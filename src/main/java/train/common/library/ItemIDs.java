@@ -458,6 +458,8 @@ public enum ItemIDs {
 	minecartILMB("ItemRollingStock", "I.L.M.B", 2),
 	minecartJT7("ItemRollingStock", "jt7", 8),
 
+	minecartAEM7("ItemRollingStock", "aem7", 8),
+
 	//FrERf//
 	minecartRoundHopper("ItemRollingStock", "train_RoundHopper", 2),
 	minecartRibbedHopper("ItemRollingStock", "ribbed_hopper", 2),

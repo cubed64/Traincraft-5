@@ -539,6 +539,7 @@ item.tc:minecartIngotPig.name=Molten Ingot "Pig"
 item.tc:minecartSteelSlabFlat.name=15' Steel Slab Flat
 item.tc:minecartFNCC2375Hopper.name=FNCC 2375 Cu Ft Hopper
 item.tc:minecartGP7f.name=FNCC GP7F
+item.tc:minecartAEM7.name=EMD AEM-7
 
 <!-- ## Achievements ## -->
 achievement.tc:engineer=Engineers clothes
@@ -1041,6 +1042,7 @@ entity.tc.SteelSlabFlat.name=15' Steel Slab Flat
 entity.tc.FNCC2375Hopper.name=FNCC 2375 Cu Ft Hopper
 entity.tc.NXTrack Geometry Car.name=NXTrack Geometry Car
 entity.tc.GP7f.name=FNCC GP7F
+entity.tc.AEM7.name=EMD AEM-7
 
 description.villager.profession.tc.station_chief=Station Chief
 tile.tc:FortyFootContainer.name= Forty Foot Container

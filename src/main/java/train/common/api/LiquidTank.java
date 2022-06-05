@@ -128,6 +128,7 @@ public class LiquidTank extends EntityRollingStock implements IFluidHandler, ISi
 			this.mass = this.getDefaultMass();
 			double preciseAmount = theTank.getFluid().amount;
 			mass += (preciseAmount / 10000);//1 bucket = 1 kilo
+			//264 gallons of water is NOT 1 kilogram but ok den
 		}
 	}
 

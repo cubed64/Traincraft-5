@@ -11,6 +11,7 @@
   "chme3_idle": {"category": "master", "sounds": [{"name": "chme3_idle","stream": false}]},
   "chme3_run": {"category": "master", "sounds": [{"name": "chme3_run","stream": false}]},
   "class62_horn": {"category": "master", "sounds": [{"name": "class62_horn","stream": true}]},
+  "aem7_horn": {"category": "master", "sounds": [{"name": "aem7_horn","stream": true}]},
   "eu07_horn": {"category": "master", "sounds": [{"name": "eu07_horn","stream": false}]},
   "german_steam_horn": {"category": "master", "sounds": [{"name": "german_steam_horn","stream": false}]},
   "gp40_2_horn": {"category": "master", "sounds": [{"name": "gp40_2_horn","stream": false}]},

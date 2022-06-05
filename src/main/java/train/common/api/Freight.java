@@ -153,7 +153,7 @@ public abstract class Freight extends EntityRollingStock implements IInventory {
 				this.itemInsideCount += itemstack.stackSize;
 			}
 		}
-		mass += (this.itemInsideCount * 0.0001);
+		mass += (this.itemInsideCount * 0.0005);// original modifier value was 0.0001
 	}
 	
 	@Override
