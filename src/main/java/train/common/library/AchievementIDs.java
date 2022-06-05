@@ -75,7 +75,7 @@ public enum AchievementIDs {
 
 	caboose(new Item[] { ItemIDs.minecartCaboose.item, ItemIDs.minecartCaboose3.item,
 			ItemIDs.minecartCabooseWork.item, ItemIDs.minecartDRGWCaboose.item, ItemIDs.minecartWVcaboose.item, ItemIDs.minecartHBC1Ccaboose.item }),
-	stockCar(new Item[] { ItemIDs.minecartStockCar.item, ItemIDs.minecartDRWGStockCar.item }),
+	stockCar(new Item[] { ItemIDs.minecartStockCar.item, ItemIDs.minecartDRWGStockCar.item, ItemIDs.minecartStampedeRack.item}),
 	distilationTower(new Item[] { Item.getItemFromBlock(BlockIDs.distilIdle.block) }),
 	cf7(new Item[]{ItemIDs.minecartCF7angle.item, ItemIDs.minecartCF7round.item}),
 	thanos(new Item[]{ItemIDs.minecartThanos.item}),

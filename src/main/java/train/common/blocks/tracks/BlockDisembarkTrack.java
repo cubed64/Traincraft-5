@@ -3,6 +3,7 @@
  */
 package train.common.blocks.tracks;
 
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.StampedeRack;
 import mods.railcraft.api.tracks.ITrackEmitter;
 import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityMinecart;
@@ -25,7 +26,7 @@ public class BlockDisembarkTrack extends TrackBaseTraincraft implements ITrackEm
 	}
 	@Override
 	public void onMinecartPass(EntityMinecart cart) {
-		if (cart instanceof EntityStockCar || cart instanceof EntityStockCarDRWG) {
+		if (cart instanceof EntityStockCar || cart instanceof EntityStockCarDRWG || cart instanceof StampedeRack) {
 			if (cart.riddenByEntity == null)
 				return;
 			cart.riddenByEntity.mountEntity(cart);

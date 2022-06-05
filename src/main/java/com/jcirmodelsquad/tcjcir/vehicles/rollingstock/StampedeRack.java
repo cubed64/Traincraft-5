@@ -76,10 +76,10 @@ public class StampedeRack extends EntityRollingStock implements IPassenger {
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
-		return 1.45F;
+		return 3.75F;
 	}
 
-	@Override
+	/*@Override
 	protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {
 		super.writeEntityToNBT(nbttagcompound);
 		if (riddenByEntity != null) {
@@ -97,6 +97,6 @@ public class StampedeRack extends EntityRollingStock implements IPassenger {
 		if(nbttagcompound.hasKey("mob2")){
 			readEntityFromNBT(nbttagcompound.getCompoundTag("mob2"));
 		}
-	}
+	}*/
 
 }
