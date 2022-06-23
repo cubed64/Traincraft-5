@@ -5,7 +5,7 @@
  * @author Mrbrutal
  ******************************************************************************/
 
-package train.common.core;
+package train.common.core.creativetab;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -20,7 +20,7 @@ public class CreativeTabTraincraft extends CreativeTabs {
 
 	@Override
 	public ItemStack getIconItemStack() {
-		return new ItemStack(ItemIDs.minecartU18B.item);
+		return new ItemStack(ItemIDs.stake.item);
 	}
 
 	@Override
@@ -29,5 +29,5 @@ public class CreativeTabTraincraft extends CreativeTabs {
 	}
 
 	@Override
-	public Item getTabIconItem(){return ItemIDs.minecartU18B.item;}
+	public Item getTabIconItem(){return ItemIDs.stake.item;}
 }

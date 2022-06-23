@@ -10,8 +10,10 @@ package train.common.items;
 import cpw.mods.fml.common.registry.GameRegistry;
 import train.common.Traincraft;
 import train.common.adminbook.ItemAdminBook;
+import train.common.library.EnumTrains;
 import train.common.library.Info;
 import train.common.library.ItemIDs;
+import train.common.library.TypeOfRollingStock;
 
 public class TCItems {
 
@@ -26,8 +28,9 @@ public class TCItems {
 				if (items.className.equals("ItemTrain")) {
 					items.item = new ItemPart(items.iconName);
 				}
-				else if (items.className.equals("ItemRollingStock")) {
-					items.item = new ItemRollingStock(items.iconName);
+				else if (items.className.equals("ItemRollingStock"))
+				{
+					items.item = new ItemRollingStock(items.iconName, items.TypeOfRollingStock);
 				}
 				else if (items.className.equals("ItemRotativeDigger")) {
 					items.item = new ItemRotativeDigger();
