@@ -16,7 +16,7 @@ import train.common.library.GuiIDs;
 
 public class DieselSD40T2 extends DieselTrain {
     public DieselSD40T2(World world) {
-        super(world, EnumTrains.SD40dash2.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.SD40T2.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
     }
     public DieselSD40T2(World world, double d, double d1, double d2){
@@ -39,7 +39,7 @@ public class DieselSD40T2 extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 3.5;
+        double distance = 3.25;
         double yOffset = 0.2;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
@@ -121,7 +121,7 @@ public class DieselSD40T2 extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.3F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.55F;
     }
 
     @Override

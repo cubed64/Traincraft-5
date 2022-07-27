@@ -1,5 +1,5 @@
 //This File was created with the Minecraft-SMP Modelling Toolbox 2.3.0.0
-// Copyright (C) 2021 Minecraft-SMP.de
+// Copyright (C) 2022 Minecraft-SMP.de
 // This file is for Flan's Flying Mod Version 4.0.x+
 
 // Model: F7a
@@ -27,7 +27,7 @@ public class ModelF7A extends ModelConverter //Same as Filename
 
 	public ModelF7A() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[406];
+		bodyModel = new ModelRendererTurbo[435];
 
 		initbodyModel_1();
 
@@ -392,7 +392,7 @@ public class ModelF7A extends ModelConverter //Same as Filename
 		bodyModel[350] = new ModelRendererTurbo(this, 161, 49, textureX, textureY); // Box 372
 		bodyModel[351] = new ModelRendererTurbo(this, 72, 177, textureX, textureY); // Box 487
 		bodyModel[352] = new ModelRendererTurbo(this, 141, 39, textureX, textureY); // Box 488
-		bodyModel[353] = new ModelRendererTurbo(this, 417, 237, textureX, textureY); // Box 0
+		bodyModel[353] = new ModelRendererTurbo(this, 371, 243, textureX, textureY); // Box 0
 		bodyModel[354] = new ModelRendererTurbo(this, 417, 222, textureX, textureY); // Box 2
 		bodyModel[355] = new ModelRendererTurbo(this, 417, 192, textureX, textureY); // Box 3
 		bodyModel[356] = new ModelRendererTurbo(this, 417, 176, textureX, textureY); // Box 4
@@ -445,6 +445,35 @@ public class ModelF7A extends ModelConverter //Same as Filename
 		bodyModel[403] = new ModelRendererTurbo(this, 73, 227, textureX, textureY); // Box 406 headlight backpart
 		bodyModel[404] = new ModelRendererTurbo(this, 171, 51, textureX, textureY); // Box 404
 		bodyModel[405] = new ModelRendererTurbo(this, 158, 51, textureX, textureY); // Box 405
+		bodyModel[406] = new ModelRendererTurbo(this, 150, 95, textureX, textureY); // Box 406
+		bodyModel[407] = new ModelRendererTurbo(this, 155, 105, textureX, textureY); // Box 407
+		bodyModel[408] = new ModelRendererTurbo(this, 155, 101, textureX, textureY); // Box 408
+		bodyModel[409] = new ModelRendererTurbo(this, 166, 95, textureX, textureY); // Box 409
+		bodyModel[410] = new ModelRendererTurbo(this, 166, 97, textureX, textureY); // Box 410
+		bodyModel[411] = new ModelRendererTurbo(this, 175, 98, textureX, textureY); // Box 421 prime base
+		bodyModel[412] = new ModelRendererTurbo(this, 166, 102, textureX, textureY, "lamp"); // Box 6 PRIME4-1
+		bodyModel[413] = new ModelRendererTurbo(this, 166, 102, textureX, textureY, "lamp"); // Box 7 PRIME4-3
+		bodyModel[414] = new ModelRendererTurbo(this, 166, 102, textureX, textureY, "lamp"); // Box 8 PRIME4-2
+		bodyModel[415] = new ModelRendererTurbo(this, 166, 102, textureX, textureY, "lamp"); // Box 9 PRIME4-4
+		bodyModel[416] = new ModelRendererTurbo(this, 166, 115, textureX, textureY, "cull"); // Box 355 support cull
+		bodyModel[417] = new ModelRendererTurbo(this, 175, 102, textureX, textureY, "lamp"); // Box 6 PRIME4-1
+		bodyModel[418] = new ModelRendererTurbo(this, 175, 102, textureX, textureY, "lamp"); // Box 6 PRIME4-3
+		bodyModel[419] = new ModelRendererTurbo(this, 175, 102, textureX, textureY, "lamp"); // Box 6 PRIME4-2
+		bodyModel[420] = new ModelRendererTurbo(this, 175, 102, textureX, textureY, "lamp"); // Box 6 PRIME4-4
+		bodyModel[421] = new ModelRendererTurbo(this, 166, 110, textureX, textureY, "cull"); // Box 421
+		bodyModel[422] = new ModelRendererTurbo(this, 166, 106, textureX, textureY); // Box 422
+		bodyModel[423] = new ModelRendererTurbo(this, 204, 106, textureX, textureY); // Southern Air Tanks
+		bodyModel[424] = new ModelRendererTurbo(this, 194, 101, textureX, textureY); // Southern Air Tank Supports
+		bodyModel[425] = new ModelRendererTurbo(this, 191, 101, textureX, textureY); // Southern Air Tank Supports
+		bodyModel[426] = new ModelRendererTurbo(this, 175, 106, textureX, textureY); // Box 437
+		bodyModel[427] = new ModelRendererTurbo(this, 188, 101, textureX, textureY); // Box 438
+		bodyModel[428] = new ModelRendererTurbo(this, 185, 101, textureX, textureY); // Box 439
+		bodyModel[429] = new ModelRendererTurbo(this, 165, 43, textureX, textureY); // Box 193
+		bodyModel[430] = new ModelRendererTurbo(this, 224, 50, textureX, textureY); // Box 195 Santa Fe 5 chime
+		bodyModel[431] = new ModelRendererTurbo(this, 224, 44, textureX, textureY); // Box 195 Santa Fe 5 chime
+		bodyModel[432] = new ModelRendererTurbo(this, 226, 41, textureX, textureY); // Box 195 Santa Fe 5 chime
+		bodyModel[433] = new ModelRendererTurbo(this, 226, 38, textureX, textureY); // Box 195 Santa Fe 5 chime
+		bodyModel[434] = new ModelRendererTurbo(this, 256, 30, textureX, textureY, "cull"); // Box 186 winterization hatch cull
 
 		bodyModel[0].addBox(0F, 0F, 0F, 57, 1, 20, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-25.5F, 0F, -10F);
@@ -1659,10 +1688,10 @@ public class ModelF7A extends ModelConverter //Same as Filename
 		bodyModel[399].addBox(0F, 0F, 0F, 47, 3, 0, 0F); // Box 399 trainphone
 		bodyModel[399].setRotationPoint(-15F, -21F, 6F);
 
-		bodyModel[400].addShapeBox(0F, 0F, 0F, 0, 2, 2, 0F,-0.2F, 0F, 0F, 0.2F, 0F, 0F, 0.25F, -0.5F, -0.5F, -0.25F, -0.5F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 403 headlight backpart
+		bodyModel[400].addShapeBox(0F, 0F, 0F, 0, 2, 2, 0F,-0.3F, 0F, 0F, 0.3F, 0F, 0F, 0.25F, -0.5F, -0.5F, -0.25F, -0.5F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 403 headlight backpart
 		bodyModel[400].setRotationPoint(-30.7F, -8F, 0F);
 
-		bodyModel[401].addShapeBox(0F, 0F, 0F, 0, 2, 2, 0F,-0.25F, -0.5F, -0.5F, 0.25F, -0.5F, -0.5F, 0.2F, 0F, 0F, -0.2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 404 headlight backpart
+		bodyModel[401].addShapeBox(0F, 0F, 0F, 0, 2, 2, 0F,-0.25F, -0.5F, -0.5F, 0.25F, -0.5F, -0.5F, 0.3F, 0F, 0F, -0.3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 404 headlight backpart
 		bodyModel[401].setRotationPoint(-30.7F, -8F, -2F);
 
 		bodyModel[402].addShapeBox(0F, 0F, 0F, 0, 2, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, -0.5F, -0.5F, -0.25F, -0.5F, -0.5F, -0.3F, 0F, 0F, 0.3F, 0F, 0F); // Box 405 headlight backpart
@@ -1676,12 +1705,101 @@ public class ModelF7A extends ModelConverter //Same as Filename
 
 		bodyModel[405].addBox(0F, 0F, 0F, 4, 0, 4, 0F); // Box 405
 		bodyModel[405].setRotationPoint(-11.5F, -21F, -2F);
+
+		bodyModel[406].addShapeBox(0F, 0F, 0F, 5, 0, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 406
+		bodyModel[406].setRotationPoint(-32F, 9F, 6F);
+
+		bodyModel[407].addShapeBox(0F, 0F, 0F, 0, 8, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 407
+		bodyModel[407].setRotationPoint(-32F, 1F, 6F);
+
+		bodyModel[408].addShapeBox(0F, 0F, 0F, 5, 8, 0, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 408
+		bodyModel[408].setRotationPoint(-32F, 1F, 11F);
+
+		bodyModel[409].addShapeBox(0F, 0F, 0F, 5, 1, 0, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 409
+		bodyModel[409].setRotationPoint(-32F, 1F, 6F);
+
+		bodyModel[410].addShapeBox(0F, 0F, 0F, 0, 1, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 410
+		bodyModel[410].setRotationPoint(-27F, 1F, 9F);
+
+		bodyModel[411].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 421 prime base
+		bodyModel[411].setRotationPoint(-17F, -21.5F, -1F);
+
+		bodyModel[412].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F); // Box 6 PRIME4-1
+		bodyModel[412].setRotationPoint(-17F, -22F, -1F);
+
+		bodyModel[413].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F); // Box 7 PRIME4-3
+		bodyModel[413].setRotationPoint(-17F, -22F, -1F);
+
+		bodyModel[414].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F); // Box 8 PRIME4-2
+		bodyModel[414].setRotationPoint(-17F, -22F, -1F);
+
+		bodyModel[415].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F); // Box 9 PRIME4-4
+		bodyModel[415].setRotationPoint(-17F, -22F, -1F);
+
+		bodyModel[416].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 355 support cull
+		bodyModel[416].setRotationPoint(-17F, -20.5F, -1F);
+
+		bodyModel[417].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F); // Box 6 PRIME4-1
+		bodyModel[417].setRotationPoint(29F, -22F, -1F);
+
+		bodyModel[418].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F); // Box 6 PRIME4-3
+		bodyModel[418].setRotationPoint(29F, -22F, -1F);
+
+		bodyModel[419].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F); // Box 6 PRIME4-2
+		bodyModel[419].setRotationPoint(29F, -22F, -1F);
+
+		bodyModel[420].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F); // Box 6 PRIME4-4
+		bodyModel[420].setRotationPoint(29F, -22F, -1F);
+
+		bodyModel[421].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 421
+		bodyModel[421].setRotationPoint(29F, -20.5F, -1F);
+
+		bodyModel[422].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 422
+		bodyModel[422].setRotationPoint(29F, -21.5F, -1F);
+
+		bodyModel[423].addShapeBox(0F, 0F, 0F, 11, 3, 3, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F); // Southern Air Tanks
+		bodyModel[423].setRotationPoint(6.6F, -19.75F, -7.5F);
+		bodyModel[423].rotateAngleX = 0.78539816F;
+
+		bodyModel[424].addBox(0F, 0F, 0F, 1, 2, 0, 0F); // Southern Air Tank Supports
+		bodyModel[424].setRotationPoint(7.6F, -19.75F, -6.8F);
+
+		bodyModel[425].addBox(0F, 0F, 0F, 1, 2, 0, 0F); // Southern Air Tank Supports
+		bodyModel[425].setRotationPoint(15.6F, -19.75F, -6.8F);
+
+		bodyModel[426].addShapeBox(0F, 0F, 0F, 11, 3, 3, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F); // Box 437
+		bodyModel[426].setRotationPoint(6.6F, -19.75F, 3.4F);
+		bodyModel[426].rotateAngleX = 0.78539816F;
+
+		bodyModel[427].addBox(0F, 0F, 0F, 1, 2, 0, 0F); // Box 438
+		bodyModel[427].setRotationPoint(7.6F, -19.75F, 6.8F);
+
+		bodyModel[428].addBox(0F, 0F, 0F, 1, 2, 0, 0F); // Box 439
+		bodyModel[428].setRotationPoint(15.6F, -19.75F, 6.8F);
+
+		bodyModel[429].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 193
+		bodyModel[429].setRotationPoint(-14F, -20.5F, 3.5F);
+
+		bodyModel[430].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 195 Santa Fe 5 chime
+		bodyModel[430].setRotationPoint(-14F, -20.5F, 4.5F);
+
+		bodyModel[431].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 195 Santa Fe 5 chime
+		bodyModel[431].setRotationPoint(-12F, -20F, 5F);
+
+		bodyModel[432].addBox(0F, 0F, 0F, 2, 1, 1, 0F); // Box 195 Santa Fe 5 chime
+		bodyModel[432].setRotationPoint(-11.5F, -20F, 4F);
+
+		bodyModel[433].addBox(0F, 0F, 0F, 2, 1, 1, 0F); // Box 195 Santa Fe 5 chime
+		bodyModel[433].setRotationPoint(-12F, -20F, 3F);
+
+		bodyModel[434].addBox(0F, 0F, 0F, 6, 2, 6, 0F); // Box 186 winterization hatch cull
+		bodyModel[434].setRotationPoint(19.35F, -23F, -3F);
 	}
 	ModelBlombergBnew theTrucc = new ModelBlombergBnew();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 406; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp") ) {
+		for (int i = 0; i < 435; i++) {
+			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);
 				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
@@ -1694,31 +1812,31 @@ public class ModelF7A extends ModelConverter //Same as Filename
 			}
 		}
 
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 11||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver.png"));
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 11||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_Grey.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-0.9, -0.01, 0);
+			GL11.glTranslated(-0.95, 0.16, 0);
 			theTrucc.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(2.2, 0.0, 0);
+			GL11.glTranslated(2.2, 0, 0);
 			theTrucc.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 8) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Espee.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergb_SPgrey.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-0.9, -0.01, 0);
+			GL11.glTranslated(-0.95, 0.16, 0);
 			theTrucc.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(2.2, 0.0, 0);
+			GL11.glTranslated(2.2, 0, 0);
 			theTrucc.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Blac.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_Black.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-0.9, -0.01, 0);
+			GL11.glTranslated(-0.95, 0.16, 0);
 			theTrucc.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(2.2, 0.0, 0);
+			GL11.glTranslated(2.2, 0, 0);
 			theTrucc.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
