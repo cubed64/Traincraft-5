@@ -37,6 +37,7 @@ public class TCKeyHandler {
 	public static KeyBinding remoteControlBrake;
 	public static KeyBinding lampControl;
 	public static KeyBinding beaconToggle;
+	public static KeyBinding bell;
 
 	public TCKeyHandler() {
 		horn = new KeyBinding("key.traincraft.horn", Keyboard.KEY_H, "key.categories.traincraft");
@@ -51,6 +52,9 @@ public class TCKeyHandler {
 		ClientRegistry.registerKeyBinding(idle);
 		furnace = new KeyBinding("key.traincraft.furnace", Keyboard.KEY_F, "key.categories.traincraft");
 		ClientRegistry.registerKeyBinding(furnace);
+		bell = new KeyBinding("Locomotive Bell", Keyboard.KEY_B, "key.categories.traincraft");
+		ClientRegistry.registerKeyBinding(bell);
+
 		if (Loader.isModLoaded("ComputerCraft") || Loader.isModLoaded("OpenComputers")) {
 			MTCScreen = new KeyBinding("key.traincraft.showMTCScreen", Keyboard.KEY_NONE, "key.categories.traincraft");
 			ClientRegistry.registerKeyBinding(MTCScreen);
@@ -65,7 +69,7 @@ public class TCKeyHandler {
         remoteControlBackwards = new KeyBinding("Remote Control Backwards", Keyboard.KEY_NUMPAD8, "key.categories.traincraft");
         remoteControlBrake = new KeyBinding("Remote Control Brake", Keyboard.KEY_NUMPAD0, "key.categories.traincraft");
         remoteControlHorn = new KeyBinding("Remote Control Horn", Keyboard.KEY_NUMPADENTER, "key.categories.traincraft");
-		lampControl = new KeyBinding("Train Lamp", Keyboard.KEY_L, "key.categories.traincraft");
+		lampControl = new KeyBinding("Locomotive Lights", Keyboard.KEY_X, "key.categories.traincraft");
 		beaconToggle = new KeyBinding("Toggle Beacons", Keyboard.KEY_NONE, "key.categories.traincraft");
 
         ClientRegistry.registerKeyBinding(remoteControlForward);
@@ -101,16 +105,36 @@ public class TCKeyHandler {
 			if (lampControl.isPressed()) {
 				if (Minecraft.getMinecraft().thePlayer.ridingEntity != null && Minecraft.getMinecraft().thePlayer.ridingEntity instanceof Locomotive) {
 					Locomotive train = (Locomotive) Minecraft.getMinecraft().thePlayer.ridingEntity;
-					train.lampOn = !train.lampOn;
-					System.out.println(train.lampOn);
-				}
 
+					if (train.lampOn) {
+						train.lampOn = true;
+						//((EntityPlayer) train.riddenByEntity).addChatMessage(new ChatComponentText("lampOn true"));
+						//System.out.println(train.lampOn);
+					} else {
+						train.lampOn = false;
+					}
+					//train.lightsOn = train.lightsOn * -1;
+					//train.lampOn = !train.lampOn;
+					//System.out.println(train.lampOn);
+					//lamp is t/f light is number
+				}
 				sendKeyControlsPacket(19);
 			}
 
-			/*if (bell.isPressed()) {
-				sendKeyControlsPacket(48);
-			}*/
+			if (bell.isPressed()) {
+				if (Minecraft.getMinecraft().thePlayer.ridingEntity != null && Minecraft.getMinecraft().thePlayer.ridingEntity instanceof Locomotive) {
+					Locomotive train = (Locomotive) Minecraft.getMinecraft().thePlayer.ridingEntity;
+
+					if (train.bellPressed) {
+						train.bellPressed = true;//BELLPRESSED NEEDS TO BE TRUE
+						System.out.println(true);// WHY AREYOUNT TRUE
+					} else {
+						train.bellPressed = false;
+						System.out.println(false);
+					}
+				}
+				sendKeyControlsPacket(10);
+			}
 
 			if (furnace.isPressed()) {
 				sendKeyControlsPacket(9);

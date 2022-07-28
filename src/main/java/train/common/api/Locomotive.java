@@ -57,7 +57,7 @@ import java.util.Random;
 
 public abstract class Locomotive extends EntityRollingStock implements IInventory, WirelessTransmitter {
     public static boolean lampOn;
-    public boolean bellPressed;
+    public static boolean bellPressed;
     public int inventorySize;
     protected ItemStack locoInvent[];
     private int soundPosition = 0;
@@ -115,6 +115,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     public int connectionAttempts = 0;
     public boolean atoAllowed = true;
     public int blinkMode = 0; // 0 = Off | 1 = Commander | 2 = Amazon Prime
+    //public static int lightsOn = 0;
     /**
      * state of the loco
      */
@@ -560,19 +561,23 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             }
         }
         if (i == 19) {
-            if (lampOn == false) {
-                lampOn = true;
-            } else if (lampOn == true) {
-                lampOn = false;
+            if (lampOn == false) {//if lampon is EQUAL TO false
+                lampOn = true;// make lampon EQUAL true
+            } else if (lampOn == true) {//if lampon is EQUAL TO true
+                lampOn = false; //make lampon EQUAL false
             }
         }
 
-        if (i == 48){
+        /*if (i == 48){
             soundBell();
-        }
+        }*/
 
         if (i == 20) {
             cycleThroughBeacons();
+        }
+
+        if (i == 10){//BELLPRESSED NEESD TO BE TRUEE
+            soundBell2();
         }
     }
     /**
@@ -628,8 +633,23 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         return speed;
     }
 
-    public void soundBell() {
+    /*public void soundBell() {
         worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "sounds/bell/test.ogg", 1F, 1.0F);
+    }*/
+    public void soundBell2AndaHalf() {
+        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "bell_test", 1.0F, 1.0F);
+
+    }
+
+    public void soundBell2() {
+        for (EnumSounds sounds : EnumSounds.values()) {
+            if (sounds.getEntityClass() != null && !sounds.getBellString().equals("")&& sounds.getEntityClass().equals(this.getClass()) /*&& whistleDelay == 0*/) {
+                if (bellPressed) {
+                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getBellString(), 1.0F, 1.0F);//first float is volume
+                    //whistleDelay = 65;
+                }
+            }//THIS SHOULD WORK BUT BELLPRESSED IS NEVER SET TO TRUE TO MAKE IT WORK IN THE FIRST PLACE
+        }//FIND OUT HOW TO GET BELLPRESSED TO TRUE
     }
 
     public void soundHorn() {
@@ -833,14 +853,14 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         }*/
         if (ConfigHandler.SOUNDS) {
             for (EnumSounds sounds : EnumSounds.values()) {
-                if (sounds.getEntityClass() != null && !sounds.getHornString().equals("")&& sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0) {
+                if (sounds.getEntityClass() != null && !sounds.getHornString().equals("")&& sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0 && !sounds.getBellString().equals("")) {
                     if (getFuel() > 0 && this.isLocoTurnedOn()) {
                         double speed = Math.sqrt(motionX * motionX + motionZ * motionZ);
                         if (speed > -0.001D && speed < 0.01D && soundPosition == 0) {
                             worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getIdleString(), sounds.getIdleVolume(), 0.001F);
                             soundPosition = sounds.getIdleSoundLenght();
                         }
-                        if (sounds.getSoundChangeWithSpeed() && !sounds.getHornString().equals("")&& sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0) {
+                        if (sounds.getSoundChangeWithSpeed() && !sounds.getHornString().equals("")&& sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0 && !sounds.getBellString().equals("")) {
                             if (speed > 0.01D && speed < 0.06D && soundPosition == 0) {
                                 worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 0.1F);
                                 soundPosition = sounds.getRunSoundLenght();

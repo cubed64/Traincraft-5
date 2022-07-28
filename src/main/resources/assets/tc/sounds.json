@@ -218,4 +218,9 @@
   "skookum_notch8": {"category": "master", "sounds": [{"name": "skookum_notch8", "stream":  true}]},
   "aircompresser": {"category": "master", "sounds": [{"name": "aircompresser", "stream":  true}]},
   "1225_whistle": {"category": "master", "sounds": [{"name": "1225_whistle", "stream":  true}]},
-  "765_whistle": {"category": "master", "sounds": [{"name": "765_whistle", "stream":  true}]}}
+  "765_whistle": {"category": "master", "sounds": [{"name": "765_whistle", "stream":  true}]},
+
+  "bell_test": {"category": "master", "sounds": [{"name": "bell_test", "stream":  true}]},
+  "bell_steel": {"category": "master", "sounds": [{"name": "bell_steel", "stream":  true}]},
+  "bell_bronze": {"category": "master", "sounds": [{"name": "bell_bronze", "stream":  true}]}
+}
