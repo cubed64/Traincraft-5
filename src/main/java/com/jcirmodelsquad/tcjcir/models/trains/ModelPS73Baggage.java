@@ -26,7 +26,7 @@ public class ModelPS73Baggage extends ModelConverter //Same as Filename
 
 	public ModelPS73Baggage() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[218];
+		bodyModel = new ModelRendererTurbo[222];
 
 		initbodyModel_1();
 
@@ -175,10 +175,10 @@ public class ModelPS73Baggage extends ModelConverter //Same as Filename
 		bodyModel[134] = new ModelRendererTurbo(this, 175, 11, textureX, textureY); // Box 189
 		bodyModel[135] = new ModelRendererTurbo(this, 165, 11, textureX, textureY); // Box 191
 		bodyModel[136] = new ModelRendererTurbo(this, 155, 11, textureX, textureY); // Box 193
-		bodyModel[137] = new ModelRendererTurbo(this, 89, 186, textureX, textureY); // Box 38 glow
-		bodyModel[138] = new ModelRendererTurbo(this, 89, 215, textureX, textureY); // Box 429 glow
-		bodyModel[139] = new ModelRendererTurbo(this, 118, 186, textureX, textureY); // Box 38 glow
-		bodyModel[140] = new ModelRendererTurbo(this, 137, 215, textureX, textureY); // Box 429 glow
+		bodyModel[137] = new ModelRendererTurbo(this, 89, 186, textureX, textureY, "glow"); // Box 38 glow
+		bodyModel[138] = new ModelRendererTurbo(this, 89, 215, textureX, textureY, "glow"); // Box 429 glow
+		bodyModel[139] = new ModelRendererTurbo(this, 118, 186, textureX, textureY, "glow"); // Box 38 glow
+		bodyModel[140] = new ModelRendererTurbo(this, 137, 215, textureX, textureY, "glow"); // Box 429 glow
 		bodyModel[141] = new ModelRendererTurbo(this, 112, 217, textureX, textureY); // Box 360
 		bodyModel[142] = new ModelRendererTurbo(this, 107, 215, textureX, textureY); // Box 363
 		bodyModel[143] = new ModelRendererTurbo(this, 149, 217, textureX, textureY); // Box 360
@@ -193,14 +193,14 @@ public class ModelPS73Baggage extends ModelConverter //Same as Filename
 		bodyModel[152] = new ModelRendererTurbo(this, 107, 186, textureX, textureY); // Box 38
 		bodyModel[153] = new ModelRendererTurbo(this, 131, 188, textureX, textureY); // Box 38
 		bodyModel[154] = new ModelRendererTurbo(this, 126, 186, textureX, textureY); // Box 38
-		bodyModel[155] = new ModelRendererTurbo(this, 94, 211, textureX, textureY); // Box 38 glow
-		bodyModel[156] = new ModelRendererTurbo(this, 85, 211, textureX, textureY); // Box 38 glow
-		bodyModel[157] = new ModelRendererTurbo(this, 76, 211, textureX, textureY); // Box 38 glow
-		bodyModel[158] = new ModelRendererTurbo(this, 67, 211, textureX, textureY); // Box 38 glow
-		bodyModel[159] = new ModelRendererTurbo(this, 112, 211, textureX, textureY); // Box 38 glow
-		bodyModel[160] = new ModelRendererTurbo(this, 103, 211, textureX, textureY); // Box 38 glow
-		bodyModel[161] = new ModelRendererTurbo(this, 130, 211, textureX, textureY); // Box 38 glow
-		bodyModel[162] = new ModelRendererTurbo(this, 121, 211, textureX, textureY); // Box 38 glow
+		bodyModel[155] = new ModelRendererTurbo(this, 94, 211, textureX, textureY, "glow"); // Box 38 glow
+		bodyModel[156] = new ModelRendererTurbo(this, 85, 211, textureX, textureY, "glow"); // Box 38 glow
+		bodyModel[157] = new ModelRendererTurbo(this, 76, 211, textureX, textureY, "glow"); // Box 38 glow
+		bodyModel[158] = new ModelRendererTurbo(this, 67, 211, textureX, textureY, "glow"); // Box 38 glow
+		bodyModel[159] = new ModelRendererTurbo(this, 112, 211, textureX, textureY, "glow"); // Box 38 glow
+		bodyModel[160] = new ModelRendererTurbo(this, 103, 211, textureX, textureY, "glow"); // Box 38 glow
+		bodyModel[161] = new ModelRendererTurbo(this, 130, 211, textureX, textureY, "glow"); // Box 38 glow
+		bodyModel[162] = new ModelRendererTurbo(this, 121, 211, textureX, textureY, "glow"); // Box 38 glow
 		bodyModel[163] = new ModelRendererTurbo(this, 45, 238, textureX, textureY); // Box 38
 		bodyModel[164] = new ModelRendererTurbo(this, 71, 244, textureX, textureY); // Box 176
 		bodyModel[165] = new ModelRendererTurbo(this, 70, 238, textureX, textureY); // Box 177
@@ -256,6 +256,10 @@ public class ModelPS73Baggage extends ModelConverter //Same as Filename
 		bodyModel[215] = new ModelRendererTurbo(this, 151, 162, textureX, textureY); // Box 41
 		bodyModel[216] = new ModelRendererTurbo(this, 150, 160, textureX, textureY); // Box 41
 		bodyModel[217] = new ModelRendererTurbo(this, 162, 160, textureX, textureY); // Box 41
+		bodyModel[218] = new ModelRendererTurbo(this, 185, 6, textureX, textureY); // Box 218
+		bodyModel[219] = new ModelRendererTurbo(this, 175, 6, textureX, textureY); // Box 219
+		bodyModel[220] = new ModelRendererTurbo(this, 165, 6, textureX, textureY); // Box 220
+		bodyModel[221] = new ModelRendererTurbo(this, 155, 6, textureX, textureY); // Box 221
 
 		bodyModel[0].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, -0.75F, 0F, 0F); // Box 2
 		bodyModel[0].setRotationPoint(41.75F, 3F, 10F);
@@ -938,12 +942,24 @@ public class ModelPS73Baggage extends ModelConverter //Same as Filename
 
 		bodyModel[217].addShapeBox(0F, 0F, 0F, 0, 2, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F); // Box 41
 		bodyModel[217].setRotationPoint(-4.99F, 3F, -5.75F);
+
+		bodyModel[218].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,0F, 0.25F, -0.15F, 0F, 0.25F, -0.15F, 0F, -0.25F, 0.15F, 0F, -0.25F, 0.15F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 218
+		bodyModel[218].setRotationPoint(36F, -20F, 5F);
+
+		bodyModel[219].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,0F, 0.25F, -0.15F, 0F, 0.25F, -0.15F, 0F, -0.25F, 0.15F, 0F, -0.25F, 0.15F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 219
+		bodyModel[219].setRotationPoint(10F, -20F, 5F);
+
+		bodyModel[220].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,0F, 0.25F, -0.15F, 0F, 0.25F, -0.15F, 0F, -0.25F, 0.15F, 0F, -0.25F, 0.15F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 220
+		bodyModel[220].setRotationPoint(-15F, -20F, 5F);
+
+		bodyModel[221].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,0F, 0.25F, -0.15F, 0F, 0.25F, -0.15F, 0F, -0.25F, 0.15F, 0F, -0.25F, 0.15F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 221
+		bodyModel[221].setRotationPoint(-40F, -20F, 5F);
 	}
 	ModelPS_Truck bogie1 = new ModelPS_Truck();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for(int i = 0; i < 218; i++)
+		for(int i = 0; i < 222; i++)
 		{
 			bodyModel[i].render(f5);
 		}
