@@ -63,6 +63,8 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     private int soundPosition = 0;
     public boolean parkingBrake = false;
     private int whistleDelay = 0;
+    private int bellDelay = 0;
+    private static int bellCount = 0;
     private int blowUpDelay = 0;
     private String lastRider = "";
     private Entity lastEntityRider;
@@ -577,7 +579,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         }
 
         if (i == 10){//BELLPRESSED NEESD TO BE TRUEE
-            soundBell2();
+            //soundBell2();
         }
     }
     /**
@@ -639,17 +641,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     public void soundBell2AndaHalf() {
         worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "bell_test", 1.0F, 1.0F);
 
-    }
-
-    public void soundBell2() {
-        for (EnumSounds sounds : EnumSounds.values()) {
-            if (sounds.getEntityClass() != null && !sounds.getBellString().equals("")&& sounds.getEntityClass().equals(this.getClass()) /*&& whistleDelay == 0*/) {
-                if (bellPressed) {
-                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getBellString(), 1.0F, 1.0F);//first float is volume
-                    //whistleDelay = 65;
-                }
-            }//THIS SHOULD WORK BUT BELLPRESSED IS NEVER SET TO TRUE TO MAKE IT WORK IN THE FIRST PLACE
-        }//FIND OUT HOW TO GET BELLPRESSED TO TRUE
     }
 
     public void soundHorn() {
@@ -851,6 +842,24 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             motionX *= 0.0;
             motionZ *= 0.0;
         }*/
+
+        //public void soundBell2() {
+            /*for (EnumSounds sounds : EnumSounds.values()) {
+                if (sounds.getEntityClass() != null && !sounds.getBellString().equals("")&& sounds.getEntityClass().equals(this.getClass()) && bellDelay == 0) {
+                    if (bellPressed) {
+                        bellCount++;
+                        if (bellCount == 10) {
+                            worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getBellString(), 1.0F, 1.0F);//first float is volume
+                            //bellDelay = 1;
+                            bellCount = 0;
+                        }
+                        //break;
+
+                    }
+                }//THIS SHOULD WORK BUT BELLPRESSED IS NEVER SET TO TRUE TO MAKE IT WORK IN THE FIRST PLACE
+            }//FIND OUT HOW TO GET BELLPRESSED TO TRUE
+        //}
+*/
         if (ConfigHandler.SOUNDS) {
             for (EnumSounds sounds : EnumSounds.values()) {
                 if (sounds.getEntityClass() != null && !sounds.getHornString().equals("")&& sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0 && !sounds.getBellString().equals("")) {
@@ -858,7 +867,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                         double speed = Math.sqrt(motionX * motionX + motionZ * motionZ);
                         if (speed > -0.001D && speed < 0.01D && soundPosition == 0) {
                             worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getIdleString(), sounds.getIdleVolume(), 0.001F);
-                            soundPosition = sounds.getIdleSoundLenght();
+                            soundPosition = sounds.getIdleSoundLenght();//soundPosition is probably where IN the sound it is currently playing, eg 1 sec int osoudn file
                         }
                         if (sounds.getSoundChangeWithSpeed() && !sounds.getHornString().equals("")&& sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0 && !sounds.getBellString().equals("")) {
                             if (speed > 0.01D && speed < 0.06D && soundPosition == 0) {
@@ -888,6 +897,29 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 }
             }
         }
+
+        for (EnumSounds sounds : EnumSounds.values()) {
+            if (sounds.getEntityClass() != null && !sounds.getHornString().equals("")&& sounds.getEntityClass().equals(this.getClass()) && !sounds.getBellString().equals("")) {
+
+                if (bellPressed) {
+
+                    if (bellCount == 0) {
+                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getBellString(), 1f, 1F);
+                        bellCount = 15;//default 15 for bronze bell
+                        System.out.println(bellCount);
+                    }
+//TODO make bellCount have a string in EnumSounds, make bells not ring for every locomotive in the world at once, make horn not override bell sound
+                    if (bellCount > 0) {
+                        bellCount--;
+                    }
+                }
+                else{
+                    bellCount = 0;
+                }
+                break;
+            }
+        }
+
         if (getState().equals("cold") && !canBePulled) {
             this.extinguish();
             if (getCurrentMaxSpeed() >= (getMaxSpeed() * 0.6)) {

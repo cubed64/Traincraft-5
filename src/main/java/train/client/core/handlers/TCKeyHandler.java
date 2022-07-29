@@ -125,13 +125,16 @@ public class TCKeyHandler {
 				if (Minecraft.getMinecraft().thePlayer.ridingEntity != null && Minecraft.getMinecraft().thePlayer.ridingEntity instanceof Locomotive) {
 					Locomotive train = (Locomotive) Minecraft.getMinecraft().thePlayer.ridingEntity;
 
-					if (train.bellPressed) {
+					train.bellPressed=!train.bellPressed;
+
+
+					/*if (train.bellPressed) {
 						train.bellPressed = true;//BELLPRESSED NEEDS TO BE TRUE
 						System.out.println(true);// WHY AREYOUNT TRUE
 					} else {
 						train.bellPressed = false;
 						System.out.println(false);
-					}
+					}*/
 				}
 				sendKeyControlsPacket(10);
 			}
