@@ -780,18 +780,22 @@ public enum RenderEnum {
 		}
 	}, "", null, 0, false),
 
-	E8A( DieselE8A.class,  new ModelE8A(), "e8a_", true,new float[] {-2F, 0.1F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.1F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{
-			add(new double[]{1.9375D, 1.3215D, 0.0D});
-			add(new double[]{1.125D, 1.3125D, 0.0D});
-		}
+	EMDE7A( DieselE7A.class,  new ModelE7A(), "EMDE7A_", true,new float[] {-1.85F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
 	}, "", null, 0, false),
-	E8B( DieselE8B.class,  new ModelE8B(), "e8b_", true,new float[] {-2F, 0.1F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.1F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{
-			add(new double[]{2.125D, 1.3215D, 0.0D});
-			add(new double[]{1.3125D, 1.3125D, 0.0D});
-		}
+
+	EMDE7B( DieselE7B.class,  new ModelE7B(), "EMDE7B_", true,new float[] {-1.75F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
 	}, "", null, 0, false),
+
+	E8A( DieselE8A.class,  new ModelE8A(), "EMDE8A_", true,new float[] {-1.85F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
+	}, "", null, 0, false),
+
+	E8B( DieselE8B.class,  new ModelE8B(), "EMDE8B_", true,new float[] {-1.75F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
+	}, "", null, 0, false),
+
 	E9A( DieselE9A.class,  new ModelE9A(), "e9a_", true,new float[] {-2F, 0.1F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.1F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{
 			add(new double[]{1.9375D, 1.3215D, 0.0D});

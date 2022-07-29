@@ -13,13 +13,14 @@ import train.common.api.LiquidManager;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class DieselE8B extends DieselTrain {
-    public DieselE8B(World world) {
-        super(world, EnumTrains.E8B.getTankCapacity(), LiquidManager.dieselFilter());
+
+public class DieselE7B extends DieselTrain {
+    public DieselE7B(World world) {
+        super(world, EnumTrains.E7B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the benis sus
     }
-    public DieselE8B(World world, double d, double d1, double d2){
+    public DieselE7B(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -132,7 +133,7 @@ public class DieselE8B extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "EMD E8B";
+        return "EMD E7B";
     }
 
     @Override

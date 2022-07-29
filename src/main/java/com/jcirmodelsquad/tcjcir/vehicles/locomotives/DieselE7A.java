@@ -13,13 +13,14 @@ import train.common.api.LiquidManager;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class DieselE8B extends DieselTrain {
-    public DieselE8B(World world) {
-        super(world, EnumTrains.E8B.getTankCapacity(), LiquidManager.dieselFilter());
+
+public class DieselE7A extends DieselTrain {
+    public DieselE7A(World world) {
+        super(world, EnumTrains.E7A.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the benis sus
     }
-    public DieselE8B(World world, double d, double d1, double d2){
+    public DieselE7A(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -39,8 +40,8 @@ public class DieselE8B extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 4.25;
-        double yOffset = 0.0;
+        double distance = 3.6;
+        double yOffset = 0.19;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
         if(side.isServer()){
@@ -122,7 +123,7 @@ public class DieselE8B extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.1F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.3F;
     }
 
     @Override
@@ -132,7 +133,7 @@ public class DieselE8B extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "EMD E8B";
+        return "EMD E7A";
     }
 
     @Override
