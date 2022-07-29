@@ -2507,8 +2507,8 @@ public class ModelGP7newer extends ModelConverter //Same as Filename
 	public ArrayList<double[]> getSmokePosition() {
 		return new ArrayList<double[]>() {
 			{
-				add(new double[]{1.45D, 1.3D, 0.0D});//front
-				add(new double[]{0.6D, 1.3D, 0.0D});//rear
+				add(new double[]{1.225D, 1.3D, 0.0D});//front
+				add(new double[]{0.475D, 1.3D, 0.0D});//rear
 			}
 		};
 	}

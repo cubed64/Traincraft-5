@@ -2338,8 +2338,8 @@ public class ModelSD38 extends ModelConverter//Same as Filename
 	public ArrayList<double[]> getSmokePosition() {
 		return new ArrayList<double[]>() {
 			{
-				add(new double[]{1.8D, 1.4D, 0.0D});
-				add(new double[]{0.85D, 1.4D, 0.0D});
+				add(new double[]{1.8D, 1.3D, 0.0D});
+				add(new double[]{0.85D, 1.3D, 0.0D});
 			}
 		};
 	}
