@@ -579,8 +579,10 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         }
 
         if (i == 10){//BELLPRESSED NEESD TO BE TRUEE
-            //soundBell2();
-            soundBell3();
+            bellPressed=!bellPressed;
+            if(bellPressed){
+                soundBell3();
+            }
         }
     }
     /**

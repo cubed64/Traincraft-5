@@ -124,7 +124,7 @@ public class TCKeyHandler {
 				sendKeyControlsPacket(19);
 			}
 
-			if (bell.isPressed()) {
+			/*if (bell.isPressed()) {
 				if (Minecraft.getMinecraft().thePlayer.ridingEntity != null && Minecraft.getMinecraft().thePlayer.ridingEntity instanceof Locomotive) {
 					Locomotive train = (Locomotive) Minecraft.getMinecraft().thePlayer.ridingEntity;
 						if(bellTimerMillis+ 1000 <System.currentTimeMillis()){//15000 for 15 seconds
@@ -133,16 +133,25 @@ public class TCKeyHandler {
 
 						}
 					//train.bellPressed=!train.bellPressed;
-					/*if (train.bellPressed) {
+					if (train.bellPressed) {
 						train.bellPressed = true;//BELLPRESSED NEEDS TO BE TRUE
 						System.out.println(true);// WHY AREYOUNT TRUE
 					} else {
 						train.bellPressed = false;
 						System.out.println(false);
-					}*/
+					}
+				}
+				sendKeyControlsPacket(10);
+			}*/
+			if (bell.isPressed()) {
+				if (Minecraft.getMinecraft().thePlayer.ridingEntity instanceof Locomotive) {
+					if(bellTimerMillis+ 1000 <System.currentTimeMillis()){//15000 for 15 seconds
+						bellTimerMillis=System.currentTimeMillis();
+					}
 				}
 				sendKeyControlsPacket(10);
 			}
+
 
 			if (furnace.isPressed()) {
 				sendKeyControlsPacket(9);
