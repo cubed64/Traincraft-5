@@ -444,8 +444,13 @@ public enum ItemIDs {
 	//BRuhMOMent//
 	minecartVO1000("ItemRollingStock", "vo1000", 4),
 
-	//other MOtOEr Shuite//
+	//Fairbanks Morse//
 	minecartH1044("ItemRollingStock", "h1044", 4),
+	minecartH16_66("ItemRollingStock", "H16-66", 5),
+	minecartH24_66("ItemRollingStock", "H24-66", 5),
+	minecartH24_66L("ItemRollingStock", "H24-66L", 5),
+
+	//other MOtOEr Shuite//
 	minecartNRE3gs21b("ItemRollingStock", "3gs21b", 4),
 	minecartgtavthing("ItemRollingStock", "gtavthing", 7),
 	minecartFOLM1B("ItemRollingStock", "folm1b", 9),
