@@ -228,6 +228,9 @@ public enum EnumSounds {
 
 	;
 
+	//for figuring out the length for a sound, find out the soundfiles actual length, move the decimal over to the right by 1, and then multiply by 2
+
+
 	private Class entityClass;
 	private String horn;
 	private float hornVolume;

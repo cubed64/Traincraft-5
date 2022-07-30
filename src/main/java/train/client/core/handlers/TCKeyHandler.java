@@ -127,12 +127,11 @@ public class TCKeyHandler {
 			if (bell.isPressed()) {
 				if (Minecraft.getMinecraft().thePlayer.ridingEntity != null && Minecraft.getMinecraft().thePlayer.ridingEntity instanceof Locomotive) {
 					Locomotive train = (Locomotive) Minecraft.getMinecraft().thePlayer.ridingEntity;
-					for (EnumSounds sounds : EnumSounds.values()) {
-						if(bellTimerMillis+ sounds.getBellLength() <System.currentTimeMillis()){//15000 for 15 seconds
+						if(bellTimerMillis+ 1000 <System.currentTimeMillis()){//15000 for 15 seconds
 							bellTimerMillis=System.currentTimeMillis();
 							train.bellPressed=!train.bellPressed;
+
 						}
-					}
 					//train.bellPressed=!train.bellPressed;
 					/*if (train.bellPressed) {
 						train.bellPressed = true;//BELLPRESSED NEEDS TO BE TRUE
