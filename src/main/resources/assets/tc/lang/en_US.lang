@@ -545,6 +545,9 @@ item.tc:minecartAEM7.name=EMD AEM-7
 item.tc:minecartSW1000.name=EMD SW1000
 item.tc:minecartSD38.name=EMD SD38
 item.tc:minecartSD39.name=EMD SD39
+item.tc:minecartH16_66.name=FM H16-66
+item.tc:minecartH24_66.name=FM H24-66
+item.tc:minecartH24_66L.name=FM H24-66 Low Ends
 
 <!-- ## Achievements ## -->
 achievement.tc:engineer=Engineers clothes
@@ -1053,6 +1056,9 @@ entity.tc.AEM7.name=EMD AEM-7
 entity.tc.SW1000.name=EMD SW1000
 entity.tc.SD38.name=EMD SD38
 entity.tc.SD39.name=EMD SD39
+entity.tc.H16_66.name=FM H16-66
+entity.tc.H24_66.name=FM H24-66
+entity.tc.H24_66L.name=FM H24-66 Low Ends
 
 description.villager.profession.tc.station_chief=Station Chief
 tile.tc:FortyFootContainer.name= Forty Foot Container

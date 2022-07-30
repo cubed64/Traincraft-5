@@ -150,6 +150,9 @@ public enum EnumSounds {
 	DieselSW1500(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSW1500.class, "nathan_p3", 0.65F, "EMD_12_645E_Notch8", 0.65F, 10, "EMD_12_645E_Idle", 0.8F, 3, true, " "),
 	//JCTC FM Diesels
 	DieselH1044(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselH1044.class, "wabco_e2", 10F, "FM_38D_6_Notch8", 0.65F, 40, "FM_38D_6_Notch8", 0.45F, 40, false, " "),
+	DieselFMH16_66(DieselH16_66.class,"leslie_a200_2", 1F,"FM_38D_6_Notch8", 0.65F, 40, "FM_38D_6_Notch8", 0.45F, 40, false," "),
+	DieselFMH24_66(DieselH24_66.class,"leslie_a200_2", 1F,"FM_38D_6_Notch8", 0.65F, 40, "FM_38D_6_Notch8", 0.45F, 40, false," "),
+	DieselFMH24_66L(DieselH24_66L.class,"leslie_a200_2", 1F,"FM_38D_6_Notch8", 0.65F, 40, "FM_38D_6_Notch8", 0.45F, 40, false," "),
 	//JCTC GE Diesels
 	Diesel25Ton(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselGE25Ton.class, "wabco_e2", 10F, "GE_HBI_600_Notch8", 0.5F, 15, "GE_HBI_600_Idle", 0.5F, 25, false, " "),
 	Diesel44Ton(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselGE44Ton.class, "hancock_airwhistle", 10F, "CAT_8_D17000_Notch8", 0.5F, 15, "CAT_8_D17000_Idle", 0.5F, 25, false, " "),
