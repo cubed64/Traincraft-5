@@ -1,7 +1,6 @@
 package train.common.items;
 
 import com.mojang.authlib.GameProfile;
-import com.sun.istack.internal.Nullable;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import mods.railcraft.api.carts.IMinecart;
@@ -31,6 +30,7 @@ import train.common.library.Info;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class ItemRollingStock extends ItemMinecart implements IMinecart, IMinecartItem {
