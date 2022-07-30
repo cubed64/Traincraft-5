@@ -548,6 +548,15 @@ item.tc:minecartSD39.name=EMD SD39
 item.tc:minecartH16_66.name=FM H16-66
 item.tc:minecartH24_66.name=FM H24-66
 item.tc:minecartH24_66L.name=FM H24-66 Low Ends
+item.tc:minecartPSRPOPM.name=Pullman Standard RPO (PM Floorplan)
+item.tc:minecartPSRPO.name=Pullman Standard RPO
+item.tc:minecartPSLunchCounter_Lounge.name=Pullman Standard Lunch Counter-Lounge
+item.tc:minecartPS30SeatParlor.name=Pullman Standard 30 Seat Coach
+item.tc:minecartPS54SeatCoach_Lounge.name=Pullman Standard 54 Seat Coach-Lounge
+item.tc:minecartPS58SeatCoach_Observation.name=Pullman Standard 58 Seat Coach-Observation
+item.tc:minecartPSBM56SeatCoach.name=Pullman Standard B&M 56 Seat Coach
+item.tc:minecartPSBMCombine.name=Pullman Standard B&M Combine Passenger-Baggage
+item.tc:minecartPSBMDiner_Lounge.name=Pullman Standard B&M Diner-Lounge
 
 <!-- ## Achievements ## -->
 achievement.tc:engineer=Engineers clothes
@@ -1059,6 +1068,15 @@ entity.tc.SD39.name=EMD SD39
 entity.tc.H16_66.name=FM H16-66
 entity.tc.H24_66.name=FM H24-66
 entity.tc.H24_66L.name=FM H24-66 Low Ends
+entity.tc.PSPMRPO.name=Pullman Standard RPO (PM Floorplan)
+entity.tc.PSRPO.name=Pullman Standard RPO
+entity.tc.PS Lunch Counter-Lounge.name=Pullman Standard Lunch Counter-Lounge
+entity.tc.PS 30 Seat Parlor.name=Pullman Standard 30 Seat Coach
+entity.tc.PS 54 Seat Coach-Lounge.name=Pullman Standard 54 Seat Coach-Lounge
+entity.tc.PS 58 Seat Coach-Observation.name=Pullman Standard 58 Seat Coach-Observation
+entity.tc.PS B&M 56 Seat Coach.name=Pullman Standard B&M 56 Seat Coach
+entity.tc.PS B&M Combine.name=Pullman Standard B&M Combine Passenger-Baggage
+entity.tc.PS B&M Diner_Lounge.name=Pullman Standard B&M Diner-Lounge
 
 description.villager.profession.tc.station_chief=Station Chief
 tile.tc:FortyFootContainer.name= Forty Foot Container

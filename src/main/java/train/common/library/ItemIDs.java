@@ -520,14 +520,25 @@ public enum ItemIDs {
 	minecartPCH120Commute("ItemRollingStock", "pch120", 4),
 	minecartPCH120Car("ItemRollingStock", "pch120car", 3),
 
-	minecartPS73Baggage("ItemRollingStock", "PS_73_baggage_icon", 3),
+	minecartPSRPO("ItemRollingStock", "PSRPOIcon", 3),
 	minecartPS85Baggage("ItemRollingStock", "PS_85_baggage_icon", 3),
-	minecartPS52seatCoach("ItemRollingStock", "PS52seatCoach", 3),
 	minecartPScombine("ItemRollingStock", "PScombine", 3),
-	minecartPSCenterDiner("ItemRollingStock", "PScenterDiner", 3),
+	minecartPS52seatCoach("ItemRollingStock", "PS52seatCoach", 3),
 	minecartPSDamnitAnotherDiner("ItemRollingStock", "BAP_Pullman_Standard_lightweight_center_diner_icom", 3),
 	minecartPSSleeper565("ItemRollingStock", "BAP_PS_lightweight_5-6-5_sleeper_icon", 3),
 	minecartPSSleeper565DRGW("ItemRollingStock", "BAP_PS_lightweight_DRGW_5-6-5_sleeper_icon", 3),
+	minecartPSLunchCounter_Lounge("ItemRollingStock", "PSLunchCounter_Lounge", 3),
+	minecartPS30SeatParlor("ItemRollingStock", "PS30SeatParlor", 3),
+
+	minecartPSRPOPM("ItemRollingStock", "PSRPOPMIcon", 3),
+	minecartPS73Baggage("ItemRollingStock", "PS_73_baggage_icon", 3),
+	minecartPS54SeatCoach_Lounge("ItemRollingStock", "PS54SeatCoach_Lounge", 3),
+	minecartPSCenterDiner("ItemRollingStock", "PScenterDiner", 3),
+	minecartPS58SeatCoach_Observation("ItemRollingStock", "PS58SeatCoach_Observation", 3),
+
+	minecartPSBMCombine("ItemRollingStock", "PSBMCombine", 3),
+	minecartPSBM56SeatCoach("ItemRollingStock", "PSBM56SeatCoach", 3),
+	minecartPSBMDiner_Lounge("ItemRollingStock", "PSBMDiner_Lounge", 3),
 
 	minecartAmfleet("ItemRollingStock", "Amfleet", 3),
 	minecartAmfleet2("ItemRollingStock", "Amfleet2", 3),
