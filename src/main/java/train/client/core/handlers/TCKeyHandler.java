@@ -18,6 +18,7 @@ import train.common.api.Locomotive;
 import train.common.api.SteamTrain;
 import train.common.core.handlers.ConfigHandler;
 import train.common.core.network.PacketKeyPress;
+import train.common.library.EnumSounds;
 import train.common.mtc.packets.PacketATO;
 
 public class TCKeyHandler {
@@ -38,6 +39,8 @@ public class TCKeyHandler {
 	public static KeyBinding lampControl;
 	public static KeyBinding beaconToggle;
 	public static KeyBinding bell;
+
+	public long bellTimerMillis = System.currentTimeMillis();
 
 	public TCKeyHandler() {
 		horn = new KeyBinding("key.traincraft.horn", Keyboard.KEY_H, "key.categories.traincraft");
@@ -124,10 +127,13 @@ public class TCKeyHandler {
 			if (bell.isPressed()) {
 				if (Minecraft.getMinecraft().thePlayer.ridingEntity != null && Minecraft.getMinecraft().thePlayer.ridingEntity instanceof Locomotive) {
 					Locomotive train = (Locomotive) Minecraft.getMinecraft().thePlayer.ridingEntity;
-
-					train.bellPressed=!train.bellPressed;
-
-
+					for (EnumSounds sounds : EnumSounds.values()) {
+						if(bellTimerMillis+ sounds.getBellLength() <System.currentTimeMillis()){//15000 for 15 seconds
+							bellTimerMillis=System.currentTimeMillis();
+							train.bellPressed=!train.bellPressed;
+						}
+					}
+					//train.bellPressed=!train.bellPressed;
 					/*if (train.bellPressed) {
 						train.bellPressed = true;//BELLPRESSED NEEDS TO BE TRUE
 						System.out.println(true);// WHY AREYOUNT TRUE
