@@ -41,6 +41,7 @@ public class TCKeyHandler {
 	public static KeyBinding bell;
 
 	public long bellTimerMillis = System.currentTimeMillis();
+	public long storedMillis = System.currentTimeMillis();
 
 	public TCKeyHandler() {
 		horn = new KeyBinding("key.traincraft.horn", Keyboard.KEY_H, "key.categories.traincraft");
@@ -105,7 +106,7 @@ public class TCKeyHandler {
 			if (horn.isPressed()) {
 				sendKeyControlsPacket(8);
 			}
-			if (lampControl.isPressed()) {
+			/*if (lampControl.isPressed()) {
 				if (Minecraft.getMinecraft().thePlayer.ridingEntity != null && Minecraft.getMinecraft().thePlayer.ridingEntity instanceof Locomotive) {
 					Locomotive train = (Locomotive) Minecraft.getMinecraft().thePlayer.ridingEntity;
 
@@ -122,6 +123,14 @@ public class TCKeyHandler {
 					//lamp is t/f light is number
 				}
 				sendKeyControlsPacket(19);
+			}*/
+			if (lampControl.isPressed()) {//TODO: make lights work eventually
+				/*if (Minecraft.getMinecraft().thePlayer.ridingEntity instanceof Locomotive) {
+					if(storedMillis+ 1000 <System.currentTimeMillis()){//15000 for 15 seconds
+						storedMillis=System.currentTimeMillis();
+					}
+				}
+				sendKeyControlsPacket(19);*/
 			}
 
 			/*if (bell.isPressed()) {
@@ -227,7 +236,7 @@ public class TCKeyHandler {
 			sendKeyControlsPacket(404);
 		}
 
-		if (beaconToggle.isPressed() && Minecraft.getMinecraft().thePlayer.ridingEntity instanceof Locomotive) {
+		if (beaconToggle.isPressed() && Minecraft.getMinecraft().thePlayer.ridingEntity instanceof Locomotive) {//TODO: make lights work eventually
 			Locomotive train = (Locomotive) Minecraft.getMinecraft().thePlayer.ridingEntity;
 			sendKeyControlsPacket(20);
 			train.cycleThroughBeacons();
