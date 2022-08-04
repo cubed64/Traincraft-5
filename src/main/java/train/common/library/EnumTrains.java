@@ -473,7 +473,7 @@ public enum EnumTrains {
 
 	BigMeme("BigMeme", BigMeme.class, ItemIDs.minecartBigMeme.item, "awesome", 1, 200, 0, 50, 0, 0, 0.9, 0.9, 8000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey"}),10 , -1.1),
 	BombCart("Payload", BombCart.class, ItemIDs.minecartBombCart.item, "misc", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"LightBlue", "Red", "Black", "Blue", "Cyan", "Green", "Grey", "Brown", "LightGrey", "Lime", "Magenta", "Orange", "Pink", "Purple", "Yellow", "White"}), 0, 0, (new String[] {"Who is not pushing ze Cart!?"})),
-	Thanos("Thanos", Thanos.class, ItemIDs.minecartThanos.item, "electric", 696969, 6210000, 0, 69, 0, 1, 6, 3, 0, null, 18, -1, (new String[] {"You don't want to mess with the Universe's Best"})),
+	Thanos("Thanos", Thanos.class, ItemIDs.minecartThanos.item, "electric", 696969, 6210000, 0, 69, 0, 1, 6, 30, 0, null, 18, -1, (new String[] {"You don't want to mess with the Universe's Best"})),
 	TGVmobile("TGVmobile", DieselTGVmobile.class, ItemIDs.minecartTGVMobile.item, "diesel", 200, 350, 0, 10, 0, 140, 0.9, 0.9, 1000,null,18, 2.7),
 	HHgregg("HHgregg", DieselHHgregg.class, ItemIDs.minecartHHgregg.item, "awesome", 9932, 299, 0, 42, 0, 48, 0.9, 0.9, 7000, null, 10, -2, (new String[] {"hhhgregg, Panasonic Blu-ray nintey-nine dollars, thirty-two inch LCD TV two-nintey nine, LG fourty-two inch HD TV only four eighty-nine, everything on sale during chirstmas in"})),
 
