@@ -1081,15 +1081,19 @@ public class ModelSB23R extends ModelConverter //Same as Filename
 		for (int i = 0; i < 252; i++) {
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
 
-				if (entity instanceof Locomotive) {
-					Locomotive theLocomotive = ((Locomotive) entity);
-					if (theLocomotive.lampOn) {
+				/*if (entity instanceof Locomotive) {
+					//System.out.println("entity instanceof");
+					Locomotive theLoco = ((Locomotive) entity);
+					//Locomotive theLoco = (Locomotive.lampOn);
+					if (theLoco.lampOn) {
 						Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+						System.out.println(theLoco.lampOn + " model lampon");
+						//System.out.println(theLoco.dothelightthing + " model dolight");
 					} else {
 
 					}
-				}
-				//Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+				}*/
+				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);
 				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
 			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {

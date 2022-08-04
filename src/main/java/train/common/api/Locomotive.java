@@ -56,14 +56,14 @@ import java.util.List;
 import java.util.Random;
 
 public abstract class Locomotive extends EntityRollingStock implements IInventory, WirelessTransmitter {
-    public static boolean lampOn;
+    public boolean lampOn;
+    public boolean dothelightthing;
     public boolean bellPressed;
     public int inventorySize;
     protected ItemStack locoInvent[];
     private int soundPosition = 0;
     public boolean parkingBrake = false;
     private int whistleDelay = 0;
-    private int bellDelay = 0;
     private int bellCount = 0;
     private int blowUpDelay = 0;
     private String lastRider = "";
@@ -563,10 +563,24 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             }
         }
         if (i == 19) {
-            if (lampOn == false) {//if lampon is EQUAL TO false
+            /*if (lampOn == false) {//if lampon is EQUAL TO false
                 lampOn = true;// make lampon EQUAL true
             } else if (lampOn == true) {//if lampon is EQUAL TO true
                 lampOn = false; //make lampon EQUAL false
+            }*/
+            lampOn = !lampOn;
+            if(lampOn){
+                this.dothelightthing = true;
+            }
+            if (!lampOn){
+                dothelightthing =false;
+            }
+
+            if (lampOn){
+                System.out.println(lampOn + " loco.java");
+            }
+            if (!lampOn){
+                System.out.println(lampOn + " loco.java");
             }
         }
 
@@ -919,7 +933,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                     if (bellCount == 0) {
                         soundBell3();
                     }
-//TODO make bellCount have a string in EnumSounds, make bells not ring for every locomotive in the world at once
+
                     if (bellCount > 0) {
                         bellCount--;
                     }

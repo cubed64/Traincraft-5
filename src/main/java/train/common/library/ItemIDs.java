@@ -318,6 +318,10 @@ public enum ItemIDs {
 	tcRailVeryLargeSlopePeaGravel("ItemTCRail", "item_rail_straight_slope_pea_gravel", 3),
 
 	tcRailSuperLargeTurn("ItemTCRail", "item_rail_tc_super_large_turn", 5),
+	tcRailVeryLongStraight("ItemTCRail", "item_rail_straight_very_large", 5),
+	tcRailSmallParallelCurve("ItemTCRail", "item_rail_tc_parallel_curve_small", 3),
+	tcRailMediumParallelCurve("ItemTCRail", "item_rail_tc_parallel_curve_medium", 3),
+	tcRailLargeParallelCurve("ItemTCRail", "item_rail_tc_parallel_curve_large", 3),
 
 	//TC-JCIR
 	remoteController("ItemRemoteController", "remote_controller", 4),
