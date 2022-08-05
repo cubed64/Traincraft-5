@@ -894,7 +894,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                     if (getFuel() > 0 && this.isLocoTurnedOn()) {
                         double speed = Math.sqrt(motionX * motionX + motionZ * motionZ);
                         if (speed > -0.001D && speed < 0.01D && soundPosition == 0) {
-                            worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getIdleString(), sounds.getIdleVolume(), 0.001F);
+                            worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getIdleString(), sounds.getIdleVolume(), 1F);
                             soundPosition = sounds.getIdleSoundLenght();//soundPosition is probably where IN the sound it is currently playing, eg 1 sec int osoudn file
                         }
                         if (sounds.getSoundChangeWithSpeed() && !sounds.getHornString().equals("")&& sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0 && !sounds.getBellString().equals("")) {
@@ -913,7 +913,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                         }
                         else {
                             if (speed > 0.01D && soundPosition == 0) {
-                                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 0.4F);
+                                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 1F);
                                 soundPosition = sounds.getRunSoundLenght();
                             }
                         }
