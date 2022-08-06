@@ -665,7 +665,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
                 worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getBellString(), 1f, 1F);
                 bellCount = sounds.getBellLength();//default 15 for bronze bell
-                System.out.println(bellCount);
+                //System.out.println(bellCount);
 
             }
         }

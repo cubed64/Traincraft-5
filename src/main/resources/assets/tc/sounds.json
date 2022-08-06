@@ -224,6 +224,9 @@
   "1225_whistle": {"category": "master", "sounds": [{"name": "1225_whistle", "stream":  true}]},
   "765_whistle": {"category": "master", "sounds": [{"name": "765_whistle", "stream":  true}]},
 
+  "alco_bronzebell_1": {"category": "master", "sounds": [{"name": "alco_bronzebell_1", "stream":  true}]},
+  "alco_bronzebell_2": {"category": "master", "sounds": [{"name": "alco_bronzebell_2", "stream":  true}]},
+  "alco_bronzebell_3": {"category": "master", "sounds": [{"name": "alco_bronzebell_3", "stream":  true}]},
   "emd_brassbell_1": {"category": "master", "sounds": [{"name": "emd_brassbell_1", "stream":  true}]},
   "emd_brassbell_2": {"category": "master", "sounds": [{"name": "emd_brassbell_2", "stream":  true}]},
   "emd_brassbell_3": {"category": "master", "sounds": [{"name": "emd_brassbell_3", "stream":  true}]},
@@ -253,5 +256,5 @@
   "steambell_4": {"category": "master", "sounds": [{"name": "steambell_4", "stream":  true}]},
   "steambell_5": {"category": "master", "sounds": [{"name": "steambell_5", "stream":  true}]},
   "steambell_6": {"category": "master", "sounds": [{"name": "steambell_6", "stream":  true}]},
-  "transonic_ebell": {"category": "master", "sounds": [{"name": "ge_steelbell_2", "stream":  true}]}
+  "transonic_ebell": {"category": "master", "sounds": [{"name": "transonic_ebell", "stream":  true}]}
 }
