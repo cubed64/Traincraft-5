@@ -23,12 +23,12 @@ import train.common.library.Info;
 
 import java.util.ArrayList;
 
-public class ModelGP40 extends ModelConverter //Same as Filename
+public class ModelGP40new extends ModelConverter //Same as Filename
 {
 	int textureX = 512;
 	int textureY = 256;
 
-	public ModelGP40() //Same as Filename
+	public ModelGP40new() //Same as Filename
 	{
 		bodyModel = new ModelRendererTurbo[550];
 
