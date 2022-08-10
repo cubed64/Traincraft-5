@@ -2818,7 +2818,7 @@ public class ItemTCRail extends ItemPart {
 						tcRail.idDrop = this.type.getItem().item;
 					}
 
-					if (type == TrackTypes.LONG_STRAIGHT) {
+					if (type == TrackTypes.LONG_STRAIGHT || type == TrackTypes.VERY_LONG_STRAIGHT) {
 						placeTrack(world,x, y + 1, z - 3, BlockIDs.tcRail.block, l);
 						TileTCRail tcRail2 = (TileTCRail) world.getTileEntity(x, y + 1, z - 3);
 						tcRail2.setFacing(l);
