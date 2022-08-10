@@ -116,6 +116,9 @@ public class CustomRenderHandler {
         else if (item.getTrackType() == ItemTCRail.TrackTypes.SLOPE_SNOW_GRAVEL) {
             RenderTCRail.modelSlope.render("snow", facing, 0, 0, 0, r, g, b, 0.5f);
         }
+        else if (item.getTrackType() == ItemTCRail.TrackTypes.SLOPE_PEA_GRAVEL) {
+            RenderTCRail.modelSlope.render("peagravel", facing, 0, 0, 0, r, g, b, 0.5f);
+        }
         else if (item.getTrackType() == ItemTCRail.TrackTypes.LARGE_SLOPE_BALLAST) {
             RenderTCRail.modelLargeSlope.render("ballast", facing, 0, 0, 0, r, g, b, 0.5f);
         }
@@ -128,6 +131,9 @@ public class CustomRenderHandler {
         else if (item.getTrackType() == ItemTCRail.TrackTypes.LARGE_SLOPE_SNOW_GRAVEL) {
             RenderTCRail.modelLargeSlope.render("snow", facing, 0, 0, 0, r, g, b, 0.5f);
         }
+        else if (item.getTrackType() == ItemTCRail.TrackTypes.LARGE_SLOPE_PEA_GRAVEL) {
+            RenderTCRail.modelLargeSlope.render("peagravel", facing, 0, 0, 0, r, g, b, 0.5f);
+        }
         else if (item.getTrackType() == ItemTCRail.TrackTypes.VERY_LARGE_SLOPE_BALLAST) {
             RenderTCRail.modelVeryLargeSlope.render("ballast", facing, 0, 0, 0, r, g, b, 0.5f);
         }
@@ -139,6 +145,9 @@ public class CustomRenderHandler {
         }
         else if (item.getTrackType() == ItemTCRail.TrackTypes.VERY_LARGE_SLOPE_SNOW_GRAVEL) {
             RenderTCRail.modelVeryLargeSlope.render("snow", facing, 0, 0, 0, r, g, b, 0.5f);
+        }
+        else if (item.getTrackType() == ItemTCRail.TrackTypes.VERY_LARGE_SLOPE_PEA_GRAVEL) {
+            RenderTCRail.modelVeryLargeSlope.render("peagravel", facing, 0, 0, 0, r, g, b, 0.5f);
         }
 
 

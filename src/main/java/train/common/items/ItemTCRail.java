@@ -391,17 +391,20 @@ public class ItemTCRail extends ItemPart {
 		else if (type == TrackTypes.SLOPE_BALLAST
 				|| type == TrackTypes.SLOPE_GRAVEL
 				|| type == TrackTypes.SLOPE_WOOD
-				|| type == TrackTypes.SLOPE_SNOW_GRAVEL )
+				|| type == TrackTypes.SLOPE_SNOW_GRAVEL
+				|| type == TrackTypes.SLOPE_PEA_GRAVEL)
 			return new int[][]{ {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0} };
 		else if ( type == TrackTypes.LARGE_SLOPE_BALLAST
 				|| type == TrackTypes.LARGE_SLOPE_GRAVEL
 				|| type == TrackTypes.LARGE_SLOPE_WOOD
-				|| type == TrackTypes.LARGE_SLOPE_SNOW_GRAVEL )
+				|| type == TrackTypes.LARGE_SLOPE_SNOW_GRAVEL
+				|| type == TrackTypes.LARGE_SLOPE_PEA_GRAVEL)
 			return new int[][]{ {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {6,0}, {7,0}, {8,0}, {9,0}, {10,0}, {11,0} };
 		else if ( type == TrackTypes.VERY_LARGE_SLOPE_BALLAST
 				|| type == TrackTypes.VERY_LARGE_SLOPE_GRAVEL
 				|| type == TrackTypes.VERY_LARGE_SLOPE_WOOD
-				|| type == TrackTypes.VERY_LARGE_SLOPE_SNOW_GRAVEL )
+				|| type == TrackTypes.VERY_LARGE_SLOPE_SNOW_GRAVEL
+				|| type == TrackTypes.VERY_LARGE_SLOPE_PEA_GRAVEL)
 			return new int[][]{ {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {6,0}, {7,0}, {8,0}, {9,0}, {10,0}, {11,0},
 					{12,0}, {13,0}, {14,0}, {15,0}, {16,0}, {17,0}};
 		else if ( type == TrackTypes.TWO_WAYS_CROSSING )
@@ -422,22 +425,9 @@ public class ItemTCRail extends ItemPart {
 			return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0},
 					{2,1}, {3,1}, {4,1}, {3,2}, {4,2}, {5,2}, {4,3}, {5,3},	{5,4}, {5,5}};
 		else if (type == TrackTypes.SUPER_LARGE_TURN) {
-			return new int[][]{{0, 0}, {0, 1}, {0, 2}, {0, 3}, {0, 4},
-					{1, 1}, {1, 2}, {1, 3}, {1, 4}, {1, 5}, {1, 6},
-					{2, 5}, {2, 6}, {2, 7}, {2, 8},
-					{3, 7}, {3, 8}, {3, 9}, {3, 10},
-					{4, 9}, {4, 10}, {4, 11},
-					{5, 10}, {5, 11}, {5, 12},
-					{6, 11}, {6, 12}, {6, 13},
-					{7, 12}, {7, 13},
-					{8, 12}, {8, 13}, {8, 14},
-					{9, 13}, {9, 14},
-					{10, 13}, {10, 14}, {10, 15},
-					{11, 14}, {11, 15},
-					{12, 14}, {12, 15},
-					{13, 14,}, {13, 15},
-					{14, 15},
-					{15, 15}};
+			return new int[][]{ {0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {6, 1}, {5, 2}, {6, 2}, {7, 2}, {8, 2},
+					{7, 3}, {8, 3}, {9, 3}, {10, 3}, {9, 4}, {10, 4}, {11, 4}, {10, 5}, {11, 5}, {12, 5},  {11, 6}, {12, 6}, {13, 6}, {12, 7}, {13, 7},
+					{12, 8}, {13, 8}, {14, 8}, {13, 9}, {14, 9}, {13, 10}, {14, 10}, {15, 10}, {14, 11}, {15, 11}, {14, 12}, {15, 12}, {14, 12,}, {15, 13}, {15, 14}, {15, 15}};
 		}
 		else if (type == TrackTypes.SMALL_PARALLEL_CURVE)
 			return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {2,1}, {3,1}, {4,1}, {5,1}, {6,1}, {7,1}};
