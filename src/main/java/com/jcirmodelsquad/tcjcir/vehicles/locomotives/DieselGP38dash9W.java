@@ -39,8 +39,8 @@ public class DieselGP38dash9W extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 2.75;
-        double yOffset = 0.15;
+        double distance = 3.1;
+        double yOffset = 0.2;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
         if(side.isServer()){
@@ -121,7 +121,7 @@ public class DieselGP38dash9W extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.5F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.25F;
     }
 
     @Override
