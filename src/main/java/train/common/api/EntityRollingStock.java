@@ -2584,4 +2584,10 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	}
 
 	public ItemStack[] getInventory(){return null;}
+
+	@SideOnly(Side.CLIENT)
+	public boolean isInRangeToRenderDist(double p_70112_1_)
+	{
+		return p_70112_1_ > 1D;
+	}
 }
