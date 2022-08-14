@@ -544,6 +544,9 @@ public enum ItemIDs {
 	minecartPSBM56SeatCoach("ItemRollingStock", "PSBM56SeatCoach", 3),
 	minecartPSBMDiner_Lounge("ItemRollingStock", "PSBMDiner_Lounge", 3),
 
+	minecartACFGNRPO_30("ItemRollingStock", "ACFGNRPO_30", 3),
+	minecartACFGN60SeatCoach("ItemRollingStock", "ACFGN60SeatCoach", 3),
+
 	minecartAmfleet("ItemRollingStock", "Amfleet", 3),
 	minecartAmfleet2("ItemRollingStock", "Amfleet2", 3),
 
