@@ -79,7 +79,7 @@ public class ACFGNRPO_30 extends Freight implements IInventory {
 
 	@Override
 	public String getInventoryName() {
-		return "Pullman Standard RPO";
+		return "American Car & Foundry GN RPO (30' mail section)";
 	}
 
 	@Override
