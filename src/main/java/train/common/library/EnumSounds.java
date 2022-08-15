@@ -169,6 +169,7 @@ public enum EnumSounds {
 	DieselU18B(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselU18B.class, "leslie_s3", 2.5F, "GE_7FDL_8_Notch8", 0.35F, 40, "GE_7FDL_8_Idle", 0.35F, 50, false, "ge_steelbell_2", 21),
 	DieselU18BB(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselU18BB.class, " ", 2.5F, "GE_7FDL_8_Notch8", 0.25F, 40, "GE_7FDL_8_Idle", 0.35F, 50, false, "", 21),
 	DieselU18BW(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselU18BW.class, "leslie_s5t_1", 2.5F, "GE_7FDL_8_Notch8", 0.25F, 40, "GE_7FDL_8_Idle", 0.35F, 50, false, "ge_steelbell_2", 21),
+	DieselU18Balt(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselU18Balt.class, "nathan_m3_2", 2.5F, "GE_7FDL_8_Notch8", 0.35F, 40, "GE_7FDL_8_Idle", 0.35F, 50, false, "ge_steelbell_2", 21),
 	DieselU23B(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselU23B.class, "leslie_s3l", 2.5F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_2", 21),
 	DieselU30C(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselU30C.class, "leslie_s3lr", 2.5F, "GE_7FDL_16_Notch8", 0.5F, 52, "GE_7FDL_16_Idle", 0.5F, 51, false, "ge_steelbell_1", 15),
 	DieselU36C(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselU36C.class, "leslie_s3lr", 2.5F, "GE_7FDL_16_Notch8", 0.5F, 52, "GE_7FDL_16_Idle", 0.5F, 51, false, "ge_steelbell_1", 15),

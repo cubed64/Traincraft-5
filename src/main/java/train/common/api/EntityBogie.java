@@ -795,4 +795,9 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 		this.motionY = this.velocityY;
 		this.motionZ = this.velocityZ;
 	}
+	/*@SideOnly(Side.CLIENT)
+	public boolean isInRangeToRenderDist(double p_70112_1_)
+	{
+		return p_70112_1_ > 1D;
+	}*/
 }

@@ -98,9 +98,9 @@ public class HBC1Cboose extends EntityRollingStock implements IPassenger {
         if (i == 7 && riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
             ((EntityPlayer) riddenByEntity).openGui(Traincraft.instance, GuiIDs.CRAFTING_CART, worldObj, (int) this.posX, (int) this.posY, (int) this.posZ);
         }
-        if (i == 9 && riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
+        /*if (i == 9 && riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
             ((EntityPlayer) riddenByEntity).openGui(Traincraft.instance, GuiIDs.FURNACE_CART, worldObj, (int) this.posX, (int) this.posY, (int) this.posZ);
-        }
+        }*/
     }
 
     @Override

@@ -1520,7 +1520,9 @@ public class ModelU18B extends ModelConverter //Same as Filename
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 0
-				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 20){
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 20
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 2
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 27){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.27, -0.025, 0);

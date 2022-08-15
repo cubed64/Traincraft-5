@@ -2588,6 +2588,6 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	@SideOnly(Side.CLIENT)
 	public boolean isInRangeToRenderDist(double p_70112_1_)
 	{
-		return p_70112_1_ > 1D;
+		return true;
 	}
 }
