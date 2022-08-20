@@ -1591,3 +1591,35 @@ public class ModelU18B extends ModelConverter //Same as Filename
 		return null;
 	}
 }
+
+
+
+/*
+* {"Orange","Skin16", "Red", "Skin17", "LightGrey", "Pink", "Magenta", "Cyan", "Purple", "Lime", "Yellow", "Grey", "Skin18", "Skin19", "Black", "Skin20", "Skin22", "Brown", "LightBlue", "Blue", "Skin23", "Skin24", "Skin25", "Skin26"}
+
+MEC, MEC2, PW, PW2, blandsville, PICK, CSXMOW, northfof, carby, wcp, SCL, SBD, FL, SCL2, TU, TU2, nep purble, nep bluub, ndem, ndem2,
+ csx1, csx2, csx3, csx4, csx5
+
+blomb black
+14, 16, 22, 11, 13, 24, 26, 18
+
+blomb blu
+4,
+
+b black
+8, 17, 5, 3, 0, 20
+
+b silver
+6,
+
+b bababooey mehico
+12
+
+fb black (no need to touch)
+10, 7, 1, 25,
+
+fb blu
+23,
+
+fb silver
+*/
