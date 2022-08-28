@@ -565,6 +565,7 @@ item.tc:minecartPSBMCombine.name=Pullman Standard B&M Combine Passenger-Baggage
 item.tc:minecartPSBMDiner_Lounge.name=Pullman Standard B&M Diner-Lounge
 item.tc:minecartACFGNRPO_30.name=American Car & Foundry GN RPO (30' mail section)
 item.tc:minecartACFGN60SeatCoach.name=American Car & Foundry GN 60 Seat Coach
+item.tc:minecartACFGNDiner_Observation.name=American Car & Foundry GN Diner-Observation
 
 <!-- ## Achievements ## -->
 achievement.tc:engineer=Engineers clothes
@@ -1088,6 +1089,7 @@ entity.tc.PS B&M Combine.name=Pullman Standard B&M Combine Passenger-Baggage
 entity.tc.PS B&M Diner_Lounge.name=Pullman Standard B&M Diner-Lounge
 entity.tc.AC&F GN RPO (30' mail).name=American Car & Foundry GN RPO (30' mail section)
 entity.tc.AC&F GN 60 Seat Coach.name=American Car & Foundry GN 60 Seat Coach
+entity.tc.AC&F GN Diner_Observation.name=American Car & Foundry GN Diner-Observation
 
 description.villager.profession.tc.station_chief=Station Chief
 tile.tc:FortyFootContainer.name= Forty Foot Container

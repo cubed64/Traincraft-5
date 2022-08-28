@@ -463,6 +463,7 @@ public enum EnumTrains {
 
 	ACFGNRPO_30("AC&F GN RPO (30' mail)", ACFGNRPO_30.class, ItemIDs.minecartACFGNRPO_30.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Orange", "Green"}), 18, 27,null),
 	ACFGN60SeatCoach("AC&F GN 60 Seat Coach", ACFGN60SeatCoach.class, ItemIDs.minecartACFGN60SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Orange", "Yellow", "Green", "LightGrey"}), 10, 0, null),
+	ACFGNDinerObservation("AC&F GN Diner-Observation", ACFGNDinerObservation.class, ItemIDs.minecartACFGNDiner_Observation.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Orange",}), 18, 27,null),
 
 	amfleet("Amfleet", Amfleet.class, ItemIDs.minecartAmfleet.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"White", "Grey", "LightGrey", "LightBlue", "Red", "Blue"}), 10, 0, null),
 	amfleet2("Amfleet2", Amfleet2.class, ItemIDs.minecartAmfleet2.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"Blue","LightGrey", "Grey"}), 10, 0, null),
