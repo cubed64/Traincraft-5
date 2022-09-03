@@ -137,7 +137,7 @@ public class DieselCF7angle2 extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "EMD CF7 (DBRR)";
+        return "EMD CF7 (CBRR)";
     }
 
     @Override
