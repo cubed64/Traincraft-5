@@ -741,6 +741,17 @@ public enum RenderEnum {
 	}, 2, true),
 	PETender(TenderPETender.class, new ModelPE_Tender(), "PETender", false, new float[] { 0.1F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 
+	F01(SteamF01.class, new ModelF01(), "F01_texture", false, new float[] {  -1.5F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
+		{
+			add(new double[] { 0D, 0D, 0D });
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] { 2.2D, -0.2D, 0.75D });//pistons
+			//add(new double[] { -0.7D, 1.4D, 0.0D });//dynamo
+		}
+	}, 2, true),
+
 	/**EMD**/
 	F3A( DieselF3A.class,  new ModelF3A(), "f3a_", true,new float[] {-1.375F, 0.1F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.1F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{

@@ -223,6 +223,7 @@
   "aircompresser": {"category": "master", "sounds": [{"name": "aircompresser", "stream":  true}]},
   "1225_whistle": {"category": "master", "sounds": [{"name": "1225_whistle", "stream":  true}]},
   "765_whistle": {"category": "master", "sounds": [{"name": "765_whistle", "stream":  true}]},
+  "steam_idle2": {"category": "master", "sounds": [{"name": "steam_idle2", "stream":  true}]},
 
   "alco_bronzebell_1": {"category": "master", "sounds": [{"name": "alco_bronzebell_1", "stream":  true}]},
   "alco_bronzebell_2": {"category": "master", "sounds": [{"name": "alco_bronzebell_2", "stream":  true}]},

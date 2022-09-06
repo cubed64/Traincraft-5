@@ -216,6 +216,7 @@ public enum EnumSounds {
 	Steam3TruckShay(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamShay3Truck.class, "shay_horn", 0.8F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 21),
 	//JCTC Fictional Steam
 	SteamPE(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamPELoco.class, "pe_whistle", 0.8F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 21),
+	SteamF01(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamF01.class, "shay_horn", 0.8F, "steam_run", 0.2F, 20, "steam_idle2", 0.2F, 24, true, "steambell_4", 21),
 	//JCTC Foreign Steam
 	SteamC11(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamC11.class, "jnr_3chime", 0.8F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "", 0),
 	//JCTC Meme Stuff
