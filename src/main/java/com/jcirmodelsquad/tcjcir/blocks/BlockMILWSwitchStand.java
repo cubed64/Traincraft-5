@@ -73,6 +73,10 @@ public class BlockMILWSwitchStand extends BlockLever {
 
 	}
 
+	@Override
+	public void setBlockBoundsBasedOnState(IBlockAccess world, int x, int y, int z) {
+
+	}
 
 	@Override
 	public void onBlockPlacedBy(World world, int i, int j, int k, EntityLivingBase entityliving, ItemStack stack) {
