@@ -100,7 +100,7 @@ public class FNCC60FootBulk extends Freight implements IInventory {
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
-        return 2.8F;
+        return 3.0F;
     }
 
     @Override
