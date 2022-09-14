@@ -283,7 +283,7 @@ public enum EnumTrains {
 	GP7old("GP7old", DieselGP7old.class, ItemIDs.minecartGP7old.item, "diesel", 1500, 105, 0, 25, 0, 200, 0.80, 0.85, 18000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Blue", "White", "Brown", "Black", "Red", "Green", "Purple", "LightGrey", "Grey", "Lime", "Cyan", "Pink", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22"}), 10, -2.9),
 	GP9old("GP9old", DieselGP9old.class, ItemIDs.minecartGP9old.item, "diesel", 1750, 105, 0, 25, 0, 200, 0.80, 0.85, 18000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Red", "Orange", "Magenta", "Yellow","Black","Brown","Blue","Green"}), 10, -2.9),
 	GP13("GP13", DieselGP13.class, ItemIDs.minecartGP13.item, "diesel", 2510,90,0,25,0,200,0.74,0.85,15000, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "LightBlue", "Black", "Orange", "White", "Yellow"}), 10, 1.4, (new String[] {"Uses the heritage GP40 Model"})),
-	GP15("GP15", DieselGP15.class, ItemIDs.minecartGP15.item, "diesel", 1800, 105, 0, 15, 0, 200, 0.85, 0.85, 15000, TraincraftUtil.getBytesFromColors(new  String[] {"Yellow", "LightGrey", "Cyan", "LightBlue"}), 10, -2.6),
+	GP15("GP15", DieselGP15.class, ItemIDs.minecartGP15.item, "diesel", 1800, 105, 0, 15, 0, 200, 0.85, 0.85, 15000, TraincraftUtil.getBytesFromColors(new  String[] {"Yellow", "LightGrey", "Cyan", "LightBlue", "Skin26"}), 10, -2.6),
 	GP30("GP30", DieselGP30.class, ItemIDs.minecartGP30.item, "diesel", 2250, 114, 0, 30, 0, 200, 0.8, 0.85, 20000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Black", "Yellow", "Blue", "Orange", "White", "Grey", "Red", "Purple", "Pink", "Cyan"}), 10, -3.1),
 	GP38dash2("GP38dash2", DieselGP38dash2.class, ItemIDs.minecartGP38dash2.item, "diesel", 2000, 105, 0, 25, 0, 200, 0.8, 0.85, 20000, TraincraftUtil.getBytesFromColors(new  String[] {"Cyan", "Green", "LightGrey", "Red", "Blue", "Yellow", "Orange", "Grey", "Black", "Pink", "Lime", "Skin16"}), 10, -3.1),
 	GP38dash9W("GP38dash9W", DieselGP38dash9W.class, ItemIDs.minecartGP38dash9W.item, "diesel", 2000, 105, 0, 45, 0, 200, 0.5, 0.85, 10000, null, 10, -3.2),
@@ -295,7 +295,7 @@ public enum EnumTrains {
 	GP49("GP49", DieselGP49.class, ItemIDs.minecartGP49.item, "diesel", 2800, 105, 0, 35, 0, 200, 0.65, 0.85, 20000, null, 10, -3.1),
 
 	SD9("SD9", DieselSD9.class, ItemIDs.minecartSD9.item, "diesel", 1750, 104, 0, 35, 0, 200, 0.75, 0.85, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Green", "Lime", "Orange", "White", "Cyan", "Grey", "Yellow", "LightGrey"}), 10, -3.2),
-	SD38("SD38", DieselSD38.class, ItemIDs.minecartSD38.item, "diesel", 2000, 105, 0, 10, 0, 200, 0.75, 0.85, 12000, TraincraftUtil.getBytesFromColors(new String[] {"White", "LightBlue", "Blue", "Skin16"}), 10, -3.45),
+	SD38("SD38", DieselSD38.class, ItemIDs.minecartSD38.item, "diesel", 2000, 105, 0, 10, 0, 200, 0.75, 0.85, 12000, TraincraftUtil.getBytesFromColors(new String[] {"White", "LightGrey", "LightBlue", "Blue", "Skin16"}), 10, -3.45),
 	SD39("SD39", DieselSD39.class, ItemIDs.minecartSD39.item, "diesel", 2300, 105, 0, 10, 0, 200, 0.75, 0.85, 12000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Brown", "Blue", "Skin16"}), 10, -3.45),
 	SDL39("SDL39", DieselSDL39.class, ItemIDs.minecartSDL39.item, "diesel", 2300, 152, 0, 5, 0, 200, 0.75, 0.85, 7000, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Blue", "Red", "Cyan"}), 10, -3),
 	SD40dash2("SD40-2", DieselSD40dash2.class, ItemIDs.minecartSD40dash2.item, "diesel", 3000, 105, 0, 5, 0, 200, 0.75, 0.85, 12000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "White", "Yellow", "Black", "Cyan", "Skin16", "Skin17", "Skin18", "Red", "Skin19"}), 10, -3.8),
@@ -358,7 +358,7 @@ public enum EnumTrains {
 	C425("C425", DieselC425.class, ItemIDs.minecartC425.item, "diesel", 2500, 113, 0, 40, 0, 200, 0.7, 0.8, 18000, TraincraftUtil.getBytesFromColors(new String[]{"Black", "Orange"}), 10, -2.8),
 	DH643("DH643", DieselDH643.class, ItemIDs.minecartDH643.item, "diesel", 4300, 124, 0, 60, 0, 200, 0.7, 0.87, 26000, null, 10, -4.1),
 
-	HH660("HH660", DieselHH660.class, ItemIDs.minecartHH660.item, "diesel", 660, 50, 0, 15, 0, 200, 0.9, 0.95, 6000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Orange", "Black"}), 10, -2),
+	HH660("HH660", DieselHH660.class, ItemIDs.minecartHH660.item, "diesel", 660, 50, 0, 15, 0, 200, 0.9, 0.95, 6000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Orange", "Black", "Red"}), 10, -2),
 	S2("S2",  DieselS2.class, ItemIDs.minecartS2.item, "diesel", 1000, 96, 0, 15, 0, 200, 0.7, 0.965, 6000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey", "Green", "Orange", "Pink", "White", "Blue", "LightGrey", "Magenta", "Red"}), 18, -2),
 
 	RSD15("RSD15", DieselRSD15.class, ItemIDs.minecartRSD15.item, "diesel", 2400, 105, 0, 30, 0, 200, 0.7, 0.91, 18000, TraincraftUtil.getBytesFromColors(new String[] {"Blue","Cyan", "Grey", "Red"}), 10, -3.7),
@@ -368,7 +368,7 @@ public enum EnumTrains {
 
 	//Fairbanks Morse//
 	H1044("H1044", DieselH1044.class, ItemIDs.minecartH1044.item, "diesel", 1000, 97, 0, 25, 0, 200, 0.75, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[]{"Green", "Yellow", "Black", "Red", "Blue", "Grey", "LightBlue", "Orange", "White", "Lime", "LightGrey"}), 18, -2.2),
-	H16_66("H16-66", DieselH16_66.class, ItemIDs.minecartH16_66.item, "diesel", 1600, 130, 0, 45, 0, 200, 0.87, 0.93, 16000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Yellow", "LightGrey", "Green", "Lime", "Black", "Grey", "Orange", "Brown", "Red", "Pink", "Magenta"}), 10, -3.35),
+	H16_66("H16-66", DieselH16_66.class, ItemIDs.minecartH16_66.item, "diesel", 1600, 130, 0, 45, 0, 200, 0.87, 0.93, 16000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Yellow", "LightGrey", "Green", "Lime", "Black", "Grey", "Orange", "Brown", "Red", "Pink", "Magenta", "Skin16"}), 10, -3.35),
 	H24_66("H24-66", DieselH24_66.class, ItemIDs.minecartH24_66.item, "diesel", 2400, 130, 0, 45, 0, 200, 0.87, 0.93, 18000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Black", "Brown", "Yellow", "Grey", "LightGrey", "Lime"}), 10, -3.75),
 	H24_66L("H24-66L", DieselH24_66L.class, ItemIDs.minecartH24_66L.item, "diesel", 2400, 130, 0, 45, 0, 200, 0.87, 0.93, 18000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Green"}), 10, -3.75),
 
@@ -397,7 +397,7 @@ public enum EnumTrains {
 	RibbedHopper("Freight Ribbed Covered Hopper", RibbedHopper.class, ItemIDs.minecartRibbedHopper.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "Cyan", "LightGrey", "Red", "Brown", "White"}), 18, 36,(new String[] {"Cargo: Any."})),
 	Hopper5201("5201 Cu Foot Hopper", Hopper5201.class, ItemIDs.minecartHopper5201.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "Cyan", "Black"}), 10, 36,(new String[] {"Cargo: Any."})),
 	Hopper6260("6260 Cu Foot Jumbo Hopper", Hopper6260.class, ItemIDs.minecartHopper6260.item, "freight", 6, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "LightGrey", "White"}), 10, 45,(new String[] {"Cargo: Any."})),
-	FNCC2375Hopper("FNCC2375Hopper", FNCC2375Hopper.class, ItemIDs.minecartFNCC2375Hopper.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[]{"Cyan", "Green", "Black", "LightGrey", "Blue", "Skin16", "Skin17", "Purple", "Magenta", "Pink", "Yellow"}), 10, 27,(new String[] {"Cargo: Any."})),
+	FNCC2375Hopper("FNCC2375Hopper", FNCC2375Hopper.class, ItemIDs.minecartFNCC2375Hopper.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[]{"Cyan", "Green", "Black", "LightGrey", "Blue", "Skin16", "Skin17", "Purple", "Magenta", "Pink", "Yellow", "Red", "Skin18"}), 10, 27,(new String[] {"Cargo: Any."})),
 
 	Freight60centerbeam("60centerbeam",  Freight60centerbeam.class, ItemIDs.minecart60centerbeam.item, "freight", 5, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Yellow", "Green", "LightGrey"}), 10, 54, (new String[] {"Cargo: Woodthings."})),
 	Freight66centerbeam("66centerbeam",  Freight66centerbeam.class, ItemIDs.minecart66centerbeam.item, "freight", 5, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Cyan", "Green", "Lime", "LightBlue", "Pink", "Blue", "Yellow", "Red", "Black"}), 0, 54, (new String[] {"Cargo: Woodthings."})),
