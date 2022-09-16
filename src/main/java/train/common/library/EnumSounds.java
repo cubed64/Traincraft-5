@@ -132,7 +132,7 @@ public enum EnumSounds {
 	DieselGP49(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselGP49.class, "nathan_p3_4", 0.8F, "EMD_12_645F3B_Notch8", 0.55F, 57, "EMD_12_645F3B_Idle", 0.55F, 53, false, "prime_speakerbell", 16),
 	DieselSD9(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD9.class, "nathan_m3", 2.5F, "EMD_16_567C_Notch8", 0.45F, 54, "EMD_16_567C_Idle", 0.75F, 48, false, "emd_brassbell_3", 29),
 	DieselSD38(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD38.class, "leslie_rs5t", 0.8F, "EMD_16_645E_Notch8", 0.55F, 53, "EMD_16_645E_Idle", 0.55F, 53, false, "emd_steelbell_5", 21),
-	DieselSD39(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD39.class, "leslie_s3", 0.8F, "EMD_12_645E3_Notch8", 0.65F, 56, "EMD_12_645E3_Idle", 0.65F, 49, false, "emd_steelbell_1", 15),
+	DieselSD39(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD39.class, "leslie_s3", 2.5F, "EMD_12_645E3_Notch8", 0.65F, 56, "EMD_12_645E3_Idle", 0.65F, 49, false, "emd_steelbell_1", 15),
 	DieselSD40dash2(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD40dash2.class, "leslie_sl4t", 2.5F, "EMD_16_645E3_Notch8", 0.65F, 51, "EMD_16_645E3_Idle", 0.8F, 40, false, "emd_steelbell_8", 25),
 	DieselSD40dash2B(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD40dash2B.class, " ", 2.5F, "EMD_16_645E3_Notch8", 0.65F, 51, "EMD_16_645E3_Idle", 0.8F, 40, false, "", 11),
 	DieselSDP40P(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSDP40.class, "leslie_sl4t", 2.5F, "EMD_16_645E3_Notch8", 0.65F, 51, "EMD_16_645E3_Idle", 0.8F, 40, false, "emd_steelbell_8", 25),
