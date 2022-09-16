@@ -2425,10 +2425,10 @@ public class ModelSD38 extends ModelConverter//Same as Filename
 		bodyModel[586].setRotationPoint(-41.5F, -8F, 11F);
 
 		bodyModel[587].addBox(0F, 0F, 0F, 6, 5, 1, 0F); // Box 570
-		bodyModel[587].setRotationPoint(-15.5F, -20.5F, -9.5F);
+		bodyModel[587].setRotationPoint(-15.5F, -20.5F, -7.5F);
 
 		bodyModel[588].addBox(0F, 0F, 0F, 6, 5, 1, 0F); // Box 571
-		bodyModel[588].setRotationPoint(-15.5F, -20.5F, 8.5F);
+		bodyModel[588].setRotationPoint(-15.5F, -20.5F, 6.5F);
 	}
 	ModelFlexicoil_C_Mid flexMid = new ModelFlexicoil_C_Mid();
 	ModelFlexicoil_C_Late flexLate = new ModelFlexicoil_C_Late();
