@@ -2324,6 +2324,15 @@ public class ModelGP40new extends ModelConverter //Same as Filename
 			GL11.glTranslated(2.93, 0, 0);//rear
 			theBlombi.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15){
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_DarkerGrey.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(-1.47, -0.0, 0);//front & rear
+			theBlombi.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glTranslated(2.93, 0, 0);//rear
+			theBlombi.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Blac.png"));
 			GL11.glPushMatrix();
