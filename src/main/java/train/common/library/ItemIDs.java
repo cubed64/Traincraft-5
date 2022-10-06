@@ -336,6 +336,8 @@ public enum ItemIDs {
 	minecartShay3Truck("ItemRollingStock", "3TruckShay", 5),
 	minecartShay3TruckTender("ItemRollingStock", "3TruckShayTender", 4),
 	minecartF01("ItemRollingStock", "f01", 3),
+	minecartBKno2a("ItemRollingStock", "bkno2a", 5),
+	minecartBKno2b("ItemRollingStock", "bkno2a", 5),
 
 	minecartLocoC11("ItemRollingStock", "train_C11", 5),
 	minecartOnion("ItemRollingStock", "Onion", 10),
