@@ -3,11 +3,11 @@ package train.common.mtc;
 import dan200.computercraft.api.peripheral.IComputerAccess;
 
 public class PDMMessage {
-    public static String UUIDFrom;
-    public static String UUIDTo;
-    public static Object message;
-    public static Integer system;
-    private static double distanceTravelled = 0;
+    public String UUIDFrom;
+    public String UUIDTo;
+    public Object message;
+    public Integer system;
+    private double distanceTravelled = 0;
 
     public PDMMessage(String UUIDFrom, String UUIDTo, Object message, Integer system) {
         this.UUIDTo = UUIDTo;
@@ -17,7 +17,7 @@ public class PDMMessage {
         distanceTravelled = 0;
     }
 
-    public static Object[] getEventData(IComputerAccess computer) {
+    public Object[] getEventData(IComputerAccess computer) {
         return new Object[]{computer.getAttachmentName(), UUIDFrom, UUIDTo, message,
                 system};
     }

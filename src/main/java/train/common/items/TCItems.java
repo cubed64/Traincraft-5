@@ -103,6 +103,8 @@ public class TCItems {
 		if (Loader.isModLoaded("ComputerCraft") || Loader.isModLoaded("OpenComputers")) {
 			ItemIDs.wirelessTransmitter.item = new ItemWirelessTransmitter();
 			ItemIDs.atoCard.item = new ItemATOCard();
+			ItemIDs.pennCentral.item = new ItemPennCentralSimCard();
+
 		}
 		//ItemIDs.signalPairingDevice.item = new ItemSignalPairingDevice();
 		ItemIDs.remoteController.item = new ItemRemoteController();

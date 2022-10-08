@@ -50,6 +50,7 @@ import train.common.mtc.LineWaypoint;
 import train.common.mtc.PDMMessage;
 import train.common.mtc.TilePDMInstructionRadio;
 import train.common.mtc.packets.*;
+import train.common.mtc.vbc.TileVBCController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -924,7 +925,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
             }
             if (mtcStatus == 1 || mtcStatus == 2 || !autoTrainOn) {
-                if (mtcType == 2) {
+                if (mtcType == 2 && !isConnecting) {
                     //Send updates every few seconds
                     if (this.ticksExisted % 20 == 0) {
                         sendMTCStatusUpdate();
@@ -1557,6 +1558,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 mtcType = 2;
                 mtcStatus = thing.get("mtcStatus").getAsInt();
                 isConnected = true;
+                isConnecting = false;
                 Traincraft.mscChannel.sendToAllAround(new PacketMTC(getEntityId(), mtcStatus, 2), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
                 speedLimit = thing.get("speedLimit").getAsInt();
                 nextSpeedLimit = thing.get("nextSpeedLimit").getAsInt();
@@ -1626,6 +1628,17 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                     }
 
                 }
+                if (te instanceof TileVBCController) {
+
+                    TileVBCController teP = (TileVBCController) te;
+
+                    if (teP.uniqueID.equals(message.UUIDTo)) {
+
+                        //System.out.println(message.message);
+                        teP.receiveMessage(message);
+                    }
+
+                }
             }
         }
 
@@ -1638,6 +1651,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             //	System.out.println("Oh, that's great! We just got the servers UUID. Now let's try connecting to it.");
             JsonObject sendTo = new JsonObject();
             sendTo.addProperty("funct", "attemptconnection");
+            sendTo.addProperty("entityID", this.getEntityId());
             sendTo.addProperty("trainType", this.trainLevel);
             //	System.out.println(sendTo.toString());
             sendMessage(new PDMMessage(this.trainID, theServerUUID, sendTo.toString(), 0));
@@ -1726,6 +1740,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         sendingObj.addProperty("posX", this.posX);
         sendingObj.addProperty("posY", this.posY);
         sendingObj.addProperty("posZ", this.posZ);
+        sendingObj.addProperty("entityID", this.getEntityId());
         sendingObj.addProperty("atoStatus", this.atoStatus);
         if (this.ridingEntity != null && this.ridingEntity instanceof EntityPlayer) {
             sendingObj.addProperty("driverName", ((EntityPlayer)ridingEntity).getDisplayName());

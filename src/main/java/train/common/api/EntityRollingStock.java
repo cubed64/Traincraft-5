@@ -156,6 +156,9 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	private double derailSpeed = 0.46;
 	private int scrollPosition;
 
+	public String trainNote = "";
+
+
 	public EntityRollingStock(World world) {
 		super(world);
 		initRollingStock(world);
@@ -1552,6 +1555,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		nbttagcompound.setBoolean("firstLoad", this.firstLoad);
 		nbttagcompound.setFloat("rotation", this.rotation);
 		nbttagcompound.setBoolean("brake", isBraking);
+		nbttagcompound.setString("trainNote", trainNote);
 	}
 
 	@Override
@@ -1569,6 +1573,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		this.firstLoad = nbttagcompound.getBoolean("firstLoad");
 		this.rotation = nbttagcompound.getFloat("rotation");
 		this.isBraking = nbttagcompound.getBoolean("brake");
+		this.trainNote = nbttagcompound.getString("trainNote");
 	}
 
 	@Override

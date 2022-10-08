@@ -67,6 +67,7 @@ public enum ItemIDs {
 	adminBook("ItemAdminBook", "item_book_blue", 0),
 	wirelessTransmitter("ItemWirelessTransmitter", "wireless_transmitter", 3),
 	atoCard("ItemATOCard", "ato_card", 5),
+	pennCentral("ItemPennCentralSimCard", "ato_card", 291),
 	paintbrushThing("ItemPaintbrushThing", "paintbrushthing", 9),
 
 

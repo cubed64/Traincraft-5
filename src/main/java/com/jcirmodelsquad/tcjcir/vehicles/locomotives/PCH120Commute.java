@@ -479,7 +479,7 @@ public class PCH120Commute extends ElectricTrain {
                             theNextStation = null;
                         }
                         if (theNextStation != null) {
-                            distanceFromNextStation = this.getDistance(this.theNextStation.stationX, this.theNextStation.stationY, this.theNextStation.stationZ);
+                            //distanceFromNextStation = theNextStation.
                             //Handle normal MTC stuff. Use W-MTC station stops and stuff.. Ooh, speaking of those, set the station stop once the train is close enough.
                         }
 

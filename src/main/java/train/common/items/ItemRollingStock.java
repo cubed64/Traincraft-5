@@ -37,6 +37,7 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
 	private String iconName = "";
 	private String trainName;
 	private String trainCreator;
+	private String trainNote;
 	private int trainColor = -1;
 
 	public ItemRollingStock(String iconName) {
@@ -61,6 +62,7 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
 		}
 		stack.getTagCompound().setInteger("uniqueID", numberOfTrains);
 		stack.getTagCompound().setString("trainCreator", player.getDisplayName());
+		stack.getTagCompound().setString("trainNote", trainNote);
 		return numberOfTrains;
 	}
 
@@ -70,6 +72,7 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
 		if (par1ItemStack.hasTagCompound()) {
 			NBTTagCompound var5 = par1ItemStack.getTagCompound();
 			trainCreator = var5.getString("trainCreator");
+			trainNote = var5.getString("trainNote");
 			/*if (id > 0)
 				par3List.add("\u00a77" + "ID: " + id);*/
 			if (trainCreator.length() > 0) {
@@ -100,11 +103,17 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
 		if(getCargoCapacity()>0){
 			par3List.add("\u00a77" + "Slots: "+getCargoCapacity());
 		}
+		if (trainName.length() > 0) {
+			par3List.add("\u00a77" + "Note: " + trainName);
+		}
 		if(additionnalInfo!=null){
 			for(String info : additionnalInfo){
 				par3List.add("\u00a77" + info);
 			}
 		}
+
+
+		//par3List.add("\u00a77" + "Notes: "+getCargoCapacity());
 	}
 	@Override
 	public EnumRarity getRarity(ItemStack par1ItemStack) {

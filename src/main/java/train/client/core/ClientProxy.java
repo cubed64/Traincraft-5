@@ -1,9 +1,11 @@
 package train.client.core;
 
+import com.jcirmodelsquad.tcjcir.features.WigglyWobblyHandler;
 import com.jcirmodelsquad.tcjcir.render.*;
 
 import com.jcirmodelsquad.tcjcir.tile.*;
 
+import com.sun.java.swing.plaf.windows.WindowsButtonListener;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -59,7 +61,8 @@ public class ClientProxy extends CommonProxy {
 		Calendar cal = Calendar.getInstance();
 		return(cal.get(Calendar.MONTH) == Calendar.DECEMBER || (cal.get(Calendar.MONTH) == Calendar.JANUARY) && cal.get(Calendar.DATE) < 7);
 	}
-	
+
+
 	@Override
 	public void throwAlphaException() {
 		throw new AlphaExpiredException();
@@ -71,6 +74,7 @@ public class ClientProxy extends CommonProxy {
 		ClientTickHandler tickHandler = new ClientTickHandler();
 		CustomRenderHandler renderHandler = new CustomRenderHandler();
 		HUDloco huDloco = new HUDloco();
+		WigglyWobblyHandler wiggle = new WigglyWobblyHandler();
 		if (Loader.isModLoaded("ComputerCraft") || Loader.isModLoaded("OpenComputers")){
 			HUDMTC hudMTC = new HUDMTC();
 
@@ -81,6 +85,7 @@ public class ClientProxy extends CommonProxy {
 		registerEvent(tickHandler);
 		registerEvent(renderHandler);
 		registerEvent(huDloco);
+		registerEvent(wiggle);
 	}
 
 	@Override

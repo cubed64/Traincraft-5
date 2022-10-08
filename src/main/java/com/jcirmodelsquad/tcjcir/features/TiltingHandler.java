@@ -3,7 +3,6 @@ package com.jcirmodelsquad.tcjcir.features;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import train.common.api.EntityRollingStock;
-import train.common.core.handlers.ConfigHandler;
 import train.common.items.ItemTCRail;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;

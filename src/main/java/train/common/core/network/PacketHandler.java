@@ -47,6 +47,8 @@ public class PacketHandler {
 				4, Side.SERVER);
 		Traincraft.lockChannel.registerMessage(PacketSetTrainLockedToClient.Handler.class,
 				PacketSetTrainLockedToClient.class, 5, Side.SERVER);
+		Traincraft.lockChannel.registerMessage(PacketAddNote.Handler.class,
+				PacketAddNote.class, 10, Side.SERVER);
 		Traincraft.ignitionChannel.registerMessage(PacketSetLocoTurnedOn.Handler.class, PacketSetLocoTurnedOn.class,
 				6, Side.SERVER);
 		Traincraft.modChannel.registerMessage(PacketLantern.Handler.class, PacketLantern.class, 7,

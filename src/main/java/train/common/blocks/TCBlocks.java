@@ -20,6 +20,7 @@ import train.common.Traincraft;
 import train.common.library.BlockIDs;
 import train.common.library.Info;
 import train.common.mtc.*;
+import train.common.mtc.vbc.BlockVBCController;
 
 public class TCBlocks {
 
@@ -60,7 +61,7 @@ public class TCBlocks {
 		BlockIDs.tcRailGag.block = new BlockTCRailGag().setHardness(1.0F).setStepSound(Block.soundTypeMetal).setCreativeTab(null);
 		
 		BlockIDs.bridgePillar.block = new BlockBridgePillar().setHardness(3.5F).setStepSound(Block.soundTypeWood);
-
+		BlockIDs.mtcVBCController.block = new BlockVBCController(Material.rock).setHardness(3.5F).setStepSound(Block.soundTypeMetal).setBlockTextureName("tc:vbcController").setBlockName("vbcController").setCreativeTab(Traincraft.tcTab);
 
 		if (Loader.isModLoaded("ComputerCraft") || Loader.isModLoaded("OpenComputers")) {
 			BlockIDs.mtcTransmitterSpeed.block = new BlockInfoTransmitterSpeed(Material.rock).setHardness(3.5F).setStepSound(Block.soundTypeMetal).setBlockTextureName("tc:speedTransmitter").setBlockName("mtcspeedtransmitter").setCreativeTab(Traincraft.tcTab);

@@ -23,7 +23,7 @@ import java.util.List;
 @Optional.Interface(iface = "li.cil.oc.api.network.SimpleComponent", modid = "OpenComputers")
 public class TileATOTransmitterStopPoint extends TileEntity implements IPeripheral, SimpleComponent {
 
-   public Boolean isActivated = false;
+   public boolean isActivated = false;
    public double stopX = 0.0;
    public double stopY = 0.0D;
    public double stopZ = 0.0D;

@@ -3,13 +3,12 @@ package train.common.mtc.vbc;
 
 
 import dan200.computercraft.api.peripheral.IPeripheral;
-import dan200.computercraft.api.peripheral.IPeripheralProvider;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public class BlockVBCController extends BlockContainer implements IPeripheralProvider {
+public class BlockVBCController extends BlockContainer {
 
    public static BlockVBCController instance;
 
@@ -30,6 +29,6 @@ public class BlockVBCController extends BlockContainer implements IPeripheralPro
 
    @Override
    public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
-      return new TileATOTransmitterStopPoint();
+      return new TileVBCController();
    }
 }

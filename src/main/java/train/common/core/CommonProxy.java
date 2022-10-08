@@ -33,6 +33,7 @@ import train.common.entity.zeppelin.AbstractZeppelin;
 import train.common.inventory.*;
 import train.common.library.GuiIDs;
 import train.common.mtc.*;
+import train.common.mtc.vbc.TileVBCController;
 import train.common.tile.*;
 
 import java.lang.reflect.InvocationTargetException;
@@ -90,6 +91,8 @@ public class CommonProxy implements IGuiHandler {
 		GameRegistry.registerTileEntity(TileTCRailGag.class, "tileTCRailGag");
 		GameRegistry.registerTileEntity(TileTCRail.class, "tileTCRail");
 		GameRegistry.registerTileEntity(TileBridgePillar.class, "tileTCBridgePillar");
+
+		GameRegistry.registerTileEntity(TileVBCController.class, "tileVBCController");
 
 		if (Loader.isModLoaded("ComputerCraft") || Loader.isModLoaded("OpenComputers")) {
 			GameRegistry.registerTileEntity(TileInfoTransmitterSpeed.class, "tileInfoTransmitterSpeed");

@@ -26,7 +26,7 @@ public class ItemPennCentralSimCard extends Item {
     @SideOnly(Side.CLIENT)
     @Override
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
-        par3List.add("\u00a77" + "Allows you to use ATO on W-MTC equipped trains");
-        par3List.add("\u00a77" + "Put this in the second inventory slot of a locomotive");
+        par3List.add("\u00a77" + "Penn Central 2077 Simulator");
+        //par3List.add("\u00a77" + "Put this in the second inventory slot of a locomotive");
     }
 }

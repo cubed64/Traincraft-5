@@ -61,7 +61,7 @@ public enum BlockIDs {
 	circleSwitchStand(false,null),
 	owoYardSwitchStand(false,null),
 	snowGravel(false,null),
-	;
+    mtcVBCController(false,null );
 
 	public Block block;
 	public boolean hasItemBlock;
