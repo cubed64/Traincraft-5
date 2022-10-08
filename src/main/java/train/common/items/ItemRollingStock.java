@@ -30,6 +30,7 @@ import train.common.library.Info;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class ItemRollingStock extends ItemMinecart implements IMinecart, IMinecartItem {
@@ -186,17 +187,24 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
 					|| tile.getType().equals(TrackTypes.SMALL_STRAIGHT.getLabel())
 					|| tile.getType().equals(TrackTypes.SMALL_ROAD_CROSSING.getLabel())
 					|| tile.getType().equals(TrackTypes.SMALL_ROAD_CROSSING_1.getLabel())
-					|| tile.getType().equals(TrackTypes.SMALL_ROAD_CROSSING_2.getLabel())) {
+					|| tile.getType().equals(TrackTypes.SMALL_ROAD_CROSSING_2.getLabel())
+					|| tile.getType().equals(TrackTypes.LONG_STRAIGHT.getLabel())
+					|| tile.getType().equals(TrackTypes.VERY_LONG_STRAIGHT.getLabel())
+			) {
 				this.placeCart(par2EntityPlayer, par1ItemStack, par3World, par4, par5, par6);
 				return true;
 			}
-			par2EntityPlayer.addChatMessage(new ChatComponentText("Place me on a straight piece of track !"));
+			par2EntityPlayer.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
 			return false;
 		}else
 		if(tileentity!=null && tileentity instanceof TileTCRailGag){
 			TileTCRailGag tileGag = (TileTCRailGag) tileentity;
 			TileTCRail tile = (TileTCRail) par3World.getTileEntity(tileGag.originX, tileGag.originY, tileGag.originZ);
-			if(tile!=null && tile.getType().equals(TrackTypes.MEDIUM_STRAIGHT.getLabel())){
+			if(tile!=null && tile.getType().equals(TrackTypes.MEDIUM_STRAIGHT.getLabel())
+					|| tile.getType().equals(TrackTypes.LONG_STRAIGHT.getLabel())
+					|| tile.getType().equals(TrackTypes.VERY_LONG_STRAIGHT.getLabel())
+			){
+
 				this.placeCart(par2EntityPlayer, par1ItemStack, par3World, par4, par5, par6);
 				return true;
 			}
@@ -410,6 +418,46 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
 		}
 		return rollingStock;
 	}
+	public static ItemStack setPersistentData(@Nullable ItemStack oldStack, @Nullable AbstractTrains train, @Nullable Integer trainID, @Nullable String player, @Nullable String creator, int color) {
+
+		ItemStack stack = oldStack;
+
+		if (train != null){
+			for (EnumTrains trains : EnumTrains.values()) {
+				if (trains.getEntityClass().equals(train.getClass())) {
+					stack = (new ItemStack(trains.getItem()));
+					break;
+				}
+			}
+		}
+		if(stack!=null) {
+			NBTTagCompound tag = stack.getTagCompound();
+			if(tag==null){
+				tag=new NBTTagCompound();
+			}
+			if(train!=null) {
+				tag.setString("puuid", train.getPersistentUUID());
+				tag.setString("trainCreator", creator==null?train.getEntityData().getString("theCreator"):creator);
+				if(player!=null && player.length()>1) {
+					tag.setString("theOwner", player);
+				}
+				if(color >0) {
+					tag.setInteger("trainColor",color);
+				}
+			} else {
+				tag.setString("trainCreator", creator!=null && creator.length()>1?creator:"Creative");
+			}
+			tag.setInteger("uniqueID", trainID==null?AbstractTrains.uniqueIDs++:trainID);
+
+
+			stack.setTagCompound(tag);
+		} else {
+			return null;//THIS SHOULD NEVER HAPPEN, but compensate anyway because java is stupid and forge is unreliable.
+		}
+		return stack;
+
+	}
+
 
 	@Override
 	public boolean canBePlacedByNonPlayer(ItemStack cart) {

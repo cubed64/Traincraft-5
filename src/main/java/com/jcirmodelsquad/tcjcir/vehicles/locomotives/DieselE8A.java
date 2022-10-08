@@ -13,6 +13,7 @@ import train.common.api.LiquidManager;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
+
 public class DieselE8A extends DieselTrain {
     public DieselE8A(World world) {
         super(world, EnumTrains.E8A.getTankCapacity(), LiquidManager.dieselFilter());
@@ -39,8 +40,8 @@ public class DieselE8A extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 3.375;
-        double yOffset = 0.1875;
+        double distance = 3.6;
+        double yOffset = 0.19;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
         if(side.isServer()){
@@ -122,7 +123,7 @@ public class DieselE8A extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.1875F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.1F;
     }
 
     @Override

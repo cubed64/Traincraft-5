@@ -440,7 +440,7 @@ public class ModelPSscrewyoutoomanydiners extends ModelConverter //Same as Filen
 		bodyModel[398] = new ModelRendererTurbo(this, 238, 219, textureX, textureY); // Box 128
 		bodyModel[399] = new ModelRendererTurbo(this, 226, 205, textureX, textureY); // Box 128
 		bodyModel[400] = new ModelRendererTurbo(this, 213, 207, textureX, textureY); // Box 128
-		bodyModel[401] = new ModelRendererTurbo(this, 232, 231, textureX, textureY); // Box 128 cull
+		bodyModel[401] = new ModelRendererTurbo(this, 232, 231, textureX, textureY, "cull"); // Box 128 cull
 		bodyModel[402] = new ModelRendererTurbo(this, 198, 232, textureX, textureY); // Box 128
 		bodyModel[403] = new ModelRendererTurbo(this, 191, 229, textureX, textureY); // Box 128
 		bodyModel[404] = new ModelRendererTurbo(this, 250, 220, textureX, textureY); // Box 128
@@ -469,8 +469,8 @@ public class ModelPSscrewyoutoomanydiners extends ModelConverter //Same as Filen
 		bodyModel[427] = new ModelRendererTurbo(this, 403, 243, textureX, textureY); // Box 128
 		bodyModel[428] = new ModelRendererTurbo(this, 403, 239, textureX, textureY); // Box 128
 		bodyModel[429] = new ModelRendererTurbo(this, 402, 223, textureX, textureY); // Box 128
-		bodyModel[430] = new ModelRendererTurbo(this, 375, 225, textureX, textureY); // Box 128 cull
-		bodyModel[431] = new ModelRendererTurbo(this, 375, 217, textureX, textureY); // Box 128 cull
+		bodyModel[430] = new ModelRendererTurbo(this, 375, 225, textureX, textureY, "cull"); // Box 128 cull
+		bodyModel[431] = new ModelRendererTurbo(this, 375, 217, textureX, textureY, "cull"); // Box 128 cull
 		bodyModel[432] = new ModelRendererTurbo(this, 354, 229, textureX, textureY); // Box 128
 		bodyModel[433] = new ModelRendererTurbo(this, 366, 211, textureX, textureY); // Box 128
 		bodyModel[434] = new ModelRendererTurbo(this, 415, 234, textureX, textureY); // Box 128
@@ -483,7 +483,7 @@ public class ModelPSscrewyoutoomanydiners extends ModelConverter //Same as Filen
 		bodyModel[441] = new ModelRendererTurbo(this, 438, 198, textureX, textureY); // Box 128
 		bodyModel[442] = new ModelRendererTurbo(this, 434, 198, textureX, textureY); // Box 128
 		bodyModel[443] = new ModelRendererTurbo(this, 464, 205, textureX, textureY); // Box 128
-		bodyModel[444] = new ModelRendererTurbo(this, 464, 217, textureX, textureY); // Box 128 cull
+		bodyModel[444] = new ModelRendererTurbo(this, 464, 217, textureX, textureY, "cull"); // Box 128 cull
 		bodyModel[445] = new ModelRendererTurbo(this, 420, 209, textureX, textureY); // Box 128
 		bodyModel[446] = new ModelRendererTurbo(this, 440, 198, textureX, textureY); // Box 128
 		bodyModel[447] = new ModelRendererTurbo(this, 420, 202, textureX, textureY); // Box 128

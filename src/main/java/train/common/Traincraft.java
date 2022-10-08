@@ -118,7 +118,7 @@ public class Traincraft {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		tcLog.info("Starting JCIR-Traincraft " + Info.modVersion + "!");
+		tcLog.info("Starting Fox-Traincraft " + Info.modVersion + "!");
 		/* Config handler */
 		configDirectory= event.getModConfigurationDirectory();
 		ConfigHandler.init(new File(event.getModConfigurationDirectory(), Info.modName + ".cfg"));

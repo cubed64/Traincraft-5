@@ -18,6 +18,8 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 	public static final ModelSlopeTCTrack modelSlope = new ModelSlopeTCTrack();
 	public static final ModelLargeSlopeTCTrack modelLargeSlope = new ModelLargeSlopeTCTrack();
 	public static final ModelVeryLargeSlopeTCTrack	modelVeryLargeSlope = new ModelVeryLargeSlopeTCTrack();
+	public static final ModelRightParallelCurveTCTrack modelRightParallelCurve = new ModelRightParallelCurveTCTrack();
+	public static final ModelLeftParallelCurveTCTrack modelLeftParallelCurve = new ModelLeftParallelCurveTCTrack();
 
 	public RenderTCRail() {
 		
@@ -30,6 +32,8 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 			
 			if (railTile.hasModel && railTile.getTrackType() != null) {
 				switch (railTile.getTrackType()){
+
+
 					case MEDIUM_TURN:
 					case MEDIUM_RIGHT_TURN: {
 						modelRightTurn.render("medium", railTile, x, y, z);
@@ -84,14 +88,15 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 						modelLeftTurn.render("very_large", railTile, x, y, z);
 						break;
 					}
-					case LONG_STRAIGHT:
-						break;
-					case MEDIUM_STRAIGHT: {
-						modelMediumStraight.render(railTile, x, y, z);
+					case SMALL_STRAIGHT:{
+						modelSmallStraight.render("straight", railTile, x, y, z);
 						break;
 					}
-					case SMALL_STRAIGHT:{
-						modelSmallStraight.render("straight", railTile, x, y, z);break;
+					case MEDIUM_STRAIGHT:
+					case LONG_STRAIGHT:
+					case VERY_LONG_STRAIGHT:{
+						modelMediumStraight.render(railTile, x, y, z);
+						break;
 					}
 					case SMALL_ROAD_CROSSING:{
 						modelRoadCrossing.render("crossing", railTile, x, y, z); break;
@@ -104,6 +109,34 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 					}
 					case TWO_WAYS_CROSSING: {
 						modelTwoWaysCrossing.render(x, y, z);
+						break;
+					}
+					case SMALL_PARALLEL_CURVE:
+					case SMALL_RIGHT_PARALLEL_CURVE:{
+						modelRightParallelCurve.render("small", railTile, x, y, z);
+						break;
+					}
+					case SMALL_LEFT_PARALLEL_CURVE:{
+						modelLeftParallelCurve.render("small", railTile, x, y, z);
+						break;
+					}
+
+					case MEDIUM_PARALLEL_CURVE:
+					case MEDIUM_RIGHT_PARALLEL_CURVE:{
+						modelRightParallelCurve.render("medium", railTile, x, y, z);
+						break;
+					}
+					case MEDIUM_LEFT_PARALLEL_CURVE:{
+						modelLeftParallelCurve.render("medium", railTile, x, y, z);
+						break;
+					}
+					case LARGE_PARALLEL_CURVE:
+					case LARGE_RIGHT_PARALLEL_CURVE: {
+						modelRightParallelCurve.render("large", railTile, x, y, z);
+						break;
+					}
+					case LARGE_LEFT_PARALLEL_CURVE: {
+						modelLeftParallelCurve.render("large", railTile, x, y, z);
 						break;
 					}
 					case SLOPE_WOOD: {
@@ -160,6 +193,18 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 					}
 					case SUPER_LARGE_LEFT_TURN: {
 						modelLeftTurn.render("super_large", railTile, x , y,z);
+						break;
+					}
+					case SLOPE_PEA_GRAVEL: {
+						modelSlope.render("peagravel", railTile, x, y, z);
+						break;
+					}
+					case LARGE_SLOPE_PEA_GRAVEL: {
+						modelLargeSlope.render("peagravel", railTile, x, y, z);
+						break;
+					}
+					case VERY_LARGE_SLOPE_PEA_GRAVEL: {
+						modelVeryLargeSlope.render("peagravel", railTile, x, y, z);
 						break;
 					}
 

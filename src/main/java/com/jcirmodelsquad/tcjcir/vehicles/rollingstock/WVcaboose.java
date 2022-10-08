@@ -4,8 +4,10 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import train.common.Traincraft;
 import train.common.api.EntityRollingStock;
 import train.common.api.IPassenger;
+import train.common.library.GuiIDs;
 
 public class WVcaboose extends EntityRollingStock implements IPassenger {
     public WVcaboose(World world) {
@@ -29,24 +31,24 @@ public class WVcaboose extends EntityRollingStock implements IPassenger {
             riddenByEntity.setPosition(posX + 0.0f, posY + getMountedYOffset() + riddenByEntity.getYOffset() + 0.3125, posZ + 0.0);
         }
     }
-   /* @Override
-    public void updateRiderPosition() {
+    /*public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = -0.25; //efault 0 for center
-        double distance2 = 1.0;
-        double yOffset = 0.33;
-        float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 0));//these basically determine the rotation of the hitbox, default 90 each
-        float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 0)));// when 90 the rider position sticks to the side
+        double distance = 0.2;
+        double yOffset = 0.4;
+        float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw));
+        float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw)));
         if(side.isServer()){
-            rotationCos1 = (float) Math.cos(Math.toRadians(this.serverRealRotation + 0));//same as above but server-based, needs testing tho
-            rotationSin1 = (float) Math.sin(Math.toRadians((this.serverRealRotation + 0)));
+            rotationCos1 = (float) Math.cos(Math.toRadians(this.serverRealRotation));
+            rotationSin1 = (float) Math.sin(Math.toRadians((this.serverRealRotation)));
             anglePitchClient = serverRealPitch*60;
         }
-        float pitch = (float) (posY + ((Math.tan(pitchRads) * distance) + getMountedYOffset()) + riddenByEntity.getYOffset() + yOffset);
+        float pitch = (float) (posY + ((Math.tan(pitchRads) * distance) + getMountedYOffset())
+                + riddenByEntity.getYOffset() + yOffset);
         float pitch1 = (float) (posY + getMountedYOffset() + riddenByEntity.getYOffset() + yOffset);
         double bogieX1 = (this.posX + (rotationCos1 * distance));
         double bogieZ1 = (this.posZ + (rotationSin1* distance));
+        //System.out.println(rotationCos1+" "+rotationSin1);
         if(anglePitchClient>20 && rotationCos1 == 1){
             bogieX1-=pitchRads*2;
             pitch-=pitchRads*1.2;
@@ -85,6 +87,19 @@ public class WVcaboose extends EntityRollingStock implements IPassenger {
             }
         }
         return true;
+    }
+
+    @Override
+    public void pressKey(int i) {
+        if(locked && riddenByEntity != null && riddenByEntity instanceof EntityPlayer&& !((EntityPlayer)riddenByEntity).getDisplayName().toLowerCase().equals(this.trainOwner.toLowerCase())){
+            return;
+        }
+        if (i == 7 && riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
+            ((EntityPlayer) riddenByEntity).openGui(Traincraft.instance, GuiIDs.CRAFTING_CART, worldObj, (int) this.posX, (int) this.posY, (int) this.posZ);
+        }
+        if (i == 9 && riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
+            ((EntityPlayer) riddenByEntity).openGui(Traincraft.instance, GuiIDs.FURNACE_CART, worldObj, (int) this.posX, (int) this.posY, (int) this.posZ);
+        }
     }
 
     @Override

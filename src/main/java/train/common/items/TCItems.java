@@ -46,7 +46,7 @@ public class TCItems {
 		ItemIDs.creditsBook.item = new ItemCreditsBook();
 		ItemIDs.paintbrushThing.item = new ItemPaintbrushThing();
 
-		ItemIDs.stake.item = new ItemStacked(200);
+		ItemIDs.stake.item = new ItemStacked(1200);
 		ItemIDs.airship.item = new ItemZeppelins(0);
 		ItemIDs.zeppelin.item = new ItemZeppelins(1);
 		ItemIDs.overalls.item = new ItemTCArmor(ItemIDs.overalls.iconName, Traincraft.instance.armor, Traincraft.trainArmor, 2,0);
@@ -96,9 +96,15 @@ public class TCItems {
 		ItemIDs.tcRailSlopeSnowGravel.item = new ItemTCRail(ItemTCRail.TrackTypes.SLOPE_SNOW_GRAVEL);
 		ItemIDs.tcRailLargeSlopeSnowGravel.item = new ItemTCRail(ItemTCRail.TrackTypes.LARGE_SLOPE_SNOW_GRAVEL);
 		ItemIDs.tcRailVeryLargeSlopeSnowGravel.item = new ItemTCRail(ItemTCRail.TrackTypes.VERY_LARGE_SLOPE_SNOW_GRAVEL);
+		ItemIDs.tcRailSlopePeaGravel.item = new ItemTCRail(ItemTCRail.TrackTypes.SLOPE_PEA_GRAVEL);
+		ItemIDs.tcRailLargeSlopePeaGravel.item = new ItemTCRail(ItemTCRail.TrackTypes.LARGE_SLOPE_PEA_GRAVEL);
+		ItemIDs.tcRailVeryLargeSlopePeaGravel.item = new ItemTCRail(ItemTCRail.TrackTypes.VERY_LARGE_SLOPE_PEA_GRAVEL);
 
 		ItemIDs.tcRailSuperLargeTurn.item = new ItemTCRail(ItemTCRail.TrackTypes.SUPER_LARGE_TURN);
-
+		ItemIDs.tcRailVeryLongStraight.item = new ItemTCRail(ItemTCRail.TrackTypes.VERY_LONG_STRAIGHT);
+		ItemIDs.tcRailSmallParallelCurve.item = new ItemTCRail(ItemTCRail.TrackTypes.SMALL_PARALLEL_CURVE);
+		ItemIDs.tcRailMediumParallelCurve.item = new ItemTCRail(ItemTCRail.TrackTypes.MEDIUM_PARALLEL_CURVE);
+		ItemIDs.tcRailLargeParallelCurve.item = new ItemTCRail(ItemTCRail.TrackTypes.LARGE_PARALLEL_CURVE);
 
 		if (Loader.isModLoaded("ComputerCraft") || Loader.isModLoaded("OpenComputers")) {
 			ItemIDs.wirelessTransmitter.item = new ItemWirelessTransmitter();

@@ -54,6 +54,8 @@ public class ItemHandler {
 		int rubberWood = OreDictionary.getOreID("woodRubber");
 		int pulpWood = OreDictionary.getOreID("pulpWood");
 		int dustWood = OreDictionary.getOreID("dustWood");
+		int dw1 = OreDictionary.getOreID("drywallUnfinished");
+		int dw2 = OreDictionary.getOreID("drywallFinished");
 
 		if(itemstack == null) {
 			return false;
@@ -64,9 +66,9 @@ public class ItemHandler {
 		}
 		if (entity instanceof EntityFreightCenterbeam_Wood_1 || entity instanceof EntityFreightCenterbeam_Wood_2 || entity instanceof Freight66centerbeam || entity instanceof Freight60centerbeam ||
 				entity instanceof EntityFlatCartWoodUS || entity instanceof EntityBulkheadFlatCart || entity instanceof EntityFlatCarLogs_DB ||
-				entity instanceof EntityFreightWood || entity instanceof EntityFreightWood2 || entity instanceof Freight73centerbeam || entity instanceof LogcarNP) {
+				entity instanceof EntityFreightWood || entity instanceof EntityFreightWood2 || entity instanceof Freight73centerbeam || entity instanceof LogcarNP || entity instanceof  Thrall63centerbeam) {
             int isid = OreDictionary.getOreID(itemstack);
-			return isid == plankWood || isid == logWood || isid == slabWood || isid == stairWood ||
+			return isid == plankWood || isid == logWood || isid == slabWood || isid == stairWood || isid == dw1|| isid == dw2||
 					itemstack.getItem() == Item.getItemFromBlock(Blocks.ladder) || itemstack.getItem() == Item.getItemFromBlock(Blocks.fence) || itemstack.getItem() == Item.getItemFromBlock(Blocks.fence_gate) || isid == rubberWood;
 		}
 		else if (entity instanceof SkeletonLogCar) {
@@ -104,6 +106,9 @@ public class ItemHandler {
 		}
 		else if (entity instanceof OreJenny) {
 			return oreBlocks(itemstack);
+		}
+		else if (entity instanceof IngotPig) {
+			return ingotItems(itemstack);
 		}
 		else {
 			return true;
@@ -156,5 +161,22 @@ public class ItemHandler {
 			}
 		}
 		return OREDICT_ORES.contains(i.getUnlocalizedName());
+	}
+
+	private static LinkedList<String> OREDICT_INGOTS = null;
+
+	public static boolean ingotItems(ItemStack i){
+		if (OREDICT_INGOTS==null){
+			OREDICT_INGOTS = new LinkedList<>();
+		}
+		if (!OREDICT_INGOTS.contains(i.getUnlocalizedName())){
+			for(Integer ore : OreDictionary.getOreIDs(i)) {
+				if (OreDictionary.getOreName(ore).toLowerCase().startsWith("ingot")){
+					OREDICT_INGOTS.add(i.getUnlocalizedName());
+					return true;
+				}
+			}
+		}
+		return OREDICT_INGOTS.contains(i.getUnlocalizedName());
 	}
 }

@@ -10,6 +10,7 @@
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFlexicoil2;
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeAnew;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -1665,6 +1666,7 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 	}
 	ModelFlexicoil2 theTrucks1 = new ModelFlexicoil2();
 	ModelTypeAClassico theTrucks2 = new ModelTypeAClassico();
+	ModelTypeAnew theTypeA = new ModelTypeAnew();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
@@ -1691,7 +1693,12 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 			GL11.glTranslated(2.13, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 12 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7) {
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 12
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/flexicoil2_Black.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.05, 0.33, 0);
@@ -1710,13 +1717,13 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 			theTrucks1.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/typeAclassico_Black.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/TypeA_new_Black_rolly.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.05, -0.03, 0);
-			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
+			theTypeA.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glTranslated(2.13, 0, 0);
-			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
+			theTypeA.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
 	}

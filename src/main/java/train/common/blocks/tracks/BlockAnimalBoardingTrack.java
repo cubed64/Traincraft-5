@@ -3,6 +3,7 @@
  */
 package train.common.blocks.tracks;
 
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.StampedeRack;
 import mods.railcraft.api.tracks.ITrackEmitter;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -29,7 +30,7 @@ public class BlockAnimalBoardingTrack extends TrackBaseTraincraft implements ITr
 	}
 	@Override
 	public void onMinecartPass(EntityMinecart cart) {
-		if (cart instanceof EntityStockCar || cart instanceof EntityStockCarDRWG) {
+		if (cart instanceof EntityStockCar || cart instanceof EntityStockCarDRWG || cart instanceof StampedeRack) {
 			if (cart.riddenByEntity != null)
 				return;
 			AxisAlignedBB box = null;

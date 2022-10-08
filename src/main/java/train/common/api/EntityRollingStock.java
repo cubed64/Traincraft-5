@@ -72,7 +72,6 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	/** Axis aligned bounding box. */
 	private AxisAlignedBB boundingBoxSmall;
 
-
 	public float maxSpeed;
 	public float railMaxSpeed;
 	public double speedLimiter = 1;
@@ -926,6 +925,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		if (list != null && !list.isEmpty()) {
 			Entity entity;
 			for (Object obj : list) {
+				//if(obj==this.riddenByEntity){continue;}
 				entity = (Entity) obj;
 
 				if (entity != this.riddenByEntity && entity.canBePushed() && entity instanceof EntityMinecart) {
@@ -2413,6 +2413,12 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		int var4 = MathHelper.floor_double(this.boundingBoxSmall.maxX - 0.001D);
 		int var5 = MathHelper.floor_double(this.boundingBoxSmall.maxY - 0.001D);
 		int var6 = MathHelper.floor_double(this.boundingBoxSmall.maxZ - 0.001D);
+		/*int var1 = MathHelper.floor_double(this.getBoundingBox().minX + 0.001D);
+		int var2 = MathHelper.floor_double(this.getBoundingBox().minY + 0.001D);
+		int var3 = MathHelper.floor_double(this.getBoundingBox().minZ + 0.001D);
+		int var4 = MathHelper.floor_double(this.getBoundingBox().maxX - 0.001D);
+		int var5 = MathHelper.floor_double(this.getBoundingBox().maxY - 0.001D);
+		int var6 = MathHelper.floor_double(this.getBoundingBox().maxZ - 0.001D);*/
 
 		if (this.worldObj.checkChunksExist(var1, var2, var3, var4, var5, var6)) {
 			for (int var7 = var1; var7 <= var4; ++var7) {
@@ -2452,7 +2458,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		for (EnumTrains trains : EnumTrains.values()) {
 			if (trains.getEntityClass().equals(this.getClass())) {
-				items.add(new ItemStack(trains.getItem()));
+				items.add(ItemRollingStock.setPersistentData(new ItemStack(trains.getItem()), this,this.getUniqueTrainID(),trainCreator, trainOwner, getColor()));
 				return items;
 			}
 		}
@@ -2583,4 +2589,10 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	}
 
 	public ItemStack[] getInventory(){return null;}
+
+	@SideOnly(Side.CLIENT)
+	public boolean isInRangeToRenderDist(double p_70112_1_)
+	{
+		return true;
+	}
 }

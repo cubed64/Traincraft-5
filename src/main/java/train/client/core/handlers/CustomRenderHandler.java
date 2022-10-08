@@ -66,12 +66,15 @@ public class CustomRenderHandler {
         // Straights
         if (item.getTrackType() == ItemTCRail.TrackTypes.SMALL_STRAIGHT
                 || item.getTrackType() == ItemTCRail.TrackTypes.MEDIUM_STRAIGHT
-                || item.getTrackType() == ItemTCRail.TrackTypes.LONG_STRAIGHT) {
+                || item.getTrackType() == ItemTCRail.TrackTypes.LONG_STRAIGHT
+                || item.getTrackType() == ItemTCRail.TrackTypes.VERY_LONG_STRAIGHT) {
             int length = 1;
             if (item.getTrackType() == ItemTCRail.TrackTypes.MEDIUM_STRAIGHT)
                 length = 3;
-            else if (item.getTrackType() == ItemTCRail.TrackTypes.LONG_STRAIGHT)
+            if (item.getTrackType() == ItemTCRail.TrackTypes.LONG_STRAIGHT)
                 length = 6;
+            else if (item.getTrackType() == ItemTCRail.TrackTypes.VERY_LONG_STRAIGHT)
+                length = 12;
 
             for (int i = 0; i < length; i++) {
                 float dx = dir.getX() * i;
@@ -113,6 +116,9 @@ public class CustomRenderHandler {
         else if (item.getTrackType() == ItemTCRail.TrackTypes.SLOPE_SNOW_GRAVEL) {
             RenderTCRail.modelSlope.render("snow", facing, 0, 0, 0, r, g, b, 0.5f);
         }
+        else if (item.getTrackType() == ItemTCRail.TrackTypes.SLOPE_PEA_GRAVEL) {
+            RenderTCRail.modelSlope.render("peagravel", facing, 0, 0, 0, r, g, b, 0.5f);
+        }
         else if (item.getTrackType() == ItemTCRail.TrackTypes.LARGE_SLOPE_BALLAST) {
             RenderTCRail.modelLargeSlope.render("ballast", facing, 0, 0, 0, r, g, b, 0.5f);
         }
@@ -124,6 +130,9 @@ public class CustomRenderHandler {
         }
         else if (item.getTrackType() == ItemTCRail.TrackTypes.LARGE_SLOPE_SNOW_GRAVEL) {
             RenderTCRail.modelLargeSlope.render("snow", facing, 0, 0, 0, r, g, b, 0.5f);
+        }
+        else if (item.getTrackType() == ItemTCRail.TrackTypes.LARGE_SLOPE_PEA_GRAVEL) {
+            RenderTCRail.modelLargeSlope.render("peagravel", facing, 0, 0, 0, r, g, b, 0.5f);
         }
         else if (item.getTrackType() == ItemTCRail.TrackTypes.VERY_LARGE_SLOPE_BALLAST) {
             RenderTCRail.modelVeryLargeSlope.render("ballast", facing, 0, 0, 0, r, g, b, 0.5f);
@@ -137,6 +146,36 @@ public class CustomRenderHandler {
         else if (item.getTrackType() == ItemTCRail.TrackTypes.VERY_LARGE_SLOPE_SNOW_GRAVEL) {
             RenderTCRail.modelVeryLargeSlope.render("snow", facing, 0, 0, 0, r, g, b, 0.5f);
         }
+        else if (item.getTrackType() == ItemTCRail.TrackTypes.VERY_LARGE_SLOPE_PEA_GRAVEL) {
+            RenderTCRail.modelVeryLargeSlope.render("peagravel", facing, 0, 0, 0, r, g, b, 0.5f);
+        }
+
+
+        else if (item.getTrackType() == ItemTCRail.TrackTypes.SMALL_PARALLEL_CURVE
+                || item.getTrackType() == ItemTCRail.TrackTypes.MEDIUM_PARALLEL_CURVE
+                || item.getTrackType() == ItemTCRail.TrackTypes.LARGE_PARALLEL_CURVE)
+        {
+            float yaw = MathHelper.wrapAngleTo180_float(player.rotationYaw);
+            boolean isLeftTurn = item.getTrackOrientation( facing, yaw ).equals("left");
+
+            if (item.getTrackType() == ItemTCRail.TrackTypes.SMALL_PARALLEL_CURVE || item.getTrackType() == ItemTCRail.TrackTypes.MEDIUM_PARALLEL_CURVE
+                    || item.getTrackType() == ItemTCRail.TrackTypes.LARGE_PARALLEL_CURVE) {
+                String turnSize = "small";
+                if ( item.getTrackType() == ItemTCRail.TrackTypes.MEDIUM_PARALLEL_CURVE )
+                    turnSize = "medium";
+                else if ( item.getTrackType() == ItemTCRail.TrackTypes.LARGE_PARALLEL_CURVE )
+                    turnSize = "large";
+                if ( isLeftTurn )
+                {
+                    RenderTCRail.modelLeftParallelCurve.render( turnSize, facing, 0, 0, 0, r, g, b, a );
+                }
+                else
+                {
+                    RenderTCRail.modelRightParallelCurve.render( turnSize, facing, 0, 0, 0, r, g, b, a );
+                }
+            }
+        }
+
         // Turns
         else if (item.getTrackType() == ItemTCRail.TrackTypes.MEDIUM_TURN
                 || item.getTrackType() == ItemTCRail.TrackTypes.LARGE_TURN
@@ -226,4 +265,5 @@ public class CustomRenderHandler {
 
         GL11.glPopMatrix();
     }
+
 }

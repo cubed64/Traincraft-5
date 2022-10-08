@@ -160,4 +160,5 @@ public class DieselSDL39 extends DieselTrain {
         return canBeAdjusted;
     }
 
+
 }
