@@ -9,6 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.trucks.Modelge_hiad;
 import com.jcirmodelsquad.tcjcir.models.trucks.Modelnewgevotruck;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -1748,7 +1749,8 @@ public class ModelDash944CW extends ModelConverter //Same as Filename
 		bodyModel[412].addBox(0F, 0F, 0F, 2, 1, 1, 0F); // Box 364
 		bodyModel[412].setRotationPoint(15F, -23F, -6.5F);
 	}
-	Modelnewgevotruck theTrucks = new Modelnewgevotruck();
+	//Modelnewgevotruck theTrucks = new Modelnewgevotruck();
+	Modelge_hiad bogie = new Modelge_hiad();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 		for (int i = 0; i < 413; i++) {
@@ -1766,25 +1768,25 @@ public class ModelDash944CW extends ModelConverter //Same as Filename
 		}
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newgevotruck_LightGrey.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/ge_hiad_Silver.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslatef(-1.8F, 0.0F, 0F);
-			theTrucks.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glTranslatef(-2F, 0.0F, 0F);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glRotatef(180, 0, 1, 0);
-			GL11.glTranslated(-3.65F, 0.0F, 0);
-			theTrucks.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glTranslated(-4F, 0.0F, 0);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 
 		} else {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newgevotruck_Black.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/ge_hiad_Black.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslatef(-1.7F, -0.0F, 0F);
-			theTrucks.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glTranslatef(-2.0F, -0.0F, 0F);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glRotatef(180, 0, 1, 0);
-			GL11.glTranslated(-3.4F, 0.0F, 0);
-			theTrucks.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glTranslated(-4.0F, 0.0F, 0);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 
 		}
@@ -1797,7 +1799,7 @@ public class ModelDash944CW extends ModelConverter //Same as Filename
 			}
 		};
 	}
-	public float[] getTrans() { return new float[]{-2.2F, 0.15F, 0F}; }
+	public float[] getTrans() { return new float[]{-2.0F, 0.15F, 0F}; }
 
 	public float[] getRotate() {
 		return new float[] { 0F, 180F, 180F };

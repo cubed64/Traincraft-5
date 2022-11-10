@@ -162,7 +162,7 @@ public enum EnumSounds {
 	DieselDash840BB(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDash840BB.class, " ", 2.5F, "GE_7FDL_16_Notch8", 0.65F, 52, "GE_7FDL_16_Idle", 0.65F, 51, false, "ge_steelbell_1", 15),
 	DieselDash840BW(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDash840BW.class, "leslie_s3l", 2.5F, "GE_7FDL_16_Notch8", 0.65F, 52, "GE_7FDL_16_Idle", 0.65F, 51, false, "ge_steelbell_1", 15),
 	DieselDash840C(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDash840C.class, "leslie_s3lr", 2.5F, "GE_FDL16_Notch8", 0.5F, 23, "GE_FDL16_Idle", 0.5F, 103, false, "ge_steelbell_1", 15),
-	DieselDash9C44W(DieselDash944CW.class, "nathan_k3la_4", 2.5F, "GE_7FDL_16_Notch8", 0.65F, 52, "GE_7FDL_16_Idle", 0.65F, 50, false, "ge_steelbell_1", 15),
+	DieselDash9C44W(DieselDash944CW.class, "nathan_p5", 2.5F, "GE_7FDL_16_Notch8", 0.65F, 52, "GE_7FDL_16_Idle", 0.65F, 50, false, "ge_steelbell_1", 15),
 	DieselES44(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselES44.class, "nathan_k5hll", 1F, "GE_GEVO_12_Notch8", 0.65F, 20, "GE_GEVO_12_Idle", 0.75F, 50, false, "ge_ebell", 16),
 	GeGenesis(com.jcirmodelsquad.tcjcir.vehicles.locomotives.GeGenesis.class, "nathan_k5la", 2.5F, "GE_7FDL_16_Notch8", 0.65F, 52, "GE_7FDL_16_Idle", 0.65F, 51, false, "ge_steelbell_1", 15),
 	DieselSF30C(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSF30C.class, "leslie_s3lr", 2.5F, "GE_FDL16_Notch8", 0.5F, 23, "GE_FDL16_Idle", 0.5F, 103, false, "ge_steelbell_1", 15),
