@@ -1075,7 +1075,7 @@ public enum RenderEnum {
 		{ }
 	}, "", null, 0, false),
 
-	Dash944CW( DieselDash944CW.class,  new ModelDash9_44CW(), "d9-44cw_", true,new float[] {-2.2F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+	Dash944CW( DieselDash944CW.class,  new ModelDash944CW(), "dash9_44cw_", true,new float[] {-2.2F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
 
