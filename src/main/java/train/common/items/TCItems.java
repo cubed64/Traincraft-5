@@ -106,12 +106,10 @@ public class TCItems {
 		ItemIDs.tcRailMediumParallelCurve.item = new ItemTCRail(ItemTCRail.TrackTypes.MEDIUM_PARALLEL_CURVE);
 		ItemIDs.tcRailLargeParallelCurve.item = new ItemTCRail(ItemTCRail.TrackTypes.LARGE_PARALLEL_CURVE);
 
-		if (Loader.isModLoaded("ComputerCraft") || Loader.isModLoaded("OpenComputers")) {
 			ItemIDs.wirelessTransmitter.item = new ItemWirelessTransmitter();
 			ItemIDs.atoCard.item = new ItemATOCard();
 			ItemIDs.pennCentral.item = new ItemPennCentralSimCard();
 
-		}
 		//ItemIDs.signalPairingDevice.item = new ItemSignalPairingDevice();
 		ItemIDs.remoteController.item = new ItemRemoteController();
 		ItemIDs.remoteControllerModule.item = new ItemRemoteControllerModule();

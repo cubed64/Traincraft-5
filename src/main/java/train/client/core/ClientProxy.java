@@ -49,6 +49,8 @@ import train.common.entity.zeppelin.EntityZeppelinTwoBalloons;
 import train.common.library.BlockIDs;
 import train.common.library.GuiIDs;
 import train.common.library.Info;
+import train.common.mtc.TileTransmitterSpeed;
+import train.common.mtc.TileTransmitterStopPoint;
 import train.common.tile.*;
 
 import java.lang.reflect.InvocationTargetException;
@@ -74,12 +76,11 @@ public class ClientProxy extends CommonProxy {
 		ClientTickHandler tickHandler = new ClientTickHandler();
 		CustomRenderHandler renderHandler = new CustomRenderHandler();
 		HUDloco huDloco = new HUDloco();
+		HUDloco huDloco = new HUDloco();
 		WigglyWobblyHandler wiggle = new WigglyWobblyHandler();
-		if (Loader.isModLoaded("ComputerCraft") || Loader.isModLoaded("OpenComputers")){
-			HUDMTC hudMTC = new HUDMTC();
-
-			registerEvent(hudMTC);
-		}
+		HUDMTC hudMTC = new HUDMTC();
+		registerEvent(hudMTC);
+		registerEvent(hudMTC);
 	/*	HudTiltingHandler tiltingHandler = new HudTiltingHandler();
 		registerEvent(tiltingHandler);*/
 		registerEvent(tickHandler);
