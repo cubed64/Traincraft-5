@@ -1778,6 +1778,17 @@ public class ModelDash944CW extends ModelConverter //Same as Filename
 			bogie.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 
+		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/ge_hiad_SP_2.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-2F, 0.0F, 0F);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(-4F, 0.0F, 0);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/ge_hiad_Black.png"));
 			GL11.glPushMatrix();

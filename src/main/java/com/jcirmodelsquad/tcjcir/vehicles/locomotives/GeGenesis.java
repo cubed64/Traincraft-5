@@ -16,7 +16,7 @@ import train.common.library.GuiIDs;
 
 public class GeGenesis extends DieselTrain {
     public GeGenesis(World world) {
-        super(world, EnumTrains.SD45dash2.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.geGenesis.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
     }

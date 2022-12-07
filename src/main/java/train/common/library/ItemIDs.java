@@ -338,6 +338,8 @@ public enum ItemIDs {
 	minecartF01("ItemRollingStock", "f01", 3),
 	minecartBKno2a("ItemRollingStock", "bkno2a", 5),
 	minecartBKno2b("ItemRollingStock", "bkno2a", 5),
+	minecartWCPBuckingBull("ItemRollingStock", "wcp_buckingbull", 4),
+	minecartWCPBaler("ItemRollingStock", "wcp_baler", 2),
 
 	minecartLocoC11("ItemRollingStock", "train_C11", 5),
 	minecartOnion("ItemRollingStock", "Onion", 10),
@@ -350,6 +352,7 @@ public enum ItemIDs {
 	minecartF3A( "ItemRollingStock", "f3a", 4),
 	minecartF7A("ItemRollingStock", "f7a", 5),
 	minecartF7B("ItemRollingStock", "f7b", 5),
+	minecartBUnitF7B("ItemRollingStock", "f7b", 5),
 	minecartCF7angle("ItemRollingStock", "cf7angle", 3),
 	minecartCF7round("ItemRollingStock", "cf7round", 3),
 	minecartCF7angle2("ItemRollingStock", "cf7dbrr", 2),
@@ -357,13 +360,16 @@ public enum ItemIDs {
 
 	minecartE7A("ItemRollingStock", "e7a",5),
 	minecartE7B("ItemRollingStock", "e7b",5),
+	minecartBUnitE7B("ItemRollingStock", "e7b",5),
 	minecartE8A( "ItemRollingStock", "e8a", 5),
 	minecartE8B( "ItemRollingStock", "e8b", 5),
+	minecartBUnitE8B( "ItemRollingStock", "e8b", 5),
 	minecartE9A( "ItemRollingStock", "e9a", 5),
 	minecartE9B( "ItemRollingStock", "e9b", 5),
 
 	minecartGP7("ItemRollingStock", "gp7", 3),
 	minecartGP7b("ItemRollingStock", "gp7b", 3),
+	minecartBUnitGP7b("ItemRollingStock", "gp7b", 4),
 	minecartGP7u("ItemRollingStock", "gp7u", 3),
 	minecartGP7f("ItemRollingStock", "gp7f", 3),
 	minecartGP9("ItemRollingStock", "gp9", 3),
@@ -388,9 +394,10 @@ public enum ItemIDs {
 	minecartSD40dash2("ItemRollingStock", "sd40dash2", 4),
 	minecartSD40T2("ItemRollingStock", "sd40t2", 4),
 	minecartSD40dash2B("ItemRollingStock", "sd40dash2b", 4),
+	minecartSD40R("ItemRollingStock", "sd40r", 4),
 	minecartSDP40("ItemRollingStock", "sdp40icon", 5),
 	minecartSDP40F("ItemRollingStock","sdp40f",5),
-	minecartSD45dash2("ItemRollingStock", "sd45dash2", 5),
+	minecartSD45dash2("ItemRollingStock", "sd45", 5),
 	minecartSD45dash2B("ItemRollingStock", "sd45dash2b", 5),
 	minecartF45("ItemRollingStock", "f45", 5),
 	minecartFP45("ItemRollingStock", "fp45", 5),
@@ -426,6 +433,7 @@ public enum ItemIDs {
 
 	minecartDash840B("ItemRollingStock", "B40-8", 4),
 	minecartDash840BB("ItemRollingStock", "B40-8B", 4),
+	minecartBUnitDash840BB("ItemRollingStock", "B40-8B", 4),
 	minecartDash840BW("ItemRollingStock", "B40-8W", 4),
 	minecartDash840C("ItemRollingStock", "C40-8", 4),
 
@@ -462,6 +470,7 @@ public enum ItemIDs {
 	minecartNRE3gs21b("ItemRollingStock", "3gs21b", 4),
 	minecartgtavthing("ItemRollingStock", "gtavthing", 7),
 	minecartFOLM1B("ItemRollingStock", "folm1b", 9),
+	minecartBUnitFOLM1B("ItemRollingStock", "folm1b", 4),
 	minecartKrautt("ItemRollingStock", "ML4000", 5),
 	minecartILMC("ItemRollingStock", "ILMC_ICON", 2),
 
