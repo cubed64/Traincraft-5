@@ -22,9 +22,9 @@ public class BUnitF7 extends LiquidTank implements IFluidHandler {
 	private LiquidManager.StandardTank theTank;
 
 	public BUnitF7(World world) {
-		super(world, EnumTrains.BUnitF7B.getTankCapacity());
+		super(world, EnumTrains.F7B.getTankCapacity());
 		initFreightWater();
-		this.theTank = LiquidManager.getInstance().new FilteredTank(EnumTrains.BUnitF7B.getTankCapacity(), LiquidManager.dieselFilter());
+		this.theTank = LiquidManager.getInstance().new FilteredTank(EnumTrains.F7B.getTankCapacity(), LiquidManager.dieselFilter());
 	}
 
 	public BUnitF7(World world, double d, double d1, double d2) {
@@ -67,14 +67,14 @@ public class BUnitF7 extends LiquidTank implements IFluidHandler {
 
 		if (getAmount() > 0) {
 			// setColor(getColorFromString("Full"));
-			setDefaultMass(-EnumTrains.BUnitF7B.getMass()*2);
+			setDefaultMass(-EnumTrains.F7B.getMass()*2);
 			if ((motionX>0.01 || motionZ>0.01) && ticksExisted % 40 == 0) {
 				drain(ForgeDirection.UNKNOWN, 8,true);
 			}
 			
 		} else if (getAmount() <= 0) {
 			// setColor(getColorFromString("Empty"));
-			setDefaultMass(EnumTrains.BUnitF7B.getMass());
+			setDefaultMass(EnumTrains.F7B.getMass());
 		}
 	}
 

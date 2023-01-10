@@ -32,7 +32,7 @@ public class ModelCF7angle2 extends ModelConverter //Same as Filename
 
 	public ModelCF7angle2() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[519];
+		bodyModel = new ModelRendererTurbo[521];
 
 		initbodyModel_1();
 		initbodyModel_2();
@@ -2094,6 +2094,8 @@ public class ModelCF7angle2 extends ModelConverter //Same as Filename
 		bodyModel[516] = new ModelRendererTurbo(this, 272, 60, textureX, textureY); // Box 523
 		bodyModel[517] = new ModelRendererTurbo(this, 266, 66, textureX, textureY, "cull"); // Box 522 tall arrestor cull
 		bodyModel[518] = new ModelRendererTurbo(this, 272, 60, textureX, textureY); // Box 523
+		bodyModel[519] = new ModelRendererTurbo(this, 140, 53, textureX, textureY); // Box 519 frame stripe fix
+		bodyModel[520] = new ModelRendererTurbo(this, 154, 32, textureX, textureY); // Box 520 frame stripe fix
 
 		bodyModel[500].addShapeBox(0F, 0F, 0F, 7, 1, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F); // Box 5 AWW 2window
 		bodyModel[500].setRotationPoint(-18F, -18F, -10F);
@@ -2154,13 +2156,19 @@ public class ModelCF7angle2 extends ModelConverter //Same as Filename
 
 		bodyModel[518].addShapeBox(0F, 0F, 0F, 2, 1, 4, 0F,-0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 523
 		bodyModel[518].setRotationPoint(10.75F, -25F, -2F);
+
+		bodyModel[519].addShapeBox(0F, 0F, 0F, 18, 1, 0, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 519 frame stripe fix
+		bodyModel[519].setRotationPoint(-9F, 0F, -10.51F);
+
+		bodyModel[520].addShapeBox(0F, 0F, 0F, 18, 1, 0, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 520 frame stripe fix
+		bodyModel[520].setRotationPoint(-9F, 0F, 10.51F);
 	}
 	ModelBlombergBnew theBlomb = new ModelBlombergBnew();
 	ModelTypeBnew theB = new ModelTypeBnew();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 519; i++) {
+		for (int i = 0; i < 521; i++) {
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp") ) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);
@@ -2177,7 +2185,7 @@ public class ModelCF7angle2 extends ModelConverter //Same as Filename
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 21||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 22
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 20||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 27
 		) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver.png"));
 			GL11.glPushMatrix();

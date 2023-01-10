@@ -352,7 +352,7 @@ public enum ItemIDs {
 	minecartF3A( "ItemRollingStock", "f3a", 4),
 	minecartF7A("ItemRollingStock", "f7a", 5),
 	minecartF7B("ItemRollingStock", "f7b", 5),
-	minecartBUnitF7B("ItemRollingStock", "f7b", 5),
+	//minecartBUnitF7B("ItemRollingStock", "f7b", 5),
 	minecartCF7angle("ItemRollingStock", "cf7angle", 3),
 	minecartCF7round("ItemRollingStock", "cf7round", 3),
 	minecartCF7angle2("ItemRollingStock", "cf7dbrr", 2),
@@ -360,16 +360,16 @@ public enum ItemIDs {
 
 	minecartE7A("ItemRollingStock", "e7a",5),
 	minecartE7B("ItemRollingStock", "e7b",5),
-	minecartBUnitE7B("ItemRollingStock", "e7b",5),
+	//minecartBUnitE7B("ItemRollingStock", "e7b",5),
 	minecartE8A( "ItemRollingStock", "e8a", 5),
 	minecartE8B( "ItemRollingStock", "e8b", 5),
-	minecartBUnitE8B( "ItemRollingStock", "e8b", 5),
+	//minecartBUnitE8B( "ItemRollingStock", "e8b", 5),
 	minecartE9A( "ItemRollingStock", "e9a", 5),
 	minecartE9B( "ItemRollingStock", "e9b", 5),
 
 	minecartGP7("ItemRollingStock", "gp7", 3),
 	minecartGP7b("ItemRollingStock", "gp7b", 3),
-	minecartBUnitGP7b("ItemRollingStock", "gp7b", 4),
+	//minecartBUnitGP7b("ItemRollingStock", "gp7b", 4),
 	minecartGP7u("ItemRollingStock", "gp7u", 3),
 	minecartGP7f("ItemRollingStock", "gp7f", 3),
 	minecartGP9("ItemRollingStock", "gp9", 3),
@@ -433,13 +433,15 @@ public enum ItemIDs {
 
 	minecartDash840B("ItemRollingStock", "B40-8", 4),
 	minecartDash840BB("ItemRollingStock", "B40-8B", 4),
-	minecartBUnitDash840BB("ItemRollingStock", "B40-8B", 4),
+	//minecartBUnitDash840BB("ItemRollingStock", "B40-8B", 4),
 	minecartDash840BW("ItemRollingStock", "B40-8W", 4),
 	minecartDash840C("ItemRollingStock", "C40-8", 4),
 
 	minecartDash944CW("ItemRollingStock", "d944cw", 5),
+	minecartAC4400CW("ItemRollingStock", "ac4400cw", 5),
 
 	minecartES44("ItemRollingStock", "es44", 6),
+	minecartGeGenesis("ItemRollingStock", "geGenesis", 4),
 
 	//ALCO//
 	minecartAlcoPA1("ItemRollingStock", "AlcoPA1Icon",5),
@@ -470,9 +472,12 @@ public enum ItemIDs {
 	minecartNRE3gs21b("ItemRollingStock", "3gs21b", 4),
 	minecartgtavthing("ItemRollingStock", "gtavthing", 7),
 	minecartFOLM1B("ItemRollingStock", "folm1b", 9),
-	minecartBUnitFOLM1B("ItemRollingStock", "folm1b", 4),
+	//minecartBUnitFOLM1B("ItemRollingStock", "folm1b", 4),
 	minecartKrautt("ItemRollingStock", "ML4000", 5),
 	minecartILMC("ItemRollingStock", "ILMC_ICON", 2),
+
+	minecartSlugMA("ItemRollingStock", "slugma", 2),
+	minecartF7BSlug("ItemRollingStock", "f7b", 3),
 
 	//E-lect-trock//
 	minecartEF1("ItemRollingStock", "ef1", 6),
@@ -588,17 +593,17 @@ public enum ItemIDs {
 	minecartAipkitExplorer2("ItemRollingStock", "explorer2", 15),
 
 	//ah, but we, are british
-	minecartLUengine("ItemRollingStock","luengine", 3),
-	minecartLUcar("ItemRollingStock","lupassenger", 2),
-	minecartClass345engine("ItemRollingStock", "Class345Engine", 3),
-	minecartClass345car("ItemRollingStock", "class345coach", 2),
+	//minecartLUengine("ItemRollingStock","luengine", 3),
+	//minecartLUcar("ItemRollingStock","lupassenger", 2),
+	//minecartClass345engine("ItemRollingStock", "Class345Engine", 3),
+	//minecartClass345car("ItemRollingStock", "class345coach", 2),
 
 
 	//undecided stuff//
 	//minecartBaldwinMineLoco("ItemRollingStock", "baldwinmineloco", 1),
 	minecartHighrailTruck("ItemRollingStock", "highrail", 3),
 	minecartFRED("ItemRollingStock", "fred", 5),
-	minecartGeGenesis("ItemRollingStock", "geGenesis", 14),
+
 	//minecartHuskyStackWellcar("ItemRollingStock", "huskystack", 3),
 	minecartHustler("ItemRollingStock", "hustler", 2),
 	minecartBoulderWagon("ItemRollingStock","BoulderWagon",3),

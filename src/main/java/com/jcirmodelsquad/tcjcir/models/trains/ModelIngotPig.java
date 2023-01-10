@@ -219,7 +219,7 @@ public class ModelIngotPig extends ModelConverter //Same as Filename
 
 		/*GL11.glPushMatrix();
 		modelSmallStraight = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_normal.obj"));
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+		tmt.Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
 
 		GL11.glTranslated(-0.0,1.0,-0.0);
 		GL11.glScalef(16f,16f,16f);

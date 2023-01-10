@@ -28,6 +28,8 @@ public enum BlockIDs {
 
 	stopper(false, null),
 
+	americanstopper(false, null),
+
 	openFurnaceIdle(false, null),
 	openFurnaceActive(false, null),
 	oreTC(true, ItemBlockOreTC.class),
