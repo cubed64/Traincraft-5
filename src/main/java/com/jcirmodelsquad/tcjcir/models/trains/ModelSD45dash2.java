@@ -2363,7 +2363,7 @@ public class ModelSD45dash2 extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 27565
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 26 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 27
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 28) {
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 28 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 29) {
 
 			//black dash 2 truck
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_C_dash2_Black.png"));

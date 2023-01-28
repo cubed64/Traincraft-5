@@ -476,14 +476,6 @@ public class Model29080DOT111 extends ModelConverter //Same as Filename
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Greyish.png"));
 		}
 
-		/*GL11.glPushMatrix();
-		GL11.glScalef(1,1,0.9f);
-		GL11.glTranslated(-1.85,0.6,-0.4);
-		bogie.render(entity,f,f1,f2,f3,f4,f5);
-
-		GL11.glTranslated(3.4375,0,0.03);
-		bogie.render(entity,f,f1,f2,f3,f4,f5);
-		GL11.glPopMatrix();*/
 		GL11.glPushMatrix();
 		GL11.glScalef(1,1,1f);
 		GL11.glTranslated(-1.73,0.0,-0.0);

@@ -377,7 +377,8 @@ public enum ItemIDs {
 	minecartGP9old("ItemRollingStock", "gp9old", 3),
 	minecartGP13("ItemRollingStock", "gp13", 3),
 	minecartGP15("ItemRollingStock", "gp15", 3),
-	minecartGP30("ItemRollingStock", "gp30", 4),
+	minecartGP30("ItemRollingStock", "gp30", 3),
+	minecartGP35("ItemRollingStock", "gp35", 3),
 	minecartGP38dash2("ItemRollingStock", "gp38dash2", 4),
 	minecartGP38dash9W("ItemRollingStock", "gp38dash9w", 3),
 	minecartGP38h3("ItemRollingStock", "gp38h3icon", 4),
@@ -395,6 +396,7 @@ public enum ItemIDs {
 	minecartSD40T2("ItemRollingStock", "sd40t2", 4),
 	minecartSD40dash2B("ItemRollingStock", "sd40dash2b", 4),
 	minecartSD40R("ItemRollingStock", "sd40r", 4),
+	minecartSD40A("ItemRollingStock", "sd40a", 4),
 	minecartSDP40("ItemRollingStock", "sdp40icon", 5),
 	minecartSDP40F("ItemRollingStock","sdp40f",5),
 	minecartSD45dash2("ItemRollingStock", "sd45", 5),
@@ -453,6 +455,7 @@ public enum ItemIDs {
 	minecartC424("ItemRollingStock", "c424", 5),
 	minecartC425("ItemRollingStock", "c425", 5),
 	minecartDH643("ItemRollingStock", "DH643", 5),
+	minecartC855a("ItemRollingStock", "c855a", 6),
 
 	minecartHH660("ItemRollingStock", "hh660", 2),
 	minecartS2("ItemRollingStock", "alco_s2", 2),
@@ -527,6 +530,7 @@ public enum ItemIDs {
 	minecart20600DOT111("ItemRollingStock", "20600DOT", 5),
 	minecart29080DOT111("ItemRollingStock", "29080DOT", 6),
 	minecart17600DOT111("ItemRollingStock", "17600DOT", 4),
+	minecartNATX30600("ItemRollingStock", "natx30600", 5),
 
 	minecartSkeletonLogCar("ItemRollingStock", "Skeleton", 1),
 	minecartEarlyFlat("ItemRollingStock", "EarlyFlat", 1),

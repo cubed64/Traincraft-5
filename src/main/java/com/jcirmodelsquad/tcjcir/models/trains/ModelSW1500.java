@@ -31,7 +31,7 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 
 	public ModelSW1500() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[397];
+		bodyModel = new ModelRendererTurbo[414];
 
 		initbodyModel_1();
 
@@ -440,6 +440,23 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 		bodyModel[394] = new ModelRendererTurbo(this, 15, 218, textureX, textureY, "cull"); // Box 391 cull
 		bodyModel[395] = new ModelRendererTurbo(this, 56, 109, textureX, textureY); // Box 395
 		bodyModel[396] = new ModelRendererTurbo(this, 56, 109, textureX, textureY); // Box 396
+		bodyModel[397] = new ModelRendererTurbo(this, 292, 230, textureX, textureY); // Box 397 smol fuel tank addition
+		bodyModel[398] = new ModelRendererTurbo(this, 1, 84, textureX, textureY); // Box 398 sw1000 fbi government cover up
+		bodyModel[399] = new ModelRendererTurbo(this, 15, 81, textureX, textureY); // Box 399 sw1000 fbi government cover up
+		bodyModel[400] = new ModelRendererTurbo(this, 2, 77, textureX, textureY); // Box 400 sw1000 box thing
+		bodyModel[401] = new ModelRendererTurbo(this, 292, 195, textureX, textureY); // Box 445
+		bodyModel[402] = new ModelRendererTurbo(this, 300, 186, textureX, textureY); // Box 19
+		bodyModel[403] = new ModelRendererTurbo(this, 325, 186, textureX, textureY); // Box 20
+		bodyModel[404] = new ModelRendererTurbo(this, 220, 58, textureX, textureY); // Box 245
+		bodyModel[405] = new ModelRendererTurbo(this, 227, 58, textureX, textureY); // Box 444
+		bodyModel[406] = new ModelRendererTurbo(this, 220, 61, textureX, textureY); // Box 445
+		bodyModel[407] = new ModelRendererTurbo(this, 220, 64, textureX, textureY); // Box 446
+		bodyModel[408] = new ModelRendererTurbo(this, 220, 67, textureX, textureY); // Box 447
+		bodyModel[409] = new ModelRendererTurbo(this, 315, 195, textureX, textureY); // Box 393
+		bodyModel[410] = new ModelRendererTurbo(this, 315, 198, textureX, textureY); // Box 410
+		bodyModel[411] = new ModelRendererTurbo(this, 335, 195, textureX, textureY); // Box 411
+		bodyModel[412] = new ModelRendererTurbo(this, 328, 195, textureX, textureY); // Box 412
+		bodyModel[413] = new ModelRendererTurbo(this, 319, 198, textureX, textureY); // Box 413
 
 		bodyModel[0].addBox(0F, 0F, 0F, 54, 1, 4, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-27F, 0F, -11F);
@@ -850,16 +867,16 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 		bodyModel[135].setRotationPoint(21.5F, -23F, 0F);
 
 		bodyModel[136].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 383
-		bodyModel[136].setRotationPoint(11F, -22F, 6.5F);
+		bodyModel[136].setRotationPoint(11.05F, -22F, 6.5F);
 
 		bodyModel[137].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 384
-		bodyModel[137].setRotationPoint(9.5F, -23F, 5.5F);
+		bodyModel[137].setRotationPoint(9.55F, -23F, 5.5F);
 
 		bodyModel[138].addBox(0F, 0F, 0F, 2, 1, 1, 0F); // Box 385
-		bodyModel[138].setRotationPoint(11F, -23F, 6.5F);
+		bodyModel[138].setRotationPoint(11.05F, -23F, 6.5F);
 
 		bodyModel[139].addBox(0F, 0F, 0F, 2, 1, 1, 0F); // Box 386
-		bodyModel[139].setRotationPoint(10.25F, -23F, 7.5F);
+		bodyModel[139].setRotationPoint(10.3F, -23F, 7.5F);
 
 		bodyModel[140].addBox(0F, 0F, 0F, 3, 0, 8, 0F); // Box 50 OPTIONAL
 		bodyModel[140].setRotationPoint(-34F, 8F, -11F);
@@ -1663,6 +1680,58 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 
 		bodyModel[396].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F); // Box 396
 		bodyModel[396].setRotationPoint(24.5F, -5.75F, 9.5F);
+
+		bodyModel[397].addShapeBox(0F, 0F, 0F, 10, 3, 18, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 397 smol fuel tank addition
+		bodyModel[397].setRotationPoint(-5F, 3F, -9F);
+
+		bodyModel[398].addShapeBox(0F, 0F, 0F, 3, 2, 7, 0F,0F, -1F, 0F, 0F, -1F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 1F, 0F); // Box 398 sw1000 fbi government cover up
+		bodyModel[398].setRotationPoint(-26F, -17F, -7F);
+
+		bodyModel[399].addShapeBox(0F, 0F, 0F, 3, 2, 7, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 1F, 0F); // Box 399 sw1000 fbi government cover up
+		bodyModel[399].setRotationPoint(-26F, -17F, 0F);
+
+		bodyModel[400].addBox(0F, 0F, 0F, 4, 1, 5, 0F); // Box 400 sw1000 box thing
+		bodyModel[400].setRotationPoint(-1F, -16.5F, 1F);
+
+		bodyModel[401].addShapeBox(0F, 0F, 0F, 4, 3, 14, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 445
+		bodyModel[401].setRotationPoint(3F, -17F, -7F);
+
+		bodyModel[402].addShapeBox(0F, 0F, 0F, 4, 1, 7, 0F,0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 19
+		bodyModel[402].setRotationPoint(7F, -15F, -7F);
+
+		bodyModel[403].addShapeBox(0F, 0F, 0F, 4, 1, 7, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 20
+		bodyModel[403].setRotationPoint(7F, -15F, 0F);
+
+		bodyModel[404].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0F, -0.5F, 0F, 0.5F, -0.5F, 0F, 0.5F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0.5F, 0.5F, 0F, 0.5F, 0.5F, 0F, 0F, 0F, 0F); // Box 245
+		bodyModel[404].setRotationPoint(8.5F, -21.5F, -8.8F);
+
+		bodyModel[405].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 444
+		bodyModel[405].setRotationPoint(8.5F, -22F, -8.75F);
+
+		bodyModel[406].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 445
+		bodyModel[406].setRotationPoint(6.5F, -23F, -8.75F);
+
+		bodyModel[407].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 446
+		bodyModel[407].setRotationPoint(7.5F, -23F, -7.75F);
+
+		bodyModel[408].addBox(0F, 0F, 0F, 4, 1, 1, 0F); // Box 447
+		bodyModel[408].setRotationPoint(7.5F, -23F, -9.75F);
+
+		bodyModel[409].addShapeBox(0F, 0F, 0F, 5, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F); // Box 393
+		bodyModel[409].setRotationPoint(1.5F, -15.5F, 7.5F);
+
+		bodyModel[410].addShapeBox(0F, 0F, 0F, 1, 3, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 410
+		bodyModel[410].setRotationPoint(1.5F, -18.5F, 7.5F);
+
+		bodyModel[411].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 411
+		bodyModel[411].setRotationPoint(5.5F, -15.5F, 6.5F);
+
+		bodyModel[412].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F, 0.25F); // Box 412
+		bodyModel[412].setRotationPoint(3F, -15.5F, 7.5F);
+
+		bodyModel[413].addShapeBox(0F, 0F, 0F, 1, 0, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 413
+		bodyModel[413].setRotationPoint(1.5F, -18.5F, 7.5F);
+		bodyModel[413].rotateAngleX = 0.78539816F;
 	}
 	ModelFlexicoil2 theTrucks1 = new ModelFlexicoil2();
 	ModelTypeAClassico theTrucks2 = new ModelTypeAClassico();
@@ -1670,7 +1739,7 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 397; i++) {
+		for (int i = 0; i < 414; i++) {
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);
@@ -1698,7 +1767,8 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5
-				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/flexicoil2_Black.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.05, 0.33, 0);
