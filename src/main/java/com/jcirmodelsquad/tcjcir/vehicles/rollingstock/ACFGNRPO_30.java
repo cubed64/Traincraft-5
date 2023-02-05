@@ -99,7 +99,7 @@ public class ACFGNRPO_30 extends Freight implements IInventory {
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
-		return 4.0F;
+		return 3.97F;
 	}
 
 	@Override

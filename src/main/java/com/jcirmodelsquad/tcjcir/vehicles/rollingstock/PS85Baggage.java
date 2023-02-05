@@ -97,7 +97,7 @@ public class PS85Baggage extends Freight implements IInventory {
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
-		return 4F;
+		return 3.97F;
 	}
 
 	@Override

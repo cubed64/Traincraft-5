@@ -72,6 +72,6 @@ public class PSLunchCounter_Lounge extends EntityRollingStock implements IPassen
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
-		return 4.0F;
+		return 3.97F;
 	}
 }
