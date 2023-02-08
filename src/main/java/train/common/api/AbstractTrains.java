@@ -519,6 +519,16 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			return "Skin29";
 		case 30:
 			return "Skin30";
+		case 31:
+			return "Skin31";
+		case 32:
+			return "Skin32";
+		case 33:
+			return "Skin33";
+		case 34:
+			return "Skin34";
+		case 35:
+			return "Skin35";
 		case 100:
 			return "Empty";
 		case 101:
@@ -592,6 +602,16 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			return "Skin29";
 		case 30:
 			return "Skin30";
+		case 31:
+			return "Skin31";
+		case 32:
+			return "Skin32";
+		case 33:
+			return "Skin33";
+		case 34:
+			return "Skin34";
+		case 35:
+			return "Skin35";
 		case 100:
 			return "Empty";
 		case 101:
@@ -633,6 +653,11 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		if (color.equals("Skin28")) return 28;
 		if (color.equals("Skin29")) return 29;
 		if (color.equals("Skin30")) return 30;
+		if (color.equals("Skin31")) return 31;
+		if (color.equals("Skin32")) return 32;
+		if (color.equals("Skin33")) return 33;
+		if (color.equals("Skin34")) return 34;
+		if (color.equals("Skin35")) return 35;
 		if (color.equals("Empty")) return 100;
 		if (color.equals("Full")) return 101;
 		return -1;
