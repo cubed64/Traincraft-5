@@ -366,6 +366,7 @@ public enum ItemIDs {
 	//minecartBUnitE8B( "ItemRollingStock", "e8b", 5),
 	minecartE9A( "ItemRollingStock", "e9a", 5),
 	minecartE9B( "ItemRollingStock", "e9b", 5),
+	minecartCE8( "ItemRollingStock", "ce8", 4),
 
 	minecartGP7("ItemRollingStock", "gp7", 3),
 	minecartGP7b("ItemRollingStock", "gp7b", 3),
@@ -501,6 +502,7 @@ public enum ItemIDs {
 	minecartHopper5201("ItemRollingStock", "Hopper5201", 4),
 	minecartHopper6260("ItemRollingStock", "Hopper6260", 5),
 	minecartFNCC2375Hopper("ItemRollingStock", "FNCCHopper", 3),
+	minecartPDH2800("ItemRollingStock", "pdh2800", 4),
 
 	minecart60centerbeam("ItemRollingStock", "60centerbeam", 3),
 	minecart66centerbeam("ItemRollingStock", "66centerbeam", 3),

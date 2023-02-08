@@ -30,7 +30,7 @@ public class ModelSD45dash2 extends ModelConverter //Same as Filename
 
 	public ModelSD45dash2() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[562];
+		bodyModel = new ModelRendererTurbo[566];
 
 		initbodyModel_1();
 		initbodyModel_2();
@@ -2134,6 +2134,10 @@ public class ModelSD45dash2 extends ModelConverter //Same as Filename
 		bodyModel[559] = new ModelRendererTurbo(this, 398, 181, textureX, textureY); // Box 546
 		bodyModel[560] = new ModelRendererTurbo(this, 29, 195, textureX, textureY, "cull"); // Box 567 cull
 		bodyModel[561] = new ModelRendererTurbo(this, -5, 195, textureX, textureY); // Box 567
+		bodyModel[562] = new ModelRendererTurbo(this, 218, 28, textureX, textureY); // Box 409 commander base csx
+		bodyModel[563] = new ModelRendererTurbo(this, 218, 24, textureX, textureY); // Box 410 commander beacon csx
+		bodyModel[564] = new ModelRendererTurbo(this, 218, 28, textureX, textureY); // Box 409 commander base csx
+		bodyModel[565] = new ModelRendererTurbo(this, 218, 24, textureX, textureY); // Box 410 commander beacon csx
 
 		bodyModel[500].addBox(0F, 0F, 0F, 3, 17, 1, 0F); // Box 106
 		bodyModel[500].setRotationPoint(-34.5F, -21F, 6F);
@@ -2320,13 +2324,30 @@ public class ModelSD45dash2 extends ModelConverter //Same as Filename
 
 		bodyModel[561].addBox(0F, 0F, 0F, 2, 0, 18, 0F); // Box 567
 		bodyModel[561].setRotationPoint(-51.5F, 8F, -9F);
+
+		bodyModel[562].addShapeBox(0F, 0F, -0.5F, 1, 1, 1, 0F,0.1F, -0.5F, 0.1F, 0.1F, -0.5F, 0.1F, 0.1F, -0.5F, 0.1F, 0.1F, -0.5F, 0.1F, 0.1F, 0F, 0.1F, 0.1F, 0F, 0.1F, 0.1F, 0F, 0.1F, 0.1F, 0F, 0.1F); // Box 409 commander base csx
+		bodyModel[562].setRotationPoint(-27F, -20.25F, -9.5F);
+		bodyModel[562].rotateAngleX = 0.64577182F;
+
+		bodyModel[563].addShapeBox(0F, -1F, -0.5F, 1, 2, 1, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F); // Box 410 commander beacon csx
+		bodyModel[563].setRotationPoint(-27F, -20.25F, -9.5F);
+		bodyModel[563].rotateAngleX = 0.64577182F;
+
+		bodyModel[564].addShapeBox(0F, 0F, -0.5F, 1, 1, 1, 0F,0.1F, -0.5F, 0.1F, 0.1F, -0.5F, 0.1F, 0.1F, -0.5F, 0.1F, 0.1F, -0.5F, 0.1F, 0.1F, 0F, 0.1F, 0.1F, 0F, 0.1F, 0.1F, 0F, 0.1F, 0.1F, 0F, 0.1F); // Box 409 commander base csx
+		bodyModel[564].setRotationPoint(-27F, -20.25F, 9.5F);
+		bodyModel[564].rotateAngleX = -0.64577182F;
+
+		bodyModel[565].addShapeBox(0F, -1F, -0.5F, 1, 2, 1, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F); // Box 410 commander beacon csx
+		bodyModel[565].setRotationPoint(-27F, -20.25F, 9.5F);
+		bodyModel[565].rotateAngleX = -0.64577182F;
+
 	}
 	ModelFlexicoil_C_Mid flexMid = new ModelFlexicoil_C_Mid();
 	ModelFlexicoil_C_Late flexLate = new ModelFlexicoil_C_Late();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 562; i++) {
+		for (int i = 0; i < 566; i++) {
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);

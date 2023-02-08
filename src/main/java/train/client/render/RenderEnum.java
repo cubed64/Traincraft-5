@@ -849,6 +849,9 @@ public enum RenderEnum {
 			add(new double[]{1.3125D, 1.3125D, 0.0D});
 		}
 	}, "", null, 0, false),
+	CE8( DieselCE8.class,  new ModelCE8(), "CE8_", true,new float[] {-1.85F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
+	}, "", null, 0, false),
 
 	GP7( DieselGP7.class,  new ModelGP7newer(), "gp7new_", true,new float[] {-0F, -0.05F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{ }
@@ -1240,6 +1243,7 @@ public enum RenderEnum {
 	Hopper5201(Hopper5201.class, new ModelHopper5201(), "5201_", true, new float[] { -0F,0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Hopper6260(Hopper6260.class, new ModelHopper6260(), "6260_", true, new float[] { -0F,0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	FNCC2375Hopper(FNCC2375Hopper.class, new ModelFNCC2375Hopper(), "FNCC2375_", true, new float[] { -0F,0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PDH2800(PDH2800.class, new ModelPDH2800(), "gatx_2800_pdh_", true, new float[] { -0F,0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	Freight60centerbeam(Freight60centerbeam.class, new Model60centerbeam(),"60ftcb_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Freight66centerbeam(Freight66centerbeam.class, new Model66centerbeam(),"66ftcb_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

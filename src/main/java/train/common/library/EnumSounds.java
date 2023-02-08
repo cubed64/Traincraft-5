@@ -111,6 +111,7 @@ public enum EnumSounds {
 	DieselE8B(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselE8B.class, " ", 1F, "EMD_12_567C_Notch8", 0.45F, 72, "EMD_12_567C_Idle", 0.75F, 62, false, "emd_bronzebell_2", 16),
 	DieselE9A(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselE9A.class, "leslie_a200", 1F, "EMD_12_567C_Notch8", 0.45F, 72, "EMD_12_567C_Idle", 0.75F, 62, false, "emd_bronzebell_2", 16),
 	DieselE9B(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselE9B.class, " ", 1F, "EMD_12_567C_Notch8", 0.45F, 72, "EMD_12_567C_Idle", 0.75F, 62, false, "emd_bronzebell_2", 16),
+	DieselCE8(DieselCE8.class, "leslie_s3", 2.5F, "EMD_12_567C_Notch8", 0.45F, 72, "EMD_12_567C_Idle", 0.75F, 62, false, "emd_bronzebell_2", 16),
 	DieselF40PH(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselF40PH.class, "nathan_k5la_5", 1F, "EMD_16_645E3_Notch8", 0.9F, 51, "EMD_16_645E3_Notch3", 0.7F, 50, false, "emd_steelbell_4", 11),
 	DieselF45(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselF45.class,"leslie_s3", 2.5F, "EMD_20_645E3_Notch8", 1F, 54, "EMD_20_645E3_Idle", 1F, 54, false, "emd_steelbell_3", 18),
 	DieselFP45(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselFP45.class,"leslie_rs5t", 2.5F, "EMD_20_645E3_Notch8", 1F, 54, "EMD_20_645E3_Idle", 1F, 54, false, "emd_steelbell_3", 18),

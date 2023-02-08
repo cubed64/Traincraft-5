@@ -30,7 +30,7 @@ public class ModelSD40dash2 extends ModelConverter //Same as Filename
 
 	public ModelSD40dash2() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[537];
+		bodyModel = new ModelRendererTurbo[541];
 
 		initbodyModel_1();
 		initbodyModel_2();
@@ -881,11 +881,11 @@ public class ModelSD40dash2 extends ModelConverter //Same as Filename
 		bodyModel[108].setRotationPoint(-39F, -21.5F, -0.5F);
 
 		bodyModel[109].addBox(0F, 0F, 0F, 1, 2, 5, 0F); // Box 351 numberboard hh
-		bodyModel[109].setRotationPoint(-39.5F, -16F, -6F);
+		bodyModel[109].setRotationPoint(-39.5F, -16.5F, -6F);
 		bodyModel[109].rotateAngleY = 0.40142573F;
 
 		bodyModel[110].addBox(0F, 0F, -5F, 1, 2, 5, 0F); // Box 350 numberboard hh
-		bodyModel[110].setRotationPoint(-39.5F, -16F, 6F);
+		bodyModel[110].setRotationPoint(-39.5F, -16.5F, 6F);
 		bodyModel[110].rotateAngleY = -0.40142573F;
 
 		bodyModel[111].addBox(0F, 0F, 0F, 2, 2, 4, 0F); // Box 387
@@ -1738,11 +1738,11 @@ public class ModelSD40dash2 extends ModelConverter //Same as Filename
 		bodyModel[388].setRotationPoint(43F, -3F, 10.5F);
 
 		bodyModel[389].addShapeBox(-1F, 0F, 0F, 1, 2, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 115 numberboard rear
-		bodyModel[389].setRotationPoint(38.5F, -15.5F, -6F);
+		bodyModel[389].setRotationPoint(38.5F, -16.5F, -6F);
 		bodyModel[389].rotateAngleY = -0.41887902F;
 
 		bodyModel[390].addShapeBox(-1F, 0F, -5F, 1, 2, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 116 numberboard rear
-		bodyModel[390].setRotationPoint(38.5F, -15.5F, 6F);
+		bodyModel[390].setRotationPoint(38.5F, -16.5F, 6F);
 		bodyModel[390].rotateAngleY = 0.41887902F;
 
 		bodyModel[391].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -1F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -1F, -0.25F, -0.25F); // Box 71 markerlight twO
@@ -1752,10 +1752,10 @@ public class ModelSD40dash2 extends ModelConverter //Same as Filename
 		bodyModel[392].setRotationPoint(37.7F, -12F, 4.5F);
 
 		bodyModel[393].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -1F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -1F, -0.25F, -0.25F); // Box 71 markerlight twO
-		bodyModel[393].setRotationPoint(37.7F, -18F, -6.5F);
+		bodyModel[393].setRotationPoint(37.7F, -19F, -6.5F);
 
 		bodyModel[394].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-1F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -1F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 1208 makrerlight twO
-		bodyModel[394].setRotationPoint(37.7F, -18F, 4.5F);
+		bodyModel[394].setRotationPoint(37.7F, -19F, 4.5F);
 
 		bodyModel[395].addShapeBox(0F, 0F, 0F, 3, 8, 7, 0F,-3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 352
 		bodyModel[395].setRotationPoint(-42F, -8F, -7F);
@@ -2114,6 +2114,10 @@ public class ModelSD40dash2 extends ModelConverter //Same as Filename
 		bodyModel[534] = new ModelRendererTurbo(this, 19, 170, textureX, textureY, "lamp"); // Box 579THIS IS A DITCHLUIGHT IT WILL GLOW
 		bodyModel[535] = new ModelRendererTurbo(this, 411, 191, textureX, textureY, "lamp"); // Box 580THIS IS A DITCHLIGHT IT WILL GLOW
 		bodyModel[536] = new ModelRendererTurbo(this, 411, 191, textureX, textureY, "lamp"); // Box 581YARR AHOY MATEY THIS BE ERE A DITCHLIGHT AND THAR SHE SHALL GLOWETH
+		bodyModel[537] = new ModelRendererTurbo(this, 219, 26, textureX, textureY); // Box 409 commander base csx
+		bodyModel[538] = new ModelRendererTurbo(this, 219, 22, textureX, textureY, "lamp"); // Box 410 commander beacon csx
+		bodyModel[539] = new ModelRendererTurbo(this, 219, 26, textureX, textureY); // Box 409 commander base csx
+		bodyModel[540] = new ModelRendererTurbo(this, 219, 22, textureX, textureY, "lamp"); // Box 410 commander beacon csx
 
 		bodyModel[500].addShapeBox(0F, 0F, 0F, 0, 5, 5, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F); // Box 612 front brakewheel
 		bodyModel[500].setRotationPoint(-43.5F, -9.5F, -2.5F);
@@ -2225,6 +2229,22 @@ public class ModelSD40dash2 extends ModelConverter //Same as Filename
 
 		bodyModel[536].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F); // Box 581YARR AHOY MATEY THIS BE ERE A DITCHLIGHT AND THAR SHE SHALL GLOWETH
 		bodyModel[536].setRotationPoint(47.25F, -2.1F, -5F);
+
+		bodyModel[537].addShapeBox(0F, 0F, -0.5F, 1, 1, 1, 0F,0.1F, -0.5F, 0.1F, 0.1F, -0.5F, 0.1F, 0.1F, -0.5F, 0.1F, 0.1F, -0.5F, 0.1F, 0.1F, 0F, 0.1F, 0.1F, 0F, 0.1F, 0.1F, 0F, 0.1F, 0.1F, 0F, 0.1F); // Box 409 commander base csx
+		bodyModel[537].setRotationPoint(-22.5F, -20.25F, -9.5F);
+		bodyModel[537].rotateAngleX = 0.64577182F;
+
+		bodyModel[538].addShapeBox(0F, -1F, -0.5F, 1, 2, 1, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F); // Box 410 commander beacon csx
+		bodyModel[538].setRotationPoint(-22.5F, -20.25F, -9.5F);
+		bodyModel[538].rotateAngleX = 0.64577182F;
+
+		bodyModel[539].addShapeBox(0F, 0F, -0.5F, 1, 1, 1, 0F,0.1F, -0.5F, 0.1F, 0.1F, -0.5F, 0.1F, 0.1F, -0.5F, 0.1F, 0.1F, -0.5F, 0.1F, 0.1F, 0F, 0.1F, 0.1F, 0F, 0.1F, 0.1F, 0F, 0.1F, 0.1F, 0F, 0.1F); // Box 409 commander base csx
+		bodyModel[539].setRotationPoint(-22.5F, -20.25F, 9.5F);
+		bodyModel[539].rotateAngleX = -0.64577182F;
+
+		bodyModel[540].addShapeBox(0F, -1F, -0.5F, 1, 2, 1, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F); // Box 410 commander beacon csx
+		bodyModel[540].setRotationPoint(-22.5F, -20.25F, 9.5F);
+		bodyModel[540].rotateAngleX = -0.64577182F;
 	}
 	ModelFlexicoil_C_Mid flexMid = new ModelFlexicoil_C_Mid();
 	ModelFlexicoil_C_Late flexLate = new ModelFlexicoil_C_Late();
