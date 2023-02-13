@@ -1314,6 +1314,9 @@ public enum RenderEnum {
 	ACFGN60SeatCoach(ACFGN60SeatCoach.class, new ModelACFGN60SeatCoach(), "AC&F_lightweight_GN60SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ACFGNDinerObservation(ACFGNDinerObservation.class, new ModelACFGNDinerObservation(), "AC&F_lightweight_GNDiner_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
+	OB84SeatCoach(OB84SeatCoach.class, new ModelOB84SeatCoach(), "OB_lightweight_84SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	OB92SeatCoach(OB92SeatCoach.class, new ModelOB92SeatCoach(), "OB_lightweight_92SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+
 	amfleet(Amfleet.class, new ModelAmfleet(),"amfleet_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	amfleet2(Amfleet2.class, new ModelAmfleet2(),"amfleet2_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
