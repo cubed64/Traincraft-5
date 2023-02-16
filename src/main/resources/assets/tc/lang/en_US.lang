@@ -1146,13 +1146,14 @@ item.tc:minecartVersaTrans.name=Versaflood Transverse Hopper
 item.tc:minecartMillGondola.name=52' Mill Gondola
 item.tc:minecartWoodchipHopper.name=Thrall 59' Woodchip Hopper
 item.tc:minecartOreJenny.name=Ore Jenny
-
+item.tc:minecartPRRGLaHopper.name= PRR GLa Hopper and clones
 
 entity.tc.VersaLongi.name=Versaflood Longitudinal Hopper
 entity.tc.VersaTrans.name=Versaflood Transverse Hopper
 entity.tc.52footMillGondola.name=52' Mill Gondola
 entity.tc.Woodchip Hopper.name=Thrall 59' Woodchip Hopper
 entity.tc.Ore Jenny.name=Ore Jenny
+entity.tc.PRR GLa hopper.name= PRR GLa Hopper and clones
 
 item.tc:minecart11000DOT111.name=11,000 Gallon Tank Car
 item.tc:minecart20600DOT111.name=20,600 Gallon Tank Car

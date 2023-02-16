@@ -527,6 +527,7 @@ public enum ItemIDs {
 	minecartMillGondola("ItemRollingStock", "millgondola", 4),
 	minecartWoodchipHopper("ItemRollingStock", "woodchiphopper", 4),
 	minecartOreJenny("ItemRollingStock", "orejenny", 2),
+	minecartPRRGLaHopper("ItemRollingStock", "prrglahopper", 2),
 
 	minecart11000DOT111("ItemRollingStock", "11000DOT", 4),
 	minecart20600DOT111("ItemRollingStock", "20600DOT", 5),

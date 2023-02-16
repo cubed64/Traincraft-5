@@ -244,6 +244,7 @@ public class AssemblyTableRecipes {
 			for (ItemStack iron : ingotIron) {
 				for (ItemStack steel : ingotSteel) {
 					betterAddRecipe(2, null, null, null, null, new ItemStack(iron.getItem(), 2), new ItemStack(Blocks.hopper, 3), new ItemStack(iron.getItem(), 2), new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item,2),  new ItemStack(itemSteel, 4, itemDamageSteel), new ItemStack(ItemIDs.minecartOreJenny.item), 1);
+					betterAddRecipe(2, null, null, null, null, new ItemStack(iron.getItem(), 2), new ItemStack(Blocks.hopper, 3), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item,3),  new ItemStack(itemSteel, 4, itemDamageSteel), new ItemStack(ItemIDs.minecartPRRGLaHopper.item), 1);
 					betterAddRecipe(2, null, new ItemStack(Blocks.log, 4), null, null, new ItemStack(Blocks.chest, 4), new ItemStack(iron.getItem(), 3), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 4),  new ItemStack(itemSteel, 4, itemDamageSteel), new ItemStack(ItemIDs.minecartWoodchipHopper.item), 1);
 					betterAddRecipe(2, new ItemStack(Blocks.planks), new ItemStack(Blocks.planks), new ItemStack(Blocks.planks), null, new ItemStack(iron.getItem(), 3), new ItemStack(Blocks.chest, 2), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 3),  new ItemStack(itemSteel, 4, itemDamageSteel), new ItemStack(ItemIDs.minecart40highcube.item),1);
 				}

@@ -1268,6 +1268,7 @@ public enum RenderEnum {
 	MillGondola(MillGondola.class, new ModelMillGondola(),"MillGondola_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	WoodchipHopper(WoodchipHopper.class, new ModelWoodchipHopper(),"woodchiphopper_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	OreJenny(OreJenny.class, new ModelOreJenny(),"orejenny_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PRRGLaHopper(PRRGLaHopper.class, new ModelPRRGLaHopper(),"PRR_GLa_hopper_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	DOT11111000(DOT11111000.class, new Model11000DOT111(),"dot11K_", true, new float[]{0F, 0.00F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	DOT11120600(DOT11120600.class, new Model20600DOT111(),"dot206K_", true, new float[]{0F, 0.00F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
