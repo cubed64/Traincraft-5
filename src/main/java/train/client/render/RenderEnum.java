@@ -1062,6 +1062,9 @@ public enum RenderEnum {
 	U23B( DieselU23B.class,  new ModelU23B(), "u23b_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
+	U25B( DieselU25B.class,  new ModelU25B(), "u25b_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 	U30C( DieselU30C.class,  new ModelU30C(), "U30C_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
