@@ -578,6 +578,8 @@ public enum ItemIDs {
 	minecartOB84SeatCoach("ItemRollingStock", "OB84-92SeatCoach", 3),
 	minecartOB92SeatCoach("ItemRollingStock", "OB84-92SeatCoach", 3),
 
+	minecartPSCNW56SeatCoach("ItemRollingStock", "PSCNW56SeatCoach", 3),
+
 	minecartAmfleet("ItemRollingStock", "Amfleet", 3),
 	minecartAmfleet2("ItemRollingStock", "Amfleet2", 3),
 
