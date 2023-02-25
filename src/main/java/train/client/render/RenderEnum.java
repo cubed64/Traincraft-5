@@ -797,6 +797,18 @@ public enum RenderEnum {
 		}
 	}, "", null, 0, false),
 	BUnitF7B(BUnitF7.class, new ModelF7B(), "F7B_", true, new float[]{0,0.15f,0}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
+	FP7A( DieselFP7A.class,  new ModelFP7A(), "FP7A_", true,new float[] {-1.375F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			//add(new double[]{0.9375D, 1.3D, 0.0D});
+			//add(new double[]{0.25D, 1.3D, 0.0D});
+		}
+	}, "", null, 0, false),
+	FP9A( DieselFP9A.class,  new ModelFP9A(), "FP9A_", true,new float[] {-1.375F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			//add(new double[]{0.9375D, 1.3D, 0.0D});
+			//add(new double[]{0.25D, 1.3D, 0.0D});
+		}
+	}, "", null, 0, false),
 	CF7angle( DieselCF7angle.class,  new ModelCF7angle2(), "CF7_Angle_", true,new float[] {-0F, -0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
