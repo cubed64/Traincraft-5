@@ -336,8 +336,8 @@ public enum ItemIDs {
 	minecartShay3Truck("ItemRollingStock", "3TruckShay", 5),
 	minecartShay3TruckTender("ItemRollingStock", "3TruckShayTender", 4),
 	minecartF01("ItemRollingStock", "f01", 3),
-	minecartBKno2a("ItemRollingStock", "bkno2a", 5),
-	minecartBKno2b("ItemRollingStock", "bkno2a", 5),
+	minecartBKno2a("ItemRollingStock", "bkno2", 5),
+	minecartBKno2b("ItemRollingStock", "bkno2", 5),
 	minecartWCPBuckingBull("ItemRollingStock", "wcp_buckingbull", 4),
 	minecartWCPBaler("ItemRollingStock", "wcp_baler", 2),
 
@@ -449,7 +449,7 @@ public enum ItemIDs {
 	minecartES44("ItemRollingStock", "es44", 6),
 	minecartGeGenesis("ItemRollingStock", "geGenesis", 4),
 
-	//ALCO//
+	//ALCO and its canookistanian counterpart//
 	minecartAlcoPA1("ItemRollingStock", "AlcoPA1Icon",5),
 	minecartAlcoPB1("ItemRollingStock", "AlcoPB1Icon",4),
 
@@ -460,6 +460,9 @@ public enum ItemIDs {
 	minecartC425("ItemRollingStock", "c425", 5),
 	minecartDH643("ItemRollingStock", "DH643", 5),
 	minecartC855a("ItemRollingStock", "c855a", 6),
+
+	minecartM420("ItemRollingStock", "M420", 4),
+	minecartM420B("ItemRollingStock", "M420B", 4),
 
 	minecartHH660("ItemRollingStock", "hh660", 2),
 	minecartS2("ItemRollingStock", "alco_s2", 2),

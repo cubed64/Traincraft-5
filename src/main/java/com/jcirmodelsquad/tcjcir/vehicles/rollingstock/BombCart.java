@@ -1,15 +1,22 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityMinecart;
+import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import train.common.Traincraft;
 import train.common.api.EntityRollingStock;
 import train.common.api.IPassenger;
+import train.common.library.GuiIDs;
 
 public class BombCart extends EntityRollingStock implements IPassenger {
     public int freightInventorySize;
     public int numFreightSlots;
+    private int bombTimer;
     public BombCart(World world) {
         super(world);
 
@@ -80,6 +87,24 @@ public class BombCart extends EntityRollingStock implements IPassenger {
     public boolean isPoweredCart() {
         return false;
     }
-}
+
+    public void pressKey(int i) {
+        if (i == 9) {
+            if (this.riddenByEntity != null && (this.riddenByEntity instanceof EntityLivingBase) && bombTimer <= 0) {
+
+                EntityTNTPrimed entitytntprimed = new EntityTNTPrimed(this.worldObj, (double) ((float) posX), (double) ((float) posY + 1F), (double) ((float) posZ), (EntityLivingBase) this.riddenByEntity);
+                this.worldObj.spawnEntityInWorld(entitytntprimed);
+                this.worldObj.playSoundAtEntity(entitytntprimed, "random.fuse", 1.0F, 1.0F);
+                bombTimer = 500;
+
+                return;
+            }
+        }
+
+        }
+    }
+
+
+
 
 

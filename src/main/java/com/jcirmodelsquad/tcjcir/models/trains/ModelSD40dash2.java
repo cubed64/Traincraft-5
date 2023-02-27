@@ -30,7 +30,7 @@ public class ModelSD40dash2 extends ModelConverter //Same as Filename
 
 	public ModelSD40dash2() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[541];
+		bodyModel = new ModelRendererTurbo[547];
 
 		initbodyModel_1();
 		initbodyModel_2();
@@ -2118,6 +2118,12 @@ public class ModelSD40dash2 extends ModelConverter //Same as Filename
 		bodyModel[538] = new ModelRendererTurbo(this, 219, 22, textureX, textureY, "lamp"); // Box 410 commander beacon csx
 		bodyModel[539] = new ModelRendererTurbo(this, 219, 26, textureX, textureY); // Box 409 commander base csx
 		bodyModel[540] = new ModelRendererTurbo(this, 219, 22, textureX, textureY, "lamp"); // Box 410 commander beacon csx
+		bodyModel[541] = new ModelRendererTurbo(this, 158, 26, textureX, textureY); // Box 541
+		bodyModel[542] = new ModelRendererTurbo(this, 158, 38, textureX, textureY); // Box 542
+		bodyModel[543] = new ModelRendererTurbo(this, 181, 35, textureX, textureY); // Box 543
+		bodyModel[544] = new ModelRendererTurbo(this, 170, 35, textureX, textureY); // Box 544
+		bodyModel[545] = new ModelRendererTurbo(this, 172, 38, textureX, textureY); // Box 545
+		bodyModel[546] = new ModelRendererTurbo(this, 172, 32, textureX, textureY); // Box 546
 
 		bodyModel[500].addShapeBox(0F, 0F, 0F, 0, 5, 5, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F); // Box 612 front brakewheel
 		bodyModel[500].setRotationPoint(-43.5F, -9.5F, -2.5F);
@@ -2245,13 +2251,31 @@ public class ModelSD40dash2 extends ModelConverter //Same as Filename
 		bodyModel[540].addShapeBox(0F, -1F, -0.5F, 1, 2, 1, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F); // Box 410 commander beacon csx
 		bodyModel[540].setRotationPoint(-22.5F, -20.25F, 9.5F);
 		bodyModel[540].rotateAngleX = -0.64577182F;
+
+		bodyModel[541].addBox(0F, 0F, 0F, 2, 1, 1, 0F); // Box 541
+		bodyModel[541].setRotationPoint(-31F, -22.5F, 1.5F);
+
+		bodyModel[542].addBox(0F, 0F, 0F, 2, 1, 1, 0F); // Box 542
+		bodyModel[542].setRotationPoint(-31F, -22.5F, -2.5F);
+
+		bodyModel[543].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 543
+		bodyModel[543].setRotationPoint(-29F, -22F, 4F);
+
+		bodyModel[544].addBox(0F, 0F, 0F, 4, 1, 1, 0F); // Box 544
+		bodyModel[544].setRotationPoint(-29.5F, -23F, 4F);
+
+		bodyModel[545].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 545
+		bodyModel[545].setRotationPoint(-31F, -22.75F, 3F);
+
+		bodyModel[546].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 546
+		bodyModel[546].setRotationPoint(-30.5F, -22.75F, 5F);
 	}
 	ModelFlexicoil_C_Mid flexMid = new ModelFlexicoil_C_Mid();
 	ModelFlexicoil_C_Late flexLate = new ModelFlexicoil_C_Late();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 537; i++) {
+		for (int i = 0; i < 547; i++) {
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);

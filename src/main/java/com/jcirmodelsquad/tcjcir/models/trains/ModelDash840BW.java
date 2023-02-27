@@ -1,5 +1,5 @@
 //This File was created with the Minecraft-SMP Modelling Toolbox 2.3.0.0
-// Copyright (C) 2021 Minecraft-SMP.de
+// Copyright (C) 2023 Minecraft-SMP.de
 // This file is for Flan's Flying Mod Version 4.0.x+
 
 // Model: 
@@ -8,6 +8,7 @@
 // Last changed on: 01.03.2021 - 23:36:02
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
+
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2;
 import net.minecraft.client.Minecraft;
@@ -29,7 +30,7 @@ public class ModelDash840BW extends ModelConverter //Same as Filename
 
 	public ModelDash840BW() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[285];
+		bodyModel = new ModelRendererTurbo[301];
 
 		initbodyModel_1();
 
@@ -326,6 +327,22 @@ public class ModelDash840BW extends ModelConverter //Same as Filename
 		bodyModel[282] = new ModelRendererTurbo(this, 93, 60, textureX, textureY); // Box 288
 		bodyModel[283] = new ModelRendererTurbo(this, 107, 135, textureX, textureY, "lamp"); // Box 396 glow marker
 		bodyModel[284] = new ModelRendererTurbo(this, 107, 135, textureX, textureY, "lamp"); // Box 396 glow marker
+		bodyModel[285] = new ModelRendererTurbo(this, 178, 107, textureX, textureY); // Box 417 ac
+		bodyModel[286] = new ModelRendererTurbo(this, 153, 42, textureX, textureY, "lamp"); // Box 239 glow liveryimg 1
+		bodyModel[287] = new ModelRendererTurbo(this, 145, 42, textureX, textureY, "lamp"); // Box 240 glow liveryimg 1
+		bodyModel[288] = new ModelRendererTurbo(this, 15, 87, textureX, textureY); // Box 114
+		bodyModel[289] = new ModelRendererTurbo(this, 20, 87, textureX, textureY); // Box 74
+		bodyModel[290] = new ModelRendererTurbo(this, 10, 87, textureX, textureY); // Box 78
+		bodyModel[291] = new ModelRendererTurbo(this, 19, 83, textureX, textureY); // Box 875
+		bodyModel[292] = new ModelRendererTurbo(this, 12, 83, textureX, textureY); // Box 876
+		bodyModel[293] = new ModelRendererTurbo(this, 1, 85, textureX, textureY); // Box 877
+		bodyModel[294] = new ModelRendererTurbo(this, 1, 82, textureX, textureY); // Box 481
+		bodyModel[295] = new ModelRendererTurbo(this, 158, 31, textureX, textureY); // Box 227
+		bodyModel[296] = new ModelRendererTurbo(this, 151, 33, textureX, textureY); // Box 228
+		bodyModel[297] = new ModelRendererTurbo(this, 25, 83, textureX, textureY); // Box 352 cabmount assembly
+		bodyModel[298] = new ModelRendererTurbo(this, 36, 85, textureX, textureY, "lamp"); // Box 353 lamp front
+		bodyModel[299] = new ModelRendererTurbo(this, 43, 85, textureX, textureY, "lamp"); // Box 354 lamp front
+		bodyModel[300] = new ModelRendererTurbo(this, 207, 47, textureX, textureY); // Box 300 headlight coverr
 
 		bodyModel[0].addBox(0F, 0F, 0F, 80, 2, 22, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-40F, -1F, -11F);
@@ -1206,11 +1223,63 @@ public class ModelDash840BW extends ModelConverter //Same as Filename
 
 		bodyModel[284].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 396 glow marker
 		bodyModel[284].setRotationPoint(-41F, -13.5F, 8.25F);
+
+		bodyModel[285].addBox(0F, 0F, 0F, 4, 2, 8, 0F); // Box 417 ac
+		bodyModel[285].setRotationPoint(-27F, -24.5F, -4F);
+
+		bodyModel[286].addBox(0F, 0F, 0F, 0, 2, 4, 0F); // Box 239 glow liveryimg 1
+		bodyModel[286].setRotationPoint(-40.51F, -12F, -10.2F);
+		bodyModel[286].rotateAngleY = 0.27925268F;
+
+		bodyModel[287].addBox(0F, 0F, -4F, 0, 2, 4, 0F); // Box 240 glow liveryimg 1
+		bodyModel[287].setRotationPoint(-40.51F, -12F, 10.2F);
+		bodyModel[287].rotateAngleY = -0.27925268F;
+
+		bodyModel[288].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.5F, 0F, 0.5F, 0.5F, 0F, 0.5F, 0.5F, 0F, 0.5F, 0.5F, 0F, 0.5F); // Box 114
+		bodyModel[288].setRotationPoint(-34.5F, -21.75F, -0.5F);
+
+		bodyModel[289].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,-0.2F, 0F, -0.2F, -0.2F, 0F, -0.2F, -0.2F, 0F, -0.2F, -0.2F, 0F, -0.2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 74
+		bodyModel[289].setRotationPoint(-34.5F, -22.75F, -0.5F);
+
+		bodyModel[290].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.5F, 0F, 0F, -0.5F); // Box 78
+		bodyModel[290].setRotationPoint(-34.25F, -21.25F, -0.25F);
+
+		bodyModel[291].addBox(0F, 0F, 0F, 3, 1, 0, 0F); // Box 875
+		bodyModel[291].setRotationPoint(-34.5F, -23F, -1F);
+
+		bodyModel[292].addBox(0F, 0F, 0F, 3, 1, 0, 0F); // Box 876
+		bodyModel[292].setRotationPoint(-34.5F, -23F, 1F);
+
+		bodyModel[293].addShapeBox(0F, 0F, 0F, 1, 1, 3, 0F,0F, -0.5F, -0.5F, -0.5F, -0.5F, -0.5F, -0.5F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, 0F, 0F, -0.5F); // Box 877
+		bodyModel[293].setRotationPoint(-34.25F, -23.25F, -1.5F);
+
+		bodyModel[294].addBox(0F, 0F, 0F, 3, 0, 2, 0F); // Box 481
+		bodyModel[294].setRotationPoint(-34.5F, -23F, -1F);
+
+		bodyModel[295].addBox(0F, 0F, 0F, 1, 2, 4, 0F); // Box 227
+		bodyModel[295].setRotationPoint(-40.5F, -12F, -10.2F);
+		bodyModel[295].rotateAngleY = 0.27925268F;
+
+		bodyModel[296].addBox(0F, 0F, -4F, 1, 2, 4, 0F); // Box 228
+		bodyModel[296].setRotationPoint(-40.5F, -12F, 10.2F);
+		bodyModel[296].rotateAngleY = -0.27925268F;
+
+		bodyModel[297].addBox(0F, 0F, 0F, 1, 2, 4, 0F); // Box 352 cabmount assembly
+		bodyModel[297].setRotationPoint(-33F, -22.99F, -2F);
+
+		bodyModel[298].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 353 lamp front 
+		bodyModel[298].setRotationPoint(-33.25F, -22.99F, -2F);
+
+		bodyModel[299].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 354 lamp front 
+		bodyModel[299].setRotationPoint(-33.25F, -22.99F, 0F);
+
+		bodyModel[300].addBox(0F, 0F, 0F, 1, 4, 2, 0F); // Box 300 headlight coverr
+		bodyModel[300].setRotationPoint(-43F, -15F, -1F);
 	}
 	ModelFB2 theTrucks2 = new ModelFB2();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 285; i++) {
+		for (int i = 0; i < 301; i++) {
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);
@@ -1232,7 +1301,7 @@ public class ModelDash840BW extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.27, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1){
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb2_Grey.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.65, 0.33, 0);

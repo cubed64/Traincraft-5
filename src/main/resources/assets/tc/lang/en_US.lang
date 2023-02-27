@@ -1002,6 +1002,9 @@ item.tc:minecartC425.name=ALCo C425
 item.tc:minecartDH643.name=ALCo DH643
 item.tc:minecartC855a.name=ALCo C855a
 
+item.tc:minecartM420.name=MLW M420
+item.tc:minecartM420B.name=MLW M420B
+
 item.tc:minecartHH660.name=ALCo HH660/HH600
 item.tc:minecartS2.name=ALCo S2
 
@@ -1018,6 +1021,9 @@ entity.tc.C424.name=ALCo C424
 entity.tc.C425.name=ALCo C425
 entity.tc.DH643.name=ALCo DH643
 entity.tc.C855a.name=ALCo C855a
+
+entity.tc.M420.name=MLW M420
+entity.tc.M420B.name=MLW M420B
 
 entity.tc.HH660.name=ALCo HH660/HH600
 entity.tc.S2.name=ALCo S2
