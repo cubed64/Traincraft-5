@@ -834,7 +834,8 @@ item.tc:minecartSD9.name=EMD SD9
 item.tc:minecartSDL39.name=EMD SDL39
 item.tc:minecartSD38.name=EMD SD38
 item.tc:minecartSD39.name=EMD SD39
-item.tc:minecartSD40dash2.name=EMD SD40
+item.tc:minecartSD40.name=EMD SD40
+item.tc:minecartSD40dash2.name=EMD SD40-2
 item.tc:minecartSD40T2.name=EMD SD40T-2
 item.tc:minecartSD40dash2B.name=EMD SD40-2B
 item.tc:minecartSD40R.name=EMD SD40R
@@ -905,6 +906,7 @@ entity.tc.SDL39.name=EMD SDL39
 entity.tc.SD38.name=EMD SD38
 entity.tc.SD39.name=EMD SD39
 entity.tc.SD40.name=EMD SD40
+entity.tc.SD40-2.name=EMD SD40-2
 entity.tc.SD40T-2.name=EMD SD40T-2
 entity.tc.SD40-2B.name=EMD SD40-2B
 entity.tc.SD40R.name=EMD SD40R
@@ -957,7 +959,8 @@ item.tc:minecartDash944CW.name=GE Dash 9-44CW
 item.tc:minecartAC4400CW.name=GE AC4400CW
 
 item.tc:minecartES44.name=GE ES44
-
+item.tc:minecartP32.name=GE P32
+item.tc:minecartGeGenesis.name=GE P40-P42
 
 entity.tc.GE 44-ton.name=GE 44-Ton
 entity.tc.23 Ton Boxcab.name=GE-23 Ton Boxcab
@@ -988,6 +991,8 @@ entity.tc.Dash944CW.name=GE Dash 9-44CW
 entity.tc.AC4400CW.name=GE AC4400CW
 
 entity.tc.ES44.name=GE ES44
+entity.tc.P32.name=GE P32
+entity.tc.P42.name=GE P40-P42
 
 --------------------------------------------------------
 

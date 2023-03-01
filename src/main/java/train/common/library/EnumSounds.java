@@ -138,6 +138,7 @@ public enum EnumSounds {
 	DieselSD9(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD9.class, "nathan_m3", 2.5F, "EMD_16_567C_Notch8", 0.45F, 54, "EMD_16_567C_Idle", 0.75F, 48, false, "emd_brassbell_3", 29),
 	DieselSD38(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD38.class, "leslie_rs5t", 0.8F, "EMD_16_645E_Notch8", 0.55F, 53, "EMD_16_645E_Idle", 0.55F, 53, false, "emd_steelbell_5", 21),
 	DieselSD39(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD39.class, "leslie_s3", 2.5F, "EMD_12_645E3_Notch8", 0.65F, 56, "EMD_12_645E3_Idle", 0.65F, 49, false, "emd_steelbell_1", 15),
+	DieselSD40(DieselSD40.class, "nathan_m3_3", 2.5F, "EMD_16_645E3_Notch8", 0.65F, 51, "EMD_16_645E3_Idle", 0.8F, 40, false, "emd_steelbell_8", 25),
 	DieselSD40dash2(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD40dash2.class, "leslie_sl4t", 2.5F, "EMD_16_645E3_Notch8", 0.65F, 51, "EMD_16_645E3_Idle", 0.8F, 40, false, "emd_steelbell_8", 25),
 	DieselSD40dash2B(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD40dash2B.class, " ", 2.5F, "EMD_16_645E3_Notch8", 0.65F, 51, "EMD_16_645E3_Idle", 0.8F, 40, false, " ", 11),
 	DieselSD40R(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD40R.class, "nathan_p5", 2.5F, "EMD_16_645E3_Notch8", 0.65F, 51, "EMD_16_645E3_Idle", 0.8F, 40, false, "emd_steelbell_8", 25),
@@ -172,7 +173,7 @@ public enum EnumSounds {
 	DieselDash9C44W(DieselDash944CW.class, "nathan_p5", 2.5F, "GE_7FDL_16_Notch8", 1F, 52, "GE_7FDL_16_Idle", 1F, 50, false, "ge_steelbell_1", 15),
 	DieselAC4400CW(DieselAC4400CW.class, "nathan_p5", 2.5F, "GE_7FDL_16_Notch8", 1F, 52, "GE_7FDL_16_Idle", 1F, 50, false, "ge_steelbell_1", 15),
 	DieselES44(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselES44.class, "nathan_k5hll", 1F, "GE_GEVO_12_Notch8", 0.65F, 20, "GE_GEVO_12_Idle", 0.75F, 50, false, "ge_ebell", 16),
-	GeGenesis(com.jcirmodelsquad.tcjcir.vehicles.locomotives.GeGenesis.class, "nathan_k5la", 2.5F, "GE_7FDL_16_Notch8", 0.65F, 52, "GE_7FDL_16_Idle", 0.65F, 51, false, "ge_steelbell_1", 15),
+	//GeGenesis(DieselP42.class, "nathan_k5la", 2.5F, "GE_7FDL_16_Notch8", 0.65F, 52, "GE_7FDL_16_Idle", 0.65F, 51, false, "ge_steelbell_1", 15),
 	DieselSF30C(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSF30C.class, "leslie_s3lr", 2.5F, "GE_FDL16_Notch8", 0.5F, 23, "GE_FDL16_Idle", 0.5F, 103, false, "ge_steelbell_1", 15),
 	DieselU18B(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselU18B.class, "leslie_s3", 2.5F, "GE_7FDL_8_Notch8", 0.25F, 40, "GE_7FDL_8_Idle", 0.35F, 50, false, "ge_steelbell_2", 21),
 	DieselU18BB(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselU18BB.class, " ", 2.5F, "GE_7FDL_8_Notch8", 0.25F, 40, "GE_7FDL_8_Idle", 0.35F, 50, false, "ge_steelbell_2", 21),
@@ -196,6 +197,14 @@ public enum EnumSounds {
 	DieselMP15DCW9(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselMP15DCW9.class,"leslie_rs3k_2", 2.5F, "EMD_12_645E_Notch8", 1F, 54, "EMD_12_645E_Idle", 1F, 54, false, "emd_steelbell_1", 17),
 	DieselSB23E(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSB23E.class, "leslie_s3l_2", 2.5F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_1", 15),
 	DieselSB23R(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSB23R.class, "prime_920_3", 2.5F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_2", 21),
+
+	DieselM420(DieselM420.class, "nathan_m5", 2.5F, "ALCO_12_251C_Notch8", 0.45F, 51, "ALCO_12_251C_Idle", 0.45F, 50, false, "alco_bronzebell_3", 24),
+	DieselM420B(DieselM420B.class, "leslie_a200", 0.9F, "ALCO_12_251C_Notch8", 0.45F, 51, "ALCO_12_251C_Idle", 0.45F, 50, false, "alco_bronzebell_3", 24),
+	DieselU25B(DieselU25B.class, "nathan_m5_2", 2.5F, "GE_7FDL_16_Notch8", 0.6F, 52, "GE_7FDL_16_Idle", 0.6F, 51, false, "ge_steelbell_1", 15),
+	DieselC855a(DieselC855a.class, "nathan_p3_3", 2.5F, "ALCO_12_251C_Notch8", 0.65F, 51, "ALCO_12_251C_Idle", 0.65F, 50, false, "alco_bronzebell_3", 24),
+	DieselP42(DieselP42.class, "nathan_k5la", 2.5F, "GE_7FDL_16_Notch8", 0.6F, 52, "GE_7FDL_16_Idle", 0.6F, 51, false, "ge_steelbell_1", 15),
+	DieselP32(DieselP32.class, "nathan_k5la_3", 2.5F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_2", 21),
+
 	//JCTC Electrics
 	//
 	//JCTC EMD Electrics

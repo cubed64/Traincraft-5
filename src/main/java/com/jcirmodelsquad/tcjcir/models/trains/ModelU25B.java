@@ -29,7 +29,7 @@ public class ModelU25B extends ModelConverter //Same as Filename
 
 	public ModelU25B() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[382];
+		bodyModel = new ModelRendererTurbo[385];
 
 		initbodyModel_1();
 
@@ -423,6 +423,9 @@ public class ModelU25B extends ModelConverter //Same as Filename
 		bodyModel[379] = new ModelRendererTurbo(this, 167, 42, textureX, textureY); // Box 324
 		bodyModel[380] = new ModelRendererTurbo(this, 167, 36, textureX, textureY); // Box 325
 		bodyModel[381] = new ModelRendererTurbo(this, 166, 32, textureX, textureY); // Box 326
+		bodyModel[382] = new ModelRendererTurbo(this, 320, 119, textureX, textureY); // Box 382
+		bodyModel[383] = new ModelRendererTurbo(this, 320, 119, textureX, textureY); // Box 383
+		bodyModel[384] = new ModelRendererTurbo(this, 144, 181, textureX, textureY); // Box 384 nose cover
 
 		bodyModel[0].addBox(0F, 0F, 0F, 76, 2, 22, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-38F, -1F, -11F);
@@ -1592,12 +1595,23 @@ public class ModelU25B extends ModelConverter //Same as Filename
 
 		bodyModel[381].addShapeBox(0F, 0F, 0F, 1, 1, 2, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F); // Box 326
 		bodyModel[381].setRotationPoint(3F, -21.5F, 7F);
+
+		bodyModel[382].addBox(0F, 0F, -1F, 1, 3, 1, 0F); // Box 382
+		bodyModel[382].setRotationPoint(-1F, 1.5F, -11.25F);
+		bodyModel[382].rotateAngleX = 1.57079633F;
+
+		bodyModel[383].addBox(0F, 0F, 0F, 1, 3, 1, 0F); // Box 383
+		bodyModel[383].setRotationPoint(-1F, 1.5F, 11.25F);
+		bodyModel[383].rotateAngleX = -1.57079633F;
+
+		bodyModel[384].addBox(0F, 0F, 0F, 2, 6, 1, 0F); // Box 384 nose cover
+		bodyModel[384].setRotationPoint(-34F, -11F, -7F);
 	}
 	ModelTypeBnew theB = new ModelTypeBnew();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 382; i++) {
+		for (int i = 0; i < 385; i++) {
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);

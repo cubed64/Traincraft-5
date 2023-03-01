@@ -5,7 +5,7 @@ import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import tmt.ModelBase;
 
-public class ModelSD40 extends ModelBase {
+public class ModelSD40heritage extends ModelBase {
 	
 	public ModelRenderer box;
 	public ModelRenderer box0;
@@ -129,7 +129,7 @@ public class ModelSD40 extends ModelBase {
 	public ModelRenderer box97;
 	public ModelRenderer box98;
 
-	public ModelSD40() {
+	public ModelSD40heritage() {
 		
 		this.textureHeight=256;
 		this.textureWidth=256;

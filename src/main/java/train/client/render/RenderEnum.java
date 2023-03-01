@@ -5,7 +5,7 @@ import com.jcirmodelsquad.tcjcir.vehicles.locomotives.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.*;
 import tmt.ModelBase;
 import train.client.render.models.*;
-import train.client.render.models.ModelSD40;
+import train.client.render.models.ModelSD40heritage;
 import train.common.api.AbstractTrains;
 import train.common.api.EntityRollingStock;
 import train.common.entity.rollingStock.*;
@@ -175,7 +175,7 @@ public enum RenderEnum {
 			add(new double[] { 2D, 1.55D, 0.0D });
 		}
 	}, "", null, 0, false),
-	locoSD40(EntityLocoDieselSD40.class, new ModelSD40(), "locoSD40_", true, new float[] { -1.2F, -0.47F, 0.0F }, new float[] { 180F, 90F, 0F }, new float[] { -1F, -1F, 1F }, "smoke", 5, new ArrayList<double[]>() {
+	locoSD40(EntityLocoDieselSD40.class, new com.jcirmodelsquad.tcjcir.models.trains.ModelSD40heritage(), "locoSD40_", true, new float[] { -1.2F, -0.47F, 0.0F }, new float[] { 180F, 90F, 0F }, new float[] { -1F, -1F, 1F }, "smoke", 5, new ArrayList<double[]>() {
 		{
 			add(new double[] { 1.45D, 1.45D, 0.0D });
 		}
@@ -961,7 +961,10 @@ public enum RenderEnum {
 			//add(new double[]{1.5D, 1.5D, 0.0D});
 		}
 	}, "", null, 0, false),
-	SD40(DieselSD40dash2.class, new ModelSD40dash2(), "sd40_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+	SD40(DieselSD40.class, new ModelSD40(), "sd40_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	SD40dash2(DieselSD40dash2.class, new ModelSD40dash2(), "sd40-2_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
 	SD40T2( DieselSD40T2.class,  new ModelSD40T(), "SD40T_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
@@ -1130,10 +1133,12 @@ public enum RenderEnum {
 			add(new double[]{1.0D, 1.4D, 0.0D});
 		}
 	}, "", null, 0, false),
-	geGenesis(GeGenesis.class, new ModelGe_Genesis(), "genesis_", true, new float[] {-2.7F, -0.33F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke",  5,  new ArrayList<double[]>() {
+	P32(DieselP32.class, new ModelP32(), "p32dc_", true, new float[] {0F, 0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke",  5,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	geGenesis(DieselP42.class, new ModelP42(), "p40dc_", true, new float[] {0F, 0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke",  5,  new ArrayList<double[]>() {
 		{
-			add(new double[]{1.8D, 1.3D, 0D});
-
+			//add(new double[]{1.8D, 1.3D, 0D});
 		}
 	}, "", null, 0, false),
 
@@ -1181,6 +1186,13 @@ public enum RenderEnum {
 	}, "", null, 0, false),
 
 	RSD15( DieselRSD15.class,  new ModelRSD15(), "rsd15_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+
+	M420( DieselM420.class,  new ModelM420(), "m420_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	M420B( DieselM420B.class,  new ModelM420B(), "m420b_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
 

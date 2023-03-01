@@ -14,13 +14,13 @@ import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
 
-public class GeGenesis extends DieselTrain {
-    public GeGenesis(World world) {
-        super(world, EnumTrains.geGenesis.getTankCapacity(), LiquidManager.dieselFilter());
+public class DieselSD40 extends DieselTrain {
+    public DieselSD40(World world) {
+        super(world, EnumTrains.SD40.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
     }
-    public GeGenesis(World world, double d, double d1, double d2){
+    public DieselSD40(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -40,8 +40,8 @@ public class GeGenesis extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 4.9;
-        double yOffset = 0.23;
+        double distance = 3.1;
+        double yOffset = 0.2;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
         if(side.isServer()){
@@ -123,7 +123,7 @@ public class GeGenesis extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 0.69F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.4F;
     }
 
     @Override
@@ -133,7 +133,7 @@ public class GeGenesis extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "Ge Genesis";
+        return "EMD SD40";
     }
 
     @Override

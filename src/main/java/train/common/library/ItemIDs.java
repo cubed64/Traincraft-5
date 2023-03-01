@@ -395,6 +395,7 @@ public enum ItemIDs {
 	minecartSDL39("ItemRollingStock", "SDL39", 4),
 	minecartSD38("ItemRollingStock", "sd38", 4),
 	minecartSD39("ItemRollingStock", "sd39", 4),
+	minecartSD40("ItemRollingStock", "sd40", 4),
 	minecartSD40dash2("ItemRollingStock", "sd40dash2", 4),
 	minecartSD40T2("ItemRollingStock", "sd40t2", 4),
 	minecartSD40dash2B("ItemRollingStock", "sd40dash2b", 4),
@@ -447,6 +448,7 @@ public enum ItemIDs {
 	minecartAC4400CW("ItemRollingStock", "ac4400cw", 5),
 
 	minecartES44("ItemRollingStock", "es44", 6),
+	minecartP32("ItemRollingStock", "geGenesis2", 4),
 	minecartGeGenesis("ItemRollingStock", "geGenesis", 4),
 
 	//ALCO and its canookistanian counterpart//
