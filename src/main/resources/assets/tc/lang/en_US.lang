@@ -1249,6 +1249,7 @@ item.tc:minecartACFGNDiner_Observation.name=American Car & Foundry GN Diner-Obse
 item.tc:minecartOB84SeatCoach.name=Osgood Bradley 84 Seat Coach
 item.tc:minecartOB92SeatCoach.name=Osgood Bradley 92 Seat Coach
 item.tc:minecartPSCNW56SeatCoach.name=Pullman Standard CNW 56 Seat Coach
+item.tc:minecartBuddRDG56SeatCoachLounge.name=Budd RDG 56 Seat Coach-Lounge
 entity.tc.Freight PS 73 Baggage.name=Pullman Standard 73' Baggage
 entity.tc.Freight PS 85 Baggage.name=Pullman Standard 85' Baggage
 entity.tc.PS 5-6-5 Sleeper.name=Pullman Standard 10-6 Sleeper (Center Bedroom)
@@ -1273,6 +1274,7 @@ entity.tc.AC&F GN Diner-Observation.name=American Car & Foundry GN Diner-Observa
 entity.tc.OB 84 Seat Coach.name=Osgood Bradley 84 Seat Coach
 entity.tc.OB 92 Seat Coach.name=Osgood Bradley 92 Seat Coach
 entity.tc.PS CNW 56 Seat Coach.name=Pullman Standard CNW 56 Seat Coach
+entity.tc.Budd RDG 56 Seat Coach-Lounge.name=Budd RDG 56 Seat Coach-Lounge
 
 
 item.tc:minecartAmfleet.name=Amfleet 1 Coach
