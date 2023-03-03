@@ -2456,7 +2456,7 @@ public class ModelPSSleeper565DRGW extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 			}
 		}
-		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==14 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==0){
+		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==143 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==0){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/41-N-11_truck_black.png"));
 			GL11.glPushMatrix();
 			GL11.glRotatef(180, 0, 1, 0);
