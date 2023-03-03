@@ -9,7 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
-import com.jcirmodelsquad.tcjcir.models.trucks.ModelPS_Truck_41ER;
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelPS_Truck_41GT;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -1967,7 +1967,7 @@ public class ModelBuddRDG56SeatCoach_Lounge extends ModelConverter//Same as File
 		bodyModel[476].addShapeBox(0F, 0F, 0F, 6, 3, 1, 0F,0F, 0F, 0F, -2.5F, 0F, 0F, -2.5F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, -2.5F, 0F, 0F, -2.5F, 0F, -0.5F, 0F, 0F, -0.5F); // Box 493
 		bodyModel[476].setRotationPoint(-50.25F, -2F, -5.25F);
 	}
-	ModelPS_Truck_41ER bogie1 = new ModelPS_Truck_41ER();
+	ModelPS_Truck_41GT bogie1 = new ModelPS_Truck_41GT();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
@@ -1986,36 +1986,36 @@ public class ModelBuddRDG56SeatCoach_Lounge extends ModelConverter//Same as File
 			}
 		}
 		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==4 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==6 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==8 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==7){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/41-ER_truck_RDGBlue.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/41-GT_truck_RDGBlue.png"));
 			GL11.glPushMatrix();
 			GL11.glRotatef(180, 0, 1, 0);
-			GL11.glTranslated(2.57, -0.03, 0);
+			GL11.glTranslated(-2.57, -0.03, 0);
 			bogie1.render(entity, f, f1, f2, f3, f4, f5);//rear truck
 
 			GL11.glRotatef(180, 0, 1, 0);
-			GL11.glTranslated(5.14, 0, 0);
+			GL11.glTranslated(-5.14, 0, 0);
 			bogie1.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==123456){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/41-ER_truck_silver.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/41-GT_truck_silver.png"));
 			GL11.glPushMatrix();
 			GL11.glRotatef(180, 0, 1, 0);
-			GL11.glTranslated(2.57, -0.03, 0);
+			GL11.glTranslated(-2.57, -0.03, 0);
 			bogie1.render(entity, f, f1, f2, f3, f4, f5);//rear truck
 
 			GL11.glRotatef(180, 0, 1, 0);
-			GL11.glTranslated(5.14, 0, 0);
+			GL11.glTranslated(-5.14, 0, 0);
 			bogie1.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/41-ER_truck_black.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/41-GT_truck_black.png"));
 			GL11.glPushMatrix();
 			GL11.glRotatef(180, 0, 1, 0);
-			GL11.glTranslated(2.57, -0.03, 0);
+			GL11.glTranslated(-2.57, -0.03, 0);
 			bogie1.render(entity, f, f1, f2, f3, f4, f5);//rear truck
 
 			GL11.glRotatef(180, 0, 1, 0);
-			GL11.glTranslated(5.14, 0, 0);
+			GL11.glTranslated(-5.14, 0, 0);
 			bogie1.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
