@@ -14,13 +14,13 @@ import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
 
-public class DieselP42 extends DieselTrain {
-    public DieselP42(World world) {
-        super(world, EnumTrains.P42.getTankCapacity(), LiquidManager.dieselFilter());
+public class DieselP40 extends DieselTrain {
+    public DieselP40(World world) {
+        super(world, EnumTrains.geGenesis.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
     }
-    public DieselP42(World world, double d, double d1, double d2){
+    public DieselP40(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -133,7 +133,7 @@ public class DieselP42 extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "Ge P42";
+        return "Ge P40";
     }
 
     @Override

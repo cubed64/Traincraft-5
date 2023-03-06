@@ -449,7 +449,8 @@ public enum ItemIDs {
 
 	minecartES44("ItemRollingStock", "es44", 6),
 	minecartP32("ItemRollingStock", "geGenesis2", 4),
-	minecartGeGenesis("ItemRollingStock", "geGenesis", 4),
+	minecartGeGenesis("ItemRollingStock", "geGenesis3", 4),
+	minecartP42("ItemRollingStock", "geGenesis", 4),
 
 	//ALCO and its canookistanian counterpart//
 	minecartAlcoPA1("ItemRollingStock", "AlcoPA1Icon",5),
@@ -529,13 +530,15 @@ public enum ItemIDs {
 	minecarthicube60foot("ItemRollingStock", "hicube60", 5),
 	minecartReefer64("ItemRollingStock", "Reefer64", 5),
 	minecartFNCC50Foot("ItemRollingStock", "FNCC50Foot", 4),
+	minecartGN40("ItemRollingStock", "gn40", 3),
 
-	minecartVersaLongi("ItemRollingStock", "versalongi", 5),
-	minecartVersaTrans("ItemRollingStock", "versatrans", 5),
+	minecartVersaLongi("ItemRollingStock", "versalongi", 4),
+	minecartVersaTrans("ItemRollingStock", "versatrans", 4),
 	minecartMillGondola("ItemRollingStock", "millgondola", 4),
 	minecartWoodchipHopper("ItemRollingStock", "woodchiphopper", 4),
 	minecartOreJenny("ItemRollingStock", "orejenny", 2),
 	minecartPRRGLaHopper("ItemRollingStock", "prrglahopper", 2),
+	minecartACF41Gon("ItemRollingStock", "ACF_41_6_gon", 3),
 
 	minecart11000DOT111("ItemRollingStock", "11000DOT", 4),
 	minecart20600DOT111("ItemRollingStock", "20600DOT", 5),

@@ -1819,14 +1819,14 @@ public class ModelP32 extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 			}
 		}
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 346) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/P42-40_truck_AMTK_Pz_III-IV.png"));
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 327) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/p32_bogie_silver.png"));
 
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 34654) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/P42-40_truck_AMTK_Pz_V_longy.png"));
 
 		} else {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/P42-40_truck_black_long_2.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/p32_bogie_black.png"));
 		}
 		GL11.glPushMatrix();
 		GL11.glTranslated(-1.67, -0.0, 0);

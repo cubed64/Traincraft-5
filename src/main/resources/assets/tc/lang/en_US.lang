@@ -960,7 +960,8 @@ item.tc:minecartAC4400CW.name=GE AC4400CW
 
 item.tc:minecartES44.name=GE ES44
 item.tc:minecartP32.name=GE P32
-item.tc:minecartGeGenesis.name=GE P40-P42
+item.tc:minecartGeGenesis.name=GE P40
+item.tc:minecartP42.name=GE P42
 
 entity.tc.GE 44-ton.name=GE 44-Ton
 entity.tc.23 Ton Boxcab.name=GE-23 Ton Boxcab
@@ -992,7 +993,8 @@ entity.tc.AC4400CW.name=GE AC4400CW
 
 entity.tc.ES44.name=GE ES44
 entity.tc.P32.name=GE P32
-entity.tc.P42.name=GE P40-P42
+entity.tc.P40.name=GE P40
+entity.tc.P42.name=GE P42
 
 --------------------------------------------------------
 
@@ -1146,6 +1148,7 @@ item.tc:minecart40highcube.name=40' Hi-Cube Boxcar
 item.tc:minecarthicube60foot.name=Gunderson 60' Hi-Cube Double Door Boxcar
 item.tc:minecartReefer64.name=Trinity 64' Mechanical Reefer
 item.tc:minecartFNCC50Foot.name=North Fox 50' Highcube Boxcar
+item.tc:minecartGN40.name=Great Northern Homebuilt 40' Boxcar(s)
 
 
 entity.tc.PS140.name=Pullman Standard 40' Boxcar
@@ -1157,6 +1160,7 @@ entity.40highcube.name=40' Hi-Cube Boxcar
 entity.tc.60 Foot Hi-Cube Boxcar.name=Gunderson 60' Hi-Cube Double Door Boxcar
 entity.tc.Reefer64.name=Trinity 64' Mechanical Reefer
 entity.tc.FNCC50FootBoxcar.name=FNCC 50' Highcube Boxcar
+entity.tc.GN40.name=Great Northern Homebuilt 40' Boxcar(s)
 
 item.tc:minecartVersaLongi.name=Versaflood Longitudinal Hopper
 item.tc:minecartVersaTrans.name=Versaflood Transverse Hopper
@@ -1164,6 +1168,7 @@ item.tc:minecartMillGondola.name=52' Mill Gondola
 item.tc:minecartWoodchipHopper.name=Thrall 59' Woodchip Hopper
 item.tc:minecartOreJenny.name=Ore Jenny
 item.tc:minecartPRRGLaHopper.name= PRR GLa Hopper and clones
+item.tc:minecartACF41Gon.name=AC&F 41' 6" Gondola
 
 entity.tc.VersaLongi.name=Versaflood Longitudinal Hopper
 entity.tc.VersaTrans.name=Versaflood Transverse Hopper
@@ -1171,6 +1176,7 @@ entity.tc.52footMillGondola.name=52' Mill Gondola
 entity.tc.Woodchip Hopper.name=Thrall 59' Woodchip Hopper
 entity.tc.Ore Jenny.name=Ore Jenny
 entity.tc.PRR GLa hopper.name= PRR GLa Hopper and clones
+entity.tc.ACF41Gon.name=AC&F 41' 6" Gondola
 
 item.tc:minecart11000DOT111.name=11,000 Gallon Tank Car
 item.tc:minecart20600DOT111.name=20,600 Gallon Tank Car
