@@ -2052,7 +2052,7 @@ public class ModelACFGN28SeatCoach_Dinette extends ModelConverter//Same as Filen
 		bodyModel[487].rotateAngleY = -3.14159265F;
 
 		bodyModel[488].addBox(-1.5F, 0F, -2F, 5, 2, 4, 0F); // Right seat part
-		bodyModel[488].setRotationPoint(-31F, -3F, 7F);
+		bodyModel[488].setRotationPoint(-32F, -3F, 7F);
 		bodyModel[488].rotateAngleY = -3.14159265F;
 
 		bodyModel[489].addShapeBox(-2.5F, 0F, -2F, 1, 5, 4, 0F,0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Right seat part
