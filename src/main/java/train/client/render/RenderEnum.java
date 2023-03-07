@@ -1346,6 +1346,7 @@ public enum RenderEnum {
 	ACFGNRPO_30(ACFGNRPO_30.class, new ModelACFGNRPO_30(), "AC&F_lightweight_GNRPO30_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ACFGN60SeatCoach(ACFGN60SeatCoach.class, new ModelACFGN60SeatCoach(), "AC&F_lightweight_GN60SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ACFGNDinerObservation(ACFGNDinerObservation.class, new ModelACFGNDinerObservation(), "AC&F_lightweight_GNDiner_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACFGN28SeatCoach_Dinette(ACFGN28SeatCoach_Dinette.class, new ModelACFGN28SeatCoach_Dinette(), "AC&F_lightweight_GN28SeatCoach_Dinette_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	OB84SeatCoach(OB84SeatCoach.class, new ModelOB84SeatCoach(), "OB_lightweight_84SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	OB92SeatCoach(OB92SeatCoach.class, new ModelOB92SeatCoach(), "OB_lightweight_92SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

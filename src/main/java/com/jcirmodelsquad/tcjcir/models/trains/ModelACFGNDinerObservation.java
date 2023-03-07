@@ -27,7 +27,7 @@ public class ModelACFGNDinerObservation extends ModelConverter//Same as Filename
 
 	public ModelACFGNDinerObservation() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[651];
+		bodyModel = new ModelRendererTurbo[653];
 
 		initbodyModel_1();
 		initbodyModel_2();
@@ -418,7 +418,7 @@ public class ModelACFGNDinerObservation extends ModelConverter//Same as Filename
 		bodyModel[375] = new ModelRendererTurbo(this, 39, 269, textureX, textureY); // Box 128
 		bodyModel[376] = new ModelRendererTurbo(this, 91, 269, textureX, textureY); // Box 128
 		bodyModel[377] = new ModelRendererTurbo(this, 65, 294, textureX, textureY); // Box 358
-		bodyModel[378] = new ModelRendererTurbo(this, 70, 310, textureX, textureY); // Box 359
+		bodyModel[378] = new ModelRendererTurbo(this, 70, 309, textureX, textureY); // Box 359
 		bodyModel[379] = new ModelRendererTurbo(this, 60, 302, textureX, textureY); // Box 360
 		bodyModel[380] = new ModelRendererTurbo(this, 50, 308, textureX, textureY); // Box 361
 		bodyModel[381] = new ModelRendererTurbo(this, 22, 299, textureX, textureY); // Box 363
@@ -1692,7 +1692,7 @@ public class ModelACFGNDinerObservation extends ModelConverter//Same as Filename
 		bodyModel[377].addShapeBox(0F, 0F, 0F, 6, 3, 4, 0F,-1F, 0F, 0F, -1F, 0F, 0F, -3F, 0F, -1F, -3F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F); // Box 358
 		bodyModel[377].setRotationPoint(-47.5F, -6F, -10F);
 
-		bodyModel[378].addBox(0F, 0F, 0F, 2, 3, 3, 0F); // Box 359
+		bodyModel[378].addBox(0F, 0F, 0F, 2, 4, 3, 0F); // Box 359
 		bodyModel[378].setRotationPoint(-45.5F, -3F, -9F);
 
 		bodyModel[379].addBox(0F, 0F, 0F, 14, 4, 1, 0F); // Box 360
@@ -1712,8 +1712,7 @@ public class ModelACFGNDinerObservation extends ModelConverter//Same as Filename
 
 		bodyModel[384].addShapeBox(-0.5F, 0F, -0.5F, 1, 6, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 375
 		bodyModel[384].setRotationPoint(-40.5F, -5F, -5F);
-		bodyModel[384].rotateAngleY = -0.76794487F;
-		bodyModel[384].rotateAngleZ = -0.01745329F;
+		bodyModel[384].rotateAngleY = -0.78539816F;
 
 		bodyModel[385].addShapeBox(0F, 0F, 0F, 6, 1, 4, 0F,-3F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 377
 		bodyModel[385].setRotationPoint(-51.5F, -6F, -9F);
@@ -1795,18 +1794,15 @@ public class ModelACFGNDinerObservation extends ModelConverter//Same as Filename
 
 		bodyModel[411].addShapeBox(-0.5F, 0F, -0.5F, 1, 6, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 375
 		bodyModel[411].setRotationPoint(-48.5F, -5F, -5F);
-		bodyModel[411].rotateAngleY = -0.76794487F;
-		bodyModel[411].rotateAngleZ = -0.01745329F;
+		bodyModel[411].rotateAngleY = -0.78539816F;
 
 		bodyModel[412].addShapeBox(-0.5F, 0F, -0.5F, 1, 6, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 463
 		bodyModel[412].setRotationPoint(-40.5F, -5F, 5F);
-		bodyModel[412].rotateAngleY = -0.76794487F;
-		bodyModel[412].rotateAngleZ = -0.01745329F;
+		bodyModel[412].rotateAngleY = -0.78539816F;
 
 		bodyModel[413].addShapeBox(-0.5F, 0F, -0.5F, 1, 6, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 464
 		bodyModel[413].setRotationPoint(-48.5F, -5F, 5F);
-		bodyModel[413].rotateAngleY = -0.76794487F;
-		bodyModel[413].rotateAngleZ = -0.01745329F;
+		bodyModel[413].rotateAngleY = -0.78539816F;
 
 		bodyModel[414].addBox(0F, 0F, 0F, 1, 16, 5, 0F); // Box 38
 		bodyModel[414].setRotationPoint(-8.5F, -15F, 5F);
@@ -2230,6 +2226,8 @@ public class ModelACFGNDinerObservation extends ModelConverter//Same as Filename
 		bodyModel[648] = new ModelRendererTurbo(this, 22, 260, textureX, textureY); // Box 38
 		bodyModel[649] = new ModelRendererTurbo(this, 43, 260, textureX, textureY); // Box 38
 		bodyModel[650] = new ModelRendererTurbo(this, 150, 66, textureX, textureY); // Box 38
+		bodyModel[651] = new ModelRendererTurbo(this, 8, 119, textureX, textureY); // Box 128
+		bodyModel[652] = new ModelRendererTurbo(this, 8, 117, textureX, textureY); // Box 261
 
 		bodyModel[500].addShapeBox(0F, 0F, 0F, 2, 3, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F); // Box 532
 		bodyModel[500].setRotationPoint(53.1F, -4F, -4F);
@@ -2702,12 +2700,18 @@ public class ModelACFGNDinerObservation extends ModelConverter//Same as Filename
 
 		bodyModel[650].addBox(0F, 0F, 0F, 38, 1, 0, 0F); // Box 38
 		bodyModel[650].setRotationPoint(-33.5F, -8F, -9.99F);
+
+		bodyModel[651].addShapeBox(0F, 0F, 0F, 0, 1, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 128
+		bodyModel[651].setRotationPoint(-63.5F, -7F, -10F);
+
+		bodyModel[652].addShapeBox(0F, 0F, 0F, 0, 1, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 261
+		bodyModel[652].setRotationPoint(-63.5F, -7F, 5F);
 	}
 	ModelPS_Truck bogie1 = new ModelPS_Truck();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for(int i = 0; i < 651; i++)
+		for(int i = 0; i < 653; i++)
 		{
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("glow")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
