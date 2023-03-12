@@ -14,7 +14,7 @@ import train.common.api.LiquidManager;
 import train.common.api.LiquidTank;
 import train.common.library.EnumTrains;
 
-public abstract class DieselEnergyGenerator extends LiquidTank implements IFluidHandler {
+public class DieselEnergyGenerator extends LiquidTank implements IFluidHandler {
     private int update = 8;
     private LiquidManager.StandardTank theTank;
     public boolean isOn = false;
