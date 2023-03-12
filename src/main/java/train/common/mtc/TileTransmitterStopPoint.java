@@ -6,17 +6,14 @@ import dan200.computercraft.api.lua.ILuaContext;
 import dan200.computercraft.api.lua.LuaException;
 import dan200.computercraft.api.peripheral.IComputerAccess;
 import dan200.computercraft.api.peripheral.IPeripheral;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Vec3;
 import train.common.Traincraft;
 import train.common.api.Locomotive;
-import train.common.mtc.network.PacketATOSetStopPoint;
 import train.common.mtc.network.PacketStopPoint;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class TileTransmitterStopPoint extends TileEntity implements IPeripheral {

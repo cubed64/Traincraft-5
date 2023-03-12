@@ -22,7 +22,6 @@ import train.common.items.ItemPaintbrushThing;
 import train.common.items.TCItems;
 import train.common.library.BlockIDs;
 import train.common.library.ItemIDs;
-import train.common.mtc.BlockInfoTransmitterSpeed;
 import train.common.recipes.RecipesArmorDyes;
 
 import java.util.ArrayList;

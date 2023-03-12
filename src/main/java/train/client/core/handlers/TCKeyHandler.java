@@ -20,7 +20,6 @@ import train.common.api.SteamTrain;
 import train.common.core.handlers.ConfigHandler;
 import train.common.core.network.PacketKeyPress;
 import train.common.library.EnumSounds;
-import train.common.mtc.packets.PacketATO;
 
 public class TCKeyHandler {
 	public static KeyBinding horn;
@@ -218,11 +217,7 @@ public class TCKeyHandler {
 					Locomotive train = (Locomotive) Minecraft.getMinecraft().thePlayer.ridingEntity;
 					sendKeyControlsPacket(18);
 					if (train.mtcStatus == 1 | train.mtcStatus == 2) {
-						if (train.overspeedOveridePressed) {
-							train.overspeedOveridePressed = false;
-						} else {
-							train.overspeedOveridePressed = true;
-						}
+						train.overspeedOveridePressed = !train.overspeedOveridePressed;
 					}
 				}
 

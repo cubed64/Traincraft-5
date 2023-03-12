@@ -5,9 +5,9 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrainHandler;
 import com.jcirmodelsquad.tcjcir.features.autotrain.Station;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,6 +18,7 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.MathHelper;
+import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import org.apache.commons.lang3.StringUtils;
@@ -25,9 +26,10 @@ import train.common.Traincraft;
 import train.common.api.ElectricTrain;
 import train.common.api.EntityRollingStock;
 import train.common.library.GuiIDs;
-import train.common.mtc.PDMMessage;
-import train.common.mtc.packets.PacketATO;
-import train.common.mtc.packets.PacketATOSetStopPoint;
+import train.common.mtc.MTCMessage;
+import train.common.mtc.network.PacketATO;
+import train.common.mtc.vbc.VBCTracking;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +59,7 @@ public class PCH120Commute extends ElectricTrain {
     public boolean requestedTimetable = false;
 
     public ArrayList<Station> theTimetable = new ArrayList<Station>();
-    public Station theNextStation;
+    public Station nextStation;
     public Station theCurrentStation;
     public Station theLastStation;
     public boolean setUUID = false;
@@ -176,8 +178,8 @@ public class PCH120Commute extends ElectricTrain {
             theStation.setBoolean("isFinalStop", station.isFinalStop);
             theInitalimetable.appendTag(theStation);
         }
-        if (theNextStation != null) {
-            nbttagcompound.setString("theNextStation", theNextStation.getStationName());
+        if (nextStation != null) {
+            nbttagcompound.setString("theNextStation", nextStation.getStationName());
         } else {
             nbttagcompound.setString("theNextStation", "null");
         }
@@ -201,7 +203,7 @@ public class PCH120Commute extends ElectricTrain {
         nbttagcompound.setTag("Stations", theTimetable);
         nbttagcompound.setTag("InitalStations", theInitalimetable);
         nbttagcompound.setInteger("atoStatus", atoStatus);
-        nbttagcompound.setBoolean("stationStopping", stationStopping);
+        //nbttagcompound.setBoolean("stationStopping", stationStopping);
         nbttagcompound.setInteger("operation", operation);
         nbttagcompound.setInteger("currentMode", currentMode);
     }
@@ -237,7 +239,7 @@ public class PCH120Commute extends ElectricTrain {
         if (!nbttagcompound.getString("theNextStation").equals("null")) {
             for (Station c : theTimetable) {
                 if (c.name.equals(nbttagcompound.getString("theNextStation"))) {
-                    theNextStation = theTimetable.get(theTimetable.indexOf(c));
+                    nextStation = theTimetable.get(theTimetable.indexOf(c));
                     break;
                 }
             }
@@ -265,7 +267,7 @@ public class PCH120Commute extends ElectricTrain {
         readyToDepart = nbttagcompound.getBoolean("readyToDepart");
         initalPosition = nbttagcompound.getString(initalPosition);
         atoStatus = nbttagcompound.getInteger("atoStatus");
-        stationStopping = nbttagcompound.getBoolean("stationStopping");
+        //stationStopping = nbttagcompound.getBoolean("stationStopping");
         currentMode = nbttagcompound.getInteger("currentMode");
         operation = nbttagcompound.getInteger("operation");
         justLoaded = true;
@@ -298,7 +300,7 @@ public class PCH120Commute extends ElectricTrain {
     }
 
     @Override
-    public void receiveMessage(PDMMessage message) {
+    public void receiveMessage(MTCMessage message) {
         super.receiveMessage(message);
         JsonParser parser = new JsonParser();
         JsonObject thing = parser.parse(message.message.toString()).getAsJsonObject();
@@ -324,7 +326,7 @@ public class PCH120Commute extends ElectricTrain {
 
             } else if (thing.get("funct").getAsString().equals("cancelTimetable")) {
                 theTimetable.clear();
-                theNextStation = null;
+                nextStation = null;
                 theCurrentStation = null;
                 theLastStation = null;
                 operatingMode = 4;
@@ -357,7 +359,7 @@ public class PCH120Commute extends ElectricTrain {
                         destination = theStation.get("stationName").getAsString();
                         theLastStation = new Station(theStation.get("stationName").getAsString(), theStation.get("stationX").getAsDouble(), theStation.get("stationY").getAsDouble(), theStation.get("stationZ").getAsDouble(), theStation.get("dwellTime").getAsInt(), true);
                     }
-                    theNextStation = theTimetable.get(0);
+                    nextStation = theTimetable.get(0);
                 }
                 initalTimetable = theTimetable;
                 operation = 1;
@@ -374,6 +376,27 @@ public class PCH120Commute extends ElectricTrain {
 
         //Whatever, handle current W-MTC stuff. But here, let's add a couple of new things.
         if (!worldObj.isRemote) {
+            //Juuust for testing...
+
+            /*if (cartLinked1 != null) {
+
+                if ((cartLinked1).train != null && (cartLinked1).train.getTrains().size() != 0 && (cartLinked1).train.getTrains().size() > 1) {
+
+                    ArrayList<EntityRollingStock> consist = new ArrayList<>((cartLinked1).train.getTrains());
+                    ArrayList<Vec3> positions = new ArrayList<Vec3>();
+
+                    for (EntityRollingStock stock: consist) {
+                        positions.add(Vec3.createVectorHelper(Math.floor(stock.posX), Math.floor(stock.posY), Math.floor(stock.posZ)));
+                    }
+
+                    VBCTracking.updateFromMessage(0, positions);
+                }
+            }*/
+
+
+
+
+
             if (justLoaded) {
                 lastMillsRTD = System.currentTimeMillis();
                 lastMills = System.currentTimeMillis();
@@ -437,15 +460,10 @@ public class PCH120Commute extends ElectricTrain {
                 case 0: { // Off. However, still transmit to the server. You never know when it might ask you to start.
                     speedLimit = 0;
                     nextSpeedLimit = 0;
-                    xStationStop = 0.0;
-                    yStationStop = 0.0;
-                    zStationStop = 0.0;
-                    xSpeedLimitChange = 0.0;
-                    ySpeedLimitChange = 0.0;
-                    zSpeedLimitChange = 0.0;
-                    xStationStop = 0.0;
-                    yStationStop = 0.0;
-                    zStationStop = 0.0;
+
+                    stationStop3 = Vec3.createVectorHelper(0,0,0);
+                    speedChange3 = Vec3.createVectorHelper(0,0,0);
+
                     atoStatus = 0;
                     theTimetable.clear();
                     //Just off doo.
@@ -474,20 +492,19 @@ public class PCH120Commute extends ElectricTrain {
                     if (operation == 1) {
                         double distanceFromNextStation = 0.0;
                         if ( theTimetable.size() != 0) {
-                            theNextStation = theTimetable.get(0);
+                            nextStation = theTimetable.get(0);
                         } else {
-                            theNextStation = null;
+                            nextStation = null;
                         }
-                        if (theNextStation != null) {
+                        if (nextStation != null) {
                             //distanceFromNextStation = theNextStation.
                             //Handle normal MTC stuff. Use W-MTC station stops and stuff.. Ooh, speaking of those, set the station stop once the train is close enough.
                         }
 
-                        if (distanceFromNextStation < this.getSpeed() + 5 && !stationStop && theNextStation != null) {
-                            this.xStationStop = theNextStation.stationX;
-                            this.yStationStop = theNextStation.stationY;
-                            this.zStationStop = theNextStation.stationZ;
-                            Traincraft.atoSetStopPoint.sendToAllAround(new PacketATOSetStopPoint(this.getEntityId(), xFromStopPoint, yFromStopPoint, zFromStopPoint, xStationStop, yStationStop, zStationStop), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
+                        if (distanceFromNextStation < this.getSpeed() + 5 && !stationStop && nextStation != null) {
+                            this.stationStop3 = Vec3.createVectorHelper(nextStation.stationX, nextStation.stationY, nextStation.stationZ);
+
+                            //Traincraft.atoSetStopPoint.sendToAllAround(new PacketATOSetStopPoint(this.getEntityId(), xFromStopPoint, yFromStopPoint, zFromStopPoint, xStationStop, yStationStop, zStationStop), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
                         }
                         if (theCurrentStation != null && stationStop) {
                             int timeUntilDeparture = theCurrentStation.getDwellTime() * 1000;
@@ -501,7 +518,7 @@ public class PCH120Commute extends ElectricTrain {
                                 JsonObject sendingObj = new JsonObject();
                                 sendingObj.addProperty("funct", "readyToDepart");
                                 sendingObj.addProperty("stationName", theCurrentStation.getStationName());
-                                sendMessage(new PDMMessage(this.trainID, serverUUID, sendingObj.toString(), 0));
+                                sendMessage(new MTCMessage(this.trainID, serverUUID, sendingObj.toString(), 0));
                                 lastMillsRTD=0L;
                                 readyToDepart = true;
                             }
@@ -516,8 +533,8 @@ public class PCH120Commute extends ElectricTrain {
                                     JsonObject sendingObj = new JsonObject();
                                     sendingObj.addProperty("funct", "newtimetable");
                                     sendingObj.addProperty("position", theCurrentStation.getStationName());
-                                    sendMessage(new PDMMessage(otherSide.trainID, serverUUID, sendingObj.toString(), 0));
-                                    Traincraft.atoChannel.sendToAllAround(new PacketATO(this.getEntityId(), 0), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
+                                    sendMessage(new MTCMessage(otherSide.trainID, serverUUID, sendingObj.toString(), 0));
+                                    Traincraft.mtcChannel.sendToAllAround(new PacketATO(this.getEntityId(), 0), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
                                     this.canBePulled = true;
                                     this.setCanBeAdjusted(true);
                                     this.parkingBrake = false;
@@ -534,17 +551,17 @@ public class PCH120Commute extends ElectricTrain {
                                     JsonObject sendingObj = new JsonObject();
                                     sendingObj.addProperty("funct", "readyforinstructions");
                                     sendingObj.addProperty("position", theCurrentStation.getStationName());
-                                    sendMessage(new PDMMessage(otherSide.trainID, serverUUID, sendingObj.toString(), 0));
+                                    sendMessage(new MTCMessage(otherSide.trainID, serverUUID, sendingObj.toString(), 0));
                                 } else {
                                     //No? It isn't the final stop? Okay, continue on the route.
                                     if (isLeading) {
                                         stationStop = false;
-                                        stationStopping = true;
+                                        //stationStopping = true;
                                         atoStatus = 1;
                                         JsonObject sendingObj = new JsonObject();
                                         sendingObj.addProperty("funct", "trainDeparting");
                                         sendingObj.addProperty("stationName", theCurrentStation.getStationName());
-                                        sendMessage(new PDMMessage(this.trainID, serverUUID, sendingObj.toString(), 0));
+                                        sendMessage(new MTCMessage(this.trainID, serverUUID, sendingObj.toString(), 0));
                                         theCurrentStation = null;
                                         readyToDepart = false;
                                     }
@@ -719,13 +736,11 @@ public class PCH120Commute extends ElectricTrain {
 
     @Override
     public void stationStopComplete() {
-        theCurrentStation = theNextStation;
-        theTimetable.remove(theNextStation);
+        theCurrentStation = nextStation;
+        theTimetable.remove(nextStation);
         atoStatus = 0;
-        this.xStationStop = 0.0;
-        this.yStationStop = 0.0;
-        this.zStationStop = 0.0;
-        Traincraft.atoSetStopPoint.sendToAllAround(new PacketATOSetStopPoint(this.getEntityId(), xFromStopPoint, yFromStopPoint, zFromStopPoint, xStationStop, yStationStop, zStationStop), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
+        this.stationStop3 = Vec3.createVectorHelper(0,0,0);
+       // Traincraft.atoSetStopPoint.sendToAllAround(new PacketATOSetStopPoint(this.getEntityId(), xFromStopPoint, yFromStopPoint, zFromStopPoint, xStationStop, yStationStop, zStationStop), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
     }
 
     @Override
@@ -737,8 +752,8 @@ public class PCH120Commute extends ElectricTrain {
         if (theTimetable != null)  {
 
             JsonArray timetableListArray = new JsonArray();
-            if (theNextStation != null) {
-                sendingObj.addProperty("nextStation", theNextStation.getStationName());
+            if (nextStation != null) {
+                sendingObj.addProperty("nextStation", nextStation.getStationName());
             }
             if (theCurrentStation != null) {
                 sendingObj.addProperty("currentStation", theCurrentStation.getStationName());
@@ -779,7 +794,7 @@ public class PCH120Commute extends ElectricTrain {
         }
         sendingObj.addProperty("currentSpeed", (int)Math.abs(this.getSpeed()));
         sendingObj.addProperty("speedOverrideActivated", overspeedOveridePressed);
-        sendMessage(new PDMMessage(this.trainID, this.serverUUID, sendingObj.toString(), 1));
+        sendMessage(new MTCMessage(this.trainID, this.serverUUID, sendingObj.toString(), 1));
     }
     @Override
     public void attemptConnection(String theServerUUID) {
@@ -795,7 +810,7 @@ public class PCH120Commute extends ElectricTrain {
                 sendTo.addProperty("extraDetail", "AutoTrain");
                 sendTo.addProperty("initalPosition", initalPosition);
                 sendTo.addProperty("destination", this.getDestinationGUI());
-                sendMessage(new PDMMessage(this.trainID, theServerUUID, sendTo.toString(), 0));
+                sendMessage(new MTCMessage(this.trainID, theServerUUID, sendTo.toString(), 0));
             }
         } else {
             isConnecting = false;

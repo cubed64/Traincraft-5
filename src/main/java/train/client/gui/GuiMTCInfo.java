@@ -14,7 +14,6 @@ import train.common.Traincraft;
 import train.common.api.Locomotive;
 import train.common.core.network.PacketDestination;
 import train.common.core.network.PacketUpdateTrainID;
-import train.common.mtc.network.PacketMTCLevelUpdate;
 
 public class GuiMTCInfo extends GuiScreen {
     Locomotive theLocomotive;

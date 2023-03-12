@@ -11,8 +11,12 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.Vec3;
 import train.common.Traincraft;
 import train.common.api.Locomotive;
+import train.common.mtc.network.PacketMTC;
+import train.common.mtc.network.PacketSpeedLimit;
+import train.common.mtc.network.PacketStopPoint;
 import train.common.mtc.packets.*;
 
 import java.util.List;
@@ -25,8 +29,8 @@ import java.util.List;
         public boolean hadSentPacket = false;
         public boolean hadSentMTCPacket = false;
         public boolean enforceSpeedLimits;
-        public Coordinates speedChangeCoords = new Coordinates();
-        public Coordinates stopCoords = new Coordinates();
+        public Vec3 speedChangeCoords = Vec3.createVectorHelper(0,0,0);
+        public Vec3 stopCoords = Vec3.createVectorHelper(0,0,0);
         public String serverUUID = "";
         public String signalBlock = "";
         public int mtcType;
@@ -78,41 +82,49 @@ import java.util.List;
 
                                 if (daTrain.mtcStatus == 0 && !hadSentMTCPacket) {
                                     daTrain.mtcStatus = 1;
-                                    Traincraft.mscChannel.sendToAllAround(new PacketMTC(daTrain.getEntityId(), 1, 1), new NetworkRegistry.TargetPoint(worldObj.provider.dimensionId, daTrain.posX, daTrain.posY, daTrain.posZ, 150.0D));
+                                    Traincraft.mtcChannel.sendToAllAround(new PacketMTC(daTrain.getEntityId(), 1, 1), new NetworkRegistry.TargetPoint(worldObj.provider.dimensionId, daTrain.posX, daTrain.posY, daTrain.posZ, 150.0D));
                                     hadSentMTCPacket = true;
                                 }
 
                                 if (daTrain.speedLimit != speedLimit && daTrain.riddenByEntity != null) {
                                     // worldObj.playSoundAtEntity(daTrain.ridingEntity, Info.resourceLocation + ":" + "mtc_speedchange", 1.0F, 1.0F);
                                     // worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getHornString(), sounds.getHornVolume(), 1.0F);
-                                    Traincraft.playSoundOnClientChannel.sendTo(new PacketPlaySoundOnClient(7, "tc:mtc_speedchange"), (EntityPlayerMP) daTrain.riddenByEntity);
+                                    //Traincraft.playSoundOnClientChannel.sendTo(new PacketPlaySoundOnClient(7, "tc:mtc_speedchange"), (EntityPlayerMP) daTrain.riddenByEntity);
                                 }
                                 daTrain.speedLimit = speedLimit;
                                 if (!hadSentPacket) {
                                     hadSentPacket = true;
-                                    Traincraft.itsChannel.sendToAllAround(new PacketSetSpeed(speedLimit, xCoord, yCoord, zCoord, daTrain.getEntityId()), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, daTrain.posX, daTrain.posY, daTrain.posZ, 150.0D));
+                                    Traincraft.mtcChannel.sendToAllAround(new PacketSpeedLimit(
+                                            daTrain.getEntityId(), speedLimit, nextSpeedLimit, speedChangeCoords.xCoord, speedChangeCoords.yCoord,  speedChangeCoords.zCoord
+                                    ), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, daTrain.posX, daTrain.posY, daTrain.posZ, 150.0D));
+
                                     daTrain.nextSpeedLimit = nextSpeedLimit;
-                                    daTrain.xSpeedLimitChange = speedChangeCoords.getXAsDouble();
-                                    daTrain.ySpeedLimitChange = speedChangeCoords.getYAsDouble();
-                                    daTrain.zSpeedLimitChange = speedChangeCoords.getZAsDouble();
-                                    Traincraft.itnsChannel.sendToAllAround(new PacketNextSpeed(this.nextSpeedLimit, this.xCoord, this.yCoord, this.zCoord, speedChangeCoords.getXAsDouble(), speedChangeCoords.getYAsDouble(), speedChangeCoords.getZAsDouble(), daTrain.getEntityId()), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, daTrain.posX, daTrain.posY, daTrain.posZ, 150.0D));
+                                    daTrain.speedChange3 = speedChangeCoords;
+
+
                                 }
                             }
 
                             if (doTransmitStopPoint && daTrain.mtcStatus == 1 || daTrain.mtcStatus == 2) {
-                                if (stopCoords.x == 0) {
-                                    daTrain.xFromStopPoint = stopCoords.getXAsDouble();
-                                    daTrain.yFromStopPoint = stopCoords.getYAsDouble();
-                                    daTrain.zFromStopPoint = stopCoords.getZAsDouble();
-                                    Traincraft.atoSetStopPoint.sendToAllAround(new PacketATOSetStopPoint(daTrain.getEntityId(),stopCoords.getXAsDouble(), stopCoords.getYAsDouble(), stopCoords.getZAsDouble(), daTrain.xStationStop, daTrain.yStationStop, daTrain.zStationStop), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, daTrain.posX, daTrain.posY, daTrain.posZ, 150.0D));
+                                if (stopCoords.xCoord == 0) {
+                                    daTrain.stopPoint3 = stopCoords;
+                                    Traincraft.mtcChannel.sendToAllAround(
+                                            new PacketStopPoint(
+                                                    daTrain.getEntityId(),
+                                                    stopCoords.xCoord,
+                                                    stopCoords.yCoord,
+                                                    stopCoords.zCoord, 0
+                                            ), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, daTrain.posX, daTrain.posY, daTrain.posZ, 150.0D)
+                                    );
+
                                 }
                             }
 
                             if (doTransmitMTCData) {
                                 daTrain.mtcStatus = mtcStatus;
-                                Traincraft.mscChannel.sendToAllAround(new PacketMTC(daTrain.getEntityId(), mtcStatus, 0) , new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, daTrain.posX, daTrain.posY, daTrain.posZ, 150.0D));
+                                Traincraft.mtcChannel.sendToAllAround(new PacketMTC(daTrain.getEntityId(), mtcStatus, 0) , new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, daTrain.posX, daTrain.posY, daTrain.posZ, 150.0D));
                                 daTrain.currentSignalBlock = this.signalBlock;
-                                daTrain.mtcType =mtcType;
+                                daTrain.mtcType = mtcType;
                                 if (mtcType == 2 && !daTrain.isConnecting) {
                                     daTrain.stationStop = false;
                                     daTrain.speedGoingDown = false;
@@ -196,7 +208,7 @@ import java.util.List;
         @Callback
         public Object[] setNextCoordinates(Context context, Arguments args) {
             if (args.isInteger(0) && args.isInteger(1) && args.isInteger(2)) {
-                speedChangeCoords = new Coordinates(args.checkInteger(0), args.checkInteger(1), args.checkInteger(2));
+                speedChangeCoords = Vec3.createVectorHelper(args.checkInteger(0), args.checkInteger(1), args.checkInteger(2));
             }
             return new Object[]{true};
         }
@@ -239,7 +251,7 @@ import java.util.List;
         @Callback
         public Object[] setStopCoordinates(Context context, Arguments args) {
             if (args.isInteger(0) && args.isInteger(1) && args.isInteger(2)) {
-                stopCoords = new Coordinates(args.checkInteger(0), args.checkInteger(1), args.checkInteger(2));
+                stopCoords = Vec3.createVectorHelper(args.checkInteger(0), args.checkInteger(1), args.checkInteger(2));
             }
             return new Object[]{true};
         }
@@ -249,13 +261,10 @@ import java.util.List;
             isActivated = nbt.getBoolean("isActivated");
             speedLimit = nbt.getInteger("speedLimit");
             enforceSpeedLimits = nbt.getBoolean("enforceSpeedLimits");
-            speedChangeCoords.setX(nbt.getInteger("speedChangeX"));
-            speedChangeCoords.setY(nbt.getInteger("speedChangeY"));
-            speedChangeCoords.setZ(nbt.getInteger("speedChangeZ"));
+            speedChangeCoords = Vec3.createVectorHelper(nbt.getInteger("speedChangeX"), nbt.getInteger("speedChangeY"), nbt.getInteger("speedChangeZ"));
 
-            stopCoords.setX(nbt.getInteger("stopCoordsX"));
-            stopCoords.setY(nbt.getInteger("stopCoordsY"));
-            stopCoords.setZ(nbt.getInteger("stopCoordsZ"));
+            stopCoords = Vec3.createVectorHelper(nbt.getInteger("speedChangeX"), nbt.getInteger("speedChangeY"), nbt.getInteger("speedChangeZ"));
+
 
             serverUUID = nbt.getString("serverUUID");
             signalBlock = nbt.getString("signalBlock");
@@ -275,13 +284,13 @@ import java.util.List;
             nbt.setInteger("speedLimit", speedLimit);
             nbt.setBoolean("enforceSpeedLimits", enforceSpeedLimits);
 
-            nbt.setInteger("speedChangeX", speedChangeCoords.getX());
-            nbt.setInteger("speedChangeY", speedChangeCoords.getY());
-            nbt.setInteger("speedChangeZ", speedChangeCoords.getZ());
+            nbt.setInteger("speedChangeX", (int) speedChangeCoords.xCoord);
+            nbt.setInteger("speedChangeY", (int) speedChangeCoords.yCoord);
+            nbt.setInteger("speedChangeZ", (int) speedChangeCoords.zCoord);
 
-            nbt.setInteger("stopCoordsX", stopCoords.getX());
-            nbt.setInteger("stopCoordsY", stopCoords.getY());
-            nbt.setInteger("stopCoordsZ", stopCoords.getZ());
+            nbt.setInteger("stopCoordsX", (int) stopCoords.xCoord);
+            nbt.setInteger("stopCoordsY", (int) stopCoords.yCoord);
+            nbt.setInteger("stopCoordsZ", (int) stopCoords.zCoord);
 
             nbt.setString("serverUUID", serverUUID);
             nbt.setString("signalBlock", signalBlock);

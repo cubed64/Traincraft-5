@@ -1,5 +1,6 @@
 package train.common.mtc.vbc;
 
+import mods.railcraft.api.signals.SignalAspect;
 import net.minecraft.util.Vec3;
 
 public class SignalSection {
@@ -33,15 +34,25 @@ public class SignalSection {
     public int speedLimit;
     public String identifier;
 
-    public int getOccupiedBy() {
-        return occupiedBy;
+    public boolean getOccupiedBy() {
+        return occupied;
     }
 
-    public void setOccupiedBy(int occupiedBy) {
-        this.occupiedBy = occupiedBy;
+    public void setOccupiedBy(boolean occupiedBy) {
+        this.occupied = occupiedBy;
     }
 
-    public int occupiedBy;
+    public boolean occupied;
+
+    public SignalAspect getAspect() {
+        return aspect;
+    }
+
+    public void setAspect(SignalAspect aspect) {
+        this.aspect = aspect;
+    }
+
+    public SignalAspect aspect;
 
     public SignalSection() {}
 

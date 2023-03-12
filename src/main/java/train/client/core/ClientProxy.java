@@ -76,10 +76,8 @@ public class ClientProxy extends CommonProxy {
 		ClientTickHandler tickHandler = new ClientTickHandler();
 		CustomRenderHandler renderHandler = new CustomRenderHandler();
 		HUDloco huDloco = new HUDloco();
-		HUDloco huDloco = new HUDloco();
 		WigglyWobblyHandler wiggle = new WigglyWobblyHandler();
 		HUDMTC hudMTC = new HUDMTC();
-		registerEvent(hudMTC);
 		registerEvent(hudMTC);
 	/*	HudTiltingHandler tiltingHandler = new HudTiltingHandler();
 		registerEvent(tiltingHandler);*/

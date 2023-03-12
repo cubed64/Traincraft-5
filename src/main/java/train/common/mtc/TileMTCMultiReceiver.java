@@ -61,7 +61,7 @@ public class TileMTCMultiReceiver extends TileEntity implements SimpleComponent 
                             return;
                         }
                         trainID = daTrain.trainID;
-                        trainLevel = Integer.parseInt(daTrain.trainLevel);
+                        trainLevel = daTrain.trainLevel;
                         trainType = daTrain.trainType;
                         trainName = daTrain.getTrainName();
 

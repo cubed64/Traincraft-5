@@ -27,4 +27,5 @@ public class GuiIDs {
 	public static final int FORTY_FOOT_CONTAINER = 105;
 	public static final int CONTROL_CAR = 106;
 	public static final int CREDITS_BOOK = 107;
+    public static final int STOPPOINT_TRANSMITTER = 108;
 }

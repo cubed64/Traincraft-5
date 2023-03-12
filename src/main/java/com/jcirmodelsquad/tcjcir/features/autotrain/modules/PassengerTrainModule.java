@@ -2,6 +2,7 @@ package com.jcirmodelsquad.tcjcir.features.autotrain.modules;
 
 import com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2Handler;
 import com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2Module;
+import net.minecraft.util.Vec3;
 import train.common.api.Locomotive;
 
 public class PassengerTrainModule extends AutoTrain2Module {
@@ -11,13 +12,9 @@ public class PassengerTrainModule extends AutoTrain2Module {
 
         if (handler.currentTrackSection != null && handler.currentTrackSection.getSectionType().equals("station") || handler.nextTrackSection != null && handler.nextTrackSection.getSectionType().equals("station")) {
             if (handler.currentTrackSection != null) {
-                locomotive.xStationStop = (double)handler.currentTrackSection.getEndPosition().getX();
-                locomotive.yStationStop = (double)handler.currentTrackSection.getEndPosition().getY();
-                locomotive.zStationStop = (double)handler.currentTrackSection.getEndPosition().getZ();
+                locomotive.stationStop3 = Vec3.createVectorHelper(handler.currentTrackSection.getEndPosition().getX(), handler.currentTrackSection.getEndPosition().getY(), handler.currentTrackSection.getEndPosition().getZ());
             } else {
-                locomotive.xStationStop = (double)handler.nextTrackSection.getEndPosition().getX();
-                locomotive.yStationStop = (double)handler.nextTrackSection.getEndPosition().getY();
-                locomotive.zStationStop = (double)handler.nextTrackSection.getEndPosition().getZ();
+                locomotive.stationStop3 = Vec3.createVectorHelper(handler.nextTrackSection.getEndPosition().getX(), handler.nextTrackSection.getEndPosition().getY(), handler.nextTrackSection.getEndPosition().getZ());
             }
         }
         if (!locomotive.stationStop) {
