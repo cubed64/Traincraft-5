@@ -277,6 +277,10 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		return dataWatcher.getWatchableObjectInt(11);
 	}
 
+	public String getTrainNote() {
+		return dataWatcher.getWatchableObjectString(30);
+	}
+
 	/*
 	 * @Override public int getID() { return ID; }
 	 */
@@ -305,6 +309,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		dataWatcher.addObject(17, 0);
 		dataWatcher.addObject(18, 1);
 		dataWatcher.addObject(19, 0.0F);
+		dataWatcher.addObject(30, ""); //train note
 	}
 
 	@Override
@@ -1555,7 +1560,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		nbttagcompound.setBoolean("firstLoad", this.firstLoad);
 		nbttagcompound.setFloat("rotation", this.rotation);
 		nbttagcompound.setBoolean("brake", isBraking);
-		nbttagcompound.setString("trainNote", trainNote);
+		nbttagcompound.setString("trainNote", getTrainNote());
 	}
 
 	@Override
@@ -1573,7 +1578,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		this.firstLoad = nbttagcompound.getBoolean("firstLoad");
 		this.rotation = nbttagcompound.getFloat("rotation");
 		this.isBraking = nbttagcompound.getBoolean("brake");
-		this.trainNote = nbttagcompound.getString("trainNote");
+		dataWatcher.updateObject(30,nbttagcompound.getString("trainNote"));
 	}
 
 	@Override

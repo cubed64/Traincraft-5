@@ -62,8 +62,8 @@ public class GuiFreight extends GuiContainer {
 			this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 130, var2 - 10, 43, 10, "Locked"));
 		}
 
-		trainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, height/2 + 95, 170,15);
-		trainNote.setText(freight.trainNote);
+		trainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, height/2 - 120, 170,15);
+		trainNote.setText(freight.getTrainNote());
 	}
 
 
@@ -221,7 +221,8 @@ public class GuiFreight extends GuiContainer {
 			theCar.lineType = railroadType.displayString;
 			theCar.operatingCrew = operatingCrew.getText();
 			Traincraft.updateGeometryCarChannel.sendToServer(new UpdateGeometryCar(theCar.getEntityId(), railroadName.getText(), railroadType.displayString, operatingCrew.getText()));*/
-			freight.trainNote = trainNote.getText();
+
+			//freight.trainNote = trainNote.getText();
 			Traincraft.lockChannel.sendToServer(new PacketAddNote(freight.getEntityId(), trainNote.getText()));
 			mc.thePlayer.closeScreen();
 		}

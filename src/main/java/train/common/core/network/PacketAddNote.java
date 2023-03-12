@@ -49,7 +49,7 @@ public class PacketAddNote implements IMessage {
 
             if (entity instanceof EntityRollingStock) {
 
-                ((EntityRollingStock) entity).trainNote = message.note;
+                entity.getDataWatcher().updateObject(30,message.note);
 
             }
 
