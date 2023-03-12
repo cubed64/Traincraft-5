@@ -436,6 +436,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			this.dimension=nbttagcompound.getInteger("Dim");
 		}
 		if(nbttagcompound.hasKey("trainNote")) trainNote = nbttagcompound.getString("trainNote");
+		dataWatcher.updateObject(31, trainNote);
 
 		if(nbttagcompound.hasKey("UUIDM")){
 			this.entityUniqueID = new UUID(nbttagcompound.getLong("UUIDM"), nbttagcompound.getLong("UUIDL"));
