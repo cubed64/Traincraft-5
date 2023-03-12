@@ -72,6 +72,6 @@ public class PS58SeatCoach_Observation extends EntityRollingStock implements IPa
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
-		return 4.0F;
+		return 3.97F;
 	}
 }

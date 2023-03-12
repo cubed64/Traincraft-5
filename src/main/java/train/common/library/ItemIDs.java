@@ -337,8 +337,10 @@ public enum ItemIDs {
 	minecartShay3Truck("ItemRollingStock", "3TruckShay", 5),
 	minecartShay3TruckTender("ItemRollingStock", "3TruckShayTender", 4),
 	minecartF01("ItemRollingStock", "f01", 3),
-	minecartBKno2a("ItemRollingStock", "bkno2a", 5),
-	minecartBKno2b("ItemRollingStock", "bkno2a", 5),
+	minecartBKno2a("ItemRollingStock", "bkno2", 5),
+	minecartBKno2b("ItemRollingStock", "bkno2", 5),
+	minecartWCPBuckingBull("ItemRollingStock", "wcp_buckingbull", 4),
+	minecartWCPBaler("ItemRollingStock", "wcp_baler", 2),
 
 	minecartLocoC11("ItemRollingStock", "train_C11", 5),
 	minecartOnion("ItemRollingStock", "Onion", 10),
@@ -351,6 +353,9 @@ public enum ItemIDs {
 	minecartF3A( "ItemRollingStock", "f3a", 4),
 	minecartF7A("ItemRollingStock", "f7a", 5),
 	minecartF7B("ItemRollingStock", "f7b", 5),
+	minecartFP7A("ItemRollingStock", "fp7a", 5),
+	minecartFP9A("ItemRollingStock", "fp9a", 5),
+	//minecartBUnitF7B("ItemRollingStock", "f7b", 5),
 	minecartCF7angle("ItemRollingStock", "cf7angle", 3),
 	minecartCF7round("ItemRollingStock", "cf7round", 3),
 	minecartCF7angle2("ItemRollingStock", "cf7dbrr", 2),
@@ -358,13 +363,17 @@ public enum ItemIDs {
 
 	minecartE7A("ItemRollingStock", "e7a",5),
 	minecartE7B("ItemRollingStock", "e7b",5),
+	//minecartBUnitE7B("ItemRollingStock", "e7b",5),
 	minecartE8A( "ItemRollingStock", "e8a", 5),
 	minecartE8B( "ItemRollingStock", "e8b", 5),
+	//minecartBUnitE8B( "ItemRollingStock", "e8b", 5),
 	minecartE9A( "ItemRollingStock", "e9a", 5),
 	minecartE9B( "ItemRollingStock", "e9b", 5),
+	minecartCE8( "ItemRollingStock", "ce8", 4),
 
 	minecartGP7("ItemRollingStock", "gp7", 3),
 	minecartGP7b("ItemRollingStock", "gp7b", 3),
+	//minecartBUnitGP7b("ItemRollingStock", "gp7b", 4),
 	minecartGP7u("ItemRollingStock", "gp7u", 3),
 	minecartGP7f("ItemRollingStock", "gp7f", 3),
 	minecartGP9("ItemRollingStock", "gp9", 3),
@@ -372,7 +381,8 @@ public enum ItemIDs {
 	minecartGP9old("ItemRollingStock", "gp9old", 3),
 	minecartGP13("ItemRollingStock", "gp13", 3),
 	minecartGP15("ItemRollingStock", "gp15", 3),
-	minecartGP30("ItemRollingStock", "gp30", 4),
+	minecartGP30("ItemRollingStock", "gp30", 3),
+	minecartGP35("ItemRollingStock", "gp35", 3),
 	minecartGP38dash2("ItemRollingStock", "gp38dash2", 4),
 	minecartGP38dash9W("ItemRollingStock", "gp38dash9w", 3),
 	minecartGP38h3("ItemRollingStock", "gp38h3icon", 4),
@@ -386,12 +396,15 @@ public enum ItemIDs {
 	minecartSDL39("ItemRollingStock", "SDL39", 4),
 	minecartSD38("ItemRollingStock", "sd38", 4),
 	minecartSD39("ItemRollingStock", "sd39", 4),
+	minecartSD40("ItemRollingStock", "sd40", 4),
 	minecartSD40dash2("ItemRollingStock", "sd40dash2", 4),
 	minecartSD40T2("ItemRollingStock", "sd40t2", 4),
 	minecartSD40dash2B("ItemRollingStock", "sd40dash2b", 4),
+	minecartSD40R("ItemRollingStock", "sd40r", 4),
+	minecartSD40A("ItemRollingStock", "sd40a", 4),
 	minecartSDP40("ItemRollingStock", "sdp40icon", 5),
 	minecartSDP40F("ItemRollingStock","sdp40f",5),
-	minecartSD45dash2("ItemRollingStock", "sd45dash2", 5),
+	minecartSD45dash2("ItemRollingStock", "sd45", 5),
 	minecartSD45dash2B("ItemRollingStock", "sd45dash2b", 5),
 	minecartF45("ItemRollingStock", "f45", 5),
 	minecartFP45("ItemRollingStock", "fp45", 5),
@@ -416,6 +429,7 @@ public enum ItemIDs {
 	minecartU18BW("ItemRollingStock", "U18BW", 3),
 	minecartU18Balt("ItemRollingStock", "U18Balt", 3),
 	minecartU23B("ItemRollingStock", "u23b", 4),
+	minecartU25B("ItemRollingStock", "u25b", 4),
 	minecartU30C("ItemRollingStock", "u30c", 5),
 	minecartSF30C("ItemRollingStock", "sf30c", 5),
 	minecartU36C( "ItemRollingStock", "u36c", 5),
@@ -427,14 +441,19 @@ public enum ItemIDs {
 
 	minecartDash840B("ItemRollingStock", "B40-8", 4),
 	minecartDash840BB("ItemRollingStock", "B40-8B", 4),
+	//minecartBUnitDash840BB("ItemRollingStock", "B40-8B", 4),
 	minecartDash840BW("ItemRollingStock", "B40-8W", 4),
 	minecartDash840C("ItemRollingStock", "C40-8", 4),
 
 	minecartDash944CW("ItemRollingStock", "d944cw", 5),
+	minecartAC4400CW("ItemRollingStock", "ac4400cw", 5),
 
 	minecartES44("ItemRollingStock", "es44", 6),
+	minecartP32("ItemRollingStock", "geGenesis2", 4),
+	minecartGeGenesis("ItemRollingStock", "geGenesis3", 4),
+	minecartP42("ItemRollingStock", "geGenesis", 4),
 
-	//ALCO//
+	//ALCO and its canookistanian counterpart//
 	minecartAlcoPA1("ItemRollingStock", "AlcoPA1Icon",5),
 	minecartAlcoPB1("ItemRollingStock", "AlcoPB1Icon",4),
 
@@ -444,6 +463,11 @@ public enum ItemIDs {
 	minecartC424("ItemRollingStock", "c424", 5),
 	minecartC425("ItemRollingStock", "c425", 5),
 	minecartDH643("ItemRollingStock", "DH643", 5),
+	minecartC855a("ItemRollingStock", "c855a", 6),
+	minecartC855b("ItemRollingStock", "c855b", 6),
+
+	minecartM420("ItemRollingStock", "M420", 4),
+	minecartM420B("ItemRollingStock", "M420B", 4),
 
 	minecartHH660("ItemRollingStock", "hh660", 2),
 	minecartS2("ItemRollingStock", "alco_s2", 2),
@@ -463,8 +487,12 @@ public enum ItemIDs {
 	minecartNRE3gs21b("ItemRollingStock", "3gs21b", 4),
 	minecartgtavthing("ItemRollingStock", "gtavthing", 7),
 	minecartFOLM1B("ItemRollingStock", "folm1b", 9),
+	//minecartBUnitFOLM1B("ItemRollingStock", "folm1b", 4),
 	minecartKrautt("ItemRollingStock", "ML4000", 5),
 	minecartILMC("ItemRollingStock", "ILMC_ICON", 2),
+
+	minecartSlugMA("ItemRollingStock", "slugma", 2),
+	minecartF7BSlug("ItemRollingStock", "f7b", 3),
 
 	//E-lect-trock//
 	minecartEF1("ItemRollingStock", "ef1", 6),
@@ -485,6 +513,7 @@ public enum ItemIDs {
 	minecartHopper5201("ItemRollingStock", "Hopper5201", 4),
 	minecartHopper6260("ItemRollingStock", "Hopper6260", 5),
 	minecartFNCC2375Hopper("ItemRollingStock", "FNCCHopper", 3),
+	minecartPDH2800("ItemRollingStock", "pdh2800", 4),
 
 	minecart60centerbeam("ItemRollingStock", "60centerbeam", 3),
 	minecart66centerbeam("ItemRollingStock", "66centerbeam", 3),
@@ -503,17 +532,21 @@ public enum ItemIDs {
 	minecarthicube60foot("ItemRollingStock", "hicube60", 5),
 	minecartReefer64("ItemRollingStock", "Reefer64", 5),
 	minecartFNCC50Foot("ItemRollingStock", "FNCC50Foot", 4),
+	minecartGN40("ItemRollingStock", "gn40", 3),
 
-	minecartVersaLongi("ItemRollingStock", "versalongi", 5),
-	minecartVersaTrans("ItemRollingStock", "versatrans", 5),
+	minecartVersaLongi("ItemRollingStock", "versalongi", 4),
+	minecartVersaTrans("ItemRollingStock", "versatrans", 4),
 	minecartMillGondola("ItemRollingStock", "millgondola", 4),
 	minecartWoodchipHopper("ItemRollingStock", "woodchiphopper", 4),
 	minecartOreJenny("ItemRollingStock", "orejenny", 2),
+	minecartPRRGLaHopper("ItemRollingStock", "prrglahopper", 2),
+	minecartACF41Gon("ItemRollingStock", "ACF_41_6_gon", 3),
 
 	minecart11000DOT111("ItemRollingStock", "11000DOT", 4),
 	minecart20600DOT111("ItemRollingStock", "20600DOT", 5),
 	minecart29080DOT111("ItemRollingStock", "29080DOT", 6),
 	minecart17600DOT111("ItemRollingStock", "17600DOT", 4),
+	minecartNATX30600("ItemRollingStock", "natx30600", 5),
 
 	minecartSkeletonLogCar("ItemRollingStock", "Skeleton", 1),
 	minecartEarlyFlat("ItemRollingStock", "EarlyFlat", 1),
@@ -533,15 +566,16 @@ public enum ItemIDs {
 	minecartPS85Baggage("ItemRollingStock", "PS_85_baggage_icon", 3),
 	minecartPScombine("ItemRollingStock", "PScombine", 3),
 	minecartPS52seatCoach("ItemRollingStock", "PS52seatCoach", 3),
-	minecartPSDamnitAnotherDiner("ItemRollingStock", "BAP_Pullman_Standard_lightweight_center_diner_icom", 3),
-	minecartPSSleeper565("ItemRollingStock", "BAP_PS_lightweight_5-6-5_sleeper_icon", 3),
-	minecartPSSleeper565DRGW("ItemRollingStock", "BAP_PS_lightweight_DRGW_5-6-5_sleeper_icon", 3),
+	minecartPSDamnitAnotherDiner("ItemRollingStock", "PScenterDiner2", 3),
+	minecartPSSleeper565("ItemRollingStock", "PS10-6Sleeper", 3),
+	minecartPSSleeper565DRGW("ItemRollingStock", "PS6-5-5Sleeper_icon", 3),
 	minecartPSLunchCounter_Lounge("ItemRollingStock", "PSLunchCounter_Lounge", 3),
 	minecartPS30SeatParlor("ItemRollingStock", "PS30SeatParlor", 3),
 
 	minecartPSRPOPM("ItemRollingStock", "PSRPOPMIcon", 3),
 	minecartPS73Baggage("ItemRollingStock", "PS_73_baggage_icon", 3),
 	minecartPS54SeatCoach_Lounge("ItemRollingStock", "PS54SeatCoach_Lounge", 3),
+	minecartPS54SeatCoach_Lounge_1950("ItemRollingStock", "PS54SeatCoach_Lounge_1950", 3),
 	minecartPSCenterDiner("ItemRollingStock", "PScenterDiner", 3),
 	minecartPS58SeatCoach_Observation("ItemRollingStock", "PS58SeatCoach_Observation", 3),
 
@@ -552,6 +586,14 @@ public enum ItemIDs {
 	minecartACFGNRPO_30("ItemRollingStock", "ACFGNRPO_30", 3),
 	minecartACFGN60SeatCoach("ItemRollingStock", "ACFGN60SeatCoach", 3),
 	minecartACFGNDiner_Observation("ItemRollingStock", "ACFGNDiner_Observation", 3),
+	minecartACFGN28SeatCoach_Dinette("ItemRollingStock", "ACFGN28SeatCoach_Dinette", 3),
+
+	minecartOB84SeatCoach("ItemRollingStock", "OB84-92SeatCoach", 3),
+	minecartOB92SeatCoach("ItemRollingStock", "OB84-92SeatCoach", 3),
+
+	minecartPSCNW56SeatCoach("ItemRollingStock", "PSCNW56SeatCoach", 3),
+
+	minecartBuddRDG56SeatCoachLounge("ItemRollingStock", "BuddRDG56SeatCoachLounge", 3),
 
 	minecartAmfleet("ItemRollingStock", "Amfleet", 3),
 	minecartAmfleet2("ItemRollingStock", "Amfleet2", 3),
@@ -580,17 +622,17 @@ public enum ItemIDs {
 	minecartAipkitExplorer2("ItemRollingStock", "explorer2", 15),
 
 	//ah, but we, are british
-	minecartLUengine("ItemRollingStock","luengine", 3),
-	minecartLUcar("ItemRollingStock","lupassenger", 2),
-	minecartClass345engine("ItemRollingStock", "Class345Engine", 3),
-	minecartClass345car("ItemRollingStock", "class345coach", 2),
+	//minecartLUengine("ItemRollingStock","luengine", 3),
+	//minecartLUcar("ItemRollingStock","lupassenger", 2),
+	//minecartClass345engine("ItemRollingStock", "Class345Engine", 3),
+	//minecartClass345car("ItemRollingStock", "class345coach", 2),
 
 
 	//undecided stuff//
 	//minecartBaldwinMineLoco("ItemRollingStock", "baldwinmineloco", 1),
 	minecartHighrailTruck("ItemRollingStock", "highrail", 3),
 	minecartFRED("ItemRollingStock", "fred", 5),
-	minecartGeGenesis("ItemRollingStock", "geGenesis", 14),
+
 	//minecartHuskyStackWellcar("ItemRollingStock", "huskystack", 3),
 	minecartHustler("ItemRollingStock", "hustler", 2),
 	minecartBoulderWagon("ItemRollingStock","BoulderWagon",3),

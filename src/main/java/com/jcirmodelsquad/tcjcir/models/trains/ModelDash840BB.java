@@ -996,7 +996,7 @@ public class ModelDash840BB extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.27, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1){
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb2_Grey.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.65, 0.33, 0);
@@ -1016,9 +1016,9 @@ public class ModelDash840BB extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 	}
-	public float[] getTrans() {
-		return new float[]{-1.6F, 0.15F, 0.00F};
-	}
+	//public float[] getTrans() {
+		//return new float[]{-1.6F, 0.15F, 0.00F};
+	//}
 
 	public float[] getRotate() {
 		return new float[] { 0F, 180F, 180F };

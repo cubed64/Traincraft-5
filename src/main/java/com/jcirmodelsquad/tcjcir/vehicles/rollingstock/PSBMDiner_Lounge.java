@@ -72,6 +72,6 @@ public class PSBMDiner_Lounge extends EntityRollingStock implements IPassenger {
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
-		return 4.0F;
+		return 3.97F;
 	}
 }

@@ -72,6 +72,6 @@ public class PS54SeatCoach_Lounge extends EntityRollingStock implements IPasseng
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
-		return 4.0F;
+		return 3.97F;
 	}
 }

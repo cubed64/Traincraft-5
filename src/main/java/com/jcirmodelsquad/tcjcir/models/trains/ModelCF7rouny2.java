@@ -30,7 +30,7 @@ public class ModelCF7rouny2 extends ModelConverter //Same as Filename
 
 	public ModelCF7rouny2() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[523];
+		bodyModel = new ModelRendererTurbo[525];
 
 		initbodyModel_1();
 		initbodyModel_2();
@@ -2095,6 +2095,8 @@ public class ModelCF7rouny2 extends ModelConverter //Same as Filename
 		bodyModel[520] = new ModelRendererTurbo(this, 272, 60, textureX, textureY); // Box 523
 		bodyModel[521] = new ModelRendererTurbo(this, 320, 103, textureX, textureY); // Box 530
 		bodyModel[522] = new ModelRendererTurbo(this, 320, 103, textureX, textureY); // Box 531
+		bodyModel[523] = new ModelRendererTurbo(this, 140, 53, textureX, textureY); // Box 519 frame stripe fix
+		bodyModel[524] = new ModelRendererTurbo(this, 154, 32, textureX, textureY); // Box 520 frame stripe fix
 
 		bodyModel[500].addShapeBox(0F, 0F, 0F, 1, 1, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 446
 		bodyModel[500].setRotationPoint(-12F, -20F, 8F);
@@ -2164,13 +2166,19 @@ public class ModelCF7rouny2 extends ModelConverter //Same as Filename
 
 		bodyModel[522].addShapeBox(0F, 0F, 0F, 2, 0, 2, 0F,-2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 531
 		bodyModel[522].setRotationPoint(-28F, -21F, -3F);
+
+		bodyModel[523].addShapeBox(0F, 0F, 0F, 18, 1, 0, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 519 frame stripe fix
+		bodyModel[523].setRotationPoint(-9F, 0F, -10.51F);
+
+		bodyModel[524].addShapeBox(0F, 0F, 0F, 18, 1, 0, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 520 frame stripe fix
+		bodyModel[524].setRotationPoint(-9F, 0F, 10.51F);
 	}
 	ModelBlombergBnew theBlomb = new ModelBlombergBnew();
 	ModelTypeBnew theB = new ModelTypeBnew();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 519; i++) {
+		for (int i = 0; i < 525; i++) {
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp") ) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);

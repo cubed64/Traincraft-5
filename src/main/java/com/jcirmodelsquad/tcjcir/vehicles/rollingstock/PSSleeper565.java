@@ -72,6 +72,6 @@ public class PSSleeper565 extends EntityRollingStock implements IPassenger {
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
-		return 4.0F;
+		return 3.97F;
 	}
 }

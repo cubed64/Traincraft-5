@@ -77,7 +77,7 @@ public class PSRPO extends Freight implements IInventory {
 
 	@Override
 	public String getInventoryName() {
-		return "Pullman Standard RPO";
+		return "Pullman Standard RPO(30')";
 	}
 
 	@Override
@@ -97,7 +97,7 @@ public class PSRPO extends Freight implements IInventory {
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
-		return 3.25F;
+		return 3.23F;
 	}
 
 	@Override

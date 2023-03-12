@@ -658,4 +658,5 @@ public class ModelFOLM1B extends ModelConverter //Same as Filename
 
 
 	}
+	//public float[] getTrans() { return new float[]{}; }
 }

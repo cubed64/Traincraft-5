@@ -5,7 +5,7 @@ import com.jcirmodelsquad.tcjcir.vehicles.locomotives.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.*;
 import tmt.ModelBase;
 import train.client.render.models.*;
-import train.client.render.models.ModelSD40;
+import train.client.render.models.ModelSD40heritage;
 import train.common.api.AbstractTrains;
 import train.common.api.EntityRollingStock;
 import train.common.entity.rollingStock.*;
@@ -175,7 +175,7 @@ public enum RenderEnum {
 			add(new double[] { 2D, 1.55D, 0.0D });
 		}
 	}, "", null, 0, false),
-	locoSD40(EntityLocoDieselSD40.class, new ModelSD40(), "locoSD40_", true, new float[] { -1.2F, -0.47F, 0.0F }, new float[] { 180F, 90F, 0F }, new float[] { -1F, -1F, 1F }, "smoke", 5, new ArrayList<double[]>() {
+	locoSD40(EntityLocoDieselSD40.class, new com.jcirmodelsquad.tcjcir.models.trains.ModelSD40heritage(), "locoSD40_", true, new float[] { -1.2F, -0.47F, 0.0F }, new float[] { 180F, 90F, 0F }, new float[] { -1F, -1F, 1F }, "smoke", 5, new ArrayList<double[]>() {
 		{
 			add(new double[] { 1.45D, 1.45D, 0.0D });
 		}
@@ -641,12 +641,7 @@ public enum RenderEnum {
 
 		}
 	}, "", null, 0, false),*/
-	geGenesis(com.jcirmodelsquad.tcjcir.vehicles.locomotives.GeGenesis.class, new ModelGe_Genesis(), "genesis_", true, new float[] {-2.7F, -0.33F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke",  5,  new ArrayList<double[]>() {
-		{
-			add(new double[]{1.8D, 1.3D, 0D});
 
-		}
-	}, "", null, 0, false),
 	LogcarNP(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.LogcarNP.class, new ModelLogcarNP(), "logcarNP_", true,new float[]{0F,0,0F,}, new float[] {0F,0F,180F,}, null, "",0, null, "", null, 0, false),
 	//HuskyStackWellcar(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.HuskyStackWellcar.class, new com.jcirmodelsquad.tcjcir.models.trainsModelHuskyStackWellcar(), "huskystack_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	testControlCar(TestControlCar.class, new ModelPassengerHighSpeedCarZeroED(), "passengerHighSpeedCarZeroED_", true, new float[] { 0.0F, -0.47F, 0.0F }, null, null, "", 0, null, "", null, 0, false),
@@ -769,6 +764,18 @@ public enum RenderEnum {
 			add(new double[] { -2.2D, -0.2D, 0.75D });//pistons
 		}
 	}, 2, true),
+	WCPBuckingBull(SteamBuckingBull.class, new Modelwcp_bucking_bull(), "wcp_bucking_bull", false, new float[] { -0.0F, -0.0F, -0.0F }, new float[] { 0F, 180F, 180F }, null, "largesmoke", 15, new ArrayList<double[]>() {
+		{
+			add(new double[] { 2.8D, 1.5D, -0.0D });
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] { 3.0D, -0.4D, 0.8D });
+			add(new double[] { 1.0D, -0.4D, 0.8D });
+		}
+	}, 2, true),
+	WCPBaler(TenderBaler.class, new Modelwcp_baler_tender(), "wcp_baler", false, new float[] {-0.00F, 0.0F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+
 
 	/**EMD**/
 	F3A( DieselF3A.class,  new ModelF3A(), "f3a_", true,new float[] {-1.375F, 0.1F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.1F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
@@ -787,6 +794,19 @@ public enum RenderEnum {
 		{
 			add(new double[]{1.35D, 1.3D, 0.0D});
 			add(new double[]{0.55D, 1.3D, 0.0D});
+		}
+	}, "", null, 0, false),
+	BUnitF7B(BUnitF7.class, new ModelF7B(), "F7B_", true, new float[]{0,0.15f,0}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
+	FP7A( DieselFP7A.class,  new ModelFP7A(), "FP7A_", true,new float[] {-1.375F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			//add(new double[]{0.9375D, 1.3D, 0.0D});
+			//add(new double[]{0.25D, 1.3D, 0.0D});
+		}
+	}, "", null, 0, false),
+	FP9A( DieselFP9A.class,  new ModelFP9A(), "FP9A_", true,new float[] {-1.375F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			//add(new double[]{0.9375D, 1.3D, 0.0D});
+			//add(new double[]{0.25D, 1.3D, 0.0D});
 		}
 	}, "", null, 0, false),
 	CF7angle( DieselCF7angle.class,  new ModelCF7angle2(), "CF7_Angle_", true,new float[] {-0F, -0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
@@ -814,12 +834,18 @@ public enum RenderEnum {
 	EMDE7B( DieselE7B.class,  new ModelE7B(), "EMDE7B_", true,new float[] {-1.75F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{}
 	}, "", null, 0, false),
+	BUnitEMDE7B( BUnitE7B.class,  new ModelE7B(), "EMDE7B_", true,new float[] {0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
+	}, "", null, 0, false),
 
 	E8A( DieselE8A.class,  new ModelE8A(), "EMDE8A_", true,new float[] {-1.85F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{}
 	}, "", null, 0, false),
 
 	E8B( DieselE8B.class,  new ModelE8B(), "EMDE8B_", true,new float[] {-1.75F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
+	}, "", null, 0, false),
+	BUnitE8B( BUnitE8B.class,  new ModelE8B(), "EMDE8B_", true,new float[] {0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{}
 	}, "", null, 0, false),
 
@@ -835,6 +861,9 @@ public enum RenderEnum {
 			add(new double[]{1.3125D, 1.3125D, 0.0D});
 		}
 	}, "", null, 0, false),
+	CE8( DieselCE8.class,  new ModelCE8(), "CE8_", true,new float[] {-1.85F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
+	}, "", null, 0, false),
 
 	GP7( DieselGP7.class,  new ModelGP7newer(), "gp7new_", true,new float[] {-0F, -0.05F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{ }
@@ -845,6 +874,7 @@ public enum RenderEnum {
 			add(new double[]{1.25D, 1.35D, 0.0D});
 		}
 	}, "", null, 0, false),
+	BUnitGP7b(BUnitGP7b.class, new ModelGP7b(), "bettergp7b_", true, new float[]{0,-0.05f,0}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
 	GP7u( DieselGP7u.class,  new ModelGP7u(), "gp7u_", true,new float[] {-1.5F, -0.05F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{
 			add(new double[]{0.45D, 1.35D, 0.0D});
@@ -882,6 +912,9 @@ public enum RenderEnum {
 		{
 			//add(new double[]{1.9D, 1.4D, 0.0D});
 		}
+	}, "", null, 0, false),
+	GP35( DieselGP35.class,  new ModelGP35(), "gp35_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{ }
 	}, "", null, 0, false),
 	GP38dash2( DieselGP38dash2.class,  new ModelGP38dash2(), "gp38dash2_", true,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{
@@ -928,7 +961,10 @@ public enum RenderEnum {
 			//add(new double[]{1.5D, 1.5D, 0.0D});
 		}
 	}, "", null, 0, false),
-	SD40dash2(DieselSD40dash2.class, new ModelSD40dash2(), "sd40dash2_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+	SD40(DieselSD40.class, new ModelSD40(), "sd40_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	SD40dash2(DieselSD40dash2.class, new ModelSD40dash2(), "sd40-2_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
 	SD40T2( DieselSD40T2.class,  new ModelSD40T(), "SD40T_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
@@ -937,7 +973,13 @@ public enum RenderEnum {
 	SD40dash2B(DieselSD40dash2B.class, new ModelSD40dash2B(), "sd40dash2b_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
-	SDP40(DieselSDP40.class, new ModelSD40dash2(), "sdp40_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+	SD40R(DieselSD40R.class, new ModelSD40R(), "sd40r_espee_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	SD40A(DieselSD40A.class, new ModelSD40A(), "sd40a_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	SDP40(DieselSDP40.class, new ModelSDP40(), "sdp40_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
 	SDP40F( DieselSDP40F.class,  new ModelSDP40F(), "sdp40f_", true,new float[] {-2F, -0.14F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
@@ -945,7 +987,7 @@ public enum RenderEnum {
 			add(new double[]{2.55D, 1.5D, 0.0D});
 		}
 	},"", null, 0, false),
-	SD45dash2(DieselSD45dash2.class,  new ModelSD45dash2(), "sd45_", true,new float[] {-0F, -0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+	SD45(DieselSD45dash2.class,  new ModelSD45dash2(), "sd45_", true,new float[] {-0F, -0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
 	SD45dash2B( DieselSD45dash2B.class,  new ModelSD45dash2B(), "sd45dash2b_", true,new float[] {-1.9F, -0.14F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
@@ -1035,6 +1077,9 @@ public enum RenderEnum {
 	U23B( DieselU23B.class,  new ModelU23B(), "u23b_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
+	U25B( DieselU25B.class,  new ModelU25B(), "u25b_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 	U30C( DieselU30C.class,  new ModelU30C(), "U30C_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
@@ -1065,9 +1110,10 @@ public enum RenderEnum {
 	Dash840B( DieselDash840B.class,  new ModelDash840B(), "dash8_40b_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
-	Dash840BB( DieselDash840BB.class,  new ModelDash840BB(), "dash8_40b_b_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
+	Dash840BB( DieselDash840BB.class,  new ModelDash840BB(), "dash8_40b_b_", true,new float[] {-1.6F, 0.15F, 0.00F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
+	BUnitDash840BB(BUnitDash840B.class, new ModelDash840BB(), "dash8_40b_b_", true, new float[]{0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Dash840BW( DieselDash840BW.class,  new ModelDash840BW(), "dash8_40bw_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
@@ -1078,11 +1124,25 @@ public enum RenderEnum {
 	Dash944CW( DieselDash944CW.class,  new ModelDash944CW(), "dash9_44cw_", true,new float[] {-2.2F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
+	AC4400CW( DieselAC4400CW.class,  new ModelDash944CW(), "ac4400cw_", true,new float[] {-2.2F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 
 	ES44( DieselES44.class,  new ModelES44(), "es44_", true,new float[] {-2.2F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{
 			add(new double[]{1.0D, 1.4D, 0.0D});
 		}
+	}, "", null, 0, false),
+	P32(DieselP32.class, new ModelP32(), "p32dc_", true, new float[] {0F, 0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke",  5,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	geGenesis(DieselP40.class, new ModelP42(), "p40dc_", true, new float[] {0F, 0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke",  5,  new ArrayList<double[]>() {
+		{
+			//add(new double[]{1.8D, 1.3D, 0D});
+		}
+	}, "", null, 0, false),
+	P42(DieselP42.class, new ModelP42(), "p42dc_", true, new float[] {0F, 0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke",  5,  new ArrayList<double[]>() {
+		{ }
 	}, "", null, 0, false),
 
 	/**ALCO**/
@@ -1113,6 +1173,12 @@ public enum RenderEnum {
 	DH643( DieselDH643.class,  new ModelDH643(), "alco_dh423_not_dumb", false,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
+	C855a( DieselC855a.class,  new ModelC855a(), "c855_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	C855b( DieselC855b.class,  new ModelC855b(), "c855b_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 
 	HH660( DieselHH660.class,  new ModelHH660(), "hh660_", true,new float[] {-1F, -0.1F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
@@ -1126,6 +1192,13 @@ public enum RenderEnum {
 	}, "", null, 0, false),
 
 	RSD15( DieselRSD15.class,  new ModelRSD15(), "rsd15_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+
+	M420( DieselM420.class,  new ModelM420(), "m420_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	M420B( DieselM420B.class,  new ModelM420B(), "m420b_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
 
@@ -1174,18 +1247,22 @@ public enum RenderEnum {
 			add(new double[]{1.6D, 1.45D, 0.0D});
 		}
 	}, "", null, 0, false),
+	BUnitFOLM1B(BUnitFOLM1B.class, new ModelFOLM1B(), "FOL_M1b_", true, new float[]{-0.25F, 0.05F, 0F}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
+
 	Krautt(DieselKrautt.class,  new ModelKrautt(), "KM_ML4000_", true,new float[] {0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
 		{ }}, "", null, 0, false),
-	ILMC( DieselILMC.class,  new ModelILMC(), "ILMC", false,new float[] {0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
+	ILMC( DieselILMC.class,  new ModelILMC(), "ILMC_", true,new float[] {0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
+
+	SlugMA(SlugMA.class, new Modelslugma(), "SMA_", true, new float[]{0,-0.05f,0}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
 
 	/**ELECTRICC**/
 	EF1(ElectricEF1.class,  new ModelEF1(), "ef1_", true,new float[] {-1.60F, 0.1875F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	EF1B(ElectricEF1B.class,  new ModelEF1B(), "ef1b_", true,new float[] {-1.15635F, 0.1875F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	EP1A(ElectricEP1A.class,  new ModelEP1A(), "ep1a_", true,new float[] {-1.60F, 0.1875F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
-	GM6C(ElectricGM6C.class,  new ModelGM6C(), "GM6C_demo", false,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	GM6C(ElectricGM6C.class,  new ModelGM6C(), "GM6C_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	ILMA(ElectricILMA.class, new ModelILMA(), "ILMA_", true, new float[] { 0.0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ILMB(ElectricILMB.class, new ModelILMB(), "ILMB_", true, new float[] { 0.0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -1199,6 +1276,7 @@ public enum RenderEnum {
 	Hopper5201(Hopper5201.class, new ModelHopper5201(), "5201_", true, new float[] { -0F,0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Hopper6260(Hopper6260.class, new ModelHopper6260(), "6260_", true, new float[] { -0F,0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	FNCC2375Hopper(FNCC2375Hopper.class, new ModelFNCC2375Hopper(), "FNCC2375_", true, new float[] { -0F,0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PDH2800(PDH2800.class, new ModelPDH2800(), "gatx_2800_pdh_", true, new float[] { -0F,0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	Freight60centerbeam(Freight60centerbeam.class, new Model60centerbeam(),"60ftcb_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Freight66centerbeam(Freight66centerbeam.class, new Model66centerbeam(),"66ftcb_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -1217,17 +1295,21 @@ public enum RenderEnum {
 	Hicube60(Hicube60foot.class, new Modelhicube60foot(),"hicube60_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Reefer64(Reefer64Foot.class, new ModelReefer64Foot(),"reefer_64_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	FNCC50Foot(FNCC50Foot.class, new ModelFNCC50Foot(),"FNCC50Foot_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	GN40(GN40.class, new ModelGN40box(),"gn40_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	VersaLongi(VersaLongi.class, new ModelVersaLongi(),"versa_longi_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	VersaTrans(VersaTrans.class, new ModelVersaTrans(),"versa_trans_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	MillGondola(MillGondola.class, new ModelMillGondola(),"MillGondola_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	WoodchipHopper(WoodchipHopper.class, new ModelWoodchipHopper(),"woodchiphopper_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	OreJenny(OreJenny.class, new ModelOreJenny(),"orejenny_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PRRGLaHopper(PRRGLaHopper.class, new ModelPRRGLaHopper(),"PRR_GLa_hopper_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACF41Gon(ACF41Gon.class, new ModelACF41Gon(),"acf_41-6_gon_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	DOT11111000(DOT11111000.class, new Model11000DOT111(),"dot11K_", true, new float[]{0F, 0.00F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	DOT11120600(DOT11120600.class, new Model20600DOT111(),"dot206K_", true, new float[]{0F, 0.00F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	DOT11129080(DOT11129080.class, new Model29080DOT111(),"dot290K_", true, new float[]{0F, 0.00F /*was 0.20F for height*/, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	DOT11117600(DOT11117600.class, new Model17600DOT111(),"17600galTank_", true, new float[]{0F, 0.00F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	NATX30600(NATX30600.class, new ModelNATX30600(),"natx_30600_", true, new float[]{0F, 0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	Skeleton(SkeletonLogCar.class, new ModelSkeletonLogCar(), "SkeletonLogCar_", true, new float[] { 0.0F, -0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	EarlyFlat(EarlyFlat.class, new ModelEarlyFlat(), "EarlyFlatCar", false, new float[] { 0.0F, -0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -1243,19 +1325,20 @@ public enum RenderEnum {
 	pch120commute(PCH120Commute.class, new ModelPCH120Commute(), "pch120commute_", true,new float[] {-1.3F, 0.01F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	pch120coach(PCH120Coach.class, new ModelPCH120Car(), "pch120car_", true,new float[] {0F, 0.01F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
-	PSRPO(PSRPO.class, new ModelPSRPO(), "PSRPO_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSRPO(PSRPO.class, new ModelPSRPO(), "PS_lightweight_RPO_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PS85Baggage(PS85Baggage.class, new ModelPS85Baggage(), "PS_lightweight_85_baggage_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCombine(PSCombine.class, new ModelPSCombine(), "PS_lightweight_baggage-coach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PS52SeatCoach(PS52SeatCoach.class, new ModelPS52SeatCoach(), "PS_lightweight_52seat_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSDamnitAnotherDiner(PSDamnitAnotherDiner.class, new ModelPSscrewyoutoomanydiners(), "PS_lightweight_center_diner_2_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSSleeper565(PSSleeper565.class, new ModelPSSleeper565(), "PS_lightweight_5-6-5_sleeper_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	PSSleeper565DRGW(PSSleeper565DRGW.class, new ModelPSSleeper565DRGW(), "PS_DRGW_lightweight_5-6-5_sleeper", false, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSSleeper565DRGW(PSSleeper565DRGW.class, new ModelPSSleeper565DRGW(), "PS_DRGW_lightweight_5-6-5_sleeper_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	passengerPSLunchCounter_Lounge(PSLunchCounter_Lounge.class, new ModelPSLunchCounter_Lounge(), "PS_lightweight_LunchCounter_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	passengerPS30SeatParlor(PS30SeatParlor.class, new ModelPS30SeatParlor(), "PS_lightweight_30SeatParlor_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
-	PSRPOPM(PSRPOPM.class, new ModelPSRPOPM(), "PSRPOPM_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	PS73Baggage(PS73Baggage.class, new ModelPS73Baggage(), "PS_Baggage_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSRPOPM(PSRPOPM.class, new ModelPSRPOPM(), "PS_lightweight_RPO_PM_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PS73Baggage(PS73Baggage.class, new ModelPS73Baggage(), "PS_lightweight_73_Baggage_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PS54SeatCoach_Lounge(PS54SeatCoach_Lounge.class, new ModelPS54SeatCoach_Lounge(), "PS_lightweight_54SeatCoach_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PS54SeatCoach_Lounge1950(PS54SeatCoach_Lounge_1950.class, new ModelPS54SeatCoach_Lounge_1950(), "PS_lightweight_54SeatCoach_Lounge_1950_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PScenterDiner(PScenterDiner.class, new ModelPScenterDiner(), "PS_lightweight_center_diner_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PS58SeatCoach_Observation(PS58SeatCoach_Observation.class, new ModelPS58SeatCoach_Observation(), "PS_lightweight_58SeatCoach_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
@@ -1266,6 +1349,14 @@ public enum RenderEnum {
 	ACFGNRPO_30(ACFGNRPO_30.class, new ModelACFGNRPO_30(), "AC&F_lightweight_GNRPO30_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ACFGN60SeatCoach(ACFGN60SeatCoach.class, new ModelACFGN60SeatCoach(), "AC&F_lightweight_GN60SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ACFGNDinerObservation(ACFGNDinerObservation.class, new ModelACFGNDinerObservation(), "AC&F_lightweight_GNDiner_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACFGN28SeatCoach_Dinette(ACFGN28SeatCoach_Dinette.class, new ModelACFGN28SeatCoach_Dinette(), "AC&F_lightweight_GN28SeatCoach_Dinette_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+
+	OB84SeatCoach(OB84SeatCoach.class, new ModelOB84SeatCoach(), "OB_lightweight_84SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	OB92SeatCoach(OB92SeatCoach.class, new ModelOB92SeatCoach(), "OB_lightweight_92SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+
+	PSCNW56SeatCoach(PSCNW56SeatCoach.class, new ModelPSCNW56SeatCoach(), "PS_lightweight_CNW56SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+
+	BuddRDG56SeatCoach_Lounge(BuddRDG56SeatCoach_Lounge.class, new ModelBuddRDG56SeatCoach_Lounge(), "Budd_lightweight_RDG56SeatCoach_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	amfleet(Amfleet.class, new ModelAmfleet(),"amfleet_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	amfleet2(Amfleet2.class, new ModelAmfleet2(),"amfleet2_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

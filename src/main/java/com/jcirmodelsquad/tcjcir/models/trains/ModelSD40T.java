@@ -1967,9 +1967,17 @@ public class ModelSD40T extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 			}
 		}
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 135245) {
-			//old model, just ignore it
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/flexicoil_c2h_Blue.png"));
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6) {
+			//silvaaahhh
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_C_dash2_longjohns.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.85F, 0.0F, 0F);
+			flexLate.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(-3.7F, 0.0F, 0);
+			flexLate.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 9||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5 ) {
 			//dark grey dash 2 truck
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_c_dash2_grey.png"));
