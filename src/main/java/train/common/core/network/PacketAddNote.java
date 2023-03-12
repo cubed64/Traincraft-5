@@ -6,6 +6,7 @@ import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.Entity;
 import net.minecraft.server.MinecraftServer;
+import train.common.api.AbstractTrains;
 import train.common.api.EntityRollingStock;
 import train.common.api.Locomotive;
 
@@ -47,9 +48,10 @@ public class PacketAddNote implements IMessage {
 
             Entity entity = context.getServerHandler().playerEntity.worldObj.getEntityByID(message.entity);
 
-            if (entity instanceof EntityRollingStock) {
+            if (entity instanceof AbstractTrains) {
 
-                entity.getDataWatcher().updateObject(30,message.note);
+                entity.getDataWatcher().updateObject(31, message.note);
+                ((AbstractTrains) entity).trainNote = message.note;
 
             }
 

@@ -71,9 +71,9 @@ public class GuiFreight extends GuiContainer {
 	protected void actionPerformed(GuiButton guibutton) {
 		if (guibutton.id == 3) {
 			if (player != null && player.getCommandSenderName().toLowerCase().equals(freight.getTrainOwner().toLowerCase())) {
+				AxisAlignedBB box = freight.boundingBox.expand(5, 5, 5);
+				List lis3 = freight.worldObj.getEntitiesWithinAABBExcludingEntity(freight, box);
 				if ((!freight.getTrainLockedFromPacket())) {
-					AxisAlignedBB box = freight.boundingBox.expand(5, 5, 5);
-					List lis3 = freight.worldObj.getEntitiesWithinAABBExcludingEntity(freight, box);
 					if (lis3 != null && lis3.size() > 0) {
 						for (Object entity : lis3) {
 							if (entity instanceof EntityPlayer) {
@@ -84,11 +84,8 @@ public class GuiFreight extends GuiContainer {
 
 					freight.locked = true;
 					guibutton.displayString = "Locked";
-					this.initGui();
 				}
 				else {
-					AxisAlignedBB box = freight.boundingBox.expand(5, 5, 5);
-					List lis3 = freight.worldObj.getEntitiesWithinAABBExcludingEntity(freight, box);
 					if (lis3 != null && lis3.size() > 0) {
 						for (Object entity : lis3) {
 							if (entity instanceof EntityPlayer) {
@@ -97,9 +94,9 @@ public class GuiFreight extends GuiContainer {
 						}
 					}
 					freight.locked = false;
-					guibutton.displayString = "UnLocked";
-					this.initGui();
+					guibutton.displayString = "Unlocked";
 				}
+				this.initGui();
 			}
 			else if (player != null && player instanceof EntityPlayer) {
 				player.addChatMessage(new ChatComponentText("You are not the owner"));
@@ -172,7 +169,7 @@ public class GuiFreight extends GuiContainer {
 			int colour2 = (colour1 & 0xfefefe) >> 1 | colour1 & 0xff000000;
 			drawGradientRect(startX - 3, startY - 3, startX + textWidth + 3, startY + 8 + 3 + 40, colour1, colour2);
 			drawGradientRect(startX - 2, startY - 2, startX + textWidth + 2, startY + 8 + 2 + 40, i4, i4);
-			fontRendererObj.drawStringWithShadow("Give the train a note here", startX, startY, -1);
+			//fontRendererObj.drawStringWithShadow("Give the train a note here", startX, startY, -1);
 
 			//fontRendererObj.drawStringWithShadow("Owner: " + freight.getTrainOwner().trim(), startX, startY + 40, -1);
 

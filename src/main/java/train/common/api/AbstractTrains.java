@@ -134,6 +134,9 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 
 	public String destination = "";
 
+	public String trainNote = "";
+
+
 	/**
 	 * Registers all possible color textures
 	 */
@@ -163,6 +166,8 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		dataWatcher.addObject(10, numberOfTrains);
 		dataWatcher.addObject(11, uniqueID);
 		dataWatcher.addObject(13, trainCreator);
+		dataWatcher.addObject(31, trainNote); //train note
+
 		shouldChunkLoad=ConfigHandler.CHUNK_LOADING;
 		this.setFlag(7, shouldChunkLoad);
 
@@ -244,6 +249,10 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 
 	public int getUniqueTrainID(){
 		return uniqueID;
+	}
+
+	public String getTrainNote() {
+		return dataWatcher.getWatchableObjectString(31);
 	}
 
 	public boolean lampOn() {return islampOn;}
@@ -396,6 +405,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 
 		nbttagcompound.setLong("UUIDM", this.getUniqueID().getMostSignificantBits());
 		nbttagcompound.setLong("UUIDL", this.getUniqueID().getLeastSignificantBits());
+		nbttagcompound.setString("trainNote", trainNote);
 	}
 
 	@Override
@@ -425,6 +435,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		if(nbttagcompound.hasKey("Dim")){
 			this.dimension=nbttagcompound.getInteger("Dim");
 		}
+		if(nbttagcompound.hasKey("trainNote")) trainNote = nbttagcompound.getString("trainNote");
 
 		if(nbttagcompound.hasKey("UUIDM")){
 			this.entityUniqueID = new UUID(nbttagcompound.getLong("UUIDM"), nbttagcompound.getLong("UUIDL"));
@@ -451,6 +462,8 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			dataWatcher.updateObject(7, trainOwner);
 			dataWatcher.updateObject(9, trainName);
 			dataWatcher.updateObject(11, uniqueID);
+			dataWatcher.updateObject(31, trainNote);
+
 			if (trainCreator != null && trainCreator.length() > 0){ dataWatcher.updateObject(13, trainCreator);}
 		}
 	}
@@ -673,7 +686,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			itemdropped=true;
 			for (ItemStack item : getItemsDropped()) {
 				if (item.getItem() instanceof ItemRollingStock){
-					ItemStack stack = ItemRollingStock.setPersistentData(item,this,this.getUniqueTrainID(),trainCreator, trainOwner, getColor());
+					ItemStack stack = ItemRollingStock.setPersistentData(item,this,this.getUniqueTrainID(),trainCreator, trainOwner, getColor(), trainNote);
 					entityDropItem(stack!=null?stack:item,0);
 				} else {
 					setUniqueIDToItem(item);

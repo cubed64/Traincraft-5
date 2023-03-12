@@ -166,7 +166,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         dataWatcher.addObject(28, castToString(Math.round(currentSpeedSlowDown)));
         dataWatcher.addObject(29, castToString(currentAccelSlowDown));
         dataWatcher.addObject(30, castToString(currentBrakeSlowDown));
-        dataWatcher.addObject(31, castToString(currentFuelConsumptionChange));
+        //dataWatcher.addObject(31, castToString(currentFuelConsumptionChange));
         dataWatcher.addObject(15, (float) Math.round((getCustomSpeed() * 3.6f)));
         //dataWatcher.addObject(32, lineWaypoints);
         setAccel(0);

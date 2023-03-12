@@ -155,7 +155,6 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	private double derailSpeed = 0.46;
 	private int scrollPosition;
 
-	public String trainNote = "";
 
 
 	public EntityRollingStock(World world) {
@@ -277,9 +276,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		return dataWatcher.getWatchableObjectInt(11);
 	}
 
-	public String getTrainNote() {
-		return dataWatcher.getWatchableObjectString(30);
-	}
+
 
 	/*
 	 * @Override public int getID() { return ID; }
@@ -309,7 +306,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		dataWatcher.addObject(17, 0);
 		dataWatcher.addObject(18, 1);
 		dataWatcher.addObject(19, 0.0F);
-		dataWatcher.addObject(30, ""); //train note
+
 	}
 
 	@Override
@@ -1560,7 +1557,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		nbttagcompound.setBoolean("firstLoad", this.firstLoad);
 		nbttagcompound.setFloat("rotation", this.rotation);
 		nbttagcompound.setBoolean("brake", isBraking);
-		nbttagcompound.setString("trainNote", getTrainNote());
+
 	}
 
 	@Override
@@ -1578,7 +1575,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		this.firstLoad = nbttagcompound.getBoolean("firstLoad");
 		this.rotation = nbttagcompound.getFloat("rotation");
 		this.isBraking = nbttagcompound.getBoolean("brake");
-		dataWatcher.updateObject(30,nbttagcompound.getString("trainNote"));
+
 	}
 
 	@Override
@@ -2463,7 +2460,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		for (EnumTrains trains : EnumTrains.values()) {
 			if (trains.getEntityClass().equals(this.getClass())) {
-				items.add(ItemRollingStock.setPersistentData(new ItemStack(trains.getItem()), this,this.getUniqueTrainID(),trainCreator, trainOwner, getColor()));
+				items.add(ItemRollingStock.setPersistentData(new ItemStack(trains.getItem()), this,this.getUniqueTrainID(),trainCreator, trainOwner, getColor(), trainNote));
 				return items;
 			}
 		}
