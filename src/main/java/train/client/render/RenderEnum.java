@@ -1152,6 +1152,24 @@ public enum RenderEnum {
 	AlcoPB1( DieselPB1.class,  new ModelPB(), "AlcoPB1_", true,new float[] {-1.55F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{}
 	}, "", null, 0, false),
+	FA1( DieselFA1.class,  new ModelFA1(), "FA1_", true,new float[] {-1.6F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
+	}, "", null, 0, false),
+	FB1( DieselFB1.class,  new ModelFB1(), "FB1_", true,new float[] {-1.55F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
+	}, "", null, 0, false),
+	FA2( DieselFA2.class,  new ModelFA2(), "FA2_", true,new float[] {-1.6F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
+	}, "", null, 0, false),
+	FB2( DieselFB2.class,  new ModelFB2(), "FB2__", true,new float[] {-1.55F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
+	}, "", null, 0, false),
+	FPA4( DieselFPA4.class,  new ModelFPA4(), "FPA4_", true,new float[] {-1.6F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
+	}, "", null, 0, false),
+	FPB4( DieselFPB4.class,  new ModelFPB4(), "FPB4_", true,new float[] {-1.55F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
+	}, "", null, 0, false),
 
 	C415H( DieselC415H.class,  new ModelC415H(), "C415h_", true,new float[] {0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }

@@ -1000,6 +1000,12 @@ entity.tc.P42.name=GE P42
 
 item.tc:minecartAlcoPA1.name=ALCo PA-1
 item.tc:minecartAlcoPB1.name=ALCo PB-1
+item.tc:minecartFA1.name=ALCo FA-1
+item.tc:minecartFB1.name=ALCo FB-1
+item.tc:minecartFA2.name=ALCo FA-2
+item.tc:minecartFB2.name=ALCo FB-2
+item.tc:minecartFPA4.name=MLW FPA-4
+item.tc:minecartFPB4.name=MLW FPB-4
 
 item.tc:minecartC415H.name=ALCo C415 (High Visibility Cab)
 item.tc:minecartC415S.name=ALCo C415
@@ -1018,9 +1024,14 @@ item.tc:minecartS2.name=ALCo S2
 
 item.tc:minecartRSD15.name=ALCo RSD-15
 
-
 entity.tc.PA1.name=ALCo PA-1
 entity.tc.PB1.name=ALCo PB-1
+entity.tc.FA1.name=ALCo FA-1
+entity.tc.FB1.name=ALCo FB-1
+entity.tc.FA2.name=ALCo FA-2
+entity.tc.FB2.name=ALCo FB-2
+entity.tc.FPA4.name=MLW FPA-4
+entity.tc.FPB4.name=MLW FPB-4
 
 entity.tc.C415H.name=ALCo C415 (High Visibility Cab)
 entity.tc.C415S.name=ALCo C415

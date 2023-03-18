@@ -456,6 +456,12 @@ public enum ItemIDs {
 	//ALCO and its canookistanian counterpart//
 	minecartAlcoPA1("ItemRollingStock", "AlcoPA1Icon",5),
 	minecartAlcoPB1("ItemRollingStock", "AlcoPB1Icon",4),
+	minecartFA1("ItemRollingStock", "FA1",4),
+	minecartFB1("ItemRollingStock", "FB1",3),
+	minecartFA2("ItemRollingStock", "FA2",4),
+	minecartFB2("ItemRollingStock", "FB2",3),
+	minecartFPA4("ItemRollingStock", "FPA4",4),
+	minecartFPB4("ItemRollingStock", "FPB4",3),
 
 	minecartC415H("ItemRollingStock", "c415h", 4),
 	minecartC415S("ItemRollingStock", "c415s", 4),

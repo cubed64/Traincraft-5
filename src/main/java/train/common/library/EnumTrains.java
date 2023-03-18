@@ -372,6 +372,13 @@ public enum EnumTrains {
 	//ALCO//
 	AlcoPA1("PA1", DieselPA1.class, ItemIDs.minecartAlcoPA1.item, "diesel", 2000, 188, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Pink", "Black", "Blue", "Cyan", "Purple", "Yellow", "Orange", "Grey", "Brown", "LightGrey", "Green", "Lime", "LightBlue", "Magenta", "White", "Skin16", "Skin17", "Skin18"}), 10, -3.15),
 	AlcoPB1("PB1", DieselPB1.class, ItemIDs.minecartAlcoPB1.item, "diesel", 2000, 188, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Black", "Yellow", "Orange", "LightGrey", "Magenta"}), 10, -3.1),
+	FA1("FA1", DieselFA1.class, ItemIDs.minecartFA1.item, "diesel", 1600, 105, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Green", "Magenta", "Yellow", "Orange", "Lime"}), 10, -2.845),
+	FB1("FB1", DieselFB1.class, ItemIDs.minecartFB1.item, "diesel", 1600, 105, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Green", "Magenta", "Yellow", "Orange", "Lime"}), 10, -2.825),
+	FA2("FA2", DieselFA2.class, ItemIDs.minecartFA2.item, "diesel", 1600, 120, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Yellow", "Blue", "Black", "Orange", "Green", "Purple", "Lime", "LightGrey", "White"}), 10, -2.845),
+	FB2("FB2", DieselFB2.class, ItemIDs.minecartFB2.item, "diesel", 1600, 120, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Yellow", "Black", "Orange", "Green", "LightGrey", "White"}), 10, -2.825),
+	FPA4("FPA4", DieselFPA4.class, ItemIDs.minecartFPA4.item, "diesel", 1800, 148, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Cyan", "Green", "Red", "LightBlue", "Purple", "Brown", "Lime", "White", "Yellow", "Black", "Grey"}), 10, -2.845),
+	FPB4("FPB4", DieselFPB4.class, ItemIDs.minecartFPB4.item, "diesel", 1800, 148, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Green", "Red", "Purple", "Brown", "Lime", "White", "Yellow"}), 10, -2.825),
+
 
 	C415H("C415H", DieselC415H.class, ItemIDs.minecartC415H.item, "diesel", 1500, 106, 0, 35, 0, 200, 0.87, 0.93, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Purple", "Magenta", "Brown", "Red", "Pink", "Green"}), 10, -2.4),
 	C415S("C415S", DieselC415S.class, ItemIDs.minecartC415S.item, "diesel", 1500, 106, 0, 35, 0, 200, 0.87, 0.93, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Brown", "Yellow", "Blue", "LightGrey"}), 10, -2.5),
