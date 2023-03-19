@@ -211,18 +211,16 @@ public class GuiFreight extends GuiContainer {
 
 		if (trainNote.isFocused()) {
 			trainNote.textboxKeyTyped(par1, par2);
-		}
-
-		if (par2 == Keyboard.KEY_ESCAPE) {
-			/*theCar.railroadLine = railroadName.getText();
-			theCar.lineType = railroadType.displayString;
-			theCar.operatingCrew = operatingCrew.getText();
-			Traincraft.updateGeometryCarChannel.sendToServer(new UpdateGeometryCar(theCar.getEntityId(), railroadName.getText(), railroadType.displayString, operatingCrew.getText()));*/
-
-			//freight.trainNote = trainNote.getText();
+		} else if (par1 == 1 || (par2 == this.mc.gameSettings.keyBindInventory.getKeyCode() || par2 == Keyboard.KEY_ESCAPE)){
 			Traincraft.lockChannel.sendToServer(new PacketAddNote(freight.getEntityId(), trainNote.getText()));
 			mc.thePlayer.closeScreen();
+		} else {
+			super.keyTyped(par1, par2);
 		}
+
+
+
+
 
 	}
 

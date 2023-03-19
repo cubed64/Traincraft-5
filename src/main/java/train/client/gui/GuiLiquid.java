@@ -11,11 +11,13 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
+import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 import train.client.core.helpers.FluidRenderHelper;
 import train.common.Traincraft;
 import train.common.api.AbstractTrains;
 import train.common.api.LiquidTank;
+import train.common.core.network.PacketAddNote;
 import train.common.core.network.PacketSetTrainLockedToClient;
 import train.common.inventory.InventoryLiquid;
 import train.common.library.Info;
@@ -26,7 +28,8 @@ public class GuiLiquid extends GuiContainer {
 
 	private LiquidTank liquid;
 	private EntityPlayer player;
-	
+	private GuiTCTextField trainNote;
+
 	public GuiLiquid(EntityPlayer player, InventoryPlayer inventoryplayer, Entity entityminecart) {
 		super(new InventoryLiquid(inventoryplayer, (LiquidTank) entityminecart));
 		liquid = (LiquidTank) entityminecart;
@@ -45,8 +48,16 @@ public class GuiLiquid extends GuiContainer {
 				drawCreativeTabHoveringText( "0mb/" + liquid.getCapacity() + "mb", t, g);
 			}
 		}
+		trainNote.drawTextBox();
 
 
+	}
+	@Override
+	public void updateScreen() {
+		super.updateScreen();
+		if (trainNote.isFocused()) {
+			trainNote.updateCursorCounter();
+		}
 	}
 
 	@Override
@@ -60,6 +71,10 @@ public class GuiLiquid extends GuiContainer {
 		}else{
 			this.buttonList.add(new GuiButton(3, var1 + 130, var2 - 10, 43, 10, "Locked"));
 		}
+
+		trainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, height/2 - 110, 170,15);
+		trainNote.setText(liquid.getTrainNote());
+
 	}
 	@Override
 	protected void actionPerformed(GuiButton guibutton) {
@@ -122,6 +137,26 @@ public class GuiLiquid extends GuiContainer {
 			drawCreativeTabHoveringTextLockButton("When a tank cart is locked,", i, j);
 		}
 	}
+
+	@Override
+	protected void keyTyped(char par1, int par2) {
+
+
+		if (trainNote.isFocused()) {
+			trainNote.textboxKeyTyped(par1, par2);
+		} else if (par1 == 1 || (par2 == this.mc.gameSettings.keyBindInventory.getKeyCode() || par2 == Keyboard.KEY_ESCAPE)){
+			Traincraft.lockChannel.sendToServer(new PacketAddNote(liquid.getEntityId(), trainNote.getText()));
+			mc.thePlayer.closeScreen();
+		} else {
+			super.keyTyped(par1, par2);
+		}
+
+
+
+
+
+	}
+
 
 	protected void drawCreativeTabHoveringTextLockButton(String str, int t, int g) {
 
@@ -198,5 +233,11 @@ public class GuiLiquid extends GuiContainer {
 		int j = (width - xSize) / 2;
 		int k = (height - ySize) / 2;
 		return (mouseX >= j + 57 && mouseX <= j + 123 && mouseY >= k + 16 && mouseY <= k + 68);
+	}
+
+	@Override
+	protected void mouseClicked(int par1, int par2, int par3) {
+		trainNote.mouseClicked(par1, par2, par3);
+		super.mouseClicked(par1, par2, par3);
 	}
 }
