@@ -109,6 +109,8 @@
   "ALCO_16_251B_Notch8": {"category": "master", "sounds": [{"name": "ALCO_16_251B_Notch8", "stream":  true}]},
   "ALCO_16_251C_Idle": {"category": "master", "sounds": [{"name": "ALCO_16_251C_Idle", "stream":  true}]},
   "ALCO_16_251C_Notch8": {"category": "master", "sounds": [{"name": "ALCO_16_251C_Notch8", "stream":  true}]},
+  "ALCO_12_244_Idle": {"category": "master", "sounds": [{"name": "ALCO_12_244_Idle", "stream":  true}]},
+  "ALCO_12_244_Notch8": {"category": "master", "sounds": [{"name": "ALCO_12_244_Notch8", "stream":  true}]},
   "ALCO_12_251C_Idle": {"category": "master", "sounds": [{"name": "ALCO_12_251C_Idle", "stream":  true}]},
   "ALCO_12_251C_Notch8": {"category": "master", "sounds": [{"name": "ALCO_12_251C_Notch8", "stream":  true}]},
   "ALCO_6_539T_Idle": {"category": "master", "sounds": [{"name": "ALCO_6_539T_Idle","stream": true}]},
