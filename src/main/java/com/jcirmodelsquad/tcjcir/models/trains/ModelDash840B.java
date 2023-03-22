@@ -9,7 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
-import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2;
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2_new;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -1288,7 +1288,7 @@ public class ModelDash840B extends ModelConverter //Same as Filename
 		bodyModel[306].addBox(0F, 0F, 0F, 4, 0, 1, 0F); // Box 442
 		bodyModel[306].setRotationPoint(40F, 1F, 7F);
 	}
-	ModelFB2 theTrucks2 = new ModelFB2();
+	ModelFB2_new theTrucks2 = new ModelFB2_new();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 		for (int i = 0; i < 307; i++) {
@@ -1314,18 +1314,18 @@ public class ModelDash840B extends ModelConverter //Same as Filename
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb2_Grey.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_silver_a.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.65, 0.33, 0);
+			GL11.glTranslated(-1.65, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glTranslated(3.27, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb2_Black.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_black_b.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.65, 0.33, 0);
+			GL11.glTranslated(-1.65, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glTranslated(3.27, 0, 0);

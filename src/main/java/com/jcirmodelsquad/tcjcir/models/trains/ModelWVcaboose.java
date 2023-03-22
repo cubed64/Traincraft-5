@@ -9,6 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelCabooseTruck2;
 import com.jcirmodelsquad.tcjcir.models.trucks.Modelcaboosetruck;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -655,7 +656,7 @@ public class ModelWVcaboose extends ModelConverter //Same as Filename
 		bodyModel[153].addShapeBox(0F, 0F, 0F, 0, 15, 47, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -39F, 0F, 0F, -39F, 0F, -12F, 0F, 0F, -12F, 0F, 0F, -12F, -39F, 0F, -12F, -39F); // Box 40
 		bodyModel[153].setRotationPoint(7.49F, -18F, -2F);
 	}
-	Modelcaboosetruck bogie = new Modelcaboosetruck();
+	ModelCabooseTruck2 bogie = new ModelCabooseTruck2();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
@@ -668,15 +669,16 @@ public class ModelWVcaboose extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 			}
 
-		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/cb_Black.png"));
-
+		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck.png"));
 		GL11.glPushMatrix();
-		GL11.glScalef(1,1,0.9f);
-		GL11.glTranslated(-1.03125f,0.5625,-0.4);
-		bogie.render(entity,f,f1,f2,f3,f4,f5);
+		GL11.glTranslated(-0.9, 0, 0);
+		bogie.render(entity, f, f1, f2, f3, f4, f5);
+		GL11.glPopMatrix();
 
-		GL11.glTranslated(1.8125,0,0.03);
-		bogie.render(entity,f,f1,f2,f3,f4,f5);
+		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck_left-generator.png"));
+		GL11.glPushMatrix();
+		GL11.glTranslated(0.9, 0, 0);
+		bogie.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
 	}
 

@@ -9,7 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
-import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2;
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2_old;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -1578,7 +1578,7 @@ public class ModelB30 extends ModelConverter//Same as Filename
 		bodyModel[378].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 428
 		bodyModel[378].setRotationPoint(-32F, -24F, -1F);
 	}
-	ModelFB2 theTrucks2 = new ModelFB2();
+	ModelFB2_old theTrucks2 = new ModelFB2_old();
 	ModelTypeBnew theTrucks3 = new ModelTypeBnew();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {

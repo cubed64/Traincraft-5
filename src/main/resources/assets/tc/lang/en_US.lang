@@ -1006,6 +1006,8 @@ item.tc:minecartFA2.name=ALCo FA-2
 item.tc:minecartFB2.name=ALCo FB-2
 item.tc:minecartFPA4.name=MLW FPA-4
 item.tc:minecartFPB4.name=MLW FPB-4
+item.tc:minecartFAFDL.name=CEE FA-FDL
+item.tc:minecartFBFDL.name=CEE FB-FDL
 
 item.tc:minecartC415H.name=ALCo C415 (High Visibility Cab)
 item.tc:minecartC415S.name=ALCo C415
@@ -1032,6 +1034,8 @@ entity.tc.FA2.name=ALCo FA-2
 entity.tc.FB2.name=ALCo FB-2
 entity.tc.FPA4.name=MLW FPA-4
 entity.tc.FPB4.name=MLW FPB-4
+entity.tc.FAFDL.name=CEE FA-FDL
+entity.tc.FBFDL.name=CEE FB-FDL
 
 entity.tc.C415H.name=ALCo C415 (High Visibility Cab)
 entity.tc.C415S.name=ALCo C415
@@ -1169,7 +1173,7 @@ entity.tc.PS150.name=Pullman Standard 50' Boxcar
 entity.tc.PS160.name=Pullman Standard 60' Boxcar
 entity.tc.OWO 60 Verticube.name=FNCC 60' Verticube Boxcar
 entity.tc.MILW40boxcar.name=MILW 40' Boxcar
-entity.40highcube.name=40' Hi-Cube Boxcar
+entity.tc.40highcube.name=40' Hi-Cube Boxcar
 entity.tc.60 Foot Hi-Cube Boxcar.name=Gunderson 60' Hi-Cube Double Door Boxcar
 entity.tc.Reefer64.name=Trinity 64' Mechanical Reefer
 entity.tc.FNCC50FootBoxcar.name=FNCC 50' Highcube Boxcar
@@ -1300,12 +1304,14 @@ entity.tc.Budd RDG 56 Seat Coach-Lounge.name=Budd RDG 56 Seat Coach-Lounge
 
 item.tc:minecartAmfleet.name=Amfleet 1 Coach
 item.tc:minecartAmfleet2.name=Amfleet 2 Coach
+item.tc:minecartAmfleetCab.name=Amfleet Cab Car
 item.tc:minecartPEcooch.name=Polar Express Coach
 item.tc:minecartPEobserve.name=Polar Express Observation
 
 
 entity.tc.Amfleet.name=Amfleet 1 Coach
 entity.tc.Amfleet2.name=Amfleet 2 Coach
+entity.tc.AmfleetCab.name=Amfleet Cab Car
 entity.tc.PEcoach.name=Polar Express Coach
 entity.tc.PEobserve.name=Polar Express Observation
 
@@ -1335,6 +1341,10 @@ item.tc:minecartTGVMobile.name=TGV Highrail Van
 item.tc:minecartHustler.name=Hustler Switcher
 item.tc:minecartFRED.name=Flashing Rear End Device (FRED)
 
+item.tc:minecartCQ310PO.name=CQ-310 (Powered)
+item.tc:minecartCQ310PA.name=CQ-310 (Trailing)
+item.tc:minecartKawasakiLRV.name=Kawasaki LRV
+
 entity.tc.BigMeme.name=Leslie A425 Trailer
 entity.tc.Payload.name=TF2 Payload Cart
 entity.tc.Thanos.name=Thanos Cart
@@ -1348,3 +1358,7 @@ entity.tc.Highrail Van.name=Generic Highrail Van
 entity.tc.TGVmobile.name=TGV Highrail Van
 entity.tc.Hustler.name=Hustler Switcher
 entity.tc.FRED.name=Flashing Rear End Device (FRED)
+
+entity.tc.CQ310PO.name=CQ-310 (Powered)
+entity.tc.CQ310PA.name=CQ-310 (Trailing)
+entity.tc.KawasakiLRV.name=Kawasaki LRV

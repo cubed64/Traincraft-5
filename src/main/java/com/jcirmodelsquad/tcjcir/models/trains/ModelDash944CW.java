@@ -1767,7 +1767,7 @@ public class ModelDash944CW extends ModelConverter //Same as Filename
 			}
 		}
 
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/ge_hiad_Silver.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslatef(-2F, 0.0F, 0F);

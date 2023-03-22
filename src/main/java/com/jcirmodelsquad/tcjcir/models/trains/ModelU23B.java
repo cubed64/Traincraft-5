@@ -9,10 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
-import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergBnew;
-import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2;
-import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeB;
-import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
+import com.jcirmodelsquad.tcjcir.models.trucks.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -1618,7 +1615,7 @@ public class ModelU23B extends ModelConverter //Same as Filename
 		bodyModel[387].setRotationPoint(-31F, -25F, -0.5F);
 	}
 	ModelTypeB theTrucks1 = new ModelTypeB();
-	ModelFB2 theTrucks2 = new ModelFB2();
+	ModelFB2_new theTrucks2 = new ModelFB2_new();
 	ModelBlombergBnew theTrucks3 = new ModelBlombergBnew();
 	ModelTypeBnew theTrucks4 = new ModelTypeBnew();
 
@@ -1638,9 +1635,9 @@ public class ModelU23B extends ModelConverter //Same as Filename
 			}
 		}
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb2_Black.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_black_a.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.52, 0.335, 0);
+			GL11.glTranslated(-1.52, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glTranslated(3.05, 0, 0);
@@ -1665,9 +1662,9 @@ public class ModelU23B extends ModelConverter //Same as Filename
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb2_Grey.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_silver_a.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.52, 0.335, 0);
+			GL11.glTranslated(-1.52, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glTranslated(3.05, 0, 0);

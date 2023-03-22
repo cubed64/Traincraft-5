@@ -9,7 +9,7 @@
 
 package  com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
-import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2;
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2_old;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeB;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
 import net.minecraft.client.Minecraft;
@@ -1413,7 +1413,7 @@ public class ModelB23 extends ModelConverter //Same as Filename
 		bodyModel[336].setRotationPoint(38.5F, -22.35F, -1.5F);
 	}
 	ModelTypeB theTrucks1 = new ModelTypeB();
-	ModelFB2 theTrucks2 = new ModelFB2();
+	ModelFB2_old theTrucks2 = new ModelFB2_old();
 	ModelTypeBnew theTrucks3 = new ModelTypeBnew();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {

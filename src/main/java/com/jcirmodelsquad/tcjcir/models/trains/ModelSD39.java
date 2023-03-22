@@ -1176,7 +1176,7 @@ public class ModelSD39 extends ModelConverter//Same as Filename
 		bodyModel[205].setRotationPoint(16F, -22F, -3F);
 
 		bodyModel[206].addBox(0F, 0F, 0F, 2, 2, 4, 0F); // Box 31
-		bodyModel[206].setRotationPoint(38.25F, -18F, -2F);
+		bodyModel[206].setRotationPoint(38.25F, -19F, -2F);
 
 		bodyModel[207].addShapeBox(0F, 0F, 0F, 3, 21, 7, 0F,0F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 40
 		bodyModel[207].setRotationPoint(37F, -21F, -7F);
@@ -1185,36 +1185,36 @@ public class ModelSD39 extends ModelConverter//Same as Filename
 		bodyModel[208].setRotationPoint(37F, -21F, 0F);
 
 		bodyModel[209].addShapeBox(-1F, 0F, 0F, 1, 2, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 115 numberboard rear
-		bodyModel[209].setRotationPoint(37.45F, -15.5F, -6F);
+		bodyModel[209].setRotationPoint(37.45F, -16.5F, -6F);
 		bodyModel[209].rotateAngleY = -0.41887902F;
 
 		bodyModel[210].addShapeBox(-1F, 0F, -5F, 1, 2, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 116 numberboard rear
-		bodyModel[210].setRotationPoint(37.45F, -15.5F, 6F);
+		bodyModel[210].setRotationPoint(37.45F, -16.5F, 6F);
 		bodyModel[210].rotateAngleY = 0.41887902F;
 
 		bodyModel[211].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F); // Box 247 headlight rear 2 beam
-		bodyModel[211].setRotationPoint(39.5F, -18F, -2F);
+		bodyModel[211].setRotationPoint(39.5F, -19F, -2F);
 
 		bodyModel[212].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F); // Box 248 headlight rear 2 beam
-		bodyModel[212].setRotationPoint(39.5F, -18F, 0F);
+		bodyModel[212].setRotationPoint(39.5F, -19F, 0F);
 
 		bodyModel[213].addShapeBox(0F, 0F, 0F, 1, 4, 4, 0F,0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F); // Box 381 sp mount
-		bodyModel[213].setRotationPoint(39.25F, -22F, -2F);
+		bodyModel[213].setRotationPoint(39.25F, -23F, -2F);
 
 		bodyModel[214].addBox(0F, 0F, 0F, 1, 2, 4, 0F); // Box 31 sp mount
-		bodyModel[214].setRotationPoint(40.25F, -20F, -2F);
+		bodyModel[214].setRotationPoint(40.25F, -21F, -2F);
 
 		bodyModel[215].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F); // Box 247 lamp gyralight rear
-		bodyModel[215].setRotationPoint(40.5F, -20F, -2F);
+		bodyModel[215].setRotationPoint(40.5F, -21F, -2F);
 
 		bodyModel[216].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F); // Box 248 lamp gyralight rear
-		bodyModel[216].setRotationPoint(40.5F, -20F, 0F);
+		bodyModel[216].setRotationPoint(40.5F, -21F, 0F);
 
 		bodyModel[217].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F); // Box 388 light red gyralight rear
-		bodyModel[217].setRotationPoint(40.5F, -22F, -1F);
+		bodyModel[217].setRotationPoint(40.5F, -23F, -1F);
 
 		bodyModel[218].addBox(0F, 0F, 0F, 1, 2, 2, 0F); // Box 389 sp mount
-		bodyModel[218].setRotationPoint(40.25F, -22F, -1F);
+		bodyModel[218].setRotationPoint(40.25F, -23F, -1F);
 
 		bodyModel[219].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -1F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -1F, -0.25F, -0.25F); // Box 71 markerlight twO
 		bodyModel[219].setRotationPoint(36.65F, -12F, -6.5F);
@@ -1223,10 +1223,10 @@ public class ModelSD39 extends ModelConverter//Same as Filename
 		bodyModel[220].setRotationPoint(36.65F, -12F, 4.5F);
 
 		bodyModel[221].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -1F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -1F, -0.25F, -0.25F); // Box 71 markerlight twO
-		bodyModel[221].setRotationPoint(36.65F, -18F, -6.5F);
+		bodyModel[221].setRotationPoint(36.65F, -19F, -6.5F);
 
 		bodyModel[222].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-1F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -1F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 1208 makrerlight twO
-		bodyModel[222].setRotationPoint(36.65F, -18F, 4.5F);
+		bodyModel[222].setRotationPoint(36.65F, -19F, 4.5F);
 
 		bodyModel[223].addBox(0F, 0F, 0F, 40, 2, 4, 0F); // Box 36
 		bodyModel[223].setRotationPoint(-18F, -2F, -11F);

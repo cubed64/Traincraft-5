@@ -11,7 +11,7 @@ package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is locat
 
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergB;
-import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2;
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2_old;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeB;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -1251,7 +1251,7 @@ public class ModelCF7R extends ModelConverter //Same as Filename
 		bodyModel[297].setRotationPoint(2F, -1F, 9.25F);
 	}
 	ModelBlombergB theTrucks2 = new ModelBlombergB();
-	ModelFB2 theTrucks1 = new ModelFB2();
+	ModelFB2_old theTrucks1 = new ModelFB2_old();
 	ModelTypeB theTrucks3 = new ModelTypeB();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {

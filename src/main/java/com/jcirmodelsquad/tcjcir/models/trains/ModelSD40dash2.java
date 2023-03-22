@@ -2321,7 +2321,7 @@ public class ModelSD40dash2 extends ModelConverter //Same as Filename
 			GL11.glTranslated(-3.6F, 0.0F, 0);
 			flexLate.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 11 ) {
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 11|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 28 ) {
 			//silver dash 2 truck
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_C_dash2_longjohns.png"));
 			GL11.glPushMatrix();

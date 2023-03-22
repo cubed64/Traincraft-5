@@ -9,6 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeAnew;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -1049,6 +1050,7 @@ public class ModelH1044 extends ModelConverter //Same as Filename
 		bodyModel[251].setRotationPoint(29F, -20F, -3F);
 	}
 	ModelTypeAClassico theTrucks = new ModelTypeAClassico();
+	ModelTypeAnew theTypeA = new ModelTypeAnew();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 		for (int i = 0; i < 252; i++) {
@@ -1066,18 +1068,38 @@ public class ModelH1044 extends ModelConverter //Same as Filename
 		}
 		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==15 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==11){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/typeAclassico_Silver.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.1F ,-0.0F,0F);//front
+			//GL11.glScalef(0.9f,0.9f,0.8f);
+			theTrucks.render(entity,f,f1,f2,f3,f4,f5);
+			GL11.glPopMatrix();
+
+			GL11.glPushMatrix();
+			GL11.glTranslated(1.1F,-0.0F,0);//rear
+			theTrucks.render(entity,f,f1,f2,f3,f4,f5);
+			GL11.glPopMatrix();
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/TypeA_new_Black_fric.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(-1.13, -0.02, 0);
+			theTypeA.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glTranslated(2.25, 0, 0);
+			theTypeA.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/typeAclassico_Black.png"));
-		}
-		GL11.glPushMatrix();
-		GL11.glTranslatef(-1.1F ,-0.0F,0F);//front
-		//GL11.glScalef(0.9f,0.9f,0.8f);
-		theTrucks.render(entity,f,f1,f2,f3,f4,f5);
-		GL11.glPopMatrix();
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.1F ,-0.0F,0F);//front
+			//GL11.glScalef(0.9f,0.9f,0.8f);
+			theTrucks.render(entity,f,f1,f2,f3,f4,f5);
+			GL11.glPopMatrix();
 
-		GL11.glPushMatrix();
-		GL11.glTranslated(1.1F,-0.0F,0);//rear
-		theTrucks.render(entity,f,f1,f2,f3,f4,f5);
-		GL11.glPopMatrix();
+			GL11.glPushMatrix();
+			GL11.glTranslated(1.1F,-0.0F,0);//rear
+			theTrucks.render(entity,f,f1,f2,f3,f4,f5);
+			GL11.glPopMatrix();
+		}
+
 	}
 }

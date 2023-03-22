@@ -10,7 +10,7 @@
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergBnew;
-import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2;
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2_new;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -1166,7 +1166,7 @@ public class ModelSB23R extends ModelConverter //Same as Filename
 		bodyModel[273].setRotationPoint(-28.5F, -17.25F, 2F);
 		bodyModel[273].rotateAngleY = 0.78539816F;
 	}
-	ModelFB2 theTrucks2 = new ModelFB2();
+	ModelFB2_new theTrucks2 = new ModelFB2_new();
 	ModelTypeBnew theTrucks3 = new ModelTypeBnew();
 	ModelBlombergBnew theTrucks69 = new ModelBlombergBnew();
 	@Override
@@ -1216,15 +1216,15 @@ public class ModelSB23R extends ModelConverter //Same as Filename
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 434){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb2_Grey.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_silver_a.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.52, 0.33, 0);
+			GL11.glTranslated(-1.52, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glTranslated(3.05, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14){
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1234){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Blac.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.52, -0.01, 0);
@@ -1234,9 +1234,9 @@ public class ModelSB23R extends ModelConverter //Same as Filename
 			theTrucks69.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb2_Black.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_black_b.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.52, 0.33, 0);
+			GL11.glTranslated(-1.52, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glTranslated(3.05, 0, 0);

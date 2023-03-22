@@ -43,7 +43,7 @@ public class ModelF45 extends ModelConverter //Same as Filename
 		bodyModel[1] = new ModelRendererTurbo(this, 169, 1, textureX, textureY); // Box 23
 		bodyModel[2] = new ModelRendererTurbo(this, 377, 1, textureX, textureY); // Box 6
 		bodyModel[3] = new ModelRendererTurbo(this, 409, 1, textureX, textureY); // Box 7
-		bodyModel[4] = new ModelRendererTurbo(this, 1, 9, textureX, textureY); // Box 34
+		bodyModel[4] = new ModelRendererTurbo(this, 1, 9, textureX, textureY, "cull"); // Box 34
 		bodyModel[5] = new ModelRendererTurbo(this, 425, 17, textureX, textureY); // Box 112
 		bodyModel[6] = new ModelRendererTurbo(this, 361, 1, textureX, textureY); // Box 164
 		bodyModel[7] = new ModelRendererTurbo(this, 169, 25, textureX, textureY); // Box 3
@@ -1152,6 +1152,10 @@ public class ModelF45 extends ModelConverter //Same as Filename
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);
 				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
+				GL11.glDisable(GL11.GL_CULL_FACE);
+				bodyModel[i].render(f5);
+				GL11.glEnable(GL11.GL_CULL_FACE);
 			} else {
 				bodyModel[i].render(f5);
 			}

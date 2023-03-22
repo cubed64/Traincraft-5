@@ -37,6 +37,11 @@ public abstract class ControlCar extends EntityRollingStock implements IPassenge
         }
     }
 
+    public ControlCar(World world, double d, double d1, double d2) {
+        super(world);
+        
+    }
+
     @Override
     public void onUpdate() {
         super.onUpdate();

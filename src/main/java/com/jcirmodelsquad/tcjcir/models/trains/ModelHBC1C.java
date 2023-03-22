@@ -1284,13 +1284,13 @@ public class ModelHBC1C extends ModelConverter //Same as Filename
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.65, 0.33, 0);
+			GL11.glTranslated(-1.055, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck_left-generator.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(3.27, 0, 0);
+			GL11.glTranslated(1.06, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}

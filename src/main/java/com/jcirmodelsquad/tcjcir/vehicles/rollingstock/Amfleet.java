@@ -72,6 +72,6 @@ public class Amfleet extends EntityRollingStock implements IPassenger {
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
-        return 2.4F;
+        return 2.5F;
     }
 }

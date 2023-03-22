@@ -12,12 +12,12 @@ package com.jcirmodelsquad.tcjcir.models.trucks;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 
-public class ModelFB2 extends ModelConverter //Same as Filename
+public class ModelFB2_old extends ModelConverter //Same as Filename
 {
 	int textureX = 512;
 	int textureY = 512;
 
-	public ModelFB2() //Same as Filename
+	public ModelFB2_old() //Same as Filename
 	{
 		bodyModel = new ModelRendererTurbo[64];
 

@@ -44,7 +44,7 @@ public class ModelSDP40F extends ModelConverter //Same as Filename
 		bodyModel[1] = new ModelRendererTurbo(this, 185, 1, textureX, textureY); // Box 23
 		bodyModel[2] = new ModelRendererTurbo(this, 401, 1, textureX, textureY); // Box 6
 		bodyModel[3] = new ModelRendererTurbo(this, 433, 1, textureX, textureY); // Box 7
-		bodyModel[4] = new ModelRendererTurbo(this, 1, 9, textureX, textureY); // Box 34
+		bodyModel[4] = new ModelRendererTurbo(this, 1, 9, textureX, textureY, "cull"); // Box 34
 		bodyModel[5] = new ModelRendererTurbo(this, 185, 25, textureX, textureY); // Box 112
 		bodyModel[6] = new ModelRendererTurbo(this, 393, 1, textureX, textureY); // Box 164
 		bodyModel[7] = new ModelRendererTurbo(this, 465, 1, textureX, textureY); // Box 3

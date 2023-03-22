@@ -1,6 +1,8 @@
 package train.common.library;
 
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.*;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.AmfleetCab;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.PCH120Coach;
 import train.common.entity.rollingStock.*;
 
 public enum EnumSounds {
@@ -101,6 +103,10 @@ public enum EnumSounds {
 	DieselFB4(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselFPB4.class,"leslie_a200_2", 2.5F,  "ALCO_12_251C_Notch8", 0.65F, 51, "ALCO_12_251C_Idle", 0.65F, 50, false, " ", 24),
 	DieselRSD15(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselRSD15.class,"leslie_rs5t", 2.5F, "ALCO_16_244_Notch8", 1F, 14, "ALCO_16_244_Idle", 1F, 28, false, "alco_bronzebell_3", 24),
 	DieselS2(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselS2.class, "leslie_a200", 1F, "ALCO_6_539T_Notch8", 0.50F, 34, "ALCO_6_539T_Idle", 0.65F, 58, true, "alco_bronzebell_1", 29),
+
+	DieselFAFDL(DieselFAFDL.class,"nathan_p5", 0.8F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_1", 15),
+	DieselFBFDL(DieselFBFDL.class,"leslie_a200_2", 2.5F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_1", 15),
+
 	//JCTC Baldwin Diesel
 	DieselVO1000(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselVO1000.class,"wabco_e2", 2.5F, "Baldwin_8VO_Notch8", 1F, 58, "Baldwin_8VO_Idle", 1F, 62, false, "alco_bronzebell_1", 22),
 	//JCTC EMD Diesels
@@ -210,6 +216,7 @@ public enum EnumSounds {
 	DieselC855a(DieselC855a.class, "nathan_p3_3", 2.5F, "ALCO_12_251C_Notch8", 0.65F, 51, "ALCO_12_251C_Idle", 0.65F, 50, false, "alco_bronzebell_3", 24),
 	DieselP42(DieselP42.class, "nathan_k5la", 2.5F, "GE_7FDL_16_Notch8", 0.6F, 52, "GE_7FDL_16_Idle", 0.6F, 51, false, "ge_steelbell_1", 15),
 	DieselP32(DieselP32.class, "nathan_k5la_3", 2.5F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_2", 21),
+	DieselP40(DieselP40.class, "nathan_k5la_2", 2.5F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_2", 21),
 
 	//JCTC Electrics
 	//
@@ -229,6 +236,10 @@ public enum EnumSounds {
 	//JCTC Foreign Electrics
 	ElectricClass345(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricClass345.class, "br_horn", 1F, "mg_run", 0.9F, 8, "mg_idle", 0.7F, 50, false, " ", 0),
 	ElectricLUEngine(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricLUengine.class, "lu_whistle", 1F, "mg_run", 0.6F, 8, "mg_idle", 0.4F, 50, false, " ", 0),
+
+	CQ310(ElectricCQ310PO.class, "subway_horn", 1F, "vl10_idle", 0.6F, 50, "vl10_idle", 0.6F, 50, false, " ", 0),
+	KawasakiLRV(ElectricKawasakiLRV.class, "subway_horn", 1F, "vl10_idle", 0.6F, 50, "vl10_idle", 0.6F, 50, false, " ", 0),
+
 	//JCTC Steam
 	//
 	//JCTC Baldwin Steam
@@ -250,6 +261,9 @@ public enum EnumSounds {
 	SteamOnion(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamOnion.class, "hancock_3chime", 0.8F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_3", 25),
 	Thanos(com.jcirmodelsquad.tcjcir.vehicles.locomotives.Thanos.class, "thanos_horn", 5, "thanos_run", 0.65F, 82, "thanos_idle", 0.65F, 33, false, " ", 0),
 	Toaster(ElectricAEM7.class, "aem7_horn", 1F, "vl10_idle", 0.6F, 50, "vl10_idle", 0.6F, 50, false, " ", 0),
+
+	PCHCoach(PCH120Coach.class, "nathan_p3_3", 2.5F, "ALCO_12_251C_Notch8", 0.65F, 51, "ALCO_12_251C_Idle", 0.65F, 50, false, "alco_bronzebell_3", 24),
+	AmfleetCab(AmfleetCab.class, "nathan_k5la_3", 2.5F, "ALCO_12_251C_Notch8", 0.65F, 51, "ALCO_12_251C_Idle", 0.65F, 50, false, "alco_bronzebell_3", 24),
 	;
 
 	//for figuring out the length for a sound, find out the soundfiles actual length, move the decimal over to the right by 1, and then multiply by 2

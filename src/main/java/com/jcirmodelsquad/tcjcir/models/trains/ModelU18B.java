@@ -10,7 +10,8 @@
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergBnew;
-import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2;
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2_new;
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2_old;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -1469,7 +1470,8 @@ public class ModelU18B extends ModelConverter //Same as Filename
 		bodyModel[350].setRotationPoint(-14F, -24F, -6F);
 	}
 	ModelTypeBnew theB = new ModelTypeBnew();
-	ModelFB2 theTrucks2 = new ModelFB2();
+	ModelFB2_old theTrucks2AndAHalf = new ModelFB2_old();
+	ModelFB2_new theTrucks2 = new ModelFB2_new();
 	ModelBlombergBnew theBlomb = new ModelBlombergBnew();
 
 	@Override
@@ -1492,10 +1494,10 @@ public class ModelU18B extends ModelConverter //Same as Filename
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb2_CSXBlue.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.3, 0.335, 0);
-			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
+			theTrucks2AndAHalf.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glTranslated(2.58, 0, 0);
-			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
+			theTrucks2AndAHalf.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6234){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
@@ -1559,18 +1561,18 @@ public class ModelU18B extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 2278){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb2_Grey.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_silver_a.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.3, 0.335, 0);
+			GL11.glTranslated(-1.3, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glTranslated(2.58, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb2_Black.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_black_a.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.3, 0.335, 0);
+			GL11.glTranslated(-1.3, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glTranslated(2.58, 0, 0);
