@@ -1610,7 +1610,7 @@ public class ModelBuddRDG56SeatCoach_Lounge extends ModelConverter//Same as File
 		bodyModel[360].setRotationPoint(-30.5F, -3F, -7F);
 
 		bodyModel[361].addShapeBox(-2.5F, 0F, -3F, 5, 2, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Left seat part
-		bodyModel[361].setRotationPoint(-30F, -3F, -7F);
+		bodyModel[361].setRotationPoint(-30.5F, -3F, -7F);
 
 		bodyModel[362].addShapeBox(-2.5F, 0F, -3F, 5, 4, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, -2F, 0F); // Right seat part cull
 		bodyModel[362].setRotationPoint(-30.5F, -5F, 7F);
