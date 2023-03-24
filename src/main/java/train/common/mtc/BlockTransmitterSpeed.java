@@ -10,7 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import train.client.gui.GuiSpeedTransmitter;
+
 
 public class BlockTransmitterSpeed extends BlockContainer implements IPeripheralProvider {
 
@@ -34,7 +34,7 @@ public class BlockTransmitterSpeed extends BlockContainer implements IPeripheral
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int metadata, float sideX, float sideY, float sideZ) {
         // System.out.println("ting");
         if (world.isRemote) {
-            Minecraft.getMinecraft().displayGuiScreen(new GuiSpeedTransmitter(world.getTileEntity(x, y, z)));
+            Minecraft.getMinecraft().displayGuiScreen(new train.client.gui.GuiSpeedTransmitter(world.getTileEntity(x, y, z)));
         }
         return true;
     }

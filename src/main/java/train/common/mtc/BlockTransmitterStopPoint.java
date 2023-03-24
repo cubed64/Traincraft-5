@@ -10,8 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import train.client.gui.GuiSpeedTransmitter;
-import train.client.gui.GuiStopPointTransmitter;
+
 
 public class BlockTransmitterStopPoint extends BlockContainer implements IPeripheralProvider {
 
@@ -40,7 +39,7 @@ public class BlockTransmitterStopPoint extends BlockContainer implements IPeriph
    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int metadata, float sideX, float sideY, float sideZ) {
       // System.out.println("ting");
       if (world.isRemote) {
-         Minecraft.getMinecraft().displayGuiScreen(new GuiStopPointTransmitter(world.getTileEntity(x, y, z)));
+         Minecraft.getMinecraft().displayGuiScreen(new train.client.gui.GuiStopPointTransmitter(world.getTileEntity(x, y, z)));
       }
       return true;
    }
