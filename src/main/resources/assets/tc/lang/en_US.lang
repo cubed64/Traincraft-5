@@ -1305,6 +1305,8 @@ entity.tc.Budd RDG 56 Seat Coach-Lounge.name=Budd RDG 56 Seat Coach-Lounge
 item.tc:minecartAmfleet.name=Amfleet 1 Coach
 item.tc:minecartAmfleet2.name=Amfleet 2 Coach
 item.tc:minecartAmfleetCab.name=Amfleet Cab Car
+item.tc:minecartAmCafe.name=Amfleet Cafe Car
+item.tc:minecartAmCafe2.name=Amfleet 2 Cafe Car
 item.tc:minecartPEcooch.name=Polar Express Coach
 item.tc:minecartPEobserve.name=Polar Express Observation
 
@@ -1312,6 +1314,8 @@ item.tc:minecartPEobserve.name=Polar Express Observation
 entity.tc.Amfleet.name=Amfleet 1 Coach
 entity.tc.Amfleet2.name=Amfleet 2 Coach
 entity.tc.AmfleetCab.name=Amfleet Cab Car
+entity.tc.AmCafe.name=Amfleet Cafe Car
+entity.tc.AmCafe2.name=Amfleet 2 Cafe Car
 entity.tc.PEcoach.name=Polar Express Coach
 entity.tc.PEobserve.name=Polar Express Observation
 

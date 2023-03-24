@@ -16,7 +16,7 @@ import train.common.library.GuiIDs;
 
 public class DieselFPA4 extends DieselTrain {
     public DieselFPA4(World world) {
-        super(world, EnumTrains.FA1.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.FPA4.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the benis sus
     }
@@ -133,7 +133,7 @@ public class DieselFPA4 extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "Alco FPA-4";
+        return "MLW FPA-4";
     }
 
     @Override

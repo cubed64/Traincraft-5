@@ -547,7 +547,7 @@ public enum ItemIDs {
 	minecartMillGondola("ItemRollingStock", "millgondola", 4),
 	minecartWoodchipHopper("ItemRollingStock", "woodchiphopper", 4),
 	minecartOreJenny("ItemRollingStock", "orejenny", 2),
-	minecartPRRGLaHopper("ItemRollingStock", "prrglahopper", 2),
+	minecartPRRGLaHopper("ItemRollingStock", "PRRGLaHopper", 2),
 	minecartACF41Gon("ItemRollingStock", "ACF_41_6_gon", 3),
 
 	minecart11000DOT111("ItemRollingStock", "11000DOT", 4),
@@ -606,6 +606,8 @@ public enum ItemIDs {
 	minecartAmfleet("ItemRollingStock", "Amfleet", 3),
 	minecartAmfleet2("ItemRollingStock", "Amfleet2", 3),
 	minecartAmfleetCab("ItemRollingStock", "AmfleetCab", 3),
+	minecartAmCafe("ItemRollingStock", "AmCafe", 3),
+	minecartAmCafe2("ItemRollingStock", "AmCafe2", 3),
 
 	minecartPEcooch("ItemRollingStock", "pecoach", 6),
 	minecartPEobserve("ItemRollingStock", "peobserve", 6),

@@ -62,7 +62,7 @@ public enum EnumSounds {
 	locoElectricBR185(EntityLocoElectricBR185.class, "mg_horn", 1F, "vl10_idle", 0.8F, 10, "vl10_idle", 0.6F, 50, false, " ", 0),
 	locoElectricClass85(EntityLocoElectricClass85.class, "mg_horn", 1F, "vl10_idle", 0.8F, 10, "vl10_idle", 0.6F, 50, false, " ", 0),
 	locoElectricE103(EntityLocoElectricE103.class, "mg_horn", 1F, "mg_run", 0.6F, 8, "mg_idle", 0.4F, 50, false, " ", 0),
-	LocoElectricBP4(EntityLocoElectricBP4.class, "nathan_k5la_3", 0.8F, "vl10_idle", 0.65F, 40, "vl10_idle", 0.65F, 40, false, "emd_steelbell_4", 11),
+	LocoElectricBP4(EntityLocoElectricBP4.class, "nathan_k5La_3", 0.8F, "vl10_idle", 0.65F, 40, "vl10_idle", 0.65F, 40, false, "emd_steelbell_4", 11),
 	//TC Diesel Stuff
 	locoDieselFOLM1(EntityLocoDieselFOLM1.class, "nathan_p01235", 0.8F, "FM_38D_6_Notch8", 0.65F, 45, "FM_38D_6_Idle", 0.65F, 58, false, "alco_bronzebell_3", 24),
 	locoDieselFOLM1B(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselFOLM1B.class, " ", 0.8F, "FM_38D_6_Notch8", 0.65F, 45, "FM_38D_6_Idle", 0.65F, 58, false, " ", 0),
@@ -214,9 +214,10 @@ public enum EnumSounds {
 	DieselM420B(DieselM420B.class, "leslie_a200", 0.9F, "ALCO_12_251C_Notch8", 0.45F, 51, "ALCO_12_251C_Idle", 0.45F, 50, false, "alco_bronzebell_3", 24),
 	DieselU25B(DieselU25B.class, "nathan_m5_2", 2.5F, "GE_7FDL_16_Notch8", 0.6F, 52, "GE_7FDL_16_Idle", 0.6F, 51, false, "ge_steelbell_1", 15),
 	DieselC855a(DieselC855a.class, "nathan_p3_3", 2.5F, "ALCO_12_251C_Notch8", 0.65F, 51, "ALCO_12_251C_Idle", 0.65F, 50, false, "alco_bronzebell_3", 24),
-	DieselP42(DieselP42.class, "nathan_k5la", 2.5F, "GE_7FDL_16_Notch8", 0.6F, 52, "GE_7FDL_16_Idle", 0.6F, 51, false, "ge_steelbell_1", 15),
-	DieselP32(DieselP32.class, "nathan_k5la_3", 2.5F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_2", 21),
-	DieselP40(DieselP40.class, "nathan_k5la_2", 2.5F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_2", 21),
+	DieselC855b(DieselC855b.class, "leslie_a200", 2.0F, "ALCO_12_251C_Notch8", 0.65F, 51, "ALCO_12_251C_Idle", 0.65F, 50, false, "alco_bronzebell_3", 24),
+	DieselP42(DieselP42.class, "nathan_k5La", 2.5F, "GE_7FDL_16_Notch8", 0.6F, 52, "GE_7FDL_16_Idle", 0.6F, 51, false, "ge_steelbell_1", 15),
+	DieselP32(DieselP32.class, "nathan_k5La_3", 2.5F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_2", 21),
+	DieselP40(DieselP40.class, "nathan_k5La_2", 2.5F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_2", 21),
 
 	//JCTC Electrics
 	//
@@ -263,7 +264,7 @@ public enum EnumSounds {
 	Toaster(ElectricAEM7.class, "aem7_horn", 1F, "vl10_idle", 0.6F, 50, "vl10_idle", 0.6F, 50, false, " ", 0),
 
 	PCHCoach(PCH120Coach.class, "nathan_p3_3", 2.5F, "ALCO_12_251C_Notch8", 0.65F, 51, "ALCO_12_251C_Idle", 0.65F, 50, false, "alco_bronzebell_3", 24),
-	AmfleetCab(AmfleetCab.class, "nathan_k5la_3", 2.5F, "ALCO_12_251C_Notch8", 0.65F, 51, "ALCO_12_251C_Idle", 0.65F, 50, false, "alco_bronzebell_3", 24),
+	AmfleetCab(AmfleetCab.class, "nathan_k5La_3", 2.5F, "ALCO_12_251C_Notch8", 0.65F, 51, "ALCO_12_251C_Idle", 0.65F, 50, false, "alco_bronzebell_3", 24),
 	;
 
 	//for figuring out the length for a sound, find out the soundfiles actual length, move the decimal over to the right by 1, and then multiply by 2

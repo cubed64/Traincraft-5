@@ -8,20 +8,21 @@ import train.common.api.ControlCar;
 import train.common.api.EntityRollingStock;
 import train.common.api.IPassenger;
 
-public class PCH120Coach extends ControlCar {
+public class PCH120Coach extends EntityRollingStock implements IPassenger {
     public PCH120Coach(World world) {
         super(world);
     }
 
     public PCH120Coach(World world, double d, double d1, double d2) {
-        this(world);
+       super(world, d, d1, d2);
+        /* this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
         motionY = 0.0D;
         motionZ = 0.0D;
         prevPosX = d;
         prevPosY = d1;
-        prevPosZ = d2;
+        prevPosZ = d2;*/
     }
 
     @Override
