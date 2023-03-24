@@ -1,6 +1,8 @@
 package train.common.mtc;
 
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import dan200.computercraft.api.peripheral.IPeripheral;
 import dan200.computercraft.api.peripheral.IPeripheralProvider;
 import net.minecraft.block.Block;
@@ -34,11 +36,14 @@ public class BlockTransmitterSpeed extends BlockContainer implements IPeripheral
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int metadata, float sideX, float sideY, float sideZ) {
         // System.out.println("ting");
         if (world.isRemote) {
-            Minecraft.getMinecraft().displayGuiScreen(new train.client.gui.GuiSpeedTransmitter(world.getTileEntity(x, y, z)));
+          openGUI(world, x, y, z);
         }
         return true;
     }
-
+    @SideOnly(Side.CLIENT)
+    public void openGUI(World world,int x, int y, int z) {
+        Minecraft.getMinecraft().displayGuiScreen(new train.client.gui.GuiSpeedTransmitter(world.getTileEntity(x, y, z)));
+    }
 
 
 }
