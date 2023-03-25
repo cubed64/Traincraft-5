@@ -82,7 +82,7 @@ public class Traincraft {
 
 
 	public static final SimpleNetworkWrapper itaChannel = NetworkRegistry.INSTANCE.newSimpleChannel("TransmitterAspect");
-	public static SimpleNetworkWrapper mtcChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MinecraftTrainControl");
+	public static SimpleNetworkWrapper mtcChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MTrainControl");
 	public static SimpleNetworkWrapper mtcBlockChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MTCBlock");
 	/*public static  SimpleNetworkWrapper itsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("TransmitterSpeed");
 	//public static  SimpleNetworkWrapper mtcsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MTCSysSetSpeed");
