@@ -2140,8 +2140,8 @@ public class ModelSD39 extends ModelConverter//Same as Filename
 		bodyModel[568] = new ModelRendererTurbo(this, 281, 49, textureX, textureY); // Box 131
 		bodyModel[569] = new ModelRendererTurbo(this, 279, 65, textureX, textureY); // Box 132
 		bodyModel[570] = new ModelRendererTurbo(this, 281, 72, textureX, textureY); // Box 314
-		bodyModel[571] = new ModelRendererTurbo(this, 270, 50, textureX, textureY); // Box 570 early vent
-		bodyModel[572] = new ModelRendererTurbo(this, 285, 50, textureX, textureY); // Box 571 early vent
+		bodyModel[571] = new ModelRendererTurbo(this, 261, 50, textureX, textureY); // Box 570 early vent
+		bodyModel[572] = new ModelRendererTurbo(this, 261, 57, textureX, textureY); // Box 571 early vent
 		bodyModel[573] = new ModelRendererTurbo(this, 150, 119, textureX, textureY); // Box 572
 		bodyModel[574] = new ModelRendererTurbo(this, 148, 119, textureX, textureY); // Box 573
 		bodyModel[575] = new ModelRendererTurbo(this, 151, 119, textureX, textureY); // Box 574

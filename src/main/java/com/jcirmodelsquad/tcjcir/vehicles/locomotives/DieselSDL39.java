@@ -16,7 +16,7 @@ import train.common.library.GuiIDs;
 
 public class DieselSDL39 extends DieselTrain {
     public DieselSDL39(World world) {
-        super(world, EnumTrains.SF30C.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.SDL39.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
     }

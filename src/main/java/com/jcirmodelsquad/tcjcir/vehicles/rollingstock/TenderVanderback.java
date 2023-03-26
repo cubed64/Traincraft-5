@@ -1,4 +1,4 @@
-package train.common.entity.rollingStock;
+package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,10 +15,13 @@ import train.common.api.Tender;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class EntityTenderHeavy extends Tender implements IInventory {
+public class TenderVanderback extends Tender implements IInventory {
+
 	public int freightInventorySize;
-	public EntityTenderHeavy(World world) {
-		super(world, FluidRegistry.WATER, 0, EnumTrains.tenderHeavy.getTankCapacity(), LiquidManager.WATER_FILTER);
+	EntityPlayer playerEntity;
+
+	public TenderVanderback(World world) {
+		super(world, FluidRegistry.WATER, 0, EnumTrains.VanderbackTender.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initFreightTender();
 	}
 
@@ -27,9 +30,9 @@ public class EntityTenderHeavy extends Tender implements IInventory {
 		tenderItems = new ItemStack[freightInventorySize];
 	}
 
-	public EntityTenderHeavy(World world, double d, double d1, double d2) {
+	public TenderVanderback(World world, double d, double d1, double d2) {
 		this(world);
-		setPosition(d, d1 + yOffset, d2);
+		setPosition(d, d1 + (double) yOffset, d2);
 		motionX = 0.0D;
 		motionY = 0.0D;
 		motionZ = 0.0D;
@@ -82,7 +85,7 @@ public class EntityTenderHeavy extends Tender implements IInventory {
 	}
 	@Override
 	public String getInventoryName() {
-		return "Tender";
+		return "FPRRR Vanderback Tender";
 	}
 
 	@Override
@@ -101,14 +104,13 @@ public class EntityTenderHeavy extends Tender implements IInventory {
 		}
 		return true;
 	}
-
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
-		return 1.5F;
+		return 1.45F;
 	}
 
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
 		return true;
 	}
- }
+}
