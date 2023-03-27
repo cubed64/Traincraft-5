@@ -80,30 +80,27 @@ public class Traincraft {
 	public static SimpleNetworkWrapper updateTrainIDChannel = NetworkRegistry.INSTANCE.newSimpleChannel("TrainIDChannel");
 	public static SimpleNetworkWrapper updateDestinationChannel = NetworkRegistry.INSTANCE.newSimpleChannel("updateDestnChannel");
 
-
-	public static final SimpleNetworkWrapper itaChannel = NetworkRegistry.INSTANCE.newSimpleChannel("TransmitterAspect");
 	public static SimpleNetworkWrapper mtcChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MTrainControl");
 	public static SimpleNetworkWrapper mtcBlockChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MTCBlock");
-	/*public static  SimpleNetworkWrapper itsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("TransmitterSpeed");
-	//public static  SimpleNetworkWrapper mtcsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MTCSysSetSpeed");
-	public static  SimpleNetworkWrapper itnsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("TransmitterNextSpeed");
-	public static final SimpleNetworkWrapper mtlChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MTCLevelUpdater");
-	public static final SimpleNetworkWrapper msChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MTCStatus");
-	public static final SimpleNetworkWrapper mscChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MTCStatusToClient");
-	public static final SimpleNetworkWrapper atoChannel = NetworkRegistry.INSTANCE.newSimpleChannel("ATOPacket");
-	public static final SimpleNetworkWrapper atoSetStopPoint = NetworkRegistry.INSTANCE.newSimpleChannel("ATOSetStopPoint");
-	//public static final SimpleNetworkWrapper ctChannel = NetworkRegistry.INSTANCE.newSimpleChannel("ctmChannel");
-	public static final SimpleNetworkWrapper gsfsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("gsfsChannel");
-	public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE.newSimpleChannel("gsfsReturnChannel");*/
 
-	public static SimpleNetworkWrapper startMissionPacketChannel = NetworkRegistry.INSTANCE.newSimpleChannel("GCStartMission");
-	public static SimpleNetworkWrapper updateGeometryCarChannel = NetworkRegistry.INSTANCE.newSimpleChannel("UpdateGeometryCar");
-	public static SimpleNetworkWrapper updateGeometryCarFromServerChannel = NetworkRegistry.INSTANCE.newSimpleChannel("UGCFromServer");
-	public static SimpleNetworkWrapper generateTrackReportChannel = NetworkRegistry.INSTANCE.newSimpleChannel("GenerateTrackReport");
-	public static SimpleNetworkWrapper updateTrackReport = NetworkRegistry.INSTANCE.newSimpleChannel("UpdateTrackReport");
+	public static SimpleNetworkWrapper geometryCarChannel = NetworkRegistry.INSTANCE.newSimpleChannel("GeometryChannel");
+	public static SimpleNetworkWrapper geometryCarChannelServer = NetworkRegistry.INSTANCE.newSimpleChannel("GeometryChannelServer");
+
 	public static SimpleNetworkWrapper remoteControlKey = NetworkRegistry.INSTANCE.newSimpleChannel("RemoteControl");
 	public static SimpleNetworkWrapper brakeUpdateFromServer = NetworkRegistry.INSTANCE.newSimpleChannel("BUpdateFromServer");
 	public static SimpleNetworkWrapper updateEtiChannel = NetworkRegistry.INSTANCE.newSimpleChannel("UpdateETI");
+
+	/*public static  SimpleNetworkWrapper itsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("TransmitterSpeed");
+//public static  SimpleNetworkWrapper mtcsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MTCSysSetSpeed");
+public static  SimpleNetworkWrapper itnsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("TransmitterNextSpeed");
+public static final SimpleNetworkWrapper mtlChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MTCLevelUpdater");
+public static final SimpleNetworkWrapper msChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MTCStatus");
+public static final SimpleNetworkWrapper mscChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MTCStatusToClient");
+public static final SimpleNetworkWrapper atoChannel = NetworkRegistry.INSTANCE.newSimpleChannel("ATOPacket");
+public static final SimpleNetworkWrapper atoSetStopPoint = NetworkRegistry.INSTANCE.newSimpleChannel("ATOSetStopPoint");
+//public static final SimpleNetworkWrapper ctChannel = NetworkRegistry.INSTANCE.newSimpleChannel("ctmChannel");
+public static final SimpleNetworkWrapper gsfsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("gsfsChannel");
+public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE.newSimpleChannel("gsfsReturnChannel");*/
 	public static File configDirectory;
 
 	/* Creative tab for Traincraft */

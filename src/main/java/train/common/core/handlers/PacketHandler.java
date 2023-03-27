@@ -8,7 +8,6 @@
 package train.common.core.handlers;
 
 import com.jcirmodelsquad.tcjcir.extras.packets.*;
-import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
@@ -19,7 +18,6 @@ import train.common.adminbook.ItemAdminBook;
 import train.common.core.network.*;
 import train.common.library.Info;
 import train.common.mtc.network.*;
-import train.common.mtc.network.handlers.*;
 
 public class PacketHandler {
 
@@ -66,10 +64,13 @@ public class PacketHandler {
 
 		Traincraft.mtcBlockChannel.registerMessage(HANDLERS[0], PacketUpdateSpeedTransmitter.class, 200, Side.SERVER);
 		Traincraft.mtcBlockChannel.registerMessage(HANDLERS[1], PacketUpdateStopPointTransmitter.class, 201, Side.SERVER);
-		Traincraft.mtcChannel.registerMessage(HANDLERS[2], PacketSpeedLimit.class, 203, Side.CLIENT);
-		Traincraft.mtcChannel.registerMessage(HANDLERS[3], PacketStopPoint.class, 204, Side.CLIENT);
-		Traincraft.mtcChannel.registerMessage(HANDLERS[4], PacketMTCStatus.class, 205, Side.CLIENT);
+		Traincraft.mtcChannel.registerMessage(HANDLERS[2], PacketSpeedLimit.class, 202, Side.CLIENT);
+		Traincraft.mtcChannel.registerMessage(HANDLERS[3], PacketStopPoint.class, 203, Side.CLIENT);
+		Traincraft.mtcChannel.registerMessage(HANDLERS[4], PacketMTCStatus.class, 204, Side.CLIENT);
+		Traincraft.mtcChannel.registerMessage(HANDLERS[5], PacketATO.class, 205, Side.CLIENT);
 
+		Traincraft.geometryCarChannel.registerMessage(HANDLERS[6], UpdateGeometryCar.class, 206, Side.SERVER);
+		Traincraft.geometryCarChannel.registerMessage(HANDLERS[7], MissionStatusPacket.class, 207, Side.SERVER);
 	}
 
 	private static final IMessageHandler[] HANDLERS = new IMessageHandler[]{
@@ -88,6 +89,14 @@ public class PacketHandler {
 			new IMessageHandler<IMessage, IMessage>() {
 				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
 			},
+			new IMessageHandler<IMessage, IMessage>() {
+				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
+			},
+
+			new IMessageHandler<IMessage, IMessage>() {
+				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
+			},
+
 			new IMessageHandler<IMessage, IMessage>() {
 				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
 			}

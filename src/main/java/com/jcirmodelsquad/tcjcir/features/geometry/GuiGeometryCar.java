@@ -1,7 +1,6 @@
 package com.jcirmodelsquad.tcjcir.features.geometry;
 
-import com.jcirmodelsquad.tcjcir.extras.packets.GenerateTrackReport;
-import com.jcirmodelsquad.tcjcir.extras.packets.StartMissionPacket;
+import com.jcirmodelsquad.tcjcir.extras.packets.MissionStatusPacket;
 import com.jcirmodelsquad.tcjcir.extras.packets.UpdateGeometryCar;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.ExperimentalGeometryCar;
 import cpw.mods.fml.relauncher.Side;
@@ -19,7 +18,7 @@ import train.client.gui.GuiTCTextField;
 import train.common.Traincraft;
 
 public class GuiGeometryCar extends GuiScreen {
-    private ExperimentalGeometryCar theCar;
+    private ExperimentalGeometryCar geoCar;
     private GuiTCTextField railroadName;
     private GuiTCTextField geometryCarName;
     private GuiTCTextField railroadStandard;
@@ -35,7 +34,7 @@ public class GuiGeometryCar extends GuiScreen {
     public boolean showReports = false;
     public GuiGeometryCar(EntityPlayer theRider) {
         if (theRider != null && theRider.ridingEntity instanceof ExperimentalGeometryCar) {
-            theCar = (ExperimentalGeometryCar)theRider.ridingEntity;
+            geoCar = (ExperimentalGeometryCar)theRider.ridingEntity;
         } else {
             return;
         }
@@ -48,29 +47,29 @@ public class GuiGeometryCar extends GuiScreen {
 
         this.guiLeft = (this.width - this.xSize) / 2;
         this.guiTop = (this.height - this.ySize) / 2;
-        railroadName = new GuiTCTextField(fontRendererObj, guiLeft + 110, guiTop + 28, 120,15);
-        operatingCrew = new GuiTCTextField(fontRendererObj, guiLeft + 110, guiTop + 72, 120, 15);
+        railroadName = new GuiTCTextField(fontRendererObj, guiLeft + 107, guiTop + 28, 120,15);
+        operatingCrew = new GuiTCTextField(fontRendererObj, guiLeft + 107, guiTop + 71, 120, 15);
        // geometryCarName = new GuiTCTextField(fontRendererObj, guiLeft + 110, guiTop + 56, 120,15);
       //  railroadType = new GuiTCTextField(fontRendererObj, guiLeft + 85, guiTop + 46, 80,15);
-        railroadType = new GuiButton(0, guiLeft + 110, guiTop + 48, 130, 20, theCar.lineType);
+        railroadType = new GuiButton(0, guiLeft + 106, guiTop + 47, 122, 20, geoCar.lineType);
 
         //railroadStandard = new GuiTCTextField(fontRendererObj, guiLeft + 5, guiTop + 546, 160,140);
 
 
-        if (theCar.missionStarted) {
-            startStopButton = new GuiButton(1,guiLeft + 110, guiTop + 90,90,20,"Stop Recording");
+        if (geoCar.missionStarted) {
+            startStopButton = new GuiButton(1,guiLeft + 106, guiTop + 90,130,20,"Stop Recording");
         } else {
-            startStopButton = new GuiButton(1,guiLeft + 110, guiTop + 90,90,20,"Start Recording");
+            startStopButton = new GuiButton(1,guiLeft + 106, guiTop + 90,130,20,"Start Recording");
         }
 
 
 
-        if (theCar.getDataWatcher() != null) {
-            railroadName.setText(theCar.railroadLine);
+        if (geoCar.getDataWatcher() != null) {
+            railroadName.setText(geoCar.railroadLine);
         }
        // saveTrackReport = new GuiButton(2,guiLeft + 110, guiTop + 115,130,20,"Generate Track Report");
-        allTrackIssues = new GuiButton(3,guiLeft + 110, guiTop + 115,130,20,"Show all track issues");
-        operatingCrew.setText(theCar.operatingCrew);
+        allTrackIssues = new GuiButton(3,guiLeft + 106, guiTop + 115,130,20,"Show all track issues");
+        operatingCrew.setText(geoCar.operatingCrew);
         this.buttonList.add(startStopButton);
         this.buttonList.add(railroadType);
         buttonList.add(allTrackIssues);
@@ -99,13 +98,14 @@ public class GuiGeometryCar extends GuiScreen {
        /* fontRendererObj.drawString("Geometry Car Name:", guiLeft + 10, guiTop + 30, 000000);
         fontRendererObj.drawString("Railroad Type: ", guiLeft + 10, guiTop + 50, 000000);*/
         } else {
-            String[] s = theCar.currentTrackReport.split("\n");
+            String[] s = geoCar.getDataWatcher().getWatchableObjectString(29).split("\n");
             GL11.glPushMatrix();
             for(String str: s){
                 fontRendererObj.drawStringWithShadow(str, x -70, y - 10, 0xFFFFFF);
                 // fontRendererObj.drawStringWithShadow("_", x + fontRendererObj.getStringWidth(str) + -68, y - 10, 0xFFFFFF);
                 GL11.glTranslatef(0,10,0);
             }
+            GL11.glPopMatrix();
 
         }
         super.drawScreen(mouseX, mouseY, partialTicks);
@@ -115,20 +115,12 @@ public class GuiGeometryCar extends GuiScreen {
     @SideOnly(Side.CLIENT)
     protected void actionPerformed(GuiButton button) {
         if (button.id == 1) {
-            if (theCar.missionStarted)  {
-                theCar.missionStarted = false;
-                Traincraft.startMissionPacketChannel.sendToServer(new StartMissionPacket(theCar.getEntityId(), false));
-                Traincraft.generateTrackReportChannel.sendToServer(new GenerateTrackReport(theCar.getEntityId(), 1));
-            } else {
-                theCar.missionStarted = true;
-                Traincraft.startMissionPacketChannel.sendToServer(new StartMissionPacket(theCar.getEntityId(), true));
-            }
+
+            geoCar.missionStarted = !geoCar.missionStarted;
+            Traincraft.geometryCarChannel.sendToServer(new MissionStatusPacket( geoCar.getEntityId(), geoCar.worldObj.provider.dimensionId, geoCar.missionStarted));
 
         } else if (button.id == 2) {
-            Traincraft.generateTrackReportChannel.sendToServer(new GenerateTrackReport(theCar.getEntityId(), 1));
-            Traincraft.generateTrackReportChannel.sendToServer(new GenerateTrackReport(theCar.getEntityId(), 2));
-            Traincraft.startMissionPacketChannel.sendToServer(new StartMissionPacket(theCar.getEntityId(), false));
-            theCar.missionStarted = false;
+            geoCar.missionStarted = false;
         } else if (button.id == 0) {
             if (railroadType.displayString.equals("Mainline")) {
                 railroadType.displayString = "Branch";
@@ -160,7 +152,7 @@ public class GuiGeometryCar extends GuiScreen {
         if (railroadName.isFocused()) {
             railroadName.updateCursorCounter();
         }
-        if ( theCar.missionStarted) {
+        if ( geoCar.missionStarted) {
             startStopButton.displayString = "Stop Recording";
         } else {
             startStopButton.displayString = "Start Recording";
@@ -172,10 +164,14 @@ public class GuiGeometryCar extends GuiScreen {
     @Override
     protected void keyTyped(char par1, int par2) {
         if (par2 == Keyboard.KEY_ESCAPE) {
-            theCar.railroadLine = railroadName.getText();
-            theCar.lineType = railroadType.displayString;
-            theCar.operatingCrew = operatingCrew.getText();
-            Traincraft.updateGeometryCarChannel.sendToServer(new UpdateGeometryCar(theCar.getEntityId(), railroadName.getText(), railroadType.displayString, operatingCrew.getText()));
+
+            geoCar.railroadLine = railroadName.getText();
+            geoCar.lineType = railroadType.displayString;
+            geoCar.operatingCrew = operatingCrew.getText();
+
+            Traincraft.geometryCarChannel.sendToServer(new UpdateGeometryCar(geoCar.getEntityId(), geoCar.worldObj.provider.dimensionId,
+                    railroadName.getText(), railroadType.displayString, operatingCrew.getText()));
+
             mc.thePlayer.closeScreen();
         }
 

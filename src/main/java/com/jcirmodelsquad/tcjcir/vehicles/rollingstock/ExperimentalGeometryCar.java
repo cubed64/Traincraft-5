@@ -41,11 +41,11 @@ public class ExperimentalGeometryCar extends EntityRollingStock implements IPass
 
     public String railroadLine = "Bruh Moment Mainline";
     public String geometryCarName = "NXTrack Geometry Car";
-    public String lineType = "mainline";
+    public String lineType = "Mainline";
     public String standard = "JCIR";
     public boolean missionStarted = false;
     private ArrayList<PotentialIssue> problematicTrackLocations = new ArrayList<PotentialIssue>();
-    private TrackPosition missionStartLocation;
+    public TrackPosition missionStartLocation;
     public String currentTrackReport;
     private ArrayList<String> accessibleNames = new ArrayList<String>();
     public String operatingCrew = "";
@@ -53,7 +53,6 @@ public class ExperimentalGeometryCar extends EntityRollingStock implements IPass
     public boolean justLoaded = false;
     public ExperimentalGeometryCar(World world) {
         super(world);
-
     }
 
     public ExperimentalGeometryCar(World world, double d, double d1, double d2) {
@@ -379,7 +378,7 @@ public class ExperimentalGeometryCar extends EntityRollingStock implements IPass
 //        }
         if (worldObj != null && !worldObj.isRemote && justLoaded && ticksExisted % 20 == 0) {
             justLoaded = false;
-            Traincraft.updateGeometryCarFromServerChannel.sendToAll(new UpdateGeometryCarFromServer(this.getEntityId(), railroadLine, lineType, operatingCrew, missionStarted));
+            //Traincraft.updateGeometryCarFromServerChannel.sendToAll(new UpdateGeometryCarFromServer(this.getEntityId(), railroadLine, lineType, operatingCrew, missionStarted));
         }
         if (worldObj != null && !worldObj.isRemote && ticksExisted % 20 == 0 && riddenByEntity != null && riddenByEntity instanceof EntityPlayerMP) {
             StringBuilder theReport = new StringBuilder();
@@ -390,7 +389,7 @@ public class ExperimentalGeometryCar extends EntityRollingStock implements IPass
                 theReport.append("\nNo detected track issues!");
             }
             this.currentTrackReport = theReport.toString();
-            Traincraft.updateTrackReport.sendTo(new ClientGeometryCarUpdate(this.getEntityId(), theReport.toString()), (EntityPlayerMP)riddenByEntity);
+            //Traincraft.updateTrackReport.sendTo(new ClientGeometryCarUpdate(this.getEntityId(), theReport.toString()), (EntityPlayerMP)riddenByEntity);
         }
     }
 
@@ -412,6 +411,8 @@ public class ExperimentalGeometryCar extends EntityRollingStock implements IPass
 
             }
         }
+
+        dataWatcher.updateObject(29, currentTrackReport);
     }
 
     public void startMission() {
@@ -427,13 +428,13 @@ public class ExperimentalGeometryCar extends EntityRollingStock implements IPass
         TrackPosition lastPosition = null;
         Format f = new SimpleDateFormat("MM/dd");
         String strDate = f.format(new Date());
-        if (missionStartLocation == null) {
-            theReport = new StringBuilder(geometryCarName + "\n Track Report \n Date: " + strDate + "\n Operating Crew: " + operatingCrew + "\n Railroad: " + railroadLine + "(type " + lineType + ")" + "\n Distance from start: " + doubleToInt(getDistance(this.missionStartLocation.x, this.missionStartLocation.y, this.missionStartLocation.z)) + " blocks.");
+        if (missionStartLocation != null) {
+            theReport = new StringBuilder(geometryCarName + "\nTrack Report\n=======================\nDate: " + strDate + "\nOperating Crew: " + operatingCrew + "\nRailroad: " + railroadLine + " (type " + lineType + ")" + "\nDistance travelled: " + doubleToInt(getDistance(this.missionStartLocation.x, this.missionStartLocation.y, this.missionStartLocation.z)) + " blocks.");
         } else {
-            theReport = new StringBuilder(geometryCarName + "\n Track Report \n Date: " + strDate + "\n Operating Crew: " + operatingCrew + "\n Railroad: " + railroadLine + "(type " + lineType + ")" + "\n Distance from start: ??? blocks.");
+            theReport = new StringBuilder(geometryCarName + "\nTrack Report \nDate: " + strDate + "\nOperating Crew: " + operatingCrew + "\nRailroad: " + railroadLine + "(type " + lineType + ")" + "\nDistance from start: ??? blocks.");
         }
         if (problematicTrackLocations.size() == 1) {
-            theReport.append("\n 1 issue: ");
+            theReport.append("\n=======================\n1 issue: ");
         } else {
             theReport.append("\n").append(problematicTrackLocations.size()).append(" issues: ");
         }
@@ -446,8 +447,7 @@ public class ExperimentalGeometryCar extends EntityRollingStock implements IPass
         if (problematicTrackLocations.size() == 0) {
             theReport.append("\nNo detected track issues!");
         }
-        theReport.append("\n");
-        theReport.append("\n");
+        theReport.append("\n=======================\n");
         theReport.append("End of track report.");
         return theReport.toString();
     }
@@ -565,13 +565,7 @@ public class ExperimentalGeometryCar extends EntityRollingStock implements IPass
     @Override
     public void initRollingStock(World world) {
         super.initRollingStock(world);
-        if (!world.isRemote) {
-            dataWatcher.addObject(31, "");
-            dataWatcher.addObject(30, "");
-            dataWatcher.addObject(29, "");
-            dataWatcher.addObject(28, "");
-            dataWatcher.addObject(27, "");
-        }
+        dataWatcher.addObject(29, "");
     }
    /* public String railroadLine = "Bruh Moment Mainline";
     public String geometryCarName = "NXTrack Geometry Car";
