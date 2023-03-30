@@ -378,7 +378,7 @@ public class PCH120Commute extends ElectricTrain {
         if (!worldObj.isRemote) {
             //Juuust for testing...
 
-            /*if (cartLinked1 != null) {
+            if (cartLinked1 != null) {
 
                 if ((cartLinked1).train != null && (cartLinked1).train.getTrains().size() != 0 && (cartLinked1).train.getTrains().size() > 1) {
 
@@ -391,7 +391,7 @@ public class PCH120Commute extends ElectricTrain {
 
                     VBCTracking.updateFromMessage(0, positions);
                 }
-            }*/
+            }
 
 
 

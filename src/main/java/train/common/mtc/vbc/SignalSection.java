@@ -6,6 +6,38 @@ import net.minecraft.util.Vec3;
 public class SignalSection {
     public Vec3 startPos;
 
+    public Vec3 endPos;
+    public int speedLimit;
+    public String identifier;
+
+    public SignalSection(Vec3 startPos, Vec3 endPos, int speedLimit, String identifier,  String prev, String next) {
+        this.startPos = startPos;
+        this.endPos = endPos;
+        this.speedLimit = speedLimit;
+        this.identifier = identifier;
+        this.next = next;
+        this.prev = prev;
+    }
+
+    public String getNext() {
+        return next;
+    }
+
+    public void setNext(String next) {
+        this.next = next;
+    }
+
+    public String getPrev() {
+        return prev;
+    }
+
+    public void setPrev(String prev) {
+        this.prev = prev;
+    }
+
+    public String next;
+    public String prev;
+
     public Vec3 getStartPos() {
         return startPos;
     }
@@ -30,10 +62,6 @@ public class SignalSection {
         this.speedLimit = speedLimit;
     }
 
-    public Vec3 endPos;
-    public int speedLimit;
-    public String identifier;
-
     public boolean getOccupiedBy() {
         return occupied;
     }
@@ -56,10 +84,5 @@ public class SignalSection {
 
     public SignalSection() {}
 
-    public SignalSection(Vec3 startPos, Vec3 endPos, int speedLimit, String identifier) {
-        this.startPos = startPos;
-        this.endPos = endPos;
-        this.speedLimit = speedLimit;
-        this.identifier = identifier;
-    }
+
 }

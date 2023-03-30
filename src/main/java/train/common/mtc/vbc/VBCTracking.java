@@ -37,47 +37,55 @@ public class VBCTracking {
     }
 
     public void addSystem(ArrayList<Track[]> system) {
-       /* ArrayList<Track[]> input = new ArrayList<>();
+        ArrayList<Track[]> input = new ArrayList<>();
 
         Track track = new Track();
-        HashMap<String, SignalSection> sectionsA = new ArrayList<>();
-        sectionsA.add(
+        LinkedHashMap<String, SignalSection> sectionsA = new LinkedHashMap<>();
+        sectionsA.put("TST-1",
                 new SignalSection(
                         Vec3.createVectorHelper(116, 64, 168),
                         Vec3.createVectorHelper(116, 64, 157),
                         20,
-                        "TST-1"
+                        "TST-1",
+                        "none",
+                        "TST-2"
                 ));
 
-        sectionsA.add(
+        sectionsA.put("TST-2",
                 new SignalSection(
                         Vec3.createVectorHelper(116, 64, 157),
                         Vec3.createVectorHelper(116, 64, 146),
                         20,
-                        "TST-2"
+                        "TST-2",
+                        "TST-1",
+                        "TST-3"
                 ));
 
 
-        sectionsA.add(
+        sectionsA.put("TST-3",
                 new SignalSection(
                         Vec3.createVectorHelper(116, 64, 146),
                         Vec3.createVectorHelper(116, 64, 136),
                         20,
-                        "TST-1"
+                        "TST-3",
+                        "TST-2",
+                        "TST-4"
                 ));
 
-        sectionsA.add(
+        sectionsA.put("TST-4",
                 new SignalSection(
                         Vec3.createVectorHelper(116, 64, 136),
                         Vec3.createVectorHelper(116, 64, 126),
                         20,
-                        "TST-1"
+                        "TST-4",
+                        "TST-3",
+                        "none"
                 ));
 
         track.sideA = sectionsA;
         Track[] tracks = new Track[] {track};
         input.add(tracks);
-        systems.put(0, input);*/
+        systems.put(0, input);
     }
 
 
@@ -95,18 +103,19 @@ public class VBCTracking {
                             //It's in the section!
                             //System.out.println("Train in " + section.identifier);
                             signalOccupancy = true;
-                            updateOccupancy(track, section.identifier, true);
+                            updateOccupancy(system, track, section.identifier, true);
+
                         }
                     }
 
-                    if (!signalOccupancy) updateOccupancy(track, section.identifier, false);
+                    if (!signalOccupancy) updateOccupancy(system, track, section.identifier, false);
                 }
             }
         }
     }
 
 
-    public static void updateOccupancy(Track track, String sectionId, boolean occupied) {
+    public static void updateOccupancy(ArrayList<Track[]> system, Track track, String sectionId, boolean occupied) {
         //Determine if it's new, or actually we need to update it.
 
         if (track.sideA.get(sectionId) != null) {
@@ -119,17 +128,31 @@ public class VBCTracking {
                 if (registeredReceivers.containsKey(sectionId)) {
                     World world = FMLCommonHandler.instance().getMinecraftServerInstance().getEntityWorld();
                     Vec3 pos = registeredReceivers.get(sectionId);
-                    //Tell it that it updated.
-                    TileVBCController controller = (TileVBCController) world.getTileEntity((int) pos.xCoord, (int) pos.yCoord, (int) pos.zCoord);
 
-                    if (controller != null) controller.updateAspect(SignalAspect.RED);
+                    //Now, determine aspects.
+
+                    updateAspect(actualSection, SignalAspect.RED);
+
+                    if (track.sideA.containsKey(actualSection.getPrev())) {
+                        //Update that one to yellow.
+                        SignalSection prevSection = track.sideA.get(actualSection.getPrev());
+                        if (!prevSection.occupied) {
+                            updateAspect(prevSection, SignalAspect.YELLOW);
+                        }
+                    }
+                    //Tell it that it updated.
+
+
+                    /*TileVBCController controller = (TileVBCController) world.getTileEntity((int) pos.xCoord, (int) pos.yCoord, (int) pos.zCoord);
+
+                    if (controller != null) controller.updateAspect(SignalAspect.RED);*/
                 }
             }
         }
 
     }
 
-    public static void updateAspects(Track track, String sectionId) {
+    public static void updateAspects(System system, Track track, String sectionId) {
         if (track.sideA.get(sectionId) != null) {
             SignalSection actualSection = track.sideA.get(sectionId);
             //SignalSection previousSection = track.sideA.values();
@@ -143,13 +166,13 @@ public class VBCTracking {
         }
     }
 
-    public static void updateAspect(Track track, String sectionId, SignalAspect aspect) {
-        if (registeredReceivers.containsKey(sectionId)) {
+    public static void updateAspect(SignalSection section, SignalAspect aspect) {
+        if (registeredReceivers.containsKey(section.identifier)) {
             World world = FMLCommonHandler.instance().getMinecraftServerInstance().getEntityWorld();
-            Vec3 pos = registeredReceivers.get(sectionId);
+            Vec3 pos = registeredReceivers.get(section.identifier);
             //Tell it that it updated.
             TileVBCController controller = (TileVBCController) world.getTileEntity((int) pos.xCoord, (int) pos.yCoord, (int) pos.zCoord);
-
+            section.setAspect(aspect);
             if (controller != null) controller.updateAspect(aspect);
         }
     }
