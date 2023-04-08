@@ -71,6 +71,7 @@ public class PacketHandler {
 
 		Traincraft.geometryCarChannel.registerMessage(HANDLERS[6], UpdateGeometryCar.class, 206, Side.SERVER);
 		Traincraft.geometryCarChannel.registerMessage(HANDLERS[7], MissionStatusPacket.class, 207, Side.SERVER);
+		Traincraft.remoteControlKey.registerMessage(RemoteControlKeyPacket.Handler.class, RemoteControlKeyPacket.class, 208, Side.SERVER);
 	}
 
 	private static final IMessageHandler[] HANDLERS = new IMessageHandler[]{

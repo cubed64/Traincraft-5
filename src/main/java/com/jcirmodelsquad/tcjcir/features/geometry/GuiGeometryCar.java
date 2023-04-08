@@ -117,7 +117,7 @@ public class GuiGeometryCar extends GuiScreen {
         if (button.id == 1) {
 
             geoCar.missionStarted = !geoCar.missionStarted;
-            Traincraft.geometryCarChannel.sendToServer(new MissionStatusPacket( geoCar.getEntityId(), geoCar.worldObj.provider.dimensionId, geoCar.missionStarted));
+            Traincraft.geometryCarChannel.sendToServer(new MissionStatusPacket( geoCar.getEntityId(), geoCar.missionStarted));
 
         } else if (button.id == 2) {
             geoCar.missionStarted = false;
@@ -169,7 +169,7 @@ public class GuiGeometryCar extends GuiScreen {
             geoCar.lineType = railroadType.displayString;
             geoCar.operatingCrew = operatingCrew.getText();
 
-            Traincraft.geometryCarChannel.sendToServer(new UpdateGeometryCar(geoCar.getEntityId(), geoCar.worldObj.provider.dimensionId,
+            Traincraft.geometryCarChannel.sendToServer(new UpdateGeometryCar(geoCar.getEntityId(),
                     railroadName.getText(), railroadType.displayString, operatingCrew.getText()));
 
             mc.thePlayer.closeScreen();

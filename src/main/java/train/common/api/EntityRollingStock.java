@@ -37,6 +37,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.minecart.MinecartCollisionEvent;
 import net.minecraftforge.event.entity.minecart.MinecartInteractEvent;
 import net.minecraftforge.event.entity.minecart.MinecartUpdateEvent;
+import org.lwjgl.opengl.GL11;
 import train.client.core.handlers.SoundUpdaterRollingStock;
 import train.common.Traincraft;
 import train.common.adminbook.ServerLogger;
@@ -56,8 +57,11 @@ import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
 
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import static train.common.core.util.TraincraftUtil.degrees;
 import static train.common.core.util.TraincraftUtil.isRailBlockAt;
@@ -1733,7 +1737,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 						theItem2.attachedLocomotive = thisAsLocomotive;
 						entityplayer.addChatMessage(new ChatComponentText(EnumChatFormatting.GREEN +  "Successfully paired with train! Right click again to unpair."));
 
-					} else if (!this.locked) {
+					} else if (!this.locked || Objects.equals(entityplayer.getDisplayName(), this.getTrainOwner())) {
 						theItem2.attachedLocomotive = thisAsLocomotive;
 						entityplayer.addChatMessage(new ChatComponentText(EnumChatFormatting.GREEN +"Successfully paired with train! Right click again to unpair."));
 					} else {

@@ -14,8 +14,7 @@ import net.minecraft.util.Vec3;
 import org.lwjgl.input.Keyboard;
 import train.common.Traincraft;
 import train.common.items.ItemPositionMarker;
-import train.common.mtc.TileTransmitterStopPoint;
-import train.common.mtc.network.PacketUpdateSpeedTransmitter;
+import train.common.mtc.tile.TileTransmitterStopPoint;
 import train.common.mtc.network.PacketUpdateStopPointTransmitter;
 
 import java.util.ArrayList;
@@ -176,7 +175,7 @@ public class GuiStopPointTransmitter extends GuiScreen {
         if (button.id == 1) {
             int profil = 0;
             for (int[] array : stopProfiles) {
-                Traincraft.mtcBlockChannel.sendToServer(new PacketUpdateStopPointTransmitter(baseTile.getWorldObj().provider.dimensionId, baseTile.xCoord, baseTile.yCoord, baseTile.zCoord,
+                Traincraft.mtcBlockChannel.sendToServer(new PacketUpdateStopPointTransmitter(baseTile.xCoord, baseTile.yCoord, baseTile.zCoord,
                         array[3], Vec3.createVectorHelper(array[0], array[1], array[2]), profil, redstoneReaction, redstoneProfile));
                 profil++;
             }

@@ -16,8 +16,8 @@ public class UpdateGeometryCar implements IMessage {
 
     public UpdateGeometryCar() {}
 
-    public UpdateGeometryCar(int dimensionId, int entity, String railroadName, String lineType, String operatingCrew) {
-        this.dimensionId = dimensionId;
+    public UpdateGeometryCar(int entity, String railroadName, String lineType, String operatingCrew) {
+        this.dimensionId = Minecraft.getMinecraft().thePlayer.worldObj.provider.dimensionId;
         this.entity = entity;
         this.railroadName = railroadName;
         this.lineType = lineType;
@@ -34,7 +34,7 @@ public class UpdateGeometryCar implements IMessage {
         lineType = ByteBufUtils.readUTF8String(buf);
         operatingCrew = ByteBufUtils.readUTF8String(buf);
 
-        Entity geometryCar = Minecraft.getMinecraft().theWorld.getEntityByID(entity);
+        Entity geometryCar = DimensionManager.getWorld(dimensionId).getEntityByID(entity);
 
         if (geometryCar instanceof ExperimentalGeometryCar) {
             ((ExperimentalGeometryCar) geometryCar).railroadLine = railroadName;

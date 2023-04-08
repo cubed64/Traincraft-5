@@ -18,10 +18,10 @@ public class MissionStatusPacket implements IMessage {
 
     public MissionStatusPacket() {}
 
-    public MissionStatusPacket(int entity, int dimensionId, boolean status) {
+    public MissionStatusPacket(int entity, boolean status) {
+        this.dimensionId = Minecraft.getMinecraft().thePlayer.worldObj.provider.dimensionId;
         this.entity = entity;
         this.status = status;
-        this.dimensionId = dimensionId;
     }
     @Override
     public void fromBytes(ByteBuf buf) {

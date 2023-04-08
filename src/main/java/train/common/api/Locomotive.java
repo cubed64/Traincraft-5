@@ -35,6 +35,7 @@ import train.common.adminbook.ServerLogger;
 import train.common.core.HandleMaxAttachedCarts;
 import train.common.core.handlers.ConfigHandler;
 import train.common.core.network.PacketKeyPress;
+import train.common.core.network.PacketParkingBrake;
 import train.common.core.network.PacketSlotsFilled;
 import train.common.entity.rollingStock.*;
 import train.common.items.ItemATOCard;
@@ -744,24 +745,18 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
             if (Minecraft.getMinecraft().thePlayer != null && Vec3.createVectorHelper(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ).distanceTo(Vec3.createVectorHelper(this.posX, posY, posZ)) < 200) {
                 if (TCKeyHandler.remoteControlForward.getIsKeyPressed() && hasController && isConnected && ((ItemRemoteController) currentItem).attachedLocomotive == this) {
-                    ItemRemoteController theController = (ItemRemoteController) currentItem;
                     Traincraft.remoteControlKey.sendToServer(new RemoteControlKeyPacket(this.getEntityId(), 1));
                 }
 
                 if (TCKeyHandler.remoteControlBackwards.getIsKeyPressed() && hasController && isConnected && ((ItemRemoteController) currentItem).attachedLocomotive == this) {
-                    ItemRemoteController theController = (ItemRemoteController) currentItem;
                     Traincraft.remoteControlKey.sendToServer(new RemoteControlKeyPacket(this.getEntityId(), 2));
                 }
 
                 if (TCKeyHandler.remoteControlBrake.getIsKeyPressed() && hasController && isConnected && ((ItemRemoteController) currentItem).attachedLocomotive == this) {
-                    ItemRemoteController theController = (ItemRemoteController) currentItem;
-
                     Traincraft.remoteControlKey.sendToServer(new RemoteControlKeyPacket(this.getEntityId(), 3));
                 }
 
                 if (TCKeyHandler.remoteControlHorn.getIsKeyPressed() && hasController && isConnected && ((ItemRemoteController) currentItem).attachedLocomotive == this) {
-                    ItemRemoteController theController = (ItemRemoteController) currentItem;
-
                     Traincraft.remoteControlKey.sendToServer(new RemoteControlKeyPacket(this.getEntityId(), 4));
                 }
             }
@@ -1780,7 +1775,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                     this.motionX -= 0.0015 * this.accelerate;
 
 
-                } else if (rotation < -90.0 && rotation > -90.0 || rotation == -90.0) {
+                } else if (rotation == -90.0) {
 
                     this.motionX += 0.0015 * this.accelerate;
 
@@ -1801,23 +1796,26 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
             case 2: {
                 double rotation = this.serverRealRotation;
-                if (rotation == 90.0) {
+                if (rotation < 90.0 && rotation > 0 || rotation == 90.0) {
 
-                    this.motionX += 0.0020 * this.accelerate;
+                    this.motionX += 0.0015 * this.accelerate;
 
 
                 } else if (rotation == -90.0) {
 
-                    this.motionX -= 0.0020 * this.accelerate;
+                    this.motionX -= 0.0015 * this.accelerate;
 
-                } else if (rotation == 0.0) {
+                } else if (rotation < -90.00 && rotation > -180) {
 
-                    this.motionZ -= 0.0020 * this.accelerate;
-
-                } else if (rotation == -180.0) {
-
-                    this.motionZ += 0.0020 * this.accelerate;
+                    this.motionZ += 0.0015 * this.accelerate;
+                } else if (rotation == 0) {
+                    this.motionZ -= 0.0015 * this.accelerate;
+                } else if (rotation < 180.0 && rotation > 90.0 || rotation == 180) {
+                    this.motionZ += 0.0015 * this.accelerate;
+                } else if (rotation > -180 && rotation < -90 || rotation == -180) {
+                    this.motionZ += 0.0015 * this.accelerate;
                 }
+
                 break;
             }
 
