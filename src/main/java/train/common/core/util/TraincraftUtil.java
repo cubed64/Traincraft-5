@@ -150,7 +150,15 @@ public class TraincraftUtil{
             return 35;
         } else if (c.equals("Skin36")) {
             return 36;
-        } else if(c.equals("Full")){
+        } else if (c.equals("Skin37")) {
+            return 37;
+        } else if (c.equals("Skin38")) {
+            return 38;
+        } else if (c.equals("Skin39")) {
+            return 39;
+        } else if (c.equals("Skin40")) {
+            return 40;
+        }else if(c.equals("Full")){
             return 101;
         } else if (c.equals("Empty")){
             return 100;
