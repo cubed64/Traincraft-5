@@ -3,9 +3,10 @@ package train.common.mtc.network;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import io.netty.buffer.ByteBuf;
 
+
 public class PacketThingFromServer implements IMessage {
     //Function 1: get all MTC data from the server
-    public int speedLimit;
+    public int speedLimit;@Deprecated
     public int nextSpeedLimit;
 
     public Double xFromStopPoint;

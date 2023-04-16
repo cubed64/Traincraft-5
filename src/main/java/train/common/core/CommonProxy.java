@@ -3,7 +3,6 @@ package train.common.core;
 import com.jcirmodelsquad.tcjcir.tile.*;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.IGuiHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -19,10 +18,7 @@ import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.MinecraftForge;
 import train.client.gui.GuiSpeedTransmitter;
 import train.common.Traincraft;
-import train.common.api.EntityRollingStock;
-import train.common.api.Freight;
-import train.common.api.LiquidTank;
-import train.common.api.Tender;
+import train.common.api.*;
 import train.common.containers.*;
 import train.common.core.handlers.ChunkEvents;
 import train.common.core.handlers.WorldEvents;
@@ -33,7 +29,11 @@ import train.common.entity.rollingStock.EntityTracksBuilder;
 import train.common.entity.zeppelin.AbstractZeppelin;
 import train.common.inventory.*;
 import train.common.library.GuiIDs;
-import train.common.mtc.*;
+import train.common.mtc.block.BlockReceiverMTC;
+import train.common.mtc.block.BlockTransmitterMTC;
+import train.common.mtc.block.BlockTransmitterSpeed;
+import train.common.mtc.block.BlockTransmitterStopPoint;
+import train.common.mtc.tile.*;
 import train.common.mtc.vbc.TileVBCController;
 import train.common.tile.*;
 
@@ -101,12 +101,12 @@ public class CommonProxy implements IGuiHandler {
 
 		GameRegistry.registerTileEntity(TileVBCController.class, "tileVBCController");
 
-			GameRegistry.registerTileEntity(TileTransmitterSpeed.class, "tileInfoTransmitterSpeed");
-			GameRegistry.registerTileEntity(TileInfoTransmitterMTC.class, "tileInfoTransmitterMTC");
-			GameRegistry.registerTileEntity(TileReceiverMTC.class, "tileInfoReceiverMTC");
-			GameRegistry.registerTileEntity(TileReceiverDestination.class, "tileInfoReceiverDestination");
-			GameRegistry.registerTileEntity(TileInstructionRadio.class, "tilePDMInstructionRadio");
-			GameRegistry.registerTileEntity(TileTransmitterStopPoint.class, "tileATOTransmitterStopPoint");
+		GameRegistry.registerTileEntity(TileTransmitterSpeed.class, "tileInfoTransmitterSpeed");
+		GameRegistry.registerTileEntity(TileInfoTransmitterMTC.class, "tileInfoTransmitterMTC");
+		GameRegistry.registerTileEntity(TileReceiverMTC.class, "tileInfoReceiverMTC");
+		GameRegistry.registerTileEntity(TileReceiverDestination.class, "tileInfoReceiverDestination");
+		GameRegistry.registerTileEntity(TileInstructionRadio.class, "tilePDMInstructionRadio");
+		GameRegistry.registerTileEntity(TileTransmitterStopPoint.class, "tileATOTransmitterStopPoint");
 	}
 
 	public void registerComputerCraftPeripherals() throws ClassNotFoundException {
@@ -163,6 +163,12 @@ public class CommonProxy implements IGuiHandler {
 			return te != null && te instanceof TileTrainWbench ? new ContainerTrainWorkbench(player.inventory, player.worldObj, (TileTrainWbench) te) : null;
 		case (GuiIDs.LOCO):
 			return riddenByEntity != null ? new InventoryLoco(riddenByEntity.inventory, (EntityRollingStock) entity) : null;
+		case (GuiIDs.CONTROL_CAR):
+				if (entity instanceof ControlCar && ((ControlCar)entity).connectedLocomotive != null) {
+					Locomotive loco = ((ControlCar)entity).connectedLocomotive;
+					return new InventoryLoco(riddenByEntity.inventory, loco);
+				}
+				//return (entity instanceof ControlCar && ((ControlCar)entity).connectedLocomotive != null) ? new InventoryLoco((Locomotive)((ControlCar)entity).connectedLocomotive).inven, (EntityRollingStock) entity) : null;
 		case (GuiIDs.FORNEY):
 			return riddenByEntity != null ? new InventoryForney(player.inventory, (EntityRollingStock) entity) : null;
 		case (GuiIDs.CRAFTING_CART):

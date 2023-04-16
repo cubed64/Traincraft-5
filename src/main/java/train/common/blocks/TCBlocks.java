@@ -8,10 +8,6 @@
 package train.common.blocks;
 
 import com.jcirmodelsquad.tcjcir.blocks.*;
-import com.jcirmodelsquad.tcjcir.features.actualsignalblock.BlockActualSignalBlock;
-import com.jcirmodelsquad.tcjcir.features.betterdetector.BlockBetterDetector;
-import com.jcirmodelsquad.tcjcir.features.eti.BlockTrainMonitor;
-import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -19,7 +15,7 @@ import net.minecraft.init.Blocks;
 import train.common.Traincraft;
 import train.common.library.BlockIDs;
 import train.common.library.Info;
-import train.common.mtc.*;
+import train.common.mtc.block.*;
 import train.common.mtc.vbc.BlockVBCController;
 
 public class TCBlocks {

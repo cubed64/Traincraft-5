@@ -36,7 +36,12 @@ public class PacketStopPoint implements IMessage {
             Entity entity = Minecraft.getMinecraft().theWorld.getEntityByID(entityId);
             if (entity instanceof Locomotive) {
                 Locomotive locomotive = (Locomotive)entity;
-                locomotive.stopPoint3 = Vec3.createVectorHelper(xStopPoint, yStopPoint, zStopPoint);
+                if (type == 0) {
+                    locomotive.stopPoint3 = Vec3.createVectorHelper(xStopPoint, yStopPoint, zStopPoint);
+                } else {
+                    locomotive.stationStop3 = Vec3.createVectorHelper(xStopPoint, yStopPoint, zStopPoint);
+                }
+
 
             }
         }

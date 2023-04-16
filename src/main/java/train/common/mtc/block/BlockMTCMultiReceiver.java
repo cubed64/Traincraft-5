@@ -1,4 +1,4 @@
-package train.common.mtc;
+package train.common.mtc.block;
 
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;

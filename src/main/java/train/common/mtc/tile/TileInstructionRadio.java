@@ -1,4 +1,4 @@
-package train.common.mtc;
+package train.common.mtc.tile;
 
 import dan200.computercraft.api.lua.ILuaContext;
 import dan200.computercraft.api.lua.LuaException;
@@ -9,6 +9,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import train.common.api.Locomotive;
 import train.common.api.WirelessTransmitter;
+import train.common.mtc.MTCMessage;
 
 import java.util.*;
 

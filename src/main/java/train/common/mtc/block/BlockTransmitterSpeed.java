@@ -1,17 +1,19 @@
-package train.common.mtc;
+package train.common.mtc.block;
 
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import dan200.computercraft.api.peripheral.IPeripheral;
 import dan200.computercraft.api.peripheral.IPeripheralProvider;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
+import train.common.mtc.tile.TileTransmitterSpeed;
 
 
 public class BlockTransmitterSpeed extends BlockContainer implements IPeripheralProvider {
@@ -40,10 +42,31 @@ public class BlockTransmitterSpeed extends BlockContainer implements IPeripheral
         }
         return true;
     }
+
+    @Override
+    public boolean isSideSolid(IBlockAccess world, int x, int y, int z, ForgeDirection side) {
+        return true;
+    }
+
     @SideOnly(Side.CLIENT)
     public void openGUI(World world,int x, int y, int z) {
         Minecraft.getMinecraft().displayGuiScreen(new train.client.gui.GuiSpeedTransmitter(world.getTileEntity(x, y, z)));
     }
 
+    public boolean renderAsNormalBlock() {
+        return false;
+    }
 
+    public boolean isOpaqueCube() {
+        return false;
+    }
+
+    public int getRenderType() {
+        return -1;
+    }
+
+    @Override
+    public boolean isBlockSolid(IBlockAccess p_149747_1_, int p_149747_2_, int p_149747_3_, int p_149747_4_, int p_149747_5_) {
+        return true;
+    }
 }

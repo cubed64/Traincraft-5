@@ -3,6 +3,7 @@ package train.common.mtc.network;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import io.netty.buffer.ByteBuf;
 
+@Deprecated
 public class PacketNextSpeed implements IMessage {
 
     public int nextSpeed;

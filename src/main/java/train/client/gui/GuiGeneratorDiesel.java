@@ -10,6 +10,7 @@ import train.common.tile.TileGeneratorDiesel;
 
 public class GuiGeneratorDiesel extends GuiContainer{
 
+
     private TileGeneratorDiesel dieselInventory;
 
     public GuiGeneratorDiesel(InventoryPlayer invPlayer, TileGeneratorDiesel tile){

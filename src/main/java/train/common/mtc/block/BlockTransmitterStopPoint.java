@@ -1,4 +1,4 @@
-package train.common.mtc;
+package train.common.mtc.block;
 
 
 
@@ -12,6 +12,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+import train.common.mtc.tile.TileTransmitterStopPoint;
 
 
 public class BlockTransmitterStopPoint extends BlockContainer implements IPeripheralProvider {

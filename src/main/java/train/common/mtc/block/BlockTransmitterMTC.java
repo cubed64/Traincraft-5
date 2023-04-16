@@ -1,4 +1,4 @@
-package train.common.mtc;
+package train.common.mtc.block;
 
 import dan200.computercraft.api.peripheral.IPeripheral;
 import dan200.computercraft.api.peripheral.IPeripheralProvider;
@@ -6,6 +6,7 @@ import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+import train.common.mtc.tile.TileInfoTransmitterMTC;
 
 public class BlockTransmitterMTC extends BlockContainer implements IPeripheralProvider {
     public static BlockTransmitterMTC instance;

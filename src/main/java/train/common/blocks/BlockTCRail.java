@@ -12,6 +12,7 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 import train.common.Traincraft;
 import train.common.items.ItemTCRail;
 import train.common.items.ItemWrench;
@@ -126,6 +127,7 @@ public class BlockTCRail extends Block {
 	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer player, int par6, float par7, float par8, float par9) {
 		TileEntity te = world.getTileEntity(i, j, k);
 		int l = world.getBlockMetadata(i, j, k);
+
 		if (!world.isRemote && te != null && (te instanceof TileTCRail)) {
 			if (player != null && player.inventory != null && player.inventory.getCurrentItem() != null && (player.inventory.getCurrentItem().getItem() instanceof ItemWrench) && ((TileTCRail) te).getType() != null && ((TileTCRail) te).getType().equals(ItemTCRail.TrackTypes.SMALL_STRAIGHT.getLabel())) {
 				l++;

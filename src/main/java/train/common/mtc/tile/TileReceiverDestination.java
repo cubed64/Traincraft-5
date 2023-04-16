@@ -1,4 +1,4 @@
-package train.common.mtc;
+package train.common.mtc.tile;
 
 import dan200.computercraft.api.lua.ILuaContext;
 import dan200.computercraft.api.lua.LuaException;

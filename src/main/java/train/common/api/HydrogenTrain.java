@@ -56,7 +56,11 @@ public abstract class HydrogenTrain extends Locomotive implements IFluidHandler 
                     motionZ *= 0.94;
                 }
             }
+        } else {
+            if (isLocoTurnedOn() && theTank.getFluidAmount() >0 && !canBePulled) worldObj.spawnParticle("cloud", posX, posY + 1.6, posZ - 0.5, 0.0D, 0.05D, 0.0D);
         }
+
+
     }
     public ItemStack checkInvent(ItemStack locoInvent0) {
         if (!this.canCheckInvent)

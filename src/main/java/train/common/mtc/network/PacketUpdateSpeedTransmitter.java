@@ -10,17 +10,18 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Vec3;
 import net.minecraftforge.common.DimensionManager;
-import train.common.mtc.TileTransmitterSpeed;
+import train.common.mtc.tile.TileTransmitterSpeed;
 
 public class PacketUpdateSpeedTransmitter implements IMessage {
-    private int dimensionId, x, y, z, speedLimit, nextSpeedLimit, profile, onRedstone, onRedstoneProfile;
+    private int dimensionId, x, y, z, speedLimit, nextSpeedLimit, profile, onRedstone, onRedstoneProfile, directionUpProfile, directionDownProfile;
+    private boolean directional;
     private Vec3 speedChange;
 
     public PacketUpdateSpeedTransmitter() {
     }
 
-    public PacketUpdateSpeedTransmitter(int dimensionId, int x, int y, int z, int speedLimit, int nextSpeedLimit, Vec3 speedChange, int profile, int onRedstone, int onRedstoneProfile) {
-        this.dimensionId = dimensionId;
+    public PacketUpdateSpeedTransmitter(int x, int y, int z, int speedLimit, int nextSpeedLimit, Vec3 speedChange, int profile, int onRedstone, int onRedstoneProfile, boolean directional, int directionUpProfile, int directionDownProfile) {
+        this.dimensionId = Minecraft.getMinecraft().thePlayer.worldObj.provider.dimensionId;
         this.x = x;
         this.y = y;
         this.z = z;
@@ -30,6 +31,10 @@ public class PacketUpdateSpeedTransmitter implements IMessage {
         this.profile = profile;
         this.onRedstone = onRedstone;
         this.onRedstoneProfile = onRedstoneProfile;
+        this.directional = directional;
+        this.directionUpProfile = directionUpProfile;
+        this.directionDownProfile = directionDownProfile;
+
     }
 
     @Override
@@ -47,6 +52,9 @@ public class PacketUpdateSpeedTransmitter implements IMessage {
         profile = bbuf.readInt();
         onRedstone = bbuf.readInt();
         onRedstoneProfile = bbuf.readInt();
+        directional = bbuf.readBoolean();
+        directionUpProfile = bbuf.readInt();
+        directionDownProfile = bbuf.readInt();
         speedChange = Vec3.createVectorHelper(sx, sy, sz);
 
         if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER) {
@@ -62,6 +70,11 @@ public class PacketUpdateSpeedTransmitter implements IMessage {
                 tileTransmitterSpeed.speedProfiles.get(profile)[4] = (int) speedChange.zCoord;
                 tileTransmitterSpeed.onRedstone = onRedstone;
                 tileTransmitterSpeed.onRedstoneProfile = onRedstoneProfile;
+                tileTransmitterSpeed.directional = directional;
+                tileTransmitterSpeed.directionUpProfile = directionUpProfile;
+                tileTransmitterSpeed.directionDownProfile = directionDownProfile;
+                tileTransmitterSpeed.inferDirection();
+
             }
         }
     }
@@ -79,6 +92,10 @@ public class PacketUpdateSpeedTransmitter implements IMessage {
                 tileTransmitterSpeed.speedProfiles.get(profile)[4] = (int) speedChange.zCoord;
                 tileTransmitterSpeed.onRedstone = onRedstone;
                 tileTransmitterSpeed.onRedstoneProfile = onRedstoneProfile;
+                tileTransmitterSpeed.directional = directional;
+                tileTransmitterSpeed.directionUpProfile = directionUpProfile;
+                tileTransmitterSpeed.directionDownProfile = directionDownProfile;
+
             }
         }
 
@@ -94,5 +111,8 @@ public class PacketUpdateSpeedTransmitter implements IMessage {
         bbuf.writeInt(profile);
         bbuf.writeInt(onRedstone);
         bbuf.writeInt(onRedstoneProfile);
+        bbuf.writeBoolean(directional);
+        bbuf.writeInt(directionUpProfile);
+        bbuf.writeInt(directionDownProfile);
     }
 }

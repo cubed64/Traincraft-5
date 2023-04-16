@@ -5,7 +5,6 @@ import com.jcirmodelsquad.tcjcir.render.*;
 
 import com.jcirmodelsquad.tcjcir.tile.*;
 
-import com.sun.java.swing.plaf.windows.WindowsButtonListener;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -49,8 +48,8 @@ import train.common.entity.zeppelin.EntityZeppelinTwoBalloons;
 import train.common.library.BlockIDs;
 import train.common.library.GuiIDs;
 import train.common.library.Info;
-import train.common.mtc.TileTransmitterSpeed;
-import train.common.mtc.TileTransmitterStopPoint;
+import train.common.mtc.render.RenderMTCBlock;
+import train.common.mtc.tile.TileTransmitterSpeed;
 import train.common.tile.*;
 
 import java.lang.reflect.InvocationTargetException;
@@ -155,6 +154,7 @@ public class ClientProxy extends CommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileBridgePillar.class, new RenderBridgePillar());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.bridgePillar.block), new ItemRenderBridgePillar());
 
+		ClientRegistry.bindTileEntitySpecialRenderer(TileTransmitterSpeed.class, new RenderMTCBlock());
 
 	}
 

@@ -10,8 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Vec3;
 import net.minecraftforge.common.DimensionManager;
-import train.common.mtc.TileTransmitterSpeed;
-import train.common.mtc.TileTransmitterStopPoint;
+import train.common.mtc.tile.TileTransmitterStopPoint;
 
 public class PacketUpdateStopPointTransmitter implements IMessage {
     private int dimensionId, x, y, z, stopType, profile, onRedstone, onRedstoneProfile;
@@ -20,8 +19,8 @@ public class PacketUpdateStopPointTransmitter implements IMessage {
     public PacketUpdateStopPointTransmitter() {
     }
 
-    public PacketUpdateStopPointTransmitter(int dimensionId, int x, int y, int z, int stopType, Vec3 stopPoint, int profile, int onRedstone, int onRedstoneProfile) {
-        this.dimensionId = dimensionId;
+    public PacketUpdateStopPointTransmitter(int x, int y, int z, int stopType, Vec3 stopPoint, int profile, int onRedstone, int onRedstoneProfile) {
+        this.dimensionId = Minecraft.getMinecraft().thePlayer.worldObj.provider.dimensionId;
         this.x = x;
         this.y = y;
         this.z = z;

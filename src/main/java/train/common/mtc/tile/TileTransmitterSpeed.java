@@ -1,4 +1,4 @@
-package train.common.mtc;
+package train.common.mtc.tile;
 
 
 import cpw.mods.fml.common.network.NetworkRegistry;
@@ -10,10 +10,13 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Vec3;
+import net.minecraftforge.common.util.ForgeDirection;
 import train.common.Traincraft;
 import train.common.api.Locomotive;
 import train.common.mtc.network.PacketSpeedLimit;
 import train.common.mtc.network.PacketMTCStatus;
+import train.common.tile.TileTCRail;
+import train.common.tile.TileTCRailGag;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +56,13 @@ public class TileTransmitterSpeed extends TileEntity implements IPeripheral {
 
     public boolean enforceSpeedLimits = false;
 
+    public int directionUp, directionDown = -1;
+    public int directionUpProfile, directionDownProfile = 0;
+
+    public boolean directional = false;
+
+
+
     public TileTransmitterSpeed() {
         speedProfiles.add(new int[]{0, 0, 0, 0, 0});
         speedProfiles.add(new int[]{0, 0, 0, 0, 0});
@@ -60,6 +70,42 @@ public class TileTransmitterSpeed extends TileEntity implements IPeripheral {
         speedProfiles.add(new int[]{0, 0, 0, 0, 0});
     }
 
+    public void inferDirection() {
+        if (worldObj.getTileEntity(xCoord, yCoord + 1, zCoord) instanceof TileTCRail) {
+
+            ForgeDirection direction = ForgeDirection.UNKNOWN;
+            int l = ((TileTCRail) worldObj.getTileEntity(xCoord, yCoord + 1, zCoord)).facingMeta;
+
+            switch(l) {
+                case 1: {
+                    direction = ForgeDirection.WEST;
+                    break;
+                }
+                case 2: {
+                    direction = ForgeDirection.NORTH;
+                    break;
+                }
+                case 3: {
+                    direction = ForgeDirection.EAST;
+                    break;
+                }
+                case 0: {
+                    direction = ForgeDirection.SOUTH;
+                    break;
+                }
+            }
+
+            System.out.println(direction);
+            System.out.println(direction.getOpposite());
+            directionUp = direction.ordinal();
+            directionDown = direction.getOpposite().ordinal();
+
+        } else if ( worldObj.getTileEntity(xCoord, yCoord + 1, zCoord) instanceof TileTCRailGag) {
+
+        }
+
+
+    }
     @Override
     public void readFromNBT(NBTTagCompound nbttagcompound) {
         super.readFromNBT(nbttagcompound);
@@ -88,9 +134,12 @@ public class TileTransmitterSpeed extends TileEntity implements IPeripheral {
 
     public void updateEntity() {
 
-        if (worldObj == null && !worldObj.isRemote) {
+        if (worldObj == null) {
             return;
         }
+
+        if (worldObj.isRemote) return;
+
         isActivated = true;
 
         int activeProfile = 0; //Default.
@@ -111,6 +160,8 @@ public class TileTransmitterSpeed extends TileEntity implements IPeripheral {
             }
         }
 
+
+
         if (isActivated) {
             List<Object> list = this.worldObj.getEntitiesWithinAABBExcludingEntity(null, this.getRenderBoundingBox());
             if (list.size() == 0 ) {
@@ -124,14 +175,14 @@ public class TileTransmitterSpeed extends TileEntity implements IPeripheral {
 
                     if (entity instanceof Locomotive) {
 
-                        Locomotive daTrain = (Locomotive) entity;
-                        daTrain.enforceSpeedLimits = enforceSpeedLimits;
-                        if (daTrain.mtcOverridePressed) { return;}
+                        Locomotive loco = (Locomotive) entity;
+                        loco.enforceSpeedLimits = enforceSpeedLimits;
+                        if (loco.mtcOverridePressed) { return;}
 
-                        if (daTrain.mtcStatus == 0  && !hadSentMTCPacket) {
-                            daTrain.mtcStatus = 1;
+                        if (loco.mtcStatus == 0  && !hadSentMTCPacket) {
+                            loco.mtcStatus = 1;
                             //Change MTC Status
-                            Traincraft.mtcChannel.sendToAllAround(new PacketMTCStatus(daTrain.getEntityId(),  1, 1)  , new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, daTrain.posX, daTrain.posY, daTrain.posZ, 150.0D));
+                            Traincraft.mtcChannel.sendToAllAround(new PacketMTCStatus(loco.getEntityId(),  1, 1)  , new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, loco.posX, loco.posY, loco.posZ, 150.0D));
                             hadSentMTCPacket = true;
                         }
 
@@ -148,15 +199,56 @@ public class TileTransmitterSpeed extends TileEntity implements IPeripheral {
 
                         }*/
 
-                        daTrain.speedLimit = speedProfiles.get(activeProfile)[0];
+                        if (directional) {
+                            double rotation = loco.rotationYaw;
+                            if (rotation == 90.0) {
+                                //north
+                            if (directionUp == 2 ) {
+                                activeProfile = directionUpProfile;
+                            } else if (directionDown == 2) {
+                                activeProfile = directionDownProfile;
+                            }
+
+
+                            } else if (rotation == -90.0) {
+                            //south
+                                if (directionUp == 0 ) {
+                                    activeProfile = directionUpProfile;
+                                } else if (directionDown == 0) {
+                                    activeProfile = directionDownProfile;
+                                }
+
+
+                            } else if (rotation == 0.0) {
+                                //west
+                                if (directionUp == 2 ) {
+                                    activeProfile = directionUpProfile;
+                                } else if (directionDown == 2) {
+                                    activeProfile = directionDownProfile;
+                                }
+
+
+                            } else if (rotation == -180.0) {
+                                //east
+                                if (directionUp == 2 ) {
+                                    activeProfile = directionUpProfile;
+                                } else if (directionDown == 2) {
+                                    activeProfile = directionDownProfile;
+                                }
+
+                            }
+                        }
+                        System.out.println(activeProfile);
+                        loco.speedLimit = speedProfiles.get(activeProfile)[0];
+
                         if (!worldObj.isRemote && !hadSentPacket) {
 
-                            trainNumber = daTrain.getEntityId();
+                            trainNumber = loco.getEntityId();
                             hadSentPacket = true;
                             //Traincraft.itsChannel.sendToAllAround(new PacketSetSpeed(speedLimit, this.xCoord, this.yCoord, this.zCoord, daTrain.getEntityId()) , new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, daTrain.posX, daTrain.posY, daTrain.posZ, 150.0D));
 
-                            daTrain.nextSpeedLimit = speedProfiles.get(activeProfile)[1];
-                            daTrain.speedChange3 = Vec3.createVectorHelper(speedProfiles.get(activeProfile)[2], speedProfiles.get(activeProfile)[3], speedProfiles.get(activeProfile)[4]);
+                            loco.nextSpeedLimit = speedProfiles.get(activeProfile)[1];
+                            loco.speedChange3 = Vec3.createVectorHelper(speedProfiles.get(activeProfile)[2], speedProfiles.get(activeProfile)[3], speedProfiles.get(activeProfile)[4]);
                             Traincraft.mtcChannel.sendToAllAround(new PacketSpeedLimit(trainNumber, speedProfiles.get(activeProfile)[0], speedProfiles.get(activeProfile)[1], speedProfiles.get(activeProfile)[2], speedProfiles.get(activeProfile)[3], speedProfiles.get(activeProfile)[4]),
                                     new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.xCoord, this.yCoord, this.zCoord, 150.0D));
 

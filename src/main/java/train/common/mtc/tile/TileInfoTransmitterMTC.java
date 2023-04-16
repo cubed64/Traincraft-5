@@ -1,4 +1,4 @@
-package train.common.mtc;
+package train.common.mtc.tile;
 
 
 import cpw.mods.fml.common.Optional;

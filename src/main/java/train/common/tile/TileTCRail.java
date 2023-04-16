@@ -26,7 +26,7 @@ public class TileTCRail extends TileEntity {
 	public double slopeLength;
 	public double slopeAngle;
 	private String type;
-	private int facingMeta;
+	public int facingMeta;
 	public boolean isLinkedToRail = false;
 	public int linkedX;
 	public int linkedY;

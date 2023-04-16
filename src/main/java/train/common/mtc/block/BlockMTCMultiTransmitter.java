@@ -1,4 +1,4 @@
-package train.common.mtc;
+package train.common.mtc.block;
 
 
 
@@ -6,10 +6,9 @@ import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+import train.common.mtc.tile.TileMTCMultiTransmitter;
 
-import java.util.List;
-
-    public class BlockMTCMultiTransmitter extends BlockContainer {
+public class BlockMTCMultiTransmitter extends BlockContainer {
         public BlockMTCMultiTransmitter(Material p_i45386_1_) {
             super(p_i45386_1_);
         }

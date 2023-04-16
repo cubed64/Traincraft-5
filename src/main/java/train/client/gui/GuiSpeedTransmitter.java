@@ -8,10 +8,11 @@ import net.minecraft.client.gui.*;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Vec3;
+import net.minecraftforge.common.util.ForgeDirection;
 import org.lwjgl.input.Keyboard;
 import train.common.Traincraft;
 import train.common.items.ItemPositionMarker;
-import train.common.mtc.TileTransmitterSpeed;
+import train.common.mtc.tile.TileTransmitterSpeed;
 import train.common.mtc.network.PacketUpdateSpeedTransmitter;
 
 import java.util.ArrayList;
@@ -29,10 +30,16 @@ public class GuiSpeedTransmitter extends GuiScreen {
     private GuiTextField profileTextField;
     private GuiTextField onRedstoneProfileField;
 
+    private GuiTextField directionUpField;
+    private GuiTextField directionDownField;
+
     private GuiButton profileChange;
     private GuiButton onRedstone; //On Redstone: Do nothing, secondary profile
     private GuiButton done; //On Redstone: Do nothing, secondary profile
     private GuiButton addFromItem;
+    private GuiButton directionalToggle;
+
+    private GuiButton inferDirection;
 
     public int xSize = 305;
     public int ySize = 274;
@@ -44,6 +51,10 @@ public class GuiSpeedTransmitter extends GuiScreen {
     int profile = 0;
     int redstoneReaction;
     int redstoneProfile;
+
+    boolean directional;
+    int upProfile;
+    int downProfile;
 
     NBTTagCompound autofillCompound;
 
@@ -76,6 +87,10 @@ public class GuiSpeedTransmitter extends GuiScreen {
         nextSpeedYField = new GuiTextField(fontRendererObj, width / 2 + 5, 106, 50, 15);
         nextSpeedZField = new GuiTextField(fontRendererObj, width / 2 + 5, 126, 50, 15);
         profileTextField = new GuiTextField(fontRendererObj, width / 2 + 130, 148, 15, 15);
+        directionUpField = new GuiTextField(fontRendererObj, width / 2 - 15, 195, 15, 15);
+        directionDownField = new GuiTextField(fontRendererObj, width / 2 + 110, 195, 15, 15);
+
+
       //  onRedstoneProfileField = new GuiTextField(fontRendererObj, width / 2 + 20, 160, 50, 15);
 
         speedProfiles = baseTile.speedProfiles;
@@ -86,17 +101,27 @@ public class GuiSpeedTransmitter extends GuiScreen {
         nextSpeedYField.setText(String.valueOf(speedProfiles.get(0)[3]));
         nextSpeedZField.setText(String.valueOf(speedProfiles.get(0)[4]));
 
+        directionUpField.setText(String.valueOf(baseTile.directionUpProfile));
+        directionDownField.setText(String.valueOf(baseTile.directionDownProfile));
 
        // nextSpeedY = new GuiTextField(fontRendererObj, width / 2 - 12, 36, 27, 15);
        // nextSpeedZ = new GuiTextField(fontRendererObj, width / 2 - 12, 39, 27, 15);
         onRedstone = new GuiButton(2, width / 2 + 4, 146, 120/**/, 20,
                 baseTile.onRedstone == 0 ? "Do nothing" : (baseTile.onRedstone == 1 ? "Activate/Deactivate" : "Change to profile: "));
-        done = new GuiButton(1, width / 2 - 30, 200, 60, 20, "Done");
+        done = new GuiButton(1, width / 2 - 30, 220, 60, 20, "Done");
         profileChange = new GuiButton(3, width / 2 - 30, 20, 60, 20, "Profile 0");
         addFromItem = new GuiButton(4, width / 2 - 60, 180, 130, 20, "Fill from Position Marker");
+
+        directionalToggle = new GuiButton(5, width / 2 + 4, 170, 120/**/, 20, baseTile.directional ? "Bi-Directional" : "Uni-Directional");
+        inferDirection = new GuiButton(6, width / 2 + 120, 170, 80/**/, 20, "Infer Direction");
+
        buttonList.add(onRedstone);
        buttonList.add(done);
        buttonList.add(profileChange);
+       buttonList.add(directionalToggle);
+       buttonList.add(inferDirection);
+
+       directional = baseTile.directional;
 
        if (Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Minecraft.getMinecraft().thePlayer.getHeldItem().getItem() instanceof ItemPositionMarker) {
            NBTTagCompound tagCompound = Minecraft.getMinecraft().thePlayer.getHeldItem().getTagCompound();
@@ -110,6 +135,9 @@ public class GuiSpeedTransmitter extends GuiScreen {
         redstoneReaction = baseTile.onRedstone;
         redstoneProfile = baseTile.onRedstoneProfile;
         profileTextField.setMaxStringLength(1);
+
+        directionUpField.setMaxStringLength(1);
+        directionDownField.setMaxStringLength(1);
         /*timeoutTime = new GuiTextField(fontRendererObj, width / 2 - 8, 26, 27, 15);
         timeoutTime.setText(String.valueOf(timeoutAmount));
         increaseButton = new GuiButton(1, width / 2 + 25, 24, 20, 20, "+");
@@ -154,11 +182,27 @@ public class GuiSpeedTransmitter extends GuiScreen {
                 nextSpeedZField.drawTextBox();
             }
         }
+        fontRendererObj.drawString("On redstone:", width / 2 - theW / 2 - 8, 152, 0xFFFFFF);
+        fontRendererObj.drawString("Directional?", width / 2 - theW / 2 - 8, 175, 0xFFFFFF);
 
         if (redstoneReaction == 2) {
             profileTextField.drawTextBox();
         }
-        fontRendererObj.drawString("On redstone:", width / 2 - theW / 2 - 8, 152, 0xFFFFFF);
+
+        if (directional) {
+            directionUpField.drawTextBox();
+            directionDownField.drawTextBox();
+            if (baseTile.directionUp != -1) {
+                fontRendererObj.drawString("Up " + ForgeDirection.getOrientation(baseTile.directionUp), width / 2 - theW / 2 - 8, 200, 0xFFFFFF);
+                fontRendererObj.drawString("Down " + ForgeDirection.getOrientation(baseTile.directionDown), width / 2 - theW / 2 + 80, 200, 0xFFFFFF);
+            } else {
+                fontRendererObj.drawString("Up ????", width / 2 - theW / 2 - 8, 200, 0xFFFFFF);
+                fontRendererObj.drawString("Down ???? ", width / 2 - theW / 2 + 80, 200, 0xFFFFFF);
+            }
+
+        }
+
+
        /* if (baseTile.isActivated) {
             crossingStatusButton.displayString = "Deactivate";
         } else {
@@ -182,8 +226,8 @@ public class GuiSpeedTransmitter extends GuiScreen {
             //Do button 1 stuff here.
             int profil = 0;
             for (int[] array : speedProfiles) {
-                Traincraft.mtcBlockChannel.sendToServer(new PacketUpdateSpeedTransmitter(baseTile.getWorldObj().provider.dimensionId, baseTile.xCoord, baseTile.yCoord, baseTile.zCoord,
-                        array[0], array[1], Vec3.createVectorHelper(array[2], array[3], array[4]), profil, redstoneReaction, redstoneProfile));
+                Traincraft.mtcBlockChannel.sendToServer(new PacketUpdateSpeedTransmitter(baseTile.xCoord, baseTile.yCoord, baseTile.zCoord,
+                        array[0], array[1], Vec3.createVectorHelper(array[2], array[3], array[4]), profil, redstoneReaction, redstoneProfile, directional, upProfile, downProfile));
                 profil++;
             }
 
@@ -232,6 +276,16 @@ public class GuiSpeedTransmitter extends GuiScreen {
             }
 
         }
+
+        if (button.id == 5) {
+            directional = !directional;
+            directionalToggle.displayString = directional ? "Bi-Directional" : "Uni-Directional";
+        }
+
+        if (button.id == 6) {
+            baseTile.inferDirection();
+
+        }
     }
 
     @Override
@@ -267,6 +321,8 @@ public class GuiSpeedTransmitter extends GuiScreen {
         if (nextSpeedYField.isFocused() && (Character.isDigit(par1) || par2 == Keyboard.KEY_BACK)) nextSpeedYField.textboxKeyTyped(par1, par2);
         if (nextSpeedZField.isFocused() && (Character.isDigit(par1) || par2 == Keyboard.KEY_BACK)) nextSpeedZField.textboxKeyTyped(par1, par2);
         if (profileTextField.isFocused() && (Character.isDigit(par1) || par2 == Keyboard.KEY_BACK) && Character.getNumericValue(par1) < 4) profileTextField.textboxKeyTyped(par1, par2);
+        if (directionUpField.isFocused() && (Character.isDigit(par1) || par2 == Keyboard.KEY_BACK) && Character.getNumericValue(par1) < 2) directionUpField.textboxKeyTyped(par1, par2);
+        if (directionDownField.isFocused() && (Character.isDigit(par1) || par2 == Keyboard.KEY_BACK) && Character.getNumericValue(par1) < 2) directionDownField.textboxKeyTyped(par1, par2);
 
          speedProfiles.get(profile)[0] = isInteger(speedLimitField.getText()) ? Integer.parseInt(speedLimitField.getText()) : 0;
          speedProfiles.get(profile)[1] = isInteger(nextSpeedLimitField.getText()) ? Integer.parseInt(nextSpeedLimitField.getText()) : 0;
@@ -274,7 +330,9 @@ public class GuiSpeedTransmitter extends GuiScreen {
          speedProfiles.get(profile)[3] = isInteger(nextSpeedYField.getText()) ? Integer.parseInt(nextSpeedYField.getText()) : 0;
          speedProfiles.get(profile)[4] = isInteger(nextSpeedZField.getText()) ? Integer.parseInt(nextSpeedZField.getText()) : 0;
          redstoneProfile = isInteger(profileTextField.getText()) ? Integer.parseInt(profileTextField.getText()) : 0;
-
+         upProfile = isInteger(directionUpField.getText()) ? Integer.parseInt(directionUpField.getText()) : 0;
+         downProfile = isInteger(directionDownField.getText()) ? Integer.parseInt(directionDownField.getText()) : 0;
+         System.out.println("w");
     }
 
     @Override
@@ -287,6 +345,8 @@ public class GuiSpeedTransmitter extends GuiScreen {
         nextSpeedYField.mouseClicked(par1, par2, par3);
         nextSpeedZField.mouseClicked(par1, par2, par3);
         profileTextField.mouseClicked(par1, par2, par3);
+        directionDownField.mouseClicked(par1, par2, par3);
+        directionUpField.mouseClicked(par1, par2, par3);
     }
     @Override
     public boolean doesGuiPauseGame() {

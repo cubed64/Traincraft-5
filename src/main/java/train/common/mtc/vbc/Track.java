@@ -1,6 +1,5 @@
 package train.common.mtc.vbc;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
@@ -8,12 +7,12 @@ public class Track {
     public String trackId;
 
     public LinkedHashMap<String, SignalSection> sideA;
-    public ArrayList<SignalSection> sideB;
+    public LinkedHashMap<String, SignalSection> sideB;
 
 
     public Track() {}
 
-    public Track(String trackId, LinkedHashMap<String, SignalSection> sideA, ArrayList<SignalSection> sideB) {
+    public Track(String trackId, LinkedHashMap<String, SignalSection> sideA, LinkedHashMap<String, SignalSection> sideB) {
         this.trackId = trackId;
         this.sideA = sideA;
         this.sideB = sideB;
@@ -35,11 +34,11 @@ public class Track {
         this.sideA = sideA;
     }
 
-    public ArrayList<SignalSection> getSideB() {
+    public LinkedHashMap<String, SignalSection> getSideB() {
         return sideB;
     }
 
-    public void setSideB(ArrayList<SignalSection> sideB) {
+    public void setSideB(LinkedHashMap<String, SignalSection>sideB) {
         this.sideB = sideB;
     }
 }
