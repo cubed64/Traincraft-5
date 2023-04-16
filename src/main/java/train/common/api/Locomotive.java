@@ -6,7 +6,6 @@ import com.jcirmodelsquad.tcjcir.extras.packets.RemoteControlKeyPacket;
 import com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2Handler;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH100H;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH120Commute;
-import com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH130Commute2;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Loader;
