@@ -1278,6 +1278,11 @@ item.tc:minecartOB84SeatCoach.name=Osgood Bradley 84 Seat Coach
 item.tc:minecartOB92SeatCoach.name=Osgood Bradley 92 Seat Coach
 item.tc:minecartPSCNW56SeatCoach.name=Pullman Standard CNW 56 Seat Coach
 item.tc:minecartBuddRDG56SeatCoachLounge.name=Budd RDG 56 Seat Coach-Lounge
+item.tc:minecartBuddCRIP52SeatCoach.name=Budd and Pullman Standard CRIP 52 Seat Coach
+item.tc:minecartBuddNYC52SeatCoach.name=Budd NYC 52 Seat Coach
+item.tc:minecartBuddCBQ52SeatCoach.name=Budd CB&Q 52 Seat Coach
+item.tc:minecartBuddATSF52SeatCoach.name=Budd ATSF 52 Seat Coach
+item.tc:minecartBuddATSF48SeatCoach.name=Budd ATSF 48 Seat Coach (news butcher stand)
 entity.tc.Freight PS 73 Baggage.name=Pullman Standard 73' Baggage
 entity.tc.Freight PS 85 Baggage.name=Pullman Standard 85' Baggage
 entity.tc.PS 5-6-5 Sleeper.name=Pullman Standard 10-6 Sleeper (Center Bedroom)
@@ -1304,6 +1309,11 @@ entity.tc.OB 84 Seat Coach.name=Osgood Bradley 84 Seat Coach
 entity.tc.OB 92 Seat Coach.name=Osgood Bradley 92 Seat Coach
 entity.tc.PS CNW 56 Seat Coach.name=Pullman Standard CNW 56 Seat Coach
 entity.tc.Budd RDG 56 Seat Coach-Lounge.name=Budd RDG 56 Seat Coach-Lounge
+entity.tc.Budd CRIP 52 Seat Coach.name=Budd and Pullman Standard CRIP 52 Seat Coach
+entity.tc.Budd NYC 52 Seat Coach.name=Budd NYC 52 Seat Coach
+entity.tc.Budd CB&Q 52 Seat Coach.name=Budd CB&Q 52 Seat Coach
+entity.tc.Budd ATSF 52 Seat Coach.name=Budd ATSF 52 Seat Coach
+entity.tc.Budd ATSF 48 Seat Coach.name=Budd ATSF 48 Seat Coach (news butcher stand)
 
 
 item.tc:minecartAmfleet.name=Amfleet 1 Coach
