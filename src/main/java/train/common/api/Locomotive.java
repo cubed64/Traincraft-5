@@ -821,7 +821,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
 
             if (updateTicks % 20 == 0) HandleMaxAttachedCarts.PullPhysic(this);
-            if (updateTicks % 15 == 0) VBCTracking.getInstance().updateFromRS(Vec3.createVectorHelper(Math.floor(posX), Math.floor(posY), Math.floor(posZ)));
+            //if (updateTicks % 15 == 0) VBCTracking.getInstance().updateFromRS(Vec3.createVectorHelper(Math.floor(posX), Math.floor(posY), Math.floor(posZ)));
 
             /**
              * Can't use datawatcher here. Locomotives use them all already
