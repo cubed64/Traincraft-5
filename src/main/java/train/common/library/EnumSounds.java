@@ -218,6 +218,8 @@ public enum EnumSounds {
 	DieselP42(DieselP42.class, "nathan_k5La", 2.5F, "GE_7FDL_16_Notch8", 0.6F, 52, "GE_7FDL_16_Idle", 0.6F, 51, false, "ge_steelbell_1", 15),
 	DieselP32(DieselP32.class, "nathan_k5La_3", 2.5F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_2", 21),
 	DieselP40(DieselP40.class, "nathan_k5La_2", 2.5F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_2", 21),
+	DieselU50(DieselU50.class, "nathan_p3_4", 2.5F, "GE_7FDL_16_Notch8", 0.6F, 52, "GE_7FDL_16_Idle", 0.6F, 51, false, "ge_steelbell_1", 15),
+	DieselU56(DieselU56.class, "prime_920_3", 2.5F, "GE_7FDL_16_Notch8", 0.6F, 52, "GE_7FDL_16_Idle", 0.6F, 51, false, "ge_steelbell_1", 15),
 
 	//JCTC Electrics
 	//
