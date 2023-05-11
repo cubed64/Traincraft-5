@@ -947,6 +947,8 @@ item.tc:minecartU25B.name=GE U25B (Phase 2-4)
 item.tc:minecartU30C.name=GE U30C
 item.tc:minecartSF30C.name=ATSF SF30C
 item.tc:minecartU36C.name=GE U36C
+item.tc:minecartU50.name=GE U50
+item.tc:minecartU56.name=GE U56
 
 item.tc:minecartB23.name=GE B23-7
 item.tc:minecartSB23R.name=CEE/GE SB23R
@@ -980,6 +982,8 @@ entity.tc.U25B.name=GE U25B (Phase 2-4)
 entity.tc.U30C.name=GE U30C
 entity.tc.SF30C.name=ATSF SF30C
 entity.tc.U36C.name=GE U36C
+entity.tc.U50.name=GE U50
+entity.tc.U56.name=GE U56
 
 entity.tc.B23-7.name=GE B23-7
 entity.tc.SB23R.name=CEE/GE SB23R

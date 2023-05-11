@@ -1105,6 +1105,12 @@ public enum RenderEnum {
 			//add(new double[]{0.75D, 1.75D, 0.0D});
 		}
 	}, "", null, 0, false),
+	U50( DieselU50.class,  new ModelU50(), "U50_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	U56( DieselU56.class,  new ModelU50(), "U56_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 
 	B23( DieselB23.class,  new ModelB23(), "b23_", true,new float[] {-1.7F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
