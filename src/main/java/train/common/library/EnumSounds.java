@@ -5,6 +5,8 @@ import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.AmfleetCab;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.PCH120Coach;
 import train.common.entity.rollingStock.*;
 
+import java.util.List;
+
 public enum EnumSounds {
 
 	//TC Steam Stuff
@@ -179,7 +181,7 @@ public enum EnumSounds {
 	DieselB30(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselB30.class, "nathan_m5", 2.5F, "GE_7FDL_16_Notch8", 0.65F, 52, "GE_7FDL_16_Idle", 0.65F, 51, false, "ge_steelbell_1", 15),
 	DieselBoxcab23Ton(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselBoxcab23Ton.class, "wabco_e2", 10F, "GE_HBI_600_Notch8", 0.5F, 15, "GE_HBI_600_Idle", 0.5F, 25, false, "ge_steelbell_1", 15),
 	DieselDash840B(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDash840B.class, "leslie_s3l", 2.5F, "GE_7FDL_16_Notch8", 0.65F, 52, "GE_7FDL_16_Idle", 0.65F, 10, false, "ge_steelbell_1", 15),
-	DieselDash840BB(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDash840BB.class, " ", 2.5F, "GE_7FDL_16_Notch8", 0.65F, 52, "GE_7FDL_16_Idle", 0.65F, 51, false, "ge_steelbell_1", 15),
+	//DieselDash840BB(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDash840BB.class, " ", 2.5F, "GE_7FDL_16_Notch8", 0.65F, 52, "GE_7FDL_16_Idle", 0.65F, 51, false, "ge_steelbell_1", 15),
 	DieselDash840BW(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDash840BW.class, "leslie_s3l", 2.5F, "GE_7FDL_16_Notch8", 0.65F, 52, "GE_7FDL_16_Idle", 0.65F, 51, false, "ge_steelbell_1", 15),
 	DieselDash840C(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDash840C.class, "leslie_s3lr", 2.5F, "GE_FDL16_Notch8", 0.5F, 23, "GE_FDL16_Idle", 0.5F, 103, false, "ge_steelbell_1", 15),
 	DieselDash9C44W(DieselDash944CW.class, "nathan_p5", 2.5F, "GE_7FDL_16_Notch8", 1F, 52, "GE_7FDL_16_Idle", 1F, 50, false, "ge_steelbell_1", 15),
@@ -232,7 +234,7 @@ public enum EnumSounds {
 	ElectricILMB(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricILMB.class, "eu07_horn", 2.5F, "MILW_Notch8", 0.65F, 40, "MILW_Idle", 0.65F, 50, false, "alco_bronzebell_3", 24),
 	ElectricJT7(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricJT7.class, "leslie_a200_3", 2.5F, "MILW_Notch8", 0.65F, 40, "MILW_Idle", 0.65F, 50, false, "alco_bronzebell_3", 24),
 	PCH100H(com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH100H.class, "nathan_p2", 1F, "pch100h_notch8", 0.6F, 8, "pch100h_idle", 0.4F, 50, false, "transonic_ebell", 11),
-	PCH120Commute(PCH120Commute.class, "nathan_p2", 1F, "mg_run", 0.6F, 8, "mg_idle", 0.4F, 50, false, "transonic_ebell", 11),
+	PCH120Commute(PCH120Commute.class, "nathan_p2", 1F, "mg_run", 0.6F, 8, "mg_idle", 0.4F, 50, false, "transonic_ebell", 11, new String[] {"nathan_p2", "eu07_horn"}),
 	TestControlCar(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.TestControlCar.class, "nathan_p2", 1F, "mg_run", 0.6F, 8, "mg_idle", 0.4F, 50, false, " ", 0),
 	//JCTC Foreign Electrics
 	ElectricClass345(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricClass345.class, "br_horn", 1F, "mg_run", 0.9F, 8, "mg_idle", 0.7F, 50, false, " ", 0),
@@ -280,12 +282,21 @@ public enum EnumSounds {
 	private String idle;
 	private float runVolume;
 	private float idleVolume;
-	private int runSoundLenght;
-	private int idleSoundLenght;
+	private int runSoundLength;
+	private int idleSoundLength;
 	private boolean soundChangeWithSpeed;
 	private String bell;
 	private int bellLength;
 
+	public String[] getHorns() {
+		return horns;
+	}
+
+	public void setHorns(String[] horns) {
+		this.horns = horns;
+	}
+
+	private String[] horns;
 	/**
 	 * Defines the Horn, Bell, Idle, and Run Sounds for Locomotives.
 	 *
@@ -294,14 +305,14 @@ public enum EnumSounds {
 	 * @param hornVolume
 	 * @param run
 	 * @param runVolume
-	 * @param runSoundLenght
+	 * @param runSoundLength
 	 * @param idle
 	 * @param idleVolume
-	 * @param idleSoundLenght
+	 * @param idleSoundLength
 	 * @param soundChangeWithSpeed
 	 * @param bell
 	 */
-	private EnumSounds(Class entityClass, String horn, float hornVolume, String run, float runVolume, int runSoundLenght, String idle, float idleVolume, int idleSoundLenght, boolean soundChangeWithSpeed, String bell, int bellLength) {
+	EnumSounds(Class entityClass, String horn, float hornVolume, String run, float runVolume, int runSoundLength, String idle, float idleVolume, int idleSoundLength, boolean soundChangeWithSpeed, String bell, int bellLength) {
 		this.entityClass = entityClass;
 		this.horn = horn;
 		this.hornVolume = hornVolume;
@@ -309,11 +320,27 @@ public enum EnumSounds {
 		this.idle = idle;
 		this.runVolume = runVolume;
 		this.idleVolume = idleVolume;
-		this.runSoundLenght = runSoundLenght;
-		this.idleSoundLenght = idleSoundLenght;
+		this.runSoundLength = runSoundLength;
+		this.idleSoundLength = idleSoundLength;
 		this.soundChangeWithSpeed = soundChangeWithSpeed;
 		this.bell = bell;
 		this.bellLength = bellLength;
+	}
+
+	EnumSounds(Class entityClass, String horn, float hornVolume, String run, float runVolume, int runSoundLength, String idle, float idleVolume, int idleSoundLength, boolean soundChangeWithSpeed, String bell, int bellLength, String[] horns) {
+		this.entityClass = entityClass;
+		this.horn = horn;
+		this.hornVolume = hornVolume;
+		this.run = run;
+		this.idle = idle;
+		this.runVolume = runVolume;
+		this.idleVolume = idleVolume;
+		this.runSoundLength = runSoundLength;
+		this.idleSoundLength = idleSoundLength;
+		this.soundChangeWithSpeed = soundChangeWithSpeed;
+		this.bell = bell;
+		this.bellLength = bellLength;
+		this.horns = horns;
 	}
 /*
 	/**
@@ -371,12 +398,12 @@ public enum EnumSounds {
 		return idleVolume;
 	}
 
-	public int getRunSoundLenght() {
-		return runSoundLenght;
+	public int getRunSoundLength() {
+		return runSoundLength;
 	}
 
-	public int getIdleSoundLenght() {
-		return idleSoundLenght;
+	public int getIdleSoundLength() {
+		return idleSoundLength;
 	}
 
 	public boolean getSoundChangeWithSpeed() {
