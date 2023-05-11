@@ -854,6 +854,7 @@ item.tc:minecartSD70Mac.name=EMD SD70Mac
 
 item.tc:minecartSW1.name=EMD SW1
 item.tc:minecartSW8.name=EMD SW8 (Classic Model)
+item.tc:minecartSW900.name=EMD SW900
 item.tc:minecartSW1000.name=EMD SW1000
 item.tc:minecartSW1200.name=EMD SW1200
 item.tc:minecartSW1500.name=EMD SW1500
@@ -925,6 +926,7 @@ entity.tc.SD70Mac.name=EMD SD70Mac
 
 entity.tc.SW1.name=EMD SW1
 entity.tc.SW8.name=EMD SW8 (Classic Model)
+entity.tc.SW900.name=EMD SW900
 entity.tc.SW1000.name=EMD SW1000
 entity.tc.SW1200.name=EMD SW1200
 entity.tc.SW1500.name=EMD SW1500
@@ -1091,6 +1093,7 @@ item.tc:minecartILMC.name=I.L.M.C
 
 item.tc:minecartSlugMA.name=EMD GP Slug (SlugMA)
 item.tc:minecartF7BSlug.name=EMD F7B Slug
+item.tc:minecartS1BL.name=FNCC S1BL Slug
 
 
 entity.tc.NRE3gs21b.name=NRE 3GS21B Genset
@@ -1102,6 +1105,7 @@ entity.tc.ILMC.name=I.L.M.C
 
 entity.tc.SlugMA.name=EMD GP Slug (SlugMA)
 entity.tc.F7BSlug.name=EMD F7B Slug
+entity.tc.S1BL.name=FNCC S1BL Slug
 
 --------------------------------------------------------
 

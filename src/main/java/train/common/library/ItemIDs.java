@@ -414,6 +414,7 @@ public enum ItemIDs {
 
 	minecartSW1("ItemRollingStock","sw1", 2),
 	minecartSW8("ItemRollingStock", "train_sw8", 3),
+	minecartSW900("ItemRollingStock", "sw900", 3),
 	minecartSW1000("ItemRollingStock", "sw1000", 3),
 	minecartSW1200("ItemRollingStock","sw1200", 4),
 	minecartSW1500("ItemRollingStock", "sw1500", 4),
@@ -505,6 +506,8 @@ public enum ItemIDs {
 
 	minecartSlugMA("ItemRollingStock", "slugma", 2),
 	minecartF7BSlug("ItemRollingStock", "f7b", 3),
+	minecartS1BL("ItemRollingStock", "s1bl", 3),
+
 
 	//E-lect-trock//
 	minecartEF1("ItemRollingStock", "ef1", 6),
