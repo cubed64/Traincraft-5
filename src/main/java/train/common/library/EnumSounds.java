@@ -67,7 +67,7 @@ public enum EnumSounds {
 	LocoElectricBP4(EntityLocoElectricBP4.class, "nathan_k5La_3", 0.8F, "vl10_idle", 0.65F, 40, "vl10_idle", 0.65F, 40, false, "emd_steelbell_4", 11),
 	//TC Diesel Stuff
 	locoDieselFOLM1(EntityLocoDieselFOLM1.class, "nathan_p01235", 0.8F, "FM_38D_6_Notch8", 0.65F, 45, "FM_38D_6_Idle", 0.65F, 58, false, "alco_bronzebell_3", 24),
-	locoDieselFOLM1B(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselFOLM1B.class, " ", 0.8F, "FM_38D_6_Notch8", 0.65F, 45, "FM_38D_6_Idle", 0.65F, 58, false, " ", 0),
+	locoDieselFOLM1B(DieselFOLM1B.class, " ", 0.8F, "FM_38D_6_Notch8", 0.65F, 45, "FM_38D_6_Idle", 0.65F, 58, false, " ", 0),
 	locoDieselCD742(EntityLocoDieselCD742.class, "742_horn", 0.8F, "742_motor_slow", 0.65F, 40, "742_motor", 0.65F, 40, false, " ", 0),
 	locoDieselChME3(EntityLocoDieselChME3.class, "chme3_horn", 0.8F, "chme3_idle", 0.65F, 40, "chme3_idle", 0.65F, 40, false, " ", 0),
 	locoDieselGP7Red(EntityLocoDieselGP7Red.class, "gp_horn", 0.8F, "chme3_idle", 0.65F, 40, "chme3_idle", 0.65F, 40, false, "emd_brassbell_1", 15),
@@ -85,8 +85,11 @@ public enum EnumSounds {
 	locoDieselDeltic(EntityLocoDieselDeltic.class, "br_horn", 0.8F, "chme3_idle", 0.65F, 40, "chme3_idle", 0.65F, 40, false, " ", 0),
 	locoDieselClass66(EntityLocoDieselClass66.class, "br_horn", 0.8F, "chme3_idle", 0.65F, 40, "chme3_idle", 0.65F, 40, false, " ", 0),
 	locoDieselCD151(EntityLocoElectricCD151.class,"mg_horn", 1F, "mg_run", 0.8F, 10, "mg_idle", 0.6F, 50, false, " ", 0),
+
 	//JCTC Content Starts Below
 	//
+
+
 	//JCTC Alco Diesels
 	DieselC424(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselC424.class, "leslie_s3", 2.5F, "ALCO_16_251C_Notch8", 0.5F, 52, "ALCO_16_251C_Idle", 0.5F, 69, false, "alco_bronzebell_3", 24),
 	DieselC425(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselC425.class, "leslie_s3", 2.5F, "ALCO_16_251C_Notch8", 0.5F, 52, "ALCO_16_251C_Idle", 0.5F, 69, false, "alco_bronzebell_3", 24),
@@ -161,7 +164,7 @@ public enum EnumSounds {
 	DieselSD40Tdash2(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD40T2.class, "nathan_p5", 2.5F, "EMD_16_645E3_Notch8", 0.65F, 51, "EMD_16_645E3_Idle", 0.8F, 40, false, "emd_steelbell_1", 15),
 	DieselSD45dash2(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD45dash2.class, "leslie_rs5t", 2.5F, "EMD_20_645E3_Notch8", 0.65F, 54, "EMD_20_645E3_Idle", 0.65F, 54, false, "emd_steelbell_4", 11),
 	DieselSD45dash2B(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD45dash2B.class, " ", 2.5F, "EMD_20_645E3_Notch8", 0.65F, 57, "EMD_20_645E3_Idle", 0.65F, 54, false, "emd_steelbell_4", 11),
-	DieselSD70M(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD70Mac.class, "nathan_k5la_4", 2F, "EMD_16_710G3B_Notch8", 0.5F, 48, "EMD_16_710G3B_Idle", 0.5F, 47, false, "emd_steelbell_8", 25),
+	DieselSD70Mac(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSD70Mac.class, "nathan_k5la_4", 2F, "EMD_16_710G3B_Notch8", 0.5F, 48, "EMD_16_710G3B_Idle", 0.5F, 47, false, "emd_steelbell_8", 25),
 	DieselSDL39(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSDL39.class, "nathan_m3", 2F, "EMD_12_645E3_Notch8", 0.65F, 56, "EMD_12_645E3_Idle", 0.65F, 49, false, "prime_speakerbell", 21),
 	DieselSDP40F(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSDP40F.class, "leslie_sl4t", 2.5F, "EMD_16_645E3_Notch8", 0.65F, 51, "EMD_16_645E3_Idle", 0.8F, 40, false, "emd_steelbell_4", 11),
 	DieselSW1(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSW1.class, "leslie_a200", 0.9F, "EMD_6_567A_Notch8", 0.45F, 52, "EMD_6_567A_Idle", 0.75F, 42, false, "emd_bronzebell_3", 28),
@@ -195,6 +198,7 @@ public enum EnumSounds {
 	DieselU18BW(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselU18BW.class, "leslie_s5t_1", 2.5F, "GE_7FDL_8_Notch8", 0.25F, 40, "GE_7FDL_8_Idle", 0.25F, 50, false, "ge_steelbell_2", 21),
 	DieselU18Balt(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselU18Balt.class, "nathan_m3_2", 3F, "GE_7FDL_8_Notch8", 0.20F, 40, "GE_7FDL_8_Idle", 0.25F, 50, false, "ge_steelbell_2", 21),
 	DieselU23B(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselU23B.class, "leslie_s3l", 2.5F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_2", 21),
+	DieselU23Bold(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselU23Bold.class, "leslie_s3l", 2.5F, "GE_7FDL_12_Notch8", 0.65F, 40, "GE_7FDL_12_Idle", 0.65F, 50, false, "ge_steelbell_2", 21),
 	DieselU30C(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselU30C.class, "leslie_s3lr", 2.5F, "GE_7FDL_16_Notch8", 0.5F, 52, "GE_7FDL_16_Idle", 0.5F, 51, false, "ge_steelbell_1", 15),
 	DieselU36C(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselU36C.class, "leslie_s3lr", 2.5F, "GE_7FDL_16_Notch8", 0.5F, 52, "GE_7FDL_16_Idle", 0.5F, 51, false, "ge_steelbell_1", 15),
 	//JCTC MOW Diesels

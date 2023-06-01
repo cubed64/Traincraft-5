@@ -13,13 +13,13 @@ import train.common.api.LiquidManager;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class DieselU23B extends DieselTrain {
-    public DieselU23B(World world) {
-        super(world, EnumTrains.U23B.getTankCapacity(), LiquidManager.dieselFilter());
+public class DieselU23Bold extends DieselTrain {
+    public DieselU23Bold(World world) {
+        super(world, EnumTrains.U23Bold.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
 
     }
-    public DieselU23B(World world, double d, double d1, double d2){
+    public DieselU23Bold(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -122,7 +122,7 @@ public class DieselU23B extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.315F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.1F;
     }
 
     @Override
