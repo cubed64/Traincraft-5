@@ -1,4 +1,4 @@
-package train.common.mtc.vbc;
+package com.jcirmodelsquad.tcjcir.features.signal.vbc;
 
 
 import mods.railcraft.api.signals.IControllerTile;
@@ -7,6 +7,7 @@ import mods.railcraft.api.signals.SignalController;
 import mods.railcraft.api.signals.SimpleSignalController;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntitySign;
 import net.minecraft.util.Vec3;
 
 
@@ -29,9 +30,12 @@ public class TileVBCController extends TileEntity implements IControllerTile {
 
    public void updateEntity() {
 
-        if (!(VBCTracking.registeredReceivers.containsKey(sectionId))) {
-            VBCTracking.registeredReceivers.put(sectionId, Vec3.createVectorHelper(xCoord, yCoord, zCoord));
-        }
+       if (worldObj.getTileEntity(xCoord, yCoord, zCoord + 1) instanceof TileEntitySign) {
+           TileEntitySign sign = (TileEntitySign) worldObj.getTileEntity(xCoord, yCoord, zCoord + 1);
+           this.sectionId = sign.signText[0];
+           VBCTracking.getInstance().registeredReceivers.put(sectionId, Vec3.createVectorHelper(xCoord, yCoord, zCoord));
+           signalController.setName(sectionId);
+       }
       if(worldObj != null) {
           if (worldObj.isRemote) {return;}
 
@@ -41,7 +45,7 @@ public class TileVBCController extends TileEntity implements IControllerTile {
   @Override
    public void readFromNBT(NBTTagCompound nbttagcompound) {
       super.readFromNBT(nbttagcompound);
-
+      signalController.readFromNBT(nbttagcompound);
       //this.uniqueID = nbttagcompound.getString("uniqueID");
 
    }
@@ -49,7 +53,9 @@ public class TileVBCController extends TileEntity implements IControllerTile {
    @Override
    public void writeToNBT(NBTTagCompound nbttagcompound) {
       super.writeToNBT(nbttagcompound);
-      // nbttagcompound.setString("uniqueID", uniqueID);
+       signalController.writeToNBT(nbttagcompound);
+
+       // nbttagcompound.setString("uniqueID", uniqueID);
    }
 
 

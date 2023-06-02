@@ -34,7 +34,7 @@ import train.common.mtc.block.BlockTransmitterMTC;
 import train.common.mtc.block.BlockTransmitterSpeed;
 import train.common.mtc.block.BlockTransmitterStopPoint;
 import train.common.mtc.tile.*;
-import train.common.mtc.vbc.TileVBCController;
+import com.jcirmodelsquad.tcjcir.features.signal.vbc.TileVBCController;
 import train.common.tile.*;
 
 import java.lang.reflect.InvocationTargetException;

@@ -1,5 +1,8 @@
 package train.common.api;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.mojang.authlib.GameProfile;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -159,7 +162,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	private double derailSpeed = 0.46;
 	private int scrollPosition;
 
-
+	public JsonObject renderRefs = new JsonObject();
 
 	public EntityRollingStock(World world) {
 		super(world);
@@ -608,7 +611,29 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	@Override
 	public void onUpdate() {
 
-		if (addedToChunk && !this.hasSpawnedBogie && this.trainSpec.getBogieLocoPosition() != 0) {
+		try {
+			Method theTransMethod = this.getClass().getDeclaredMethod("getBogieLocation");
+			double theBogiePos = (double) theTransMethod.invoke(this);
+			if (theBogiePos != 0.0) {
+				this.bogieShift = theBogiePos;
+				if (addedToChunk && !this.hasSpawnedBogie && bogieLoco == null) {
+					//this.bogieShift = this.trainSpec.getBogieLocoPosition();
+					this.bogieLoco = new EntityBogie(worldObj,
+							(posX - Math.cos(this.serverRealRotation * TraincraftUtil.radian) * this.bogieShift),
+							posY + ((Math.tan(this.renderPitch * TraincraftUtil.radian) * -this.bogieShift) + getMountedYOffset()),
+							(posZ - Math.sin(this.serverRealRotation * TraincraftUtil.radian) * this.bogieShift), this, this.uniqueID, 0, this.bogieShift);
+
+					//if(!worldObj.isRemote)System.out.println("ID: "+this.getID());
+					if (!worldObj.isRemote) worldObj.spawnEntityInWorld(bogieLoco);
+					this.needsBogieUpdate = true;
+				}
+				this.hasSpawnedBogie = true;
+			} else {
+				throw new NoSuchMethodException();
+			}
+
+		} catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+			if (addedToChunk && !this.hasSpawnedBogie && this.trainSpec.getBogieLocoPosition() != 0) {
 				//System.out.println(i + " " + this.trainSpec.getBogiePositions()[i]);
 				if (bogieLoco == null) {
 					this.bogieShift = this.trainSpec.getBogieLocoPosition();
@@ -622,8 +647,10 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 					this.needsBogieUpdate = true;
 				}
 				this.hasSpawnedBogie = true;
+			}
 		}
-		
+
+
 		super.manageChunkLoading();
 		
 		/**
@@ -2410,6 +2437,15 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	public int getMotionZClient() {
 		return (this.dataWatcher.getWatchableObjectInt(21));
 	}
+
+	public JsonObject getRenderRefs() {
+		return new JsonParser().parse(dataWatcher.getWatchableObjectString(27)).getAsJsonObject();
+	}
+
+	public JsonElement getRenderRef(String name) {
+		return new JsonParser().parse(dataWatcher.getWatchableObjectString(27)).getAsJsonObject().get(name);
+	}
+
 
 	@Override
 	protected void  func_145775_I() {

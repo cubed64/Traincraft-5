@@ -8,7 +8,7 @@ import train.common.api.Locomotive;
 public class PassengerTrainModule extends AutoTrain2Module {
 
     @Override
-    public void doThings(AutoTrain2Handler handler, Locomotive locomotive) {
+    public void drive(AutoTrain2Handler handler, Locomotive locomotive) {
 
         if (handler.currentTrackSection != null && handler.currentTrackSection.getSectionType().equals("station") || handler.nextTrackSection != null && handler.nextTrackSection.getSectionType().equals("station")) {
             if (handler.currentTrackSection != null) {

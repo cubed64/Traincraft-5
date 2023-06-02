@@ -16,7 +16,7 @@ public class AutoTrain2Module {
     public AutoTrain2Module() {
     }
 
-    public void doThings(AutoTrain2Handler handler, Locomotive locomotive) {
+    public void drive(AutoTrain2Handler handler, Locomotive locomotive) {
 
     }
 

@@ -156,7 +156,7 @@ public class TileInstructionRadio extends TileEntity implements IPeripheral, Wir
 
                             if(obj instanceof Locomotive){
 
-                                toAdd.add((Locomotive)obj);
+                               // toAdd.add((Locomotive)obj);
                             }
 
                         }

@@ -128,15 +128,15 @@ import java.util.List;
                                 if (mtcType == 2 && !daTrain.isConnecting) {
                                     daTrain.stationStop = false;
                                     daTrain.speedGoingDown = false;
-                                    if (!serverUUID.equals("") &&  !(daTrain.serverUUID.equals(serverUUID))) {
+                                   // if (!serverUUID.equals("") &&  !(daTrain.serverUUID.equals(serverUUID))) {
                                         daTrain.isConnecting = true;
-                                        daTrain.connectingUUID = this.serverUUID;
-                                        daTrain.attemptConnection(serverUUID);
-                                    }
+                                        //daTrain.connectingUUID = this.serverUUID;
+                                   //     daTrain.attemptConnection(serverUUID);
+                               //     }
                                 } else if (serverUUID.equals("end")) {
                                     //End communications with the server
                                     daTrain.disconnectFromServer();
-                                    daTrain.serverUUID = "";
+                                    //daTrain.serverUUID = "";
                                 }
                             }
 

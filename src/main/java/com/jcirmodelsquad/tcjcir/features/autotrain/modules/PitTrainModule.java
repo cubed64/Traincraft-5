@@ -7,7 +7,7 @@ import train.common.api.Locomotive;
 public class PitTrainModule extends AutoTrain2Module {
 
     @Override
-    public void doThings(AutoTrain2Handler handler, Locomotive locomotive) {
+    public void drive(AutoTrain2Handler handler, Locomotive locomotive) {
 
     }
 

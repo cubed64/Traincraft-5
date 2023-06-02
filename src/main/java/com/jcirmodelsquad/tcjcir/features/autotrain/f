@@ -1,0 +1,17 @@
+[TrainScript]
+120, 64, 146: SpeedLimit: 20
+119, 64, 88: Station 1 for 20 secs
+119, 64, 91: Switch: Ensure Unswitched
+119, 64, 130: Switch: Ensure Unswitched
+120, 64, 146: SpeedLimit: 40
+29, 64, 216: Switch: Ensure Unswitched
+24, 64, 216: Switch: Ensure Unswitched
+-10, 64, 259: Station 2 for 20 secs
+-10, 64, 281: Switch: Ensure Unswitched
+-10, 64, 286: Switch: Ensure Unswitched
+-10, 64, 305: SpeedLimit: 100
+120, 64, 714: SpeedLimit: 40
+29, 64, 740: Switch: Ensure Unswitched
+34, 64, 740: Switch: Ensure switched
+67, 64, 734: Station 2 for 20 secs
+[End]

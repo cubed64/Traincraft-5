@@ -1,7 +1,6 @@
 package com.jcirmodelsquad.tcjcir.features.autotrain;
 
 import com.jcirmodelsquad.tcjcir.features.eti.jcirmonitor.Position;
-import net.minecraft.util.Vec3;
 import net.minecraftforge.common.ForgeChunkManager;
 import train.common.api.Locomotive;
 
@@ -112,7 +111,7 @@ public class AutoTrain2Handler {
                 System.out.println(section);
             }
             System.out.println("=======================");*/
-            loadedModule.doThings(this, locomotive);
+            loadedModule.drive(this, locomotive);
 
 
 

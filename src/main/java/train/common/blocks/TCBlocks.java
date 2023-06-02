@@ -16,7 +16,7 @@ import train.common.Traincraft;
 import train.common.library.BlockIDs;
 import train.common.library.Info;
 import train.common.mtc.block.*;
-import train.common.mtc.vbc.BlockVBCController;
+import com.jcirmodelsquad.tcjcir.features.signal.vbc.BlockVBCController;
 
 public class TCBlocks {
 

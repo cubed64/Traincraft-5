@@ -1,4 +1,4 @@
-package train.common.mtc.vbc;
+package com.jcirmodelsquad.tcjcir.features.signal.vbc;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

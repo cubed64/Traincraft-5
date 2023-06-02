@@ -20,6 +20,7 @@ import train.common.mtc.network.PacketUpdateStopPointTransmitter;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class GuiStopPointTransmitter extends GuiScreen {
     private TileTransmitterStopPoint baseTile;
 

@@ -1,15 +1,18 @@
 package train.common.api;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.jcirmodelsquad.tcjcir.extras.packets.RemoteControlKeyPacket;
 import com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2Handler;
+import com.jcirmodelsquad.tcjcir.features.signal.dynamic.LocoTransceiver;
+import com.jcirmodelsquad.tcjcir.features.signal.dynamic.Message;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDash944CW;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH100H;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH120Commute;
+import com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH130Commute2;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
 import io.netty.buffer.ByteBuf;
@@ -44,15 +47,13 @@ import train.common.items.ItemWirelessTransmitter;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.Info;
-import train.common.mtc.MTCMessage;
-import train.common.mtc.tile.TileInstructionRadio;
 import train.common.mtc.network.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
-public abstract class Locomotive extends EntityRollingStock implements IInventory, WirelessTransmitter {
+import static com.jcirmodelsquad.tcjcir.features.autotrain.DriveScript2.xyz;
+
+public abstract class Locomotive extends EntityRollingStock implements IInventory {
     public boolean lampOn;
     public boolean dothelightthing;
     public boolean bellPressed;
@@ -97,13 +98,14 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     public Boolean overspeedOveridePressed = false;
     public boolean enforceSpeedLimits = true;
 
-    public String serverUUID = "";
+    /*public String serverUUID = "";*/
+    public LocoTransceiver ttTransceiver;
+
     public String trainID = "";
     public String currentSignalBlock = "";
     public boolean speedGoingDown = false;
 
     public boolean stationStop = false;
-    public String connectingUUID = "";
 
     public boolean isConnected = false;
     public boolean isConnecting = false;
@@ -142,11 +144,27 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
      * TrainsOnClick
      */
     public boolean canBePulled = false;
-    //ETI Type Beat type beat.
+    //ETI Type Beat.
     public String operatorID = ""; //Example: PR for PeachRail, or TXCN for Texas Central
     public String trainName = ""; //May not be used very often, but just in case, include it.
     public String trainNumber = "";
     public ArrayList<String> stations = new ArrayList<String>();
+
+
+    public String guiDetailsJSON() {
+        JsonObject gui = new JsonObject();
+        gui.addProperty("cartsPulled", currentNumCartsPulled);
+        gui.addProperty("massPulled", currentMassPulled);
+        gui.addProperty("slowDown", currentSpeedSlowDown);
+        gui.addProperty("accelSlowDown", currentAccelSlowDown);
+        gui.addProperty("brakeSlowDown", currentBrakeSlowDown);
+        gui.addProperty("fuelUseChange", currentFuelConsumptionChange);
+        return gui.toString();
+    }
+
+    public String guiDetailsDW() {
+        return dataWatcher.getWatchableObjectString(26);
+    }
 
 
     public Locomotive(World world) {
@@ -161,12 +179,8 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         dataWatcher.addObject(22, locoState);
         dataWatcher.addObject(24, fuelTrain);
         dataWatcher.addObject(25, (int) convertSpeed(Math.sqrt(Math.abs(motionX * motionX) + Math.abs(motionZ * motionZ))));//convertSpeed((Math.abs(this.motionX) + Math.abs(this.motionZ))
-        dataWatcher.addObject(26, castToString(currentNumCartsPulled));
-        dataWatcher.addObject(27, castToString(currentMassPulled));
-        dataWatcher.addObject(28, castToString(Math.round(currentSpeedSlowDown)));
-        dataWatcher.addObject(29, castToString(currentAccelSlowDown));
-        dataWatcher.addObject(30, castToString(currentBrakeSlowDown));
-        //dataWatcher.addObject(31, castToString(currentFuelConsumptionChange));
+        dataWatcher.addObject(26, guiDetailsJSON());
+        dataWatcher.addObject(27, renderRefs.toString());
         dataWatcher.addObject(15, (float) Math.round((getCustomSpeed() * 3.6f)));
         //dataWatcher.addObject(32, lineWaypoints);
         setAccel(0);
@@ -181,9 +195,10 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             sb.append(c);
         }
         trainID = sb.toString();
-        if (!serverUUID.equals("")) {
+        //TODO: Re-implement MTC-2
+      /*  if (!serverUUID.equals("")) {
             attemptConnection(serverUUID);
-        }
+        }*/
     }
 
     /**
@@ -431,7 +446,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         nbttagcompound.setDouble("zSpeedChange", speedChange3.zCoord);
         nbttagcompound.setBoolean("mtcOverridePressed", mtcOverridePressed);
         nbttagcompound.setBoolean("overspeedOverridePressed", overspeedOveridePressed);
-        nbttagcompound.setString("serverUUID", serverUUID);
+        //nbttagcompound.setString("serverUUID", serverUUID);
         nbttagcompound.setString("currentSignalBlock", currentSignalBlock);
         nbttagcompound.setBoolean("isConnected", isConnected);
         nbttagcompound.setBoolean("stationStop", stationStop);
@@ -464,7 +479,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
         mtcOverridePressed = ntc.getBoolean("mtcOverridePressed");
         overspeedOveridePressed = ntc.getBoolean("overspeedOverridePressed");
-        serverUUID = ntc.getString("serverUUID");
+        //serverUUID = ntc.getString("serverUUID");
         currentSignalBlock = ntc.getString("currentSignalBlock");
         isConnected = ntc.getBoolean("isConnected");
         stationStop = ntc.getBoolean("stationStop");
@@ -592,35 +607,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 soundBell3();
             }
         }
-    }
-
-    /**
-     * All this is used in GUI only
-     *
-     * @return
-     */
-    public String getCurrentNumCartsPulled() {
-        return (this.dataWatcher.getWatchableObjectString(26));
-    }
-
-    public String getCurrentMassPulled() {
-        return (this.dataWatcher.getWatchableObjectString(27));
-    }
-
-    public String getCurrentSpeedSlowDown() {
-        return (this.dataWatcher.getWatchableObjectString(28));
-    }
-
-    public String getCurrentAccelSlowDown() {
-        return (this.dataWatcher.getWatchableObjectString(29));
-    }
-
-    public String getCurrentBrakeSlowDown() {
-        return (this.dataWatcher.getWatchableObjectString(30));
-    }
-
-    public String getCurrentFuelConsumptionChange() {
-        return (this.dataWatcher.getWatchableObjectString(31));
     }
 
     public Float getCustomSpeedGUI() {
@@ -1096,63 +1082,63 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 if ((mtcType == 2 || mtcType == 3) && !trainIsWMTCSupported()) {
                     //Seems like the MTC card has been removed suddenly. Terminate connections.
                     disconnectFromServer();
-                    serverUUID = "";
+                    //serverUUID = "";
                     mtcStatus = 0;
                     Traincraft.mtcChannel.sendToAllAround(new PacketMTC(getEntityId(), mtcStatus, 2), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
                 }
-                    isDriverOverspeed = getSpeed() > speedLimit && speedLimit != 0 && enforceSpeedLimits;
-                    if (isDriverOverspeed && (ticksExisted % 40 == 0) && atoStatus != 1 && this.riddenByEntity != null) {
-                        //Todo Play Sound on Client
-                        //Traincraft.playSoundOnClientChannel.sendTo(new PacketPlaySoundOnClient(7, "tc:mtc_overspeed"), (EntityPlayerMP) this.riddenByEntity);
+                isDriverOverspeed = getSpeed() > speedLimit && speedLimit != 0 && enforceSpeedLimits;
+                if (isDriverOverspeed && (ticksExisted % 40 == 0) && atoStatus != 1 && this.riddenByEntity != null) {
+                    //Todo Play Sound on Client
+                    //Traincraft.playSoundOnClientChannel.sendTo(new PacketPlaySoundOnClient(7, "tc:mtc_overspeed"), (EntityPlayerMP) this.riddenByEntity);
+                }
+                if (isDriverOverspeed && ticksExisted % 120 == 0 && !overspeedBrakingInProgress && !overspeedOveridePressed && atoStatus != 1) {
+                    //Start braking.
+                    overspeedBrakingInProgress = true;
+                }
+
+                if (isDriverOverspeed && ticksExisted % 120 == 0 && !overspeedBrakingInProgress && !overspeedOveridePressed && atoStatus != 1) {
+                    overspeedBrakingInProgress = true;
+                }
+
+                if (overspeedBrakingInProgress && atoStatus != 1) {
+                    if (getSpeed() < speedLimit) {
+                        //Stop overspeed braking.
+                        overspeedBrakingInProgress = false;
+                        isDriverOverspeed = false;
+                    } else {
+                        slow(speedLimit);
                     }
-                    if (isDriverOverspeed && ticksExisted % 120 == 0 && !overspeedBrakingInProgress && !overspeedOveridePressed && atoStatus != 1) {
-                        //Start braking.
-                        overspeedBrakingInProgress = true;
-                    }
+                }
 
-                    if (isDriverOverspeed && ticksExisted % 120 == 0 && !overspeedBrakingInProgress && !overspeedOveridePressed && atoStatus != 1) {
-                        overspeedBrakingInProgress = true;
-                    }
-
-                    if (overspeedBrakingInProgress && atoStatus != 1) {
-                        if (getSpeed() < speedLimit) {
-                            //Stop overspeed braking.
-                            overspeedBrakingInProgress = false;
-                            isDriverOverspeed = false;
-                        } else {
-                            slow(speedLimit);
-                        }
-                    }
-
-                    distanceFromStopPoint = stopPoint3.distanceTo(Vec3.createVectorHelper(this.posX, this.posY, this.posZ));
-                    distanceFromSpeedChange = speedChange3.distanceTo(Vec3.createVectorHelper(this.posX, this.posY, this.posZ));
+                distanceFromStopPoint = stopPoint3.distanceTo(Vec3.createVectorHelper(this.posX, this.posY, this.posZ));
+                distanceFromSpeedChange = speedChange3.distanceTo(Vec3.createVectorHelper(this.posX, this.posY, this.posZ));
 
 
-                    if (distanceFromSpeedChange < this.speedLimit && !(distanceFromSpeedChange < this.nextSpeedLimit)) {
-                        speedLimit = (int) Math.round(distanceFromSpeedChange);
-                        speedGoingDown = true;
+                if (distanceFromSpeedChange < this.speedLimit && !(distanceFromSpeedChange < this.nextSpeedLimit)) {
+                    speedLimit = (int) Math.round(distanceFromSpeedChange);
+                    speedGoingDown = true;
 
-                        if (distanceFromSpeedChange <= 5) {
-                            speedChange3 = Vec3.createVectorHelper(0, 0, 0);
-                            speedLimit = nextSpeedLimit;
-                            nextSpeedLimit = 0;
-                            speedGoingDown = false;
+                    if (distanceFromSpeedChange <= 5) {
+                        speedChange3 = Vec3.createVectorHelper(0, 0, 0);
+                        speedLimit = nextSpeedLimit;
+                        nextSpeedLimit = 0;
+                        speedGoingDown = false;
 
-                            Traincraft.mtcChannel.sendToAllAround(new PacketSpeedLimit(getEntityId(), speedLimit, nextSpeedLimit, 0, 0, 0),
-                                    new TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
-                        }
-
+                        Traincraft.mtcChannel.sendToAllAround(new PacketSpeedLimit(getEntityId(), speedLimit, nextSpeedLimit, 0, 0, 0),
+                                new TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
                     }
 
-                    if (distanceFromStopPoint >= 40 && distanceFromStopPoint < this.speedLimit && !(this.stopPoint3.xCoord == 0.0)) {
-                        this.speedLimit = (int) Math.round(distanceFromStopPoint);
-                        speedGoingDown = true;
-                    } else if (distanceFromStopPoint >= 10 && distanceFromStopPoint < this.speedLimit && !(this.stopPoint3.xCoord == 0.0) && (mtcType == 2 || mtcType == 3)) {
-                        this.speedLimit = (int) Math.round(distanceFromStopPoint);
-                        speedGoingDown = true;
-                    }
-                    Traincraft.mtcChannel.sendToAllAround(new PacketSpeedLimit(getEntityId(), speedLimit, nextSpeedLimit),
-                            new TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
+                }
+
+                if (distanceFromStopPoint >= 40 && distanceFromStopPoint < this.speedLimit && !(this.stopPoint3.xCoord == 0.0)) {
+                    this.speedLimit = (int) Math.round(distanceFromStopPoint);
+                    speedGoingDown = true;
+                } else if (distanceFromStopPoint >= 10 && distanceFromStopPoint < this.speedLimit && !(this.stopPoint3.xCoord == 0.0) && (mtcType == 2 || mtcType == 3)) {
+                    this.speedLimit = (int) Math.round(distanceFromStopPoint);
+                    speedGoingDown = true;
+                }
+                Traincraft.mtcChannel.sendToAllAround(new PacketSpeedLimit(getEntityId(), speedLimit, nextSpeedLimit),
+                        new TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
 
 				/*if (distanceFromStopPoint < this.getSpeed() && !(distanceFromStopPoint < nextSpeedLimit)  && !(this instanceof EntityLocoElectricPeachDriverlessMetro)) {
 					speedLimit = (int) Math.round(distanceFromStopPoint);
@@ -1160,82 +1146,61 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 				}*/
 
 
-                    //For Automatic Train Operation
+                //For Automatic Train Operation
 
-                    if (this.atoStatus == 1 && trainIsATOSupported()) {
-                        distanceFromStationStop = stationStop3.distanceTo(Vec3.createVectorHelper(this.posX, this.posY, this.posZ));
-                        if (this.parkingBrake) {
-                            this.parkingBrake = false;
-                            //Accelerate to the speed limit
-                        }
-                        if (!(distanceFromStopPoint < this.getSpeed()) && (!(distanceFromSpeedChange < this.getSpeed())) && !(distanceFromStationStop < this.getSpeed() + 5)) {
-                            accel(this.speedLimit);
-                        }
-
-
-                        //Todo: ATO
-
-                if (this.atoStatus == 1) {
-
-                }
-                if (distanceFromStationStop < this.getSpeed()) {
-                    stop(stationStop3);
-                }
-
-                if (distanceFromSpeedChange < this.getSpeed() && !(this.getSpeed() == this.nextSpeedLimit)) {
-                    //Slow it down to the next speed limit
-                    slow(this.nextSpeedLimit);
-                }
-
-                if (isDriverOverspeed) {
-                    //The ATO system is speeding somehow, slow it down
-                    slow(this.speedLimit);
-                }
-                if (this.distanceFromStopPoint < 2 || this.distanceFromStationStop < 2 && !stationStop) {
-                    this.parkingBrake = true;
-                }
-
-                if (this.distanceFromStationStop < 2 && !stationStop) {
-                    //Disengage ATO.
-
-                    this.isBraking = true;
-                    this.stationStop3 = Vec3.createVectorHelper(0,0,0);
-
-                    this.atoStatus = 0;
-                    this.stationStop = true;
-
-                    Traincraft.mtcChannel.sendToAllAround(new PacketATO(this.getEntityId(), 0), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
-                    Traincraft.mtcChannel.sendToAllAround(new PacketStopPoint(this.getEntityId(), 0.0, 0.0, 0.0, 1), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
-                    Traincraft.brakeChannel.sendToAllAround(new PacketParkingBrake(true, this.getEntityId()),
-                            new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
-                    stationStopComplete();
-
-                }
-
-
-                }
-
+                if (this.atoStatus == 1 && trainIsATOSupported()) {
+                    distanceFromStationStop = stationStop3.distanceTo(Vec3.createVectorHelper(this.posX, this.posY, this.posZ));
+                    if (this.parkingBrake) {
+                        this.parkingBrake = false;
+                        //Accelerate to the speed limit
                     }
+                    if (!(distanceFromStopPoint < this.getSpeed()) && (!(distanceFromSpeedChange < this.getSpeed())) && !(distanceFromStationStop < this.getSpeed() + 5)) {
+                        accel(this.speedLimit);
+                    }
+
+
+                    if (distanceFromStationStop < this.getSpeed()) {
+                        stop(stationStop3);
+                    }
+
+                    if (distanceFromSpeedChange < this.getSpeed() + 5 && !(this.getSpeed() == this.nextSpeedLimit)) {
+                        //Slow it down to the next speed limit
+                        slow(this.nextSpeedLimit);
+                    }
+
+                    if (isDriverOverspeed) {
+                        //The ATO system is speeding somehow, slow it down
+                        slow(this.speedLimit);
+                    }
+                    if (this.distanceFromStopPoint < 2 || this.distanceFromStationStop < 2 && !stationStop) {
+                        this.parkingBrake = true;
+                    }
+
+                    if (this.distanceFromStationStop < 2 && !stationStop) stationStopComplete();
+
+
+
                 }
+
+            }
+        }
 
 
         super.onUpdate();
         if (!worldObj.isRemote) {
             //System.out.println(motionX +" "+motionZ);
-            dataWatcher.updateObject(25, (int) convertSpeed(Math.sqrt(motionX * motionX + motionZ * motionZ)));
-            dataWatcher.updateObject(24, fuelTrain);
-            dataWatcher.updateObject(20, overheatLevel);
-            dataWatcher.updateObject(22, locoState);
             dataWatcher.updateObject(3, destination);
             dataWatcher.updateObject(5, trainID);
-            dataWatcher.updateObject(26, (castToString(currentNumCartsPulled)));
-            dataWatcher.updateObject(27, (castToString((currentMassPulled)) + " tons"));
-            dataWatcher.updateObject(28, ((int) currentSpeedSlowDown) + " km/h");
-            dataWatcher.updateObject(29, (castToString((double) (Math.round(currentAccelSlowDown * 1000)) / 1000)));
-            dataWatcher.updateObject(30, (castToString((double) (Math.round(currentBrakeSlowDown * 1000)) / 1000)));
-            dataWatcher.updateObject(31, ("1c/" + castToString((int) (currentFuelConsumptionChange)) + " per tick"));
             dataWatcher.updateObject(15, getMaxSpeed());
-            //System.out.println();
+            dataWatcher.updateObject(20, overheatLevel);
+            dataWatcher.updateObject(22, locoState);
+            dataWatcher.updateObject(24, fuelTrain);
+            dataWatcher.updateObject(25, (int) convertSpeed(Math.sqrt(motionX * motionX + motionZ * motionZ)));
+            dataWatcher.updateObject(26, guiDetailsJSON());
+            dataWatcher.updateObject(27, renderRefs.toString());
+            dataWatcher.updateObject(31, ("1c/" + castToString((int) (currentFuelConsumptionChange)) + " per tick"));
+
+
             if (this.worldObj.handleMaterialAcceleration(this.boundingBox.expand(0.0D, -0.2000000059604645D, 0.0D).contract(0.001D, 0.001D, 0.001D), Material.water, this) && this.updateTicks % 4 == 0) {
                 if (!hasDrowned && !worldObj.isRemote && FMLCommonHandler.instance().getMinecraftServerInstance() != null && this.lastEntityRider instanceof EntityPlayer) {
                     FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().sendChatMsg(new ChatComponentText(((EntityPlayer) this.lastEntityRider).getDisplayName() + " drowned " + this.getTrainOwner() + "'s locomotive"));
@@ -1501,13 +1466,10 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             }
             this.setDead();
             disconnectFromServer();
+
+            if (ttTransceiver != null) ttTransceiver.disconnect();
             ServerLogger.deleteWagon(this);
 
-            ArrayList<Vec3> positions = new ArrayList<>();
-            positions.add(Vec3.createVectorHelper(Math.floor(posX), Math.floor(posY), Math.floor(posZ)));
-
-
-            //VBCTracking.getInstance().updateFromRS(positions);
 
             if (damagesource.getEntity() instanceof EntityPlayer) {
                 dropCartAsItem(((EntityPlayer) damagesource.getEntity()).capabilities.isCreativeMode);
@@ -1702,137 +1664,40 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     }
 
     public void stop(Vec3 signalPosition) {
-        double currentDistance = Math.copySign(Vec3.createVectorHelper(this.posX, this.posY, this.posZ).distanceTo(signalPosition), 1.0D);
-        double originalDistance;
-        originalDistance = currentDistance;
-        double slowPercentage = 3D;
-        if (1.0D - currentDistance != 0.0D && originalDistance != 0.0D) {
-            slowPercentage = currentDistance / this.getSpeed();
-        }
-       // System.out.println(slowPercentage);
-        this.motionX *= slowPercentage;
-        this.motionZ *= slowPercentage;
+        Vec3 currentPosition = Vec3.createVectorHelper(this.posX, this.posY, this.posZ);
+        double currentDistance = currentPosition.distanceTo(Vec3.createVectorHelper(signalPosition.xCoord, signalPosition.yCoord, signalPosition.zCoord));
+        double originalDistance = currentDistance;
+        double brakingPercentage = 0.3D;
+        double brakingFactor = 0.9D; // Adjust this value for faster deceleration
+        double smoothingFactor = 0.9D; // Adjust this value for smoother deceleration
 
-    }
-
-    @Override
-    public void receiveMessage(MTCMessage message) {
-        JsonParser parser = new JsonParser();
-
-        JsonObject thing = parser.parse(message.message.toString()).getAsJsonObject();
-        //System.out.println("Got one!");
-        //Todo: W-MTC
-       /* if (message != null) {
-            if (thing.get("funct").getAsString().equals("startlevel2")) {
-                //That's actually really great, now let's get where it sent from owo
-                //	System.out.println("Connected!");
-                serverUUID = message.UUIDFrom;
-                mtcType = 2;
-                mtcStatus = thing.get("mtcStatus").getAsInt();
-                isConnected = true;
-                isConnecting = false;
-                Traincraft.mscChannel.sendToAllAround(new PacketMTC(getEntityId(), mtcStatus, 2), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
-                speedLimit = thing.get("speedLimit").getAsInt();
-                nextSpeedLimit = thing.get("nextSpeedLimit").getAsInt();
-                Traincraft.itsChannel.sendToAllAround(new PacketSetSpeed(speedLimit, 0, 0, 0, getEntityId()), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
-                if (nextSpeedLimit != 0) {
-                    xSpeedLimitChange = thing.get("nextSpeedLimitChangeX").getAsDouble();
-                    ySpeedLimitChange = thing.get("nextSpeedLimitChangeY").getAsDouble();
-                    zSpeedLimitChange = thing.get("nextSpeedLimitChangeZ").getAsDouble();
-                }
-
-            } else if (thing.get("funct").getAsString().equals("response")) {
-                mtcType = 2;
-                this.mtcStatus = thing.get("mtcStatus").getAsInt();
-                Traincraft.mscChannel.sendToAllAround(new PacketMTC(getEntityId(), mtcStatus, 2), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
-                nextSpeedLimit = thing.get("nextSpeedLimit").getAsInt();
-                if (!speedGoingDown && xFromStopPoint == 0.0) {
-                    speedLimit = thing.get("speedLimit").getAsInt();
-                    Traincraft.itsChannel.sendToAllAround(new PacketSetSpeed(speedLimit, 0, 0, 0, getEntityId()), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
-                }
-                if (thing.get("speedChange").getAsBoolean()) {
-                    xSpeedLimitChange = thing.get("nextSpeedLimitChangeX").getAsDouble();
-                    ySpeedLimitChange = thing.get("nextSpeedLimitChangeY").getAsDouble();
-                    zSpeedLimitChange = thing.get("nextSpeedLimitChangeZ").getAsDouble();
-                    Traincraft.itnsChannel.sendToAllAround(new PacketNextSpeed( nextSpeedLimit, 0,0,0, xSpeedLimitChange, ySpeedLimitChange, zSpeedLimitChange, this.getEntityId()), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
-                }
-
-                if (thing.get("endSoon").getAsBoolean()) {
-                    if (!(stationStop)) {
-                        xFromStopPoint = thing.get("xStopPoint").getAsDouble();
-                        yFromStopPoint = thing.get("yStopPoint").getAsDouble();
-                        zFromStopPoint = thing.get("zStopPoint").getAsDouble();
-                        Traincraft.atoSetStopPoint.sendToAllAround(new PacketATOSetStopPoint(this.getEntityId(), xFromStopPoint, yFromStopPoint, zFromStopPoint, xStationStop, yStationStop, zStationStop), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
-                    }
-                }
-                if (thing.get("stationStopSoon").getAsBoolean() && !stationStop) {
-                    xStationStop = thing.get("xStationStop").getAsDouble();
-                    yStationStop = thing.get("yStationStop").getAsDouble();
-                    zStationStop = thing.get("zStationStop").getAsDouble();
-
-
-                    Traincraft.atoSetStopPoint.sendToAllAround(new PacketATOSetStopPoint(this.getEntityId(), xFromStopPoint, yFromStopPoint, zFromStopPoint, xStationStop, yStationStop, zStationStop), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
-                } if (thing.get("atoStatus") != null) {
-                    this.atoStatus = thing.get("atoStatus").getAsInt();
-                    Traincraft.atoChannel.sendToAllAround(new PacketATO(this.getEntityId(), thing.get("atoStatus").getAsInt()),new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
-                }
-               
-
-            }
-        }*/
-    }
-
-    @Override
-    public void sendMessage(MTCMessage message) {
-        //	System.out.println("Sendmessage..");
-        if (Loader.isModLoaded("ComputerCraft") || Loader.isModLoaded("OpenComputers")) {
-            AxisAlignedBB targetBox = AxisAlignedBB.getBoundingBox(this.posX, this.posY, this.posZ, this.posX + 2000, this.posY + 2000, this.posZ + 2000);
-            List<TileEntity> allTEs = worldObj.loadedTileEntityList;
-            for (TileEntity te : allTEs) {
-
-                if (te instanceof TileInstructionRadio) {
-
-                    TileInstructionRadio teP = (TileInstructionRadio) te;
-
-                    if (teP.uniqueID.equals(message.UUIDTo)) {
-
-                        //System.out.println(message.message);
-                        teP.receiveMessage(message);
-                    }
-
-                }
-
-            }
+        if (currentDistance != 0.0D && originalDistance != 0.0D) {
+            brakingFactor = Math.pow((originalDistance - currentDistance) / originalDistance, 2); // Apply non-linear braking function
+            double adjustedBrakingPercentage = 1.0D - (1.0D - brakingPercentage) * brakingFactor;
+            brakingPercentage = brakingPercentage + (adjustedBrakingPercentage - brakingPercentage) * smoothingFactor;
         }
 
-
+        this.motionX *= brakingPercentage;
+        this.motionZ *= brakingPercentage;
     }
 
-    public void attemptConnection(String theServerUUID) {
-        //Oh, that's great! We just got the servers UUID. Now let's try connecting to it.
-        if (theServerUUID != null && !serverUUID.equals(theServerUUID) && !canBePulled) {
-            //	System.out.println("Oh, that's great! We just got the servers UUID. Now let's try connecting to it.");
-            JsonObject sendTo = new JsonObject();
-            sendTo.addProperty("funct", "attemptconnection");
-            sendTo.addProperty("entityID", this.getEntityId());
-            sendTo.addProperty("trainType", this.trainLevel);
-            //	System.out.println(sendTo.toString());
-            sendMessage(new MTCMessage(this.trainID, theServerUUID, sendTo.toString(), 0));
-        }
+
+    public void attemptConnection(int ttId) {
+        ttTransceiver = new LocoTransceiver(getEntityId(), this);
+        ttTransceiver.connect(ttId);
     }
 
     public void disconnectFromServer() {
         JsonObject sendTo = new JsonObject();
         sendTo.addProperty("funct", "disconnect");
-        sendMessage(new MTCMessage(this.trainID, serverUUID, sendTo.toString(), 0));
+        // sendMessage(new MTCMessage(this.trainID, serverUUID, sendTo.toString(), 0));
         this.mtcType = 1;
-        this.serverUUID = "";
+        // this.serverUUID = "";
         isConnected = false;
     }
 
     public void remoteControlFromPacket(int key) {
-        System.out.println("glrlr");
-        System.out.println(this.serverRealRotation);
+
         switch (key) {
             case 1: {
                 double rotation = this.serverRealRotation;
@@ -1898,28 +1763,58 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     }
 
     public void stationStopComplete() {
+        this.isBraking = true;
+        this.stationStop3 = Vec3.createVectorHelper(0, 0, 0);
+
+        this.atoStatus = 0;
+        this.stationStop = true;
+        this.parkingBrake = true;
+
+        Traincraft.mtcChannel.sendToAllAround(new PacketATO(this.getEntityId(), 0), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
+        Traincraft.mtcChannel.sendToAllAround(new PacketStopPoint(this.getEntityId(), 0.0, 0.0, 0.0, 1), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
+        Traincraft.brakeChannel.sendToAllAround(new PacketParkingBrake(true, this.getEntityId()),
+                new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
     }
 
     public void sendMTCStatusUpdate() {
-        JsonObject sendingObj = new JsonObject();
-        sendingObj.addProperty("funct", "update");
-        sendingObj.addProperty("signalBlock", this.currentSignalBlock);
-        sendingObj.addProperty("trainLevel", this.trainLevel);
-        sendingObj.addProperty("trainName", this.getTrainName());
-        sendingObj.addProperty("destination", this.getDestinationGUI());
-        sendingObj.addProperty("posX", this.posX);
-        sendingObj.addProperty("posY", this.posY);
-        sendingObj.addProperty("posZ", this.posZ);
-        sendingObj.addProperty("entityID", this.getEntityId());
-        sendingObj.addProperty("atoStatus", this.atoStatus);
-        if (this.ridingEntity != null && this.ridingEntity instanceof EntityPlayer) {
-            sendingObj.addProperty("driverName", ((EntityPlayer) ridingEntity).getDisplayName());
-        } else {
-            sendingObj.addProperty("driverName", "Nobody");
+
+        Vec3 end = xyz((int) posX, (int) posY, (int) posZ);
+
+        if (cartLinked1 != null) {
+            Map<Integer, Vec3> distances = new HashMap<>();
+            if ((cartLinked1).train != null && (cartLinked1).train.getTrains().size() != 0 && (cartLinked1).train.getTrains().size() > 1) {
+
+                for (int i = 0; i < (cartLinked1).train.getTrains().size(); i++) {
+                    EntityRollingStock stock = (cartLinked1).train.getTrains().get(i);
+                    distances.put((int) getDistance(stock.posX, stock.posY, stock.posZ), xyz((int) stock.posX, (int) stock.posY, (int) stock.posZ));
+                }
+            }
+
+            List sortedKeys = new ArrayList(distances.keySet());
+            Collections.sort(sortedKeys);
+
+
+            if (!sortedKeys.isEmpty()) {
+                end = distances.get(sortedKeys.get(sortedKeys.size() - 1));
+            }
         }
-        sendingObj.addProperty("currentSpeed", (int) Math.abs(this.getSpeed()));
-        sendingObj.addProperty("speedOverrideActivated", overspeedOveridePressed);
-        sendMessage(new MTCMessage(this.trainID, this.serverUUID, sendingObj.toString(), 1));
+
+        if (ttTransceiver != null) {
+            Map<String, Object> data = new HashMap<String, Object>();
+            data.put("x1", (int) this.posX);
+            data.put("y1", (int) this.posY);
+            data.put("z1", (int) this.posZ);
+            data.put("x2", (int) end.xCoord);
+            data.put("y2", (int) end.yCoord);
+            data.put("z2", (int) end.zCoord);
+
+            data.put("rp", rotationPitch);
+            data.put("ry", rotationYaw);
+
+            ttTransceiver.sendMessage(new Message(-1, getEntityId(), "pos", data));
+        }
+        //sendMessage(new MTCMessage(this.trainID, this.serverUUID, sendingObj.toString(), 1));
+
     }
 
     public boolean trainIsWMTCSupported() {
@@ -1935,7 +1830,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 support = false;
             }
         }
-        return this instanceof EntityLocoDieselSD40 || this instanceof EntityLocoElectricBP4 || this instanceof EntityLocoDieselClass66 || this instanceof EntityLocoElectricBR185 || this instanceof EntityLocoElectricCD151 || this instanceof EntityLocoDieselDD35A || this instanceof EntityLocoElectricICE1 || this instanceof EntityLocoElectricHighSpeedZeroED || this instanceof EntityLocoElectricE103 || this instanceof EntityLocoDieselV60_DB || this instanceof EntityLocoDieselCD742 || this instanceof EntityLocoElectricVL10 || this instanceof EntityLocoElectricTramNY || this instanceof EntityLocoDieselIC4_DSB_MG || this instanceof EntityLocoDieselSD70 || this instanceof PCH120Commute || support;
+        return this instanceof EntityLocoDieselSD40 || this instanceof EntityLocoElectricBP4 || this instanceof EntityLocoDieselClass66 || this instanceof EntityLocoElectricBR185 || this instanceof EntityLocoElectricCD151 || this instanceof EntityLocoDieselDD35A || this instanceof EntityLocoElectricICE1 || this instanceof EntityLocoElectricHighSpeedZeroED || this instanceof EntityLocoElectricE103 || this instanceof EntityLocoDieselV60_DB || this instanceof EntityLocoDieselCD742 || this instanceof EntityLocoElectricVL10 || this instanceof EntityLocoElectricTramNY || this instanceof EntityLocoDieselIC4_DSB_MG || this instanceof EntityLocoDieselSD70 || this instanceof PCH120Commute || this instanceof PCH130Commute2 || support;
 
 
     }
@@ -1953,7 +1848,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 support = false;
             }
         }
-        return this instanceof EntityLocoElectricHighSpeedZeroED || this instanceof EntityLocoElectricTramNY || this instanceof EntityLocoElectricICE1 || this instanceof EntityLocoDieselIC4_DSB_MG || this instanceof PCH120Commute || this instanceof PCH100H || support;
+        return this instanceof EntityLocoElectricHighSpeedZeroED || this instanceof EntityLocoElectricTramNY || this instanceof EntityLocoElectricICE1 || this instanceof EntityLocoDieselIC4_DSB_MG || this instanceof PCH120Commute || this instanceof PCH100H || this instanceof PCH130Commute2 || support;
 
     }
 

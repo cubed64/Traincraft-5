@@ -2,6 +2,8 @@ package train.common;
 
 import com.jcirmodelsquad.tcjcir.extras.JCIRQuote;
 import com.jcirmodelsquad.tcjcir.extras.QuoteList;
+import com.jcirmodelsquad.tcjcir.features.signal.dynamic.DynamicSignalServer;
+import com.jcirmodelsquad.tcjcir.features.signal.dynamic.TrainTalk;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
@@ -16,7 +18,6 @@ import cpw.mods.fml.common.registry.VillagerRegistry;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
@@ -33,24 +34,13 @@ import train.common.core.TrainModCore;
 import train.common.core.handlers.*;
 import train.common.generation.ComponentVillageTrainstation;
 import train.common.generation.WorldGenWorld;
-import train.common.items.ItemPaintbrushThing;
-import train.common.items.ItemRemoteController;
-import train.common.items.ItemRemoteControllerModule;
 import train.common.items.TCItems;
 import train.common.library.Info;
-import train.common.library.ItemIDs;
+import com.jcirmodelsquad.tcjcir.features.signal.vbc.VBCTracking;
 import train.common.recipes.AssemblyTableRecipes;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
-
-import static com.jcirmodelsquad.tcjcir.extras.QuoteList.importantQuotes;
 
 @Mod(modid = Info.modID, name = Info.modName, version = Info.modVersion)
 public class Traincraft {
@@ -115,6 +105,8 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 
 
 	public static WorldGenWorld worldGen;
+
+
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -210,6 +202,8 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 
 		proxy.registerBookHandler();
 
+		FMLCommonHandler.instance().bus().register(VBCTracking.getInstance());
+		MinecraftForge.EVENT_BUS.register(VBCTracking.getInstance());
 
 		tcLog.info("Finished Initialization!");
 
@@ -232,7 +226,9 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		Random rand = new Random();
 		JCIRQuote quoteOfTheDay = QuoteList.getQuotes().get(rand.nextInt(QuoteList.getQuotes().size()));
 		tcLog.info(quoteOfTheDay.quote + " -" + quoteOfTheDay.from);
-
+		TrainTalk.getInstance().init();
+		DynamicSignalServer thing = new DynamicSignalServer(0, "AutoTrain Test");
+		thing.init();
 		tcLog.info("Finished PostInitialization! We are done for Traincraft!");
 	}
 

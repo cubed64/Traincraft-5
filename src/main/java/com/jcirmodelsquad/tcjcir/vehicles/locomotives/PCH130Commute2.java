@@ -29,20 +29,23 @@ import train.common.library.GuiIDs;
 import train.common.mtc.MTCMessage;
 import train.common.mtc.network.PacketATO;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class PCH120Commute extends ElectricTrain {
+public class PCH130Commute2 extends ElectricTrain {
 
     DriveScript2 script2 = new DriveScript2();
 
-    public PCH120Commute(World world) {
+
+    public PCH130Commute2(World world) {
         super(world);
+        dataWatcher.addObject(30, "");
+        dataWatcher.addObject(29, "");
+        renderRefs.addProperty("doors", true);
     }
 
 
-    public PCH120Commute(World world, double d, double d1, double d2) {
+    public PCH130Commute2(World world, double d, double d1, double d2) {
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -59,8 +62,8 @@ public class PCH120Commute extends ElectricTrain {
             return;
         }
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 2.75;
-        double yOffset = 0.2;
+        double distance = 2.3;
+        double yOffset = 0;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
         if (side.isServer()) {
@@ -102,6 +105,7 @@ public class PCH120Commute extends ElectricTrain {
             ((EntityPlayer) riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCO, worldObj, (int) this.posX, (int) this.posY, (int) this.posZ);
         }
     }
+
 
     @Override
     protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {
@@ -161,16 +165,22 @@ public class PCH120Commute extends ElectricTrain {
         return true;
     }
 
-    public AxisAlignedBB getDetectionBoundingBox() {
-        if (boundingBox == null) {
-            // boundingBox = AxisAlignedBB.getBoundingBox(posX, posY, posZ, );
+
+    @Override
+    public void onUpdate() {
+        super.onUpdate();
+
+        //Drive with AutoTrain2.
+
+        if (!worldObj.isRemote) {
+            if (script2.active) script2.drive(this);
         }
-        return boundingBox;
     }
+
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
-        return 0.8F;
+        return 0.4F;
     }
 
     @Override
@@ -189,16 +199,12 @@ public class PCH120Commute extends ElectricTrain {
         script2.start(this);
     }
 
-
     @Override
     public void stationStopComplete() {
         super.stationStopComplete();
         script2.stationStop(this);
-       /* theCurrentStation = nextStation;
-        theTimetable.remove(nextStation);
-        atoStatus = 0;
-        this.stationStop3 = Vec3.createVectorHelper(0,0,0);*/
-       // Traincraft.atoSetStopPoint.sendToAllAround(new PacketATOSetStopPoint(this.getEntityId(), xFromStopPoint, yFromStopPoint, zFromStopPoint, xStationStop, yStationStop, zStationStop), new NetworkRegistry.TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
     }
+
+
 
 }

@@ -579,6 +579,9 @@ public enum ItemIDs {
 	minecartPCH120Commute("ItemRollingStock", "pch120", 4),
 	minecartPCH120Car("ItemRollingStock", "pch120car", 3),
 
+	minecartPCH130Commute2("ItemRollingStock", "pch130", 4),
+	minecartPCH130Car2("ItemRollingStock", "pch130car", 3),
+
 	minecartPSRPO("ItemRollingStock", "PSRPOIcon", 3),
 	minecartPS85Baggage("ItemRollingStock", "PS_85_baggage_icon", 3),
 	minecartPScombine("ItemRollingStock", "PScombine", 3),
