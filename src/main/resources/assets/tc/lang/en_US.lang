@@ -1222,12 +1222,14 @@ entity.tc.DOT29080.name=29,080 Gallon Tank Car
 entity.tc.DOT17600.name=17,600 Gallon Tank Car
 entity.tc.NATX30600.name=NATX 30,600 Gallon Tank Car
 
+item.tc:minecartCoffinCar.name=Early Coffin Car
 item.tc:minecartSkeletonLogCar.name=45' Skeleton Log Car
 item.tc:minecartEarlyFlat.name=Early Flatcar
 item.tc:minecartBoulderWagon.name=Boulder Wagon
 item.tc:minecartLogcarNP.name=Log Car NP
 
 
+entity.tc.CoffinCar.name=Early Coffin Car
 entity.tc.Skeleton.name=45' Skeleton Log Car
 entity.tc.EarlyFlat.name=Early Flatcar
 entity.tc.BoulderWagon.name=Boulder Wagon

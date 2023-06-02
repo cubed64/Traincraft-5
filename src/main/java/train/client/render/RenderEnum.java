@@ -1359,6 +1359,7 @@ public enum RenderEnum {
 	DOT11117600(DOT11117600.class, new Model17600DOT111(),"17600galTank_", true, new float[]{0F, 0.00F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	NATX30600(NATX30600.class, new ModelNATX30600(),"natx_30600_", true, new float[]{0F, 0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
+	CoffinCar(CoffinCar.class, new ModelCoffinCar(), "CoffinCar_", true, new float[] { 0.0F, -0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Skeleton(SkeletonLogCar.class, new ModelSkeletonLogCar(), "SkeletonLogCar_", true, new float[] { 0.0F, -0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	EarlyFlat(EarlyFlat.class, new ModelEarlyFlat(), "EarlyFlatCar", false, new float[] { 0.0F, -0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 

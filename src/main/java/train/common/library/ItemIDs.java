@@ -564,6 +564,7 @@ public enum ItemIDs {
 	minecart17600DOT111("ItemRollingStock", "17600DOT", 4),
 	minecartNATX30600("ItemRollingStock", "natx30600", 5),
 
+	minecartCoffinCar("ItemRollingStock", "CoffinCar", 1),
 	minecartSkeletonLogCar("ItemRollingStock", "Skeleton", 1),
 	minecartEarlyFlat("ItemRollingStock", "EarlyFlat", 1),
 
