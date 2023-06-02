@@ -35,6 +35,7 @@ import train.common.core.handlers.*;
 import train.common.generation.ComponentVillageTrainstation;
 import train.common.generation.WorldGenWorld;
 import train.common.items.TCItems;
+import train.common.library.BetterEnumSounds;
 import train.common.library.Info;
 import com.jcirmodelsquad.tcjcir.features.signal.vbc.VBCTracking;
 import train.common.recipes.AssemblyTableRecipes;
@@ -130,6 +131,8 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 
 		proxy.registerTileEntities();
 		proxy.registerSounds();
+		BetterEnumSounds.init();
+
 		proxy.setHook(); // Moved file needed to run JLayer, we need to set a hook in order to retrieve it
 
 		GameRegistry.registerFuelHandler(new FuelHandler());

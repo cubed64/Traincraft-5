@@ -686,6 +686,7 @@ public enum EnumTrains {
 		this.additionnalTooltip=additionnalTooltip;
 	}
 
+
 	/**
 	 * Constructor for freight carts
 	 * @param internalName

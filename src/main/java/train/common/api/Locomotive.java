@@ -5,7 +5,6 @@ import com.jcirmodelsquad.tcjcir.extras.packets.RemoteControlKeyPacket;
 import com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2Handler;
 import com.jcirmodelsquad.tcjcir.features.signal.dynamic.LocoTransceiver;
 import com.jcirmodelsquad.tcjcir.features.signal.dynamic.Message;
-import com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDash944CW;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH100H;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH120Commute;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH130Commute2;
@@ -29,6 +28,7 @@ import net.minecraft.util.*;
 import net.minecraft.world.World;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.lwjgl.input.Keyboard;
+import train.client.MovingTrainSound;
 import train.client.core.handlers.TCKeyHandler;
 import train.common.Traincraft;
 import train.common.adminbook.ServerLogger;
@@ -42,6 +42,7 @@ import train.common.items.ItemATOCard;
 import train.common.items.ItemRemoteController;
 import train.common.items.ItemRemoteControllerModule;
 import train.common.items.ItemWirelessTransmitter;
+import train.common.library.BetterEnumSounds;
 import train.common.library.EnumSounds;
 import train.common.library.Info;
 import train.common.mtc.network.*;
@@ -861,103 +862,130 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         //}
 */
         if (ConfigHandler.SOUNDS) {
-            for (EnumSounds sounds : EnumSounds.values()) {
-                if (sounds.getEntityClass() != null && !sounds.getHornString().equals("") && sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0 && !sounds.getBellString().equals("")) {
-                    if (getFuel() > 0 && this.isLocoTurnedOn()) {
-                        double speed = this.getSpeed();
-                        if (this instanceof DieselDash944CW) {
-                            String sound = "";
-                            double notch1 = (23 * this.getMaxSpeed()) / 100;
-                            double notch2 = (35 * this.getMaxSpeed()) / 100;
-                            double notch3 = (47 * this.getMaxSpeed()) / 100;
-                            double notch4 = (59 * this.getMaxSpeed()) / 100;
-                            double notch5 = (71 * this.getMaxSpeed()) / 100;
-                            double notch6 = (83 * this.getMaxSpeed()) / 100;
-                            double notch7 = (95 * this.getMaxSpeed()) / 100;
-                            double notch8 = this.getMaxSpeed();
 
+            double speed = this.getSpeed();
 
-                            if (soundPosition2 <= 0) {
-                                if (isBetween(speed, -1, 5)) {
-                                    //(speed > -0.001D && speed < 0.01D && soundPosition == 0 && speed < (int)(maxspeeed*(11f/100f))) {
-                                    sound = "tc:GE_D9_7FDL_16_IDLE";
-                                    soundPosition2 = 36.52;
-                                    //^^^^^ idle
-                                } else if (isBetween(speed, 0.01D, notch1)) {//25f being the percentage of the speed
-                                    sound = "tc:GE_D9_7FDL_16_N1";
-                                    soundPosition2 = 19.56;
-                                    //^^^^^ notch 1
-                                } else if (isBetween(speed, notch1, notch2)) {
-                                    sound = "tc:GE_D9_7FDL_16_N2";
-                                    soundPosition2 = 49.96;
-                                } else if (isBetween(speed, notch2, notch3)) {
-                                    sound = "tc:GE_D9_7FDL_16_N3";
-                                    soundPosition2 = 61.1d;
-                                    //^^^^^ notch 3
-                                } else if (isBetween(speed, notch3, notch4)) {
-                                    sound = "tc:GE_D9_7FDL_16_N4";
-                                    soundPosition2 = 49.32d;
-                                    //^^^^^ notch 4
-                                } else if (isBetween(speed, notch4, notch5)) {
-                                    sound = "tc:GE_D9_7FDL_16_N5";
-                                    soundPosition2 = 49.96d;
-                                    //^^^^^ notch 5
-                                } else if (isBetween(speed, notch5, notch6)) {
-                                    sound = "tc:GE_D9_7FDL_16_N6";
-                                    soundPosition2 = 47.48d;
-                                    //^^^^^ notch 6
-                                } else if (isBetween(speed, notch6, notch7)) {
-                                    sound = "tc:GE_D9_7FDL_16_N7";
-                                    soundPosition2 = 49.96d;
-                                    //^^^^^ notch 7
-                                } else if (isBetween(speed, notch7, notch8)) {
-                                    sound = "tc:GE_D9_7FDL_16_N8";
-                                    soundPosition2 = 48.4d;
-                                    //^^^^^ notch 8
-                                }
-                            }
+            if (BetterEnumSounds.trainSounds.containsKey(this.getClass().getName()) && worldObj.isRemote) {
+                //Use BetterEnumSounds.
+                BetterEnumSounds sounds = BetterEnumSounds.trainSounds.get(this.getClass().getName());
+                String sound = "";
 
+                ArrayList<Integer> scaledPercentages = new ArrayList<Integer>();
 
-                            if (!sound.equals("")) {
-                                System.out.println(sound);
-                                worldObj.playSoundAtEntity(this, sound, 1F, 1F);
+                for (Integer percent : sounds.getPercentages()) {
+                    scaledPercentages.add((int) ((percent * this.getMaxSpeed() - 1) / 100));
+                }
 
-                            }
-                            if (soundPosition2 > 0) {
-                                soundPosition2--;
-                            }
+                if (soundPosition2 <= 0) {
+                    for (int i = 0; i < scaledPercentages.size(); i++) {
+                        if (i + 1 < scaledPercentages.size()) {
+                            Integer first = scaledPercentages.get(i);
+                            Integer second = scaledPercentages.get(i + 1);
 
-                        } else {
-                            if (speed > -0.001D && speed < 0.01D && soundPosition == 0) {
-                                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getIdleString(), sounds.getIdleVolume(), 1F);
-                                soundPosition = sounds.getIdleSoundLength();//soundPosition is probably where IN the sound it is currently playing, eg 1 sec int osoudn file
-                            }
-                            if (sounds.getSoundChangeWithSpeed() && !sounds.getHornString().equals("") && sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0 && !sounds.getBellString().equals("")) {
-                                if (speed > 0.01D && speed < 0.06D && soundPosition == 0) {
-                                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 0.1F);
-                                    soundPosition = sounds.getRunSoundLength();
-                                } else if (speed > 0.06D && speed < 0.2D && soundPosition == 0) {
-                                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 0.4F);
-                                    soundPosition = sounds.getRunSoundLength() / 2;
-                                } else if (speed > 0.2D && soundPosition == 0) {
-                                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 0.5F);
-                                    soundPosition = sounds.getRunSoundLength() / 3;
-                                }
-                            } else {
-                                if (speed > 0.01D && soundPosition == 0) {
-                                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 1F);
-                                    soundPosition = sounds.getRunSoundLength();
-                                }
-                            }
-                            if (soundPosition > 0) {
-                                soundPosition--;
+                            if (isBetween(speed, first, second)) {
+                                sound = sounds.getEngineSounds()[i];
+                                soundPosition2 = sounds.getLengths()[i];
+                                break;
+                            } else if (speed > second) {
+                                sound = sounds.getEngineSounds()[scaledPercentages.size() - 1];
+                                soundPosition2 = sounds.getLengths()[scaledPercentages.size() - 1];
                             }
                         }
                     }
-                    break;
+
+
+
+                    /*if (isBetween(speed, -1, 5)) {
+                        //(speed > -0.001D && speed < 0.01D && soundPosition == 0 && speed < (int)(maxspeeed*(11f/100f))) {
+                        sound = "tc:GE_D9_7FDL_16_IDLE";
+                        soundPosition2 = 36.52;
+                        //^^^^^ idle
+                    } else if (isBetween(speed, 0.01D, notch1)) {//25f being the percentage of the speed
+                        sound = "tc:GE_D9_7FDL_16_N1";
+                        soundPosition2 = 19.56;
+                        //^^^^^ notch 1
+                    } else if (isBetween(speed, notch1, notch2)) {
+                        sound = "tc:GE_D9_7FDL_16_N2";
+                        soundPosition2 = 49.96;
+                    } else if (isBetween(speed, notch2, notch3)) {
+                        sound = "tc:GE_D9_7FDL_16_N3";
+                        soundPosition2 = 61.1d;
+                        //^^^^^ notch 3
+                    } else if (isBetween(speed, notch3, notch4)) {
+                        sound = "tc:GE_D9_7FDL_16_N4";
+                        soundPosition2 = 49.32d;
+                        //^^^^^ notch 4
+                    } else if (isBetween(speed, notch4, notch5)) {
+                        sound = "tc:GE_D9_7FDL_16_N5";
+                        soundPosition2 = 49.96d;
+                        //^^^^^ notch 5
+                    } else if (isBetween(speed, notch5, notch6)) {
+                        sound = "tc:GE_D9_7FDL_16_N6";
+                        soundPosition2 = 47.48d;
+                        //^^^^^ notch 6
+                    } else if (isBetween(speed, notch6, notch7)) {
+                        sound = "tc:GE_D9_7FDL_16_N7";
+                        soundPosition2 = 49.96d;
+                        //^^^^^ notch 7
+                    } else if (isBetween(speed, notch7, notch8)) {
+                        sound = "tc:GE_D9_7FDL_16_N8";
+                        soundPosition2 = 48.4d;
+                        //^^^^^ notch 8
+                    }*/
+                }
+
+
+                if (!sound.equals("")) {
+                    System.out.println(sound);
+                    Minecraft.getMinecraft().getSoundHandler().playSound(new MovingTrainSound(new ResourceLocation("tc:" + sound)));
+                }
+
+                if (soundPosition2 > 0) {
+                    soundPosition2--;
+
+                }
+
+            } else {
+                    //Use the old sound system.
+
+
+                    for (EnumSounds sounds : EnumSounds.values()) {
+                        if (sounds.getEntityClass() != null && !sounds.getHornString().equals("") && sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0 && !sounds.getBellString().equals("")) {
+                            if (getFuel() > 0 && this.isLocoTurnedOn() && worldObj.isRemote) {
+
+
+                            } else {
+                                if (speed > -0.001D && speed < 0.01D && soundPosition == 0) {
+                                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getIdleString(), sounds.getIdleVolume(), 1F);
+                                    soundPosition = sounds.getIdleSoundLength();//soundPosition is probably where IN the sound it is currently playing, eg 1 sec int osoudn file
+                                }
+                                if (sounds.getSoundChangeWithSpeed() && !sounds.getHornString().equals("") && sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0 && !sounds.getBellString().equals("")) {
+                                    if (speed > 0.01D && speed < 0.06D && soundPosition == 0) {
+                                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 0.1F);
+                                        soundPosition = sounds.getRunSoundLength();
+                                    } else if (speed > 0.06D && speed < 0.2D && soundPosition == 0) {
+                                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 0.4F);
+                                        soundPosition = sounds.getRunSoundLength() / 2;
+                                    } else if (speed > 0.2D && soundPosition == 0) {
+                                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 0.5F);
+                                        soundPosition = sounds.getRunSoundLength() / 3;
+                                    }
+                                } else {
+                                    if (speed > 0.01D && soundPosition == 0) {
+                                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 1F);
+                                        soundPosition = sounds.getRunSoundLength();
+                                    }
+                                }
+                                if (soundPosition > 0) {
+                                    soundPosition--;
+                                }
+                            }
+                        }
+                        break;
+                    }
                 }
             }
-        }
+
 
         for (EnumSounds sounds : EnumSounds.values()) {
             if (sounds.getEntityClass() != null && !sounds.getHornString().equals("") && sounds.getEntityClass().equals(this.getClass()) && !sounds.getBellString().equals("")) {
