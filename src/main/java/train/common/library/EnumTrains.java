@@ -592,7 +592,7 @@ public enum EnumTrains {
 	private Item item;
 	private String trainType;
 	private int MHP;
-	private int maxSpeed;
+	public int maxSpeed;
 	private double mass;
 	private int fuelConsumption;
 	private int waterConsumption;

@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.jcirmodelsquad.tcjcir.extras.packets.RemoteControlKeyPacket;
 import com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2Handler;
+import com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDash944CW;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH100H;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH120Commute;
 import cpw.mods.fml.client.FMLClientHandler;
@@ -41,6 +42,7 @@ import train.common.items.ItemRemoteController;
 import train.common.items.ItemRemoteControllerModule;
 import train.common.items.ItemWirelessTransmitter;
 import train.common.library.EnumSounds;
+import train.common.library.EnumTrains;
 import train.common.library.Info;
 import train.common.mtc.MTCMessage;
 import train.common.mtc.tile.TileInstructionRadio;
@@ -57,6 +59,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     public int inventorySize;
     protected ItemStack locoInvent[];
     private int soundPosition = 0;
+    private double soundPosition2 = 0;
     public boolean parkingBrake = false;
     private int whistleDelay = 0;
     private int bellCount = 0;
@@ -887,6 +890,74 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 if (sounds.getEntityClass() != null && !sounds.getHornString().equals("") && sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0 && !sounds.getBellString().equals("")) {
                     if (getFuel() > 0 && this.isLocoTurnedOn()) {
                         double speed = Math.sqrt(motionX * motionX + motionZ * motionZ);
+                        //float sackspeed = this.getMaxSpeed();
+                        //double maxspeeed = ((double)sackspeed);
+                        double maxspeeed = this.getMaxSpeed();
+                        if (this instanceof DieselDash944CW) {
+                            System.out.println(soundPosition2);
+                            if  (speed > -0.001D && speed < 0.01D && soundPosition2 <= 0 && speed < (int)(maxspeeed*(11d/100d))) {
+                                //(speed > -0.001D && speed < 0.01D && soundPosition == 0 && speed < (int)(maxspeeed*(11f/100f))) {
+                                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "GE_D9_7FDL_16_IDLE", sounds.getIdleVolume(), 1F);
+                                soundPosition2 = 36.52d;
+                                //soundPosition = sounds.getIdleSoundLength();
+                                System.out.println("idle");
+                                System.out.println(speed);
+                                //^^^^^ idle
+                            } else if (speed >= (maxspeeed*(12d/100d))&& soundPosition2 <= 0 && speed < (int)(maxspeeed*(23d/100d)) ){//25f being the percentage of the speed
+                                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "GE_D9_7FDL_16_N1", sounds.getIdleVolume(), 1F);
+                                soundPosition2 = 19.56d;
+                                System.out.println("1");
+                                System.out.println(speed);
+                                //^^^^^ notch 1
+                            } else if (speed >= (maxspeeed*(24d/100d))&& soundPosition2 <= 0 && speed < (int)(maxspeeed*(35d/100d)) ){
+                                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "GE_D9_7FDL_16_N2", sounds.getIdleVolume(), 1F);
+                                soundPosition2 = 49.96d;
+                                System.out.println("2");
+                                System.out.println(speed);
+                                //^^^^^ notch 2
+                            } else if (speed >= (maxspeeed*(36d/100d))&& soundPosition2 <= 0 && speed < (int)(maxspeeed*(47d/100d)) ){
+                                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "GE_D9_7FDL_16_N3", sounds.getIdleVolume(), 1F);
+                                soundPosition2 = 61.1d;
+                                System.out.println("3");
+                                System.out.println(speed);
+                                //^^^^^ notch 3
+                            } else if (speed >= (maxspeeed*(48d/100d))&& soundPosition2 <= 0 && speed < (int)(maxspeeed*(59d/100d)) ){
+                                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "GE_D9_7FDL_16_N4", sounds.getIdleVolume(), 1F);
+                                soundPosition2 = 49.32d;
+                                System.out.println("4");
+                                System.out.println(speed);
+                                //^^^^^ notch 4
+                            } else if (speed >= (maxspeeed*(60d/100d))&& soundPosition2 <= 0 && speed < (int)(maxspeeed*(71d/100d)) ){
+                                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "GE_D9_7FDL_16_N5", sounds.getIdleVolume(), 1F);
+                                soundPosition2 = 49.96d;
+                                System.out.println("5");
+                                System.out.println(speed);
+                                //^^^^^ notch 5
+                            } else if (speed >= (maxspeeed*(72d/100d))&& soundPosition2 <= 0 && speed < (int)(maxspeeed*(83d/100d)) ){
+                                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "GE_D9_7FDL_16_N6", sounds.getIdleVolume(), 1F);
+                                soundPosition2 = 47.48d;
+                                System.out.println("6");
+                                System.out.println(speed);
+                                //^^^^^ notch 6
+                            } else if (speed >= (maxspeeed*(84d/100d))&& soundPosition2 <= 0 && speed < (int)(maxspeeed*(95d/100d)) ){
+                                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "GE_D9_7FDL_16_N7", sounds.getIdleVolume(), 1F);
+                                soundPosition2 = 49.96d;
+                                System.out.println("7");
+                                System.out.println(speed);
+                                //^^^^^ notch 7
+                            }
+                            else if (speed >= (maxspeeed*(96d/100d))&& soundPosition2 <= 0 && speed < (int)(maxspeeed*(100d/100d)) ){
+                                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "GE_D9_7FDL_16_N8", sounds.getIdleVolume(), 1F);
+                                soundPosition2 = 48.4d;
+                                System.out.println("8");
+                                System.out.println(speed);
+                                //^^^^^ notch 8
+                            }
+                            if (soundPosition2 > 0) {
+                                soundPosition2--;
+                            }
+
+                        } else{
                         if (speed > -0.001D && speed < 0.01D && soundPosition == 0) {
                             worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getIdleString(), sounds.getIdleVolume(), 1F);
                             soundPosition = sounds.getIdleSoundLength();//soundPosition is probably where IN the sound it is currently playing, eg 1 sec int osoudn file
@@ -910,6 +981,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                         }
                         if (soundPosition > 0) {
                             soundPosition--;
+                        }
                         }
                     }
                     break;
