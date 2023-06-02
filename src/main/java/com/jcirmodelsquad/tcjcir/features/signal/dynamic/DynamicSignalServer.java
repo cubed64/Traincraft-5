@@ -79,8 +79,8 @@ public class DynamicSignalServer extends TTTransceiver {
         side1.add(new TrackSection(xyz(-4, 64, 705), xyz(-4, 64, 728), 60));
         side1.add(new TrackSection(xyz(5, 64, 734), xyz(77, 64, 734), 60));
         trackModel.put(1, side1);
-        occupants.put(0, new HashMap<>());
-        occupants.put(1, new HashMap<>());
+        occupants.put(0, new HashMap<Integer, Train>());
+        occupants.put(1, new HashMap<Integer, Train>());
         connect(0);
 
 

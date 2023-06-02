@@ -226,9 +226,9 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		Random rand = new Random();
 		JCIRQuote quoteOfTheDay = QuoteList.getQuotes().get(rand.nextInt(QuoteList.getQuotes().size()));
 		tcLog.info(quoteOfTheDay.quote + " -" + quoteOfTheDay.from);
-		TrainTalk.getInstance().init();
+		/*TrainTalk.getInstance().init();
 		DynamicSignalServer thing = new DynamicSignalServer(0, "AutoTrain Test");
-		thing.init();
+		thing.init();*/
 		tcLog.info("Finished PostInitialization! We are done for Traincraft!");
 	}
 
