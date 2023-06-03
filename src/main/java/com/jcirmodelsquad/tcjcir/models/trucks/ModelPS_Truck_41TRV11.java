@@ -20,7 +20,7 @@ public class ModelPS_Truck_41TRV11 extends ModelConverter //Same as Filename
 
 	public ModelPS_Truck_41TRV11() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[108];
+		bodyModel = new ModelRendererTurbo[112];
 
 		initbodyModel_1();
 
@@ -140,6 +140,10 @@ public class ModelPS_Truck_41TRV11 extends ModelConverter //Same as Filename
 		bodyModel[105] = new ModelRendererTurbo(this, 8, 21, textureX, textureY); // Box 117
 		bodyModel[106] = new ModelRendererTurbo(this, 489, 1, textureX, textureY); // Box 537
 		bodyModel[107] = new ModelRendererTurbo(this, 187, 17, textureX, textureY); // Box 116
+		bodyModel[108] = new ModelRendererTurbo(this, 97, 21, textureX, textureY); // Box 106
+		bodyModel[109] = new ModelRendererTurbo(this, 100, 21, textureX, textureY); // Box 106
+		bodyModel[110] = new ModelRendererTurbo(this, 180, 21, textureX, textureY); // Box 37
+		bodyModel[111] = new ModelRendererTurbo(this, 177, 21, textureX, textureY); // Box 37
 
 		bodyModel[0].addBox(-3F, -3F, 0F, 6, 6, 0, 0F); // Box 2 wheel
 		bodyModel[0].setRotationPoint(-6.5F, 7F, -6F);
@@ -468,5 +472,17 @@ public class ModelPS_Truck_41TRV11 extends ModelConverter //Same as Filename
 
 		bodyModel[107].addShapeBox(0F, 0F, 0F, 1, 0, 1, 0F,-0.25F, 0F, -0.24F, -0.25F, 0F, -0.24F, -0.125F, 0F, 0F, -0.375F, 0F, 0F, -0.25F, 0F, -0.24F, -0.25F, 0F, -0.24F, -0.125F, 0F, 0F, -0.375F, 0F, 0F); // Box 116
 		bodyModel[107].setRotationPoint(-8.75F, 3.74F, -7.75F);
+
+		bodyModel[108].addShapeBox(0F, 0F, 0F, 0, 2, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 106
+		bodyModel[108].setRotationPoint(-1.01F, 4.25F, -9.25F);
+
+		bodyModel[109].addShapeBox(0F, 0F, 0F, 0, 2, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 106
+		bodyModel[109].setRotationPoint(1.01F, 4.25F, -9.25F);
+
+		bodyModel[110].addShapeBox(0F, 0F, 0F, 0, 2, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 37
+		bodyModel[110].setRotationPoint(1.01F, 4.25F, 8.25F);
+
+		bodyModel[111].addShapeBox(0F, 0F, 0F, 0, 2, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 37
+		bodyModel[111].setRotationPoint(-1.01F, 4.25F, 8.25F);
 	}
 }

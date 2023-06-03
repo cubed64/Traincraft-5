@@ -1295,6 +1295,10 @@ item.tc:minecartBuddNYC52SeatCoach.name=Budd NYC 52 Seat Coach
 item.tc:minecartBuddCBQ52SeatCoach.name=Budd CB&Q 52 Seat Coach
 item.tc:minecartBuddATSF52SeatCoach.name=Budd ATSF 52 Seat Coach
 item.tc:minecartBuddATSF48SeatCoach.name=Budd ATSF 48 Seat Coach (news butcher stand)
+item.tc:minecartBuddATSF50SeatCoachObservation.name=Budd ATSF 50 Seat Coach-Observation
+item.tc:minecartBuddATSF34SeatParlorObservation.name=Budd ATSF 34 Seat Parlor-Observation
+item.tc:minecartBuddATSF58SeatCoachObservation.name=Budd ATSF 58 Seat Coach-Observation
+item.tc:minecartPSATSF50SeatCoachObservation.name=Pullman Standard ATSF 50 Seat Coach-Observation
 entity.tc.Freight PS 73 Baggage.name=Pullman Standard 73' Baggage
 entity.tc.Freight PS 85 Baggage.name=Pullman Standard 85' Baggage
 entity.tc.PS 5-6-5 Sleeper.name=Pullman Standard 10-6 Sleeper (Center Bedroom)
@@ -1326,6 +1330,10 @@ entity.tc.Budd NYC 52 Seat Coach.name=Budd NYC 52 Seat Coach
 entity.tc.Budd CB&Q 52 Seat Coach.name=Budd CB&Q 52 Seat Coach
 entity.tc.Budd ATSF 52 Seat Coach.name=Budd ATSF 52 Seat Coach
 entity.tc.Budd ATSF 48 Seat Coach.name=Budd ATSF 48 Seat Coach (news butcher stand)
+entity.tc.Budd ATSF 50 Seat Coach-Observation.name=Budd ATSF 50 Seat Coach-Observation
+entity.tc.Budd ATSF 34 Seat Parlor-Observation.name=Budd ATSF 34 Seat Parlor-Observation
+entity.tc.Budd ATSF 58 Seat Coach-Observation.name=Budd ATSF 58 Seat Coach-Observation
+entity.tc.PS ATSF 50 Seat Coach-Observation.name=Pullman Standard ATSF 50 Seat Coach-Observation
 
 
 item.tc:minecartAmfleet.name=Amfleet 1 Coach
