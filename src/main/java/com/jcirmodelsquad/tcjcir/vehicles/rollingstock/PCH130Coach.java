@@ -73,6 +73,6 @@ public class PCH130Coach extends EntityRollingStock implements IPassenger {
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
-        return 2.8f;
+        return 2.9F;
     }
 }

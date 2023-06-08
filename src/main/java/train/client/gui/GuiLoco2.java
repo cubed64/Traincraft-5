@@ -2,6 +2,9 @@ package train.client.gui;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.jcirmodelsquad.tcjcir.features.autotrain.GuiAutoTrain2;
+import com.jcirmodelsquad.tcjcir.features.autotrain.IAT2Compatible;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.Entity;
@@ -94,6 +97,9 @@ public class GuiLoco2 extends GuiContainer {
 				this.buttonList.add(this.buttonLock = new GuiButton(4, var1 + 108, var2 - 22, 67, 12, "Start Engine"));
 			}
 		}
+		if (loco instanceof IAT2Compatible) {
+			this.buttonList.add(this.buttonLock = new GuiButton(5, var1 + 108, var2 - 34, 67, 12, "AutoTrain-2"));
+		}
 	}
 
 	@Override
@@ -155,6 +161,9 @@ public class GuiLoco2 extends GuiContainer {
 				loco.isLocoTurnedOn = true;
 				guibutton.displayString = "Stop Engine";
 			}
+		}
+		if (guibutton.id == 5) {
+			Minecraft.getMinecraft().displayGuiScreen(new GuiAutoTrain2((Locomotive) Minecraft.getMinecraft().thePlayer.ridingEntity));
 		}
 	}
 

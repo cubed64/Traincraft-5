@@ -2,18 +2,15 @@ package com.jcirmodelsquad.tcjcir.features.autotrain;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.ibm.icu.impl.Trie;
-import com.jcirmodelsquad.tcjcir.features.signal.dynamic.TTTransceiver;
-import com.jcirmodelsquad.tcjcir.features.signal.dynamic.TrainTalk;
+import com.google.gson.JsonParser;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import ebf.XmlBuilder;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
-import tmt.Vec3d;
 import train.common.Traincraft;
+import train.common.api.EntityRollingStock;
 import train.common.api.Locomotive;
 import train.common.core.network.PacketParkingBrake;
 import train.common.mtc.network.*;
@@ -23,7 +20,7 @@ import train.common.tile.TileTCRailGag;
 import java.util.LinkedList;
 import java.util.List;
 
-public class DriveScript2 {
+public class AutoTrain2 {
 
     public static class Action {
         public String action;
@@ -92,6 +89,8 @@ public class DriveScript2 {
     }
 
 
+    public Locomotive locomotive;
+
     public boolean active = false;
     public boolean pdmMode = true;
     /*PDM lets track switches and speed limits be determined by a Dynamic Signal Server, instead of onboard.
@@ -99,8 +98,7 @@ public class DriveScript2 {
 
     public List<Action> driveScript = new LinkedList<>();
 
-
-    public List<Action> speedChanges = new LinkedList<>();
+    public Action doneAction = null;
 
     public int position, speedPosition = 0;
 
@@ -115,9 +113,43 @@ public class DriveScript2 {
     public int ttId = -1;
 
 
-    public DriveScript2() {
+    public AutoTrain2(Locomotive locomotive) {
+        this.locomotive = locomotive;
         init();
     }
+
+
+    public JsonObject parseDriveScript(String input) {
+        //DriveScripts are json. Here is an example.
+        /*
+        {
+    "name" : "TestWorld Up",
+    "version" : "drivescript0.5",
+    "pdmMode" : true,
+    "drivescript" : [
+        {"action" : "stationStop", "xyz" : "119|64|85", "param1" : "Station 1", "param2" : "20"},
+        {"action" : "stationStop", "xyz" : "-10|64|259", "param1" : "Station 2", "param2" : "20"},
+        {"action" : "stationStop", "xyz" : "67|64|735", "param1" : "Station 3", "param2" : "20"}
+    ],
+    "doneAction" : {"action" : "switchover", "xyz" : "", "param1" : "TestWorld Down", "param2" : "10"}
+}
+        *
+        *
+        * */
+
+        try {
+            return new JsonParser().parse(input).getAsJsonObject();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public void loadDriveScript(JsonObject driveScript) {
+
+    }
+
 
     public void init() {
         //Initialize everything.
@@ -125,24 +157,24 @@ public class DriveScript2 {
         statusXML = new XmlBuilder();
 
         //Hardcoded for world test A
-        driveScript.add(new Action("speedLimit", null, "40", ""));
+        /*driveScript.add(new Action("speedLimit", null, "40", ""));*/
         driveScript.add(new Action("stationStop", xyz(119, 64, 85), "Station 1", "20"));
-        driveScript.add(new Action("trackSwitch", xyz(119, 64, 90), "false", ""));
-        driveScript.add(new Action("trackSwitch", xyz(119, 64, 130), "false", ""));
-        driveScript.add(new Action("speedLimit", xyz(120, 64, 146), "60", ""));
+        /*driveScript.add(new Action("trackSwitch", xyz(119, 64, 90), "false", ""));
+        driveScript.add(new Action("trackSwitch", xyz(119, 64, 130), "false", ""));*/
+       /* driveScript.add(new Action("speedLimit", xyz(120, 64, 146), "60", ""));
         driveScript.add(new Action("trackSwitch", xyz(29, 64, 216), "false", ""));
-        driveScript.add(new Action("trackSwitch", xyz(24, 64, 216), "false", ""));
+        driveScript.add(new Action("trackSwitch", xyz(24, 64, 216), "false", ""));*/
         driveScript.add(new Action("stationStop", xyz(-10, 64, 259), "Station 2", "20"));
-        driveScript.add(new Action("speedLimit", xyz(-10, 64, 263), "100", ""));
+        /*driveScript.add(new Action("speedLimit", xyz(-10, 64, 263), "100", ""));
         driveScript.add(new Action("speedLimit", xyz(-10, 64, 711), "40", ""));
-        driveScript.add(new Action("trackSwitch", xyz(33, 64, 740), "true", ""));
+        driveScript.add(new Action("trackSwitch", xyz(33, 64, 740), "true", ""));*/
         driveScript.add(new Action("stationStop", xyz(67, 64, 735), "Station 3", "20"));
-        for (Action action : driveScript) {
+        /*for (Action action : driveScript) {
             if (action.action.equals("speedLimit")) {
                 speedChanges.add(action);
             }
             driveScriptJSON.add(action.toJSON());
-        }
+        }*/
 
         ttId = 0;
     }
@@ -172,26 +204,29 @@ public class DriveScript2 {
         Traincraft.mtcChannel.sendToAllAround(new PacketATO(locomotive.getEntityId(), 1), new NetworkRegistry.TargetPoint(
                 locomotive.worldObj.provider.dimensionId, locomotive.posX, locomotive.posY, locomotive.posZ, 150.0D));
 
-        if (locomotive.riddenByEntity != null)
-            ((EntityPlayer) locomotive.riddenByEntity).addChatMessage(new ChatComponentText("MTC is now being controlled by AutoTrain-2. To disable, deactivate MTC"));
+        /*if (locomotive.riddenByEntity != null)
+            ((EntityPlayer) locomotive.riddenByEntity).addChatMessage(new ChatComponentText("MTC is now being controlled by AutoTrain-2. To disable, deactivate MTC"));*/
         active = true;
 
         lastMillsRTD = System.currentTimeMillis();
         lastMills = System.currentTimeMillis();
         status = "drive";
-        syncDatawatcher(locomotive);
+        syncDatawatcher();
     }
 
-    public void drive(Locomotive locomotive) {
+    public void drive() {
         statusXML.putString("status", status);
         statusXML.putString("progress", String.valueOf(position));
 
         if (driveScript.get(position).getPosition() == null || isThere(locomotive.posX, locomotive.posY, locomotive.posZ, driveScript.get(position))) {
             Action action = driveScript.get(position);
 
-            switch (action.action) {
+            /*switch (action.action) {
 
-                /*case "speedLimit" : {
+                case "speedLimit": {
+
+                    if (!pdmMode) break;
+
                     System.out.println("speed!?");
                     int nextSpeed = 0;
                     double speedX = 0, speedY = 0, speedZ = 0;
@@ -206,14 +241,15 @@ public class DriveScript2 {
                         speedY = speedAction.position.yCoord;
                         speedZ = speedAction.position.zCoord;
                     }
+
                     locomotive.speedLimit = Integer.parseInt(action.param1);
                     locomotive.nextSpeedLimit = nextSpeed;
                     locomotive.speedChange3 = xyz((int) speedX, (int) speedY, (int) speedZ);
                     Traincraft.mtcChannel.sendToAllAround(new PacketSpeedLimit(locomotive.getEntityId(), Integer.parseInt(action.param1), nextSpeed, speedX, speedY, speedZ),
                             new NetworkRegistry.TargetPoint(locomotive.worldObj.provider.dimensionId, locomotive.posX, locomotive.posY, locomotive.posZ, 150.0D));
-                break;
-                }*/
-            }
+                    break;
+                }
+            }*/
             //Do the thing. next position pls.
             if (position + 1 < driveScript.size()) {
                 //Prepare the next one.
@@ -228,7 +264,9 @@ public class DriveScript2 {
                     }
 
                     case "trackSwitch": {
-                        System.out.println("grkgmr");
+
+                        if (!pdmMode) break;
+
                         //Find the track switch and talk to it.
                         TileEntity tileSwitch = locomotive.worldObj.getTileEntity((int) nextAction.position.xCoord, (int) nextAction.position.yCoord, (int) nextAction.position.zCoord);
                         TileTCRail trackSwitch = null;
@@ -256,7 +294,7 @@ public class DriveScript2 {
             position++;
             System.out.println("New current action is: " + driveScript.get(position));
 
-            syncDatawatcher(locomotive);
+            syncDatawatcher();
             return;
         }
 
@@ -268,7 +306,7 @@ public class DriveScript2 {
                 lastMillsRTD = 0L;
                 status = "readyToDepart";
                 System.out.println("Ready to depart");
-                syncDatawatcher(locomotive);
+                syncDatawatcher();
             }
 
             if (System.currentTimeMillis() > lastMills + timeUntilDeparture) {
@@ -291,12 +329,19 @@ public class DriveScript2 {
                     status = "done";
                     locomotive.atoStatus = 0;
                     active = false;
-                    syncDatawatcher(locomotive);
+
+                    if (doneAction != null) {
+                        if (doneAction.action.equals("switchover")) {
+
+                        }
+                    }
+
+                    syncDatawatcher();
                 } else {
                     position++;
                     System.out.println("Leaving!");
                     locomotive.renderRefs.addProperty("doors", true);
-                    syncDatawatcher(locomotive);
+                    syncDatawatcher();
                 }
 
             }
@@ -310,7 +355,26 @@ public class DriveScript2 {
 
     }
 
-    public void syncDatawatcher(Locomotive locomotive) {
+    public Locomotive findOtherSide() {
+
+
+            if ((locomotive.cartLinked1).train != null && (locomotive.cartLinked1).train.getTrains().size() != 0 && (locomotive.cartLinked1).train.getTrains().size() > 1) {
+
+                for (int i = 0; i < (locomotive.cartLinked1).train.getTrains().size(); i++) {
+                    EntityRollingStock stock = (locomotive.cartLinked1).train.getTrains().get(i);
+                    if (stock != locomotive && stock instanceof Locomotive) {
+                        return (Locomotive) stock;
+                    }
+                    //distances.put((int) getDistance(stock.posX, stock.posY, stock.posZ), xyz((int) stock.posX, (int) stock.posY, (int) stock.posZ));
+                }
+            }
+
+
+return null;
+    }
+
+
+    public void syncDatawatcher() {
         statusXML.putString("status", status);
         statusXML.putString("progress", String.valueOf(position));
 
@@ -319,10 +383,10 @@ public class DriveScript2 {
     }
 
 
-    public void stationStop(Locomotive locomotive) {
+    public void stationStop() {
         status = "stationStop";
         locomotive.renderRefs.addProperty("doors", false);
-        syncDatawatcher(locomotive);
+        syncDatawatcher();
     }
 
 }

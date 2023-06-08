@@ -2,12 +2,11 @@ package com.jcirmodelsquad.tcjcir.features.signal.dynamic;
 
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
-import scala.Int;
 import train.common.api.Locomotive;
 
 import java.util.*;
 
-import static com.jcirmodelsquad.tcjcir.features.autotrain.DriveScript2.xyz;
+import static com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2.xyz;
 
 public class DynamicSignalServer extends TTTransceiver {
 

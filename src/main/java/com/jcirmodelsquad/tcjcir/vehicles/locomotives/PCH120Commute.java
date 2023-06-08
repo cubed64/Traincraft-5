@@ -1,44 +1,26 @@
 package com.jcirmodelsquad.tcjcir.vehicles.locomotives;
 
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.jcirmodelsquad.tcjcir.features.autotrain.DriveScript2;
-import com.jcirmodelsquad.tcjcir.features.autotrain.Station;
-import cpw.mods.fml.common.network.NetworkRegistry;
+import com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2;
 import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.MathHelper;
-import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
-import org.apache.commons.lang3.StringUtils;
 import train.common.Traincraft;
 import train.common.api.ElectricTrain;
-import train.common.api.EntityRollingStock;
 import train.common.library.GuiIDs;
-import train.common.mtc.MTCMessage;
-import train.common.mtc.network.PacketATO;
-
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class PCH120Commute extends ElectricTrain {
 
-    DriveScript2 script2 = new DriveScript2();
+    AutoTrain2 script2;
 
     public PCH120Commute(World world) {
         super(world);
+        script2 = new AutoTrain2(this);
     }
 
 
@@ -186,14 +168,14 @@ public class PCH120Commute extends ElectricTrain {
     @Override
     public void setLocoTurnedOnFromPacket(boolean set) {
         super.setLocoTurnedOnFromPacket(set);
-        script2.start(this);
+        //script2.start(this);
     }
 
 
     @Override
     public void stationStopComplete() {
         super.stationStopComplete();
-        script2.stationStop(this);
+        script2.stationStop();
        /* theCurrentStation = nextStation;
         theTimetable.remove(nextStation);
         atoStatus = 0;

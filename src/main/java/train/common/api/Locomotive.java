@@ -49,7 +49,7 @@ import train.common.mtc.network.*;
 
 import java.util.*;
 
-import static com.jcirmodelsquad.tcjcir.features.autotrain.DriveScript2.xyz;
+import static com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2.xyz;
 
 public abstract class Locomotive extends EntityRollingStock implements IInventory {
     public boolean lampOn;
