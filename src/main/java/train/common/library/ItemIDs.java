@@ -623,6 +623,10 @@ public enum ItemIDs {
 
 	minecartBuddATSF52SeatCoach("ItemRollingStock", "BuddATSF52SeatCoach", 3),
 	minecartBuddATSF48SeatCoach("ItemRollingStock", "BuddATSF48SeatCoach", 3),
+	minecartBuddATSF50SeatCoachObservation("ItemRollingStock", "BuddATSF50SeatCoachObservation", 3),
+	minecartBuddATSF34SeatParlorObservation("ItemRollingStock", "BuddATSF34SeatParlorObservation", 3),
+	minecartBuddATSF58SeatCoachObservation("ItemRollingStock", "BuddATSF34SeatParlorObservation", 3),
+	minecartPSATSF50SeatCoachObservation("ItemRollingStock", "PSATSF50SeatCoachObservation", 3),
 
 	minecartAmfleet("ItemRollingStock", "Amfleet", 3),
 	minecartAmfleet2("ItemRollingStock", "Amfleet2", 3),

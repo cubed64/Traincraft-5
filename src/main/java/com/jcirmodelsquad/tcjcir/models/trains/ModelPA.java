@@ -3119,6 +3119,8 @@ public class ModelPA extends ModelConverter //Same as Filename
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/AlcoPATruckSilver.png"));
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/AlcoPATruckJenksBlue.png"));
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 21) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/AlcoPATruckAFTBlue.png"));
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/AlcoPATruckBlack.png"));
 		}

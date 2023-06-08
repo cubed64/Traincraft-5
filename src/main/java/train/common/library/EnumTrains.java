@@ -241,53 +241,26 @@ public enum EnumTrains {
 	locoSteamAdler("Loco Steam Adler",EntityLocoSteamAdler.class, ItemIDs.minecartLocoSteamAdler.item,"steam",200,65,0,60,160,300,0.5,0.968,3000,null,15,-1.5),
 	locoSteamSnowPlow("Loco Steam Snow Plow", EntityLocoSteamSnowPlow.class, ItemIDs.minecartLocoSnowPlow.item, "steam, snow plow", 200, 20, 0, 10, 120, 170, 0.7, 0.965, 6850, null, 18, -4.75),
 
-	/** JCIR-TC*/
+	/** Fox-TC*/
 
-	//stEAmeeee//
-	Climax2("2TruckClimax", SteamClimaxNew.class, ItemIDs.minecartClimaxNew.item, "steam", 280,35,0,50,160,120,0.7,0.8,8000, null,15,-1.0),
-	VBShay("2TruckVerticalBoilerShay", SteamVBShay2.class, ItemIDs.minecartVBShay2.item, "steam", 230,35,0,50,160,120,0.7,0.8,6000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey"}),15,-1.3),
-	Skook("Skookum", SteamSkook.class, ItemIDs.minecartSkook.item, "steam", 670, 75, 0, 75, 75, 190, 0.8, 0.91, 2000, null, 10, -2.4),
-	SkookTender("Skookum Tender", TenderSkookTender.class, ItemIDs.minecartSkookTender.item,"tender",0,0,2,0,0,0,0,0,15000,null,18,0, (new String[] {"Water capacity: 15000mb."})),
-	Shay3Truck("3 Truck Shay", SteamShay3Truck.class, ItemIDs.minecartShay3Truck.item, "steam", 438, 35, 0, 75, 75, 190, 0.8, 0.9, 4000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey", "White"}), 10, -1.8),
-	Shay3TruckTender("3 Truck Shay Tender", TenderShay3Truck.class, ItemIDs.minecartShay3TruckTender.item,"tender",0,0,2,0,0,0,0,0,10000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey", "White"}),18,0,(new String[] {"Water capacity: 10000mb."})),
-	F01("F01", SteamF01.class, ItemIDs.minecartF01.item, "steam", 350,65,0,50,160,120,0.7,0.8,9000, null,10,-1.7),
-	P01a("P01a", SteamP01a.class, ItemIDs.minecartP01a.item, "steam", 600, 85, 0, 75, 75, 190, 0.85, 0.8, 4000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "LightGrey"}), 10, -1.8),
-	VanderbackTender("VanderbackTender", TenderVanderback.class, ItemIDs.minecartVanderbackTender.item,"tender",0,0,2,0,0,0,0,0,15000, TraincraftUtil.getBytesFromColors(new String[] {"Grey"}),10,0,(new String[] {"Water capacity: 15000mb."})),
-	BKno2a("BKno2a", SteamBKno2a.class, ItemIDs.minecartBKno2a.item, "steam", 700,80,0,50,160,120,0.7,0.8,15000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Orange"}),10,-1.3,(new String[] {"Place facing forward"})),
-	BKno2b("BKno2b", SteamBKno2b.class, ItemIDs.minecartBKno2b.item, "steam", 700,80,0,50,160,120,0.7,0.8,15000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Orange"}),10,-1.2,(new String[] {"Place facing backward"})),
-	WCPBuckingBull("WCPBuckingBull", SteamBuckingBull.class, ItemIDs.minecartWCPBuckingBull.item, "steam", 2200, 70, 0, 55, 70, 170, 0.78, 0.87, 2000, null, 10, -2.4),
-	WCPBaler("WCPBaler", TenderBaler.class, ItemIDs.minecartWCPBaler.item,"tender",0,0,3,0,0,0,0,0,15000, null,18,0, (new String[] {"Water capacity: 15000mb."})),
+	// EMD 4 AXLES //
+	// REBUILDS //
+	Beep("Beep", DieselBeep.class, ItemIDs.minecartBeep.item, "diesel", 1500, 105, 0, 25, 0, 200, 0.89, 0.8, 9000, null, 10, -2.2),
+	CF7angle("CF7angle", DieselCF7angle.class, ItemIDs.minecartCF7angle.item, "diesel", 1500, 116, 0, 25, 0, 200, 0.65, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Skin29", "Red", "LightGrey", "White", "Green", "Brown", "Skin16", "Skin17", "Orange", "Skin18", "Skin19", "Skin20", "Skin21", "Black", "Grey", "Cyan", "Skin22", "Skin23", "Skin24", "Magenta", "Pink", "Lime", "Skin25", "Purple", "LightBlue", "Skin26", "Skin27", "Skin28"}), 10, -2.5),
+	CF7round("CF7round", DieselCF7round.class, ItemIDs.minecartCF7round.item, "diesel", 1500, 116, 0, 25, 0, 200, 0.65, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Yellow", "Skin18", "White", "Grey", "Pink", "Cyan", "Skin24", "LightBlue", "Lime", "Skin16", "Skin17"}), 10, -2.5),
+	CF7angle2("CF7angle2", DieselCF7angle2.class, ItemIDs.minecartCF7angle2.item, "diesel", 1470, 90, 0, 35, 0, 200, 0.6, 0.9, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Skin16", "Green", "White", "Skin17"}), 10, -2.5),
+	MP15DCW9("MP15DCW9", DieselMP15DCW9.class, ItemIDs.minecartMP15DCW9.item, "diesel", 1500, 97, 0, 25, 0, 200, 0.85, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Orange"}), 10, -2.3),
 
-	C11("Loco Steam C11", SteamC11.class, ItemIDs.minecartLocoC11.item,"steam", 1030, 97, 0, 80, 100, 200, 0.35, 0.975, 16000, null, 10, -3.0),
-	Onion("Onion", SteamOnion.class, ItemIDs.minecartOnion.item, "steam", 350,155,0,50,140,100,0.7,0.99,8000, TraincraftUtil.getBytesFromColors(new String[]{"Black", "Orange", "Blue", "Grey", "Red", "Yellow", "White", "Brown", "LightGrey", "Pink"}),15,-1.3),
-	OnionTender("Onion Tender", TenderOnion.class, ItemIDs.minecartOnionTender.item, "tender", 0, 0, 0.1, 0, 0, 0, 0, 0, 12000, TraincraftUtil.getBytesFromColors(new String[]{"Black", "Orange", "Blue", "Grey", "Red", "Yellow", "White", "Brown", "LightGrey", "Pink"}), 15, 0, (new String[] {"Water capacity: 12000mb."})),
-
-	PELoco("Loco Steam PELoco", SteamPELoco.class, ItemIDs.minecartPELocomotive.item,"steam", 1484, 120, 0, 80, 100, 200, 0.35, 0.975, 4000, null, 10, -3.4 ),
-	PETender("Tender PETender",TenderPETender.class, ItemIDs.minecartPETender.item,"tender",0,0,1.5,0,0,0,0,0,20000,null,18,0,(new String[] {"Water capacity: 20000mb"})),
-
-	//EMD//
-	F3A("F3A", DieselF3A.class, ItemIDs.minecartF3A.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Blue"}), 10, -2.5),
+	// CARBODIES //
+	F3A("F3A", DieselF3A.class, ItemIDs.minecartF3A.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "LightGrey", "Grey", "Cyan"}), 10, -2.5),
 	F7A("F7A", DieselF7A.class, ItemIDs.minecartF7A.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "LightGrey", "White", "Orange", "Black", "Yellow", "Grey", "Magenta", "LightBlue", "Pink", "Cyan", "Brown", "Red", "Lime", "Blue", "Purple", "Skin16", "Skin17", "Skin25", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24"}), 10, -2.70),
 	F7B("F7B", DieselF7B.class, ItemIDs.minecartF7B.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "LightGrey", "White", "Orange", "Black", "Yellow", "Grey", "Magenta", "LightBlue", "Pink", "Cyan", "Brown", "Red", "Lime", "Blue", "Purple", "Skin16", "Skin17", "Skin25", "Skin18", "Skin21", "Skin22"}), 10, -2.4),
 	//BUnitF7B("BUnitF7B", BUnitF7.class, ItemIDs.minecartBUnitF7B.item, "b-unit", 0, 0, 7, 0, 0, 0, 0, 0, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Green", "LightGrey", "White", "Orange", "Black", "Yellow", "Grey", "Magenta", "LightBlue", "Pink", "Cyan", "Brown", "Red", "Lime", "Blue", "Purple", "Skin16", "Skin17", "Skin18", "Skin21", "Skin22", "Skin19"}), 18, 0, (new String[] {"Reduces weight carried by 70 tons when fueled"})),
 	FP7A("FP7A", DieselFP7A.class, ItemIDs.minecartFP7A.item, "diesel", 1500, 192, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "LightGrey", "Cyan", "Skin16"}), 10, -2.70),
 	FP9A("FP9A", DieselFP9A.class, ItemIDs.minecartFP9A.item, "diesel", 1750, 169, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Blue"}), 10, -2.70),
-
-	CF7angle("CF7angle", DieselCF7angle.class, ItemIDs.minecartCF7angle.item, "diesel", 1500, 116, 0, 25, 0, 200, 0.65, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Skin29", "Red", "LightGrey", "White", "Green", "Brown", "Skin16", "Skin17", "Orange", "Skin18", "Skin19", "Skin20", "Skin21", "Black", "Grey", "Cyan", "Skin22", "Skin23", "Skin24", "Magenta", "Pink", "Lime", "Skin25", "Purple", "LightBlue", "Skin26", "Skin27", "Skin28"}), 10, -2.5),
-	CF7round("CF7round", DieselCF7round.class, ItemIDs.minecartCF7round.item, "diesel", 1500, 116, 0, 25, 0, 200, 0.65, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Yellow", "Skin18", "White", "Grey", "Pink", "Cyan", "Skin24", "LightBlue", "Lime", "Skin16", "Skin17"}), 10, -2.5),
-	CF7angle2("CF7angle2", DieselCF7angle2.class, ItemIDs.minecartCF7angle2.item, "diesel", 1470, 90, 0, 35, 0, 200, 0.6, 0.9, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Skin16", "Green", "White", "Skin17"}), 10, -2.5),
 	F40PH("F40PH", DieselF40PH.class, ItemIDs.minecartF40PH.item, "diesel", 3000, 103, 0, 35, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey", "Red", "Yellow", "Cyan"}), 10, -3.5),
 
-	E7A("E7A", DieselE7A.class, ItemIDs.minecartE7A.item, "diesel", 2000, 188, 4.5, 20, 0, 180, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Magenta", "Cyan", "Green", "Lime", "Brown", "Black", "Orange", "Blue", "LightBlue", "Yellow", "Grey", "LightGrey", "Purple", "Red", "Pink", "White", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24", "Skin25", "Skin26", "Skin27", "Skin28", "Skin29", "Skin30", "Skin31", "Skin32", "Skin33", "Skin34", "Skin35", "Skin36", "Skin37", "Skin38", "Skin39", "Skin40"}), 10, -3.65),
-	E7B("E7B", DieselE7B.class, ItemIDs.minecartE7B.item, "diesel", 2000, 188, 4.5, 20, 0, 180, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Magenta", "Orange", "Yellow", "Grey", "LightGrey", "Purple", "Red", "Pink", "Skin27", "Skin37"}), 10, -3.77),
-	//BUnitE7B("BUnitE7B", BUnitE7B.class, ItemIDs.minecartBUnitE7B.item, "diesel", 0, 0, 5, 0, 0, 0, 0, 0, 11000, TraincraftUtil.getBytesFromColors(new String[] {"Magenta", "Orange", "Yellow", "Grey", "LightGrey", "Purple", "Red", "Pink"}), 10, 0, (new String[] {"Reduces weight carried by 50 tons when fueled"})),
-	E8A("E8A", DieselE8A.class, ItemIDs.minecartE8A.item, "diesel", 2250, 188, 0, 25, 0, 200, 0.8, 0.69, 11000, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Purple", "Cyan", "Blue", "Brown", "Red", "Pink", "Yellow", "Lime", "Grey", "LightGrey", "White"}), 10, -3.65),
-	E8B("E8B", DieselE8B.class, ItemIDs.minecartE8B.item, "diesel", 2250, 188, 0, 25, 0, 200, 0.8, 0.69, 11000, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Blue", "Red", "Grey", "LightGrey"}), 10, -3.77),
-	//BUnitE8B("BUnitE8B", BUnitE8B.class, ItemIDs.minecartBUnitE8B.item, "diesel", 0, 0, 5, 0, 0, 0, 0, 0, 11000, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Blue", "Red", "Grey", "LightGrey"}), 10, 0, (new String[] {"Reduces weight carried by 50 tons when fueled"})),
-	E9A("E9A", DieselE9A.class, ItemIDs.minecartE9A.item, "diesel", 2400, 188, 0, 25, 0, 200, 0.8, 0.69, 11000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey"}), 10, -3.75),
-	E9B("E9B", DieselE9B.class, ItemIDs.minecartE9B.item, "diesel", 2400, 188, 0, 25, 0, 200, 0.8, 0.69, 11000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey"}), 10, -3.6875),
-	CE8("CE8", DieselCE8.class, ItemIDs.minecartCE8.item, "diesel", 2250, 116, 0, 25, 0, 200, 0.8, 0.69, 11000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey", "LightBlue"}), 10, -3.65),
-
+	// GP SERIES //
 	GP7("GP7", DieselGP7.class, ItemIDs.minecartGP7.item, "diesel", 1500, 105, 0, 25, 0, 200, 0.80, 0.85, 18000, TraincraftUtil.getBytesFromColors(new String[] {"White", "Green", "Black", "Yellow", "Skin19", "LightGrey", "Skin20", "Skin21", "Lime", "Purple", "Blue", "Skin16", "Skin17", "Skin18", "Grey", "Orange", "Pink", "Skin22", "Brown", "Skin23", "LightBlue"}), 10, -2.9),
 	GP7b("GP7b", DieselGP7b.class, ItemIDs.minecartGP7b.item, "diesel", 1500, 105, 0, 25, 0, 200, 0.80, 0.85, 18000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "White", "Red", "Yellow"}), 10, -2.9),
 	//BUnitGP7b("BUnitGP7b", BUnitGP7b.class, ItemIDs.minecartBUnitGP7b.item, "diesel", 0, 0, 7, 0, 0, 0, 0, 0, 18000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "White", "Red", "Yellow"}), 10, 0, (new String[] {"Reduces weight carried by 70 tons when fueled"})),
@@ -309,6 +282,32 @@ public enum EnumTrains {
 	GP40TC("GP40TC", DieselGP40TC.class, ItemIDs.minecartGP40tc.item, "diesel", 3000, 169, 0, 25, 0, 200, 0.8, 0.85, 16000, TraincraftUtil.getBytesFromColors(new  String[] {"Blue", "White"}), 10, -3.25),
 	GP49("GP49", DieselGP49.class, ItemIDs.minecartGP49.item, "diesel", 2800, 105, 0, 35, 0, 200, 0.65, 0.85, 20000, null, 10, -3.1),
 
+	// SW SERIES//
+	SW1("SW1", DieselSW1.class, ItemIDs.minecartSW1.item, "diesel", 600, 105, 0, 35, 0, 160, 0.6, 0.890, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Green", "Skin22", "LightBlue", "Skin16", "Black", "Skin17", "Pink", "Purple", "Skin18", "Skin19", "Lime", "Skin20", "Skin21"}), 10, -2),
+	SW8("SW8", DieselSW8.class, ItemIDs.minecartSW8.item, "diesel", 800, 105, 0, 35, 0, 200, 0.85, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[]{"Red", "Black"}), 10, -2.0),
+	SW900("SW900", DieselSW900.class, ItemIDs.minecartSW900.item, "diesel", 900, 105, 0, 35, 0, 180, 0.85, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "LightBlue", "Cyan", "White", "LightGrey"}), 10, -2),
+	SW1000("SW1000", DieselSW1000.class, ItemIDs.minecartSW1000.item, "diesel", 1000, 105, 0, 25, 0, 200, 0.85, 0.7, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "LightGrey", "Purple", "Yellow", "Skin16", "Skin19"}), 10, -2),
+	SW1200("SW1200", DieselSW1200.class, ItemIDs.minecartSW1200.item, "diesel", 1200, 105, 0, 25, 0, 200, 0.85, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Blue", "Skin17", "Black", "Lime", "Yellow", "Brown", "Cyan", "Orange", "Red", "Skin16"}), 10, -2),
+	SW1500("SW1500", DieselSW1500.class, ItemIDs.minecartSW1500.item, "diesel", 1500, 105, 0, 25, 0, 200, 0.85, 0.7, 10000, TraincraftUtil.getBytesFromColors(new String[] {"LightBlue", "LightGrey", "Grey", "Black", "Magenta", "Pink", "Cyan", "Red", "Orange", "Skin16", "Blue", "Skin17", "Green", "Skin19", "Skin20", "Skin21", "Skin22"}), 10, -2),
+
+
+
+
+    // EMD 6 AXLES //
+	// REBUILDS //
+	CE8("CE8", DieselCE8.class, ItemIDs.minecartCE8.item, "diesel", 2250, 116, 0, 25, 0, 200, 0.8, 0.69, 11000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey", "LightBlue"}), 10, -3.65),
+
+	//CARBODIES//
+	E7A("E7A", DieselE7A.class, ItemIDs.minecartE7A.item, "diesel", 2000, 188, 4.5, 20, 0, 180, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Magenta", "Cyan", "Green", "Lime", "Brown", "Black", "Orange", "Blue", "LightBlue", "Yellow", "Grey", "LightGrey", "Purple", "Red", "Pink", "White", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24", "Skin25", "Skin26", "Skin27", "Skin28", "Skin29", "Skin30", "Skin31", "Skin32", "Skin33", "Skin34", "Skin35", "Skin36", "Skin37", "Skin38", "Skin39", "Skin40"}), 10, -3.65),
+	E7B("E7B", DieselE7B.class, ItemIDs.minecartE7B.item, "diesel", 2000, 188, 4.5, 20, 0, 180, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Magenta", "Orange", "Yellow", "Grey", "LightGrey", "Purple", "Red", "Pink", "Skin27", "Skin37"}), 10, -3.77),
+	//BUnitE7B("BUnitE7B", BUnitE7B.class, ItemIDs.minecartBUnitE7B.item, "diesel", 0, 0, 5, 0, 0, 0, 0, 0, 11000, TraincraftUtil.getBytesFromColors(new String[] {"Magenta", "Orange", "Yellow", "Grey", "LightGrey", "Purple", "Red", "Pink"}), 10, 0, (new String[] {"Reduces weight carried by 50 tons when fueled"})),
+	E8A("E8A", DieselE8A.class, ItemIDs.minecartE8A.item, "diesel", 2250, 188, 0, 25, 0, 200, 0.8, 0.69, 11000, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Purple", "Cyan", "Blue", "Brown", "Red", "Pink", "Yellow", "Lime", "Grey", "LightGrey", "White", "Green", "LightBlue", "Black", "Magenta"}), 10, -3.65),
+	E8B("E8B", DieselE8B.class, ItemIDs.minecartE8B.item, "diesel", 2250, 188, 0, 25, 0, 200, 0.8, 0.69, 11000, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Blue", "Red", "Grey", "LightGrey"}), 10, -3.77),
+	//BUnitE8B("BUnitE8B", BUnitE8B.class, ItemIDs.minecartBUnitE8B.item, "diesel", 0, 0, 5, 0, 0, 0, 0, 0, 11000, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Blue", "Red", "Grey", "LightGrey"}), 10, 0, (new String[] {"Reduces weight carried by 50 tons when fueled"})),
+	E9A("E9A", DieselE9A.class, ItemIDs.minecartE9A.item, "diesel", 2400, 188, 0, 25, 0, 200, 0.8, 0.69, 11000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey"}), 10, -3.75),
+	E9B("E9B", DieselE9B.class, ItemIDs.minecartE9B.item, "diesel", 2400, 188, 0, 25, 0, 200, 0.8, 0.69, 11000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey"}), 10, -3.6875),
+
+	// SD SERIES //
 	SD9("SD9", DieselSD9.class, ItemIDs.minecartSD9.item, "diesel", 1750, 104, 0, 35, 0, 200, 0.75, 0.85, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Green", "Lime", "Orange", "White", "Cyan", "Grey", "Yellow", "LightGrey", "Skin16", "Skin17"}), 10, -3.2),
 	SD38("SD38", DieselSD38.class, ItemIDs.minecartSD38.item, "diesel", 2000, 105, 0, 10, 0, 200, 0.75, 0.85, 12000, TraincraftUtil.getBytesFromColors(new String[] {"White", "LightGrey", "LightBlue", "Blue", "Skin16", "Cyan", "Skin17", "Black"}), 10, -3.45),
 	SD39("SD39", DieselSD39.class, ItemIDs.minecartSD39.item, "diesel", 2300, 105, 0, 10, 0, 200, 0.75, 0.85, 12000, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "LightGrey", "Brown", "Blue", "Skin16", "Skin18", "Skin19", "Cyan"}), 10, -3.45),
@@ -327,22 +326,24 @@ public enum EnumTrains {
 	F45("F45",DieselF45.class, ItemIDs.minecartF45.item, "diesel", 3600, 145, 0, 10, 0, 200, 0.75, 0.58, 16000, TraincraftUtil.getBytesFromColors(new String[] {"LightBlue", "Green", "Blue", "Yellow", "Red"}), 10, -3.65),
 	SD70Mac("SD70Mac", DieselSD70Mac.class, ItemIDs.minecartSD70Mac.item, "diesel", 4000, 112, 0, 10, 0, 200, 0.7, 0.85, 20000, TraincraftUtil.getBytesFromColors(new String[]{"Red", "Blue", "Grey", "LightGrey", "LightBlue", "Yellow", "Black","Green", "Orange", "Lime", "Pink", "Magenta", "Brown", "Cyan"}), 18, -4),
 
-	SW1("SW1", DieselSW1.class, ItemIDs.minecartSW1.item, "diesel", 600, 105, 0, 35, 0, 160, 0.6, 0.890, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Green", "Skin22", "LightBlue", "Skin16", "Black", "Skin17", "Pink", "Purple", "Skin18", "Skin19", "Lime", "Skin20", "Skin21"}), 10, -2),
-	SW8("SW8", DieselSW8.class, ItemIDs.minecartSW8.item, "diesel", 800, 105, 0, 35, 0, 200, 0.85, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[]{"Red", "Black"}), 10, -2.0),
-	SW900("SW900", DieselSW900.class, ItemIDs.minecartSW900.item, "diesel", 900, 105, 0, 35, 0, 180, 0.85, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "LightBlue", "Cyan", "White", "LightGrey"}), 10, -2),
-	SW1000("SW1000", DieselSW1000.class, ItemIDs.minecartSW1000.item, "diesel", 1000, 105, 0, 25, 0, 200, 0.85, 0.7, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "LightGrey", "Purple", "Yellow", "Skin16", "Skin19"}), 10, -2),
-	SW1200("SW1200", DieselSW1200.class, ItemIDs.minecartSW1200.item, "diesel", 1200, 105, 0, 25, 0, 200, 0.85, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Blue", "Skin17", "Black", "Lime", "Yellow", "Brown", "Cyan", "Orange", "Red", "Skin16"}), 10, -2),
-	SW1500("SW1500", DieselSW1500.class, ItemIDs.minecartSW1500.item, "diesel", 1500, 105, 0, 25, 0, 200, 0.85, 0.7, 10000, TraincraftUtil.getBytesFromColors(new String[] {"LightBlue", "LightGrey", "Grey", "Black", "Magenta", "Pink", "Cyan", "Red", "Orange", "Skin16", "Blue", "Skin17", "Green", "Skin19", "Skin20", "Skin21", "Skin22"}), 10, -2),
-	MP15DCW9("MP15DCW9", DieselMP15DCW9.class, ItemIDs.minecartMP15DCW9.item, "diesel", 1500, 97, 0, 25, 0, 200, 0.85, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Orange"}), 10, -2.3),
+	// ELECTRICS //
+	GM6C("GM6C",ElectricGM6C.class, ItemIDs.minecartGM6C.item, "electric", 6000, 115, 0, 55, 0, 200, 0.65, 0.79, 12500, TraincraftUtil.getBytesFromColors(new String[] {"White", "Blue"}), 10, -3.8),
 
-	Beep("Beep", DieselBeep.class, ItemIDs.minecartBeep.item, "diesel", 1500, 105, 0, 25, 0, 200, 0.89, 0.8, 9000, null, 10, -2.2),
 
-	//GE//
-	GE44Ton("GE 44-ton", DieselGE44Ton.class, ItemIDs.minecart44Ton.item, "diesel", 360, 56, 0, 10, 0, 200, 0.7, 0.75, 7000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Pink", "LightGrey", "Skin16", "Black", "Skin17", "Skin18", "Magenta", "Purple"}), 10, -2.0),
+
+
+	//GE 4 AXLES//
+	// REBUILDS //
+	SB23R("SB23R", DieselSB23R.class, ItemIDs.minecartSB23R.item, "diesel", 2300, 113, 0, 25, 0, 200, 0.74, 0.91, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan","Grey", "Orange", "Skin17", "Purple", "White", "Skin16", "Green", "Brown"}), 10, -3.4),
+	SB23E("SB23E", DieselSB23E.class, ItemIDs.minecartSB23E.item, "diesel", 2300, 113, 0, 25, 0, 200, 0.74, 0.91, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Orange", "Skin17", "Red", "White", "Green"}), 10, -3.4),
+
+	// TONNERS//
 	Boxcab23Ton("23 Ton Boxcab", DieselBoxcab23Ton.class, ItemIDs.minecartBoxcab23Ton.item, "diesel", 150, 40, 0, 10, 0, 200, 0.6, 0.6, 4000,  TraincraftUtil.getBytesFromColors(new String[] {"Blue", "White", "Black", "Green"}), 10, -1.5),
 	//note on the boxcab: check the RenderEnum for more info related to its hitboxes
 	GE25Ton("GE 25-ton", DieselGE25Ton.class, ItemIDs.minecart25Ton.item, "diesel", 150, 50, 0, 10, 0, 200, 0.65, 0.7, 4000, TraincraftUtil.getBytesFromColors(new String[]{"Brown", "Pink", "Cyan", "Orange", "Green"}), 10, -1),
+	GE44Ton("GE 44-ton", DieselGE44Ton.class, ItemIDs.minecart44Ton.item, "diesel", 360, 56, 0, 10, 0, 200, 0.7, 0.75, 7000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Pink", "LightGrey", "Skin16", "Black", "Skin17", "Skin18", "Magenta", "Purple"}), 10, -2.0),
 
+	// U-BOATS //
 	U18B("U18B", DieselU18B.class, ItemIDs.minecartU18B.item, "diesel", 1800, 113, 0, 20, 0, 200, 0.7, 0.88, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Orange","Skin16", "Red", "Skin17", "LightGrey", "Pink", "Magenta", "Cyan", "Purple", "Lime", "Yellow", "Grey", "Skin18", "Skin19", "Black", "Skin20", "Skin22", "Brown", "LightBlue", "Blue", "Skin23", "Skin24", "Skin25", "Skin26", "Skin27"}), 10, -2.5),
 	U18BB("U18BB", DieselU18BB.class, ItemIDs.minecartU18BB.item, "diesel", 1800, 113, 0, 20, 0, 200, 0.7, 0.88, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "Lime", "Skin27"}), 10, -2.5),
 	U18BW("U18BW", DieselU18BW.class, ItemIDs.minecartU18BW.item, "diesel", 1800, 120, 0, 20, 0, 200, 0.7, 0.88, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "White", "Cyan", "Orange", "Grey", "Lime", "Skin27"}), 10, -2.5),
@@ -350,87 +351,127 @@ public enum EnumTrains {
 	U23B("U23B", DieselU23B.class, ItemIDs.minecartU23B.item, "diesel", 2250, 113, 0, 25, 0, 200, 0.7, 0.88, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Grey", "Cyan", "Skin16", "LightBlue", "LightGrey"}), 10, -3.1),
 	U23Bold("U23Bold", DieselU23Bold.class, ItemIDs.minecartU23Bold.item, "diesel", 2250, 113, 0, 25, 0, 200, 0.7, 0.88, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Orange", "LightGrey", "Cyan", "Skin16", "Yellow", "Blue", "LightBlue", "Black", "Green", "Purple", "Skin17", "Skin19", "Pink"}), 10, -3.3),
 	U25B("U25B", DieselU25B.class, ItemIDs.minecartU25B.item, "diesel", 2500, 113, 0, 25, 0, 200, 0.7, 0.88, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "LightGrey", "Cyan", "Blue", "Orange", "Pink", "Green", "Skin16", "Red", "Skin17"}), 10, -3.3),
-	U30C("U30C", DieselU30C.class, ItemIDs.minecartU30C.item, "diesel", 3000, 113, 0, 20, 0, 200, 0.7, 0.88, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Grey", "Cyan", "Red", "Yellow", "Skin16", "Skin17"}), 10, -3.3),
-	SF30C("SF30C", DieselSF30C.class, ItemIDs.minecartSF30C.item, "diesel", 3000, 121, 0, 20, 0, 200, 0.7, 0.8, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Red"}), 10, -4.3),
-	U36C("U36C", DieselU36C.class, ItemIDs.minecartU36C.item, "diesel", 3600, 113, 0, 15, 0, 200, 0.75, 0.84, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Blue", "Red", "Yellow", "Orange"}), 10, -3.75),
-	U50("U50", DieselU50.class, ItemIDs.minecartU50.item, "diesel", 5000, 110, 0, 40, 0, 200, 0.8, 0.85, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Red", "Cyan", "LightGrey", "Skin16", "Skin17"}), 10, -4.35),
-	U56("U56", DieselU56.class, ItemIDs.minecartU56.item, "diesel", 5600, 110, 0, 40, 0, 200, 0.8, 0.85, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Cyan", "Orange"}), 10, -4.35),
 
+	//B-BOATS//
 	B23("B23-7", DieselB23.class, ItemIDs.minecartB23.item, "diesel", 2250, 113, 0, 25, 0, 200, 0.74, 0.91, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Red", "Blue", "LightGrey", "White", "Orange", "Pink", "Brown"}), 10, -3.4),
-	SB23R("SB23R", DieselSB23R.class, ItemIDs.minecartSB23R.item, "diesel", 2300, 113, 0, 25, 0, 200, 0.74, 0.91, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan","Grey", "Orange", "Skin17", "Purple", "White", "Skin16", "Green", "Brown"}), 10, -3.4),
-	SB23E("SB23E", DieselSB23E.class, ItemIDs.minecartSB23E.item, "diesel", 2300, 113, 0, 25, 0, 200, 0.74, 0.91, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Orange", "Skin17", "Red", "White", "Green"}), 10, -3.4),
 	B30("B30-7", DieselB30.class, ItemIDs.minecartB30.item, "diesel", 3000, 113, 0, 35, 0, 200, 0.74, 0.91, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Yellow"}), 10, -3.4),
 
+	// DESHLER SERIES //
 	Dash840B("Dash840B", DieselDash840B.class, ItemIDs.minecartDash840B.item, "diesel", 4000, 113, 0, 40, 0, 200, 0.7, 0.88, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Blue", "Cyan", "White", "LightGrey", "Skin16", "Green", "Skin17", "Skin18", "Skin19"}), 10, -3.3),
 	Dash840BB("Dash840BB", DieselDash840BB.class, ItemIDs.minecartDash840BB.item, "diesel", 4000, 113, 0, 40, 0, 200, 0.7, 0.88, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Skin17"}), 10, -3.3),
-	//BUnitDash840B("BUnitDash840B", BUnitDash840B.class, ItemIDs.minecartBUnitDash840BB.item, "diesel", 0, 0, 9, 0, 0, 0, 0, 0, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Red"}), 10, 0, (new String[] {"Reduces weight carried by 90 tons when fueled"})),
 	Dash840BW("Dash840BW", DieselDash840BW.class, ItemIDs.minecartDash840BW.item, "diesel", 4000, 113, 0, 40, 0, 200, 0.7, 0.88, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Green", "Skin17"}), 10, -3.3),
+
+
+
+
+	// GE 6 AXLES//
+	// REBUILDS //
+	SF30C("SF30C", DieselSF30C.class, ItemIDs.minecartSF30C.item, "diesel", 3000, 121, 0, 20, 0, 200, 0.7, 0.8, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Red"}), 10, -4.3),
+	U56("U56", DieselU56.class, ItemIDs.minecartU56.item, "diesel", 5600, 110, 0, 40, 0, 200, 0.8, 0.85, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Cyan", "Orange"}), 10, -4.35),
+
+	// U-BOATS //
+	U30C("U30C", DieselU30C.class, ItemIDs.minecartU30C.item, "diesel", 3000, 113, 0, 20, 0, 200, 0.7, 0.88, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Grey", "Cyan", "Red", "Yellow", "Skin16", "Skin17"}), 10, -3.3),
+	U36C("U36C", DieselU36C.class, ItemIDs.minecartU36C.item, "diesel", 3600, 113, 0, 15, 0, 200, 0.75, 0.84, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Blue", "Red", "Yellow", "Orange"}), 10, -3.75),
+	U50("U50", DieselU50.class, ItemIDs.minecartU50.item, "diesel", 5000, 110, 0, 40, 0, 200, 0.8, 0.85, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Red", "Cyan", "LightGrey", "Skin16", "Skin17"}), 10, -4.35),
+
+	//DESHLER SERIES//
 	Dash840C("Dash840C", DieselDash840C.class, ItemIDs.minecartDash840C.item, "diesel", 4000, 113, 0, 40, 0, 200, 0.7, 0.88, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Yellow", "Black", "Grey", "Red", "LightGrey", "Green"}), 10, -3.3),
-
 	Dash944CW("Dash944CW", DieselDash944CW.class, ItemIDs.minecartDash944CW.item, "diesel", 4400, 119, 0, 45, 0, 180, 0.75, 0.87, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "LightGrey", "Grey", "Orange", "Magenta", "Skin17", "Pink", "Green", "White", "Skin27", "Skin18", "Red", "Skin19"}), 10, -4.0),
-	AC4400CW("AC4400CW", DieselAC4400CW.class, ItemIDs.minecartAC4400CW.item, "diesel", 4400, 119, 0, 45, 0, 180, 0.75, 0.87, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Skin16", "LightGrey"}), 10, -4.0),
 
+	//AC AND ES SERIES//
+	AC4400CW("AC4400CW", DieselAC4400CW.class, ItemIDs.minecartAC4400CW.item, "diesel", 4400, 119, 0, 45, 0, 180, 0.75, 0.87, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Skin16", "LightGrey"}), 10, -4.0),
 	ES44("ES44", DieselES44.class, ItemIDs.minecartES44.item, "diesel", 4400, 120, 0, 10, 0, 200, 0.7, 0.8, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Lime", "Orange", "Red", "Yellow", "Blue", "LightGrey", "Grey", "Black"}), 10, -4.3),
+
+	// GENESIS SERIES //
 	P32("P32", DieselP32.class, ItemIDs.minecartP32.item, "diesel", 3200, 177, 0, 30, 0, 175, 0.93, 0.84, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Red", "LightGrey"}), 10, -3.5),
 	geGenesis("P40", DieselP40.class, ItemIDs.minecartGeGenesis.item, "diesel", 4000, 177, 0, 30, 0, 175, 0.93, 0.84, 15000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey"}), 10, -3.5),
 	P42("P42", DieselP42.class, ItemIDs.minecartP42.item, "diesel", 4250, 177, 0, 30, 0, 175, 0.93, 0.84, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Cyan", "Skin16", "Blue"}), 10, -3.5),
 
-	//ALCO//
-	AlcoPA1("PA1", DieselPA1.class, ItemIDs.minecartAlcoPA1.item, "diesel", 2000, 188, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Pink", "Black", "Blue", "Cyan", "Purple", "Yellow", "Orange", "Grey", "Brown", "LightGrey", "Green", "Lime", "LightBlue", "Magenta", "White", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20"}), 10, -3.15),
-	AlcoPB1("PB1", DieselPB1.class, ItemIDs.minecartAlcoPB1.item, "diesel", 2000, 188, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Black", "Yellow", "Orange", "LightGrey", "Magenta", "Skin19"}), 10, -3.1),
+
+
+
+	// ALCO/MLW 4 AXLES //
+	// REBUILDS //
+	FAFDL("FAFDL", DieselFAFDL.class, ItemIDs.minecartFAFDL.item, "diesel", 2250, 111, 0, 30, 0, 200, 0.7, 0.79, 12000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "LightGrey", "Pink", "Magenta"}), 10, -2.845),
+	FBFDL("FBFDL", DieselFBFDL.class, ItemIDs.minecartFBFDL.item, "diesel", 2250, 111, 0, 30, 0, 200, 0.7, 0.79, 12000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "LightGrey", "Pink"}), 10, -2.825),
+
+	// FA/FP SERIES //
 	FA1("FA1", DieselFA1.class, ItemIDs.minecartFA1.item, "diesel", 1600, 105, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Green", "Magenta", "Yellow", "Orange", "Lime", "Skin16", "Skin17"}), 10, -2.845),
 	FB1("FB1", DieselFB1.class, ItemIDs.minecartFB1.item, "diesel", 1600, 105, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Green", "Magenta", "Yellow", "Orange", "Lime"}), 10, -2.825),
 	FA2("FA2", DieselFA2.class, ItemIDs.minecartFA2.item, "diesel", 1600, 120, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Yellow", "Blue", "Black", "Orange", "Green", "Purple", "Lime", "LightGrey", "White"}), 10, -2.845),
 	FB2("FB2", DieselFB2.class, ItemIDs.minecartFB2.item, "diesel", 1600, 120, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Yellow", "Black", "Orange", "Green", "LightGrey", "White"}), 10, -2.825),
 	FPA4("FPA4", DieselFPA4.class, ItemIDs.minecartFPA4.item, "diesel", 1800, 148, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Cyan", "Green", "Red", "LightBlue", "Purple", "Brown", "Lime", "White", "Yellow", "Black", "Grey"}), 10, -2.845),
 	FPB4("FPB4", DieselFPB4.class, ItemIDs.minecartFPB4.item, "diesel", 1800, 148, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Green", "Red", "Purple", "Brown", "Lime", "White", "Yellow"}), 10, -2.825),
-	FAFDL("FAFDL", DieselFAFDL.class, ItemIDs.minecartFAFDL.item, "diesel", 2250, 111, 0, 30, 0, 200, 0.7, 0.79, 12000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "LightGrey", "Pink", "Magenta"}), 10, -2.845),
-	FBFDL("FBFDL", DieselFBFDL.class, ItemIDs.minecartFBFDL.item, "diesel", 2250, 111, 0, 30, 0, 200, 0.7, 0.79, 12000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "LightGrey", "Pink"}), 10, -2.825),
 
+	// CENTURY SERIES //
 	C415H("C415H", DieselC415H.class, ItemIDs.minecartC415H.item, "diesel", 1500, 106, 0, 35, 0, 200, 0.87, 0.93, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Purple", "Magenta", "Brown", "Red", "Pink", "Green"}), 10, -2.4),
 	C415S("C415S", DieselC415S.class, ItemIDs.minecartC415S.item, "diesel", 1500, 106, 0, 35, 0, 200, 0.87, 0.93, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Brown", "Yellow", "Blue", "LightGrey"}), 10, -2.5),
 	C415L("C415L", DieselC415L.class, ItemIDs.minecartC415L.item, "diesel", 1500, 106, 0, 35, 0, 200, 0.87, 0.93, 17000, TraincraftUtil.getBytesFromColors(new String[] {"Black"}), 10, -2.5),
 	C424("C424",DieselC424.class, ItemIDs.minecartC424.item, "diesel", 2400, 113, 0, 40, 0, 200, 0.7, 0.8, 18000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Red", "Cyan", "Pink", "Orange"}), 10, -2.8),
 	C425("C425", DieselC425.class, ItemIDs.minecartC425.item, "diesel", 2500, 113, 0, 40, 0, 200, 0.7, 0.8, 18000, TraincraftUtil.getBytesFromColors(new String[]{"Black", "Orange"}), 10, -2.8),
-	DH643("DH643", DieselDH643.class, ItemIDs.minecartDH643.item, "diesel", 4300, 124, 0, 60, 0, 200, 0.7, 0.87, 16000, null, 10, -4.1),
-	C855a("C855a", DieselC855a.class, ItemIDs.minecartC855a.item, "diesel", 5500, 106, 0, 40, 0, 200, 0.8, 0.85, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Cyan"}), 10, -4.25),
-	C855b("C855b", DieselC855b.class, ItemIDs.minecartC855b.item, "diesel", 5500, 106, 0, 40, 0, 200, 0.8, 0.85, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Cyan"}), 10, -4.25),
 
-	HH660("HH660", DieselHH660.class, ItemIDs.minecartHH660.item, "diesel", 660, 50, 0, 15, 0, 200, 0.9, 0.95, 6000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Orange", "Black", "Red", "Cyan"}), 10, -2),
-	S2("S2",  DieselS2.class, ItemIDs.minecartS2.item, "diesel", 1000, 96, 0, 15, 0, 200, 0.7, 0.965, 6000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey", "Green", "Orange", "Pink", "White", "Blue", "LightGrey", "Magenta", "Red", "Skin16"}), 18, -2),
-
-	RSD15("RSD15", DieselRSD15.class, ItemIDs.minecartRSD15.item, "diesel", 2400, 105, 0, 30, 0, 200, 0.7, 0.91, 18000, TraincraftUtil.getBytesFromColors(new String[] {"Blue","Cyan", "Grey", "Red"}), 10, -3.7),
-
+	// MLW 4 AXLES //
 	M420("M420", DieselM420.class, ItemIDs.minecartM420.item, "diesel", 2000, 108, 0, 25, 0, 200, 0.8, 0.85, 20000, TraincraftUtil.getBytesFromColors(new  String[] {"Lime", "Pink"}), 10, -2.8),
 	M420B("M420B", DieselM420B.class, ItemIDs.minecartM420B.item, "diesel", 2000, 108, 0, 25, 0, 200, 0.8, 0.85, 20000, TraincraftUtil.getBytesFromColors(new  String[] {"Lime", "Pink"}), 10, -2.8),
 
-	//BRuhMOMent//
+	// ALCO SWITCHERS //
+	HH660("HH660", DieselHH660.class, ItemIDs.minecartHH660.item, "diesel", 660, 50, 0, 15, 0, 200, 0.9, 0.95, 6000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Orange", "Black", "Red", "Cyan"}), 10, -2),
+	S2("S2",  DieselS2.class, ItemIDs.minecartS2.item, "diesel", 1000, 96, 0, 15, 0, 200, 0.7, 0.965, 6000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey", "Green", "Orange", "Pink", "White", "Blue", "LightGrey", "Magenta", "Red", "Skin16"}), 18, -2),
+
+
+
+
+	// ALCO/MLW 6 AXLES //
+	Krautt("Krautt", DieselKrautt.class, ItemIDs.minecartKrautt.item, "diesel", 3540, 113, 0, 65, 0, 200, 0.75, 0.85, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "LightGrey", "Black", "Red"}), 10, -3.3),
+	DH643("DH643", DieselDH643.class, ItemIDs.minecartDH643.item, "diesel", 4300, 124, 0, 60, 0, 200, 0.7, 0.87, 16000, null, 10, -4.1),
+	//REBUILDS//
+
+	// PA SERIES //
+	AlcoPA1("PA1", DieselPA1.class, ItemIDs.minecartAlcoPA1.item, "diesel", 2000, 188, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Pink", "Black", "Blue", "Cyan", "Purple", "Yellow", "Orange", "Grey", "Brown", "LightGrey", "Green", "Lime", "LightBlue", "Magenta", "White", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23"}), 10, -3.15),
+	AlcoPB1("PB1", DieselPB1.class, ItemIDs.minecartAlcoPB1.item, "diesel", 2000, 188, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Black", "Yellow", "Orange", "LightGrey", "Magenta", "Skin19"}), 10, -3.1),
+
+	// RS SERIES //
+	RSD15("RSD15", DieselRSD15.class, ItemIDs.minecartRSD15.item, "diesel", 2400, 105, 0, 30, 0, 200, 0.7, 0.91, 18000, TraincraftUtil.getBytesFromColors(new String[] {"Blue","Cyan", "Grey", "Red"}), 10, -3.7),
+
+	// CENTURY SERIES //
+	C855a("C855a", DieselC855a.class, ItemIDs.minecartC855a.item, "diesel", 5500, 106, 0, 40, 0, 200, 0.8, 0.85, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Cyan"}), 10, -4.25),
+	C855b("C855b", DieselC855b.class, ItemIDs.minecartC855b.item, "diesel", 5500, 106, 0, 40, 0, 200, 0.8, 0.85, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Cyan"}), 10, -4.25),
+
+
+	// BALDWIN 4 AXLES //
 	VO1000("VO1000", DieselVO1000.class, ItemIDs.minecartVO1000.item, "diesel", 1000, 67, 0, 20, 0, 200, 0.8, 0.9, 6000, TraincraftUtil.getBytesFromColors(new String[]{"Green", "Pink", "Blue", "LightBlue", "Skin16"}), 10, -2.2),
 
-	//Fairbanks Morse//
+
+
+
+	// FM 4 AXLES //
 	H1044("H1044", DieselH1044.class, ItemIDs.minecartH1044.item, "diesel", 1000, 97, 0, 25, 0, 200, 0.75, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[]{"Green", "Yellow", "Black", "Red", "Blue", "Grey", "LightBlue", "Orange", "White", "Lime", "LightGrey", "Skin16"}), 18, -2.2),
+
+
+
+
+	// FM 6 AXLES //
 	H16_66("H16-66", DieselH16_66.class, ItemIDs.minecartH16_66.item, "diesel", 1600, 130, 0, 45, 0, 200, 0.87, 0.93, 16000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Yellow", "LightGrey", "Green", "Lime", "Black", "Grey", "Orange", "Brown", "Red", "Pink", "Magenta", "Skin16"}), 10, -3.35),
 	H24_66("H24-66", DieselH24_66.class, ItemIDs.minecartH24_66.item, "diesel", 2400, 130, 0, 45, 0, 200, 0.87, 0.93, 18000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Black", "Brown", "Yellow", "Grey", "LightGrey", "Lime"}), 10, -3.75),
 	H24_66L("H24-66L", DieselH24_66L.class, ItemIDs.minecartH24_66L.item, "diesel", 2400, 130, 0, 45, 0, 200, 0.87, 0.93, 18000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Green"}), 10, -3.75),
 
-	//other MOtOEr Shuite//
+	// MISC DIESELS //
 	NRE3gs21b("NRE3gs21b", DieselNRE3gs21b.class, ItemIDs.minecartNRE3gs21b.item, "diesel genset", 2100, 104, 0, 10,0,  200, 0.78, 0.8, 14000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Orange", "Grey", "LightGrey", "Skin16"}), 10, -3.1),
 	gtavthing("gtavthing", Dieselgtavthing.class, ItemIDs.minecartgtavthing.item, "diesel", 1550, 110, 0, 45, 0, 200, 0.85, 0.9, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow"}), 10, -3.2, (new String[] {"Fictional locomotive from GTA-V"})),
 	FOLM1B("FOL-M1B", DieselFOLM1B.class, ItemIDs.minecartFOLM1B.item, "diesel", 5000, 110, 0, 10, 0, 200, 0.7, 0.965, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "Blue"}), 18, -3.8, (new String[] {"Fictional B unit for the Fictional loco from Factorio"})),
 	//BUnitFOLM1B("BUnitFOL-M1B", BUnitFOLM1B.class, ItemIDs.minecartBUnitFOLM1B.item, "b-unit", 0, 0, 9, 0, 0, 0, 0, 0, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "Blue"}), 18, 0, (new String[]{"Reduces weight carried by 90 tons when fueled"})),
-	Krautt("Krautt", DieselKrautt.class, ItemIDs.minecartKrautt.item, "diesel", 3540, 113, 0, 65, 0, 200, 0.75, 0.85, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "LightGrey", "Black", "Red"}), 10, -3.3),
 	ILMC("ILMC", DieselILMC.class, ItemIDs.minecartILMC.item, "diesel", 600, 45, 0, 25, 0, 200, 0.75, 0.85, 7000, TraincraftUtil.getBytesFromColors(new String[]{"Green", "Blue"}), 10, -1),
+	Hustler("Hustler", DieselHustler.class, ItemIDs.minecartHustler.item, "diesel", 150, 30, 0, 50, 0, 170, 0.6, 0.7, 9000,  TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Black", "Blue", "Brown"}), 10, -2),
 
+	// SLUGS //
 	SlugMA("SlugMA", SlugMA.class, ItemIDs.minecartSlugMA.item, "slug", 0, 0, 7, 0, 0, 0, 0, 0, 18000, TraincraftUtil.getBytesFromColors(new String[] {"White", "Skin16", "Magenta", "Blue"}), 10, 0, (new String[] {"Reduces train weight when fueled"})),
 	F7BSlug("F7BSlug", BUnitF7.class, ItemIDs.minecartF7BSlug.item, "slug", 0, 0, 7, 0, 0, 0, 0, 0, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Skin19"}), 18, 0, (new String[] {"Reduces train weight when fueled"})),
 	S1BL("S1BL", S1BL.class, ItemIDs.minecartS1BL.item, "road slug", 0, 0, 8, 0, 0, 0, 0, 0, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan"}), 10, 0, (new String[] {"WIP. Reduces train weight. Is also equipped to 'lead' consists"})),
 
-	//E-lect-trock//
+	// ELECTRICS //
 	EF1("EF1",ElectricEF1.class, ItemIDs.minecartEF1.item, "electric", 1720, 64, 0, 55, 0, 200, 0.65, 0.75, 12500, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Yellow", "Red", "Green", "Black", "Grey"}), 10, -3.4375),
 	EF1B("EF1B",ElectricEF1B.class, ItemIDs.minecartEF1B.item, "electric", 1720, 64, 0, 55, 0, 200, 0.65, 0.75, 12500, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Red", "Black", "Pink"}), 10, -2.3125),
 	EP1A("EP1A",ElectricEP1A.class, ItemIDs.minecartEP1A.item, "electric", 2500, 120, 0, 55, 0, 200, 0.75, 0.85, 12500, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Red"}), 10, -3.4375),
-
-	GM6C("GM6C",ElectricGM6C.class, ItemIDs.minecartGM6C.item, "electric", 6000, 115, 0, 55, 0, 200, 0.65, 0.79, 12500, TraincraftUtil.getBytesFromColors(new String[] {"White", "Blue"}), 10, -3.8),
 
 	ILMA("Loco Electric ILMA", ElectricILMA.class, ItemIDs.minecartILMA.item,"electric",400,40,0,45,0,400,0.9,0.946,0,TraincraftUtil.getBytesFromColors(new String[] {"Green", "Lime"}),18,-1),
 	ILMB("Loco Electric ILMB", ElectricILMB.class, ItemIDs.minecartILMB.item,"electric",500,40,0,45,0,400,0.9,0.946,0,TraincraftUtil.getBytesFromColors(new String[] {"Brown", "Lime"}),18,-1),
@@ -438,22 +479,35 @@ public enum EnumTrains {
 
 	AEM7("AEM7", ElectricAEM7.class, ItemIDs.minecartAEM7.item,"electric",7000,201,0,10,0,200,0.9,0.946,0,TraincraftUtil.getBytesFromColors(new String[] {"LightGrey"}),10,-2),
 
-	//FrERf//
-	RoundHopper("Freight Round Covered Hopper", RoundHopper.class, ItemIDs.minecartRoundHopper.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[]{"Red", "Black", "White", "LightGrey"}), 18, 36,(new String[] {"Cargo: Any."})),
-	RibbedHopper("Freight Ribbed Covered Hopper", RibbedHopper.class, ItemIDs.minecartRibbedHopper.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "Cyan", "LightGrey", "Red", "Brown", "White", "Pink", "Skin16", "Orange", "Skin20", "Skin17", "Skin18", "Skin19", "Skin21", "Green", "Skin22"}), 18, 36,(new String[] {"Cargo: Any."})),
-	Hopper5201("5201 Cu Foot Hopper", Hopper5201.class, ItemIDs.minecartHopper5201.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "Cyan", "Black", "Skin16", "Skin17", "LightGrey", "Blue", "Skin18", "Skin19", "Skin20"}), 10, 36,(new String[] {"Cargo: Any."})),
-	Hopper6260("6260 Cu Foot Jumbo Hopper", Hopper6260.class, ItemIDs.minecartHopper6260.item, "freight", 6, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "LightGrey", "White", "Brown", "Skin16"}), 10, 45,(new String[] {"Cargo: Any."})),
-	FNCC2375Hopper("FNCC2375Hopper", FNCC2375Hopper.class, ItemIDs.minecartFNCC2375Hopper.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[]{"Cyan", "Green", "Black", "LightGrey", "Blue", "Skin16", "Skin17", "Purple", "Magenta", "Pink", "Yellow", "Red", "Skin18", "Skin19", "Skin20", "Skin21"}), 10, 27,(new String[] {"Cargo: Any."})),
-	PDH2800("PDH2800", PDH2800.class, ItemIDs.minecartPDH2800.item, "freight", 3, TraincraftUtil.getBytesFromColors(new String[]{"LightGrey","Yellow","Grey","Magenta",}), 10, 27,(new String[] {"Cargo: Any."})),
+	// AMERICAN STEAM //
+	Climax2("2TruckClimax", SteamClimaxNew.class, ItemIDs.minecartClimaxNew.item, "steam", 280,35,0,50,160,120,0.7,0.8,8000, null,15,-1.0),
+	VBShay("2TruckVerticalBoilerShay", SteamVBShay2.class, ItemIDs.minecartVBShay2.item, "steam", 230,35,0,50,160,120,0.7,0.8,6000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey"}),15,-1.3),
+	Skook("Skookum", SteamSkook.class, ItemIDs.minecartSkook.item, "steam", 670, 75, 0, 75, 75, 190, 0.8, 0.91, 2000, null, 10, -2.4),
+	SkookTender("Skookum Tender", TenderSkookTender.class, ItemIDs.minecartSkookTender.item,"tender",0,0,2,0,0,0,0,0,15000,null,18,0, (new String[] {"Water capacity: 15000mb."})),
+	Shay3Truck("3 Truck Shay", SteamShay3Truck.class, ItemIDs.minecartShay3Truck.item, "steam", 438, 35, 0, 75, 75, 190, 0.8, 0.9, 4000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey", "White"}), 10, -1.8),
+	Shay3TruckTender("3 Truck Shay Tender", TenderShay3Truck.class, ItemIDs.minecartShay3TruckTender.item,"tender",0,0,2,0,0,0,0,0,10000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey", "White"}),18,0,(new String[] {"Water capacity: 10000mb."})),
+	BKno2a("BKno2a", SteamBKno2a.class, ItemIDs.minecartBKno2a.item, "steam", 700,80,0,50,160,120,0.7,0.8,15000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Orange"}),10,-1.3,(new String[] {"Place facing forward"})),
+	BKno2b("BKno2b", SteamBKno2b.class, ItemIDs.minecartBKno2b.item, "steam", 700,80,0,50,160,120,0.7,0.8,15000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Orange"}),10,-1.2,(new String[] {"Place facing backward"})),
 
-	Freight60centerbeam("60centerbeam",  Freight60centerbeam.class, ItemIDs.minecart60centerbeam.item, "freight", 5, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Yellow", "Green", "LightGrey"}), 10, 54, (new String[] {"Cargo: Woodthings."})),
-	Freight66centerbeam("66centerbeam",  Freight66centerbeam.class, ItemIDs.minecart66centerbeam.item, "freight", 5, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Cyan", "Green", "Lime", "LightBlue", "Pink", "Blue", "Yellow", "Red", "Black"}), 0, 54, (new String[] {"Cargo: Woodthings."})),
-	Freight73centerbeam("73centerbeam",  Freight73centerbeam.class, ItemIDs.minecart73centerbeam.item, "freight", 6, TraincraftUtil.getBytesFromColors(new String[] {"Pink", "Cyan", "Green", "Orange", "Yellow", "Red"}), 10, 54, (new String[] {"Cargo: Woodthings."})),
-	GSI60FootBulkhead("GSI_Bulkhead", GSI60FootBulkhead.class, ItemIDs.minecartGSI60FootBulkhead.item, "freight", 5, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Skin16", "Green", "Black", "Skin17", "Brown"}), 10, 45, (new String[] {"Cargo: Bulkhead Items."})),
-	GSC60FootFlatcar("GSC_Flatcar", GSC60FootFlat.class, ItemIDs.minecartGSC60FootFlatcar.item, "freight", 3, TraincraftUtil.getBytesFromColors(new String[] {"LightBlue", "Orange", "Yellow", "Skin17", "Brown", "Green", "Skin16"}), 10, 45, (new String[] {"Cargo: whatever flatcars carry i guess"})),
-	Thrall63centerbeam("63centerbeam",  Thrall63centerbeam.class, ItemIDs.minecartthrall63centerbeam.item, "freight", 5, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Yellow", "Red", "Black", "Cyan", "Skin16"}), 10, 45, (new String[] {"Cargo: Woodthings."})),
-	FNCC60FootBulk("FNCC60FootBulk", FNCC60FootBulk.class, ItemIDs.minecartFNCC60FootBulk.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "Green", "Yellow"}), 10, 45, (new String[] {"Cargo: Bulkhead Stuff."})),
+	// FICTIONAL STEAM //
+	F01("F01", SteamF01.class, ItemIDs.minecartF01.item, "steam", 350,65,0,50,160,120,0.7,0.8,9000, null,10,-1.7),
+	P01a("P01a", SteamP01a.class, ItemIDs.minecartP01a.item, "steam", 600, 85, 0, 75, 75, 190, 0.85, 0.8, 4000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "LightGrey"}), 10, -1.8),
+	VanderbackTender("VanderbackTender", TenderVanderback.class, ItemIDs.minecartVanderbackTender.item,"tender",0,0,2,0,0,0,0,0,15000, TraincraftUtil.getBytesFromColors(new String[] {"Grey"}),10,0,(new String[] {"Water capacity: 15000mb."})),
+	WCPBuckingBull("WCPBuckingBull", SteamBuckingBull.class, ItemIDs.minecartWCPBuckingBull.item, "steam", 2200, 70, 0, 55, 70, 170, 0.78, 0.87, 2000, null, 10, -2.4),
+	WCPBaler("WCPBaler", TenderBaler.class, ItemIDs.minecartWCPBaler.item,"tender",0,0,3,0,0,0,0,0,15000, null,18,0, (new String[] {"Water capacity: 15000mb."})),
+	Onion("Onion", SteamOnion.class, ItemIDs.minecartOnion.item, "steam", 350,155,0,50,140,100,0.7,0.99,8000, TraincraftUtil.getBytesFromColors(new String[]{"Black", "Orange", "Blue", "Grey", "Red", "Yellow", "White", "Brown", "LightGrey", "Pink"}),15,-1.3),
+	OnionTender("Onion Tender", TenderOnion.class, ItemIDs.minecartOnionTender.item, "tender", 0, 0, 0.1, 0, 0, 0, 0, 0, 12000, TraincraftUtil.getBytesFromColors(new String[]{"Black", "Orange", "Blue", "Grey", "Red", "Yellow", "White", "Brown", "LightGrey", "Pink"}), 15, 0, (new String[] {"Water capacity: 12000mb."})),
+	PELoco("Loco Steam PELoco", SteamPELoco.class, ItemIDs.minecartPELocomotive.item,"steam", 1484, 120, 0, 80, 100, 200, 0.35, 0.975, 4000, null, 10, -3.4 ),
+	PETender("Tender PETender",TenderPETender.class, ItemIDs.minecartPETender.item,"tender",0,0,1.5,0,0,0,0,0,20000,null,18,0,(new String[] {"Water capacity: 20000mb"})),
 
+	// FOREIGN STEAM //
+	C11("Loco Steam C11", SteamC11.class, ItemIDs.minecartLocoC11.item,"steam", 1030, 97, 0, 80, 100, 200, 0.35, 0.975, 16000, null, 10, -3.0),
+
+
+
+
+	// FREIGHT ROLLING STOCK//
+	// BOXCARS //
 	PS140("PS140",  PS140.class, ItemIDs.minecartPS140.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "Red", "LightBlue", "Green", "Cyan", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20", "Yellow", "Skin21", "Skin22", "Skin23", "Skin24", "Skin25"}), 10, 27, (new String[] {"Cargo: Any."})),
 	PS150("PS150",  PS150.class, ItemIDs.minecartPS150.item, "freight", 5, TraincraftUtil.getBytesFromColors(new String[] {"White", "Lime", "Red", "Yellow", "Skin16", "Skin17", "Skin18"}), 10, 36, (new String[] {"Cargo: Any."})),
 	PS160("PS160", PS160.class, ItemIDs.minecartPS160.item, "freight", 6, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Orange", "Cyan", "White"}), 10, 45, (new String[] {"Cargo: Any."})),
@@ -465,6 +519,15 @@ public enum EnumTrains {
 	FNCC50Foot("FNCC50FootBoxcar",  FNCC50Foot.class, ItemIDs.minecartFNCC50Foot.item, "freight", 5, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "Green", "Brown", "Pink", "Black", "Skin16", "Blue", "Skin22", "Skin21", "Yellow", "White", "Skin17"}), 0, 36, (new String[] {"Cargo: Any."})),
 	GN40("GN40",  GN40.class, ItemIDs.minecartGN40.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Red"}), 10, 27, (new String[] {"Cargo: Any."})),
 
+	// TANKERS //
+	DOT11111000( "DOT11000", DOT11111000.class, ItemIDs.minecart11000DOT111.item, "tank", 0, 0, 4, 0, 0, 0, 0, 0, 41000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "LightGrey", "Grey"}), 10, 0, (new String[] {"Capacity: 41000mb."})),
+	DOT11120600( "DOT20600", DOT11120600.class, ItemIDs.minecart20600DOT111.item, "tank", 0, 0, 5, 0, 0, 0, 0, 0, 78000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Black", "White", "Green", "LightGrey"}), 10, 0, (new String[] {"Capacity: 78000mb."})),
+	DOT11129080( "DOT29080", DOT11129080.class, ItemIDs.minecart29080DOT111.item, "tank", 0, 0, 6, 0, 0, 0, 0, 0, 110000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Orange", "LightGrey", "White", "Grey", "Skin16", "Skin17"}), 10, 0, (new String[] {"Capacity: 110000mb."})),
+	DOT11117600( "DOT17600", DOT11117600.class, ItemIDs.minecart17600DOT111.item, "tank", 0, 0, 4.5, 0, 0, 0, 0, 0, 67000, TraincraftUtil.getBytesFromColors(new String[] {"White", "Black", "Blue", "LightGrey", "Grey", "Yellow", "Brown", "Purple"}), 10, 0, (new String[] {"Capacity: 67000mb."})),
+	NATX30600( "NATX30600", NATX30600.class, ItemIDs.minecartNATX30600.item, "tank", 0, 0, 6, 0, 0, 0, 0, 0, 116000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey", "Green", "Red", "Yellow", "Pink", "Skin16"}), 10, 0, (new String[] {"Capacity: 116000mb."})),
+	CoffinCar( "CoffinCar", CoffinCar.class, ItemIDs.minecartCoffinCar.item, "tank", 0, 0, 2, 0, 0, 0, 0, 0, 16000, TraincraftUtil.getBytesFromColors(new String[] {"Black"}), 10, 0, (new String[] {"Capacity: 16000mb."})),
+
+	// OPEN HOPPERS/GONDOLAS //
 	VersaLongi("VersaLongi", VersaLongi.class, ItemIDs.minecartVersaLongi.item, "freight", 3, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Black", "Orange"}), 10, 36, (new String[] {"Cargo: Aggregates."})),
 	VersaTrans("VersaTrans", VersaTrans.class, ItemIDs.minecartVersaTrans.item, "freight", 3, TraincraftUtil.getBytesFromColors(new String[] {"LightBlue", "Grey", "LightGrey"}), 10, 36, (new String[] {"Cargo: Aggregates."})),
 	MillGondola("52footMillGondola", MillGondola.class, ItemIDs.minecartMillGondola.item, "freight", 3, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Black", "Orange", "Green", "Grey", "Skin16", "Blue", "Lime", "Skin17", "Brown", "Pink"}), 10, 50, (new String[] {"Cargo: Any."})),
@@ -473,29 +536,52 @@ public enum EnumTrains {
 	PRRGLaHopper("PRR GLa hopper", PRRGLaHopper.class, ItemIDs.minecartPRRGLaHopper.item, "freight", 1, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Black", "Yellow", "Magenta", "Blue", "LightGrey"}), 10, 27, (new String[] {"Cargo: Ores."})),
 	ACF41Gon("ACF41Gon", ACF41Gon.class, ItemIDs.minecartACF41Gon.item, "freight", 3, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Black", "Grey", "Brown", "Skin16"}), 10, 27, (new String[] {"Cargo: Gonstuff"})),
 
-	DOT11111000( "DOT11000", DOT11111000.class, ItemIDs.minecart11000DOT111.item, "tank", 0, 0, 4, 0, 0, 0, 0, 0, 41000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "LightGrey", "Grey"}), 10, 0, (new String[] {"Capacity: 41000mb."})),
-	DOT11120600( "DOT20600", DOT11120600.class, ItemIDs.minecart20600DOT111.item, "tank", 0, 0, 5, 0, 0, 0, 0, 0, 78000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Black", "White", "Green", "LightGrey"}), 10, 0, (new String[] {"Capacity: 78000mb."})),
-	DOT11129080( "DOT29080", DOT11129080.class, ItemIDs.minecart29080DOT111.item, "tank", 0, 0, 6, 0, 0, 0, 0, 0, 110000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Orange", "LightGrey", "White", "Grey", "Skin16", "Skin17"}), 10, 0, (new String[] {"Capacity: 110000mb."})),
-	DOT11117600( "DOT17600", DOT11117600.class, ItemIDs.minecart17600DOT111.item, "tank", 0, 0, 4.5, 0, 0, 0, 0, 0, 67000, TraincraftUtil.getBytesFromColors(new String[] {"White", "Black", "Blue", "LightGrey", "Grey", "Yellow", "Brown", "Purple"}), 10, 0, (new String[] {"Capacity: 67000mb."})),
+	// CLOSED HOPPERS //
+	RoundHopper("Freight Round Covered Hopper", RoundHopper.class, ItemIDs.minecartRoundHopper.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[]{"Red", "Black", "White", "LightGrey"}), 18, 36,(new String[] {"Cargo: Any."})),
+	RibbedHopper("Freight Ribbed Covered Hopper", RibbedHopper.class, ItemIDs.minecartRibbedHopper.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "Cyan", "LightGrey", "Red", "Brown", "White", "Pink", "Skin16", "Orange", "Skin20", "Skin17", "Skin18", "Skin19", "Skin21", "Green", "Skin22"}), 18, 36,(new String[] {"Cargo: Any."})),
+	Hopper5201("5201 Cu Foot Hopper", Hopper5201.class, ItemIDs.minecartHopper5201.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "Cyan", "Black", "Skin16", "Skin17", "LightGrey", "Blue", "Skin18", "Skin19", "Skin20"}), 10, 36,(new String[] {"Cargo: Any."})),
+	Hopper6260("6260 Cu Foot Jumbo Hopper", Hopper6260.class, ItemIDs.minecartHopper6260.item, "freight", 6, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "LightGrey", "White", "Brown", "Skin16"}), 10, 45,(new String[] {"Cargo: Any."})),
+	FNCC2375Hopper("FNCC2375Hopper", FNCC2375Hopper.class, ItemIDs.minecartFNCC2375Hopper.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[]{"Cyan", "Green", "Black", "LightGrey", "Blue", "Skin16", "Skin17", "Purple", "Magenta", "Pink", "Yellow", "Red", "Skin18", "Skin19", "Skin20", "Skin21"}), 10, 27,(new String[] {"Cargo: Any."})),
+	PDH2800("PDH2800", PDH2800.class, ItemIDs.minecartPDH2800.item, "freight", 3, TraincraftUtil.getBytesFromColors(new String[]{"LightGrey","Yellow","Grey","Magenta",}), 10, 27,(new String[] {"Cargo: Any."})),
 
-	NATX30600( "NATX30600", NATX30600.class, ItemIDs.minecartNATX30600.item, "tank", 0, 0, 6, 0, 0, 0, 0, 0, 116000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey", "Green", "Red", "Yellow", "Pink", "Skin16"}), 10, 0, (new String[] {"Capacity: 116000mb."})),
-	CoffinCar( "CoffinCar", CoffinCar.class, ItemIDs.minecartCoffinCar.item, "tank", 0, 0, 2, 0, 0, 0, 0, 0, 16000, TraincraftUtil.getBytesFromColors(new String[] {"Black"}), 10, 0, (new String[] {"Capacity: 16000mb."})),
-	SkeletonCar("Skeleton", SkeletonLogCar.class, ItemIDs.minecartSkeletonLogCar.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Black","Grey", "LightGrey"}), 18, 18, (new String[] {"Cargo: Logs."})),
+	//FLATCARS//
+	GSI60FootBulkhead("GSI_Bulkhead", GSI60FootBulkhead.class, ItemIDs.minecartGSI60FootBulkhead.item, "freight", 5, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Skin16", "Green", "Black", "Skin17", "Brown"}), 10, 45, (new String[] {"Cargo: Bulkhead Items."})),
+	GSC60FootFlatcar("GSC_Flatcar", GSC60FootFlat.class, ItemIDs.minecartGSC60FootFlatcar.item, "freight", 3, TraincraftUtil.getBytesFromColors(new String[] {"LightBlue", "Orange", "Yellow", "Skin17", "Brown", "Green", "Skin16"}), 10, 45, (new String[] {"Cargo: whatever flatcars carry i guess"})),
+	FNCC60FootBulk("FNCC60FootBulk", FNCC60FootBulk.class, ItemIDs.minecartFNCC60FootBulk.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "Green", "Yellow"}), 10, 45, (new String[] {"Cargo: Bulkhead Stuff."})),
 	EarlyFlat("EarlyFlat", EarlyFlat.class, ItemIDs.minecartEarlyFlat.item, "flat", 0, 0, 0.7, 0, 0, 0, 0, 0, 0, null, 18, 0),
 
+	//CENTERBEAMS//
+	Freight60centerbeam("60centerbeam",  Freight60centerbeam.class, ItemIDs.minecart60centerbeam.item, "freight", 5, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Yellow", "Green", "LightGrey"}), 10, 54, (new String[] {"Cargo: Woodthings."})),
+	Freight66centerbeam("66centerbeam",  Freight66centerbeam.class, ItemIDs.minecart66centerbeam.item, "freight", 5, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Cyan", "Green", "Lime", "LightBlue", "Pink", "Blue", "Yellow", "Red", "Black"}), 0, 54, (new String[] {"Cargo: Woodthings."})),
+	Freight73centerbeam("73centerbeam",  Freight73centerbeam.class, ItemIDs.minecart73centerbeam.item, "freight", 6, TraincraftUtil.getBytesFromColors(new String[] {"Pink", "Cyan", "Green", "Orange", "Yellow", "Red"}), 10, 54, (new String[] {"Cargo: Woodthings."})),
+	Thrall63centerbeam("63centerbeam",  Thrall63centerbeam.class, ItemIDs.minecartthrall63centerbeam.item, "freight", 5, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Yellow", "Red", "Black", "Cyan", "Skin16"}), 10, 45, (new String[] {"Cargo: Woodthings."})),
+
+	// AUTOSNACKS //
 	Gunderson89FootAutorack("89ftAutorack", Gunderson89ftAutorack.class, ItemIDs.minecartGunderson89ftAutorack.item, "freight", 7, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Orange", "LightGrey", "Blue", "Black", "Brown", "Pink"}), 10, 54, (new String[] {"Cargo: Any"})),
 	Gunderson89FootFlat("89ftFlat", Gunderson89ftFlat.class, ItemIDs.minecartGunderson89ftFlat.item, "freight", 3, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Blue", "Purple"}), 10, 54, (new String[] {"Cargo: Any"})),
 	StampedeRack("StampedeRack", StampedeRack.class, ItemIDs.minecartStampedeRack.item, "stock car", 0, 0, 5, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Brown"}), 10, 0),
 
+	// SPECIALTY CARS //
 	IngotPig("IngotPig", IngotPig.class, ItemIDs.minecartIngotPig.item, "freight", 0.5, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "Black"}), 0, 9, (new String[] {"Cargo: Ingots."})),
 	SteelSlabFlat("SteelSlabFlat", SteelSlabFlat.class, ItemIDs.minecartSteelSlabFlat.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "Black"}), 0, 9, (new String[] {"Cargo: steel and metal ig."})),
+	LogcarNP("LogcarNP",LogcarNP.class, ItemIDs.minecartLogcarNP.item,"freight",2, TraincraftUtil.getBytesFromColors(new String[]{"Brown","Black"}), 0, 18, null),
+	SkeletonCar("Skeleton", SkeletonLogCar.class, ItemIDs.minecartSkeletonLogCar.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Black","Grey", "LightGrey"}), 18, 18, (new String[] {"Cargo: Logs."})),
+	BoulderWagon("BoulderWagon", BoulderWagon.class, ItemIDs.minecartBoulderWagon.item, "freight", 5, TraincraftUtil.getBytesFromColors(new String[]{"Grey","skin16"}), 0, 9, null),
+	FRED("FRED", FRED.class, ItemIDs.minecartFRED.item, "misc", 0.2, null, 0, 1, (new String[] {"the least used item in the mod"})),
 
-	//pAssenger//
+	// Caboodles //
+	WVcaboose("WVcaboose",WVcaboose.class, ItemIDs.minecartWVcaboose.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Green", "Lime", "Cyan", "White", "Purple", "Skin16"}), 10, 0, null),
+	HBC1C("HBC1C",HBC1Cboose.class, ItemIDs.minecartHBC1Ccaboose.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "White", "LightGrey", "Red"}), 10, 0, null),
+	DRGWCaboose("DRGWCaboose", DRGWboose.class, ItemIDs.minecartDRGWCaboose.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey", "Lime", "Yellow", "Black", "Red", "Orange", "Pink", "Skin16", "Purple"}), 10, 0, null),
+
+	// Passenger //
 	pch120commute("PCH-120 Commute", PCH120Commute.class, ItemIDs.minecartPCH120Commute.item, "electric",1400, 120, 0, 55, 0, 160, 0.8, 0.985, 0, TraincraftUtil.getBytesFromColors(new String[] {"White", "Blue", "Red", "Green","Cyan"}), 18, -2.7),
 	pch120coach("PCH-120 Commute Car", PCH120Coach.class, ItemIDs.minecartPCH120Car.item, "passenger",0, 0, 2, 0, 0, 0, 0, 0, 0,TraincraftUtil.getBytesFromColors(new String[] {"White", "Blue", "Red", "Green", "Cyan"}), 0, 0),
 
 	pch130commute2("PCH-130 Commute2", PCH130Commute2.class, ItemIDs.minecartPCH130Commute2.item, "electric",1450, 130, 0, 60, 0, 160, 0.9, 0.995, 0, TraincraftUtil.getBytesFromColors(new String[] {"White"}), 18, -3.7 ),
 	pch130car2("PCH-130 Commute2 Car", PCH130Coach.class, ItemIDs.minecartPCH130Car2.item, "passenger",0, 0, 2, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[] {"White"}), 0,0),
+
+	PCH100H("PCH-100H", PCH100H.class, ItemIDs.minecartExperimentalHydrogenTrain.item, "hydrogen",900, 100, 0, 6, 0, 160, 0.8, 0.985, 7000, TraincraftUtil.getBytesFromColors(new String[]{"LightBlue", "Blue", "Lime", "Red"}), 18,  -2.6, (new String[] {"Powered by Mekanism Hydrogen"})),
 
 	PSRPO("PSRPO", PSRPO.class, ItemIDs.minecartPSRPO.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Blue", "Cyan"}), 18, 27,null),
 	PS85Baggage("Freight PS 85 Baggage", PS85Baggage.class, ItemIDs.minecartPS85Baggage.item, "freight", 2, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Blue"}), 18, 27, null),
@@ -504,7 +590,7 @@ public enum EnumTrains {
 	PSDamnitAnotherDiner("PS Center Diner 2", PSDamnitAnotherDiner.class, ItemIDs.minecartPSDamnitAnotherDiner.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Orange", "Blue", "Cyan"}), 10, 0),
 	PSSleeper565("PS 5-6-5 Sleeper", PSSleeper565.class, ItemIDs.minecartPSSleeper565.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "Brown", "Orange", "LightBlue", "Grey", "Yellow", "LightGrey"}), 10, 0),
 	PSSleeper565DRGW("PS 5-6-5 Sleeper DRGW Edition", PSSleeper565DRGW.class, ItemIDs.minecartPSSleeper565DRGW.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Orange"}), 10, 0),
-	PSLunchCounter_Lounge("PS Lunch Counter-Lounge", PSLunchCounter_Lounge.class, ItemIDs.minecartPSLunchCounter_Lounge.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "Yellow", "Orange", "LightBlue", "Purple", "LightGrey", "White"}), 10, 0, null),
+	PSLunchCounter_Lounge("PS Lunch Counter-Lounge", PSLunchCounter_Lounge.class, ItemIDs.minecartPSLunchCounter_Lounge.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "Yellow", "Orange", "LightBlue", "Purple", "LightGrey", "Grey",     "White"}), 10, 0, null),
 	PS30SeatParlor("PS 30 Seat Parlor", PS30SeatParlor.class, ItemIDs.minecartPS30SeatParlor.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "LightBlue", "Orange"}), 10, 0, null),
 
 	PSRPOPM("PSPMRPO", PSRPOPM.class, ItemIDs.minecartPSRPOPM.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Yellow"}), 18, 27,null),
@@ -523,8 +609,8 @@ public enum EnumTrains {
 	ACFGNDinerObservation("AC&F GN Diner-Observation", ACFGNDinerObservation.class, ItemIDs.minecartACFGNDiner_Observation.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Orange",}), 18, 27,null),
 	ACFGN28SeatCoach_Dinette("AC&F GN 28 Seat Coach-Dinette", ACFGN28SeatCoach_Dinette.class, ItemIDs.minecartACFGN28SeatCoach_Dinette.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Orange", "White"}), 10, 0, null),
 
-	OB84SeatCoach("OB 84 Seat Coach", OB84SeatCoach.class, ItemIDs.minecartOB84SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Green", "Lime", "Grey", "LightBlue", "Yellow", "Magenta", "Red", "Pink", "Blue", "LightGrey"}), 10, 0, null),
-	OB92SeatCoach("OB 92 Seat Coach", OB92SeatCoach.class, ItemIDs.minecartOB92SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Green", "Lime"}), 10, 0, null),
+	OB84SeatCoach("OB 84 Seat Coach", OB84SeatCoach.class, ItemIDs.minecartOB84SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Green", "Lime", "Black", "White", "Grey", "LightBlue", "Yellow", "Magenta", "Red", "Pink", "Blue", "LightGrey"}), 10, 0, null),
+	OB92SeatCoach("OB 92 Seat Coach", OB92SeatCoach.class, ItemIDs.minecartOB92SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Green", "Lime", "Black", "White"}), 10, 0, null),
 
 	PSCNW56SeatCoach("PS CNW 56 Seat Coach", PSCNW56SeatCoach.class, ItemIDs.minecartPSCNW56SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Black", "Green", "Lime", "White", "Brown", "Grey", "LightGrey","Purple", "Orange", "Red", "Blue", "Cyan", "LightBlue", "Pink", "Magenta"}), 10, 0, null),
 
@@ -538,7 +624,10 @@ public enum EnumTrains {
 
 	BuddATSF52SeatCoach("Budd ATSF 52 Seat Coach", BuddATSF52SeatCoach.class, ItemIDs.minecartBuddATSF52SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Orange", "Green", "Pink", "Blue", "Lime", "Purple", "Brown", "Grey"}), 10, 0, null),
 	BuddATSF48SeatCoach("Budd ATSF 48 Seat Coach", BuddATSF48SeatCoach.class, ItemIDs.minecartBuddATSF48SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Cyan"}), 10, 0, null),
-
+	BuddATSF50SeatCoach_observation("Budd ATSF 50 Seat Coach-Observation", BuddATSF50SeatCoach_Observation.class, ItemIDs.minecartBuddATSF50SeatCoachObservation.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "LightGrey"}), 10, 0, null),
+	BuddATSF34SeatParlor_observation("Budd ATSF 34 Seat Parlor-Observation", BuddATSF34SeatParlor_Observation.class, ItemIDs.minecartBuddATSF34SeatParlorObservation.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Green", "Lime", "Brown", "Blue"}), 10, 0, null),
+	BuddATSF58SeatCoach_observation("Budd ATSF 58 Seat Coach-Observation", BuddATSF58SeatCoach_Observation.class, ItemIDs.minecartBuddATSF58SeatCoachObservation.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Orange", "Cyan", "Purple"}), 10, 0, null),
+	PSATSF50SeatCoach_observation("PS ATSF 50 Seat Coach-Observation", PSATSF50SeatCoach_Observation.class, ItemIDs.minecartPSATSF50SeatCoachObservation.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "LightGrey", "Blue", "Orange"}), 10, 0, null),
 
 	amfleet("Amfleet", Amfleet.class, ItemIDs.minecartAmfleet.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"White", "Grey", "LightGrey", "LightBlue", "Red", "Blue", "Green", "Skin16"}), 10, 0, null),
 	amfleet2("Amfleet2", Amfleet2.class, ItemIDs.minecartAmfleet2.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"Blue","LightGrey", "Grey", "Red", "LightBlue", "Skin16"}), 10, 0, null),
@@ -549,43 +638,42 @@ public enum EnumTrains {
 	PEcoach("PEcoach", PEcoach.class, ItemIDs.minecartPEcooch.item, "festive passenger",  0, 0, 6, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan"}), 10, 0),
 	PEobserve("PEobserve", PEobserve.class, ItemIDs.minecartPEobserve.item, "festive passenger",  0, 0, 6, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan"}), 10, 0),
 
-	//or as i like to call it the cabussy//
-	WVcaboose("WVcaboose",WVcaboose.class, ItemIDs.minecartWVcaboose.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Green", "Lime", "Cyan", "White", "Purple", "Skin16"}), 10, 0, null),
-	HBC1C("HBC1C",HBC1Cboose.class, ItemIDs.minecartHBC1Ccaboose.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "White", "LightGrey", "Red"}), 10, 0, null),
-	DRGWCaboose("DRGWCaboose", DRGWboose.class, ItemIDs.minecartDRGWCaboose.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey", "Lime", "Yellow", "Black", "Red", "Orange", "Pink", "Skin16", "Purple"}), 10, 0, null),
 
-	//meme
+
+	// TRAMS //
+	KawasakiLRV("KawasakiLRV", ElectricKawasakiLRV.class,  ItemIDs.minecartKawasakiLRV.item, "electric", 200, 80, 0, 10, 0, 170, 0.7, 0.965, 0, null, 10, -3),
+	CQ310PO("CQ310PO", ElectricCQ310PO.class,  ItemIDs.minecartCQ310PO.item, "electric", 350, 100, 0, 10, 0, 170, 0.7, 0.965, 0, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Black"}), 10, -3),
+	CQ310PA("CQ310PA", CQ310PA.class, ItemIDs.minecartCQ310PA.item, "passenger", 0, 0, 1, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Black"}), 18, 0),
+
+
+
+
+	// MOW //
+	geometryCar("NXTrack Geometry Car", ExperimentalGeometryCar.class, ItemIDs.minecartGeometryCar.item, "geometry car", 0, 0, 2, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "LightGrey"}), 18, 0, (new String[] {"Checks the railroad for things up to standard"})),
+	HighrailTruck("Highrail Truck", DieselHighrailTruck.class, ItemIDs.minecartHighrailTruck.item, "diesel", 90, 80, 0, 10, 0, 140, 0.7, 0.8, 1000,TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "White", "LightGrey"}),18, 2.7),
+	HighrailVan("Highrail Van", DieselHighrailVan.class, ItemIDs.minecartHighrailVan.item, "diesel", 90, 80, 0, 10, 0, 140, 0.7, 0.8, 1000,TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "White", "Grey", "Orange", "Green"}),18, 2.7),
+
+
+
+
+	// Memes //
 	BigMeme("BigMeme", BigMeme.class, ItemIDs.minecartBigMeme.item, "awesome", 1, 200, 0, 50, 0, 0, 0.9, 0.9, 8000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey"}),10 , -1.1),
 	BombCart("Payload", BombCart.class, ItemIDs.minecartBombCart.item, "misc", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"LightBlue", "Red", "Black", "Blue", "Cyan", "Green", "Grey", "Brown", "LightGrey", "Lime", "Magenta", "Orange", "Pink", "Purple", "Yellow", "White"}), 0, 0, (new String[] {"Who is not pushing ze Cart!?"})),
 	Thanos("Thanos", Thanos.class, ItemIDs.minecartThanos.item, "electric", 696969, 6210000, 0, 69, 0, 1, 6, 30, 0, null, 18, -1, (new String[] {"You don't want to mess with the Universe's Best"})),
 	TGVmobile("TGVmobile", DieselTGVmobile.class, ItemIDs.minecartTGVMobile.item, "diesel", 200, 350, 0, 10, 0, 140, 0.9, 0.9, 1000,null,18, 2.7),
 	HHgregg("HHgregg", DieselHHgregg.class, ItemIDs.minecartHHgregg.item, "awesome", 9932, 299, 0, 42, 0, 48, 0.9, 0.9, 7000, null, 10, -2, (new String[] {"hhhgregg, Panasonic Blu-ray nintey-nine dollars, thirty-two inch LCD TV two-nintey nine, LG fourty-two inch HD TV only four eighty-nine, everything on sale during chirstmas in"})),
 
-	//dont speak americano
+
+
+
+	// HASHED SHIT //
 	//Class345("Class 345", ElectricClass345.class, ItemIDs.minecartClass345engine.item, "electric", 1500, 290, 0,6, 0, 100, 2, 1.5, 1000, null, 18, -3),
 	//Class345Coach("Class345", Class345Coach.class, ItemIDs.minecartClass345car.item, "passenger", 0, 0, 1.5,0 , 0, 0, 0,0,0,null,0,0),
 	//LUengine("London Underground Engine", ElectricLUengine.class, ItemIDs.minecartLUengine.item, "electric", 600, 100, 0, 10, 0, 100, 0.7, 0.8, 1000, null, 18, -2),
 	//LUpassenger("London Underground Passenger Car", LUpassenger.class, ItemIDs.minecartLUcar.item, "passenger", 0.3, null, 0, 0, null),
-
-	KawasakiLRV("KawasakiLRV", ElectricKawasakiLRV.class,  ItemIDs.minecartKawasakiLRV.item, "electric", 200, 80, 0, 10, 0, 170, 0.7, 0.965, 0, null, 10, -3),
-	CQ310PO("CQ310PO", ElectricCQ310PO.class,  ItemIDs.minecartCQ310PO.item, "electric", 350, 100, 0, 10, 0, 170, 0.7, 0.965, 0, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Black"}), 10, -3),
-	CQ310PA("CQ310PA", CQ310PA.class, ItemIDs.minecartCQ310PA.item, "passenger", 0, 0, 1, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Black"}), 18, 0),
-
-	//old and extras
-	geometryCar("NXTrack Geometry Car", ExperimentalGeometryCar.class, ItemIDs.minecartGeometryCar.item, "geometry car", 0, 0, 2, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "LightGrey"}), 18, 0, (new String[] {"Checks the railroad for things up to standard"})),
-	HighrailTruck("Highrail Truck", DieselHighrailTruck.class, ItemIDs.minecartHighrailTruck.item, "diesel", 90, 80, 0, 10, 0, 140, 0.7, 0.8, 1000,TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "White", "LightGrey"}),18, 2.7),
-	FRED("FRED", FRED.class, ItemIDs.minecartFRED.item, "misc", 0.2, null, 0, 1, (new String[] {"the least used item in the mod"})),
-	//HuskyStackWellcar("53' HuskyStack Wellcar", HuskyStackWellcar.class, ItemIDs.minecartHuskyStackWellcar.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Pink"}), 0,0, TraincraftUtil.getBytesFromColors(new String[] {"Model by Bidahochi"})),
+    //HuskyStackWellcar("53' HuskyStack Wellcar", HuskyStackWellcar.class, ItemIDs.minecartHuskyStackWellcar.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Pink"}), 0,0, TraincraftUtil.getBytesFromColors(new String[] {"Model by Bidahochi"})),
 	//testControlCar("Test Control Car", TestControlCar.class, ItemIDs.testControlCar.item, "passenger", 0, 0, 2, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"White", "LightGrey"}), 18, 0),
-	PCH100H("PCH-100H", PCH100H.class, ItemIDs.minecartExperimentalHydrogenTrain.item, "hydrogen",900, 100, 0, 6, 0, 160, 0.8, 0.985, 7000, TraincraftUtil.getBytesFromColors(new String[]{"LightBlue", "Blue", "Lime", "Red"}), 18,  -2.6, (new String[] {"Powered by Mekanism Hydrogen"})),
-	PCH100Coach("PCH-100H Coach", PCH100HCoach.class, ItemIDs.minecartPCH100HCoach.item, "passenger",0, 0, 2, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"LightBlue", "Blue", "Lime", "Red"}), 0, 0),
-	aipkitExplorer("Aipkit Explorer", AipkitExplorer.class, ItemIDs.minecartAipkitExplorer.item, "passenger",0, 0, 2, 0, 0, 0, 0, 0, 0, null, 0, 0),
-	aipkitExplorer2("Aipkit Explorer-II", AipkitExplorer2.class, ItemIDs.minecartAipkitExplorer2.item, "passenger",0, 0, 2, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"White", "Grey","Lime"}), 0, 0),
-	Hustler("Hustler", DieselHustler.class, ItemIDs.minecartHustler.item, "diesel", 150, 30, 0, 50, 0, 170, 0.6, 0.7, 9000,  TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Black", "Blue", "Brown"}), 10, -2),
-	BoulderWagon("BoulderWagon", BoulderWagon.class, ItemIDs.minecartBoulderWagon.item, "freight", 5, TraincraftUtil.getBytesFromColors(new String[]{"Grey","skin16"}), 0, 9, null),
-	LogcarNP("LogcarNP",LogcarNP.class, ItemIDs.minecartLogcarNP.item,"freight",2, TraincraftUtil.getBytesFromColors(new String[]{"Brown","Black"}), 0, 18, null),
-	//CF7R("CF7R", DieselCF7R.class, ItemIDs.minecartCF7R.item, "diesel", 2350, 105, 0, 5, 0, 185, 0.8, 0.9, 7000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Yellow", "Black"}), 10, -3, TraincraftUtil.getBytesFromColors(new String[] {"CF7 Rebuild Rebuilt"})),
-	HighrailVan("Highrail Van", DieselHighrailVan.class, ItemIDs.minecartHighrailVan.item, "diesel", 90, 80, 0, 10, 0, 140, 0.7, 0.8, 1000,TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "White", "Grey", "Orange", "Green"}),18, 2.7),
+    //CF7R("CF7R", DieselCF7R.class, ItemIDs.minecartCF7R.item, "diesel", 2350, 105, 0, 5, 0, 185, 0.8, 0.9, 7000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Yellow", "Black"}), 10, -3, TraincraftUtil.getBytesFromColors(new String[] {"CF7 Rebuild Rebuilt"})),
 	;
 
 //String trainType,int MHP,int maxSpeed, double mass, int fuelConsumption, int waterConsumption, int heatingTime, double accelerationRate, double brakeRate, int tankCapacity, String[] colors,
