@@ -130,7 +130,7 @@ public class ModelFBFDL extends ModelConverter //Same as Filename
 		bodyModel[86] = new ModelRendererTurbo(this, 454, 150, textureX, textureY); // Box 120
 		bodyModel[87] = new ModelRendererTurbo(this, 393, 128, textureX, textureY); // Box 0
 		bodyModel[88] = new ModelRendererTurbo(this, 97, 128, textureX, textureY); // Box 6
-		bodyModel[89] = new ModelRendererTurbo(this, 76, 118, textureX, textureY); // Box 6 vent cull
+		bodyModel[89] = new ModelRendererTurbo(this, 76, 118, textureX, textureY, "cull"); // Box 6 vent cull
 		bodyModel[90] = new ModelRendererTurbo(this, 162, 103, textureX, textureY); // Box 6 late FB-2 and later
 		bodyModel[91] = new ModelRendererTurbo(this, 214, 113, textureX, textureY); // Box 6 FB/FPB-2 and 4 vent
 		bodyModel[92] = new ModelRendererTurbo(this, 221, 103, textureX, textureY); // Box 6 late FB-2 and later
@@ -151,10 +151,10 @@ public class ModelFBFDL extends ModelConverter //Same as Filename
 		bodyModel[107] = new ModelRendererTurbo(this, 282, 178, textureX, textureY); // Box 0 Radiator and fan shaft
 		bodyModel[108] = new ModelRendererTurbo(this, 295, 165, textureX, textureY); // Box 0 Radiator and fan shaft
 		bodyModel[109] = new ModelRendererTurbo(this, 299, 169, textureX, textureY); // Box 0 Radiator and fan shaft
-		bodyModel[110] = new ModelRendererTurbo(this, 308, 26, textureX, textureY); // Box 0 CP winterization hatch cull FB/FPB-2
-		bodyModel[111] = new ModelRendererTurbo(this, 310, 16, textureX, textureY); // Box 0 CP winterization hatch cull FB/FPB-2
-		bodyModel[112] = new ModelRendererTurbo(this, 297, 19, textureX, textureY); // Box 0 CP winterization hatch cull FB/FPB-2
-		bodyModel[113] = new ModelRendererTurbo(this, 329, 19, textureX, textureY); // Box 0 CP winterization hatch cull FB/FPB-2
+		bodyModel[110] = new ModelRendererTurbo(this, 308, 26, textureX, textureY, "cull"); // Box 0 CP winterization hatch cull FB/FPB-2
+		bodyModel[111] = new ModelRendererTurbo(this, 310, 16, textureX, textureY, "cull"); // Box 0 CP winterization hatch cull FB/FPB-2
+		bodyModel[112] = new ModelRendererTurbo(this, 297, 19, textureX, textureY, "cull"); // Box 0 CP winterization hatch cull FB/FPB-2
+		bodyModel[113] = new ModelRendererTurbo(this, 329, 19, textureX, textureY, "cull"); // Box 0 CP winterization hatch cull FB/FPB-2
 		bodyModel[114] = new ModelRendererTurbo(this, 276, 203, textureX, textureY); // Box 0 Batteries
 		bodyModel[115] = new ModelRendererTurbo(this, 276, 203, textureX, textureY); // Box 0 Batteries
 		bodyModel[116] = new ModelRendererTurbo(this, 108, 205, textureX, textureY); // Box 0 Electrical box
@@ -184,13 +184,13 @@ public class ModelFBFDL extends ModelConverter //Same as Filename
 		bodyModel[140] = new ModelRendererTurbo(this, 67, 137, textureX, textureY); // Box 128 weird lifting lugs
 		bodyModel[141] = new ModelRendererTurbo(this, 80, 137, textureX, textureY); // Box 128 weird lifting lugs
 		bodyModel[142] = new ModelRendererTurbo(this, 75, 137, textureX, textureY); // Box 128 weird lifting lugs
-		bodyModel[143] = new ModelRendererTurbo(this, 76, 118, textureX, textureY); // Box 6 vent cull
+		bodyModel[143] = new ModelRendererTurbo(this, 76, 118, textureX, textureY, "cull"); // Box 6 vent cull
 		bodyModel[144] = new ModelRendererTurbo(this, 162, 103, textureX, textureY); // Box 6 late FB-2 and later
 		bodyModel[145] = new ModelRendererTurbo(this, 214, 113, textureX, textureY); // Box 6 FB/FPB-2 and 4 vent
 		bodyModel[146] = new ModelRendererTurbo(this, 221, 103, textureX, textureY); // Box 6 late FB-2 and later
-		bodyModel[147] = new ModelRendererTurbo(this, 306, 100, textureX, textureY); // backing light type 1
+		bodyModel[147] = new ModelRendererTurbo(this, 306, 100, textureX, textureY, "lamp"); // backing light type 1
 		bodyModel[148] = new ModelRendererTurbo(this, 306, 105, textureX, textureY); // backing light type 1 socket
-		bodyModel[149] = new ModelRendererTurbo(this, 306, 100, textureX, textureY); // backing light type 1
+		bodyModel[149] = new ModelRendererTurbo(this, 306, 100, textureX, textureY, "lamp"); // backing light type 1
 		bodyModel[150] = new ModelRendererTurbo(this, 306, 105, textureX, textureY); // backing light type 1 socket
 		bodyModel[151] = new ModelRendererTurbo(this, 447, 178, textureX, textureY); // Box 0 FA-1
 		bodyModel[152] = new ModelRendererTurbo(this, 286, 222, textureX, textureY); // Box 0 FA-2 & after
@@ -255,10 +255,10 @@ public class ModelFBFDL extends ModelConverter //Same as Filename
 		bodyModel[211] = new ModelRendererTurbo(this, 135, 55, textureX, textureY); // Box 644
 		bodyModel[212] = new ModelRendererTurbo(this, 132, 54, textureX, textureY); // Box 644
 		bodyModel[213] = new ModelRendererTurbo(this, 158, 57, textureX, textureY); // Box 364 prime base
-		bodyModel[214] = new ModelRendererTurbo(this, 167, 57, textureX, textureY); // Box 6 PRIME1-1
-		bodyModel[215] = new ModelRendererTurbo(this, 167, 57, textureX, textureY); // Box 7 PRIME1-3
-		bodyModel[216] = new ModelRendererTurbo(this, 167, 57, textureX, textureY); // Box 8 PRIME1-2
-		bodyModel[217] = new ModelRendererTurbo(this, 167, 57, textureX, textureY); // Box 9 PRIME1-4
+		bodyModel[214] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, "lamp"); // Box 6 PRIME1-1
+		bodyModel[215] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, "lamp"); // Box 7 PRIME1-3
+		bodyModel[216] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, "lamp"); // Box 8 PRIME1-2
+		bodyModel[217] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, "lamp"); // Box 9 PRIME1-4
 
 		bodyModel[0].addBox(0F, 0F, 0F, 3, 2, 3, 0F); // Box 1
 		bodyModel[0].setRotationPoint(-39F, 3F, -1.5F);
