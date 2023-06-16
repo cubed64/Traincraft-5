@@ -15,6 +15,7 @@ import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
 import train.common.api.AbstractTrains;
+import train.common.api.Freight;
 import train.common.library.Info;
 
 public class ModelPRRGLaHopper extends ModelConverter //Same as Filename
@@ -312,9 +313,9 @@ public class ModelPRRGLaHopper extends ModelConverter //Same as Filename
 		bodyModel[273] = new ModelRendererTurbo(this, 80, 41, textureX, textureY); // Box 324
 		bodyModel[274] = new ModelRendererTurbo(this, 195, 90, textureX, textureY); // Box 74
 		bodyModel[275] = new ModelRendererTurbo(this, 195, 41, textureX, textureY); // Box 324
-		bodyModel[276] = new ModelRendererTurbo(this, 45, 217, textureX, textureY); // Rock load
-		bodyModel[277] = new ModelRendererTurbo(this, 114, 217, textureX, textureY); // Rock load
-		bodyModel[278] = new ModelRendererTurbo(this, 189, 217, textureX, textureY); // Rock load
+		bodyModel[276] = new ModelRendererTurbo(this, 45, 217, textureX, textureY, "load"); // Rock load
+		bodyModel[277] = new ModelRendererTurbo(this, 114, 217, textureX, textureY, "load"); // Rock load
+		bodyModel[278] = new ModelRendererTurbo(this, 189, 217, textureX, textureY, "load"); // Rock load
 		bodyModel[279] = new ModelRendererTurbo(this, 68, 51, textureX, textureY,"cull"); // Box 0 cull
 		bodyModel[280] = new ModelRendererTurbo(this, 1, 46, textureX, textureY,"cull"); // Box 0 cull
 		bodyModel[281] = new ModelRendererTurbo(this, 211, 107, textureX, textureY); // Box 211
@@ -1223,10 +1224,18 @@ public class ModelPRRGLaHopper extends ModelConverter //Same as Filename
 	{
 		for(int i = 0; i < 283; i++)
 		{
+			int cargo = ((Freight) entity).getAmmountOfCargo();
+
+
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
 				GL11.glDisable(GL11.GL_CULL_FACE);
 				bodyModel[i].render(f5);
 				GL11.glEnable(GL11.GL_CULL_FACE);
+			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("load")) {
+				if (cargo > 0) {
+					bodyModel[i].render(f5);
+				}
+				if (cargo == 0) { }
 			} else {
 				bodyModel[i].render(f5);
 			}

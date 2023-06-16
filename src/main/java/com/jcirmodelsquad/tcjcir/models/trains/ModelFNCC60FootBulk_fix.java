@@ -11,6 +11,7 @@ package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is locat
 
 
 import com.jcirmodelsquad.tcjcir.models.loads.ModelMixedLogs;
+import com.jcirmodelsquad.tcjcir.models.loads.Modelpipeload1;
 import com.jcirmodelsquad.tcjcir.models.trucks.Model70TonTruck2;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -543,6 +544,7 @@ public class ModelFNCC60FootBulk_fix extends ModelConverter //Same as Filename
 	}
 	Model70TonTruck2 bogie2 = new Model70TonTruck2();
 	ModelMixedLogs sticks = new ModelMixedLogs();
+	Modelpipeload1 toobe = new Modelpipeload1();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
@@ -575,6 +577,14 @@ public class ModelFNCC60FootBulk_fix extends ModelConverter //Same as Filename
 				GL11.glTranslated(-1,-0.01,0.2);
 				sticks.render(entity,f,f1,f2,f3,f4,f5);
 				GL11.glPopMatrix();
+			}else if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==16){
+				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/pipe_falling_sfx_1.png"));
+				GL11.glPushMatrix();
+				GL11.glTranslated(-0.0,-0.5,-0.0);
+				toobe.render(entity,f,f1,f2,f3,f4,f5);
+				GL11.glPopMatrix();
+			}else{
+
 			}
 		}
 

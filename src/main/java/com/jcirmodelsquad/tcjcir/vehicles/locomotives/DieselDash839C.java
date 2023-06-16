@@ -13,13 +13,13 @@ import train.common.api.LiquidManager;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class DieselB23 extends DieselTrain {
-    public DieselB23(World world) {
-        super(world, EnumTrains.B23.getTankCapacity(), LiquidManager.dieselFilter());
-        initLoco();
 
+public class DieselDash839C extends DieselTrain {
+    public DieselDash839C(World world) {
+        super(world, EnumTrains.Dash839C.getTankCapacity(), LiquidManager.dieselFilter());
+        initLoco();
     }
-    public DieselB23(World world, double d, double d1, double d2){
+    public DieselDash839C(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -29,7 +29,6 @@ public class DieselB23 extends DieselTrain {
         prevPosY = d1;
         prevPosZ = d2;
     }
-
     public void initLoco() {
         fuelTrain = 0;
         locoInvent = new ItemStack[inventorySize];
@@ -38,8 +37,8 @@ public class DieselB23 extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 3.2;
-        double yOffset = 0.25;
+        double distance = 3.9;
+        double yOffset = 0.4;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
         if(side.isServer()){
@@ -72,20 +71,17 @@ public class DieselB23 extends DieselTrain {
         super.setDead();
         isDead = true;
     }
-
     @Override
     public void pressKey(int i) {
         if (i == 7 && riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
             ((EntityPlayer) riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCO, worldObj, (int) this.posX, (int) this.posY, (int) this.posZ);
         }
     }
-
     @Override
     public void onUpdate() {
         checkInvent(locoInvent[0]);
         super.onUpdate();
     }
-
     @Override
     protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {
         super.writeEntityToNBT(nbttagcompound);
@@ -102,7 +98,6 @@ public class DieselB23 extends DieselTrain {
         }
         nbttagcompound.setTag("Items", nbttaglist);
     }
-
     @Override
     protected void readEntityFromNBT(NBTTagCompound nbttagcompound) {
         super.readEntityFromNBT(nbttagcompound);
@@ -118,26 +113,21 @@ public class DieselB23 extends DieselTrain {
             }
         }
     }
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.315F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.3F;
     }
-
     @Override
     public int getSizeInventory() {
         return inventorySize;
     }
-
     @Override
     public String getInventoryName() {
-        return "GE B23-7";
+        return "GE C39-8";
     }
-
     @Override
     public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
         return false;
     }
-
     @Override
     public boolean interactFirst(EntityPlayer entityplayer) {
         playerEntity = entityplayer;
@@ -156,5 +146,4 @@ public class DieselB23 extends DieselTrain {
     public boolean canBeAdjusted(EntityMinecart cart) {
         return canBeAdjusted;
     }
-
 }

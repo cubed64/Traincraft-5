@@ -18,6 +18,7 @@ import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
 import train.common.api.AbstractTrains;
+import train.common.api.Freight;
 import train.common.library.Info;
 
 public class ModelWoodchipHopper extends ModelConverter//Same as Filename
@@ -75,15 +76,15 @@ public class ModelWoodchipHopper extends ModelConverter//Same as Filename
 		bodyModel[33] = new ModelRendererTurbo(this, 345, 25, textureX, textureY); // Box 1
 		bodyModel[34] = new ModelRendererTurbo(this, 457, 25, textureX, textureY); // Box 1
 		bodyModel[35] = new ModelRendererTurbo(this, 177, 33, textureX, textureY); // Box 1
-		bodyModel[36] = new ModelRendererTurbo(this, 1, 49, textureX, textureY); // load 3
-		bodyModel[37] = new ModelRendererTurbo(this, 329, 49, textureX, textureY); // load 2
-		bodyModel[38] = new ModelRendererTurbo(this, 1, 57, textureX, textureY); // load 1
-		bodyModel[39] = new ModelRendererTurbo(this, 385, 41, textureX, textureY); // load 4
-		bodyModel[40] = new ModelRendererTurbo(this, 409, 41, textureX, textureY); // load 5
-		bodyModel[41] = new ModelRendererTurbo(this, 145, 49, textureX, textureY); // load 6
-		bodyModel[42] = new ModelRendererTurbo(this, 217, 49, textureX, textureY); // load 9
-		bodyModel[43] = new ModelRendererTurbo(this, 473, 49, textureX, textureY); // load 8
-		bodyModel[44] = new ModelRendererTurbo(this, 169, 57, textureX, textureY); // load 7
+		bodyModel[36] = new ModelRendererTurbo(this, 1, 49, textureX, textureY, "load"); // load 3
+		bodyModel[37] = new ModelRendererTurbo(this, 329, 49, textureX, textureY, "load"); // load 2
+		bodyModel[38] = new ModelRendererTurbo(this, 1, 57, textureX, textureY, "load"); // load 1
+		bodyModel[39] = new ModelRendererTurbo(this, 385, 41, textureX, textureY, "load"); // load 4
+		bodyModel[40] = new ModelRendererTurbo(this, 409, 41, textureX, textureY, "load"); // load 5
+		bodyModel[41] = new ModelRendererTurbo(this, 145, 49, textureX, textureY, "load"); // load 6
+		bodyModel[42] = new ModelRendererTurbo(this, 217, 49, textureX, textureY, "load"); // load 9
+		bodyModel[43] = new ModelRendererTurbo(this, 473, 49, textureX, textureY, "load"); // load 8
+		bodyModel[44] = new ModelRendererTurbo(this, 169, 57, textureX, textureY, "load"); // load 7
 		bodyModel[45] = new ModelRendererTurbo(this, 329, 33, textureX, textureY); // Box 1
 		bodyModel[46] = new ModelRendererTurbo(this, 505, 33, textureX, textureY); // Box 1
 		bodyModel[47] = new ModelRendererTurbo(this, 1, 49, textureX, textureY); // Box 1
@@ -370,6 +371,19 @@ public class ModelWoodchipHopper extends ModelConverter//Same as Filename
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
 		for (int i = 0; i < 81; i++) {
+
+			int cargo = ((Freight) entity).getAmmountOfCargo();
+			/*if (cargo > 0) {
+				bodyModel[36].render(f5);
+				bodyModel[37].render(f5);
+				bodyModel[38].render(f5);
+				bodyModel[39].render(f5);
+				bodyModel[40].render(f5);
+				bodyModel[41].render(f5);
+				bodyModel[42].render(f5);
+				bodyModel[43].render(f5);
+				bodyModel[44].render(f5);
+			}*/
 			if (i == 9999) { //36 37 38 39 40 41 42 43 44
 				/*int cargo = ((Freight) entity).getAmmountOfCargo();
 				if (cargo != 0) {
@@ -395,7 +409,17 @@ public class ModelWoodchipHopper extends ModelConverter//Same as Filename
 				GL11.glDisable(GL11.GL_CULL_FACE);
 				bodyModel[i].render(f5);
 				GL11.glEnable(GL11.GL_CULL_FACE);
+
+			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("load")) {
+				if (cargo > 0) {
+					bodyModel[i].render(f5);
+				}
+				if (cargo == 0) {
+
+				}
+
 			} else
+
 				bodyModel[i].render(f5);
 		}
 
