@@ -14,12 +14,13 @@ import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
 
-public class DieselDash839C extends DieselTrain {
-    public DieselDash839C(World world) {
-        super(world, EnumTrains.Dash839C.getTankCapacity(), LiquidManager.dieselFilter());
+public class DieselSDP45 extends DieselTrain {
+    public DieselSDP45(World world) {
+        super(world, EnumTrains.SDP45.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        //when the
     }
-    public DieselDash839C(World world, double d, double d1, double d2){
+    public DieselSDP45(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -29,16 +30,18 @@ public class DieselDash839C extends DieselTrain {
         prevPosY = d1;
         prevPosZ = d2;
     }
+
     public void initLoco() {
         fuelTrain = 0;
         locoInvent = new ItemStack[inventorySize];
     }
+
     @Override
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 4.05;
-        double yOffset = 0.25;
+        double distance = 3.6;
+        double yOffset = 0.2;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
         if(side.isServer()){
@@ -51,6 +54,7 @@ public class DieselDash839C extends DieselTrain {
         float pitch1 = (float) (posY + getMountedYOffset() + riddenByEntity.getYOffset() + yOffset);
         double bogieX1 = (this.posX + (rotationCos1 * distance));
         double bogieZ1 = (this.posZ + (rotationSin1* distance));
+        //System.out.println(rotationCos1+" "+rotationSin1);
         if(anglePitchClient>20 && rotationCos1 == 1){
             bogieX1-=pitchRads*2;
             pitch-=pitchRads*1.2;
@@ -60,10 +64,10 @@ public class DieselDash839C extends DieselTrain {
             pitch-=pitchRads*1.2;
         }
         if (pitchRads == 0.0) {
-            riddenByEntity.setPosition(bogieX1, pitch1, bogieZ1);
+            riddenByEntity.setPosition(bogieX1, pitch1, bogieZ1 -0.0);
         }
         if (pitchRads > -1.01 && pitchRads < 1.01) {
-            riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
+            riddenByEntity.setPosition(bogieX1, pitch, bogieZ1 +0.0);
         }
     }
     @Override
@@ -71,17 +75,20 @@ public class DieselDash839C extends DieselTrain {
         super.setDead();
         isDead = true;
     }
+
     @Override
     public void pressKey(int i) {
         if (i == 7 && riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
             ((EntityPlayer) riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCO, worldObj, (int) this.posX, (int) this.posY, (int) this.posZ);
         }
     }
+
     @Override
     public void onUpdate() {
         checkInvent(locoInvent[0]);
         super.onUpdate();
     }
+
     @Override
     protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {
         super.writeEntityToNBT(nbttagcompound);
@@ -98,6 +105,7 @@ public class DieselDash839C extends DieselTrain {
         }
         nbttagcompound.setTag("Items", nbttaglist);
     }
+
     @Override
     protected void readEntityFromNBT(NBTTagCompound nbttagcompound) {
         super.readEntityFromNBT(nbttagcompound);
@@ -113,21 +121,26 @@ public class DieselDash839C extends DieselTrain {
             }
         }
     }
+
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.3F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.6F;
     }
+
     @Override
     public int getSizeInventory() {
         return inventorySize;
     }
+
     @Override
     public String getInventoryName() {
-        return "GE C39-8";
+        return "EMD SDP45";
     }
+
     @Override
     public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
         return false;
     }
+
     @Override
     public boolean interactFirst(EntityPlayer entityplayer) {
         playerEntity = entityplayer;
@@ -146,4 +159,5 @@ public class DieselDash839C extends DieselTrain {
     public boolean canBeAdjusted(EntityMinecart cart) {
         return canBeAdjusted;
     }
+
 }

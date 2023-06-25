@@ -1742,7 +1742,8 @@ public class ModelU23B extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.05, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1178||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16){
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19324){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.52, -0.025, 0);
@@ -1760,8 +1761,26 @@ public class ModelU23B extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.05, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 2 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18){
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Blac.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(-1.52, -0.01, 0);
+			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glTranslated(3.05, 0, 0);
+			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_silver_a.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(-1.52, 0.0, 0);
+			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glTranslated(3.05, 0, 0);
+			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 9){
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_de_bleu.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.52, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);

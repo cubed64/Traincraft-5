@@ -30,7 +30,7 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 
 	public ModelDash839C() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[426];
+		bodyModel = new ModelRendererTurbo[427];
 
 		initbodyModel_1();
 
@@ -116,7 +116,7 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 		bodyModel[72] = new ModelRendererTurbo(this, 41, 166, textureX, textureY); // Box 459
 		bodyModel[73] = new ModelRendererTurbo(this, 53, 147, textureX, textureY); // Box 462
 		bodyModel[74] = new ModelRendererTurbo(this, 15, 117, textureX, textureY, "cull"); // Box 162 cull
-		bodyModel[75] = new ModelRendererTurbo(this, 27, 112, textureX, textureY); // Box 163
+		bodyModel[75] = new ModelRendererTurbo(this, 27, 112, textureX, textureY, "cull"); // Box 163 cull
 		bodyModel[76] = new ModelRendererTurbo(this, 33, 117, textureX, textureY, "cull"); // Box 164 cull
 		bodyModel[77] = new ModelRendererTurbo(this, 27, 117, textureX, textureY); // Box 467
 		bodyModel[78] = new ModelRendererTurbo(this, 48, 134, textureX, textureY); // Box 363
@@ -428,8 +428,8 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 		bodyModel[384] = new ModelRendererTurbo(this, 73, 126, textureX, textureY, "lamp"); // Box 217 headlight front 2
 		bodyModel[385] = new ModelRendererTurbo(this, 59, 138, textureX, textureY); // Box 311
 		bodyModel[386] = new ModelRendererTurbo(this, 248, 206, textureX, textureY); // Box 336
-		bodyModel[387] = new ModelRendererTurbo(this, 255, 201, textureX, textureY, "cull"); // Box 337 cull
-		bodyModel[388] = new ModelRendererTurbo(this, 248, 201, textureX, textureY, "cull"); // Box 338 cull
+		bodyModel[387] = new ModelRendererTurbo(this, 255, 201, textureX, textureY, "lamp"); // Box 337 cull
+		bodyModel[388] = new ModelRendererTurbo(this, 248, 201, textureX, textureY, "lamp"); // Box 338 cull
 		bodyModel[389] = new ModelRendererTurbo(this, 463, 158, textureX, textureY, "lamp"); // Box 396 headlight r
 		bodyModel[390] = new ModelRendererTurbo(this, 456, 158, textureX, textureY); // Box 397
 		bodyModel[391] = new ModelRendererTurbo(this, 463, 158, textureX, textureY, "lamp"); // Box 398 headlight r
@@ -467,6 +467,7 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 		bodyModel[423] = new ModelRendererTurbo(this, 33, 70, textureX, textureY); // Box 4
 		bodyModel[424] = new ModelRendererTurbo(this, 18, 72, textureX, textureY); // Box 448
 		bodyModel[425] = new ModelRendererTurbo(this, 48, 72, textureX, textureY); // Box 449
+		bodyModel[426] = new ModelRendererTurbo(this, 175, 177, textureX, textureY); // Box 431 backpannel bulgy bit
 
 		bodyModel[0].addBox(0F, 0F, 0F, 92, 2, 4, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-46F, -2F, -11F);
@@ -597,17 +598,17 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 		bodyModel[42].addShapeBox(0F, 0F, 0F, 2, 1, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0.5F, 0F, 0F, 0.5F, 0F); // Box 185 ph2 mounting stuff
 		bodyModel[42].setRotationPoint(31F, 1F, -11F);
 
-		bodyModel[43].addBox(0F, 0F, 0F, 31, 4, 16, 0F); // Box 2
-		bodyModel[43].setRotationPoint(-15.5F, 5F, -8F);
+		bodyModel[43].addBox(0F, 0F, 0F, 27, 4, 16, 0F); // Box 2
+		bodyModel[43].setRotationPoint(-13.5F, 5F, -8F);
 
-		bodyModel[44].addShapeBox(0F, 0F, 0F, 31, 3, 22, 0F,0F, -0.15F, 0F, 0F, -0.15F, 0F, 0F, -0.15F, 0F, 0F, -0.15F, 0F, 0F, 0.5F, 0F, 0F, 0.5F, 0F, 0F, 0.5F, 0F, 0F, 0.5F, 0F); // Box 10
-		bodyModel[44].setRotationPoint(-15.5F, 1.5F, -11F);
+		bodyModel[44].addShapeBox(0F, 0F, 0F, 27, 3, 22, 0F,0F, -0.15F, 0F, 0F, -0.15F, 0F, 0F, -0.15F, 0F, 0F, -0.15F, 0F, 0F, 0.5F, 0F, 0F, 0.5F, 0F, 0F, 0.5F, 0F, 0F, 0.5F, 0F); // Box 10
+		bodyModel[44].setRotationPoint(-13.5F, 1.5F, -11F);
 
-		bodyModel[45].addShapeBox(0F, 0F, 0F, 31, 4, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 157
-		bodyModel[45].setRotationPoint(-15.5F, 5F, -11F);
+		bodyModel[45].addShapeBox(0F, 0F, 0F, 27, 4, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 157
+		bodyModel[45].setRotationPoint(-13.5F, 5F, -11F);
 
-		bodyModel[46].addShapeBox(0F, 0F, 0F, 31, 4, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F); // Box 158
-		bodyModel[46].setRotationPoint(-15.5F, 5F, 8F);
+		bodyModel[46].addShapeBox(0F, 0F, 0F, 27, 4, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F); // Box 158
+		bodyModel[46].setRotationPoint(-13.5F, 5F, 8F);
 
 		bodyModel[47].addShapeBox(0F, 0F, 0F, 100, 1, 15, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F); // Box 63
 		bodyModel[47].setRotationPoint(-50F, 1.75F, -7.5F);
@@ -622,28 +623,28 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 		bodyModel[50].setRotationPoint(-46F, -2F, 7F);
 
 		bodyModel[51].addBox(0F, 0F, 0F, 1, 3, 18, 0F); // Box 19
-		bodyModel[51].setRotationPoint(-17.5F, 4F, -9F);
+		bodyModel[51].setRotationPoint(-15.5F, 4F, -9F);
 
 		bodyModel[52].addShapeBox(0F, 0F, 0F, 1, 5, 4, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 305 pipe cull
-		bodyModel[52].setRotationPoint(-17.5F, 1F, 5.5F);
+		bodyModel[52].setRotationPoint(-15.5F, 1F, 5.5F);
 
 		bodyModel[53].addShapeBox(0F, 0F, 0F, 1, 1, 18, 0F,0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F); // Box 19
-		bodyModel[53].setRotationPoint(-18.5F, 5F, -9F);
+		bodyModel[53].setRotationPoint(-16.5F, 5F, -9F);
 
 		bodyModel[54].addShapeBox(0F, 0F, 0F, 1, 1, 18, 0F,0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F); // Box 548
-		bodyModel[54].setRotationPoint(-16.5F, 5F, -9F);
+		bodyModel[54].setRotationPoint(-14.5F, 5F, -9F);
 
 		bodyModel[55].addBox(0F, 0F, 0F, 1, 3, 18, 0F); // Box 19
-		bodyModel[55].setRotationPoint(16.5F, 4F, -9F);
+		bodyModel[55].setRotationPoint(14.5F, 4F, -9F);
 
 		bodyModel[56].addShapeBox(0F, 0F, 0F, 1, 5, 4, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 305 pipe cull
-		bodyModel[56].setRotationPoint(16.5F, 1F, 5.5F);
+		bodyModel[56].setRotationPoint(14.5F, 1F, 5.5F);
 
 		bodyModel[57].addShapeBox(0F, 0F, 0F, 1, 1, 18, 0F,0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F); // Box 19
-		bodyModel[57].setRotationPoint(15.5F, 5F, -9F);
+		bodyModel[57].setRotationPoint(13.5F, 5F, -9F);
 
 		bodyModel[58].addShapeBox(0F, 0F, 0F, 1, 1, 18, 0F,0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F); // Box 548
-		bodyModel[58].setRotationPoint(17.5F, 5F, -9F);
+		bodyModel[58].setRotationPoint(15.5F, 5F, -9F);
 
 		bodyModel[59].addShapeBox(0F, 0F, 0F, 30, 1, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F); // Box 156
 		bodyModel[59].setRotationPoint(-46F, 0.5F, -11F);
@@ -652,35 +653,35 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 		bodyModel[60].setRotationPoint(-46F, 0F, -11F);
 
 		bodyModel[61].addShapeBox(0F, 0F, 0F, 3, 3, 14, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, -3F, 0F); // Box 310 cull fueltank support
-		bodyModel[61].setRotationPoint(-18.5F, 2F, -7F);
+		bodyModel[61].setRotationPoint(-16.5F, 2F, -7F);
 
 		bodyModel[62].addShapeBox(0F, 0F, 0F, 1, 2, 13, 0F,0F, 0F, 0F, 0.5F, 0F, 0F, 0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, -0.5F, 0.5F, 0F, -0.5F, 0.5F, 0F, 0F, 1F, 0F); // Box 441
-		bodyModel[62].setRotationPoint(-18.5F, 2F, -6.5F);
+		bodyModel[62].setRotationPoint(-16.5F, 2F, -6.5F);
 
 		bodyModel[63].addBox(-0.5F, -5F, -1F, 1, 5, 1, 0F); // Box 305 pipe cull
-		bodyModel[63].setRotationPoint(-17F, 5.5F, -8.99F);
+		bodyModel[63].setRotationPoint(-15F, 5.5F, -8.99F);
 		bodyModel[63].rotateAngleZ = 0.36651914F;
 
 		bodyModel[64].addShapeBox(0F, 0F, 0F, 3, 3, 14, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, -1F, 0F); // Box 443
-		bodyModel[64].setRotationPoint(15.5F, 2F, -7F);
+		bodyModel[64].setRotationPoint(13.5F, 2F, -7F);
 
 		bodyModel[65].addBox(-0.5F, -3F, -1F, 1, 3, 4, 0F); // Box 445 pipe cull
-		bodyModel[65].setRotationPoint(17F, 5.5F, -8.99F);
+		bodyModel[65].setRotationPoint(15F, 5.5F, -8.99F);
 		bodyModel[65].rotateAngleZ = -0.31415927F;
 
 		bodyModel[66].addShapeBox(0F, 0F, 0F, 2, 1, 4, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 447 pipe cull
-		bodyModel[66].setRotationPoint(14.75F, 2.75F, -10F);
+		bodyModel[66].setRotationPoint(12.75F, 2.75F, -10F);
 
 		bodyModel[67].addBox(0F, -0.5F, 0F, 1, 1, 3, 0F); // Box 382
-		bodyModel[67].setRotationPoint(-14F, 1.25F, -11.25F);
+		bodyModel[67].setRotationPoint(-12F, 1.25F, -11.25F);
 		bodyModel[67].rotateAngleX = -0.29670597F;
 
 		bodyModel[68].addBox(0F, -0.5F, -3F, 1, 1, 3, 0F); // Box 450
-		bodyModel[68].setRotationPoint(-14F, 1.25F, 11.25F);
+		bodyModel[68].setRotationPoint(-12F, 1.25F, 11.25F);
 		bodyModel[68].rotateAngleX = 0.29670597F;
 
 		bodyModel[69].addShapeBox(0F, 0F, 0F, 2, 5, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, -2F, 0F); // Box 527 why dont you filter some grass instead
-		bodyModel[69].setRotationPoint(-19.75F, 0F, 8.5F);
+		bodyModel[69].setRotationPoint(-17.75F, 0F, 8.5F);
 
 		bodyModel[70].addShapeBox(0F, 0F, 0F, 1, 2, 0, 0F,0F, 0F, 0F, -0.35F, 0F, 0F, -0.35F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, 0.5F, 0F, 0F, 0.5F); // Box 457
 		bodyModel[70].setRotationPoint(-46F, 6F, -11F);
@@ -1311,7 +1312,7 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 		bodyModel[274].setRotationPoint(4F, -24F, -6.5F);
 
 		bodyModel[275].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 421
-		bodyModel[275].setRotationPoint(5.5F, -23.75F, -7.5F);
+		bodyModel[275].setRotationPoint(6F, -23.75F, -7.5F);
 
 		bodyModel[276].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F); // Box 6 PRIME1-1
 		bodyModel[276].setRotationPoint(-37F, -23.5F, 7.5F);
@@ -1530,16 +1531,16 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 		bodyModel[345].setRotationPoint(50F, 1F, -7.5F);
 
 		bodyModel[346].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.5F, 0F, 0.5F, 0.5F, 0F, 0.5F, 0.5F, 0F, 0.5F, 0.5F, 0F, 0.5F); // Box 114
-		bodyModel[346].setRotationPoint(-17F, 2.5F, 7.5F);
+		bodyModel[346].setRotationPoint(-15F, 2.5F, 7.5F);
 
 		bodyModel[347].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,-0.2F, 0F, -0.2F, -0.2F, 0F, -0.2F, -0.2F, 0F, -0.2F, -0.2F, 0F, -0.2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 74
-		bodyModel[347].setRotationPoint(-17F, 1.5F, 7.5F);
+		bodyModel[347].setRotationPoint(-15F, 1.5F, 7.5F);
 
 		bodyModel[348].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.5F, 0F, 0F, -0.5F); // Box 78
-		bodyModel[348].setRotationPoint(-16.75F, 3F, 7.75F);
+		bodyModel[348].setRotationPoint(-14.75F, 3F, 7.75F);
 
 		bodyModel[349].addBox(0F, 0F, 0F, 1, 1, 2, 0F); // Box 1007 cull
-		bodyModel[349].setRotationPoint(-17F, 0.5F, 7.1F);
+		bodyModel[349].setRotationPoint(-15F, 0.5F, 7.1F);
 
 		bodyModel[350].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.5F, 0F, 0F, -0.5F); // Box 566
 		bodyModel[350].setRotationPoint(-42.25F, -20F, -0.25F);
@@ -1629,22 +1630,22 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 		bodyModel[375].setRotationPoint(-25.5F, -17F, 7.01F);
 
 		bodyModel[376].addBox(0F, 0F, 0F, 1, 1, 2, 0F); // Box 383
-		bodyModel[376].setRotationPoint(16F, 0.5F, 7.1F);
+		bodyModel[376].setRotationPoint(15F, 0.5F, 7.1F);
 
 		bodyModel[377].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,-0.2F, 0F, -0.2F, -0.2F, 0F, -0.2F, -0.2F, 0F, -0.2F, -0.2F, 0F, -0.2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 384
-		bodyModel[377].setRotationPoint(16F, 1.5F, 7.5F);
+		bodyModel[377].setRotationPoint(15F, 1.5F, 7.5F);
 
 		bodyModel[378].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.5F, 0F, 0.5F, 0.5F, 0F, 0.5F, 0.5F, 0F, 0.5F, 0.5F, 0F, 0.5F); // Box 385
-		bodyModel[378].setRotationPoint(16F, 2.5F, 7.5F);
+		bodyModel[378].setRotationPoint(15F, 2.5F, 7.5F);
 
 		bodyModel[379].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.5F, 0F, 0F, -0.5F); // Box 386
-		bodyModel[379].setRotationPoint(16.25F, 3F, 7.75F);
+		bodyModel[379].setRotationPoint(15.25F, 3F, 7.75F);
 
 		bodyModel[380].addShapeBox(0F, 0F, 0F, 8, 4, 1, 0F,0F, 0F, 0F, -4F, 0F, 0F, -4F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -4F, 0F, 0F, -4F, 0F, 0F, 0F, 0F, 0F); // Box 387
 		bodyModel[380].setRotationPoint(39.5F, -13F, 7F);
 
 		bodyModel[381].addShapeBox(0F, 0F, 0F, 1, 2, 13, 0F,0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.5F, 0F, 0F, -0.5F, 0.5F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, -0.5F, 0.5F, 0F); // Box 387
-		bodyModel[381].setRotationPoint(17.5F, 2F, -6.5F);
+		bodyModel[381].setRotationPoint(15.5F, 2F, -6.5F);
 
 		bodyModel[382].addBox(0F, 0F, 0F, 1, 15, 12, 0F); // Box 530 not a fridge
 		bodyModel[382].setRotationPoint(-28F, -21F, -6F);
@@ -1783,6 +1784,9 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 
 		bodyModel[425].addShapeBox(0F, 0F, 0F, 3, 1, 8, 0F,-2.5F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, -0.5F, 0F, 0F, -2.5F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, -0.5F, 0F, 0F); // Box 449
 		bodyModel[425].setRotationPoint(-53F, 5F, -10F);
+
+		bodyModel[426].addShapeBox(0F, 0F, 0F, 1, 10, 10, 0F,0.125F, -0.125F, -0.125F, 0.125F, -0.125F, -0.125F, 0.125F, -0.125F, -5.125F, 0.125F, -0.125F, -5.125F, 0.125F, -5.125F, -0.125F, 0.125F, -5.125F, -0.125F, 0.125F, -5.125F, -5.125F, 0.125F, -5.125F, -5.125F); // Box 431 backpannel bulgy bit
+		bodyModel[426].setRotationPoint(-28F, -20.5F, 0.5F);
 	}
 
 	ModelFB3 theTrucks2 = new ModelFB3();
@@ -1804,19 +1808,19 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 843) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb3_Grey.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.75, 0.07, 0);
+			GL11.glTranslated(-1.95, 0.07, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(3.52, 0, 0);
+			GL11.glTranslated(3.95, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb3_Silver.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.75, 0.07, 0);
+			GL11.glTranslated(-1.95, 0.07, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(3.52, 0, 0);
+			GL11.glTranslated(3.95, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else {
@@ -1845,7 +1849,7 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 	public ArrayList<double[]> getSmokePosition() {
 		return new ArrayList<double[]>() {
 			{
-				add(new double[]{0.65D, 1.35D, 0.0D});
+				add(new double[]{0.925D, 1.5D, 0.0D});
 			}
 		};
 	}

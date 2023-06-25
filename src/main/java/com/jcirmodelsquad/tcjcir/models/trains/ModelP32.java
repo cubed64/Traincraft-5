@@ -1840,7 +1840,7 @@ public class ModelP32 extends ModelConverter //Same as Filename
 	public ArrayList<double[]> getSmokePosition() {
 		return new ArrayList<double[]>() {
 			{
-				add(new double[]{1.94D, 1.3D, 0D});
+				add(new double[]{1.3D, 1.35D, 0D});
 			}
 		};
 	}

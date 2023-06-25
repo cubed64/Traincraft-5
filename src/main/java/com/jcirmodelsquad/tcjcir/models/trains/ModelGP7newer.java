@@ -31,7 +31,7 @@ public class ModelGP7newer extends ModelConverter //Same as Filename
 
 	public ModelGP7newer() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[629];
+		bodyModel = new ModelRendererTurbo[631];
 
 		initbodyModel_1();
 		initbodyModel_2();
@@ -2200,6 +2200,8 @@ public class ModelGP7newer extends ModelConverter //Same as Filename
 		bodyModel[626] = new ModelRendererTurbo(this, 451, 180, textureX, textureY, "lamp"); // Box 626 low ditchlight r
 		bodyModel[627] = new ModelRendererTurbo(this, 444, 180, textureX, textureY, "cull"); // Box 627 cull
 		bodyModel[628] = new ModelRendererTurbo(this, 444, 180, textureX, textureY, "cull"); // Box 628 cull
+		bodyModel[629] = new ModelRendererTurbo(this, 225, 110, textureX, textureY); // Box 123 sunshade
+		bodyModel[630] = new ModelRendererTurbo(this, 225, 107, textureX, textureY); // Box 311 sunshade
 
 		bodyModel[500].addBox(0F, 0F, 0F, 2, 3, 2, 0F); // Box 526
 		bodyModel[500].setRotationPoint(3.5F, -21.5F, -1F);
@@ -2600,6 +2602,14 @@ public class ModelGP7newer extends ModelConverter //Same as Filename
 
 		bodyModel[628].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F); // Box 628 cull
 		bodyModel[628].setRotationPoint(37.5F, 1F, -6.75F);
+
+		bodyModel[629].addShapeBox(0F, 0F, 0F, 9, 2, 0, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F); // Box 123 sunshade
+		bodyModel[629].setRotationPoint(-20.5F, -16F, -11F);
+		bodyModel[629].rotateAngleX = -0.78539816F;
+
+		bodyModel[630].addShapeBox(0F, 0F, 0F, 9, 2, 0, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F); // Box 311 sunshade
+		bodyModel[630].setRotationPoint(-20.5F, -16F, 11F);
+		bodyModel[630].rotateAngleX = 0.78539816F;
 	}
 
 	ModelBlombergBnew theBlombi = new ModelBlombergBnew();
@@ -2608,7 +2618,7 @@ public class ModelGP7newer extends ModelConverter //Same as Filename
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 629; i++) {
+		for (int i = 0; i < 631; i++) {
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);

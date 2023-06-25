@@ -1007,6 +1007,9 @@ RenderEnum {
 			add(new double[]{2.5D, 1.5D, 0.0D});
 		}
 	}, "", null, 0, false),
+	SDP45(DieselSDP45.class, new ModelSDP45(), "sdp45_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 	FP45( DieselFP45.class,  new ModelFP45(), "fp45_", true,new float[] {-2F, -0.14F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
 		{
 			add(new double[]{2.55D, 1.5D, 0.0D});
@@ -1152,6 +1155,9 @@ RenderEnum {
 		{ }
 	}, "", null, 0, false),
 	AC4400CW( DieselAC4400CW.class,  new ModelDash944CW(), "ac4400cw_", true,new float[] {-2.2F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	AC4400C( DieselAC4400C.class,  new ModelAC44C(), "ac4400c_", true,new float[] {-2.2F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
 

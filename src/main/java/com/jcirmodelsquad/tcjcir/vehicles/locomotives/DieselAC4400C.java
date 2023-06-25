@@ -14,12 +14,12 @@ import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
 
-public class DieselDash839C extends DieselTrain {
-    public DieselDash839C(World world) {
-        super(world, EnumTrains.Dash839C.getTankCapacity(), LiquidManager.dieselFilter());
+public class DieselAC4400C extends DieselTrain {
+    public DieselAC4400C(World world) {
+        super(world, EnumTrains.AC4400C.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
     }
-    public DieselDash839C(World world, double d, double d1, double d2){
+    public DieselAC4400C(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -37,8 +37,8 @@ public class DieselDash839C extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 4.05;
-        double yOffset = 0.25;
+        double distance = 3.9;
+        double yOffset = 0.4;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
         if(side.isServer()){
@@ -122,7 +122,7 @@ public class DieselDash839C extends DieselTrain {
     }
     @Override
     public String getInventoryName() {
-        return "GE C39-8";
+        return "GE AC4400C";
     }
     @Override
     public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {

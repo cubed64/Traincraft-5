@@ -709,21 +709,21 @@ public class ModelSD40A extends ModelConverter //Same as Filename
 		bodyModel[96].setRotationPoint(11F, -21F, 7F);
 
 		bodyModel[97].addBox(0F, 0F, 0F, 2, 2, 4, 0F); // Box 31
-		bodyModel[97].setRotationPoint(39.25F, -18F, -2F);
+		bodyModel[97].setRotationPoint(39.25F, -19F, -2F);
 
 		bodyModel[98].addShapeBox(-1F, 0F, 0F, 1, 2, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 115 numberboard rear
-		bodyModel[98].setRotationPoint(38.45F, -15.5F, -6F);
+		bodyModel[98].setRotationPoint(38.45F, -16.5F, -6F);
 		bodyModel[98].rotateAngleY = -0.41887902F;
 
 		bodyModel[99].addShapeBox(-1F, 0F, -5F, 1, 2, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 116 numberboard rear
-		bodyModel[99].setRotationPoint(38.45F, -15.5F, 6F);
+		bodyModel[99].setRotationPoint(38.45F, -16.5F, 6F);
 		bodyModel[99].rotateAngleY = 0.41887902F;
 
 		bodyModel[100].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F); // Box 247 headlight rear 2 beam
-		bodyModel[100].setRotationPoint(40.5F, -18F, -2F);
+		bodyModel[100].setRotationPoint(40.5F, -19F, -2F);
 
 		bodyModel[101].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F); // Box 248 headlight rear 2 beam
-		bodyModel[101].setRotationPoint(40.5F, -18F, 0F);
+		bodyModel[101].setRotationPoint(40.5F, -19F, 0F);
 
 		bodyModel[102].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -1F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -1F, -0.25F, -0.25F); // Box 71 markerlight twO
 		bodyModel[102].setRotationPoint(37.65F, -12F, -6.5F);
@@ -778,10 +778,10 @@ public class ModelSD40A extends ModelConverter //Same as Filename
 		bodyModel[118].setRotationPoint(-41F, -8F, 0F);
 
 		bodyModel[119].addShapeBox(0F, 0F, 0F, 1, 5, 1, 0F,0F, 0F, 0F, -0.58F, 0F, 0F, -0.58F, 0F, 0F, -0.42F, 0F, 0F, 0F, 0F, 0F, -0.58F, 0F, 0F, -0.58F, 0F, 0F, -0.42F, 0F, 0F); // Box 296 nose cover
-		bodyModel[119].setRotationPoint(-44F, -13F, 0F);
+		bodyModel[119].setRotationPoint(-41F, -13F, 0F);
 
 		bodyModel[120].addShapeBox(0F, 0F, 0F, 1, 5, 1, 0F,-0.42F, 0F, 0F, -0.58F, 0F, 0F, -0.58F, 0F, 0F, 0F, 0F, 0F, -0.42F, 0F, 0F, -0.58F, 0F, 0F, -0.58F, 0F, 0F, 0F, 0F, 0F); // Box 299 nose cover
-		bodyModel[120].setRotationPoint(-44F, -13F, -1F);
+		bodyModel[120].setRotationPoint(-41F, -13F, -1F);
 
 		bodyModel[121].addBox(0F, 0F, 0F, 6, 13, 14, 0F); // Box 43
 		bodyModel[121].setRotationPoint(-36F, -13F, -7F);

@@ -408,6 +408,7 @@ public enum ItemIDs {
 	minecartSDP40F("ItemRollingStock","sdp40f",5),
 	minecartSD45dash2("ItemRollingStock", "sd45", 5),
 	minecartSD45dash2B("ItemRollingStock", "sd45dash2b", 5),
+	minecartSDP45("ItemRollingStock", "sdp45", 5),
 	minecartF45("ItemRollingStock", "f45", 5),
 	minecartFP45("ItemRollingStock", "fp45", 5),
 	minecartSD70Mac("ItemRollingStock", "sd70mac", 6),
@@ -454,6 +455,7 @@ public enum ItemIDs {
 
 	minecartDash944CW("ItemRollingStock", "d944cw", 5),
 	minecartAC4400CW("ItemRollingStock", "ac4400cw", 5),
+	minecartAC4400C("ItemRollingStock", "ac4400c", 5),
 
 	minecartES44("ItemRollingStock", "es44", 6),
 	minecartP32("ItemRollingStock", "geGenesis2", 4),
