@@ -1,7 +1,6 @@
 package com.jcirmodelsquad.tcjcir.features.eti;
 
 import com.jcirmodelsquad.tcjcir.models.ModelTrainMonitorSatelite;
-import com.jcirmodelsquad.tcjcir.models.containers.ModelA40AFootContainer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;

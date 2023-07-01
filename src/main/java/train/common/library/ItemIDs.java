@@ -574,6 +574,7 @@ public enum ItemIDs {
 	minecartGunderson89ftAutorack("ItemRollingStock", "gunderson_autorack", 7),
 	minecartGunderson89ftFlat("ItemRollingStock", "gunderson_flat", 2),
 	minecartStampedeRack("ItemRollingStock", "stampede", 3),
+	minecartHuskyStackWellcar("ItemRollingStock", "huskystack", 3),
 
 	minecartIngotPig("ItemRollingStock", "pigiron", 3),
 	minecartSteelSlabFlat("ItemRollingStock", "steelflat", 3),
@@ -675,7 +676,6 @@ public enum ItemIDs {
 	minecartHighrailTruck("ItemRollingStock", "highrail", 3),
 	minecartFRED("ItemRollingStock", "fred", 5),
 
-	//minecartHuskyStackWellcar("ItemRollingStock", "huskystack", 3),
 	minecartHustler("ItemRollingStock", "hustler", 2),
 	minecartBoulderWagon("ItemRollingStock","BoulderWagon",3),
 	minecartLogcarNP( "ItemRollingStock","logcarNP",3),

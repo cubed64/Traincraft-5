@@ -2,7 +2,8 @@ package com.jcirmodelsquad.tcjcir.features.containers.render;
 
 import com.jcirmodelsquad.tcjcir.features.containers.BlockFortyFootContainer;
 import com.jcirmodelsquad.tcjcir.features.containers.TileFortyFootContainer;
-import com.jcirmodelsquad.tcjcir.models.containers.ModelA40AFootContainer;
+import com.jcirmodelsquad.tcjcir.models.containers.ModelISO_40FT_Block;
+import com.jcirmodelsquad.tcjcir.models.containers.ModelISO_40FT_Item;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
@@ -46,7 +47,7 @@ public class FortyFootContainerRender extends TileEntitySpecialRenderer {
             GL11.glTranslated(x+ 0.5 ,y + 0.5, z+ 0.44F);
         }
         GL11.glRotatef(180,0,0,1);
-        ModelA40AFootContainer theContainer = new ModelA40AFootContainer();
+        ModelISO_40FT_Block theContainer = new ModelISO_40FT_Block();
         theContainer.render(null,0, 0, 0,0, 0, .0625f);
         GL11.glPopMatrix();
     }

@@ -1,6 +1,9 @@
 package train.client.core;
 
 import com.jcirmodelsquad.tcjcir.features.WigglyWobblyHandler;
+import com.jcirmodelsquad.tcjcir.features.containers.TileFortyFootContainer;
+import com.jcirmodelsquad.tcjcir.features.containers.render.FortyFootContainerRender;
+import com.jcirmodelsquad.tcjcir.features.containers.render.ItemRenderFortyFootContainer;
 import com.jcirmodelsquad.tcjcir.render.*;
 
 import com.jcirmodelsquad.tcjcir.tile.*;
@@ -157,6 +160,9 @@ public class ClientProxy extends CommonProxy {
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.bridgePillar.block), new ItemRenderBridgePillar());
 
 		ClientRegistry.bindTileEntitySpecialRenderer(TileTransmitterSpeed.class, new RenderMTCBlock());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileFortyFootContainer.class, new FortyFootContainerRender());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.FortyFootContainer.block), new ItemRenderFortyFootContainer());
 
 
 

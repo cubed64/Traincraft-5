@@ -144,7 +144,7 @@ public class TileFortyFootContainer extends TileEntity implements IInventory {
     @Override
     public void writeToNBT(NBTTagCompound nbt)
     {
-        super.writeToNBT(nbt);
+        super.writeToNBT(nbt);//the issue lies here
         NBTTagList list = new NBTTagList();
 
         for (int i = 0; i < inventory.length; ++i)
@@ -165,12 +165,10 @@ public class TileFortyFootContainer extends TileEntity implements IInventory {
 
     public ArrayList<String> getAvailableColors() {
         ArrayList<String> leColors = new ArrayList<String>();
-        leColors.add("Grey");
+        leColors.add("LightGrey");
         leColors.add("Blue");
-        leColors.add("Orange");
         leColors.add("White");
-        leColors.add("Purple");
-        leColors.add("Red");
+        leColors.add("Boop");
         return leColors;
     }
 

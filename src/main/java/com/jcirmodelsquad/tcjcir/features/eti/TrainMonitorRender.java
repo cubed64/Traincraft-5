@@ -3,7 +3,6 @@ package com.jcirmodelsquad.tcjcir.features.eti;
 import com.jcirmodelsquad.tcjcir.features.containers.BlockFortyFootContainer;
 import com.jcirmodelsquad.tcjcir.features.containers.TileFortyFootContainer;
 import com.jcirmodelsquad.tcjcir.models.ModelTrainMonitorSatelite;
-import com.jcirmodelsquad.tcjcir.models.containers.ModelA40AFootContainer;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;

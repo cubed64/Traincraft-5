@@ -1,6 +1,7 @@
 package com.jcirmodelsquad.tcjcir.features.containers.render;
 
-import com.jcirmodelsquad.tcjcir.models.containers.ModelA40AFootContainer;
+
+import com.jcirmodelsquad.tcjcir.models.containers.ModelISO_40FT_Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
@@ -42,17 +43,17 @@ public class ItemRenderFortyFootContainer implements IItemRenderer {
 
     }
     private void renderContainer(float f, float g, float h, ItemStack theItem) {
-        ModelA40AFootContainer theContainer = new ModelA40AFootContainer();
+        ModelISO_40FT_Item theContainer = new ModelISO_40FT_Item();
         if (theItem.getTagCompound() != null) {
             if (theItem.getTagCompound().getString("currentColorString").equals("")) {
-                tmt.Tessellator.bindTexture(new ResourceLocation("tc:textures/trains/container40_Grey.png"));
+                tmt.Tessellator.bindTexture(new ResourceLocation("tc:textures/trains/ISO_40FT_LightGrey.png"));
             } else {
-                tmt.Tessellator.bindTexture(new ResourceLocation("tc:textures/trains/container40_" + theItem.getTagCompound().getString("currentColorString") + ".png"));
+                tmt.Tessellator.bindTexture(new ResourceLocation("tc:textures/trains/ISO_40FT_" + theItem.getTagCompound().getString("currentColorString") + ".png"));
             }
 
 
         } else {
-            tmt.Tessellator.bindTexture(new ResourceLocation("tc:textures/trains/container40_Grey.png"));
+            tmt.Tessellator.bindTexture(new ResourceLocation("tc:textures/trains/ISO_40FT_LightGrey.png"));
         }
 
         GL11.glPushMatrix();

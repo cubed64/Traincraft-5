@@ -7,6 +7,7 @@
 
 package train.common.library;
 
+import com.jcirmodelsquad.tcjcir.features.containers.ItemFortyFootContainer;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import com.jcirmodelsquad.tcjcir.render.ItemRenderMILWSwitchStand;
@@ -49,7 +50,7 @@ public enum BlockIDs {
 	//mtcMultiTransmitter(false, null),
 	//mtcMultiReceiver(false, null),
 	//trainMonitor(false, null),
-//	FortyFootContainer(true, ItemFortyFootContainer.class),
+    FortyFootContainer(true, ItemFortyFootContainer.class),
 	//Liquids
 	diesel(false, ItemBlockFluid.class),
 	refinedFuel(false, ItemBlockFluid.class),

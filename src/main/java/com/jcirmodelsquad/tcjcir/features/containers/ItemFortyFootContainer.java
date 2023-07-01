@@ -20,7 +20,7 @@ public class ItemFortyFootContainer extends ItemBlock {
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
         par3List.add("\u00a77" + "A container that you can put items in.");
         par3List.add("\u00a77" + "Can be put on wellcars.");
-        par3List.add("\u00a77" + "Color can be changed with a paintbrush.");
+        par3List.add("\u00a77" + "Color can be changed with the paintbrush.");
         par3List.add("\u00a77" + EnumChatFormatting.RED + "Warning, a work in progress! Things may break!");
     }
 

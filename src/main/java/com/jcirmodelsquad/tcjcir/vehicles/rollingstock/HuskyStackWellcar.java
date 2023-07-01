@@ -1,7 +1,7 @@
-/*
+
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
-import com.jcirmodelsquad.tcjcir.extras.BasicallyContainer;
+import com.jcirmodelsquad.tcjcir.features.containers.BasicallyContainer;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
@@ -85,7 +85,7 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
     @Override
     public void setDead() {
         super.setDead();
-//        ItemStack stackToPlace = new ItemStack(BlockIDs.FortyFootContainer.block, 1);
+        ItemStack stackToPlace = new ItemStack(BlockIDs.FortyFootContainer.block, 1);
 
         if (container1 != null) {
             if (container1.savedData != null) {
@@ -140,23 +140,23 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
             if (!worldObj.isRemote) {
                 entityplayer.inventory.setInventorySlotContents(entityplayer.inventory.currentItem, (ItemStack)null);
             }
-            */
-/*NBTTagList list = theItem.getTagCompound().getTagList("Items", Constants.NBT.TAG_COMPOUND);
+
+            /*NBTTagList list = theItem.getTagCompound().getTagList("Items", Constants.NBT.TAG_COMPOUND);
 
             if (container1 == null) {
                 this.container1 = new BasicallyContainer("FortyFootContainer", "grey", list);
             } else {
                 this.container2 = new BasicallyContainer("FortyFootContainer", "grey", list);
-            }*//*
+            }*/
 
         } else if (entityplayer.getHeldItem() == null && entityplayer.isSneaking()) {
-//            ItemStack theItemStack = new ItemStack(BlockIDs.FortyFootContainer.block, 1);
+            ItemStack theItemStack = new ItemStack(BlockIDs.FortyFootContainer.block, 1);
             if (container2 != null) {
                 if (container2.savedData != null) {
                     container2.savedData.removeTag("x");
                     container2.savedData.removeTag("y");
                     container2.savedData.removeTag("z");
-                 //   theItemStack.setTagCompound(container2.savedData);
+                    theItemStack.setTagCompound(container2.savedData);
                 }
                 if (!worldObj.isRemote) {
                     EntityItem dropItem = new EntityItem(entityplayer.getEntityWorld(), entityplayer.posX, entityplayer.posY, entityplayer.posZ, theItemStack.copy());
@@ -170,7 +170,7 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
                     container1.savedData.removeTag("x");
                     container1.savedData.removeTag("y");
                     container1.savedData.removeTag("z");
-                  //  theItemStack.setTagCompound(container1.savedData);
+                    theItemStack.setTagCompound(container1.savedData);
                 }
                 if (!worldObj.isRemote) {
                     EntityItem dropItem = new EntityItem(entityplayer.getEntityWorld(), entityplayer.posX, entityplayer.posY, entityplayer.posZ, theItemStack.copy());
@@ -220,4 +220,4 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
         }
     }
 }
-*/
+
