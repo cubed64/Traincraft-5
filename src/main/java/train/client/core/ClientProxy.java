@@ -233,6 +233,8 @@ public class ClientProxy extends CommonProxy {
 			return new GuiLantern(player, (TileLantern)te);
 		case (GuiIDs.JUKEBOX):
 			return entity1 != null ? new GuiJukebox(player,(EntityJukeBoxCart)entity1) : null;
+		case (GuiIDs.FORTY_FOOT_CONTAINER):
+			return te instanceof TileFortyFootContainer ? new GuiFortyFootContainer(player.inventory, (TileFortyFootContainer) te) : null;
 		default:
 			return null;
 		}

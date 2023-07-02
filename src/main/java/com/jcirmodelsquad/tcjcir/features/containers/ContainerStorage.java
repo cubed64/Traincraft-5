@@ -1,6 +1,7 @@
 package com.jcirmodelsquad.tcjcir.features.containers;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
@@ -11,7 +12,7 @@ public class ContainerStorage extends Container
 
     private int slotID = 0;
 
-    public ContainerStorage(TileFortyFootContainer te, EntityPlayer player)
+    public ContainerStorage(InventoryPlayer inventory, TileFortyFootContainer te)
     {
         this.te = te;
 
@@ -33,7 +34,7 @@ public class ContainerStorage extends Container
                 this.addSlotToContainer(new Slot(te, x + y * 10, 7 + x * 18, 19 + y * 18));
             }
         }*/
-        for (j = 0; j < 5; ++j)
+        for (j = 0; j < 4; ++j)
         {
             for (k = 0; k < 9; ++k)
             {
@@ -48,13 +49,13 @@ public class ContainerStorage extends Container
         // Player Inventory, Slot 9-35, Slot IDs 9-35
         for (int y = 0; y < 3; ++y) {
             for (int x = 0; x < 9; ++x) {
-                this.addSlotToContainer(new Slot(player.inventory, x + y * 9 + 9, 8 + x * 18, 122 + y * 18));
+                this.addSlotToContainer(new Slot(inventory, x + y * 9 + 9, 8 + x * 18, 122 + y * 18));
             }
         }
         // Hotbar
         for (int i = 0; i < 9; i++)
         {
-            addSlotToContainer(new Slot(player.inventory, i, 8 + i * 18, 180 ));
+            addSlotToContainer(new Slot(inventory, i, 8 + i * 18, 180 ));
         }
     }
 

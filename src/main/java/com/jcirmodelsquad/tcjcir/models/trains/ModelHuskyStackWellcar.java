@@ -16,7 +16,6 @@ import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.HuskyStackWellcar;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
-import tmt.ModelBase;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
@@ -344,23 +343,23 @@ public class ModelHuskyStackWellcar extends ModelConverter
 
         if (entity instanceof HuskyStackWellcar) {
             HuskyStackWellcar wellcar = (HuskyStackWellcar)entity;
-            if (wellcar.container1 != null && wellcar.container1.theType.equals("FortyFootContainer")) {
+            if (wellcar.container1 != null && wellcar.container1.type.equals("FortyFootContainer")) {
                 ModelISO_40FT_Item theContainer = new ModelISO_40FT_Item();
                 Tessellator.bindTexture(new ResourceLocation("tc:textures/trains/ISO_40FT_" + wellcar.container1.color + ".png"));
 
                 GL11.glPushMatrix();
                 GL11.glScalef(1,1,1f);
-                GL11.glTranslated(0,0,0);
+                GL11.glTranslated(0,-0.1,0);
                 theContainer.render(entity, f, f1, f2, f3, f4, f5);
                 GL11.glPopMatrix();
             }
-            if (wellcar.container2 != null && wellcar.container2.theType.equals("FortyFootContainer")) {
+            if (wellcar.container2 != null && wellcar.container2.type.equals("FortyFootContainer")) {
                 ModelISO_40FT_Item theContainer = new ModelISO_40FT_Item();
                 Tessellator.bindTexture(new ResourceLocation("tc:textures/trains/ISO_40FT_" + wellcar.container2.color + ".png"));
 
                 GL11.glPushMatrix();
                 GL11.glScalef(1,1,1f);
-                GL11.glTranslated(0,-1.313,0);
+                GL11.glTranslated(0,-1.4,0);
                 theContainer.render(entity, f, f1, f2, f3, f4, f5);
                 GL11.glPopMatrix();
             }

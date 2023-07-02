@@ -14,9 +14,9 @@ public class GuiFortyFootContainer extends GuiContainer {
     private InventoryPlayer inventory;
     private TileFortyFootContainer te;
     private int inventoryRows;
-    public GuiFortyFootContainer(TileFortyFootContainer te, EntityPlayer player) {
-        super(new ContainerStorage(te, player));
-        inventory = player.inventory;
+    public GuiFortyFootContainer(InventoryPlayer inventory, TileFortyFootContainer te) {
+        super(new ContainerStorage(inventory, te));
+        this.inventory = inventory;
         this.te = te;
         short short1 = 222;
         int i = short1 - 108;

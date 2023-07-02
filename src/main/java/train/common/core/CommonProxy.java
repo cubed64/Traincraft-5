@@ -1,5 +1,7 @@
 package train.common.core;
 
+import com.jcirmodelsquad.tcjcir.features.containers.ContainerStorage;
+import com.jcirmodelsquad.tcjcir.features.containers.TileFortyFootContainer;
 import com.jcirmodelsquad.tcjcir.tile.*;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -91,6 +93,8 @@ public class CommonProxy implements IGuiHandler {
 		GameRegistry.registerTileEntity(TileRacor36D_2.class, "tileRacor36D_2");
 		GameRegistry.registerTileEntity(TileRacor36H.class, "tileRacor36H");
 
+		GameRegistry.registerTileEntity(TileFortyFootContainer.class, "tileFortyFootContainer");
+
 		GameRegistry.registerTileEntity(TileWaterWheel.class, "tileWaterWheel");
 		GameRegistry.registerTileEntity(TileWindMill.class, "tileWindMill");
 		GameRegistry.registerTileEntity(TileGeneratorDiesel.class, "tileGeneratorDiesel");
@@ -107,6 +111,8 @@ public class CommonProxy implements IGuiHandler {
 		GameRegistry.registerTileEntity(TileReceiverDestination.class, "tileInfoReceiverDestination");
 		GameRegistry.registerTileEntity(TileInstructionRadio.class, "tilePDMInstructionRadio");
 		GameRegistry.registerTileEntity(TileTransmitterStopPoint.class, "tileATOTransmitterStopPoint");
+
+
 	}
 
 	public void registerComputerCraftPeripherals() throws ClassNotFoundException {
@@ -196,8 +202,8 @@ public class CommonProxy implements IGuiHandler {
 			return te instanceof TileTransmitterSpeed ? new GuiSpeedTransmitter(te) : null;
 		case (GuiIDs.STOPPOINT_TRANSMITTER):
 			return te instanceof TileTransmitterStopPoint ? new GuiSpeedTransmitter(te) : null;
-		/*case (GuiIDs.FORTY_FOOT_CONTAINER):
-			return new ContainerStorage((TileFortyFootContainer)te, player);*/
+		case (GuiIDs.FORTY_FOOT_CONTAINER):
+			return te instanceof TileFortyFootContainer ? new ContainerStorage(player.inventory, (TileFortyFootContainer) te) : null;
 
 			default:
 			return null;

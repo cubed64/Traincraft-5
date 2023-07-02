@@ -88,7 +88,7 @@ public class BlockFortyFootContainer extends BlockContainer {
 
         TileEntity te = world.getTileEntity(x, y, z);
         if (te instanceof TileFortyFootContainer && world.isRemote) {
-            if (player.getHeldItem() != null && player.getHeldItem().getItem() instanceof ItemPaintbrushThing) {
+            if (player.getHeldItem() != null && player.getHeldItem().getItem() instanceof ItemPaintbrushThing)  {
                 ((TileFortyFootContainer) te).goToNextColor();
             }
         }
@@ -195,11 +195,12 @@ public class BlockFortyFootContainer extends BlockContainer {
     public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase player, ItemStack stack)
     {
         TileFortyFootContainer te = (TileFortyFootContainer) world.getTileEntity(x, y, z);
-        int playerYaw = MathHelper.floor_double((player.rotationYaw / 90.0F) + 2.5D) & 3;
+        int dir = MathHelper.floor_double((player.rotationYaw / 90.0F) + 2.5D) & 3;
+        world.setBlockMetadataWithNotify(x,y,z, dir, 2);
+
 
         if (te != null && stack.getTagCompound() != null)
         {
-            te.directionPlaced = playerYaw;
             stack.getTagCompound().setInteger("x", x);
             stack.getTagCompound().setInteger("y", y);
             stack.getTagCompound().setInteger("z", z);
