@@ -1,6 +1,7 @@
 package train.client.core;
 
 import com.jcirmodelsquad.tcjcir.features.WigglyWobblyHandler;
+import com.jcirmodelsquad.tcjcir.features.containers.GuiFortyFootContainer;
 import com.jcirmodelsquad.tcjcir.features.containers.TileFortyFootContainer;
 import com.jcirmodelsquad.tcjcir.features.containers.render.FortyFootContainerRender;
 import com.jcirmodelsquad.tcjcir.features.containers.render.ItemRenderFortyFootContainer;
