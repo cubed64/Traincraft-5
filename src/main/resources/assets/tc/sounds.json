@@ -263,6 +263,7 @@
   "prime_speakerbell": {"category": "master", "sounds": [{"name": "prime_speakerbell", "stream":  true}]},
   "tram_bell": {"category": "master", "sounds": [{"name": "tram_bell", "stream":  true}]},
   "transonic_ebell": {"category": "master", "sounds": [{"name": "transonic_ebell", "stream":  true}]},
+  "bell": {"category": "master", "sounds": [{"name": "bell", "stream":  true}]},
 
 
   "steambell_1": {"category": "master", "sounds": [{"name": "steambell_1", "stream":  true}]},

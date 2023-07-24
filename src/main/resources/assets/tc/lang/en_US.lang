@@ -47,6 +47,23 @@ tile.tc:circleSwitchStand.name= Circle Switch Stand
 tile.tc:owoYardSwitchStand.name=OWO Yard Switch Stand
 tile.tc:oreTC.snowgravel.name=Snowy Gravel
 
+tile.tc:MFPBWigWag.name=Wig Wag Crossing
+tile.tc:WigWag.name=Wig Wag Crossing
+tile.tc:StandardCrossingArm.name=Flashers With Left Gate
+tile.tc:StandardCrossingArm2.name=Flashers With Right Gate
+tile.tc:Flashers.name=Flashers
+tile.tc:StandardCantilever1.name=Standard Cantilever 1
+tile.tc:StandardCantilever2.name=Standard Cantilever 2
+tile.tc:StandardCantilever3.name=Standard Cantilever 3
+tile.tc:MediumCantileverRight.name=Medium Left Cantilever
+tile.tc:MediumCantileverLeft.name=Medium Right Cantilever
+tile.tc:LargeCantilever.name=Large Cantilever
+tile.tc:PedestrianCrossing.name=Pedestrian Flashers
+tile.tc:WoodenCrossingBuck.name=Crossing Buck
+tile.tc:SmallBungalo.name=Small Bungalow
+tile.tc:MediumBungalo.name=Medium Bungalow
+tile.tc:LargeBungalo.name=Large Bungalow
+
 <!-- ## Misc ## -->
 fluid.diesel.name=Diesel Fuel
 fluid.refinedfuel.name=Refined Fuel

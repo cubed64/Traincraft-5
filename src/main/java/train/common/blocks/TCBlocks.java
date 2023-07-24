@@ -14,6 +14,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import train.common.Traincraft;
+import train.common.blocks.crossers.*;
 import train.common.library.BlockIDs;
 import train.common.library.Info;
 import train.common.mtc.block.*;
@@ -73,6 +74,25 @@ public class TCBlocks {
 			BlockIDs.pdmInstructionBlock.block = new BlockInstructionRadio(Material.rock).setHardness(3.5F).setStepSound(Block.soundTypeMetal).setBlockTextureName("tc:pdmradio").setBlockName("pdmradio").setCreativeTab(Traincraft.tcTab);
 			BlockIDs.mtcReceiverDestination.block = new BlockReceiverDestination(Material.rock).setHardness(3.5F).setStepSound(Block.soundTypeMetal).setBlockTextureName("tc:destinationreceiver").setBlockName("mtcdestinationreceiver").setCreativeTab(Traincraft.tcTab);
 		//BlockIDs.book.block = new BlockBook(BlockIDs.book.blockID);
+
+		//crossers
+		BlockIDs.MFPBWigWag.block = new BlockMFPBWigWag().setHardness(2.5F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.WigWag.block = new BlockWigWag().setHardness(2.5F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.CrossingBase.block = new BlockCrossingBase().setHardness(2.5F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.Flashers.block = new BlockFlashers().setHardness(2.5F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.StandardCantilever1.block = new BlockStandardCantilever1().setHardness(2.5F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.StandardCantilever2.block = new BlockStandardCantilever2().setHardness(2.5F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.StandardCantilever3.block = new BlockStandardCantilever3().setHardness(2.5F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.MediumCantileverRight.block = new BlockMediumCantileverRight().setHardness(2.5F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.MediumCantileverLeft.block = new BlockMediumCantileverLeft().setHardness(2.5F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.LargeCantilever.block = new BlockLargeCantilever().setHardness(2.5F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.PedestrianCrossing.block = new BlockPedestrianCrossing().setHardness(2.5F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.WoodenCrossingBuck.block = new BlockWoodenCrossingBuck().setHardness(2.5F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.SmallBungalo.block = new BlockSmallBungalo().setHardness(2.5F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.MediumBungalo.block = new BlockMediumBungalo().setHardness(2.5F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.LargeBungalo.block = new BlockLargeBungalo().setHardness(2.5F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.StandardCrossingArm.block = new BlockFlashersWithGate().setHardness(2.5f).setStepSound(Block.soundTypeMetal);
+		BlockIDs.StandardCrossingArm2.block = new BlockFlashersWithGate2().setHardness(2.5f).setStepSound(Block.soundTypeMetal);
 	}
 
 	public static void registerBlocks() {

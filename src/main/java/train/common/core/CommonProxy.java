@@ -38,6 +38,7 @@ import train.common.mtc.block.BlockTransmitterStopPoint;
 import train.common.mtc.tile.*;
 import com.jcirmodelsquad.tcjcir.features.signal.vbc.TileVBCController;
 import train.common.tile.*;
+import train.common.tile.tileSwitch.*;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -112,7 +113,24 @@ public class CommonProxy implements IGuiHandler {
 		GameRegistry.registerTileEntity(TileInstructionRadio.class, "tilePDMInstructionRadio");
 		GameRegistry.registerTileEntity(TileTransmitterStopPoint.class, "tileATOTransmitterStopPoint");
 
-
+		//crossigns
+		GameRegistry.registerTileEntity(TileMFPBWigWag.class, "tileMFPBWigWag");
+		GameRegistry.registerTileEntity(TileWigWag.class, "tileWigWag");
+		GameRegistry.registerTileEntity(TileCrossingBase.class, "tileCrossingBase");
+		GameRegistry.registerTileEntity(TileFlashers.class, "tileFlashers");
+		GameRegistry.registerTileEntity(TileStandardCantilever1.class, "tileStandardCantilever1");
+		GameRegistry.registerTileEntity(TileStandardCantilever2.class, "tileStandardCantilever2");
+		GameRegistry.registerTileEntity(TileStandardCantilever3.class, "tileStandardCantilever3");
+		GameRegistry.registerTileEntity(TileMediumCantileverRight.class, "tileMediumCantileverRight");
+		GameRegistry.registerTileEntity(TileMediumCantileverLeft.class, "tileMediumCantileverLeft");
+		GameRegistry.registerTileEntity(TileLargeCantilever.class, "tileLargeCantilever");
+		GameRegistry.registerTileEntity(TilePedestrianCrossing.class, "tilePedestrianCrossing");
+		GameRegistry.registerTileEntity(TileFlashersWithGate.class, "tileStandardCrossingArm");
+		GameRegistry.registerTileEntity(TileFlashersWithGate2.class, "tileStandardCrossingArm2");
+		GameRegistry.registerTileEntity(TileWoodenCrossingBuck.class, "tileWoodenCrossingBuck");
+		GameRegistry.registerTileEntity(TileSmallBungalo.class, "tileSmallBungalo");
+		GameRegistry.registerTileEntity(TileMediumBungalo.class, "tileMediumBungalo");
+		GameRegistry.registerTileEntity(TileLargeBungalo.class, "tileLargeBungalo");
 	}
 
 	public void registerComputerCraftPeripherals() throws ClassNotFoundException {

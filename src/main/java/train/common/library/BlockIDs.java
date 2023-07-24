@@ -69,7 +69,28 @@ public enum BlockIDs {
 	Racor36H(false,null),
 
 	snowGravel(false,null),
-    mtcVBCController(false,null );
+    mtcVBCController(false,null ),
+
+	//crossing stuff
+	MFPBWigWag(false, null),
+	WigWag(false, null),
+	CrossingTest(false, null),
+	CrossingBase(false, null),
+	Flashers(false, null),
+	StandardCantilever1(false, null),
+	StandardCantilever2(false, null),
+	StandardCantilever3(false, null),
+	MediumCantileverRight(false, null),
+	MediumCantileverLeft(false, null),
+	LargeCantilever(false, null),
+	PedestrianCrossing(false, null),
+	StandardCrossingArm(false, null),
+	StandardCrossingArm2(false, null),
+	WoodenCrossingBuck(false, null),
+	SmallBungalo(false, null),
+	MediumBungalo(false, null),
+	LargeBungalo(false, null),
+	;
 
 	public Block block;
 	public boolean hasItemBlock;

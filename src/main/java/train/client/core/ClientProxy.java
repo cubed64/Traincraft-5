@@ -57,6 +57,7 @@ import train.common.mtc.render.RenderMTCBlock;
 import train.common.mtc.tile.TileMTCMultiTransmitter;
 import train.common.mtc.tile.TileTransmitterSpeed;
 import train.common.tile.*;
+import train.common.tile.tileSwitch.*;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -165,6 +166,58 @@ public class ClientProxy extends CommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileFortyFootContainer.class, new FortyFootContainerRender());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.FortyFootContainer.block), new ItemRenderFortyFootContainer());
 
+
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileMFPBWigWag.class, new RenderMFPBWigWag());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.MFPBWigWag.block), new ItemRenderMFPBWigWag());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileWigWag.class, new RenderWigWag());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.WigWag.block), new ItemRenderWigWag());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileCrossingBase.class, new RenderCrossingBase());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.CrossingBase.block), new ItemRenderCrossingBase());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileFlashers.class, new RenderFlashers());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Flashers.block), new ItemRenderFlashers());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileStandardCantilever1.class, new RenderStandardCantilever1());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.StandardCantilever1.block), new ItemRenderStandardCantilever1());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileStandardCantilever2.class, new RenderStandardCantilever2());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.StandardCantilever2.block), new ItemRenderStandardCantilever2());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileStandardCantilever3.class, new RenderStandardCantilever3());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.StandardCantilever3.block), new ItemRenderStandardCantilever3());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileMediumCantileverRight.class, new RenderMediumCantileverRight());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.MediumCantileverRight.block), new ItemRenderMediumCantileverRight());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileMediumCantileverLeft.class, new RenderMediumCantileverLeft());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.MediumCantileverLeft.block), new ItemRenderMediumCantileverLeft());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileLargeCantilever.class, new RenderLargeCantilever());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.LargeCantilever.block), new ItemRenderLargeCantilever());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TilePedestrianCrossing.class, new RenderPedestrianCrossing());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.PedestrianCrossing.block), new ItemRenderPedestrianCrossing());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileFlashersWithGate.class, new RenderFlashersWithGate());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.StandardCrossingArm.block), new ItemRenderFlashersWithGate());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileFlashersWithGate2.class, new RenderFlashersWithGate2());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.StandardCrossingArm2.block), new ItemRenderFlashersWithGate2());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileWoodenCrossingBuck.class, new RenderWoodenCrossingBuck());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.WoodenCrossingBuck.block), new ItemRenderWoodenCrossingBuck());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileSmallBungalo.class, new RenderSmallBungalo());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.SmallBungalo.block), new ItemRenderSmallBungalo());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileMediumBungalo.class, new RenderMediumBungalo());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.MediumBungalo.block), new ItemRenderMediumBungalo());
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileLargeBungalo.class, new RenderLargeBungalo());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.LargeBungalo.block), new ItemRenderLargeBungalo());
 
 
 	}
