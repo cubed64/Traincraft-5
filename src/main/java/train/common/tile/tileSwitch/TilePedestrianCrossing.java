@@ -40,7 +40,7 @@ public class TilePedestrianCrossing extends TileMFPBWigWag {
             if (powered = getWorldObj().isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)) {
                 if (this.updateTicks % 10 == 0) {
                     flip = !flip;
-                    worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + "bell", 1f, 1f, true);
+                    worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + "ge_crossing_ebell", 1f, 1f, true);
                     if(flip) {
                         Tessellator.bindTexture(textureOn);
                     } else {

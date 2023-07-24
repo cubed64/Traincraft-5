@@ -263,8 +263,14 @@
   "prime_speakerbell": {"category": "master", "sounds": [{"name": "prime_speakerbell", "stream":  true}]},
   "tram_bell": {"category": "master", "sounds": [{"name": "tram_bell", "stream":  true}]},
   "transonic_ebell": {"category": "master", "sounds": [{"name": "transonic_ebell", "stream":  true}]},
-  "bell": {"category": "master", "sounds": [{"name": "bell", "stream":  true}]},
 
+  "ge_crossing_ebell": {"category": "master", "sounds": [{"name": "ge_crossing_ebell", "stream":  true}]},
+  "mfs_bell": {"category": "master", "sounds": [{"name": "mfs_bell", "stream":  true}]},
+  "uss_teardrop_bell": {"category": "master", "sounds": [{"name": "uss_teardrop_bell", "stream":  true}]},
+  "safetran_type1_bell": {"category": "master", "sounds": [{"name": "safetran_type1_bell", "stream":  true}]},
+  "safetran_type3_bell": {"category": "master", "sounds": [{"name": "safetran_type3_bell", "stream":  true}]},
+  "wch_ebell": {"category": "master", "sounds": [{"name": "wch_ebell", "stream":  true}]},
+  "wch_mchbell": {"category": "master", "sounds": [{"name": "wch_mchbell", "stream":  true}]},
 
   "steambell_1": {"category": "master", "sounds": [{"name": "steambell_1", "stream":  true}]},
   "steambell_2": {"category": "master", "sounds": [{"name": "steambell_2", "stream":  true}]},

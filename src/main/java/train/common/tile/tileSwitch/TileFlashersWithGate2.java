@@ -51,7 +51,7 @@ public class TileFlashersWithGate2 extends TileMFPBWigWag {
                 if (powered = getWorldObj().isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)) {
                     if (updateTicks % 10 == 0) {
                         flip = !flip;
-                        worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + "bell", 1f, 1f, true);
+                        worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + "wch_mchbell", 1f, 1f, true);
                         if(flip) {
                             Tessellator.bindTexture(textureOn);
                         } else {
@@ -64,7 +64,7 @@ public class TileFlashersWithGate2 extends TileMFPBWigWag {
                 if (powered = getWorldObj().isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)) {
                     if (updateTicks % 10 == 0) {
                         flip = !flip;
-                        worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + "bell", 1f, 1f, true);
+                        worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + "wch_mchbell", 1f, 1f, true);
                         if(flip) {
                             Tessellator.bindTexture(textureOn);
                         } else {

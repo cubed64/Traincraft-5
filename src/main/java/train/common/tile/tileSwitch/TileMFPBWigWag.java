@@ -60,7 +60,7 @@ public class TileMFPBWigWag extends TileTraincraft {
 
                 //if(!Minecraft.getMinecraft().getSoundHandler().isSoundPlaying(bell)){
                     //Minecraft.getMinecraft().getSoundHandler().playSound(bell);
-                worldObj.playSound(xCoord,yCoord,zCoord, Info.resourceLocation + ":" + "bell",1f,1f,true);
+                worldObj.playSound(xCoord,yCoord,zCoord, Info.resourceLocation + ":" + "mfs_bell",1f,1f,true);
 
             }
             if (powered = getWorldObj().isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)) {
