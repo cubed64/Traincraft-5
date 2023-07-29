@@ -38,7 +38,7 @@ public class S1BL extends ControlCar {
     public void onUpdate() {
         super.onUpdate();
         if ((motionX>0.1 || motionZ>0.1) && ticksExisted % 40 == 0) {
-            setDefaultMass(-EnumTrains.S1BL.getMass() * 1.75);
+            setDefaultMass(-EnumTrains.SMSC1.getMass() * 1.75);//this should be S1BL
         }
     }
 

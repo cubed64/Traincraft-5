@@ -21,7 +21,7 @@ public class ModelDD35A extends ModelBase
 
 	public ModelDD35A()
 	{
-		dd35aModel = new ModelRendererTurbo[170];
+		dd35aModel = new ModelRendererTurbo[171];
 		dd35aModel[0] = new ModelRendererTurbo(this, 1, 1, textureX, textureY); // Box 5
 		dd35aModel[1] = new ModelRendererTurbo(this, 25, 1, textureX, textureY); // Box 7
 		dd35aModel[2] = new ModelRendererTurbo(this, 41, 1, textureX, textureY); // Box 11
@@ -192,6 +192,7 @@ public class ModelDD35A extends ModelBase
 		dd35aModel[167] = new ModelRendererTurbo(this, 16, 19, textureX, textureY); // Box 167
 		dd35aModel[168] = new ModelRendererTurbo(this, 9, 19, textureX, textureY); // Box 168
 		dd35aModel[169] = new ModelRendererTurbo(this, 2, 19, textureX, textureY); // Box 169
+		dd35aModel[170] = new ModelRendererTurbo(this, 106, 130, textureX, textureY, "lamp"); // Box 170
 
 		dd35aModel[0].addBox(0F, 0F, -1F, 8, 2, 2, 0F); // Box 5
 		dd35aModel[0].setRotationPoint(-24F, 1F, 0F);
@@ -703,13 +704,16 @@ public class ModelDD35A extends ModelBase
 		dd35aModel[169].addShapeBox(0F, 0F, 0F, 3, 3, 0, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F); // Box 169
 		dd35aModel[169].setRotationPoint(101F, -11F, -9F);
 
+		dd35aModel[170].addBox(0F, 0F, -1F, 1, 3, 2, 0F); // Box 170
+		dd35aModel[170].setRotationPoint(-18.25F, -16F, 0F);
+
 
 	}
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for(int i = 0; i < 170; i++)
+		for(int i = 0; i < 171; i++)
 		{
 			if(dd35aModel[i].boxName!= null && dd35aModel[i].boxName.equals("lamp")){
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
@@ -727,4 +731,7 @@ public class ModelDD35A extends ModelBase
 	}
 
 	public ModelRendererTurbo dd35aModel[];
+
+	public float[] getScale() { return new float[]{0.9f,1.0f,1.1f}; }
+
 }

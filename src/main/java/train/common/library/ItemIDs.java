@@ -510,7 +510,8 @@ public enum ItemIDs {
 
 	minecartSlugMA("ItemRollingStock", "slugma", 2),
 	minecartF7BSlug("ItemRollingStock", "f7b", 3),
-	minecartS1BL("ItemRollingStock", "s1bl", 3),
+	//minecartS1BL("ItemRollingStock", "s1bl", 3),
+	minecartSMSC1("ItemRollingStock", "smsc1", 5),
 
 
 	//E-lect-trock//

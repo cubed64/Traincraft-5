@@ -1119,6 +1119,7 @@ item.tc:minecartILMC.name=I.L.M.C
 item.tc:minecartSlugMA.name=EMD GP Slug (SlugMA)
 item.tc:minecartF7BSlug.name=EMD F7B Slug
 item.tc:minecartS1BL.name=FNCC S1BL Slug
+item.tc:minecartSMSC1.name=CEE Slug Motor System, C-C, Type 1
 
 
 entity.tc.NRE3gs21b.name=NRE 3GS21B Genset
@@ -1131,6 +1132,7 @@ entity.tc.ILMC.name=I.L.M.C
 entity.tc.SlugMA.name=EMD GP Slug (SlugMA)
 entity.tc.F7BSlug.name=EMD F7B Slug
 entity.tc.S1BL.name=FNCC S1BL Slug
+entity.tc.SMSC1.name=CEE Slug Motor System, C-C, Type 1
 
 --------------------------------------------------------
 
