@@ -511,4 +511,6 @@ public class ModelDD35B extends ModelBase
 	}
 
 	public ModelRendererTurbo dd35bModel[];
+
+	public float[] getScale() { return new float[]{0.9f,1.0f,1.1f}; }
 }
