@@ -21,6 +21,7 @@ import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
 import train.common.api.EntityRollingStock;
+import train.common.api.Locomotive;
 
 
 public class ModelPCH130Commute2 extends ModelConverter {
@@ -88,12 +89,12 @@ public class ModelPCH130Commute2 extends ModelConverter {
 		bodyModel[44] = new ModelRendererTurbo(this, 105, 41, textureX, textureY); // Box 87
 		bodyModel[45] = new ModelRendererTurbo(this, 369, 25, textureX, textureY); // Box 92
 		bodyModel[46] = new ModelRendererTurbo(this, 489, 33, textureX, textureY); // Box 94
-		bodyModel[47] = new ModelRendererTurbo(this, 145, 41, textureX, textureY); // Box 96 door slide left left side
-		bodyModel[48] = new ModelRendererTurbo(this, 169, 41, textureX, textureY); // Box 97 door slide right left side
+		bodyModel[47] = new ModelRendererTurbo(this, 145, 41, textureX, textureY, "door"); // Box 96 door slide left left side
+		bodyModel[48] = new ModelRendererTurbo(this, 169, 41, textureX, textureY, "door"); // Box 97 door slide right left side
 		bodyModel[49] = new ModelRendererTurbo(this, 329, 41, textureX, textureY); // Box 103
-		bodyModel[50] = new ModelRendererTurbo(this, 353, 41, textureX, textureY); // Box 104 door slide right right side
+		bodyModel[50] = new ModelRendererTurbo(this, 353, 41, textureX, textureY, "door"); // Box 104 door slide right right side
 		bodyModel[51] = new ModelRendererTurbo(this, 49, 134, textureX, textureY); // Box 105
-		bodyModel[52] = new ModelRendererTurbo(this, 457, 41, textureX, textureY); // Box 106 door slide left right side
+		bodyModel[52] = new ModelRendererTurbo(this, 457, 41, textureX, textureY, "door"); // Box 106 door slide left right side
 		bodyModel[53] = new ModelRendererTurbo(this, 17, 17, textureX, textureY); // Box 107
 		bodyModel[54] = new ModelRendererTurbo(this, 1, 49, textureX, textureY); // Box 108
 		bodyModel[55] = new ModelRendererTurbo(this, 17, 25, textureX, textureY); // Box 111
@@ -143,11 +144,11 @@ public class ModelPCH130Commute2 extends ModelConverter {
 		bodyModel[99] = new ModelRendererTurbo(this, 57, 49, textureX, textureY); // Box 134
 		bodyModel[100] = new ModelRendererTurbo(this, 193, 49, textureX, textureY); // Box 135
 		bodyModel[101] = new ModelRendererTurbo(this, 305, 73, textureX, textureY); // Box 138
-		bodyModel[102] = new ModelRendererTurbo(this, 417, 73, textureX, textureY); // Box 139 door slide left right side
-		bodyModel[103] = new ModelRendererTurbo(this, 1, 81, textureX, textureY); // Box 140 door slide right right side
+		bodyModel[102] = new ModelRendererTurbo(this, 417, 73, textureX, textureY, "door"); // Box 139 door slide left right side
+		bodyModel[103] = new ModelRendererTurbo(this, 1, 81, textureX, textureY, "door"); // Box 140 door slide right right side
 		bodyModel[104] = new ModelRendererTurbo(this, 441, 73, textureX, textureY); // Box 141
-		bodyModel[105] = new ModelRendererTurbo(this, 25, 81, textureX, textureY); // Box 142 door slide right left side
-		bodyModel[106] = new ModelRendererTurbo(this, 49, 81, textureX, textureY); // Box 143 door slide left left side
+		bodyModel[105] = new ModelRendererTurbo(this, 25, 81, textureX, textureY, "door"); // Box 142 door slide right left side
+		bodyModel[106] = new ModelRendererTurbo(this, 49, 81, textureX, textureY, "door"); // Box 143 door slide left left side
 		bodyModel[107] = new ModelRendererTurbo(this, 449, 73, textureX, textureY); // Box 144
 		bodyModel[108] = new ModelRendererTurbo(this, 49, 110, textureX, textureY); // Box 149
 		bodyModel[109] = new ModelRendererTurbo(this, 169, 81, textureX, textureY); // Box 263
@@ -186,7 +187,7 @@ public class ModelPCH130Commute2 extends ModelConverter {
 		bodyModel[142] = new ModelRendererTurbo(this, 369, 25, textureX, textureY); // Box 146
 		bodyModel[143] = new ModelRendererTurbo(this, 369, 25, textureX, textureY); // Box 147
 		bodyModel[144] = new ModelRendererTurbo(this, 177, 1, textureX, textureY); // Box 228
-		bodyModel[145] = new ModelRendererTurbo(this, 31, 173, textureX, textureY); // Box 147
+		bodyModel[145] = new ModelRendererTurbo(this, 31, 173, textureX, textureY, "panel"); // Box 147
 		bodyModel[146] = new ModelRendererTurbo(this, 54, 173, textureX, textureY); // Box 148
 
 		bodyModel[0].addBox(0F, 0F, 0F, 83, 1, 22, 0F); // Box 11
@@ -649,12 +650,17 @@ public class ModelPCH130Commute2 extends ModelConverter {
 
 		for(int i = 0; i < 147; i++)
 		{
-			if (i == 110 || i == 111 || i == 107 || i == 108 || i == 54 || i == 56 || i == 48 || i == 49) {
+			if (bodyModel[i].boxName.equals("door")) {
 
 				if (stock.getRenderRef("doors") != null && (stock.getRenderRef("doors").getAsBoolean())) {
 					bodyModel[i].render(f5);
 				}
-			} else {
+			} else if (bodyModel[i].boxName.equals("panel")) {
+					if (((Locomotive)stock).atoStatus == 1) {
+						bodyModel[i].render(f5);
+					}
+				}
+			 else {
 				bodyModel[i].render(f5);
 			}
 

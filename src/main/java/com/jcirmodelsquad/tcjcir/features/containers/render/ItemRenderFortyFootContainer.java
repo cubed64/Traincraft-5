@@ -45,10 +45,10 @@ public class ItemRenderFortyFootContainer implements IItemRenderer {
     private void renderContainer(float f, float g, float h, ItemStack theItem) {
         ModelISO_40FT_Item theContainer = new ModelISO_40FT_Item();
         if (theItem.getTagCompound() != null) {
-            if (theItem.getTagCompound().getString("currentColorString").equals("")) {
+            if (theItem.getTagCompound().getString("color").equals("")) {
                 tmt.Tessellator.bindTexture(new ResourceLocation("tc:textures/trains/ISO_40FT_LightGrey.png"));
             } else {
-                tmt.Tessellator.bindTexture(new ResourceLocation("tc:textures/trains/ISO_40FT_" + theItem.getTagCompound().getString("currentColorString") + ".png"));
+                tmt.Tessellator.bindTexture(new ResourceLocation("tc:textures/trains/ISO_40FT_" + theItem.getTagCompound().getString("color") + ".png"));
             }
 
 

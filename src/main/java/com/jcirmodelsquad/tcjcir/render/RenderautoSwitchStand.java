@@ -1,6 +1,6 @@
 package com.jcirmodelsquad.tcjcir.render;
 
-import com.jcirmodelsquad.tcjcir.tile.TileautoSwitchStand;
+import com.jcirmodelsquad.tcjcir.tile.TileAutoSwitchStand;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
@@ -9,7 +9,6 @@ import tmt.Tessellator;
 import com.jcirmodelsquad.tcjcir.render.models.ModelautoSwitchOff;
 import com.jcirmodelsquad.tcjcir.render.models.ModelautoSwitchOn;
 import train.common.library.Info;
-import com.jcirmodelsquad.tcjcir.tile.TileautoSwitchStand;
 
 public class RenderautoSwitchStand extends TileEntitySpecialRenderer {
     private static final ModelautoSwitchOn modelSwitch2 = new ModelautoSwitchOn();
@@ -24,7 +23,7 @@ public class RenderautoSwitchStand extends TileEntitySpecialRenderer {
         GL11.glRotated(180,0,1,0);
         boolean skipRender = false;
 
-        switch (((TileautoSwitchStand)tileEntity).getFacing()){
+        switch (((TileAutoSwitchStand)tileEntity).getFacing()){
             case NORTH:{
                 GL11.glRotated(180,0,0,1);
                 GL11.glRotated(270,0,1,0);

@@ -85,11 +85,11 @@ public class CommonProxy implements IGuiHandler {
 		GameRegistry.registerTileEntity(TileLantern.class, "tileLantern");
 		GameRegistry.registerTileEntity(TileSwitchStand.class, "tileSwitchStand");
 
-		GameRegistry.registerTileEntity(TileowoSwitchStand.class, "tileowoswitchstand");
-		GameRegistry.registerTileEntity(TilecircleSwitchStand.class, "tilecircleswitchstand");
+		GameRegistry.registerTileEntity(TileOwoSwitchStand.class, "tileowoswitchstand");
+		GameRegistry.registerTileEntity(TileCircleSwitchStand.class, "tilecircleswitchstand");
 		GameRegistry.registerTileEntity(TileMILWSwitchStand.class, "tileMILWSwitchStand");
-		GameRegistry.registerTileEntity(TileautoSwitchStand.class, "tileautoSwitchStand");
-		GameRegistry.registerTileEntity(TileowoYardSwitchStand.class, "tileowoYardSwitchStand");
+		GameRegistry.registerTileEntity(TileAutoSwitchStand.class, "tileautoSwitchStand");
+		GameRegistry.registerTileEntity(TileOwoYardSwitchStand.class, "tileowoYardSwitchStand");
 		GameRegistry.registerTileEntity(TileRacor36D_1.class, "tileRacor36D_1");
 		GameRegistry.registerTileEntity(TileRacor36D_2.class, "tileRacor36D_2");
 		GameRegistry.registerTileEntity(TileRacor36H.class, "tileRacor36H");
@@ -105,6 +105,8 @@ public class CommonProxy implements IGuiHandler {
 		GameRegistry.registerTileEntity(TileBridgePillar.class, "tileTCBridgePillar");
 
 		GameRegistry.registerTileEntity(TileVBCController.class, "tileVBCController");
+
+		GameRegistry.registerTileEntity(TileMTCMarker.class, "tileMTCMarker");
 
 		GameRegistry.registerTileEntity(TileTransmitterSpeed.class, "tileInfoTransmitterSpeed");
 		GameRegistry.registerTileEntity(TileInfoTransmitterMTC.class, "tileInfoTransmitterMTC");

@@ -519,7 +519,7 @@ public class ModelPCH130Coach2 extends ModelConverter //Same as Filename
 	}
 
 	public float[] getTrans() {
-		return new float[]{0.22F, 0.1F, 0F};
+		return new float[]{0.05F, 0.1F, 0F};
 	}
 
 	public float[] getRotate() {

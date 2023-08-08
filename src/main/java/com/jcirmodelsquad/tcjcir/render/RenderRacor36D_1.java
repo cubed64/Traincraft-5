@@ -2,10 +2,7 @@ package com.jcirmodelsquad.tcjcir.render;
 
 import com.jcirmodelsquad.tcjcir.render.models.ModelRacor36D_Off;
 import com.jcirmodelsquad.tcjcir.render.models.ModelRacor36D_On;
-import com.jcirmodelsquad.tcjcir.render.models.ModelowoYardSwitchStandOff;
-import com.jcirmodelsquad.tcjcir.render.models.ModelowoYardSwitchStandOn;
 import com.jcirmodelsquad.tcjcir.tile.TileRacor36D_1;
-import com.jcirmodelsquad.tcjcir.tile.TileowoYardSwitchStand;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;

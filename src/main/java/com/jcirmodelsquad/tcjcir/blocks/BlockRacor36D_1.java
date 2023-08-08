@@ -1,7 +1,6 @@
 package com.jcirmodelsquad.tcjcir.blocks;
 
 import com.jcirmodelsquad.tcjcir.tile.TileRacor36D_1;
-import com.jcirmodelsquad.tcjcir.tile.TileowoYardSwitchStand;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;

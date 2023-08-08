@@ -1,15 +1,12 @@
 package com.jcirmodelsquad.tcjcir.blocks;
 
-import com.jcirmodelsquad.tcjcir.tile.TileowoYardSwitchStand;
+import com.jcirmodelsquad.tcjcir.tile.TileOwoYardSwitchStand;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockLever;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
@@ -20,15 +17,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import train.common.Traincraft;
 import train.common.library.Info;
-import com.jcirmodelsquad.tcjcir.tile.TileowoYardSwitchStand;
 
 import java.util.List;
 import java.util.Random;
 
-public class BlockowoYardSwitchStand extends BlockLever {
+public class BlockOwoYardSwitchStand extends BlockLever {
     private IIcon texture;
 
-    public BlockowoYardSwitchStand() {
+    public BlockOwoYardSwitchStand() {
         super();
         setCreativeTab(Traincraft.tcTab);
         this.setTickRandomly(true);
@@ -57,7 +53,7 @@ public class BlockowoYardSwitchStand extends BlockLever {
 
     @Override
     public TileEntity createTileEntity(World world, int metadata) {
-        return new TileowoYardSwitchStand();
+        return new TileOwoYardSwitchStand();
     }
 
     @Override
@@ -82,7 +78,7 @@ public class BlockowoYardSwitchStand extends BlockLever {
     @Override
     public void onBlockPlacedBy(World world, int i, int j, int k, EntityLivingBase entityliving, ItemStack stack) {
         super.onBlockPlacedBy(world, i, j, k, entityliving, stack);
-        TileowoYardSwitchStand te = (TileowoYardSwitchStand) world.getTileEntity(i, j, k);
+        TileOwoYardSwitchStand te = (TileOwoYardSwitchStand) world.getTileEntity(i, j, k);
         if (te != null) {
             int dir = MathHelper.floor_double((double) ((entityliving.rotationYaw * 4F) / 360F) + 0.5D) & 3;
             te.setFacing(ForgeDirection.getOrientation(dir == 0 ? 2 : dir == 1 ? 5 : dir == 2 ? 3 : 4));

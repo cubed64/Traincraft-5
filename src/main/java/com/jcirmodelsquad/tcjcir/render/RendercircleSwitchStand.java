@@ -2,7 +2,7 @@ package com.jcirmodelsquad.tcjcir.render;
 
 import com.jcirmodelsquad.tcjcir.render.models.ModelcircleSwitchStandOff;
 import com.jcirmodelsquad.tcjcir.render.models.ModelcircleSwitchStandOn;
-import com.jcirmodelsquad.tcjcir.tile.TilecircleSwitchStand;
+import com.jcirmodelsquad.tcjcir.tile.TileCircleSwitchStand;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
@@ -24,7 +24,7 @@ public class RendercircleSwitchStand extends TileEntitySpecialRenderer {
         GL11.glRotated(180,0,1,0);
         boolean skipRender = false;
 
-        switch (((TilecircleSwitchStand)tileEntity).getFacing()){
+        switch (((TileCircleSwitchStand)tileEntity).getFacing()){
             case NORTH:{
                 GL11.glRotated(180,0,0,1);
                 GL11.glRotated(270,0,1,0);

@@ -2,13 +2,10 @@ package com.jcirmodelsquad.tcjcir.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockLever;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
@@ -19,15 +16,15 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import train.common.Traincraft;
 import train.common.library.Info;
-import com.jcirmodelsquad.tcjcir.tile.TileowoSwitchStand;
+import com.jcirmodelsquad.tcjcir.tile.TileAutoSwitchStand;
 
 import java.util.List;
 import java.util.Random;
 
-public class BlockowoSwitchStand extends BlockLever {
+public class BlockAutoSwitchStand extends BlockLever {
     private IIcon texture;
 
-    public BlockowoSwitchStand() {
+    public BlockAutoSwitchStand() {
         super();
         setCreativeTab(Traincraft.tcTab);
         this.setTickRandomly(true);
@@ -35,8 +32,7 @@ public class BlockowoSwitchStand extends BlockLever {
     }
 
     @Override
-    public void addCollisionBoxesToList(World p_149743_1_, int p_149743_2_, int p_149743_3_, int p_149743_4_, AxisAlignedBB p_149743_5_, List p_149743_6_, Entity p_149743_7_)
-    {
+    public void addCollisionBoxesToList(World p_149743_1_, int p_149743_2_, int p_149743_3_, int p_149743_4_, AxisAlignedBB p_149743_5_, List p_149743_6_, Entity p_149743_7_) {
     }
 
     @Override
@@ -56,7 +52,7 @@ public class BlockowoSwitchStand extends BlockLever {
 
     @Override
     public TileEntity createTileEntity(World world, int metadata) {
-        return new TileowoSwitchStand();
+        return new TileAutoSwitchStand();
     }
 
     @Override
@@ -81,7 +77,7 @@ public class BlockowoSwitchStand extends BlockLever {
     @Override
     public void onBlockPlacedBy(World world, int i, int j, int k, EntityLivingBase entityliving, ItemStack stack) {
         super.onBlockPlacedBy(world, i, j, k, entityliving, stack);
-        TileowoSwitchStand te = (TileowoSwitchStand) world.getTileEntity(i, j, k);
+        TileAutoSwitchStand te = (TileAutoSwitchStand) world.getTileEntity(i, j, k);
         if (te != null) {
             int dir = MathHelper.floor_double((double) ((entityliving.rotationYaw * 4F) / 360F) + 0.5D) & 3;
             te.setFacing(ForgeDirection.getOrientation(dir == 0 ? 2 : dir == 1 ? 5 : dir == 2 ? 3 : 4));
@@ -108,4 +104,3 @@ public class BlockowoSwitchStand extends BlockLever {
         return texture;
     }
 }
-

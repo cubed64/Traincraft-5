@@ -50,6 +50,7 @@ public enum BlockIDs {
 	//mtcMultiTransmitter(false, null),
 	//mtcMultiReceiver(false, null),
 	//trainMonitor(false, null),
+	mtcMarker(false, null),
     FortyFootContainer(true, ItemFortyFootContainer.class),
 	//Liquids
 	diesel(false, ItemBlockFluid.class),

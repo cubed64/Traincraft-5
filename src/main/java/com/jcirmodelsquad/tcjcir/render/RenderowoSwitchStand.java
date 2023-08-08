@@ -2,17 +2,13 @@ package com.jcirmodelsquad.tcjcir.render;
 
 import com.jcirmodelsquad.tcjcir.render.models.ModelowoSwitchStandOff;
 import com.jcirmodelsquad.tcjcir.render.models.ModelowoSwitchStandOn;
-import com.jcirmodelsquad.tcjcir.tile.TileautoSwitchStand;
-import com.jcirmodelsquad.tcjcir.tile.TileowoSwitchStand;
+import com.jcirmodelsquad.tcjcir.tile.TileOwoSwitchStand;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import tmt.Tessellator;
-import com.jcirmodelsquad.tcjcir.render.models.ModelautoSwitchOff;
-import com.jcirmodelsquad.tcjcir.render.models.ModelautoSwitchOn;
 import train.common.library.Info;
-import com.jcirmodelsquad.tcjcir.tile.TileautoSwitchStand;
 
 public class RenderowoSwitchStand extends TileEntitySpecialRenderer {
     private static final ModelowoSwitchStandOn modelSwitch2 = new ModelowoSwitchStandOn();
@@ -27,7 +23,7 @@ public class RenderowoSwitchStand extends TileEntitySpecialRenderer {
         GL11.glRotated(180,0,1,0);
         boolean skipRender = false;
 
-        switch (((TileowoSwitchStand)tileEntity).getFacing()){
+        switch (((TileOwoSwitchStand)tileEntity).getFacing()){
             case NORTH:{
                 GL11.glRotated(180,0,0,1);
                 GL11.glRotated(270,0,1,0);

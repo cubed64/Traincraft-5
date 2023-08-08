@@ -14,7 +14,7 @@ import train.common.tile.TileTraincraft;
 
 import java.util.Random;
 
-public class TileautoSwitchStand extends TileTraincraft {
+public class TileOwoYardSwitchStand extends TileTraincraft {
 
     private int updateTicks = 0;
     private static Random rand = new Random();

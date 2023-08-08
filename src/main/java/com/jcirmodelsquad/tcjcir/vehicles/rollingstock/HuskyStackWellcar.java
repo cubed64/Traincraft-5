@@ -136,13 +136,13 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
             ItemStack theItem = entityplayer.getHeldItem();
             if (container1 == null) {
                 if (theItem.getTagCompound() != null) {
-                    this.container1 = new BasicallyContainer("FortyFootContainer", theItem.getTagCompound().getString("currentColorString"), theItem.getTagCompound());
+                    this.container1 = new BasicallyContainer("FortyFootContainer", theItem.getTagCompound().getString("color"), theItem.getTagCompound());
                 } else {
                     this.container1 = new BasicallyContainer("FortyFootContainer", "LightGrey", null);
                 }
             } else {
                 if (theItem.getTagCompound() != null) {
-                    this.container2 = new BasicallyContainer("FortyFootContainer", theItem.getTagCompound().getString("currentColorString"), theItem.getTagCompound());
+                    this.container2 = new BasicallyContainer("FortyFootContainer", theItem.getTagCompound().getString("color"), theItem.getTagCompound());
                 } else {
                     this.container2 = new BasicallyContainer("FortyFootContainer", "LightGrey", null);
                 }
@@ -221,13 +221,13 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
             if (ntc.getCompoundTag("container1").getString("color").equals("")) {
                 ntc.getCompoundTag("container1").setString("color", "LightGrey");
             }
-            container1 = new BasicallyContainer("FortyFootContainer", ntc.getCompoundTag("container1").getString("currentColorString"), ntc.getCompoundTag("container1"));
+            container1 = new BasicallyContainer("FortyFootContainer", ntc.getCompoundTag("container1").getString("color"), ntc.getCompoundTag("container1"));
         }
         if (ntc.hasKey("container2")) {
             if (ntc.getCompoundTag("container2").getString("color").equals("")) {
                 ntc.getCompoundTag("container2").setString("color", "LightGrey");
             }
-            container2 = new BasicallyContainer("FortyFootContainer", ntc.getCompoundTag("container2").getString("currentColorString"), ntc.getCompoundTag("container2"));
+            container2 = new BasicallyContainer("FortyFootContainer", ntc.getCompoundTag("container2").getString("color"), ntc.getCompoundTag("container2"));
         }
     }
 }
