@@ -200,7 +200,7 @@
   "drgw_3chime_2": {"category": "master", "sounds": [{"name": "drgw_3chime_2", "stream":  true}]},
   "drgw_5chime": {"category": "master", "sounds": [{"name": "drgw_5chime", "stream":  true}]},
   "ebt_5chime": {"category": "master", "sounds": [{"name": "ebt_5chime", "stream":  true}]},
-  "hancock_airwhistle": {"category": "master", "sounds": [{"name": "hancock_airwhistle", "stream":  true}]},
+  "hancock_airwhistle_1": {"category": "master", "sounds": [{"name": "hancock_airwhistle_1", "stream":  true}]},
   "hancock_3chime": {"category": "master", "sounds": [{"name": "hancock_3chime", "stream":  true}]},
   "lima_5chime": {"category": "master", "sounds": [{"name": "lima_5chime", "stream":  true}]},
   "lukenhimer_3chime": {"category": "master", "sounds": [{"name": "lukenhimer_3chime", "stream":  true}]},
