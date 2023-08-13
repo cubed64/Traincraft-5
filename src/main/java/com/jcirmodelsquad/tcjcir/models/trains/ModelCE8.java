@@ -1542,7 +1542,7 @@ public class ModelCE8 extends ModelConverter//Same as Filename
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/NewBlombergA1ATruckBlack.png"));
 		}
 		GL11.glPushMatrix();
-		GL11.glTranslated(-1.67, -0.0, 0);
+		GL11.glTranslated(-1.67, -0.02, 0);
 		theTruck.render(entity, f, f1, f2, f3, f4, f5);
 
 		GL11.glTranslated(3.35, 0, 0);
