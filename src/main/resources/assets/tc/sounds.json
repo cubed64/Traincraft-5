@@ -209,9 +209,10 @@
   "pe_whistle": {"category": "master", "sounds": [{"name": "pe_whistle", "stream":  true}]},
   "skookum_whistle": {"category": "master", "sounds": [{"name": "skookum_whistle", "stream":  true}]},
   "southern_3chime": {"category": "master", "sounds": [{"name": "southern_3chime", "stream":  true}]},
+  "usarmy_3chime": {"category": "master", "sounds": [{"name": "usarmy_3chime", "stream":  true}]},
   "765_whistle": {"category": "master", "sounds": [{"name": "765_whistle", "stream":  true}]},
   "1225_whistle": {"category": "master", "sounds": [{"name": "1225_whistle", "stream":  true}]},
-
+  "westinghouse_whistle_1": {"category": "master", "sounds": [{"name": "westinghouse_whistle_1", "stream":  true}]},
 
 
   "a4_whistle": {"category": "master", "sounds": [{"name": "a4_whistle", "stream":  true}]},
@@ -255,7 +256,7 @@
 
 
 
-  "ge_ebell": {"category": "master", "sounds": [{"name": "ge_ebell", "stream":  true}]},
+  "graham_ebell": {"category": "master", "sounds": [{"name": "graham_ebell", "stream":  true}]},
   "ge_steelbell_1": {"category": "master", "sounds": [{"name": "ge_steelbell_1", "stream":  true}]},
   "ge_steelbell_2": {"category": "master", "sounds": [{"name": "ge_steelbell_2", "stream":  true}]},
 
@@ -274,13 +275,12 @@
   "wch_ebell": {"category": "master", "sounds": [{"name": "wch_ebell", "stream":  true}]},
   "wch_mchbell": {"category": "master", "sounds": [{"name": "wch_mchbell", "stream":  true}]},
 
+  "sp_bell": {"category": "master", "sounds": [{"name": "sp_bell", "stream":  true}]},
   "steambell_1": {"category": "master", "sounds": [{"name": "steambell_1", "stream":  true}]},
   "steambell_2": {"category": "master", "sounds": [{"name": "steambell_2", "stream":  true}]},
   "steambell_3": {"category": "master", "sounds": [{"name": "steambell_3", "stream":  true}]},
   "steambell_4": {"category": "master", "sounds": [{"name": "steambell_4", "stream":  true}]},
-  "steambell_5": {"category": "master", "sounds": [{"name": "steambell_5", "stream":  true}]},
-  "steambell_6": {"category": "master", "sounds": [{"name": "steambell_6", "stream":  true}]},
-
+  "nkp_bell": {"category": "master", "sounds": [{"name": "nkp_bell", "stream":  true}]},
 
 
   "ALCO_16_244_Idle": {"category": "master", "sounds": [{"name": "ALCO_16_244_Idle", "stream":  true}]},
