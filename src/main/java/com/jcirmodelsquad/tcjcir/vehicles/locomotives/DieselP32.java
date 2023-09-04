@@ -16,7 +16,7 @@ import train.common.library.GuiIDs;
 
 public class DieselP32 extends DieselTrain {
     public DieselP32(World world) {
-        super(world, EnumTrains.geGenesis.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.P32.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
     }

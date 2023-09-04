@@ -1822,7 +1822,10 @@ public class ModelSW1000 extends ModelConverter //Same as Filename
 			}
 		}
 
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 12 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 12
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/flexicoil2_Black.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.05, 0.33, 0);

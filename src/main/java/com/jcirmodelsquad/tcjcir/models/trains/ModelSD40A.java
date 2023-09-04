@@ -263,7 +263,7 @@ public class ModelSD40A extends ModelConverter //Same as Filename
 		bodyModel[217] = new ModelRendererTurbo(this, 369, 22, textureX, textureY); // Box 881
 		bodyModel[218] = new ModelRendererTurbo(this, 369, 15, textureX, textureY); // Box 882
 		bodyModel[219] = new ModelRendererTurbo(this, 488, 127, textureX, textureY); // Box 444
-		bodyModel[220] = new ModelRendererTurbo(this, 474, 123, textureX, textureY); // Box 445
+		bodyModel[220] = new ModelRendererTurbo(this, 474, 123, textureX, textureY, "cull"); // Box 445
 		bodyModel[221] = new ModelRendererTurbo(this, 485, 125, textureX, textureY); // Box 527 brakewheel rear
 		bodyModel[222] = new ModelRendererTurbo(this, 150, 145, textureX, textureY); // Box 440 honse
 		bodyModel[223] = new ModelRendererTurbo(this, 5, 175, textureX, textureY); // Box 396

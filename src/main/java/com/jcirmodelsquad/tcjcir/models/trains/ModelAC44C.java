@@ -1793,7 +1793,7 @@ public class ModelAC44C extends ModelConverter //Same as Filename
 			}
 		}
 
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1344 ) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 12 ) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/ge_hiad_Silver.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslatef(-2F, 0.0F, 0F);
