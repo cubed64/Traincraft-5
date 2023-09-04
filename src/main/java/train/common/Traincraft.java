@@ -2,7 +2,7 @@ package train.common;
 
 import com.jcirmodelsquad.tcjcir.extras.JCIRQuote;
 import com.jcirmodelsquad.tcjcir.extras.QuoteList;
-import com.jcirmodelsquad.tcjcir.features.signal.dynamic.DSSConfig;
+//import com.jcirmodelsquad.tcjcir.features.signal.dynamic.DSSConfig;
 import com.jcirmodelsquad.tcjcir.features.signal.dynamic.DynamicSignalServer;
 import com.jcirmodelsquad.tcjcir.features.signal.dynamic.TrainTalk;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -213,7 +213,7 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		MinecraftForge.EVENT_BUS.register(VBCTracking.getInstance());*/
 
 		TrainTalk.getInstance().init();
-		DSSConfig.load();
+		//DSSConfig.load();
 
 
 		tcLog.info("Finished Initialization!");
