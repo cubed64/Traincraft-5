@@ -27,14 +27,34 @@ public class BlockFortyFootContainer extends BlockContainer {
     private TileFortyFootContainer theTile;
     public BlockFortyFootContainer(Material p_i45386_1_) {
         super(p_i45386_1_);
-        this.minX = -1.1F;
+        /*this.minX = -1.1F;
         this.minZ = -0.2F;
         this.minY = 0.0F;
         this.maxX = 2.2F;
         this.maxY = 2F;
         this.maxZ = 1.1F;
-        this.setBlockBounds(-1.1F, 0.0F, -0.2F, 2.2F, 1.5F, 1.1F);
+        this.setBlockBounds(-1.1F, 0.0F, -0.2F, 2.2F, 1.5F, 1.1F);*/
 
+    }
+
+    public void setBlockBoundsBasedOnState(IBlockAccess world, int x, int y, int z) {
+        //cover if tile isn't a thing
+        if(world == null || !(world.getTileEntity(x,y,z) instanceof TileFortyFootContainer)){
+            super.setBlockBoundsBasedOnState(world,x,y,z);
+            return;
+        }
+        //return based on tile data
+        switch(((TileFortyFootContainer)world.getTileEntity(x,y,z)).directionPlaced){
+            case 0:{this.setBlockBounds(-1F, 0.0F, -3F, 1F, 2F, 3F); return;}//north
+            //x is width, Z is length, Y is heighthdt
+            case 1:{this.setBlockBounds(0.5F, 0.0F, 0.25F, 1.0F, 1F, 0.75F); return;}//east
+            case 2:{this.setBlockBounds(0.25F, 0.0F, 0.5F, 0.75F, 1F, 1F); return;}//south
+            case 3:{this.setBlockBounds(0.0F, 0.0F, 0.25F, 0.5F, 1F, 0.75F); return;}//west
+        }
+
+        //fallback if rotation wasn't understood
+        super.setBlockBoundsBasedOnState(world,x,y,z);
+        return;
     }
 
     @Override
@@ -108,9 +128,9 @@ public class BlockFortyFootContainer extends BlockContainer {
     }
 
 
-    public AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
-    {
-        return AxisAlignedBB.getBoundingBox((double)p_149668_2_ + this.minX, (double)p_149668_3_ + this.minY, (double)p_149668_4_ + this.minZ, (double)p_149668_2_ + this.maxX + 7F, (double)p_149668_3_ + this.maxY, (double)p_149668_4_ + this.maxZ);
+    @Override //entity collision, this doesn't need changing, but needs inclusion
+    public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
+        return AxisAlignedBB.getBoundingBox((double)x + this.minX, (double)y + this.minY, (double)z + this.minZ, (double)x + this.maxX, (double)y + this.maxY, (double)z + this.maxZ);
     }
 
     @Override
@@ -192,6 +212,7 @@ public class BlockFortyFootContainer extends BlockContainer {
     }*/
 
     @Override
+    //DO NOT TOUCH IT BREAK THE NIBBLE ARRAY
     public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase player, ItemStack stack)
     {
         TileFortyFootContainer te = (TileFortyFootContainer) world.getTileEntity(x, y, z);

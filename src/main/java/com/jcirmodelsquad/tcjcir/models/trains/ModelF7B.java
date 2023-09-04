@@ -28,7 +28,7 @@ public class ModelF7B extends ModelConverter //Same as Filename
 
 	public ModelF7B() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[225];
+		bodyModel = new ModelRendererTurbo[227];
 
 		initbodyModel_1();
 
@@ -265,6 +265,8 @@ public class ModelF7B extends ModelConverter //Same as Filename
 		bodyModel[222] = new ModelRendererTurbo(this, 354, 99, textureX, textureY); // Box 451
 		bodyModel[223] = new ModelRendererTurbo(this, 344, 77, textureX, textureY); // Box 452
 		bodyModel[224] = new ModelRendererTurbo(this, 275, 21, textureX, textureY); // Box 398
+		bodyModel[225] = new ModelRendererTurbo(this, 168, 48, textureX, textureY); // Box 194
+		bodyModel[226] = new ModelRendererTurbo(this, 275, 21, textureX, textureY); // Box 398
 
 		bodyModel[0].addBox(0F, 0F, 0F, 57, 1, 20, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-25.5F, 0F, -10F);
@@ -941,11 +943,17 @@ public class ModelF7B extends ModelConverter //Same as Filename
 
 		bodyModel[224].addBox(0F, 0F, 0F, 4, 1, 4, 0F); // Box 398
 		bodyModel[224].setRotationPoint(-12.5F, -20F, -2F);
+
+		bodyModel[225].addBox(0F, 0F, 0F, 1, 2, 0, 0F); // Box 194
+		bodyModel[225].setRotationPoint(-15F, -21F, -2.5F);
+
+		bodyModel[226].addBox(0F, 0F, 0F, 4, 1, 4, 0F); // Box 398
+		bodyModel[226].setRotationPoint(-12.5F, -20F, -2F);
 	}
 	ModelBlombergBnew theTrucc = new ModelBlombergBnew();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 225; i++) {
+		for (int i = 0; i < 227; i++) {
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp") ) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);

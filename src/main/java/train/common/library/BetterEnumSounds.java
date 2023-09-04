@@ -3,18 +3,17 @@ package train.common.library;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDash944CW;
 
 import java.util.HashMap;
+public enum BetterEnumSounds {;
 
-public enum BetterEnumSounds {
-
-    DieselDash9C44W(
-            DieselDash944CW.class,
-            false,
-            "nathan_p5",
-            "ge_steelbell_1",
-            new int[] {-1, 7, 35, 47, 59, 71, 73, 95, 100},
-            new String[] {"GE_D9_7FDL_16_IDLE", "GE_D9_7FDL_16_N1", "GE_D9_7FDL_16_N2", "GE_D9_7FDL_16_N3", "GE_D9_7FDL_16_N4", "GE_D9_7FDL_16_N5", "GE_D9_7FDL_16_N6", "GE_D9_7FDL_16_N7", "GE_D9_7FDL_16_N8"},
-            new double[] {36.52, 19.56, 49.96, 61.1d, 49.32d, 49.96d, 47.48d, 49.96d, 48.4d},
-            null);
+    //DieselDash9C44W(
+            //DieselDash944CW.class,
+            //false,
+            //"nathan_p5",
+            //"ge_steelbell_1",
+            //new int[] {-1, 7, 35, 47, 59, 71, 73, 95, 100},
+            //new String[] {"GE_D9_7FDL_16_IDLE", "GE_D9_7FDL_16_N1", "GE_D9_7FDL_16_N2", "GE_D9_7FDL_16_N3", "GE_D9_7FDL_16_N4", "GE_D9_7FDL_16_N5", "GE_D9_7FDL_16_N6", "GE_D9_7FDL_16_N7", "GE_D9_7FDL_16_N8"},
+            //new double[] {36.52, 19.56, 49.96, 61.1d, 49.32d, 49.96d, 47.48d, 49.96d, 48.4d},
+            //null);
 
 
     private Class entityClass;

@@ -70,11 +70,11 @@
   "leslie_rs5t_4": {"category": "master", "sounds": [{"name": "leslie_rs5t_4", "stream":  true}]},
 
   "leslie_s2m_1": {"category": "master", "sounds": [{"name": "leslie_s2m_1", "stream":  true}]},
-  "leslie_s3": {"category": "master", "sounds": [{"name": "leslie_s3", "stream":  true}]},
+  "leslie_s3_1": {"category": "master", "sounds": [{"name": "leslie_s3_1", "stream":  true}]},
   "leslie_s3l_1": {"category": "master", "sounds": [{"name": "leslie_s3l_1","stream": true}]},
   "leslie_s3l_2": {"category": "master", "sounds": [{"name": "leslie_s3l_2","stream": true}]},
   "leslie_s3l_3": {"category": "master", "sounds": [{"name": "leslie_s3l_3","stream": true}]},
-  "leslie_s3lr": {"category": "master", "sounds": [{"name": "leslie_s3lr","stream": true}]},
+  "leslie_s3lr_1": {"category": "master", "sounds": [{"name": "leslie_s3lr_1","stream": true}]},
   "leslie_sl4t_1": {"category": "master", "sounds": [{"name": "leslie_sl4t_1", "stream":  true}]},
   "leslie_sl4t_2": {"category": "master", "sounds": [{"name": "leslie_sl4t_2", "stream":  true}]},
   "leslie_sl4t_3": {"category": "master", "sounds": [{"name": "leslie_sl4t_3", "stream":  true}]},
@@ -84,13 +84,15 @@
 
   "nathan_kj24_1": {"category": "master", "sounds": [{"name": "nathan_kj24_1","stream": true}]},
   "nathan_k3l_1": {"category": "master", "sounds": [{"name": "nathan_k3l_1","stream": true}]},
-  "nathan_k3la": {"category": "master", "sounds": [{"name": "nathan_k3la","stream": true}]},
   "nathan_k3la_1": {"category": "master", "sounds": [{"name": "nathan_k3la_1","stream": true}]},
   "nathan_k3la_2": {"category": "master", "sounds": [{"name": "nathan_k3la_2","stream": true}]},
   "nathan_k3la_3": {"category": "master", "sounds": [{"name": "nathan_k3la_3","stream": true}]},
   "nathan_k3la_4": {"category": "master", "sounds": [{"name": "nathan_k3la_4","stream": true}]},
   "nathan_k3la_5": {"category": "master", "sounds": [{"name": "nathan_k3la_5","stream": true}]},
-  "nathan_k5hll": {"category": "master", "sounds": [{"name": "nathan_k5hll","stream": true}]},
+  "nathan_k5hl_1": {"category": "master", "sounds": [{"name": "nathan_k5hl_1","stream": true}]},
+  "nathan_k5hl_2": {"category": "master", "sounds": [{"name": "nathan_k5hl_2","stream": true}]},
+  "nathan_k5hl_3": {"category": "master", "sounds": [{"name": "nathan_k5hl_3","stream": true}]},
+  "nathan_k5hl_4": {"category": "master", "sounds": [{"name": "nathan_k5hl_4","stream": true}]},
   "nathan_k5l_1": {"category": "master", "sounds": [{"name": "nathan_k5l_1","stream": true}]},
   "nathan_k5l_2": {"category": "master", "sounds": [{"name": "nathan_k5l_2","stream": true}]},
   "nathan_k5l_3": {"category": "master", "sounds": [{"name": "nathan_k5l_3","stream": true}]},
@@ -168,7 +170,7 @@
   "nathan_p5_old_4": {"category": "master", "sounds": [{"name": "nathan_p5_old_4", "stream":  true}]},
   "nathan_p5_old_5": {"category": "master", "sounds": [{"name": "nathan_p5_old_5", "stream":  true}]},
   "nathan_p5_old_6": {"category": "master", "sounds": [{"name": "nathan_p5_old_6", "stream":  true}]},
-  "nathan_p6": {"category": "master", "sounds": [{"name": "nathan_p6", "stream":  true}]},
+  "nathan_p6_1": {"category": "master", "sounds": [{"name": "nathan_p6_1", "stream":  true}]},
 
 
 
@@ -207,9 +209,10 @@
   "pe_whistle": {"category": "master", "sounds": [{"name": "pe_whistle", "stream":  true}]},
   "skookum_whistle": {"category": "master", "sounds": [{"name": "skookum_whistle", "stream":  true}]},
   "southern_3chime": {"category": "master", "sounds": [{"name": "southern_3chime", "stream":  true}]},
+  "usarmy_3chime": {"category": "master", "sounds": [{"name": "usarmy_3chime", "stream":  true}]},
   "765_whistle": {"category": "master", "sounds": [{"name": "765_whistle", "stream":  true}]},
   "1225_whistle": {"category": "master", "sounds": [{"name": "1225_whistle", "stream":  true}]},
-
+  "westinghouse_whistle_1": {"category": "master", "sounds": [{"name": "westinghouse_whistle_1", "stream":  true}]},
 
 
   "a4_whistle": {"category": "master", "sounds": [{"name": "a4_whistle", "stream":  true}]},
@@ -253,7 +256,7 @@
 
 
 
-  "ge_ebell": {"category": "master", "sounds": [{"name": "ge_ebell", "stream":  true}]},
+  "graham_ebell": {"category": "master", "sounds": [{"name": "graham_ebell", "stream":  true}]},
   "ge_steelbell_1": {"category": "master", "sounds": [{"name": "ge_steelbell_1", "stream":  true}]},
   "ge_steelbell_2": {"category": "master", "sounds": [{"name": "ge_steelbell_2", "stream":  true}]},
 
@@ -272,13 +275,12 @@
   "wch_ebell": {"category": "master", "sounds": [{"name": "wch_ebell", "stream":  true}]},
   "wch_mchbell": {"category": "master", "sounds": [{"name": "wch_mchbell", "stream":  true}]},
 
+  "sp_bell": {"category": "master", "sounds": [{"name": "sp_bell", "stream":  true}]},
   "steambell_1": {"category": "master", "sounds": [{"name": "steambell_1", "stream":  true}]},
   "steambell_2": {"category": "master", "sounds": [{"name": "steambell_2", "stream":  true}]},
   "steambell_3": {"category": "master", "sounds": [{"name": "steambell_3", "stream":  true}]},
   "steambell_4": {"category": "master", "sounds": [{"name": "steambell_4", "stream":  true}]},
-  "steambell_5": {"category": "master", "sounds": [{"name": "steambell_5", "stream":  true}]},
-  "steambell_6": {"category": "master", "sounds": [{"name": "steambell_6", "stream":  true}]},
-
+  "nkp_bell": {"category": "master", "sounds": [{"name": "nkp_bell", "stream":  true}]},
 
 
   "ALCO_16_244_Idle": {"category": "master", "sounds": [{"name": "ALCO_16_244_Idle", "stream":  true}]},

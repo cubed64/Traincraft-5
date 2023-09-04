@@ -349,7 +349,7 @@ public class ModelHuskyStackWellcar extends ModelConverter
 
                 GL11.glPushMatrix();
                 GL11.glScalef(1,1,1f);
-                GL11.glTranslated(0,-0.1,0);
+                GL11.glTranslated(0,-0.155,0.0);
                 theContainer.render(entity, f, f1, f2, f3, f4, f5);
                 GL11.glPopMatrix();
             }
@@ -359,7 +359,7 @@ public class ModelHuskyStackWellcar extends ModelConverter
 
                 GL11.glPushMatrix();
                 GL11.glScalef(1,1,1f);
-                GL11.glTranslated(0,-1.4,0);
+                GL11.glTranslated(0,-1.467,0);
                 theContainer.render(entity, f, f1, f2, f3, f4, f5);
                 GL11.glPopMatrix();
             }

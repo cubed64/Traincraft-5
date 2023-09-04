@@ -421,7 +421,7 @@ public class ModelWoodchipHopper extends ModelConverter//Same as Filename
 			} else
 
 				bodyModel[i].render(f5);
-		}
+			}
 
 		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==6){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Greyish.png"));
