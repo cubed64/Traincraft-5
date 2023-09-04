@@ -8,6 +8,7 @@
 package train.common.core.handlers;
 
 import com.jcirmodelsquad.tcjcir.extras.packets.*;
+import com.jcirmodelsquad.tcjcir.features.aipkitinterface.PacketInterfaceAction;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
@@ -68,7 +69,7 @@ public class PacketHandler {
 		Traincraft.mtcChannel.registerMessage(HANDLERS[3], PacketStopPoint.class, 203, Side.CLIENT);
 		Traincraft.mtcChannel.registerMessage(HANDLERS[4], PacketMTCStatus.class, 204, Side.CLIENT);
 		Traincraft.mtcChannel.registerMessage(HANDLERS[5], PacketATO.class, 205, Side.CLIENT);
-
+		Traincraft.mtcChannel.registerMessage(HANDLERS[8], PacketInterfaceAction.class, 209, Side.SERVER);
 		Traincraft.geometryCarChannel.registerMessage(HANDLERS[6], UpdateGeometryCar.class, 206, Side.SERVER);
 		Traincraft.geometryCarChannel.registerMessage(HANDLERS[7], MissionStatusPacket.class, 207, Side.SERVER);
 		Traincraft.remoteControlKey.registerMessage(RemoteControlKeyPacket.Handler.class, RemoteControlKeyPacket.class, 208, Side.SERVER);
@@ -98,6 +99,9 @@ public class PacketHandler {
 				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
 			},
 
+			new IMessageHandler<IMessage, IMessage>() {
+				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
+			},
 			new IMessageHandler<IMessage, IMessage>() {
 				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
 			}

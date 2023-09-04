@@ -1,8 +1,11 @@
 package train.common.api;
 
 import com.google.gson.JsonObject;
+import com.jcirmodelsquad.tcjcir.extras.PeachyUtil;
 import com.jcirmodelsquad.tcjcir.extras.packets.RemoteControlKeyPacket;
+import com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2;
 import com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2Handler;
+import com.jcirmodelsquad.tcjcir.features.autotrain.IAT2Compatible;
 import com.jcirmodelsquad.tcjcir.features.signal.dynamic.LocoTransceiver;
 import com.jcirmodelsquad.tcjcir.features.signal.dynamic.Message;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH100H;
@@ -49,7 +52,6 @@ import train.common.mtc.network.*;
 
 import java.util.*;
 
-import static com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2.xyz;
 
 public abstract class Locomotive extends EntityRollingStock implements IInventory {
     public boolean lampOn;
@@ -526,13 +528,12 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             brakePressed = false;
         }
         if (i == 16) {
-            if (mtcStatus != 0 && this.mtcType == 2) {
-                if (!(this instanceof SteamTrain && !ConfigHandler.ALLOW_ATO_ON_STEAMERS)) {
-                    if (atoStatus == 1) {
-                        atoStatus = 0;
-                    } else {
-                        atoStatus = 1;
-                    }
+            if (mtcStatus != 0 && this.mtcType != 1) {
+                if (this instanceof IAT2Compatible) {
+                    AutoTrain2 autoTrain2 = ((IAT2Compatible)this).getDriver();
+                    autoTrain2.start();
+                } else {
+                    setMTCStatus(1, mtcType, atoStatus == 0 ? 1 : 0);
                 }
             }
         }
@@ -865,7 +866,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
             double speed = this.getSpeed();
 
-            if (BetterEnumSounds.trainSounds.containsKey(this.getClass().getName()) && worldObj.isRemote) {
+            if (BetterEnumSounds.trainSounds.containsKey(this.getClass().getName()) && worldObj.isRemote && getFuel() > 0 && this.isLocoTurnedOn()) {
                 //Use BetterEnumSounds.
                 BetterEnumSounds sounds = BetterEnumSounds.trainSounds.get(this.getClass().getName());
                 String sound = "";
@@ -949,46 +950,47 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                     //Use the old sound system.
 
 
-                    for (EnumSounds sounds : EnumSounds.values()) {
-                        if (sounds.getEntityClass() != null && !sounds.getHornString().equals("") && sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0 && !sounds.getBellString().equals("")) {
-                            if (getFuel() > 0 && this.isLocoTurnedOn() && worldObj.isRemote) {
-
-
+                EnumSounds[] values = EnumSounds.values();
+                for (EnumSounds sounds : values) {
+                    System.out.println(sounds.getEntityClass());
+                    if (sounds.getEntityClass() != null && !sounds.getHornString().isEmpty() && sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0) {
+                        if (getFuel() > 0 && this.isLocoTurnedOn()) {
+                            if (speed > -0.001D && speed < 0.01D && soundPosition == 0) {
+                                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getIdleString(), sounds.getIdleVolume(), 1F);
+                                soundPosition = sounds.getIdleSoundLength();//soundPosition is probably where IN the sound it is currently playing, eg 1 sec int osoudn file
+                            }
+                            if (sounds.getSoundChangeWithSpeed() && !sounds.getHornString().isEmpty() && sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0 && !sounds.getBellString().isEmpty()) {
+                                if (speed > 0.01D && speed < 0.06D && soundPosition == 0) {
+                                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 0.1F);
+                                    soundPosition = sounds.getRunSoundLength();
+                                } else if (speed > 0.06D && speed < 0.2D && soundPosition == 0) {
+                                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 0.4F);
+                                    soundPosition = sounds.getRunSoundLength() / 2;
+                                } else if (speed > 0.2D && soundPosition == 0) {
+                                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 0.5F);
+                                    soundPosition = sounds.getRunSoundLength() / 3;
+                                }
                             } else {
-                                if (speed > -0.001D && speed < 0.01D && soundPosition == 0) {
-                                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getIdleString(), sounds.getIdleVolume(), 1F);
-                                    soundPosition = sounds.getIdleSoundLength();//soundPosition is probably where IN the sound it is currently playing, eg 1 sec int osoudn file
-                                }
-                                if (sounds.getSoundChangeWithSpeed() && !sounds.getHornString().equals("") && sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0 && !sounds.getBellString().equals("")) {
-                                    if (speed > 0.01D && speed < 0.06D && soundPosition == 0) {
-                                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 0.1F);
-                                        soundPosition = sounds.getRunSoundLength();
-                                    } else if (speed > 0.06D && speed < 0.2D && soundPosition == 0) {
-                                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 0.4F);
-                                        soundPosition = sounds.getRunSoundLength() / 2;
-                                    } else if (speed > 0.2D && soundPosition == 0) {
-                                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 0.5F);
-                                        soundPosition = sounds.getRunSoundLength() / 3;
-                                    }
-                                } else {
-                                    if (speed > 0.01D && soundPosition == 0) {
-                                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 1F);
-                                        soundPosition = sounds.getRunSoundLength();
-                                    }
-                                }
-                                if (soundPosition > 0) {
-                                    soundPosition--;
+                                if (speed > 0.01D && soundPosition == 0) {
+                                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getRunString(), sounds.getRunVolume(), 1F);
+                                    soundPosition = sounds.getRunSoundLength();
                                 }
                             }
+                            if (soundPosition > 0) {
+                                soundPosition--;
+                            }
                         }
+
                         break;
                     }
+
+                }
                 }
             }
 
 
         for (EnumSounds sounds : EnumSounds.values()) {
-            if (sounds.getEntityClass() != null && !sounds.getHornString().equals("") && sounds.getEntityClass().equals(this.getClass()) && !sounds.getBellString().equals("")) {
+            if (sounds.getEntityClass() != null && !sounds.getHornString().isEmpty() && sounds.getEntityClass().equals(this.getClass()) && !sounds.getBellString().equals("")) {
                 if (bellPressed) {
 
                     if (bellCount == 0) {
@@ -1607,15 +1609,53 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     }
 
 
+    public void setSpeedLimit(int speedLimit, int nextSpeedLimit, Vec3 speedChange3) {
+        this.speedLimit = speedLimit;
+        this.nextSpeedLimit = nextSpeedLimit;
+        this.speedChange3 = speedChange3;
+        Traincraft.mtcChannel.sendToAllAround(new PacketSpeedLimit(getEntityId(), speedLimit, nextSpeedLimit, speedChange3.xCoord, speedChange3.yCoord, speedChange3.zCoord),
+                new NetworkRegistry.TargetPoint(worldObj.provider.dimensionId, posX, posY, posZ, 150.0D));
+    }
+
+    public void setMTCStatus(int status, int type, int atoStatus) {
+        this.mtcStatus = status;
+        this.mtcType = type;
+        this.atoStatus = atoStatus;
+        Traincraft.mtcChannel.sendToAllAround(new PacketMTCStatus(getEntityId(), status, type),
+                new NetworkRegistry.TargetPoint(worldObj.provider.dimensionId,
+                        posX, posY, posZ, 150.0D));
+        if (atoStatus != 0) {
+            Traincraft.mtcChannel.sendToAllAround(new PacketATO(getEntityId(), 1), new NetworkRegistry.TargetPoint(
+                    worldObj.provider.dimensionId, posX, posY, posZ, 150.0D));
+        }
+    }
+
+    public void setStationStop(Vec3 stationStop) {
+        this.stationStop3 = stationStop;
+        if (stationStop3.xCoord == 0 && stationStop3.yCoord == 0 && stationStop3.zCoord == 0) this.stationStop = false;
+        Traincraft.mtcChannel.sendToAllAround(new PacketStopPoint(getEntityId(), stationStop.xCoord, stationStop.yCoord, stationStop.zCoord, 1),
+                new NetworkRegistry.TargetPoint(worldObj.provider.dimensionId, posX, posY, posZ, 150.0D));
+    }
+
+    public void setParkingBrake(boolean status) {
+        this.parkingBrake = status;
+        Traincraft.brakeChannel.sendToAllAround(new PacketParkingBrake(false, getEntityId()),
+                new NetworkRegistry.TargetPoint(worldObj.provider.dimensionId, posX, posY, posZ, 150.0D));
+    }
+
     /**
+     *
      * For MTC's Automatic Train Operation system
      */
+
+
+
     public void accel(Integer desiredSpeed) {
         if (this.worldObj != null) {
 
             if (this.getSpeed() != desiredSpeed) {
                 if ((int) this.getSpeed() <= this.speedLimit) {
-                    if (this.riddenByEntity == null) {
+                    if (this.riddenByEntity == null || this.mtcType == 3) {
 
                         double rotation = this.serverRealRotation;
                         if (rotation == 90.0) {
@@ -1678,9 +1718,9 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         Vec3 currentPosition = Vec3.createVectorHelper(this.posX, this.posY, this.posZ);
         double currentDistance = currentPosition.distanceTo(Vec3.createVectorHelper(signalPosition.xCoord, signalPosition.yCoord, signalPosition.zCoord));
         double originalDistance = currentDistance;
-        double brakingPercentage = 0.3D;
+        double brakingPercentage = 0.5D; // Adjust this value for stronger deceleration
         double brakingFactor = 0.9D; // Adjust this value for faster deceleration
-        double smoothingFactor = 0.9D; // Adjust this value for smoother deceleration
+        double smoothingFactor = 0.8D; // Adjust this value for smoother deceleration
 
         if (currentDistance != 0.0D && originalDistance != 0.0D) {
             brakingFactor = Math.pow((originalDistance - currentDistance) / originalDistance, 2); // Apply non-linear braking function
@@ -1690,6 +1730,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
         this.motionX *= brakingPercentage;
         this.motionZ *= brakingPercentage;
+
     }
 
 
@@ -1699,12 +1740,8 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     }
 
     public void disconnectFromServer() {
-        JsonObject sendTo = new JsonObject();
-        sendTo.addProperty("funct", "disconnect");
-        // sendMessage(new MTCMessage(this.trainID, serverUUID, sendTo.toString(), 0));
-        this.mtcType = 1;
-        // this.serverUUID = "";
-        isConnected = false;
+        this.isConnected = false;
+        if (ttTransceiver != null) ttTransceiver.disconnect();
     }
 
     public void remoteControlFromPacket(int key) {
@@ -1789,7 +1826,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
     public void sendMTCStatusUpdate() {
 
-        Vec3 end = xyz((int) posX, (int) posY, (int) posZ);
+        Vec3 end = PeachyUtil.xyz((int) posX, (int) posY, (int) posZ);
 
         if (cartLinked1 != null) {
             Map<Integer, Vec3> distances = new HashMap<>();
@@ -1797,7 +1834,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
                 for (int i = 0; i < (cartLinked1).train.getTrains().size(); i++) {
                     EntityRollingStock stock = (cartLinked1).train.getTrains().get(i);
-                    distances.put((int) getDistance(stock.posX, stock.posY, stock.posZ), xyz((int) stock.posX, (int) stock.posY, (int) stock.posZ));
+                    distances.put((int) getDistance(stock.posX, stock.posY, stock.posZ), PeachyUtil.xyz((int) stock.posX, (int) stock.posY, (int) stock.posZ));
                 }
             }
 
@@ -1837,8 +1874,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             // System.out.println(this.getInventory()[whichOneToCheck].getItem().getClass().getName());
             if (this.getInventory()[whichOneToCheck].getItem() instanceof ItemWirelessTransmitter) {
                 support = true;
-            } else {
-                support = false;
             }
         }
         return this instanceof EntityLocoDieselSD40 || this instanceof EntityLocoElectricBP4 || this instanceof EntityLocoDieselClass66 || this instanceof EntityLocoElectricBR185 || this instanceof EntityLocoElectricCD151 || this instanceof EntityLocoDieselDD35A || this instanceof EntityLocoElectricICE1 || this instanceof EntityLocoElectricHighSpeedZeroED || this instanceof EntityLocoElectricE103 || this instanceof EntityLocoDieselV60_DB || this instanceof EntityLocoDieselCD742 || this instanceof EntityLocoElectricVL10 || this instanceof EntityLocoElectricTramNY || this instanceof EntityLocoDieselIC4_DSB_MG || this instanceof EntityLocoDieselSD70 || this instanceof PCH120Commute || this instanceof PCH130Commute2 || support;

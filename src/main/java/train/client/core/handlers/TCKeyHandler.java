@@ -59,7 +59,7 @@ public class TCKeyHandler {
 		bell = new KeyBinding("Locomotive Bell", Keyboard.KEY_B, "key.categories.traincraft");
 		ClientRegistry.registerKeyBinding(bell);
 
-		if (Loader.isModLoaded("ComputerCraft") || Loader.isModLoaded("OpenComputers")) {
+
 			MTCScreen = new KeyBinding("key.traincraft.showMTCScreen", Keyboard.KEY_NONE, "key.categories.traincraft");
 			ClientRegistry.registerKeyBinding(MTCScreen);
 			toggleATO = new KeyBinding("key.traincraft.toggleATO", Keyboard.KEY_NONE, "key.categories.traincraft");
@@ -68,7 +68,7 @@ public class TCKeyHandler {
 			ClientRegistry.registerKeyBinding(mtcOverride);
 			overspeedOverride = new KeyBinding("key.traincraft.overspeedOverride", Keyboard.KEY_NONE, "key.categories.traincraft");
 			ClientRegistry.registerKeyBinding(overspeedOverride);
-		}
+
 		remoteControlForward = new KeyBinding("Remote Control Forward", Keyboard.KEY_NUMPAD8, "key.categories.traincraft");
         remoteControlBackwards = new KeyBinding("Remote Control Backwards", Keyboard.KEY_NUMPAD8, "key.categories.traincraft");
         remoteControlBrake = new KeyBinding("Remote Control Brake", Keyboard.KEY_NUMPAD0, "key.categories.traincraft");
@@ -165,7 +165,7 @@ public class TCKeyHandler {
 			if (furnace.isPressed()) {
 				sendKeyControlsPacket(9);
 			}
-			if (Loader.isModLoaded("ComputerCraft") || Loader.isModLoaded("OpenComputers")) {
+
 				if (MTCScreen.isPressed() && !FMLClientHandler.instance().isGUIOpen(GuiMTCInfo.class)) {
 					if (Minecraft.getMinecraft().thePlayer.ridingEntity != null) {
 						Minecraft.getMinecraft().displayGuiScreen(new GuiMTCInfo(Minecraft.getMinecraft().thePlayer.ridingEntity));
@@ -223,7 +223,7 @@ public class TCKeyHandler {
 
 			}
 
-		}
+
 
 		if (FMLClientHandler.instance().getClient().gameSettings.keyBindSneak.isPressed() && Keyboard.isKeyDown(Keyboard.KEY_F3)) {
 			sendKeyControlsPacket(404);

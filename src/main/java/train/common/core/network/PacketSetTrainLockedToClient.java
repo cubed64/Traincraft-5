@@ -10,7 +10,7 @@ import train.common.api.AbstractTrains;
 public class PacketSetTrainLockedToClient implements IMessage {
 
 	boolean	bool;
-	int		entityID;
+	int	entityID;
     public PacketSetTrainLockedToClient(){}
 
 	public PacketSetTrainLockedToClient(boolean bool, int trainEntity) {

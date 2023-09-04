@@ -31,7 +31,7 @@ public class FortyFootContainerRender extends TileEntitySpecialRenderer {
                 skyLight=tileEntity.getWorldObj().getSkyBlockTypeBrightness(EnumSkyBlock.Sky, (int)x, (int)y, (int)z) << 20 | (Math.max(skyLight, 0)) << 4;
                 OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit,  skyLight % 65536,  skyLight * 0.00001525878f);*/
         GL11.glColor4f(1,1,1,1);
-        tmt.Tessellator.bindTexture(new ResourceLocation("tc:textures/trains/ISO_40FT_" + theTileEntity.getAvailableColors().get(theTileEntity.currentColor) + ".png"));
+        tmt.Tessellator.bindTexture(new ResourceLocation("tc:textures/trains/ISO_40FT_" + theTileEntity.currentColor + ".png"));
         GL11.glColor4f(1,1,1,1);
         //tessellator.setBrightness(theBlock.getMixedBrightnessForBlock(tileEntity.getWorldObj(), (int)x, (int)y, (int)z));
         tessellator.setBrightness(15);

@@ -2,7 +2,7 @@ package train.client.gui;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.jcirmodelsquad.tcjcir.features.autotrain.GuiAutoTrain2;
+import com.jcirmodelsquad.tcjcir.features.autotrain.GUIAipkitInterface;
 import com.jcirmodelsquad.tcjcir.features.autotrain.IAT2Compatible;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
@@ -163,7 +163,7 @@ public class GuiLoco2 extends GuiContainer {
 			}
 		}
 		if (guibutton.id == 5) {
-			Minecraft.getMinecraft().displayGuiScreen(new GuiAutoTrain2((Locomotive) Minecraft.getMinecraft().thePlayer.ridingEntity));
+			Minecraft.getMinecraft().displayGuiScreen(new GUIAipkitInterface((Locomotive) Minecraft.getMinecraft().thePlayer.ridingEntity));
 		}
 	}
 

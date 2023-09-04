@@ -2,6 +2,7 @@ package train.common;
 
 import com.jcirmodelsquad.tcjcir.extras.JCIRQuote;
 import com.jcirmodelsquad.tcjcir.extras.QuoteList;
+import com.jcirmodelsquad.tcjcir.features.signal.dynamic.DSSConfig;
 import com.jcirmodelsquad.tcjcir.features.signal.dynamic.DynamicSignalServer;
 import com.jcirmodelsquad.tcjcir.features.signal.dynamic.TrainTalk;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -20,7 +21,9 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
+import net.minecraft.world.gen.structure.MapGenVillage;
 import net.minecraftforge.common.AchievementPage;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
@@ -41,6 +44,7 @@ import com.jcirmodelsquad.tcjcir.features.signal.vbc.VBCTracking;
 import train.common.recipes.AssemblyTableRecipes;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.Random;
 
 @Mod(modid = Info.modID, name = Info.modName, version = Info.modVersion)
@@ -205,8 +209,12 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 
 		proxy.registerBookHandler();
 
-		FMLCommonHandler.instance().bus().register(VBCTracking.getInstance());
-		MinecraftForge.EVENT_BUS.register(VBCTracking.getInstance());
+		/*FMLCommonHandler.instance().bus().register(VBCTracking.getInstance());
+		MinecraftForge.EVENT_BUS.register(VBCTracking.getInstance());*/
+
+		TrainTalk.getInstance().init();
+		DSSConfig.load();
+
 
 		tcLog.info("Finished Initialization!");
 
@@ -232,6 +240,7 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		/*TrainTalk.getInstance().init();
 		DynamicSignalServer thing = new DynamicSignalServer(0, "AutoTrain Test");
 		thing.init();*/
+		MapGenVillage.villageSpawnBiomes = Arrays.asList(BiomeGenBase.plains, BiomeGenBase.desert, BiomeGenBase.savanna, BiomeGenBase.extremeHills);
 		tcLog.info("Finished PostInitialization! We are done for Traincraft!");
 	}
 

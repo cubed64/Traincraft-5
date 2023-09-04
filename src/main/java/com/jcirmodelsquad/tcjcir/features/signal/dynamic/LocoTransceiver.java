@@ -1,6 +1,7 @@
 package com.jcirmodelsquad.tcjcir.features.signal.dynamic;
 
 import cpw.mods.fml.common.network.NetworkRegistry;
+import net.minecraft.util.Vec3;
 import train.common.Traincraft;
 import train.common.api.Locomotive;
 import train.common.mtc.network.PacketSpeedLimit;
@@ -21,9 +22,13 @@ public class LocoTransceiver extends TTTransceiver {
     public void receiveMessage(Message msg) {
         super.receiveMessage(msg);
         if (msg.getHeader().equals("resp")) {
+            loco.isConnected = true;
             Map<String, Object> data = (Map<String, Object>) msg.getData();
             int speedLimit = (int) data.get("speedLimit");
+            int nextSpeedLimit = (int) data.get("nextSpeedLimit");
             int safeDistance = (int) data.get("safeDistance");
+
+            Vec3 nextSpeedPos = (Vec3)data.get("nextSpeedPos");
 
             if (safeDistance < 0) {
                 speedLimit = 0;
@@ -31,9 +36,7 @@ public class LocoTransceiver extends TTTransceiver {
                 speedLimit = safeDistance;
             }
 
-            loco.speedLimit = speedLimit;
-            Traincraft.mtcChannel.sendToAllAround(new PacketSpeedLimit(loco.getEntityId(), speedLimit, 0, 0, 0, 0),
-                    new NetworkRegistry.TargetPoint(loco.worldObj.provider.dimensionId, loco.posX, loco.posY, loco.posZ, 150.0D));
+            loco.setSpeedLimit(speedLimit, nextSpeedLimit, nextSpeedPos);
         }
     }
 

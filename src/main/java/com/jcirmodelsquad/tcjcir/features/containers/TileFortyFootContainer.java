@@ -13,7 +13,8 @@ import java.util.ArrayList;
 public class TileFortyFootContainer extends TileEntity implements IInventory {
     public ItemStack[] inventory;
     public int directionPlaced;
-    public int currentColor = 0;
+    public String currentColor = "LightGrey";
+    public int colorIndex = 0;
 
     public TileFortyFootContainer() {
         this.inventory = new ItemStack[this.getSizeInventory()];
@@ -138,7 +139,7 @@ public class TileFortyFootContainer extends TileEntity implements IInventory {
         }
 
         }
-        currentColor = nbt.getInteger("currentColor");
+        currentColor = nbt.getString("Color");
     }
 
     @Override
@@ -159,8 +160,7 @@ public class TileFortyFootContainer extends TileEntity implements IInventory {
         }
 
         nbt.setTag("Items", list);
-        nbt.setInteger("currentColor", currentColor);
-        nbt.setString("currentColorString", getAvailableColors().get(currentColor));
+        nbt.setString("Color", currentColor);
     }
 
     public ArrayList<String> getAvailableColors() {
@@ -174,13 +174,14 @@ public class TileFortyFootContainer extends TileEntity implements IInventory {
 
     public void goToNextColor() {
         if (getAvailableColors().size() > 0) {
-            if (currentColor > getAvailableColors().size() -2) {
-                currentColor = 0;
+            if (colorIndex > getAvailableColors().size() -2) {
+                colorIndex = 0;
             } else {
-                currentColor++;
+                colorIndex++;
             }
         }
 
+        currentColor = getAvailableColors().get(colorIndex);
     }
 
 }

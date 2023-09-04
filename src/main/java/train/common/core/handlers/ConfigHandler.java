@@ -45,6 +45,8 @@ public class ConfigHandler {
 	public static boolean ALLOW_ATO_ON_STEAMERS;
 	public static boolean ENABLE_TILT_HANDLER;
 
+	public static boolean ENABLE_DSS_WEBUI;
+
 	public static void changeFirstLoad(){
 		Configuration cf = new Configuration(new File(Traincraft.configDirectory, Info.modName + ".cfg"));
 		cf.load();

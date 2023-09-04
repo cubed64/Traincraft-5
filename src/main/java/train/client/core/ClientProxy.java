@@ -20,7 +20,6 @@ import javazoom.jl.decoder.JavaLayerUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.SoundCategory;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -54,7 +53,6 @@ import train.common.library.BlockIDs;
 import train.common.library.GuiIDs;
 import train.common.library.Info;
 import train.common.mtc.render.RenderMTCBlock;
-import train.common.mtc.tile.TileMTCMultiTransmitter;
 import train.common.mtc.tile.TileTransmitterSpeed;
 import train.common.tile.*;
 import train.common.tile.tileSwitch.*;
@@ -77,6 +75,10 @@ public class ClientProxy extends CommonProxy {
 	}
 
 	@Override
+
+
+
+
 	public void registerEvents(FMLPreInitializationEvent event) {
 		super.registerEvents(event);
 		ClientTickHandler tickHandler = new ClientTickHandler();
@@ -89,7 +91,8 @@ public class ClientProxy extends CommonProxy {
 		registerEvent(tiltingHandler);*/
 		registerEvent(tickHandler);
 		registerEvent(renderHandler);
-		registerEvent(huDloco);
+		registerEvent(new HUDLoco2());
+		registerEvent(new HUDAipkit());
 		registerEvent(wiggle);
 	}
 
@@ -114,19 +117,19 @@ public class ClientProxy extends CommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileRacor36H.class, new RenderRacor36H());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.Racor36H.block), new ItemRenderRacor36H());
 
-		ClientRegistry.bindTileEntitySpecialRenderer(TileowoYardSwitchStand.class, new RenderowoYardSwtichStand());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileOwoYardSwitchStand.class, new RenderowoYardSwtichStand());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.owoYardSwitchStand.block), new ItemRenderowoYardSwitchStand());
 
 		ClientRegistry.bindTileEntitySpecialRenderer(TileMILWSwitchStand.class, new RenderMILWSwitchStand());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.MILWSwitchStand.block), new ItemRenderMILWSwitchStand());
 
-		ClientRegistry.bindTileEntitySpecialRenderer(TilecircleSwitchStand.class, new RendercircleSwitchStand());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileCircleSwitchStand.class, new RendercircleSwitchStand());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.circleSwitchStand.block), new ItemRendercircleSwitchStand());
 
-		ClientRegistry.bindTileEntitySpecialRenderer(TileowoSwitchStand.class, new RenderowoSwitchStand());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileOwoSwitchStand.class, new RenderowoSwitchStand());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.owoSwitchStand.block), new ItemRenderowoSwitchStand());
 
-		ClientRegistry.bindTileEntitySpecialRenderer(TileautoSwitchStand.class, new RenderautoSwitchStand());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileAutoSwitchStand.class, new RenderautoSwitchStand());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.autoSwtichStand.block), new ItemRenderautoSwitchStand());
 
 		ClientRegistry.bindTileEntitySpecialRenderer(TileStopper.class, new RenderStopper());
@@ -166,7 +169,7 @@ public class ClientProxy extends CommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileFortyFootContainer.class, new FortyFootContainerRender());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.FortyFootContainer.block), new ItemRenderFortyFootContainer());
 
-
+		ClientRegistry.bindTileEntitySpecialRenderer(TileMTCMarker.class, new RenderMTCMarker());
 
 		ClientRegistry.bindTileEntitySpecialRenderer(TileMFPBWigWag.class, new RenderMFPBWigWag());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.MFPBWigWag.block), new ItemRenderMFPBWigWag());

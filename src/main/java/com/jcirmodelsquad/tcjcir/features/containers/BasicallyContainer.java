@@ -19,7 +19,7 @@ public class BasicallyContainer {
 
     public NBTTagCompound getAsTagCompound() {
         NBTTagCompound theCompound = new NBTTagCompound();
-        theCompound.setString("color", color);
+        theCompound.setString("Color", color);
         theCompound.setString("theType", type);
         if (savedData != null) {
             theCompound.setTag("Items", savedData.getTagList("Items", Constants.NBT.TAG_COMPOUND));

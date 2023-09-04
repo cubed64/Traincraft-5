@@ -60,10 +60,11 @@ public class HUDMTC extends GuiScreen {
 
 		double speedScaled = Math.abs((loco.getSpeed() * (int)(guiLeft*0.275f)) / loco.getMaxSpeed());
 		double nextSpeedScaled = Math.abs((loco.distanceFromSpeedChange * (int)(guiLeft*0.275f)) / loco.getMaxSpeed());
+		double stationStopScaled = Math.abs((loco.distanceFromStationStop * (int)(guiLeft*0.275f)) / loco.getMaxSpeed());
 		/*if (loco.getMaxSpeed() > nextSpeedScaled ) {
 			nextSpeedScaled = (int) (guiLeft*0.275f);
 		}*/
-		double stopScaled = Math.abs((loco.distanceFromStationStop * (int)(guiLeft*0.275f)) / loco.getMaxSpeed());
+
 
 		Gui.drawRect((int)(guiLeft*0.009f),(int)(guiTop*0.01f),(int)(guiLeft*0.3f),(int)(guiTop*0.17f) //Background
 
@@ -80,7 +81,7 @@ public class HUDMTC extends GuiScreen {
 		for (int i = 0; i < 6; i++) {
 			double speed = 5*(Math.ceil(Math.abs(loco.getMaxSpeed() * (i * 0.2)/5)));
 
-			fontRendererObj.drawStringWithShadow(Long.toString(Math.round(speed)),textPos,(int)(guiTop*0.102f), 0xFFFFFF);
+			fontRendererObj.drawStringWithShadow(Long.toString(Math.round(speed)),textPos,(int)(guiTop*0.104f), 0xFFFFFF);
 			textPos = (int) (textPos + 48);
 		}
 		fontRendererObj.drawStringWithShadow("kmh/m",textPos - 52,(int)(guiTop*0.13f), 0xFFFFFF);
@@ -112,6 +113,10 @@ public class HUDMTC extends GuiScreen {
 		//Speed Change Distance Indicator
 
 		if (loco.nextSpeedLimit != 0) Gui.drawRect((int)(guiLeft*0.020f),(int)(guiTop*0.085f), (int) ((int)(guiLeft*0.020f) + nextSpeedScaled)  ,(int)(guiTop*0.09f), 0xFFFFFF55);
+
+
+		if (loco.stationStop3.xCoord != 0) Gui.drawRect((int)(guiLeft*0.020f),(int)(guiTop*0.095f), (int) ((int)(guiLeft*0.020f) + stationStopScaled)  ,(int)(guiTop*0.1f), (127 << 24) | 0xFF0000);
+
 
 		fontRendererObj.drawStringWithShadow(EnumChatFormatting.GREEN + Integer.toString(loco.speedLimit), (int)((guiLeft*0.020f) + Math.abs((loco.speedLimit * (int)(guiLeft*0.275f)) / loco.getMaxSpeed()) - speedPosMain),(int)(guiTop*0.04f), 0xFFFFFF);
 		fontRendererObj.drawStringWithShadow(EnumChatFormatting.YELLOW + Integer.toString(loco.nextSpeedLimit),(int)((guiLeft*0.020f) + Math.abs((loco.nextSpeedLimit * (int)(guiLeft*0.275f)) / loco.getMaxSpeed()) - speedPosNext),(int)(guiTop*0.04f), 0xFFFFFF);
@@ -166,38 +171,39 @@ public class HUDMTC extends GuiScreen {
 		//Draw autotrain stuff.
 
 		if (loco.mtcType == 3) {
+			Gui.drawRect((int)(guiLeft*0.009f),(int)(guiTop*0.18f),(int)(guiLeft*0.3f),(int)(guiTop*0.5f), 0x802766D6);
 			if (loco.getDataWatcher().getWatchableObjectString(29).isEmpty()) return;
+			StringBuilder output = new StringBuilder();
 			StringBuilder actionDisplay = new StringBuilder();
-			XmlBuilder status = new XmlBuilder(loco.getDataWatcher().getWatchableObjectString(29));
-			status.buildXML();
-			fontRendererObj.drawStringWithShadow("AutoTrain-2",(int)(guiLeft*0.012f), (int) (guiTop*0.18), 0xFFFFFF);
-			fontRendererObj.drawStringWithShadow("Status: " + status.getString("status"),(int)(guiLeft*0.012f), (int) (guiTop*0.20), 0xFFFFFF);
-			fontRendererObj.drawStringWithShadow("Position: " + status.getString("progress"),(int)(guiLeft*0.012f), (int) (guiTop*0.22), 0xFFFFFF);
+			JsonObject status = new JsonParser().parse(loco.getDataWatcher().getWatchableObjectString(29)).getAsJsonObject();
+			output.append("AutoTrain-2\n");
+			output.append("Status: ").append(status.get("status").getAsString()).append("\n");
+			output.append("Position: ").append(status.get("progress").getAsString()).append("\n");
+;
 
-			JsonArray driveScript = new JsonParser().parse(loco.getDataWatcher().getWatchableObjectString(30)).getAsJsonArray();
+			JsonArray driveScript = status.get("driveScript").getAsJsonArray();
 
 			for (int i = 0; i < driveScript.size(); i++) {
 				JsonObject action = driveScript.get(i).getAsJsonObject();
-				actionDisplay.append(Integer.parseInt(status.getString("progress")) == i ? ">> " : "")
+				output.append(status.get("progress").getAsInt() == i ?  EnumChatFormatting.GREEN + ">> " : "")
 				.append(action.get("action").getAsString())
 						.append(" (")
 						.append(action.get("param1").getAsString())
-						.append(",")
+						.append(", ")
 						.append(action.get("param2").getAsString().isEmpty() ? "null" : action.get("param2").getAsString())
 						.append(") ")
 						.append(action.get("position").getAsString())
 						.append("\n");
 
 			}
-			fontRendererObj.drawStringWithShadow("DriveScript:",(int)(guiLeft*0.012f), (int) (guiTop*0.26), 0xFFFFFF);
 
-			String[] actions = actionDisplay.toString().split("\n");
+			String[] text = output.toString().split("\n");
 
 			GL11.glPushMatrix();
-			for(int i = 0; i < actions.length; i++) {
-				String str = actions[i];
+			for(int i = 0; i < text.length; i++) {
+				String str = text[i];
 
-				fontRendererObj.drawStringWithShadow(str, (int)(guiLeft*0.012f), (int) (guiTop*0.28), Integer.parseInt(status.getString("progress")) == i ? 0x55FF55 : 0xFFFFFF );
+				fontRendererObj.drawStringWithShadow(str,  (int)(guiLeft*0.020f), (int) (guiTop*0.19),/* status.get("progress").getAsInt() == i ? 0x55FF55 : */0xFFFFFF );
 				// fontRendererObj.drawStringWithShadow("_", x + fontRendererObj.getStringWidth(str) + -68, y - 10, 0xFFFFFF);
 				GL11.glTranslatef(0,10,0);
 			}
@@ -205,6 +211,8 @@ public class HUDMTC extends GuiScreen {
 			//fontRendererObj.drawStringWithShadow(actionDisplay.toString(),(int)(guiLeft*0.012f), (int) (guiTop*0.28), 0xFFFFFF);
 		}
 }
+
+
 	public void renderSkillHUDOld(RenderGameOverlayEvent event, Locomotive rcCar) {
 		windowWidth = event.resolution.getScaledWidth();
 		windowHeight = event.resolution.getScaledHeight() - 100;

@@ -56,7 +56,7 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
                 } else {
                     NBTTagCompound nbt1 = (NBTTagCompound) JsonToNBT.func_150315_a(dataWatcher.getWatchableObjectString(25));
                     container1 = new BasicallyContainer();
-                    container1.color = nbt1.getString("color");
+                    container1.color = nbt1.getString("Color");
                     container1.type = nbt1.getString("theType");
                     if (nbt1.hasKey("Items")) {
                         NBTTagCompound newCompound = new NBTTagCompound();
@@ -70,7 +70,7 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
                 } else {
                     NBTTagCompound nbt2 = (NBTTagCompound) JsonToNBT.func_150315_a(dataWatcher.getWatchableObjectString(26));
                     container2 = new BasicallyContainer();
-                    container2.color = nbt2.getString("color");
+                    container2.color = nbt2.getString("Color");
                     container2.type = nbt2.getString("theType");
                     if (nbt2.hasKey("Items")) {
                         NBTTagCompound newCompound = new NBTTagCompound();
@@ -136,13 +136,13 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
             ItemStack theItem = entityplayer.getHeldItem();
             if (container1 == null) {
                 if (theItem.getTagCompound() != null) {
-                    this.container1 = new BasicallyContainer("FortyFootContainer", theItem.getTagCompound().getString("color"), theItem.getTagCompound());
+                    this.container1 = new BasicallyContainer("FortyFootContainer", theItem.getTagCompound().getString("Color"), theItem.getTagCompound());
                 } else {
                     this.container1 = new BasicallyContainer("FortyFootContainer", "LightGrey", null);
                 }
             } else {
                 if (theItem.getTagCompound() != null) {
-                    this.container2 = new BasicallyContainer("FortyFootContainer", theItem.getTagCompound().getString("color"), theItem.getTagCompound());
+                    this.container2 = new BasicallyContainer("FortyFootContainer", theItem.getTagCompound().getString("Color"), theItem.getTagCompound());
                 } else {
                     this.container2 = new BasicallyContainer("FortyFootContainer", "LightGrey", null);
                 }
@@ -199,7 +199,7 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
 
         if (container1 != null && container1.savedData != null) {
             NBTTagCompound container1Tag = new NBTTagCompound();
-            container1Tag.setString("color", container1.color);
+            container1Tag.setString("Color", container1.color);
             container1Tag.setString("theType", container1.type);
             container1Tag.setTag("Items", container1.savedData.getTagList("Items", Constants.NBT.TAG_COMPOUND));
             ntc.setTag("container1", container1Tag);
@@ -207,7 +207,7 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
 
        if (container2 != null && container2.savedData != null) {
            NBTTagCompound container2Tag = new NBTTagCompound();
-           container2Tag.setString("color", container2.color);
+           container2Tag.setString("Color", container2.color);
            container2Tag.setString("theType", container2.type);
            container2Tag.setTag("Items", container2.savedData.getTagList("Items", Constants.NBT.TAG_COMPOUND));
            ntc.setTag("container2", container2Tag);
@@ -218,16 +218,16 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
     protected void readEntityFromNBT(NBTTagCompound ntc) {
         super.readEntityFromNBT(ntc);
         if (ntc.hasKey("container1")) {
-            if (ntc.getCompoundTag("container1").getString("color").equals("")) {
-                ntc.getCompoundTag("container1").setString("color", "LightGrey");
+            if (ntc.getCompoundTag("container1").getString("Color").equals("")) {
+                ntc.getCompoundTag("container1").setString("Color", "LightGrey");
             }
-            container1 = new BasicallyContainer("FortyFootContainer", ntc.getCompoundTag("container1").getString("color"), ntc.getCompoundTag("container1"));
+            container1 = new BasicallyContainer("FortyFootContainer", ntc.getCompoundTag("container1").getString("Color"), ntc.getCompoundTag("container1"));
         }
         if (ntc.hasKey("container2")) {
-            if (ntc.getCompoundTag("container2").getString("color").equals("")) {
-                ntc.getCompoundTag("container2").setString("color", "LightGrey");
+            if (ntc.getCompoundTag("container2").getString("Color").equals("")) {
+                ntc.getCompoundTag("container2").setString("Color", "LightGrey");
             }
-            container2 = new BasicallyContainer("FortyFootContainer", ntc.getCompoundTag("container2").getString("color"), ntc.getCompoundTag("container2"));
+            container2 = new BasicallyContainer("FortyFootContainer", ntc.getCompoundTag("container2").getString("Color"), ntc.getCompoundTag("container2"));
         }
     }
 }

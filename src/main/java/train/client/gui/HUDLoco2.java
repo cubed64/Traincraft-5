@@ -1,7 +1,11 @@
 package train.client.gui;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import ebf.XmlBuilder;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiScreen;
@@ -28,7 +32,7 @@ public class HUDLoco2 extends GuiScreen {
 
     if (game != null && game.thePlayer != null && game.thePlayer.ridingEntity != null && game.thePlayer.ridingEntity instanceof Locomotive && Minecraft.isGuiEnabled()) {
             inLoco = true;
-            renderSkillHUD(event, (Locomotive) game.thePlayer.ridingEntity);
+           // renderSkillHUD(event, (Locomotive) game.thePlayer.ridingEntity);
         } else {
         inLoco = false;
         this.game = this.mc = Minecraft.getMinecraft();
@@ -62,64 +66,189 @@ public class HUDLoco2 extends GuiScreen {
         }
     }
 
-    public void renderSkillHUD(RenderGameOverlayEvent event, Locomotive rcCar) {
-        guiLeft=new ScaledResolution(Minecraft.getMinecraft(), Minecraft.getMinecraft().displayWidth, Minecraft.getMinecraft().displayHeight).getScaledWidth();
-        guiTop=new ScaledResolution(Minecraft.getMinecraft(), Minecraft.getMinecraft().displayWidth, Minecraft.getMinecraft().displayHeight).getScaledHeight();
-        rcCar.distanceFromSpeedChange = rcCar.getDistance(rcCar.speedChange3.xCoord, rcCar.speedChange3.yCoord,rcCar.speedChange3.zCoord);
+    public void renderSkillHUD(RenderGameOverlayEvent event, Locomotive loco) {
 
-        int x = event.resolution.getScaledWidth() / 2;
-        int y = event.resolution.getScaledHeight() / 2;
-        windowHeight = event.resolution.getScaledHeight();
-        int padding = 2;
-        int margin = 4;
-        int xPos = 0 + margin;
-        int yPos = 0 + margin;
-        // x1, y1, x2, y2, color
+        int width = this.game.fontRenderer.getStringWidth(EnumChatFormatting.GREEN + "Speed Limit" + EnumChatFormatting.GRAY + " / " + EnumChatFormatting.YELLOW + "Next Speed Limit");
+
+        guiLeft = new ScaledResolution(Minecraft.getMinecraft(), Minecraft.getMinecraft().displayWidth, Minecraft.getMinecraft().displayHeight).getScaledWidth();
+        guiTop = new ScaledResolution(Minecraft.getMinecraft(), Minecraft.getMinecraft().displayWidth, Minecraft.getMinecraft().displayHeight).getScaledHeight();
+        //loco.distanceFromSpeedChange = loco.getDistance(loco.speedChange3.xCoord, loco.speedChange3.yCoord,loco.speedChange3.zCoord);
+        loco.distanceFromStopPoint = loco.getDistance(loco.stopPoint3.xCoord, loco.stopPoint3.yCoord, loco.stopPoint3.zCoord);
+        loco.distanceFromSpeedChange = loco.getDistance(loco.speedChange3.xCoord, loco.speedChange3.yCoord,loco.speedChange3.zCoord);
+        loco.distanceFromStationStop = loco.getDistance(loco.stationStop3.xCoord, loco.stationStop3.yCoord,loco.stationStop3.zCoord);
+
         this.width = 300;
         this.height = 256;
+        windowHeight = event.resolution.getScaledHeight();
 
-        double speedScaled = Math.abs((rcCar.getSpeed() * (int)(guiLeft*0.275f)) / rcCar.getMaxSpeed());
+        double speedScaled = Math.abs((loco.getSpeed() * (int)(guiLeft*0.275f)) / loco.getMaxSpeed());
+        double nextSpeedScaled = Math.abs((loco.distanceFromSpeedChange * (int)(guiLeft*0.275f)) / loco.getMaxSpeed());
+        double stationStopScaled = Math.abs((loco.distanceFromStationStop * (int)(guiLeft*0.275f)) / loco.getMaxSpeed());
+		/*if (loco.getMaxSpeed() > nextSpeedScaled ) {
+			nextSpeedScaled = (int) (guiLeft*0.275f);
+		}*/
 
-        this.drawGradientRect((int)(guiLeft*0.009f),(int)(guiTop*0.75f),(int)(guiLeft*0.3f),(int)(guiTop*0.95f)
-                /*event.resolution.getScaledWidth() / 2 - 50) + 50,(event.resolution.getScaledHeight() / 2 - 50) + 50, (event.resolution.getScaledWidth() / 2 - 50) + 80, (event.resolution.getScaledHeight() / 2 - 50) + 40*/, 0xA1999999, 0xa1F3F3F3);
-        Gui.drawRect((int)(guiLeft*0.020f),(int)(guiTop*0.79f),(int)(guiLeft*0.288f),(int)(guiTop*0.82f), 0xFF555555);
-        Gui.drawRect((int)(guiLeft*0.020f),(int)(guiTop*0.79f), (int) ((int)(guiLeft*0.020f) + speedScaled),(int)(guiTop*0.82f), 0xFFFFFFFF);
-        drawRect((int)(guiLeft*0.20f),(int)(guiTop*0.83f),(int)(guiLeft*0.287f),(int)(guiTop*0.88f), 0xAA000000);
 
-        int width = this.game.fontRenderer.getStringWidth(String.valueOf(Math.round(rcCar.getSpeed())));
+        Gui.drawRect((int)(guiLeft*0.009f),(int)(guiTop*0.01f),(int)(guiLeft*0.3f),(int)(guiTop*0.17f) //Background
 
-       /*GL11.glPushMatrix(); //Start new matrix
-        GL11.glScalef(1.2f,1.2f,1.2f);
-        GL11.glTranslated((width * -5), (width * -5), (width * 3))*/;//scale it to 0.5 size on each side. Must be float e.g.: 2.0F*/
-        int numDigits = String.valueOf(Math.round(rcCar.getSpeed())).length();
-        int speedPositions = 0;
+                /*event.resolution.getScaledWidth() / 2 - 50) + 50,(event.resolution.getScaledHeight() / 2 - 50) + 50, (event.resolution.getScaledWidth() / 2 - 50) + 80, (event.resolution.getScaledHeight() / 2 - 50) + 40*/, 0xA4000000/*0xA1999999, 0xa10066cc*/);
+
+        fontRendererObj.drawStringWithShadow(EnumChatFormatting.GREEN + "Speed Limit" + EnumChatFormatting.GRAY + " / " + EnumChatFormatting.YELLOW + "Next Speed Limit",(int) (guiLeft*0.020f),(int)(guiTop*0.018f), 0xFFFFFF);
+
+        //Draw Speedometer
+        Gui.drawRect((int)(guiLeft*0.020f),(int)(guiTop*0.06f),(int)(guiLeft*0.288f),(int)(guiTop*0.08f), 0xFF555555); //Speedometer background
+        Gui.drawRect((int)(guiLeft*0.020f),(int)(guiTop*0.06f), (int) ((int)(guiLeft*0.020f) + speedScaled),(int)(guiTop*0.08f), loco.getSpeed() > loco.speedLimit ?  0xFFFF5733 : 0xFFFFFFFF); //Speed
+
+        //Draw speed text
+        int textPos = (int)(guiLeft*0.020f);
+        for (int i = 0; i < 6; i++) {
+            double speed = 5*(Math.ceil(Math.abs(loco.getMaxSpeed() * (i * 0.2)/5)));
+
+            fontRendererObj.drawStringWithShadow(Long.toString(Math.round(speed)),textPos,(int)(guiTop*0.102f), 0xFFFFFF);
+            textPos = (int) (textPos + 48);
+        }
+        fontRendererObj.drawStringWithShadow("kmh/m",textPos - 52,(int)(guiTop*0.13f), 0xFFFFFF);
+
+        float speedPosMain = 0;
+        int numDigits = String.valueOf(Math.round(loco.speedLimit)).length();
+
         if (numDigits == 1) {
-            speedPositions = (int)(guiLeft*0.219f);
+            speedPosMain = 0 ;
 
         } else if (numDigits == 2) {
-            speedPositions = (int)(guiLeft*0.213f);
+            speedPosMain = 6;
         } else {
-            speedPositions = (int)(guiLeft*0.208f);
+            speedPosMain = 25;
         }
-        fontRendererObj.drawStringWithShadow(Math.round(rcCar.getSpeed()) + "km/h",speedPositions,(int)(guiTop*0.845f), 0xFFFFFF); //fr - fontRenderer
+
+        float speedPosNext = 0;
+        int numDigits2 = String.valueOf(Math.round(loco.nextSpeedLimit)).length();
+
+        if (numDigits2 == 1) {
+            speedPosNext = 0 ;
+
+        } else if (numDigits2 == 2) {
+            speedPosNext = 6;
+        } else {
+            speedPosNext = 28;
+        }
+
+        //Speed Change Distance Indicator
+
+        if (loco.nextSpeedLimit != 0) Gui.drawRect((int)(guiLeft*0.020f),(int)(guiTop*0.085f), (int) ((int)(guiLeft*0.020f) + nextSpeedScaled)  ,(int)(guiTop*0.09f), 0xFFFFFF55);
+
+
+        if (loco.stationStop3.xCoord != 0) Gui.drawRect((int)(guiLeft*0.020f),(int)(guiTop*0.095f), (int) ((int)(guiLeft*0.020f) + stationStopScaled)  ,(int)(guiTop*0.1f), (127 << 24) | 0xFF0000);
+
+
+        fontRendererObj.drawStringWithShadow(EnumChatFormatting.GREEN + Integer.toString(loco.speedLimit), (int)((guiLeft*0.020f) + Math.abs((loco.speedLimit * (int)(guiLeft*0.275f)) / loco.getMaxSpeed()) - speedPosMain),(int)(guiTop*0.04f), 0xFFFFFF);
+        fontRendererObj.drawStringWithShadow(EnumChatFormatting.YELLOW + Integer.toString(loco.nextSpeedLimit),(int)((guiLeft*0.020f) + Math.abs((loco.nextSpeedLimit * (int)(guiLeft*0.275f)) / loco.getMaxSpeed()) - speedPosNext),(int)(guiTop*0.04f), 0xFFFFFF);
+
+        //fontRendererObj.drawStringWithShadow(EnumChatFormatting.YELLOW + Integer.toString(loco.nextSpeedLimit),(int)((guiLeft*0.020f) + Math.abs((loco.nextSpeedLimit * (int)(guiLeft*0.275f)) / loco.getMaxSpeed())),(int)(guiTop*0.1f), 0xFFFFFF);
+
+        //Stop Point Distance Indicator
+        //Gui.drawRect((int)(guiLeft*0.020f),(int)(guiTop*0.095f), (int) ((int)(guiLeft*0.020f) + stopScaled)  ,(int)(guiTop*0.099f), 0xFFFF5555);
+
+        //Draw icons
+        if (loco.mtcOverridePressed) {
+            drawTexturedRect(new ResourceLocation(Info.resourceLocation, Info.guiPrefix + "mtcdisable.png"), 12, (int)(guiTop*0.1f), 0, 0, 64, 64, 64, 64, 0.25);
+        } else if (loco.mtcStatus == 1 || loco.mtcStatus == 2) {
+           /* if (mtcIconOnOff) {
+
+                if (loco.mtcType == 1 || loco.mtcType == 0) {
+                    drawTexturedRect(new ResourceLocation(Info.resourceLocation, Info.guiPrefix + "mtcicon.png"), (int)(guiLeft*0.020f), (int)(guiTop*0.13f), 0, 0, 64, 64, 64, 64, 0.25);
+                } else if (loco.mtcType == 2){
+                    drawTexturedRect(new ResourceLocation(Info.resourceLocation, Info.guiPrefix + "mtcicon2.png"),(int)(guiLeft*0.020f), (int)(guiTop*0.13f), 0, 0, 64, 64, 64, 64, 0.25);
+                } else {
+                    drawTexturedRect(new ResourceLocation(Info.resourceLocation, Info.guiPrefix + "mtcicon3.png"),(int)(guiLeft*0.020f), (int)(guiTop*0.13f), 0, 0, 64, 64, 64, 64, 0.25);
+                }
+
+            }*/
+        }
+
+        if (loco.atoStatus == 1 && loco.mtcType == 2) drawTexturedRect(new ResourceLocation(Info.resourceLocation, Info.guiPrefix + "ato_lvl2.png"), (int)(guiLeft*0.070f), (int)(guiTop*0.13f), 0, 0, 64, 64, 64, 64, 0.25);
+        if (loco.atoStatus == 1 && loco.mtcType == 3) drawTexturedRect(new ResourceLocation(Info.resourceLocation, Info.guiPrefix + "ato_lvl3.png"), (int)(guiLeft*0.070f), (int)(guiTop*0.13f), 0, 0, 64, 64, 64, 64, 0.25);
+
+
+		/*GL11.glPushMatrix(); //Start new matrix
+        GL11.glScalef(1.2f,1.2f,1.2f);
+        GL11.glTranslated((width * -5), (width * -5), (width * 3))*/;//scale it to 0.5 size on each side. Must be float e.g.: 2.0F*/
+
+
+        //fontRendererObj.drawStringWithShadow(Math.round(loco.getSpeed()) + "km/h",speedPositions,(int)(guiTop*0.845f), 0xFFFFFF); //fr - fontRenderer
         /*GL11.glPopMatrix();*/
 
-        fontRendererObj.drawStringWithShadow(EnumChatFormatting.YELLOW  + rcCar.getTrainName(),(int)(guiLeft*0.020f),(int)(guiTop*0.76f), 0xFFFFFF);
-        GL11.glPushMatrix();
 
+		/*GL11.glEnable(GL11.GL_BLEND);
+		GL11.glDisable(GL11.GL_TEXTURE_2D);
+		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+		Tessellator tes = Tessellator.instance;
+		tes.startDrawing(GL11.GL_TRIANGLES);
+		tes.addVertex(20, 20, 0);
+		tes.addVertex(20, 30, 0);
+		tes.addVertex(30, 20, 0);
+		tes.draw();
+		GL11.glEnable(GL11.GL_TEXTURE_2D);
+		GL11.glDisable(GL11.GL_BLEND);*/
+
+        //Draw autotrain stuff.
+
+        if (loco.mtcType == 3) {
+            Gui.drawRect((int)(guiLeft*0.009f),(int)(guiTop*0.01f),(int)(guiLeft*0.3f),(int)(guiTop*0.17f), 0xA4000000); //Background
+            if (loco.getDataWatcher().getWatchableObjectString(29).isEmpty()) return;
+            StringBuilder actionDisplay = new StringBuilder();
+            XmlBuilder status = new XmlBuilder(loco.getDataWatcher().getWatchableObjectString(29));
+            status.buildXML();
+            fontRendererObj.drawStringWithShadow("AutoTrain-2",(int)(guiLeft*0.012f), (int) (guiTop*0.18), 0xFFFFFF);
+            fontRendererObj.drawStringWithShadow("Status: " + status.getString("status"),(int)(guiLeft*0.012f), (int) (guiTop*0.20), 0xFFFFFF);
+            fontRendererObj.drawStringWithShadow("Position: " + status.getString("progress"),(int)(guiLeft*0.012f), (int) (guiTop*0.22), 0xFFFFFF);
+
+            JsonArray driveScript = new JsonParser().parse(loco.getDataWatcher().getWatchableObjectString(30)).getAsJsonArray();
+
+            for (int i = 0; i < driveScript.size(); i++) {
+                JsonObject action = driveScript.get(i).getAsJsonObject();
+                actionDisplay.append(Integer.parseInt(status.getString("progress")) == i ? ">> " : "")
+                        .append(action.get("action").getAsString())
+                        .append(" (")
+                        .append(action.get("param1").getAsString())
+                        .append(",")
+                        .append(action.get("param2").getAsString().isEmpty() ? "null" : action.get("param2").getAsString())
+                        .append(") ")
+                        .append(action.get("position").getAsString())
+                        .append("\n");
+
+            }
+            fontRendererObj.drawStringWithShadow("DriveScript:",(int)(guiLeft*0.012f), (int) (guiTop*0.26), 0xFFFFFF);
+
+            String[] actions = actionDisplay.toString().split("\n");
+
+            GL11.glPushMatrix();
+            for(int i = 0; i < actions.length; i++) {
+                String str = actions[i];
+
+                fontRendererObj.drawStringWithShadow(str, (int)(guiLeft*0.012f), (int) (guiTop*0.28), Integer.parseInt(status.getString("progress")) == i ? 0x55FF55 : 0xFFFFFF );
+                // fontRendererObj.drawStringWithShadow("_", x + fontRendererObj.getStringWidth(str) + -68, y - 10, 0xFFFFFF);
+                GL11.glTranslatef(0,10,0);
+            }
+            GL11.glPopMatrix();
+            //fontRendererObj.drawStringWithShadow(actionDisplay.toString(),(int)(guiLeft*0.012f), (int) (guiTop*0.28), 0xFFFFFF);
+        }
+        int x = 20;
+        int y = 20;
+        int size = 32;
         GL11.glEnable(GL11.GL_BLEND);
         GL11.glDisable(GL11.GL_TEXTURE_2D);
         GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-        Tessellator tes = Tessellator.instance;
-        tes.startDrawing(GL11.GL_TRIANGLES);
-        tes.addVertex((int)(guiLeft*0.020f), guiTop*0.79f, 0);
-        tes.addVertex((int)(guiLeft*0.030f), guiTop*0.69f, 0);
-        tes.addVertex((int)(guiLeft*0.040f), guiTop*0.79f, 0);
-        tes.draw();
+
+        Tessellator tessellator = Tessellator.instance;
+        tessellator.startDrawing(GL11.GL_TRIANGLES);
+        tessellator.addVertex(x, y, 0);
+        tessellator.addVertex(x, y + size, 0);
+        tessellator.addVertex(x - (float) (size * Math.sqrt(3) / 2), y + size / 2, 0);
+        tessellator.draw();
+
         GL11.glEnable(GL11.GL_TEXTURE_2D);
         GL11.glDisable(GL11.GL_BLEND);
-        //GL11.glTranslated((int)(guiLeft*0.020f),(int)(guiTop*0.79f), 0);
-        GL11.glPopMatrix();
     }
 
     public static int percentTop(int value){return (int)(guiTop*(value*0.01f));}

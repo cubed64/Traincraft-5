@@ -15,14 +15,14 @@ public class TrainTalk {
         return instance;
     }
 
-
-
-
-    List<Channel> ttChannels;
+    Map<Integer, Channel> ttChannels;
 
     public void init() {
-        ttChannels = new ArrayList<>();
-        ttChannels.add(new Channel());
+        ttChannels = new HashMap<>();
+    }
+
+    public void createChannel(int channelId) {
+        ttChannels.put(channelId, new Channel());
     }
 
 

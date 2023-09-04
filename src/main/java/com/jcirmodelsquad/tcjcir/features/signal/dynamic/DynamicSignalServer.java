@@ -1,12 +1,11 @@
 package com.jcirmodelsquad.tcjcir.features.signal.dynamic;
 
-import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
-import train.common.api.Locomotive;
 
 import java.util.*;
 
-import static com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2.xyz;
+import static com.jcirmodelsquad.tcjcir.extras.PeachyUtil.*;
+
 
 public class DynamicSignalServer extends TTTransceiver {
 
@@ -14,22 +13,10 @@ public class DynamicSignalServer extends TTTransceiver {
     String name;
 
     int minimumTrainDistance = 30;
-    static Map<Integer, List<TrackSection>> trackModel;
+    Map<Integer, Map<String, Track>> trackModel;
+    Map<String, Switch> switchMap;
 
-    static Map<Integer, Map<Integer, Train>> occupants;
-    static
-    class TrackSection {
-        Vec3 boundA;
-        Vec3 boundB;
-        int speedLimit;
-
-
-        public TrackSection(Vec3 boundA, Vec3 boundB, int speedLimit) {
-            this.boundA = boundA;
-            this.boundB = boundB;
-            this.speedLimit = speedLimit;
-        }
-    }
+    Map<Integer, Map<Integer, Train>> occupants;
 
 
     class Train {
@@ -46,15 +33,16 @@ public class DynamicSignalServer extends TTTransceiver {
             this.rotationYaw = rotationYaw;
         }
     }
-    public DynamicSignalServer(int id, String name) {
+    public DynamicSignalServer(int id, String name, int minimumTrainDistance, int systemId) {
         this(id);
         this.id = id;
         this.name = name;
-
+        this.minimumTrainDistance = minimumTrainDistance;
+        this.systemId = systemId;
     }
 
     public void init() {
-        trackModel = new HashMap<>();
+        /*trackModel = new HashMap<>();
         occupants = new HashMap<>();
         List<TrackSection> side0 = new ArrayList<>();
         side0.add(new TrackSection(xyz(119, 64, 18), xyz(119, 64, 58), 60));
@@ -79,26 +67,13 @@ public class DynamicSignalServer extends TTTransceiver {
         side1.add(new TrackSection(xyz(5, 64, 734), xyz(77, 64, 734), 60));
         trackModel.put(1, side1);
         occupants.put(0, new HashMap<Integer, Train>());
-        occupants.put(1, new HashMap<Integer, Train>());
-        connect(0);
+        occupants.put(1, new HashMap<Integer, Train>());*/
+        connect(systemId);
 
 
     }
     public DynamicSignalServer(int id) {
         super(id);
-    }
-
-
-    public boolean isInside(Vec3 loc, Vec3 l1, Vec3 l2) {
-
-        int x1 = (int) Math.min(l1.xCoord, l2.xCoord);
-        int y1 = (int) Math.min(l1.yCoord, l2.yCoord);
-        int z1 = (int) Math.min(l1.zCoord, l2.zCoord);
-        int x2 = (int) Math.max(l1.xCoord, l2.xCoord);
-        int y2 = (int) Math.max(l1.yCoord, l2.yCoord);
-        int z2 = (int) Math.max(l1.zCoord, l2.zCoord);
-
-        return loc.xCoord >= x1 && loc.xCoord <= x2 && loc.yCoord >= y1 && loc.yCoord <= y2 && loc.zCoord >= z1 && loc.zCoord <= z2;
     }
 
     @Override
@@ -113,42 +88,52 @@ public class DynamicSignalServer extends TTTransceiver {
                 while (iter.hasNext()) {
                     Map.Entry<Integer,Train> entry = iter.next();
                     if (entry.getKey() == msg.source) {
-                        System.out.println("Removing!!");
                         iter.remove();
                     }
-                  System.out.println(entry);
                 }
             }
 
         }
 
         if (msg.getHeader().equals("pos")) {
+
             Map<String, Object> response = new HashMap<>();
 
             int side = -1;
-            TrackSection boundASection = null;
-            TrackSection boundBSection = null;
+            int position = -1;
+
+            Track boundASection = null;
+            Track boundBSection = null;
             Map<String, Object> data = (Map<String, Object>) msg.data;
             Vec3 trainPos = xyz((Integer) data.get("x1"), (Integer) data.get("y1"), (Integer) data.get("z1"));
             Vec3 trainPos2 = xyz((Integer) data.get("x2"), (Integer) data.get("y2"), (Integer) data.get("z2"));
 
-            for (Map.Entry<Integer, List<TrackSection>> entry : trackModel.entrySet()) {
+
+            for (Map.Entry<Integer, Map<String, Track>> entry : trackModel.entrySet()) {
                 Integer key = entry.getKey();
-                List<TrackSection> value = entry.getValue();
+                Map<String, Track> value = entry.getValue();
                 //Determine where the train is.
-                for (TrackSection section: value) {
+                for (int i = 0; i < value.size(); i++) {
+                    Track section = (Track) value.values().toArray()[i];
+                    Train train = new Train(trainPos, trainPos2, (Float) data.get("ry"), (Float) data.get("rp"));
                     if (isInside(trainPos, section.boundA, section.boundB) || isInside(trainPos2, section.boundA, section.boundB)) {
-                        System.out.println("Train is on side " + key);
-                        occupants.get(key).put(msg.source, new Train(trainPos, trainPos2, (Float) data.get("ry"), (Float) data.get("rp")));
+                        occupants.get(key).put(msg.source, train);
                         side = key;
-                        if (isInside(trainPos, section.boundA, section.boundB)) boundASection = section;
+                        if (isInside(trainPos, section.boundA, section.boundB)) {
+                            boundASection = section;
+                            position = i;
+                        }
                         if (isInside(trainPos2, section.boundA, section.boundB))  boundBSection = section;
                         break;
+                    } else {
+                        occupants.get(key).remove(msg.source);
                     }
-
                 }
 
+
             }
+
+
 
             if (side != -1) {
                 //Calculate the distances between all the trains on the specific track
@@ -163,95 +148,68 @@ public class DynamicSignalServer extends TTTransceiver {
                     if (distance > 0) distances.put(key, distance);
                 }
 
-                System.out.println("distances.." + distances);
 
-                List sortedKeys = new ArrayList(distances.keySet());
+                List<Integer> sortedKeys = new ArrayList<>(distances.keySet());
                 Collections.sort(sortedKeys);
-                int sendLimit =  25;
+
+
+
+                int speedLimit =  25;
+                int nextSpeedLimit = 0;
+                Vec3 nextSpeedPos = xyz(0,0,0);
+
                 if (boundASection == null) {
-                    if (boundBSection != null) sendLimit = boundBSection.speedLimit;
+                    if (boundBSection != null) speedLimit = boundBSection.speedLimit;
                 } else {
-                    sendLimit = boundASection.speedLimit;
+                    speedLimit = boundASection.speedLimit;
+                }
+                //Determine the next speed limit by checking the position, and if it is going towards the direction you want.
+                if ((position + 1) < trackModel.get(side).size()) {
+                    Track nextSection = (Track) trackModel.get(side).values().toArray()[position + 1];
+                    if (nextSection.speedLimit != speedLimit) {
+                        nextSpeedLimit = nextSection.speedLimit;
+                        nextSpeedPos = nextSection.boundA;
+                    }
+                } else {
+                    //End of the track..
+                    nextSpeedLimit = 1;
+                    if (boundASection != null) {
+                        nextSpeedPos = boundASection.boundB;
+                    }
+
+
                 }
 
+
+
                 if (!sortedKeys.isEmpty()) {
-                    System.out.println("closest one: " + sortedKeys.get(0));
                     Integer closestDistance = distances.get(sortedKeys.get(0));
 
                     //Default train distance level is 50. If a train is too close to another, stop it.
 
-                    response.put("speedLimit", sendLimit);
+                    response.put("speedLimit", speedLimit);
+                    response.put("nextSpeedLimit", nextSpeedLimit);
+                    response.put("nextSpeedPos", nextSpeedPos);
                     response.put("safeDistance", closestDistance - minimumTrainDistance);
                 } else {
-                    response.put("speedLimit", sendLimit);
-                    response.put("safeDistance", sendLimit);
+                    response.put("speedLimit", speedLimit);
+                    response.put("nextSpeedLimit", nextSpeedLimit);
+                    response.put("nextSpeedPos", nextSpeedPos);
+                    response.put("safeDistance", speedLimit);
                 }
 
             } else {
                 response.put("speedLimit", 15);
+                response.put("nextSpeedLimit", 0);
+                response.put("nextSpeedPos", xyz(0,0,0));
                 response.put("safeDistance", 15);
             }
             response.put("minimumTrainDistance", minimumTrainDistance);
             sendMessage(new Message(msg.source, id, "resp", response));
 
-
-
-
-
-
         }
 
     }
-    public double getDistanceWithDirection(Locomotive loco1, Locomotive loco2) {
-
-        Vec3 player1Pos = xyz((int) loco1.posX, (int) loco1.posY, (int) loco1.posZ);
-        Vec3 player2Pos = xyz((int) loco2.posX, (int) loco2.posY, (int) loco2.posZ);
-
-        float rotationYaw = loco1.rotationYaw;
-        float rotationPitch = loco1.rotationPitch;
-
-        double lookX = MathHelper.cos(-rotationYaw * 0.017453292F - (float) Math.PI);
-        double lookY = -MathHelper.sin(-rotationPitch * 0.017453292F);
-        double lookZ = -MathHelper.sin(-rotationYaw * 0.017453292F - (float) Math.PI);
-
-        Vec3 player1LookVec = Vec3.createVectorHelper(lookX, lookY, lookZ);
 
 
-
-        Vec3 player2ToPlayer1 = player1Pos.subtract(player2Pos);
-
-        double dotProduct = player2ToPlayer1.dotProduct(player1LookVec);
-        double distance = player1Pos.distanceTo(player2Pos);
-
-        if (dotProduct < 0) {
-            // Player 2 is behind Player 1
-            distance = -distance;
-        }
-
-        return distance;
-    }
-
-    public double getDistanceWithDirection(Vec3 train1Pos, float rotationYaw, float rotationPitch, Vec3 train2Pos) {
-
-
-        double lookX = MathHelper.cos(-rotationYaw * 0.017453292F - (float) Math.PI);
-        double lookY = -MathHelper.sin(-rotationPitch * 0.017453292F);
-        double lookZ = -MathHelper.sin(-rotationYaw * 0.017453292F - (float) Math.PI);
-
-        Vec3 train1LookVec = Vec3.createVectorHelper(lookX, lookY, lookZ);
-
-
-
-        Vec3 train2ToTrain1 = train1Pos.subtract(train2Pos);
-
-        double dotProduct = train2ToTrain1.dotProduct(train1LookVec);
-        double distance = train1Pos.distanceTo(train2Pos);
-
-        if (dotProduct < 0) {
-            // Player 2 is behind Player 1
-            distance = -distance;
-        }
-
-        return distance;
-    }
 }
