@@ -765,10 +765,10 @@ public class ModelSD40dash2 extends ModelConverter //Same as Filename
 		bodyModel[70].setRotationPoint(15F, -22.75F, -3.5F);
 
 		bodyModel[71].addShapeBox(0F, 0F, 0F, 6, 1, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F); // Box 5 aww
-		bodyModel[71].setRotationPoint(-26F, -17F, 10F);
+		bodyModel[71].setRotationPoint(-26F, -18F, 10F);
 
 		bodyModel[72].addShapeBox(0F, 0F, 0F, 6, 5, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2.5F, 0F, 0F, -2.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2.5F, 0F, 0F, -2.5F); // Box 3 cull aww
-		bodyModel[72].setRotationPoint(-26F, -16F, 10F);
+		bodyModel[72].setRotationPoint(-26F, -17F, 10F);
 
 		bodyModel[73].addShapeBox(-1F, 0F, 0F, 11, 4, 2, 0F,0F, 0F, 0F, -5F, 0F, 0F, -5F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -2F, 0F, -5F, -2F, 0F, -5F, -2F, 0F, 0F, -2F, 0F); // Box 86
 		bodyModel[73].setRotationPoint(-26.5F, -14F, -5F);
@@ -955,10 +955,10 @@ public class ModelSD40dash2 extends ModelConverter //Same as Filename
 		bodyModel[132].setRotationPoint(-31F, -23F, -2F);
 
 		bodyModel[133].addBox(0F, 0F, 0F, 0, 4, 1, 0F); // Box 351
-		bodyModel[133].setRotationPoint(-28F, -16F, 11F);
+		bodyModel[133].setRotationPoint(-26F, -16F, 11F);
 
 		bodyModel[134].addBox(0F, 0F, 0F, 0, 4, 1, 0F); // Box 350
-		bodyModel[134].setRotationPoint(-28F, -16F, -12F);
+		bodyModel[134].setRotationPoint(-26F, -16F, -12F);
 
 		bodyModel[135].addShapeBox(0F, 0F, 0F, 6, 2, 1, 0F,1F, 0F, -1F, 1F, 0F, -1F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F); // box65
 		bodyModel[135].setRotationPoint(-26F, -18F, -12F);
@@ -1081,7 +1081,7 @@ public class ModelSD40dash2 extends ModelConverter //Same as Filename
 		bodyModel[174].setRotationPoint(-32.5F, -19F, -0.5F);
 
 		bodyModel[175].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 356
-		bodyModel[175].setRotationPoint(-37F, -11F, -7.5F);
+		bodyModel[175].setRotationPoint(-37F, -10F, -7.5F);
 
 		bodyModel[176].addBox(0F, 0F, 0F, 1, 2, 2, 0F); // Box 354 cnw bELL
 		bodyModel[176].setRotationPoint(-42F, -13F, -1F);
@@ -1803,7 +1803,7 @@ public class ModelSD40dash2 extends ModelConverter //Same as Filename
 		bodyModel[409].setRotationPoint(-39F, -13F, -7F);
 
 		bodyModel[410].addShapeBox(0F, 0F, 0F, 5, 5, 0, 0F,-0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F); // Box 355 brakewheel
-		bodyModel[410].setRotationPoint(-39F, -13F, -7.5F);
+		bodyModel[410].setRotationPoint(-39F, -12F, -7.5F);
 
 		bodyModel[411].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 314 headlight sp front b
 		bodyModel[411].setRotationPoint(-41.75F, -12F, -2F);
@@ -1953,13 +1953,13 @@ public class ModelSD40dash2 extends ModelConverter //Same as Filename
 		bodyModel[459].setRotationPoint(-45F, -8F, 0F);
 
 		bodyModel[460].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 542
-		bodyModel[460].setRotationPoint(-40F, -11F, -7.5F);
+		bodyModel[460].setRotationPoint(-40F, -10F, -7.5F);
 
 		bodyModel[461].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F); // Box 544 snoot sandcap
 		bodyModel[461].setRotationPoint(-42.5F, -13.5F, -0.5F);
 
 		bodyModel[462].addShapeBox(0F, 0F, 0F, 5, 5, 0, 0F,-0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F); // Box 386 brakewheel snoot
-		bodyModel[462].setRotationPoint(-42F, -13F, -7.5F);
+		bodyModel[462].setRotationPoint(-42F, -12F, -7.5F);
 
 		bodyModel[463].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 545 headlight nose high b
 		bodyModel[463].setRotationPoint(-45F, -11F, -1F);
