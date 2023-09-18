@@ -834,6 +834,9 @@ RenderEnum {
 	CF7angle2( DieselCF7angle2.class,  new ModelCF7angle2(), "CF7_Angle_DBRR_", true,new float[] {-0F, -0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 3,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
+	CF7hh( DieselCF7hh.class,  new ModelCF7hh(), "CF7_highhood_", true,new float[] {-0F, -0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 3,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 	F40PH( DieselF40PH.class,  new ModelF40PH(), "f40ph_", true,new float[] {-1.7F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[]{1.9D, 1.4D, 0.0D});

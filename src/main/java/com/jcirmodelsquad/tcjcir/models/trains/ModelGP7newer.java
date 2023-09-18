@@ -9,6 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.Modelane_slab_antenna;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergBnew;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeAnew;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
@@ -2615,6 +2616,7 @@ public class ModelGP7newer extends ModelConverter //Same as Filename
 	ModelBlombergBnew theBlombi = new ModelBlombergBnew();
 	ModelTypeBnew theB = new ModelTypeBnew();
 	ModelTypeAnew theA = new ModelTypeAnew();
+	Modelane_slab_antenna aneOnSomeShitFr = new Modelane_slab_antenna();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
@@ -2631,7 +2633,8 @@ public class ModelGP7newer extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 			}
 		}
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 24
+			||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 25234) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.37, -0.0, 0);//front & rear
@@ -2649,14 +2652,19 @@ public class ModelGP7newer extends ModelConverter //Same as Filename
 			GL11.glTranslated(2.74, 0, 0);//rear
 			theA.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1435){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_DarkGrey.png"));
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 25){
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black_oops_im_cheesed_to_meet_you.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.37, -0.0, 0);//front & rear
 			theB.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glTranslated(2.74, 0, 0);//rear
 			theB.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/gp7_ane_radioslab_owo.png"));
+			GL11.glPushMatrix();
+			aneOnSomeShitFr.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3546){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver.png"));
