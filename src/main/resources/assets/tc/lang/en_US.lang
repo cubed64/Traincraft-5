@@ -1098,7 +1098,12 @@ entity.tc.RSD15.name=ALCo RSD-15
 --------------------------------------------------------
 
 item.tc:minecartVO1000.name=BLW VO-1000
+item.tc:minecartS12.name=BLH S12 (606A)
+item.tc:minecartDS441000.name=BLH DS-4-4-1000 (606SC)
+
 entity.tc.VO1000.name=BLW VO-1000
+entity.tc.S12.name=BLH S12 (606A)
+entity.tc.DS441000.name=BLH DS-4-4-1000 (606SC)
 
 --------------------------------------------------------
 
@@ -1175,7 +1180,7 @@ item.tc:minecartHopper5201.name=5201 Cu Ft Hopper
 item.tc:minecartHopper6260.name=6260 Cu Ft Jumbo Hopper
 item.tc:minecartFNCC2375Hopper.name=FNCC 2375 Cu Ft Hopper
 item.tc:minecartPDH2800.name=GATX 2800 Cu Ft Pressure Differential Hopper
-
+item.tc:minecartACF2Bay.name=ACF 2980 Cu Ft 2-Bay Hopper
 
 entity.tc.Freight Round Covered Hopper.name=Round Covered Hopper
 entity.tc.Freight Ribbed Covered Hopper.name=Ribbed Covered Hopper
@@ -1183,6 +1188,7 @@ entity.tc.5201 Cu Foot Hopper.name=5201 Cu Ft Hopper
 entity.tc.6260 Cu Foot Jumbo Hopper.name=6260 Cu Ft Jumbo Hopper
 entity.tc.FNCC2375Hopper.name=FNCC 2375 Cu Ft Hopper
 entity.tc.PDH2800.name=GATX 2800 Cu Ft Pressure Differential Hopper
+entity.tc.ACF2Bay.name=ACF 2980 Cu Ft 2-Bay Hopper
 
 item.tc:minecart60centerbeam.name=60' Center Beam
 item.tc:minecart66centerbeam.name=66' Center Beam

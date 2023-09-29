@@ -33,7 +33,7 @@ public class IngotPig extends Freight implements IInventory {
     }
 
     public void initFreightCart() {
-        numFreightSlots = 1;
+        numFreightSlots = 9;
         freightInventorySize = trainSpec.getCargoCapacity();
         cargoItems = new ItemStack[freightInventorySize];
     }

@@ -236,7 +236,7 @@ public class ModelB23 extends ModelConverter //Same as Filename
 		bodyModel[190] = new ModelRendererTurbo(this, 484, 53, textureX, textureY); // Box 230 smol low radiator 2
 		bodyModel[191] = new ModelRendererTurbo(this, 476, 16, textureX, textureY); // Box 293  smol low radiator 1
 		bodyModel[192] = new ModelRendererTurbo(this, 484, 46, textureX, textureY); // Box 232 smol low radiator smol
-		bodyModel[193] = new ModelRendererTurbo(this, 484, 53, textureX, textureY); // Box 233 smol low radiator 2
+		bodyModel[193] = new ModelRendererTurbo(this, 484, 60, textureX, textureY); // Box 233 smol low radiator 2
 		bodyModel[194] = new ModelRendererTurbo(this, 493, 25, textureX, textureY); // Box 234 regular thin radi
 		bodyModel[195] = new ModelRendererTurbo(this, 476, 16, textureX, textureY); // Box 235 smol low radiator 1
 		bodyModel[196] = new ModelRendererTurbo(this, 482, 25, textureX, textureY); // Box 236 b30-7a early

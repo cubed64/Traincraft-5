@@ -495,7 +495,9 @@ public enum ItemIDs {
 	minecartRSD15("ItemRollingStock","RSD15_Icon", 4),
 
 	//BRuhMOMent//
-	minecartVO1000("ItemRollingStock", "vo1000", 4),
+	minecartVO1000("ItemRollingStock", "vo1000", 2),
+	minecartS12("ItemRollingStock", "s12", 3),
+	minecartDS441000("ItemRollingStock", "ds441000", 3),
 
 	//Fairbanks Morse//
 	minecartH1044("ItemRollingStock", "h1044", 4),
@@ -536,7 +538,8 @@ public enum ItemIDs {
 	minecartHopper5201("ItemRollingStock", "Hopper5201", 4),
 	minecartHopper6260("ItemRollingStock", "Hopper6260", 5),
 	minecartFNCC2375Hopper("ItemRollingStock", "FNCCHopper", 3),
-	minecartPDH2800("ItemRollingStock", "pdh2800", 4),
+	minecartPDH2800("ItemRollingStock", "pdh2800", 3),
+	minecartACF2Bay("ItemRollingStock", "ACF2Bay", 3),
 
 	minecart60centerbeam("ItemRollingStock", "60centerbeam", 3),
 	minecart66centerbeam("ItemRollingStock", "66centerbeam", 3),
