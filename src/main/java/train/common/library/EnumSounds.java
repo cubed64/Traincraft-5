@@ -112,8 +112,8 @@ public enum EnumSounds {
 	DieselRSD15(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselRSD15.class," ", 2.5F, "ALCO_16_244_Notch8", 1F, 14, "ALCO_16_244_Idle", 1F, 28, false, "alco_bronzebell_3", 18, new String[] {"nathan_m3_1", "nathan_m3_1", "generic_horn_1", "nathan_m5_1" }),
 	DieselS2(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselS2.class, "leslie_a200_1", 1F, "ALCO_6_539T_Notch8", 0.50F, 34, "ALCO_6_539T_Idle", 0.65F, 58, true, "alco_bronzebell_1", 9),
 	//JCTC Baldwin Diesels
-	DieselDS441000(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDS441000.class," ", 2.5F, "Baldwin_8VO_Notch8", 1F, 58, "Baldwin_8VO_Idle", 1F, 62, false, "baldwin_brassbell_1", 22, new String[] {"leslie_a125_1", "leslie_a125_1", "leslie_a125_1", "leslie_a125_1"}),
-	DieselS12(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselS12.class," ", 2.5F, "Baldwin_8VO_Notch8", 1F, 58, "Baldwin_8VO_Idle", 1F, 62, false, "baldwin_brassbell_1", 22, new String[] {"leslie_a125_1", "generic_horn_1", "leslie_a125_1"}),
+	DieselDS441000(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDS441000.class," ", 2.5F, "Baldwin_608A_Notch8", 1F, 55, "Baldwin_608A_Idle", 1F, 47, false, "baldwin_brassbell_1", 22, new String[] {"leslie_a125_1", "leslie_a125_1", "leslie_a125_1", "leslie_a125_1"}),
+	DieselS12(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselS12.class," ", 2.5F, "Baldwin_606A_Notch8", 1F, 42, "Baldwin_606A_Idle", 1F, 37, false, "baldwin_brassbell_1", 22, new String[] {"leslie_a125_1", "generic_horn_1", "leslie_a125_1"}),
 	DieselVO1000(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselVO1000.class," ", 2.5F, "Baldwin_8VO_Notch8", 1F, 58, "Baldwin_8VO_Idle", 1F, 62, false, "baldwin_brassbell_1", 22, new String[] {"wabco_e2_1", "wabco_e2_1", "wabco_e2_1", "leslie_a125_1", "prime_990_1" }),
 	//JCTC EMD Diesels
 	DieselBeep(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselBeep.class,"leslie_s3lr", 2.5F, "EMD_16_567BC_Notch8", 0.7F, 47, "EMD_16_567BC_Idle", 0.7F, 54, false, "emd_brassbell_1", 15),

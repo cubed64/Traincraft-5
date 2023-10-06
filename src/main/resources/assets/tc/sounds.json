@@ -307,6 +307,10 @@
 
   "Baldwin_8VO_Idle": {"category": "master", "sounds": [{"name": "Baldwin_8VO_Idle", "stream":  true}]},
   "Baldwin_8VO_Notch8": {"category": "master", "sounds": [{"name": "Baldwin_8VO_Notch8", "stream":  true}]},
+  "Baldwin_606A_Idle": {"category": "master", "sounds": [{"name": "Baldwin_606A_Idle", "stream":  true}]},
+  "Baldwin_606A_Notch8": {"category": "master", "sounds": [{"name": "Baldwin_606A_Notch8", "stream":  true}]},
+  "Baldwin_608A_Idle": {"category": "master", "sounds": [{"name": "Baldwin_608A_Idle", "stream":  true}]},
+  "Baldwin_608A_Notch8": {"category": "master", "sounds": [{"name": "Baldwin_608A_Notch8", "stream":  true}]},
 
 
 
