@@ -900,6 +900,9 @@ RenderEnum {
 	GP7f( DieselGP7f.class,  new ModelGP7U_ARR(), "gp7u_arr_", true,new float[] {-0F, -0.05F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 2,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
+	GPFDL( DieselGPFDL.class,  new ModelGPFDL(), "gpfdl_", true,new float[] {-0F, -0.05F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 	GP9( DieselGP9.class,  new ModelGP7newer(), "gp9_", true,new float[] {-1.5F, -0.05F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
@@ -1130,6 +1133,9 @@ RenderEnum {
 	}, "", null, 0, false),
 
 	B23( DieselB23.class,  new ModelB23(), "b23-7_", true,new float[] {-1.7F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	BQ23( DieselBQ23.class,  new ModelBQ23(), "bq23-7_", true,new float[] {-1.7F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
 	SB23R( DieselSB23R.class,  new ModelSB23R(), "sb23r_", true,new float[] {-1.7F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {

@@ -9,6 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.cabs.ModelRTR;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergBnew;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
 import net.minecraft.client.Minecraft;
@@ -2300,6 +2301,7 @@ public class ModelGP40new extends ModelConverter //Same as Filename
 	}
 	ModelBlombergBnew theBlombi = new ModelBlombergBnew();
 	ModelTypeBnew theB = new ModelTypeBnew();
+	ModelRTR rtr = new ModelRTR();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
@@ -2325,14 +2327,19 @@ public class ModelGP40new extends ModelConverter //Same as Filename
 			GL11.glTranslated(2.93, 0, 0);//rear
 			theB.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14321){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 26){
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Blac.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.47, -0.0, 0);//front & rear
-			theB.render(entity, f, f1, f2, f3, f4, f5);
+			theBlombi.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glTranslated(2.93, 0, 0);//rear
-			theB.render(entity, f, f1, f2, f3, f4, f5);
+			theBlombi.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/rtr.png"));
+			GL11.glPushMatrix();
+			rtr.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver.png"));

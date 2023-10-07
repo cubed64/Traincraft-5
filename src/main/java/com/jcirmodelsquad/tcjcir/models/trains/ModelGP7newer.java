@@ -2666,7 +2666,7 @@ public class ModelGP7newer extends ModelConverter //Same as Filename
 			GL11.glPushMatrix();
 			aneOnSomeShitFr.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3546){
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 32){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.37, -0.0, 0);//front & rear

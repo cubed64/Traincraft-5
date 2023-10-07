@@ -379,6 +379,7 @@ public enum ItemIDs {
 	//minecartBUnitGP7b("ItemRollingStock", "gp7b", 4),
 	minecartGP7u("ItemRollingStock", "gp7u", 3),
 	minecartGP7f("ItemRollingStock", "gp7f", 3),
+	minecartGPFDL("ItemRollingStock", "gpfdl", 4),
 	minecartGP9("ItemRollingStock", "gp9", 3),
 	minecartGP7old("ItemRollingStock", "gp7old", 3),
 	minecartGP9old("ItemRollingStock", "gp9old", 3),
@@ -445,6 +446,7 @@ public enum ItemIDs {
 	minecartU56("ItemRollingStock", "u56", 6),
 
 	minecartB23("ItemRollingStock", "b23", 4),
+	minecartBQ23("ItemRollingStock", "bq23", 4),
 	minecartSB23R("ItemRollingStock", "sb23r", 4),
 	minecartSB23E("ItemRollingStock", "sb23e", 4),
 	minecartB30("ItemRollingStock", "b30", 4),

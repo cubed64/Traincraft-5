@@ -31,7 +31,7 @@ public class ModelB23 extends ModelConverter //Same as Filename
 
 	public ModelB23() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[447];
+		bodyModel = new ModelRendererTurbo[452];
 
 		initbodyModel_1();
 
@@ -490,6 +490,11 @@ public class ModelB23 extends ModelConverter //Same as Filename
 		bodyModel[444] = new ModelRendererTurbo(this, 146, 148, textureX, textureY); // Box 407
 		bodyModel[445] = new ModelRendererTurbo(this, 1, 186, textureX, textureY); // Box 445
 		bodyModel[446] = new ModelRendererTurbo(this, 12, 188, textureX, textureY); // Box 446
+		bodyModel[447] = new ModelRendererTurbo(this, 182, 72, textureX, textureY); // Box 447 pw antenna
+		bodyModel[448] = new ModelRendererTurbo(this, 195, 46, textureX, textureY); // Box 786
+		bodyModel[449] = new ModelRendererTurbo(this, 186, 43, textureX, textureY); // Box 787
+		bodyModel[450] = new ModelRendererTurbo(this, 184, 46, textureX, textureY); // Box 788
+		bodyModel[451] = new ModelRendererTurbo(this, 186, 49, textureX, textureY); // Box 789
 
 		bodyModel[0].addBox(0F, 0F, 0F, 76, 2, 22, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-38F, -1F, -11F);
@@ -1859,14 +1864,30 @@ public class ModelB23 extends ModelConverter //Same as Filename
 
 		bodyModel[446].addShapeBox(0F, 0F, -2F, 1, 1, 8, 0F,-1.5F, 1F, 0F, 1F, 1F, 0F, -1F, 0F, 0F, 0.5F, 0F, 0F, -2.5F, 0F, 0F, 2F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F); // Box 446
 		bodyModel[446].setRotationPoint(-45F, 3F, -8F);
+
+		bodyModel[447].addShapeBox(0F, 0F, 0F, 3, 1, 0, 0F,-1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 447 pw antenna
+		bodyModel[447].setRotationPoint(-31F, -23F, 0F);
+
+		bodyModel[448].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 786
+		bodyModel[448].setRotationPoint(-16.5F, -21.5F, -4.5F);
+
+		bodyModel[449].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 787
+		bodyModel[449].setRotationPoint(-17F, -22.25F, -3.5F);
+
+		bodyModel[450].addBox(0F, 0F, 0F, 4, 1, 1, 0F); // Box 788
+		bodyModel[450].setRotationPoint(-19F, -22.5F, -4.5F);
+
+		bodyModel[451].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 789
+		bodyModel[451].setRotationPoint(-18F, -22.25F, -5.5F);
 	}
+
 	ModelFB2_new theTrucks2 = new ModelFB2_new();
 	ModelBlombergBnew theTrucks3 = new ModelBlombergBnew();
 	ModelTypeBnew theTrucks4 = new ModelTypeBnew();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 447; i++) {
+		for (int i = 0; i < 452; i++) {
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);
@@ -1899,6 +1920,26 @@ public class ModelB23 extends ModelConverter //Same as Filename
 
 			GL11.glTranslated(3.05, 0, 0);
 			theTrucks4.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14236){
+			//fb2 blac early
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_black_a.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(-1.52, -0.015, 0);
+			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glTranslated(3.07, 0, 0);
+			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 11){
+			//fb2 u p is where the poop is early
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_up_early.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(-1.52, -0.015, 0);
+			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glTranslated(3.07, 0, 0);
+			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 8||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17){
 			//fb2 sp late
