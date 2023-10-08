@@ -346,7 +346,7 @@ public class RenderRollingStock extends Render {
 						renderExplosionFX(cart, yaw, pitch, renders.getExplosionType(), renders.getExplosionFX(), renders.getExplosionFXIterations(), renders.hasSmokeOnSlopes());
 					}
 				}
-
+				GL11.glEnable(GL11.GL_LIGHTING);
 				break;
 			}
 		}
