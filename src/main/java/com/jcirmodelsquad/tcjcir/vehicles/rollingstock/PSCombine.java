@@ -11,6 +11,13 @@ public class PSCombine extends EntityRollingStock implements IPassenger {
 
 	public PSCombine(World world) {
 		super(world);
+		textureDescriptionMap.put(0, "C&O");
+		textureDescriptionMap.put(1, "D&RGW");
+		textureDescriptionMap.put(2, "D&RGW (As Delivered)");
+		textureDescriptionMap.put(3, "D&RGW Interior Scheme 2");
+		textureDescriptionMap.put(4, "D&RGW 1231 Rio Grande Zephyr Scheme 1");
+		textureDescriptionMap.put(5, "D&RGW 1231 Rio Grande Zephyr Scheme 2");
+		textureDescriptionMap.put(6, "D&RGW 1230 Rio Grande Zephyr");
 	}
 
 	public PSCombine(World world, double d, double d1, double d2) {

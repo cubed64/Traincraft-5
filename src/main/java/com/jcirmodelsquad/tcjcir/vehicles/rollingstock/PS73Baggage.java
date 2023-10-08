@@ -19,6 +19,11 @@ public class PS73Baggage extends Freight implements IInventory {
 	public PS73Baggage(World world) {
 		super(world);
 		initFreightCart();
+		textureDescriptionMap.put(0, "PM");
+		textureDescriptionMap.put(1, "C&O");
+		textureDescriptionMap.put(2, "CGW (As Delivered)");
+		textureDescriptionMap.put(3, "CGW");
+		textureDescriptionMap.put(4, "GN (ex-CGW)");
 	}
 
 	public void initFreightCart() {
