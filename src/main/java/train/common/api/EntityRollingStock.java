@@ -1827,7 +1827,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		}
 		if (par1Entity == bogieLoco){ return;}
 		if (par1Entity instanceof EntityRollingStock && ((EntityRollingStock) par1Entity).bogieLoco != null) {
-				if (par1Entity == ((EntityRollingStock) par1Entity).bogieLoco) return;
+			if (par1Entity == ((EntityRollingStock) par1Entity).bogieLoco) return;
 		}
 
 		MinecraftForge.EVENT_BUS.post(new MinecartCollisionEvent(this, par1Entity));
@@ -1931,17 +1931,20 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				if ((par1Entity instanceof AbstractTrains && d2 <= ((AbstractTrains) par1Entity).getLinkageDistance((EntityMinecart) par1Entity) * 0.7 && d2 >= 9.999999747378752E-5D) || (par1Entity instanceof EntityBogie && ((EntityBogie) par1Entity).entityMainTrain != null && d2 <= ((EntityBogie) par1Entity).entityMainTrain.getLinkageDistance((EntityMinecart) par1Entity) * 0.7 && d2 >= 9.999999747378752E-5D) || (!(par1Entity instanceof AbstractTrains) && d2 >= 9.999999747378752E-5D))// >= 9.999999747378752E-5D)
 				{
 					d2 = MathHelper.sqrt_double(d2);
+					double d2Clone = d2;
 					if (d0 != 0) {
 						d0 /= d2;
 					} else {
 						d2=0;
 					}
 					if (d1 != 0) {
-						d1 /= d2;
+						d1 /= d2Clone;
 					} else {
-						d2=0;
+						d2Clone = 0;
 					}
-
+					if (d2 != d2Clone && d2 != 0) {
+						d2 = d2Clone;
+					}
 					if (d2 > 1.0D) {
 						d2 = 1.0D;
 					}
@@ -1955,6 +1958,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 					d0 *= 0.5D;
 					d1 *= 0.5D;
 
+					// Handling velocity of coupled entities.
 					if ((par1Entity instanceof EntityMinecart ) && !this.isAttached) {
 
 						Vec3 vec31 = Vec3.createVectorHelper(MathHelper.cos(this.rotationYaw * (float) Math.PI / 180.0F), 0.0D, MathHelper.sin(this.rotationYaw * (float) Math.PI / 180.0F)).normalize();
@@ -2032,22 +2036,15 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 						}
 						else if ((par1Entity instanceof EntityBogie)) {
 							this.addVelocity(-d0, 0.0D, -d1);
-						}/*
-						 * else if(par1Entity instanceof EntityBogie){
-						 * par1Entity.addVelocity(-d0, 0.0D, -d1);
-						 * 
-						 * }
-						 */
-						//if(!(par1Entity instanceof EntityPlayer))par1Entity.addVelocity(d0 / 4.0D, 0.0D, d1 / 4.0D);
-						//par1Entity.setVelocity(0, 0.0D, 0);
-						par1Entity.addVelocity(d0 * 2 * 100, 0.0D, d1 * 2 * 100);
-						/*
-						 * if(this.bogieUtility[0]!=null &&
-						 * this.bogieUtility[1]!=null){
-						 * this.bogieUtility[0].addVelocity(-d0*2, 0.0D, -d1*2);
-						 * this.bogieUtility[1].addVelocity(-d0*2, 0.0D, -d1*2);
-						 * }
-						 */
+						}
+
+						// Adding velocity to coupled entity with clamping force.
+						if (par1Entity instanceof Locomotive && this instanceof Locomotive) { // Locomotive pushing another locomotive.
+							// Use reduce clamping force when running two locomotives together.
+							par1Entity.addVelocity(d0 * 2, 0.0D, d1 * 2);
+						} else {
+							par1Entity.addVelocity(d0 * 2 * 100, 0.0D, d1 * 2 * 100);
+						}
 
 						if (par1Entity instanceof EntityPlayer) {
 
