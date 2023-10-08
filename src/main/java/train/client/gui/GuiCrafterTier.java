@@ -11,6 +11,7 @@ import org.lwjgl.opengl.GL11;
 import train.client.gui.sideTabs.SideTabInfo;
 import train.client.gui.sideTabs.SideTabRecipes;
 import train.client.gui.sideTabs.SideTabSlots;
+import train.client.render.RenderRollingStock;
 import train.common.api.AbstractTrains;
 import train.common.containers.ContainerTier;
 import train.common.core.interfaces.ITier;
@@ -21,8 +22,6 @@ import train.common.library.Info;
 import train.common.library.ItemIDs;
 
 import java.util.List;
-
-import static train.common.api.AbstractTrains.getColorFromString;
 
 public class GuiCrafterTier extends GuiTraincraft {
 
@@ -114,7 +113,9 @@ public class GuiCrafterTier extends GuiTraincraft {
 				GL11.glPushMatrix();
 				GL11.glColor3f(1, 1, 1);
 				GL11.glTranslatef(guiLeft-70, this.guiTop+170, 100);
-
+				RenderRollingStock.setRenderModeGUI(true);
+				GL11.glColor4f(1, 1, 1, 1);
+				GL11.glTranslatef(guiLeft-70, this.guiTop+170, 350);
 				RenderHelper.enableGUIStandardItemLighting();
 				Item item = currentKnownItem;
 				EnumTrains train = EnumTrains.getCurrentTrain(item);
@@ -136,6 +137,7 @@ public class GuiCrafterTier extends GuiTraincraft {
 				GL11.glRotatef(yaw, 0, 1, 0);
 				if(renderEntity!=null)RenderManager.instance.renderEntityWithPosYaw(renderEntity, 0, 0, 0, 0, 0);
 				RenderHelper.disableStandardItemLighting();
+				RenderRollingStock.setRenderModeGUI(false);
 				GL11.glPopMatrix();
 				yaw += 0.5F;
 				if(rollDown){

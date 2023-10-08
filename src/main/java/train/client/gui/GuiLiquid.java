@@ -69,7 +69,13 @@ public class GuiLiquid extends GuiContainer {
 		if (!liquid.getTrainLockedFromPacket()) {
 			this.buttonList.add(new GuiButton(3, var1 + 124, var2 - 10, 51, 10, "Unlocked"));
 		}else{
-			this.buttonList.add(new GuiButton(3, var1 + 130, var2 - 10, 43, 10, "Locked"));
+			if (liquid.getTrainOwner().equalsIgnoreCase(player.getDisplayName()))
+				this.buttonList.add(new GuiButton(3, var1 + 130, var2 - 10, 43, 10, "Locked"));
+			else if (liquid.isPlayerTrusted(player.getDisplayName()))
+				if (liquid.isPlayerTrustedToBreak(player.getDisplayName()))
+					this.buttonList.add(new GuiButton(3, var1 + 125, var2 - 10, 48, 10, "Trusted+"));
+				else
+					this.buttonList.add(new GuiButton(3, var1 + 128, var2 - 10, 45, 10, "Trusted"));;
 		}
 
 		trainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, height/2 - 110, 170,15);
@@ -79,38 +85,29 @@ public class GuiLiquid extends GuiContainer {
 	@Override
 	protected void actionPerformed(GuiButton guibutton) {
 		if (guibutton.id == 3) {
-			if(player!=null && player.getCommandSenderName().toLowerCase().equals(((AbstractTrains) liquid).getTrainOwner().toLowerCase())){
+			if (player != null && player.getCommandSenderName().equalsIgnoreCase(((AbstractTrains) liquid).getTrainOwner()) && !isShiftKeyDown()){
 				if ((!liquid.getTrainLockedFromPacket())){
-					AxisAlignedBB box = liquid.boundingBox.expand(5, 5, 5);
-					List lis3 = liquid.worldObj.getEntitiesWithinAABBExcludingEntity(liquid, box);
-					if (lis3 != null && lis3.size() > 0) {
-						for (Object entity : lis3) {
-							if (entity instanceof EntityPlayer) {
-								Traincraft.lockChannel
-										.sendToServer(new PacketSetTrainLockedToClient(true, liquid.getEntityId()));
-							}
-						}
-					}
 					liquid.locked = true;
 					guibutton.displayString = "Locked";
 					this.initGui();
-				}else{
-					AxisAlignedBB box = liquid.boundingBox.expand(5, 5, 5);
-					List lis3 = liquid.worldObj.getEntitiesWithinAABBExcludingEntity(liquid, box);
-					if (lis3 != null && lis3.size() > 0) {
-						for (Object entity : lis3) {
-							if (entity instanceof EntityPlayer) {
-								Traincraft.lockChannel
-										.sendToServer(new PacketSetTrainLockedToClient(false, liquid.getEntityId()));
-							}
-						}
-					}
+				} else if (!isShiftKeyDown()) {
 					liquid.locked = false;
 					guibutton.displayString = "UnLocked";
 					this.initGui();
 				}
-			}else if(player!=null && player instanceof EntityPlayer){
-				player.addChatMessage(new ChatComponentText("You are not the owner"));
+				AxisAlignedBB box = liquid.boundingBox.expand(5, 5, 5);
+				List lis3 = liquid.worldObj.getEntitiesWithinAABBExcludingEntity(liquid, box);
+				if (lis3 != null && lis3.size() > 0) {
+					for (Object entity : lis3) {
+						if (entity instanceof EntityPlayer) {
+							if (!isShiftKeyDown()) {
+								Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(liquid.locked, liquid.getTrustedList(), liquid.getEntityId(), false));
+							}
+						}
+					}
+				}
+			}else if (player != null) {
+				player.addChatMessage(new ChatComponentText("You are not the owner!"));
 			}
 		}
 	}
@@ -163,7 +160,13 @@ public class GuiLiquid extends GuiContainer {
 		//int liqui = (dieselInventory.getLiquidAmount() * 50) / dieselInventory.getTankCapacity();
 		String state = "";
 		if(liquid.getTrainLockedFromPacket()){
-			state="Locked";
+			if (liquid.getTrainOwner().equalsIgnoreCase(player.getDisplayName()))
+				state = "Locked";
+			else if (liquid.isPlayerTrusted(player.getDisplayName()))
+				if (liquid.isPlayerTrustedToBreak(player.getDisplayName()))
+					state = "Trusted Access+";
+				else
+					state = "Trusted Access";
 		} else {
 			state = "Unlocked";
 		}

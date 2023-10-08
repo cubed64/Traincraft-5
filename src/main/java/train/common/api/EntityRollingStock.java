@@ -16,8 +16,8 @@ import mods.railcraft.api.carts.ILinkableCart;
 import mods.railcraft.api.tracks.RailTools;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockAir;
-import net.minecraft.block.BlockRail;
 import net.minecraft.block.BlockRailBase;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.SoundHandler;
 import net.minecraft.entity.*;
 import net.minecraft.entity.item.EntityItem;
@@ -40,7 +40,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.minecart.MinecartCollisionEvent;
 import net.minecraftforge.event.entity.minecart.MinecartInteractEvent;
 import net.minecraftforge.event.entity.minecart.MinecartUpdateEvent;
-import org.lwjgl.opengl.GL11;
 import train.client.core.handlers.SoundUpdaterRollingStock;
 import train.common.Traincraft;
 import train.common.adminbook.ServerLogger;
@@ -49,16 +48,17 @@ import train.common.blocks.BlockTCRailGag;
 import train.common.core.HandleOverheating;
 import train.common.core.handlers.*;
 import train.common.core.network.PacketRollingStockRotation;
+import train.common.core.network.PacketSetTrainLockedToClient;
 import train.common.core.util.TraincraftUtil;
 import train.common.entity.rollingStock.EntityTracksBuilder;
 import train.common.items.*;
 import train.common.items.ItemTCRail.TrackTypes;
 import train.common.library.BlockIDs;
 import train.common.library.EnumTrains;
+import train.common.library.GuiIDs;
 import train.common.library.ItemIDs;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
-
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -68,7 +68,6 @@ import java.util.Objects;
 
 import static train.common.core.util.TraincraftUtil.degrees;
 import static train.common.core.util.TraincraftUtil.isRailBlockAt;
-import static train.common.core.util.TraincraftUtil.radian;
 
 public class EntityRollingStock extends AbstractTrains implements ILinkableCart {
 	public int fuelTrain;
@@ -163,6 +162,10 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	private int scrollPosition;
 
 	public JsonObject renderRefs = new JsonObject();
+	/**
+	 * Used for syncing overlay texture configuration to client. Updated in onUpdate().
+	 */
+	private boolean additionalDataSentToServer = false;
 
 	public EntityRollingStock(World world) {
 		super(world);
@@ -383,7 +386,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			if (((EntityPlayer) damagesource.getEntity()).capabilities.isCreativeMode) {
 				this.setDamage(1000);
 				if (ConfigHandler.ENABLE_WAGON_REMOVAL_NOTICES && ((EntityPlayer) damagesource.getEntity()).canCommandSenderUseCommand(2,"")) {
-					((EntityPlayer) damagesource.getEntity()).addChatComponentMessage(new ChatComponentText("Operator removed train owned by " + getTrainOwner()));
+					((EntityPlayer) damagesource.getEntity()).addChatComponentMessage(new ChatComponentText("Operator removed " + getTrainName() + " owned by " + getTrainOwner() + "."));
 				}
 			}
 			setDamage(getDamage() + i * 10);
@@ -649,7 +652,10 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				this.hasSpawnedBogie = true;
 			}
 		}
-
+		if (!additionalDataSentToServer && worldObj.isRemote && ticksExisted > 10) { // If client, request overlay packet once entity is fully loaded.
+			Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(getEntityId(), Minecraft.getMinecraft().thePlayer.getEntityId()));
+			additionalDataSentToServer = true;
+		}
 
 		super.manageChunkLoading();
 		
@@ -1633,15 +1639,15 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		ItemStack itemstack = entityplayer.inventory.getCurrentItem();
 
 		if (this.getTrainLockedFromPacket()) {
-			if (!playerEntity.getDisplayName().toLowerCase().equals(this.trainOwner.toLowerCase()) && !canBeRiddenWhileLocked(this)) {
-				if (!worldObj.isRemote) entityplayer.addChatMessage(new ChatComponentText("Train is locked"));
+			boolean isTrustedPlayer = isPlayerTrusted(playerEntity.getDisplayName());
+			if (!playerEntity.getDisplayName().equalsIgnoreCase(this.getTrainOwner()) && !canBeRiddenWhileLocked(this) && !isTrustedPlayer) {
+				if (!worldObj.isRemote) entityplayer.addChatMessage(new ChatComponentText("Train is locked by " + this.getTrainOwner() + "."));
 				return true;
 			}
-			else if (!playerEntity.getDisplayName().toLowerCase().equals(this.trainOwner.toLowerCase()) && entityplayer.inventory.getCurrentItem() != null && entityplayer.inventory.getCurrentItem().getItem() instanceof ItemDye && (this instanceof Locomotive)) {
-				if (!worldObj.isRemote) entityplayer.addChatMessage(new ChatComponentText("Train is locked"));
+			else if (!playerEntity.getDisplayName().equalsIgnoreCase(this.getTrainOwner()) && entityplayer.inventory.getCurrentItem() != null && entityplayer.inventory.getCurrentItem().getItem() instanceof ItemDye && (this instanceof Locomotive) && !isTrustedPlayer) {
+				if (!worldObj.isRemote) entityplayer.addChatMessage(new ChatComponentText("Train is locked by " + this.getTrainOwner() + "."));
 				return true;
 			}
-
 		}
 
 		if (itemstack != null && itemstack.getItem() instanceof ItemWrench && this instanceof Locomotive
@@ -1681,35 +1687,40 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 					}
 				}
 				if (worldObj.isRemote && ConfigHandler.SHOW_POSSIBLE_COLORS) {
-					String concatColors = ": ";
-					for (int t = 0; t < this.acceptedColors.size(); t++) {
-						concatColors = concatColors.concat(getColorAsString(this.acceptedColors.get(t)) + ", ");
+					String concatColors = getColorAsString(this.acceptedColors.get(0));
+					int moreColors = 0;
+					for (int t = 1; t < this.acceptedColors.size(); t++) {
+						if (!(this.acceptedColors.get(t) > 15)) {
+							concatColors = concatColors.concat(", " + getColorAsString(this.acceptedColors.get(t)));
+						} else {
+							moreColors++;
+						}
 					}
-					entityplayer.addChatMessage(new ChatComponentText("Possible colors" + concatColors));
-					entityplayer.addChatMessage(new ChatComponentText("To paint, click me with the right dye"));
-					return true;
+					if (moreColors == 0) {
+						entityplayer.addChatMessage(new ChatComponentText("Possible colors: " + concatColors + "."));
+					} else {
+						entityplayer.addChatMessage(new ChatComponentText("Possible colors: " + concatColors + ", and " + moreColors + " more."));
+					}
+					entityplayer.addChatMessage(new ChatComponentText("To paint, use the " + StatCollector.translateToLocal("item.tc:paintbrushThing.name") + " or click me with the right (vanilla) dye."));
 				}
 			}
 			else if (this.acceptedColors != null && this.acceptedColors.size() == 0) {
-				entityplayer.addChatMessage(new ChatComponentText("No other colors available"));
+				entityplayer.addChatMessage(new ChatComponentText("No other colors available."));
 			}
 		}
 		else if ((trainsOnClick.onClickWithStake(this, itemstack, playerEntity, worldObj))) { return true; }
 
 		if (itemstack != null && itemstack.getItem() instanceof ItemPaintbrushThing && entityplayer.isSneaking()) {
 			if (this.acceptedColors != null && this.acceptedColors.size() > 0) {
-				if (scrollPosition > this.acceptedColors.size() - 1) {
-					this.setColor(acceptedColors.get(0));
-					scrollPosition = 0;
-				} else {
-					this.setColor(acceptedColors.get(scrollPosition));
-					scrollPosition++;
-				}
+				entityplayer.openGui(Traincraft.instance, GuiIDs.PAINTBRUSH, entityplayer.getEntityWorld(), this.getEntityId(), -1, (int) this.posZ);
 			}
 
 			if (this.acceptedColors != null && this.acceptedColors.size() == 0) {
 				entityplayer.addChatMessage(new ChatComponentText("There are no other colors available."));
 			}
+			return true;
+		} else if (entityplayer.isSneaking() && itemstack != null && itemstack.getItem() instanceof ItemPadlock && getTrainOwner().equalsIgnoreCase(entityplayer.getDisplayName())) {
+			entityplayer.openGui(Traincraft.instance, GuiIDs.LOCK_MENU, entityplayer.getEntityWorld(), this.getEntityId(), -1, (int) this.posZ);
 			return true;
 		}
 

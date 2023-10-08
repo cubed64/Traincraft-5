@@ -1,6 +1,5 @@
 package train.client.gui;
 
-import com.jcirmodelsquad.tcjcir.extras.packets.UpdateGeometryCar;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.ScaledResolution;
@@ -59,7 +58,13 @@ public class GuiFreight extends GuiContainer {
 			this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 124, var2 - 10, 51, 10, "Unlocked"));
 		}
 		else {
-			this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 130, var2 - 10, 43, 10, "Locked"));
+			if (freight.getTrainOwner().equalsIgnoreCase(player.getDisplayName()))
+				this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 130, var2 - 10, 43, 10, "Locked"));
+			else if (freight.isPlayerTrusted(player.getDisplayName()))
+				if (freight.isPlayerTrustedToBreak(player.getDisplayName()))
+					this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 125, var2 - 10, 48, 10, "Trusted+"));
+				else
+					this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 128, var2 - 10, 45, 10, "Trusted"));
 		}
 
 		trainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, height/2 - 120, 170,15);
@@ -70,36 +75,30 @@ public class GuiFreight extends GuiContainer {
 	@Override
 	protected void actionPerformed(GuiButton guibutton) {
 		if (guibutton.id == 3) {
-			if (player != null && player.getCommandSenderName().toLowerCase().equals(freight.getTrainOwner().toLowerCase())) {
-				AxisAlignedBB box = freight.boundingBox.expand(5, 5, 5);
-				List lis3 = freight.worldObj.getEntitiesWithinAABBExcludingEntity(freight, box);
-				if ((!freight.getTrainLockedFromPacket())) {
-					if (lis3 != null && lis3.size() > 0) {
-						for (Object entity : lis3) {
-							if (entity instanceof EntityPlayer) {
-								Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(true, freight.getEntityId()));
-							}
-						}
-					}
-
+			if (player != null && player.getCommandSenderName().equalsIgnoreCase(freight.getTrainOwner())) {
+				if (!freight.getTrainLockedFromPacket() && !isShiftKeyDown()) {
 					freight.locked = true;
 					guibutton.displayString = "Locked";
+					this.initGui();
+				} else if (!isShiftKeyDown()) {
+					freight.locked = false;
+					guibutton.displayString = "UnLocked";
+					this.initGui();
 				}
-				else {
-					if (lis3 != null && lis3.size() > 0) {
-						for (Object entity : lis3) {
-							if (entity instanceof EntityPlayer) {
-								Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(false, freight.getEntityId()));
+				AxisAlignedBB box = freight.boundingBox.expand(5, 5, 5);
+				List lis3 = freight.worldObj.getEntitiesWithinAABBExcludingEntity(freight, box);
+				if (lis3 != null && lis3.size() > 0) {
+					for (Object entity : lis3) {
+						if (entity instanceof EntityPlayer) {
+							if (!isShiftKeyDown()) {
+								Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(freight.locked, freight.getTrustedList(), freight.getEntityId(), false));
 							}
 						}
 					}
-					freight.locked = false;
-					guibutton.displayString = "Unlocked";
 				}
-				this.initGui();
 			}
-			else if (player != null && player instanceof EntityPlayer) {
-				player.addChatMessage(new ChatComponentText("You are not the owner"));
+			else if (player != null) {
+				player.addChatMessage(new ChatComponentText("You are not the owner!"));
 			}
 		}
 	}
@@ -108,9 +107,15 @@ public class GuiFreight extends GuiContainer {
 	protected void drawCreativeTabHoveringText(String str, int t, int g) {
 
 		String state = "";
-		if (freight.getTrainLockedFromPacket())
-			state = "Locked";
-		if (!freight.getTrainLockedFromPacket())
+		if (freight.getTrainLockedFromPacket()) {
+			if (freight.getTrainOwner().equalsIgnoreCase(player.getDisplayName()))
+				state = "Locked";
+			else if (freight.isPlayerTrusted(player.getDisplayName()))
+				if (freight.isPlayerTrustedToBreak(player.getDisplayName()))
+					state = "Trusted Access+";
+				else
+					state = "Trusted Access";
+		} else
 			state = "Unlocked";
 
 		int textWidth = fontRendererObj.getStringWidth("the GUI, change speed, destroy it.");

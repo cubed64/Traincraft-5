@@ -15,8 +15,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import train.common.Traincraft;
 import train.common.api.*;
@@ -399,6 +399,7 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                         rollingStock.setColor(trainColor);
                     rollingStock.trainCreator = trainCreator;
                     rollingStock.trainNote = trainNote;
+                    rollingStock.importTrustedListFromNBT(var5);
                 }
                 if (player != null)
                     rollingStock.setInformation(((ItemRollingStock) itemstack.getItem()).getTrainType(), player.getDisplayName(), trainCreator, (itemstack.getItem()).getItemStackDisplayName(itemstack), uniID);
@@ -406,18 +407,29 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                     rollingStock.setInformation(((ItemRollingStock) itemstack.getItem()).getTrainType(), "", trainCreator, (itemstack.getItem()).getItemStackDisplayName(itemstack), uniID);
 
                 if (ConfigHandler.SHOW_POSSIBLE_COLORS && rollingStock.acceptedColors != null && rollingStock.acceptedColors.size() > 0) {
-                    String concatColors = ": ";
+                    String concatColors = "";
+                    int moreColors = 0;
                     for (int t = 0; t < rollingStock.acceptedColors.size(); t++) {
                         if (!AbstractTrains.getColorAsString(rollingStock.acceptedColors.get(t)).equals("Empty")
-                                && !AbstractTrains.getColorAsString(rollingStock.acceptedColors.get(t)).equals("Full"))
-                            concatColors = concatColors
-                                    .concat(AbstractTrains.getColorAsString(rollingStock.acceptedColors.get(t)) + ", ");
+                                && !AbstractTrains.getColorAsString(rollingStock.acceptedColors.get(t)).equals("Full")
+                                && !(rollingStock.acceptedColors.get(t) > 15)) {
+                            if (!concatColors.isEmpty())
+                                concatColors = concatColors
+                                        .concat(", " + AbstractTrains.getColorAsString(rollingStock.acceptedColors.get(t)));
+                            else
+                                concatColors = AbstractTrains.getColorAsString(rollingStock.acceptedColors.get(t));
+                        } else if (rollingStock.acceptedColors.get(t) > 15) {
+                            moreColors++;
+                        }
                     }
                     if (concatColors.length() > 4) {
                         if (player != null) {
-                            player.addChatMessage(new ChatComponentText("Possible colors" + concatColors));
-                            player.addChatMessage(new ChatComponentText("To paint, click me with the right (vanilla) dye,"));
-                            player.addChatMessage(new ChatComponentText("Or" + EnumChatFormatting.GREEN + " Shift-right click " + EnumChatFormatting.WHITE + "using the Paintbrush Item to cycle through textures"));
+                            if (moreColors == 0) {
+                                player.addChatMessage(new ChatComponentText("Possible colors: " + concatColors + "."));
+                            } else {
+                                player.addChatMessage(new ChatComponentText("Possible colors: " + concatColors + ", and " + moreColors + " more."));
+                            }
+                            player.addChatMessage(new ChatComponentText("To paint, use the " + StatCollector.translateToLocal("item.tc:paintbrushThing.name") + " or click me with the right (vanilla) dye."));
                         }
                     }
                 }

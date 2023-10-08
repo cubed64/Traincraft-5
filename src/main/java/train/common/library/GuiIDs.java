@@ -28,4 +28,7 @@ public class GuiIDs {
 	public static final int CONTROL_CAR = 106;
 	public static final int CREDITS_BOOK = 107;
     public static final int STOPPOINT_TRANSMITTER = 108;
+	public static final int PAINTBRUSH = 109;
+	public static final int LOCK_MENU = 110;
+	public static final int LOCK_MENU_SWITCHES = 111;
 }

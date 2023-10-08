@@ -9,17 +9,13 @@ package train.common.core.handlers;
 
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
-import jdk.nashorn.internal.ir.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
-import scala.Char;
 import train.common.inventory.TrainCraftingManager;
-import train.common.items.ItemPaintbrushThing;
-import train.common.items.TCItems;
 import train.common.library.BlockIDs;
 import train.common.library.ItemIDs;
 import train.common.recipes.RecipesArmorDyes;
@@ -56,7 +52,7 @@ public class RecipeHandler {
 			}
 		}
 		addDictRecipe(new ItemStack(BlockIDs.distilIdle.block, 1),  "###", "#F#", "###", Character.valueOf('#'), "ingotSteel", Character.valueOf('F'), ItemIDs.firebox.item );
-
+		addDictRecipe(new ItemStack(ItemIDs.padlock.item, 1), "L#L", "#L#", "#G#", Character.valueOf('#'), Items.iron_ingot, Character.valueOf('G'), Items.gold_nugget);
 		/* Open Hearth Furnace */
 		if (!ConfigHandler.MAKE_MODPACKS_GREAT_AGAIN) {
 			GameRegistry.addRecipe(new ItemStack(BlockIDs.openFurnaceIdle.block, 1), "#L#", "#B#", "#I#",

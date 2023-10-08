@@ -84,6 +84,23 @@ train.owner.name=You are not the owner!
 train.locked.name=Locked
 train.unlocked.name=Unlocked
 
+paintbrushmenu.Close Menu.name=Close
+paintbrushmenu.Next Page.name=Next Page
+paintbrushmenu.Previous Page.name=Previous Page
+paintbrushmenu.Pause.name=Pause Animation
+paintbrushmenu.Play.name=Play Animation
+paintbrushmenu.Lights On.name=Lights On
+paintbrushmenu.Lights Off.name=Lights Off
+paintbrushmenu.Hide Models.name=Hide Models
+paintbrushmenu.Show Models.name=Show Models
+
+lockmenu.Unlock.name=Unlock
+lockmenu.Lock.name=Lock
+
+lockmenu.Title_Trusted_Players.name=Trusted Players
+lockmenu.Save and Close.name=Save and Close
+lockmenu.Save To All Cars in Consist.name=Save To All Cars in Consist
+
 <!-- ## Achievements ## -->
 achievement.tc:engineer=Engineers clothes
 achievement.tc:engineer.desc=A true trainman!
@@ -280,8 +297,8 @@ item.tc:jacket_suit_paintable.name=Composite Suit's Chest (Paintable)
 item.tc:reinforcedPlastic.name=Fibre-Reinforced Plastic
 item.tc:reinforcedPlates.name=Reinforced Plates
 item.tc:composite_wrench.name=Composite Wrench
-item.tc:paintbrushThing.name=Paintbrush Thing
-item.null.name=Paintbrush Thing
+item.tc:paintbrushThing.name=Train Paintbrush
+item.tc:padlock.name=Padlock
 item.tc:adminBook.name=Traincraft Admin Book
 item.tc:wirelessTransmitter.name=MTC Wireless Transmitter
 item.tc:atoCard.name=ATO Card

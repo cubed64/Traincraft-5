@@ -9,6 +9,7 @@ package train.common.blocks;
 
 import com.jcirmodelsquad.tcjcir.blocks.*;
 import com.jcirmodelsquad.tcjcir.features.containers.BlockFortyFootContainer;
+import com.jcirmodelsquad.tcjcir.features.signal.vbc.BlockVBCController;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -18,7 +19,6 @@ import train.common.blocks.crossers.*;
 import train.common.library.BlockIDs;
 import train.common.library.Info;
 import train.common.mtc.block.*;
-import com.jcirmodelsquad.tcjcir.features.signal.vbc.BlockVBCController;
 
 public class TCBlocks {
 
@@ -37,7 +37,7 @@ public class TCBlocks {
 		BlockIDs.assemblyTableIII.block = new BlockAssemblyTableIII(Material.rock).setHardness(3.5F).setStepSound(Block.soundTypeWood);
 		//Switches by -hariesh
 		BlockIDs.MILWSwitchStand.block = new BlockMILWSwitchStand().setHardness(1F).setStepSound(Block.soundTypeStone);
-		BlockIDs.switchStand.block = new BlockSwitchStand().setHardness(1F).setStepSound(Block.soundTypeStone);
+		BlockIDs.switchStand.block = new BlockHighStarSwitchStand().setHardness(1F).setStepSound(Block.soundTypeStone);
 		BlockIDs.autoSwtichStand.block = new BlockAutoSwitchStand().setHardness(1F).setStepSound(Block.soundTypeAnvil);
 		BlockIDs.owoSwitchStand.block = new BlockOwoSwitchStand().setHardness(2F).setStepSound(Block.soundTypeMetal);
 		BlockIDs.circleSwitchStand.block = new BlockCircleSwitchStand().setHardness(2F).setStepSound(Block.soundTypeAnvil);

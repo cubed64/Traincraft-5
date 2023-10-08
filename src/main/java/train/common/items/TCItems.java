@@ -7,9 +7,7 @@
 
 package train.common.items;
 
-import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.util.IRegistry;
 import train.common.Traincraft;
 import train.common.adminbook.ItemAdminBook;
 import train.common.library.Info;
@@ -45,6 +43,7 @@ public class TCItems {
 		ItemIDs.adminBook.item = new ItemAdminBook();
 		ItemIDs.creditsBook.item = new ItemCreditsBook();
 		ItemIDs.paintbrushThing.item = new ItemPaintbrushThing();
+		ItemIDs.padlock.item = new ItemPadlock();
 
 		ItemIDs.stake.item = new ItemStacked(1200);
 		ItemIDs.airship.item = new ItemZeppelins(0);

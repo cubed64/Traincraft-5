@@ -6,9 +6,7 @@ import com.jcirmodelsquad.tcjcir.features.containers.TileFortyFootContainer;
 import com.jcirmodelsquad.tcjcir.features.containers.render.FortyFootContainerRender;
 import com.jcirmodelsquad.tcjcir.features.containers.render.ItemRenderFortyFootContainer;
 import com.jcirmodelsquad.tcjcir.render.*;
-
 import com.jcirmodelsquad.tcjcir.tile.*;
-
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -37,7 +35,6 @@ import train.client.core.handlers.TCKeyHandler;
 import train.client.core.helpers.JLayerHook;
 import train.client.gui.*;
 import train.client.render.*;
-import com.jcirmodelsquad.tcjcir.render.ItemRenderMILWSwitchStand;
 import train.common.Traincraft;
 import train.common.adminbook.GUIAdminBook;
 import train.common.api.EntityBogie;
@@ -284,6 +281,16 @@ public class ClientProxy extends CommonProxy {
 			return new GuiRecipeBook(player, player.getCurrentEquippedItem());
 		/*case (GuiIDs.RECIPE_BOOK2):
 			return te != null && te instanceof TileBook ? new GuiRecipeBook2(player, player.getCurrentEquippedItem()) : new GuiRecipeBook2(player, player.getCurrentEquippedItem());*/
+		case (GuiIDs.PAINTBRUSH):
+			return entity1 != null ? new GuiPaintbrushMenu(player, (EntityRollingStock) entity1) : null;
+		case (GuiIDs.LOCK_MENU):
+			if (entity != null) { // If player is riding the entity (locomotives).
+				return new GuiLockMenu(player, (EntityRollingStock) entity);
+			} else { // If player is not riding the entity (freight).
+				return entity1 != null ? new GuiLockMenu(player, ((EntityRollingStock) entity1)) : null;
+			}
+		case (GuiIDs.LOCK_MENU_SWITCHES):
+			return (te instanceof TileSwitchStand ? new GuiLockMenuSwitches(player, ((TileSwitchStand) te)) : null);
 			case (GuiIDs.CREDITS_BOOK):
 				return new GUICreditsBook(player, player.getCurrentEquippedItem());
 		case (GuiIDs.LANTERN):

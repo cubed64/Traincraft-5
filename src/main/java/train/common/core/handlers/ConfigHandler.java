@@ -44,6 +44,8 @@ public class ConfigHandler {
 	public static boolean FIRST_RUN;
 	public static boolean ALLOW_ATO_ON_STEAMERS;
 	public static boolean ENABLE_TILT_HANDLER;
+	public static boolean DISABLE_PAINTBRUSH_GUI_ANIMATION;
+	public static boolean DISABLE_PAINTBRUSH_GUI_MODELS;
 
 	public static boolean ENABLE_DSS_WEBUI;
 
@@ -91,6 +93,8 @@ public class ConfigHandler {
 			FIRST_RUN = cf.get(CATEGORY_GENERAL, "FIRST_RUN", true).getBoolean(true);
 			ALLOW_ATO_ON_STEAMERS = cf.get(CATEGORY_GENERAL, "ALLOW_ATO_ON_STEAMERS", false, "Allows Minecraft Train Control's ATO system to be used on steam trains").getBoolean(true);
 			ENABLE_TILT_HANDLER = cf.get(CATEGORY_GENERAL, "ENABLE_TILT_HANDLER", false, "Allows certain trains to tilt into curves, as a visual effect. As of 1.6, it isn't perfect and there could be issues. Try it if you want, though. [default: false]").getBoolean(false);
+			DISABLE_PAINTBRUSH_GUI_ANIMATION = cf.get(CATEGORY_GENERAL, "DISABLE_PAINTBRUSH_GUI_ANIMATION", false, "Defaults to pausing animation in paintbrush menu.").getBoolean(false);
+			DISABLE_PAINTBRUSH_GUI_MODELS = cf.get(CATEGORY_GENERAL, "DISABLE_PAINTBRUSH_GUI_MODELS", false, "Defaults to hiding models in the paintbrush menu. Potentially useful on lower-spec machines.").getBoolean(false);
 
 		} catch (Exception e) {
 			Traincraft.tcLog.fatal("Traincraft had a problem loading its configuration\n" + e);

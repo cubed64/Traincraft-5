@@ -7,7 +7,9 @@
 
 package train.common.core.handlers;
 
-import com.jcirmodelsquad.tcjcir.extras.packets.*;
+import com.jcirmodelsquad.tcjcir.extras.packets.MissionStatusPacket;
+import com.jcirmodelsquad.tcjcir.extras.packets.RemoteControlKeyPacket;
+import com.jcirmodelsquad.tcjcir.extras.packets.UpdateGeometryCar;
 import com.jcirmodelsquad.tcjcir.features.aipkitinterface.PacketInterfaceAction;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
@@ -34,6 +36,8 @@ public class PacketHandler {
 		Traincraft.brakeChannel = NetworkRegistry.INSTANCE.newSimpleChannel("brake");
 		Traincraft.lockChannel = NetworkRegistry.INSTANCE.newSimpleChannel("lock");
 		Traincraft.builderChannel = NetworkRegistry.INSTANCE.newSimpleChannel("builder");
+		Traincraft.paintbrushColorChannel = NetworkRegistry.INSTANCE.newSimpleChannel("paintbrushColor");
+		Traincraft.switchStandLockChannel = NetworkRegistry.INSTANCE.newSimpleChannel("switchStandLock");
 
 
 
@@ -52,6 +56,8 @@ public class PacketHandler {
 				4, Side.SERVER);
 		Traincraft.lockChannel.registerMessage(PacketSetTrainLockedToClient.Handler.class,
 				PacketSetTrainLockedToClient.class, 5, Side.SERVER);
+		Traincraft.lockChannel.registerMessage(PacketSetTrainLockedToClient.Handler.class,
+				PacketSetTrainLockedToClient.class, 18, Side.CLIENT);
 		Traincraft.lockChannel.registerMessage(PacketAddNote.Handler.class,
 				PacketAddNote.class, 10, Side.SERVER);
 		Traincraft.ignitionChannel.registerMessage(PacketSetLocoTurnedOn.Handler.class, PacketSetLocoTurnedOn.class,
@@ -62,6 +68,9 @@ public class PacketHandler {
 				PacketTrackBuilderHeight.class, 8, Side.SERVER);
 		Traincraft.builderChannel.registerMessage(PacketTrackBuilderFollow.Handler.class,
 				PacketTrackBuilderFollow.class, 9, Side.SERVER);
+		Traincraft.paintbrushColorChannel.registerMessage(PacketPaintbrushColor.Handler.class, PacketPaintbrushColor.class, 11, Side.SERVER);
+		Traincraft.switchStandLockChannel.registerMessage(PacketUpdateSwitchStand.Handler.class,
+				PacketUpdateSwitchStand.class, 17, Side.SERVER);
 
 		Traincraft.mtcBlockChannel.registerMessage(HANDLERS[0], PacketUpdateSpeedTransmitter.class, 200, Side.SERVER);
 		Traincraft.mtcBlockChannel.registerMessage(HANDLERS[1], PacketUpdateStopPointTransmitter.class, 201, Side.SERVER);
