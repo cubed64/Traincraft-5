@@ -11,6 +11,10 @@ public class PSDamnitAnotherDiner extends EntityRollingStock implements IPasseng
 
 	public PSDamnitAnotherDiner(World world) {
 		super(world);
+		textureDescriptionMap.put(0, "D&RGW");
+		textureDescriptionMap.put(1, "D&RGW (No Lounge)");
+		textureDescriptionMap.put(2, "C&O (Semi-Fictional)");
+		textureDescriptionMap.put(3, "PM (Semi-Fictional) ");
 	}
 
 	public PSDamnitAnotherDiner(World world, double d, double d1, double d2) {

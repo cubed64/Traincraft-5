@@ -84,7 +84,13 @@ public class GuiForney extends GuiContainer {
 			this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 124, var2 - 10, 51, 10, "Unlocked"));
 		}
 		else {
-			this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 130, var2 - 10, 43, 10, "Locked"));
+			if (loco.getTrainOwner().equalsIgnoreCase(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
+				this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 130, var2 - 10, 43, 10, "Locked"));
+			else if (loco.isPlayerTrusted(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
+				if (loco.isPlayerTrustedToBreak(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
+					this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 125, var2 - 10, 48, 10, "Trusted+"));
+				else
+					this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 128, var2 - 10, 45, 10, "Trusted"));
 		}
 	}
 
@@ -105,22 +111,18 @@ public class GuiForney extends GuiContainer {
 			}
 		}
 		if (guibutton.id == 3) {
-			//System.out.println("1 "+loco.getTrainOwner());
-			//System.out.println("2 "+((EntityPlayer)loco.riddenByEntity).getDisplayName());
-			//System.out.println(((EntityPlayer)loco.riddenByEntity).getDisplayName().equals(loco.getTrainOwner().trim()));
-
 			if (loco.riddenByEntity != null && loco.riddenByEntity instanceof EntityPlayer && ((EntityPlayer) loco.riddenByEntity).getDisplayName().equals(loco.getTrainOwner())) {
-				if ((!loco.getTrainLockedFromPacket())) {
-					Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(true, loco.getEntityId()));
-					loco.locked = true;
-					guibutton.displayString = "Locked";
-					this.initGui();
-				}
-				else {
-					Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(false, loco.getEntityId()));
-					loco.locked = false;
-					guibutton.displayString = "UnLocked";
-					this.initGui();
+				if (!isShiftKeyDown()) {
+					if ((!loco.getTrainLockedFromPacket())) {
+						loco.locked = true;
+						guibutton.displayString = "Locked";
+						this.initGui();
+					} else {
+						loco.locked = false;
+						guibutton.displayString = "UnLocked";
+						this.initGui();
+					}
+					Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(true, loco.getTrustedList(), loco.getEntityId(), false));
 				}
 			}
 			else if (loco.riddenByEntity != null && loco.riddenByEntity instanceof EntityPlayer) {
@@ -135,10 +137,15 @@ public class GuiForney extends GuiContainer {
 		//int liqui = (dieselInventory.getLiquidAmount() * 50) / dieselInventory.getTankCapacity();
 		String state = "";
 		if (loco.getTrainLockedFromPacket()) {
-			state = "Locked";
-		} else {
+			if (loco.getTrainOwner().equalsIgnoreCase(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
+				state = "Locked";
+			else if (loco.isPlayerTrusted(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
+				if (loco.isPlayerTrustedToBreak(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
+					state = "Trusted Access+";
+				else
+					state = "Trusted Access";
+		} else
 			state = "Unlocked";
-		}
 
 		int textWidth = fontRendererObj.getStringWidth("the GUI, change speed, destroy it.");
 		int startX = 90;

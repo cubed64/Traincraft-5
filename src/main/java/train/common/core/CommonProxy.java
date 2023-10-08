@@ -2,6 +2,7 @@ package train.common.core;
 
 import com.jcirmodelsquad.tcjcir.features.containers.ContainerStorage;
 import com.jcirmodelsquad.tcjcir.features.containers.TileFortyFootContainer;
+import com.jcirmodelsquad.tcjcir.features.signal.vbc.TileVBCController;
 import com.jcirmodelsquad.tcjcir.tile.*;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -36,7 +37,6 @@ import train.common.mtc.block.BlockTransmitterMTC;
 import train.common.mtc.block.BlockTransmitterSpeed;
 import train.common.mtc.block.BlockTransmitterStopPoint;
 import train.common.mtc.tile.*;
-import com.jcirmodelsquad.tcjcir.features.signal.vbc.TileVBCController;
 import train.common.tile.*;
 import train.common.tile.tileSwitch.*;
 
@@ -83,7 +83,7 @@ public class CommonProxy implements IGuiHandler {
 		GameRegistry.registerTileEntity(TileAmericanStopper.class, "TileAmericanStopper");
 		GameRegistry.registerTileEntity(TileSignal.class, "TileTrainSignal");
 		GameRegistry.registerTileEntity(TileLantern.class, "tileLantern");
-		GameRegistry.registerTileEntity(TileSwitchStand.class, "tileSwitchStand");
+		GameRegistry.registerTileEntity(TileHighStarSwitchStand.class, "tileSwitchStand");
 
 		GameRegistry.registerTileEntity(TileOwoSwitchStand.class, "tileowoswitchstand");
 		GameRegistry.registerTileEntity(TileCircleSwitchStand.class, "tilecircleswitchstand");

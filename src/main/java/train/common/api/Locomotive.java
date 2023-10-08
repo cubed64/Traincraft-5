@@ -499,9 +499,10 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     @Override
     public void keyHandlerFromPacket(int i) {
         if (this.getTrainLockedFromPacket()) {
+            // Allow a player to operate locomotive if they are the owner if they are trusted.
             if (this.riddenByEntity instanceof EntityPlayer
-                    && !((EntityPlayer) this.riddenByEntity).getDisplayName().toLowerCase()
-                    .equals(this.getTrainOwner().toLowerCase())) {
+                    && !((EntityPlayer) this.riddenByEntity).getDisplayName()
+                    .equalsIgnoreCase(this.getTrainOwner()) && !this.isPlayerTrusted(((EntityPlayer) riddenByEntity).getDisplayName())) {
                 return;
             }
         }
@@ -761,8 +762,8 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 //EntityLivingBase entity = (EntityLivingBase) this.riddenByEntity;
                 if (forwardPressed || backwardPressed) {
                     if (getFuel() > 0 && this.isLocoTurnedOn() && rand.nextInt(4) == 0 && !worldObj.isRemote) {
-                        if (this.getTrainLockedFromPacket() && !((EntityPlayer) this.riddenByEntity).getDisplayName()
-                                .toLowerCase().equals(this.getTrainOwner().toLowerCase())) {
+                        if (this.getTrainLockedFromPacket() && !((EntityPlayer) this.riddenByEntity).getDisplayName().equalsIgnoreCase(this.getTrainOwner())
+                                && !isPlayerTrusted(((EntityPlayer) this.riddenByEntity).getDisplayName())) {
                             return;
                         }
                         if (riddenByEntity instanceof EntityPlayer) {

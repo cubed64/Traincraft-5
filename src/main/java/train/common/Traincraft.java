@@ -2,8 +2,6 @@ package train.common;
 
 import com.jcirmodelsquad.tcjcir.extras.JCIRQuote;
 import com.jcirmodelsquad.tcjcir.extras.QuoteList;
-//import com.jcirmodelsquad.tcjcir.features.signal.dynamic.DSSConfig;
-import com.jcirmodelsquad.tcjcir.features.signal.dynamic.DynamicSignalServer;
 import com.jcirmodelsquad.tcjcir.features.signal.dynamic.TrainTalk;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Loader;
@@ -40,7 +38,6 @@ import train.common.generation.WorldGenWorld;
 import train.common.items.TCItems;
 import train.common.library.BetterEnumSounds;
 import train.common.library.Info;
-import com.jcirmodelsquad.tcjcir.features.signal.vbc.VBCTracking;
 import train.common.recipes.AssemblyTableRecipes;
 
 import java.io.File;
@@ -72,6 +69,8 @@ public class Traincraft {
 	public static SimpleNetworkWrapper brakeChannel;
 	public static SimpleNetworkWrapper lockChannel;
 	public static SimpleNetworkWrapper builderChannel;
+	public static SimpleNetworkWrapper switchStandLockChannel;
+	public static SimpleNetworkWrapper paintbrushColorChannel;
 	public static SimpleNetworkWrapper updateTrainIDChannel = NetworkRegistry.INSTANCE.newSimpleChannel("TrainIDChannel");
 	public static SimpleNetworkWrapper updateDestinationChannel = NetworkRegistry.INSTANCE.newSimpleChannel("updateDestnChannel");
 
@@ -148,6 +147,10 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		RetrogenHandler retroGen = new RetrogenHandler();
 		MinecraftForge.EVENT_BUS.register(retroGen);
 		FMLCommonHandler.instance().bus().register(retroGen);
+
+		BlockBreakHandler blockBreakHandler = new BlockBreakHandler();
+		MinecraftForge.EVENT_BUS.register(blockBreakHandler);
+		FMLCommonHandler.instance().bus().register(blockBreakHandler);
 
 		MapGenStructureIO.func_143031_a(ComponentVillageTrainstation.class, "Trainstation");
 

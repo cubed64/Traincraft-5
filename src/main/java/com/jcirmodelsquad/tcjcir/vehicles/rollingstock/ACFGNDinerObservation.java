@@ -11,6 +11,7 @@ public class ACFGNDinerObservation extends EntityRollingStock implements IPassen
 
 	public ACFGNDinerObservation(World world) {
 		super(world);
+		textureDescriptionMap.put(0, "GN Red River");
 	}
 
 	public ACFGNDinerObservation(World world, double d, double d1, double d2) {

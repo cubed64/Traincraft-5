@@ -11,6 +11,8 @@ public class ACFGN28SeatCoach_Dinette extends EntityRollingStock implements IPas
 
 	public ACFGN28SeatCoach_Dinette(World world) {
 		super(world);
+		textureDescriptionMap.put(0, "GN Internationals");
+		textureDescriptionMap.put(1, "AMTK (ex-GN)");
 	}
 
 	public ACFGN28SeatCoach_Dinette(World world, double d, double d1, double d2) {

@@ -7,6 +7,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.MathHelper;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import train.common.api.AbstractTrains;
 import train.common.api.EntityRollingStock;
@@ -335,9 +336,12 @@ public class LinkHandler {
 					}
 
 
-					EntityPlayer entityplayer = cart1.worldObj.getClosestPlayerToEntity(cart1, 20);//
-					if (entityplayer != null && byPlayer) {
-						entityplayer.addChatMessage(new ChatComponentText("attached!"));
+					// Send coupled message to every player within 20 blocks.
+					List entityList = cart1.worldObj.getEntitiesWithinAABBExcludingEntity(cart1, cart1.boundingBox.expand(10, 10, 10));
+					for (Object entity : entityList) {
+						if (entity instanceof EntityPlayer) {
+							((EntityPlayer) entity).addChatMessage(new ChatComponentText("Attached " + StatCollector.translateToLocal(cart1.getTrainName()) + " to " + StatCollector.translateToLocal(cart2.getTrainName()) + "!"));
+						}
 					}
 				}
 			}

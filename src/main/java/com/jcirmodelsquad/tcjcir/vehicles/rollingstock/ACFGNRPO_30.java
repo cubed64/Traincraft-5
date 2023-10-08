@@ -9,9 +9,7 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
-import train.common.api.EntityRollingStock;
 import train.common.api.Freight;
-import train.common.api.IPassenger;
 import train.common.library.GuiIDs;
 
 public class ACFGNRPO_30 extends Freight implements IInventory {
@@ -21,6 +19,8 @@ public class ACFGNRPO_30 extends Freight implements IInventory {
 	public ACFGNRPO_30(World world) {
 		super(world);
 		initFreightCart();
+		textureDescriptionMap.put(0, "GN Internationals");
+		textureDescriptionMap.put(1, "GN Red River");
 	}
 
 	public void initFreightCart() {

@@ -11,6 +11,10 @@ public class OB92SeatCoach extends EntityRollingStock implements IPassenger {
 
 	public OB92SeatCoach(World world) {
 		super(world);
+		textureDescriptionMap.put(0, "NH (As Delivered)");
+		textureDescriptionMap.put(1, "NH");
+		textureDescriptionMap.put(2, "NH (Black Knight Scheme)");
+		textureDescriptionMap.put(3, "PC");
 	}
 
 	public OB92SeatCoach(World world, double d, double d1, double d2) {

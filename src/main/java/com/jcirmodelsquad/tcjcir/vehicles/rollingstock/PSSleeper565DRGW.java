@@ -11,6 +11,7 @@ public class PSSleeper565DRGW extends EntityRollingStock implements IPassenger {
 
 	public PSSleeper565DRGW(World world) {
 		super(world);
+		textureDescriptionMap.put(0, "D&RGW");
 	}
 
 	public PSSleeper565DRGW(World world, double d, double d1, double d2) {

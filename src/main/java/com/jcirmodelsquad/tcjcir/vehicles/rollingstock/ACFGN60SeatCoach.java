@@ -11,6 +11,10 @@ public class ACFGN60SeatCoach extends EntityRollingStock implements IPassenger {
 
 	public ACFGN60SeatCoach(World world) {
 		super(world);
+		textureDescriptionMap.put(0, "GN Internationals (With Conductor's Booth)");
+		textureDescriptionMap.put(1, "GN Internationals");
+		textureDescriptionMap.put(2, "GN Red River (With Conductor's Booth)");
+		textureDescriptionMap.put(3, "GN Red River");
 	}
 
 	public ACFGN60SeatCoach(World world, double d, double d1, double d2) {

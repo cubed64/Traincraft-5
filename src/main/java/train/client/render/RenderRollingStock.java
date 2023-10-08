@@ -13,10 +13,8 @@ import org.lwjgl.opengl.GL11;
 import tmt.Tessellator;
 import train.common.api.EntityRollingStock;
 import train.common.api.Locomotive;
-import train.common.core.util.TraincraftUtil;
 import train.common.entity.rollingStock.EntityTracksBuilder;
 import train.common.library.Info;
-import net.minecraft.entity.Entity;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -37,7 +35,7 @@ public class RenderRollingStock extends Render {
 
 
 
-	public static void renderTheMinecart(EntityRollingStock cart, double x, double y, double z, float yaw, float time) {
+	public static void renderTheMinecart(EntityRollingStock cart, double x, double y, double z, float yaw, float time, boolean renderModeGUI) {
 		GL11.glPushMatrix();
 		long var10 = cart.getEntityId() * 493286711L;
 		var10 = var10 * var10 * 4392167121L + var10 * 98761L;
@@ -299,10 +297,17 @@ public class RenderRollingStock extends Render {
 
 				Tessellator.bindTexture(getTexture(cart));
 
-				GL11.glEnable(GL11.GL_LIGHTING);
 				int skyLight = cart.worldObj.getLightBrightnessForSkyBlocks(i, j, k, 0);
-				OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit,  skyLight % 65536,
-						skyLight / 65536f);
+				if (!renderModeGUI) {
+					GL11.glEnable(GL11.GL_LIGHTING);
+					OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, skyLight % 65536,
+							skyLight / 65536f);
+				} else {
+					if (renderGUIFullBright)
+						GL11.glDisable(GL11.GL_LIGHTING);
+					OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, 240f,
+							240f);
+				}
 
 
 				renders.getModel().render(cart, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
@@ -341,7 +346,7 @@ public class RenderRollingStock extends Render {
 						renderExplosionFX(cart, yaw, pitch, renders.getExplosionType(), renders.getExplosionFX(), renders.getExplosionFXIterations(), renders.hasSmokeOnSlopes());
 					}
 				}
-
+				GL11.glEnable(GL11.GL_LIGHTING);
 				break;
 			}
 		}
@@ -448,7 +453,7 @@ public class RenderRollingStock extends Render {
 
 	@Override
 	public void doRender(Entity par1Entity, double x, double y, double d2, float yaw, float time) {
-		renderTheMinecart((EntityRollingStock) par1Entity, x, y, d2, yaw, time);
+		renderTheMinecart((EntityRollingStock) par1Entity, x, y, d2, yaw, time, renderModeGUI);
 	}
 
 
@@ -463,5 +468,26 @@ public class RenderRollingStock extends Render {
 			if (renders.getEntityClass() != null && renders.getEntityClass().equals(entity.getClass())) { return getResourceFile(renders.getTexture(), renders.getIsMultiTextured(), (EntityRollingStock) entity); }
 		}
 		return null;
+	}
+
+	private static boolean renderModeGUI = false;
+	private static boolean renderGUIFullBright = false;
+
+	/**
+	 * @author 02skaplan
+	 * @param renderModeGUI GUI lighting flag
+	 * 	<p>Flag of whether to allow in-game lighting conditions to effect light levels of rendered entity.
+	 *  <b>Set to true if rendering in a GUI and set back to false when done.</b></p>
+	 */
+	public static void setRenderModeGUI(boolean renderModeGUI) {
+		RenderRollingStock.renderModeGUI = renderModeGUI;
+	}
+
+	/**
+	 * @param renderGUIFullBright Flag of whether to allow any lighting on a rendered entity. This will cause the entity to render
+	 * unnaturally bright, which may or may not be desired.
+	 */
+	public static void setRenderGUIFullBright(boolean renderGUIFullBright) {
+		RenderRollingStock.renderGUIFullBright = renderGUIFullBright;
 	}
 }

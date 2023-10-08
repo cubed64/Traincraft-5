@@ -31,7 +31,6 @@ public class ItemPaintbrushThing extends Item {
     @SideOnly(Side.CLIENT)
     @Override
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
-        par3List.add("\u00a77" + EnumChatFormatting.GREEN + "Shift-right click" + EnumChatFormatting.GRAY + " on a train to cycle through it's textures.");
-        par3List.add("\u00a77" + "We couldn't think of a better name for it");
+        par3List.add("\u00a77" + EnumChatFormatting.GREEN + "Shift-right-click" + EnumChatFormatting.GRAY + " on a train to open the texture menu.");
     }
 }

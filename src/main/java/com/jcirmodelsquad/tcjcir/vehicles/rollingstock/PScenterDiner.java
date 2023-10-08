@@ -11,6 +11,8 @@ public class PScenterDiner extends EntityRollingStock implements IPassenger {
 
 	public PScenterDiner(World world) {
 		super(world);
+		textureDescriptionMap.put(0, "PM");
+		textureDescriptionMap.put(1, "C&O");
 	}
 
 	public PScenterDiner(World world, double d, double d1, double d2) {

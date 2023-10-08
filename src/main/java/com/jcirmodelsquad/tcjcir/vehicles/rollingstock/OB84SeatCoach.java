@@ -11,6 +11,18 @@ public class OB84SeatCoach extends EntityRollingStock implements IPassenger {
 
 	public OB84SeatCoach(World world) {
 		super(world);
+		textureDescriptionMap.put(0, "NH (As Delivered)");
+		textureDescriptionMap.put(1, "NH");
+		textureDescriptionMap.put(2, "NH (Black Knight Scheme)");
+		textureDescriptionMap.put(3, "PC");
+		textureDescriptionMap.put(4, "B&M B&M (As Delivered, 1935 Batch)");
+		textureDescriptionMap.put(5, "B&M Interior Scheme 1 (As Delivered, 1937 Batch)");
+		textureDescriptionMap.put(6, "B&M Interior Scheme 2 (As Delivered, 1937 Batch)");
+		textureDescriptionMap.put(7, "B&M (1935 Batch)");
+		textureDescriptionMap.put(8, "B&M Interior Scheme 1 (1937 Batch)");
+		textureDescriptionMap.put(9, "B&M Interior Scheme 2 (1937 Batch)");
+		textureDescriptionMap.put(10, "BAR (As Delivered)");
+		textureDescriptionMap.put(11, "BAR");
 	}
 
 	public OB84SeatCoach(World world, double d, double d1, double d2) {

@@ -12,7 +12,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.server.MinecraftServer;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.DamageSource;
@@ -21,20 +21,19 @@ import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeChunkManager.Ticket;
+import net.minecraftforge.common.util.Constants;
 import org.apache.commons.lang3.ArrayUtils;
-import train.client.render.RenderEnum;
 import train.common.Traincraft;
 import train.common.adminbook.ItemAdminBook;
 import train.common.core.handlers.ConfigHandler;
 import train.common.core.handlers.TrainHandler;
+import train.common.entity.TrustedPlayer;
 import train.common.items.ItemChunkLoaderActivator;
 import train.common.items.ItemRollingStock;
 import train.common.items.ItemWrench;
 import train.common.library.EnumTrains;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public abstract class AbstractTrains extends EntityMinecart implements IMinecart, IRoutableCart, IEntityAdditionalSpawnData {
 
@@ -143,6 +142,11 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	public ArrayList<Integer> acceptedColors;
 
 	public boolean islampOn;
+	/**
+	 * <p>List of players trusted to use the train</p>
+	 */
+	private List<TrustedPlayer> trustedList = new ArrayList<>();
+	public final Map<Integer, String> textureDescriptionMap = new HashMap<>();
 
 	@Override
 	public float getBrightness(float p_70013_1_) {
@@ -406,6 +410,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		nbttagcompound.setLong("UUIDM", this.getUniqueID().getMostSignificantBits());
 		nbttagcompound.setLong("UUIDL", this.getUniqueID().getLeastSignificantBits());
 		nbttagcompound.setString("trainNote", trainNote);
+		exportTrustedListToNBT(nbttagcompound);
 	}
 
 	@Override
@@ -441,6 +446,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		if(nbttagcompound.hasKey("UUIDM")){
 			this.entityUniqueID = new UUID(nbttagcompound.getLong("UUIDM"), nbttagcompound.getLong("UUIDL"));
 		}
+		importTrustedListFromNBT(nbttagcompound);
 	}
 
 	@Override
@@ -708,6 +714,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			for (ItemStack item : getItemsDropped()) {
 				if (item.getItem() instanceof ItemRollingStock){
 					ItemStack stack = ItemRollingStock.setPersistentData(item,this,this.getUniqueTrainID(),trainCreator, trainOwner, getColor(), trainNote);
+					exportTrustedListToNBT(stack != null ? stack.getTagCompound() : null);
 					entityDropItem(stack!=null?stack:item,0);
 				} else {
 					setUniqueIDToItem(item);
@@ -794,7 +801,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 					((EntityPlayer) damagesource.getEntity()).addChatMessage(new ChatComponentText("Removing the train using OP permission"));
 					return false;
 				}
-				else if (!((EntityPlayer) damagesource.getEntity()).getDisplayName().toLowerCase().equals(this.trainOwner.toLowerCase())) {
+				else if (!((EntityPlayer) damagesource.getEntity()).getDisplayName().equalsIgnoreCase(this.trainOwner) && !(this.isPlayerTrustedToBreak(((EntityPlayerMP) damagesource.getEntity()).getDisplayName()))) {
 					((EntityPlayer) damagesource.getEntity()).addChatMessage(new ChatComponentText("You are not the owner!"));
 					return true;
 				}
@@ -875,5 +882,77 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		}
 	}
 
+	/**
+	 * @return Returns String ArrayList of trusted players' usernames.
+	 */
+	public List<TrustedPlayer> getTrustedList() {
+		return trustedList;
+	}
+	public void setTrustedList(List<TrustedPlayer> trustedList) { this.trustedList = trustedList; }
 
+	/**
+	 * <p>Returns whether or not a player is trusted to a piece of rolling stock.</p>
+	 * @param displayName Case-insensitive display name of player.
+	 * @return True if the player is trusted, false if the player is not trusted.
+	 */
+	public boolean isPlayerTrusted(String displayName) {
+		for (TrustedPlayer trustedPlayer : this.getTrustedList()) {
+			if (trustedPlayer.getDisplayName().equalsIgnoreCase(displayName)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * <p>Returns whether or not a player is trusted to break a piece of rolling stock.</p>
+	 * @param displayName Case-insensitive display name of player.
+	 * @return True if player has break access, false if player does not have break access.
+	 */
+	public boolean isPlayerTrustedToBreak(String displayName) {
+		for (TrustedPlayer trustedPlayer : this.getTrustedList()) {
+			if (trustedPlayer.getDisplayName().equalsIgnoreCase(displayName)) {
+				return trustedPlayer.hasBreakAccess();
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * <p>Export trusted players to NBT tag for data saving.</p>
+	 * @param nbttagcompound NBT tag into which to write trusted list.
+	 */
+	public void exportTrustedListToNBT(NBTTagCompound nbttagcompound) {
+		if (!trustedList.isEmpty()) {
+			NBTTagList trustedList = new NBTTagList();
+			for (TrustedPlayer trustedPlayer : this.trustedList) {
+				NBTTagCompound trustedPlayerTag = new NBTTagCompound();
+				trustedPlayerTag.setString("playerName", trustedPlayer.getDisplayName());
+				trustedPlayerTag.setBoolean("breakAccess", trustedPlayer.hasBreakAccess());
+				trustedList.appendTag(trustedPlayerTag);
+			}
+			nbttagcompound.setTag("trustedList", trustedList);
+			nbttagcompound.setString("trustedListPreviousOwner", getTrainOwner());
+		}
+	}
+
+	/**
+	 * <p>Import a trusted player list from a given NBT tag.</p>
+	 * @param nbttagcompound NBT tag from which to import trusted list.
+	 */
+	public void importTrustedListFromNBT(NBTTagCompound nbttagcompound) {
+		if (nbttagcompound.hasKey("trustedList")) {
+			NBTTagList trustedList = nbttagcompound.getTagList("trustedList", Constants.NBT.TAG_COMPOUND);
+			this.trustedList.clear();
+			for (int i = 0; i < trustedList.tagCount(); i++) {
+				if (!trustedList.getCompoundTagAt(i).getString("playerName").equalsIgnoreCase(trainOwner)) // Check to ensure we're not adding the current owner to the trusted list...
+					this.trustedList.add(new TrustedPlayer(trustedList.getCompoundTagAt(i).getString("playerName"), trustedList.getCompoundTagAt(i).getBoolean("breakAccess")));
+			}
+			if (nbttagcompound.hasKey("trustedListPreviousOwner")) { // If the previous owner is not the one who placed down the piece of rolling stock... // TODO test this out!
+				if (!nbttagcompound.getString("trustedListPreviousOwner").equalsIgnoreCase(trainOwner)) {
+					getTrustedList().add(new TrustedPlayer(nbttagcompound.getString("trustedListPreviousOwner"), true));
+				}
+			}
+		}
+	}
 }
