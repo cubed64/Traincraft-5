@@ -1420,10 +1420,12 @@ entity.tc.PEobserve.name=Polar Express Observation
 
 item.tc:minecartWVcaboose.name=International Car Co. Wide Vision Caboose
 item.tc:minecartHBC1Ccaboose.name=FNCC HBC1-C Caboose
+item.tc:minecartHBC1Bcaboose.name=FNCC HBC1-B Caboose
 item.tc:minecartDRGWCaboose.name=DRGW 01400 Series Caboose
 
 entity.tc.WVcaboose.name=International Car Co. Wide Vision Caboose
 entity.tc.HBC1C.name=FNCC HBC1-C Caboose
+entity.tc.HBC1B.name=FNCC HBC1-B Caboose
 entity.tc.DRGWCaboose.name=DRGW 01400 Series Caboose
 
 --------------------------------------------------------

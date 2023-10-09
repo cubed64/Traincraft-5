@@ -17,7 +17,12 @@ public class DieselBQ23 extends DieselTrain {
     public DieselBQ23(World world) {
         super(world, EnumTrains.BQ23.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Family Lines (As Delivered)");
+        textureDescriptionMap.put(1, "Providence & Worcester");
+        textureDescriptionMap.put(2, "Blandsville & Blasic");
+        textureDescriptionMap.put(3, "Fox, North Coast & Cascades");
+        textureDescriptionMap.put(4, "CSXT YN2 3003");
+        textureDescriptionMap.put(5, "CSXT YN2 (Post 90s)");
     }
     public DieselBQ23(World world, double d, double d1, double d2){
         this(world);

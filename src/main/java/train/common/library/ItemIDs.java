@@ -383,7 +383,6 @@ public enum ItemIDs {
 	minecartGPFDL("ItemRollingStock", "gpfdl", 4),
 	minecartGP9("ItemRollingStock", "gp9", 3),
 	minecartGP7old("ItemRollingStock", "gp7old", 3),
-	minecartGP9old("ItemRollingStock", "gp9old", 3),
 	minecartGP13("ItemRollingStock", "gp13", 3),
 	minecartGP15("ItemRollingStock", "gp15", 3),
 	minecartGP30("ItemRollingStock", "gp30", 3),
@@ -655,6 +654,7 @@ public enum ItemIDs {
 	//othershizzle//
 	minecartWVcaboose("ItemRollingStock", "wvcaboose",3),
 	minecartHBC1Ccaboose("ItemRollingStock", "HBC1C",3),
+	minecartHBC1Bcaboose("ItemRollingStock", "HBC1B",3),
 	minecartDRGWCaboose("ItemRollingStock", "DRGW_01400_series_caboose",3),
 
 	minecartBigMeme("ItemRollingStock", "lol", 69),
@@ -689,9 +689,10 @@ public enum ItemIDs {
 
 	minecartHustler("ItemRollingStock", "hustler", 2),
 	minecartBoulderWagon("ItemRollingStock","BoulderWagon",3),
-	minecartLogcarNP( "ItemRollingStock","logcarNP",3),
+	//minecartLogcarNP( "ItemRollingStock","logcarNP",3),
 	//minecartCF7R("ItemRollingStock", "cf7r", 12),
 	minecartHighrailVan("ItemRollingStock", "highrailvan", 3),
+	//minecartGP9old("ItemRollingStock", "gp9old", 3),
 
 	;
 
