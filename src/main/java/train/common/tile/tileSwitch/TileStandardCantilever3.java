@@ -39,7 +39,7 @@ public class TileStandardCantilever3 extends TileMFPBWigWag {
         updateTicks++;
         if (worldObj.isRemote) {
             if (powered = getWorldObj().isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)) {
-                if (updateTicks % 10 == 0) {
+                if (updateTicks % 6 == 0) {
                     flip = !flip;
                     worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + "safetran_type1_bell", 1f, 1f, true);
                     if(flip) {

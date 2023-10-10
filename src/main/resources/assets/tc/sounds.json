@@ -227,6 +227,7 @@
 
   "aem7_horn": {"category": "master", "sounds": [{"name": "aem7_horn","stream": true}]},
   "hhgregg600horn": {"category": "master", "sounds": [{"name": "hhgregg600horn", "stream":  true}]},
+  "rtr_horn": {"category": "master", "sounds": [{"name": "rtr_horn","stream": true}]},
   "thanos_horn": {"category": "master", "sounds": [{"name": "thanos_horn","stream": true}]},
   "truck_horn": {"category": "master", "sounds": [{"name": "truck_horn", "stream":  true}]},
   "generic_horn_1": {"category": "master", "sounds": [{"name": "generic_horn_1", "stream":  true}]},
@@ -277,6 +278,8 @@
   "safetran_type3_bell": {"category": "master", "sounds": [{"name": "safetran_type3_bell", "stream":  true}]},
   "wch_ebell": {"category": "master", "sounds": [{"name": "wch_ebell", "stream":  true}]},
   "wch_mchbell": {"category": "master", "sounds": [{"name": "wch_mchbell", "stream":  true}]},
+  "gatemotor_down": {"category": "master", "sounds": [{"name": "gatemotor_down", "stream":  true}]},
+  "gatemotor_up": {"category": "master", "sounds": [{"name": "gatemotor_up", "stream":  true}]},
 
   "sp_bell": {"category": "master", "sounds": [{"name": "sp_bell", "stream":  true}]},
   "steambell_1": {"category": "master", "sounds": [{"name": "steambell_1", "stream":  true}]},

@@ -38,7 +38,7 @@ public class TilePedestrianCrossing extends TileMFPBWigWag {
         this.updateTicks++;
         if (worldObj.isRemote) {
             if (powered = getWorldObj().isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)) {
-                if (this.updateTicks % 10 == 0) {
+                if (this.updateTicks % 8 == 0) {
                     flip = !flip;
                     worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + "ge_crossing_ebell", 1f, 1f, true);
                     if(flip) {

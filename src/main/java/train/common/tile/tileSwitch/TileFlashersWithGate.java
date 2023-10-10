@@ -50,7 +50,7 @@ public class TileFlashersWithGate extends TileMFPBWigWag {
         if (worldObj.isRemote) {
             if (rotation > -85) {
                 if (powered = getWorldObj().isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)) {
-                    if (updateTicks % 10 == 0) {
+                    if (updateTicks % 6 == 0) {
                         flip = !flip;
                         worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + "wch_mchbell", 1f, 1f, true);
                         if(flip) {
@@ -63,7 +63,7 @@ public class TileFlashersWithGate extends TileMFPBWigWag {
             } else {
                 rotation = -85 + 1.75f;
                 if (powered = getWorldObj().isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)) {
-                    if (updateTicks % 10 == 0) {
+                    if (updateTicks % 6 == 0) {
                         flip = !flip;
                         worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + "wch_mchbell", 1f, 1f, true);
                         if(flip) {

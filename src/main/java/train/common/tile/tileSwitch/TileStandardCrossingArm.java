@@ -49,9 +49,9 @@ public class TileStandardCrossingArm extends TileMFPBWigWag {
         if (worldObj.isRemote) {
             if (rotation > -85) {
                 if (powered = getWorldObj().isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)) {
-                    if (updateTicks % 10 == 0) {
+                    if (updateTicks % 6 == 0) {
                         flip = !flip;
-                        worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + "bell", 1f, 1f, true);
+                        //worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + " ", 1f, 1f, true);
                         if(flip) {
                             Tessellator.bindTexture(textureOn);
                         } else {
@@ -64,7 +64,7 @@ public class TileStandardCrossingArm extends TileMFPBWigWag {
                 if (powered = getWorldObj().isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)) {
                     if (updateTicks % 10 == 0) {
                         flip = !flip;
-                        worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + "bell", 1f, 1f, true);
+                        //worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + " ", 1f, 1f, true);
                         if(flip) {
                             Tessellator.bindTexture(textureOn);
                         } else {
@@ -79,9 +79,9 @@ public class TileStandardCrossingArm extends TileMFPBWigWag {
             } else {
                 if (rotation < 0) {
                     rotation += 1.75;
-                    if (updateTicks % 10 == 0) {
+                    if (updateTicks % 6 == 0) {
                         flip = !flip;
-                        //worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + "bell", 1f, 1f, true);
+                        //worldObj.playSound(xCoord, yCoord, zCoord, Info.resourceLocation + ":" + " ", 1f, 1f, true);
                         if(flip) {
                             Tessellator.bindTexture(textureOn);
                         } else {
