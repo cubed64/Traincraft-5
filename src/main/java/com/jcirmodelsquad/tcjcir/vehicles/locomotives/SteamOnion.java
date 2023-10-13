@@ -17,6 +17,7 @@ public class SteamOnion extends SteamTrain {
 	public SteamOnion(World world) {
 		super(world, EnumTrains.Onion.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
+		textureDescriptionMap.put(4, "MISSINGNO BUTTSECKS RAILROAD NUMBER 1");
 	}
 
 	public void initLocoSteam() {

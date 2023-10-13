@@ -1135,9 +1135,9 @@ item.tc:minecartH24_66L.name=FM H24-66 Low Ends
 
 
 entity.tc.H1044.name=FM H10-44
-entity.tc.H16_66.name=FM H16-66
-entity.tc.H24_66.name=FM H24-66
-entity.tc.H24_66L.name=FM H24-66 (Low Ends)
+entity.tc.H16-66.name=FM H16-66
+entity.tc.H24-66.name=FM H24-66
+entity.tc.H24-66L.name=FM H24-66 (Low Ends)
 
 --------------------------------------------------------
 
@@ -1156,8 +1156,9 @@ item.tc:minecartSMSC1.name=CEE Slug Motor System, C-C, Type 1
 
 entity.tc.NRE3gs21b.name=NRE 3GS21B Genset
 entity.tc.gtavthing.name=GTAV Locomotive
+entity.tc.Loco FOL-M1.name=FOL-M1
 entity.tc.FOL-M1B.name=FOL-M1B (Powered)
-entity.tc.BUnitFOL-M1B.name=FOLM1B (Unpowered)
+entity.tc.BUnitFOL-M1B.name=FOL-M1B (Unpowered)
 entity.tc.Krautt.name=Krauss-Maffei ML-4000
 entity.tc.ILMC.name=I.L.M.C
 

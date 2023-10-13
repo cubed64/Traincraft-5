@@ -17,7 +17,9 @@ public class DieselDash840BW extends DieselTrain {
     public DieselDash840BW(World world) {
         super(world, EnumTrains.Dash840BW.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "ATSF");
+        textureDescriptionMap.put(1, "Morristown Tenneva & Southern");
+        textureDescriptionMap.put(2, "North Fox (Early)");
     }
     public DieselDash840BW(World world, double d, double d1, double d2){
         this(world);

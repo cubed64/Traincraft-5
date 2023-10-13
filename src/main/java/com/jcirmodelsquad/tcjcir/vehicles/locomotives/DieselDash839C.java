@@ -18,6 +18,15 @@ public class DieselDash839C extends DieselTrain {
     public DieselDash839C(World world) {
         super(world, EnumTrains.Dash839C.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "Conrail");
+        textureDescriptionMap.put(1, "CSXT (YN2)");
+        textureDescriptionMap.put(2, "Norfolk Southern");
+        textureDescriptionMap.put(3, "Nomansi and Eastern Pacific");
+        textureDescriptionMap.put(4, "North Fox (Early)");
+        textureDescriptionMap.put(5, "Blandsville & Blankerston");
+        textureDescriptionMap.put(6, "Magnolia Acres");
+        textureDescriptionMap.put(7, "Nautilus");
+        textureDescriptionMap.put(8, "Ann Arbor (but awesomer)");
     }
     public DieselDash839C(World world, double d, double d1, double d2){
         this(world);

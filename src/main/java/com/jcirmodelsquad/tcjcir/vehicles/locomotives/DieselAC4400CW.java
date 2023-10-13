@@ -18,6 +18,9 @@ public class DieselAC4400CW extends DieselTrain {
     public DieselAC4400CW(World world) {
         super(world, EnumTrains.AC4400CW.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "CSXT (YN2)");
+        textureDescriptionMap.put(1, "Nomansi and Eastern Pacific");
+        textureDescriptionMap.put(2, "Blandsville & Blankerston");
     }
     public DieselAC4400CW(World world, double d, double d1, double d2){
         this(world);

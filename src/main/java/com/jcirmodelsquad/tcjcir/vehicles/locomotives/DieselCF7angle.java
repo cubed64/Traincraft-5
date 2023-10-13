@@ -18,6 +18,37 @@ public class DieselCF7angle extends DieselTrain {
     public DieselCF7angle(World world) {
         super(world, EnumTrains.CF7angle.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "ATSF (2444)");
+        textureDescriptionMap.put(1, "ATSF (2546)");
+        textureDescriptionMap.put(2, "Washington Central Railroad");
+        textureDescriptionMap.put(3, "Fox Union Rail Resources (FURRX)");
+        textureDescriptionMap.put(4, "Avanste Northeastern");
+        textureDescriptionMap.put(5, "Columbus & Greenville Railway");
+        textureDescriptionMap.put(6, "Red River Valley & Western");
+        textureDescriptionMap.put(7, "Twin Cities & Western");
+        textureDescriptionMap.put(8, "Los Angeles Junction");
+        textureDescriptionMap.put(9, "WATCO 6");
+        textureDescriptionMap.put(10, "WATCO 7");
+        textureDescriptionMap.put(11, "WATX 1002");
+        textureDescriptionMap.put(12, "WAMX 7108");
+        textureDescriptionMap.put(13, "WATX 2633");
+        textureDescriptionMap.put(14, "Grafton & Upton");
+        textureDescriptionMap.put(15, "Blandsville & Blankerston");
+        textureDescriptionMap.put(16, "Fox, North Coast & Cascades (CEE License Built)");
+        textureDescriptionMap.put(17, "Fox, North Coast & Cascades (ATSF Rehabilitated)");
+        textureDescriptionMap.put(18, "CSWR");
+        textureDescriptionMap.put(19, "Delta Southern");
+        textureDescriptionMap.put(20, "Carbondale & Pine Valley");
+        textureDescriptionMap.put(21, "Morristown, Tenneva & Southern");
+        textureDescriptionMap.put(22, "Morristown, Tenneva & Southern (Ex ANE)");
+        textureDescriptionMap.put(23, "Midwest Coal Handling");
+        textureDescriptionMap.put(24, "Mississippi & Skuna Valley D-5");
+        textureDescriptionMap.put(25, "Atlas & Red Sands Railroad");
+        textureDescriptionMap.put(26, "Gloster Southern");
+        textureDescriptionMap.put(27, "Port of Latona Terminal Railroad");
+        textureDescriptionMap.put(28, "Washaska & Old Fox RR Co 19");
+        textureDescriptionMap.put(29, "Washaska & Old Fox RR Co 20");
+        textureDescriptionMap.put(30, "Morristown, Tenneva & Southern 1776");
     }
     public DieselCF7angle(World world, double d, double d1, double d2){
         this(world);

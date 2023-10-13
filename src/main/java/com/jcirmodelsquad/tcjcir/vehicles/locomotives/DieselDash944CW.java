@@ -18,6 +18,20 @@ public class DieselDash944CW extends DieselTrain {
     public DieselDash944CW(World world) {
         super(world, EnumTrains.Dash944CW.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "Norfolk Southern");
+        textureDescriptionMap.put(1, "Norfolk Southern (9634)");
+        textureDescriptionMap.put(2, "Blandsvill & Blankerston");
+        textureDescriptionMap.put(3, "Fox Union Rail Resources (FURRX)");
+        textureDescriptionMap.put(4, "BNSF (H1)");
+        textureDescriptionMap.put(5, "Southern Pacific");
+        textureDescriptionMap.put(6, "Southern Pacific (UP Patch)");
+        textureDescriptionMap.put(7, "Chicago Northwestern");
+        textureDescriptionMap.put(8, "Morristown Tenneva & Southern");
+        textureDescriptionMap.put(9, "Avanste Northeastern");
+        textureDescriptionMap.put(10, "Gaysburg Shitty railroad and who gives 2 fucks");
+        textureDescriptionMap.put(11, "CSWR");
+        textureDescriptionMap.put(12, "ATSF");
+        textureDescriptionMap.put(13, "ATSF (BNSF Patch)");
     }
     public DieselDash944CW(World world, double d, double d1, double d2){
         this(world);

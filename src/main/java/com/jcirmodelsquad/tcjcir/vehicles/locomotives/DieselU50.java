@@ -17,7 +17,13 @@ public class DieselU50 extends DieselTrain {
     public DieselU50(World world) {
         super(world, EnumTrains.U50.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Union Pacific");
+        textureDescriptionMap.put(1, "Southern Pacific");
+        textureDescriptionMap.put(2, "Fox, North Coast & Cascades");
+        textureDescriptionMap.put(3, "Blandsville & Blankerston");
+        textureDescriptionMap.put(4, "Southfield");
+        textureDescriptionMap.put(5, "Southfield De Mexico");
+        textureDescriptionMap.put(6, "Penn Central the objectively best railroad to own the U50 guys i swear PC owned like 30 of them trust me bro my source is that i MADE IT THE FUCK UP");
     }
     public DieselU50(World world, double d, double d1, double d2){
         this(world);

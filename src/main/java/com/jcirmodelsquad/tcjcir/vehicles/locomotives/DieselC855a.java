@@ -17,7 +17,8 @@ public class DieselC855a extends DieselTrain {
     public DieselC855a(World world) {
         super(world, EnumTrains.C855a.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Union Pacific");
+        textureDescriptionMap.put(1, "Fox, North Coast & Cascades");
     }
     public DieselC855a(World world, double d, double d1, double d2){
         this(world);

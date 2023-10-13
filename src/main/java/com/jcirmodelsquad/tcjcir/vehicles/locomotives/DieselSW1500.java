@@ -18,6 +18,27 @@ public class DieselSW1500 extends DieselTrain {
     public DieselSW1500(World world) {
         super(world, EnumTrains.SW1500.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "Denver SUCK MY FUCKIN BALLS cock sucker island (stupid) mofo Volkswagon 1083 deez nuts express");
+        textureDescriptionMap.put(1, "Blandsville & Blankerston");
+        textureDescriptionMap.put(2, "Southern Pacific");
+        textureDescriptionMap.put(3, "CFW (SP-UP Patch)");
+        textureDescriptionMap.put(4, "Penn Central");
+        textureDescriptionMap.put(5, "GM Demonstrator");
+        textureDescriptionMap.put(6, "BNSF H1");
+        textureDescriptionMap.put(7, "North Fox (Switcher Scheme)");
+        textureDescriptionMap.put(8, "Fox, North Coast & Cascades");
+        textureDescriptionMap.put(9, "Indiana Harbor Belt");
+        textureDescriptionMap.put(10, "Nomansi and Eastern Pacific? maybe?");
+        textureDescriptionMap.put(11, "CSXT (lame future)");
+        textureDescriptionMap.put(12, "Port of Latona Terminal Railroad");
+        textureDescriptionMap.put(13, "Messicrew Tenneva & Southern");
+        textureDescriptionMap.put(14, "Southern Port Belt");
+        textureDescriptionMap.put(15, "Western Pacific (Preserved)");
+        textureDescriptionMap.put(16, "Western Pacific");
+        textureDescriptionMap.put(17, "Western Pacific (Late)");
+        textureDescriptionMap.put(18, "Apalachicola Northern");
+        textureDescriptionMap.put(19, "Canadian National (WC)");
+        textureDescriptionMap.put(20, "Grassland Labratories");
     }
     public DieselSW1500(World world, double d, double d1, double d2){
         this(world);

@@ -19,7 +19,7 @@ public class DieselBQ23 extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "Family Lines (As Delivered)");
         textureDescriptionMap.put(1, "Providence & Worcester");
-        textureDescriptionMap.put(2, "Blandsville & Blasic");
+        textureDescriptionMap.put(2, "Blandsville & Blankerston");
         textureDescriptionMap.put(3, "Fox, North Coast & Cascades");
         textureDescriptionMap.put(4, "CSXT YN2 3003");
         textureDescriptionMap.put(5, "CSXT YN2 (Post 90s)");

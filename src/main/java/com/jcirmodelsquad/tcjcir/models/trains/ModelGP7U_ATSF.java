@@ -1698,7 +1698,7 @@ public class ModelGP7U_ATSF extends ModelConverter //Same as Filename
 			GL11.glTranslated(2.74, 0, 0);//rear
 			theB.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3546){
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.37, -0.0, 0);//front & rear

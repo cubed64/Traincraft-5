@@ -17,7 +17,7 @@ public class DieselC415L extends DieselTrain {
     public DieselC415L(World world) {
         super(world, EnumTrains.C415L.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Mongolia Connecting Railroad");
     }
     public DieselC415L(World world, double d, double d1, double d2){
         this(world);

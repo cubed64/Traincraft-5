@@ -1752,7 +1752,7 @@ public class ModelU23B extends ModelConverter //Same as Filename
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19324){
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 25){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.54, -0.025, 0);

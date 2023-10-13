@@ -17,7 +17,19 @@ public class DieselU25B extends DieselTrain {
     public DieselU25B(World world) {
         super(world, EnumTrains.U25B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "New Haven");
+        textureDescriptionMap.put(1, "Blandsville & Blankerston");
+        textureDescriptionMap.put(2, "Fox, North Coast & Cascades (Early)");
+        textureDescriptionMap.put(3, "Fox, North Coast & Cascades");
+        textureDescriptionMap.put(4, "Great Northern (BSB)");
+        textureDescriptionMap.put(5, "Great Northern (EB Simp)");
+        textureDescriptionMap.put(6, "the Milwaukee Road");
+        textureDescriptionMap.put(7, "Burlington Northern");
+        textureDescriptionMap.put(8, "Deadwood & La Mesa (hamburger helper rayroad)");
+        textureDescriptionMap.put(9, "Burlington");
+        textureDescriptionMap.put(10, "Nautilus");
+        textureDescriptionMap.put(11, "New York Central (Early 60s)");
+        textureDescriptionMap.put(12, "New York Central (Very Late 60s)");
     }
     public DieselU25B(World world, double d, double d1, double d2){
         this(world);

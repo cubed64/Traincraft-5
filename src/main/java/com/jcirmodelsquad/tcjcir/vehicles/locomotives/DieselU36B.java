@@ -17,7 +17,13 @@ public class DieselU36B extends DieselTrain {
     public DieselU36B(World world) {
         super(world, EnumTrains.U36B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "auto-train Corp");
+        textureDescriptionMap.put(1, "Fox, North Coast & Cascades");
+        textureDescriptionMap.put(2, "Transkentucky Transportation Ind");
+        textureDescriptionMap.put(3, "Blandsville & Blankerston");
+        textureDescriptionMap.put(4, "CSXT (YN2)");
+        textureDescriptionMap.put(5, "she consolodate on my rail till i coperation");
+        textureDescriptionMap.put(6, "Western Pacific");
     }
     public DieselU36B(World world, double d, double d1, double d2){
         this(world);

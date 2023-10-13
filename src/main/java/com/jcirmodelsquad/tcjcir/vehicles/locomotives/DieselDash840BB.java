@@ -17,7 +17,8 @@ public class DieselDash840BB extends DieselTrain {
     public DieselDash840BB(World world) {
         super(world, EnumTrains.Dash840BB.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "ATSF");
+        textureDescriptionMap.put(1, "North Fox (Early)");
     }
     public DieselDash840BB(World world, double d, double d1, double d2){
         this(world);

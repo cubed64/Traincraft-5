@@ -17,7 +17,27 @@ public class DieselU23B extends DieselTrain {
     public DieselU23B(World world) {
         super(world, EnumTrains.U23B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Union Pacific");
+        textureDescriptionMap.put(1, "Fox Union Rail Resources (FURRX)");
+        textureDescriptionMap.put(2, "Fox, North Coast & Cascades");
+        textureDescriptionMap.put(3, "Fox, North Coast & Cascades (Early)");
+        textureDescriptionMap.put(4, "Fox, North Coast & Cascades (100 Years Bicentennial)");
+        textureDescriptionMap.put(5, "Conrail");
+        textureDescriptionMap.put(6, "Blandsville & Blankerston");
+        textureDescriptionMap.put(7, "Deep Rock Railroad");
+        textureDescriptionMap.put(8, "Deep Rock Railroad (C&PV Patch)");
+        textureDescriptionMap.put(9, "Carbondale & Pine Valley");
+        textureDescriptionMap.put(10, "ATSF (Pinstripe)");
+        textureDescriptionMap.put(11, "ATSF (Freightbonnet)");
+        textureDescriptionMap.put(12, "Deleware & Hudson");
+        textureDescriptionMap.put(13, "Southern");
+        textureDescriptionMap.put(14, "MoPac");
+        textureDescriptionMap.put(15, "Western Pacific");
+        textureDescriptionMap.put(16, "Western Pacific");
+        textureDescriptionMap.put(17, "Deadwood & La Mesa");
+        textureDescriptionMap.put(18, "CSXT (YN2)");
+        textureDescriptionMap.put(19, "Penn Central");
+        textureDescriptionMap.put(20, "Seaboard System");
     }
     public DieselU23B(World world, double d, double d1, double d2){
         this(world);
