@@ -24,15 +24,16 @@ public class DieselB23 extends DieselTrain {
         textureDescriptionMap.put(4, "Fox, North Coast & Cascades (Late Order)");
         textureDescriptionMap.put(5, "Blandsville & Blankerston");
         textureDescriptionMap.put(6, "Western Pacific");
-        textureDescriptionMap.put(7, "CSXT (YN1)");
-        textureDescriptionMap.put(8, "Conrail");
-        textureDescriptionMap.put(9, "Norfolk Southern");
-        textureDescriptionMap.put(10, "Union Pacific (CCRCL)");
-        textureDescriptionMap.put(11, "Staff Storage Mountain Co.");
-        textureDescriptionMap.put(12, "USSC");
-        textureDescriptionMap.put(13, "CSXT (YN2)");
-        textureDescriptionMap.put(14, "Union Pacific");
-        textureDescriptionMap.put(15, "Providence & Worcester");
+        textureDescriptionMap.put(7, "Western Pacific (Post 90s)");
+        textureDescriptionMap.put(8, "CSXT (YN1)");
+        textureDescriptionMap.put(9, "Conrail");
+        textureDescriptionMap.put(10, "Norfolk Southern");
+        textureDescriptionMap.put(11, "Union Pacific (CCRCL)");
+        textureDescriptionMap.put(12, "Staff Storage Mountain Co.");
+        textureDescriptionMap.put(13, "USSC");
+        textureDescriptionMap.put(14, "CSXT (YN2)");
+        textureDescriptionMap.put(15, "Union Pacific");
+        textureDescriptionMap.put(16, "Providence & Worcester");
     }
     public DieselB23(World world, double d, double d1, double d2){
         this(world);

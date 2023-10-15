@@ -18,6 +18,7 @@ public class DieselCF7angle2 extends DieselTrain {
     public DieselCF7angle2(World world) {
         super(world, EnumTrains.CF7angle2.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(6, "CFW 1504");
     }
     public DieselCF7angle2(World world, double d, double d1, double d2){
         this(world);
