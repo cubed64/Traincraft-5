@@ -27,7 +27,7 @@ public class ModelACFGN60SeatCoach extends ModelConverter//Same as Filename
 
 	public ModelACFGN60SeatCoach() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[567];
+		bodyModel = new ModelRendererTurbo[572];
 
 		initbodyModel_1();
 		initbodyModel_2();
@@ -2259,6 +2259,11 @@ public class ModelACFGN60SeatCoach extends ModelConverter//Same as Filename
 		bodyModel[564] = new ModelRendererTurbo(this, 366, 101, textureX, textureY); // Box 261
 		bodyModel[565] = new ModelRendererTurbo(this, 8, 119, textureX, textureY); // Box 128
 		bodyModel[566] = new ModelRendererTurbo(this, 8, 117, textureX, textureY); // Box 261
+		bodyModel[567] = new ModelRendererTurbo(this, 72, 339, textureX, textureY); // Box 128
+		bodyModel[568] = new ModelRendererTurbo(this, 78, 337, textureX, textureY); // Box 38
+		bodyModel[569] = new ModelRendererTurbo(this, 78, 335, textureX, textureY); // Box 452
+		bodyModel[570] = new ModelRendererTurbo(this, 99, 333, textureX, textureY); // Box 38
+		bodyModel[571] = new ModelRendererTurbo(this, 99, 331, textureX, textureY); // Box 452
 
 		bodyModel[500].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, -0.5F, 0F, -0.5F, -0.5F); // Box 528
 		bodyModel[500].setRotationPoint(-48F, -3.5F, -1.5F);
@@ -2460,12 +2465,27 @@ public class ModelACFGN60SeatCoach extends ModelConverter//Same as Filename
 
 		bodyModel[566].addShapeBox(0F, 0F, 0F, 0, 1, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 261
 		bodyModel[566].setRotationPoint(-63.5F, -7F, 5F);
+
+		bodyModel[567].addShapeBox(0F, 0F, 0F, 123, 2, 7, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F); // Box 128
+		bodyModel[567].setRotationPoint(-61.5F, -20F, -3F);
+
+		bodyModel[568].addBox(0F, 0F, 0F, 116, 1, 0, 0F); // Box 38
+		bodyModel[568].setRotationPoint(-60.5F, -13.5F, -11.01F);
+
+		bodyModel[569].addBox(0F, 0F, 0F, 116, 1, 0, 0F); // Box 452
+		bodyModel[569].setRotationPoint(-60.5F, -13.5F, 11.01F);
+
+		bodyModel[570].addBox(0F, 0F, 0F, 95, 1, 0, 0F); // Box 38
+		bodyModel[570].setRotationPoint(-47.5F, -1.5F, -11.01F);
+
+		bodyModel[571].addBox(0F, 0F, 0F, 95, 1, 0, 0F); // Box 452
+		bodyModel[571].setRotationPoint(-47.5F, -1.5F, 11.01F);
 	}
 	ModelPS_Truck bogie1 = new ModelPS_Truck();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for(int i = 0; i < 567; i++)
+		for(int i = 0; i < 572; i++)
 		{
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("glow")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);

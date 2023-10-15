@@ -27,7 +27,7 @@ public class ModelPS30SeatParlor extends ModelConverter//Same as Filename
 
 	public ModelPS30SeatParlor() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[478];
+		bodyModel = new ModelRendererTurbo[481];
 
 		initbodyModel_1();
 
@@ -517,6 +517,9 @@ public class ModelPS30SeatParlor extends ModelConverter//Same as Filename
 		bodyModel[475] = new ModelRendererTurbo(this, 174, 222, textureX, textureY); // Box 476
 		bodyModel[476] = new ModelRendererTurbo(this, 106, 274, textureX, textureY, "glow"); // Box 275 glow
 		bodyModel[477] = new ModelRendererTurbo(this, 107, 189, textureX, textureY, "glow"); // Box 285 glow
+		bodyModel[478] = new ModelRendererTurbo(this, 72, 373, textureX, textureY); // Box 128
+		bodyModel[479] = new ModelRendererTurbo(this, 78, 371, textureX, textureY); // Box 38
+		bodyModel[480] = new ModelRendererTurbo(this, 78, 369, textureX, textureY); // Box 452
 
 		bodyModel[0].addBox(0F, 0F, 0F, 118, 2, 22, 0F); // Box 2
 		bodyModel[0].setRotationPoint(-61.5F, 1F, -11F);
@@ -2099,13 +2102,22 @@ public class ModelPS30SeatParlor extends ModelConverter//Same as Filename
 
 		bodyModel[477].addBox(0F, 0F, 0F, 84, 0, 1, 0F); // Box 285 glow
 		bodyModel[477].setRotationPoint(-44.5F, -12.99F, 7.5F);
+
+		bodyModel[478].addShapeBox(0F, 0F, 0F, 123, 2, 7, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F); // Box 128
+		bodyModel[478].setRotationPoint(-61.5F, -20F, -3F);
+
+		bodyModel[479].addBox(0F, 0F, 0F, 116, 1, 0, 0F); // Box 38
+		bodyModel[479].setRotationPoint(-60.5F, -13.5F, -11.01F);
+
+		bodyModel[480].addBox(0F, 0F, 0F, 116, 1, 0, 0F); // Box 452
+		bodyModel[480].setRotationPoint(-60.5F, -13.5F, 11.01F);
 	}
 
 	ModelPS_Truck bogie1 = new ModelPS_Truck();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for(int i = 0; i < 478; i++)
+		for(int i = 0; i < 481; i++)
 		{
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("glow")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);

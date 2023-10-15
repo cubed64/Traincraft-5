@@ -27,7 +27,7 @@ public class ModelPSSleeper565DRGW extends ModelConverter //Same as Filename
 
 	public ModelPSSleeper565DRGW() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[576];
+		bodyModel = new ModelRendererTurbo[579];
 
 		initbodyModel_1();
 		initbodyModel_2();
@@ -2191,6 +2191,9 @@ public class ModelPSSleeper565DRGW extends ModelConverter //Same as Filename
 		bodyModel[573] = new ModelRendererTurbo(this, 194, 363, textureX, textureY); // Section sliding part
 		bodyModel[574] = new ModelRendererTurbo(this, 109, 363, textureX, textureY); // Section sliding part
 		bodyModel[575] = new ModelRendererTurbo(this, 24, 363, textureX, textureY); // Section sliding part
+		bodyModel[576] = new ModelRendererTurbo(this, 72, 480, textureX, textureY); // Box 128
+		bodyModel[577] = new ModelRendererTurbo(this, 279, 336, textureX, textureY); // Box 38
+		bodyModel[578] = new ModelRendererTurbo(this, 279, 334, textureX, textureY); // Box 452
 
 		bodyModel[500].addShapeBox(0F, -4F, 0F, 1, 4, 6, 0F,0F, 0F, 0F, -0.99F, 0F, 0F, -0.99F, 0F, 0F, 0F, 0F, 0F, 0F, 0.01F, 0F, -0.99F, 0.01F, 0F, -0.99F, 0.01F, 0F, 0F, 0.01F, 0F); // Section rotating part F
 		bodyModel[500].setRotationPoint(46.49F, -3.01F, -10F);
@@ -2437,12 +2440,21 @@ public class ModelPSSleeper565DRGW extends ModelConverter //Same as Filename
 
 		bodyModel[575].addShapeBox(0F, 0F, 0F, 2, 2, 6, 0F,0F, -0.01F, 0F, 0F, -0.01F, 0F, 0F, -0.01F, 0F, 0F, -0.01F, 0F, 0F, -0.01F, 0F, 0F, -0.01F, 0F, 0F, -0.01F, 0F, 0F, -0.01F, 0F); // Section sliding part
 		bodyModel[575].setRotationPoint(26F, -3F, -10F);
+
+		bodyModel[576].addShapeBox(0F, 0F, 0F, 123, 2, 7, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F); // Box 128
+		bodyModel[576].setRotationPoint(-61.5F, -20F, -3F);
+
+		bodyModel[577].addBox(0F, 0F, 0F, 116, 1, 0, 0F); // Box 38
+		bodyModel[577].setRotationPoint(-60.5F, -13.5F, -11.01F);
+
+		bodyModel[578].addBox(0F, 0F, 0F, 116, 1, 0, 0F); // Box 452
+		bodyModel[578].setRotationPoint(-60.5F, -13.5F, 11.01F);
 	}
 	ModelPS_Truck bogie1 = new ModelPS_Truck();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for(int i = 0; i < 576; i++)
+		for(int i = 0; i < 579; i++)
 		{
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("glow")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
