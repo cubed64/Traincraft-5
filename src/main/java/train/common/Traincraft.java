@@ -70,6 +70,7 @@ public class Traincraft {
 	public static SimpleNetworkWrapper lockChannel;
 	public static SimpleNetworkWrapper builderChannel;
 	public static SimpleNetworkWrapper switchStandLockChannel;
+	public static SimpleNetworkWrapper cargoSelectionChannel;
 	public static SimpleNetworkWrapper paintbrushColorChannel;
 	public static SimpleNetworkWrapper updateTrainIDChannel = NetworkRegistry.INSTANCE.newSimpleChannel("TrainIDChannel");
 	public static SimpleNetworkWrapper updateDestinationChannel = NetworkRegistry.INSTANCE.newSimpleChannel("updateDestnChannel");

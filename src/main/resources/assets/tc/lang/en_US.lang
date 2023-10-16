@@ -93,6 +93,8 @@ paintbrushmenu.Lights On.name=Lights On
 paintbrushmenu.Lights Off.name=Lights Off
 paintbrushmenu.Hide Models.name=Hide Models
 paintbrushmenu.Show Models.name=Show Models
+paintbrushmenu.Load Cargo.name=Load Cargo
+paintbrushmenu.No Cargo.name=No Cargo
 
 lockmenu.Unlock.name=Unlock
 lockmenu.Lock.name=Lock

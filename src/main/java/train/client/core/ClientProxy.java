@@ -291,7 +291,9 @@ public class ClientProxy extends CommonProxy {
 			}
 		case (GuiIDs.LOCK_MENU_SWITCHES):
 			return (te instanceof TileSwitchStand ? new GuiLockMenuSwitches(player, ((TileSwitchStand) te)) : null);
-			case (GuiIDs.CREDITS_BOOK):
+		case (GuiIDs.CARGO_MENU):
+				return entity1 != null ? new GuiCargoSelection(player, ((EntityRollingStock) entity1)) : null;
+		case (GuiIDs.CREDITS_BOOK):
 				return new GUICreditsBook(player, player.getCurrentEquippedItem());
 		case (GuiIDs.LANTERN):
 			return new GuiLantern(player, (TileLantern)te);
