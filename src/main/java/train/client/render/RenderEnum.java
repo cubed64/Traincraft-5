@@ -1440,6 +1440,10 @@ RenderEnum {
 	OB92SeatCoach(OB92SeatCoach.class, new ModelOB92SeatCoach(), "OB_lightweight_92SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	PSCNW56SeatCoach(PSCNW56SeatCoach.class, new ModelPSCNW56SeatCoach(), "PS_lightweight_CNW56SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCNW48SeatCoach_Lounge(PSCNW48SeatCoach_Lounge.class, new ModelPSCNW48SeatCoach_Lounge(), "PS_lightweight_CNW48SeatCoach_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCNW20SeatCoach_Lounge(PSCNW20SeatCoach_Lounge.class, new ModelPSCNW20SeatCoach_Lounge(), "PS_lightweight_CNW20SeatCoach_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCNW36SeatCoach_Dinette(PSCNW36SeatCoach_Dinette.class, new ModelPSCNW36SeatCoach_Dinette(), "PS_lightweight_CNW36SeatCoach_Dinette_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+
 
 	BuddRDG56SeatCoach_Lounge(BuddRDG56SeatCoach_Lounge.class, new ModelBuddRDG56SeatCoach_Lounge(), "Budd_lightweight_RDG56SeatCoach_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 
