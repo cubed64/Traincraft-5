@@ -27,7 +27,7 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 
 	public ModelPSCNW56SeatCoach() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[628];
+		bodyModel = new ModelRendererTurbo[648];
 
 		initbodyModel_1();
 		initbodyModel_2();
@@ -324,7 +324,7 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 		bodyModel[281] = new ModelRendererTurbo(this, 1, 244, textureX, textureY); // Box 128
 		bodyModel[282] = new ModelRendererTurbo(this, 15, 263, textureX, textureY); // Box 128
 		bodyModel[283] = new ModelRendererTurbo(this, 15, 239, textureX, textureY); // Box 185
-		bodyModel[284] = new ModelRendererTurbo(this, 176, 250, textureX, textureY, "cull"); // Box 275 cull
+		bodyModel[284] = new ModelRendererTurbo(this, 176, 250, textureX, textureY,"cull"); // Box 275 cull
 		bodyModel[285] = new ModelRendererTurbo(this, 177, 244, textureX, textureY,"glow"); // Box 38 glow
 		bodyModel[286] = new ModelRendererTurbo(this, 177, 255, textureX, textureY,"glow"); // Box 38 glow
 		bodyModel[287] = new ModelRendererTurbo(this, 284, 247, textureX, textureY,"glow"); // Box 38 glow
@@ -334,11 +334,11 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 		bodyModel[291] = new ModelRendererTurbo(this, 256, 247, textureX, textureY,"glow"); // Box 38 glow
 		bodyModel[292] = new ModelRendererTurbo(this, 249, 247, textureX, textureY,"glow"); // Box 38 glow
 		bodyModel[293] = new ModelRendererTurbo(this, 242, 247, textureX, textureY,"glow"); // Box 38 glow
-		bodyModel[294] = new ModelRendererTurbo(this, 111, 263, textureX, textureY); // Box 38
+		bodyModel[294] = new ModelRendererTurbo(this, 110, 262, textureX, textureY); // Box 38
 		bodyModel[295] = new ModelRendererTurbo(this, 116, 289, textureX, textureY); // Box 38
-		bodyModel[296] = new ModelRendererTurbo(this, 149, 298, textureX, textureY); // Box 38
+		bodyModel[296] = new ModelRendererTurbo(this, 148, 297, textureX, textureY); // Box 38
 		bodyModel[297] = new ModelRendererTurbo(this, 20, 289, textureX, textureY); // Box 38
-		bodyModel[298] = new ModelRendererTurbo(this, 1, 298, textureX, textureY); // Box 38
+		bodyModel[298] = new ModelRendererTurbo(this, 0, 297, textureX, textureY); // Box 38
 		bodyModel[299] = new ModelRendererTurbo(this, 111, 303, textureX, textureY); // Box 38
 		bodyModel[300] = new ModelRendererTurbo(this, 101, 268, textureX, textureY); // Box 38
 		bodyModel[301] = new ModelRendererTurbo(this, 53, 303, textureX, textureY); // Box 38
@@ -382,38 +382,38 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 		bodyModel[339] = new ModelRendererTurbo(this, 485, 260, textureX, textureY); // Box 41
 		bodyModel[340] = new ModelRendererTurbo(this, 466, 241, textureX, textureY); // Box 462
 		bodyModel[341] = new ModelRendererTurbo(this, 479, 322, textureX, textureY); // Box 38
-		bodyModel[342] = new ModelRendererTurbo(this, 478, 263, textureX, textureY, "cull"); // Box 38 cull
-		bodyModel[343] = new ModelRendererTurbo(this, 464, 333, textureX, textureY, "cull"); // Box 38 cull
+		bodyModel[342] = new ModelRendererTurbo(this, 478, 263, textureX, textureY,"cull"); // Box 38 cull
+		bodyModel[343] = new ModelRendererTurbo(this, 464, 333, textureX, textureY,"cull"); // Box 38 cull
 		bodyModel[344] = new ModelRendererTurbo(this, 496, 261, textureX, textureY); // Box 347
 		bodyModel[345] = new ModelRendererTurbo(this, 441, 254, textureX, textureY); // Box 38
 		bodyModel[346] = new ModelRendererTurbo(this, 454, 254, textureX, textureY); // Box 38
-		bodyModel[347] = new ModelRendererTurbo(this, 454, 260, textureX, textureY, "cull"); // Box 38 cull
+		bodyModel[347] = new ModelRendererTurbo(this, 454, 260, textureX, textureY,"cull"); // Box 38 cull
 		bodyModel[348] = new ModelRendererTurbo(this, 458, 246, textureX, textureY); // Box 38
-		bodyModel[349] = new ModelRendererTurbo(this, 471, 263, textureX, textureY, "cull"); // Box 38 cull
+		bodyModel[349] = new ModelRendererTurbo(this, 471, 263, textureX, textureY,"cull"); // Box 38 cull
 		bodyModel[350] = new ModelRendererTurbo(this, 72, 376, textureX, textureY); // Box 492
 		bodyModel[351] = new ModelRendererTurbo(this, 77, 393, textureX, textureY); // Box 493
-		bodyModel[352] = new ModelRendererTurbo(this, 58, 380, textureX, textureY, "cull"); // Box 495 cull
-		bodyModel[353] = new ModelRendererTurbo(this, 88, 380, textureX, textureY, "cull"); // Box 495 cull
+		bodyModel[352] = new ModelRendererTurbo(this, 58, 380, textureX, textureY,"cull"); // Box 495 cull
+		bodyModel[353] = new ModelRendererTurbo(this, 88, 380, textureX, textureY,"cull"); // Box 495 cull
 		bodyModel[354] = new ModelRendererTurbo(this, 73, 383, textureX, textureY); // Box 493
 		bodyModel[355] = new ModelRendererTurbo(this, 74, 348, textureX, textureY); // Box 492
 		bodyModel[356] = new ModelRendererTurbo(this, 102, 354, textureX, textureY); // Box 493
-		bodyModel[357] = new ModelRendererTurbo(this, 91, 368, textureX, textureY, "cull"); // Box 495 cull
-		bodyModel[358] = new ModelRendererTurbo(this, 91, 342, textureX, textureY, "cull"); // Box 495 cull
+		bodyModel[357] = new ModelRendererTurbo(this, 91, 368, textureX, textureY,"cull"); // Box 495 cull
+		bodyModel[358] = new ModelRendererTurbo(this, 91, 342, textureX, textureY,"cull"); // Box 495 cull
 		bodyModel[359] = new ModelRendererTurbo(this, 89, 354, textureX, textureY); // Box 493
 		bodyModel[360] = new ModelRendererTurbo(this, 75, 310, textureX, textureY); // Box 492
 		bodyModel[361] = new ModelRendererTurbo(this, 103, 316, textureX, textureY); // Box 493
-		bodyModel[362] = new ModelRendererTurbo(this, 91, 330, textureX, textureY, "cull"); // Box 495 cull
-		bodyModel[363] = new ModelRendererTurbo(this, 92, 304, textureX, textureY, "cull"); // Box 495 cull
+		bodyModel[362] = new ModelRendererTurbo(this, 91, 330, textureX, textureY,"cull"); // Box 495 cull
+		bodyModel[363] = new ModelRendererTurbo(this, 92, 304, textureX, textureY,"cull"); // Box 495 cull
 		bodyModel[364] = new ModelRendererTurbo(this, 90, 316, textureX, textureY); // Box 493
 		bodyModel[365] = new ModelRendererTurbo(this, 69, 318, textureX, textureY); // Box 492
 		bodyModel[366] = new ModelRendererTurbo(this, 53, 316, textureX, textureY); // Box 493
-		bodyModel[367] = new ModelRendererTurbo(this, 58, 330, textureX, textureY, "cull"); // Box 495 cull
-		bodyModel[368] = new ModelRendererTurbo(this, 58, 304, textureX, textureY, "cull"); // Box 495 cull
+		bodyModel[367] = new ModelRendererTurbo(this, 58, 330, textureX, textureY,"cull"); // Box 495 cull
+		bodyModel[368] = new ModelRendererTurbo(this, 58, 304, textureX, textureY,"cull"); // Box 495 cull
 		bodyModel[369] = new ModelRendererTurbo(this, 56, 316, textureX, textureY); // Box 493
 		bodyModel[370] = new ModelRendererTurbo(this, 69, 356, textureX, textureY); // Box 492
 		bodyModel[371] = new ModelRendererTurbo(this, 53, 354, textureX, textureY); // Box 493
-		bodyModel[372] = new ModelRendererTurbo(this, 58, 368, textureX, textureY, "cull"); // Box 495 cull
-		bodyModel[373] = new ModelRendererTurbo(this, 58, 342, textureX, textureY, "cull"); // Box 495 cull
+		bodyModel[372] = new ModelRendererTurbo(this, 58, 368, textureX, textureY,"cull"); // Box 495 cull
+		bodyModel[373] = new ModelRendererTurbo(this, 58, 342, textureX, textureY,"cull"); // Box 495 cull
 		bodyModel[374] = new ModelRendererTurbo(this, 56, 354, textureX, textureY); // Box 493
 		bodyModel[375] = new ModelRendererTurbo(this, 420, 270, textureX, textureY); // Right seat part
 		bodyModel[376] = new ModelRendererTurbo(this, 409, 270, textureX, textureY); // Right seat part
@@ -441,8 +441,8 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 		bodyModel[398] = new ModelRendererTurbo(this, 420, 317, textureX, textureY); // Left seat part
 		bodyModel[399] = new ModelRendererTurbo(this, 434, 314, textureX, textureY); // Left seat part
 		bodyModel[400] = new ModelRendererTurbo(this, 407, 318, textureX, textureY); // Boc 42
-		bodyModel[401] = new ModelRendererTurbo(this, 405, 309, textureX, textureY, "cull"); // Left seat part cull
-		bodyModel[402] = new ModelRendererTurbo(this, 405, 280, textureX, textureY, "cull"); // Right seat part cull
+		bodyModel[401] = new ModelRendererTurbo(this, 405, 309, textureX, textureY,"cull"); // Left seat part cull
+		bodyModel[402] = new ModelRendererTurbo(this, 405, 280, textureX, textureY,"cull"); // Right seat part cull
 		bodyModel[403] = new ModelRendererTurbo(this, 384, 270, textureX, textureY); // Right seat part
 		bodyModel[404] = new ModelRendererTurbo(this, 384, 299, textureX, textureY); // Left seat part
 		bodyModel[405] = new ModelRendererTurbo(this, 373, 299, textureX, textureY); // Left seat part
@@ -468,8 +468,8 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 		bodyModel[425] = new ModelRendererTurbo(this, 384, 317, textureX, textureY); // Left seat part
 		bodyModel[426] = new ModelRendererTurbo(this, 398, 314, textureX, textureY); // Left seat part
 		bodyModel[427] = new ModelRendererTurbo(this, 371, 318, textureX, textureY); // Boc 42
-		bodyModel[428] = new ModelRendererTurbo(this, 369, 309, textureX, textureY, "cull"); // Left seat part cull
-		bodyModel[429] = new ModelRendererTurbo(this, 369, 280, textureX, textureY, "cull"); // Right seat part cull
+		bodyModel[428] = new ModelRendererTurbo(this, 369, 309, textureX, textureY,"cull"); // Left seat part cull
+		bodyModel[429] = new ModelRendererTurbo(this, 369, 280, textureX, textureY,"cull"); // Right seat part cull
 		bodyModel[430] = new ModelRendererTurbo(this, 373, 270, textureX, textureY); // Right seat part
 		bodyModel[431] = new ModelRendererTurbo(this, 348, 270, textureX, textureY); // Right seat part
 		bodyModel[432] = new ModelRendererTurbo(this, 348, 299, textureX, textureY); // Left seat part
@@ -496,8 +496,8 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 		bodyModel[453] = new ModelRendererTurbo(this, 348, 317, textureX, textureY); // Left seat part
 		bodyModel[454] = new ModelRendererTurbo(this, 362, 314, textureX, textureY); // Left seat part
 		bodyModel[455] = new ModelRendererTurbo(this, 335, 318, textureX, textureY); // Boc 42
-		bodyModel[456] = new ModelRendererTurbo(this, 333, 309, textureX, textureY, "cull"); // Left seat part cull
-		bodyModel[457] = new ModelRendererTurbo(this, 333, 280, textureX, textureY, "cull"); // Right seat part cull
+		bodyModel[456] = new ModelRendererTurbo(this, 333, 309, textureX, textureY,"cull"); // Left seat part cull
+		bodyModel[457] = new ModelRendererTurbo(this, 333, 280, textureX, textureY,"cull"); // Right seat part cull
 		bodyModel[458] = new ModelRendererTurbo(this, 337, 270, textureX, textureY); // Right seat part
 		bodyModel[459] = new ModelRendererTurbo(this, 312, 270, textureX, textureY); // Right seat part
 		bodyModel[460] = new ModelRendererTurbo(this, 312, 299, textureX, textureY); // Left seat part
@@ -524,8 +524,8 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 		bodyModel[481] = new ModelRendererTurbo(this, 312, 317, textureX, textureY); // Left seat part
 		bodyModel[482] = new ModelRendererTurbo(this, 326, 314, textureX, textureY); // Left seat part
 		bodyModel[483] = new ModelRendererTurbo(this, 299, 318, textureX, textureY); // Boc 42
-		bodyModel[484] = new ModelRendererTurbo(this, 297, 309, textureX, textureY, "cull"); // Left seat part cull
-		bodyModel[485] = new ModelRendererTurbo(this, 297, 280, textureX, textureY, "cull"); // Right seat part cull
+		bodyModel[484] = new ModelRendererTurbo(this, 297, 309, textureX, textureY,"cull"); // Left seat part cull
+		bodyModel[485] = new ModelRendererTurbo(this, 297, 280, textureX, textureY,"cull"); // Right seat part cull
 		bodyModel[486] = new ModelRendererTurbo(this, 301, 270, textureX, textureY); // Right seat part
 		bodyModel[487] = new ModelRendererTurbo(this, 276, 270, textureX, textureY); // Right seat part
 		bodyModel[488] = new ModelRendererTurbo(this, 276, 299, textureX, textureY); // Left seat part
@@ -1429,19 +1429,19 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 		bodyModel[293].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F); // Box 38 glow
 		bodyModel[293].setRotationPoint(34F, -17F, -0.5F);
 
-		bodyModel[294].addBox(0F, 0F, 0F, 2, 16, 6, 0F); // Box 38
-		bodyModel[294].setRotationPoint(-34.5F, -15F, 4F);
+		bodyModel[294].addBox(0F, 0F, 0F, 2, 16, 7, 0F); // Box 38
+		bodyModel[294].setRotationPoint(-34.5F, -15F, 3F);
 
 		bodyModel[295].addBox(0F, 0F, 0F, 1, 16, 15, 0F); // Box 38
 		bodyModel[295].setRotationPoint(-38.5F, -15F, -10F);
 
-		bodyModel[296].addBox(0F, 0F, 0F, 5, 16, 6, 0F); // Box 38
+		bodyModel[296].addBox(0F, 0F, 0F, 5, 16, 7, 0F); // Box 38
 		bodyModel[296].setRotationPoint(-37.5F, -15F, -10F);
 
 		bodyModel[297].addBox(0F, 0F, 0F, 1, 16, 15, 0F); // Box 38
 		bodyModel[297].setRotationPoint(-55.5F, -15F, -10F);
 
-		bodyModel[298].addBox(0F, 0F, 0F, 3, 16, 6, 0F); // Box 38
+		bodyModel[298].addBox(0F, 0F, 0F, 3, 16, 7, 0F); // Box 38
 		bodyModel[298].setRotationPoint(-58.5F, -15F, -10F);
 
 		bodyModel[299].addShapeBox(0F, 0F, 0F, 1, 16, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F); // Box 38
@@ -2097,8 +2097,8 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 		bodyModel[509] = new ModelRendererTurbo(this, 276, 317, textureX, textureY); // Left seat part
 		bodyModel[510] = new ModelRendererTurbo(this, 290, 314, textureX, textureY); // Left seat part
 		bodyModel[511] = new ModelRendererTurbo(this, 263, 318, textureX, textureY); // Boc 42
-		bodyModel[512] = new ModelRendererTurbo(this, 261, 309, textureX, textureY, "cull"); // Left seat part cull
-		bodyModel[513] = new ModelRendererTurbo(this, 261, 280, textureX, textureY, "cull"); // Right seat part cull
+		bodyModel[512] = new ModelRendererTurbo(this, 261, 309, textureX, textureY,"cull"); // Left seat part cull
+		bodyModel[513] = new ModelRendererTurbo(this, 261, 280, textureX, textureY,"cull"); // Right seat part cull
 		bodyModel[514] = new ModelRendererTurbo(this, 265, 270, textureX, textureY); // Right seat part
 		bodyModel[515] = new ModelRendererTurbo(this, 240, 270, textureX, textureY); // Right seat part
 		bodyModel[516] = new ModelRendererTurbo(this, 240, 299, textureX, textureY); // Left seat part
@@ -2125,8 +2125,8 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 		bodyModel[537] = new ModelRendererTurbo(this, 240, 317, textureX, textureY); // Left seat part
 		bodyModel[538] = new ModelRendererTurbo(this, 254, 314, textureX, textureY); // Left seat part
 		bodyModel[539] = new ModelRendererTurbo(this, 227, 318, textureX, textureY); // Boc 42
-		bodyModel[540] = new ModelRendererTurbo(this, 225, 309, textureX, textureY, "cull"); // Left seat part cull
-		bodyModel[541] = new ModelRendererTurbo(this, 225, 280, textureX, textureY, "cull"); // Right seat part cull
+		bodyModel[540] = new ModelRendererTurbo(this, 225, 309, textureX, textureY,"cull"); // Left seat part cull
+		bodyModel[541] = new ModelRendererTurbo(this, 225, 280, textureX, textureY,"cull"); // Right seat part cull
 		bodyModel[542] = new ModelRendererTurbo(this, 229, 270, textureX, textureY); // Right seat part
 		bodyModel[543] = new ModelRendererTurbo(this, 204, 270, textureX, textureY); // Right seat part
 		bodyModel[544] = new ModelRendererTurbo(this, 204, 299, textureX, textureY); // Left seat part
@@ -2153,11 +2153,11 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 		bodyModel[565] = new ModelRendererTurbo(this, 204, 317, textureX, textureY); // Left seat part
 		bodyModel[566] = new ModelRendererTurbo(this, 218, 314, textureX, textureY); // Left seat part
 		bodyModel[567] = new ModelRendererTurbo(this, 191, 318, textureX, textureY); // Boc 42
-		bodyModel[568] = new ModelRendererTurbo(this, 189, 309, textureX, textureY, "cull"); // Left seat part cull
-		bodyModel[569] = new ModelRendererTurbo(this, 189, 280, textureX, textureY, "cull"); // Right seat part cull
+		bodyModel[568] = new ModelRendererTurbo(this, 189, 309, textureX, textureY,"cull"); // Left seat part cull
+		bodyModel[569] = new ModelRendererTurbo(this, 189, 280, textureX, textureY,"cull"); // Right seat part cull
 		bodyModel[570] = new ModelRendererTurbo(this, 193, 270, textureX, textureY); // Right seat part
 		bodyModel[571] = new ModelRendererTurbo(this, 495, 227, textureX, textureY); // Box 38
-		bodyModel[572] = new ModelRendererTurbo(this, 176, 239, textureX, textureY, "cull"); // Box 38 cull
+		bodyModel[572] = new ModelRendererTurbo(this, 176, 239, textureX, textureY,"cull"); // Box 38 cull
 		bodyModel[573] = new ModelRendererTurbo(this, 319, 164, textureX, textureY); // Box 2
 		bodyModel[574] = new ModelRendererTurbo(this, 328, 164, textureX, textureY); // Box 2
 		bodyModel[575] = new ModelRendererTurbo(this, 328, 176, textureX, textureY); // Box 2
@@ -2180,15 +2180,15 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 		bodyModel[592] = new ModelRendererTurbo(this, 339, 157, textureX, textureY); // Box 636
 		bodyModel[593] = new ModelRendererTurbo(this, 321, 150, textureX, textureY); // Box 638
 		bodyModel[594] = new ModelRendererTurbo(this, 325, 157, textureX, textureY); // Box 639
-		bodyModel[595] = new ModelRendererTurbo(this, 65, 159, textureX, textureY, "cull"); // Box 31 cull
+		bodyModel[595] = new ModelRendererTurbo(this, 65, 159, textureX, textureY,"cull"); // Box 31 cull
 		bodyModel[596] = new ModelRendererTurbo(this, 65, 157, textureX, textureY); // Box 31
-		bodyModel[597] = new ModelRendererTurbo(this, 65, 140, textureX, textureY, "cull"); // Box 31 cull
+		bodyModel[597] = new ModelRendererTurbo(this, 65, 140, textureX, textureY,"cull"); // Box 31 cull
 		bodyModel[598] = new ModelRendererTurbo(this, 65, 138, textureX, textureY); // Box 31
 		bodyModel[599] = new ModelRendererTurbo(this, 1, 345, textureX, textureY); // Box 495
 		bodyModel[600] = new ModelRendererTurbo(this, 18, 338, textureX, textureY); // Box 495
 		bodyModel[601] = new ModelRendererTurbo(this, 6, 344, textureX, textureY); // Box 495
 		bodyModel[602] = new ModelRendererTurbo(this, 19, 341, textureX, textureY); // Box 495
-		bodyModel[603] = new ModelRendererTurbo(this, 6, 336, textureX, textureY, "cull"); // Box 495 cull
+		bodyModel[603] = new ModelRendererTurbo(this, 6, 336, textureX, textureY,"cull"); // Box 495 cull
 		bodyModel[604] = new ModelRendererTurbo(this, 0, 328, textureX, textureY); // Box 495
 		bodyModel[605] = new ModelRendererTurbo(this, 3, 328, textureX, textureY); // Box 495
 		bodyModel[606] = new ModelRendererTurbo(this, 8, 321, textureX, textureY); // Box 264
@@ -2213,6 +2213,26 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 		bodyModel[625] = new ModelRendererTurbo(this, 15, 329, textureX, textureY); // Box 495
 		bodyModel[626] = new ModelRendererTurbo(this, 24, 330, textureX, textureY); // Box 495
 		bodyModel[627] = new ModelRendererTurbo(this, 7, 351, textureX, textureY); // Box 495
+		bodyModel[628] = new ModelRendererTurbo(this, 41, 58, textureX, textureY); // Box 128
+		bodyModel[629] = new ModelRendererTurbo(this, 32, 58, textureX, textureY,"glow"); // Box 128 tailsign glow
+		bodyModel[630] = new ModelRendererTurbo(this, 36, 55, textureX, textureY); // Box 128
+		bodyModel[631] = new ModelRendererTurbo(this, 29, 55, textureX, textureY,"glow"); // Box 128 rear light glow
+		bodyModel[632] = new ModelRendererTurbo(this, 67, 99, textureX, textureY); // Box 204
+		bodyModel[633] = new ModelRendererTurbo(this, 67, 95, textureX, textureY); // Box 204 marker lense
+		bodyModel[634] = new ModelRendererTurbo(this, 65, 92, textureX, textureY,"glow"); // Box 204 marker lens
+		bodyModel[635] = new ModelRendererTurbo(this, 65, 88, textureX, textureY,"glow"); // Box 204 marker lens
+		bodyModel[636] = new ModelRendererTurbo(this, 66, 85, textureX, textureY); // Box 204 marker lense
+		bodyModel[637] = new ModelRendererTurbo(this, 67, 80, textureX, textureY); // Box 617
+		bodyModel[638] = new ModelRendererTurbo(this, 67, 76, textureX, textureY); // Box 618
+		bodyModel[639] = new ModelRendererTurbo(this, 65, 73, textureX, textureY,"glow"); // Box 619 marker lens
+		bodyModel[640] = new ModelRendererTurbo(this, 65, 69, textureX, textureY,"glow"); // Box 620 marker lens
+		bodyModel[641] = new ModelRendererTurbo(this, 66, 66, textureX, textureY); // Box 621
+		bodyModel[642] = new ModelRendererTurbo(this, 49, 343, textureX, textureY); // Right seat part
+		bodyModel[643] = new ModelRendererTurbo(this, 51, 347, textureX, textureY); // Right seat part
+		bodyModel[644] = new ModelRendererTurbo(this, 49, 355, textureX, textureY); // Right seat part
+		bodyModel[645] = new ModelRendererTurbo(this, 110, 343, textureX, textureY); // Right seat part
+		bodyModel[646] = new ModelRendererTurbo(this, 112, 347, textureX, textureY); // Right seat part
+		bodyModel[647] = new ModelRendererTurbo(this, 110, 355, textureX, textureY); // Right seat part
 
 		bodyModel[500].addShapeBox(-2.5F, 0F, -3F, 1, 1, 1, 0F,0F, -1F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F); // Right seat part
 		bodyModel[500].setRotationPoint(-7.5F, -4F, 7F);
@@ -2598,12 +2618,74 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 
 		bodyModel[627].addShapeBox(0F, 0F, 0F, 1, 1, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 495
 		bodyModel[627].setRotationPoint(-54.5F, -6F, -5F);
+
+		bodyModel[628].addShapeBox(0F, 0F, 0F, 1, 2, 4, 0F,0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F); // Box 128
+		bodyModel[628].setRotationPoint(-60F, -3F, -2F);
+
+		bodyModel[629].addShapeBox(0F, 0F, 0F, 0, 2, 4, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 128 tailsign glow
+		bodyModel[629].setRotationPoint(-60.01F, -3F, -2F);
+
+		bodyModel[630].addShapeBox(0F, 0F, 0F, 1, 3, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 128
+		bodyModel[630].setRotationPoint(-60.5F, -8F, -1.5F);
+
+		bodyModel[631].addShapeBox(0F, 0F, 0F, 0, 3, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 128 rear light glow
+		bodyModel[631].setRotationPoint(-60.51F, -8F, -1.5F);
+
+		bodyModel[632].addShapeBox(0F, 0F, 0F, 1, 0, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F); // Box 204
+		bodyModel[632].setRotationPoint(-59.5F, -9F, 11F);
+
+		bodyModel[633].addShapeBox(0F, 0F, 0F, 1, 2, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F); // Box 204 marker lense
+		bodyModel[633].setRotationPoint(-59.5F, -10.5F, 11.25F);
+
+		bodyModel[634].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, 0F, -0.125F, -0.125F); // Box 204 marker lens
+		bodyModel[634].setRotationPoint(-59.75F, -10.5F, 11.25F);
+
+		bodyModel[635].addShapeBox(0F, 0F, 0F, 1, 1, 2, 0F,-0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, -0.5F); // Box 204 marker lens
+		bodyModel[635].setRotationPoint(-59.5F, -10.5F, 11F);
+
+		bodyModel[636].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, -0.5F, 0F, -0.5F, -0.5F); // Box 204 marker lense
+		bodyModel[636].setRotationPoint(-59.25F, -11F, 11.5F);
+
+		bodyModel[637].addShapeBox(0F, 0F, 0F, 1, 0, 1, 0F,0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 617
+		bodyModel[637].setRotationPoint(-59.5F, -9F, -12F);
+
+		bodyModel[638].addShapeBox(0F, 0F, 0F, 1, 2, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F); // Box 618
+		bodyModel[638].setRotationPoint(-59.5F, -10.5F, -12.25F);
+
+		bodyModel[639].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, 0F, -0.125F, -0.125F); // Box 619 marker lens
+		bodyModel[639].setRotationPoint(-59.75F, -10.5F, -12.25F);
+
+		bodyModel[640].addShapeBox(0F, 0F, 0F, 1, 1, 2, 0F,-0.125F, -0.125F, -0.5F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F); // Box 620 marker lens
+		bodyModel[640].setRotationPoint(-59.5F, -10.5F, -13F);
+
+		bodyModel[641].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, -0.5F, -0.5F, -0.5F, -0.5F, -0.5F, -0.5F, 0F, 0F, -0.5F, 0F); // Box 621
+		bodyModel[641].setRotationPoint(-59.25F, -11F, -12.5F);
+
+		bodyModel[642].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F); // Right seat part
+		bodyModel[642].setRotationPoint(-49.5F, -5F, -3.25F);
+
+		bodyModel[643].addShapeBox(-0.5F, 0F, -0.5F, 1, 6, 1, 0F,-0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F); // Right seat part
+		bodyModel[643].setRotationPoint(-48.5F, -5.5F, -2.25F);
+		bodyModel[643].rotateAngleY = -0.78539816F;
+
+		bodyModel[644].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, -0.5F, -0.125F); // Right seat part
+		bodyModel[644].setRotationPoint(-49.5F, 0.5F, -3.25F);
+
+		bodyModel[645].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F); // Right seat part
+		bodyModel[645].setRotationPoint(-45.5F, -5F, -3.25F);
+
+		bodyModel[646].addShapeBox(-0.5F, 0F, -0.5F, 1, 6, 1, 0F,-0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F); // Right seat part
+		bodyModel[646].setRotationPoint(-44.5F, -5.5F, -2.25F);
+		bodyModel[646].rotateAngleY = -0.78539816F;
+
+		bodyModel[647].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, -0.5F, -0.125F, -0.125F, -0.5F, -0.125F); // Right seat part
+		bodyModel[647].setRotationPoint(-45.5F, 0.5F, -3.25F);
 	}
 	ModelPS_Truck bogie1 = new ModelPS_Truck();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for(int i = 0; i < 628; i++)
+		for(int i = 0; i < 648; i++)
 		{
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("glow")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
@@ -2617,7 +2699,7 @@ public class ModelPSCNW56SeatCoach extends ModelConverter//Same as Filename
 				bodyModel[i].render(f5);
 			}
 		}
-		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==123456){
+		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==16){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/41-N-11_truck_silver.png"));
 			GL11.glPushMatrix();
 			GL11.glRotatef(180, 0, 1, 0);
