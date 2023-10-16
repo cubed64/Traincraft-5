@@ -27,6 +27,7 @@ import train.common.Traincraft;
 import train.common.adminbook.ItemAdminBook;
 import train.common.core.handlers.ConfigHandler;
 import train.common.core.handlers.TrainHandler;
+import train.common.entity.CargoManager;
 import train.common.entity.TrustedPlayer;
 import train.common.items.ItemChunkLoaderActivator;
 import train.common.items.ItemRollingStock;
@@ -146,6 +147,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	 * <p>List of players trusted to use the train</p>
 	 */
 	private List<TrustedPlayer> trustedList = new ArrayList<>();
+	private CargoManager cargoManager = null;
 	public final Map<Integer, String> textureDescriptionMap = new HashMap<>();
 
 	@Override
@@ -206,13 +208,24 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 				return null;
 			}
 	}
+
 	/**
-	 * this is basically NBT for entity spawn, to keep data between client and server in sync because some data is not automatically shared.
+	 * <p>This method is called on the client side when an entity is being loaded in. The additionalData buffer is sent from the server
+	 * and is populated by the server using the writeSpawnData method.</p>
+	 * <br></br><p>"this is basically NBT for entity spawn, to keep data between client and server in sync because some data is not automatically shared."</p>
+	 * @param additionalData The packet data stream
 	 */
 	@Override
 	public void readSpawnData(ByteBuf additionalData) {
 		locked = additionalData.readBoolean();
 	}
+
+	/**
+	 * <p>This method is called on the server side when a connected client is loading the entity. Data written
+	 * to the ByteBuffer will be synced with the client and available to the client through the readSpawnData method.</p>
+	 * <br></br><p>"this is basically NBT for entity spawn, to keep data between client and server in sync because some data is not automatically shared."</p>
+	 * @param buffer The packet data stream
+	 */
 	@Override
 	public void writeSpawnData(ByteBuf buffer) {
 		buffer.writeBoolean(locked);
@@ -411,6 +424,9 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		nbttagcompound.setLong("UUIDL", this.getUniqueID().getLeastSignificantBits());
 		nbttagcompound.setString("trainNote", trainNote);
 		exportTrustedListToNBT(nbttagcompound);
+		if (cargoManager != null) {
+			getCargoManager().exportToNBT(nbttagcompound);
+		}
 	}
 
 	@Override
@@ -447,6 +463,9 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			this.entityUniqueID = new UUID(nbttagcompound.getLong("UUIDM"), nbttagcompound.getLong("UUIDL"));
 		}
 		importTrustedListFromNBT(nbttagcompound);
+		if (cargoManager != null) {
+			getCargoManager().importFromNBTTagCompound(nbttagcompound);
+		}
 	}
 
 	@Override
@@ -973,11 +992,28 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 				if (!trustedList.getCompoundTagAt(i).getString("playerName").equalsIgnoreCase(trainOwner)) // Check to ensure we're not adding the current owner to the trusted list...
 					this.trustedList.add(new TrustedPlayer(trustedList.getCompoundTagAt(i).getString("playerName"), trustedList.getCompoundTagAt(i).getBoolean("breakAccess")));
 			}
-			if (nbttagcompound.hasKey("trustedListPreviousOwner")) { // If the previous owner is not the one who placed down the piece of rolling stock... // TODO test this out!
+			if (nbttagcompound.hasKey("trustedListPreviousOwner")) { // If the previous owner is not the one who placed down the piece of rolling stock...
 				if (!nbttagcompound.getString("trustedListPreviousOwner").equalsIgnoreCase(trainOwner)) {
 					getTrustedList().add(new TrustedPlayer(nbttagcompound.getString("trustedListPreviousOwner"), true));
 				}
 			}
 		}
+	}
+
+	/**
+	 * @author 02skaplan
+	 * @return CargoManager for entity if entity supports custom cargo, else null.
+	 */
+	public CargoManager getCargoManager() {
+		return cargoManager;
+	}
+
+	/**
+	 * @author 02skaplan
+	 * <p>Call after super and init in a Class<\? extends EntityRollingStock\>'s constructor with a new CargoManager containing
+	 * all cargo options for a given entity.</p>
+	 */
+	public void setCargoManager(CargoManager cargoManager) {
+		this.cargoManager = cargoManager;
 	}
 }

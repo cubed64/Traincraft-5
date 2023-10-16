@@ -31,4 +31,5 @@ public class GuiIDs {
 	public static final int PAINTBRUSH = 109;
 	public static final int LOCK_MENU = 110;
 	public static final int LOCK_MENU_SWITCHES = 111;
+	public static final int CARGO_MENU = 112;
 }

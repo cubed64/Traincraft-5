@@ -1,5 +1,7 @@
 package train.common.entity.rollingStock;
 
+import com.jcirmodelsquad.tcjcir.models.loads.ModelMixedLogs;
+import com.jcirmodelsquad.tcjcir.models.trains.ModelOnion;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -10,6 +12,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.Freight;
+import train.common.entity.CargoManager;
+import train.common.entity.CargoSpecification;
 import train.common.library.GuiIDs;
 
 public class EntityBulkheadFlatCart extends Freight implements IInventory {
@@ -20,6 +24,12 @@ public class EntityBulkheadFlatCart extends Freight implements IInventory {
 	public EntityBulkheadFlatCart(World world) {
 		super(world);
 		initBulkheadFlat();
+		setCargoManager(new CargoManager(new CargoSpecification[] {
+				new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Oak", "Oak Logs", 0, 2.9, 0),
+				new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Birch", "Birch Logs", 0, 2.9, 0),
+				new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Spruce", "Spruce Logs", 0, 2.9, 0),
+				new CargoSpecification(ModelOnion.class, "trains/Onion_Black", "O n i o n", 0, 2.4, 0),
+		}));
 	}
 	
 	public void initBulkheadFlat() {

@@ -244,17 +244,36 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 
 
 	/**
-	 * this is basically NBT for entity spawn, to keep data between client and server in sync because some data is not automatically shared.
+	 * <p>This method is called on the client side when an entity is being loaded in. The additionalData buffer is sent from the server
+	 * and is populated by the server using the writeSpawnData method.</p>
+	 * <br></br><p>"this is basically NBT for entity spawn, to keep data between client and server in sync because some data is not automatically shared."</p>
+	 * @param additionalData The packet data stream
 	 */
 	@Override
 	public void readSpawnData(ByteBuf additionalData) {
 		isBraking = additionalData.readBoolean();
 		setTrainLockedFromPacket(additionalData.readBoolean());
+		if (additionalData.readBoolean()) {
+			int selectedCargo = additionalData.readInt();
+			if (selectedCargo < getCargoManager().getCargoSpecificationList().length + 1)
+				getCargoManager().setSelectedCargo(selectedCargo);
+		}
 	}
+
+	/**
+	 * <p>This method is called on the server side when a connected client is loading the entity. Data written
+	 * to the ByteBuffer will be synced with the client and available to the client through the readSpawnData method.</p>
+	 * <br></br><p>"this is basically NBT for entity spawn, to keep data between client and server in sync because some data is not automatically shared."</p>
+	 * @param buffer The packet data stream
+	 */
 	@Override
 	public void writeSpawnData(ByteBuf buffer) {
 		buffer.writeBoolean(isBraking);
 		buffer.writeBoolean(getTrainLockedFromPacket());
+		buffer.writeBoolean(getCargoManager() != null);
+		if (getCargoManager() != null) {
+			buffer.writeInt(getCargoManager().getSelectedCargo());
+		}
 	}
 
 	public String getTrainName() {

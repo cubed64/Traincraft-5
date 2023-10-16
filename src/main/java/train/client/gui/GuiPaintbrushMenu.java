@@ -18,6 +18,7 @@ import train.common.api.EntityRollingStock;
 import train.common.core.handlers.ConfigHandler;
 import train.common.core.network.PacketPaintbrushColor;
 import train.common.library.EnumTrains;
+import train.common.library.GuiIDs;
 import train.common.library.Info;
 
 import java.awt.*;
@@ -66,6 +67,7 @@ public class GuiPaintbrushMenu extends GuiScreen {
     private GuiButtonPaintbrushMenu playPauseButton;
     private GuiButtonPaintbrushMenu lightControlButton;
     private GuiButtonPaintbrushMenu renderModelsButton;
+    private GuiButtonPaintbrushCargoController loadCargoButton;
     private boolean renderModels;
     private boolean disableLighting = true;
     private int optionsOnCurrentPage;
@@ -98,7 +100,11 @@ public class GuiPaintbrushMenu extends GuiScreen {
      */
     @Override
     public void initGui() {
-        GUI_ANCHOR_MID_X = (this.width) / 2;
+        if (rollingStock.getCargoManager() == null) {
+            GUI_ANCHOR_MID_X = (this.width) / 2;
+        } else {
+            GUI_ANCHOR_MID_X = (this.width) / 2 + 15;
+        }
         GUI_ANCHOR_Y = (this.height) / 2 - ((MENU_TEXTURE_HEIGHT) / 2) - (38 / 2);
         GUI_ANCHOR_X = GUI_ANCHOR_MID_X - MENU_TEXTURE_WIDTH;
         this.buttonList.clear();
@@ -117,6 +123,7 @@ public class GuiPaintbrushMenu extends GuiScreen {
         this.buttonList.add(this.closeMenuButton = new GuiButtonPaintbrushMenu(14, GUI_ANCHOR_X + 382, GUI_ANCHOR_Y + 10, 22, 22, GuiButtonPaintbrushMenu.Type.CLOSE));
         this.buttonList.add(this.playPauseButton = new GuiButtonPaintbrushMenu(15, GUI_ANCHOR_X + 382, GUI_ANCHOR_Y + MENU_TEXTURE_HEIGHT - 29, 22, 22, GuiButtonPaintbrushMenu.Type.PLAY));
         this.buttonList.add(this.lightControlButton = new GuiButtonPaintbrushMenu(16, GUI_ANCHOR_X + 382, GUI_ANCHOR_Y + MENU_TEXTURE_HEIGHT - 77, 22, 22, GuiButtonPaintbrushMenu.Type.LIGHTSOFF));
+        this.buttonList.add(this.loadCargoButton = new GuiButtonPaintbrushCargoController(17, GUI_ANCHOR_X - 27, (int) (GUI_ANCHOR_Y + ((MENU_TEXTURE_HEIGHT * 0.5) - (29 * 0.5))), 29, 29, GuiButtonPaintbrushCargoController.Type.LOAD));
         this.updateButtons();
     }
 
@@ -153,6 +160,12 @@ public class GuiPaintbrushMenu extends GuiScreen {
         this.renderModelsButton.visible = true;
         this.renderModelsButton.showButton = true;
         this.renderModelsButton.setType(renderModels ? GuiButtonPaintbrushMenu.Type.STOPRENDER : GuiButtonPaintbrushMenu.Type.PLAY, renderModelsButton.getTexture());
+        boolean acceptsCargo = rollingStock.getCargoManager() != null;
+        this.loadCargoButton.visible = acceptsCargo;
+        this.loadCargoButton.showButton = acceptsCargo;
+        if (acceptsCargo) {
+            this.loadCargoButton.setType(GuiButtonPaintbrushCargoController.Type.LOAD, GuiButtonPaintbrushCargoController.Texture.UNSELECTED);
+        }
     }
 
     ResourceLocation rightMenuTexture = new ResourceLocation(Info.resourceLocation, Info.guiPrefix + "gui_paintbrush_menu_right.png");
@@ -166,6 +179,12 @@ public class GuiPaintbrushMenu extends GuiScreen {
         this.drawTexturedModalRect(GUI_ANCHOR_MID_X, GUI_ANCHOR_Y, 0, 0, MENU_TEXTURE_WIDTH, MENU_TEXTURE_HEIGHT);
         mc.renderEngine.bindTexture(leftMenuTexture);
         this.drawTexturedModalRect(GUI_ANCHOR_X, GUI_ANCHOR_Y, 0, 0, MENU_TEXTURE_WIDTH, MENU_TEXTURE_HEIGHT);
+        // Draw cargo controller bar if cargo controller is enabled...
+        if (rollingStock.getCargoManager() != null) {
+            mc.renderEngine.bindTexture(leftMenuTexture);
+            this.drawTexturedModalRect(GUI_ANCHOR_X - 32, GUI_ANCHOR_Y, 0, 0, (int) (MENU_TEXTURE_WIDTH * 0.5), MENU_TEXTURE_HEIGHT);
+        }
+
         int loopRenderColor;
         if (renderModels) {
             // Rolling stock pieces with more than one bogie need offset based on bogie position to render properly.
@@ -266,6 +285,9 @@ public class GuiPaintbrushMenu extends GuiScreen {
                 else
                     drawHoveringText(Collections.singletonList(StatCollector.translateToLocal("paintbrushmenu.Show Models.name")), mouseX, mouseY, fontRendererObj);
             }
+        } else if (mouseX < GUI_ANCHOR_X + 10) { // If mouse is somewhere on the cargo controller bar...
+            if (loadCargoButton.getHoveringStatus())
+                drawHoveringText(Collections.singletonList(StatCollector.translateToLocal("paintbrushmenu.Load Cargo.name")), mouseX, mouseY, fontRendererObj);
         } else { // If the mouse is anywhere else on the screen...
             if (renderModels) {
                 // Draw texture descriptions if they exist...
@@ -327,6 +349,10 @@ public class GuiPaintbrushMenu extends GuiScreen {
                 case 16:
                     disableLighting = !disableLighting;
                     updateButtons();
+                    break;
+                case 17: // Load Cargo
+                    this.mc.thePlayer.closeScreen();
+                    editingPlayer.openGui(Traincraft.instance, GuiIDs.CARGO_MENU, editingPlayer.getEntityWorld(), rollingStock.getEntityId(), -1, (int) editingPlayer.posZ);
                     break;
             }
         }

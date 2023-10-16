@@ -38,6 +38,7 @@ public class PacketHandler {
 		Traincraft.builderChannel = NetworkRegistry.INSTANCE.newSimpleChannel("builder");
 		Traincraft.paintbrushColorChannel = NetworkRegistry.INSTANCE.newSimpleChannel("paintbrushColor");
 		Traincraft.switchStandLockChannel = NetworkRegistry.INSTANCE.newSimpleChannel("switchStandLock");
+		Traincraft.cargoSelectionChannel = NetworkRegistry.INSTANCE.newSimpleChannel("cargoSelection");
 
 
 
@@ -71,6 +72,10 @@ public class PacketHandler {
 		Traincraft.paintbrushColorChannel.registerMessage(PacketPaintbrushColor.Handler.class, PacketPaintbrushColor.class, 11, Side.SERVER);
 		Traincraft.switchStandLockChannel.registerMessage(PacketUpdateSwitchStand.Handler.class,
 				PacketUpdateSwitchStand.class, 17, Side.SERVER);
+		Traincraft.cargoSelectionChannel.registerMessage(PacketCargoSelection.Handler.class,
+				PacketCargoSelection.class, 16, Side.CLIENT);
+		Traincraft.cargoSelectionChannel.registerMessage(PacketCargoSelection.Handler.class,
+				PacketCargoSelection.class, 16, Side.SERVER);
 
 		Traincraft.mtcBlockChannel.registerMessage(HANDLERS[0], PacketUpdateSpeedTransmitter.class, 200, Side.SERVER);
 		Traincraft.mtcBlockChannel.registerMessage(HANDLERS[1], PacketUpdateStopPointTransmitter.class, 201, Side.SERVER);

@@ -9,8 +9,10 @@
 
 package com.jcirmodelsquad.tcjcir.models.loads; //Path where the model is located
 
+import net.minecraft.entity.Entity;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
+import train.common.api.Freight;
 
 public class ModelMixedLogs extends ModelConverter //Same as Filename
 {
@@ -27,6 +29,19 @@ public class ModelMixedLogs extends ModelConverter //Same as Filename
 
 
 		flipAll();
+	}
+
+	@Override
+	public void render(Entity entity, float f0, float f1, float f2, float f3, float f4, float scale) {
+		float cargo = ((Freight) entity).getAmmountOfCargo();
+		if (cargo != 0) {
+			cargo = cargo / ((Freight) entity).getSizeInventory();
+			int max = 13;
+			max = (int) Math.ceil(cargo * max);
+			for (int i = 0; i < max; i++) {
+				bodyModel[i].render();
+			}
+		}
 	}
 
 	private void initbodyModel_1()
