@@ -34,6 +34,7 @@ public class DieselB23 extends DieselTrain {
         textureDescriptionMap.put(14, "CSXT (YN2)");
         textureDescriptionMap.put(15, "Union Pacific");
         textureDescriptionMap.put(16, "Providence & Worcester");
+        textureDescriptionMap.put(17, "Fox Union Rail Resources (FURRX)");
     }
     public DieselB23(World world, double d, double d1, double d2){
         this(world);
