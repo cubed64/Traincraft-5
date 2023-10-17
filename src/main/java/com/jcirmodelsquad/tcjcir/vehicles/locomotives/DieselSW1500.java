@@ -21,7 +21,7 @@ public class DieselSW1500 extends DieselTrain {
         textureDescriptionMap.put(0, "Denver SUCK MY FUCKIN BALLS cock sucker island (stupid) mofo Volkswagon 1083 deez nuts express");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
         textureDescriptionMap.put(2, "Southern Pacific");
-        textureDescriptionMap.put(3, "CFW (SP-UP Patch)");
+        textureDescriptionMap.put(3, "CFW 1136");
         textureDescriptionMap.put(4, "Penn Central");
         textureDescriptionMap.put(5, "GM Demonstrator");
         textureDescriptionMap.put(6, "BNSF H1");

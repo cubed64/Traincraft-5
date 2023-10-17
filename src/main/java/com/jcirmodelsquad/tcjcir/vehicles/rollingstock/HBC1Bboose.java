@@ -12,6 +12,8 @@ import train.common.library.GuiIDs;
 public class HBC1Bboose extends EntityRollingStock implements IPassenger {
     public HBC1Bboose(World world) {
         super(world);
+        textureDescriptionMap.put(0, "Fox, North Coast & Cascades");
+        textureDescriptionMap.put(1, "Ann Arbor");
     }
 
     public HBC1Bboose(World world, double d, double d1, double d2){

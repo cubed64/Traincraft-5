@@ -17,7 +17,22 @@ public class DieselGP38 extends DieselTrain {
     public DieselGP38(World world) {
         super(world, EnumTrains.GP38.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Butte, Anaconda & Pacific");
+        textureDescriptionMap.put(1, "Blandsville & Blankerston");
+        textureDescriptionMap.put(2, "MKT (Stripes)");
+        textureDescriptionMap.put(3, "MKT (Stripes)");
+        textureDescriptionMap.put(4, "Fox, North Coast & Cascades");
+        textureDescriptionMap.put(5, "Fox Union Rail Resources (FURRX)");
+        textureDescriptionMap.put(6, "Nomansi & Eastern Pacific");
+        textureDescriptionMap.put(7, "CSXT (poopshidder future lulmayo)");
+        textureDescriptionMap.put(8, "Norfolk Southern (Ex-Sou)");
+        textureDescriptionMap.put(9, "Norfolk Southern");
+        textureDescriptionMap.put(10, "Southern Port Belt");
+        textureDescriptionMap.put(11, "Southern Port Belt (NS Patch)");
+        textureDescriptionMap.put(12, "ATSF (Pinstripe)");
+        textureDescriptionMap.put(13, "ATSF (Freightbonnet)");
+        textureDescriptionMap.put(14, "ATSF (Kodachrome)");
+        textureDescriptionMap.put(15, "Penn Central");
     }
     public DieselGP38(World world, double d, double d1, double d2){
         this(world);

@@ -17,7 +17,42 @@ public class DieselGP7 extends DieselTrain {
     public DieselGP7(World world) {
         super(world, EnumTrains.GP7.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Avanste Northeastern (Late)");
+        textureDescriptionMap.put(1, "Burlington Northern (Ex CBQ)");
+        textureDescriptionMap.put(2, "Butte, Anaconda & Pacific (Early)");
+        textureDescriptionMap.put(3, "Chicago Northwestern");
+        textureDescriptionMap.put(4, "Avanste Northeastern (As Delivered)");
+        textureDescriptionMap.put(5, "Fox Union Resources (FURRX)");
+        textureDescriptionMap.put(6, "Bangor & Aroostook (Early)");
+        textureDescriptionMap.put(7, "Bangor & Aroostook (Late)");
+        textureDescriptionMap.put(8, "West Creek Pacific");
+        textureDescriptionMap.put(9, "Carbondale & Pine Valley");
+        textureDescriptionMap.put(10, "Carbondale & Pine Valley (CSWR Buyout)");
+        //textureDescriptionMap.put(11, "idk"); //rylees old freelance
+        textureDescriptionMap.put(12, "Deadwood & La Mesa (Early)");
+        textureDescriptionMap.put(13, "Deadwood & La Mesa (Late)");
+        textureDescriptionMap.put(14, "Blandsville & Blankerston");
+        textureDescriptionMap.put(15, "Amtrak MOW");
+        textureDescriptionMap.put(16, "Seaboard Coast Line");
+        textureDescriptionMap.put(17, "Denver & Rio Grande Western (Early)");
+        textureDescriptionMap.put(18, "Denver & Rio Grande Western (Early 2?)");
+        textureDescriptionMap.put(19, "Denver & Rio Grande Western (Late Small Logo)");
+        textureDescriptionMap.put(20, "Denver & Rio Grande Western (Late Big Logo)");
+        textureDescriptionMap.put(21, "US Army");
+        textureDescriptionMap.put(22, "Great Northern (Emp Builder)");
+        textureDescriptionMap.put(23, "Great Northern (EB Simp)");
+        textureDescriptionMap.put(24, "Great Northern (BSB)");
+        textureDescriptionMap.put(25, "Washaska & Old Fox RR Co 21");
+        textureDescriptionMap.put(26, "Washaska & Old Fox RR Co 26");
+        textureDescriptionMap.put(27, "New York Central (Early)");
+        textureDescriptionMap.put(28, "New York Central (Lightning Bolt)");
+        textureDescriptionMap.put(29, "New York Central (Late)");
+        textureDescriptionMap.put(30, "New York Central (Grey Lighting Bolt)");
+        textureDescriptionMap.put(31, "Fox, North Coast & Cascades");
+        textureDescriptionMap.put(32, "ATSF (Pinstripe)");
+        textureDescriptionMap.put(33, "ATSF (Zebrastripe)");
+        textureDescriptionMap.put(34, "MKT");
+        textureDescriptionMap.put(35, "Penn Central");
     }
     public DieselGP7(World world, double d, double d1, double d2){
         this(world);

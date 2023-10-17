@@ -17,7 +17,35 @@ public class DieselGP9 extends DieselTrain {
     public DieselGP9(World world) {
         super(world, EnumTrains.GP9.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Burlington Northern");
+        textureDescriptionMap.put(1, "Southern Pacific (Black Widow Passenger)");
+        textureDescriptionMap.put(2, "Southern Pacific (Black Widow)");
+        textureDescriptionMap.put(3, "Western Pacific");
+        textureDescriptionMap.put(4, "Western Pacific");
+        textureDescriptionMap.put(5, "Avanste Northeastern (Late)");
+        textureDescriptionMap.put(6, "Magnolia Acres");
+        textureDescriptionMap.put(7, "Morristown Tenneva & Southern");
+        textureDescriptionMap.put(8, "Lishaw and something or other");
+        textureDescriptionMap.put(9, "Lishaw and something or other 2");
+        textureDescriptionMap.put(10, "Blandsville & Blankerston");
+        textureDescriptionMap.put(11, "Nomansi & Eastern Pacific (Early)");
+        textureDescriptionMap.put(12, "Nomansi & Eastern Pacific");
+        textureDescriptionMap.put(13, "Milwaukee Road");
+        textureDescriptionMap.put(14, "Canadian Pacific (Script)");
+        textureDescriptionMap.put(15, "Denver & Rio Grande Western (Early)");
+        textureDescriptionMap.put(16, "Denver & Rio Grande Western");
+        textureDescriptionMap.put(17, "Denver & Rio Grande Western (Big Logo)");
+        textureDescriptionMap.put(18, "Spokane Portland & Seattle (Early)");
+        textureDescriptionMap.put(19, "Spokane Portland & Seattle (Middle Era)");
+        textureDescriptionMap.put(20, "Spokane Portland & Seattle (Late)");
+        textureDescriptionMap.put(21, "Magnolia Acres");
+        textureDescriptionMap.put(22, "New York Central (Early)");
+        textureDescriptionMap.put(23, "New York Central (Lightning Bolt)");
+        textureDescriptionMap.put(24, "New York Central (Late)");
+        textureDescriptionMap.put(25, "New York Central (Grey Lighting Bolt)");
+        textureDescriptionMap.put(26, "ATSF (Pinstripe)");
+        textureDescriptionMap.put(27, "ATSF (Zebrastripe)");
+        textureDescriptionMap.put(28, "Penn Central");
     }
     public DieselGP9(World world, double d, double d1, double d2){
         this(world);

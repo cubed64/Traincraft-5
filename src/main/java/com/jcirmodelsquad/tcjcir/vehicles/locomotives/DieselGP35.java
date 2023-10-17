@@ -17,7 +17,23 @@ public class DieselGP35 extends DieselTrain {
     public DieselGP35(World world) {
         super(world, EnumTrains.GP35.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Ann Arbor");
+        textureDescriptionMap.put(1, "Ann Arbor (Ferry in the Fog)");
+        textureDescriptionMap.put(2, "Southern");
+        textureDescriptionMap.put(3, "Western Pacific");
+        textureDescriptionMap.put(4, "Western Pacific");
+        textureDescriptionMap.put(5, "Southern Pacific (Early)");
+        textureDescriptionMap.put(6, "Southern Pacific (Late)");
+        textureDescriptionMap.put(7, "Conrail");
+        textureDescriptionMap.put(8, "Blandsville & Blankerston");
+        textureDescriptionMap.put(9, "Port of Latona Terminal Railroad");
+        textureDescriptionMap.put(10, "Great Lakes Central");
+        textureDescriptionMap.put(11, "Union Pacific (Ex-WP)");
+        textureDescriptionMap.put(12, "Conway Scenic");
+        textureDescriptionMap.put(13, "DRGW (Small logo)");
+        textureDescriptionMap.put(14, "DRGW (Big logo)");
+        textureDescriptionMap.put(15, "New York Central");
+        textureDescriptionMap.put(16, "New York Central");
     }
     public DieselGP35(World world, double d, double d1, double d2){
         this(world);

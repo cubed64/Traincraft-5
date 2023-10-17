@@ -17,6 +17,12 @@ public class DieselGP15 extends DieselTrain {
 	public DieselGP15(World world) {
 		super(world, EnumTrains.GP15.getTankCapacity(), LiquidManager.dieselFilter());
 		initLoco();
+		textureDescriptionMap.put(0, "UPY");
+		textureDescriptionMap.put(1, "FURRX (old nasty ass texture if i see this in game somewhjer i will kill you");
+		textureDescriptionMap.put(2, "Washaks & Old Fox RR Co 14");
+		textureDescriptionMap.put(3, "L&w");
+		textureDescriptionMap.put(4, "Atlas & Red Sands Railroad");
+		textureDescriptionMap.put(5, "Southern Port Belt");
 	}
 
 	public void initLoco() {

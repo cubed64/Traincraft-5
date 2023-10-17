@@ -17,7 +17,29 @@ public class DieselGP40 extends DieselTrain {
     public DieselGP40(World world) {
         super(world, EnumTrains.GP40.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Wisconsen Southern (FrankenForty)");
+        textureDescriptionMap.put(1, "Wisconsen Southern");
+        textureDescriptionMap.put(2, "Seaboard System");
+        textureDescriptionMap.put(3, "Blandsville & Blankerston");
+        textureDescriptionMap.put(4, "Paradox Rail");
+        textureDescriptionMap.put(5, "Western Pacific 1776");
+        textureDescriptionMap.put(6, "Western Pacific");
+        textureDescriptionMap.put(7, "Western Pacific");
+        textureDescriptionMap.put(8, "are there any more Western Pacifics i should know about");
+        textureDescriptionMap.put(9, "Western Pacific");
+        textureDescriptionMap.put(10, "Burlington Northern");
+        textureDescriptionMap.put(11, "Chicago, Burlington & Quincy");
+        textureDescriptionMap.put(12, "Morristown Tenneva & Southern");
+        textureDescriptionMap.put(13, "Avanste Northeastern");
+        textureDescriptionMap.put(14, "Avanste Northeastern (Snow Service)");
+        textureDescriptionMap.put(15, "Suffern Hoboken Interstate Transfer");
+        textureDescriptionMap.put(16, "CSXT (YNsomething)");
+        textureDescriptionMap.put(17, "Amtrak (PH III)");
+        textureDescriptionMap.put(18, "Norfolk Southern");
+        textureDescriptionMap.put(19, "Deadwood & La Mesa");
+        textureDescriptionMap.put(20, "New York Central");
+        textureDescriptionMap.put(21, "New York Central");
+        textureDescriptionMap.put(22, "Athearn RTR GP40 (Avanste Northeastern)");
     }
     public DieselGP40(World world, double d, double d1, double d2){
         this(world);

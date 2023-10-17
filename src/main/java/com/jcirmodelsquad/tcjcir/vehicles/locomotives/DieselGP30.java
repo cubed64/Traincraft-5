@@ -17,7 +17,7 @@ public class DieselGP30 extends DieselTrain {
     public DieselGP30(World world) {
         super(world, EnumTrains.GP30.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(11, "Deep Rock Railroad");
     }
     public DieselGP30(World world, double d, double d1, double d2){
         this(world);

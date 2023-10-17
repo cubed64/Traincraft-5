@@ -17,7 +17,10 @@ public class DieselGP7f extends DieselTrain {
     public DieselGP7f(World world) {
         super(world, EnumTrains.GP7f.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "ARR 1803");
+        textureDescriptionMap.put(1, "ARR 1807");
+        textureDescriptionMap.put(2, "ARR 1802");
+        textureDescriptionMap.put(3, "Blandsville & Blankerston");
     }
     public DieselGP7f(World world, double d, double d1, double d2){
         this(world);
@@ -131,7 +134,7 @@ public class DieselGP7f extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "FNCC GP7F";
+        return "ARR GP7u";
     }
 
     @Override

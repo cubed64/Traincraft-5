@@ -18,6 +18,9 @@ public class DieselS12 extends DieselTrain {
     public DieselS12(World world) {
         super(world, EnumTrains.S12.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "Amador Central Railroad");
+        textureDescriptionMap.put(1, "Blandsville & Blankerston");
+        textureDescriptionMap.put(2, "Latrans Range Railroad");
     }
     public DieselS12(World world, double d, double d1, double d2){
         this(world);
