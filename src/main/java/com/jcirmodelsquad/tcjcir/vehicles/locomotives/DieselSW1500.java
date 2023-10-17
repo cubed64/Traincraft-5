@@ -31,7 +31,7 @@ public class DieselSW1500 extends DieselTrain {
         textureDescriptionMap.put(10, "Nomansi and Eastern Pacific? maybe?");
         textureDescriptionMap.put(11, "CSXT (lame future)");
         textureDescriptionMap.put(12, "Port of Latona Terminal Railroad");
-        textureDescriptionMap.put(13, "Messicrew Tenneva & Southern");
+        textureDescriptionMap.put(13, "Morristown Tenneva & Southern (The 1701 Trekkie Unit)");
         textureDescriptionMap.put(14, "Southern Port Belt");
         textureDescriptionMap.put(15, "Western Pacific (Preserved)");
         textureDescriptionMap.put(16, "Western Pacific");

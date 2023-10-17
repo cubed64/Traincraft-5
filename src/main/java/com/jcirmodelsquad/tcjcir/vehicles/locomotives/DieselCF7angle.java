@@ -39,8 +39,8 @@ public class DieselCF7angle extends DieselTrain {
         textureDescriptionMap.put(18, "CSWR");
         textureDescriptionMap.put(19, "Delta Southern");
         textureDescriptionMap.put(20, "Carbondale & Pine Valley");
-        textureDescriptionMap.put(21, "Morristown, Tenneva & Southern");
-        textureDescriptionMap.put(22, "Morristown, Tenneva & Southern (Ex ANE)");
+        textureDescriptionMap.put(21, "Morristown Tenneva & Southern");
+        textureDescriptionMap.put(22, "Morristown Tenneva & Southern (Ex ANE)");
         textureDescriptionMap.put(23, "Midwest Coal Handling");
         textureDescriptionMap.put(24, "Mississippi & Skuna Valley D-5");
         textureDescriptionMap.put(25, "Atlas & Red Sands Railroad");
@@ -48,7 +48,7 @@ public class DieselCF7angle extends DieselTrain {
         textureDescriptionMap.put(27, "Port of Latona Terminal Railroad");
         textureDescriptionMap.put(28, "Washaska & Old Fox RR Co 19");
         textureDescriptionMap.put(29, "Washaska & Old Fox RR Co 20");
-        textureDescriptionMap.put(30, "Morristown, Tenneva & Southern 1776");
+        textureDescriptionMap.put(30, "Morristown Tenneva & Southern Spirit of 1776");
     }
     public DieselCF7angle(World world, double d, double d1, double d2){
         this(world);
