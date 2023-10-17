@@ -1443,7 +1443,12 @@ RenderEnum {
 	PSCNW48SeatCoach_Lounge(PSCNW48SeatCoach_Lounge.class, new ModelPSCNW48SeatCoach_Lounge(), "PS_lightweight_CNW48SeatCoach_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCNW20SeatCoach_Lounge(PSCNW20SeatCoach_Lounge.class, new ModelPSCNW20SeatCoach_Lounge(), "PS_lightweight_CNW20SeatCoach_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCNW36SeatCoach_Dinette(PSCNW36SeatCoach_Dinette.class, new ModelPSCNW36SeatCoach_Dinette(), "PS_lightweight_CNW36SeatCoach_Dinette_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
-
+	PSCNW56SeatCoachDiner(PSCNW56SeatDiner.class, new ModelPSCNW56SeatDiner(), "PS_lightweight_CNW56SeatCoachDiner_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCNW48SeatCoachDiner(PSCNW48SeatDiner.class, new ModelPSCNW48SeatDiner(), "PS_lightweight_CNW48SeatCoachDiner_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCNW1DR_22SeatParlor(PSCNW1DR_22SeatParlor.class, new ModelPSCNW1DR_22SeatParlor(), "PS_lightweight_CNW1DR_22SeatParlor_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCNW16_1_3Sleeper(PSCNW16_1_3Sleeper.class, new ModelPSCNW16_1_3Sleeper(), "PS_lightweight_CNW16_1_3Sleeper_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCNWRPO15(PSCNWRPO15.class, new ModelPSCNWRPO15(), "PS_lightweight_CNWRPO15_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCNWRPO60(PSCNWRPO60.class, new ModelPSCNWRPO60(), "PS_lightweight_CNWRPO60_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	BuddRDG56SeatCoach_Lounge(BuddRDG56SeatCoach_Lounge.class, new ModelBuddRDG56SeatCoach_Lounge(), "Budd_lightweight_RDG56SeatCoach_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 
@@ -1459,6 +1464,8 @@ RenderEnum {
 	BuddATSF34SeatParlor_Observation(BuddATSF34SeatParlor_Observation.class, new ModelBuddATSF50SeatCoach_Observation(), "Budd_lightweight_ATSF50SeatCoach_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	BuddATSF58SeatCoach_Observation(BuddATSF58SeatCoach_Observation.class, new ModelBuddATSF50SeatCoach_Observation(), "Budd_lightweight_ATSF50SeatCoach_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSATSF50SeatCoach_Observation(PSATSF50SeatCoach_Observation.class, new ModelPSATSF50SeatCoach_Observation(), "PS_lightweight_ATSF50SeatCoach_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+
+	ACFUPRPO60(ACFUPRPO60.class, new ModelPSCNWRPO60(), "AC&F_lightweight_UPRPO60_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	amfleet(Amfleet.class, new ModelAmfleet(),"amfleet_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	amfleet2(Amfleet2.class, new ModelAmfleet2(),"amfleet2_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

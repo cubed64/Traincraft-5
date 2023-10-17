@@ -629,6 +629,13 @@ public enum ItemIDs {
 	minecartPSCNW48SeatCoachLounge("ItemRollingStock", "PSCNW56SeatCoach", 3),
 	minecartPSCNW20SeatCoachLounge("ItemRollingStock", "PSCNW20SeatCoach_Lounge", 3),
 	minecartPSCNW36SeatCoach_Dinette("ItemRollingStock", "PSCNW36SeatCoach_Dinette", 3),
+	minecartPSCNW56SeatDiner("ItemRollingStock", "PSCNWDiner", 3),
+	minecartPSCNW48SeatDiner("ItemRollingStock", "PSCNWDiner", 3),
+	minecartPSCNW1DR_22SeatParlor("ItemRollingStock", "PSCNW1DR_22SeatParlor", 3),
+	minecartPSCNW16_1_3Sleeper("ItemRollingStock", "PSCNW16_1_3Sleeper", 3),
+	minecartPSCNWRPO15("ItemRollingStock", "PSCNWRPO15", 3),
+	minecartPSCNWRPO60("ItemRollingStock", "PSCNWRPO60", 3),
+	minecartACFUPRPO60("ItemRollingStock", "ACFUPRPO60", 3),
 
 	minecartBuddRDG56SeatCoachLounge("ItemRollingStock", "BuddRDG56SeatCoachLounge", 3),
 
