@@ -12,10 +12,12 @@ import train.common.Traincraft;
 import train.common.api.AbstractTrains;
 import train.common.api.EntityRollingStock;
 import train.common.api.Freight;
+import train.common.core.handlers.ConfigHandler;
 import train.common.core.network.PacketCargoSelection;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
+import java.awt.*;
 import java.util.Collections;
 
 /**
@@ -30,7 +32,11 @@ public class GuiCargoSelection extends GuiAbstractPaintbrush {
     private final EnumTrains fakeTrain;
     private final AbstractTrains renderEntity;
     private GuiButtonPaintbrushMenu playPauseButton;
-    private boolean doRotation = true;
+    private GuiButtonPaintbrushMenu lightControlButton;
+    private GuiButtonPaintbrushMenu renderModelsButton;
+    private boolean renderModels = !ConfigHandler.DISABLE_PAINTBRUSH_GUI_MODELS;
+    private boolean disableLighting = true;
+    private boolean doRotation = !ConfigHandler.DISABLE_PAINTBRUSH_GUI_ANIMATION;
     /**
      * Used to vary the amount of cargo stored in a display entity to give illusion of loading animation.
      */
@@ -55,9 +61,15 @@ public class GuiCargoSelection extends GuiAbstractPaintbrush {
     @Override
     protected void updateButtons() {
         super.updateButtons();
-        this.playPauseButton.showButton = true;
-        this.playPauseButton.visible = true;
+        this.playPauseButton.showButton = renderModels;
+        this.playPauseButton.visible = renderModels;
         this.playPauseButton.setType(doRotation ? GuiButtonPaintbrushMenu.Type.PLAY : GuiButtonPaintbrushMenu.Type.PAUSE, playPauseButton.getTexture());
+        this.lightControlButton.showButton = renderModels;
+        this.lightControlButton.visible = renderModels;
+        this.lightControlButton.setType(disableLighting ? GuiButtonPaintbrushMenu.Type.LIGHTSON : GuiButtonPaintbrushMenu.Type.LIGHTSOFF, lightControlButton.getTexture());
+        this.renderModelsButton.visible = true;
+        this.renderModelsButton.showButton = true;
+        this.renderModelsButton.setType(renderModels ? GuiButtonPaintbrushMenu.Type.STOPRENDER : GuiButtonPaintbrushMenu.Type.PLAY, renderModelsButton.getTexture());
         if (currentPage == (getSelectedOption() / RESULTS_PER_PAGE)) { // If overlay is on current page, set the selected overlay to active and the rest to inactive.
             int numberOfActiveOverlayInGUI = getSelectedOption() % RESULTS_PER_PAGE; // Which button corresponds to the active overlay...
             for (int i = 3; i < 11; i++) {
@@ -76,7 +88,6 @@ public class GuiCargoSelection extends GuiAbstractPaintbrush {
                 }
             }
         }
-
     }
 
     @Override
@@ -85,48 +96,77 @@ public class GuiCargoSelection extends GuiAbstractPaintbrush {
         float offsetX = GUI_ANCHOR_X;
         float offsetY = GUI_ANCHOR_Y + 12;
         // Display the model with each texture.
-        RenderRollingStock.setRenderModeGUI(true); // VERY IMPORTANT CALL! Forces renderer to render in full bright.
-        RenderRollingStock.setRenderGUIFullBright(true);
 
         // Trick the entity into thinking it is amount of cargo is changing.
         // If the load is dynamic, it will cycle between the different states to show the loading animation.
         if (renderIteration == 10) {
             renderIteration = 0;
-            if (((Freight) renderEntity).getAmmountOfCargo() == ((Freight) renderEntity).getSizeInventory() - 1)
-                renderEntity.getDataWatcher().updateObject(22, 1);
-            else
-                renderEntity.getDataWatcher().updateObject(22, renderEntity.getDataWatcher().getWatchableObjectInt(22) + 1);
-        }
-
-        float bogieOffset = (float) Math.abs(fakeTrain.getBogieLocoPosition()) * 0.5f;
-        for (int i = 0; i < optionsOnCurrentPage; i++) {
-            renderEntity.setColor(rollingStock.getColor());
-            renderEntity.getCargoManager().setSelectedCargo(i + RESULTS_PER_PAGE * currentPage);
-            GL11.glColor4f(1, 1, 1, 1);
-            GL11.glPushMatrix();
-            GL11.glTranslated(offsetX + 50, offsetY + 50, 400);
-            GL11.glScalef(-fakeTrain.getGuiRenderScale(), fakeTrain.getGuiRenderScale(), fakeTrain.getGuiRenderScale());
-            GL11.glRotatef(180, 0, 0, 1);
-            GL11.glRotatef(yaw, 0, 1, 0);
-            RenderManager.instance.renderEntityWithPosYaw(renderEntity, bogieOffset, 0, 0, 0, 0);
-            GL11.glPopMatrix();
-
-            // Handle rotation of entity(s) in GUI.
-            offsetX += 95;
-            if (offsetX > GUI_ANCHOR_X + 292) {
-                offsetX = GUI_ANCHOR_X;
-                offsetY += 92;
+            if (renderEntity instanceof Freight) {
+                if (((Freight) renderEntity).getAmmountOfCargo() == ((Freight) renderEntity).getSizeInventory() - 1) {
+                    renderEntity.getDataWatcher().updateObject(22, 1);
+                }
+                else {
+                    renderEntity.getDataWatcher().updateObject(22, renderEntity.getDataWatcher().getWatchableObjectInt(22) + 1);
+                }
             }
         }
-        if (doRotation)
-            yaw += 0.5F;
-        RenderRollingStock.setRenderModeGUI(false); // VERY IMPORTANT CALL! Forces renderer to render in full bright.
-        RenderRollingStock.setRenderGUIFullBright(false);
+
+        if (renderModels) {
+            RenderRollingStock.setRenderModeGUI(true); // VERY IMPORTANT CALL! Forces renderer to render in full bright.
+            RenderRollingStock.setRenderGUIFullBright(disableLighting);
+            float bogieOffset = (float) Math.abs(fakeTrain.getBogieLocoPosition()) * 0.5f;
+            for (int i = 0; i < optionsOnCurrentPage; i++) {
+                renderEntity.setColor(rollingStock.getColor());
+                renderEntity.getCargoManager().setSelectedCargo(i + RESULTS_PER_PAGE * currentPage);
+                GL11.glColor4f(1, 1, 1, 1);
+                GL11.glPushMatrix();
+                GL11.glTranslated(offsetX + 50, offsetY + 50, 400);
+                GL11.glScalef(-fakeTrain.getGuiRenderScale(), fakeTrain.getGuiRenderScale(), fakeTrain.getGuiRenderScale());
+                GL11.glRotatef(180, 0, 0, 1);
+                GL11.glRotatef(yaw, 0, 1, 0);
+                RenderManager.instance.renderEntityWithPosYaw(renderEntity, bogieOffset, 0, 0, 0, 0);
+                GL11.glPopMatrix();
+
+                // Handle rotation of entity(s) in GUI.
+                offsetX += 95;
+                if (offsetX > GUI_ANCHOR_X + 292) {
+                    offsetX = GUI_ANCHOR_X;
+                    offsetY += 92;
+                }
+            }
+            if (doRotation)
+                yaw += 0.5F;
+            RenderRollingStock.setRenderModeGUI(false); // VERY IMPORTANT CALL! Forces renderer to render in full bright.
+            RenderRollingStock.setRenderGUIFullBright(false);
+        }
+
     }
 
     @Override
     public void drawInForeground(int mouseX, int mouseY) {
-        // Draw tooltips.
+        // Render texture names in lieu of models...
+        if (!renderModels) {
+            float offsetX = GUI_ANCHOR_X + 13;
+            float offsetY = GUI_ANCHOR_Y + 44;
+            final int fontColor = new Color(0, 0, 0).getRGB();
+            String optionName;
+            for (int i = 0; i < optionsOnCurrentPage; i++) {
+                if (i == 0 && currentPage == 0) {
+                    optionName = StatCollector.translateToLocal("paintbrushmenu.No Cargo.name");
+
+                } else {
+                    optionName = rollingStock.getCargoManager().getCargoSpecificationList()[i - 1 + RESULTS_PER_PAGE * currentPage][0].textureName;
+                }
+                fontRendererObj.drawSplitString(optionName, (int) ((offsetX + 14) - (0.5 * fontRendererObj.splitStringWidth(optionName, 82))), (int) offsetY, 82, fontColor);
+                offsetX += 94;
+                if (offsetX > GUI_ANCHOR_X + 322) {
+                    offsetX = GUI_ANCHOR_X + 13;
+                    offsetY += 92;
+                }
+            }
+        }
+
+        // Draw button tooltips.
         GuiButtonPaintbrushMenu loopButton;
         for (int i = 0; i < optionsOnCurrentPage; i++) {
             loopButton = ((GuiButtonPaintbrushMenu) buttonList.get(i + 3));
@@ -142,6 +182,16 @@ public class GuiCargoSelection extends GuiAbstractPaintbrush {
                 drawHoveringText(Collections.singletonList(StatCollector.translateToLocal("paintbrushmenu.Pause.name")), mouseX, mouseY, fontRendererObj);
             else
                 drawHoveringText(Collections.singletonList(StatCollector.translateToLocal("paintbrushmenu.Play.name")), mouseX, mouseY, fontRendererObj);
+        } else if (lightControlButton.getTexture() == GuiButtonPaintbrushMenu.Texture.ACTIVE) {
+            if (!disableLighting)
+                drawHoveringText(Collections.singletonList(StatCollector.translateToLocal("paintbrushmenu.Lights On.name")), mouseX, mouseY, fontRendererObj);
+            else
+                drawHoveringText(Collections.singletonList(StatCollector.translateToLocal("paintbrushmenu.Lights Off.name")), mouseX, mouseY, fontRendererObj);
+        } else if (renderModelsButton.getTexture() == GuiButtonPaintbrushMenu.Texture.ACTIVE) {
+            if (renderModels)
+                drawHoveringText(Collections.singletonList(StatCollector.translateToLocal("paintbrushmenu.Hide Models.name")), mouseX, mouseY, fontRendererObj);
+            else
+                drawHoveringText(Collections.singletonList(StatCollector.translateToLocal("paintbrushmenu.Show Models.name")), mouseX, mouseY, fontRendererObj);
         }
     }
 
@@ -174,13 +224,25 @@ public class GuiCargoSelection extends GuiAbstractPaintbrush {
     @Override
     public void addExtraButtons() {
         this.buttonList.add(this.playPauseButton = new GuiButtonPaintbrushMenu(12, GUI_ANCHOR_X + 382, GUI_ANCHOR_Y + MENU_TEXTURE_HEIGHT - 29, 22, 22, GuiButtonPaintbrushMenu.Type.PLAY));
+        this.buttonList.add(this.lightControlButton = new GuiButtonPaintbrushMenu(13, GUI_ANCHOR_X + 382, GUI_ANCHOR_Y + MENU_TEXTURE_HEIGHT - 77, 22, 22, GuiButtonPaintbrushMenu.Type.LIGHTSOFF));
+        this.buttonList.add(this.renderModelsButton = new GuiButtonPaintbrushMenu(14, GUI_ANCHOR_X + 382, GUI_ANCHOR_Y + MENU_TEXTURE_HEIGHT - 53, 22, 22, GuiButtonPaintbrushMenu.Type.STOPRENDER));
     }
 
     @Override
     public void handleExtraButtons(int buttonID) {
-        if (buttonID == 12) {
-            doRotation = !doRotation;
-            updateButtons();
+        switch (buttonID) {
+            case 12:
+                doRotation = !doRotation;
+                updateButtons();
+                break;
+            case 13:
+                disableLighting = !disableLighting;
+                updateButtons();
+                break;
+            case 14:
+                renderModels = !renderModels;
+                updateButtons();
+                break;
         }
     }
 }

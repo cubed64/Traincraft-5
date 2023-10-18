@@ -7,6 +7,7 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
+import org.lwjgl.opengl.GL11;
 import train.common.api.EntityRollingStock;
 import train.common.library.Info;
 
@@ -119,6 +120,7 @@ public abstract class GuiAbstractPaintbrush extends GuiScreen {
 
     @Override
     public void drawScreen(int mouseX, int mouseY, float par3) {
+        GL11.glColor3f(1, 1, 1);
         // Draw background.
         mc.renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.guiPrefix + "gui_paintbrush_menu_right.png"));
         this.drawTexturedModalRect(GUI_ANCHOR_MID_X, GUI_ANCHOR_Y, 0, 0, MENU_TEXTURE_WIDTH, MENU_TEXTURE_HEIGHT);

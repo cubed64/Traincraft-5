@@ -400,6 +400,10 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                     rollingStock.trainCreator = trainCreator;
                     rollingStock.trainNote = trainNote;
                     rollingStock.importTrustedListFromNBT(var5);
+                    if (var5.hasKey("cargoSelection")) {
+                        if (var5.getInteger("cargoSelection") < rollingStock.getCargoManager().getCargoSpecificationList().length + 1)
+                            rollingStock.getCargoManager().setSelectedCargo(var5.getInteger("cargoSelection"));
+                    }
                 }
                 if (player != null)
                     rollingStock.setInformation(((ItemRollingStock) itemstack.getItem()).getTrainType(), player.getDisplayName(), trainCreator, (itemstack.getItem()).getItemStackDisplayName(itemstack), uniID);
