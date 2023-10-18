@@ -633,9 +633,12 @@ public enum ItemIDs {
 	minecartPSCNW48SeatDiner("ItemRollingStock", "PSCNWDiner", 3),
 	minecartPSCNW1DR_22SeatParlor("ItemRollingStock", "PSCNW1DR_22SeatParlor", 3),
 	minecartPSCNW16_1_3Sleeper("ItemRollingStock", "PSCNW16_1_3Sleeper", 3),
+	minecartPSCNW12SeatParlor_Observation("ItemRollingStock", "PSCNW12SeatParlor_Observation", 3),
 	minecartPSCNWRPO15("ItemRollingStock", "PSCNWRPO15", 3),
 	minecartPSCNWRPO60("ItemRollingStock", "PSCNWRPO60", 3),
-	minecartACFUPRPO60("ItemRollingStock", "ACFUPRPO60", 3),
+	minecartPSCNWBaggage_LC_Lounge("ItemRollingStock", "PSCNWBaggage_LC_Lounge", 3),
+	minecartPSCNWRPO15_Baggage_LC_Lounge("ItemRollingStock", "PSCNWRPO15_Baggage_LC_Lounge", 3),
+	minecartPSCNWBaggage_LC_Diner("ItemRollingStock", "PSCNWBaggage_LC_Diner", 3),
 
 	minecartBuddRDG56SeatCoachLounge("ItemRollingStock", "BuddRDG56SeatCoachLounge", 3),
 
@@ -651,6 +654,8 @@ public enum ItemIDs {
 	minecartBuddATSF34SeatParlorObservation("ItemRollingStock", "BuddATSF34SeatParlorObservation", 3),
 	minecartBuddATSF58SeatCoachObservation("ItemRollingStock", "BuddATSF34SeatParlorObservation", 3),
 	minecartPSATSF50SeatCoachObservation("ItemRollingStock", "PSATSF50SeatCoachObservation", 3),
+
+	minecartACFUPRPO60("ItemRollingStock", "ACFUPRPO60", 3),
 
 	minecartAmfleet("ItemRollingStock", "Amfleet", 3),
 	minecartAmfleet2("ItemRollingStock", "Amfleet2", 3),
