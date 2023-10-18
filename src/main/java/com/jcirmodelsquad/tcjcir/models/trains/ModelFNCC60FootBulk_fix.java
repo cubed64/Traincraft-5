@@ -557,7 +557,7 @@ public class ModelFNCC60FootBulk_fix extends ModelConverter //Same as Filename
 			} else {
 				bodyModel[i].render(f5);
 			}
-		int cargo = ((Freight) entity).getAmmountOfCargo();
+		/*int cargo = ((Freight) entity).getAmmountOfCargo();
 		if (cargo > 0) {
 			if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==2){
 				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/MixedLogs_Spruce.png"));
@@ -586,7 +586,7 @@ public class ModelFNCC60FootBulk_fix extends ModelConverter //Same as Filename
 			}else{
 
 			}
-		}
+		}*/
 
 		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==18900){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Black.png"));
@@ -600,6 +600,8 @@ public class ModelFNCC60FootBulk_fix extends ModelConverter //Same as Filename
 		GL11.glTranslated(3.75,-0.0,0.00);
 		bogie2.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();
+
+		((AbstractTrains) entity).getCargoManager().renderCargo((AbstractTrains) entity, f, f1, f2, f3, f4, f5);
 	}
 	public float[] getTrans() { return new float[]{-0F, 0.15F, 0F}; }
 }

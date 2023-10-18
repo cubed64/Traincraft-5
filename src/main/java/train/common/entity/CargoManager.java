@@ -14,17 +14,17 @@ import train.common.library.Info;
  */
 public class CargoManager {
     private int selectedCargo = 0;
-    private final CargoSpecification[] cargoSpecificationList;
+    private final CargoSpecification[][] cargoSpecificationList;
 
     /**
      * @author 02skaplan
      * @param cargoSpecificationList List of CargoSpecifications detailing possible cargo options.
      */
-    public CargoManager(CargoSpecification[] cargoSpecificationList) {
+    public CargoManager(CargoSpecification[][] cargoSpecificationList) {
         this.cargoSpecificationList = cargoSpecificationList;
     }
 
-    public CargoSpecification[] getCargoSpecificationList() {
+    public CargoSpecification[][] getCargoSpecificationList() {
         return cargoSpecificationList;
     }
 
@@ -47,19 +47,20 @@ public class CargoManager {
             // This if statement should always be activated, but is useful in case a CargoSpec is removed from the list.
             if (cargoNumber - 1 < cargoSpecificationList.length) {
                 try {
-                    ModelConverter cargo = getCargoSpecificationList()[cargoNumber - 1].cargoModelClass.newInstance();
-                    if (!getCargoSpecificationList()[cargoNumber - 1].textureFile.isEmpty())
-                        Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/" + getCargoSpecificationList()[cargoNumber - 1].textureFile + ".png"));
-                    GL11.glPushMatrix();
-                    GL11.glTranslated(getCargoSpecificationList()[cargoNumber - 1].offsetX, getCargoSpecificationList()[cargoNumber - 1].offsetY - 3, getCargoSpecificationList()[cargoNumber - 1].offsetZ);
-                    cargo.render(entity, f, f1, f2, f3, f4, f5);
-                    GL11.glPopMatrix();
+                    for (int i = 0; i < getCargoSpecificationList()[cargoNumber - 1].length; i++) {
+                        ModelConverter cargo = getCargoSpecificationList()[cargoNumber - 1][i].cargoModelClass.newInstance();
+                        if (!getCargoSpecificationList()[cargoNumber - 1][i].textureFile.isEmpty())
+                            Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/" + getCargoSpecificationList()[cargoNumber - 1][i].textureFile + ".png"));
+                        GL11.glPushMatrix();
+                        GL11.glTranslated(getCargoSpecificationList()[cargoNumber - 1][i].offsetX, getCargoSpecificationList()[cargoNumber - 1][i].offsetY - 3, getCargoSpecificationList()[cargoNumber - 1][i].offsetZ);
+                        cargo.render(entity, f, f1, f2, f3, f4, f5);
+                        GL11.glPopMatrix();
+                    }
                 } catch (InstantiationException | IllegalAccessException e) {
                     throw new RuntimeException(e);
                 }
             }
         }
-
     }
 
     public void exportToNBT(NBTTagCompound nbtTagCompound) {

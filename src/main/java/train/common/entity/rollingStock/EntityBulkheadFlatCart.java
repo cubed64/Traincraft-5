@@ -24,11 +24,11 @@ public class EntityBulkheadFlatCart extends Freight implements IInventory {
 	public EntityBulkheadFlatCart(World world) {
 		super(world);
 		initBulkheadFlat();
-		setCargoManager(new CargoManager(new CargoSpecification[] {
-				new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Oak", "Oak Logs", 0, 2.9, 0),
-				new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Birch", "Birch Logs", 0, 2.9, 0),
-				new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Spruce", "Spruce Logs", 0, 2.9, 0),
-				new CargoSpecification(ModelOnion.class, "trains/Onion_Black", "O n i o n", 0, 2.4, 0),
+		setCargoManager(new CargoManager(new CargoSpecification[][] {
+				{ new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Oak", "Oak Logs", 0, 2.9, 0)},
+				{ new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Birch", "Birch Logs", 0, 2.9, 0) },
+				{ new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Spruce", "Spruce Logs", 0, 2.9, 0) },
+				{ new CargoSpecification(ModelOnion.class, "trains/Onion_Black", "O n i o n", 0, 2.4, 0) },
 		}));
 	}
 	

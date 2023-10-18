@@ -134,7 +134,7 @@ public class GuiCargoSelection extends GuiAbstractPaintbrush {
                 if (i == 0 && currentPage == 0) {
                     drawHoveringText(Collections.singletonList(StatCollector.translateToLocal("paintbrushmenu.No Cargo.name")), mouseX, mouseY, fontRendererObj);
                 } else {
-                    drawHoveringText(Collections.singletonList(rollingStock.getCargoManager().getCargoSpecificationList()[i - 1 + RESULTS_PER_PAGE * currentPage].textureName), mouseX, mouseY, fontRendererObj);
+                    drawHoveringText(Collections.singletonList(rollingStock.getCargoManager().getCargoSpecificationList()[i - 1 + RESULTS_PER_PAGE * currentPage][0].textureName), mouseX, mouseY, fontRendererObj);
                 }
         }
         if (playPauseButton.getTexture() == GuiButtonPaintbrushMenu.Texture.ACTIVE) {
