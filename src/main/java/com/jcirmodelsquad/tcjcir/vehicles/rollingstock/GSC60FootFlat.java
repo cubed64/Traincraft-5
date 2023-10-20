@@ -1,5 +1,7 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
+import com.jcirmodelsquad.tcjcir.models.loads.ModelWrappedWoodOptimized_bulkhead_slice;
+import com.jcirmodelsquad.tcjcir.models.loads.Modelpipeload1;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -10,6 +12,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.Freight;
+import train.common.entity.CargoManager;
+import train.common.entity.CargoSpecification;
 import train.common.library.GuiIDs;
 
 public class GSC60FootFlat extends Freight implements IInventory {
@@ -18,6 +22,73 @@ public class GSC60FootFlat extends Freight implements IInventory {
     public GSC60FootFlat(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "GN");
+        textureDescriptionMap.put(1, "ICG");
+        textureDescriptionMap.put(2, "UP");
+        textureDescriptionMap.put(3, "MP/ UP MOW");
+        textureDescriptionMap.put(4, "ATSF");
+        textureDescriptionMap.put(5, "BN");
+        textureDescriptionMap.put(6, "BN");
+        setCargoManager(new CargoManager(new CargoSpecification[][] {
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//washaska wood
+                        "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", 0, 1.555, 0),
+                        /*new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Wrapped Lumber (Washaska)", 0, 2.985, 0)*/},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//washaska wood 2
+                        "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 1.555, 0),
+                        /*new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Wrapped Lumber (Washaska)", 0, 2.985, 0)*/},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//tolko wood
+                        "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", 0, 1.555, 0),
+                        /*new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Wrapped Lumber (Tolko)", 0, 2.985, 0)*/},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//canfor wood
+                        "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", 0, 1.555, 0),
+                        /*new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Wrapped Lumber (Canfor)", 0, 2.985, 0)*/},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//blank wood
+                        "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 1.555, 0),
+                        /*new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Wrapped Lumber", 0, 2.985, 0)*/},
+
+                { new CargoSpecification(Modelpipeload1.class,
+                        "loads/pipe_falling_sfx_1", "Pipes", 0, 2.5, 0) },
+        }));
     }
 
     public GSC60FootFlat(World world, double d, double d1, double d2){

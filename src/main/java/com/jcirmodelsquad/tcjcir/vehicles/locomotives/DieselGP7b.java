@@ -17,7 +17,9 @@ public class DieselGP7b extends DieselTrain {
     public DieselGP7b(World world) {
         super(world, EnumTrains.GP7b.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "ATSF");
+        textureDescriptionMap.put(1, "Blandsville & Blankerston");
+        textureDescriptionMap.put(2, "Avanste Northeastern");
     }
     public DieselGP7b(World world, double d, double d1, double d2){
         this(world);

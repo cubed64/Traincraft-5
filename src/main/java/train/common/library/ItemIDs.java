@@ -382,6 +382,7 @@ public enum ItemIDs {
 	minecartGP7f("ItemRollingStock", "gp7f", 3),
 	minecartGPFDL("ItemRollingStock", "gpfdl", 4),
 	minecartGP9("ItemRollingStock", "gp9", 3),
+	minecartGP9b("ItemRollingStock", "gp9b", 3),
 	minecartGP7old("ItemRollingStock", "gp7old", 3),
 	minecartGP13("ItemRollingStock", "gp13", 3),
 	minecartGP15("ItemRollingStock", "gp15", 3),
