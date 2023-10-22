@@ -18,7 +18,8 @@ public class DieselSF30C extends DieselTrain {
     public DieselSF30C(World world) {
         super(world, EnumTrains.SF30C.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        //when the
+        textureDescriptionMap.put(0, "ATSF (Freightbonnet)");
+        textureDescriptionMap.put(1, "ATSF (Kodachrome)");
     }
     public DieselSF30C(World world, double d, double d1, double d2){
         this(world);

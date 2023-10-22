@@ -18,7 +18,18 @@ public class DieselFPA4 extends DieselTrain {
     public DieselFPA4(World world) {
         super(world, EnumTrains.FPA4.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        //when the benis sus
+        textureDescriptionMap.put(0, "VIA Rail");
+        textureDescriptionMap.put(1, "VIA Rail");
+        textureDescriptionMap.put(2, "Canadian National (Old)");
+        textureDescriptionMap.put(3, "Canadian National (Stripes)");
+        textureDescriptionMap.put(4, "Canadian National (VIA)");
+        textureDescriptionMap.put(5, "Whatcom & Fraser Railroad");
+        textureDescriptionMap.put(6, "COW");
+        textureDescriptionMap.put(7, "Canadian National (Old 2)");
+        textureDescriptionMap.put(8, "Canadian National (Stripes 2)");
+        textureDescriptionMap.put(9, "VIA Rail");
+        textureDescriptionMap.put(10, "VIA Rail");
+        textureDescriptionMap.put(11, "VIA Rail");
     }
     public DieselFPA4(World world, double d, double d1, double d2){
         this(world);

@@ -18,7 +18,10 @@ public class DieselP42 extends DieselTrain {
     public DieselP42(World world) {
         super(world, EnumTrains.P42.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        //when the
+        textureDescriptionMap.put(0, "New Jersey Transit");
+        textureDescriptionMap.put(1, "VIA Rail");
+        textureDescriptionMap.put(2, "VIA Rail");
+        textureDescriptionMap.put(3, "VIA Rail");
     }
     public DieselP42(World world, double d, double d1, double d2){
         this(world);

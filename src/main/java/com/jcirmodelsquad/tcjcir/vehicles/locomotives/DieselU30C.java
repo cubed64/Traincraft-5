@@ -17,7 +17,14 @@ public class DieselU30C extends DieselTrain {
     public DieselU30C(World world) {
         super(world, EnumTrains.U30C.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Burlington Northern");
+        textureDescriptionMap.put(1, "Seaboard Systems");
+        textureDescriptionMap.put(2, "Fox, North Coast & Cascades (North Fox)");
+        textureDescriptionMap.put(3, "CB&Q");
+        textureDescriptionMap.put(4, "Chicago Northwestern Railroad");
+        textureDescriptionMap.put(5, "Acworth North Western");
+        textureDescriptionMap.put(6, "L&W (EX Seaboard)");
+        textureDescriptionMap.put(7, "West Creek Pacific");
     }
     public DieselU30C(World world, double d, double d1, double d2){
         this(world);

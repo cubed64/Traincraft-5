@@ -18,7 +18,16 @@ public class DieselFA2 extends DieselTrain {
     public DieselFA2(World world) {
         super(world, EnumTrains.FA1.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        //when the benis sus
+        textureDescriptionMap.put(0, "New York Central (Lightning)");
+        textureDescriptionMap.put(1, "Chicago Northwestern");
+        textureDescriptionMap.put(2, "Wabash");
+        textureDescriptionMap.put(3, "ALCO Demonstrator");
+        textureDescriptionMap.put(3, "Great Northern");
+        textureDescriptionMap.put(4, "Great Northern (Solid)");
+        textureDescriptionMap.put(5, "Great Northern (Steam Gen");
+        textureDescriptionMap.put(6, "Great Northern (Steam Gen Solid 2)");
+        textureDescriptionMap.put(7, "Canadian National (Old)");
+        textureDescriptionMap.put(8, "Canadian National (Stripes)");
     }
     public DieselFA2(World world, double d, double d1, double d2){
         this(world);

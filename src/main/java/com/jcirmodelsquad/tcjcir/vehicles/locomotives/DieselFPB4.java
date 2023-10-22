@@ -18,7 +18,15 @@ public class DieselFPB4 extends DieselTrain {
     public DieselFPB4(World world) {
         super(world, EnumTrains.FPB4.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        //when the benis sus
+        textureDescriptionMap.put(0, "VIA Rail");
+        textureDescriptionMap.put(1, "Canadian National (Old)");
+        textureDescriptionMap.put(2, "Canadian National (Stripes)");
+        textureDescriptionMap.put(3, "Whatcom & Fraser Railroad");
+        textureDescriptionMap.put(4, "COW (Calf)");
+        textureDescriptionMap.put(7, "Canadian National (Old 2)");
+        textureDescriptionMap.put(8, "Canadian National (Stripes 2)");
+        textureDescriptionMap.put(1, "VIA Rail");
+
     }
     public DieselFPB4(World world, double d, double d1, double d2){
         this(world);

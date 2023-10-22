@@ -17,7 +17,8 @@ public class DieselB30 extends DieselTrain {
     public DieselB30(World world) {
         super(world, EnumTrains.B30.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Burlington Northern");
+        textureDescriptionMap.put(0, "Union Pacific");
     }
     public DieselB30(World world, double d, double d1, double d2){
         this(world);

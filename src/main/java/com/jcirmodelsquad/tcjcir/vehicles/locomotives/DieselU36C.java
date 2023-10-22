@@ -17,7 +17,11 @@ public class DieselU36C extends DieselTrain {
     public DieselU36C(World world) {
         super(world, EnumTrains.U36C.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Erie Lackawana");
+        textureDescriptionMap.put(1, "ATSF (Pinstripe)");
+        textureDescriptionMap.put(2, "ATSF (Kodachrome)");
+        textureDescriptionMap.put(3, "ATSF (Freightbonet)");
+        textureDescriptionMap.put(4, "Milwaukee Road");
     }
     public DieselU36C(World world, double d, double d1, double d2){
         this(world);
