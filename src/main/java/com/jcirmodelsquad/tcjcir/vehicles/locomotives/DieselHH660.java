@@ -17,6 +17,12 @@ public class DieselHH660 extends DieselTrain {
     public DieselHH660(World world) {
         super(world, EnumTrains.HH660.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "RE 601");
+        textureDescriptionMap.put(1, "RE 606");
+        textureDescriptionMap.put(2, "ATSF (Zebra)");
+        textureDescriptionMap.put(3, "DLMR");
+        textureDescriptionMap.put(4, "Fraser Pine River Railroad");
+
     }
     public DieselHH660(World world, double d, double d1, double d2) {
         this(world);

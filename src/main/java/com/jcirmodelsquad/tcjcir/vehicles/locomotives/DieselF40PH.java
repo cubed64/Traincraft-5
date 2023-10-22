@@ -17,6 +17,11 @@ public class DieselF40PH extends DieselTrain {
     public DieselF40PH(World world) {
         super(world, EnumTrains.F40PH.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "Amtrak (Phase III)");
+        textureDescriptionMap.put(1, "Amtrak (Phase IV)");
+        textureDescriptionMap.put(2, "Amtrak (Phase II)");
+        textureDescriptionMap.put(3, "VIA Rail");
+        textureDescriptionMap.put(4, "JCTransit");
 
     }
     public DieselF40PH(World world, double d, double d1, double d2){

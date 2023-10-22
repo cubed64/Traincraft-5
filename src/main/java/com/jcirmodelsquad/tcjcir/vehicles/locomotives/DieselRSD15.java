@@ -17,6 +17,8 @@ public class DieselRSD15 extends DieselTrain {
     public DieselRSD15(World world) {
         super(world, EnumTrains.RSD15.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(2, "Blandsville & Blankerston");
+        textureDescriptionMap.put(3, "CSWR");
     }
     public DieselRSD15(World world, double d, double d1, double d2){
         this(world);

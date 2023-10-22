@@ -17,7 +17,11 @@ public class DieselNRE3gs21b extends DieselTrain {
     public DieselNRE3gs21b(World world) {
         super(world, EnumTrains.NRE3gs21b.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Union Pacific");
+        textureDescriptionMap.put(1, "BNSF");
+        textureDescriptionMap.put(2, "FURRX");
+        textureDescriptionMap.put(3, "FURRX (W/ Plow)");
+        textureDescriptionMap.put(4, "Southern Port Belt");
     }
     public DieselNRE3gs21b(World world, double d, double d1, double d2){
         this(world);

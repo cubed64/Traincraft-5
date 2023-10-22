@@ -17,6 +17,19 @@ public class DieselH1044 extends DieselTrain {
     public DieselH1044(World world) {
         super(world, EnumTrains.H1044.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "Hallet Dock Company");
+        textureDescriptionMap.put(1, "Union Pacific");
+        textureDescriptionMap.put(2, "Denver & Rio Grande");
+        textureDescriptionMap.put(3, "Frisco");
+        textureDescriptionMap.put(4, "ATSF (Zebra)");
+        textureDescriptionMap.put(5, "New York Central");
+        textureDescriptionMap.put(6, "Apache Railway");
+        textureDescriptionMap.put(7, "The Milwaukee Road");
+        textureDescriptionMap.put(8, "FURRX");
+        textureDescriptionMap.put(9, "Chicago Northwestern");
+        textureDescriptionMap.put(10, "Illinois Harbor Belt");
+        textureDescriptionMap.put(11, "Dee Dee Valley Railroad");
+
     }
     public DieselH1044(World world, double d, double d1, double d2) {
         this(world);

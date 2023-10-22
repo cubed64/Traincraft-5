@@ -17,6 +17,8 @@ public class DieselH24_66L extends DieselTrain {
     public DieselH24_66L(World world) {
         super(world, EnumTrains.H24_66L.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "Wabash");
+        textureDescriptionMap.put(1, "Southern");
     }
     public DieselH24_66L(World world, double d, double d1, double d2){
         this(world);
