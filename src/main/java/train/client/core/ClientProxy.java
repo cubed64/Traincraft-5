@@ -88,7 +88,7 @@ public class ClientProxy extends CommonProxy {
 		registerEvent(tiltingHandler);*/
 		registerEvent(tickHandler);
 		registerEvent(renderHandler);
-		registerEvent(new HUDLoco2());
+		registerEvent(huDloco);
 		registerEvent(new HUDAipkit());
 		registerEvent(wiggle);
 	}

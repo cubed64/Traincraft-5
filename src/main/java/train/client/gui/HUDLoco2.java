@@ -32,7 +32,7 @@ public class HUDLoco2 extends GuiScreen {
 
     if (game != null && game.thePlayer != null && game.thePlayer.ridingEntity != null && game.thePlayer.ridingEntity instanceof Locomotive && Minecraft.isGuiEnabled()) {
             inLoco = true;
-           // renderSkillHUD(event, (Locomotive) game.thePlayer.ridingEntity);
+            renderSkillHUD(event, (Locomotive) game.thePlayer.ridingEntity);
         } else {
         inLoco = false;
         this.game = this.mc = Minecraft.getMinecraft();
