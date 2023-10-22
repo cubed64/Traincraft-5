@@ -32,13 +32,14 @@ public class DieselSW1500 extends DieselTrain {
         textureDescriptionMap.put(11, "CSXT (lame future)");
         textureDescriptionMap.put(12, "Port of Latona Terminal Railroad");
         textureDescriptionMap.put(13, "Morristown Tenneva & Southern (The 1701 Trekkie Unit)");
-        textureDescriptionMap.put(14, "Southern Port Belt");
-        textureDescriptionMap.put(15, "Western Pacific (Preserved)");
-        textureDescriptionMap.put(16, "Western Pacific");
-        textureDescriptionMap.put(17, "Western Pacific (Late)");
-        textureDescriptionMap.put(18, "Apalachicola Northern");
-        textureDescriptionMap.put(19, "Canadian National (WC)");
-        textureDescriptionMap.put(20, "Grassland Labratories");
+        textureDescriptionMap.put(14, "Morristown Tenneva & Southern");
+        textureDescriptionMap.put(15, "Southern Port Belt");
+        textureDescriptionMap.put(16, "Western Pacific (Preserved)");
+        textureDescriptionMap.put(17, "Western Pacific");
+        textureDescriptionMap.put(18, "Western Pacific (Late)");
+        textureDescriptionMap.put(19, "Apalachicola Northern");
+        textureDescriptionMap.put(21, "Canadian National (WC)");
+        textureDescriptionMap.put(22, "Grassland Labratories");
     }
     public DieselSW1500(World world, double d, double d1, double d2){
         this(world);
