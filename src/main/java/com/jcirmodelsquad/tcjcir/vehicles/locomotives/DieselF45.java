@@ -18,6 +18,11 @@ public class DieselF45 extends DieselTrain {
         super(world, EnumTrains.F45.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
+        textureDescriptionMap.put(0, "Great Northern");
+        textureDescriptionMap.put(1, "Burlington Northern");
+        textureDescriptionMap.put(2, "ATSF (Pinstripe)");
+        textureDescriptionMap.put(3, "ATSF (Freightbonnet)");
+        textureDescriptionMap.put(4, "ATSF (Kodachrome)");
     }
     public DieselF45(World world, double d, double d1, double d2){
         this(world);

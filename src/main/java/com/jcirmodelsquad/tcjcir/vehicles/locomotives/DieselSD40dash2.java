@@ -19,6 +19,33 @@ public class DieselSD40dash2 extends DieselTrain {
         super(world, EnumTrains.SD40dash2.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
+        textureDescriptionMap.put(0, "LLPX");
+        textureDescriptionMap.put(1, "Burlington Northern");
+        textureDescriptionMap.put(2, "Avanste Northeastern");
+        textureDescriptionMap.put(3, "Avanste Northeastern");
+        textureDescriptionMap.put(4, "Union Pacific");
+        textureDescriptionMap.put(5, "BNSF");
+        textureDescriptionMap.put(6, "BNSF (With Yellow AC unit");
+        textureDescriptionMap.put(7, "THE MILWAUKEE ROAD");
+        textureDescriptionMap.put(8, "THE MILWAUKEE ROAD (With Icebreaker)");
+        textureDescriptionMap.put(9, "THE MILWAUKEE ROAD (Bicentennial)");
+        textureDescriptionMap.put(10, "The Rock Island");
+        textureDescriptionMap.put(11, "NdeM");
+        textureDescriptionMap.put(12, "Norfolk Southern");
+        textureDescriptionMap.put(13, "Norfolk Southern (Ex-N&W)");
+        textureDescriptionMap.put(14, "Norfolk Southern (Ex-SOU)");
+        textureDescriptionMap.put(15, "Blandsville & Blankerston");
+        textureDescriptionMap.put(16, "CSLX");
+        textureDescriptionMap.put(17, "CSX (Yn3)");
+        textureDescriptionMap.put(18, "Fort Worth Western Railroad");
+        textureDescriptionMap.put(19, "FURRX");
+        textureDescriptionMap.put(20, "FURRX");
+        textureDescriptionMap.put(21, "CSWR");
+        textureDescriptionMap.put(22, "ATSF (Freightbonnet w/ Black Trucks)");
+        textureDescriptionMap.put(23, "ATSF (Freightbonnet w/ Silver Trucks)");
+        textureDescriptionMap.put(24, "Morristown Tenneva and Southern");
+        textureDescriptionMap.put(25, "Morristown Tenneva and Southern (High Hood)");
+        textureDescriptionMap.put(26, "Kansas City Southern");
     }
     public DieselSD40dash2(World world, double d, double d1, double d2){
         this(world);

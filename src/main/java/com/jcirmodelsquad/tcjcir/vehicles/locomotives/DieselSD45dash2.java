@@ -19,6 +19,33 @@ public class DieselSD45dash2 extends DieselTrain {
         super(world, EnumTrains.SD45.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
+        textureDescriptionMap.put(0, "Great Northern (Big Sky)");
+        textureDescriptionMap.put(1, "Great Northern (Empire Simplified");
+        textureDescriptionMap.put(2, "Burlington Northern");
+        textureDescriptionMap.put(3, "Northern Pacific");
+        textureDescriptionMap.put(4, "Southern Pacific (Early)");
+        textureDescriptionMap.put(5, "Penn Central");
+        textureDescriptionMap.put(6, "Denver & Rio Grande Western");
+        textureDescriptionMap.put(7, "Denver & Rio Grande Western");
+        textureDescriptionMap.put(8, "THE MILWAUKEE ROAD");
+        textureDescriptionMap.put(9, "THE MILWAUKEE ROAD");
+        textureDescriptionMap.put(10, "Chicago Northwestern");
+        textureDescriptionMap.put(11, "Chicago Northwestern (Zito Yellow)");
+        textureDescriptionMap.put(12, "Frisco");
+        textureDescriptionMap.put(13, "ATSF 5691 (Freightbonnet");
+        textureDescriptionMap.put(14, "ATSF 5712 (Freightbonnet)");
+        textureDescriptionMap.put(15, "ATSF (Bicentennial)");
+        textureDescriptionMap.put(16, "BNSF (Ex-ATSF Patched)");
+        textureDescriptionMap.put(17, "BNSF (H1)");
+        textureDescriptionMap.put(18, "BNSF (H3)");
+        textureDescriptionMap.put(19, "Blandsville & Blankerston (Flared Radiator)");
+        textureDescriptionMap.put(20, "Blandsville & Blankerston");
+        textureDescriptionMap.put(22, "CSXT (Yn3)");
+        textureDescriptionMap.put(23, "Morristown Tenneva & Southern");
+
+
+
+
     }
     public DieselSD45dash2(World world, double d, double d1, double d2){
         this(world);

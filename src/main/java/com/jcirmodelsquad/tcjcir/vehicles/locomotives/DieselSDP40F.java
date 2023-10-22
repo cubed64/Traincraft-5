@@ -19,6 +19,11 @@ public class DieselSDP40F extends DieselTrain {
         super(world, EnumTrains.SDP40F.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
+        textureDescriptionMap.put(0, "EMD");
+        textureDescriptionMap.put(1, "Amtrak (Phase III)");
+        textureDescriptionMap.put(2, "Amtrak (Phase I)");
+        textureDescriptionMap.put(3, "Amtrak (Phase II)");
+        textureDescriptionMap.put(4, "ATSF (Frieghtbonnet)");
     }
     public DieselSDP40F(World world, double d, double d1, double d2){
         this(world);

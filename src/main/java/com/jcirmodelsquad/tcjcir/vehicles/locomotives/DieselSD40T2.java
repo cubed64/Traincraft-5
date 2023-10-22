@@ -18,6 +18,18 @@ public class DieselSD40T2 extends DieselTrain {
     public DieselSD40T2(World world) {
         super(world, EnumTrains.SD40T2.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "Denver and Rio Grande Western");
+        textureDescriptionMap.put(1, "Southern Pacific 8491 (Early)");
+        textureDescriptionMap.put(2, "Southern Pacific 8251 (Early)");
+        textureDescriptionMap.put(3, "Southern Pacific 8491 (Late)");
+        textureDescriptionMap.put(4, "Union Pacific (Ex-SP Patched)");
+        textureDescriptionMap.put(5, "Northern Railroad");
+        textureDescriptionMap.put(6, "EMD");
+        textureDescriptionMap.put(7, "Blandsville & Blankerston");
+        textureDescriptionMap.put(11, "Paradox Rail");
+        textureDescriptionMap.put(12, "Avanste Northeastern");
+        textureDescriptionMap.put(13, "Fox, North Coast & Cascades");
+        textureDescriptionMap.put(14, "Fox, North Coast & Cascades (Post-86)");
     }
     public DieselSD40T2(World world, double d, double d1, double d2){
         this(world);

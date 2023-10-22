@@ -25,8 +25,8 @@ public class DieselGP9 extends DieselTrain {
         textureDescriptionMap.put(5, "Avanste Northeastern (Late)");
         textureDescriptionMap.put(6, "Magnolia Acres");
         textureDescriptionMap.put(7, "Morristown Tenneva & Southern");
-        textureDescriptionMap.put(8, "Lishaw and something or other");
-        textureDescriptionMap.put(9, "Lishaw and something or other 2");
+        textureDescriptionMap.put(8, "Lisha & Watson (High Hood)");
+        textureDescriptionMap.put(9, "Lisha & Watson (Chop Nose)");
         textureDescriptionMap.put(10, "Blandsville & Blankerston");
         textureDescriptionMap.put(11, "Nomansi & Eastern Pacific (Early)");
         textureDescriptionMap.put(12, "Nomansi & Eastern Pacific");

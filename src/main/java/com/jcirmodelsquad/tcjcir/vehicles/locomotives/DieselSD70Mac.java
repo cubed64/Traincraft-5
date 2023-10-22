@@ -17,6 +17,23 @@ public class DieselSD70Mac extends DieselTrain {
     public DieselSD70Mac(World world) {
         super(world, EnumTrains.SD70Mac.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "EMD Demo");
+        textureDescriptionMap.put(1, "Alaska Railroad");
+        textureDescriptionMap.put(2, "CSXT (Yn2)");
+        textureDescriptionMap.put(3, "ATSF (Warbonnet)");
+        textureDescriptionMap.put(4, "Conrail");
+        textureDescriptionMap.put(5, "Union Pacific");
+        textureDescriptionMap.put(6, "Norfolk Southern");
+        textureDescriptionMap.put(7, "Burlington Northern (Executive)");
+        textureDescriptionMap.put(8, "BNSF (H2)");
+        textureDescriptionMap.put(9, "Morristown Tenneva & Southern");
+        textureDescriptionMap.put(10, "Southern Pacific");
+        textureDescriptionMap.put(11, "Union Pacific (Ex-SP Patched)");
+        textureDescriptionMap.put(12, "SST");
+        textureDescriptionMap.put(13, "Joblogh Rail Network");
+
+
+
     }
     public DieselSD70Mac(World world, double d, double d1, double d2){
         this(world);

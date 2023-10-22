@@ -23,7 +23,7 @@ public class DieselU30C extends DieselTrain {
         textureDescriptionMap.put(3, "CB&Q");
         textureDescriptionMap.put(4, "Chicago Northwestern Railroad");
         textureDescriptionMap.put(5, "Acworth North Western");
-        textureDescriptionMap.put(6, "L&W (EX Seaboard)");
+        textureDescriptionMap.put(6, "Lisha & Watson (EX Seaboard)");
         textureDescriptionMap.put(7, "West Creek Pacific");
     }
     public DieselU30C(World world, double d, double d1, double d2){

@@ -19,6 +19,11 @@ public class DieselSDL39 extends DieselTrain {
         super(world, EnumTrains.SDL39.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
+        textureDescriptionMap.put(0, "THE MILWAKKEE ROAD");
+        textureDescriptionMap.put(1, "THE MILWAKKEE ROAD (Winterized)");
+        textureDescriptionMap.put(2, "THE MILWAKKEE ROAD");
+        textureDescriptionMap.put(3, "Wisconsin Central");
+
     }
     public DieselSDL39(World world, double d, double d1, double d2){
         this(world);

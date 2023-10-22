@@ -24,7 +24,7 @@ public class DieselGP38 extends DieselTrain {
         textureDescriptionMap.put(4, "Fox, North Coast & Cascades");
         textureDescriptionMap.put(5, "Fox Union Rail Resources (FURRX)");
         textureDescriptionMap.put(6, "Nomansi & Eastern Pacific");
-        textureDescriptionMap.put(7, "CSXT (poopshidder future lulmayo)");
+        textureDescriptionMap.put(7, "CSXT (Yn3)");
         textureDescriptionMap.put(8, "Norfolk Southern (Ex-Sou)");
         textureDescriptionMap.put(9, "Norfolk Southern");
         textureDescriptionMap.put(10, "Southern Port Belt");

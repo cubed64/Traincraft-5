@@ -19,6 +19,9 @@ public class DieselSD40dash3 extends DieselTrain {
         super(world, EnumTrains.SD40dash3.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
+        textureDescriptionMap.put(0, "CSXT (RCO Equipped)");
+        textureDescriptionMap.put(1, "CSXT");
+        textureDescriptionMap.put(2, "Ann Arbor 69");
     }
     public DieselSD40dash3(World world, double d, double d1, double d2){
         this(world);

@@ -19,6 +19,17 @@ public class DieselSD9 extends DieselTrain {
         super(world, EnumTrains.SD9.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
+        textureDescriptionMap.put(0, "Port of Tillamook Bay");
+        textureDescriptionMap.put(1, "Burlington Northern");
+        textureDescriptionMap.put(2, "Burlington Northern");
+        textureDescriptionMap.put(3, "THE MILWAKKEE ROAD");
+        textureDescriptionMap.put(4, "WETX");
+        textureDescriptionMap.put(5, "BNSF");
+        textureDescriptionMap.put(6, "Denver and Rio Grande Western");
+        textureDescriptionMap.put(7, "Denver and Rio Grande Western");
+        textureDescriptionMap.put(8, "Denver and Rio Grande Western");
+        textureDescriptionMap.put(9, "Avanste Northeastern (As Deliver)");
+        textureDescriptionMap.put(10, "Avanste Northeastern");
     }
     public DieselSD9(World world, double d, double d1, double d2){
         this(world);

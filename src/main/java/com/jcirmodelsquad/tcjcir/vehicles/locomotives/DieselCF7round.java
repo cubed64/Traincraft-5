@@ -29,7 +29,7 @@ public class DieselCF7round extends DieselTrain {
         textureDescriptionMap.put(8, "CSWR");
         textureDescriptionMap.put(9, "Paradox Rail 69");
         textureDescriptionMap.put(10, "West Creek Pacific");
-        textureDescriptionMap.put(11, "L&W");
+        textureDescriptionMap.put(11, "Lisha & Watson");
         textureDescriptionMap.put(12, "some bigj railroad that hes probably forgotten about lol");
     }
     public DieselCF7round(World world, double d, double d1, double d2){

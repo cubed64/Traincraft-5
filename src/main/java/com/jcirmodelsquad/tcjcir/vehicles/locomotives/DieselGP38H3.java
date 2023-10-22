@@ -17,6 +17,8 @@ public class DieselGP38H3 extends DieselTrain {
     public DieselGP38H3(World world) {
         super(world, EnumTrains.GP38H3.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "Amtrak");
+        textureDescriptionMap.put(1, "Unexpected Cubed in the Bagging Area");
 
     }
     public DieselGP38H3(World world, double d, double d1, double d2){

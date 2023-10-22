@@ -19,6 +19,8 @@ public class DieselSDP40 extends DieselTrain {
         super(world, EnumTrains.SDP40.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
+        textureDescriptionMap.put(0, "Burlington Northern");
+        textureDescriptionMap.put(4, "Blandsville & Blankerston");
     }
     public DieselSDP40(World world, double d, double d1, double d2){
         this(world);

@@ -17,7 +17,8 @@ public class DieselGP40TC extends DieselTrain {
     public DieselGP40TC(World world) {
         super(world, EnumTrains.GP40TC.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "GO Transit");
+        textureDescriptionMap.put(0, "Amtrak");
     }
     public DieselGP40TC(World world, double d, double d1, double d2){
         this(world);

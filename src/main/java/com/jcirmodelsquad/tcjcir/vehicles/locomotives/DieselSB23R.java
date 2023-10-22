@@ -24,7 +24,7 @@ public class DieselSB23R extends DieselTrain {
         textureDescriptionMap.put(4, "Magnolia Acres");
         textureDescriptionMap.put(5, "Avanste Northeastern");
         textureDescriptionMap.put(6, "Avanste Northeastern");
-        textureDescriptionMap.put(7, "Messicrew Tennava & Southern");
+        textureDescriptionMap.put(7, "Morristown Tennava & Southern");
         textureDescriptionMap.put(8, "PLTR");
     }
     public DieselSB23R(World world, double d, double d1, double d2){
