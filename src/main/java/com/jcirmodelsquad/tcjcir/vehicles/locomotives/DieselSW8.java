@@ -17,6 +17,7 @@ public class DieselSW8 extends DieselTrain {
     public DieselSW8(World world) {
         super(world, EnumTrains.SW8.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "DRIR 553");
     }
     public DieselSW8(World world, double d, double d1, double d2){
         this(world);

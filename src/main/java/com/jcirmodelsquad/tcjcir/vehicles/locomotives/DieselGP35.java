@@ -34,6 +34,9 @@ public class DieselGP35 extends DieselTrain {
         textureDescriptionMap.put(14, "DRGW (Big logo)");
         textureDescriptionMap.put(15, "New York Central");
         textureDescriptionMap.put(16, "New York Central");
+        textureDescriptionMap.put(17, "Avanste Northeastern");
+        textureDescriptionMap.put(18, "AMEX 2019");
+        textureDescriptionMap.put(19, "Great Lakes & North Territories");
     }
     public DieselGP35(World world, double d, double d1, double d2){
         this(world);

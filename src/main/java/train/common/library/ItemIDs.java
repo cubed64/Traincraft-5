@@ -562,6 +562,7 @@ public enum ItemIDs {
 	minecartReefer64("ItemRollingStock", "Reefer64", 5),
 	minecartFNCC50Foot("ItemRollingStock", "FNCC50Foot", 4),
 	minecartGN40("ItemRollingStock", "gn40", 3),
+	minecartR70Reefer("ItemRollingStock", "r70", 5),
 
 	minecartVersaLongi("ItemRollingStock", "versalongi", 4),
 	minecartVersaTrans("ItemRollingStock", "versatrans", 4),
