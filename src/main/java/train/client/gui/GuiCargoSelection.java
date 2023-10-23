@@ -57,7 +57,6 @@ public class GuiCargoSelection extends GuiAbstractPaintbrush {
         optionsOnCurrentPage = Math.min(RESULTS_PER_PAGE, totalOptions - currentPage * RESULTS_PER_PAGE);
     }
 
-
     @Override
     protected void updateButtons() {
         super.updateButtons();
@@ -223,6 +222,10 @@ public class GuiCargoSelection extends GuiAbstractPaintbrush {
 
     @Override
     public void addExtraButtons() {
+        // Overwrite the arrows in the abstract menu with arrows higher up on the screen.
+        this.buttonList.set(0, this.arrowUp = new GuiButtonPaintbrushMenu(0, GUI_ANCHOR_X + 388, GUI_ANCHOR_Y + 37, 12, 38, GuiButtonPaintbrushMenu.Type.ARROWUP));
+        this.buttonList.set(1, this.arrowDown = new GuiButtonPaintbrushMenu(1, GUI_ANCHOR_X + 388, GUI_ANCHOR_Y + 79, 12, 38, GuiButtonPaintbrushMenu.Type.ARROWDOWN));
+
         this.buttonList.add(this.playPauseButton = new GuiButtonPaintbrushMenu(12, GUI_ANCHOR_X + 382, GUI_ANCHOR_Y + MENU_TEXTURE_HEIGHT - 29, 22, 22, GuiButtonPaintbrushMenu.Type.PLAY));
         this.buttonList.add(this.lightControlButton = new GuiButtonPaintbrushMenu(13, GUI_ANCHOR_X + 382, GUI_ANCHOR_Y + MENU_TEXTURE_HEIGHT - 77, 22, 22, GuiButtonPaintbrushMenu.Type.LIGHTSOFF));
         this.buttonList.add(this.renderModelsButton = new GuiButtonPaintbrushMenu(14, GUI_ANCHOR_X + 382, GUI_ANCHOR_Y + MENU_TEXTURE_HEIGHT - 53, 22, 22, GuiButtonPaintbrushMenu.Type.STOPRENDER));
