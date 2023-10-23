@@ -15,6 +15,7 @@ import train.common.library.Info;
 public class CargoManager {
     private int selectedCargo = 0;
     private final CargoSpecification[][] cargoSpecificationList;
+    private ModelConverter[] renderModels;
 
     /**
      * @author 02skaplan
@@ -34,6 +35,14 @@ public class CargoManager {
 
     public void setSelectedCargo(int selectedCargo) {
         this.selectedCargo = selectedCargo;
+        if (selectedCargo > 0) {
+            try {
+                renderModels = new ModelConverter[getCargoSpecificationList()[selectedCargo - 1].length];
+                for (int i = 0; i < renderModels.length; i++) {
+                    renderModels[i] = getCargoSpecificationList()[selectedCargo - 1][i].cargoModelClass.newInstance();
+                }
+            } catch (InstantiationException | IllegalAccessException ignored) {}
+        }
     }
 
     /**
@@ -46,18 +55,13 @@ public class CargoManager {
             int cargoNumber = getSelectedCargo();
             // This if statement should always be activated, but is useful in case a CargoSpec is removed from the list.
             if (cargoNumber - 1 < cargoSpecificationList.length) {
-                try {
-                    for (int i = 0; i < getCargoSpecificationList()[cargoNumber - 1].length; i++) {
-                        ModelConverter cargo = getCargoSpecificationList()[cargoNumber - 1][i].cargoModelClass.newInstance();
-                        if (!getCargoSpecificationList()[cargoNumber - 1][i].textureFile.isEmpty())
-                            Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/" + getCargoSpecificationList()[cargoNumber - 1][i].textureFile + ".png"));
-                        GL11.glPushMatrix();
-                        GL11.glTranslated(getCargoSpecificationList()[cargoNumber - 1][i].offsetX, getCargoSpecificationList()[cargoNumber - 1][i].offsetY - 3, getCargoSpecificationList()[cargoNumber - 1][i].offsetZ);
-                        cargo.render(entity, f, f1, f2, f3, f4, f5);
-                        GL11.glPopMatrix();
-                    }
-                } catch (InstantiationException | IllegalAccessException e) {
-                    throw new RuntimeException(e);
+                for (int i = 0; i < getCargoSpecificationList()[cargoNumber - 1].length; i++) {
+                    if (!getCargoSpecificationList()[cargoNumber - 1][i].textureFile.isEmpty())
+                        Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/" + getCargoSpecificationList()[cargoNumber - 1][i].textureFile + ".png"));
+                    GL11.glPushMatrix();
+                    GL11.glTranslated(getCargoSpecificationList()[cargoNumber - 1][i].offsetX, getCargoSpecificationList()[cargoNumber - 1][i].offsetY - 3, getCargoSpecificationList()[cargoNumber - 1][i].offsetZ);
+                    renderModels[i].render(entity, f, f1, f2, f3, f4, f5);
+                    GL11.glPopMatrix();
                 }
             }
         }

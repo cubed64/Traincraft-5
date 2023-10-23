@@ -39,8 +39,8 @@ public abstract class GuiAbstractPaintbrush extends GuiScreen {
     protected int GUI_ANCHOR_Y;
     protected boolean hasNextPage;
 
-    private GuiButtonPaintbrushMenu arrowUp;
-    private GuiButtonPaintbrushMenu arrowDown;
+    protected GuiButtonPaintbrushMenu arrowUp;
+    protected GuiButtonPaintbrushMenu arrowDown;
     private GuiButtonPaintbrushMenu textureOne;
     private GuiButtonPaintbrushMenu textureTwo;
     private GuiButtonPaintbrushMenu textureThree;
