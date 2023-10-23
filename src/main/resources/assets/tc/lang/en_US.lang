@@ -1202,7 +1202,7 @@ item.tc:minecartRoundHopper.name=Round Covered Hopper
 item.tc:minecartRibbedHopper.name=Ribbed Covered Hopper
 item.tc:minecartHopper5201.name=5201 Cu Ft Hopper
 item.tc:minecartHopper6260.name=6260 Cu Ft Jumbo Hopper
-item.tc:minecartFNCC2375Hopper.name=FNCC 2375 Cu Ft Hopper
+item.tc:minecartFNCC2375Hopper.name=KSFI 2375 Cu Ft Hopper
 item.tc:minecartPDH2800.name=GATX 2800 Cu Ft Pressure Differential Hopper
 item.tc:minecartACF2Bay.name=ACF 2980 Cu Ft 2-Bay Hopper
 
@@ -1210,7 +1210,7 @@ entity.tc.Freight Round Covered Hopper.name=Round Covered Hopper
 entity.tc.Freight Ribbed Covered Hopper.name=Ribbed Covered Hopper
 entity.tc.5201 Cu Foot Hopper.name=5201 Cu Ft Hopper
 entity.tc.6260 Cu Foot Jumbo Hopper.name=6260 Cu Ft Jumbo Hopper
-entity.tc.FNCC2375Hopper.name=FNCC 2375 Cu Ft Hopper
+entity.tc.FNCC2375Hopper.name=KSFI 2375 Cu Ft Hopper
 entity.tc.PDH2800.name=GATX 2800 Cu Ft Pressure Differential Hopper
 entity.tc.ACF2Bay.name=ACF 2980 Cu Ft 2-Bay Hopper
 
@@ -1220,7 +1220,7 @@ item.tc:minecart73centerbeam.name=73' Center Beam
 item.tc:minecartGSI60FootBulkhead.name=GSI 60' Bulkhead Flat
 item.tc:minecartGSC60FootFlatcar.name=GSC 60' Flatcar
 item.tc:minecartthrall63centerbeam.name=Thrall 63' Centerbeam
-item.tc:minecartFNCC60FootBulk.name=FNCC 60' Bulkhead Flat
+item.tc:minecartFNCC60FootBulk.name=KSFI 60' Bulkhead Flat
 
 
 entity.tc.60centerbeam.name=60' Center Beam
@@ -1229,12 +1229,12 @@ entity.tc.73centerbeam.name=73' Center Beam
 entity.tc.63centerbeam.name=Thrall 63' Centerbeam
 entity.tc.GSI_Bulkhead.name=GSI 60' Bulkhead Flat
 entity.tc.GSC_Flatcar.name=GSC 60' Flatcar
-entity.tc.FNCC60FootBulk.name=FNCC 60' Bulkhead Flat
+entity.tc.FNCC60FootBulk.name=KSFI 60' Bulkhead Flat
 
 item.tc:minecartPS140.name=Pullman Standard 40' Boxcar
 item.tc:minecartPS150.name=Pullman Standard 50' Boxcar
 item.tc:minecartPS160.name=Pullman Standard 60' Boxcar
-item.tc:minecartOWO60Verticube.name=FNCC 60' Verticube Boxcar
+item.tc:minecartOWO60Verticube.name=KSFI 60' Verticube Boxcar
 item.tc:minecartMILW40boxcar.name=MILW 40' Boxcar
 item.tc:minecart40highcube.name=40' Hi-Cube Boxcar
 item.tc:minecarthicube60foot.name=Gunderson 60' Hi-Cube Double Door Boxcar
@@ -1247,12 +1247,12 @@ item.tc:minecartR70Reefer.name=PFE R-70-20 Reefer
 entity.tc.PS140.name=Pullman Standard 40' Boxcar
 entity.tc.PS150.name=Pullman Standard 50' Boxcar
 entity.tc.PS160.name=Pullman Standard 60' Boxcar
-entity.tc.OWO 60 Verticube.name=FNCC 60' Verticube Boxcar
+entity.tc.OWO 60 Verticube.name=KSFI 60' Verticube Boxcar
 entity.tc.MILW40boxcar.name=MILW 40' Boxcar
 entity.tc.40highcube.name=40' Hi-Cube Boxcar
 entity.tc.60 Foot Hi-Cube Boxcar.name=Gunderson 60' Hi-Cube Double Door Boxcar
 entity.tc.Reefer64.name=Trinity 64' Mechanical Reefer
-entity.tc.FNCC50FootBoxcar.name=FNCC 50' Highcube Boxcar
+entity.tc.FNCC50FootBoxcar.name=KSFI 50' Highcube Boxcar
 entity.tc.GN40.name=Great Northern Homebuilt 40' Boxcar(s)
 entity.tc.R70Reefer.name=PFE R-70-20 Reefer
 
@@ -1452,13 +1452,13 @@ entity.tc.PEobserve.name=Polar Express Observation
 --------------------------------------------------------
 
 item.tc:minecartWVcaboose.name=International Car Co. Wide Vision Caboose
-item.tc:minecartHBC1Ccaboose.name=FNCC HBC1-C Caboose
-item.tc:minecartHBC1Bcaboose.name=FNCC HBC1-B Caboose
+item.tc:minecartHBC1Ccaboose.name=KSFI HBC1-C Caboose
+item.tc:minecartHBC1Bcaboose.name=KSFI HBC1-B Caboose
 item.tc:minecartDRGWCaboose.name=DRGW 01400 Series Caboose
 
 entity.tc.WVcaboose.name=International Car Co. Wide Vision Caboose
-entity.tc.HBC1C.name=FNCC HBC1-C Caboose
-entity.tc.HBC1B.name=FNCC HBC1-B Caboose
+entity.tc.HBC1C.name=KSFI HBC1-C Caboose
+entity.tc.HBC1B.name=KSFI HBC1-B Caboose
 entity.tc.DRGWCaboose.name=DRGW 01400 Series Caboose
 
 --------------------------------------------------------

@@ -18,6 +18,18 @@ public class PS150 extends Freight implements IInventory {
     public PS150(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "MEC (State of Maine)");
+        textureDescriptionMap.put(1, "Penn Central (The Best Railroad)");
+        textureDescriptionMap.put(2, "ATSF");
+        textureDescriptionMap.put(3, "DRGW");
+        textureDescriptionMap.put(4, "BLUX");
+        textureDescriptionMap.put(5, "REDX");
+        textureDescriptionMap.put(6, "TIRY");
+        textureDescriptionMap.put(7, "DLMR");
+        textureDescriptionMap.put(8, "DLMR 2");
+        textureDescriptionMap.put(9, "ANN ARBOR");
+        textureDescriptionMap.put(10, "FNCC (Simple)");
+        textureDescriptionMap.put(11, "FNCC");
     }
 
     public PS150(World world, double d, double d1, double d2){

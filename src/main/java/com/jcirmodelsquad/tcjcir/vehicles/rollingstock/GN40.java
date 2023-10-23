@@ -18,6 +18,8 @@ public class GN40 extends Freight implements IInventory {
     public GN40(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "GN (Aluminum Express Boxcar)");
+        textureDescriptionMap.put(1, "GN (Plywood Side Homebuilt Boxcar)");
     }
 
     public GN40(World world, double d, double d1, double d2){

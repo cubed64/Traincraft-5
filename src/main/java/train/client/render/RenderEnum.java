@@ -1178,9 +1178,9 @@ RenderEnum {
 		{ }
 	}, "", null, 0, false),
 
-	ES44( DieselES44.class,  new ModelES44(), "es44_", true,new float[] {-2.2F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+	ES44( DieselES44.class,  new ModelES44new(), "es44_new_", true,new float[] {-2.2F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{
-			add(new double[]{1.0D, 1.4D, 0.0D});
+			//add(new double[]{1.0D, 1.4D, 0.0D});
 		}
 	}, "", null, 0, false),
 	P32(DieselP32.class, new ModelP32(), "p32dc_", true, new float[] {0F, 0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke",  5,  new ArrayList<double[]>() {

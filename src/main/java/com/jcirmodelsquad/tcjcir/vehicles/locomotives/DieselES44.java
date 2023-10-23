@@ -20,13 +20,16 @@ public class DieselES44 extends DieselTrain {
         initLoco();
         //i think i need a scooby doo tie-fighter now
         textureDescriptionMap.put(0, "Evolution Series Demonstrator");
-        textureDescriptionMap.put(1, "BNSF");
-        textureDescriptionMap.put(2, "Canadian Pacific");
-        textureDescriptionMap.put(3, "Union Pacific");
-        textureDescriptionMap.put(4, "CSX");
-        textureDescriptionMap.put(5, "CitiRail");
-        textureDescriptionMap.put(6, "Canadian National (CN)");
-        textureDescriptionMap.put(7, "Norfolk Southern (NS)");
+        textureDescriptionMap.put(1, "BNSF (H2)");
+        textureDescriptionMap.put(2, "BNSF (H3)");
+        textureDescriptionMap.put(3, "Canadian Pacific");
+        textureDescriptionMap.put(4, "Union Pacific");
+        textureDescriptionMap.put(5, "Savatrans");
+        textureDescriptionMap.put(6, "CitiRail");
+        textureDescriptionMap.put(7, "Canadian National (CN)");
+        textureDescriptionMap.put(8, "Norfolk Southern (NS)");
+        textureDescriptionMap.put(9, "Blandsville & Blankerston");
+        textureDescriptionMap.put(10, "CSXT");
     }
     public DieselES44(World world, double d, double d1, double d2){
         this(world);
@@ -48,7 +51,7 @@ public class DieselES44 extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 4.1;
+        double distance = 3.9;
         double yOffset = 0.4;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));

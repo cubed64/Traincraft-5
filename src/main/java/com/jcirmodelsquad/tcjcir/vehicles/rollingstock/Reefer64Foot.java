@@ -18,6 +18,16 @@ public class Reefer64Foot extends Freight implements IInventory {
     public Reefer64Foot(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "ARMN");
+        textureDescriptionMap.put(1, "Naked Juice");
+        textureDescriptionMap.put(2, "Tropicana");
+        textureDescriptionMap.put(3, "Cryotrans");
+        textureDescriptionMap.put(4, "Cryotrans (Cavendish)");
+        textureDescriptionMap.put(5, "Cryotrans (Carnation)");
+        textureDescriptionMap.put(6, "Cryotrans (McCain)");
+        textureDescriptionMap.put(7, "OWO (Coolsville)");
+        textureDescriptionMap.put(8, "NEP");
+        textureDescriptionMap.put(9, "NEP");
     }
 
     public Reefer64Foot(World world, double d, double d1, double d2){

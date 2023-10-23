@@ -30,6 +30,7 @@ public class GSI60FootBulkhead extends Freight implements IInventory {
         textureDescriptionMap.put(3, "SCL");
         textureDescriptionMap.put(4, "ACL");
         textureDescriptionMap.put(5, "ACL");
+        textureDescriptionMap.put(6, "FNCC");
         setCargoManager(new CargoManager(new CargoSpecification[][] {
 
                 { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//washaska wood

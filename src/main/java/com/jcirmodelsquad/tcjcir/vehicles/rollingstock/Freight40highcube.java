@@ -18,6 +18,21 @@ public class Freight40highcube extends Freight implements IInventory  {
     public Freight40highcube(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "BAWX");
+        textureDescriptionMap.put(1, "BN");
+        textureDescriptionMap.put(2, "NP");
+        textureDescriptionMap.put(3, "IC");
+        textureDescriptionMap.put(4, "BEEPX & BOOPX");
+        textureDescriptionMap.put(5, "ATSF");
+        textureDescriptionMap.put(6, "MT&S");
+        textureDescriptionMap.put(7, "MILW");
+        textureDescriptionMap.put(8, "CBQ");
+        textureDescriptionMap.put(9, "CBQ");
+        textureDescriptionMap.put(10, "CBQ");
+        textureDescriptionMap.put(11, "DRGW");
+        textureDescriptionMap.put(12, "DRGW");
+        textureDescriptionMap.put(13, "ICG");
+        textureDescriptionMap.put(14, "FNCC");
     }
 
     public Freight40highcube(World world, double d, double d1, double d2){

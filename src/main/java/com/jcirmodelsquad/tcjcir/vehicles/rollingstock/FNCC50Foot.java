@@ -18,6 +18,22 @@ public class FNCC50Foot extends Freight implements IInventory {
     public FNCC50Foot(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "FNCC");
+        textureDescriptionMap.put(1, "FNCC (Post '86 Logo)");
+        textureDescriptionMap.put(2, "FNCC (Fast as A Fox)");
+        textureDescriptionMap.put(3, "FNCC (Small Logo");
+        textureDescriptionMap.put(4, "FNCC (Olympic Range Logo)");
+        textureDescriptionMap.put(5, "LRR");
+        textureDescriptionMap.put(6, "LRR (White Door)");
+        textureDescriptionMap.put(7, "NSCC");
+        textureDescriptionMap.put(8, "NEP");
+        textureDescriptionMap.put(9, "COW");
+        textureDescriptionMap.put(10, "COW");
+        textureDescriptionMap.put(11, "COW");
+        textureDescriptionMap.put(12, "COW");
+        textureDescriptionMap.put(13, "B&B");
+        textureDescriptionMap.put(14, "SPB");
+
     }
 
     public FNCC50Foot(World world, double d, double d1, double d2){

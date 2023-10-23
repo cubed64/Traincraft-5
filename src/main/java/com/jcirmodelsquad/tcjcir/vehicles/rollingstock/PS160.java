@@ -18,6 +18,10 @@ public class PS160 extends Freight implements IInventory {
     public PS160(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "GT");
+        textureDescriptionMap.put(1, "IC");
+        textureDescriptionMap.put(2, "WRX (Tree Logo)");
+        textureDescriptionMap.put(3, "WRX (Slant Scheme)");
     }
 
     public PS160(World world, double d, double d1, double d2){

@@ -20,6 +20,8 @@ public class ACF2Bay extends Freight implements IInventory {
 	public ACF2Bay(World world) {
 		super(world);
 		initFreightGrain();
+		textureDescriptionMap.put(0, "Blandsville & Blankerston");
+		textureDescriptionMap.put(1, "Fox, North Coast & Cascades");
 	}
 
 	public void initFreightGrain() {

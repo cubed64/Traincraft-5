@@ -18,6 +18,15 @@ public class OWO60Verticube extends Freight implements IInventory {
     public OWO60Verticube(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "FNCC (Verti-Cube)");
+        textureDescriptionMap.put(1, "FNCC");
+        textureDescriptionMap.put(2, "FNCC (WRX Tree Logo)");
+        textureDescriptionMap.put(3, "LRR");
+        textureDescriptionMap.put(4, "LRR (White Door)");
+        textureDescriptionMap.put(5, "ANE");
+        textureDescriptionMap.put(6, "ANE (Mega Cushion)");
+        textureDescriptionMap.put(7, "ANE (Mega Cushion Graffiti)");
+        textureDescriptionMap.put(8, "FNCC (WRX Tree Logo Graffiti)");
     }
 
     public OWO60Verticube(World world, double d, double d1, double d2){

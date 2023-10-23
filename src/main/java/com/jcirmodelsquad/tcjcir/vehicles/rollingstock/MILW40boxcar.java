@@ -19,6 +19,14 @@ public class MILW40boxcar extends Freight implements IInventory {
     public MILW40boxcar(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "themilwaukeeroad");
+        textureDescriptionMap.put(1, "themilwaukeeroad");
+        textureDescriptionMap.put(2, "themilwaukeeroad");
+        textureDescriptionMap.put(3, "themilwaukeeroad");
+        textureDescriptionMap.put(4, "themilwaukeeroad");
+        textureDescriptionMap.put(5, "themilwaukeeroad");
+        textureDescriptionMap.put(6, "FAWX");
+        textureDescriptionMap.put(7, "MRSX");
     }
 
     public MILW40boxcar(World world, double d, double d1, double d2) {

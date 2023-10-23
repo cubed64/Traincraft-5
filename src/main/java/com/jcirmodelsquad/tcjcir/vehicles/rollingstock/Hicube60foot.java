@@ -18,6 +18,17 @@ public class Hicube60foot extends Freight implements IInventory {
     public Hicube60foot(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "TBOX");
+        textureDescriptionMap.put(1, "Generic Red");
+        textureDescriptionMap.put(2, "Generic Red (Graffiti)");
+        textureDescriptionMap.put(3, "CSXT");
+        textureDescriptionMap.put(4, "PRD");
+        textureDescriptionMap.put(5, "PRD");
+        textureDescriptionMap.put(6, "UP");
+        textureDescriptionMap.put(7, "Generic White");
+        textureDescriptionMap.put(8, "Generic Blue");
+        textureDescriptionMap.put(9, "MT&S");
+        textureDescriptionMap.put(10, "Generic Yellow");
     }
 
     public Hicube60foot(World world, double d, double d1, double d2){
