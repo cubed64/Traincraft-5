@@ -1309,6 +1309,10 @@ RenderEnum {
 		{}
 	}, "", null, 0, false),
 
+	FMH24_66C( DieselH24_66C.class,  new ModelH24_66C(), "FM_H24-66_C_", true,new float[] {-1.9F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  null, "smoke", 3,  new ArrayList<double[]>() {
+		{}
+	}, "", null, 0, false),
+
 	/**OTHER DIESELS**/
 	NRE3gs21b( DieselNRE3gs21b.class,  new ModelNRE3gs21b(), "3gs21b_", true,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{

@@ -507,6 +507,7 @@ public enum ItemIDs {
 	minecartH16_66("ItemRollingStock", "H16-66", 5),
 	minecartH24_66("ItemRollingStock", "H24-66", 5),
 	minecartH24_66L("ItemRollingStock", "H24-66L", 5),
+	minecartH24_66C("ItemRollingStock", "H24-66C", 5),
 
 	//other MOtOEr Shuite//
 	minecartNRE3gs21b("ItemRollingStock", "3gs21b", 4),

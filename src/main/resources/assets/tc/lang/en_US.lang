@@ -1133,13 +1133,15 @@ entity.tc.DS441000.name=BLH DS-4-4-1000 (606SC)
 item.tc:minecartH1044.name=FM H10-44
 item.tc:minecartH16_66.name=FM H16-66
 item.tc:minecartH24_66.name=FM H24-66
-item.tc:minecartH24_66L.name=FM H24-66 Low Ends
+item.tc:minecartH24_66L.name=FM H24-66 (Low Ends)
+item.tc:minecartH24_66C.name=FM H24-66 (Canadian)
 
 
 entity.tc.H1044.name=FM H10-44
 entity.tc.H16-66.name=FM H16-66
 entity.tc.H24-66.name=FM H24-66
 entity.tc.H24-66L.name=FM H24-66 (Low Ends)
+entity.tc.H24-66C.name=FM H24-66 (Canadian)
 
 --------------------------------------------------------
 
