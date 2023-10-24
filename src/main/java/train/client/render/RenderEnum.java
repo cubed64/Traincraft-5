@@ -1457,6 +1457,9 @@ RenderEnum {
 	PSCNWBaggage_LC_Lounge(PSCNWBaggage_LC_Lounge.class, new ModelPSCNWBaggage_LC_Lounge(), "PS_lightweight_CNWBaggage_LC_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCNWRPO15_Baggage_LC_Lounge(PSCNWRPO15_Baggage_LC_Lounge.class, new ModelPSCNWRPO15_Baggage_LC_Lounge(), "PS_lightweight_CNWRPO15_Baggage_LC_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCNWBaggage_LC_Diner(PSCNWBaggage_LC_Diner.class, new ModelPSCNWBaggage_LC_Diner(), "PS_lightweight_CNWBaggage_LC_Diner_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCNW20SeatCoach_Lounge_1959(PSCNW20SeatCoach_Lounge_1959.class, new ModelPSCNW20SeatCoach_Lounge_1959(), "PS_lightweight_CNW20SeatCoach_Lounge_1959_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCNWCommuterLounge(PSCNWCommuterLounge.class, new ModelPSCNW20SeatCoach_Lounge_1959(), "PS_lightweight_CNWCommuterLounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCNW27SeatParlor_Observation(PSCNW27SeatParlor_Observation.class, new ModelPSCNW27SeatParlor_Observation(), "PS_lightweight_CNW27SeatParlor_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	BuddRDG56SeatCoach_Lounge(BuddRDG56SeatCoach_Lounge.class, new ModelBuddRDG56SeatCoach_Lounge(), "Budd_lightweight_RDG56SeatCoach_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 

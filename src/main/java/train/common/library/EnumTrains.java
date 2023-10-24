@@ -518,8 +518,8 @@ public enum EnumTrains {
 	aipkitExplorer("Aipkit Explorer", AipkitExplorer.class, ItemIDs.minecartAipkitExplorer.item, "passenger",0, 0, 2, 0, 0, 0, 0, 0, 0, null, 10, 0),
 	aipkitExplorer2("Aipkit Explorer-II", AipkitExplorer2.class, ItemIDs.minecartAipkitExplorer2.item, "passenger",0, 0, 2, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"White", "Grey","Lime"}), 10, 0),
 
-	PSRPO("PSRPO", PSRPO.class, ItemIDs.minecartPSRPO.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Blue", "Cyan"}), 18, 27,null),
-	PS85Baggage("Freight PS 85 Baggage", PS85Baggage.class, ItemIDs.minecartPS85Baggage.item, "freight", 2, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Blue"}), 18, 27, null),
+	PSRPO("PSRPO", PSRPO.class, ItemIDs.minecartPSRPO.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Blue", "Cyan"}), 12, 27,null),
+	PS85Baggage("Freight PS 85 Baggage", PS85Baggage.class, ItemIDs.minecartPS85Baggage.item, "freight", 2, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Blue"}), 10, 27, null),
 	PSCombine("PS Combine Coach", PSCombine.class, ItemIDs.minecartPScombine.item, "passenger/combine", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Yellow", "Orange", "LightGrey", "Grey", "White"}), 10, 0),
 	PS52SeatCoach("PS 52 Seat Coach", PS52SeatCoach.class, ItemIDs.minecartPS52seatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "LightBlue", "Yellow", "Orange", "Cyan", "Grey", "LightGrey", "Purple", "Green", "Lime", "White"}), 10, 0),
 	PSDamnitAnotherDiner("PS Center Diner 2", PSDamnitAnotherDiner.class, ItemIDs.minecartPSDamnitAnotherDiner.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Orange", "Blue", "Cyan"}), 10, 0),
@@ -528,8 +528,8 @@ public enum EnumTrains {
 	PSLunchCounter_Lounge("PS Lunch Counter-Lounge", PSLunchCounter_Lounge.class, ItemIDs.minecartPSLunchCounter_Lounge.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "Yellow", "Orange", "LightBlue", "Purple", "LightGrey", "Grey",     "White"}), 10, 0, null),
 	PS30SeatParlor("PS 30 Seat Parlor", PS30SeatParlor.class, ItemIDs.minecartPS30SeatParlor.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "LightBlue", "Orange"}), 10, 0, null),
 
-	PSRPOPM("PSPMRPO", PSRPOPM.class, ItemIDs.minecartPSRPOPM.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Yellow"}), 18, 27,null),
-	PS73Baggage("Freight PS 73 Baggage", PS73Baggage.class, ItemIDs.minecartPS73Baggage.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Yellow", "Green", "Magenta", "Orange"}), 18, 27, null),
+	PSRPOPM("PSPMRPO", PSRPOPM.class, ItemIDs.minecartPSRPOPM.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Yellow"}), 12, 27,null),
+	PS73Baggage("Freight PS 73 Baggage", PS73Baggage.class, ItemIDs.minecartPS73Baggage.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Yellow", "Green", "Magenta", "Orange"}), 12, 27, null),
 	PS54SeatCoach_Lounge("PS 54 Seat Coach-Lounge", PS54SeatCoach_Lounge.class, ItemIDs.minecartPS54SeatCoach_Lounge.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "LightGrey"}), 10, 0, null),
 	PS54SeatCoach_Lounge_1950("PS 54 Seat Coach-Lounge 1950", PS54SeatCoach_Lounge_1950.class, ItemIDs.minecartPS54SeatCoach_Lounge_1950.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan"}), 10, 0, null),
 	PScenterDiner("PS Center Diner", PScenterDiner.class, ItemIDs.minecartPSCenterDiner.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan"}), 10, 0),
@@ -539,7 +539,7 @@ public enum EnumTrains {
 	PSBM56SeatCoach("PS B&M 56 Seat Coach", PSBM56SeatCoach.class, ItemIDs.minecartPSBM56SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Magenta", "LightGrey", "Grey", "Brown", "Red", "Pink", "Green", "Lime", "Yellow", "Blue", "Cyan", "LightBlue", "Purple", "Black", "Orange", "White"}), 10, 0, null),
 	PSBMDiner_Lounge("PS B&M Diner_Lounge", PSBMDiner_Lounge.class, ItemIDs.minecartPSBMDiner_Lounge.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Magenta", "Brown", "Green", "Blue", "Cyan", "LightGrey"}), 10, 0, null),
 
-	ACFGNRPO_30("AC&F GN RPO (30' mail)", ACFGNRPO_30.class, ItemIDs.minecartACFGNRPO_30.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Orange", "Green"}), 18, 27,null),
+	ACFGNRPO_30("AC&F GN RPO (30' mail)", ACFGNRPO_30.class, ItemIDs.minecartACFGNRPO_30.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Orange", "Green"}), 10, 27,null),
 	ACFGN60SeatCoach("AC&F GN 60 Seat Coach", ACFGN60SeatCoach.class, ItemIDs.minecartACFGN60SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Orange", "Yellow", "Green", "LightGrey", "Cyan", "Skin16"}), 10, 0, null),
 	ACFGNDinerObservation("AC&F GN Diner-Observation", ACFGNDinerObservation.class, ItemIDs.minecartACFGNDiner_Observation.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Orange",}), 18, 27,null),
 	ACFGN28SeatCoach_Dinette("AC&F GN 28 Seat Coach-Dinette", ACFGN28SeatCoach_Dinette.class, ItemIDs.minecartACFGN28SeatCoach_Dinette.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Orange", "White"}), 10, 0, null),
@@ -561,6 +561,9 @@ public enum EnumTrains {
 	PSCNWBaggage_LC_Lounge("PS CNW Baggage-LC-Lounge", PSCNWBaggage_LC_Lounge.class, ItemIDs.minecartPSCNWBaggage_LC_Lounge.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Black", "Green", "Lime", "Grey", "LightGrey", "White", "Magenta"}), 10, 0, null),
 	PSCNWRPO15_Baggage_LC_Lounge("PS CNW RPO(15')-Baggage-LC-Lounge", PSCNWRPO15_Baggage_LC_Lounge.class, ItemIDs.minecartPSCNWRPO15_Baggage_LC_Lounge.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Black", "Green", "Lime", "Grey", "LightGrey"}), 10, 0, null),
 	PSCNWBaggage_LC_Diner("PS CNW Baggage-LC-Diner", PSCNWBaggage_LC_Diner.class, ItemIDs.minecartPSCNWBaggage_LC_Diner.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Black", "Green", "Lime", "Grey"}), 10, 0, null),
+	PSCNW20SeatCoach_Lounge_1959("PS CNW 20 Seat Coach-Lounge (1959)", PSCNW20SeatCoach_Lounge_1959.class, ItemIDs.minecartPSCNW20SeatCoachLounge_1959.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Yellow"}), 10, 0, null),
+	PSCNWCommuterLounge("PS CNW Commuter Lounge", PSCNWCommuterLounge.class, ItemIDs.minecartPSCNWCommuterLounge.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Green"}), 10, 0, null),
+	PSCNW27SeatParlor_Observation("PS CNW 27 Seat Parlor-Observation", PSCNW27SeatParlor_Observation.class, ItemIDs.minecartPSCNW27SeatParlor_Observation.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Green", "Black", "Lime"}), 10, 0, null),
 
 	BuddRDG56SeatCoach_Lounge("Budd RDG 56 Seat Coach-Lounge", BuddRDG56SeatCoach_Lounge.class, ItemIDs.minecartBuddRDG56SeatCoachLounge.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "Grey", "LightGrey"}), 10, 0, null),
 
