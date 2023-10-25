@@ -371,10 +371,10 @@ public class ModelH24_66C extends ModelConverter //Same as Filename
 		bodyModel[326] = new ModelRendererTurbo(this, 384, 393, textureX, textureY); // drop platform dummy, delete when animated
 		bodyModel[327] = new ModelRendererTurbo(this, 89, 22, textureX, textureY,"glow"); // headlight R
 		bodyModel[328] = new ModelRendererTurbo(this, 88, 33, textureX, textureY,"glow"); // headlight R
-		bodyModel[329] = new ModelRendererTurbo(this, 88, 27, textureX, textureY,"glow"); // headlight R
+		bodyModel[329] = new ModelRendererTurbo(this, 88, 27, textureX, textureY); // headlight R
 		bodyModel[330] = new ModelRendererTurbo(this, 414, 320, textureX, textureY,"glow"); // headlight R
 		bodyModel[331] = new ModelRendererTurbo(this, 414, 325, textureX, textureY,"glow"); // headlight R
-		bodyModel[332] = new ModelRendererTurbo(this, 407, 320, textureX, textureY,"glow"); // headlight R
+		bodyModel[332] = new ModelRendererTurbo(this, 407, 320, textureX, textureY); // headlight R
 		bodyModel[333] = new ModelRendererTurbo(this, 392, 45, textureX, textureY); // Box 2
 		bodyModel[334] = new ModelRendererTurbo(this, 34, 84, textureX, textureY); // Box 2
 		bodyModel[335] = new ModelRendererTurbo(this, 34, 80, textureX, textureY); // Box 2

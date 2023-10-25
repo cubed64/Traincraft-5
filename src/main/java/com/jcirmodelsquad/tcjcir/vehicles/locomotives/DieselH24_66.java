@@ -19,7 +19,7 @@ public class DieselH24_66 extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "FM Demo");
         textureDescriptionMap.put(1, "Virginian");
-        textureDescriptionMap.put(2, "Illinois Central");
+        textureDescriptionMap.put(2, "Illinois Central (Semi-Fictional)");
         textureDescriptionMap.put(3, "Reading");
         textureDescriptionMap.put(4, "Southern Pacific");
         textureDescriptionMap.put(5, "Erie Lackawanna");

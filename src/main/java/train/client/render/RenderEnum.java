@@ -867,22 +867,23 @@ RenderEnum {
 	E8B( DieselE8B.class,  new ModelE8B(), "EMDE8B_", true,new float[] {-1.75F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{}
 	}, "", null, 0, false),
+
 	BUnitE8B( BUnitE8B.class,  new ModelE8B(), "EMDE8B_", true,new float[] {0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{}
 	}, "", null, 0, false),
 
-	E9A( DieselE9A.class,  new ModelE9A(), "e9a_", true,new float[] {-2F, 0.1F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.1F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{
-			add(new double[]{1.9375D, 1.3215D, 0.0D});
-			add(new double[]{1.125D, 1.3125D, 0.0D});
-		}
+	E9A( DieselE9A.class,  new ModelE9A(), "EMDE9A_", true,new float[] {-1.85F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
 	}, "", null, 0, false),
-	E9B( DieselE9B.class,  new ModelE9B(), "e9b_", true,new float[] {-2F, 0.1F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.1F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{
-			add(new double[]{2.125D, 1.3215D, 0.0D});
-			add(new double[]{1.3125D, 1.3125D, 0.0D});
-		}
+
+	E9B( DieselE9B.class,  new ModelE9B(), "EMDE9B_", true,new float[] {-1.75F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
 	}, "", null, 0, false),
+
+	BUnitE9B( BUnitE9B.class,  new ModelE9B(), "EMDE9B_", true,new float[] {0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{}
+	}, "", null, 0, false),
+
 	CE8( DieselCE8.class,  new ModelCE8(), "CE8_", true,new float[] {-1.85F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{}
 	}, "", null, 0, false),
