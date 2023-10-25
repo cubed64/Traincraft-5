@@ -12,24 +12,16 @@ import train.common.Traincraft;
 import train.common.api.Freight;
 import train.common.library.GuiIDs;
 
-public class R70Reefer extends Freight implements IInventory {
+public class NSCReefer extends Freight implements IInventory {
     public int freightInventorySize;
     public int numFreightSlots;
-    public R70Reefer(World world) {
+    public NSCReefer(World world) {
         super(world);
         initFreightCart();
-        textureDescriptionMap.put(0, "PFE (White W/ Orange Logo)");
-        textureDescriptionMap.put(1, "Blandsville Fruit Exprees");
-        textureDescriptionMap.put(2, "FNCC");
-        textureDescriptionMap.put(3, "BNFE (White)");
-        textureDescriptionMap.put(4, "BNFE (Yellow)");
-        textureDescriptionMap.put(5, "BNFE (Yellow but with a white roof for some reason)");
-        textureDescriptionMap.put(6, "PFE (Orange)");
-        textureDescriptionMap.put(7, "MILW");
-        textureDescriptionMap.put(8, "SOO");
+        textureDescriptionMap.put(0, "CP Script");
     }
 
-    public R70Reefer(World world, double d, double d1, double d2){
+    public NSCReefer(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -42,7 +34,7 @@ public class R70Reefer extends Freight implements IInventory {
     }
 
     public void initFreightCart() {
-        numFreightSlots = 6;
+        numFreightSlots = 3;
         freightInventorySize = trainSpec.getCargoCapacity();
         cargoItems = new ItemStack[freightInventorySize];
     }
@@ -85,7 +77,7 @@ public class R70Reefer extends Freight implements IInventory {
 
     @Override
     public String getInventoryName() {
-        return "PFE R-70-20 Reefer";
+        return "National Steel Car 3294 Mechanical Reefer";
     }
 
     @Override
@@ -109,7 +101,7 @@ public class R70Reefer extends Freight implements IInventory {
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
-        return 3.1F;
+        return 2.4F;
     }
 
     @Override

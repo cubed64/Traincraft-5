@@ -1151,9 +1151,12 @@ RenderEnum {
 		{ }
 	}, "", null, 0, false),
 
-	Dash839C( DieselDash839C.class,  new ModelDash839C(), "c39-8_", true,new float[] {-2.2F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+	Dash839C( DieselDash839C.class,  new ModelDash839C(), "c39-8_", true,new float[] {-2.0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
+	Dash839CE( DieselDash839CE.class,  new ModelDash840Cnew(), "c39-8e_", true,new float[] {-2.0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, true),
 	Dash840B( DieselDash840B.class,  new ModelDash840B(), "dash8_40b_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
@@ -1167,6 +1170,9 @@ RenderEnum {
 	Dash840C( DieselDash840C.class,  new ModelDash840C(), "dash8_40c_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
+	Dash841C( DieselDash841C.class,  new ModelDash840Cnew(), "c41-8_", true,new float[] {-2.2F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, true),
 
 	Dash944CW( DieselDash944CW.class,  new ModelDash944CW(), "dash9_44cw_", true,new float[] {-2.2F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{ }
@@ -1179,9 +1185,10 @@ RenderEnum {
 	}, "", null, 0, false),
 
 	ES44( DieselES44.class,  new ModelES44new(), "es44_new_", true,new float[] {-2.2F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
-		{
-			//add(new double[]{1.0D, 1.4D, 0.0D});
-		}
+		{ }
+	}, "", null, 0, false),
+	ES44h( DieselES44h.class,  new ModelES44new(), "es44_h_", true,new float[] {-2.2F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+		{ }
 	}, "", null, 0, false),
 	P32(DieselP32.class, new ModelP32(), "p32dc_", true, new float[] {0F, 0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke",  5,  new ArrayList<double[]>() {
 		{ }
@@ -1384,6 +1391,7 @@ RenderEnum {
 	FNCC50Foot(FNCC50Foot.class, new ModelFNCC50Foot(),"FNCC50Foot_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	GN40(GN40.class, new ModelGN40box(),"gn40_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	R70Reefer(R70Reefer.class, new ModelR70Reefer(),"R70Reefer_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	NSCReefer(NSCReefer.class, new ModelNSCReefer(),"NSCReefer_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	VersaLongi(VersaLongi.class, new ModelVersaLongi(),"versa_longi_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	VersaTrans(VersaTrans.class, new ModelVersaTrans(),"versa_trans_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

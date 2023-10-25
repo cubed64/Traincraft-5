@@ -40,6 +40,11 @@ public class DieselGP40 extends DieselTrain {
         textureDescriptionMap.put(20, "New York Central");
         textureDescriptionMap.put(21, "New York Central");
         textureDescriptionMap.put(22, "Athearn RTR GP40 (Avanste Northeastern)");
+        textureDescriptionMap.put(23, "Great Lakes & Northern Territories");
+        textureDescriptionMap.put(24, "DRGW (big logo)");
+        textureDescriptionMap.put(25, "DRGW (small logo)");
+        textureDescriptionMap.put(26, "Florida East Coast");
+        textureDescriptionMap.put(27, "Westrn Maryland");
     }
     public DieselGP40(World world, double d, double d1, double d2){
         this(world);

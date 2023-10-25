@@ -46,6 +46,8 @@ public class DieselSD40dash2 extends DieselTrain {
         textureDescriptionMap.put(24, "Morristown Tenneva and Southern");
         textureDescriptionMap.put(25, "Morristown Tenneva and Southern (High Hood)");
         textureDescriptionMap.put(26, "Kansas City Southern");
+        textureDescriptionMap.put(27, "Florida East Coast");
+        textureDescriptionMap.put(28, "CSXT (YN2)");
     }
     public DieselSD40dash2(World world, double d, double d1, double d2){
         this(world);

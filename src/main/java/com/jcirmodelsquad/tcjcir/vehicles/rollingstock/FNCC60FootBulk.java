@@ -176,7 +176,7 @@ public class FNCC60FootBulk extends Freight implements IInventory {
 
     @Override
     public String getInventoryName() {
-        return "North Fox 60' Bulkhead Flat";
+        return "KSFI 60' Bulkhead Flat";
     }
 
     @Override

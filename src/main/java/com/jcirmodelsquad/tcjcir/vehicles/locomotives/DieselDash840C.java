@@ -17,7 +17,10 @@ public class DieselDash840C extends DieselTrain {
     public DieselDash840C(World world) {
         super(world, EnumTrains.Dash840C.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Union Pacific");
+        textureDescriptionMap.put(1, "CSXT (Grey Ghost)");
+        textureDescriptionMap.put(2, "CSXT (YN2)");
+        textureDescriptionMap.put(3, "Southern Port Belt");
     }
     public DieselDash840C(World world, double d, double d1, double d2){
         this(world);
@@ -39,7 +42,7 @@ public class DieselDash840C extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 3.55;
+        double distance = 4.05;
         double yOffset = 0.3;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
@@ -122,7 +125,7 @@ public class DieselDash840C extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.6F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.35F;
     }
 
     @Override
@@ -132,7 +135,7 @@ public class DieselDash840C extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "GE Dash 8-40C";
+        return "GE C40-8";
     }
 
     @Override

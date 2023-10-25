@@ -453,20 +453,23 @@ public enum ItemIDs {
 	minecartB30("ItemRollingStock", "b30", 4),
 
 	minecartDash839C("ItemRollingStock", "c39-8_icon", 5),
-	minecartDash840B("ItemRollingStock", "B40-8", 4),
-	minecartDash840BB("ItemRollingStock", "B40-8B", 4),
+	minecartDash839CE("ItemRollingStock", "c39-8e", 5),
+	minecartDash840B("ItemRollingStock", "B40-8", 5),
+	minecartDash840BB("ItemRollingStock", "B40-8B", 5),
 	//minecartBUnitDash840BB("ItemRollingStock", "B40-8B", 4),
-	minecartDash840BW("ItemRollingStock", "B40-8W", 4),
+	minecartDash840BW("ItemRollingStock", "B40-8W", 5),
 	minecartDash840C("ItemRollingStock", "C40-8", 5),
+	minecartDash841C("ItemRollingStock", "C41-8", 5),
 
 	minecartDash944CW("ItemRollingStock", "d944cw", 5),
 	minecartAC4400CW("ItemRollingStock", "ac4400cw", 5),
 	minecartAC4400C("ItemRollingStock", "ac44c_iconographie", 5),
 
 	minecartES44("ItemRollingStock", "es44", 6),
-	minecartP32("ItemRollingStock", "geGenesis2", 4),
-	minecartGeGenesis("ItemRollingStock", "geGenesis3", 4),
-	minecartP42("ItemRollingStock", "geGenesis", 4),
+	minecartES44h("ItemRollingStock", "es44h", 6),
+	minecartP32("ItemRollingStock", "geGenesis2", 5),
+	minecartGeGenesis("ItemRollingStock", "geGenesis3", 5),
+	minecartP42("ItemRollingStock", "geGenesis", 5),
 
 	//ALCO and its canookistanian counterpart//
 	minecartAlcoPA1("ItemRollingStock", "AlcoPA1Icon",5),
@@ -564,6 +567,7 @@ public enum ItemIDs {
 	minecartFNCC50Foot("ItemRollingStock", "FNCC50Foot", 4),
 	minecartGN40("ItemRollingStock", "gn40", 3),
 	minecartR70Reefer("ItemRollingStock", "r70", 5),
+	minecartNSCchildHUH("ItemRollingStock", "NSC_3294_mechanical_reefer", 2),
 
 	minecartVersaLongi("ItemRollingStock", "versalongi", 4),
 	minecartVersaTrans("ItemRollingStock", "versatrans", 4),

@@ -92,7 +92,7 @@ public class FNCC50Foot extends Freight implements IInventory {
 
     @Override
     public String getInventoryName() {
-        return "North Fox 50' Mini-Highcube Boxcar";
+        return "KSFI 50' Mini-Highcube Boxcar";
     }
 
     @Override

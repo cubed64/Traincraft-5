@@ -49,6 +49,8 @@ public class DieselCF7angle extends DieselTrain {
         textureDescriptionMap.put(28, "Washaska & Old Fox RR Co 19");
         textureDescriptionMap.put(29, "Washaska & Old Fox RR Co 20");
         textureDescriptionMap.put(30, "Morristown Tenneva & Southern Spirit of 1776");
+        textureDescriptionMap.put(31, "Amtrak 585");
+        textureDescriptionMap.put(32, "Nittany & Blad Eagle");
     }
     public DieselCF7angle(World world, double d, double d1, double d2){
         this(world);

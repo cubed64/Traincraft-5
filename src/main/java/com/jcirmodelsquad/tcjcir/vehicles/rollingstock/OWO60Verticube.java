@@ -85,7 +85,7 @@ public class OWO60Verticube extends Freight implements IInventory {
 
     @Override
     public String getInventoryName() {
-        return "OWO 60' Verticube Boxcar";
+        return "KSFI 60' Verticube Boxcar";
     }
 
     @Override

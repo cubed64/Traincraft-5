@@ -23,6 +23,7 @@ public class DieselGP39 extends DieselTrain {
         textureDescriptionMap.put(3, "Nomansi & Eastern Pacific");
         textureDescriptionMap.put(4, "NEP (Late)");
         textureDescriptionMap.put(5, "CSXT (YN2)");
+        textureDescriptionMap.put(6, "CSXT (YN3)");
     }
     public DieselGP39(World world, double d, double d1, double d2){
         this(world);

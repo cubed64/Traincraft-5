@@ -123,7 +123,7 @@ public class DieselDash839C extends DieselTrain {
         }
     }
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.3F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.35F;
     }
     @Override
     public int getSizeInventory() {
