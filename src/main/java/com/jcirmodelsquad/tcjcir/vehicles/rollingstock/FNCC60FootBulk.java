@@ -60,6 +60,50 @@ public class FNCC60FootBulk extends Freight implements IInventory {
                         new CargoSpecification(ModelMixedLogs.class,
                                 "loads/MixedLogs_Redwood", "Redwood Logs", -0.5,2.7,-0.034)},
 
+                { new CargoSpecification(ModelMixedLogs.class,// pine log
+                        "loads/MixedLogs_Pine", "Pine Logs", 0.5,2.99,0.1),//maximum length, minimum height, maximum width
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Pine", "Pine Logs", -0.28,2.95,-0.05),
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Pine", "Pine Logs", 0.1,2.75,-0.11),
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Pine", "Pine Logs", 0.25,2.83,0.073),
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Pine", "Pine Logs", -0.5,2.7,-0.034)},
+
+                { new CargoSpecification(ModelMixedLogs.class,// fir log
+                        "loads/MixedLogs_Fir", "Fir Logs", 0.5,2.99,0.1),//maximum length, minimum height, maximum width
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Fir", "Fir Logs", -0.28,2.95,-0.05),
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Fir", "Fir Logs", 0.1,2.75,-0.11),
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Fir", "Fir Logs", 0.25,2.83,0.073),
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Fir", "Fir Logs", -0.5,2.7,-0.034)},
+
+                { new CargoSpecification(ModelMixedLogs.class,// jungle log
+                        "loads/MixedLogs_Jungle", "Jungle Logs", 0.5,2.99,0.1),//maximum length, minimum height, maximum width
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Jungle", "Jungle Logs", -0.28,2.95,-0.05),
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Jungle", "Jungle Logs", 0.1,2.75,-0.11),
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Jungle", "Jungle Logs", 0.25,2.83,0.073),
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Jungle", "Jungle Logs", -0.5,2.7,-0.034)},
+
+                { new CargoSpecification(ModelMixedLogs.class,// birch log
+                        "loads/MixedLogs_Birch", "Birch Logs", 0.5,2.99,0.1),//maximum length, minimum height, maximum width
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Birch", "Birch Logs", -0.28,2.95,-0.05),
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Birch", "Birch Logs", 0.1,2.75,-0.11),
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Birch", "Birch Logs", 0.25,2.83,0.073),
+                        new CargoSpecification(ModelMixedLogs.class,
+                                "loads/MixedLogs_Birch", "Birch Logs", -0.5,2.7,-0.034)},
+
                 { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//washaska wood
                         "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", 0, 2.5, 0),
                         new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,

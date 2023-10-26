@@ -8,43 +8,34 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
-import train.common.api.DieselTrain;
-import train.common.api.LiquidManager;
-import train.common.library.EnumTrains;
+import train.common.api.ElectricTrain;
 import train.common.library.GuiIDs;
 
-
-public class DieselFAFDL extends DieselTrain {
-    public DieselFAFDL(World world) {
-        super(world, EnumTrains.FAFDL.getTankCapacity(), LiquidManager.dieselFilter());
-        initLoco();
-        textureDescriptionMap.put(0, "FNCC (Passenger Scheme Early)");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "FNCC (Freight Scheme)");
-        textureDescriptionMap.put(3, "FNCC (Freight Scheme)");
+public class ElectricB_BEL extends ElectricTrain {
+    public ElectricB_BEL(World world) {
+        super(world);
+        textureDescriptionMap.put(0, "Blandsville & Blankerston");
+        textureDescriptionMap.put(1, "North Fox");
+        textureDescriptionMap.put(2, "Western Pacific");
     }
-    public DieselFAFDL(World world, double d, double d1, double d2){
+
+    public ElectricB_BEL(World world, double d, double d1, double d2) {
         this(world);
-        setPosition(d, d1 + yOffset, d2);
+        setPosition(d, d1 + (double) yOffset, d2);
         motionX = 0.0D;
         motionY = 0.0D;
         motionZ = 0.0D;
-        prevPosX = d;
+        prevPosX = d ;
         prevPosY = d1;
         prevPosZ = d2;
-    }
-
-    public void initLoco() {
-        fuelTrain = 0;
-        locoInvent = new ItemStack[inventorySize];
     }
 
     @Override
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 2.7;
-        double yOffset = 0.14;
+        double distance = 3.2;
+        double yOffset = 0.25;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
         if(side.isServer()){
@@ -73,6 +64,7 @@ public class DieselFAFDL extends DieselTrain {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
         }
     }
+
     @Override
     public void setDead() {
         super.setDead();
@@ -82,14 +74,8 @@ public class DieselFAFDL extends DieselTrain {
     @Override
     public void pressKey(int i) {
         if (i == 7 && riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
-            ((EntityPlayer) riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCO, worldObj, (int) this.posX, (int) this.posY, (int) this.posZ);
+            ((EntityPlayer) riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCO, worldObj, (int) this.posX + 2, (int) this.posY, (int) this.posZ);
         }
-    }
-
-    @Override
-    public void onUpdate() {
-        checkInvent(locoInvent[0]);
-        super.onUpdate();
     }
 
     @Override
@@ -126,22 +112,13 @@ public class DieselFAFDL extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 0.93F;
-    }
-
-    @Override
     public int getSizeInventory() {
         return inventorySize;
     }
 
     @Override
     public String getInventoryName() {
-        return "CEE FA-FDL";
-    }
-
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
+        return "CEE B-BEL";
     }
 
     @Override
@@ -159,8 +136,16 @@ public class DieselFAFDL extends DieselTrain {
         return true;
     }
     @Override
+    public float getOptimalDistance(EntityMinecart cart) {
+        return 1.3F;
+    }
+
+    @Override
     public boolean canBeAdjusted(EntityMinecart cart) {
         return canBeAdjusted;
     }
-
+    @Override
+    public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+        return true;
+    }
 }

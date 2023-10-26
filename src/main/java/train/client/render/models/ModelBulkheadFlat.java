@@ -9,6 +9,7 @@
 
 package train.client.render.models;
 
+import com.jcirmodelsquad.tcjcir.models.trucks.Model70TonTruck2;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
@@ -479,6 +480,7 @@ public class ModelBulkheadFlat extends ModelBase
 	}
 
 	private ModelWellcarBogie trucks = new ModelWellcarBogie();
+	Model70TonTruck2 bogie2 = new Model70TonTruck2();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
@@ -487,7 +489,7 @@ public class ModelBulkheadFlat extends ModelBase
 		{
 			bulkheadflatModel[i].render(f5);
 		}
-		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/wellcar_bogie.png"));
+		/*Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/wellcar_bogie.png"));
 		GL11.glPushMatrix();
 		GL11.glTranslated(-1.8,0.16,-0.35);
 		GL11.glScalef(1.1f,1.1f,0.9f);
@@ -498,6 +500,15 @@ public class ModelBulkheadFlat extends ModelBase
 		GL11.glTranslated(1.6,0.15,-0.35);
 		GL11.glScalef(1.1f,1.1f,0.9f);
 		trucks.render(entity,f,f1,f2,f3,f4,f5);
+		GL11.glPopMatrix();*/
+
+		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Black.png"));
+		GL11.glPushMatrix();
+		GL11.glTranslated(-1.76,-0.15,-0.0);
+		bogie2.render(entity,f,f1,f2,f3,f4,f5);
+
+		GL11.glTranslated(3.5,-0.0,0.00);
+		bogie2.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();
 		((AbstractTrains) entity).getCargoManager().renderCargo((AbstractTrains) entity, f, f1, f2, f3, f4, f5);
 	}
@@ -507,4 +518,5 @@ public class ModelBulkheadFlat extends ModelBase
 	}
 
 	public ModelRendererTurbo bulkheadflatModel[];
+	public float[] getTrans() { return new float[]{-0F, 0.0F, 0F}; }
 }

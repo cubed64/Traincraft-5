@@ -1,6 +1,7 @@
 package train.common.entity.rollingStock;
 
-import com.jcirmodelsquad.tcjcir.models.loads.ModelMixedLogs;
+import com.jcirmodelsquad.tcjcir.models.loads.*;
+import com.jcirmodelsquad.tcjcir.models.trains.ModelAEM7;
 import com.jcirmodelsquad.tcjcir.models.trains.ModelOnion;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
@@ -28,7 +29,23 @@ public class EntityBulkheadFlatCart extends Freight implements IInventory {
 				{ new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Oak", "Oak Logs", 0, 2.9, 0)},
 				{ new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Birch", "Birch Logs", 0, 2.9, 0) },
 				{ new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Spruce", "Spruce Logs", 0, 2.9, 0) },
+				{ new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Jungle", "Jungle Logs", 0, 2.9, 0) },
+				{ new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Redwood", "Redwood Logs", 0, 2.9, 0) },
+				{ new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Fir", "Fir Logs", 0, 2.9, 0) },
+				{ new CargoSpecification(ModelMixedLogs.class, "loads/MixedLogs_Pine", "Pine Logs", 0, 2.9, 0) },
 				{ new CargoSpecification(ModelOnion.class, "trains/Onion_Black", "O n i o n", 0, 2.4, 0) },
+				{ new CargoSpecification(ModelAEM7.class, "trains/AEM-7_Grey", "highly important cargo", 0, 2.38, 0),
+						new CargoSpecification(Modeltoastertiedown.class, "loads/AEM_tiedown", "highly important cargo", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//wood blank
+						"loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//wood canfor
+						"loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//wood tolky
+						"loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//wood wash1
+						"loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//wood wash2
+						"loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 2.38, 0) },
 		}));
 	}
 	

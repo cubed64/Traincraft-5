@@ -1,5 +1,9 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
+import com.jcirmodelsquad.tcjcir.models.loads.Modelpipeload1;
+import com.jcirmodelsquad.tcjcir.models.loads.Modelroadrailer_trailer_53;
+import com.jcirmodelsquad.tcjcir.models.loads.Modeltoastertiedown;
+import com.jcirmodelsquad.tcjcir.models.trains.ModelAEM7;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -10,6 +14,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.Freight;
+import train.common.entity.CargoManager;
+import train.common.entity.CargoSpecification;
 import train.common.library.GuiIDs;
 
 public class Gunderson89ftFlat extends Freight implements IInventory {
@@ -18,6 +24,14 @@ public class Gunderson89ftFlat extends Freight implements IInventory {
     public Gunderson89ftFlat(World world) {
         super(world);
         initFreightCart();
+        setCargoManager(new CargoManager(new CargoSpecification[][] {
+        /*{ new CargoSpecification(Modelroadrailer_trailer_53.class,
+                "loads/roadrailer_53_generic", "53 Ft Dryvan", 0, 2.5, 0) },
+        { new CargoSpecification(Modelroadrailer_trailer_53.class,
+                "roadrailer_53_fernrock", "53 Ft Refrididgerator (Fernrock Foods)", 0, 2.5, 0) },*/
+        { new CargoSpecification(ModelAEM7.class, "trains/AEM-7_Grey", "highly important cargo", 0, 2.58, 0),
+              new CargoSpecification(Modeltoastertiedown.class, "loads/AEM_tiedown", "highly important cargo", 0, 2.58, 0) },
+        }));
     }
 
     public Gunderson89ftFlat(World world, double d, double d1, double d2){

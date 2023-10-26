@@ -539,6 +539,8 @@ public enum ItemIDs {
 
 	minecartAEM7("ItemRollingStock", "aem7", 8),
 
+	minecartB_BEL("ItemRollingStock", "b_bel", 5),
+
 	//FrERf//
 	minecartRoundHopper("ItemRollingStock", "train_RoundHopper", 2),
 	minecartRibbedHopper("ItemRollingStock", "ribbed_hopper", 2),
@@ -583,6 +585,7 @@ public enum ItemIDs {
 	minecart29080DOT111("ItemRollingStock", "29080DOT", 6),
 	minecart17600DOT111("ItemRollingStock", "17600DOT", 4),
 	minecartNATX30600("ItemRollingStock", "natx30600", 5),
+	minecartgatc10000("ItemRollingStock", "gatc10000", 3),
 
 	minecartCoffinCar("ItemRollingStock", "CoffinCar", 1),
 	minecartSkeletonLogCar("ItemRollingStock", "Skeleton", 1),
