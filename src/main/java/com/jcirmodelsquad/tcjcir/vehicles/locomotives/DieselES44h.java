@@ -19,7 +19,12 @@ public class DieselES44h extends DieselTrain {
         super(world, EnumTrains.ES44h.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         textureDescriptionMap.put(0, "your mom dot com or something");
-
+        textureDescriptionMap.put(10, "CSX Conrail");
+        textureDescriptionMap.put(11, "CSX Chessie");
+        textureDescriptionMap.put(12, "CSX B&O");
+        textureDescriptionMap.put(13, "CSX C&O");
+        textureDescriptionMap.put(14, "CSX Seaboard");
+        textureDescriptionMap.put(15, "CSX L&N");
     }
     public DieselES44h(World world, double d, double d1, double d2){
         this(world);
