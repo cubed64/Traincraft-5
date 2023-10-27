@@ -1749,28 +1749,28 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         switch (key) {
             case 1: {
                 double rotation = this.serverRealRotation;
-                System.out.println(rotation);
+                //System.out.println(rotation);
                 if (rotation < 90.0 && rotation > 0 || rotation == 90.0) {
-                    System.out.println("Forward 1");
+                    //System.out.println("Forward 1");
                     this.motionX -= 0.0015 * this.accelerate;
 
 
                 } else if (rotation == -90.0) {
-                    System.out.println("Forward 2");
+                    //System.out.println("Forward 2");
                     this.motionX += 0.0015 * this.accelerate;
 
                 } else if (rotation < -90.00 && rotation > -180) {
-                    System.out.println("Forward 3");
+                    //System.out.println("Forward 3");
                     this.motionZ -= 0.0015 * this.accelerate;
                 } else if (rotation == 0) {
                     this.motionZ += 0.0015 * this.accelerate;
-                    System.out.println("Forward 4");
+                    //System.out.println("Forward 4");
                 } else if (rotation < 180.0 && rotation > 90.0 || rotation == 180) {
                     this.motionZ -= 0.0015 * this.accelerate;
-                    System.out.println("Forward 5");
+                    //System.out.println("Forward 5");
                 } else if (rotation > -180 && rotation < -90 || rotation == -180) {
                     this.motionZ -= 0.0015 * this.accelerate;
-                    System.out.println("Forward 6");
+                    //System.out.println("Forward 6");
                 }
 
 

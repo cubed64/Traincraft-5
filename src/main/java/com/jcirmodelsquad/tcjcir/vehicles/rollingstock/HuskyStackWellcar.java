@@ -92,7 +92,7 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
     @Override
     public void setDead() {
         super.setDead();
-        ItemStack stackToPlace = new ItemStack(BlockIDs.FortyFootContainer.block, 1);
+        /*ItemStack stackToPlace = new ItemStack(BlockIDs.FortyFootContainer.block, 1);
 
         if (container1 != null) {
             if (container1.savedData != null) {
@@ -159,7 +159,7 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
                 this.container2 = new BasicallyContainer("FortyFootContainer", "grey", list);
             }*/
 
-        } else if (entityplayer.getHeldItem() == null && entityplayer.isSneaking()) {
+        /*} else if (entityplayer.getHeldItem() == null && entityplayer.isSneaking()) {
             ItemStack theItemStack = new ItemStack(BlockIDs.FortyFootContainer.block, 1);
             if (container2 != null) {
                 if (container2.savedData != null) {
@@ -228,7 +228,7 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
                 ntc.getCompoundTag("container2").setString("Color", "LightGrey");
             }
             container2 = new BasicallyContainer("FortyFootContainer", ntc.getCompoundTag("container2").getString("Color"), ntc.getCompoundTag("container2"));
-        }
+        }*/
     }
 }
 
