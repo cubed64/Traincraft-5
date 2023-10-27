@@ -506,10 +506,10 @@ public enum EnumTrains {
 	SkeletonCar("Skeleton", SkeletonLogCar.class, ItemIDs.minecartSkeletonLogCar.item, "freight", 1, TraincraftUtil.getBytesFromColors(new String[]{"Black","Grey", "LightGrey"}), 18, 18, (new String[] {"Cargo: Logs."})),
 	EarlyFlat("EarlyFlat", EarlyFlat.class, ItemIDs.minecartEarlyFlat.item, "flat", 0, 0, 0.7, 0, 0, 0, 0, 0, 0, null, 18, 0),
 
-	Gunderson89FootAutorack("89ftAutorack", Gunderson89ftAutorack.class, ItemIDs.minecartGunderson89ftAutorack.item, "freight", 4.75, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Orange", "LightGrey", "Blue", "Black", "Brown", "Pink"}), 8, 54, (new String[] {"Cargo: Any"})),
-	Gunderson89FootFlat("89ftFlat", Gunderson89ftFlat.class, ItemIDs.minecartGunderson89ftFlat.item, "freight", 3.25, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Blue", "Purple"}), 8, 54, (new String[] {"Cargo: Any"})),
-	StampedeRack("StampedeRack", StampedeRack.class, ItemIDs.minecartStampedeRack.item, "stock car", 0, 0, 3.75, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Brown"}), 10, 0),
-	HuskyStackWellcar("40ftHuskyStackWellcar", HuskyStackWellcar.class, ItemIDs.minecartHuskyStackWellcar.item, "freight", 3, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Blue", "Brown", "Green", "Pink", "Skin16"}), 0,0, (new String[] {"Can carry up to 2 Containers!"})),
+	Gunderson89FootAutorack("89ftAutorack", Gunderson89ftAutorack.class, ItemIDs.minecartGunderson89ftAutorack.item, "freight", 7, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Orange", "LightGrey", "Blue", "Black", "Brown", "Pink"}), 8, 54, (new String[] {"Cargo: Any"})),
+	Gunderson89FootFlat("89ftFlat", Gunderson89ftFlat.class, ItemIDs.minecartGunderson89ftFlat.item, "freight", 3, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Blue", "Purple"}), 8, 54, (new String[] {"Cargo: Any"})),
+	StampedeRack("StampedeRack", StampedeRack.class, ItemIDs.minecartStampedeRack.item, "stock car", 0, 0, 5, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Brown"}), 10, 0),
+	//HuskyStackWellcar("40ftHuskyStackWellcar", HuskyStackWellcar.class, ItemIDs.minecartHuskyStackWellcar.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Blue", "Brown", "Green", "Pink", "Skin16"}), 0,0, (new String[] {"Can carry up to 2 Containers!"})),
 
 	IngotPig("IngotPig", IngotPig.class, ItemIDs.minecartIngotPig.item, "freight", 2, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "Black"}), 18, 9, (new String[] {"Cargo: Ingots."})),
 	SteelSlabFlat("SteelSlabFlat", SteelSlabFlat.class, ItemIDs.minecartSteelSlabFlat.item, "freight", 2.5, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "Black"}), 16, 9, (new String[] {"Cargo: steel and metal ig."})),

@@ -63,8 +63,8 @@ public class TCBlocks {
 		BlockIDs.tcRailGag.block = new BlockTCRailGag().setHardness(1.0F).setStepSound(Block.soundTypeMetal).setCreativeTab(null);
 		
 		BlockIDs.bridgePillar.block = new BlockBridgePillar().setHardness(3.5F).setStepSound(Block.soundTypeWood);
-		BlockIDs.mtcVBCController.block = new BlockVBCController(Material.rock).setHardness(3.5F).setStepSound(Block.soundTypeMetal).setBlockTextureName("tc:vbcController").setBlockName("vbcController").setCreativeTab(Traincraft.tcTab);
-		BlockIDs.FortyFootContainer.block = new BlockFortyFootContainer(Material.iron).setHardness(4.5F).setCreativeTab(Traincraft.tcTab).setStepSound(Block.soundTypeMetal);
+		//BlockIDs.mtcVBCController.block = new BlockVBCController(Material.rock).setHardness(3.5F).setStepSound(Block.soundTypeMetal).setBlockTextureName("tc:vbcController").setBlockName("vbcController").setCreativeTab(Traincraft.tcTab);
+		//BlockIDs.FortyFootContainer.block = new BlockFortyFootContainer(Material.iron).setHardness(4.5F).setCreativeTab(Traincraft.tcTab).setStepSound(Block.soundTypeMetal);
 
 
 			BlockIDs.mtcTransmitterSpeed.block = new BlockTransmitterSpeed(Material.rock).setHardness(3.5F).setStepSound(Block.soundTypeMetal).setBlockTextureName("tc:speedTransmitter").setBlockName("mtcspeedtransmitter").setCreativeTab(Traincraft.tcTab);

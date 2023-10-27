@@ -51,7 +51,7 @@ public enum BlockIDs {
 	//mtcMultiReceiver(false, null),
 	//trainMonitor(false, null),
 	mtcMarker(false, null),
-    FortyFootContainer(true, ItemFortyFootContainer.class),
+    //FortyFootContainer(true, ItemFortyFootContainer.class),
 	//Liquids
 	diesel(false, ItemBlockFluid.class),
 	refinedFuel(false, ItemBlockFluid.class),
