@@ -18,13 +18,23 @@ public class DieselES44h extends DieselTrain {
     public DieselES44h(World world) {
         super(world, EnumTrains.ES44h.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "your mom dot com or something");
-        textureDescriptionMap.put(10, "CSX Conrail");
-        textureDescriptionMap.put(11, "CSX Chessie");
-        textureDescriptionMap.put(12, "CSX B&O");
-        textureDescriptionMap.put(13, "CSX C&O");
-        textureDescriptionMap.put(14, "CSX Seaboard");
-        textureDescriptionMap.put(15, "CSX L&N");
+        textureDescriptionMap.put(0, "NS 8025 (Monongahela)");
+        textureDescriptionMap.put(1, "NS 8098 (Conrail)");
+        textureDescriptionMap.put(2, "NS 8099 (Southern)");
+        textureDescriptionMap.put(3, "NS 8100 (NKP)");
+        textureDescriptionMap.put(4, "NS 8101 (Central of Georgia)");
+        textureDescriptionMap.put(5, "NS 8102 (Pennsylvania)");
+        textureDescriptionMap.put(6, "NS 8103 (Norfolk & Western)");
+        textureDescriptionMap.put(7, "NS 8104 (LV Pre Jun 2012)");
+        textureDescriptionMap.put(8, "NS 8104 (LV Post Jun 2012)");
+        textureDescriptionMap.put(9, "NS 8105 (Interstate)");
+        textureDescriptionMap.put(10, "NS 8114 (NS 1942-1982)");
+        textureDescriptionMap.put(11, "CSX 1976 (Conrail)");
+        textureDescriptionMap.put(12, "CSX 1973 (Chessie)");
+        textureDescriptionMap.put(13, "CSX 1827 (B&O)");
+        textureDescriptionMap.put(14, "CSX 1869 (C&O)");
+        textureDescriptionMap.put(15, "CSX 1982 (Seaboard)");
+        textureDescriptionMap.put(16, "CSX 1850 (L&N)");
     }
     public DieselES44h(World world, double d, double d1, double d2){
         this(world);
