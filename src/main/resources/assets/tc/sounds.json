@@ -237,7 +237,7 @@
   "lu_whistle": {"category": "master", "sounds": [{"name": "lu_whistle", "stream":  true}]},
 
 
-
+  "walterwhite": {"category": "master", "sounds": [{"name": "walterwhite","stream": true}]},
   "aem7_horn": {"category": "master", "sounds": [{"name": "aem7_horn","stream": true}]},
   "hhgregg600horn": {"category": "master", "sounds": [{"name": "hhgregg600horn", "stream":  true}]},
   "rtr_horn": {"category": "master", "sounds": [{"name": "rtr_horn","stream": true}]},
