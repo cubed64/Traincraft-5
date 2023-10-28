@@ -588,16 +588,16 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 		bodyModel[38].setRotationPoint(-32F, 1F, 6F);
 
 		bodyModel[39].addBox(0F, 0F, 0F, 4, 1, 4, 0F); // Box 182 ph2 mounting stuff
-		bodyModel[39].setRotationPoint(30F, 1.5F, -2F);
+		bodyModel[39].setRotationPoint(29F, 1.5F, -2F);
 
 		bodyModel[40].addShapeBox(0F, 0F, 0F, 2, 1, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.5F, 0F, 0F, 0.5F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F); // Box 183 ph2 mounting stuff
-		bodyModel[40].setRotationPoint(31F, 1F, 6F);
+		bodyModel[40].setRotationPoint(30F, 1F, 6F);
 
 		bodyModel[41].addShapeBox(0F, 0F, 0F, 4, 1, 22, 0F,-0.25F, 0F, 0.25F, -0.25F, 0F, 0.25F, -0.25F, 0F, 0.25F, -0.25F, 0F, 0.25F, -0.25F, 0F, 0.25F, -0.25F, 0F, 0.25F, -0.25F, 0F, 0.25F, -0.25F, 0F, 0.25F); // Box 184 ph2 mounting stuff
-		bodyModel[41].setRotationPoint(30F, 0F, -11F);
+		bodyModel[41].setRotationPoint(29F, 0F, -11F);
 
 		bodyModel[42].addShapeBox(0F, 0F, 0F, 2, 1, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0.5F, 0F, 0F, 0.5F, 0F); // Box 185 ph2 mounting stuff
-		bodyModel[42].setRotationPoint(31F, 1F, -11F);
+		bodyModel[42].setRotationPoint(30F, 1F, -11F);
 
 		bodyModel[43].addBox(0F, 0F, 0F, 27, 4, 16, 0F); // Box 2
 		bodyModel[43].setRotationPoint(-13.5F, 5F, -8F);
@@ -1809,28 +1809,28 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 843) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb3_new_greygray.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.95, 0.0, 0);
+			GL11.glTranslated(-1.9325, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(3.95, 0, 0);
+			GL11.glTranslated(3.875, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb3_new_silbver.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb3_new_earliie_silvers.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.95, 0.0, 0);
+			GL11.glTranslated(-1.9325, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(3.95, 0, 0);
+			GL11.glTranslated(3.875, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb3_new_blacku.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.95, 0.0, 0);
+			GL11.glTranslated(-1.9325, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(3.95, 0, 0);
+			GL11.glTranslated(3.875, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}

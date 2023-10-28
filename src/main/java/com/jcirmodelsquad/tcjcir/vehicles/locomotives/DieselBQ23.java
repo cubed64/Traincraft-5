@@ -23,6 +23,7 @@ public class DieselBQ23 extends DieselTrain {
         textureDescriptionMap.put(3, "Fox, North Coast & Cascades");
         textureDescriptionMap.put(4, "CSXT YN2 3003");
         textureDescriptionMap.put(5, "CSXT YN2 (Post 90s)");
+        textureDescriptionMap.put(6, "CSXT Ghrey Ghonst");
     }
     public DieselBQ23(World world, double d, double d1, double d2){
         this(world);

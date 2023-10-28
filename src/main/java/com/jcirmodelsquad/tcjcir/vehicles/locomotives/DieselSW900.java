@@ -18,6 +18,15 @@ public class DieselSW900 extends DieselTrain {
     public DieselSW900(World world) {
         super(world, EnumTrains.SW900.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "Electric Fuels Corperation");
+        textureDescriptionMap.put(1, "Conrail Shared Assets");
+        textureDescriptionMap.put(2, "Fox, North Coast & Cascades");
+        textureDescriptionMap.put(3, "Avanste Northeastern");
+        textureDescriptionMap.put(4, "Blandsville & Blankerston");
+        textureDescriptionMap.put(5, "Deadwood & La Mesa");
+        textureDescriptionMap.put(6, "New York Central");
+        textureDescriptionMap.put(7, "New York Central");
+        textureDescriptionMap.put(8, "Great Lakes & Northern Territories");
     }
     public DieselSW900(World world, double d, double d1, double d2){
         this(world);

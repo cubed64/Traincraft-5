@@ -24,8 +24,8 @@ public class DieselSD38 extends DieselTrain {
         textureDescriptionMap.put(2, "Conrail");
         textureDescriptionMap.put(3, "LLPX");
         textureDescriptionMap.put(4, "Masaou");
-        textureDescriptionMap.put(5, "Fraser Pine River Railroad 178");
-        textureDescriptionMap.put(6, "Fraser Pine River Railroad 179");
+        textureDescriptionMap.put(5, "Fraser Pine River Railroad");
+        textureDescriptionMap.put(6, "Fraser Pine River Railroad");
         textureDescriptionMap.put(7, "NSCC");
         textureDescriptionMap.put(8, "Southern Port Belt");
         textureDescriptionMap.put(9, "CSXT");

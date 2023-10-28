@@ -16,9 +16,14 @@ import train.common.library.GuiIDs;
 
 public class DieselFP7A extends DieselTrain {
     public DieselFP7A(World world) {
-        super(world, EnumTrains.F7A.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.FP7A.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the benis sus
+        textureDescriptionMap.put(0, "Readding a fucking book");
+        textureDescriptionMap.put(1, "Blandsville & Blankerston");
+        textureDescriptionMap.put(2, "Checker rayroad");
+        textureDescriptionMap.put(3, "Western Pacific");
+        textureDescriptionMap.put(4, "Western Pacific");
     }
     public DieselFP7A(World world, double d, double d1, double d2){
         this(world);

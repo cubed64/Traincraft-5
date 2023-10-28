@@ -28,7 +28,7 @@ public class DieselGP7 extends DieselTrain {
         textureDescriptionMap.put(8, "West Creek Pacific");
         textureDescriptionMap.put(9, "Carbondale & Pine Valley");
         textureDescriptionMap.put(10, "Carbondale & Pine Valley (CSWR Buyout)");
-        //textureDescriptionMap.put(11, "idk"); //rylees old freelance
+        textureDescriptionMap.put(11, "waltuh white gp7");
         textureDescriptionMap.put(12, "Deadwood & La Mesa (Early)");
         textureDescriptionMap.put(13, "Deadwood & La Mesa (Late)");
         textureDescriptionMap.put(14, "Blandsville & Blankerston");
@@ -53,6 +53,7 @@ public class DieselGP7 extends DieselTrain {
         textureDescriptionMap.put(33, "ATSF (Zebrastripe)");
         textureDescriptionMap.put(34, "MKT");
         textureDescriptionMap.put(35, "Penn Central");
+        textureDescriptionMap.put(36, "Western Pacific");
     }
     public DieselGP7(World world, double d, double d1, double d2){
         this(world);

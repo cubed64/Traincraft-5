@@ -45,6 +45,8 @@ public class DieselGP40 extends DieselTrain {
         textureDescriptionMap.put(25, "DRGW (small logo)");
         textureDescriptionMap.put(26, "Florida East Coast");
         textureDescriptionMap.put(27, "Westrn Maryland");
+        textureDescriptionMap.put(28, "Milwaukee Road");
+        textureDescriptionMap.put(29, "Milwaukee Road (Billboard)");
     }
     public DieselGP40(World world, double d, double d1, double d2){
         this(world);

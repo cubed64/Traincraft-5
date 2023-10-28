@@ -33,6 +33,9 @@ public class DieselGP38 extends DieselTrain {
         textureDescriptionMap.put(13, "ATSF (Freightbonnet)");
         textureDescriptionMap.put(14, "ATSF (Kodachrome)");
         textureDescriptionMap.put(15, "Penn Central");
+        textureDescriptionMap.put(16, "Great Lakes & Northern Territories");
+        textureDescriptionMap.put(17, "Milwaukee Road");
+        textureDescriptionMap.put(18, "Milwaukee Road");
     }
     public DieselGP38(World world, double d, double d1, double d2){
         this(world);

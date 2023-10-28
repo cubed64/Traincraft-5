@@ -21,15 +21,15 @@ public class DieselSD40dash2 extends DieselTrain {
         //when the
         textureDescriptionMap.put(0, "LLPX");
         textureDescriptionMap.put(1, "Burlington Northern");
-        textureDescriptionMap.put(2, "Avanste Northeastern");
-        textureDescriptionMap.put(3, "Avanste Northeastern");
+        textureDescriptionMap.put(2, "Avanste Northeastern (Yard Service)");
+        textureDescriptionMap.put(3, "Avanste Northeastern (Road Service)");
         textureDescriptionMap.put(4, "Union Pacific");
         textureDescriptionMap.put(5, "BNSF");
-        textureDescriptionMap.put(6, "BNSF (With Yellow AC unit");
-        textureDescriptionMap.put(7, "THE MILWAUKEE ROAD");
-        textureDescriptionMap.put(8, "THE MILWAUKEE ROAD (With Icebreaker)");
-        textureDescriptionMap.put(9, "THE MILWAUKEE ROAD (Bicentennial)");
-        textureDescriptionMap.put(10, "The Rock Island");
+        textureDescriptionMap.put(6, "BNSF");
+        textureDescriptionMap.put(7, "Milwaukee Road");
+        textureDescriptionMap.put(8, "Milwaukee Road (Icebreakers)");
+        textureDescriptionMap.put(9, "Milwaukee Road (Bicentennial)");
+        textureDescriptionMap.put(10, "Rock Island");
         textureDescriptionMap.put(11, "NdeM");
         textureDescriptionMap.put(12, "Norfolk Southern");
         textureDescriptionMap.put(13, "Norfolk Southern (Ex-N&W)");
@@ -41,13 +41,14 @@ public class DieselSD40dash2 extends DieselTrain {
         textureDescriptionMap.put(19, "FURRX");
         textureDescriptionMap.put(20, "FURRX");
         textureDescriptionMap.put(21, "CSWR");
-        textureDescriptionMap.put(22, "ATSF (Freightbonnet w/ Black Trucks)");
-        textureDescriptionMap.put(23, "ATSF (Freightbonnet w/ Silver Trucks)");
+        textureDescriptionMap.put(22, "ATSF (Freightbonnet)");
+        textureDescriptionMap.put(23, "ATSF (Freightbonnet)");
         textureDescriptionMap.put(24, "Morristown Tenneva and Southern");
         textureDescriptionMap.put(25, "Morristown Tenneva and Southern (High Hood)");
         textureDescriptionMap.put(26, "Kansas City Southern");
         textureDescriptionMap.put(27, "Florida East Coast");
         textureDescriptionMap.put(28, "CSXT (YN2)");
+        textureDescriptionMap.put(29, "Great Lakes & Northern Territories");
     }
     public DieselSD40dash2(World world, double d, double d1, double d2){
         this(world);
