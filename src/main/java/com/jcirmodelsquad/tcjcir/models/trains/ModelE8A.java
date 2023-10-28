@@ -351,8 +351,8 @@ public class ModelE8A extends ModelConverter //Same as Filename
 		bodyModel[306] = new ModelRendererTurbo(this, 328, 19, textureX, textureY); // Single Steam Genorator
 		bodyModel[307] = new ModelRendererTurbo(this, 312, 23, textureX, textureY, "cull"); // Box 186
 		bodyModel[308] = new ModelRendererTurbo(this, 284, 27, textureX, textureY); // Dynamic Brake fan
-		bodyModel[309] = new ModelRendererTurbo(this, 274, 35, textureX, textureY); // Exhaust shrowd
-		bodyModel[310] = new ModelRendererTurbo(this, 274, 35, textureX, textureY); // Exhaust shrowd
+		bodyModel[309] = new ModelRendererTurbo(this, 274, 35, textureX, textureY, "cull"); // Exhaust shrowd
+		bodyModel[310] = new ModelRendererTurbo(this, 274, 35, textureX, textureY, "cull"); // Exhaust shrowd
 		bodyModel[311] = new ModelRendererTurbo(this, 368, 10, textureX, textureY); // Southern Air Tanks
 		bodyModel[312] = new ModelRendererTurbo(this, 368, 20, textureX, textureY); // Southern Air Tanks
 		bodyModel[313] = new ModelRendererTurbo(this, 371, 17, textureX, textureY); // Southern Air Tank Supports
