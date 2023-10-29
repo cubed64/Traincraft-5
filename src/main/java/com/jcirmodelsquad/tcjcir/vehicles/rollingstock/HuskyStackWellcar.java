@@ -5,6 +5,7 @@ import com.jcirmodelsquad.tcjcir.features.containers.BasicallyContainer;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.JsonToNBT;
 import net.minecraft.nbt.NBTException;
@@ -92,7 +93,7 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
     @Override
     public void setDead() {
         super.setDead();
-        ItemStack stackToPlace = new ItemStack(BlockIDs.FortyFootContainer.block, 1);
+        ItemStack stackToPlace = new ItemStack(Items.record_11, 1);
 
         if (container1 != null) {
             if (container1.savedData != null) {
@@ -160,7 +161,7 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
             }*/
 
         } else if (entityplayer.getHeldItem() == null && entityplayer.isSneaking()) {
-            ItemStack theItemStack = new ItemStack(BlockIDs.FortyFootContainer.block, 1);
+            ItemStack theItemStack = new ItemStack(Items.wheat, 1);
             if (container2 != null) {
                 if (container2.savedData != null) {
                     container2.savedData.removeTag("x");

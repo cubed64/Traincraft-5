@@ -937,9 +937,9 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 }
 
 
-                if (!sound.equals("")) {
+                if (!sound.isEmpty()) {
                     System.out.println(sound);
-                    Minecraft.getMinecraft().getSoundHandler().playSound(new MovingTrainSound(new ResourceLocation("tc:" + sound)));
+                    MovingTrainSound.playSound(new ResourceLocation("tc:" + sound));
                 }
 
                 if (soundPosition2 > 0) {
