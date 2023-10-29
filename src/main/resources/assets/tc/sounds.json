@@ -338,6 +338,8 @@
   "EMD_8_567C_Notch8": {"category": "master", "sounds": [{"name": "EMD_8_567C_Notch8", "stream":  true}]},
   "EMD_8_645E_Idle": {"category": "master", "sounds": [{"name": "EMD_8_645E_Idle", "stream":  true}]},
   "EMD_8_645E_Notch8": {"category": "master", "sounds": [{"name": "EMD_8_645E_Notch8", "stream":  true}]},
+  "EMD_12_567A_Idle": {"category": "master", "sounds": [{"name": "EMD_12_567A_Idle", "stream":  true}]},
+  "EMD_12_567A_Notch8": {"category": "master", "sounds": [{"name": "EMD_12_567A_Notch8", "stream":  true}]},
   "EMD_12_567C_Idle": {"category": "master", "sounds": [{"name": "EMD_12_567C_Idle", "stream":  true}]},
   "EMD_12_567C_Notch8": {"category": "master", "sounds": [{"name": "EMD_12_567C_Notch8", "stream":  true}]},
   "EMD_12_567B_Idle": {"category": "master", "sounds": [{"name": "EMD_12_567B_Idle", "stream":  true}]},
