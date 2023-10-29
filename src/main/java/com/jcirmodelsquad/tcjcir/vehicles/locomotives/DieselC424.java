@@ -17,7 +17,17 @@ public class DieselC424 extends DieselTrain {
     public DieselC424(World world) {
         super(world, EnumTrains.C424.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Spokane, Portland & Seattle");
+        textureDescriptionMap.put(1, "Morristown & Erie");
+        textureDescriptionMap.put(2, "Western New York & Pacific");
+        textureDescriptionMap.put(3, "Washaska & Old Fox RR");
+        textureDescriptionMap.put(4, "Latrans Range RR");
+        textureDescriptionMap.put(5, "NdeM");
+        textureDescriptionMap.put(6, "NdeM");
+        textureDescriptionMap.put(7, "Blandsville & Blankerston");
+        textureDescriptionMap.put(8, "Nautilus");
+        textureDescriptionMap.put(9, "Deadwood & La Mesa");
+        textureDescriptionMap.put(10, "Penn Central");
     }
     public DieselC424(World world, double d, double d1, double d2){
         this(world);
@@ -39,7 +49,7 @@ public class DieselC424 extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 2.8;
+        double distance = 2.9;
         double yOffset = 0.2;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));

@@ -24,12 +24,16 @@ public class DieselSD40T2 extends DieselTrain {
         textureDescriptionMap.put(3, "Southern Pacific 8491 (Late)");
         textureDescriptionMap.put(4, "Union Pacific (Ex-SP Patched)");
         textureDescriptionMap.put(5, "Northern Railroad");
-        textureDescriptionMap.put(6, "EMD");
+        textureDescriptionMap.put(6, "EMD Demo/Lease");
         textureDescriptionMap.put(7, "Blandsville & Blankerston");
+        textureDescriptionMap.put(8, "NEP");
+        textureDescriptionMap.put(9, "Magnolia Acres");
+        textureDescriptionMap.put(10, "Run 8 Western");
         textureDescriptionMap.put(11, "Paradox Rail");
         textureDescriptionMap.put(12, "Avanste Northeastern");
         textureDescriptionMap.put(13, "Fox, North Coast & Cascades");
         textureDescriptionMap.put(14, "Fox, North Coast & Cascades (Post-86)");
+        textureDescriptionMap.put(15, "Southern Port Belt");
     }
     public DieselSD40T2(World world, double d, double d1, double d2){
         this(world);

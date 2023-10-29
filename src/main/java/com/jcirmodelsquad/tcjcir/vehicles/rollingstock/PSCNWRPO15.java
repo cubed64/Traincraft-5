@@ -97,7 +97,7 @@ public class PSCNWRPO15 extends Freight implements IInventory {
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
-		return 3.23F;
+		return 3.85F;
 	}
 
 	@Override

@@ -1344,15 +1344,15 @@ public class ModelGPFDL extends ModelConverter//Same as Filename
 		bodyModel[296].setRotationPoint(-17F, -21.5F, -2F);
 
 		bodyModel[297].addBox(0.5F, 0F, 0.5F, 2, 9, 3, 0F); // Box 412 cs1
-		bodyModel[297].setRotationPoint(-16.5F, -13F, -2F);
+		bodyModel[297].setRotationPoint(-16.5F, -13F, -7F);
 		bodyModel[297].rotateAngleY = -0.26179939F;
 
 		bodyModel[298].addBox(0F, 0F, 0F, 6, 7, 3, 0F); // Box 413 cs1
-		bodyModel[298].setRotationPoint(-21.6F, -11F, 2F);
+		bodyModel[298].setRotationPoint(-21.6F, -11F, -3F);
 		bodyModel[298].rotateAngleY = -0.59341195F;
 
 		bodyModel[299].addShapeBox(0F, 0F, 0F, 12, 4, 1, 0F,0F, 0F, 0F, -6F, 0F, 0F, -6F, 0F, 0.5F, 0F, 0F, 0.5F, 0F, -2F, 0F, -6F, -2F, 0F, -6F, -2F, 0.5F, 0F, -2F, 0.5F); // Box 86 cs1
-		bodyModel[299].setRotationPoint(-21.6F, -13F, 2F);
+		bodyModel[299].setRotationPoint(-21.6F, -13F, -3F);
 		bodyModel[299].rotateAngleY = -0.59341195F;
 
 		bodyModel[300].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 364 prime base
@@ -1632,11 +1632,11 @@ public class ModelGPFDL extends ModelConverter//Same as Filename
 		bodyModel[388].setRotationPoint(-34.75F, -14F, -1F);
 
 		bodyModel[389].addShapeBox(-0.5F, 0F, -1F, 1, 3, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, -1F, -1F, 0F, -1F, -1F); // Box 71 glow speedometer
-		bodyModel[389].setRotationPoint(-18F, -15.25F, 1.5F);
+		bodyModel[389].setRotationPoint(-18F, -15.25F, -3.5F);
 		bodyModel[389].rotateAngleY = 0.78539816F;
 
 		bodyModel[390].addShapeBox(-1.5F, 0F, -1F, 2, 2, 2, 0F,0F, 0F, 0.25F, -0.25F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, 0F, 0F, 0.25F, 0F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, 0F, 0.25F, 0.25F); // Box 307 spedo
-		bodyModel[390].setRotationPoint(-18F, -15.25F, 1.5F);
+		bodyModel[390].setRotationPoint(-18F, -15.25F, -3.5F);
 		bodyModel[390].rotateAngleY = 0.78539816F;
 
 		bodyModel[391].addBox(0F, 0F, 0F, 7, 4, 4, 0F); // Box 36 cubort doobort here is your detatched 70s era crab signalling box use it well my son use it till the cows come home or something like that haha thats funny right there (maybe)
@@ -1703,7 +1703,7 @@ public class ModelGPFDL extends ModelConverter//Same as Filename
 	public ArrayList<double[]> getSmokePosition() {
 		return new ArrayList<double[]>() {
 			{
-				add(new double[]{1.4D, 1.3D, 0.0D});//front
+				add(new double[]{1.3D, 1.3D, 0.0D});//front
 				//add(new double[]{0.475D, 1.3D, 0.0D});//rear
 			}
 		};
