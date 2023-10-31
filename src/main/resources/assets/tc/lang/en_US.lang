@@ -63,6 +63,7 @@ tile.tc:WoodenCrossingBuck.name=Crossing Buck
 tile.tc:SmallBungalo.name=Small Bungalow
 tile.tc:MediumBungalo.name=Medium Bungalow
 tile.tc:LargeBungalo.name=Large Bungalow
+tile.tc:CrossingBase.name=Crossing Base
 
 <!-- ## Misc ## -->
 fluid.diesel.name=Diesel Fuel

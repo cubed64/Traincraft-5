@@ -939,7 +939,8 @@ public class ModelFBFDL extends ModelConverter //Same as Filename
 			}
 		}
 
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 9||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 9
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.31, -0.03, 0);

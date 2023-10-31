@@ -22,7 +22,7 @@ public class DieselAC4400C extends DieselTrain {
         textureDescriptionMap.put(1, "North Fox (Early)");
         textureDescriptionMap.put(2, "CEFX");
         textureDescriptionMap.put(3, "Blandsville & Blankerston");
-        textureDescriptionMap.put(3, "NEP");
+        textureDescriptionMap.put(4, "NEP");
     }
     public DieselAC4400C(World world, double d, double d1, double d2){
         this(world);

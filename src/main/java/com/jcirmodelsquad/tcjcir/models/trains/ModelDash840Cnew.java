@@ -2069,8 +2069,8 @@ public class ModelDash840Cnew extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 			}
 		}
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 843) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb3_new_greygray.png"));
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 8) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb3_new_csxandmpblu.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.9325, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);

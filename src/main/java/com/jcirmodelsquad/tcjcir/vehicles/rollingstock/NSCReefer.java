@@ -34,7 +34,7 @@ public class NSCReefer extends Freight implements IInventory {
     }
 
     public void initFreightCart() {
-        numFreightSlots = 3;
+        numFreightSlots = 36;
         freightInventorySize = trainSpec.getCargoCapacity();
         cargoItems = new ItemStack[freightInventorySize];
     }
@@ -77,7 +77,7 @@ public class NSCReefer extends Freight implements IInventory {
 
     @Override
     public String getInventoryName() {
-        return "National Steel Car 3294 Mechanical Reefer";
+        return "NSC 3294 Mech Reefer";
     }
 
     @Override

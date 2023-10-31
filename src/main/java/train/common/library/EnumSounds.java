@@ -90,8 +90,8 @@ public enum EnumSounds {
 
 
 	//JCTC Alco/MLW Diesels
-	DieselC424(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselC424.class, " ", 2.5F, "ALCO_16_251C_Notch8", 0.5F, 52, "ALCO_16_251C_Idle", 0.5F, 69, false, "alco_bronzebell_2", 13, new String[] {"nathan_m3_1", "nathan_k3la_4", "nathan_m3_4", "nathan_m3h_1", "prime_920_2", "leslie_s3l_2", "leslie_s3l_2", "generic_horn_1", "prime_990_4", "nathan_p3_new_4", "leslie_s3l_2"}),
-	DieselC425(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselC425.class, " ", 2.5F, "ALCO_16_251C_Notch8", 0.5F, 52, "ALCO_16_251C_Idle", 0.5F, 69, false, "alco_bronzebell_2", 13, new String[] {"leslie_s3l_2", "nathan_m3_3", "nathan_m3_5"}),
+	DieselC424(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselC424.class, " ", 2.5F, "ALCO_16_251C_Notch8", 0.5F, 52, "ALCO_16_251C_Idle", 0.5F, 69, false, "alco_bronzebell_2", 13, new String[] {"nathan_m3_1", "nathan_k3la_4", "nathan_m3_4", "nathan_m3h_1", "prime_920_2", "leslie_s3l_2", "leslie_s3l_2", "generic_horn_1", "prime_990_4", "nathan_p3_new_4", "leslie_s3l_2", "prime_990_1","nathan_m3_1"}),
+	DieselC425(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselC425.class, " ", 2.5F, "ALCO_16_251C_Notch8", 0.5F, 52, "ALCO_16_251C_Idle", 0.5F, 69, false, "alco_bronzebell_2", 13, new String[] {"leslie_s3l_2", "nathan_m3_3", "nathan_m3_5", "nathan_m3_1"}),
 	DieselC415H(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselC415H.class, " ", 2.5F, "ALCO_8_251F_Notch8", 0.65F, 46, "ALCO_8_251F_Idle", 0.8F, 54, false, "alco_bronzebell_1", 9, new String[] {"leslie_s2m_1", "leslie_s2m_1", "leslie_rs3l_faulty_2", "nathan_p3_new_4", "nathan_p3_new_3", "leslie_rs3l_5" }),
 	DieselC415L(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselC415L.class, "nathan_ms1", 2.5F, "ALCO_8_251F_Notch8", 0.65F, 46, "ALCO_8_251F_Idle", 0.8F, 54, false, "alco_bronzebell_1", 9),
 	DieselC415S(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselC415S.class, " ", 2.5F, "ALCO_8_251F_Notch8", 0.65F, 46, "ALCO_8_251F_Idle", 0.8F, 54, false, "alco_bronzebell_1", 9, new String[] {"leslie_rs3k_1", "leslie_rs3l_faulty_1", "nathan_m3_2", "leslie_rs3k_3", "generic_horn_1" }),

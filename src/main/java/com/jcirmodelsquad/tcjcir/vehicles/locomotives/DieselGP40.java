@@ -17,8 +17,8 @@ public class DieselGP40 extends DieselTrain {
     public DieselGP40(World world) {
         super(world, EnumTrains.GP40.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Wisconsen Southern (FrankenForty)");
-        textureDescriptionMap.put(1, "Wisconsen Southern");
+        textureDescriptionMap.put(0, "Wisconsin Central (FrankenForty)");
+        textureDescriptionMap.put(1, "Wisconsin Central");
         textureDescriptionMap.put(2, "Seaboard System");
         textureDescriptionMap.put(3, "Blandsville & Blankerston");
         textureDescriptionMap.put(4, "Paradox Rail");

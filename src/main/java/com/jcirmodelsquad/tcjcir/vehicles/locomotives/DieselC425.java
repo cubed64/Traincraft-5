@@ -20,6 +20,7 @@ public class DieselC425 extends DieselTrain {
         textureDescriptionMap.put(0, "Penn Central");
         textureDescriptionMap.put(1, "Chicago Northwestern");
         textureDescriptionMap.put(2, "Spokane, Portland & Seattle");
+        textureDescriptionMap.put(3, "Burlington Northern");
     }
     public DieselC425(World world, double d, double d1, double d2){
         this(world);

@@ -9,6 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelBluntTruck;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFlexicoil2;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeAnew;
 import net.minecraft.client.Minecraft;
@@ -1831,6 +1832,7 @@ public class ModelSW900 extends ModelConverter //Same as Filename
 	}
 	ModelFlexicoil2 theTrucks1 = new ModelFlexicoil2();
 	ModelTypeAnew theTypeA = new ModelTypeAnew();
+	ModelBluntTruck fatBlunt = new ModelBluntTruck();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
@@ -1874,6 +1876,15 @@ public class ModelSW900 extends ModelConverter //Same as Filename
 
 			GL11.glTranslated(2.0, 0, 0);
 			theTrucks1.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blunttruck_Black.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(-0.95, 0.27, 0);
+			fatBlunt.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glTranslated(2.0, 0, 0);
+			fatBlunt.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/TypeA_new_Black_rolly.png"));
