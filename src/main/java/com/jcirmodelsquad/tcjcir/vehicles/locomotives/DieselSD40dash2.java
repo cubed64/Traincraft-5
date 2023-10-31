@@ -40,7 +40,7 @@ public class DieselSD40dash2 extends DieselTrain {
         textureDescriptionMap.put(18, "Fort Worth Western Railroad");
         textureDescriptionMap.put(19, "FURRX");
         textureDescriptionMap.put(20, "FURRX");
-        textureDescriptionMap.put(21, "CSWR");
+        textureDescriptionMap.put(21, "CSLX (EX CSWR)");
         textureDescriptionMap.put(22, "ATSF (Freightbonnet)");
         textureDescriptionMap.put(23, "ATSF (Freightbonnet)");
         textureDescriptionMap.put(24, "Morristown Tenneva and Southern");

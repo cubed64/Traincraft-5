@@ -29,7 +29,7 @@ public class DieselDash944CW extends DieselTrain {
         textureDescriptionMap.put(8, "Morristown Tenneva & Southern");
         textureDescriptionMap.put(9, "Avanste Northeastern");
         textureDescriptionMap.put(10, "Gaysburg Shitty railroad and who gives 2 fucks");
-        textureDescriptionMap.put(11, "CSWR");
+        textureDescriptionMap.put(11, "CSLX (EX CSWR)");
         textureDescriptionMap.put(12, "ATSF");
         textureDescriptionMap.put(13, "ATSF (BNSF Patch)");
     }

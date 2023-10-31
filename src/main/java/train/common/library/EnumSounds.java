@@ -279,7 +279,7 @@ public enum EnumSounds {
 	Thanos(com.jcirmodelsquad.tcjcir.vehicles.locomotives.Thanos.class, "thanos_horn", 5, "thanos_run", 0.65F, 82, "thanos_idle", 0.65F, 33, false, " ", 0),
 	Toaster(ElectricAEM7.class, "aem7_horn", 1F, "vl10_idle", 0.6F, 50, "vl10_idle", 0.6F, 50, false, " ", 0),
     //JCTC Rolling Stock
-	AmfleetCab(AmfleetCab.class, "nathan_k5La_3", 2.5F, " ", 0.65F, 51, " ", 0.65F, 50, false, " ", 24),
+	AmfleetCab(AmfleetCab.class, "nathan_k5la_big_1", 2.5F, " ", 0.65F, 51, " ", 0.65F, 50, false, " ", 24),
 	;
 
 	//for figuring out the length for a sound, find out the soundfiles actual length, move the decimal over to the right by 1, and then multiply by 2

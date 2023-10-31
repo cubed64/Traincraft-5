@@ -22,7 +22,7 @@ public class DieselDash840B extends DieselTrain {
         textureDescriptionMap.put(2, "Generic Blue");
         textureDescriptionMap.put(3, "CSLX");
         textureDescriptionMap.put(4, "Generic Grey");
-        textureDescriptionMap.put(5, "CSWR");
+        textureDescriptionMap.put(5, "COW (EX CSWR)");
         textureDescriptionMap.put(6, "Paradox Rail 420");
         textureDescriptionMap.put(7, "North Fox (Early)");
         textureDescriptionMap.put(8, "Western Pacific");
