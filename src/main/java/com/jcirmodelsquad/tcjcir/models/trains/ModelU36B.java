@@ -1541,7 +1541,8 @@ public class ModelU36B extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.07, 0, 0);
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3542 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13248){
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Blac.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.54, -0.01, 0);
