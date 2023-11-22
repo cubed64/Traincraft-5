@@ -159,6 +159,9 @@ public class PacketSetTrainLockedToClient implements IMessage {
                     Traincraft.lockChannel.sendToAllAround(new PacketSetTrainLockedToClient(locked, trustedPlayerList, loopRollingStock.getEntityId(), false),
                             new NetworkRegistry.TargetPoint(loopRollingStock.dimension, loopRollingStock.posX, loopRollingStock.posY, loopRollingStock.posZ, 256D));
                     completedList.add(loopRollingStock.getEntityId());
+                } else if (!loopRollingStock.getTrainOwner().equalsIgnoreCase(rollingStock.getTrainOwner())) {
+                    completedList.add(loopRollingStock.getEntityId());
+
                 }
             }
 
