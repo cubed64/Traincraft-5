@@ -21,6 +21,7 @@ public class DieselGP7f extends DieselTrain {
         textureDescriptionMap.put(1, "ARR 1807");
         textureDescriptionMap.put(2, "ARR 1802");
         textureDescriptionMap.put(3, "Blandsville & Blankerston");
+        textureDescriptionMap.put(4, "Seattle & North Coast 401");
     }
     public DieselGP7f(World world, double d, double d1, double d2){
         this(world);

@@ -31,7 +31,7 @@ public class ModelU23B extends ModelConverter //Same as Filename
 
 	public ModelU23B() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[413];
+		bodyModel = new ModelRendererTurbo[427];
 
 		initbodyModel_1();
 
@@ -456,6 +456,20 @@ public class ModelU23B extends ModelConverter //Same as Filename
 		bodyModel[410] = new ModelRendererTurbo(this, 7, 39, textureX, textureY); // Box 175
 		bodyModel[411] = new ModelRendererTurbo(this, 437, 78, textureX, textureY); // Box 430 early nonsense
 		bodyModel[412] = new ModelRendererTurbo(this, 437, 74, textureX, textureY); // Box 431 early nonsense
+		bodyModel[413] = new ModelRendererTurbo(this, 303, 204, textureX, textureY); // Box 413 smol fuel tank
+		bodyModel[414] = new ModelRendererTurbo(this, 257, 197, textureX, textureY); // Box 414 smol fuel tank
+		bodyModel[415] = new ModelRendererTurbo(this, 251, 218, textureX, textureY); // Box 415 smol fuel tank
+		bodyModel[416] = new ModelRendererTurbo(this, 303, 219, textureX, textureY); // Box 416 smol fuel tank
+		bodyModel[417] = new ModelRendererTurbo(this, 305, 198, textureX, textureY); // Box 296 fuel tank smol support
+		bodyModel[418] = new ModelRendererTurbo(this, 305, 198, textureX, textureY); // Box 296 fuel tank smol support
+		bodyModel[419] = new ModelRendererTurbo(this, 305, 198, textureX, textureY); // Box 296 fuel tank smol support
+		bodyModel[420] = new ModelRendererTurbo(this, 305, 198, textureX, textureY); // Box 296 fuel tank smol support
+		bodyModel[421] = new ModelRendererTurbo(this, 304, 229, textureX, textureY); // Box 421 engineroom oil drain small tank
+		bodyModel[422] = new ModelRendererTurbo(this, 183, 55, textureX, textureY, "lamp"); // Box 6 PRIME5-1
+		bodyModel[423] = new ModelRendererTurbo(this, 183, 55, textureX, textureY, "lamp"); // Box 7 PRIME5-3
+		bodyModel[424] = new ModelRendererTurbo(this, 183, 55, textureX, textureY, "lamp"); // Box 8 PRIME5-2
+		bodyModel[425] = new ModelRendererTurbo(this, 183, 55, textureX, textureY, "lamp"); // Box 9 PRIME5-4
+		bodyModel[426] = new ModelRendererTurbo(this, 183, 59, textureX, textureY); // Box 428 prime base
 
 		bodyModel[0].addBox(0F, 0F, 0F, 76, 2, 22, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-38F, -1F, -11F);
@@ -1722,6 +1736,48 @@ public class ModelU23B extends ModelConverter //Same as Filename
 
 		bodyModel[412].addShapeBox(0F, 0F, 0F, 4, 2, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 1.35F, 0F, 0F, 0F, 0F, 0F, 0F, -1F); // Box 431 early nonsense
 		bodyModel[412].setRotationPoint(13F, -20F, 7F);
+
+		bodyModel[413].addShapeBox(0F, 0F, 0F, 14, 4, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 413 smol fuel tank
+		bodyModel[413].setRotationPoint(-7F, 5F, -11F);
+
+		bodyModel[414].addBox(0F, 0F, 0F, 14, 4, 16, 0F); // Box 414 smol fuel tank
+		bodyModel[414].setRotationPoint(-7F, 5F, -8F);
+
+		bodyModel[415].addShapeBox(0F, 0F, 0F, 14, 3, 22, 0F,0F, -0.15F, 0F, 0F, -0.15F, 0F, 0F, -0.15F, 0F, 0F, -0.15F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 415 smol fuel tank
+		bodyModel[415].setRotationPoint(-7F, 2F, -11F);
+
+		bodyModel[416].addShapeBox(0F, 0F, 0F, 14, 4, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F); // Box 416 smol fuel tank
+		bodyModel[416].setRotationPoint(-7F, 5F, 8F);
+
+		bodyModel[417].addShapeBox(0F, 0F, 0F, 2, 2, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F); // Box 296 fuel tank smol support
+		bodyModel[417].setRotationPoint(-9F, 3F, -5.5F);
+
+		bodyModel[418].addShapeBox(0F, 0F, 0F, 2, 2, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F); // Box 296 fuel tank smol support
+		bodyModel[418].setRotationPoint(-9F, 3F, 5F);
+
+		bodyModel[419].addShapeBox(0F, 0F, 0F, 2, 2, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F); // Box 296 fuel tank smol support
+		bodyModel[419].setRotationPoint(7F, 3F, -5.5F);
+
+		bodyModel[420].addShapeBox(0F, 0F, 0F, 2, 2, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F); // Box 296 fuel tank smol support
+		bodyModel[420].setRotationPoint(7F, 3F, 5F);
+
+		bodyModel[421].addShapeBox(0F, 0F, 0F, 3, 6, 0, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 421 engineroom oil drain small tank
+		bodyModel[421].setRotationPoint(7F, 1.5F, -9F);
+
+		bodyModel[422].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F); // Box 6 PRIME5-1
+		bodyModel[422].setRotationPoint(-33.5F, -23.5F, -1F);
+
+		bodyModel[423].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F); // Box 7 PRIME5-3
+		bodyModel[423].setRotationPoint(-33.5F, -23.5F, -1F);
+
+		bodyModel[424].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F); // Box 8 PRIME5-2
+		bodyModel[424].setRotationPoint(-33.5F, -23.5F, -1F);
+
+		bodyModel[425].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F); // Box 9 PRIME5-4
+		bodyModel[425].setRotationPoint(-33.5F, -23.5F, -1F);
+
+		bodyModel[426].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 428 prime base
+		bodyModel[426].setRotationPoint(-33.5F, -23F, -1F);
 	}
 	ModelFB2_new theTrucks2 = new ModelFB2_new();
 	ModelBlombergBnew theTrucks3 = new ModelBlombergBnew();
@@ -1729,7 +1785,7 @@ public class ModelU23B extends ModelConverter //Same as Filename
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 413; i++) {
+		for (int i = 0; i < 427; i++) {
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);
@@ -1742,7 +1798,7 @@ public class ModelU23B extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 			}
 		}
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13244||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3247) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3247) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_black_a.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.54, 0.0, 0);
@@ -1751,7 +1807,7 @@ public class ModelU23B extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.07, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 25){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
 			GL11.glPushMatrix();
@@ -1779,7 +1835,7 @@ public class ModelU23B extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.07, 0, 0);
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 29){
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6324 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 29){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_silver_a.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.54, 0.0, 0);

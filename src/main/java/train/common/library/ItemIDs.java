@@ -436,6 +436,7 @@ public enum ItemIDs {
 	minecartU18BW("ItemRollingStock", "U18BW", 3),
 	minecartU18Balt("ItemRollingStock", "U18Balt", 3),
 	minecartU23B("ItemRollingStock", "u23b", 4),
+	minecartU23BU("ItemRollingStock", "u23bu", 4),
 	minecartU25B("ItemRollingStock", "u25b", 4),
 	minecartU36B("ItemRollingStock", "u36b", 5),
 	minecartU30C("ItemRollingStock", "u30c", 4),
@@ -444,6 +445,9 @@ public enum ItemIDs {
 	minecartU50("ItemRollingStock", "u50", 6),
 	minecartU56("ItemRollingStock", "u56", 6),
 
+	minecartSB18R("ItemRollingStock", "sb18r", 3),
+	minecartSB18E("ItemRollingStock", "sb18e", 3),
+	minecartSB18B("ItemRollingStock", "sb18b", 3),
 	minecartB23("ItemRollingStock", "b23", 4),
 	minecartBQ23("ItemRollingStock", "bq23", 4),
 	minecartSB23R("ItemRollingStock", "sb23r", 4),

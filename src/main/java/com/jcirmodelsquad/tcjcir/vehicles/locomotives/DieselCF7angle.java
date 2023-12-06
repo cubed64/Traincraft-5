@@ -52,6 +52,8 @@ public class DieselCF7angle extends DieselTrain {
         textureDescriptionMap.put(31, "Amtrak 585");
         textureDescriptionMap.put(32, "Nittany & Blad Eagle");
         textureDescriptionMap.put(33, "Great Lakes & Northern Territories");
+        textureDescriptionMap.put(34, "Seattle & North Coast 102 (Post 1983)");
+        textureDescriptionMap.put(35, "Seattle & North Coast 103 (Post 1983)");
     }
     public DieselCF7angle(World world, double d, double d1, double d2){
         this(world);

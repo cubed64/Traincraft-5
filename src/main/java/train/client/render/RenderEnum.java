@@ -1107,6 +1107,9 @@ RenderEnum {
 	U23B( DieselU23B.class,  new ModelU23B(), "U23B_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
+	U23BU( DieselU23BU.class,  new ModelU23BU(), "U23BU_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 	/*U23Bold( DieselU23Bold.class,  new ModelU23Bold(), "u23b_old_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),*/
@@ -1136,6 +1139,15 @@ RenderEnum {
 		{ }
 	}, "", null, 0, false),
 
+	SB18R( DieselSB18R.class,  new ModelSB18R(), "SB18R_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	SB18E( DieselSB18E.class,  new ModelSB18E(), "SB18E_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	SB18B( DieselSB18B.class,  new ModelSB18B(), "SB18B_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 	B23( DieselB23.class,  new ModelB23(), "b23-7_", true,new float[] {-1.7F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
