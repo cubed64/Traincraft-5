@@ -1044,12 +1044,12 @@ public class Modelthrall63centerbeam extends ModelConverter //Same as Filename
 		bodyModel[241].setRotationPoint(39.5F, 3.25F, 9.5F);
 	}
 	Model70TonTruck2 bogie = new Model70TonTruck2();
-	Modelthrall63tiedownsA tiedownsA = new Modelthrall63tiedownsA();
-	Modelthrall63tiedownsB tiedownsB = new Modelthrall63tiedownsB();
-	Modelthrall63tiedownsLoaded tiedownsL = new Modelthrall63tiedownsLoaded();
-	Modelwrappedwood load1 = new Modelwrappedwood();
-	ModelWrappedWoodDeluxe1 wood1 = new ModelWrappedWoodDeluxe1();
-	ModelWrappedWoodDeluxe5 wood5 = new ModelWrappedWoodDeluxe5();
+	//Modelthrall63tiedownsA tiedownsA = new Modelthrall63tiedownsA();
+	//Modelthrall63tiedownsB tiedownsB = new Modelthrall63tiedownsB();
+	//Modelthrall63tiedownsLoaded tiedownsL = new Modelthrall63tiedownsLoaded();
+	//Modelwrappedwood load1 = new Modelwrappedwood();
+	//ModelWrappedWoodDeluxe1 wood1 = new ModelWrappedWoodDeluxe1();
+	//ModelWrappedWoodDeluxe5 wood5 = new ModelWrappedWoodDeluxe5();
 
 	List<String> planks = Arrays.asList(new String[]{
 			"tile.wood.oak","tile.wood.spruce",
@@ -1062,10 +1062,6 @@ public class Modelthrall63centerbeam extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		if (!(entity instanceof Freight)) {
-			return;
-		}
-		Freight freight = (Freight)entity;
 
 		for(int i = 0; i < 242; i++)
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
@@ -1076,239 +1072,20 @@ public class Modelthrall63centerbeam extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 			}
 
-		int cargo = ((Freight) entity).getAmmountOfCargo();
-		//for (ItemStack item : freight.cargoItems) {
-			if (cargo == 0) {
-				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/thrall63footcenterbeam_tiedowns.png"));
-				tiedownsA.render(entity,f,f1,f2,f3,f4,f5);
-
-				//new Random().nextInt(2);
-
-				/*int a = new Random().nextInt(3);{
-					if (a==1){
-						tiedownsB.render(entity,f,f1,f2,f3,f4,f5);
-						System.out.println(a);
-						break;
-					}
-					else if(a==2){
-						tiedownsA.render(entity,f,f1,f2,f3,f4,f5);
-						System.out.println(a);
-						break;
-					}
-				}*/
-
-			} else if (cargo <= 9 /*&& item!=null && planks.contains(item.getUnlocalizedName())*/){
-				 if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==6 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==16){
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Washaska_Straps.png"));
-				 } else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 0) {
-					 Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Tolko_Straps.png"));
-				 } else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 2) {
-					 Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Canfor_Straps.png"));
-				} else {
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Blank_Straps.png"));
-				}
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-0.47,-0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-0.47,0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-			}else if(cargo<=18 && cargo>9) {
-				if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==6 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==16){
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Washaska_Straps.png"));
-				} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 0) {
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Tolko_Straps.png"));
-				} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 2) {
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Canfor_Straps.png"));
-				} else {
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Blank_Straps.png"));
-				}
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-0.47,-0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-0.47,0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-0.78,-0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-0.78,0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-			}else if(cargo<=27 && cargo>18) {
-				if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==6 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==16){
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Washaska_Straps.png"));
-				} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 0) {
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Tolko_Straps.png"));
-				} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 2) {
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Canfor_Straps.png"));
-				} else {
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Blank_Straps.png"));
-				}
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-0.47,-0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-0.47,0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-0.78,-0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-0.78,0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-1.09,-0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-1.09,0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-			}else if(cargo<=36 && cargo>27) {
-				if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==6 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==16){
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Washaska_Straps.png"));
-				} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 0) {
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Tolko_Straps.png"));
-				} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 2) {
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Canfor_Straps.png"));
-				} else {
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Blank_Straps.png"));
-				}
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-0.47,-0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-0.47,0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-0.78,-0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-0.78,0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-1.09,-0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-1.09,0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-1.4,-0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f,-1.4,0.4);
-				wood5.render(entity,f,f1,f2,f3,f4,f5);
-				GL11.glPopMatrix();
-			}else {
-				if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Washaska_Straps.png"));
-				} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 0) {
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Tolko_Straps.png"));
-				} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 2) {
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Canfor_Straps.png"));
-				} else {
-					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/loads/WrappedWood2_Blank_Straps.png"));
-				}
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f, -0.47, -0.4);
-				wood5.render(entity, f, f1, f2, f3, f4, f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f, -0.47, 0.4);
-				wood5.render(entity, f, f1, f2, f3, f4, f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f, -0.78, -0.4);
-				wood5.render(entity, f, f1, f2, f3, f4, f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f, -0.78, 0.4);
-				wood5.render(entity, f, f1, f2, f3, f4, f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f, -1.09, -0.4);
-				wood5.render(entity, f, f1, f2, f3, f4, f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f, -1.09, 0.4);
-				wood5.render(entity, f, f1, f2, f3, f4, f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f, -1.4, -0.4);
-				wood5.render(entity, f, f1, f2, f3, f4, f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f, -1.4, 0.4);
-				wood5.render(entity, f, f1, f2, f3, f4, f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f, -1.71, -0.4);
-				wood5.render(entity, f, f1, f2, f3, f4, f5);
-				GL11.glPopMatrix();
-
-				GL11.glPushMatrix();
-				GL11.glTranslated(-0f, -1.71, 0.4);
-				wood5.render(entity, f, f1, f2, f3, f4, f5);
-				GL11.glPopMatrix();
-
-				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/thrall63footcenterbeam_tiedowns.png"));
-				tiedownsL.render(entity,f,f1,f2,f3,f4,f5);
-			}
-		//}
-
 		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==324){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Black.png"));
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Greyish.png"));
 		}
+		GL11.glPushMatrix();
 		GL11.glScalef(1,1,1f);
 		GL11.glTranslated(-2.25,-0.0,-0.0);
 		bogie.render(entity,f,f1,f2,f3,f4,f5);
 
 		GL11.glTranslated(4.5,-0.0,0.00);
 		bogie.render(entity,f,f1,f2,f3,f4,f5);
+		GL11.glPopMatrix();
+
+		((AbstractTrains) entity).getCargoManager().renderCargo((AbstractTrains) entity, f, f1, f2, f3, f4, f5);
 	}
 }

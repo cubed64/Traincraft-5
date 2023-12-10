@@ -800,6 +800,9 @@ item.tc:minecartWCPBaler.name=WCP Baler Tender
 item.tc:minecartLocoC11.name=JNR C11
 item.tc:minecartOnion.name=Onion
 item.tc:minecartOnionTender.name=Onion's Tender
+item.tc:minecartNP_L9.name=NP L9 Class 0-6-0
+item.tc:minecartNP_11C_tender.name=NP 11C & 12C Class Tenders
+item.tc:minecartNP_13C_tender.name=NP 13C Class Tender
 
 item.tc:minecartPELocomotive.name=Polar Express 1225
 item.tc:minecartPETender.name=Polar Express Tender
@@ -822,6 +825,9 @@ entity.tc.WCPBaler.name=WCP Baler Tender
 entity.tc.Loco Steam C11.name=JNR C11
 entity.tc.Onion.name=Onion
 entity.tc.Onion Tender.name=Onion's Tender
+entity.tc.NP_L9.name=NP L9 Class 0-6-0
+entity.tc.NP_11C_tender.name=NP 11C & 12C Class Tenders
+entity.tc.NP_13C_tender.name=NP 13C Class Tender
 
 entity.tc.Loco Steam PELoco.name=Polar Express 1225
 entity.tc.Tender PETender.name=Polar Express Tender

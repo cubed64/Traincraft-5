@@ -19,6 +19,12 @@ public class DieselSB18R extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "CEE Factory Blank (Phase 1)");
         textureDescriptionMap.put(1, "CEE Factory Blank (Phase 2)");
+        textureDescriptionMap.put(2, "TTLC (Highlands Moss)");
+        textureDescriptionMap.put(3, "TTLC (Koke Moss)");
+        textureDescriptionMap.put(4, "TTLC (Moss)");
+        textureDescriptionMap.put(5, "TTLC (Oak Moss)");
+        textureDescriptionMap.put(6, "TTLC (Reindeer Moss)");
+        textureDescriptionMap.put(7, "TTLC (Swamp Moss)");
     }
     public DieselSB18R(World world, double d, double d1, double d2){
         this(world);

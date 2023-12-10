@@ -1,5 +1,6 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
+import com.jcirmodelsquad.tcjcir.models.loads.ModelWrappedWoodOptimized_slice1;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -10,6 +11,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.Freight;
+import train.common.entity.CargoManager;
+import train.common.entity.CargoSpecification;
 import train.common.library.GuiIDs;
 
 public class Freight60centerbeam extends Freight implements IInventory {
@@ -18,6 +21,68 @@ public class Freight60centerbeam extends Freight implements IInventory {
     public Freight60centerbeam(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "Generic Black");
+        textureDescriptionMap.put(1, "UP");
+        textureDescriptionMap.put(2, "BCOL");
+        textureDescriptionMap.put(3, "Centex");
+        setCargoManager(new CargoManager(new CargoSpecification[][] {
+
+                //is 0.315 5 mb? is 0.063 1 mb? bigger positive number means lower, smaller positive number means higher
+                { new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,//washaska wood
+                        "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", 0, 2.437, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", 0, 2.122, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", 0, 1.807, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", 0, 1.492, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", 0, 1.177, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,//washaska wood 2
+                        "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 2.437, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 2.122, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 1.807, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 1.492, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 1.177, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,//tolko wood
+                        "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", 0, 2.437, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", 0, 2.122, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", 0, 1.807, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", 0, 1.492, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", 0, 1.177, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,//canfor wood
+                        "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", 0, 2.437, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", 0, 2.122, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", 0, 1.807, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", 0, 1.492, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", 0, 1.177, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,//blank wood
+                        "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 2.437, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 2.122, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 1.807, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 1.492, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 1.177, 0),},
+        }));
     }
 
     public Freight60centerbeam(World world, double d, double d1, double d2){

@@ -348,6 +348,9 @@ public enum ItemIDs {
 	minecartLocoC11("ItemRollingStock", "train_C11", 5),
 	minecartOnion("ItemRollingStock", "Onion", 10),
 	minecartOnionTender("ItemRollingStock", "OnionTender", 10),
+	minecartNP_L9("ItemRollingStock", "np_l9", 3),
+	minecartNP_11C_tender("ItemRollingStock", "np_11c", 3),
+	minecartNP_13C_tender("ItemRollingStock", "np_13c", 3),
 
 	minecartPELocomotive("ItemRollingStock", "PELocoIcon", 5),
 	minecartPETender("ItemRollingStock", "PETenderIcon", 3),
