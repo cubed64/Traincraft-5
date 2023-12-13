@@ -826,8 +826,8 @@ entity.tc.Loco Steam C11.name=JNR C11
 entity.tc.Onion.name=Onion
 entity.tc.Onion Tender.name=Onion's Tender
 entity.tc.NP_L9.name=NP L9 Class 0-6-0
-entity.tc.NP_11C_tender.name=NP 11C & 12C Class Tenders
-entity.tc.NP_13C_tender.name=NP 13C Class Tender
+entity.tc.NP_11C_Tender.name=NP 11C & 12C Class Tenders
+entity.tc.NP_13C_Tender.name=NP 13C Class Tender
 
 entity.tc.Loco Steam PELoco.name=Polar Express 1225
 entity.tc.Tender PETender.name=Polar Express Tender

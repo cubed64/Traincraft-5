@@ -9,8 +9,15 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelFrictionTruckTender;
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
+import tmt.Tessellator;
+import train.common.library.Info;
 
 public class ModelNP_11C_12C_tender extends ModelConverter //Same as Filename
 {
@@ -375,5 +382,39 @@ public class ModelNP_11C_12C_tender extends ModelConverter //Same as Filename
 
 		bodyModel[85].addShapeBox(0F, 0F, 0F, 5, 1, 1, 0F,0F, 0F, 0F, 0F, 3F, -3F, 0F, 3F, 3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, -3F, 0F, -3F, 3F, 0F, 0F, 0F); // Box 2
 		bodyModel[85].setRotationPoint(-20F, 5.5F, -9.5F);
+	}
+	ModelFrictionTruckTender wheel3 = new ModelFrictionTruckTender();
+
+	@Override
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+		for (int i = 0; i < 86; i++) {
+			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
+				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+				bodyModel[i].render(f5);
+				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+			} else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
+				GL11.glDisable(GL11.GL_CULL_FACE);
+				bodyModel[i].render(f5);
+				GL11.glEnable(GL11.GL_CULL_FACE);
+			} else {
+				bodyModel[i].render(f5);
+			}
+		}
+		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/FrictionTruck_Greyish_small.png"));
+		GL11.glPushMatrix();
+		GL11.glTranslatef(-0.8F, 0.0F, 0F);
+		wheel3.render(entity, f, f1, f2, f3, f4, f5);
+
+		GL11.glRotatef(180, 0, 1, 0);
+		GL11.glTranslated(-1.425F, 0.0F, 0);
+		wheel3.render(entity, f, f1, f2, f3, f4, f5);
+		GL11.glPopMatrix();
+	}
+
+	public float[] getTrans() {
+		return new float[]{-0F, 0.155F, 0F}; }
+
+	public float[] getRotate() {
+		return new float[] { 0F, 0F, 180F };
 	}
 }

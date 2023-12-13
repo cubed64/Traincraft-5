@@ -9,8 +9,13 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.Entity;
+import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
+
+import java.util.ArrayList;
 
 public class ModelNP_L9 extends ModelConverter //Same as Filename
 {
@@ -1436,5 +1441,35 @@ public class ModelNP_L9 extends ModelConverter //Same as Filename
 		bodyModel[343].addShapeBox(0F, 0F, 0F, 11, 1, 1, 0F,0F, 0F, -0.05F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.05F, 0F, 0F, -0.05F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.05F); // Box 5
 		bodyModel[343].setRotationPoint(-10.5F, 5.5F, -7.5F);
 		bodyModel[343].rotateAngleZ = -0.18325957F;
+	}
+	@Override
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+		for (int i = 0; i < 344; i++) {
+			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
+				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+				bodyModel[i].render(f5);
+				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+			} else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
+				GL11.glDisable(GL11.GL_CULL_FACE);
+				bodyModel[i].render(f5);
+				GL11.glEnable(GL11.GL_CULL_FACE);
+			} else {
+				bodyModel[i].render(f5);
+			}
+		}
+	}
+	public ArrayList<double[]> getSmokePosition() {
+		return new ArrayList<double[]>() {
+			{
+				add(new double[]{2.05D, 1.5D, 0.0D});//stack
+			}
+		};
+	}
+
+	public float[] getTrans() {
+		return new float[]{-1.0F, 0.15F, 0F}; }
+
+	public float[] getRotate() {
+		return new float[] { 0F, 180F, 180F };
 	}
 }

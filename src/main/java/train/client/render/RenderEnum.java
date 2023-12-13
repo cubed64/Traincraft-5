@@ -741,6 +741,18 @@ RenderEnum {
 		}
 	}, 2, true),
 	PETender(TenderPETender.class, new ModelPE_Tender(), "PETender", false, new float[] { 0.1F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	NP_L9(SteamNP_L9.class, new ModelNP_L9(), "np_l9_", true, new float[] {  -1.5F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
+		{
+			add(new double[] { 0D, 0D, 0D });
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] { 2.2D, -0.2D, 0.75D });//pistons
+		}
+	}, 2, true),
+	NP_11C_Tender(TenderNP_11C.class, new ModelNP_11C_12C_tender(), "np_11c_n_12c_tender_", true, new float[] { 0.0F, 0.0F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	NP_13C_Tender(TenderNP_13C.class, new ModelNP_13C_tender(), "np_13c_tender_", true, new float[] { 0.0F, 0.0F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+
 
 	F01(SteamF01.class, new ModelF01(), "F01_texture", false, new float[] {  -1.5F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
 		{
@@ -763,7 +775,7 @@ RenderEnum {
 			add(new double[] { 2.1D, 1.4D, 0.0D });//stack
 		}
 	}, 2, true),
-	VanderbackTender(TenderVanderback.class, new ModelVanderbackTender(), "vanderback_", true, new float[] { 0.0F, 0.0F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	VanderbackTender(TenderVanderback.class, new ModelVanderbackTender(), "vanderback_", true, new float[] { 0.0F, 0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	BKno2a(SteamBKno2a.class, new ModelBKno2a(), "BoothKelly_", true, new float[] {-1.5F, 0.15F, 0.0F}, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
 		{

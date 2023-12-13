@@ -10,6 +10,8 @@
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFlexicoil_C_Late;
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelFrictionTruckTender;
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelFrictionTruck_Small;
 import com.jcirmodelsquad.tcjcir.models.trucks.Modelvanderback_truck;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -318,6 +320,8 @@ public class ModelVanderbackTender extends ModelConverter //Same as Filename
 		bodyModel[67].setRotationPoint(18.01F, -9F, -10F);
 	}
 	Modelvanderback_truck wheel = new Modelvanderback_truck();
+	ModelFrictionTruck_Small wheel2 = new ModelFrictionTruck_Small();
+	ModelFrictionTruckTender wheel3 = new ModelFrictionTruckTender();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
@@ -333,15 +337,15 @@ public class ModelVanderbackTender extends ModelConverter //Same as Filename
 			} else {
 				bodyModel[i].render(f5);
 			}
-		}
-		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/vanderback_truck.png"));
+		}//vanderback_truck
+		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/FrictionTruck_Greyish_small.png"));
 		GL11.glPushMatrix();
 		GL11.glTranslatef(-0.8F, 0.0F, 0F);
-		wheel.render(entity, f, f1, f2, f3, f4, f5);
+		wheel3.render(entity, f, f1, f2, f3, f4, f5);
 
 		GL11.glRotatef(180, 0, 1, 0);
 		GL11.glTranslated(-1.425F, 0.0F, 0);
-		wheel.render(entity, f, f1, f2, f3, f4, f5);
+		wheel3.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
 	}
 
@@ -349,6 +353,6 @@ public class ModelVanderbackTender extends ModelConverter //Same as Filename
 		return new float[]{-0F, 0.155F, 0F}; }
 
 	public float[] getRotate() {
-		return new float[] { 0F, 0F, 180F };
+		return new float[] { 0F, 180F, 180F };
 	}
 }
