@@ -1,6 +1,6 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
-import com.jcirmodelsquad.tcjcir.models.loads.ModelWrappedWoodOptimized_slice1;
+import com.jcirmodelsquad.tcjcir.models.loads.ModelWrappedWoodOptimized_sliceAAA;
 import com.jcirmodelsquad.tcjcir.models.loads.Modelthrall63tiedownsA;
 import com.jcirmodelsquad.tcjcir.models.loads.Modelthrall63tiedownsB;
 import com.jcirmodelsquad.tcjcir.models.loads.Modelthrall63tiedownsLoaded;
@@ -39,70 +39,70 @@ public class Thrall63centerbeam extends Freight implements IInventory {
                 { new CargoSpecification(Modelthrall63tiedownsB.class,//tiedowns empty 2
                         "trains/thrall63footcenterbeam_tiedowns", "Empty Tiedowns", 0, 3.00, 0)},
 
-                { new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,//washaska wood
-                        "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", -0.0315, 2.5279, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", -0.0315, 2.2129, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", -0.0315, 1.8979, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", -0.0315, 1.5829, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", -0.0315, 1.2679, 0),
+                { new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,//washaska wood
+                        "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", -0.0315, 2.54, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", -0.0315, 2.225, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", -0.0315, 1.91, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", -0.0315, 1.595, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", -0.0315, 1.283, 0),
                         new CargoSpecification(Modelthrall63tiedownsLoaded.class,
                                 "trains/thrall63footcenterbeam_tiedowns", "Wrapped Lumber (Washaska)", 0, 3, 0),},
 
-                { new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,//washaska wood 2
-                        "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 2.437, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 2.122, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 1.807, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 1.492, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 1.177, 0),
+                { new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,//washaska wood 2
+                        "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", -0.0315, 2.54, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", -0.0315, 2.225, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", -0.0315, 1.91, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", -0.0315, 1.595, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", -0.0315, 1.283, 0),
                         new CargoSpecification(Modelthrall63tiedownsLoaded.class,
                                 "trains/thrall63footcenterbeam_tiedowns", "Wrapped Lumber (Washaska)", 0, 3, 0),},
 
-                { new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,//tolko wood
-                        "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", 0, 2.437, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", 0, 2.122, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", 0, 1.807, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", 0, 1.492, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", 0, 1.177, 0),
+                { new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,//tolko wood
+                        "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", -0.0315, 2.54, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", -0.0315, 2.225, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", -0.0315, 1.91, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", -0.0315, 1.595, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Tolko_Straps", "Wrapped Lumber (Tolko)", -0.0315, 1.283, 0),
                         new CargoSpecification(Modelthrall63tiedownsLoaded.class,
-                                "trains/thrall63footcenterbeam_tiedowns", "Wrapped Lumber (Washaska)", 0, 1.177, 0),},
+                                "trains/thrall63footcenterbeam_tiedowns", "Wrapped Lumber (Tolko)", 0, 3, 0),},
+//some other old values that might be useful should i revisit this: 2.437 2.122 1.807 1.492 1.177
+                { new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,//canfor wood
+                        "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", -0.0315, 2.54, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", -0.0315, 2.225, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", -0.0315, 1.91, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", -0.0315, 1.595, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", -0.0315, 1.283, 0),
+                        new CargoSpecification(Modelthrall63tiedownsLoaded.class,
+                                "trains/thrall63footcenterbeam_tiedowns", "Wrapped Lumber (Canfor)", 0, 3, 0),},
 
-                { new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,//canfor wood
-                        "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", 0, 2.437, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", 0, 2.122, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", 0, 1.807, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", 0, 1.492, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Canfor_Straps", "Wrapped Lumber (Canfor)", 0, 1.177, 0),
+                { new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,//blank wood
+                        "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", -0.0315, 2.54, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", -0.0315, 2.225, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", -0.0315, 1.91, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", -0.0315, 1.595, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", -0.0315, 1.283, 0),
                         new CargoSpecification(Modelthrall63tiedownsLoaded.class,
-                                "trains/thrall63footcenterbeam_tiedowns", "Wrapped Lumber (Washaska)", 0, 1.177, 0),},
-
-                { new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,//blank wood
-                        "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 2.437, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 2.122, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 1.807, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 1.492, 0),
-                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
-                                "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 1.177, 0),
-                        new CargoSpecification(Modelthrall63tiedownsLoaded.class,
-                                "trains/thrall63footcenterbeam_tiedowns", "Wrapped Lumber (Washaska)", 0, 1.177, 0),},
+                                "trains/thrall63footcenterbeam_tiedowns", "Wrapped Lumber", 0, 3, 0),},
         }));
     }
 
