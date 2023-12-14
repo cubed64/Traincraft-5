@@ -26,7 +26,7 @@ public class FNCC50Foot extends Freight implements IInventory {
         textureDescriptionMap.put(5, "LRR");
         textureDescriptionMap.put(6, "LRR (White Door)");
         textureDescriptionMap.put(7, "NSCC");
-        textureDescriptionMap.put(8, "NEP");
+        textureDescriptionMap.put(8, "UNCLX");
         textureDescriptionMap.put(9, "COW");
         textureDescriptionMap.put(10, "COW");
         textureDescriptionMap.put(11, "COW");

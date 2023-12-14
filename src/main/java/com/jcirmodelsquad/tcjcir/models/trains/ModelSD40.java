@@ -9,6 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.Modelfncc_snow_bits;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFlexicoil_C_Late;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFlexicoil_C_Mid;
 import net.minecraft.client.Minecraft;
@@ -2272,6 +2273,7 @@ public class ModelSD40 extends ModelConverter //Same as Filename
 	}
 	ModelFlexicoil_C_Mid flexMid = new ModelFlexicoil_C_Mid();
 	ModelFlexicoil_C_Late flexLate = new ModelFlexicoil_C_Late();
+	Modelfncc_snow_bits stupid = new Modelfncc_snow_bits();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
@@ -2299,9 +2301,9 @@ public class ModelSD40 extends ModelConverter //Same as Filename
 			GL11.glTranslated(-3.45F, 0.0F, 0);
 			flexMid.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 43324 ) {
-			//sp regular truck
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexcoil_c2h_sp.png"));
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19 ) {
+			//fncc snow shit
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexcoil_c2h_silvers.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslatef(-1.725F, 0.0F, 0F);
 			flexMid.render(entity, f, f1, f2, f3, f4, f5);
@@ -2309,6 +2311,11 @@ public class ModelSD40 extends ModelConverter //Same as Filename
 			GL11.glRotatef(180, 0, 1, 0);
 			GL11.glTranslated(-3.45F, 0.0F, 0);
 			flexMid.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fncc_snow_shid.png"));
+			GL11.glPushMatrix();
+			stupid.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4324 ) {
 			//silver dash 2 truck

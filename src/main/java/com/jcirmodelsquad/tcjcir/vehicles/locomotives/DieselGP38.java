@@ -24,18 +24,19 @@ public class DieselGP38 extends DieselTrain {
         textureDescriptionMap.put(4, "Fox, North Coast & Cascades");
         textureDescriptionMap.put(5, "Fox Union Rail Resources (FURRX)");
         textureDescriptionMap.put(6, "Nomansi & Eastern Pacific");
-        textureDescriptionMap.put(7, "CSXT (Yn3)");
-        textureDescriptionMap.put(8, "Norfolk Southern (Ex-Sou)");
-        textureDescriptionMap.put(9, "Norfolk Southern");
-        textureDescriptionMap.put(10, "Southern Port Belt");
-        textureDescriptionMap.put(11, "Southern Port Belt (NS Patch)");
-        textureDescriptionMap.put(12, "ATSF (Pinstripe)");
-        textureDescriptionMap.put(13, "ATSF (Freightbonnet)");
-        textureDescriptionMap.put(14, "ATSF (Kodachrome)");
-        textureDescriptionMap.put(15, "Penn Central");
-        textureDescriptionMap.put(16, "Great Lakes & Northern Territories");
-        textureDescriptionMap.put(17, "Milwaukee Road");
-        textureDescriptionMap.put(18, "Milwaukee Road (Billboard)");
+        textureDescriptionMap.put(7, "Nomansi & Eastern Pacific (GP38R)");
+        textureDescriptionMap.put(8, "CSXT (Yn3)");
+        textureDescriptionMap.put(9, "Norfolk Southern (Ex-Sou)");
+        textureDescriptionMap.put(10, "Norfolk Southern");
+        textureDescriptionMap.put(11, "Southern Port Belt");
+        textureDescriptionMap.put(12, "Southern Port Belt (NS Patch)");
+        textureDescriptionMap.put(13, "ATSF (Pinstripe)");
+        textureDescriptionMap.put(14, "ATSF (Freightbonnet)");
+        textureDescriptionMap.put(15, "ATSF (Kodachrome)");
+        textureDescriptionMap.put(16, "Penn Central");
+        textureDescriptionMap.put(17, "Great Lakes & Northern Territories");
+        textureDescriptionMap.put(18, "Milwaukee Road");
+        textureDescriptionMap.put(19, "Milwaukee Road (Billboard)");
     }
     public DieselGP38(World world, double d, double d1, double d2){
         this(world);

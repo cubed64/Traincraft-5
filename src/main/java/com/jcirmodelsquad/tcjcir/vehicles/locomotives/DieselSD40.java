@@ -24,8 +24,10 @@ public class DieselSD40 extends DieselTrain {
         textureDescriptionMap.put(2, "FURRX");
         textureDescriptionMap.put(3, "Wisconsin & Southern");
         textureDescriptionMap.put(5, "Fox, North Coast & Cascades");
-        textureDescriptionMap.put(6, "Pennsylvania Railroad");
-        textureDescriptionMap.put(7, "CSXT (YN1)");
+        textureDescriptionMap.put(6, "FNCC (SD40Sn Snow Service Unit)");
+        textureDescriptionMap.put(7, "Pennsylvania Railroad");
+        textureDescriptionMap.put(8, "CSXT (YN1)");
+        textureDescriptionMap.put(9, "DLMR");
     }
     public DieselSD40(World world, double d, double d1, double d2){
         this(world);

@@ -17,7 +17,8 @@ public class DieselSB18E extends DieselTrain {
     public DieselSB18E(World world) {
         super(world, EnumTrains.SB18E.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "CEE Factory Blank (Phase 1)");
+        textureDescriptionMap.put(0, "CEE Factory Blank (Phase 2)");
+        textureDescriptionMap.put(1, "Nomansi & Eastern Pacific");
     }
     public DieselSB18E(World world, double d, double d1, double d2){
         this(world);

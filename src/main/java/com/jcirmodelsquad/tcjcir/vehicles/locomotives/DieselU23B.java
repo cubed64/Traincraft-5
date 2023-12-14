@@ -42,6 +42,7 @@ public class DieselU23B extends DieselTrain {
         textureDescriptionMap.put(19, "CFW 558");
         textureDescriptionMap.put(20, "Morristown Tenneva & Southern");
         textureDescriptionMap.put(21, "Milwaukee Road");
+        textureDescriptionMap.put(22, "Nomansi & Eastern Pacific");
     }
     public DieselU23B(World world, double d, double d1, double d2){
         this(world);
