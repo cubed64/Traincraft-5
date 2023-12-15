@@ -13,19 +13,19 @@ import train.common.api.LiquidManager;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class DieselBQ23 extends DieselTrain {
-    public DieselBQ23(World world) {
-        super(world, EnumTrains.BQ23.getTankCapacity(), LiquidManager.dieselFilter());
+
+public class DieselM636 extends DieselTrain {
+    public DieselM636(World world) {
+        super(world, EnumTrains.M636.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Family Lines (As Delivered)");
-        textureDescriptionMap.put(1, "Providence & Worcester");
-        textureDescriptionMap.put(2, "Blandsville & Blankerston");
-        textureDescriptionMap.put(3, "Fox, North Coast & Cascades");
-        textureDescriptionMap.put(4, "CSXT YN2 3003");
-        textureDescriptionMap.put(5, "CSXT YN2 (Post 90s)");
-        textureDescriptionMap.put(6, "CSXT Ghrey Ghonst");
+        textureDescriptionMap.put(0, "FCP (Small Words)");
+        textureDescriptionMap.put(1, "FCP (Big Letters)");
+        textureDescriptionMap.put(2, "FCP (but its BLUe)");
+        textureDescriptionMap.put(3, "FCP (Southern Pacific Obsession)");
+        textureDescriptionMap.put(4, "Blandsville & Blankerston");
+
     }
-    public DieselBQ23(World world, double d, double d1, double d2){
+    public DieselM636(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -40,13 +40,14 @@ public class DieselBQ23 extends DieselTrain {
         fuelTrain = 0;
         locoInvent = new ItemStack[inventorySize];
     }
+
     @Override
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 3.4; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
+        double distance = 3.8; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
         double distanceLR = -0.4; //how far left/right on the entity you ride; left > 0; right < 0;
-        double yOffset = 0.35;
+        double yOffset = 0.25;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
         float rotationCosLR1 = (float) Math.cos(Math.toRadians(this.renderYaw));
@@ -132,7 +133,7 @@ public class DieselBQ23 extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.315F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.525F;
     }
 
     @Override
@@ -142,7 +143,7 @@ public class DieselBQ23 extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "GE BQ23-7";
+        return "MLW M636 (Divot End)";
     }
 
     @Override

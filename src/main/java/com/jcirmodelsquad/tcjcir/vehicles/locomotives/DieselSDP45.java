@@ -21,6 +21,10 @@ public class DieselSDP45 extends DieselTrain {
         //when the
         textureDescriptionMap.put(0, "Southern Pacific");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
+        textureDescriptionMap.put(2, "Great Northern");
+        textureDescriptionMap.put(3, "Burlington Northern 6596");
+        textureDescriptionMap.put(4, "Burlington Northern 6593");
+
     }
     public DieselSDP45(World world, double d, double d1, double d2){
         this(world);

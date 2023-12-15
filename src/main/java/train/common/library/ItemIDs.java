@@ -500,6 +500,14 @@ public enum ItemIDs {
 	minecartM420("ItemRollingStock", "M420", 4),
 	minecartM420B("ItemRollingStock", "M420B", 4),
 
+	minecartM630("ItemRollingStock", "M630", 5),
+	minecartM630R("ItemRollingStock", "M630", 5),
+	minecartM630W("ItemRollingStock", "M630W", 5),
+	minecartM636("ItemRollingStock", "M636", 5),
+	minecartM636R("ItemRollingStock", "M636", 5),
+	minecartM640("ItemRollingStock", "M640", 6),
+	minecartM640W("ItemRollingStock", "M640W", 6),
+
 	minecartHH660("ItemRollingStock", "hh660", 2),
 	minecartS2("ItemRollingStock", "alco_s2", 2),
 

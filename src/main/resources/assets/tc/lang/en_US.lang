@@ -1106,6 +1106,14 @@ item.tc:minecartC855b.name=ALCo C855b
 item.tc:minecartM420.name=MLW M420
 item.tc:minecartM420B.name=MLW M420B
 
+item.tc:minecartM630.name=MLW M630 (Divot End)
+item.tc:minecartM630R.name=MLW M630 (Round End)
+item.tc:minecartM630W.name=MLW M630W
+item.tc:minecartM636.name=MLW M636 (Divot End)
+item.tc:minecartM636R.name=MLW M636 (Round End)
+item.tc:minecartM640.name=MLW M640
+item.tc:minecartM640W.name=MLW M640W
+
 item.tc:minecartHH660.name=ALCo HH660/HH600
 item.tc:minecartS2.name=ALCo S2
 
@@ -1133,6 +1141,14 @@ entity.tc.C855b.name=ALCo C855b
 
 entity.tc.M420.name=MLW M420
 entity.tc.M420B.name=MLW M420B
+
+entity.tc.M630.name=MLW M630 (Divot End)
+entity.tc.M630R.name=MLW M630 (Round End)
+entity.tc.M630W.name=MLW M630W
+entity.tc.M636.name=MLW M636 (Divot End)
+entity.tc.M636R.name=MLW M636 (Round End)
+entity.tc.M640.name=MLW M640
+entity.tc.M640W.name=MLW M640W
 
 entity.tc.HH660.name=ALCo HH660/HH600
 entity.tc.S2.name=ALCo S2
