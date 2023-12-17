@@ -976,22 +976,22 @@ public class ModelCE8 extends ModelConverter//Same as Filename
 		bodyModel[183].setRotationPoint(-19F, -4F, 11.01F);
 
 		bodyModel[184].addBox(0.5F, 0F, 0.5F, 4, 9, 3, 0F); // Box 412 cs1
-		bodyModel[184].setRotationPoint(-29F, -14F, -7F);
+		bodyModel[184].setRotationPoint(-29F, -14F, 0F);
 		bodyModel[184].rotateAngleY = -0.26179939F;
 
 		bodyModel[185].addBox(0F, 0F, 0F, 6, 7, 3, 0F); // Box 413 cs1
-		bodyModel[185].setRotationPoint(-34.1F, -12F, -3F);
+		bodyModel[185].setRotationPoint(-34.1F, -12F, 4F);
 		bodyModel[185].rotateAngleY = -0.59341195F;
 
 		bodyModel[186].addShapeBox(0F, 0F, 0F, 12, 4, 1, 0F,0F, 0F, 0F, -6F, 0F, 0F, -6F, 0F, 0.5F, 0F, 0F, 0.5F, 0F, -2F, 0F, -6F, -2F, 0F, -6F, -2F, 0.5F, 0F, -2F, 0.5F); // Box 86 cs1
-		bodyModel[186].setRotationPoint(-34.1F, -14F, -3F);
+		bodyModel[186].setRotationPoint(-34.1F, -14F, 4F);
 		bodyModel[186].rotateAngleY = -0.59341195F;
 
 		bodyModel[187].addBox(0F, 0F, 0F, 3, 7, 0, 0F); // Box 461 nose stairs hand rail inside your ass
 		bodyModel[187].setRotationPoint(-34F, -12F, -4F);
 
 		bodyModel[188].addShapeBox(0.5F, 0F, 0.5F, 4, 2, 3, 0F,0F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, 0F, 0F, -0.25F); // Box 476 cs1 radio
-		bodyModel[188].setRotationPoint(-29F, -16F, -7F);
+		bodyModel[188].setRotationPoint(-29F, -16F, 0F);
 		bodyModel[188].rotateAngleY = -0.26179939F;
 
 		bodyModel[189].addBox(0F, 0F, 0F, 1, 16, 12, 0F); // Box 482

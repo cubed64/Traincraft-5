@@ -18,8 +18,8 @@ public class DieselCF7angle extends DieselTrain {
     public DieselCF7angle(World world) {
         super(world, EnumTrains.CF7angle.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "ATSF (2444)");
-        textureDescriptionMap.put(1, "ATSF (2546)");
+        textureDescriptionMap.put(0, "ATSF 2444");
+        textureDescriptionMap.put(1, "ATSF 2546");
         textureDescriptionMap.put(2, "Washington Central Railroad");
         textureDescriptionMap.put(3, "Fox Union Rail Resources (FURRX)");
         textureDescriptionMap.put(4, "Avanste Northeastern");
@@ -54,6 +54,7 @@ public class DieselCF7angle extends DieselTrain {
         textureDescriptionMap.put(33, "Great Lakes & Northern Territories");
         textureDescriptionMap.put(34, "Seattle & North Coast 102 (Post 1983)");
         textureDescriptionMap.put(35, "Seattle & North Coast 103 (Post 1983)");
+        textureDescriptionMap.put(36, "Florida Central 50");
     }
     public DieselCF7angle(World world, double d, double d1, double d2){
         this(world);
@@ -75,20 +76,25 @@ public class DieselCF7angle extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 2.5;
+        double distance = 2.5; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
+        double distanceLR = -0.35; //how far left/right on the entity you ride; left > 0; right < 0;
         double yOffset = 0.2;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
+        float rotationCosLR1 = (float) Math.cos(Math.toRadians(this.renderYaw));
+        float rotationSinLR1 = (float) Math.sin(Math.toRadians((this.renderYaw)));
         if(side.isServer()){
             rotationCos1 = (float) Math.cos(Math.toRadians(this.serverRealRotation + 90));
             rotationSin1 = (float) Math.sin(Math.toRadians((this.serverRealRotation + 90)));
+            rotationCosLR1 = (float) Math.cos(Math.toRadians(this.serverRealRotation));
+            rotationSinLR1 = (float) Math.sin(Math.toRadians((this.serverRealRotation)));
             anglePitchClient = serverRealPitch*60;
         }
         float pitch = (float) (posY + ((Math.tan(pitchRads) * distance) + getMountedYOffset())
                 + riddenByEntity.getYOffset() + yOffset);
         float pitch1 = (float) (posY + getMountedYOffset() + riddenByEntity.getYOffset() + yOffset);
-        double bogieX1 = (this.posX + (rotationCos1 * distance));
-        double bogieZ1 = (this.posZ + (rotationSin1* distance));
+        double bogieX1 = (this.posX + (rotationCos1 * distance) + (rotationCosLR1 * distanceLR));
+        double bogieZ1 = (this.posZ + (rotationSin1* distance) + (rotationSinLR1 * distanceLR));
         //System.out.println(rotationCos1+" "+rotationSin1);
         if(anglePitchClient>20 && rotationCos1 == 1){
             bogieX1-=pitchRads*2;
@@ -99,10 +105,10 @@ public class DieselCF7angle extends DieselTrain {
             pitch-=pitchRads*1.2;
         }
         if (pitchRads == 0.0) {
-            riddenByEntity.setPosition(bogieX1, pitch1, bogieZ1);
+            riddenByEntity.setPosition(bogieX1, pitch1, bogieZ1 -0.0);
         }
         if (pitchRads > -1.01 && pitchRads < 1.01) {
-            riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
+            riddenByEntity.setPosition(bogieX1, pitch, bogieZ1 +0.0);
         }
     }
     @Override

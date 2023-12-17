@@ -1139,18 +1139,18 @@ public class ModelGP7U_ARR extends ModelConverter //Same as Filename
 		bodyModel[251].setRotationPoint(-24F, -16F, -1F);
 
 		bodyModel[252].addShapeBox(0F, 0F, 0F, 2, 10, 2, 0F,1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 412 cs
-		bodyModel[252].setRotationPoint(-15.05F, -14F, -5F);
+		bodyModel[252].setRotationPoint(-15.05F, -14F, 1F);
 
 		bodyModel[253].addShapeBox(0F, 0F, 0F, 6, 4, 3, 0F,0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 413 cs
-		bodyModel[253].setRotationPoint(-21.75F, -12F, -3F);
+		bodyModel[253].setRotationPoint(-21.75F, -12F, 3F);
 		bodyModel[253].rotateAngleY = -0.45378561F;
 
 		bodyModel[254].addShapeBox(0F, 0F, 0F, 11, 4, 2, 0F,0F, 0F, -0.5F, -5F, 0F, -0.5F, -5F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, -0.5F, -5F, -2F, -0.5F, -5F, -2F, 0F, 0F, -2F, 0F); // Box 86 cs
-		bodyModel[254].setRotationPoint(-21.75F, -14F, -3F);
+		bodyModel[254].setRotationPoint(-21.75F, -14F, 3F);
 		bodyModel[254].rotateAngleY = -0.45378561F;
 
 		bodyModel[255].addShapeBox(0F, 0F, 0F, 6, 4, 2, 0F,0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 531 cs
-		bodyModel[255].setRotationPoint(-21.75F, -8F, -3F);
+		bodyModel[255].setRotationPoint(-21.75F, -8F, 3F);
 		bodyModel[255].rotateAngleY = -0.45378561F;
 
 		bodyModel[256].addShapeBox(0F, 0F, 0F, 1, 3, 4, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 2.5F, 0F, -1F, 2.5F, 0F, -1F, 2.5F, 0F, -1F, 2.5F); // Box 354 cull horn mount

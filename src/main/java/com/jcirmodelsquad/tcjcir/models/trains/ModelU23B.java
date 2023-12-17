@@ -1595,23 +1595,23 @@ public class ModelU23B extends ModelConverter //Same as Filename
 		bodyModel[367].setRotationPoint(17.5F, -8F, -8F);
 
 		bodyModel[368].addShapeBox(0F, 0F, 0F, 3, 10, 2, 0F,1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 412 cs
-		bodyModel[368].setRotationPoint(-25.8F, -15F, -5F);
+		bodyModel[368].setRotationPoint(-25.8F, -15F, 1F);
 
 		bodyModel[369].addShapeBox(0F, 0F, 0F, 6, 4, 3, 0F,0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 413 cs
-		bodyModel[369].setRotationPoint(-32.5F, -13F, -3F);
+		bodyModel[369].setRotationPoint(-32.5F, -13F, 3F);
 		bodyModel[369].rotateAngleY = -0.45378561F;
 
 		bodyModel[370].addShapeBox(0F, 0F, 0F, 11, 4, 2, 0F,0F, 0F, -0.5F, -5F, 0F, -0.5F, -5F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, -0.5F, -5F, -2F, -0.5F, -5F, -2F, 0F, 0F, -2F, 0F); // Box 86 cs
-		bodyModel[370].setRotationPoint(-32.5F, -15F, -3F);
+		bodyModel[370].setRotationPoint(-32.5F, -15F, 3F);
 		bodyModel[370].rotateAngleY = -0.45378561F;
 
 		bodyModel[371].addShapeBox(0F, 0F, 0F, 6, 4, 2, 0F,0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 531 cs
-		bodyModel[371].setRotationPoint(-32.5F, -9F, -3F);
+		bodyModel[371].setRotationPoint(-32.5F, -9F, 3F);
 		bodyModel[371].rotateAngleY = -0.45378561F;
 
 		bodyModel[372].addShapeBox(0F, 0F, -2F, 1, 4, 3, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F); // Box 275 cs speedo glow
-		bodyModel[372].setRotationPoint(-32F, -18F, 6.5F);
-		bodyModel[372].rotateAngleY = 0.17453293F;
+		bodyModel[372].setRotationPoint(-32F, -18F, 7.5F);
+		//bodyModel[372].rotateAngleY = 0.17453293F;
 
 		bodyModel[373].addShapeBox(0F, 0F, 0F, 13, 2, 1, 0F,0F, 0F, 0F, -6.5F, 0F, 0F, -6.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -6.5F, 0F, 0F, -6.5F, 0F, 0F, 0F, 0F, 0F); // Box 544
 		bodyModel[373].setRotationPoint(-18.5F, -19F, -7.15F);
