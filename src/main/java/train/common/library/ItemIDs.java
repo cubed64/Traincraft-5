@@ -466,6 +466,7 @@ public enum ItemIDs {
 	minecartDash840C("ItemRollingStock", "C40-8", 5),
 	minecartDash841C("ItemRollingStock", "c41-8", 5),
 
+	minecartDash940C("ItemRollingStock", "d940c", 5),
 	minecartDash944CW("ItemRollingStock", "d944cw", 5),
 	minecartAC4400CW("ItemRollingStock", "ac4400cw", 5),
 	minecartAC4400C("ItemRollingStock", "ac44c_iconographie", 5),

@@ -2316,7 +2316,8 @@ public class ModelGP38 extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 			}
 		}
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 26) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 26
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 27 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 28) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.47, -0.0, 0);//front & rear

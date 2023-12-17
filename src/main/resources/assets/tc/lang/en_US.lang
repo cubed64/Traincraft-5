@@ -1024,6 +1024,7 @@ item.tc:minecartDash840BW.name=GE Dash 8-40BW
 item.tc:minecartDash840C.name=GE C40-8
 item.tc:minecartDash841C.name=GE C41-8
 
+item.tc:minecartDash940C.name=GE Dash 9-40C
 item.tc:minecartDash944CW.name=GE Dash 9-44CW
 item.tc:minecartAC4400CW.name=GE AC4400CW
 item.tc:minecartAC4400C.name=GE AC4400C
@@ -1071,6 +1072,7 @@ entity.tc.Dash840BW.name=GE Dash 8-40BW
 entity.tc.Dash840C.name=GE C40-8
 entity.tc.Dash841C.name=GE C41-8
 
+entity.tc.Dash940C.name=GE Dash 9-40C
 entity.tc.Dash944CW.name=GE Dash 9-44CW
 entity.tc.AC4400CW.name=GE AC4400CW
 entity.tc.AC4400C.name=GE AC4400C
