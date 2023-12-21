@@ -17,14 +17,15 @@ public class DieselU23BU extends DieselTrain {
     public DieselU23BU(World world) {
         super(world, EnumTrains.U23BU.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Fox, North Coast & Cascades");
-        textureDescriptionMap.put(1, "Fox, North Coast & Cascades (2nd Order)");
-        textureDescriptionMap.put(2, "Fox, North Coast & Cascades (Experimental Scheme)");
+        textureDescriptionMap.put(0, "Fox, North Coast & Cascades (KIT-L)");
+        textureDescriptionMap.put(1, "Fox, North Coast & Cascades (KIT-L, 2nd Order)");
+        textureDescriptionMap.put(2, "Fox, North Coast & Cascades (Experimental 1)");
         textureDescriptionMap.put(3, "Fox, North Coast & Cascades (100 Years Bicentennial)");
         textureDescriptionMap.put(4, "North Fox (Ex Sou High Hood)");
         textureDescriptionMap.put(5, "North Fox (Ex Sou Patch)");
         textureDescriptionMap.put(6, "Blandsville & Blankerston");
-        //textureDescriptionMap.put(7, "Fox, North Coast & Cascades (Experimental Scheme)");
+        textureDescriptionMap.put(7, "Fox, North Coast & Cascades (KIT-80)");
+        textureDescriptionMap.put(8, "Fox, North Coast & Cascades (MW-S)");
 //"Cyan", "Skin17", "Skin29", "Skin19", "Skin16", "Black"
     }
     public DieselU23BU(World world, double d, double d1, double d2){

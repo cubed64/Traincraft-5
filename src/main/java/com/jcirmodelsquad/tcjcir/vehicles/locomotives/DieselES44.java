@@ -33,6 +33,8 @@ public class DieselES44 extends DieselTrain {
         textureDescriptionMap.put(11, "Kansas City Southern");
         textureDescriptionMap.put(12, "Cemex");
         textureDescriptionMap.put(13, "Ferromex");
+        textureDescriptionMap.put(14, "LMX");
+        textureDescriptionMap.put(15, "LMX");
     }
     public DieselES44(World world, double d, double d1, double d2){
         this(world);

@@ -24,6 +24,8 @@ public class DieselU36B extends DieselTrain {
         textureDescriptionMap.put(4, "CSXT (YN2)");
         textureDescriptionMap.put(5, "she consolodate on my rail till i coperation");
         textureDescriptionMap.put(6, "Western Pacific");
+        textureDescriptionMap.put(7, "Drexel Co");
+        textureDescriptionMap.put(8, "Deadwood & La Mesa");
     }
     public DieselU36B(World world, double d, double d1, double d2){
         this(world);
