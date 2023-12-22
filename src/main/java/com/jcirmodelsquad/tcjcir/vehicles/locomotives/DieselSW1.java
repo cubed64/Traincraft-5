@@ -22,20 +22,21 @@ public class DieselSW1 extends DieselTrain {
         textureDescriptionMap.put(1, "Seattle & North Coast 52");
         textureDescriptionMap.put(2, "Burlington Northern 91");
         textureDescriptionMap.put(3, "ARR (Early)");
-        textureDescriptionMap.put(4, "WP");
+        textureDescriptionMap.put(4, "ARR (Later)");
         textureDescriptionMap.put(5, "WP");
-        textureDescriptionMap.put(6, "Magnolia");
-        textureDescriptionMap.put(7, "Carbondale & Pine Valley");
-        textureDescriptionMap.put(8, "DLMR");
+        textureDescriptionMap.put(6, "WP");
+        textureDescriptionMap.put(7, "Magnolia");
+        textureDescriptionMap.put(8, "Carbondale & Pine Valley");
         textureDescriptionMap.put(9, "DLMR");
-        textureDescriptionMap.put(10, "POOP TRAIN RAILROAD");
-        textureDescriptionMap.put(11, "NEP");
-        textureDescriptionMap.put(12, "NEP MOW");
-        textureDescriptionMap.put(13, "NYC");
+        textureDescriptionMap.put(10, "DLMR");
+        textureDescriptionMap.put(11, "POOP TRAIN RAILROAD");
+        textureDescriptionMap.put(12, "NEP");
+        textureDescriptionMap.put(13, "NEP MOW");
         textureDescriptionMap.put(14, "NYC");
-        textureDescriptionMap.put(15, "Strasborgaer");
-        textureDescriptionMap.put(16, "Deadwood & Northern");
-        textureDescriptionMap.put(17, "Fox, North Coast & Cascades (Regal)");
+        textureDescriptionMap.put(15, "NYC");
+        textureDescriptionMap.put(16, "Strasborgaer");
+        textureDescriptionMap.put(17, "Deadwood & Northern");
+        textureDescriptionMap.put(18, "Fox, North Coast & Cascades (Regal)");
     }
     public DieselSW1(World world, double d, double d1, double d2){
         this(world);

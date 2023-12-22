@@ -698,6 +698,8 @@ public enum ItemIDs {
 	minecartHBC1Ccaboose("ItemRollingStock", "HBC1C",3),
 	minecartHBC1Bcaboose("ItemRollingStock", "HBC1B",3),
 	minecartDRGWCaboose("ItemRollingStock", "DRGW_01400_series_caboose",3),
+	minecartICCBaywindowWP("ItemRollingStock", "ICCBaywindowWP",3),
+	minecartWPShops600Series("ItemRollingStock", "WPShops600Series",3),
 
 	minecartBigMeme("ItemRollingStock", "lol", 69),
 	minecartBombCart("ItemRollingStock", "payload", 2),

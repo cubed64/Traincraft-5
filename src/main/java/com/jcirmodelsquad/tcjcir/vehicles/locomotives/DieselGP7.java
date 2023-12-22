@@ -53,7 +53,13 @@ public class DieselGP7 extends DieselTrain {
         textureDescriptionMap.put(33, "ATSF (Zebrastripe)");
         textureDescriptionMap.put(34, "MKT");
         textureDescriptionMap.put(35, "Penn Central");
-        textureDescriptionMap.put(36, "Western Pacific");
+        textureDescriptionMap.put(36, "Northern Pacific");
+        textureDescriptionMap.put(37, "Northern Pacific");
+        textureDescriptionMap.put(38, "Cotton Belt/ Southern Pacific");
+        textureDescriptionMap.put(39, "Cotton Belt/ Southern Pacific");
+        textureDescriptionMap.put(40, "Southern Pacific");
+        textureDescriptionMap.put(41, "Western Pacific");
+        textureDescriptionMap.put(42, "Deadwood & Northern");
     }
     public DieselGP7(World world, double d, double d1, double d2){
         this(world);

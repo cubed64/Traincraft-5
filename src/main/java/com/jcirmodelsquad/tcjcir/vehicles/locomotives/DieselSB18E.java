@@ -19,6 +19,8 @@ public class DieselSB18E extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "CEE Factory Blank (Phase 2)");
         textureDescriptionMap.put(1, "Nomansi & Eastern Pacific");
+        textureDescriptionMap.put(2, "Western Pacific");
+        textureDescriptionMap.put(3, "Western Pacific");
     }
     public DieselSB18E(World world, double d, double d1, double d2){
         this(world);
