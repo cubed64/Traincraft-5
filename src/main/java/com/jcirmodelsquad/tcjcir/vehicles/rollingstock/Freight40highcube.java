@@ -33,6 +33,7 @@ public class Freight40highcube extends Freight implements IInventory  {
         textureDescriptionMap.put(12, "DRGW");
         textureDescriptionMap.put(13, "ICG");
         textureDescriptionMap.put(14, "FNCC");
+        textureDescriptionMap.put(15, "FNCC (Foxtail logo)");
     }
 
     public Freight40highcube(World world, double d, double d1, double d2){

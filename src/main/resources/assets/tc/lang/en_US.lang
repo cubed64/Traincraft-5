@@ -1310,6 +1310,7 @@ item.tc:minecartOreJenny.name=Ore Jenny
 item.tc:minecartPRRGLaHopper.name= PRR GLa Hopper and clones
 item.tc:minecartACF41Gon.name=AC&F 41' 6" Gondola
 item.tc:minecartBethgonII.name=Bethgon II Open Top Hopper
+item.tc:minecart67millgon.name=Greenville Car Co Drop End Gondola
 
 entity.tc.VersaLongi.name=Versaflood Longitudinal Hopper
 entity.tc.VersaTrans.name=Versaflood Transverse Hopper
@@ -1319,6 +1320,7 @@ entity.tc.Ore Jenny.name=Ore Jenny
 entity.tc.PRR GLa hopper.name= PRR GLa Hopper and clones
 entity.tc.ACF41Gon.name=AC&F 41' 6" Gondola
 entity.tc.BethgonII.name=Bethgon II Open Top Hopper
+entity.tc.67millgon.name=Greenville Car Co Drop End Gondola
 
 item.tc:minecart11000DOT111.name=11,000 Gallon Tank Car
 item.tc:minecart20600DOT111.name=20,600 Gallon Tank Car

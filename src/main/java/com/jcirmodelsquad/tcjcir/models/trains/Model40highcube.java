@@ -381,13 +381,14 @@ public class Model40highcube extends ModelConverter //Same as Filename
 		GL11.glTranslated(2.055,0,0.03);
 		bogie.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();*/
-		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==3 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==8 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==16){
+		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==3 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==8
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==16 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==17){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Greyish.png"));
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Black.png"));
 		}
 		GL11.glScalef(1,1,1f);
-		GL11.glTranslated(-1.0,-0.05,-0.0);
+		GL11.glTranslated(-1.0,-0.075,-0.0);
 		bogie2.render(entity,f,f1,f2,f3,f4,f5);
 
 		GL11.glTranslated(2.05,-0.0,0.00);
@@ -399,5 +400,5 @@ public class Model40highcube extends ModelConverter //Same as Filename
 	}
 
 	public ModelRendererTurbo Model40highcube[];
-	public float[] getTrans() { return new float[]{-0F, 0.1F, 0F}; }
+	public float[] getTrans() { return new float[]{-0F, 0.09F, 0F}; }
 }

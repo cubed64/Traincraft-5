@@ -348,9 +348,9 @@ public enum ItemIDs {
 	minecartLocoC11("ItemRollingStock", "train_C11", 5),
 	minecartOnion("ItemRollingStock", "Onion", 10),
 	minecartOnionTender("ItemRollingStock", "OnionTender", 10),
-	minecartNP_L9("ItemRollingStock", "np_l9", 3),
-	minecartNP_11C_tender("ItemRollingStock", "np_11c", 3),
-	minecartNP_13C_tender("ItemRollingStock", "np_13c", 3),
+	minecartNP_L9("ItemRollingStock", "NP_L-9", 3),
+	minecartNP_11C_tender("ItemRollingStock", "NP_11c-12c_tender", 3),
+	minecartNP_13C_tender("ItemRollingStock", "NP_13c_tender", 3),
 
 	minecartPELocomotive("ItemRollingStock", "PELocoIcon", 5),
 	minecartPETender("ItemRollingStock", "PETenderIcon", 3),
@@ -502,9 +502,9 @@ public enum ItemIDs {
 	minecartM420B("ItemRollingStock", "M420B", 4),
 
 	minecartM630("ItemRollingStock", "M630", 5),
-	minecartM630R("ItemRollingStock", "M630", 5),
+	minecartM630R("ItemRollingStock", "M630_round", 5),
 	minecartM630W("ItemRollingStock", "M630W", 5),
-	minecartM636("ItemRollingStock", "M636", 5),
+	minecartM636("ItemRollingStock", "M636_divit", 5),
 	minecartM636R("ItemRollingStock", "M636", 5),
 	minecartM640("ItemRollingStock", "M640", 6),
 	minecartM640W("ItemRollingStock", "M640W", 6),
@@ -593,6 +593,7 @@ public enum ItemIDs {
 	minecartPRRGLaHopper("ItemRollingStock", "PRRGLaHopper", 2),
 	minecartACF41Gon("ItemRollingStock", "ACF_41_6_gon", 3),
 	minecartBethgonII("ItemRollingStock", "Bethgon_icon", 5),
+	minecart67millgon("ItemRollingStock", "gsco_67millgon_icon", 4),
 
 	minecart11000DOT111("ItemRollingStock", "11000DOT", 4),
 	minecart20600DOT111("ItemRollingStock", "20600DOT", 5),
@@ -698,8 +699,8 @@ public enum ItemIDs {
 	minecartHBC1Ccaboose("ItemRollingStock", "HBC1C",3),
 	minecartHBC1Bcaboose("ItemRollingStock", "HBC1B",3),
 	minecartDRGWCaboose("ItemRollingStock", "DRGW_01400_series_caboose",3),
-	minecartICCBaywindowWP("ItemRollingStock", "ICCBaywindowWP",3),
-	minecartWPShops600Series("ItemRollingStock", "WPShops600Series",3),
+	minecartICCBaywindowWP("ItemRollingStock", "wp_iccbaywindow_icon",3),
+	minecartWPShops600Series("ItemRollingStock", "wp648680_series_icon",3),
 
 	minecartBigMeme("ItemRollingStock", "lol", 69),
 	minecartBombCart("ItemRollingStock", "payload", 2),
