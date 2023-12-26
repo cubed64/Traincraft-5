@@ -21,7 +21,7 @@ public class DieselGP38 extends DieselTrain {
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
         textureDescriptionMap.put(2, "MKT (Stripes)");
         textureDescriptionMap.put(3, "MKT (Stripes)");
-        textureDescriptionMap.put(4, "Fox, North Coast & Cascades");
+        textureDescriptionMap.put(4, "Fox, North Coast & Cascades (GP38ac Kit-L)");
         textureDescriptionMap.put(5, "Fox Union Rail Resources (FURRX)");
         textureDescriptionMap.put(6, "Nomansi & Eastern Pacific");
         textureDescriptionMap.put(7, "Nomansi & Eastern Pacific (GP38R)");

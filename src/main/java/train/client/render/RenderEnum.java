@@ -1182,6 +1182,9 @@ RenderEnum {
 	Dash839CE( DieselDash839CE.class,  new ModelDash840Cnew(), "c39-8e_", true,new float[] {-2.0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, true),
+	Dash839B( DieselDash839B.class,  new ModelDash839B(), "b39-8_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 	Dash840B( DieselDash840B.class,  new ModelDash840B(), "dash8_40b_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),

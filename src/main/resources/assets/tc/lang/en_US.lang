@@ -1017,6 +1017,7 @@ item.tc:minecartB30.name=GE B30-7
 
 item.tc:minecartDash839C.name=GE C39-8
 item.tc:minecartDash839CE.name=GE C39-8E
+item.tc:minecartDash839B.name=GE B39-8
 item.tc:minecartDash840B.name=GE Dash 8-40B
 item.tc:minecartDash840BB.name=GE Dash 8-40BB
 item.tc:minecartBUnitDash840BB.name=GE Dash 8-40BB (Unpowered)
@@ -1065,6 +1066,7 @@ entity.tc.B30-7.name=GE B30-7
 
 entity.tc.Dash839C.name=GE C39-8
 entity.tc.Dash839CE.name=GE C39-8E
+entity.tc.Dash839B.name=GE B39-8
 entity.tc.Dash840B.name=GE Dash 8-40B
 entity.tc.Dash840BB.name=GE Dash 8-40BB
 entity.tc.BUnitDash840B.name=GE Dash 8-40BB (Unpowered)
