@@ -1098,6 +1098,10 @@ item.tc:minecartFPB4.name=MLW FPB-4
 item.tc:minecartFAFDL.name=CEE FA-FDL
 item.tc:minecartFBFDL.name=CEE FB-FDL
 
+item.tc:minecartRS1.name=ALCo RS-1
+item.tc:minecartRS2.name=ALCo RS-2
+item.tc:minecartRS3.name=ALCo RS-3
+
 item.tc:minecartC415H.name=ALCo C415 (High Visibility Cab)
 item.tc:minecartC415S.name=ALCo C415
 item.tc:minecartC415L.name=ALCo C415 (Low Clearance Cab)
@@ -1133,6 +1137,10 @@ entity.tc.FPA4.name=MLW FPA-4
 entity.tc.FPB4.name=MLW FPB-4
 entity.tc.FAFDL.name=CEE FA-FDL
 entity.tc.FBFDL.name=CEE FB-FDL
+
+entity.tc.RS1.name=ALCo RS-1
+entity.tc.RS2.name=ALCo RS-2
+entity.tc.RS3.name=ALCo RS-3
 
 entity.tc.C415H.name=ALCo C415 (High Visibility Cab)
 entity.tc.C415S.name=ALCo C415

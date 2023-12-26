@@ -490,6 +490,10 @@ public enum ItemIDs {
 	minecartFAFDL("ItemRollingStock", "FAFDL",4),
 	minecartFBFDL("ItemRollingStock", "FBFDL",4),
 
+	minecartRS1("ItemRollingStock", "RS-1", 2),
+	minecartRS2("ItemRollingStock", "RS-2", 2),
+	minecartRS3("ItemRollingStock", "RS-3", 3),
+
 	minecartC415H("ItemRollingStock", "c415h", 4),
 	minecartC415S("ItemRollingStock", "c415s", 4),
 	minecartC415L("ItemRollingStock", "c415l", 4),
