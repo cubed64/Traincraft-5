@@ -17,8 +17,8 @@ public class DieselRS3 extends DieselTrain {
     public DieselRS3(World world) {
         super(world, EnumTrains.RS3.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Southern Pacific");
-        textureDescriptionMap.put(1, "LMX (1990s)");
+        textureDescriptionMap.put(0, "Boston & Maine (Simp)");
+        textureDescriptionMap.put(1, "Blandsville & Blankerston");
 
     }
     public DieselRS3(World world, double d, double d1, double d2){
@@ -41,9 +41,9 @@ public class DieselRS3 extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = -0.5; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
+        double distance = 0.4; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
         double distanceLR = -0.35; //how far left/right on the entity you ride; left > 0; right < 0;
-        double yOffset = 0.25;
+        double yOffset = 0.35;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
         float rotationCosLR1 = (float) Math.cos(Math.toRadians(this.renderYaw));
@@ -129,7 +129,7 @@ public class DieselRS3 extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.4F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.3F;
     }
 
     @Override

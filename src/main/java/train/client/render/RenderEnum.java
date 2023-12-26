@@ -1268,6 +1268,12 @@ RenderEnum {
 	RS1( DieselRS1.class,  new ModelRS1(), "rs1_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
+	RS2( DieselRS2.class,  new ModelRS2(), "rs2_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	RS3( DieselRS3.class,  new ModelRS2(), "rs3_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 
 	C415H( DieselC415H.class,  new ModelC415H(), "C415h_", true,new float[] {0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }

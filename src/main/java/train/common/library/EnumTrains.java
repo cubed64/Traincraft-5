@@ -409,8 +409,8 @@ public enum EnumTrains {
 	FBFDL("FBFDL", DieselFBFDL.class, ItemIDs.minecartFBFDL.item, "diesel", 2250, 111, 0, 30, 0, 200, 0.7, 0.79, 12000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "LightGrey", "Pink", "Orange"}), 15, -2.825),
 
 	RS1("RS1", DieselRS1.class, ItemIDs.minecartRS1.item, "diesel", 1000, 105, 0, 30, 0, 200, 0.7, 0.8, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Orange","Green", "LightGrey", "Skin17", "Skin18"}), 16, -2.5),
-	RS2("RS2", DieselRS2.class, ItemIDs.minecartRS2.item, "diesel", 1500, 105, 0, 28, 0, 200, 0.7, 0.8, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Orange","Skin16"}), 16, -2.5),
-	RS3("RS3", DieselRS3.class, ItemIDs.minecartRS3.item, "diesel", 1600, 137, 0, 28, 0, 200, 0.7, 0.8, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Orange","Skin16"}), 16, -2.5),
+	RS2("RS2", DieselRS2.class, ItemIDs.minecartRS2.item, "diesel", 1500, 105, 0, 28, 0, 200, 0.7, 0.8, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "LightGrey"}), 16, -2.5),
+	RS3("RS3", DieselRS3.class, ItemIDs.minecartRS3.item, "diesel", 1600, 137, 0, 28, 0, 200, 0.7, 0.8, 8000, TraincraftUtil.getBytesFromColors(new String[] {"LightBlue", "LightGrey"}), 16, -2.5),
 
 	C415H("C415H", DieselC415H.class, ItemIDs.minecartC415H.item, "diesel", 1500, 106, 0, 35, 0, 200, 0.87, 0.93, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Purple", "Magenta", "Brown", "Red", "Pink", "Green"}), 16, -2.4),
 	C415S("C415S", DieselC415S.class, ItemIDs.minecartC415S.item, "diesel", 1500, 106, 0, 35, 0, 200, 0.87, 0.93, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Brown", "Yellow", "Blue", "LightGrey"}), 16, -2.5),

@@ -1663,7 +1663,7 @@ public class ModelRS1 extends ModelConverter //Same as Filename
 		};
 	}
 	public float[] getTrans() {
-		return new float[]{-1.225F, 0.155F, 0F};
+		return new float[]{-1.225F, 0.15F, 0F};
 	}
 
 	public float[] getRotate() {
