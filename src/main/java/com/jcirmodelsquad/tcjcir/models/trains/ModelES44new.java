@@ -1882,7 +1882,7 @@ public class ModelES44new extends ModelConverter //Same as Filename
 			}
 		}
 
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1965) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 23) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/ge_hiad_Silver.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslatef(-2F, 0.0F, 0F);

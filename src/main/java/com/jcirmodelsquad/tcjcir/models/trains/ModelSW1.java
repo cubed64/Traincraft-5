@@ -792,7 +792,7 @@ public class ModelSW1 extends ModelConverter //Same as Filename
 		bodyModel[103].setRotationPoint(30.01F, 9F, -10F);
 
 		bodyModel[104].addShapeBox(0F, 0F, 0F, 2, 2, 4, 0F,0F, -2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 186 cull
-		bodyModel[104].setRotationPoint(-33F, 7F, -2F);
+		bodyModel[104].setRotationPoint(-32F, 7F, -2F);
 
 		bodyModel[105].addBox(0F, 0F, 0F, 3, 0, 20, 0F); // Box 50
 		bodyModel[105].setRotationPoint(-33F, 9F, -10F);

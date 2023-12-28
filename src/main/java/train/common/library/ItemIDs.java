@@ -344,6 +344,7 @@ public enum ItemIDs {
 	minecartBKno2b("ItemRollingStock", "bkno2", 5),
 	minecartWCPBuckingBull("ItemRollingStock", "wcp_buckingbull", 4),
 	minecartWCPBaler("ItemRollingStock", "wcp_baler", 2),
+	minecartWCPMacky("ItemRollingStock", "wcp_macky", 4),
 
 	minecartLocoC11("ItemRollingStock", "train_C11", 5),
 	minecartOnion("ItemRollingStock", "Onion", 10),

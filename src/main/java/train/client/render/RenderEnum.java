@@ -806,7 +806,16 @@ RenderEnum {
 		}
 	}, 2, true),
 	WCPBaler(TenderBaler.class, new Modelwcp_baler_tender(), "wcp_baler", false, new float[] {-0.00F, 0.0F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
-
+	WCPMacky(SteamMacky.class, new ModelWCPMacky(), "WCP_macky_three", false, new float[] { -0.0F, -0.0F, -0.0F }, new float[] { 0F, 180F, 180F }, null, "largesmoke", 15, new ArrayList<double[]>() {
+		{
+			//add(new double[] { 2.8D, 1.5D, -0.0D });
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] { 3.0D, -0.4D, 0.8D });
+			//add(new double[] { 1.0D, -0.4D, 0.8D });
+		}
+	}, 2, true),
 
 	/**EMD**/
 	F3A( DieselF3A.class,  new ModelF3A(), "f3a_", true,new float[] {-1.375F, 0.1F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.1F, 1F }, "smoke", 3,  new ArrayList<double[]>() {

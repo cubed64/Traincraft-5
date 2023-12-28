@@ -256,8 +256,9 @@ public enum EnumTrains {
 	VanderbackTender("VanderbackTender", TenderVanderback.class, ItemIDs.minecartVanderbackTender.item,"tender",0,0,2,0,0,0,0,0,29000, TraincraftUtil.getBytesFromColors(new String[] {"Grey"}),18,0,(new String[] {"Water capacity: 29000mb."})),
 	BKno2a("BKno2a", SteamBKno2a.class, ItemIDs.minecartBKno2a.item, "steam", 1450,80,0,50,160,120,0.7,0.8,15000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Orange"}),18,-1.3,(new String[] {"Place facing forward"})),
 	BKno2b("BKno2b", SteamBKno2b.class, ItemIDs.minecartBKno2b.item, "steam", 1450,80,0,50,160,120,0.7,0.8,15000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Orange"}),15,-1.2,(new String[] {"Place facing backward"})),
-	WCPBuckingBull("WCPBuckingBull", SteamBuckingBull.class, ItemIDs.minecartWCPBuckingBull.item, "steam", 2200, 70, 0, 55, 70, 170, 0.78, 0.87, 2000, null, 10, -2.4),
+	WCPBuckingBull("WCPBuckingBull", SteamBuckingBull.class, ItemIDs.minecartWCPBuckingBull.item, "steam", 2200, 70, 0, 25, 70, 170, 0.78, 0.9, 2000, null, 10, -2.4),
 	WCPBaler("WCPBaler", TenderBaler.class, ItemIDs.minecartWCPBaler.item,"tender",0,0,3,0,0,0,0,0,15000, null,18,0, (new String[] {"Water capacity: 15000mb."})),
+	WCPMacky("WCPMacky", SteamMacky.class, ItemIDs.minecartWCPMacky.item, "steam", 2069, 66, 0, 25, 90, 170, 0.66, 0.9, 2000, null, 10, -2.2),
 
 	C11("Loco Steam C11", SteamC11.class, ItemIDs.minecartLocoC11.item,"steam", 1030, 97, 0, 80, 100, 200, 0.35, 0.975, 16000, null, 10, -3.0),
 	Onion("Onion", SteamOnion.class, ItemIDs.minecartOnion.item, "steam", 350,1555,0,50,140,100,0.7,0.99,8000, TraincraftUtil.getBytesFromColors(new String[]{"Black", "Orange", "Blue", "Grey", "Red", "Yellow", "White", "Brown", "LightGrey", "Pink"}),17,-1.3),
@@ -390,8 +391,8 @@ public enum EnumTrains {
 	AC4400CW("AC4400CW", DieselAC4400CW.class, ItemIDs.minecartAC4400CW.item, "diesel", 4400, 119, 0, 45, 0, 180, 0.8, 0.87, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Skin16", "LightGrey"}), 12, -4.0),
 	AC4400C("AC4400C", DieselAC4400C.class, ItemIDs.minecartAC4400C.item, "diesel", 4400, 119, 0, 45, 0, 180, 0.8, 0.87, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Cyan", "LightBlue", "Grey", "Blue"}), 12, -4.0),
 
-	ES44("ES44", DieselES44.class, ItemIDs.minecartES44.item, "diesel", 4400, 120, 0, 10, 0, 200, 0.7, 0.8, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "Orange", "Skin17", "Red", "Yellow", "Blue", "LightGrey", "Grey", "Black", "Skin18", "Skin19", "Pink", "Purple", "Lime", "Skin20", "Skin21"}), 12, -4.0),
-	ES44h("ES44h", DieselES44h.class, ItemIDs.minecartES44h.item, "diesel", 4400, 120, 0, 10, 0, 200, 0.7, 0.8, 21000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey","LightBlue", "Green", "Black", "Cyan", "Brown", "Blue", "White", "Lime", "Orange", "Red", "Skin16", "Skin22", "Skin18", "Skin19", "Skin20", "Skin21"}), 12, -4.0),
+	ES44("ES44", DieselES44.class, ItemIDs.minecartES44.item, "diesel", 4400, 120, 0, 10, 0, 200, 0.7, 0.8, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "Orange", "Skin17", "Red", "Yellow", "Blue", "LightGrey", "Grey", "Black", "Skin18", "Skin19", "Pink", "Purple", "Lime", "Skin20", "Skin21", "Skin22"}), 12, -4.0),
+	ES44h("ES44h", DieselES44h.class, ItemIDs.minecartES44h.item, "diesel", 4400, 120, 0, 10, 0, 200, 0.7, 0.8, 21000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey","LightBlue", "Green", "Black", "Cyan", "Brown", "Blue", "White", "Lime", "Orange", "Red", "Skin16", "Skin22", "Skin18", "Skin19", "Skin20", "Skin21", "Skin23", "Skin24"}), 12, -4.0),
 	P32("P32", DieselP32.class, ItemIDs.minecartP32.item, "diesel", 3200, 177, 0, 30, 0, 175, 0.93, 0.84, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Red", "LightGrey"}), 10, -3.5),
 	geGenesis("P40", DieselP40.class, ItemIDs.minecartGeGenesis.item, "diesel", 4000, 177, 0, 30, 0, 175, 0.93, 0.84, 15000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey"}), 10, -3.5),
 	P42("P42", DieselP42.class, ItemIDs.minecartP42.item, "diesel", 4250, 177, 0, 30, 0, 175, 0.93, 0.84, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Cyan", "Skin16", "Blue"}), 10, -3.5),

@@ -777,7 +777,7 @@ entity.tc.Loco Hall Class.name=Hall Class
 entity.tc.4000GallonTender.name=4000 Gallon Tender
 entity.tc.Loco King Class.name=King Class
 entity.tc.Loco WLs40.name=WLs40
-entity.tc.Freight Car L.name=Freight Car L
+entity.tc.Freight Car L.name=Freight Car L + bozo
 entity.tc.Loco Steam C41 0-8-0.name=C41 0-8-0
 entity.tc.Loco Steam Alco SC4.name=Alco SC4
 
@@ -796,6 +796,7 @@ item.tc:minecartBKno2a.name=Booth-Kelly Lumber Co. No 2 (Front)
 item.tc:minecartBKno2b.name=Booth-Kelly Lumber Co. No 2 (Rear)
 item.tc:minecartWCPBuckingBull.name=WCP Bucking Bull 2-6-6-0
 item.tc:minecartWCPBaler.name=WCP Baler Tender
+item.tc:minecartWCPMacky.name=WCP Macky 0-10-2
 
 item.tc:minecartLocoC11.name=JNR C11
 item.tc:minecartOnion.name=Onion
@@ -821,6 +822,7 @@ entity.tc.BKno2a.name=Booth-Kelly Lumber Co. No 2 (Front)
 entity.tc.BKno2b.name=Booth-Kelly Lumber Co. No 2 (Rear)
 entity.tc.WCPBuckingBull.name=WCP Bucking Bull 2-6-6-0
 entity.tc.WCPBaler.name=WCP Baler Tender
+entity.tc.WCPMacky.name=WCP Macky 0-10-2
 
 entity.tc.Loco Steam C11.name=JNR C11
 entity.tc.Onion.name=Onion
