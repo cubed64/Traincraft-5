@@ -22,6 +22,7 @@ public class PS52SeatCoach extends EntityRollingStock implements IPassenger {
 		textureDescriptionMap.put(8, "CNW Interior Scheme 1");
 		textureDescriptionMap.put(9, "CNW Interior Scheme 2");
 		textureDescriptionMap.put(10, "AMTK Phase 1 (ex-NKP)");
+		textureDescriptionMap.put(11, "DLMR");
 	}
 
 	public PS52SeatCoach(World world, double d, double d1, double d2) {

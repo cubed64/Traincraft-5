@@ -19,7 +19,8 @@ public class DieselRS3 extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "Boston & Maine (Simp)");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
-
+        textureDescriptionMap.put(2, "Denver & Rio Grande Western (Early)");
+        textureDescriptionMap.put(3, "Denver & Rio Grande Western");
     }
     public DieselRS3(World world, double d, double d1, double d2){
         this(world);

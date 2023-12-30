@@ -21,6 +21,7 @@ public class PS85Baggage extends Freight implements IInventory {
 		initFreightCart();
 		textureDescriptionMap.put(0, "D&RGW");
 		textureDescriptionMap.put(1, "C&O (Semi-Fictional)");
+		textureDescriptionMap.put(2, "DLMR");
 	}
 
 	public void initFreightCart() {
