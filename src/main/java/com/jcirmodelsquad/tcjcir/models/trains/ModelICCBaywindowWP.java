@@ -68,7 +68,7 @@ public class ModelICCBaywindowWP extends ModelConverter //Same as Filename
 		bodyModel[25] = new ModelRendererTurbo(this, 159, 23, textureX, textureY); // Box 52
 		bodyModel[26] = new ModelRendererTurbo(this, 160, 43, textureX, textureY, "cull"); // Box 118 cull walkway
 		bodyModel[27] = new ModelRendererTurbo(this, 156, 35, textureX, textureY, "cull"); // Box 215 cull support
-		bodyModel[28] = new ModelRendererTurbo(this, 156, 25, textureX, textureY); // Box 216
+		bodyModel[28] = new ModelRendererTurbo(this, 156, 25, textureX, textureY, "cull"); // Box 216
 		bodyModel[29] = new ModelRendererTurbo(this, 28, 71, textureX, textureY); // Box 56
 		bodyModel[30] = new ModelRendererTurbo(this, 23, 71, textureX, textureY); // Box 57
 		bodyModel[31] = new ModelRendererTurbo(this, 28, 71, textureX, textureY); // Box 58
@@ -289,7 +289,7 @@ public class ModelICCBaywindowWP extends ModelConverter //Same as Filename
 		bodyModel[246] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, "lamp"); // Box 8 PRIME4-2
 		bodyModel[247] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, "lamp"); // Box 9 PRIME4-4
 		bodyModel[248] = new ModelRendererTurbo(this, 374, 123, textureX, textureY, "cull"); // Box 355 support cull
-		bodyModel[249] = new ModelRendererTurbo(this, 148, 5, textureX, textureY); // Box 275
+		bodyModel[249] = new ModelRendererTurbo(this, 148, 5, textureX, textureY, "cull"); // Box 275
 		bodyModel[250] = new ModelRendererTurbo(this, 176, 54, textureX, textureY, "cull"); // Box 561 cull ptc antenna shiz
 		bodyModel[251] = new ModelRendererTurbo(this, 157, 54, textureX, textureY, "cull"); // Box 562 cull ptc antenna shiz
 		bodyModel[252] = new ModelRendererTurbo(this, 179, 52, textureX, textureY); // Box 563
@@ -297,8 +297,8 @@ public class ModelICCBaywindowWP extends ModelConverter //Same as Filename
 		bodyModel[254] = new ModelRendererTurbo(this, 79, 70, textureX, textureY); // Box 410
 		bodyModel[255] = new ModelRendererTurbo(this, 91, 66, textureX, textureY, "lamp"); // Box 411 front light R
 		bodyModel[256] = new ModelRendererTurbo(this, 86, 69, textureX, textureY, "lamp"); // Box 412 front light L
-		bodyModel[257] = new ModelRendererTurbo(this, 86, 69, textureX, textureY); // Box 257
-		bodyModel[258] = new ModelRendererTurbo(this, 91, 66, textureX, textureY); // Box 258
+		bodyModel[257] = new ModelRendererTurbo(this, 86, 69, textureX, textureY, "lamp"); // Box 257
+		bodyModel[258] = new ModelRendererTurbo(this, 91, 66, textureX, textureY, "lamp"); // Box 258
 		bodyModel[259] = new ModelRendererTurbo(this, 72, 67, textureX, textureY); // Box 259
 
 		bodyModel[0].addBox(0F, 0F, 0F, 20, 16, 1, 0F); // Box 2
@@ -660,10 +660,10 @@ public class ModelICCBaywindowWP extends ModelConverter //Same as Filename
 		bodyModel[117].setRotationPoint(-8.75F, -19.5F, -6.75F);
 
 		bodyModel[118].addShapeBox(0F, 0F, 0F, 1, 15, 1, 0F,0.25F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0F, 0.25F, 0F, 0F); // Box 173
-		bodyModel[118].setRotationPoint(-9.5F, -20F, 6.62F);
+		bodyModel[118].setRotationPoint(-9.51F, -20F, 6.62F);
 
 		bodyModel[119].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0.25F, 0F, 0F, -0.05F, 0F, 0.5F, -0.55F, 0F, 0.5F, -0.55F, 0F, 0.5F, -0.05F, 0F, 0.5F); // Box 240 chimney cull
-		bodyModel[119].setRotationPoint(-9.87F, -20.26F, 6.5F);
+		bodyModel[119].setRotationPoint(-9.88F, -20.26F, 6.5F);
 
 		bodyModel[120].addShapeBox(0F, 0F, 0F, 1, 2, 4, 0F,-0.5F, -1.5F, -2F, 0F, -1.5F, -2F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 145
 		bodyModel[120].setRotationPoint(-5.5F, -13F, -13F);
@@ -1107,26 +1107,50 @@ public class ModelICCBaywindowWP extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 			}
 		}
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1465|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1554){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck_Silver.png"));
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck_Silver_generator2.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.055, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck_Silver_generator.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck_Silver2.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(1.06, 0, 0);
+			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1845){
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck_left-generator3.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(-1.055, 0, 0);
+			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck3.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(1.06, 0, 0);
+			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17){
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck_left-generator4.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(-1.055, 0, 0);
+			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck4.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(1.06, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck_left-generator.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.055, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck_left-generator.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(1.06, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);

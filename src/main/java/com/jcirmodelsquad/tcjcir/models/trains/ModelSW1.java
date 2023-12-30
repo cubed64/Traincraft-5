@@ -1825,7 +1825,7 @@ public class ModelSW1 extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18
-				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19) {
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/TypeA_new_Black_fric.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.0F ,-0.035F,0F);

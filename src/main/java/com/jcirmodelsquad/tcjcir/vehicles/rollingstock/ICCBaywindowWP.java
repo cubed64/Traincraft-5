@@ -12,6 +12,14 @@ import train.common.library.GuiIDs;
 public class ICCBaywindowWP extends EntityRollingStock implements IPassenger {
     public ICCBaywindowWP(World world) {
         super(world);
+        //textureDescriptionMap.put(0, "cubed fill this out at some point plos im lazy");
+        //textureDescriptionMap.put(1, "cubed fill this out at some point plos im lazy);
+        //textureDescriptionMap.put(2, "cubed fill this out at some point plos im lazy");
+        //textureDescriptionMap.put(3, "generic? i think?");
+        textureDescriptionMap.put(4, "Fox, North Coast & Cascades (Regal)");
+        textureDescriptionMap.put(5, "Fox, North Coast & Cascades (Regal Late)");
+        textureDescriptionMap.put(6, "Fox, North Coast & Cascades (KIT-L)");
+        textureDescriptionMap.put(7, "North Fox (KIT-L)");
     }
 
     public ICCBaywindowWP(World world, double d, double d1, double d2){
