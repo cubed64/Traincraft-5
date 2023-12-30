@@ -781,6 +781,11 @@ entity.tc.Freight Car L.name=Freight Car L + bozo
 entity.tc.Loco Steam C41 0-8-0.name=C41 0-8-0
 entity.tc.Loco Steam Alco SC4.name=Alco SC4
 
+item.tc:minecartCF7_H_Angle.name=CF7 Anglecab (Heritage Model)
+item.tc:minecartCF7_H_Round.name=CF7 Roundcab (Heritage Model)
+entity.tc.CF7_H_Angle.name=CF7 Anglecab (Heritage Model)
+entity.tc.CF7_H_Round.name=CF7 Roundcab (Heritage Model)
+
 <!-- ## Fox-TC Content ## -->
 
 item.tc:minecartClimaxNew.name=2 Truck Climax

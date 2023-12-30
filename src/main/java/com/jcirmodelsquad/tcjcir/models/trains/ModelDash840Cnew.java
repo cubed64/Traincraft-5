@@ -1328,30 +1328,30 @@ public class ModelDash840Cnew extends ModelConverter //Same as Filename
 		bodyModel[261].rotateAngleZ = -1.48352986F;
 
 		bodyModel[262].addShapeBox(0F, 0F, 0F, 3, 10, 2, 0F,1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 412 cs
-		bodyModel[262].setRotationPoint(-31.8F, -16F, -5F);
+		bodyModel[262].setRotationPoint(-31.8F, -16F, 1F);
 
 		bodyModel[263].addShapeBox(0F, 0F, 0F, 6, 4, 3, 0F,0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 413 cs
-		bodyModel[263].setRotationPoint(-38.5F, -14F, -3F);
+		bodyModel[263].setRotationPoint(-38.5F, -14F, 3F);
 		bodyModel[263].rotateAngleY = -0.45378561F;
 
 		bodyModel[264].addShapeBox(0F, 0F, 0F, 11, 4, 2, 0F,0F, 0F, -0.5F, -5F, 0F, -0.5F, -5F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, -0.5F, -5F, -2F, -0.5F, -5F, -2F, 0F, 0F, -2F, 0F); // Box 86 cs
-		bodyModel[264].setRotationPoint(-38.5F, -16F, -3F);
+		bodyModel[264].setRotationPoint(-38.5F, -16F, 3F);
 		bodyModel[264].rotateAngleY = -0.45378561F;
 
 		bodyModel[265].addShapeBox(0F, 0F, 0F, 6, 4, 2, 0F,0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 531 cs
-		bodyModel[265].setRotationPoint(-38.5F, -10F, -3F);
+		bodyModel[265].setRotationPoint(-38.5F, -10F, 3F);
 		bodyModel[265].rotateAngleY = -0.45378561F;
 
 		bodyModel[266].addShapeBox(0F, 0F, -2F, 1, 4, 3, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F); // Box 275 cs speedo glow
-		bodyModel[266].setRotationPoint(-38F, -19F, 0.5F);
-		bodyModel[266].rotateAngleY = 0.17453293F;
+		bodyModel[266].setRotationPoint(-38F, -19F, 7.5F);
+		//bodyModel[266].rotateAngleY = 0.17453293F;
 
 		bodyModel[267].addShapeBox(-0.5F, 0F, -1F, 1, 3, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, -1F, -1F, 0F, -1F, -1F); // Box 71 glow speedometer
-		bodyModel[267].setRotationPoint(-35F, -18.25F, -3F);
+		bodyModel[267].setRotationPoint(-35F, -18.25F, 3F);
 		bodyModel[267].rotateAngleY = 0.78539816F;
 
 		bodyModel[268].addShapeBox(-1.5F, 0F, -1F, 2, 2, 2, 0F,0F, 0F, 0.25F, -0.25F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, 0F, 0F, 0.25F, 0F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, 0F, 0.25F, 0.25F); // Box 307 spedo
-		bodyModel[268].setRotationPoint(-35F, -18.25F, -3F);
+		bodyModel[268].setRotationPoint(-35F, -18.25F, 3F);
 		bodyModel[268].rotateAngleY = 0.78539816F;
 
 		bodyModel[269].addBox(0F, 0F, 0F, 3, 8, 0, 0F); // Box 461 nose stairs hand rail inside your ass
@@ -1758,11 +1758,11 @@ public class ModelDash840Cnew extends ModelConverter //Same as Filename
 		bodyModel[397].setRotationPoint(-26F, -22.5F, 7.01F);
 
 		bodyModel[398].addShapeBox(0F, 0F, 0.5F, 36, 1, 19, 0F,0F, 0F, 0F, -18F, 0F, 0F, -18F, 0F, -9.4F, 0F, 0F, -9.4F, 0F, 0F, 0F, -18F, 0F, 0F, -18F, 0F, -9.4F, 0F, 0F, -9.4F); // Box 547
-		bodyModel[398].setRotationPoint(27F, -23.37F, 1F);
+		bodyModel[398].setRotationPoint(27F, -23.38F, 1F);
 		bodyModel[398].rotateAngleX = -0.13613568F;
 
 		bodyModel[399].addShapeBox(0F, 0F, -19.5F, 36, 1, 19, 0F,0F, 0F, -9.4F, -18F, 0F, -9.4F, -18F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -9.4F, -18F, 0F, -9.4F, -18F, 0F, 0F, 0F, 0F, 0F); // Box 345
-		bodyModel[399].setRotationPoint(27F, -23.37F, -1F);
+		bodyModel[399].setRotationPoint(27F, -23.38F, -1F);
 		bodyModel[399].rotateAngleX = 0.13613568F;
 
 		bodyModel[400].addShapeBox(0F, 0F, 0F, 9, 2, 0, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F); // Box 123
@@ -2078,7 +2078,8 @@ public class ModelDash840Cnew extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.875, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18){
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb3_new_earliie_silvers.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.9325, 0.0, 0);

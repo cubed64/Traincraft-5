@@ -627,6 +627,15 @@ RenderEnum {
 		}
 	}, "", null, 0, false),
 
+
+	CF7_H_Angle(DieselCF7_H_Angle.class,  new ModelCF7_H_Angle(), "18PX_CF7_Angle_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	CF7_H_Round(DieselCF7_H_Round.class,  new ModelCF7_H_Round(), "18PX_CF7_Round_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+
+
 	/** JCIR-TC **/
 	geometryCar(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.ExperimentalGeometryCar.class,new ModelGeometryCar(), "geometrycar_", true, new float[] {0F, 0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	HighrailTruck( com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselHighrailTruck.class,  new ModelHighrailTruck(), "highrail_", true,new float[] {-1.5F, 0.2F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 1,  new ArrayList<double[]>() {

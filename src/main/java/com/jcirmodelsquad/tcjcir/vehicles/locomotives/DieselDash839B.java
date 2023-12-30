@@ -22,6 +22,10 @@ public class DieselDash839B extends DieselTrain {
         textureDescriptionMap.put(2, "Western Pacific (Early)");
         textureDescriptionMap.put(3, "Western Pacific (Late)");
         textureDescriptionMap.put(4, "Western Pacific (OLS)");
+        textureDescriptionMap.put(5, "Blandsville & Blankerston");
+        textureDescriptionMap.put(6, "North Fox (KIT-L)");
+        textureDescriptionMap.put(7, "North Fox (KIT-80)");
+        textureDescriptionMap.put(8, "CEEX 90s Lease Scheme");
 
     }
     public DieselDash839B(World world, double d, double d1, double d2){

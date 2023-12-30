@@ -27,6 +27,7 @@ public class DieselS2 extends DieselTrain {
         textureDescriptionMap.put(8, "Amtrak (Phase II)");
         textureDescriptionMap.put(9, "CP Rail");
         textureDescriptionMap.put(10, "Dee Dee Valley Railroad");
+        textureDescriptionMap.put(11, "Ann Arbor");
     }
     public DieselS2(World world, double d, double d1, double d2) {
         this(world);

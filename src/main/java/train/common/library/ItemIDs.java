@@ -325,6 +325,9 @@ public enum ItemIDs {
 	tcRailMediumParallelCurve("ItemTCRail", "item_rail_tc_parallel_curve_medium", 3),
 	tcRailLargeParallelCurve("ItemTCRail", "item_rail_tc_parallel_curve_large", 3),
 
+	minecartCF7_H_Angle("ItemRollingStock", "cf7angle", 10),
+	minecartCF7_H_Round("ItemRollingStock", "cf7round", 10),
+
 	//TC-JCIR
 	remoteController("ItemRemoteController", "remote_controller", 4),
 	remoteControllerModule("ItemRemoteControllerModule", "remote_controller_module", 4),
