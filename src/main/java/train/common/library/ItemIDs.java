@@ -527,6 +527,10 @@ public enum ItemIDs {
 	minecartVO1000("ItemRollingStock", "vo1000", 2),
 	minecartS12("ItemRollingStock", "s12", 3),
 	minecartDS441000("ItemRollingStock", "ds441000", 3),
+	minecartDR441500Shark("ItemRollingStock", "DR441500Shark",4),
+	minecartDR441500BShark("ItemRollingStock", "DR441500BShark",4),
+	minecartRF16("ItemRollingStock", "RF16",4),
+	minecartRF16B("ItemRollingStock", "RF16B",4),
 
 	//Fairbanks Morse//
 	minecartH1044("ItemRollingStock", "h1044", 4),

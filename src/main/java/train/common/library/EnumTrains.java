@@ -447,6 +447,10 @@ public enum EnumTrains {
 	VO1000("VO1000", DieselVO1000.class, ItemIDs.minecartVO1000.item, "diesel", 1000, 67, 0, 20, 0, 200, 0.8, 0.9, 6000, TraincraftUtil.getBytesFromColors(new String[]{"Green", "Pink", "Blue", "LightBlue", "Skin16"}), 16, -2.2),
 	DS441000("DS441000", DieselDS441000.class, ItemIDs.minecartDS441000.item, "diesel", 1000, 97, 0, 35, 0, 180, 0.75, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Green", "Grey", "Black"}), 16, -2.2),
 	S12("S12", DieselS12.class, ItemIDs.minecartS12.item, "diesel", 1200, 97, 0, 35, 0, 180, 0.75, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "LightGrey", "Brown", "Skin16"}), 16, -2.2),
+	DR441500Shark("DR441500Shark", DieselDR441500Shark.class, ItemIDs.minecartDR441500Shark.item, "diesel", 1500, 105, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Orange", "Blue", "Cyan", "LightBlue", "Grey"}), 15, -2.845),
+	DR441500BShark("DR441500BShark", DieselDR441500BShark.class, ItemIDs.minecartDR441500BShark.item, "diesel", 1500, 105, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Orange", "Blue", "Cyan", "Grey"}), 15, -2.675),
+	RF16("RF16", DieselRF16.class, ItemIDs.minecartRF16.item, "diesel", 1600, 105, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Yellow", "LightGrey", "Blue", "Cyan", "LightBlue", "Grey", "Black", "Orange", "Magenta", "Red"}), 15, -2.845),
+	RF16B("RF16B", DieselRF16B.class, ItemIDs.minecartRF16B.item, "diesel", 1600, 105, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Blue", "Cyan", "Grey", "Black", "Orange", "Magenta"}), 15, -2.675),
 
 	//Fairbanks Morse//
 	H1044("H1044", DieselH1044.class, ItemIDs.minecartH1044.item, "diesel", 1000, 97, 0, 25, 0, 200, 0.75, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[]{"Green", "Yellow", "Black", "Red", "Blue", "Grey", "LightBlue", "Orange", "White", "Lime", "LightGrey", "Skin16"}), 18, -2.2),

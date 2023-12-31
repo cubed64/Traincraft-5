@@ -1179,10 +1179,18 @@ entity.tc.RSD15.name=ALCo RSD-15
 item.tc:minecartVO1000.name=BLW VO-1000
 item.tc:minecartS12.name=BLH S12 (606A)
 item.tc:minecartDS441000.name=BLH DS-4-4-1000 (606SC)
+item.tc:minecartDR441500Shark.name=BLW DR-4-4-1500 (Sharknose)
+item.tc:minecartDR441500BShark.name=BLW DR-4-4-1500B (Sharknose)
+item.tc:minecartRF16.name=BLH RF-16
+item.tc:minecartRF16B.name=BLH RF-16B
 
 entity.tc.VO1000.name=BLW VO-1000
 entity.tc.S12.name=BLH S12 (606A)
 entity.tc.DS441000.name=BLH DS-4-4-1000 (606SC)
+entity.tc.DR441500Shark.name=BLW DR-4-4-1500 (Sharknose)
+entity.tc.DR441500BShark.name=BLW DR-4-4-1500B (Sharknose)
+entity.tc.RF16.name=BLH RF-16
+entity.tc.RF16B.name=BLH RF-16B
 
 --------------------------------------------------------
 
