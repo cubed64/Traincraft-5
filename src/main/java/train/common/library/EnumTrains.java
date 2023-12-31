@@ -614,6 +614,8 @@ public enum EnumTrains {
 	BuddNYC52SeatCoach("Budd NYC 52 Seat Coach", BuddNYC52SeatCoach.class, ItemIDs.minecartBuddNYC52SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Orange", "Red"}), 10, 0, null),
 
 	BuddCBQ52SeatCoach("Budd CB&Q 52 Seat Coach", BuddCBQ52SeatCoach.class, ItemIDs.minecartBuddCBQ52SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Brown", "Purple"}), 10, 0, null),
+	BuddDome46SeatCoach("Budd Dome-46 Seat Coach", BuddDome46SeatCoach.class, ItemIDs.minecartBuddDome46SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "LightGrey", "White", "Brown", "Green", "Lime", "Orange", "Blue", "Black", "Magenta", "Yellow", "Red", "Pink", "Cyan", "LightBlue", "Purple", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20"}), 10, 0),
+	BuddCBQDome50SeatCoach("Budd CB&Q Dome-50 Seat Coach", BuddCBQDome50SeatCoach.class, ItemIDs.minecartBuddCBQDome50SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Grey"}), 10, 0),
 
 	BuddATSF52SeatCoach("Budd ATSF 52 Seat Coach", BuddATSF52SeatCoach.class, ItemIDs.minecartBuddATSF52SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Orange", "Green", "Pink", "Blue", "Lime", "Purple", "Brown", "Grey"}), 10, 0, null),
 	BuddATSF48SeatCoach("Budd ATSF 48 Seat Coach", BuddATSF48SeatCoach.class, ItemIDs.minecartBuddATSF48SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Cyan"}), 10, 0, null),
@@ -623,6 +625,8 @@ public enum EnumTrains {
 	PSATSF50SeatCoach_observation("PS ATSF 50 Seat Coach-Observation", PSATSF50SeatCoach_Observation.class, ItemIDs.minecartPSATSF50SeatCoachObservation.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "LightGrey", "Blue", "Orange"}), 10, 0, null),
 
 	ACFUPRPO60("AC&F UP RPO(60')", ACFUPRPO60.class, ItemIDs.minecartACFUPRPO60.item, "freight", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Red", "Orange", "Green", "Grey", "LightGrey", "Black", "White"}), 10, 27,null),
+
+	BuddDome54SeatCoach("Budd Dome-54 Seat Coach", BuddDome54SeatCoach.class, ItemIDs.minecartBuddDome54SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "LightBlue", "Grey", "LightGrey", "White", "Red"}), 10, 0),
 
 	amfleet("Amfleet", Amfleet.class, ItemIDs.minecartAmfleet.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"White", "Grey", "LightGrey", "LightBlue", "Red", "Blue", "Green", "Skin16"}), 14, 0, null),
 	amfleet2("Amfleet2", Amfleet2.class, ItemIDs.minecartAmfleet2.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"Blue","LightGrey", "Grey", "Red", "LightBlue", "Skin16"}), 14, 0, null),

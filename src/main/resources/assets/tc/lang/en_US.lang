@@ -1407,30 +1407,35 @@ entity.tc.PCH-120 Commute Car.name=PCH-120 Commute Coach
 entity.tc.PCH-100H.name=PCH-100H
 entity.tc.PCH-100H Coach.name=PCH-100H Coach
 
-item.tc:minecartPS73Baggage.name=Pullman Standard 73' Baggage
 item.tc:minecartPS85Baggage.name=Pullman Standard 85' Baggage
-item.tc:minecartPSCenterDiner.name=Pullman Standard Center-Kitchen Dining Car
 item.tc:minecartPSDamnitAnotherDiner.name=Pullman Standard Center-Kitchen Dining Car 2
 item.tc:minecartPSSleeper565.name=Pullman Standard 10-6 Sleeper (Center Bedroom)
 item.tc:minecartPSSleeper565DRGW.name=Pullman Standard DRGW 6-5-5 Sleeper
 item.tc:minecartPS52seatCoach.name=Pullman Standard 52 Seat Coach
 item.tc:minecartPScombine.name=Pullman Standard Combine Passenger-Baggage
-item.tc:minecartPSRPOPM.name=Pullman Standard RPO(15')
 item.tc:minecartPSRPO.name=Pullman Standard RPO(30')
 item.tc:minecartPSLunchCounter_Lounge.name=Pullman Standard Lunch Counter-Lounge
 item.tc:minecartPS30SeatParlor.name=Pullman Standard C&O 30 Seat Parlor
+
+item.tc:minecartPSRPOPM.name=Pullman Standard RPO(15')
+item.tc:minecartPS73Baggage.name=Pullman Standard 73' Baggage
+item.tc:minecartPSCenterDiner.name=Pullman Standard Center-Kitchen Dining Car
 item.tc:minecartPS54SeatCoach_Lounge.name=Pullman Standard 54 Seat Coach-Lounge (1946 version)
 item.tc:minecartPS54SeatCoach_Lounge_1950.name=Pullman Standard 54 Seat Coach-Lounge (1950 version)
 item.tc:minecartPS58SeatCoach_Observation.name=Pullman Standard 58 Seat Coach-Observation
+
 item.tc:minecartPSBM56SeatCoach.name=Pullman Standard B&M 56 Seat Coach-Lounge
 item.tc:minecartPSBMCombine.name=Pullman Standard B&M Combine Passenger-Baggage
 item.tc:minecartPSBMDiner_Lounge.name=Pullman Standard B&M Diner-Lounge
+
 item.tc:minecartACFGNRPO_30.name=American Car & Foundry GN RPO (30' mail section)
 item.tc:minecartACFGN60SeatCoach.name=American Car & Foundry GN 60 Seat Coach
 item.tc:minecartACFGNDiner_Observation.name=American Car & Foundry GN Diner-Observation
 item.tc:minecartACFGN28SeatCoach_Dinette.name=American Car & Foundry GN 28 Seat Coach-Dinette
+
 item.tc:minecartOB84SeatCoach.name=Osgood Bradley 84 Seat Coach
 item.tc:minecartOB92SeatCoach.name=Osgood Bradley 92 Seat Coach
+
 item.tc:minecartPSCNW56SeatCoach.name=Pullman Standard CNW 56 Seat Coach-Lounge
 item.tc:minecartPSCNW48SeatCoachLounge.name=Pullman Standard CNW 48 Seat Coach-Nurse Room-Lounge
 item.tc:minecartPSCNW20SeatCoachLounge.name=Pullman Standard CNW 20 Seat Coach-Lounge
@@ -1448,41 +1453,58 @@ item.tc:minecartPSCNWBaggage_LC_Diner.name=Pullman Standard CNW Baggage-Lunch Co
 item.tc:minecartPSCNW20SeatCoachLounge_1959.name=Pullman Standard CNW 20 Seat Coach-Lounge (1959 version)
 item.tc:minecartPSCNWCommuterLounge.name=Pullman Standard CNW Commuter Lounge
 item.tc:minecartPSCNW27SeatParlor_Observation.name=Pullman Standard CNW 27 Seat Parlor-Observation
+
 item.tc:minecartACFUPRPO60.name=American Car & Foundry RPO(60')
+
+item.tc:minecartBuddDome54SeatCoach.name=Budd Dome-54 Seat Coach
+
 item.tc:minecartBuddRDG56SeatCoachLounge.name=Budd RDG 56 Seat Coach-Lounge
+
 item.tc:minecartBuddCRIP52SeatCoach.name=Budd and Pullman Standard CRIP 52 Seat Coach
+
 item.tc:minecartBuddNYC52SeatCoach.name=Budd NYC 52 Seat Coach
+
 item.tc:minecartBuddCBQ52SeatCoach.name=Budd CB&Q 52 Seat Coach
+item.tc:minecartBuddDome46SeatCoach.name=Budd Dome-46 Seat Coach
+item.tc:minecartBuddCBQDome50SeatCoach.name=Budd CB&Q Dome-50 Seat Coach
+
 item.tc:minecartBuddATSF52SeatCoach.name=Budd ATSF 52 Seat Coach
 item.tc:minecartBuddATSF48SeatCoach.name=Budd ATSF 48 Seat Coach (news butcher stand)
 item.tc:minecartBuddATSF50SeatCoachObservation.name=Budd ATSF 50 Seat Coach-Observation
 item.tc:minecartBuddATSF34SeatParlorObservation.name=Budd ATSF 34 Seat Parlor-Observation
 item.tc:minecartBuddATSF58SeatCoachObservation.name=Budd ATSF 58 Seat Coach-Observation
 item.tc:minecartPSATSF50SeatCoachObservation.name=Pullman Standard ATSF 50 Seat Coach-Observation
-entity.tc.Freight PS 73 Baggage.name=Pullman Standard 73' Baggage
+
+
 entity.tc.Freight PS 85 Baggage.name=Pullman Standard 85' Baggage
 entity.tc.PS 5-6-5 Sleeper.name=Pullman Standard 10-6 Sleeper (Center Bedroom)
 entity.tc.PS 5-6-5 Sleeper DRGW Edition.name=Pullman Standard DRGW 6-5-5 Sleeper
 entity.tc.PS 52 Seat Coach.name=Pullman Standard 52 Seat Coach
 entity.tc.PS Combine Coach.name=Pullman Standard Combine Passenger-Baggage
-entity.tc.PS Center Diner.name=Pullman Standard Center-Kitchen Dining Car
 entity.tc.PS Center Diner 2.name=Pullman Standard Center-Kitchen Dining Car 2
-entity.tc.PSPMRPO.name=Pullman Standard RPO(15')
 entity.tc.PSRPO.name=Pullman Standard RPO(30')
 entity.tc.PS Lunch Counter-Lounge.name=Pullman Standard Lunch Counter-Lounge
 entity.tc.PS 30 Seat Parlor.name=Pullman Standard C&O 30 Seat Parlor
+
+entity.tc.Freight PS 73 Baggage.name=Pullman Standard 73' Baggage
+entity.tc.PS Center Diner.name=Pullman Standard Center-Kitchen Dining Car
+entity.tc.PSPMRPO.name=Pullman Standard RPO(15')
 entity.tc.PS 54 Seat Coach-Lounge.name=Pullman Standard 54 Seat Coach-Lounge (1946 version)
 entity.tc.PS 54 Seat Coach-Lounge 1950.name=Pullman Standard 54 Seat Coach-Lounge (1950 version)
 entity.tc.PS 58 Seat Coach-Observation.name=Pullman Standard 58 Seat Coach-Observation
+
 entity.tc.PS B&M 56 Seat Coach.name=Pullman Standard B&M 56 Seat Coach-Lounge
 entity.tc.PS B&M Combine.name=Pullman Standard B&M Combine Passenger-Baggage
 entity.tc.PS B&M Diner_Lounge.name=Pullman Standard B&M Diner-Lounge
+
 entity.tc.AC&F GN RPO (30' mail).name=American Car & Foundry GN RPO (30' mail section)
 entity.tc.AC&F GN 60 Seat Coach.name=American Car & Foundry GN 60 Seat Coach
 entity.tc.AC&F GN Diner-Observation.name=American Car & Foundry GN Diner-Observation
 entity.tc.AC&F GN 28 Seat Coach-Dinette.name=American Car & Foundry GN 28 Seat Coach-Dinette
+
 entity.tc.OB 84 Seat Coach.name=Osgood Bradley 84 Seat Coach
 entity.tc.OB 92 Seat Coach.name=Osgood Bradley 92 Seat Coach
+
 entity.tc.PS CNW 56 Seat Coach.name=Pullman Standard CNW 56 Seat Coach-Lounge
 entity.tc.PS CNW 48 Seat Coach-Lounge.name=Pullman Standard CNW 48 Seat Coach-Nurse Room-Lounge
 entity.tc.PS CNW 20 Seat Coach-Lounge.name=Pullman Standard CNW 20 Seat Coach-Lounge
@@ -1500,11 +1522,20 @@ entity.tc.PS CNW Baggage-LC-Diner.name=Pullman Standard CNW Baggage-Lunch Counte
 entity.tc.PS CNW 20 Seat Coach-Lounge (1959).name=Pullman Standard CNW 20 Seat Coach-Lounge (1959 version)
 entity.tc.PS CNW Commuter Lounge.name=Pullman Standard CNW Commuter Lounge
 entity.tc.PS CNW 27 Seat Parlor-Observation.name=Pullman Standard CNW 27 Seat Parlor-Observation
+
 entity.tc.AC&F UP RPO(60').name=American Car & Foundry RPO(60')
+entity.tc.Budd Dome-54 Seat Coach.name=Budd Dome-54 Seat Coach
+
 entity.tc.Budd RDG 56 Seat Coach-Lounge.name=Budd RDG 56 Seat Coach-Lounge
+
 entity.tc.Budd CRIP 52 Seat Coach.name=Budd and Pullman Standard CRIP 52 Seat Coach
+
 entity.tc.Budd NYC 52 Seat Coach.name=Budd NYC 52 Seat Coach
+
 entity.tc.Budd CB&Q 52 Seat Coach.name=Budd CB&Q 52 Seat Coach
+entity.tc.Budd Dome-46 Seat Coach.name=Budd Dome-46 Seat Coach
+entity.tc.Budd CB&Q Dome-50 Seat Coach.name=Budd CB&Q Dome-50 Seat Coach
+
 entity.tc.Budd ATSF 52 Seat Coach.name=Budd ATSF 52 Seat Coach
 entity.tc.Budd ATSF 48 Seat Coach.name=Budd ATSF 48 Seat Coach (news butcher stand)
 entity.tc.Budd ATSF 50 Seat Coach-Observation.name=Budd ATSF 50 Seat Coach-Observation

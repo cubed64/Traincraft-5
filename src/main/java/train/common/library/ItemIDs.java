@@ -688,6 +688,8 @@ public enum ItemIDs {
 	minecartBuddNYC52SeatCoach("ItemRollingStock", "BuddNYC52SeatCoach", 3),
 
 	minecartBuddCBQ52SeatCoach("ItemRollingStock", "BuddCBQ52SeatCoach", 3),
+	minecartBuddDome46SeatCoach("ItemRollingStock", "BuddDome46SeatCoach", 3),
+	minecartBuddCBQDome50SeatCoach("ItemRollingStock", "BuddCBQDome50SeatCoach", 3),
 
 	minecartBuddATSF52SeatCoach("ItemRollingStock", "BuddATSF52SeatCoach", 3),
 	minecartBuddATSF48SeatCoach("ItemRollingStock", "BuddATSF48SeatCoach", 3),
@@ -697,6 +699,8 @@ public enum ItemIDs {
 	minecartPSATSF50SeatCoachObservation("ItemRollingStock", "PSATSF50SeatCoachObservation", 3),
 
 	minecartACFUPRPO60("ItemRollingStock", "ACFUPRPO60", 3),
+
+	minecartBuddDome54SeatCoach("ItemRollingStock", "BuddDome54SeatCoach", 3),
 
 	minecartAmfleet("ItemRollingStock", "Amfleet", 3),
 	minecartAmfleet2("ItemRollingStock", "Amfleet2", 3),
