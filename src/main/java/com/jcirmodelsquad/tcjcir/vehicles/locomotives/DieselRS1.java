@@ -23,6 +23,7 @@ public class DieselRS1 extends DieselTrain {
         textureDescriptionMap.put(3, "Blandsville & Blankerston");
         textureDescriptionMap.put(4, "Deadwood & La Mesa (Early)");
         textureDescriptionMap.put(5, "Deadwood & La Mesa (Late)");
+        textureDescriptionMap.put(6, "Fox, North Coast & Cascades (Regal)");
 
     }
     public DieselRS1(World world, double d, double d1, double d2){
