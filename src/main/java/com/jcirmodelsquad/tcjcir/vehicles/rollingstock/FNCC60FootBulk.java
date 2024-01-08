@@ -26,6 +26,9 @@ public class FNCC60FootBulk extends Freight implements IInventory {
         textureDescriptionMap.put(2, "TTPX (No Stakes)");
         textureDescriptionMap.put(3, "FNCC (No Equip Slots)");
         textureDescriptionMap.put(4, "TTPX (No Stakes)");
+        textureDescriptionMap.put(5, "CDP");
+        textureDescriptionMap.put(6, "DN");
+        textureDescriptionMap.put(7, "DN");
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(ModelMixedLogs.class,//spruce log
                         "loads/MixedLogs_Spruce", "Spruce Logs", 0.5,2.99,0.1),//maximum length, minimum height, maximum width

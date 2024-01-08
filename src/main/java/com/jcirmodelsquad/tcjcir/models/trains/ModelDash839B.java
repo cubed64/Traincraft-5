@@ -228,8 +228,8 @@ public class ModelDash839B extends ModelConverter //Same as Filename
 		bodyModel[184] = new ModelRendererTurbo(this, 68, 41, textureX, textureY); // Box 327
 		bodyModel[185] = new ModelRendererTurbo(this, 68, 45, textureX, textureY); // Box 328
 		bodyModel[186] = new ModelRendererTurbo(this, 68, 43, textureX, textureY); // Box 329
-		bodyModel[187] = new ModelRendererTurbo(this, 5, 148, textureX, textureY, "lamp"); // Box 398 not a ditchlight will not glow
-		bodyModel[188] = new ModelRendererTurbo(this, 5, 153, textureX, textureY, "lamp"); // Box 398 not a ditchlight will not glow
+		bodyModel[187] = new ModelRendererTurbo(this, 5, 148, textureX, textureY, ""); // Box 398 not a ditchlight will not glow
+		bodyModel[188] = new ModelRendererTurbo(this, 5, 153, textureX, textureY, ""); // Box 398 not a ditchlight will not glow
 		bodyModel[189] = new ModelRendererTurbo(this, 21, 134, textureX, textureY); // Box 440 honse m-2
 		bodyModel[190] = new ModelRendererTurbo(this, 337, 200, textureX, textureY); // Box 341
 		bodyModel[191] = new ModelRendererTurbo(this, 296, 199, textureX, textureY); // Box 354

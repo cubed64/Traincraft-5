@@ -124,7 +124,7 @@ public enum EnumSounds {
 	DieselM640W(DieselM640W.class, " ", 2.5F, "ALCO_16_251E_Notch8", 0.45F, 25, "ALCO_12_251E_Idle", 0.45F, 19, false, "alco_bronzebell_3", 18, new String[] {"nathan_m5_3", "nathan_m5_3", "generic_horn_1"}),
 	DieselM636D(DieselM636.class, " ", 2.5F, "ALCO_16_251E_Notch8", 0.45F, 25, "ALCO_12_251E_Idle", 0.45F, 19, false, "alco_bronzebell_3", 18, new String[] {"nathan_m3h_faulty_2", "nathan_m3h_3", "nathan_m3h_3", "nathan_m3h_faulty_2", "generic_horn_1"}),
 	DieselM636R(DieselM636R.class, " ", 2.5F, "ALCO_16_251E_Notch8", 0.45F, 25, "ALCO_12_251E_Idle", 0.45F, 19, false, "alco_bronzebell_3", 18, new String[] {"nathan_m3h_1", "nathan_m3h_1", "generic_horn_1"}),
-	DieselM630D(DieselM630.class, " ", 2.5F, "ALCO_16_251E_Notch8", 0.45F, 25, "ALCO_12_251E_Idle", 0.45F, 19, false, "alco_bronzebell_3", 18, new String[] {"generic_horn_1", "nathan_m3h_4"}),
+	DieselM630D(DieselM630.class, " ", 2.5F, "ALCO_16_251E_Notch8", 0.45F, 25, "ALCO_12_251E_Idle", 0.45F, 19, false, "alco_bronzebell_3", 18, new String[] {"nathan_m3h_4", "generic_horn_1", "nathan_m3h_4"}),
 	DieselM630R(DieselM630R.class, " ", 2.5F, "ALCO_16_251E_Notch8", 0.45F, 25, "ALCO_12_251E_Idle", 0.45F, 19, false, "alco_bronzebell_3", 18, new String[] {"generic_horn_1"}),
 	DieselM630W(DieselM630W.class, " ", 2.5F, "ALCO_16_251E_Notch8", 0.45F, 25, "ALCO_12_251E_Idle", 0.45F, 19, false, "alco_bronzebell_3", 18, new String[] {"generic_horn_1", "nathan_m3h_4"}),
 

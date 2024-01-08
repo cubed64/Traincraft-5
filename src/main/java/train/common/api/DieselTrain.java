@@ -67,8 +67,8 @@ public abstract class DieselTrain extends Locomotive implements IFluidHandler {
 				if (theTank.getFluid().amount <= 1) {
 					motionX *= 0.94;
 					motionZ *= 0.94;
-					System.out.println(this.getTrainName());
-				}
+					//System.out.println(this.getTrainName());
+				}//oopsi fuckin poopsi
 			}
 		}
 	}

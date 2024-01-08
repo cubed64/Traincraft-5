@@ -179,8 +179,8 @@ public class ModelWPShops600Series extends ModelConverter //Same as Filename
 		bodyModel[135] = new ModelRendererTurbo(this, 318, 119, textureX, textureY, "cull"); // Box 171 cull ladder top
 		bodyModel[136] = new ModelRendererTurbo(this, 298, 113, textureX, textureY, "cull"); // Box 173 cull ladder top
 		bodyModel[137] = new ModelRendererTurbo(this, 280, 104, textureX, textureY); // Box 174
-		bodyModel[138] = new ModelRendererTurbo(this, 311, 115, textureX, textureY); // Box 175
-		bodyModel[139] = new ModelRendererTurbo(this, 298, 107, textureX, textureY); // Box 176
+		bodyModel[138] = new ModelRendererTurbo(this, 311, 115, textureX, textureY, "cull"); // Box 175
+		bodyModel[139] = new ModelRendererTurbo(this, 298, 107, textureX, textureY, "cull"); // Box 176
 		bodyModel[140] = new ModelRendererTurbo(this, 477, 3, textureX, textureY); // Box 177
 		bodyModel[141] = new ModelRendererTurbo(this, 462, -4, textureX, textureY); // Box 178
 		bodyModel[142] = new ModelRendererTurbo(this, 469, 3, textureX, textureY); // Box 179
@@ -255,7 +255,7 @@ public class ModelWPShops600Series extends ModelConverter //Same as Filename
 		bodyModel[211] = new ModelRendererTurbo(this, 0, 34, textureX, textureY); // Box 204
 		bodyModel[212] = new ModelRendererTurbo(this, 7, 38, textureX, textureY); // Box 200
 		bodyModel[213] = new ModelRendererTurbo(this, 107, 17, textureX, textureY, "cull"); // Box 215 cull support
-		bodyModel[214] = new ModelRendererTurbo(this, 100, 19, textureX, textureY); // Box 216
+		bodyModel[214] = new ModelRendererTurbo(this, 100, 19, textureX, textureY, "cull"); // Box 216
 		bodyModel[215] = new ModelRendererTurbo(this, 70, 11, textureX, textureY); // Box 217
 		bodyModel[216] = new ModelRendererTurbo(this, 75, 11, textureX, textureY); // Box 218
 		bodyModel[217] = new ModelRendererTurbo(this, 70, 11, textureX, textureY); // Box 219
