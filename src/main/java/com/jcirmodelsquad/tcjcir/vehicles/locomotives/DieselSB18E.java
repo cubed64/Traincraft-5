@@ -21,6 +21,7 @@ public class DieselSB18E extends DieselTrain {
         textureDescriptionMap.put(1, "Nomansi & Eastern Pacific");
         textureDescriptionMap.put(2, "Western Pacific");
         textureDescriptionMap.put(3, "Western Pacific");
+        textureDescriptionMap.put(4, "Galesburg Clinton & Midland i think");
     }
     public DieselSB18E(World world, double d, double d1, double d2){
         this(world);

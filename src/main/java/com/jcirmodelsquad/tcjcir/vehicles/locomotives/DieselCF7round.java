@@ -24,8 +24,8 @@ public class DieselCF7round extends DieselTrain {
         textureDescriptionMap.put(3, "Avanste Northeastern");
         textureDescriptionMap.put(4, "Blandsville & Blankerston");
         textureDescriptionMap.put(5, "Carbondale & Pine Valley");
-        textureDescriptionMap.put(6, "Fox, North Coast & Cascades");
-        textureDescriptionMap.put(7, "Fox, North Coast & Cascades (Variation)");
+        textureDescriptionMap.put(6, "North Fox 20-25 (KIT-L ex ATSF)");
+        textureDescriptionMap.put(7, "North Fox 20-25 (KIT-L ex ATSF, (Variation))");
         textureDescriptionMap.put(8, "FURRX (EX CSWR)");
         textureDescriptionMap.put(9, "Paradox Rail 69");
         textureDescriptionMap.put(10, "West Creek Pacific");

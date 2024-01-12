@@ -34,8 +34,8 @@ public class DieselCF7angle extends DieselTrain {
         textureDescriptionMap.put(13, "WATX 2633");
         textureDescriptionMap.put(14, "Grafton & Upton");
         textureDescriptionMap.put(15, "Blandsville & Blankerston");
-        textureDescriptionMap.put(16, "Fox, North Coast & Cascades (CEE License Built)");
-        textureDescriptionMap.put(17, "Fox, North Coast & Cascades (ATSF Rehabilitated)");
+        textureDescriptionMap.put(16, "North Fox (KIT-L, CEE License Built)");
+        textureDescriptionMap.put(17, "North Fox (KIT-L, ex ATSF)");
         textureDescriptionMap.put(18, "WFR (EX CSWR)");
         textureDescriptionMap.put(19, "Delta Southern");
         textureDescriptionMap.put(20, "Carbondale & Pine Valley");

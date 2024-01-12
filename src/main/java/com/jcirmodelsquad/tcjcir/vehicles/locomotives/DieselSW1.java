@@ -37,6 +37,8 @@ public class DieselSW1 extends DieselTrain {
         textureDescriptionMap.put(16, "Strasborgaer");
         textureDescriptionMap.put(17, "Deadwood & Northern");
         textureDescriptionMap.put(18, "Fox, North Coast & Cascades (Regal)");
+        textureDescriptionMap.put(19, "Pacific Electric / SP");
+        textureDescriptionMap.put(20, "Sacramento Northern / WP");
     }
     public DieselSW1(World world, double d, double d1, double d2){
         this(world);

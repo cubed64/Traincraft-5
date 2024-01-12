@@ -30,6 +30,7 @@ public class DieselU25B extends DieselTrain {
         textureDescriptionMap.put(10, "Nautilus");
         textureDescriptionMap.put(11, "New York Central (Early 60s)");
         textureDescriptionMap.put(12, "New York Central (Very Late 60s)");
+        textureDescriptionMap.put(13, "Galesburg Clinton & Midland");
     }
     public DieselU25B(World world, double d, double d1, double d2){
         this(world);
