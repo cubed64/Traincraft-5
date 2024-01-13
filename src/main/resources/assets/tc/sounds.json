@@ -246,6 +246,7 @@
   "rtr_horn": {"category": "master", "sounds": [{"name": "rtr_horn","stream": true}]},
   "thanos_horn": {"category": "master", "sounds": [{"name": "thanos_horn","stream": true}]},
   "truck_horn": {"category": "master", "sounds": [{"name": "truck_horn", "stream":  true}]},
+  "ttte_whistle": {"category": "master", "sounds": [{"name": "ttte_whistle", "stream":  true}]},
   "generic_horn_1": {"category": "master", "sounds": [{"name": "generic_horn_1", "stream":  true}]},
   "generic_horn_2": {"category": "master", "sounds": [{"name": "generic_horn_2", "stream":  true}]},
 

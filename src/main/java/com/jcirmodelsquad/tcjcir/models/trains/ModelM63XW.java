@@ -1577,7 +1577,7 @@ public class ModelM63XW extends ModelConverter //Same as Filename
 			GL11.glTranslated(-3.6F, 0.0F, 0);
 			flexLate.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else {
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 11675 ) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/MLW_3_axle_hiad_Blacc.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslatef(-1.75F, 0.0F, 0F);
@@ -1588,6 +1588,7 @@ public class ModelM63XW extends ModelConverter //Same as Filename
 			boger.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
+
 	}
 	public ArrayList<double[]> getSmokePosition() {
 		return new ArrayList<double[]>() {
