@@ -303,7 +303,7 @@ public class ModelMillGondola extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 		}
 		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==14 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==8
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==16){
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==16 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==18){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Greyish.png"));
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Black.png"));

@@ -28,11 +28,12 @@ public class MillGondola extends Freight implements IInventory {
         textureDescriptionMap.put(3, "MT&S");
         textureDescriptionMap.put(4, "FNCC");
         textureDescriptionMap.put(5, "FNCC");
-        textureDescriptionMap.put(6, "PRD");
+        textureDescriptionMap.put(6, "FNCC");
         textureDescriptionMap.put(7, "PRD");
-        textureDescriptionMap.put(8, "PRD (DEMOMAN)");
-        textureDescriptionMap.put(9, "DJJX");
-        textureDescriptionMap.put(10, "Generic Green");
+        textureDescriptionMap.put(8, "PRD");
+        textureDescriptionMap.put(9, "PRD (DEMOMAN)");
+        textureDescriptionMap.put(10, "DJJX");
+        textureDescriptionMap.put(11, "Generic Green");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_dort",
