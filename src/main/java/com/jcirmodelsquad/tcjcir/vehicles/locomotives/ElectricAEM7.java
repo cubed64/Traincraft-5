@@ -15,6 +15,8 @@ import train.common.library.GuiIDs;
 public class ElectricAEM7 extends ElectricTrain {
 	public ElectricAEM7(World world) {
 		super(world);
+		textureDescriptionMap.put(0, "Toast");
+		textureDescriptionMap.put(1, "Toastless");
 	}
 
 	public ElectricAEM7(World world, double d, double d1, double d2) {

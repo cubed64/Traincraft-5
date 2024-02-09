@@ -48,6 +48,7 @@ public class DieselGP40 extends DieselTrain {
         textureDescriptionMap.put(28, "Milwaukee Road");
         textureDescriptionMap.put(29, "Milwaukee Road (Billboard)");
         textureDescriptionMap.put(30, "North Fox (Kit-80)");
+        textureDescriptionMap.put(31, "IC (Deathstar)");
     }
     public DieselGP40(World world, double d, double d1, double d2){
         this(world);

@@ -40,6 +40,8 @@ public class DieselSW1500 extends DieselTrain {
         textureDescriptionMap.put(19, "Apalachicola Northern");
         textureDescriptionMap.put(20, "Canadian National (WC)");
         textureDescriptionMap.put(21, "Grassland Labratories");
+        textureDescriptionMap.put(22, "FURRX");
+        textureDescriptionMap.put(23, "FURRX");
     }
     public DieselSW1500(World world, double d, double d1, double d2){
         this(world);

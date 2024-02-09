@@ -20,6 +20,12 @@ public class Hopper6260 extends Freight implements IInventory {
 	public Hopper6260(World world) {
 		super(world);
 		initFreightGrain();
+		textureDescriptionMap.put(0, "Generic Light Grey");
+		textureDescriptionMap.put(1, "GATX");
+		textureDescriptionMap.put(2, "CSWR");
+		textureDescriptionMap.put(3, "Generic Brown");
+		textureDescriptionMap.put(4, "GATX TWO");
+		textureDescriptionMap.put(5, "WP");
 	}
 
 	public void initFreightGrain() {

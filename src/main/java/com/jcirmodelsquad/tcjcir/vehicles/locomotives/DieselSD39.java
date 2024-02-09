@@ -25,7 +25,7 @@ public class DieselSD39 extends DieselTrain {
         textureDescriptionMap.put(3, "NEP");
         textureDescriptionMap.put(4, "NEP");
         textureDescriptionMap.put(5, "NEP");
-        textureDescriptionMap.put(6, "Fraser Pine River Railroad");
+        textureDescriptionMap.put(6, "FURRX");
         textureDescriptionMap.put(7, "Carbondale & Pine Valley");
 
     }

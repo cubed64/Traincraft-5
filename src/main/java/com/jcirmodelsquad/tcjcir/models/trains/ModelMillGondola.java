@@ -290,7 +290,7 @@ public class ModelMillGondola extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 				GL11.glEnable(GL11.GL_CULL_FACE);
 			}else if (i == 58) {
-				int cargo = ((Freight) entity).getAmmountOfCargo();
+				/*int cargo = ((Freight) entity).getAmmountOfCargo();
 				if (cargo != 0) {
 					GL11.glPushMatrix();
 					GL11.glTranslatef(0, 0.57f + ((Freight) entity).getAmmountOfCargo() * -0.013f, 0);
@@ -298,7 +298,7 @@ public class ModelMillGondola extends ModelConverter //Same as Filename
 					//System.out.println(-0.51f + ((Freight) entity).getAmmountOfCargo() * 0.016f);
 					bodyModel[58].render(f5);
 					GL11.glPopMatrix();
-				}
+				}*/
 			} else
 				bodyModel[i].render(f5);
 		}
@@ -315,6 +315,8 @@ public class ModelMillGondola extends ModelConverter //Same as Filename
 		GL11.glTranslated(3.25,-0.0,0.00);
 		bogie2.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();
+
+		((AbstractTrains) entity).getCargoManager().renderCargo((AbstractTrains) entity, f, f1, f2, f3, f4, f5);
 	}
 
 	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)

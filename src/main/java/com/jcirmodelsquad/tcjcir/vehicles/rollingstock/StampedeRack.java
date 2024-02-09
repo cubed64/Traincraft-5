@@ -11,6 +11,7 @@ import train.common.api.IPassenger;
 public class StampedeRack extends EntityRollingStock implements IPassenger {
 	public StampedeRack(World world) {
 		super(world);
+		textureDescriptionMap.put(0, "Stampeed Rack");
 	}
 
 	public StampedeRack(World world, double d, double d1, double d2) {

@@ -1,5 +1,7 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
+import com.jcirmodelsquad.tcjcir.models.loads.Modelgondola_load_flat_aggregates_medium;
+import com.jcirmodelsquad.tcjcir.models.loads.Modelgondola_load_flat_aggregates_small;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -10,6 +12,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.Freight;
+import train.common.entity.CargoManager;
+import train.common.entity.CargoSpecification;
 import train.common.library.GuiIDs;
 
 public class MillGondola extends Freight implements IInventory {
@@ -18,6 +22,28 @@ public class MillGondola extends Freight implements IInventory {
     public MillGondola(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "WCRC");
+        textureDescriptionMap.put(1, "GONX");
+        textureDescriptionMap.put(2, "OWO");
+        textureDescriptionMap.put(3, "MT&S");
+        textureDescriptionMap.put(4, "FNCC");
+        textureDescriptionMap.put(5, "FNCC");
+        textureDescriptionMap.put(6, "PRD");
+        textureDescriptionMap.put(7, "PRD");
+        textureDescriptionMap.put(8, "PRD (DEMOMAN)");
+        textureDescriptionMap.put(9, "DJJX");
+        textureDescriptionMap.put(10, "Generic Green");
+
+        setCargoManager(new CargoManager(new CargoSpecification[][] {
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_dort",
+                        "Aggregate - Dirt", 0, 2.475, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_peagravel",
+                        "Aggregate - Peagravel", 0, 2.475, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_scrap1",
+                        "Scrapmetal A", 0, 2.475, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_scrap2",
+                        "Scrapmetal B", 0, 2.475, 0)},
+        }));
     }
 
     public MillGondola(World world, double d, double d1, double d2){

@@ -21,7 +21,7 @@ public class DieselFP7A extends DieselTrain {
         //when the benis sus
         textureDescriptionMap.put(0, "Readding a fucking book");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "Checker rayroad");
+        textureDescriptionMap.put(2, "Flatiron Northwestern");
         textureDescriptionMap.put(3, "Western Pacific");
         textureDescriptionMap.put(4, "Western Pacific");
     }

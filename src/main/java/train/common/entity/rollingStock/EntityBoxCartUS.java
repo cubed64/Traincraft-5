@@ -19,6 +19,9 @@ public class EntityBoxCartUS extends Freight implements IInventory {
 	public EntityBoxCartUS(World world) {
 		super(world);
 		initFreightCart();
+		textureDescriptionMap.put(16, "FNCC (Oldstyle)");
+		textureDescriptionMap.put(17, "FNCC");
+		textureDescriptionMap.put(18, "RBOX");
 	}
 
 	public void initFreightCart() {

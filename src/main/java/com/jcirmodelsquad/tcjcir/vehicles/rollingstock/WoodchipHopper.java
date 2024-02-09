@@ -18,6 +18,14 @@ public class WoodchipHopper extends Freight implements IInventory  {
     public WoodchipHopper(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "CHIP");
+        textureDescriptionMap.put(1, "GN");
+        textureDescriptionMap.put(2, "BN");
+        textureDescriptionMap.put(3, "MILW");
+        textureDescriptionMap.put(4, "ATSF");
+        textureDescriptionMap.put(5, "OWO");
+        textureDescriptionMap.put(6, "FNCC");
+        textureDescriptionMap.put(7, "WP");
     }
 
     public WoodchipHopper(World world, double d, double d1, double d2){

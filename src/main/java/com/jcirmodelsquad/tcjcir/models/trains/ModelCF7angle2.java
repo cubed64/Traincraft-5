@@ -1151,13 +1151,13 @@ public class ModelCF7angle2 extends ModelConverter //Same as Filename
 		bodyModel[196].setRotationPoint(-29.75F, -24F, -2F);
 
 		bodyModel[197].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 573 Headlight Front Nose
-		bodyModel[197].setRotationPoint(-33.75F, -10F, -1F);
+		bodyModel[197].setRotationPoint(-33.35F, -10F, -1F);
 
 		bodyModel[198].addShapeBox(0F, 0F, 0F, 1, 4, 2, 0F,-0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F); // Box 574 nose light mount
-		bodyModel[198].setRotationPoint(-34F, -12F, -1F);
+		bodyModel[198].setRotationPoint(-33.6F, -12F, -1F);
 
 		bodyModel[199].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 575 Headlight Front Nose
-		bodyModel[199].setRotationPoint(-33.75F, -12F, -1F);
+		bodyModel[199].setRotationPoint(-33.35F, -12F, -1F);
 
 		bodyModel[200].addBox(0F, 0F, 0F, 1, 4, 4, 0F); // Box 90
 		bodyModel[200].setRotationPoint(-11F, -4F, 7F);
@@ -2186,7 +2186,7 @@ public class ModelCF7angle2 extends ModelConverter //Same as Filename
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 21||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 22
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 20||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 27
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 29
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 29||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 40
 		) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver.png"));
 			GL11.glPushMatrix();

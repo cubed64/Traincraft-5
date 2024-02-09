@@ -18,7 +18,9 @@ public class DieselBoxcab23Ton extends DieselTrain {
         super(world, EnumTrains.Boxcab23Ton.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //i think i need a scooby doo tie-fighter now
+
     }
+
     public DieselBoxcab23Ton(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);

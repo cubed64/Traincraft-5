@@ -22,6 +22,7 @@ public class DieselHH660 extends DieselTrain {
         textureDescriptionMap.put(2, "ATSF (Zebra)");
         textureDescriptionMap.put(3, "DLMR");
         textureDescriptionMap.put(4, "Fraser Pine River Railroad");
+        textureDescriptionMap.put(5, "FURRX");
 
     }
     public DieselHH660(World world, double d, double d1, double d2) {

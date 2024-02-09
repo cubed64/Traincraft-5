@@ -18,6 +18,15 @@ public class BethgonII extends Freight implements IInventory  {
     public BethgonII(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "Generic Black");
+        textureDescriptionMap.put(1, "Generic Silver W/Green End");
+        textureDescriptionMap.put(2, "Generic Silver W/Orange End");
+        textureDescriptionMap.put(3, "CSXT");
+        textureDescriptionMap.put(4, "Generic Silver");
+        textureDescriptionMap.put(5, "UP");
+        textureDescriptionMap.put(6, "NS");
+        textureDescriptionMap.put(7, "C&PV (Rock Service)");
+        textureDescriptionMap.put(8, "C&PV (Rock Service)");
     }
 
     public BethgonII(World world, double d, double d1, double d2){

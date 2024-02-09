@@ -16,8 +16,11 @@ import train.common.library.GuiIDs;
 
 public class DieselMP15DCW9 extends DieselTrain {
     public DieselMP15DCW9(World world) {
-        super(world, EnumTrains.SW1500.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.MP15DCW9.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
+        textureDescriptionMap.put(0, "buttsecks poopyhead dead rayroad boner ;)");
+        textureDescriptionMap.put(1, "WFR but AWESOME");
+        textureDescriptionMap.put(2, "SST but AWESOMER");
         //when the
     }
     public DieselMP15DCW9(World world, double d, double d1, double d2){

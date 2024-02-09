@@ -20,6 +20,22 @@ public class FNCC2375Hopper extends Freight implements IInventory {
 	public FNCC2375Hopper(World world) {
 		super(world);
 		initFreightGrain();
+		textureDescriptionMap.put(0, "FNCC (Plain)");
+		textureDescriptionMap.put(1, "FNCC (Big Block Text)");
+		textureDescriptionMap.put(2, "FNCC (Carbon Black)");
+		textureDescriptionMap.put(3, "Blandsville & Blankerston");
+		textureDescriptionMap.put(4, "UNCLX");
+		textureDescriptionMap.put(5, "UNCLX");
+		textureDescriptionMap.put(6, "Magnolia");
+		textureDescriptionMap.put(7, "RUVX");
+		textureDescriptionMap.put(8, "RUVX");
+		textureDescriptionMap.put(9, "RUVX");
+		textureDescriptionMap.put(10, "CBRR");
+		textureDescriptionMap.put(11, "DLMR");
+		textureDescriptionMap.put(12, "hamburger helper rayroa");
+		textureDescriptionMap.put(13, "AA");
+		textureDescriptionMap.put(14, "AA (Ferry in the Fog)");
+		textureDescriptionMap.put(15, "SPB");
 	}
 
 	public void initFreightGrain() {

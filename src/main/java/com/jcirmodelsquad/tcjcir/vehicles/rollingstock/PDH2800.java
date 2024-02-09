@@ -20,6 +20,11 @@ public class PDH2800 extends Freight implements IInventory {
 	public PDH2800(World world) {
 		super(world);
 		initFreightGrain();
+		textureDescriptionMap.put(0, "DPCX");
+		textureDescriptionMap.put(1, "DPCX");
+		textureDescriptionMap.put(2, "DPCX");
+		textureDescriptionMap.put(3, "WP");
+		textureDescriptionMap.put(4, "LEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAAAAAANNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN");
 	}
 
 	public void initFreightGrain() {

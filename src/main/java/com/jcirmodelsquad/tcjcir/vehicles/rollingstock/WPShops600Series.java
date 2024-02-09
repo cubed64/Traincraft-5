@@ -12,6 +12,10 @@ import train.common.library.GuiIDs;
 public class WPShops600Series extends EntityRollingStock implements IPassenger {
     public WPShops600Series(World world) {
         super(world);
+        textureDescriptionMap.put(0, "WP");
+        textureDescriptionMap.put(1, "WP");
+        textureDescriptionMap.put(2, "WP MOW");
+        textureDescriptionMap.put(3, "SN");
     }
 
     public WPShops600Series(World world, double d, double d1, double d2){

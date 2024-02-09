@@ -21,6 +21,9 @@ public class DieselS12 extends DieselTrain {
         textureDescriptionMap.put(0, "Amador Central Railroad");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
         textureDescriptionMap.put(2, "Latrans Range Railroad");
+        textureDescriptionMap.put(3, "hamburger helper railroad");
+        textureDescriptionMap.put(4, "DDVR 30 & 31");
+        textureDescriptionMap.put(5, "FNCC (Regal, as Delivered)");
     }
     public DieselS12(World world, double d, double d1, double d2){
         this(world);

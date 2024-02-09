@@ -12,6 +12,13 @@ import train.common.library.GuiIDs;
 public class WVcaboose extends EntityRollingStock implements IPassenger {
     public WVcaboose(World world) {
         super(world);
+        textureDescriptionMap.put(0, "ATSF");
+        textureDescriptionMap.put(1, "BN");
+        textureDescriptionMap.put(2, "MT&S");
+        textureDescriptionMap.put(3, "OWO");
+        textureDescriptionMap.put(4, "SOO");
+        textureDescriptionMap.put(5, "Generic Green");
+        textureDescriptionMap.put(6, "Magnolia");
     }
 
     public WVcaboose(World world, double d, double d1, double d2){

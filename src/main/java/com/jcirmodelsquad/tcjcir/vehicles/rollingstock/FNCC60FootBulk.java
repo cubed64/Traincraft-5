@@ -25,7 +25,7 @@ public class FNCC60FootBulk extends Freight implements IInventory {
         textureDescriptionMap.put(1, "FNCC (Stakes)");
         textureDescriptionMap.put(2, "TTPX (No Stakes)");
         textureDescriptionMap.put(3, "FNCC (No Equip Slots)");
-        textureDescriptionMap.put(4, "TTPX (No Stakes)");
+        textureDescriptionMap.put(4, "TTPX");
         textureDescriptionMap.put(5, "CDP");
         textureDescriptionMap.put(6, "DN");
         textureDescriptionMap.put(7, "DN");

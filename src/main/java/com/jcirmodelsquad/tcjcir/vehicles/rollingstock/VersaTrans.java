@@ -18,6 +18,9 @@ public class VersaTrans extends Freight implements IInventory {
     public VersaTrans(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "Generic Blue");
+        textureDescriptionMap.put(1, "Generic Dark Grey");
+        textureDescriptionMap.put(2, "Generic Light Grey");
     }
 
     public VersaTrans(World world, double d, double d1, double d2){

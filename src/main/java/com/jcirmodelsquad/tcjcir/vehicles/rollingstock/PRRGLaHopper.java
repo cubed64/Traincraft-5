@@ -18,6 +18,12 @@ public class PRRGLaHopper extends Freight implements IInventory  {
     public PRRGLaHopper(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "PRR");
+        textureDescriptionMap.put(1, "NYC");
+        textureDescriptionMap.put(2, "PRR MOW");
+        textureDescriptionMap.put(3, "PRR MOW");
+        textureDescriptionMap.put(4, "NEP");
+        textureDescriptionMap.put(5, "NEP NOW");
     }
 
     public PRRGLaHopper(World world, double d, double d1, double d2){

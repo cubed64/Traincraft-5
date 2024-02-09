@@ -1,5 +1,6 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
+import com.jcirmodelsquad.tcjcir.models.loads.Modelgondola_load_flat_aggregates_small;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -10,6 +11,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.Freight;
+import train.common.entity.CargoManager;
+import train.common.entity.CargoSpecification;
 import train.common.library.GuiIDs;
 
 public class ACF41Gon extends Freight implements IInventory {
@@ -18,6 +21,22 @@ public class ACF41Gon extends Freight implements IInventory {
     public ACF41Gon(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "SP&S");
+        textureDescriptionMap.put(1, "NP");
+        textureDescriptionMap.put(2, "NP");
+        textureDescriptionMap.put(3, "FNCC");
+        textureDescriptionMap.put(4, "FNCC");
+
+        setCargoManager(new CargoManager(new CargoSpecification[][] {
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_small.class, "loads/gondola_load_flat_aggregates_medium_dort",
+                        "Aggregate - Dirt", 0, 2.47, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_small.class, "loads/gondola_load_flat_aggregates_medium_peagravel",
+                        "Aggregate - Peagravel", 0, 2.47, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_small.class, "loads/gondola_load_flat_aggregates_medium_scrap1",
+                        "Scrapmetal A", 0, 2.47, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_small.class, "loads/gondola_load_flat_aggregates_medium_scrap2",
+                        "Scrapmetal B", 0, 2.47, 0)},
+        }));
     }
 
     public ACF41Gon(World world, double d, double d1, double d2){

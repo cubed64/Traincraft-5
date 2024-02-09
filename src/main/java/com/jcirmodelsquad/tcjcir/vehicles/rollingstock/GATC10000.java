@@ -18,6 +18,13 @@ public class GATC10000 extends LiquidTank {
     public GATC10000(World world) {
         super(world, EnumTrains.gatc10000.getTankCapacity());
         initFreightWater();
+        textureDescriptionMap.put(0, "GATC");
+        textureDescriptionMap.put(1, "GATC (Early)");
+        textureDescriptionMap.put(2, "GATC");
+        textureDescriptionMap.put(3, "ARR");
+        textureDescriptionMap.put(4, "HPCX");
+        textureDescriptionMap.put(5, "GATC (Union Oil)");
+        textureDescriptionMap.put(6, "GATC (Allied Chemical)");
     }
 
     public void initFreightWater() {

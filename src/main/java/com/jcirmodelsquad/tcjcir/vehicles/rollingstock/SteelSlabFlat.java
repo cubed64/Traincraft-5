@@ -18,6 +18,8 @@ public class SteelSlabFlat extends Freight implements IInventory {
     public SteelSlabFlat(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "FAWX");
+        textureDescriptionMap.put(1, "Generic");
     }
 
     public SteelSlabFlat(World world, double d, double d1, double d2){

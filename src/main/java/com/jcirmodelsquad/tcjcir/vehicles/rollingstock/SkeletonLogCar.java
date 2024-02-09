@@ -22,6 +22,9 @@ public class SkeletonLogCar extends Freight implements IInventory {
 	public SkeletonLogCar(World world) {
 		super(world);
 		initFreightWood();
+		textureDescriptionMap.put(0, "Generic");
+		textureDescriptionMap.put(1, "FPRRR");
+		textureDescriptionMap.put(2, "Generic");
 	}
 
 	public void initFreightWood() {

@@ -32,7 +32,8 @@ public class DieselDash944CW extends DieselTrain {
         textureDescriptionMap.put(11, "CSLX (EX CSWR)");
         textureDescriptionMap.put(12, "ATSF");
         textureDescriptionMap.put(13, "ATSF (BNSF Patch)");
-        textureDescriptionMap.put(14, "Gaysburg Shitty railroad and who gives 2 fucks BUT ITS DIFFERENT CUS OLS WOOOWOWOWOWOWOWOWOWOWOWOWOOOOWOWOoow");
+        textureDescriptionMap.put(14, "Plainsview");
+        textureDescriptionMap.put(15, "Gaysburg Shitty railroad and who gives 2 fucks BUT ITS DIFFERENT CUS OLS WOOOWOWOWOWOWOWOWOWOWOWOWOOOOWOWOoow");
     }
     public DieselDash944CW(World world, double d, double d1, double d2){
         this(world);

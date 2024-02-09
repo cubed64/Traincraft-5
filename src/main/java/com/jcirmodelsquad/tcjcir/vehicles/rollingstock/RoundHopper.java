@@ -20,6 +20,10 @@ public class RoundHopper extends Freight implements IInventory {
 	public RoundHopper(World world) {
 		super(world);
 		initFreightGrain();
+		textureDescriptionMap.put(0, "CNWX Red");
+		textureDescriptionMap.put(1, "CPRail Multimark");
+		textureDescriptionMap.put(2, "ECYX");
+		textureDescriptionMap.put(3, "FKIX Patchout");
 	}
 
 	public void initFreightGrain() {

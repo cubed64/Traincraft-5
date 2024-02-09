@@ -19,6 +19,8 @@ public class DieselE9A extends DieselTrain {
         super(world, EnumTrains.E9A.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the benis sus
+        textureDescriptionMap.put(0, "AMTK (Ph 1)");
+        textureDescriptionMap.put(1, "AMTK (Ph 2)");
     }
     public DieselE9A(World world, double d, double d1, double d2){
         this(world);

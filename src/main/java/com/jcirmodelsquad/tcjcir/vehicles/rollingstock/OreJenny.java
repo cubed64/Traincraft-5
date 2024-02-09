@@ -18,6 +18,11 @@ public class OreJenny extends Freight implements IInventory  {
     public OreJenny(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "ORJY");
+        textureDescriptionMap.put(1, "DMIR");
+        textureDescriptionMap.put(2, "MILW");
+        textureDescriptionMap.put(3, "WETX");
+        textureDescriptionMap.put(4, "JC's period mining incorperated");
     }
 
     public OreJenny(World world, double d, double d1, double d2){

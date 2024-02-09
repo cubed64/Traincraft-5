@@ -17,6 +17,16 @@ public class DieselGE44Ton extends DieselTrain {
 	public DieselGE44Ton(World world) {
 		super(world, EnumTrains.GE44Ton.getTankCapacity(), LiquidManager.dieselFilter());
 		initLoco();
+		textureDescriptionMap.put(0, "VGN");
+		textureDescriptionMap.put(1, "VGN");
+		textureDescriptionMap.put(2, "Blandsville & Blankerston (Early)");
+		textureDescriptionMap.put(3, "Blandsville & Blankerston (Late)");
+		textureDescriptionMap.put(4, "DRGW");
+		textureDescriptionMap.put(5, "TIR");
+		textureDescriptionMap.put(6, "TIR");
+		textureDescriptionMap.put(7, "Generic Industrial");
+		textureDescriptionMap.put(8, "Generic Industrial");
+		textureDescriptionMap.put(9, "DLMR");
 	}
 
 	public void initLoco() {

@@ -17,6 +17,11 @@ public class DieselGE25Ton extends DieselTrain {
 	public DieselGE25Ton(World world) {
 		super(world, EnumTrains.GE25Ton.getTankCapacity(), LiquidManager.dieselFilter());
 		initLoco();
+		textureDescriptionMap.put(0, "NPS (Golden Spike National Park)");
+		textureDescriptionMap.put(1, "PW (Shop Switcher)");
+		textureDescriptionMap.put(2, "Duke Power Company");
+		textureDescriptionMap.put(3, "some cement company thing idk they not important");
+		textureDescriptionMap.put(4, "oh brother heres another forgotten about bigj railroad");
 	}
 
 	public void initLoco() {

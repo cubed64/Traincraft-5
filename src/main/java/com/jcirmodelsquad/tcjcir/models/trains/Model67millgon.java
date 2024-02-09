@@ -9,6 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.trucks.Model70TonTruck2;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelAndrews_Truck;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -575,6 +576,7 @@ public class Model67millgon extends ModelConverter //Same as Filename
 		bodyModel[130].setRotationPoint(-49.5F, 0F, -8.5F);
 	}
 	ModelAndrews_Truck bogie2 = new ModelAndrews_Truck();
+	Model70TonTruck2 bogie = new Model70TonTruck2();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
@@ -588,21 +590,30 @@ public class Model67millgon extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 			}
 
-		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==9534){
+		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==8){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Greyish.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(-2.4,-0.0,-0.0);
+			bogie.render(entity,f,f1,f2,f3,f4,f5);
+			GL11.glPopMatrix();
+
+			GL11.glPushMatrix();
+			GL11.glTranslated(2.4,-0.0,0.00);
+			bogie.render(entity,f,f1,f2,f3,f4,f5);
+			GL11.glPopMatrix();
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/Andrews_Truck_black.png"));
-		}
-		GL11.glPushMatrix();
-		GL11.glScalef(1,1,1f);
-		GL11.glTranslated(-2.5,-0.0,-0.0);
-		bogie2.render(entity,f,f1,f2,f3,f4,f5);
-		GL11.glPopMatrix();
-		GL11.glPushMatrix();
-		GL11.glTranslated(2.5,-0.0,0.00);
-		bogie2.render(entity,f,f1,f2,f3,f4,f5);
-		GL11.glPopMatrix();
+			GL11.glPushMatrix();
+			GL11.glTranslated(-2.5,-0.0,-0.0);
+			bogie2.render(entity,f,f1,f2,f3,f4,f5);
+			GL11.glPopMatrix();
 
+			GL11.glPushMatrix();
+			GL11.glTranslated(2.5,-0.0,0.00);
+			bogie2.render(entity,f,f1,f2,f3,f4,f5);
+			GL11.glPopMatrix();
+		}
+		((AbstractTrains) entity).getCargoManager().renderCargo((AbstractTrains) entity, f, f1, f2, f3, f4, f5);
 	}
 	public float[] getTrans() { return new float[]{-0F, 0.15F, 0F}; }
 }

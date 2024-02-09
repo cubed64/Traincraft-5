@@ -39,6 +39,7 @@ public class DieselB23 extends DieselTrain {
         textureDescriptionMap.put(19, "Finger Lakes");
         textureDescriptionMap.put(20, "Finger Lakes (Ex Camas Prairie)");
         textureDescriptionMap.put(21, "AOK");
+        textureDescriptionMap.put(22, "ADT (Ex UP)");
     }
     public DieselB23(World world, double d, double d1, double d2){
         this(world);

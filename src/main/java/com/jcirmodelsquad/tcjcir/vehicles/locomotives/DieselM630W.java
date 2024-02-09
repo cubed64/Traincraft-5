@@ -20,6 +20,7 @@ public class DieselM630W extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "Blandsville & Blankerston");
         textureDescriptionMap.put(1, "North Fox & Yukon Route (FNCC)");
+        textureDescriptionMap.put(2, "BCRail");
 
     }
     public DieselM630W(World world, double d, double d1, double d2){

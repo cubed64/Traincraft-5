@@ -18,6 +18,14 @@ public class DOT11117600 extends LiquidTank {
     public DOT11117600(World world) {
         super(world, EnumTrains.DOT11117600.getTankCapacity());
         initFreightWater();
+        textureDescriptionMap.put(0, "CRGX");
+        textureDescriptionMap.put(1, "CRGX");
+        textureDescriptionMap.put(2, "UTLX");
+        textureDescriptionMap.put(3, "UTLX");
+        textureDescriptionMap.put(4, "UTLX (Cargill Foods)");
+        textureDescriptionMap.put(5, "UTLX");
+        textureDescriptionMap.put(6, "UTLX (Casco)");
+        textureDescriptionMap.put(7, "Magnolia");
     }
 
     public void initFreightWater() {

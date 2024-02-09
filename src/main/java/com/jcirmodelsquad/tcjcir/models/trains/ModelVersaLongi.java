@@ -368,17 +368,8 @@ public class ModelVersaLongi extends ModelConverter //Same as Filename
 			} else
 				bodyModel[i].render(f5);
 		}
-		/*Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70truck_Black.png"));
 
-		GL11.glPushMatrix();
-		GL11.glScalef(1, 1, 0.9f);
-		GL11.glTranslated(-1.37, 0.55, -0.4);
-		bogie.render(entity, f, f1, f2, f3, f4, f5);
-
-		GL11.glTranslated(2.5, 0, 0.03);
-		bogie.render(entity, f, f1, f2, f3, f4, f5);
-		GL11.glPopMatrix();*/
-		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==3456){
+		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==8){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Greyish.png"));
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Black.png"));

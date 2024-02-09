@@ -10,6 +10,15 @@ import train.common.api.IPassenger;
 public class Amfleet extends EntityRollingStock implements IPassenger {
     public Amfleet(World world) {
         super(world);
+        textureDescriptionMap.put(0, "AMTK ()");
+        textureDescriptionMap.put(1, "AMTK ()");
+        textureDescriptionMap.put(2, "AMTK ()");
+        textureDescriptionMap.put(3, "AMTK ()");
+        textureDescriptionMap.put(4, "AMTK ()");
+        textureDescriptionMap.put(5, "AMTK ()");
+        textureDescriptionMap.put(6, "AMTK ()");
+        textureDescriptionMap.put(7, "AMTK ()");
+        textureDescriptionMap.put(8, "AMTK ()");
     }
 
     public Amfleet(World world, double d, double d1, double d2){

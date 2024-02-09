@@ -18,6 +18,11 @@ public class DieselSW8 extends DieselTrain {
         super(world, EnumTrains.SW8.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         textureDescriptionMap.put(0, "DRIR 553");
+        textureDescriptionMap.put(1, "Blandsville & Blankerston");
+        textureDescriptionMap.put(2, "NYC");
+        textureDescriptionMap.put(3, "NYC");
+        textureDescriptionMap.put(4, "Strasbooger/Strasboner/Strasburger/Strasburry Dough Boy");
+        textureDescriptionMap.put(5, "EMDX");
     }
     public DieselSW8(World world, double d, double d1, double d2){
         this(world);

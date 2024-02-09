@@ -20,6 +20,9 @@ public class DieselSDP40 extends DieselTrain {
         initLoco();
         //when the
         textureDescriptionMap.put(0, "Burlington Northern");
+        textureDescriptionMap.put(1, "NEP");
+        textureDescriptionMap.put(2, "NEPKIN");
+        textureDescriptionMap.put(3, "that one chopass SDP that cubed is obsessed with");
         textureDescriptionMap.put(4, "Blandsville & Blankerston");
     }
     public DieselSDP40(World world, double d, double d1, double d2){

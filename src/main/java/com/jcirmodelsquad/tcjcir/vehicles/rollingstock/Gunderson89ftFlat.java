@@ -24,6 +24,9 @@ public class Gunderson89ftFlat extends Freight implements IInventory {
     public Gunderson89ftFlat(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "TrailerTrain Cooperation");
+        textureDescriptionMap.put(1, "NEP");
+        textureDescriptionMap.put(2, "NEP");
         setCargoManager(new CargoManager(new CargoSpecification[][] {
         /*{ new CargoSpecification(Modelroadrailer_trailer_53.class,
                 "loads/roadrailer_53_generic", "53 Ft Dryvan", 0, 2.5, 0) },

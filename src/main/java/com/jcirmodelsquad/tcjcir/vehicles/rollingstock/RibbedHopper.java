@@ -20,6 +20,22 @@ public class RibbedHopper extends Freight implements IInventory {
 	public RibbedHopper(World world) {
 		super(world);
 		initFreightGrain();
+		textureDescriptionMap.put(0, "Generic Light Grey");
+		textureDescriptionMap.put(1, "Penn Central");
+		textureDescriptionMap.put(2, "FM Chemicals");
+		textureDescriptionMap.put(3, "ATSF");
+		textureDescriptionMap.put(4, "BNSF");
+		textureDescriptionMap.put(5, "Generic Tan");
+		textureDescriptionMap.put(6, "messicews underwear");
+		textureDescriptionMap.put(7, "messicews underwear");
+		textureDescriptionMap.put(8, "DRGW");
+		textureDescriptionMap.put(9, "Ex DRGW Patch");
+		textureDescriptionMap.put(10, "ADMX");
+		textureDescriptionMap.put(11, "Generic Bown");
+		textureDescriptionMap.put(12, "CR");
+		textureDescriptionMap.put(13, "CSXT");
+		textureDescriptionMap.put(14, "MT&S");
+		textureDescriptionMap.put(15, "SPB");
 	}
 
 	public void initFreightGrain() {

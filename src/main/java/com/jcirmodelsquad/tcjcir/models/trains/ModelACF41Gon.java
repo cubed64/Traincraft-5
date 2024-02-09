@@ -693,6 +693,7 @@ public class ModelACF41Gon extends ModelConverter //Same as Filename
 			bogie2.render(entity,f,f1,f2,f3,f4,f5);
 			GL11.glPopMatrix();
 		}
+		((AbstractTrains) entity).getCargoManager().renderCargo((AbstractTrains) entity, f, f1, f2, f3, f4, f5);
 	}
 	public float[] getTrans() { return new float[]{-0F, 0.15F, 0F}; }
 }

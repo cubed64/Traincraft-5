@@ -48,6 +48,7 @@ public class DieselGP9 extends DieselTrain {
         textureDescriptionMap.put(28, "Union Pacific");
         textureDescriptionMap.put(29, "Consolidated Rail Corporation");
         textureDescriptionMap.put(30, "Western Pacific");
+        textureDescriptionMap.put(31, "ADT (Ex UP)");
     }
     public DieselGP9(World world, double d, double d1, double d2){
         this(world);

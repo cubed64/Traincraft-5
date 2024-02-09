@@ -18,6 +18,8 @@ public class IngotPig extends Freight implements IInventory {
     public IngotPig(World world) {
         super(world);
         initFreightCart();
+        textureDescriptionMap.put(0, "FAWX");
+        textureDescriptionMap.put(1, "Generic");
     }
 
     public IngotPig(World world, double d, double d1, double d2){

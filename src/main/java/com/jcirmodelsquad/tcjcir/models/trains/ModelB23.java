@@ -1931,7 +1931,7 @@ public class ModelB23 extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.07, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 11){
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 11 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 25){
 			//fb2 u p is where the poop is early
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_up_early.png"));
 			GL11.glPushMatrix();

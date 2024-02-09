@@ -1122,13 +1122,13 @@ public class ModelCF7rouny2 extends ModelConverter //Same as Filename
 		bodyModel[187].setRotationPoint(-29.75F, -23F, -2F);
 
 		bodyModel[188].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 573 Headlight Front Nose
-		bodyModel[188].setRotationPoint(-33.75F, -10F, -1F);
+		bodyModel[188].setRotationPoint(-33.35F, -10F, -1F);
 
 		bodyModel[189].addShapeBox(0F, 0F, 0F, 1, 4, 2, 0F,-0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F); // Box 574 nose light mount
-		bodyModel[189].setRotationPoint(-34F, -12F, -1F);
+		bodyModel[189].setRotationPoint(-33.6F, -12F, -1F);
 
 		bodyModel[190].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 575 Headlight Front Nose
-		bodyModel[190].setRotationPoint(-33.75F, -12F, -1F);
+		bodyModel[190].setRotationPoint(-33.35F, -12F, -1F);
 
 		bodyModel[191].addBox(0F, 0F, 0F, 1, 4, 4, 0F); // Box 90
 		bodyModel[191].setRotationPoint(-11F, -4F, 7F);
