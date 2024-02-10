@@ -18,6 +18,7 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
 public class ModelNATX30600 extends ModelConverter //Same as Filename
@@ -768,12 +769,16 @@ public class ModelNATX30600 extends ModelConverter //Same as Filename
 
 		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Greyish.png"));
 
+		GL11.glPushMatrix();
 		GL11.glScalef(1,1,1f);
 		GL11.glTranslated(-1.81,-0.0,-0.0);
 		bogie.render(entity,f,f1,f2,f3,f4,f5);
 
 		GL11.glTranslated(3.62,-0.0,0.00);
 		bogie.render(entity,f,f1,f2,f3,f4,f5);
+		GL11.glPopMatrix();
+
+		((AbstractTrains) entity).getCargoManager().renderCargo((AbstractTrains) entity, f, f1, f2, f3, f4, f5);
 	}
 	public float[] getTrans() { return new float[]{-0F, 0.15F, 0F}; }
 }

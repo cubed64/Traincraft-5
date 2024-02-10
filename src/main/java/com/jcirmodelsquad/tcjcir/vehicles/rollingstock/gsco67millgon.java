@@ -36,7 +36,7 @@ public class gsco67millgon extends Freight implements IInventory {
                 { new CargoSpecification(Modelgondola_load_flat_aggregates_large.class, "loads/gondola_load_flat_aggregates_medium_scrap1",
                         "Scrapmetal A", 0, 2.7, 0)},
                 { new CargoSpecification(Modelgondola_load_flat_aggregates_large.class, "loads/gondola_load_flat_aggregates_medium_scrap2",
-                        "Scrapmetal B", 0, 2.475, 0)},
+                        "Scrapmetal B", 0, 2.7, 0)},
         }));
     }
 

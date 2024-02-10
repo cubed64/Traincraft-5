@@ -1,5 +1,6 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
+import com.jcirmodelsquad.tcjcir.models.loads.Modelhazmat_plac_17600;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -9,6 +10,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.LiquidTank;
+import train.common.entity.CargoManager;
+import train.common.entity.CargoSpecification;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -26,6 +29,31 @@ public class DOT11117600 extends LiquidTank {
         textureDescriptionMap.put(5, "UTLX");
         textureDescriptionMap.put(6, "UTLX (Casco)");
         textureDescriptionMap.put(7, "Magnolia");
+
+        setCargoManager(new CargoManager(new CargoSpecification[][] {
+                { new CargoSpecification(Modelhazmat_plac_17600.class, "loads/hazmat_plac_flammable_number",
+                        "Hazmat Placard - Flammable (Bluk)", 0, 3.0, 0)},
+                { new CargoSpecification(Modelhazmat_plac_17600.class, "loads/hazmat_plac_flammable",
+                        "Hazmat Placard - Flammable", 0, 3.0, 0)},
+                { new CargoSpecification(Modelhazmat_plac_17600.class, "loads/hazmat_plac_corrosive_number",
+                        "Hazmat Placard - Corrosive (Bulk)", 0, 3, 0)},
+                { new CargoSpecification(Modelhazmat_plac_17600.class, "loads/hazmat_plac_hot",
+                        "Hazmat Placard - HOT", 0, 3, 0)},
+                { new CargoSpecification(Modelhazmat_plac_17600.class, "loads/hazmat_plac_oxidizer",
+                        "Hazmat Placard - Oxidizer/Oxygen", 0, 3, 0)},
+                { new CargoSpecification(Modelhazmat_plac_17600.class, "loads/hazmat_plac_class9_numbers",
+                        "Hazmat Placard - Class 9 (Bulk)", 0, 3, 0)},
+                { new CargoSpecification(Modelhazmat_plac_17600.class, "loads/hazmat_plac_class9",
+                        "Hazmat Placard - Class 9", 0, 3, 0)},
+                { new CargoSpecification(Modelhazmat_plac_17600.class, "loads/hazmat_plac_class6",
+                        "Hazmat Placard - Class 6 (Poision, PG III, Toxic)", 0, 3, 0)},
+                { new CargoSpecification(Modelhazmat_plac_17600.class, "loads/hazmat_plac_wet",
+                        "Hazmat Placard - Dangerous when Wet", 0, 3, 0)},
+                { new CargoSpecification(Modelhazmat_plac_17600.class, "loads/hazmat_plac_explosives",
+                        "Hazmat Placard - Explosives", 0, 3, 0)},
+                { new CargoSpecification(Modelhazmat_plac_17600.class, "loads/hazmat_plac_radioactive",
+                        "Hazmat Placard - Radioactive", 0, 3, 0)},
+        }));
     }
 
     public void initFreightWater() {

@@ -1921,7 +1921,7 @@ public class ModelB23 extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.05, 0, 0);
 			theTrucks4.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14236){
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 26){
 			//fb2 blac early
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_black_a.png"));
 			GL11.glPushMatrix();
