@@ -543,6 +543,7 @@ public class EntityRotativeDigger extends Entity implements IInventory {
 	 * @param block_index index of the block in mining list
 	 */
 
+	@SideOnly(Side.CLIENT)
 	private void playMiningEffect(Vec3 pos, int block_index) {
 		Block id = worldObj.getBlock((int) pos.xCoord, (int) pos.yCoord, (int) pos.zCoord);
 		Block block = id;
