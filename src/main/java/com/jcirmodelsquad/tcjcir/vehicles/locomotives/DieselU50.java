@@ -19,7 +19,7 @@ public class DieselU50 extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "Union Pacific");
         textureDescriptionMap.put(1, "Southern Pacific");
-        textureDescriptionMap.put(2, "Fox, North Coast & Cascades");
+        textureDescriptionMap.put(2, "Fox, North Coast & Cascades (KIT-L, Big Canon)");
         textureDescriptionMap.put(3, "Blandsville & Blankerston");
         textureDescriptionMap.put(4, "Southfield");
         textureDescriptionMap.put(5, "Southfield De Mexico");

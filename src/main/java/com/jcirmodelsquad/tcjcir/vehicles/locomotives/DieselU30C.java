@@ -19,10 +19,11 @@ public class DieselU30C extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "Burlington Northern 5344");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "Fox, North Coast & Cascades (KIT-L)");
+        textureDescriptionMap.put(2, "Fox, North Coast & Cascades (KIT-L, Dual Canon)");
         textureDescriptionMap.put(3, "Southern Pacific");
         textureDescriptionMap.put(4, "Rock Island");
         textureDescriptionMap.put(5, "Deadwood & La Mesa");
+        textureDescriptionMap.put(6, "West Creek Pacific");
 
         //old textures, old model
         /*textureDescriptionMap.put(0, "Burlington Northern");

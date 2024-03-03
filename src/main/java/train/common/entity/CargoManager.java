@@ -60,6 +60,7 @@ public class CargoManager {
                         Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/" + getCargoSpecificationList()[cargoNumber - 1][i].textureFile + ".png"));
                     GL11.glPushMatrix();
                     GL11.glTranslated(getCargoSpecificationList()[cargoNumber - 1][i].offsetX, getCargoSpecificationList()[cargoNumber - 1][i].offsetY - 3, getCargoSpecificationList()[cargoNumber - 1][i].offsetZ);
+                    GL11.glScaled(getCargoSpecificationList()[cargoNumber - 1][i].scaleXa + 1, getCargoSpecificationList()[cargoNumber - 1][i].scaleYa + 1, getCargoSpecificationList()[cargoNumber - 1][i].scaleZa + 1);
                     renderModels[i].render(entity, f, f1, f2, f3, f4, f5);
                     GL11.glPopMatrix();
                 }

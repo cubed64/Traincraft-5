@@ -24,13 +24,14 @@ public class DieselCF7round extends DieselTrain {
         textureDescriptionMap.put(3, "Avanste Northeastern");
         textureDescriptionMap.put(4, "Blandsville & Blankerston");
         textureDescriptionMap.put(5, "Carbondale & Pine Valley");
-        textureDescriptionMap.put(6, "North Fox 20-25 (KIT-L ex ATSF)");
-        textureDescriptionMap.put(7, "North Fox 20-25 (KIT-L ex ATSF, (Variation))");
+        textureDescriptionMap.put(6, "FNCC (KIT-L, Ex ATSF, Dual Canon)");
+        textureDescriptionMap.put(7, "FNCC (KIT-L, Ex ATSF, Dual Canon)");
         textureDescriptionMap.put(8, "FURRX (EX CSWR)");
         textureDescriptionMap.put(9, "Paradox Rail 69");
         textureDescriptionMap.put(10, "West Creek Pacific");
         textureDescriptionMap.put(11, "Lisha & Watson");
         textureDescriptionMap.put(12, "some bigj railroad that hes probably forgotten about lol");
+        textureDescriptionMap.put(13, "Drexel Co");
     }
     public DieselCF7round(World world, double d, double d1, double d2){
         this(world);

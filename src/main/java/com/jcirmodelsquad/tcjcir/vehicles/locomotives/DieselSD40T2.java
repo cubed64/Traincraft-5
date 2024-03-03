@@ -28,11 +28,11 @@ public class DieselSD40T2 extends DieselTrain {
         textureDescriptionMap.put(7, "Blandsville & Blankerston");
         textureDescriptionMap.put(8, "NEP");
         textureDescriptionMap.put(9, "Magnolia Acres");
-        textureDescriptionMap.put(10, "Run 8 Western");
+        textureDescriptionMap.put(10, "Run 8 & Western");
         textureDescriptionMap.put(11, "Paradox Rail");
         textureDescriptionMap.put(12, "Avanste Northeastern");
-        textureDescriptionMap.put(13, "Fox, North Coast & Cascades (KIT-L)");
-        textureDescriptionMap.put(14, "Fox, North Coast & Cascades (KIT-80)");
+        textureDescriptionMap.put(13, "Fox, North Coast & Cascades (KIT-L, Big Canon)");
+        textureDescriptionMap.put(14, "Fox, North Coast & Cascades (KIT-80, Big Canon)");
         textureDescriptionMap.put(15, "Southern Port Belt");
     }
     public DieselSD40T2(World world, double d, double d1, double d2){

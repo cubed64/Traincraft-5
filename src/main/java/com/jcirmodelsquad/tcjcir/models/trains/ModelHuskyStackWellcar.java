@@ -19,6 +19,7 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
 public class ModelHuskyStackWellcar extends ModelConverter
@@ -341,7 +342,7 @@ public class ModelHuskyStackWellcar extends ModelConverter
         bogie.render(entity,f,f1,f2,f3,f4,f5);
         GL11.glPopMatrix();
 
-        if (entity instanceof HuskyStackWellcar) {
+        /*if (entity instanceof HuskyStackWellcar) {
             HuskyStackWellcar wellcar = (HuskyStackWellcar)entity;
             if (wellcar.container1 != null && wellcar.container1.type.equals("FortyFootContainer")) {
                 ModelISO_40FT_Item theContainer = new ModelISO_40FT_Item();
@@ -363,12 +364,9 @@ public class ModelHuskyStackWellcar extends ModelConverter
                 theContainer.render(entity, f, f1, f2, f3, f4, f5);
                 GL11.glPopMatrix();
             }
-        }
+        }*/
+        ((AbstractTrains) entity).getCargoManager().renderCargo((AbstractTrains) entity, f, f1, f2, f3, f4, f5);
     }
 
-    public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
-    {
-    }
-
-    public ModelRendererTurbo huskystackwellcarModel[];
+    public float[] getTrans() { return new float[]{-0F, 0.15F, 0F}; }
 }

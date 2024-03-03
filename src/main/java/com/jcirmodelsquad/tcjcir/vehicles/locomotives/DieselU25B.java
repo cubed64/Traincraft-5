@@ -19,8 +19,8 @@ public class DieselU25B extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "New Haven");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "Fox, North Coast & Cascades (Early)");
-        textureDescriptionMap.put(3, "Fox, North Coast & Cascades");
+        textureDescriptionMap.put(2, "Fox, North Coast & Cascades (KIT-E, Big Canon)");
+        textureDescriptionMap.put(3, "Fox, North Coast & Cascades (KIT-L, Big Canon)");
         textureDescriptionMap.put(4, "Great Northern (BSB)");
         textureDescriptionMap.put(5, "Great Northern (EB Simp)");
         textureDescriptionMap.put(6, "the Milwaukee Road");
@@ -31,6 +31,7 @@ public class DieselU25B extends DieselTrain {
         textureDescriptionMap.put(11, "New York Central (Early 60s)");
         textureDescriptionMap.put(12, "New York Central (Very Late 60s)");
         textureDescriptionMap.put(13, "Galesburg Clinton & Midland");
+        textureDescriptionMap.put(14, "Detroit Export System");
     }
     public DieselU25B(World world, double d, double d1, double d2){
         this(world);

@@ -20,8 +20,8 @@ public class DieselB23 extends DieselTrain {
         textureDescriptionMap.put(0, "Franklin Industrial Minerals (FIMX Early)");
         textureDescriptionMap.put(1, "Southern Pacific (Early)");
         textureDescriptionMap.put(2, "Southern Pacific (Late)");
-        textureDescriptionMap.put(3, "Fox, North Coast & Cascades (Early Order KIT-L)");
-        textureDescriptionMap.put(4, "Fox, North Coast & Cascades (Late Order KIT-L)");
+        textureDescriptionMap.put(3, "Fox, North Coast & Cascades (Early Order KIT-L, Dual Canon)");
+        textureDescriptionMap.put(4, "Fox, North Coast & Cascades (Late Order KIT-L, Big Canon)");
         textureDescriptionMap.put(5, "Blandsville & Blankerston");
         textureDescriptionMap.put(6, "Western Pacific");
         textureDescriptionMap.put(7, "Western Pacific (Post 90s)");

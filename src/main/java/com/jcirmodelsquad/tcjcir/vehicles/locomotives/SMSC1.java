@@ -24,7 +24,7 @@ public class SMSC1 extends LiquidTank implements IFluidHandler {
     public SMSC1(World world) {
         super(world, EnumTrains.SMSC1.getTankCapacity());
         initFreightWater();
-        textureDescriptionMap.put(0, "FNCC S99");
+        textureDescriptionMap.put(0, "FNCC S99 (KIT-L, Dual Canon)");
         this.theTank = LiquidManager.getInstance().new FilteredTank(EnumTrains.SMSC1.getTankCapacity(), LiquidManager.dieselFilter());
     }
 

@@ -19,7 +19,7 @@ public class DieselM630W extends DieselTrain {
         super(world, EnumTrains.M630W.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         textureDescriptionMap.put(0, "Blandsville & Blankerston");
-        textureDescriptionMap.put(1, "North Fox & Yukon Route (FNCC)");
+        textureDescriptionMap.put(1, "North Fox & Yukon Route (FNCC, KIT-L, Big Canon)");
         textureDescriptionMap.put(2, "BCRail");
 
     }

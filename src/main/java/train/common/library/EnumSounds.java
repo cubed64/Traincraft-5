@@ -201,7 +201,7 @@ public enum EnumSounds {
 	DieselSW1500(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSW1500.class, " ", 0.65F, "EMD_12_645E_Notch8", 0.65F, 54, "EMD_12_645E_Idle", 0.8F, 54, false, "emd_steelbell_5", 15, new String[] {"nathan_p3_new_2", "generic_horn_1", "nathan_p3_old_1", "nathan_j3_1", "leslie_a125_1", "leslie_a125_1", "nathan_k3la_3", "prime_920_3", "prime_990_4", "leslie_a125_1", "nathan_n3_1", "nathan_k5la_hybrid_1", "nathan_m3h_2", "leslie_rs5t_3", "leslie_rs5t_3", "nathan_k3la_2", "leslie_a125_1", "nathan_k3la_1", "nathan_k3l_1", "nathan_m5_4", "nathan_p3_new_3", "leslie_s3l_4"}),
 
 	//FoxTC FM Diesels
-	DieselH1044(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselH1044.class, " ", 10F, "FM_38D_6_Notch8", 0.65F, 45, "FM_38D_6_Idle", 0.45F, 58, false, "alco_bronzebell_3", 18,  new String[] {"hancock_airwhistle_1", "wabco_e2_1", "wabco_e2_1", "wabco_e2_1", "wabco_e2_1", "wabco_e2_1", "nathan_m3h_1", "wabco_e2_1", "nathan_k3la_1", "wabco_e2_1", "wabco_e2_1", "prime_990_4"}),
+	DieselH1044(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselH1044.class, " ", 10F, "FM_38D_6_Notch8", 0.65F, 45, "FM_38D_6_Idle", 0.45F, 58, false, "alco_bronzebell_3", 18,  new String[] {"hancock_airwhistle_1", "wabco_e2_1", "wabco_e2_1", "wabco_e2_1", "wabco_e2_1", "wabco_e2_1", "nathan_m3h_1", "wabco_e2_1", "nathan_j3_1", "wabco_e2_1", "wabco_e2_1", "prime_990_4"}),
 	DieselFMH16_66(DieselH16_66.class," ", 1F,"FM_38D_6_Notch8", 0.65F, 45, "FM_38D_6_Idle", 0.45F, 58, false,"alco_bronzebell_3", 18, new String[] {"wabco_e2_dual_1", "leslie_s3l_1", "leslie_s3l_1", "wabco_e2_dual_1", "wabco_e2_dual_1", "wabco_e2_dual_1", "wabco_e2_dual_1", "wabco_e2_dual_1", "wabco_e2_dual_1", "wabco_e2_dual_1", "nathan_p5_new_2", "leslie_s3l_3", "wabco_e2_dual_1"}),
 	DieselFMH24_66(DieselH24_66.class," ", 1F,"FM_38D_6_Notch8", 0.65F, 45, "FM_38D_6_Idle", 0.45F, 58, false,"alco_bronzebell_3", 18, new String[] {"wabco_e2_dual_1", "leslie_s3l_2", "leslie_s3l_2", "wabco_e2_dual_1", "nathan_p5_new_4", "wabco_e2_dual_1", "leslie_a200_triple_1" }),
 	DieselFMH24_66L(DieselH24_66L.class," ", 1F,"FM_38D_6_Notch8", 0.65F, 45, "FM_38D_6_Idle", 0.45F, 58, false,"alco_bronzebell_3", 18, new String[] {"leslie_s3l_3", "nathan_p5_new_3"}),
@@ -264,7 +264,7 @@ public enum EnumSounds {
 	//FoxTC Electrics
 	//
 	//FoxTC EMD Electrics
-	ElectricGM6C(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricGM6C.class, "leslie_s3l_1", 2.5F, "MILW_Notch8", 0.65F, 40, "MILW_Idle", 0.65F, 50, false, "emd_brassbell_1", 15),
+	ElectricGM6C(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricGM6C_2.class, "leslie_s3l_1", 2.5F, "MILW_Notch8", 0.65F, 40, "MILW_Idle", 0.65F, 50, false, "emd_brassbell_1", 15),
 
 	//FoxTC ALCO Electrics
 	ElectricEF1(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricEF1.class, "wabco_e2_1", 2.5F, "MILW_Notch8", 0.65F, 40, "MILW_Idle", 0.65F, 50, false, "alco_bronzebell_3", 18),

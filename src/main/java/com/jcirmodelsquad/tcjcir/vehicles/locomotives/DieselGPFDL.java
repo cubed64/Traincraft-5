@@ -17,7 +17,7 @@ public class DieselGPFDL extends DieselTrain {
     public DieselGPFDL(World world) {
         super(world, EnumTrains.GPFDL.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "North Fox (Early)");
+        textureDescriptionMap.put(0, "North Fox (KIT-L, Big Canon)");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
     }
     public DieselGPFDL(World world, double d, double d1, double d2){

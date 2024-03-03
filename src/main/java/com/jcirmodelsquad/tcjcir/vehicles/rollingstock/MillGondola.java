@@ -1,7 +1,9 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
+import com.jcirmodelsquad.tcjcir.models.loads.Modelcoil_load;
 import com.jcirmodelsquad.tcjcir.models.loads.Modelgondola_load_flat_aggregates_medium;
 import com.jcirmodelsquad.tcjcir.models.loads.Modelgondola_load_flat_aggregates_small;
+import com.jcirmodelsquad.tcjcir.models.loads.Modelrebar_bundle;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -44,6 +46,10 @@ public class MillGondola extends Freight implements IInventory {
                         "Scrapmetal A", 0, 2.475, 0)},
                 { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_scrap2",
                         "Scrapmetal B", 0, 2.475, 0)},
+                { new CargoSpecification(Modelrebar_bundle.class, "loads/rebar_bundle2",
+                        "Rebar Bundle", 0, 2.375, 0)},
+                { new CargoSpecification(Modelcoil_load.class, "loads/coils",
+                        "Metal Coils", 0, 2.375, 0)},
         }));
     }
 

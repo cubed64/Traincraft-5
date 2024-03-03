@@ -15,9 +15,30 @@ import train.common.library.GuiIDs;
 
 public class DieselGP38dash2 extends DieselTrain {
     public DieselGP38dash2(World world) {
-        super(world, EnumTrains.GP38dash2.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.GP38Dash2.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-
+        textureDescriptionMap.put(0, "Butte, Anaconda & Pacific");
+        textureDescriptionMap.put(1, "MKT (Stripes)");
+        textureDescriptionMap.put(2, "MKT (Solids)");
+        textureDescriptionMap.put(3, "CSXT (Yn3)");
+        textureDescriptionMap.put(4, "Norfolk Southern (Ex-Sou)");
+        textureDescriptionMap.put(5, "Norfolk Southern");
+        textureDescriptionMap.put(6, "Southern Port Belt");
+        textureDescriptionMap.put(7, "Southern Port Belt (NS Patch)");
+        textureDescriptionMap.put(8, "Milwaukee Road");
+        textureDescriptionMap.put(9, "Milwaukee Road (Billboard)");
+        textureDescriptionMap.put(10, "");
+        textureDescriptionMap.put(11, "");
+        textureDescriptionMap.put(12, "");
+        textureDescriptionMap.put(13, "");
+        textureDescriptionMap.put(14, "");
+        textureDescriptionMap.put(15, "");
+        textureDescriptionMap.put(16, "");
+        textureDescriptionMap.put(17, "");
+        textureDescriptionMap.put(18, "");
+        textureDescriptionMap.put(19, "");
+        textureDescriptionMap.put(20, "");
+        textureDescriptionMap.put(21, "");
     }
     public DieselGP38dash2(World world, double d, double d1, double d2){
         this(world);
@@ -39,7 +60,7 @@ public class DieselGP38dash2 extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 2.95;
+        double distance = 2.9;
         double yOffset = 0.15;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
@@ -121,7 +142,7 @@ public class DieselGP38dash2 extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.2F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.25F;
     }
 
     @Override

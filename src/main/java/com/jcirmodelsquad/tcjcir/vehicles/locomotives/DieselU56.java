@@ -17,8 +17,8 @@ public class DieselU56 extends DieselTrain {
     public DieselU56(World world) {
         super(world, EnumTrains.U56.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Fox, North Coast & Cascades (White Visibility Stripes)");
-        textureDescriptionMap.put(1, "Fox, North Coast & Cascades (Orange Visibility Stripes)");
+        textureDescriptionMap.put(0, "Fox, North Coast & Cascades (White Visibility Stripes, Big Canon)");
+        textureDescriptionMap.put(1, "Fox, North Coast & Cascades (Orange Visibility Stripes, Big Canon)");
     }
     public DieselU56(World world, double d, double d1, double d2){
         this(world);

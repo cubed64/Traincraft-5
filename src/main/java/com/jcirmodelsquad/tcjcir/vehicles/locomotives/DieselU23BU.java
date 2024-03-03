@@ -17,15 +17,15 @@ public class DieselU23BU extends DieselTrain {
     public DieselU23BU(World world) {
         super(world, EnumTrains.U23BU.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Fox, North Coast & Cascades (KIT-L)");
-        textureDescriptionMap.put(1, "Fox, North Coast & Cascades (KIT-L, 2nd Order)");
-        textureDescriptionMap.put(2, "Fox, North Coast & Cascades (Experimental 1)");
-        textureDescriptionMap.put(3, "Fox, North Coast & Cascades (100 Years Bicentennial)");
-        textureDescriptionMap.put(4, "North Fox (Ex Sou High Hood)");
-        textureDescriptionMap.put(5, "North Fox (Ex Sou Patch)");
-        textureDescriptionMap.put(6, "Blandsville & Blankerston");
-        textureDescriptionMap.put(7, "Fox, North Coast & Cascades (KIT-80)");
-        textureDescriptionMap.put(8, "Fox, North Coast & Cascades (MW-S)");
+        textureDescriptionMap.put(0, "FNCC (KIT-L, Big Canon)");
+        textureDescriptionMap.put(1, "FNCC (KIT-L, 2nd Order, Dual Canon)");
+        textureDescriptionMap.put(2, "FNCC (Experimental 1, Big Canon)");
+        textureDescriptionMap.put(3, "FNCC (100 Years Bicentennial, Dual Canon)");
+        textureDescriptionMap.put(4, "North Fox (Ex Sou, High Hood, Big Canon)");
+        textureDescriptionMap.put(5, "North Fox (Ex Sou, Patch, Big Canon)");
+        textureDescriptionMap.put(6, "Blandsville & Blankerston (Late Phase Blank)");
+        textureDescriptionMap.put(7, "FNCC (KIT-80, Dual Canon)");
+        textureDescriptionMap.put(8, "FNCC (MW-S, Big Canon)");
 //"Cyan", "Skin17", "Skin29", "Skin19", "Skin16", "Black"
     }
     public DieselU23BU(World world, double d, double d1, double d2){

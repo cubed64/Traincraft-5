@@ -15,6 +15,10 @@ public class CargoSpecification {
     public final double offsetY;
     public final double offsetZ;
 
+    public double scaleXa;
+    public double scaleYa;
+    public double scaleZa;
+
     /**
      * @author 02skaplan
      * <p>Stores information about an individual custom load's model, texture, and offset.</p>
@@ -33,5 +37,17 @@ public class CargoSpecification {
         this.offsetX = offsetX;
         this.offsetY = offsetY;
         this.offsetZ = offsetZ;
+    }
+
+    public CargoSpecification(Class<? extends ModelConverter> cargoModelClass, String textureFile, String textureName, double offsetX, double offsetY, double offsetZ, double scaleX, double scaleY, double scaleZ) {
+        this.cargoModelClass = cargoModelClass;
+        this.textureFile = textureFile;
+        this.textureName = textureName;
+        this.offsetX = offsetX;
+        this.offsetY = offsetY;
+        this.offsetZ = offsetZ;
+        this.scaleXa = scaleX;
+        this.scaleYa = scaleY;
+        this.scaleZa = scaleZ;
     }
 }

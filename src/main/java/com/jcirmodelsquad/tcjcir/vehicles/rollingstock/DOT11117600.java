@@ -29,6 +29,7 @@ public class DOT11117600 extends LiquidTank {
         textureDescriptionMap.put(5, "UTLX");
         textureDescriptionMap.put(6, "UTLX (Casco)");
         textureDescriptionMap.put(7, "Magnolia");
+        textureDescriptionMap.put(8, "CCOX (Aragonite Slurry Service)");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Modelhazmat_plac_17600.class, "loads/hazmat_plac_flammable_number",

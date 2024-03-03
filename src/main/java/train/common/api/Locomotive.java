@@ -201,6 +201,11 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         super.readSpawnData(additionalData);
         isLocoTurnedOn = additionalData.readBoolean();
         parkingBrake = additionalData.readBoolean();
+        if (additionalData.readBoolean()) {
+            int selectedCargo = additionalData.readInt();
+            if (selectedCargo < getCargoManager().getCargoSpecificationList().length + 1)
+                getCargoManager().setSelectedCargo(selectedCargo);
+        }
     }
 
     @Override
@@ -208,6 +213,10 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         super.writeSpawnData(buffer);
         buffer.writeBoolean(isLocoTurnedOn);
         buffer.writeBoolean(parkingBrake);
+        buffer.writeBoolean(getCargoManager() != null);
+        if (getCargoManager() != null) {
+            buffer.writeInt(getCargoManager().getSelectedCargo());
+        }
     }
 
     private String castToString(double str) {
