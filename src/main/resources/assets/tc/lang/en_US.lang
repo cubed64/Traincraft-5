@@ -849,7 +849,9 @@ item.tc:minecartFP7A.name=EMD FP7A
 item.tc:minecartFP9A.name=EMD FP9A
 item.tc:minecartCF7angle.name=ATSF CF7 Anglecab
 item.tc:minecartCF7round.name=ATSF CF7 Roundcab
+item.tc:minecartCF7round3.name=EMD CF7 (Roundcab Freelances)
 item.tc:minecartCF7angle2.name=ATSF CF7 (CBRR)
+item.tc:minecartCF7angle3.name=EMD CF7 (Anglecab Freelances)
 item.tc:minecartCF7hh.name=CEE CF7 (GL)
 item.tc:minecartF40PH.name=EMD F40PH
 
@@ -928,7 +930,9 @@ entity.tc.FP9A.name=EMD FP9A
 entity.tc.BUnitF7B.name=EMD F7B (Unpowered)
 entity.tc.CF7angle.name=ATSF CF7 Anglecab
 entity.tc.CF7round.name=ATSF CF7 Roundcab
+entity.tc.CF7round3.name=EMD CF7 (Roundcab Freelances)
 entity.tc.CF7angle2.name=ATSF CF7 (CBRR)
+entity.tc.CF7angle3.name=EMD CF7 (Anglecab Freelances)
 entity.tc.CF7hh.name=CEE CF7 (GL)
 entity.tc.F40PH.name=EMD F40PH
 

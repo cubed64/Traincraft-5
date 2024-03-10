@@ -862,12 +862,15 @@ RenderEnum {
 		{ }
 	}, "", null, 0, false),
 	CF7round( DieselCF7round.class,  new ModelCF7rouny2(), "CF7_Round_", true,new float[] {-0F, -0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
-		{
-			//add(new double[]{0.6D, 1.4D, 0.0D});
-			//add(new double[]{1.1D, 1.4D, 0.0D});
-		}
+		{ }
+	}, "", null, 0, false),
+	CF7round3( DieselCF7round3.class,  new ModelCF7rouny3(), "CF7_Round_F_", true,new float[] {-0F, -0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+		{ }
 	}, "", null, 0, false),
 	CF7angle2( DieselCF7angle2.class,  new ModelCF7angle2(), "CF7_Angle_DBRR_", true,new float[] {-0F, -0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 3,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	CF7angle3( DieselCF7angle3.class,  new ModelCF7angle3(), "CF7_Angle_F_", true,new float[] {-0F, -0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
 	CF7hh( DieselCF7hh.class,  new ModelCF7hh(), "CF7_highhood_", true,new float[] {-0F, -0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 3,  new ArrayList<double[]>() {
