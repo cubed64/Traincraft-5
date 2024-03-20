@@ -41,6 +41,7 @@ public class DieselB23 extends DieselTrain {
         textureDescriptionMap.put(21, "AOK");
         textureDescriptionMap.put(22, "ADT (Ex UP)");
         textureDescriptionMap.put(23, "ADT (Ex NS)");
+        textureDescriptionMap.put(24, "BNSF H1 (Ex ATSF)");
     }
     public DieselB23(World world, double d, double d1, double d2){
         this(world);

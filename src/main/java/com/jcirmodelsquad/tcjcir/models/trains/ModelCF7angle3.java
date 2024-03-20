@@ -2203,8 +2203,8 @@ public class ModelCF7angle3 extends ModelConverter //Same as Filename
 			GL11.glTranslated(2.55, 0, 0);
 			theBlomb.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1340) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_spooki_up_trashy_trash.png"));
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Beansniff_SINGLESHOE.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.28, -0.02, 0);
 			theBlomb.render(entity, f, f1, f2, f3, f4, f5);

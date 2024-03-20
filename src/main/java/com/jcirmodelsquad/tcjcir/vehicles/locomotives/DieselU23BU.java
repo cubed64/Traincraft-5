@@ -17,7 +17,7 @@ public class DieselU23BU extends DieselTrain {
     public DieselU23BU(World world) {
         super(world, EnumTrains.U23BU.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "FNCC (KIT-L, Big Canon)");
+        textureDescriptionMap.put(0, "FNCC (KIT-L, 1st Order, Big Canon)");
         textureDescriptionMap.put(1, "FNCC (KIT-L, 2nd Order, Dual Canon)");
         textureDescriptionMap.put(2, "FNCC (Experimental 1, Big Canon)");
         textureDescriptionMap.put(3, "FNCC (100 Years Bicentennial, Dual Canon)");
@@ -26,6 +26,8 @@ public class DieselU23BU extends DieselTrain {
         textureDescriptionMap.put(6, "Blandsville & Blankerston (Late Phase Blank)");
         textureDescriptionMap.put(7, "FNCC (KIT-80, Dual Canon)");
         textureDescriptionMap.put(8, "FNCC (MW-S, Big Canon)");
+        textureDescriptionMap.put(9, "FNCC (591 & 592, Ex Mon, Big Canon)");
+        textureDescriptionMap.put(10, "FNCC (Kit-Lw, 1st Order, Dual Canon)");
 //"Cyan", "Skin17", "Skin29", "Skin19", "Skin16", "Black"
     }
     public DieselU23BU(World world, double d, double d1, double d2){
