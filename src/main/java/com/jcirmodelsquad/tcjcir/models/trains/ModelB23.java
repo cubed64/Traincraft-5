@@ -1727,23 +1727,23 @@ public class ModelB23 extends ModelConverter //Same as Filename
 		bodyModel[402].setRotationPoint(-13F, -23F, -7.5F);
 
 		bodyModel[403].addShapeBox(0F, 0F, 0F, 2, 10, 2, 0F,1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 412 cs
-		bodyModel[403].setRotationPoint(-26.05F, -15F, -4F);
+		bodyModel[403].setRotationPoint(-26.05F, -15F, 1F);
 
 		bodyModel[404].addShapeBox(0F, 0F, 0F, 6, 4, 3, 0F,0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 413 cs
-		bodyModel[404].setRotationPoint(-32.75F, -13F, -2F);
+		bodyModel[404].setRotationPoint(-32.75F, -13F, 3F);
 		bodyModel[404].rotateAngleY = -0.45378561F;
 
 		bodyModel[405].addShapeBox(0F, 0F, 0F, 11, 4, 2, 0F,0F, 0F, -0.5F, -5F, 0F, -0.5F, -5F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, -0.5F, -5F, -2F, -0.5F, -5F, -2F, 0F, 0F, -2F, 0F); // Box 86 cs
-		bodyModel[405].setRotationPoint(-32.75F, -15F, -2F);
+		bodyModel[405].setRotationPoint(-32.75F, -15F, 3F);
 		bodyModel[405].rotateAngleY = -0.45378561F;
 
 		bodyModel[406].addShapeBox(0F, 0F, 0F, 6, 4, 2, 0F,0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 531 cs
-		bodyModel[406].setRotationPoint(-32.75F, -9F, -2F);
+		bodyModel[406].setRotationPoint(-32.75F, -9F, 3F);
 		bodyModel[406].rotateAngleY = -0.45378561F;
 
 		bodyModel[407].addShapeBox(0F, 0F, -2F, 1, 4, 3, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F); // Box 275 cs speedo glow
-		bodyModel[407].setRotationPoint(-32F, -17F, 6.5F);
-		bodyModel[407].rotateAngleY = 0.17453293F;
+		bodyModel[407].setRotationPoint(-32F, -17F, 7.5F);
+		//bodyModel[407].rotateAngleY = 0.17453293F;
 
 		bodyModel[408].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F); // Box 6 PRIME5-1
 		bodyModel[408].setRotationPoint(-36.5F, -22.5F, -1F);

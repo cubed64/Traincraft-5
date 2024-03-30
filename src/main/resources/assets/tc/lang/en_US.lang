@@ -1122,6 +1122,7 @@ item.tc:minecartFBFDL.name=CEE FB-FDL
 item.tc:minecartRS1.name=ALCo RS-1
 item.tc:minecartRS2.name=ALCo RS-2
 item.tc:minecartRS3.name=ALCo RS-3
+item.tc:minecartRSFDL.name=FNCC RSFDL
 
 item.tc:minecartC415H.name=ALCo C415 (High Visibility Cab)
 item.tc:minecartC415S.name=ALCo C415
@@ -1162,6 +1163,7 @@ entity.tc.FBFDL.name=CEE FB-FDL
 entity.tc.RS1.name=ALCo RS-1
 entity.tc.RS2.name=ALCo RS-2
 entity.tc.RS3.name=ALCo RS-3
+entity.tc.RSFDL.name=FNCC RSFDL
 
 entity.tc.C415H.name=ALCo C415 (High Visibility Cab)
 entity.tc.C415S.name=ALCo C415
@@ -1289,6 +1291,7 @@ item.tc:minecartFNCC2375Hopper.name=KSFI 2375 Cu Ft Hopper
 item.tc:minecartPDH2800.name=GATX 2800 Cu Ft Pressure Differential Hopper
 item.tc:minecartACF2Bay.name=ACF 2980 Cu Ft 2-Bay Hopper
 item.tc:minecartACF4650.name=ACF 4650 Cu Ft 3-Bay Hopper
+item.tc:minecartPS2_4750.name=PS2 4750 Cu Ft 3-Bay Hopper
 
 entity.tc.Freight Round Covered Hopper.name=Round Covered Hopper
 entity.tc.Freight Ribbed Covered Hopper.name=Ribbed Covered Hopper
@@ -1298,6 +1301,7 @@ entity.tc.FNCC2375Hopper.name=KSFI 2375 Cu Ft Hopper
 entity.tc.PDH2800.name=GATX 2800 Cu Ft Pressure Differential Hopper
 entity.tc.ACF2Bay.name=ACF 2980 Cu Ft 2-Bay Hopper
 entity.tc.ACF4650.name=ACF 4650 Cu Ft 3-Bay Hopper
+entity.tc.PS2_4750.name=PS2 4750 Cu Ft 3-Bay Hopper
 
 item.tc:minecart60centerbeam.name=60' Center Beam
 item.tc:minecart66centerbeam.name=66' Center Beam

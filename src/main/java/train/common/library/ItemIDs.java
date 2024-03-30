@@ -504,6 +504,7 @@ public enum ItemIDs {
 	minecartRS1("ItemRollingStock", "RS-1", 2),
 	minecartRS2("ItemRollingStock", "RS-2", 2),
 	minecartRS3("ItemRollingStock", "RS-3", 3),
+	minecartRSFDL("ItemRollingStock", "RSFDL", 4),
 
 	minecartC415H("ItemRollingStock", "c415h", 4),
 	minecartC415S("ItemRollingStock", "c415s", 4),
@@ -584,6 +585,7 @@ public enum ItemIDs {
 	minecartPDH2800("ItemRollingStock", "pdh2800", 3),
 	minecartACF2Bay("ItemRollingStock", "ACF2Bay", 3),
 	minecartACF4650("ItemRollingStock", "ACF4650", 4),
+	minecartPS2_4750("ItemRollingStock", "PS2_4750", 4),
 
 	minecart60centerbeam("ItemRollingStock", "60centerbeam", 3),
 	minecart66centerbeam("ItemRollingStock", "66centerbeam", 3),

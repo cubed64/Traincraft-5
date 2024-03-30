@@ -327,7 +327,7 @@ public class ModelSW10 extends ModelConverter //Same as Filename
 		bodyModel[282] = new ModelRendererTurbo(this, 339, 107, textureX, textureY, "cull"); // Box 260 cull
 		bodyModel[283] = new ModelRendererTurbo(this, 341, 117, textureX, textureY); // Box 453
 		bodyModel[284] = new ModelRendererTurbo(this, 213, 158, textureX, textureY); // Box 1251
-		bodyModel[285] = new ModelRendererTurbo(this, 378, 43, textureX, textureY); // Box 330
+		bodyModel[285] = new ModelRendererTurbo(this, 378, 43, textureX, textureY, "cull"); // Box 330
 		bodyModel[286] = new ModelRendererTurbo(this, 384, 29, textureX, textureY); // Box 331
 		bodyModel[287] = new ModelRendererTurbo(this, 62, 87, textureX, textureY); // Box 396
 		bodyModel[288] = new ModelRendererTurbo(this, 62, 82, textureX, textureY); // Box 398 not a ditchlight will not glow

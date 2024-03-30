@@ -20,9 +20,6 @@ public class DieselU23B extends DieselTrain {
         textureDescriptionMap.put(0, "Union Pacific");
         textureDescriptionMap.put(1, "Fox Union Rail Resources (FURRX)");
         textureDescriptionMap.put(2, "Fox, North Coast & Cascades (KIT-E 1st Order, Big Canon)");
-        //textureDescriptionMap.put(3, "Fox, North Coast & Cascades (Early)");
-        //textureDescriptionMap.put(4, "Fox, North Coast & Cascades (100 Years Bicentennial)");
-        //textureDescriptionMap.put(5, "Fox, North Coast & Cascades (Experimental Scheme)");
         textureDescriptionMap.put(3, "Conrail");
         textureDescriptionMap.put(4, "Blandsville & Blankerston");
         textureDescriptionMap.put(5, "Deep Rock Railroad");
@@ -45,6 +42,8 @@ public class DieselU23B extends DieselTrain {
         textureDescriptionMap.put(22, "Nomansi & Eastern Pacific");
         textureDescriptionMap.put(23, "ADT");
         textureDescriptionMap.put(24, "ADT (Ex UP)");
+        textureDescriptionMap.put(25, "SNCT 201 (Ex MILW)");
+        textureDescriptionMap.put(26, "SNCT 202 (Ex MILW)");
     }
     public DieselU23B(World world, double d, double d1, double d2){
         this(world);
