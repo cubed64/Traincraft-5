@@ -1168,6 +1168,9 @@ RenderEnum {
 	U36B( DieselU36B.class,  new ModelU36B(), "U36B_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
+	U23C( DieselU23C.class,  new ModelU30C_new(), "U23C_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 	U30C( DieselU30C.class,  new ModelU30C_new(), "U30C_new_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),

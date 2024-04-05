@@ -27,7 +27,7 @@ public class ModelACF2Bay extends ModelConverter //Same as Filename
 
 	public ModelACF2Bay() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[113];
+		bodyModel = new ModelRendererTurbo[115];
 
 		initbodyModel_1();
 
@@ -152,6 +152,8 @@ public class ModelACF2Bay extends ModelConverter //Same as Filename
 		bodyModel[110] = new ModelRendererTurbo(this, 12, 224, textureX, textureY); // Box 484
 		bodyModel[111] = new ModelRendererTurbo(this, 12, 239, textureX, textureY); // Box 485
 		bodyModel[112] = new ModelRendererTurbo(this, 33, 239, textureX, textureY); // Box 486
+		bodyModel[113] = new ModelRendererTurbo(this, 91, 71, textureX, textureY, "cull"); // Box 477 cull bracket
+		bodyModel[114] = new ModelRendererTurbo(this, 98, 71, textureX, textureY, "cull"); // Box 478 cull bracket
 
 		bodyModel[0].addBox(0F, 0F, 0F, 4, 2, 3, 0F); // Box 1 coupler
 		bodyModel[0].setRotationPoint(-34.5F, 3F, -1.5F);
@@ -506,6 +508,12 @@ public class ModelACF2Bay extends ModelConverter //Same as Filename
 
 		bodyModel[112].addShapeBox(0F, 0F, 0F, 6, 8, 6, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -6F, 0F, 0F, -6F); // Box 486
 		bodyModel[112].setRotationPoint(5F, 0F, 3.5F);
+
+		bodyModel[113].addShapeBox(0F, 0F, 0F, 1, 4, 2, 0F,0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 1F, 0F, 0F, 1F); // Box 477 cull bracket
+		bodyModel[113].setRotationPoint(-27F, -18F, 8F);
+
+		bodyModel[114].addShapeBox(0F, 0F, 0F, 1, 4, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, -1F, 0F, 0F, -1F, 0F); // Box 478 cull bracket
+		bodyModel[114].setRotationPoint(26F, -18F, -10F);
 	}
 	Model70TonTruck2 bogie = new Model70TonTruck2();
 	Model70TonTruckEarly bogie2 = new Model70TonTruckEarly();
@@ -513,7 +521,7 @@ public class ModelACF2Bay extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for(int i = 0; i < 113; i++)
+		for(int i = 0; i < 115; i++)
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
 				GL11.glDisable(GL11.GL_CULL_FACE);
 				bodyModel[i].render(f5);

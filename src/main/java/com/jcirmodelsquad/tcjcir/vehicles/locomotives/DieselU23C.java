@@ -1,9 +1,5 @@
 package com.jcirmodelsquad.tcjcir.vehicles.locomotives;
 
-import com.jcirmodelsquad.tcjcir.models.pantos.Modelpanto_gm6c_down;
-import com.jcirmodelsquad.tcjcir.models.pantos.Modelpanto_gm6c_downup;
-import com.jcirmodelsquad.tcjcir.models.pantos.Modelpanto_gm6c_up;
-import com.jcirmodelsquad.tcjcir.models.pantos.Modelpanto_gm6c_updown;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -12,52 +8,47 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
-import train.common.api.ElectricTrain;
-import train.common.entity.CargoManager;
-import train.common.entity.CargoSpecification;
+import train.common.api.DieselTrain;
+import train.common.api.LiquidManager;
+import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class ElectricGM6C_2 extends ElectricTrain {
-    public ElectricGM6C_2(World world) {
-        super(world);
-        textureDescriptionMap.put(0, "EMDX Demo");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "Conrail");
-        textureDescriptionMap.put(3, "Norfolk Southern");
-        textureDescriptionMap.put(4, "Norfolk Southern (Later in Life)");
-        textureDescriptionMap.put(5, "Fox, North Coast & Cascades (KIT-Lm, Dual Canon)");
-
-        setCargoManager(new CargoManager(new CargoSpecification[][] {
-                { new CargoSpecification(Modelpanto_gm6c_down.class, "pantopart_gm6c",
-                        "Pantograph (Both Down)", 0, 3.0, 0)},
-                { new CargoSpecification(Modelpanto_gm6c_updown.class, "pantopart_gm6c",
-                        "Pantograph (Up Down)", 0, 3.0, 0)},
-                { new CargoSpecification(Modelpanto_gm6c_downup.class, "pantopart_gm6c",
-                        "Pantograph (Down Up)", 0, 3.0, 0)},
-                { new CargoSpecification(Modelpanto_gm6c_up.class, "pantopart_gm6c",
-                        "Pantograph (Both Up)", 0, 3.0, 0)},
-
-        }));
+public class DieselU23C extends DieselTrain {
+    public DieselU23C(World world) {
+        super(world, EnumTrains.U23C.getTankCapacity(), LiquidManager.dieselFilter());//its like magic guys trust me
+        initLoco();
+        textureDescriptionMap.put(0, "Consolidate DeeZ NUTS");
+        textureDescriptionMap.put(1, "Nautilus");
+        textureDescriptionMap.put(2, "Blandsville & Blankerston");
+        textureDescriptionMap.put(3, "");
+        textureDescriptionMap.put(4, "Cock Island");
+        textureDescriptionMap.put(5, "");
+        textureDescriptionMap.put(6, "");
+        textureDescriptionMap.put(7, "");
     }
-
-    public ElectricGM6C_2(World world, double d, double d1, double d2) {
+    public DieselU23C(World world, double d, double d1, double d2){
         this(world);
-        setPosition(d, d1 + (double) yOffset, d2);
+        setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
         motionY = 0.0D;
         motionZ = 0.0D;
-        prevPosX = d ;
+        prevPosX = d;
         prevPosY = d1;
         prevPosZ = d2;
+    }
+
+    public void initLoco() {
+        fuelTrain = 0;
+        locoInvent = new ItemStack[inventorySize];
     }
 
     @Override
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 3.8; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
+        double distance = 3.6; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
         double distanceLR = -0.35; //how far left/right on the entity you ride; left > 0; right < 0;
-        double yOffset = -0.10;
+        double yOffset = 0.3;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
         float rotationCosLR1 = (float) Math.cos(Math.toRadians(this.renderYaw));
@@ -90,7 +81,6 @@ public class ElectricGM6C_2 extends ElectricTrain {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1 +0.0);
         }
     }
-
     @Override
     public void setDead() {
         super.setDead();
@@ -100,8 +90,14 @@ public class ElectricGM6C_2 extends ElectricTrain {
     @Override
     public void pressKey(int i) {
         if (i == 7 && riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
-            ((EntityPlayer) riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCO, worldObj, (int) this.posX + 2, (int) this.posY, (int) this.posZ);
+            ((EntityPlayer) riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCO, worldObj, (int) this.posX, (int) this.posY, (int) this.posZ);
         }
+    }
+
+    @Override
+    public void onUpdate() {
+        checkInvent(locoInvent[0]);
+        super.onUpdate();
     }
 
     @Override
@@ -138,13 +134,22 @@ public class ElectricGM6C_2 extends ElectricTrain {
     }
 
     @Override
+    public float getOptimalDistance(EntityMinecart cart) { return 1.65F;
+    }
+
+    @Override
     public int getSizeInventory() {
         return inventorySize;
     }
 
     @Override
     public String getInventoryName() {
-        return "EMD GM6C";
+        return "GE U23C";
+    }
+
+    @Override
+    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
+        return false;
     }
 
     @Override
@@ -162,16 +167,8 @@ public class ElectricGM6C_2 extends ElectricTrain {
         return true;
     }
     @Override
-    public float getOptimalDistance(EntityMinecart cart) {
-        return 1.45F;
-    }
-
-    @Override
     public boolean canBeAdjusted(EntityMinecart cart) {
         return canBeAdjusted;
     }
-    @Override
-    public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-        return true;
-    }
+
 }

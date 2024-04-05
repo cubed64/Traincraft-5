@@ -1713,7 +1713,7 @@ public class ModelS12 extends ModelConverter //Same as Filename
 			GL11.glTranslated(2.2, 0, 0);
 			theTypeA.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17) {
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/TypeA_new_silvers_rolly.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.1, -0.02, 0);

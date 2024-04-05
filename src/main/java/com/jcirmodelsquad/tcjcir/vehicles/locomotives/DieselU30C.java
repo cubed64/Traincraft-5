@@ -24,6 +24,7 @@ public class DieselU30C extends DieselTrain {
         textureDescriptionMap.put(4, "Rock Island");
         textureDescriptionMap.put(5, "Deadwood & La Mesa");
         textureDescriptionMap.put(6, "West Creek Pacific");
+        textureDescriptionMap.put(7, "Boston & Maine 663 (Guilford)");
 
         //old textures, old model
         /*textureDescriptionMap.put(0, "Burlington Northern");

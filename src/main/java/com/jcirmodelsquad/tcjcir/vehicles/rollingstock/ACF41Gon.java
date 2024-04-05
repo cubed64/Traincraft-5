@@ -38,6 +38,8 @@ public class ACF41Gon extends Freight implements IInventory {
                         "Scrapmetal A", 0, 2.5, 0)},
                 { new CargoSpecification(Modelgondola_load_flat_aggregates_small.class, "loads/gondola_load_flat_aggregates_medium_scrap2",
                         "Scrapmetal B", 0, 2.5, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_small.class, "loads/gondola_load_flat_cullet2_medium",
+                        "Cullet / Scrap Glass", 0, 2.5, 0)},
                 { new CargoSpecification(Modelrebar_bundle.class, "loads/rebar_bundle2",
                         "Rebar Bundle", 0, 2.5, 0)},
                 { new CargoSpecification(Modelcoil_load2.class, "loads/coils",

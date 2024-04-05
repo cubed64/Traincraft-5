@@ -20,6 +20,10 @@ public class DieselDash841C extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "Canadian National");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
+        textureDescriptionMap.put(2, "CSLX");
+        textureDescriptionMap.put(3, "WP (Early)");
+        textureDescriptionMap.put(4, "WP (Late)");
+        textureDescriptionMap.put(5, "WP (Rebuilt)");
     }
     public DieselDash841C(World world, double d, double d1, double d2){
         this(world);

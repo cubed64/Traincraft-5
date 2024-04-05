@@ -34,7 +34,7 @@ public class MillGondola extends Freight implements IInventory {
         textureDescriptionMap.put(7, "PRD");
         textureDescriptionMap.put(8, "PRD");
         textureDescriptionMap.put(9, "PRD (DEMOMAN)");
-        textureDescriptionMap.put(10, "DJJX");
+        textureDescriptionMap.put(10, "DJJX / Generic Black");
         textureDescriptionMap.put(11, "Generic Green");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
@@ -46,6 +46,8 @@ public class MillGondola extends Freight implements IInventory {
                         "Scrapmetal A", 0, 2.475, 0)},
                 { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_scrap2",
                         "Scrapmetal B", 0, 2.475, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_cullet2_medium",
+                        "Cullet / Scrap Glass", 0, 2.475, 0)},
                 { new CargoSpecification(Modelrebar_bundle.class, "loads/rebar_bundle2",
                         "Rebar Bundle", 0, 2.375, 0)},
                 { new CargoSpecification(Modelcoil_load.class, "loads/coils",

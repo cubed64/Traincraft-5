@@ -1226,7 +1226,7 @@ public class ModelGM6C_V2 extends ModelConverter //Same as Filename
 				m.render(f5);
 			}
 		}
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15 ) {
 			//silver dash 2 truck
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_C_dash2_longjohns.png"));
 		} else {
@@ -1234,10 +1234,10 @@ public class ModelGM6C_V2 extends ModelConverter //Same as Filename
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_C_dash2_Black.png"));
 		}
 		GL11.glPushMatrix();
-		GL11.glTranslatef(-1.8F, 0.0F, 0F);
+		GL11.glTranslatef(-1.75F, 0.0F, 0F);
 		flexLate.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glRotatef(180, 0, 1, 0);
-		GL11.glTranslated(-3.6F, 0.0F, 0);
+		GL11.glTranslated(-3.5F, 0.0F, 0);
 		flexLate.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
 
