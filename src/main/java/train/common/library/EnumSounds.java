@@ -255,8 +255,8 @@ public enum EnumSounds {
 	//FoxTC Fictional Diesels
 	DieselGP389W(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselGP38dash9W.class, "leslie_rs5t_3", 0.8F, "EMD_16_645E_Notch8", 0.55F, 53, "EMD_16_645E_Idle", 0.55F, 53, false, "emd_steelbell_4", 10),
 	Dieselgtavthing(com.jcirmodelsquad.tcjcir.vehicles.locomotives.Dieselgtavthing.class,"leslie_s3_1", 1F, "EMD_16_567D3_Notch8", 0.9F, 55, "EMD_16_567D3_Idle", 0.7F, 47, false, "emd_steelbell_4", 10),
-	DieselHustler(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselHustler.class, "wabco3bell", 1F, "Plymouth_V8_Notch8", 0.9F, 8, "Plymouth_V8_Idle", 0.7F, 50, false, "emd_bronzebell_3", 16),
-	DieselILMC(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselILMC.class, "eu07_horn", 2.5F, "GE_HBI_600_Notch8", 0.65F, 80, "GE_HBI_600_Idle", 0.65F, 100, false, "emd_bronzebell_3", 16),
+	//DieselHustler(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselHustler.class, "wabco3bell", 1F, "Plymouth_V8_Notch8", 0.9F, 8, "Plymouth_V8_Idle", 0.7F, 50, false, "emd_bronzebell_3", 16),
+	//DieselILMC(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselILMC.class, "eu07_horn", 2.5F, "GE_HBI_600_Notch8", 0.65F, 80, "GE_HBI_600_Idle", 0.65F, 100, false, "emd_bronzebell_3", 16),
 	DieselMP15DCW9(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselMP15DCW9.class,"leslie_rs3k_2", 2.5F, "EMD_12_645E_Notch8", 1F, 54, "EMD_12_645E_Idle", 1F, 54, false, "emd_steelbell_1", 17),
 
 
@@ -264,7 +264,7 @@ public enum EnumSounds {
 	//FoxTC Electrics
 	//
 	//FoxTC EMD Electrics
-	ElectricGM6C(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricGM6C_2.class, "leslie_s3l_1", 2.5F, "MILW_Notch8", 0.65F, 40, "MILW_Idle", 0.65F, 50, false, "emd_brassbell_1", 15),
+	ElectricGM6C(ElectricGM6C_2.class, "leslie_s3l_1", 2.5F, "MILW_Notch8", 0.65F, 40, "MILW_Idle", 0.65F, 50, false, "emd_brassbell_1", 15),
 
 	//FoxTC ALCO Electrics
 	ElectricEF1(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricEF1.class, "wabco_e2_1", 2.5F, "MILW_Notch8", 0.65F, 40, "MILW_Idle", 0.65F, 50, false, "alco_bronzebell_3", 18),
@@ -272,8 +272,8 @@ public enum EnumSounds {
 	ElectricEP1A(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricEP1A.class, "wabco_e2_1", 2.5F, "MILW_Notch8", 0.65F, 40, "MILW_Idle", 0.65F, 50, false, "alco_bronzebell_3", 18),
 
 	//FoxTC Fictional Electric
-	ElectricILMA(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricILMA.class, "eu07_horn", 2.5F, "MILW_Notch8", 0.65F, 40, "MILW_Idle", 0.65F, 50, false, "alco_bronzebell_3", 18),
-	ElectricILMB(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricILMB.class, "eu07_horn", 2.5F, "MILW_Notch8", 0.65F, 40, "MILW_Idle", 0.65F, 50, false, "alco_bronzebell_3", 18),
+	//ElectricILMA(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricILMA.class, "eu07_horn", 2.5F, "MILW_Notch8", 0.65F, 40, "MILW_Idle", 0.65F, 50, false, "alco_bronzebell_3", 18),
+	//ElectricILMB(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricILMB.class, "eu07_horn", 2.5F, "MILW_Notch8", 0.65F, 40, "MILW_Idle", 0.65F, 50, false, "alco_bronzebell_3", 18),
 	ElectricJT7(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricJT7.class, " ", 2.5F, "MILW_Notch8", 0.65F, 40, "MILW_Idle", 0.65F, 50, false, "alco_bronzebell_3", 18, new String[] {"leslie_a200_3", "leslie_a200_triple_1", "generic_horn_2"}),
 	PCH100H(com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH100H.class, "nathan_p2_1", 1F, "pch100h_notch8", 0.6F, 8, "pch100h_idle", 0.4F, 50, false, "transonic_ebell", 11),
 	PCH120Commute(com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH120Commute.class, " ", 1F, "mg_run", 0.6F, 8, "mg_idle", 0.4F, 50, false, "transonic_ebell", 11, new String[] {"nathan_p2_1", "eu07_horn", "nathan_p2_1", "lu_whistle", "nathan_k5la_big_2", "eu07_horn"}),

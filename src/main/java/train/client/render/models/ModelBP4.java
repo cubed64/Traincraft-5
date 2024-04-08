@@ -10,6 +10,7 @@
 package train.client.render.models;
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergB;
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergBnew;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -975,7 +976,8 @@ public class ModelBP4 extends ModelConverter
 		bodyModel[230].setRotationPoint(-31F, -21F, 7F);
 	}
 
-	ModelBlombergB bogie = new ModelBlombergB();//bloombergB trucks
+	//ModelBlombergB bogie = new ModelBlombergB();//bloombergB trucks
+	ModelBlombergBnew bogie = new ModelBlombergBnew();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
@@ -993,15 +995,15 @@ public class ModelBP4 extends ModelConverter
 		}
 
 
-		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==5){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_Grey.png"));
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5){
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver.png"));
 		} else {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_Black.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Blac.png"));
 		}
 
 		GL11.glPushMatrix();
 		GL11.glScalef(1f,1f,1f);
-		GL11.glTranslatef(-1.6f,0.15f,0.0f);
+		GL11.glTranslatef(-1.6f,-0.025f,0.0f);
 		bogie.render(entity, f, f1, f2, f3, f4, f5);
 
 		GL11.glTranslatef(3.1f,0f,0);

@@ -22,12 +22,19 @@ public class ACF4650 extends Freight implements IInventory {
 		initFreightGrain();
 		textureDescriptionMap.put(0, "BN");
 		textureDescriptionMap.put(1, "BN (ex FWD)");
-		textureDescriptionMap.put(2, "ACFX (Blue Swaws)");
-		textureDescriptionMap.put(3, "BB (1964-1965)");
-		textureDescriptionMap.put(4, "BB (1966-1970)");
-		textureDescriptionMap.put(5, "BB (1970+)");
-		textureDescriptionMap.put(6, "LRR");
-		textureDescriptionMap.put(7, "WP (Early)");
+		textureDescriptionMap.put(2, "BN (ex GN/NP)");
+		textureDescriptionMap.put(3, "ACFX (Blue Swaws)");
+		textureDescriptionMap.put(4, "BB (1964-1965)");
+		textureDescriptionMap.put(5, "BB (1966-1970)");
+		textureDescriptionMap.put(6, "BB (1970+)");
+		textureDescriptionMap.put(7, "LRR");
+		textureDescriptionMap.put(8, "WP (Early)");
+		textureDescriptionMap.put(9, "GN (Early)");
+		textureDescriptionMap.put(10, "GN (BSB)");
+		textureDescriptionMap.put(11, "Far-Mar CO-OP");
+		textureDescriptionMap.put(12, "SP (H-100-12)");
+		textureDescriptionMap.put(13, "SP (H-100-18)");
+		textureDescriptionMap.put(14, "SP (H-100-39)");
 	}
 
 	public void initFreightGrain() {

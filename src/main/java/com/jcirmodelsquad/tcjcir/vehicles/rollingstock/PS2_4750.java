@@ -25,9 +25,19 @@ public class PS2_4750 extends Freight implements IInventory {
 		textureDescriptionMap.put(2, "KSFX 'Seed Co-Op'");
 		textureDescriptionMap.put(3, "KSFX 'Seed Co-Op'");
 		textureDescriptionMap.put(4, "FNCC Black");
-		textureDescriptionMap.put(5, "");
-		textureDescriptionMap.put(6, "");
-		textureDescriptionMap.put(7, "");
+		textureDescriptionMap.put(5, "SNEED'S");
+		textureDescriptionMap.put(6, "UP");
+		textureDescriptionMap.put(7, "UP (But Boring)");
+		textureDescriptionMap.put(8, "CRIPple");
+		textureDescriptionMap.put(9, "The COCK!!!1!");
+		textureDescriptionMap.put(10, "MILW");
+		textureDescriptionMap.put(11, "MILW but Intermountain fucked up apparently");
+		textureDescriptionMap.put(12, "Far-Mar CO-OP");
+		textureDescriptionMap.put(13, "DRGW");
+		textureDescriptionMap.put(14, "FW&D");
+		textureDescriptionMap.put(15, "BN");
+		textureDescriptionMap.put(16, "CNW");
+		textureDescriptionMap.put(17, "CNW again");
 	}
 
 	public void initFreightGrain() {

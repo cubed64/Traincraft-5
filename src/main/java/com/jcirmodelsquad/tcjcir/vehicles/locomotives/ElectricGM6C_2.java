@@ -26,6 +26,7 @@ public class ElectricGM6C_2 extends ElectricTrain {
         textureDescriptionMap.put(3, "Norfolk Southern");
         textureDescriptionMap.put(4, "Norfolk Southern (Later in Life)");
         textureDescriptionMap.put(5, "Fox, North Coast & Cascades (KIT-Lm, Dual Canon)");
+        textureDescriptionMap.put(6, "FNCC 600 (JCIR 6 Years Celebration Unit, Not Canon)");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Modelpanto_gm6c_down.class, "pantopart_gm6c",

@@ -66,7 +66,7 @@ public class ItemHandler {
 		}
 		if (entity instanceof EntityFreightCenterbeam_Wood_1 || entity instanceof EntityFreightCenterbeam_Wood_2 || entity instanceof Freight66centerbeam || entity instanceof Freight60centerbeam ||
 				entity instanceof EntityFlatCartWoodUS || entity instanceof EntityBulkheadFlatCart || entity instanceof EntityFlatCarLogs_DB ||
-				entity instanceof EntityFreightWood || entity instanceof EntityFreightWood2 || entity instanceof Freight73centerbeam || entity instanceof LogcarNP || entity instanceof  Thrall63centerbeam) {
+				entity instanceof EntityFreightWood || entity instanceof EntityFreightWood2 || entity instanceof Freight73centerbeam || entity instanceof  Thrall63centerbeam) {
             int isid = OreDictionary.getOreID(itemstack);
 			return isid == plankWood || isid == logWood || isid == slabWood || isid == stairWood || isid == dw1|| isid == dw2||
 					itemstack.getItem() == Item.getItemFromBlock(Blocks.ladder) || itemstack.getItem() == Item.getItemFromBlock(Blocks.fence) || itemstack.getItem() == Item.getItemFromBlock(Blocks.fence_gate) || isid == rubberWood;

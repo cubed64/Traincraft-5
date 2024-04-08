@@ -370,7 +370,7 @@ public enum ItemIDs {
 	minecartCF7round("ItemRollingStock", "cf7round", 3),
 	minecartCF7round3("ItemRollingStock", "cf7round3", 3),
 	minecartCF7angle2("ItemRollingStock", "cf7dbrr", 2),
-	minecartCF7angle3("ItemRollingStock", "cf7angle3", 2),
+	minecartCF7angle3("ItemRollingStock", "cf7angle3", 3),
 	minecartCF7hh("ItemRollingStock", "cf7highhood", 2),
 	minecartF40PH("ItemRollingStock", "f40ph", 5),
 
@@ -394,8 +394,9 @@ public enum ItemIDs {
 	minecartGP9b("ItemRollingStock", "gp9b", 3),
 	minecartGP13("ItemRollingStock", "gp13", 3),
 	minecartGP15("ItemRollingStock", "gp15", 3),
-	minecartGP30("ItemRollingStock", "gp30", 3),
-	minecartGP35("ItemRollingStock", "gp35", 3),
+	minecartGP18("ItemRollingStock", "gp18", 3),
+	minecartGP30("ItemRollingStock", "gp30", 4),
+	minecartGP35("ItemRollingStock", "gp35", 4),
 	minecartGP38dash9W("ItemRollingStock", "gp38dash9w", 3),
 	minecartGP38h3("ItemRollingStock", "gp38h3icon", 4),
 	minecartGP38("ItemRollingStock", "gp38", 4),
@@ -554,7 +555,7 @@ public enum ItemIDs {
 	minecartFOLM1B("ItemRollingStock", "folm1b", 9),
 	//minecartBUnitFOLM1B("ItemRollingStock", "folm1b", 4),
 	minecartKrautt("ItemRollingStock", "ML4000", 5),
-	minecartILMC("ItemRollingStock", "ILMC_ICON", 2),
+	//minecartILMC("ItemRollingStock", "ILMC_ICON", 2),
 
 	minecartSlugMA("ItemRollingStock", "slugma", 2),
 	minecartF7BSlug("ItemRollingStock", "f7b", 3),
@@ -569,8 +570,8 @@ public enum ItemIDs {
 
 	minecartGM6C("ItemRollingStock", "GM6C_Icon", 5),
 
-	minecartILMA("ItemRollingStock", "I.L.MA_icon", 2),
-	minecartILMB("ItemRollingStock", "I.L.M.B", 2),
+	//minecartILMA("ItemRollingStock", "I.L.MA_icon", 2),
+	//minecartILMB("ItemRollingStock", "I.L.M.B", 2),
 	minecartJT7("ItemRollingStock", "jt7", 8),
 
 	minecartAEM7("ItemRollingStock", "aem7", 8),
@@ -761,7 +762,7 @@ public enum ItemIDs {
 	minecartHighrailTruck("ItemRollingStock", "highrail", 3),
 	minecartFRED("ItemRollingStock", "fred", 5),
 
-	minecartHustler("ItemRollingStock", "hustler", 2),
+	//minecartHustler("ItemRollingStock", "hustler", 2),
 	minecartBoulderWagon("ItemRollingStock","BoulderWagon",3),
 	//minecartLogcarNP( "ItemRollingStock","logcarNP",3),
 	//minecartCF7R("ItemRollingStock", "cf7r", 12),
