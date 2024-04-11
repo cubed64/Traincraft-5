@@ -609,6 +609,7 @@ public enum ItemIDs {
 	minecartGN40("ItemRollingStock", "gn40", 3),
 	minecartR70Reefer("ItemRollingStock", "r70", 5),
 	minecartNSCchildHUH("ItemRollingStock", "NSC_3294_mechanical_reefer", 2),
+	minecartPCF6033("ItemRollingStock", "6033_Icon", 4),
 
 	minecartVersaLongi("ItemRollingStock", "versalongi", 4),
 	minecartVersaTrans("ItemRollingStock", "versatrans", 4),

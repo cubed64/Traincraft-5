@@ -1334,6 +1334,7 @@ item.tc:minecartFNCC50Foot.name=KSFI 50' Highcube Boxcar
 item.tc:minecartGN40.name=Great Northern Homebuilt 40' Boxcar(s)
 item.tc:minecartR70Reefer.name=PFE R-70-20 Reefer
 item.tc:minecartNSCchildHUH.name=National Steel Car 3294 Mechanical Reefer
+item.tc:minecartPCF6033.name=PC&F 6033 Cu Ft Boxcar
 
 
 entity.tc.PS140.name=Pullman Standard 40' Boxcar
@@ -1348,6 +1349,7 @@ entity.tc.FNCC50FootBoxcar.name=KSFI 50' Highcube Boxcar
 entity.tc.GN40.name=Great Northern Homebuilt 40' Boxcar(s)
 entity.tc.R70Reefer.name=PFE R-70-20 Reefer
 entity.tc.NSCReefer.name=National Steel Car 3294 Mechanical Reefer
+entity.tc.PCF6033.name=PC&F 6033 Cu Ft Boxcar
 
 item.tc:minecartVersaLongi.name=Versaflood Longitudinal Hopper
 item.tc:minecartVersaTrans.name=Versaflood Transverse Hopper

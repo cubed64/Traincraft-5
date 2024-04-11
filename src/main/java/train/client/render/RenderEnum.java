@@ -1512,6 +1512,7 @@ RenderEnum {
 	GN40(GN40.class, new ModelGN40box(),"gn40_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	R70Reefer(R70Reefer.class, new ModelR70Reefer(),"R70Reefer_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	NSCReefer(NSCReefer.class, new ModelNSCReefer(),"NSCReefer_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PCF6033(PCF6033.class, new ModelPCF6033(),"pcf_6033_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	VersaLongi(VersaLongi.class, new ModelVersaLongi(),"versa_longi_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	VersaTrans(VersaTrans.class, new ModelVersaTrans(),"versa_trans_", true, new float[]{0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
