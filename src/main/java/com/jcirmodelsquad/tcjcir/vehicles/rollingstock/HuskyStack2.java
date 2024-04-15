@@ -86,6 +86,11 @@ public class HuskyStack2 extends Freight implements IInventory {
 						new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_NFCU",
 								"Dual Containers (North Fox Container Lines)", 0, 1.533, 0) },
 
+				{ new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_safmarine",
+						"Dual Containers (Safmarine)", 0, 2.845, 0),
+						new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_safmarine",
+								"Dual Containers (Safmarine)", 0, 1.533, 0) },
+
 				{ new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_Blue",
 						"Dual Containers (Mix 1)", 0, 2.845, 0),
 						new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_White",
@@ -141,6 +146,21 @@ public class HuskyStack2 extends Freight implements IInventory {
 						new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_K-Line",
 								"Dual Containers (Mix 11)", 0, 1.533, 0) },
 
+				{ new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_safmarine",
+						"Dual Containers (Mix 12)", 0, 2.845, 0),
+						new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_K-Line",
+								"Dual Containers (Mix 12)", 0, 1.533, 0) },
+
+				{ new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_White",
+						"Dual Containers (Mix 13)", 0, 2.845, 0),
+						new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_safmarine",
+								"Dual Containers (Mix 13)", 0, 1.533, 0) },
+
+				{ new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_Cosco",
+						"Dual Containers (Mix 14)", 0, 2.845, 0),
+						new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_safmarine",
+								"Dual Containers (Mix 14)", 0, 1.533, 0) },
+
 				{ new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_NFCU",
 						"Single Container (NFCU)", 0, 2.845, 0)},
 
@@ -173,6 +193,9 @@ public class HuskyStack2 extends Freight implements IInventory {
 
 				{ new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_CSX_Blue",
 						"Single Container (CSX2)", 0, 2.845, 0)},
+
+				{ new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_safmarine",
+						"Single Container (Safmarine)", 0, 2.845, 0)},
 		}));
 	}
 

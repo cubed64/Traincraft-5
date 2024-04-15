@@ -343,11 +343,12 @@ public enum ItemIDs {
 	minecartF01("ItemRollingStock", "f01", 3),
 	minecartP01a("ItemRollingStock", "p01a", 4),
 	minecartVanderbackTender("ItemRollingStock", "vanderbacktender", 3),
-	minecartBKno2a("ItemRollingStock", "bkno2", 5),
-	minecartBKno2b("ItemRollingStock", "bkno2", 5),
+	minecartBKno2a("ItemRollingStock", "bkno2", 3),
+	minecartBKno2b("ItemRollingStock", "bkno2", 3),
 	minecartWCPBuckingBull("ItemRollingStock", "wcp_buckingbull", 4),
 	minecartWCPBaler("ItemRollingStock", "wcp_baler", 2),
 	minecartWCPMacky("ItemRollingStock", "wcp_macky", 4),
+	minecartClimaxB("ItemRollingStock", "climaxb", 3),
 
 	minecartLocoC11("ItemRollingStock", "train_C11", 5),
 	minecartOnion("ItemRollingStock", "Onion", 10),
@@ -561,6 +562,7 @@ public enum ItemIDs {
 	minecartF7BSlug("ItemRollingStock", "f7b", 3),
 	//minecartS1BL("ItemRollingStock", "s1bl", 3),
 	minecartSMSC1("ItemRollingStock", "smsc1", 5),
+	minecartCEEslug("ItemRollingStock", "ceeslug", 4),
 
 
 	//E-lect-trock//

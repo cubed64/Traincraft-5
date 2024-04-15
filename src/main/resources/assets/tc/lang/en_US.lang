@@ -802,6 +802,7 @@ item.tc:minecartBKno2b.name=Booth-Kelly Lumber Co. No 2 (Rear)
 item.tc:minecartWCPBuckingBull.name=WCP Bucking Bull 2-6-6-0
 item.tc:minecartWCPBaler.name=WCP Baler Tender
 item.tc:minecartWCPMacky.name=WCP Macky 0-10-2
+item.tc:minecartClimaxB.name=50 Ton Class B Climax
 
 item.tc:minecartLocoC11.name=JNR C11
 item.tc:minecartOnion.name=Onion
@@ -828,6 +829,7 @@ entity.tc.BKno2b.name=Booth-Kelly Lumber Co. No 2 (Rear)
 entity.tc.WCPBuckingBull.name=WCP Bucking Bull 2-6-6-0
 entity.tc.WCPBaler.name=WCP Baler Tender
 entity.tc.WCPMacky.name=WCP Macky 0-10-2
+entity.tc.ClimaxB.name=50 Ton Class B Climax
 
 entity.tc.Loco Steam C11.name=JNR C11
 entity.tc.Onion.name=Onion
@@ -877,6 +879,7 @@ item.tc:minecartGP9b.name=EMD GP9b
 item.tc:minecartGP7old.name=EMD GP7 (Old Model)
 item.tc:minecartGP13.name=EMD GP13
 item.tc:minecartGP15.name=EMD GP15-1
+item.tc:minecartGP18.name=EMD GP18
 item.tc:minecartGP30.name=EMD GP30
 item.tc:minecartGP35.name=EMD GP35 (Phase 1)
 item.tc:minecartGP38dash9W.name=MT&S GP38W-2
@@ -958,6 +961,7 @@ entity.tc.GP9b.name=EMD GP9b
 entity.tc.GP7old.name=EMD GP7 (Old Model)
 entity.tc.GP13.name=EMD GP13
 entity.tc.GP15.name=EMD GP15-1
+entity.tc.GP18.name=EMD GP18
 entity.tc.GP30.name=EMD GP30
 entity.tc.GP35.name=EMD GP35 (Phase 1)
 entity.tc.GP38dash9W.name=MT&S GP38W-2
@@ -1238,6 +1242,7 @@ item.tc:minecartSlugMA.name=EMD GP Slug (SlugMA)
 item.tc:minecartF7BSlug.name=EMD F7B Slug
 item.tc:minecartS1BL.name=FNCC S1BL Slug
 item.tc:minecartSMSC1.name=CEE Slug Motor System, C-C, Type 1
+item.tc:minecartCEEslug.name=CEE rebuilt slug (U23B core)
 
 
 entity.tc.NRE3gs21b.name=NRE 3GS21B Genset
@@ -1252,6 +1257,7 @@ entity.tc.SlugMA.name=EMD GP Slug (SlugMA)
 entity.tc.F7BSlug.name=EMD F7B Slug
 entity.tc.S1BL.name=FNCC S1BL Slug
 entity.tc.SMSC1.name=CEE Slug Motor System, C-C, Type 1
+entity.tc.CEEslug.name=CEE rebuilt slug (U23B core)
 
 --------------------------------------------------------
 
