@@ -1305,19 +1305,19 @@ public class ModelC855a extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 			}
 		}
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1784) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-2.4, -0.03, 0);
+			GL11.glTranslated(-1.45, -0.03, 0);
 			theBetterTrucks.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(2.8, 0, 0);
+			GL11.glTranslated(-1.42, 0, 0);
 			theBetterTrucks.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(3.8, 0, 0);
+			GL11.glTranslated(4.31, 0, 0);
 			theBetterTrucks.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(4.8, 0, 0);
+			GL11.glTranslated(1.43, 0, 0);
 			theBetterTrucks.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else {

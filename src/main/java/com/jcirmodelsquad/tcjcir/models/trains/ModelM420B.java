@@ -30,7 +30,7 @@ public class ModelM420B extends ModelConverter //Same as Filename
 
 	public ModelM420B() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[312];
+		bodyModel = new ModelRendererTurbo[330];
 
 		initbodyModel_1();
 
@@ -354,6 +354,24 @@ public class ModelM420B extends ModelConverter //Same as Filename
 		bodyModel[309] = new ModelRendererTurbo(this, 206, 33, textureX, textureY, "lamp"); // Box 298 liveryimg 2
 		bodyModel[310] = new ModelRendererTurbo(this, 208, 28, textureX, textureY, "lamp"); // Box 298 rear morker lights
 		bodyModel[311] = new ModelRendererTurbo(this, 214, 33, textureX, textureY, "lamp"); // Box 298 rear morker lights
+		bodyModel[312] = new ModelRendererTurbo(this, 222, 21, textureX, textureY); // Box 327
+		bodyModel[313] = new ModelRendererTurbo(this, 224, 18, textureX, textureY); // Box 328
+		bodyModel[314] = new ModelRendererTurbo(this, 224, 24, textureX, textureY); // Box 329
+		bodyModel[315] = new ModelRendererTurbo(this, 233, 21, textureX, textureY); // Box 330
+		bodyModel[316] = new ModelRendererTurbo(this, 161, 20, textureX, textureY); // Box 439
+		bodyModel[317] = new ModelRendererTurbo(this, 43, 139, textureX, textureY); // Box 398 not a ditchlight will not glow
+		bodyModel[318] = new ModelRendererTurbo(this, 36, 139, textureX, textureY); // Box 398 not a ditchlight will not glow
+		bodyModel[319] = new ModelRendererTurbo(this, 477, 130, textureX, textureY); // Box 398 not a ditchlight will not glow
+		bodyModel[320] = new ModelRendererTurbo(this, 484, 130, textureX, textureY); // Box 398 not a ditchlight will not glow
+		bodyModel[321] = new ModelRendererTurbo(this, 226, 8, textureX, textureY, "lamp"); // Box 9 PRIME1-4
+		bodyModel[322] = new ModelRendererTurbo(this, 226, 8, textureX, textureY, "lamp"); // Box 8 PRIME1-2
+		bodyModel[323] = new ModelRendererTurbo(this, 226, 8, textureX, textureY, "lamp"); // Box 7 PRIME1-3
+		bodyModel[324] = new ModelRendererTurbo(this, 226, 8, textureX, textureY, "lamp"); // Box 6 PRIME1-1
+		bodyModel[325] = new ModelRendererTurbo(this, 226, 12, textureX, textureY); // Box 364 prime base
+		bodyModel[326] = new ModelRendererTurbo(this, 46, 153, textureX, textureY); // Box 132
+		bodyModel[327] = new ModelRendererTurbo(this, 20, 153, textureX, textureY); // Box 133
+		bodyModel[328] = new ModelRendererTurbo(this, 444, 166, textureX, textureY); // Box 328
+		bodyModel[329] = new ModelRendererTurbo(this, 470, 166, textureX, textureY); // Box 329
 
 		bodyModel[0].addBox(0F, 0F, 0F, 3, 2, 3, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-43.5F, 3F, -1.5F);
@@ -570,8 +588,8 @@ public class ModelM420B extends ModelConverter //Same as Filename
 		bodyModel[70].addBox(0F, 0F, 0F, 11, 6, 0, 0F); // Box 721
 		bodyModel[70].setRotationPoint(-27.5F, -12F, 11F);
 
-		bodyModel[71].addShapeBox(0F, 0F, 0F, 3, 1, 0, 0F,0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 3F, 0F, 0F, 3F, 0F, 0F, 0F, 0F); // Box 723
-		bodyModel[71].setRotationPoint(-11.5F, -12F, -11F);
+		bodyModel[71].addShapeBox(0F, 0F, 0F, 3, 1, 0, 0F,0F, 0F, 0F, 0.25F, -3F, 0F, 0.25F, -3F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F, 0F, 3F, 0F, 0F, 3F, 0F, 0.25F, 0F, 0F); // Box 723
+		bodyModel[71].setRotationPoint(-11.5F, -12F, -11.01F);
 
 		bodyModel[72].addBox(0F, 0F, 0F, 16, 8, 0, 0F); // Box 724
 		bodyModel[72].setRotationPoint(-27.5F, -12F, -11F);
@@ -790,19 +808,19 @@ public class ModelM420B extends ModelConverter //Same as Filename
 		bodyModel[143].setRotationPoint(40.5F, -9F, -8F);
 
 		bodyModel[144].addBox(0.5F, 0F, 0.5F, 3, 9, 2, 0F); // Box 412 cs1
-		bodyModel[144].setRotationPoint(-23.4F, -15F, -6F);
+		bodyModel[144].setRotationPoint(-23.4F, -15F, -2F);
 		bodyModel[144].rotateAngleY = -0.19198622F;
 
 		bodyModel[145].addBox(0F, 0F, 0F, 6, 7, 2, 0F); // Box 413 cs1
-		bodyModel[145].setRotationPoint(-28.5F, -13F, -2F);
+		bodyModel[145].setRotationPoint(-28.5F, -13F, 2F);
 		bodyModel[145].rotateAngleY = -0.59341195F;
 
 		bodyModel[146].addShapeBox(0F, 0F, 0F, 12, 4, 2, 0F,0F, 0F, 0F, -6F, 0F, 0F, -6F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, -6F, -2F, 0F, -6F, -2F, 0F, 0F, -2F, 0F); // Box 86 cs1
-		bodyModel[146].setRotationPoint(-28.5F, -15F, -2F);
+		bodyModel[146].setRotationPoint(-28.5F, -15F, 2F);
 		bodyModel[146].rotateAngleY = -0.59341195F;
 
 		bodyModel[147].addShapeBox(-0.5F, 0F, 0.5F, 4, 2, 2, 0F,0F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, 0F, 0F, -0.25F); // Box 476 cs1 radio
-		bodyModel[147].setRotationPoint(-23.4F, -17F, -6F);
+		bodyModel[147].setRotationPoint(-23.4F, -17F, -2F);
 		bodyModel[147].rotateAngleY = -0.19198622F;
 
 		bodyModel[148].addShapeBox(0F, 0F, 0F, 1, 4, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F); // Box 504
@@ -1099,14 +1117,14 @@ public class ModelM420B extends ModelConverter //Same as Filename
 		bodyModel[245].addBox(0F, 0F, 0F, 5, 8, 0, 0F); // Box 225
 		bodyModel[245].setRotationPoint(-35.5F, -9F, 11F);
 
-		bodyModel[246].addShapeBox(0F, 0F, 0F, 3, 1, 0, 0F,0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, 3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 3F, 0F); // Box 723
-		bodyModel[246].setRotationPoint(-30.5F, -12F, -11F);
+		bodyModel[246].addShapeBox(0F, 0F, 0F, 3, 1, 0, 0F,0.25F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, -3F, 0F, 0F, 3F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0F, 3F, 0F); // Box 723
+		bodyModel[246].setRotationPoint(-30.5F, -12F, -11.01F);
 
-		bodyModel[247].addShapeBox(0F, 0F, 0F, 3, 1, 0, 0F,0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 3F, 0F, 0F, 3F, 0F, 0F, 0F, 0F); // Box 723
-		bodyModel[247].setRotationPoint(-16.5F, -12F, 11F);
+		bodyModel[247].addShapeBox(0F, 0F, 0F, 3, 1, 0, 0F,0F, 0F, 0F, 0.25F, -3F, 0F, 0.25F, -3F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F, 0F, 3F, 0F, 0F, 3F, 0F, 0.25F, 0F, 0F); // Box 723
+		bodyModel[247].setRotationPoint(-16.5F, -12F, 11.01F);
 
-		bodyModel[248].addShapeBox(0F, 0F, 0F, 3, 1, 0, 0F,0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, 3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 3F, 0F); // Box 723
-		bodyModel[248].setRotationPoint(-30.5F, -12F, 11F);
+		bodyModel[248].addShapeBox(0F, 0F, 0F, 3, 1, 0, 0F,0.25F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, -3F, 0F, 0F, 3F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0F, 3F, 0F); // Box 723
+		bodyModel[248].setRotationPoint(-30.5F, -12F, 11.01F);
 
 		bodyModel[249].addBox(0F, 0F, 0F, 6, 15, 1, 0F); // Box 2
 		bodyModel[249].setRotationPoint(-22.5F, -21F, -7F);
@@ -1304,23 +1322,77 @@ public class ModelM420B extends ModelConverter //Same as Filename
 		bodyModel[311].addShapeBox(0F, 0F, -4F, 1, 1, 3, 0F,0F, 0F, 0F, -0.8F, 0F, 0F, -0.8F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.8F, 0F, 0F, -0.8F, 0F, 0F, 0F, 0F, 0F); // Box 298 rear morker lights
 		bodyModel[311].setRotationPoint(-35.41F, -21F, -2.5F);
 		bodyModel[311].rotateAngleY = 0.38397244F;
+
+		bodyModel[312].addBox(0F, 0F, 0F, 4, 1, 1, 0F); // Box 327
+		bodyModel[312].setRotationPoint(6F, -23F, -5.5F);
+
+		bodyModel[313].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 328
+		bodyModel[313].setRotationPoint(7F, -22.75F, -4.5F);
+
+		bodyModel[314].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 329
+		bodyModel[314].setRotationPoint(6.5F, -22.75F, -6.5F);
+
+		bodyModel[315].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 330
+		bodyModel[315].setRotationPoint(8.5F, -22F, -5.5F);
+
+		bodyModel[316].addShapeBox(0F, 0F, 0F, 3, 1, 0, 0F,-1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 439
+		bodyModel[316].setRotationPoint(-21.5F, -22.5F, -2F);
+
+		bodyModel[317].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F); // Box 398 not a ditchlight will not glow
+		bodyModel[317].setRotationPoint(-40.5F, 0.5F, -4F);
+
+		bodyModel[318].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F); // Box 398 not a ditchlight will not glow
+		bodyModel[318].setRotationPoint(-40.5F, 0.5F, 2F);
+
+		bodyModel[319].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 398 not a ditchlight will not glow
+		bodyModel[319].setRotationPoint(39.5F, 0.5F, -4F);
+
+		bodyModel[320].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 398 not a ditchlight will not glow
+		bodyModel[320].setRotationPoint(39.5F, 0.5F, 2F);
+
+		bodyModel[321].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F); // Box 9 PRIME1-4
+		bodyModel[321].setRotationPoint(-27F, -23F, -1F);
+
+		bodyModel[322].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F); // Box 8 PRIME1-2
+		bodyModel[322].setRotationPoint(-27F, -23F, -1F);
+
+		bodyModel[323].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F); // Box 7 PRIME1-3
+		bodyModel[323].setRotationPoint(-27F, -23F, -1F);
+
+		bodyModel[324].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -1F, 0F, -1F, -1F, 0F, -1F, -0.25F, 0F, -0.25F); // Box 6 PRIME1-1
+		bodyModel[324].setRotationPoint(-27F, -23F, -1F);
+
+		bodyModel[325].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 364 prime base
+		bodyModel[325].setRotationPoint(-27F, -22.5F, -1F);
+
+		bodyModel[326].addShapeBox(0F, 0F, 0F, 2, 3, 8, 0F,-2F, -3F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 132
+		bodyModel[326].setRotationPoint(-41.51F, 6F, -8F);
+
+		bodyModel[327].addShapeBox(0F, 0F, 0F, 2, 3, 8, 0F,-2F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, -2F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F); // Box 133
+		bodyModel[327].setRotationPoint(-41.51F, 6F, 0F);
+
+		bodyModel[328].addShapeBox(0F, 0F, 0F, 2, 3, 8, 0F,0F, 0F, 0F, -2F, 0F, 0F, -2F, -3F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, 0F, 0F, 0F); // Box 328
+		bodyModel[328].setRotationPoint(39.51F, 6F, 0F);
+
+		bodyModel[329].addShapeBox(0F, 0F, 0F, 2, 3, 8, 0F,0F, -3F, 0F, -2F, -3F, 0F, -2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 329
+		bodyModel[329].setRotationPoint(39.51F, 6F, -8F);
 	}
 	ModelTypeBnew theB = new ModelTypeBnew();
 	ModelZWT theZ = new ModelZWT();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 312; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
+		for(ModelRendererTurbo m :bodyModel) {
+			if(m.boxName.equals("lamp")){
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
+				m.render(f5);
 				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
+			}else if(m.boxName.equals("cull")){
 				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
+				m.render(f5);
 				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
+			}else{
+				m.render(f5);
 			}
 		}
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15464) {
@@ -1332,16 +1404,15 @@ public class ModelM420B extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.05, 0, 0);
 			theB.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1154){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6){
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/zwt_fncc_silver.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.52, -0.025, 0);
-			theB.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glTranslated(-1.4, -0.025, 0);
+			theZ.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(3.05, 0, 0);
-			theB.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glTranslated(2.8, 0, 0);
+			theZ.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/zwt_black.png"));
 			GL11.glPushMatrix();

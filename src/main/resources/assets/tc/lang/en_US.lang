@@ -920,6 +920,7 @@ item.tc:minecartSW900.name=EMD SW900
 item.tc:minecartSW1000.name=EMD SW1000
 item.tc:minecartSW1200.name=EMD SW1200
 item.tc:minecartSW1500.name=EMD SW1500
+item.tc:minecartMP900.name=Masaou MP900
 item.tc:minecartMP15DCW9.name=WFLW MP15BW
 
 item.tc:minecartBeep.name=ATSF SWBLW (The Beep)
@@ -1002,6 +1003,7 @@ entity.tc.SW900.name=EMD SW900
 entity.tc.SW1000.name=EMD SW1000
 entity.tc.SW1200.name=EMD SW1200
 entity.tc.SW1500.name=EMD SW1500
+entity.tc.MP900.name=Masaou MP900
 entity.tc.MP15DCW9.name=WFLW MP15BW
 
 entity.tc.Beep.name=ATSF SWBLW (The Beep)

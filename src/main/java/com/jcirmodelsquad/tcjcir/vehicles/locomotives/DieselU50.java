@@ -24,6 +24,7 @@ public class DieselU50 extends DieselTrain {
         textureDescriptionMap.put(4, "Southfield");
         textureDescriptionMap.put(5, "Southfield De Mexico");
         textureDescriptionMap.put(6, "Penn Central the objectively best railroad to own the U50 guys i swear PC owned like 30 of them trust me bro my source is that i MADE IT THE FUCK UP");
+        textureDescriptionMap.put(7, "hamburge helper rayroade");
     }
     public DieselU50(World world, double d, double d1, double d2){
         this(world);

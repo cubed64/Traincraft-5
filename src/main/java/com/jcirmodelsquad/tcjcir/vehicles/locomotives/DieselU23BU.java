@@ -21,13 +21,15 @@ public class DieselU23BU extends DieselTrain {
         textureDescriptionMap.put(1, "FNCC (KIT-L, 2nd Order, Dual Canon)");
         textureDescriptionMap.put(2, "FNCC (Experimental 1, Big Canon)");
         textureDescriptionMap.put(3, "FNCC (100 Years Bicentennial, Dual Canon)");
-        textureDescriptionMap.put(4, "North Fox (Ex Sou, High Hood, Big Canon)");
-        textureDescriptionMap.put(5, "North Fox (Ex Sou, Patch, Big Canon)");
+        textureDescriptionMap.put(4, "FNCC (Ex Sou, High Hood, Big Canon)");
+        textureDescriptionMap.put(5, "FNCC (Ex Sou, Patch, Big Canon)");
         textureDescriptionMap.put(6, "Blandsville & Blankerston (Late Phase Blank)");
         textureDescriptionMap.put(7, "FNCC (KIT-80, Dual Canon)");
         textureDescriptionMap.put(8, "FNCC (MW-S, Big Canon)");
         textureDescriptionMap.put(9, "FNCC (591 & 592, Ex Mon, Big Canon)");
         textureDescriptionMap.put(10, "FNCC (Kit-Lw, 1st Order, Dual Canon)");
+        textureDescriptionMap.put(11, "FNCC (Ex ATSF, Patch, Dual Canon)");
+        textureDescriptionMap.put(12, "FNCC (Ex ATSF, Dual Canon)");
 //"Cyan", "Skin17", "Skin29", "Skin19", "Skin16", "Black"
     }
     public DieselU23BU(World world, double d, double d1, double d2){

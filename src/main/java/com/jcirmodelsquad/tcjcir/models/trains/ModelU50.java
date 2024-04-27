@@ -1107,7 +1107,8 @@ public class ModelU50 extends ModelConverter //Same as Filename
 			}
 		}
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 0) {
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 0
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.38, -0.03, 0);

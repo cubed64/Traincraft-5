@@ -436,6 +436,7 @@ public enum ItemIDs {
 	minecartSW1000("ItemRollingStock", "sw1000", 3),
 	minecartSW1200("ItemRollingStock","sw1200", 4),
 	minecartSW1500("ItemRollingStock", "sw1500", 4),
+	minecartMP900("ItemRollingStock", "mp900", 4),
 	minecartMP15DCW9("ItemRollingStock", "mp15dcw9", 4),
 
 	minecartBeep("ItemRollingStock", "BeepIcon", 2),

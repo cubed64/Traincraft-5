@@ -59,6 +59,9 @@ public class DieselGP9 extends DieselTrain {
         textureDescriptionMap.put(39, "NP (Phase II no DB)");
         textureDescriptionMap.put(40, "NP (Phase III)");
         textureDescriptionMap.put(41, "NP (Phase III no DB)");
+        textureDescriptionMap.put(42, "DLMR (Early)");
+        textureDescriptionMap.put(43, "DLMR (Late)");
+        textureDescriptionMap.put(44, "DLMR (MOW)");
     }
     public DieselGP9(World world, double d, double d1, double d2){
         this(world);

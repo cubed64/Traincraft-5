@@ -19,6 +19,7 @@ public class DieselC855a extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "Union Pacific");
         textureDescriptionMap.put(1, "Fox, North Coast & Cascades (Not Canon)");
+        textureDescriptionMap.put(2, "Great Lakes & Northern Territories");
     }
     public DieselC855a(World world, double d, double d1, double d2){
         this(world);

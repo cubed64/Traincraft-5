@@ -20,6 +20,8 @@ public class ICCBaywindowWP extends EntityRollingStock implements IPassenger {
         textureDescriptionMap.put(5, "Fox, North Coast & Cascades (Regal Late)");
         textureDescriptionMap.put(6, "Fox, North Coast & Cascades (KIT-L)");
         textureDescriptionMap.put(7, "North Fox (KIT-L)");
+        textureDescriptionMap.put(8, "DLMR");
+        textureDescriptionMap.put(9, "DLMR (but somebody spilled the ketchup)");
     }
 
     public ICCBaywindowWP(World world, double d, double d1, double d2){

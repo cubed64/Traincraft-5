@@ -30,6 +30,8 @@ public class Thrall63centerbeam extends Freight implements IInventory {
         textureDescriptionMap.put(3, "COER 'CENTERBEAM'");
         textureDescriptionMap.put(4, "WRX");
         textureDescriptionMap.put(5, "FNCC");
+        textureDescriptionMap.put(6, "DN");
+
         setCargoManager(new CargoManager(new CargoSpecification[][] {
 
                 //is 0.315 5 mb? is 0.063 1 mb? bigger positive number means lower, smaller positive number means higher

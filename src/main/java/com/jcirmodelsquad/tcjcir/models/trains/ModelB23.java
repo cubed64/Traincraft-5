@@ -1972,7 +1972,7 @@ public class ModelB23 extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.12, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7){
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 29){
 			//fb2 grey late
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_grey.png"));
 			GL11.glPushMatrix();

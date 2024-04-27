@@ -1115,6 +1115,9 @@ RenderEnum {
 	SW1500(DieselSW1500.class,  new ModelSW1500(), "sw1500_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
+	MP900(DieselMP900.class,  new ModelMP900(), "mp900_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 	MP15DCW9( DieselMP15DCW9.class,  new ModelMP15DCW9(), "mp15dcw-9_", true,new float[] {-1.2F, -0.01F, 0F},  new float[] { 180F, 180F, 0F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{
 			add(new double[]{1.05D, 1.5D, 0.0D});
