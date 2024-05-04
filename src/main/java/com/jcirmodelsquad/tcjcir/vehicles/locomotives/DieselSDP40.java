@@ -28,6 +28,7 @@ public class DieselSDP40 extends DieselTrain {
         textureDescriptionMap.put(6, "MRL (80s-90s)");
         textureDescriptionMap.put(7, "GN (BSB)");
         textureDescriptionMap.put(8, "GN (EB)");
+        textureDescriptionMap.put(9, "Steampunk Rail");
     }
     public DieselSDP40(World world, double d, double d1, double d2){
         this(world);

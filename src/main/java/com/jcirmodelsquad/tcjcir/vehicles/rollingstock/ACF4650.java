@@ -39,6 +39,8 @@ public class ACF4650 extends Freight implements IInventory {
 		textureDescriptionMap.put(16, "NS");
 		textureDescriptionMap.put(17, "SNEEDY");
 		textureDescriptionMap.put(18, "SOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOup");
+		textureDescriptionMap.put(19, "Washington Grain Train");
+		textureDescriptionMap.put(20, "Washington Grain Train (Stale)");
 	}
 
 	public void initFreightGrain() {

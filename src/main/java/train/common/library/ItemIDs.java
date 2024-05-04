@@ -471,6 +471,7 @@ public enum ItemIDs {
 	minecartSB23R("ItemRollingStock", "sb23r", 4),
 	minecartSB23E("ItemRollingStock", "sb23e", 4),
 	minecartB30("ItemRollingStock", "b30", 4),
+	minecartSB36X("ItemRollingStock", "sb36x", 5),
 
 	minecartDash839C("ItemRollingStock", "c39-8_icon", 5),
 	minecartDash839CE("ItemRollingStock", "c39-8e", 5),
@@ -564,7 +565,7 @@ public enum ItemIDs {
 	//minecartS1BL("ItemRollingStock", "s1bl", 3),
 	minecartSMSC1("ItemRollingStock", "smsc1", 5),
 	minecartCEEslug("ItemRollingStock", "ceeslug", 4),
-
+	minecartSBMS("ItemRollingStock", "sbms", 4),
 
 	//E-lect-trock//
 	minecartEF1("ItemRollingStock", "ef1", 6),
@@ -759,7 +760,8 @@ public enum ItemIDs {
 	//minecartClass345engine("ItemRollingStock", "Class345Engine", 3),
 	//minecartClass345car("ItemRollingStock", "class345coach", 2),
 	minecartClass74("ItemRollingStock", "Class_74_icon", 6),
-
+	minecartTwoBil("ItemRollingStock", "2-bil_icon", 3),
+	minecartTwoBilTail("ItemRollingStock", "2-bil_tail_icon", 3),
 
 	//undecided stuff//
 	//minecartBaldwinMineLoco("ItemRollingStock", "baldwinmineloco", 1),

@@ -1437,8 +1437,7 @@ public class ModelCF7hh extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 			}
 		}
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13241
-		) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13241) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.28, -0.02, 0);

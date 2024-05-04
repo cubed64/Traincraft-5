@@ -200,7 +200,7 @@ public class HuskyStack2 extends Freight implements IInventory {
 	}
 
 	public void initFreightGrain() {
-		numFreightSlots = 9;
+		numFreightSlots = 6;
 		if(trainSpec!=null)freightInventorySize = trainSpec.getCargoCapacity();
 		cargoItems = new ItemStack[freightInventorySize];
 	}

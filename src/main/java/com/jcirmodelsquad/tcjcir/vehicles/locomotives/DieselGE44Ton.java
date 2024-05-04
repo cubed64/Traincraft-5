@@ -27,6 +27,7 @@ public class DieselGE44Ton extends DieselTrain {
 		textureDescriptionMap.put(7, "Generic Industrial");
 		textureDescriptionMap.put(8, "Generic Industrial");
 		textureDescriptionMap.put(9, "DLMR");
+		textureDescriptionMap.put(10, "TNRJ (Temporarily Named Spawn Railroad Company of JCIR)");
 	}
 
 	public void initLoco() {

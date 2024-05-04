@@ -968,7 +968,7 @@ entity.tc.GP35.name=EMD GP35 (Phase 1)
 entity.tc.GP38dash9W.name=MT&S GP38W-2
 entity.tc.GP38H3.name=EMD GP38H3
 entity.tc.GP38.name=EMD GP38
-entity.tc.GP38dash2.name=EMD GP38-2
+entity.tc.GP38Dash2.name=EMD GP38-2
 entity.tc.GP39.name=EMD GP39
 entity.tc.GP39Dash2.name=EMD GP39-2
 entity.tc.GP40.name=EMD GP40
@@ -1040,6 +1040,7 @@ item.tc:minecartBQ23.name=GE BQ23-7
 item.tc:minecartSB23R.name=CEE SB23R
 item.tc:minecartSB23E.name=CEE SB23E
 item.tc:minecartB30.name=GE B30-7
+item.tc:minecartSB36X.name=CEE SB36X Prototype
 
 item.tc:minecartDash839C.name=GE C39-8
 item.tc:minecartDash839CE.name=GE C39-8E
@@ -1092,6 +1093,7 @@ entity.tc.BQ23-7.name=GE BQ23-7
 entity.tc.SB23R.name=CEE/GE SB23R
 entity.tc.SB23E.name=CEE/GE SB23E
 entity.tc.B30-7.name=GE B30-7
+entity.tc.SB36X.name=CEE SB36X Prototype
 
 entity.tc.Dash839C.name=GE C39-8
 entity.tc.Dash839CE.name=GE C39-8E
@@ -1245,6 +1247,7 @@ item.tc:minecartF7BSlug.name=EMD F7B Slug
 item.tc:minecartS1BL.name=FNCC S1BL Slug
 item.tc:minecartSMSC1.name=CEE Slug Motor System, C-C, Type 1
 item.tc:minecartCEEslug.name=CEE rebuilt slug (U23B core)
+item.tc:minecartSBMS.name=CEE SB Motor System
 
 
 entity.tc.NRE3gs21b.name=NRE 3GS21B Genset
@@ -1260,6 +1263,7 @@ entity.tc.F7BSlug.name=EMD F7B Slug
 entity.tc.S1BL.name=FNCC S1BL Slug
 entity.tc.SMSC1.name=CEE Slug Motor System, C-C, Type 1
 entity.tc.CEEslug.name=CEE rebuilt slug (U23B core)
+entity.tc.SBMS.name=CEE SB Motor System
 
 --------------------------------------------------------
 
@@ -1649,3 +1653,8 @@ entity.tc.KawasakiLRV.name=Kawasaki LRV
 
 item.tc:minecartClass74.name=Class 74
 entity.tc.Class74.name=Class 74
+
+item.tc:minecartTwoBil.name=2-Bil Engine
+entity.tc.TwoBil.name=2-Bil Engine
+item.tc:minecartTwoBilTail.name=2-Bil Tail
+entity.tc.TwoBilTail.name=2-Bil Tail

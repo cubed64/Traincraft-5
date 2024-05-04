@@ -9,8 +9,16 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.Modelclass74_deets;
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
+import tmt.Tessellator;
+import train.common.api.AbstractTrains;
+import train.common.library.Info;
 
 public class Modelclass74 extends ModelConverter //Same as Filename
 {
@@ -1946,5 +1954,31 @@ public class Modelclass74 extends ModelConverter //Same as Filename
 	}
 	public float[] getTrans() {
 		return new float[]{-1.0F, 0.15F, 0.00F};
+	}
+	Modelclass74_deets deets = new Modelclass74_deets();
+	@Override
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+		for(ModelRendererTurbo m :bodyModel) {
+			if(m.boxName.equals("lamp")){
+				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+				m.render(f5);
+				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+			}else if(m.boxName.equals("cull")){
+				GL11.glDisable(GL11.GL_CULL_FACE);
+				m.render(f5);
+				GL11.glEnable(GL11.GL_CULL_FACE);
+			}else{
+				m.render(f5);
+			}
+		}
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/Detail_Kit_Class_74_Steam_Punk_Rail.png"));
+		} else {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/000EMPTY.png"));//empty cus it was being a bitch and i dont give enough a shit to make it work normally
+		}
+		GL11.glPushMatrix();
+		GL11.glTranslatef(-0F, -0.00F, 0F);
+		deets.render(entity, f, f1, f2, f3, f4, f5);
+		GL11.glPopMatrix();
 	}
 }

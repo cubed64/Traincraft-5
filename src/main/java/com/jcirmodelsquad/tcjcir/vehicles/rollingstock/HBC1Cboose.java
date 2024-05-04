@@ -16,6 +16,7 @@ public class HBC1Cboose extends EntityRollingStock implements IPassenger {
         textureDescriptionMap.put(1, "Fox, North Coast & Cascades");
         textureDescriptionMap.put(2, "Fox, North Coast & Cascades");
         textureDescriptionMap.put(3, "Western Pacific");
+        textureDescriptionMap.put(4, "Steampunk Rail");
     }
 
     public HBC1Cboose(World world, double d, double d1, double d2){

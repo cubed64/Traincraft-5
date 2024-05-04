@@ -34,6 +34,7 @@ public class DieselSD40T2 extends DieselTrain {
         textureDescriptionMap.put(13, "Fox, North Coast & Cascades (KIT-L, Big Canon)");
         textureDescriptionMap.put(14, "Fox, North Coast & Cascades (KIT-80, Big Canon)");
         textureDescriptionMap.put(15, "Southern Port Belt");
+        textureDescriptionMap.put(16, "Steampunk Rail");
     }
     public DieselSD40T2(World world, double d, double d1, double d2){
         this(world);

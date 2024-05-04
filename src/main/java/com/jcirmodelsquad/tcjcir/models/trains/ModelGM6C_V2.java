@@ -1227,7 +1227,7 @@ public class ModelGM6C_V2 extends ModelConverter //Same as Filename
 			}
 		}
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15
-				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18) {
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1348) {
 			//silver dash 2 truck
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_C_dash2_longjohns.png"));
 		} else {
