@@ -22,6 +22,7 @@ public class DieselSW10 extends DieselTrain {
         textureDescriptionMap.put(2, "North Fox KIT-L (Dual Canon)");
         textureDescriptionMap.put(3, "TIR 1248 & 1253");
         textureDescriptionMap.put(4, "TIR 1269");
+        textureDescriptionMap.put(5, "Glonch Rayroa");
 
     }
     public DieselSW10(World world, double d, double d1, double d2){

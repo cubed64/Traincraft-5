@@ -29,7 +29,7 @@ public class DieselGP38 extends DieselTrain {
         textureDescriptionMap.put(9, "Great Lakes & Northern Territories");
         textureDescriptionMap.put(10, "Seattle & North Coast 301");
         textureDescriptionMap.put(11, "Seattle & North Coast 302");
-        textureDescriptionMap.put(12, "");
+        textureDescriptionMap.put(12, "GLNT JCIR 6 years");
         textureDescriptionMap.put(13, "");
         textureDescriptionMap.put(14, "");
         textureDescriptionMap.put(15, "");

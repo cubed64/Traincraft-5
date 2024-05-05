@@ -20,6 +20,7 @@ public class DieselGPFDL extends DieselTrain {
         textureDescriptionMap.put(0, "North Fox (KIT-L, Big Canon)");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
         textureDescriptionMap.put(2, "Sacramento Northern (Ex FNCC 6&7)");
+        textureDescriptionMap.put(3, "Sacramento Northern (Ex FNCC 6&7)");
     }
     public DieselGPFDL(World world, double d, double d1, double d2){
         this(world);

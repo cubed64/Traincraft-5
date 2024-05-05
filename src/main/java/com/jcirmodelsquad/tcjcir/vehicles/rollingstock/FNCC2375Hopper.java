@@ -36,6 +36,7 @@ public class FNCC2375Hopper extends Freight implements IInventory {
 		textureDescriptionMap.put(13, "AA");
 		textureDescriptionMap.put(14, "AA (Ferry in the Fog)");
 		textureDescriptionMap.put(15, "SPB");
+		textureDescriptionMap.put(16, "GLNT");
 	}
 
 	public void initFreightGrain() {

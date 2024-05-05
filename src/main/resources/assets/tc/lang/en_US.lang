@@ -1042,6 +1042,7 @@ item.tc:minecartSB23E.name=CEE SB23E
 item.tc:minecartB30.name=GE B30-7
 item.tc:minecartSB36X.name=CEE SB36X Prototype
 
+item.tc:minecartDash832BWH.name=GE Dash 8-32BWH
 item.tc:minecartDash839C.name=GE C39-8
 item.tc:minecartDash839CE.name=GE C39-8E
 item.tc:minecartDash839B.name=GE B39-8
@@ -1095,6 +1096,7 @@ entity.tc.SB23E.name=CEE/GE SB23E
 entity.tc.B30-7.name=GE B30-7
 entity.tc.SB36X.name=CEE SB36X Prototype
 
+entity.tc.Dash832BWH.name=GE Dash 8-32BWH
 entity.tc.Dash839C.name=GE C39-8
 entity.tc.Dash839CE.name=GE C39-8E
 entity.tc.Dash839B.name=GE B39-8
@@ -1241,6 +1243,7 @@ item.tc:minecartFOLM1B.name=FOL-M1B
 item.tc:minecartBUnitFOLM1B.name=FOL-M1B (Unpowered)
 item.tc:minecartKrautt.name=Krauss-Maffei ML-4000
 item.tc:minecartILMC.name=I.L.M.C
+item.tc:minecartDD55.name=LA Switcher Company DD55
 
 item.tc:minecartSlugMA.name=EMD GP Slug (SlugMA)
 item.tc:minecartF7BSlug.name=EMD F7B Slug
@@ -1257,6 +1260,7 @@ entity.tc.FOL-M1B.name=FOL-M1B
 entity.tc.BUnitFOL-M1B.name=FOL-M1B (Unpowered)
 entity.tc.Krautt.name=Krauss-Maffei ML-4000
 entity.tc.ILMC.name=I.L.M.C
+entity.tc.DD55.name=LA Switcher Company DD55
 
 entity.tc.SlugMA.name=EMD GP Slug (SlugMA)
 entity.tc.F7BSlug.name=EMD F7B Slug
@@ -1632,6 +1636,7 @@ item.tc:minecartFRED.name=Flashing Rear End Device (FRED)
 item.tc:minecartCQ310PO.name=CQ-310 (Powered)
 item.tc:minecartCQ310PA.name=CQ-310 (Trailing)
 item.tc:minecartKawasakiLRV.name=Kawasaki LRV
+item.tc:minecartPCC.name=PCC Streetcar
 
 entity.tc.BigMeme.name=Leslie A425 Trailer
 entity.tc.Payload.name=TF2 Payload Cart
@@ -1650,6 +1655,7 @@ entity.tc.FRED.name=Flashing Rear End Device (FRED)
 entity.tc.CQ310PO.name=CQ-310 (Powered)
 entity.tc.CQ310PA.name=CQ-310 (Trailing)
 entity.tc.KawasakiLRV.name=Kawasaki LRV
+entity.tc.PCC.name=PCC Streetcar
 
 item.tc:minecartClass74.name=Class 74
 entity.tc.Class74.name=Class 74

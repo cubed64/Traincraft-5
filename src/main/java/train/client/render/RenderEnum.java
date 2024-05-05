@@ -1194,7 +1194,7 @@ RenderEnum {
 			add(new double[]{0.75D, 1.5D, 0.0D});
 		}
 	}, "", null, 0, false),
-	U36C( DieselU36C.class,  new ModelU36C(), "u36c_", true,new float[] {-2.3125F, -0.15F/* -0.13F*/, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+	U36C( DieselU36C.class,  new ModelU36C(), "u36c_", true,new float[] {-2.3125F, -0.20F/* -0.15F*/, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{
 			//add(new double[]{0.75D, 1.75D, 0.0D});
 		}
@@ -1234,6 +1234,9 @@ RenderEnum {
 		{ }
 	}, "", null, 0, false),
 
+	Dash832BWH( DieselDash832BWH.class,  new ModelDash832BWH(), "b32-8wh_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 	Dash839C( DieselDash839C.class,  new ModelDash839C(), "c39-8_", true,new float[] {-2.0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, true),
@@ -1479,6 +1482,10 @@ RenderEnum {
 	Krautt(DieselKrautt.class,  new ModelKrautt(), "KM_ML4000_", true,new float[] {0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
 		{ }}, "", null, 0, false),
 
+	DD55( DieselDD55.class,  new ModelDD55(), "DD55_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 12,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+
 	SlugMA(SlugMA.class, new Modelslugma(), "SMA_", true, new float[]{0,-0.05f,0}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
 	//S1BL(S1BL.class, new ModelS1BL(), "s1bl_", true, new float[]{0,-0.05f,0}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
 	SMSC1(SMSC1.class, new ModelSMSC1(), "SMSC1_", true, new float[]{0,-0.05f,0}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
@@ -1665,6 +1672,7 @@ RenderEnum {
 	KawasakiLRV(ElectricKawasakiLRV.class, new ModelSeptaLRV(), "kawasaki_white", false, new float[] { -1.5F, -0.44F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	CQ310PO(ElectricCQ310PO.class, new Modelcq310(), "CQ_310_", true, new float[] { -1.5F, -0.44F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	CQ310PA(CQ310PA.class, new Modelcq310_again(), "CQ_310_", true, new float[] { 0F, -0.44F, 0.0F }, new float[] { 180F, 180F, 0F }, null, "", 0, null, "", null, 0, false),
+	PCC(ElectricPCC.class, new ModelPCC(), "Pcc_", true, new float[] { -1.5F, -0.44F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	Class74(ElectricClass74.class, new Modelclass74(), "Class_74_", true, new float[] { -1.5F, -0.44F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	TwoBil(ElectricTwoBil.class, new ModelTwoBilEngine(), "2-bil_", true, new float[]{-1.7F, 0.17F, 0F}, new float[]{0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),

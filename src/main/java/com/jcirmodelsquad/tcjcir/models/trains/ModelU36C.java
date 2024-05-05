@@ -10,6 +10,7 @@
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
 
+import com.jcirmodelsquad.tcjcir.models.Modelfncici_shid;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB3;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -66,7 +67,7 @@ public class ModelU36C extends ModelConverter //Same as Filename
 		bodyModel[32] = new ModelRendererTurbo(this, 109, 127, textureX, textureY); // Box 203
 		bodyModel[33] = new ModelRendererTurbo(this, 109, 133, textureX, textureY); // Box 204
 		bodyModel[34] = new ModelRendererTurbo(this, 109, 139, textureX, textureY); // Box 205
-		bodyModel[35] = new ModelRendererTurbo(this, 67, 121, textureX, textureY); // Box 208 cul
+		bodyModel[35] = new ModelRendererTurbo(this, 67, 121, textureX, textureY, "cull"); // Box 208 cul
 		bodyModel[36] = new ModelRendererTurbo(this, 415, 113, textureX, textureY); // Box 211
 		bodyModel[37] = new ModelRendererTurbo(this, 415, 102, textureX, textureY); // Box 214
 		bodyModel[38] = new ModelRendererTurbo(this, 367, 121, textureX, textureY); // Box 215
@@ -284,10 +285,10 @@ public class ModelU36C extends ModelConverter //Same as Filename
 		bodyModel[250] = new ModelRendererTurbo(this, 25, 2, textureX, textureY); // Box 52 door swing right
 		bodyModel[251] = new ModelRendererTurbo(this, 71, 18, textureX, textureY); // Box 314 door swing right
 		bodyModel[252] = new ModelRendererTurbo(this, 152, 27, textureX, textureY); // Box 364 prime base
-		bodyModel[253] = new ModelRendererTurbo(this, 172, 21, textureX, textureY); // Prime2-4
-		bodyModel[254] = new ModelRendererTurbo(this, 169, 18, textureX, textureY); // Prime2-3
-		bodyModel[255] = new ModelRendererTurbo(this, 169, 24, textureX, textureY); // Prime2-1
-		bodyModel[256] = new ModelRendererTurbo(this, 166, 21, textureX, textureY); // Prime2-2
+		bodyModel[253] = new ModelRendererTurbo(this, 172, 21, textureX, textureY, "glow"); // Prime2-4
+		bodyModel[254] = new ModelRendererTurbo(this, 169, 18, textureX, textureY, "glow"); // Prime2-3
+		bodyModel[255] = new ModelRendererTurbo(this, 169, 24, textureX, textureY, "glow"); // Prime2-1
+		bodyModel[256] = new ModelRendererTurbo(this, 166, 21, textureX, textureY, "glow"); // Prime2-2
 		bodyModel[257] = new ModelRendererTurbo(this, 167, 27, textureX, textureY); // Box 364 prime base
 		bodyModel[258] = new ModelRendererTurbo(this, 74, 93, textureX, textureY); // Box 83
 		bodyModel[259] = new ModelRendererTurbo(this, 85, 92, textureX, textureY); // Box 83
@@ -1125,30 +1126,26 @@ public class ModelU36C extends ModelConverter //Same as Filename
 		bodyModel[269].addShapeBox(0F, 0F, 0F, 3, 1, 2, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 364 prime base
 		bodyModel[269].setRotationPoint(-29.5F, -29.1F, -3F);
 
-
-
 		translateAll(0F, 0F, 0F);
-
 
 		flipAll();
 	}
 	ModelFB3 theTrucks2 = new ModelFB3();
-
-	//color 14 is orange, color 0 is black, 7 is LG
+	Modelfncici_shid theSHID = new Modelfncici_shid();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 270; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
+		for(ModelRendererTurbo m :bodyModel) {
+			if(m.boxName.equals("glow")){
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
+				m.render(f5);
 				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
+			}else if(m.boxName.equals("cull")){
 				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
+				m.render(f5);
 				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
+			}else{
+				m.render(f5);
 			}
 		}
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 8||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14) {
@@ -1170,14 +1167,25 @@ public class ModelU36C extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.6875, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/u36c_Cyan.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(0.44, -0.375, 0);
+			theSHID.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb3_Silver.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(-1.375, -0.25, 0);
+			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glTranslated(3.6875, 0, 0);
+			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
 		}
-	}
 
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
-	{
 	}
-
-	public ModelRendererTurbo ModelU36C[];
 	public ArrayList<double[]> getSmokePosition() {
 		return new ArrayList<double[]>() {
 			{

@@ -30,6 +30,8 @@ public class gsco67millgon extends Freight implements IInventory {
         textureDescriptionMap.put(4, "FNCC");
         textureDescriptionMap.put(5, "DN");
         textureDescriptionMap.put(6, "DLMR");
+        textureDescriptionMap.put(7, "GLNT");
+        textureDescriptionMap.put(8, "GLONTCHJ 2");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Modelgondola_load_flat_aggregates_large.class, "loads/gondola_load_flat_aggregates_medium_dort",

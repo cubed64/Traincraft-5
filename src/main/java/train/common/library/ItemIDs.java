@@ -473,6 +473,7 @@ public enum ItemIDs {
 	minecartB30("ItemRollingStock", "b30", 4),
 	minecartSB36X("ItemRollingStock", "sb36x", 5),
 
+	minecartDash832BWH("ItemRollingStock", "B32-8WH", 4),
 	minecartDash839C("ItemRollingStock", "c39-8_icon", 5),
 	minecartDash839CE("ItemRollingStock", "c39-8e", 5),
 	minecartDash839B("ItemRollingStock", "b39-8_icone", 5),
@@ -559,6 +560,7 @@ public enum ItemIDs {
 	//minecartBUnitFOLM1B("ItemRollingStock", "folm1b", 4),
 	minecartKrautt("ItemRollingStock", "ML4000", 5),
 	//minecartILMC("ItemRollingStock", "ILMC_ICON", 2),
+	minecartDD55("ItemRollingStock", "dd55", 3),
 
 	minecartSlugMA("ItemRollingStock", "slugma", 2),
 	minecartF7BSlug("ItemRollingStock", "f7b", 3),
@@ -745,6 +747,7 @@ public enum ItemIDs {
 	minecartCQ310PO("ItemRollingStock", "CQ_310_Loco_icon",3),
 	minecartCQ310PA("ItemRollingStock", "CQ_310_Tail_icon",3),
 	minecartKawasakiLRV("ItemRollingStock", "KawasakiLRV",3),
+	minecartPCC("ItemRollingStock", "pcc", 3),
 
 	//peach moments
 	minecartGeometryCar("ItemRollingStock", "geometry_car", 15),

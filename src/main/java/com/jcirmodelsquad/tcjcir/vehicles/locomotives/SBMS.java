@@ -25,17 +25,18 @@ public class SBMS extends LiquidTank implements IFluidHandler {
         super(world, EnumTrains.SBMS.getTankCapacity());
         initFreightWater();
         textureDescriptionMap.put(0, "FNCC");
-        textureDescriptionMap.put(1, "Blandsville & Blasic i mean Blankerston");
-        textureDescriptionMap.put(2, "TTLC (Burnt Forest Black)");
-        textureDescriptionMap.put(3, "TTLC (Cedar Blue)");
-        textureDescriptionMap.put(4, "TTLC (Cedar Green)");
-        textureDescriptionMap.put(5, "TTLC (Evergreen)");
-        textureDescriptionMap.put(6, "TTLC (Fern)");
-        textureDescriptionMap.put(7, "TTLC (Fern Green)");
-        textureDescriptionMap.put(8, "TTLC (Fir Green)");
-        textureDescriptionMap.put(9, "TTLC (Jungle Green)");
-        textureDescriptionMap.put(10, "TTLC (Pine Green)");
-        textureDescriptionMap.put(11, "TTLC (Red Forest Brown)");
+        textureDescriptionMap.put(1, "WP");
+        textureDescriptionMap.put(2, "Blandsville & Blasic i mean Blankerston");
+        textureDescriptionMap.put(3, "TTLC (Burnt Forest Black)");
+        textureDescriptionMap.put(4, "TTLC (Cedar Blue)");
+        textureDescriptionMap.put(5, "TTLC (Cedar Green)");
+        textureDescriptionMap.put(6, "TTLC (Evergreen)");
+        textureDescriptionMap.put(7, "TTLC (Fern)");
+        textureDescriptionMap.put(8, "TTLC (Fern Green)");
+        textureDescriptionMap.put(9, "TTLC (Fir Green)");
+        textureDescriptionMap.put(10, "TTLC (Jungle Green)");
+        textureDescriptionMap.put(11, "TTLC (Pine Green)");
+        textureDescriptionMap.put(12, "TTLC (Red Forest Brown)");
 
         this.theTank = LiquidManager.getInstance().new FilteredTank(EnumTrains.SBMS.getTankCapacity(), LiquidManager.dieselFilter());
     }

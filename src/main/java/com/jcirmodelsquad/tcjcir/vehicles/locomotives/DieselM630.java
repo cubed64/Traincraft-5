@@ -21,6 +21,7 @@ public class DieselM630 extends DieselTrain {
         textureDescriptionMap.put(0, "Pacific Great Eastern");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
         textureDescriptionMap.put(2, "North Fox & Yukon Route (FNCC, KIT-L, Big Canon)");
+        textureDescriptionMap.put(3, "Great Lakes & Northern Territories");
 
     }
     public DieselM630(World world, double d, double d1, double d2){

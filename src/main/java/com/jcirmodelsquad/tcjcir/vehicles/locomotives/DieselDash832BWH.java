@@ -13,22 +13,22 @@ import train.common.api.LiquidManager;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class DieselRS1 extends DieselTrain {
-    public DieselRS1(World world) {
-        super(world, EnumTrains.RS1.getTankCapacity(), LiquidManager.dieselFilter());
+public class DieselDash832BWH extends DieselTrain {
+    public DieselDash832BWH(World world) {
+        super(world, EnumTrains.Dash832BWH.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "she ann on my arbor till i bankruptcy");
-        textureDescriptionMap.put(1, "she wabash on my lake till i ann arbor");
-        textureDescriptionMap.put(2, "Tidewater Southern");
-        textureDescriptionMap.put(3, "Blandsville & Blankerston");
-        textureDescriptionMap.put(4, "Deadwood & La Mesa (Early)");
-        textureDescriptionMap.put(5, "Deadwood & La Mesa (Late)");
-        textureDescriptionMap.put(6, "Fox, North Coast & Cascades (Regal, Dual Canon)");
-        textureDescriptionMap.put(7, "sander faye");
-        textureDescriptionMap.put(8, "Glontch");
+        textureDescriptionMap.put(0, "Amtrak (PH 3)");
+        textureDescriptionMap.put(1, "Amtrak (PH 4)");
+        textureDescriptionMap.put(2, "Amtrak (PH 5)");
+        textureDescriptionMap.put(3, "Western Pacific (Cali Zephyr)");
+        textureDescriptionMap.put(4, "Blandsville & Blankerston");
+        textureDescriptionMap.put(5, "");
+        textureDescriptionMap.put(6, "");
+        textureDescriptionMap.put(7, "");
+        textureDescriptionMap.put(8, "");
 
     }
-    public DieselRS1(World world, double d, double d1, double d2){
+    public DieselDash832BWH(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -48,7 +48,7 @@ public class DieselRS1 extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 0.4; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
+        double distance = 3.7; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
         double distanceLR = -0.35; //how far left/right on the entity you ride; left > 0; right < 0;
         double yOffset = 0.35;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
@@ -136,7 +136,7 @@ public class DieselRS1 extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.3F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.4F;
     }
 
     @Override
@@ -146,7 +146,7 @@ public class DieselRS1 extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "ALCo RS-1";
+        return "GE Dash 8-32BWH";
     }
 
     @Override
