@@ -15,13 +15,13 @@ import train.common.api.Tender;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class TenderVanderback extends Tender implements IInventory {
+public class TenderSquanderback extends Tender implements IInventory {
 
 	public int freightInventorySize;
 	EntityPlayer playerEntity;
 
-	public TenderVanderback(World world) {
-		super(world, FluidRegistry.WATER, 0, EnumTrains.VanderbackTender.getTankCapacity(), LiquidManager.WATER_FILTER);
+	public TenderSquanderback(World world) {
+		super(world, FluidRegistry.WATER, 0, EnumTrains.SquanderbackTender.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initFreightTender();
 	}
 
@@ -30,7 +30,7 @@ public class TenderVanderback extends Tender implements IInventory {
 		tenderItems = new ItemStack[freightInventorySize];
 	}
 
-	public TenderVanderback(World world, double d, double d1, double d2) {
+	public TenderSquanderback(World world, double d, double d1, double d2) {
 		this(world);
 		setPosition(d, d1 + (double) yOffset, d2);
 		motionX = 0.0D;
@@ -85,7 +85,7 @@ public class TenderVanderback extends Tender implements IInventory {
 	}
 	@Override
 	public String getInventoryName() {
-		return "WRX Vanderback Tender";
+		return "WRX Squanderback Tender";
 	}
 
 	@Override

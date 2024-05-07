@@ -785,6 +785,7 @@ RenderEnum {
 		}
 	}, 2, true),
 	VanderbackTender(TenderVanderback.class, new ModelVanderbackTender(), "vanderback_", true, new float[] { 0.0F, 0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	SquanderbackTender(TenderSquanderback.class, new ModelSquanderbackTender(), "squanderback_", true, new float[] { 0.0F, 0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	BKno2a(SteamBKno2a.class, new ModelBKno2a(), "BoothKelly_", true, new float[] {-1.5F, 0.15F, 0.0F}, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
 		{
@@ -834,6 +835,17 @@ RenderEnum {
 			add(new double[] { 1.9D, -0.2D, 0.6D });//piston steam
 			add(new double[] { 1.0D, 1.3D, 0.0D });//dynamo
 			add(new double[] { 2.2D, 1.4D, 0.0D });//stack
+		}
+	}, 2, true),
+	Alco2102(SteamAlco2102.class,  new Modelalco2102(), "alco_2-10-2st_", true,new float[] {0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
+		{
+			//add(new double[] { 2.025D, 1.4D, 0.0D });//smoke
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] { 2.7D, -0.4D, 0.6D });//piston steam
+			//add(new double[] { 0.0D, 1.3D, 0.0D });//dynamo
+			add(new double[] { 2.8D, 1.40D, 0.0D });//stack
 		}
 	}, 2, true),
 

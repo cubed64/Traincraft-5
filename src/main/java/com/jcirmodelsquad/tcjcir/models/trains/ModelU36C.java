@@ -1176,7 +1176,7 @@ public class ModelU36C extends ModelConverter //Same as Filename
 
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb3_Silver.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.375, -0.25, 0);
+			GL11.glTranslated(-1.375, -0.3, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glTranslated(3.6875, 0, 0);

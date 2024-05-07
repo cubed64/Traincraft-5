@@ -13,10 +13,16 @@ import train.common.api.SteamTrain;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class SteamP01a extends SteamTrain {
-	public SteamP01a(World world) {
-		super(world, EnumTrains.P01a.getTankCapacity(), LiquidManager.WATER_FILTER);
+public class SteamAlco2102 extends SteamTrain {
+	public SteamAlco2102(World world) {
+		super(world, EnumTrains.Alco2102.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
+		textureDescriptionMap.put(0, "Blandsville Forest Products, Inc");
+		textureDescriptionMap.put(1, "Sugar Pine Lumber");
+		textureDescriptionMap.put(2, "Consolidated Builders Inc");
+		textureDescriptionMap.put(3, "Kaiser Steel");
+		textureDescriptionMap.put(4, "Oil Clusters & Garden");
+		textureDescriptionMap.put(5, "Washaska Resources");
 	}
 
 	public void initLocoSteam() {
@@ -24,7 +30,7 @@ public class SteamP01a extends SteamTrain {
 		locoInvent = new ItemStack[inventorySize];
 	}
 
-	public SteamP01a(World world, double d, double d1, double d2) {
+	public SteamAlco2102(World world, double d, double d1, double d2) {
 		this(world);
 		setPosition(d, d1 + (double) yOffset, d2);
 		motionX = 0.0D;
@@ -39,8 +45,8 @@ public class SteamP01a extends SteamTrain {
 	public void updateRiderPosition() {
 		if (riddenByEntity == null) {return;}
 		double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-		double distance = -0.9; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
-		double distanceLR = -0.4; //how far left/right on the entity you ride; left > 0; right < 0;
+		double distance = -0.5; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
+		double distanceLR = -0.45; //how far left/right on the entity you ride; left > 0; right < 0;
 		double yOffset = 0.1;
 		float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
 		float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
@@ -137,7 +143,7 @@ public class SteamP01a extends SteamTrain {
 
 	@Override
 	public String getInventoryName() {
-		return "P01a 2-6-2 Prairie";
+		return "Alco 2-10-2ST";
 	}
 
 	@Override
@@ -157,7 +163,7 @@ public class SteamP01a extends SteamTrain {
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
-		return 1.05F;
+		return 1.45F;
 	}
 
 	@Override
