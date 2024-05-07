@@ -427,6 +427,8 @@ public enum ItemIDs {
 	minecartSDP45("ItemRollingStock", "sdp45_iconograhy", 5),
 	minecartF45("ItemRollingStock", "f45", 5),
 	minecartFP45("ItemRollingStock", "fp45", 5),
+	minecartSD50("ItemRollingStock", "sd50_icno", 5),
+	minecartSD60("ItemRollingStock", "sd60icone", 6),
 	minecartSD70Mac("ItemRollingStock", "sd70mac", 6),
 
 	minecartSW1("ItemRollingStock","sw1", 2),

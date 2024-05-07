@@ -1084,6 +1084,12 @@ RenderEnum {
 			add(new double[]{2.25D, 1.5D, 0.0D});
 		}
 	}, "", null, 0, false),
+	SD50(DieselSD50.class, new ModelSD50(), "sd50_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
+	SD60(DieselSD60.class, new ModelSD60(), "sd60_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{ }
+	}, "", null, 0, false),
 	SD70Mac( DieselSD70Mac.class, new ModelSD70Mac(), "sd70mac_", true,new float[] {-2.1F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{
 			//add(new double[]{2.35D, 1.5D, 0.0D});

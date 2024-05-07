@@ -911,6 +911,8 @@ item.tc:minecartSD45dash2B.name=EMD SD45-2B
 item.tc:minecartSDP45.name=EMD SDP45
 item.tc:minecartF45.name=EMD F45
 item.tc:minecartFP45.name=EMD FP45
+item.tc:minecartSD50.name=EMD SD50
+item.tc:minecartSD60.name=EMD SD60
 item.tc:minecartSD70Mac.name=EMD SD70Mac
 
 item.tc:minecartSW1.name=EMD SW1
@@ -994,6 +996,8 @@ entity.tc.SD45-2B.name=EMD SD45-2B
 entity.tc.SDP45.name=EMD SDP45
 entity.tc.F45.name=EMD F45
 entity.tc.FP45.name=EMD FP45
+entity.tc.SD50.name=EMD SD50
+entity.tc.SD60.name=EMD SD60
 entity.tc.SD70Mac.name=EMD SD70Mac
 
 entity.tc.SW1.name=EMD SW1
