@@ -27,6 +27,7 @@ public class DieselSB18R extends DieselTrain {
         textureDescriptionMap.put(7, "TTLC (Oak Moss)");
         textureDescriptionMap.put(8, "TTLC (Reindeer Moss)");
         textureDescriptionMap.put(9, "TTLC (Swamp Moss)");
+        textureDescriptionMap.put(10, "Morristown Tenneva & Southern");
     }
     public DieselSB18R(World world, double d, double d1, double d2){
         this(world);
