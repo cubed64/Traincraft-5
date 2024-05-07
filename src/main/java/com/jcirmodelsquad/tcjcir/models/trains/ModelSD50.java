@@ -2046,6 +2046,17 @@ public class ModelSD50 extends ModelConverter //Same as Filename
 
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5 ) {
 			//csx shid
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexcoil_c2h_csxes.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.875F, 0.0F, 0F);
+			flexLate.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(-3.75F, 0.0F, 0);
+			flexLate.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+		/*} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5 ) {//the cooler csx we cant have :(
+			//csx shid
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_C2_middy_blue.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslatef(-1.875F, 0.0F, 0F);
@@ -2054,7 +2065,7 @@ public class ModelSD50 extends ModelConverter //Same as Filename
 			GL11.glRotatef(180, 0, 1, 0);
 			GL11.glTranslated(-3.75F, 0.0F, 0);
 			flexMid.render(entity, f, f1, f2, f3, f4, f5);
-			GL11.glPopMatrix();
+			GL11.glPopMatrix();*/
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1331|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 228 ) {
 			//silver dash 2 truck
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_C_dash2_longjohns.png"));

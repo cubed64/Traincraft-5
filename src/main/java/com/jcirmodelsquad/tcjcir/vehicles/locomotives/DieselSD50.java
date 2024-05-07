@@ -26,7 +26,7 @@ public class DieselSD50 extends DieselTrain {
         textureDescriptionMap.put(5, "DRGW");
         textureDescriptionMap.put(6, "ANE (1st & 2nd Orders)");
         textureDescriptionMap.put(7, "Blandsville & Blanklands Terminal Railroad Association");
-        textureDescriptionMap.put(8, "");
+        textureDescriptionMap.put(8, "HBRY");
         textureDescriptionMap.put(9, "");
     }
     public DieselSD50(World world, double d, double d1, double d2){
