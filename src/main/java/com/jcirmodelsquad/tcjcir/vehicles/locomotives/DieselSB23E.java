@@ -17,11 +17,11 @@ public class DieselSB23E extends DieselTrain {
     public DieselSB23E(World world) {
         super(world, EnumTrains.SB23E.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Blandsville & Blankerston");
-        textureDescriptionMap.put(1, "Western Pacific (Early)");
-        textureDescriptionMap.put(2, "Western Pacific (Late)");
-        textureDescriptionMap.put(3, "FURRX (EX CSWR)");
-        textureDescriptionMap.put(4, "Avanste Northeastern");
+        textureDescriptionMap.put(0, "Western Pacific (Early)");
+        textureDescriptionMap.put(1, "Western Pacific (Late)");
+        textureDescriptionMap.put(2, "North Fox (Dar80, Dual Canon)");
+        textureDescriptionMap.put(3, "Blandsville & Blankerston");
+        textureDescriptionMap.put(4, "CSXT");
         textureDescriptionMap.put(5, "Morristown Tenneva & Southern");
     }
     public DieselSB23E(World world, double d, double d1, double d2){
@@ -43,20 +43,26 @@ public class DieselSB23E extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 0.0;
-        double yOffset = 0.3;
+        double distance = 3.2; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
+        double distanceLR = -0.35; //how far left/right on the entity you ride; left > 0; right < 0;
+        double yOffset = 0.25;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
+        float rotationCosLR1 = (float) Math.cos(Math.toRadians(this.renderYaw));
+        float rotationSinLR1 = (float) Math.sin(Math.toRadians((this.renderYaw)));
         if(side.isServer()){
             rotationCos1 = (float) Math.cos(Math.toRadians(this.serverRealRotation + 90));
             rotationSin1 = (float) Math.sin(Math.toRadians((this.serverRealRotation + 90)));
+            rotationCosLR1 = (float) Math.cos(Math.toRadians(this.serverRealRotation));
+            rotationSinLR1 = (float) Math.sin(Math.toRadians((this.serverRealRotation)));
             anglePitchClient = serverRealPitch*60;
         }
         float pitch = (float) (posY + ((Math.tan(pitchRads) * distance) + getMountedYOffset())
                 + riddenByEntity.getYOffset() + yOffset);
         float pitch1 = (float) (posY + getMountedYOffset() + riddenByEntity.getYOffset() + yOffset);
-        double bogieX1 = (this.posX + (rotationCos1 * distance));
-        double bogieZ1 = (this.posZ + (rotationSin1* distance));
+        double bogieX1 = (this.posX + (rotationCos1 * distance) + (rotationCosLR1 * distanceLR));
+        double bogieZ1 = (this.posZ + (rotationSin1* distance) + (rotationSinLR1 * distanceLR));
+        //System.out.println(rotationCos1+" "+rotationSin1);
         if(anglePitchClient>20 && rotationCos1 == 1){
             bogieX1-=pitchRads*2;
             pitch-=pitchRads*1.2;
@@ -66,10 +72,10 @@ public class DieselSB23E extends DieselTrain {
             pitch-=pitchRads*1.2;
         }
         if (pitchRads == 0.0) {
-            riddenByEntity.setPosition(bogieX1, pitch1, bogieZ1);
+            riddenByEntity.setPosition(bogieX1, pitch1, bogieZ1 -0.0);
         }
         if (pitchRads > -1.01 && pitchRads < 1.01) {
-            riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
+            riddenByEntity.setPosition(bogieX1, pitch, bogieZ1 +0.0);
         }
     }
     @Override
@@ -125,7 +131,7 @@ public class DieselSB23E extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.1F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.315F;
     }
 
     @Override
@@ -135,7 +141,7 @@ public class DieselSB23E extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "CEE/GE SB23E";
+        return "CEE SB23E";
     }
 
     @Override

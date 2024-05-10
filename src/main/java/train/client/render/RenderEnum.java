@@ -1112,9 +1112,7 @@ RenderEnum {
 		{ }
 	}, "", null, 0, false),
 	SW8( DieselSW8.class,  new ModelSW900(), "SW8_", true,new float[] {-1.0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
-		{
-			//add(new double[]{1.3D, 1.3D, 0.0D});
-		}
+		{ }
 	}, "", null, 0, false),
 	SW10( DieselSW10.class,  new ModelSW10(), "sw10_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{ }
@@ -1239,10 +1237,10 @@ RenderEnum {
 	BQ23( DieselBQ23.class,  new ModelBQ23(), "bq23-7_", true,new float[] {-1.7F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
-	SB23R( DieselSB23R.class,  new ModelSB23R(), "sb23r_", true,new float[] {-1.7F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
+	SB23R( DieselSB23R.class,  new ModelSB23R(), "SB23R_", true,new float[] {-1.7F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
-	SB23E( DieselSB23E.class,  new ModelSB23E(), "sb23e_", true,new float[] {-1.7F, 0.155F, 0F},  new float[] { 0F, 0F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
+	SB23E( DieselSB23E.class,  new ModelSB23E(), "SB23E_", true,new float[] {-1.7F, 0.155F, 0F},  new float[] { 0F, 0F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
 	B30( DieselB30.class,  new ModelB30(), "b30_", true,new float[] {-1.7F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {

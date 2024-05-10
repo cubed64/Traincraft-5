@@ -32,7 +32,7 @@ public class ModelSW900 extends ModelConverter //Same as Filename
 
 	public ModelSW900() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[436];
+		bodyModel = new ModelRendererTurbo[438];
 
 		initbodyModel_1();
 
@@ -480,6 +480,8 @@ public class ModelSW900 extends ModelConverter //Same as Filename
 		bodyModel[433] = new ModelRendererTurbo(this, 406, 12, textureX, textureY, "lamp"); // Box 410 commander beacon
 		bodyModel[434] = new ModelRendererTurbo(this, 418, 3, textureX, textureY, "cull"); // Box 434 cull beacon holder
 		bodyModel[435] = new ModelRendererTurbo(this, 167, 100, textureX, textureY); // Box 268
+		bodyModel[436] = new ModelRendererTurbo(this, 23, 46, textureX, textureY); // Box 436 mu cable confuckery
+		bodyModel[437] = new ModelRendererTurbo(this, 123, 46, textureX, textureY); // Box 437 mu cable confuckery
 
 		bodyModel[0].addBox(0F, 0F, 0F, 10, 5, 14, 0F); // Box 89
 		bodyModel[0].setRotationPoint(-5F, 3F, -7F);
@@ -1829,6 +1831,12 @@ public class ModelSW900 extends ModelConverter //Same as Filename
 
 		bodyModel[435].addBox(0F, 0F, 0F, 3, 2, 4, 0F); // Box 268
 		bodyModel[435].setRotationPoint(26.5F, -1F, -2F);
+
+		bodyModel[436].addBox(0F, 0F, 0F, 0, 7, 16, 0F); // Box 436 mu cable confuckery
+		bodyModel[436].setRotationPoint(-31.03F, 2F, -8F);
+
+		bodyModel[437].addBox(0F, 0F, 0F, 0, 7, 16, 0F); // Box 437 mu cable confuckery
+		bodyModel[437].setRotationPoint(31.03F, 2F, -8F);
 	}
 	ModelFlexicoil2 theTrucks1 = new ModelFlexicoil2();
 	ModelTypeAnew theTypeA = new ModelTypeAnew();
@@ -1836,20 +1844,19 @@ public class ModelSW900 extends ModelConverter //Same as Filename
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 435; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
+		for(ModelRendererTurbo m :bodyModel) {
+			if(m.boxName.equals("lamp")){
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
+				m.render(f5);
 				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
+			}else if(m.boxName.equals("cull")){
 				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
+				m.render(f5);
 				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
+			}else{
+				m.render(f5);
 			}
 		}
-
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/TypeA_new_silvers_rolly.png"));
 			GL11.glPushMatrix();
