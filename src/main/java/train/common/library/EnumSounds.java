@@ -24,7 +24,7 @@ public enum EnumSounds {
 	locoSteamfowler(EntityLocoSteamFowler.class, "steam_horn", 0.6F, "steam_run", 0.4F, 20, "steam_run", 0.4F, 20, true, " ", 0),
 	locoSteamberk765(EntityLocoSteamBerk765.class, "765_whistle", 0.6F, "steam_run", 0.4F, 20, "steam_run", 0.4F, 20, true, "nkp_bell", 14),
 	locoSteamberk1225(EntityLocoSteamBerk1225.class, " ", 0.6F, "steam_run", 0.4F, 20, "steam_idle", 0.4F, 20, true, "steambell_1", 22, new String[] {"1225_whistle", "pe_whistle"}),
-	locoSteamAlcoSC4(EntityLocoSteamAlcoSC4.class, " ", 0.6F, "steam_run", 0.4F, 20, "steam_run", 0.4F, 20, true, "steambell_3", 21, new String[] {"ebt_5chime", "lima_5chime"}),
+	locoSteamAlcoSC4(EntityLocoSteamAlcoSC4.class, " ", 0.6F, "steam_run", 0.4F, 20, "steam_run", 0.4F, 20, true, "steambell_3", 21, new String[] {"ebt_5chime", "lima_5chime_1"}),
 	locoSteamS100UK(EntityLocoSteamUSATCUK.class, "german_steam_horn", 0.6F, "steam_run", 0.4F, 20, "steam_run", 0.4F, 20, true, " ", 0),
 	locoSteamS100US(EntityLocoSteamUSATCUS.class, "usarmy_3chime", 0.6F, "steam_run", 0.4F, 20, "steam_run", 0.4F, 20, true, "steambell_2", 22),
 	locoSteamHallClass(EntityLocoSteamHallClass.class, "steam_horn", 0.6F, "steam_run", 0.4F, 20, "steam_run", 0.4F, 20, true, " ", 0),
@@ -34,7 +34,7 @@ public enum EnumSounds {
 	locoSteamForney(EntityLocoSteamForneyRed.class, "american_steam_horn", 0.8F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_3", 21),
 	locoSteamMogul(EntityLocoSteamMogulBlue.class, "american_steam_horn", 0.8F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_3", 21),
 	locoSteamSmall(EntityLocoSteamSmall.class, " ", 0.5F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_3", 21, new String[] {"steam_horn", "steam_horn", "steam_horn", "steam_horn", "steam_horn", "ttte_whistle"}),
-	locoSteamShay(EntityLocoSteamShay.class, "lukenhimer_3chime", 0.8F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_1", 22),
+	locoSteamShay(EntityLocoSteamShay.class, "lukenhimer_3chime_1", 0.8F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_1", 22),
 	locoSteamClass62(EntityLocoSteamC62Class.class, "class62_horn", 0.8F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, " ", 0),
 	locoSteamD51S(EntityLocoSteamD51.class, "class62_horn", 0.8F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, " ", 0),
 	locoSteamD51L(EntityLocoSteamD51Long.class, "class62_horn", 0.8F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, " ", 0),
@@ -47,7 +47,7 @@ public enum EnumSounds {
 	locoSteamvb(EntityLocoSteam040VB.class, "adler_whistle", 0.8F, "adler_run", 0.2F, 20, "adler_run", 0.2F, 20, true, "steambell_1", 22),
 	locoSteamvbShay(EntityLocoSteamVBShay.class, "shay_horn", 0.8F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_1", 22),
 	locoSteam262T(EntityLocoSteam262T.class, "german_steam_horn", 0.8F, "steam_run", 0.4F, 20, "steam_run", 0.4F, 20, true, " ", 0),
-	locoSteamClimax(EntityLocoSteamClimax.class, "crosby_3chime", 0.5F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_1", 22),
+	locoSteamClimax(EntityLocoSteamClimax.class, "crosby_3chime_1", 0.5F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_1", 22),
 	locoSteamCoranationClass(EntityLocoSteamCoranationClass.class, "steam_horn", 0.6F, "steam_run", 0.4F, 20, "steam_run", 0.4F, 20, true, " ", 0),
 	locoSteamLSSP7(EntityLocoSteamLSSP7.class, "american_steam_horn", 0.8F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_1", 22),
 	// TRAINCRAFT ELECTRICS //
@@ -200,7 +200,7 @@ public enum EnumSounds {
 	DieselSW1(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSW1.class, " ", 1F, "EMD_6_567A_Notch8", 0.45F, 52, "EMD_6_567A_Idle", 0.45F, 42, false, "emd_bronzebell_3", 16, new String[] {"leslie_a125_1", "leslie_a125_1", "leslie_a125_1", "leslie_a125_1", "leslie_a125_1", "leslie_a125_1", "leslie_a125_1", "nathan_k3la_2", "nathan_m3h_1", "leslie_rs3l_2", "leslie_rs3l_1", "leslie_a125_1", "nathan_kj24_1", "nathan_m3h_2", "leslie_a125_1", "leslie_a125_1", "leslie_a125_1", "leslie_rs3l_3", "nathan_m3_3", "leslie_a200_1", "nathan_j3_1"}),
 	DieselSW8(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSW8.class, " ", 1F, "EMD_12_567B_Notch8", 0.45F, 28, "EMD_12_567B_Idle", 0.45F, 30, false, "emd_bronzebell_3", 16, new String[] {"nathan_k5la_wide_2", "generic_horn_2", "leslie_a125_1", "leslie_a125_1", "nathan_k5la_wide_2", "leslie_a125_1", "leslie_a125_1"}),
 	DieselSW10(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSW10.class, " ", 1F, "EMD_12_645C_Notch8", 0.45F, 49, "EMD_12_645C_Idle", 0.45F, 46, false, "emd_steelbell_1", 15, new String[] {"leslie_s3l_2", "generic_horn_2", "prime_990_5", "leslie_s2m_1", "leslie_s2m_1"}),
-	DieselSW900(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSW900.class, " ", 1F, "EMD_8_567C_Notch8", 0.45F, 28, "EMD_8_567C_Idle", 0.45F, 30, false, "emd_steelbell_1", 15, new String[] {"nathan_m3_3", "leslie_s3l_3", "nathan_j3_3", "prime_920_4"}),
+	DieselSW900(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSW900.class, " ", 1F, "EMD_8_567C_Notch8", 0.45F, 28, "EMD_8_567C_Idle", 0.45F, 30, false, "emd_steelbell_1", 15,  new String[] {"leslie_s2m_1", "leslie_s3l_1", "prime_990_5", "nathan_m3_8", "generic_horn_1", "leslie_s3l_2", "leslie_a125_1", "leslie_a125_1", "nathan_m3_3", "leslie_s3l_3", "nathan_j3_3", "prime_920_4"}),
 	DieselSW1000(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSW1000.class, " ", 1F, "EMD_8_645E_Notch8", 0.45F, 48, "EMD_8_645E_Idle", 0.45F, 54, false, "emd_steelbell_8", 13, new String[] {"leslie_a125_1", "generic_horn_1", "nathan_m3h_1", "leslie_a125_1", "nathan_p3_new_3", "nathan_k3la_5", "nathan_k3la_2", "nathan_k3la_3"}),
 	DieselSW1200(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSW1200.class, " ", 1F, "EMD_12_645E_Notch8", 0.45F, 54, "EMD_12_645E_Idle", 0.45F, 54, false, "emd_steelbell_4", 10, new String[] {"nathan_p3_old_3", "leslie_a200_1", "leslie_a125_1", "leslie_a125_1", "leslie_s3l_3", "leslie_a125_1", "leslie_a200_triple_1", "prime_920_4", "leslie_a125_1", "leslie_s2m_1", "leslie_s2m_1"}),
 	DieselSW1500(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSW1500.class, " ", 1F, "EMD_12_645E_Notch8", 0.45F, 54, "EMD_12_645E_Idle", 0.45F, 54, false, "emd_steelbell_5", 15, new String[] {"nathan_p3_new_2", "generic_horn_1", "nathan_p3_old_1", "nathan_j3_1", "leslie_a125_1", "leslie_a125_1", "nathan_k3la_3", "prime_920_3", "prime_990_4", "leslie_a125_1", "nathan_n3_1", "nathan_k5la_hybrid_1", "nathan_m3h_2", "leslie_rs5t_3", "leslie_rs5t_3", "nathan_k3la_2", "leslie_a125_1", "nathan_k3la_1", "nathan_k3l_1", "nathan_m5_4", "nathan_p3_new_3", "leslie_s3l_4", "nathan_k3la_3", "nathan_k3la_5"}),
@@ -295,6 +295,7 @@ public enum EnumSounds {
 	//
 	//FoxTC Alco Steam
 	SteamL9(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamNP_L9.class, "np_5chime_1", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 19),
+	Steam2102(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamAlco2102.class, " ", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 19, new String[] {"generic_5chime_1", "crosby3_chime_2", "usarmy_3chime", "alco_5chime_1", "lima_5chime_2", "shay_whistle_1"}),
 
 	//FoxTC Baldwin Steam
 	SteamSkook(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamSkook.class,"skookum_whistle", 1F, "skookum_notch8", 0.9F, 8, "skookum_idle", 0.7F, 50, true, "steambell_4", 19),
@@ -305,13 +306,14 @@ public enum EnumSounds {
 	SteamVBShay(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamVBShay2.class, "shay_horn", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 21),
 	Steam2TruckClimax(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamClimaxNew.class, "shay_horn", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 21),
 	Steam3TruckShay(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamShay3Truck.class, "shay_horn", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 21),
+	SteamClimaxB(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamClimaxB.class, " ", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 19, new String[] {"shay_horn", "lukenimer_3chime_2"}),
 
 	//FoxTC Fictional Steam
 	SteamPE(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamPELoco.class, "pe_whistle", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 19),
 	SteamF01(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamF01.class, "shay_horn", 1F, "steam_run", 0.2F, 20, "steam_idle2", 0.2F, 24, true, "steambell_4", 19),
 	SteamP01a(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamP01a.class, "shay_horn", 1F, "steam_run", 0.2F, 20, "steam_idle2", 0.2F, 24, true, "steambell_4", 19),
 	SteamWCPBuckingBull(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamBuckingBull.class, "hancock_3chime", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_1", 22),
-	SteamWCPMacky(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamMacky.class, "hancock_3chime", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_1", 22),
+	SteamWCPMacky(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamMacky.class, "dmir_yellowstone_whistle", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_1", 22),
 
 	//FoxTC Foreign Steam
 	SteamC11(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamC11.class, "jnr_3chime", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, " ", 0),
