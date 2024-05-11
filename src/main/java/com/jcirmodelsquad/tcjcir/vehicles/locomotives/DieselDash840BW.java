@@ -20,7 +20,7 @@ public class DieselDash840BW extends DieselTrain {
         textureDescriptionMap.put(0, "ATSF");
         textureDescriptionMap.put(1, "borgborg");
         textureDescriptionMap.put(2, "Blandsville & Blankerston");
-        textureDescriptionMap.put(3, "");
+        textureDescriptionMap.put(3, "Morristown Tenneva & Southern");
         textureDescriptionMap.put(4, "");
         textureDescriptionMap.put(5, "");
         textureDescriptionMap.put(6, "");
