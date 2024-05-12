@@ -16,7 +16,7 @@ import train.common.library.GuiIDs;
 
 public class DieselSD60 extends DieselTrain {
     public DieselSD60(World world) {
-        super(world, EnumTrains.SD50.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.SD60.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         textureDescriptionMap.put(0, "Oakway Lease");
         textureDescriptionMap.put(1, "Oakway Lease");
@@ -25,7 +25,7 @@ public class DieselSD60 extends DieselTrain {
         textureDescriptionMap.put(4, "NS (Ex Soup)");
         textureDescriptionMap.put(5, "CR (ohe now thats quality -demoman tf2)");
         textureDescriptionMap.put(6, "Blandsville & Blanklands Terminal Railroad Association");
-        textureDescriptionMap.put(7, "");
+        textureDescriptionMap.put(7, "GLoNT");
         textureDescriptionMap.put(8, "");
         textureDescriptionMap.put(9, "");
     }

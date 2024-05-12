@@ -37,6 +37,7 @@ public class SBMS extends LiquidTank implements IFluidHandler {
         textureDescriptionMap.put(10, "TTLC (Jungle Green)");
         textureDescriptionMap.put(11, "TTLC (Pine Green)");
         textureDescriptionMap.put(12, "TTLC (Red Forest Brown)");
+        textureDescriptionMap.put(13, "wcfbs got tiny brain syndrome");
 
         this.theTank = LiquidManager.getInstance().new FilteredTank(EnumTrains.SBMS.getTankCapacity(), LiquidManager.dieselFilter());
     }

@@ -19,6 +19,7 @@ public class ElectricB_BEL extends ElectricTrain {
         textureDescriptionMap.put(2, "Western Pacific");
         textureDescriptionMap.put(3, "Norfolk Southern");
         textureDescriptionMap.put(4, "FURRX");
+        textureDescriptionMap.put(5, "fucking wcfb fuck");
     }
 
     public ElectricB_BEL(World world, double d, double d1, double d2) {

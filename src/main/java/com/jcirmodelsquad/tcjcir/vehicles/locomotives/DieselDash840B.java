@@ -22,7 +22,7 @@ public class DieselDash840B extends DieselTrain {
         textureDescriptionMap.put(2, "BNSF");
         textureDescriptionMap.put(3, "Conrail");
         textureDescriptionMap.put(4, "PDR");
-        textureDescriptionMap.put(5, "");
+        textureDescriptionMap.put(5, "wcfb likes kissing men");
         textureDescriptionMap.put(6, "");
         textureDescriptionMap.put(7, "");
         textureDescriptionMap.put(8, "");

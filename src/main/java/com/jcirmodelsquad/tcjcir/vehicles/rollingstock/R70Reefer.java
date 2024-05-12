@@ -40,6 +40,7 @@ public class R70Reefer extends Freight implements IInventory {
         textureDescriptionMap.put(19, "ATSF Late");
         textureDescriptionMap.put(20, "WP Ice Service");
         textureDescriptionMap.put(21, "FGE (Real Cold)");
+        textureDescriptionMap.put(22, "GCM");
     }
 
     public R70Reefer(World world, double d, double d1, double d2){

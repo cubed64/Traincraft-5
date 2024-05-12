@@ -49,6 +49,7 @@ public class PS2_4750 extends Freight implements IInventory {
 		textureDescriptionMap.put(26, "Washington Grain Train");
 		textureDescriptionMap.put(27, "Washington Grain Train (Stale)");
 		textureDescriptionMap.put(28, "HRTX (THE GOCK!!!!1!!!1111111111111111111111111111111111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!?!11111111111111111!!!!!!!!!!!!!!!!/)");
+		textureDescriptionMap.put(29, "GCM");
 	}
 
 	public void initFreightGrain() {

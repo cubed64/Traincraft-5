@@ -20,6 +20,8 @@ public class DieselDD55 extends DieselTrain {
         textureDescriptionMap.put(0, "West Creek Pacific");
         textureDescriptionMap.put(1, "Steampunk Rail");
         textureDescriptionMap.put(2, "LA Switcher Company Primer");
+        textureDescriptionMap.put(3, "CSX (but awesome)");
+        textureDescriptionMap.put(4, "CSX (but awesome)");
 
     }
     public DieselDD55(World world, double d, double d1, double d2){

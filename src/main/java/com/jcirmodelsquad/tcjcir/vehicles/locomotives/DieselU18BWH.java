@@ -15,11 +15,12 @@ import train.common.library.GuiIDs;
 
 public class DieselU18BWH extends DieselTrain {
     public DieselU18BWH(World world) {
-        super(world, EnumTrains.U23BW.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.U18BWH.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         textureDescriptionMap.put(0, "Amtrak (PH1)");
         textureDescriptionMap.put(1, "Amtrak (Low Clearance NEC Edition)");
         textureDescriptionMap.put(2, "Blandsville & Blankerston");
+        textureDescriptionMap.put(3, "wcfb has a huge nose wtf");
     }
     public DieselU18BWH(World world, double d, double d1, double d2){
         this(world);
@@ -139,7 +140,7 @@ public class DieselU18BWH extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "GE U23B(W)";
+        return "GE U18B(W)H";
     }
 
     @Override
