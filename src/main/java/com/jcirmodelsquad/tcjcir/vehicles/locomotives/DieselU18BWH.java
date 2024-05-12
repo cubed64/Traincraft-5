@@ -20,7 +20,7 @@ public class DieselU18BWH extends DieselTrain {
         textureDescriptionMap.put(0, "Amtrak (PH1)");
         textureDescriptionMap.put(1, "Amtrak (Low Clearance NEC Edition)");
         textureDescriptionMap.put(2, "Blandsville & Blankerston");
-        textureDescriptionMap.put(3, "wcfb has a huge nose wtf");
+        textureDescriptionMap.put(3, "Galesburg Clinton & Midland");
     }
     public DieselU18BWH(World world, double d, double d1, double d2){
         this(world);

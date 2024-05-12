@@ -31,7 +31,7 @@ public class FNCC60FootBulk extends Freight implements IInventory {
         textureDescriptionMap.put(7, "DN");
         textureDescriptionMap.put(8, "BN");
         textureDescriptionMap.put(9, "BN (Stakes)");
-        textureDescriptionMap.put(10, "wcfb is a binthc");
+        textureDescriptionMap.put(10, "GCM");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(ModelMixedLogs.class,//spruce log

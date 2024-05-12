@@ -23,7 +23,7 @@ public class DieselU18BW extends DieselTrain {
         textureDescriptionMap.put(3, "Western Pacific");
         textureDescriptionMap.put(4, "Blank");
         textureDescriptionMap.put(5, "West Creek Pacific");
-        textureDescriptionMap.put(6, "wcfb stupid buttsecks railroad");
+        textureDescriptionMap.put(6, "Galesburg Clinton & Midland");
     }
     public DieselU18BW(World world, double d, double d1, double d2){
         this(world);

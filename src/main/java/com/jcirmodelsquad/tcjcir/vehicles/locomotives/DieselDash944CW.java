@@ -28,12 +28,12 @@ public class DieselDash944CW extends DieselTrain {
         textureDescriptionMap.put(7, "Chicago Northwestern");
         textureDescriptionMap.put(8, "Morristown Tenneva & Southern");
         textureDescriptionMap.put(9, "Avanste Northeastern");
-        textureDescriptionMap.put(10, "Gaysburg Shitty railroad and who gives 2 fucks");
+        textureDescriptionMap.put(10, "Galesburg Clinton & Midland");
         textureDescriptionMap.put(11, "CSLX (EX CSWR)");
         textureDescriptionMap.put(12, "ATSF");
         textureDescriptionMap.put(13, "ATSF (BNSF Patch)");
         textureDescriptionMap.put(14, "Plainsview");
-        textureDescriptionMap.put(15, "Gaysburg Shitty railroad and who gives 2 fucks BUT ITS DIFFERENT CUS OLS WOOOWOWOWOWOWOWOWOWOWOWOWOOOOWOWOoow");
+        textureDescriptionMap.put(15, "Galesburg Clinton & Midland");
     }
     public DieselDash944CW(World world, double d, double d1, double d2){
         this(world);

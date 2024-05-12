@@ -19,7 +19,7 @@ public class DieselU18BB extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "Fox, North Coast & Cascades");
         textureDescriptionMap.put(1, "West Creek Pacific");
-        textureDescriptionMap.put(2, "stupid wfcb railroad");
+        textureDescriptionMap.put(2, "Galesburg Clinton & Midland");
     }
     public DieselU18BB(World world, double d, double d1, double d2){
         this(world);
