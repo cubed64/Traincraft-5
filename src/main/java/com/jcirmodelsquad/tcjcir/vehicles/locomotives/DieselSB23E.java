@@ -44,7 +44,7 @@ public class DieselSB23E extends DieselTrain {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
         double distance = 3.2; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
-        double distanceLR = -0.35; //how far left/right on the entity you ride; left > 0; right < 0;
+        double distanceLR = 0.35; //how far left/right on the entity you ride; left > 0; right < 0;
         double yOffset = 0.25;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
