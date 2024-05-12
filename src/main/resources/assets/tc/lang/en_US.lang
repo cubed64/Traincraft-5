@@ -921,6 +921,7 @@ item.tc:minecartSD70Mac.name=EMD SD70Mac
 
 item.tc:minecartSW1.name=EMD SW1
 item.tc:minecartSW8.name=EMD SW8
+item.tc:minecartSW9.name=EMD SW9
 item.tc:minecartSW10.name=EMD/UP SW10
 item.tc:minecartSW900.name=EMD SW900
 item.tc:minecartSW1000.name=EMD SW1000
@@ -1006,6 +1007,7 @@ entity.tc.SD70Mac.name=EMD SD70Mac
 
 entity.tc.SW1.name=EMD SW1
 entity.tc.SW8.name=EMD SW8
+entity.tc.SW9.name=EMD SW9
 entity.tc.SW10.name=EMD/UP SW10
 entity.tc.SW900.name=EMD SW900
 entity.tc.SW1000.name=EMD SW1000
