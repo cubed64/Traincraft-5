@@ -405,7 +405,7 @@ public enum EnumTrains {
 	Dash840BB("Dash840BB", DieselDash840BB.class, ItemIDs.minecartDash840BB.item, "diesel", 4000, 113, 0, 40, 0, 200, 0.7, 0.88, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Skin17"}), 14, -3.3),
 	//BUnitDash840B("BUnitDash840B", BUnitDash840B.class, ItemIDs.minecartBUnitDash840BB.item, "diesel", 0, 0, 9, 0, 0, 0, 0, 0, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Red"}), 14, 0, (new String[] {"Reduces weight carried by 90 tons when fueled"})),
 	Dash840BW("Dash840BW", DieselDash840BW.class, ItemIDs.minecartDash840BW.item, "diesel", 4000, 113, 0, 40, 0, 200, 0.7, 0.88, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Orange", "LightGrey", "Skin16", "Pink"}), 12, -3.6),
-	Dash840C("Dash840C", DieselDash840C.class, ItemIDs.minecartDash840C.item, "diesel", 4000, 113, 0, 40, 0, 200, 0.8, 0.88, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Grey", "LightBlue", "Blue", "Skin16", "LightGrey", "Skin17", "Purple", "Skin18"}), 12, -4),
+	Dash840C("Dash840C", DieselDash840C.class, ItemIDs.minecartDash840C.item, "diesel", 4000, 113, 0, 40, 0, 200, 0.8, 0.88, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Grey", "LightBlue", "Blue", "Skin16", "LightGrey", "Skin17", "Purple", "Skin22"}), 12, -4),
 	Dash841C("Dash841C", DieselDash841C.class, ItemIDs.minecartDash841C.item, "diesel", 4100, 113, 0, 39, 0, 180, 0.8, 0.87, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "LightGrey", "Pink", "Orange", "Skin16", "Green", "Skin17"}), 12, -4.0),
 
 	Dash940C("Dash940C", DieselDash940C.class, ItemIDs.minecartDash940C.item, "diesel", 4000, 119, 0, 45, 0, 180, 0.8, 0.87, 21000, TraincraftUtil.getBytesFromColors(new String[] {"White"}), 12, -4.0),
