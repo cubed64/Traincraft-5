@@ -1531,6 +1531,12 @@ item.tc:minecartBuddATSF34SeatParlorObservation.name=Budd ATSF 34 Seat Parlor-Ob
 item.tc:minecartBuddATSF58SeatCoachObservation.name=Budd ATSF 58 Seat Coach-Observation
 item.tc:minecartPSATSF50SeatCoachObservation.name=Pullman Standard ATSF 50 Seat Coach-Observation
 
+item.tc:minecartPSCEIRPO15_Baggage_LC_Lounge.name=Pullman Standard C&EI RPO(15')-Baggage-Lunch Counter-Lounge
+item.tc:minecartPSCEIRPO15_Baggage_38SeatCoach.name=Pullman Standard C&EI RPO(15')-Baggage-38 Seat Coach
+item.tc:minecartPSCEI60SeatCoach.name=Pullman Standard C&EI 60 Seat Coach
+item.tc:minecartPSCEIDiner.name=Pullman Standard C&EI Diner
+item.tc:minecartPSCEI1DR28SeatParlorObservation.name=Pullman Standard C&EI 1DR-28 Seat Parlor-Observation
+
 
 entity.tc.Freight PS 85 Baggage.name=Pullman Standard 85' Baggage
 entity.tc.PS 5-6-5 Sleeper.name=Pullman Standard 10-6 Sleeper (Center Bedroom)
@@ -1599,6 +1605,11 @@ entity.tc.Budd ATSF 34 Seat Parlor-Observation.name=Budd ATSF 34 Seat Parlor-Obs
 entity.tc.Budd ATSF 58 Seat Coach-Observation.name=Budd ATSF 58 Seat Coach-Observation
 entity.tc.PS ATSF 50 Seat Coach-Observation.name=Pullman Standard ATSF 50 Seat Coach-Observation
 
+entity.tc.PS C&EI RPO(15')-Baggage-LC-Lounge.name=Pullman Standard C&EI RPO(15')-Baggage-Lunch Counter-Lounge
+entity.tc.PS C&EI RPO(15')-Baggage-38 Seat Coach.name=Pullman Standard C&EI RPO(15')-Baggage-38 Seat Coach
+entity.tc.PS C&EI 60 Seat Coach.name=Pullman Standard C&EI 60 Seat Coach
+entity.tc.PS C&EI Diner.name=Pullman Standard C&EI Diner
+entity.tc.PS C&EI 1DR-28 Seat Parlor-Observation.name=Pullman Standard C&EI 1DR-28 Seat Parlor-Observation
 
 item.tc:minecartAmfleet.name=Amfleet 1 Coach
 item.tc:minecartAmfleet2.name=Amfleet 2 Coach

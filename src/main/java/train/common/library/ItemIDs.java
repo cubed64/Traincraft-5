@@ -729,6 +729,12 @@ public enum ItemIDs {
 
 	minecartBuddDome54SeatCoach("ItemRollingStock", "BuddDome54SeatCoach", 3),
 
+	minecartPSCEIRPO15_Baggage_LC_Lounge("ItemRollingStock", "PSCEIRPO15_Baggage_LC_Lounge", 3),
+	minecartPSCEIRPO15_Baggage_38SeatCoach("ItemRollingStock", "PSCEIRPO15_Baggage_LC_Lounge", 3),
+	minecartPSCEI60SeatCoach("ItemRollingStock", "PSCEIRPO60SeatCoach", 3),
+	minecartPSCEIDiner("ItemRollingStock", "PSCEIDiner", 3),
+	minecartPSCEI1DR28SeatParlorObservation("ItemRollingStock", "PSCEI1DR28ParlorObservation", 3),
+
 	minecartAmfleet("ItemRollingStock", "Amfleet", 3),
 	minecartAmfleet2("ItemRollingStock", "Amfleet2", 3),
 	minecartAmfleetCab("ItemRollingStock", "AmfleetCab", 3),

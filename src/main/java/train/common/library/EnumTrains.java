@@ -657,6 +657,12 @@ public enum EnumTrains {
 
 	BuddDome54SeatCoach("Budd Dome-54 Seat Coach", BuddDome54SeatCoach.class, ItemIDs.minecartBuddDome54SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "LightBlue", "Grey", "LightGrey", "White", "Red"}), 10, 0),
 
+	PSCEIRPO15_Baggage_LC_Lounge("PS C&EI RPO(15')-Baggage-LC-Lounge", PSCEIRPO15_Baggage_LC_Lounge.class, ItemIDs.minecartPSCEIRPO15_Baggage_LC_Lounge.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Orange", "Cyan", "Red"}), 10, 0, null),
+	PSCEIRPO15_Baggage_38SeatCoach("PS C&EI RPO(15')-Baggage-38 Seat Coach", PSCEIRPO15_Baggage_38SeatCoach.class, ItemIDs.minecartPSCEIRPO15_Baggage_38SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Orange", "Cyan", "Red"}), 10, 0, null),
+	PSCEI60SeatCoach("PS C&EI 60 Seat Coach", PSCEI60SeatCoach.class, ItemIDs.minecartPSCEI60SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Orange", "Cyan", "LightBlue", "Purple", "Yellow", "Pink", "Grey", "Green", "LightGrey", "Black", "Lime", "Brown", "Magenta", "Red"}), 10, 0, null),
+	PSCEIDiner("PS C&EI Diner", PSCEIDiner.class, ItemIDs.minecartPSCEIDiner.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "Red"}), 10, 0, null),
+	PSCEI1DR_28SeatParlor_Observation("PS C&EI 1DR-28 Seat Parlor-Observation", PSCEI1DR_28SeatParlor_Observation.class, ItemIDs.minecartPSCEI1DR28SeatParlorObservation.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Orange", "Red"}), 10, 0, null),
+
 	amfleet("Amfleet", Amfleet.class, ItemIDs.minecartAmfleet.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"White", "Grey", "LightGrey", "LightBlue", "Red", "Blue", "Green", "Skin16", "Skin17"}), 14, 0, null),
 	amfleet2("Amfleet2", Amfleet2.class, ItemIDs.minecartAmfleet2.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"Blue","LightGrey", "Grey", "Red", "LightBlue", "Skin16", "Skin17"}), 14, 0, null),
 	amfleetcab("AmfleetCab", AmfleetCab.class, ItemIDs.minecartAmfleetCab.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey", "LightBlue", "Red", "White", "Skin16", "Skin17"}), 14, 0, null),
