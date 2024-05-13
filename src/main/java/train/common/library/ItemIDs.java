@@ -634,6 +634,8 @@ public enum ItemIDs {
 	minecartACF41Gon("ItemRollingStock", "ACF_41_6_gon", 3),
 	minecartBethgonII("ItemRollingStock", "Bethgon_icon", 5),
 	minecart67millgon("ItemRollingStock", "gsco_67millgon_icon", 4),
+	minecartAAR50TonHopper("ItemRollingStock", "AAR50TonHopper", 2),
+	minecartAAR70TonHopper("ItemRollingStock", "AAR70TonHopper", 3),
 
 	minecart11000DOT111("ItemRollingStock", "11000DOT", 4),
 	minecart20600DOT111("ItemRollingStock", "20600DOT", 5),

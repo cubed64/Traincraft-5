@@ -555,6 +555,8 @@ public enum EnumTrains {
 	ACF41Gon("ACF41Gon", ACF41Gon.class, ItemIDs.minecartACF41Gon.item, "freight", 2.75, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Black", "Grey", "Brown", "Skin16"}), 15, 27, (new String[] {"Cargo: Gonstuff"})),
 	BethgonII("BethgonII", BethgonII.class, ItemIDs.minecartBethgonII.item, "freight", 4, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Green", "Orange", "Yellow", "Grey", "Magenta", "Pink", "Purple", "Skin16", "Skin17"}), 14, 45, (new String[] {"Cargo: Coal n shid"})),
 	gsco67millgon("67millgon", gsco67millgon.class, ItemIDs.minecart67millgon.item, "freight", 3.5, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Green", "Brown", "Blue", "Grey", "Skin16", "Skin17", "Purple", "Skin18"}), 12, 45, (new String[] {"Cargo: Any."})),
+	AAR50TonHopper("AAR 50 Ton Hopper", AAR50TonHopper.class, ItemIDs.minecartAAR50TonHopper.item, "freight", 2, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Purple"}), 16, 27, (new String[] {"Cargo: Ores."})),
+	AAR70TonHopper("AAR 70 Ton Hopper", AAR70TonHopper.class, ItemIDs.minecartAAR70TonHopper.item, "freight", 2, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Magenta"}), 16, 27, (new String[] {"Cargo: Ores."})),
 
 	DOT11111000( "DOT11000", DOT11111000.class, ItemIDs.minecart11000DOT111.item, "tank", 0, 0, 2.25, 0, 0, 0, 0, 0, 41000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "LightGrey", "Grey"}), 16, 0, (new String[] {"Capacity: 41000mb."})),
 	DOT11120600( "DOT20600", DOT11120600.class, ItemIDs.minecart20600DOT111.item, "tank", 0, 0, 3, 0, 0, 0, 0, 0, 78000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Black", "White", "Green", "LightGrey"}), 14, 0, (new String[] {"Capacity: 78000mb."})),
