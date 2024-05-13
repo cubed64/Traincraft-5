@@ -1031,11 +1031,8 @@ RenderEnum {
 		{ }
 	}, "", null, 0, false),
 
-	SD9(DieselSD9.class,  new ModelSD9(), "SD9_", true,new float[] {-1.6F,0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
-		{
-			//add(new double[]{0.8D, 1.4D, 0.0D});
-			//add(new double[]{1.6D, 1.4D, 0.0D});
-		}
+	SD9(DieselSD9.class,  new ModelSD9new(), "sd9_", true,new float[] {-1.6F,0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{ }
 	}, "", null, 0, false),
 	SD38(DieselSD38.class, new ModelSD38(), "sd38_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{ }

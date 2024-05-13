@@ -804,7 +804,7 @@ item.tc:minecartWCPBuckingBull.name=WCP Bucking Bull 2-6-6-0
 item.tc:minecartWCPBaler.name=WCP Baler Tender
 item.tc:minecartWCPMacky.name=WCP Macky 0-10-2
 item.tc:minecartClimaxB.name=50 Ton Class B Climax
-item.tc:minecartAlco2102.name=Alco 2-10-2ST
+item.tc:minecartalco2102.name=Alco 2-10-2ST
 
 item.tc:minecartLocoC11.name=JNR C11
 item.tc:minecartOnion.name=Onion
@@ -897,7 +897,7 @@ item.tc:minecartGP40Dash2.name=EMD GP40-2
 item.tc:minecartGP40tc.name=EMD GP40TC
 item.tc:minecartGP49.name=EMD GP49
 
-item.tc:minecartSD9.name=EMD SD9
+item.tc:minecartSD9.name=EMD SD9 (Phase 1 & 2)
 item.tc:minecartSDL39.name=EMD SDL39
 item.tc:minecartSD38.name=EMD SD38
 item.tc:minecartSD39.name=EMD SD39
