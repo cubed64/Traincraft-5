@@ -805,6 +805,9 @@ item.tc:minecartWCPBaler.name=WCP Baler Tender
 item.tc:minecartWCPMacky.name=WCP Macky 0-10-2
 item.tc:minecartClimaxB.name=50 Ton Class B Climax
 item.tc:minecartalco2102.name=Alco 2-10-2ST
+item.tc:minecartMK60.name=WP MK60-71 2-8-2
+item.tc:minecartTender10k.name=WP 10,000 Gal Tender
+item.tc:minecartTenderDeseret.name=WP Deseret Tender
 
 item.tc:minecartLocoC11.name=JNR C11
 item.tc:minecartOnion.name=Onion
@@ -834,6 +837,9 @@ entity.tc.WCPBaler.name=WCP Baler Tender
 entity.tc.WCPMacky.name=WCP Macky 0-10-2
 entity.tc.ClimaxB.name=50 Ton Class B Climax
 entity.tc.Alco2102.name=Alco 2-10-2ST
+entity.tc.MK60.name=WP MK60-71 2-8-2
+entity.tc.Tender10k.name=WP 10,000 Gal Tender
+entity.tc.TenderDeseret.name=WP Deseret Tender
 
 entity.tc.Loco Steam C11.name=JNR C11
 entity.tc.Onion.name=Onion

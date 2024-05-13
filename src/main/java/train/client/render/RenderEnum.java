@@ -848,6 +848,17 @@ RenderEnum {
 			add(new double[] { 2.8D, 1.40D, 0.0D });//stack
 		}
 	}, 2, true),
+	MK60(SteamMK60.class,  new Modelmk60(), "mk60-71_", true,new float[] {0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
+		{ }
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] { 3.5D, -0.4D, 0.6D });//piston steam
+			add(new double[] { 3.3D, 1.60D, 0.0D });//stack
+		}
+	}, 2, true),
+	Tender10k(Tender10k.class, new ModelTender10k(), "wp_10k_", true, new float[] {-0.00F, 0.0F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	TenderDeseret(TenderDeseret.class, new ModelTenderDeseret(), "wp_deserettender_", true, new float[] {-0.00F, 0.0F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+
 
 	/**EMD**/
 	F3A( DieselF3A.class,  new ModelF3A(), "f3a_", true,new float[] {-1.375F, 0.1F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.1F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
