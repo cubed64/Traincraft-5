@@ -218,6 +218,7 @@
 
 
 
+  "alco_5chime_1": {"category": "master", "sounds": [{"name": "alco_5chime_1", "stream":  true}]},
   "crosby_3chime_1": {"category": "master", "sounds": [{"name": "crosby_3chime_1", "stream":  true}]},
   "crosby_3chime_2": {"category": "master", "sounds": [{"name": "crosby_3chime_2", "stream":  true}]},
   "daylight_whistle": {"category": "master", "sounds": [{"name": "daylight_whistle", "stream":  true}]},
@@ -253,6 +254,7 @@
   "bb_horn": {"category": "master", "sounds": [{"name": "bb_horn","stream": true}]},
   "walterwhite": {"category": "master", "sounds": [{"name": "walterwhite","stream": true}]},
   "aem7_horn": {"category": "master", "sounds": [{"name": "aem7_horn","stream": true}]},
+  "fuck_bees": {"category": "master", "sounds": [{"name": "fuck_bees","stream": true}]},
   "hhgregg600horn": {"category": "master", "sounds": [{"name": "hhgregg600horn", "stream":  true}]},
   "rtr_horn": {"category": "master", "sounds": [{"name": "rtr_horn","stream": true}]},
   "thanos_horn": {"category": "master", "sounds": [{"name": "thanos_horn","stream": true}]},
@@ -441,7 +443,7 @@
   "CAT_8_D17000_Idle": {"category": "master", "sounds": [{"name": "CAT_8_D17000_Idle", "stream":  true}]},
   "CAT_8_D17000_Notch8": {"category": "master", "sounds": [{"name": "CAT_8_D17000_Notch8", "stream":  true}]},
   "deltic_idle": {"category": "master", "sounds": [{"name": "deltic_idle", "stream":  true}]},
-  "deltic_notch8": {"category": "master", "sounds": [{"name": "deltic_notch8", "stream":  true}]},
+  "deltic_run": {"category": "master", "sounds": [{"name": "deltic_run", "stream":  true}]},
   "Maybach_MD870_16_Idle": {"category": "master", "sounds": [{"name": "Maybach_MD870_16_Idle", "stream":  true}]},
   "Maybach_MD870_16_Notch8": {"category": "master", "sounds": [{"name": "Maybach_MD870_16_Notch8", "stream":  true}]},
   "MILW_Idle": {"category": "master", "sounds": [{"name": "MILW_Idle", "stream":  true}]},
