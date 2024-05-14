@@ -242,7 +242,7 @@
   "765_whistle": {"category": "master", "sounds": [{"name": "765_whistle", "stream":  true}]},
   "1225_whistle": {"category": "master", "sounds": [{"name": "1225_whistle", "stream":  true}]},
   "westinghouse_whistle_1": {"category": "master", "sounds": [{"name": "westinghouse_airwhistle_1", "stream":  true}]},
-
+  "wp_5chime_1": {"category": "master", "sounds": [{"name": "wp_5chime_1", "stream":  true}]},
 
   "a4_whistle": {"category": "master", "sounds": [{"name": "a4_whistle", "stream":  true}]},
   "br_horn": {"category": "master", "sounds": [{"name": "br_horn", "stream":  true}]},
