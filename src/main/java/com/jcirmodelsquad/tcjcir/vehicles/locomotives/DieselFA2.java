@@ -22,13 +22,13 @@ public class DieselFA2 extends DieselTrain {
         textureDescriptionMap.put(1, "Chicago Northwestern");
         textureDescriptionMap.put(2, "Wabash");
         textureDescriptionMap.put(3, "ALCO Demonstrator");
-        textureDescriptionMap.put(3, "Great Northern");
-        textureDescriptionMap.put(4, "Great Northern (Solid)");
-        textureDescriptionMap.put(5, "Great Northern (Steam Gen");
-        textureDescriptionMap.put(6, "Great Northern (Steam Gen Solid 2)");
-        textureDescriptionMap.put(7, "Canadian National (Old)");
-        textureDescriptionMap.put(8, "Canadian National (Stripes)");
-        textureDescriptionMap.put(9, "Galesburg Clinton & Midland (FPA-2)");
+        textureDescriptionMap.put(4, "Great Northern");
+        textureDescriptionMap.put(5, "Great Northern (Solid)");
+        textureDescriptionMap.put(6, "Great Northern (Steam Gen)");
+        textureDescriptionMap.put(7, "Great Northern (Steam Gen Solid 2)");
+        textureDescriptionMap.put(8, "Canadian National (Old)");
+        textureDescriptionMap.put(9, "Canadian National (Stripes)");
+        textureDescriptionMap.put(10, "Galesburg Clinton & Midland (FPA-2)");
     }
     public DieselFA2(World world, double d, double d1, double d2){
         this(world);

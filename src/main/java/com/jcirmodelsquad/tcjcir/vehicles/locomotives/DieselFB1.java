@@ -24,6 +24,7 @@ public class DieselFB1 extends DieselTrain {
         textureDescriptionMap.put(3, "Reading");
         textureDescriptionMap.put(4, "Great Northern");
         textureDescriptionMap.put(5, "Great Northern (Solid)");
+        textureDescriptionMap.put(6, "Lehigh & New England");
     }
     public DieselFB1(World world, double d, double d1, double d2){
         this(world);

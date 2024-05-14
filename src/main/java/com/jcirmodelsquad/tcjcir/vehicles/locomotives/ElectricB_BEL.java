@@ -20,6 +20,7 @@ public class ElectricB_BEL extends ElectricTrain {
         textureDescriptionMap.put(3, "Norfolk Southern");
         textureDescriptionMap.put(4, "FURRX");
         textureDescriptionMap.put(5, "Galesburg Clinton & Midland");
+        textureDescriptionMap.put(6, "JCIR 633");
     }
 
     public ElectricB_BEL(World world, double d, double d1, double d2) {

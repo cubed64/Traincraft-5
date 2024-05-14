@@ -20,6 +20,8 @@ public class DieselRS2 extends DieselTrain {
         textureDescriptionMap.put(0, "Deleware & Hudson");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
         textureDescriptionMap.put(2, "sans fey undertail rayroad");
+        textureDescriptionMap.put(3, "Lehigh & New England");
+        textureDescriptionMap.put(4, "Lehigh & New England (late)");
 
     }
     public DieselRS2(World world, double d, double d1, double d2){

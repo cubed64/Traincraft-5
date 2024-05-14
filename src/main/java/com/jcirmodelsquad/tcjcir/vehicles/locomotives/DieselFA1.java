@@ -24,8 +24,10 @@ public class DieselFA1 extends DieselTrain {
         textureDescriptionMap.put(3, "Reading");
         textureDescriptionMap.put(4, "Great Northern");
         textureDescriptionMap.put(5, "Great Northern (Solid)");
-        textureDescriptionMap.put(6, "Deadwood & La Mesa");
-        textureDescriptionMap.put(7, "Deadwood & La Mesa");
+        textureDescriptionMap.put(6, "Lehigh & New England");
+        textureDescriptionMap.put(7, "Lehigh & New England (late)");
+        textureDescriptionMap.put(8, "Deadwood & La Mesa");
+        textureDescriptionMap.put(9, "Deadwood & La Mesa");
 
     }
     public DieselFA1(World world, double d, double d1, double d2){

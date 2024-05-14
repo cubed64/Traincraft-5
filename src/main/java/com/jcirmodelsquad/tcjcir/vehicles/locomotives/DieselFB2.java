@@ -25,6 +25,7 @@ public class DieselFB2 extends DieselTrain {
         textureDescriptionMap.put(4, "Great Northern (Solid)");
         textureDescriptionMap.put(5, "Canadian National (Old)");
         textureDescriptionMap.put(6, "Canadian National (Stripes)");
+        textureDescriptionMap.put(7, "Galesburg Clinton & Midland (FPB-2)");
     }
     public DieselFB2(World world, double d, double d1, double d2){
         this(world);
