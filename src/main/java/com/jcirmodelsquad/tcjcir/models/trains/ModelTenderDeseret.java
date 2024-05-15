@@ -76,7 +76,7 @@ public class ModelTenderDeseret extends ModelConverter //Same as Filename
 		bodyModel[35] = new ModelRendererTurbo(this, 345, 1, textureX, textureY); // Box 594
 		bodyModel[36] = new ModelRendererTurbo(this, 441, 9, textureX, textureY, "lamp"); // Box 595 glow marker
 		bodyModel[37] = new ModelRendererTurbo(this, 497, 9, textureX, textureY); // Box 659
-		bodyModel[38] = new ModelRendererTurbo(this, 505, 9, textureX, textureY); // Box 660
+		bodyModel[38] = new ModelRendererTurbo(this, 505, 9, textureX, textureY, "cull"); // Box 660
 		bodyModel[39] = new ModelRendererTurbo(this, 297, 25, textureX, textureY); // Box 670
 		bodyModel[40] = new ModelRendererTurbo(this, 193, 17, textureX, textureY, "cull"); // Box 175 cull
 		bodyModel[41] = new ModelRendererTurbo(this, 1, 17, textureX, textureY); // Box 73

@@ -18,9 +18,9 @@ public class SteamMK60 extends SteamTrain {
 		super(world, EnumTrains.MK60.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
 		textureDescriptionMap.put(0, "B");
-		textureDescriptionMap.put(1, "");
-		textureDescriptionMap.put(2, "");
-		textureDescriptionMap.put(3, "");
+		textureDescriptionMap.put(1, "putting texture names here");
+		textureDescriptionMap.put(2, "will be a cubed problem");
+		textureDescriptionMap.put(3, "eventually");
 		textureDescriptionMap.put(4, "");
 		textureDescriptionMap.put(5, "");
 	}

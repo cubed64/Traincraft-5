@@ -166,6 +166,17 @@ public class FNCC60FootBulk extends Freight implements IInventory {
                         new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
                                 "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Wrapped Lumber", 0, 2.985, 0)},
 
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//foggye wood
+                        "loads/WrappedWood3_FRLC_Straps", "Wrapped Lumber (Foggy River)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_FRLC_Straps", "Wrapped Lumber (Foggy River)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_FRLC_Straps", "Wrapped Lumber (Foggy River)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_FRLC_Straps", "Wrapped Lumber (Foggy River)", 0, 1.555, 0),
+                        new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Wrapped Lumber (Foggy River)", 0, 2.985, 0)},
+
                 { new CargoSpecification(Modelpipeload1.class,
                         "loads/pipe_falling_sfx_1", "Pipes", 0, 2.5, 0) },
         }));

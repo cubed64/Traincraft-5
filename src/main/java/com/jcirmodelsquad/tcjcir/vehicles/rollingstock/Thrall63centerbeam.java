@@ -105,6 +105,19 @@ public class Thrall63centerbeam extends Freight implements IInventory {
                                 "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", -0.0315, 1.283, 0),
                         new CargoSpecification(Modelthrall63tiedownsLoaded.class,
                                 "trains/thrall63footcenterbeam_tiedowns", "Wrapped Lumber", 0, 3, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,//foggyriver wood
+                        "loads/WrappedWood3_FRLC_Straps", "Wrapped Lumber (Foggy River)", -0.0315, 2.54, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_FRLC_Straps", "Wrapped Lumber (Foggy River)", -0.0315, 2.225, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_FRLC_Straps", "Wrapped Lumber (Foggy River)", -0.0315, 1.91, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_FRLC_Straps", "Wrapped Lumber (Foggy River)", -0.0315, 1.595, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/WrappedWood3_FRLC_Straps", "Wrapped Lumber (Foggy River)", -0.0315, 1.283, 0),
+                        new CargoSpecification(Modelthrall63tiedownsLoaded.class,
+                                "trains/thrall63footcenterbeam_tiedowns", "Wrapped Lumber (Foggy River)", 0, 3, 0),},
         }));
     }
 

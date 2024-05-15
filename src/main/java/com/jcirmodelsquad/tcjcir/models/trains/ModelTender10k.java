@@ -66,7 +66,7 @@ public class ModelTender10k extends ModelConverter //Same as Filename
 		bodyModel[24] = new ModelRendererTurbo(this, 65, 9, textureX, textureY); // Box 568
 		bodyModel[25] = new ModelRendererTurbo(this, 372, 9, textureX, textureY); // Box 570
 		bodyModel[26] = new ModelRendererTurbo(this, 49, 9, textureX, textureY); // Box 659
-		bodyModel[27] = new ModelRendererTurbo(this, 1, 17, textureX, textureY); // Box 660
+		bodyModel[27] = new ModelRendererTurbo(this, 1, 17, textureX, textureY, "cull"); // Box 660
 		bodyModel[28] = new ModelRendererTurbo(this, 25, 25, textureX, textureY); // Box 661
 		bodyModel[29] = new ModelRendererTurbo(this, 217, 25, textureX, textureY); // Box 662
 		bodyModel[30] = new ModelRendererTurbo(this, 217, 28, textureX, textureY); // Box 663

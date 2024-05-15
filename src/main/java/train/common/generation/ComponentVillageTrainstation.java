@@ -1,8 +1,6 @@
 package train.common.generation;
 
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.Amfleet;
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.Amfleet2;
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.PS140;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.*;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
@@ -166,7 +164,7 @@ public class ComponentVillageTrainstation extends StructureVillagePieces.Village
 		int l1 = this.getZWithOffset(6, 8);
 
 		if (structureboundingbox.isVecInside(j1, k1, l1)) {
-			int rD = random.nextInt(11);
+			int rD = random.nextInt(14);//bound is the next highest random number you CANT generate. EG: 11 entities, max bound 12
 			EntityRollingStock cart = new EntityCabooseLogging(world);
 			if (rD == 0)
 				cart = new EntityCaboose(world);
@@ -188,6 +186,12 @@ public class ComponentVillageTrainstation extends StructureVillagePieces.Village
 				cart = new Amfleet2(world);
 			if (rD == 9)
 				cart = new PS140(world);
+			if (rD == 10)
+				cart = new BombCart(world);
+			if (rD == 11)
+				cart = new GATC10000(world);
+			if (rD == 12)
+				cart = new PDH2800(world);
 
 			cart.setLocationAndAngles(j1 + 0.5D, k1, l1 + 0.5D, 90.0F, 0.0F);
 			cart.setTrainOwner("VillagerJoe");
@@ -198,11 +202,23 @@ public class ComponentVillageTrainstation extends StructureVillagePieces.Village
 			if (rD == 7) {
 				cart.setColor(AbstractTrains.getColorFromString("Red"));
 			}
+			if (rD == 8) {
+				cart.setColor(AbstractTrains.getColorFromString("Grey"));
+			}
 			if (rD == 5) {
 				cart.setColor(AbstractTrains.getColorFromString("Brown"));
 			}
 			if (rD == 9) {
 				cart.setColor(AbstractTrains.getColorFromString("Skin16"));
+			}
+			if (rD == 10) {
+				cart.setColor(AbstractTrains.getColorFromString("Blue"));
+			}
+			if (rD == 11) {
+				cart.setColor(AbstractTrains.getColorFromString("Black"));
+			}
+			if (rD == 12) {
+				cart.setColor(AbstractTrains.getColorFromString("Grey"));
 			}
 			world.spawnEntityInWorld(cart);
 			cart.setInformation(cart.getTrainType(), "VillagerJoe", "VillagerJoe", cart.getCartItem().getItem().getItemStackDisplayName(cart.getCartItem()), -1);
@@ -212,7 +228,7 @@ public class ComponentVillageTrainstation extends StructureVillagePieces.Village
 		int l2 = this.getZWithOffset(3, 8);
 
 		if (structureboundingbox.isVecInside(j2, k2, l2)) {
-			int rD = random.nextInt(11);
+			int rD = random.nextInt(14);
 			EntityRollingStock cart = new EntityFreightWood2(world);
 			if (rD == 0)
 				cart = new EntityCaboose(world);
@@ -234,6 +250,13 @@ public class ComponentVillageTrainstation extends StructureVillagePieces.Village
 				cart = new Amfleet2(world);
 			if (rD == 9)
 				cart = new PS140(world);
+			if (rD == 10)
+				cart = new BombCart(world);
+			if (rD == 11)
+				cart = new GATC10000(world);
+			if (rD == 12)
+				cart = new PDH2800(world);
+
 			cart.setLocationAndAngles(j2 + 0.5D, k2, l2 + 0.5D, 90.0F, 0.0F);
 			cart.setTrainOwner("VillagerJoe");
 			if (rD == 4) {
@@ -242,8 +265,23 @@ public class ComponentVillageTrainstation extends StructureVillagePieces.Village
 			if (rD == 5) {
 				cart.setColor(AbstractTrains.getColorFromString("Brown"));
 			}
+			if (rD == 7) {
+				cart.setColor(AbstractTrains.getColorFromString("Red"));
+			}
+			if (rD == 8) {
+				cart.setColor(AbstractTrains.getColorFromString("Grey"));
+			}
 			if (rD == 9) {
 				cart.setColor(AbstractTrains.getColorFromString("Skin17"));
+			}
+			if (rD == 10) {
+				cart.setColor(AbstractTrains.getColorFromString("Blue"));
+			}
+			if (rD == 11) {
+				cart.setColor(AbstractTrains.getColorFromString("Black"));
+			}
+			if (rD == 12) {
+				cart.setColor(AbstractTrains.getColorFromString("Grey"));
 			}
 			world.spawnEntityInWorld(cart);
 		}

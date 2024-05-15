@@ -9,7 +9,9 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelFlexicoil_C2H;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFlexicoil_C_Late;
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelFlexicoil_C_Mid;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -1209,6 +1211,7 @@ public class ModelGM6C_V2 extends ModelConverter //Same as Filename
 		bodyModel[285].setRotationPoint(-35F, -13.5F, -13F);
 	}
 	ModelFlexicoil_C_Late flexLate = new ModelFlexicoil_C_Late();
+	ModelFlexicoil_C_Mid flexMid = new ModelFlexicoil_C_Mid();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
@@ -1230,18 +1233,34 @@ public class ModelGM6C_V2 extends ModelConverter //Same as Filename
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1348) {
 			//silver dash 2 truck
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_C_dash2_longjohns.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.75F, 0.0F, 0F);
+			flexLate.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(-3.5F, 0.0F, 0);
+			flexLate.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 12) {
+			//conrail can eat my dick
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_c2h_black.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.75F, 0.0F, 0F);
+			flexMid.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(-3.5F, 0.0F, 0);
+			flexMid.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
 		} else {
 			//black dash 2 truck
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_C_dash2_Black.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.75F, 0.0F, 0F);
+			flexLate.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(-3.5F, 0.0F, 0);
+			flexLate.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
 		}
-		GL11.glPushMatrix();
-		GL11.glTranslatef(-1.75F, 0.0F, 0F);
-		flexLate.render(entity, f, f1, f2, f3, f4, f5);
-		GL11.glRotatef(180, 0, 1, 0);
-		GL11.glTranslated(-3.5F, 0.0F, 0);
-		flexLate.render(entity, f, f1, f2, f3, f4, f5);
-		GL11.glPopMatrix();
-
 		((AbstractTrains) entity).getCargoManager().renderCargo((AbstractTrains) entity, f, f1, f2, f3, f4, f5);
 	}
 

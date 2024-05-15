@@ -38,6 +38,7 @@ public class DieselGP35 extends DieselTrain {
         textureDescriptionMap.put(18, "AMEX 2019");
         textureDescriptionMap.put(19, "Great Lakes & North Territories");
         textureDescriptionMap.put(20, "Ann Arbor (OLS)");
+        textureDescriptionMap.put(21, "Ann Arbor (Ex SouP)");
     }
     public DieselGP35(World world, double d, double d1, double d2){
         this(world);

@@ -86,6 +86,17 @@ public class Freight73centerbeam extends Freight implements IInventory {
                                 "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 1.492, 0),
                         new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
                                 "loads/WrappedWood3_Blank_Straps", "Wrapped Lumber", 0, 1.177, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,//foggy river
+                        "loads/WrappedWood3_FRLC_Straps", "Wrapped Lumber (Foggy River)", 0, 2.437, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/WrappedWood3_FRLC_Straps", "Wrapped Lumber (Foggy River)", 0, 2.122, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/WrappedWood3_FRLC_Straps", "Wrapped Lumber (Foggy River)", 0, 1.807, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/WrappedWood3_FRLC_Straps", "Wrapped Lumber (Foggy River)", 0, 1.492, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/WrappedWood3_FRLC_Straps", "Wrapped Lumber (Foggy River)", 0, 1.177, 0),},
         }));
     }
 

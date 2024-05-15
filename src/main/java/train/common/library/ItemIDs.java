@@ -763,7 +763,7 @@ public enum ItemIDs {
 	minecartCQ310PO("ItemRollingStock", "CQ_310_Loco_icon",3),
 	minecartCQ310PA("ItemRollingStock", "CQ_310_Tail_icon",3),
 	minecartKawasakiLRV("ItemRollingStock", "KawasakiLRV",3),
-	minecartPCC("ItemRollingStock", "pcc", 3),
+	minecartPCC("ItemRollingStock", "PCC", 3),
 
 	//peach moments
 	minecartGeometryCar("ItemRollingStock", "geometry_car", 15),
