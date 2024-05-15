@@ -24,12 +24,12 @@ public class GSI60FootBulkhead extends Freight implements IInventory {
     public GSI60FootBulkhead(World world) {
         super(world);
         initFreightCart();
-        textureDescriptionMap.put(0, "GN");
-        textureDescriptionMap.put(1, "GN");
+        textureDescriptionMap.put(0, "GN 1");
+        textureDescriptionMap.put(1, "GN 2");
         textureDescriptionMap.put(2, "BN");
         textureDescriptionMap.put(3, "SCL");
-        textureDescriptionMap.put(4, "ACL");
-        textureDescriptionMap.put(5, "ACL");
+        textureDescriptionMap.put(4, "ACL 1");
+        textureDescriptionMap.put(5, "ACL 2");
         textureDescriptionMap.put(6, "FNCC");
         setCargoManager(new CargoManager(new CargoSpecification[][] {
 

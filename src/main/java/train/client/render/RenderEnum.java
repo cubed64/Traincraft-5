@@ -1630,6 +1630,14 @@ RenderEnum {
 
 	OB84SeatCoach(OB84SeatCoach.class, new ModelOB84SeatCoach(), "OB_lightweight_84SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	OB92SeatCoach(OB92SeatCoach.class, new ModelOB92SeatCoach(), "OB_lightweight_92SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	OBNHGrillCar(OBNHGrillCar.class, new ModelOBNHGrillCar(), "OB_lightweight_NHGrillCar_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	OBNHLounge5107(OBNHLounge5107.class, new ModelOBNHLounge5107(), "OB_lightweight_NHLounge5107_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	OBBaggage_52SeatDividedCoach(OBBaggage_52SeatDividedCoach.class, new ModelOBBaggage_52SeatDividedCoach(), "OB_lightweight_Baggage_52SeatDividedCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	OB76SeatDividedCoach(OB76SeatDividedCoach.class, new ModelOB76SeatDividedCoach(), "OB_lightweight_76SeatDividedCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	OBLV82_92SeatCoach(OBLV82_92SeatCoach.class, new ModelOBLV82_92SeatCoach(), "OB_lightweight_LV82_92SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	OBRPO15(OBRPO15.class, new ModelOBRPO15(), "OB_lightweight_RPO15_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	OB24SeatCoach_Dinette(OB24SeatCoach_Dinette.class, new ModelOB24SeatCoach_Dinette(), "OB_lightweight_24SeatCoach_Dinette_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	OBBAR52SeatCoach_Dinette(OBBAR52SeatCoach_Dinette.class, new ModelOBBAR52SeatCoach_Dinette(), "OB_lightweight_BAR52SeatCoach_Dinette_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	PSCNW56SeatCoach(PSCNW56SeatCoach.class, new ModelPSCNW56SeatCoach(), "PS_lightweight_CNW56SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCNW48SeatCoach_Lounge(PSCNW48SeatCoach_Lounge.class, new ModelPSCNW48SeatCoach_Lounge(), "PS_lightweight_CNW48SeatCoach_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -1675,6 +1683,8 @@ RenderEnum {
 	PSCEI60SeatCoach(PSCEI60SeatCoach.class, new ModelPSCEI60SeatCoach(), "PS_lightweight_CEI60SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCEIDiner(PSCEIDiner.class, new ModelPSCEIDiner(), "PS_lightweight_CEIDiner_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCEI1DR_28SeatParlor_Observation(PSCEI1DR_28SeatParlor_Observation.class, new ModelPSCEI1DR_28SeatParlor_Observation(), "PS_lightweight_CEI1DR_28SeatParlor_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+
+	OBHWNH5570_5589(OBHWNH5570_5589Baggage.class, new ModelOBHWNH5570_5589Baggage(), "OB_heavyweight_NH5570_5589Baggage_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	amfleet(Amfleet.class, new ModelAmfleet(),"amfleet_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	amfleet2(Amfleet2.class, new ModelAmfleet2(),"amfleet2_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

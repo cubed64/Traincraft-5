@@ -691,6 +691,14 @@ public enum ItemIDs {
 
 	minecartOB84SeatCoach("ItemRollingStock", "OB84-92SeatCoach", 3),
 	minecartOB92SeatCoach("ItemRollingStock", "OB84-92SeatCoach", 3),
+	minecartOBNHGrillCar("ItemRollingStock", "OBNHGrillCar", 3),
+	minecartOBNHLounge5107("ItemRollingStock", "OBNHLounge5107", 3),
+	minecartOBBaggage_52SeatDividedCoach("ItemRollingStock", "OBBaggage_SeatDividedCoach", 3),
+	minecartOB76SeatDividedCoach("ItemRollingStock", "OB76SeatDividedCoach", 3),
+	minecartOBLV82_92SeatCoach("ItemRollingStock", "OBLV84-92SeatCoach", 3),
+	minecartOBRPO15("ItemRollingStock", "OBRPO15", 3),
+	minecartOB24SeatCoach_Dinette("ItemRollingStock", "OB24SeatCoach_Dinette", 3),
+	minecartOBBAR52SeatCoach_Dinette("ItemRollingStock", "OBBAR52SeatCoach_Dinette", 3),
 
 	minecartPSCNW56SeatCoach("ItemRollingStock", "PSCNW56SeatCoach", 3),
 	minecartPSCNW48SeatCoachLounge("ItemRollingStock", "PSCNW56SeatCoach", 3),
@@ -736,6 +744,8 @@ public enum ItemIDs {
 	minecartPSCEI60SeatCoach("ItemRollingStock", "PSCEIRPO60SeatCoach", 3),
 	minecartPSCEIDiner("ItemRollingStock", "PSCEIDiner", 3),
 	minecartPSCEI1DR28SeatParlorObservation("ItemRollingStock", "PSCEI1DR28ParlorObservation", 3),
+
+	minecartOBHWNH5570_5589Baggage("ItemRollingStock", "OBHWNH5570_5589Baggage", 3),
 
 	minecartAmfleet("ItemRollingStock", "Amfleet", 3),
 	minecartAmfleet2("ItemRollingStock", "Amfleet2", 3),

@@ -345,7 +345,7 @@ public class ModelAAR70TonHopper extends ModelConverter //Same as Filename
 		bodyModel[310] = new ModelRendererTurbo(this, 153, 72, textureX, textureY); // Box 214
 		bodyModel[311] = new ModelRendererTurbo(this, 69, 75, textureX, textureY); // Box 0
 		bodyModel[312] = new ModelRendererTurbo(this, 69, 72, textureX, textureY); // Box 214
-		bodyModel[313] = new ModelRendererTurbo(this, 455, 13, textureX, textureY); // Box 224
+		bodyModel[313] = new ModelRendererTurbo(this, 455, 13, textureX, textureY, "cull"); // Box 224 cull
 		bodyModel[314] = new ModelRendererTurbo(this, 477, 187, textureX, textureY,"cull"); // Box 224 cull
 		bodyModel[315] = new ModelRendererTurbo(this, 477, 141, textureX, textureY,"cull"); // Box 224 cull
 		bodyModel[316] = new ModelRendererTurbo(this, 457, 150, textureX, textureY,"cull"); // Box 224 cull
@@ -361,7 +361,7 @@ public class ModelAAR70TonHopper extends ModelConverter //Same as Filename
 		bodyModel[326] = new ModelRendererTurbo(this, 491, 117, textureX, textureY); // Box 224
 		bodyModel[327] = new ModelRendererTurbo(this, 491, 114, textureX, textureY); // Box 251
 		bodyModel[328] = new ModelRendererTurbo(this, 130, 135, textureX, textureY); // Box 0
-		bodyModel[329] = new ModelRendererTurbo(this, 455, 57, textureX, textureY); // Box 297
+		bodyModel[329] = new ModelRendererTurbo(this, 455, 57, textureX, textureY, "cull"); // Box 297 cull
 
 		bodyModel[0].addShapeBox(0F, 0F, 0F, 3, 2, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 1 coupler
 		bodyModel[0].setRotationPoint(-37.5F, 3F, -1.5F);
@@ -1336,7 +1336,7 @@ public class ModelAAR70TonHopper extends ModelConverter //Same as Filename
 		bodyModel[312].addShapeBox(0F, 0F, 0F, 10, 1, 1, 0F,0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, -0.2F, 0F, 0F, -0.4F, 0F, 0F, -0.4F, 0F, 0F, -0.2F, 0F, 0F); // Box 214
 		bodyModel[312].setRotationPoint(-21.95F, 2F, 9.5F);
 
-		bodyModel[313].addShapeBox(0F, 0F, 0F, 17, 3, 1, 0F,0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, -1F, 0F, -0.25F, -1F, 0F, -0.25F, 0F, 0F, -0.25F, 0F); // Box 224
+		bodyModel[313].addShapeBox(0F, 0F, 0F, 17, 3, 1, 0F,0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, -1F, 0F, -0.25F, -1F, 0F, -0.25F, 0F, 0F, -0.25F, 0F); // Box 224 cull
 		bodyModel[313].setRotationPoint(-8.5F, -12.75F, 10.5F);
 
 		bodyModel[314].addShapeBox(0F, 0F, 0F, 6, 3, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, -1F, 0F, -0.25F, -1F); // Box 224 cull
@@ -1384,7 +1384,7 @@ public class ModelAAR70TonHopper extends ModelConverter //Same as Filename
 		bodyModel[328].addShapeBox(0F, 0F, 0F, 4, 3, 4, 0F,0F, 0F, 0F, -0.1F, -3F, 0F, -0.1F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.1F, 0F, 0F, -0.1F, 0F, 0F, 0F, 0F, 0F); // Box 0
 		bodyModel[328].setRotationPoint(-8.5F, 0F, -2F);
 
-		bodyModel[329].addShapeBox(0F, 0F, 0F, 17, 3, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, -1F, 0F, -0.25F, -1F); // Box 297
+		bodyModel[329].addShapeBox(0F, 0F, 0F, 17, 3, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, -1F, 0F, -0.25F, -1F); // Box 297 cull
 		bodyModel[329].setRotationPoint(-8.5F, -12.75F, -11.5F);
 	}
 	ModelBettendorf_Truck_Small theTrucks1 = new ModelBettendorf_Truck_Small();

@@ -1495,6 +1495,14 @@ item.tc:minecartACFGN28SeatCoach_Dinette.name=American Car & Foundry GN 28 Seat 
 
 item.tc:minecartOB84SeatCoach.name=Osgood Bradley 84 Seat Coach
 item.tc:minecartOB92SeatCoach.name=Osgood Bradley 92 Seat Coach
+item.tc:minecartOBNHGrillCar.name=Osgood Bradley NH Grill Car
+item.tc:minecartOBNHLounge5107.name=Osgood Bradley NH Commuter Lounge 5107
+item.tc:minecartOBBaggage_52SeatDividedCoach.name=Osgood Bradley Baggage-52 Seat Divided Coach
+item.tc:minecartOB76SeatDividedCoach.name=Osgood Bradley 76 Seat Divided Coach
+item.tc:minecartOBLV82_92SeatCoach.name=Osgood Bradley LV 82/92 Seat Coach
+item.tc:minecartOBRPO15.name=Osgood Bradley RPO(15')
+item.tc:minecartOB24SeatCoach_Dinette.name=Osgood Bradley 24 Seat Coach-Dinette
+item.tc:minecartOBBAR52SeatCoach_Dinette.name=Osgood Bradley BAR 52 Seat Coach-Dinette
 
 item.tc:minecartPSCNW56SeatCoach.name=Pullman Standard CNW 56 Seat Coach-Lounge
 item.tc:minecartPSCNW48SeatCoachLounge.name=Pullman Standard CNW 48 Seat Coach-Nurse Room-Lounge
@@ -1541,6 +1549,8 @@ item.tc:minecartPSCEI60SeatCoach.name=Pullman Standard C&EI 60 Seat Coach
 item.tc:minecartPSCEIDiner.name=Pullman Standard C&EI Diner
 item.tc:minecartPSCEI1DR28SeatParlorObservation.name=Pullman Standard C&EI 1DR-28 Seat Parlor-Observation
 
+item.tc:minecartOBHWNH5570_5589Baggage.name=Osgood Bradley NH 5570-5589 Series Baggage
+
 
 entity.tc.Freight PS 85 Baggage.name=Pullman Standard 85' Baggage
 entity.tc.PS 5-6-5 Sleeper.name=Pullman Standard 10-6 Sleeper (Center Bedroom)
@@ -1570,6 +1580,14 @@ entity.tc.AC&F GN 28 Seat Coach-Dinette.name=American Car & Foundry GN 28 Seat C
 
 entity.tc.OB 84 Seat Coach.name=Osgood Bradley 84 Seat Coach
 entity.tc.OB 92 Seat Coach.name=Osgood Bradley 92 Seat Coach
+entity.tc.OB NH Grill Car.name=Osgood Bradley NH Grill Car
+entity.tc.OB NH Commuter Lounge 5107.name=Osgood Bradley NH Commuter Lounge 5107
+entity.tc.OB Baggage-52 Seat Divided Coach.name=Osgood Bradley Baggage-52 Seat Divided Coach
+entity.tc.OB 76 Seat Divided Coach.name=Osgood Bradley 76 Seat Divided Coach
+entity.tc.OB LV 82/92 Seat Coach.name=Osgood Bradley LV 82/92 Seat Coach
+entity.tc.OB RPO (15' mail).name=Osgood Bradley RPO(15')
+entity.tc.OB 24 Seat Coach-Dinette.name=Osgood Bradley 24 Seat Coach-Dinette
+entity.tc.OB BAR 52 Seat Coach-Dinette.name=Osgood Bradley BAR 52 Seat Coach-Dinette
 
 entity.tc.PS CNW 56 Seat Coach.name=Pullman Standard CNW 56 Seat Coach-Lounge
 entity.tc.PS CNW 48 Seat Coach-Lounge.name=Pullman Standard CNW 48 Seat Coach-Nurse Room-Lounge
@@ -1614,6 +1632,8 @@ entity.tc.PS C&EI RPO(15')-Baggage-38 Seat Coach.name=Pullman Standard C&EI RPO(
 entity.tc.PS C&EI 60 Seat Coach.name=Pullman Standard C&EI 60 Seat Coach
 entity.tc.PS C&EI Diner.name=Pullman Standard C&EI Diner
 entity.tc.PS C&EI 1DR-28 Seat Parlor-Observation.name=Pullman Standard C&EI 1DR-28 Seat Parlor-Observation
+
+entity.tc.OB HW NH 5570-5589 Series Baggage.name=Osgood Bradley NH 5570-5589 Series Baggage
 
 item.tc:minecartAmfleet.name=Amfleet 1 Coach
 item.tc:minecartAmfleet2.name=Amfleet 2 Coach

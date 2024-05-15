@@ -26,8 +26,8 @@ public class DieselSD9 extends DieselTrain {
         textureDescriptionMap.put(4, "FNCC (Kit-L, Dual Canon, Late era)");
         textureDescriptionMap.put(5, "Blandsville Pacific");
         textureDescriptionMap.put(6, "OC&G");
-        textureDescriptionMap.put(7, "");
-        textureDescriptionMap.put(8, "");
+        textureDescriptionMap.put(7, "DRGW");
+        textureDescriptionMap.put(8, "DRGW (5305, Low Hood)");
         textureDescriptionMap.put(9, "");
         textureDescriptionMap.put(10, "");
     }
