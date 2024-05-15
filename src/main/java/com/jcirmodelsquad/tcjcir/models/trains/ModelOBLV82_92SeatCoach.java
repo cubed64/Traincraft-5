@@ -321,8 +321,8 @@ public class ModelOBLV82_92SeatCoach extends ModelConverter //Same as Filename
 		bodyModel[277] = new ModelRendererTurbo(this, 346, 324, textureX, textureY); // Box 380
 		bodyModel[278] = new ModelRendererTurbo(this, 341, 331, textureX, textureY); // Box 381
 		bodyModel[279] = new ModelRendererTurbo(this, 353, 331, textureX, textureY); // Box 382
-		bodyModel[280] = new ModelRendererTurbo(this, 317, 318, textureX, textureY, "glow"); // Box 86 glow
-		bodyModel[281] = new ModelRendererTurbo(this, 317, 283, textureX, textureY, "glow"); // Box 384 glow
+		bodyModel[280] = new ModelRendererTurbo(this, 317, 318, textureX, textureY,"glow"); // Box 86 glow
+		bodyModel[281] = new ModelRendererTurbo(this, 317, 283, textureX, textureY,"glow"); // Box 384 glow
 		bodyModel[282] = new ModelRendererTurbo(this, 275, 286, textureX, textureY); // Right seat part
 		bodyModel[283] = new ModelRendererTurbo(this, 285, 276, textureX, textureY); // Right seat part
 		bodyModel[284] = new ModelRendererTurbo(this, 275, 321, textureX, textureY); // Left seat part
@@ -427,8 +427,8 @@ public class ModelOBLV82_92SeatCoach extends ModelConverter //Same as Filename
 		bodyModel[383] = new ModelRendererTurbo(this, 379, 83, textureX, textureY); // Rear gate open
 		bodyModel[384] = new ModelRendererTurbo(this, 4, 107, textureX, textureY); // Front gate closed
 		bodyModel[385] = new ModelRendererTurbo(this, 1, 112, textureX, textureY); // Front gate open
-		bodyModel[386] = new ModelRendererTurbo(this, 52, 237, textureX, textureY, "glow"); // Box 384 glow
-		bodyModel[387] = new ModelRendererTurbo(this, 52, 234, textureX, textureY, "glow"); // Box 386 glow
+		bodyModel[386] = new ModelRendererTurbo(this, 52, 237, textureX, textureY,"glow"); // Box 384 glow
+		bodyModel[387] = new ModelRendererTurbo(this, 52, 234, textureX, textureY,"glow"); // Box 386 glow
 		bodyModel[388] = new ModelRendererTurbo(this, 89, 244, textureX, textureY); // Box 384
 		bodyModel[389] = new ModelRendererTurbo(this, 8, 385, textureX, textureY); // Right seat part
 		bodyModel[390] = new ModelRendererTurbo(this, 18, 340, textureX, textureY); // Right seat part
@@ -522,7 +522,7 @@ public class ModelOBLV82_92SeatCoach extends ModelConverter //Same as Filename
 		bodyModel[478] = new ModelRendererTurbo(this, 315, 189, textureX, textureY); // Box 128
 		bodyModel[479] = new ModelRendererTurbo(this, 127, 380, textureX, textureY,"cull"); // Box 386 cull
 		bodyModel[480] = new ModelRendererTurbo(this, 91, 339, textureX, textureY,"cull"); // Box 658 cull
-		bodyModel[481] = new ModelRendererTurbo(this, 124, 189, textureX, textureY, "glow"); // Box 384 glow
+		bodyModel[481] = new ModelRendererTurbo(this, 124, 189, textureX, textureY,"glow"); // Box 384 glow
 		bodyModel[482] = new ModelRendererTurbo(this, 104, 399, textureX, textureY); // Box 95
 		bodyModel[483] = new ModelRendererTurbo(this, 91, 349, textureX, textureY,"cull"); // Box 658 cull
 		bodyModel[484] = new ModelRendererTurbo(this, 113, 390, textureX, textureY,"cull"); // Box 664 cull
@@ -539,8 +539,8 @@ public class ModelOBLV82_92SeatCoach extends ModelConverter //Same as Filename
 		bodyModel[495] = new ModelRendererTurbo(this, 301, 180, textureX, textureY); // Box 677
 		bodyModel[496] = new ModelRendererTurbo(this, 129, 197, textureX, textureY); // Box 678
 		bodyModel[497] = new ModelRendererTurbo(this, 112, 380, textureX, textureY,"cull"); // Box 386 cull
-		bodyModel[498] = new ModelRendererTurbo(this, 140, 207, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[499] = new ModelRendererTurbo(this, 157, 205, textureX, textureY, "glow"); // Box 128 glow
+		bodyModel[498] = new ModelRendererTurbo(this, 140, 207, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[499] = new ModelRendererTurbo(this, 157, 205, textureX, textureY,"glow"); // Box 128 glow
 
 		bodyModel[0].addBox(0F, 0F, 0F, 113, 2, 20, 0F); // Box 2
 		bodyModel[0].setRotationPoint(-56.5F, 1F, -10F);
@@ -2194,50 +2194,50 @@ public class ModelOBLV82_92SeatCoach extends ModelConverter //Same as Filename
 
 	private void initbodyModel_2()
 	{
-		bodyModel[500] = new ModelRendererTurbo(this, 195, 205, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[501] = new ModelRendererTurbo(this, 233, 205, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[502] = new ModelRendererTurbo(this, 271, 205, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[503] = new ModelRendererTurbo(this, 380, 205, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[504] = new ModelRendererTurbo(this, 418, 205, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[505] = new ModelRendererTurbo(this, 456, 205, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[506] = new ModelRendererTurbo(this, 380, 224, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[507] = new ModelRendererTurbo(this, 418, 224, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[508] = new ModelRendererTurbo(this, 456, 224, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[509] = new ModelRendererTurbo(this, 380, 243, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[510] = new ModelRendererTurbo(this, 418, 243, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[511] = new ModelRendererTurbo(this, 456, 243, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[512] = new ModelRendererTurbo(this, 380, 262, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[513] = new ModelRendererTurbo(this, 418, 262, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[514] = new ModelRendererTurbo(this, 456, 262, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[515] = new ModelRendererTurbo(this, 418, 281, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[516] = new ModelRendererTurbo(this, 456, 281, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[517] = new ModelRendererTurbo(this, 176, 207, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[518] = new ModelRendererTurbo(this, 214, 207, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[519] = new ModelRendererTurbo(this, 252, 207, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[520] = new ModelRendererTurbo(this, 361, 207, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[521] = new ModelRendererTurbo(this, 399, 207, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[522] = new ModelRendererTurbo(this, 437, 207, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[523] = new ModelRendererTurbo(this, 361, 226, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[524] = new ModelRendererTurbo(this, 399, 226, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[525] = new ModelRendererTurbo(this, 437, 226, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[526] = new ModelRendererTurbo(this, 361, 245, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[527] = new ModelRendererTurbo(this, 399, 245, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[528] = new ModelRendererTurbo(this, 437, 245, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[529] = new ModelRendererTurbo(this, 361, 264, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[530] = new ModelRendererTurbo(this, 399, 264, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[531] = new ModelRendererTurbo(this, 437, 264, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[532] = new ModelRendererTurbo(this, 399, 283, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[533] = new ModelRendererTurbo(this, 437, 283, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[534] = new ModelRendererTurbo(this, 430, 307, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[535] = new ModelRendererTurbo(this, 418, 305, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[536] = new ModelRendererTurbo(this, 406, 307, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[537] = new ModelRendererTurbo(this, 418, 308, textureX, textureY, "glow"); // Box 128 glow
+		bodyModel[500] = new ModelRendererTurbo(this, 195, 205, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[501] = new ModelRendererTurbo(this, 233, 205, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[502] = new ModelRendererTurbo(this, 271, 205, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[503] = new ModelRendererTurbo(this, 380, 205, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[504] = new ModelRendererTurbo(this, 418, 205, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[505] = new ModelRendererTurbo(this, 456, 205, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[506] = new ModelRendererTurbo(this, 380, 224, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[507] = new ModelRendererTurbo(this, 418, 224, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[508] = new ModelRendererTurbo(this, 456, 224, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[509] = new ModelRendererTurbo(this, 380, 243, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[510] = new ModelRendererTurbo(this, 418, 243, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[511] = new ModelRendererTurbo(this, 456, 243, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[512] = new ModelRendererTurbo(this, 380, 262, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[513] = new ModelRendererTurbo(this, 418, 262, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[514] = new ModelRendererTurbo(this, 456, 262, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[515] = new ModelRendererTurbo(this, 418, 281, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[516] = new ModelRendererTurbo(this, 456, 281, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[517] = new ModelRendererTurbo(this, 176, 207, textureX, textureY); // Box 128
+		bodyModel[518] = new ModelRendererTurbo(this, 214, 207, textureX, textureY); // Box 128
+		bodyModel[519] = new ModelRendererTurbo(this, 252, 207, textureX, textureY); // Box 128
+		bodyModel[520] = new ModelRendererTurbo(this, 361, 207, textureX, textureY); // Box 128
+		bodyModel[521] = new ModelRendererTurbo(this, 399, 207, textureX, textureY); // Box 128
+		bodyModel[522] = new ModelRendererTurbo(this, 437, 207, textureX, textureY); // Box 128
+		bodyModel[523] = new ModelRendererTurbo(this, 361, 226, textureX, textureY); // Box 128
+		bodyModel[524] = new ModelRendererTurbo(this, 399, 226, textureX, textureY); // Box 128
+		bodyModel[525] = new ModelRendererTurbo(this, 437, 226, textureX, textureY); // Box 128
+		bodyModel[526] = new ModelRendererTurbo(this, 361, 245, textureX, textureY); // Box 128
+		bodyModel[527] = new ModelRendererTurbo(this, 399, 245, textureX, textureY); // Box 128
+		bodyModel[528] = new ModelRendererTurbo(this, 437, 245, textureX, textureY); // Box 128
+		bodyModel[529] = new ModelRendererTurbo(this, 361, 264, textureX, textureY); // Box 128
+		bodyModel[530] = new ModelRendererTurbo(this, 399, 264, textureX, textureY); // Box 128
+		bodyModel[531] = new ModelRendererTurbo(this, 437, 264, textureX, textureY); // Box 128
+		bodyModel[532] = new ModelRendererTurbo(this, 399, 283, textureX, textureY); // Box 128
+		bodyModel[533] = new ModelRendererTurbo(this, 437, 283, textureX, textureY); // Box 128
+		bodyModel[534] = new ModelRendererTurbo(this, 430, 307, textureX, textureY); // Box 128
+		bodyModel[535] = new ModelRendererTurbo(this, 418, 305, textureX, textureY,"glow"); // Box 128 glow
+		bodyModel[536] = new ModelRendererTurbo(this, 406, 307, textureX, textureY); // Box 128
+		bodyModel[537] = new ModelRendererTurbo(this, 418, 308, textureX, textureY); // Box 128
 		bodyModel[538] = new ModelRendererTurbo(this, 430, 318, textureX, textureY); // Box 128
 		bodyModel[539] = new ModelRendererTurbo(this, 418, 302, textureX, textureY); // Box 668
 		bodyModel[540] = new ModelRendererTurbo(this, 430, 302, textureX, textureY); // Box 669
-		bodyModel[541] = new ModelRendererTurbo(this, 128, 209, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[542] = new ModelRendererTurbo(this, 152, 209, textureX, textureY, "glow"); // Box 128 glow
-		bodyModel[543] = new ModelRendererTurbo(this, 152, 210, textureX, textureY, "glow"); // Box 128 glow
+		bodyModel[541] = new ModelRendererTurbo(this, 128, 209, textureX, textureY); // Box 128
+		bodyModel[542] = new ModelRendererTurbo(this, 152, 209, textureX, textureY); // Box 128
+		bodyModel[543] = new ModelRendererTurbo(this, 152, 210, textureX, textureY); // Box 128
 		bodyModel[544] = new ModelRendererTurbo(this, 152, 203, textureX, textureY); // Box 668
 		bodyModel[545] = new ModelRendererTurbo(this, 134, 204, textureX, textureY); // Box 669
 		bodyModel[546] = new ModelRendererTurbo(this, 134, 220, textureX, textureY); // Box 128
@@ -2291,13 +2291,13 @@ public class ModelOBLV82_92SeatCoach extends ModelConverter //Same as Filename
 		bodyModel[594] = new ModelRendererTurbo(this, 32, 419, textureX, textureY); // Box 128
 		bodyModel[595] = new ModelRendererTurbo(this, 37, 412, textureX, textureY); // Box 128
 		bodyModel[596] = new ModelRendererTurbo(this, 63, 353, textureX, textureY); // Box 128
-		bodyModel[597] = new ModelRendererTurbo(this, 331, 310, textureX, textureY, "glow"); // Box 386 glow
+		bodyModel[597] = new ModelRendererTurbo(this, 331, 310, textureX, textureY,"glow"); // Box 386 glow
 		bodyModel[598] = new ModelRendererTurbo(this, 12, 206, textureX, textureY); // Box 128
 		bodyModel[599] = new ModelRendererTurbo(this, 28, 228, textureX, textureY); // Box 128
 		bodyModel[600] = new ModelRendererTurbo(this, 24, 234, textureX, textureY); // Box 128
 		bodyModel[601] = new ModelRendererTurbo(this, 31, 244, textureX, textureY); // Box 128
-		bodyModel[602] = new ModelRendererTurbo(this, 41, 234, textureX, textureY, "glow"); // Box 386 glow
-		bodyModel[603] = new ModelRendererTurbo(this, 30, 247, textureX, textureY, "glow"); // Box 386 glow
+		bodyModel[602] = new ModelRendererTurbo(this, 41, 234, textureX, textureY,"glow"); // Box 386 glow
+		bodyModel[603] = new ModelRendererTurbo(this, 30, 247, textureX, textureY,"glow"); // Box 386 glow
 		bodyModel[604] = new ModelRendererTurbo(this, 372, 328, textureX, textureY); // Box 102
 		bodyModel[605] = new ModelRendererTurbo(this, 389, 328, textureX, textureY); // Box 102
 		bodyModel[606] = new ModelRendererTurbo(this, 57, 416, textureX, textureY); // Box 379
@@ -2323,10 +2323,10 @@ public class ModelOBLV82_92SeatCoach extends ModelConverter //Same as Filename
 		bodyModel[626] = new ModelRendererTurbo(this, 73, 392, textureX, textureY); // Box 531
 		bodyModel[627] = new ModelRendererTurbo(this, 78, 381, textureX, textureY); // Box 532
 		bodyModel[628] = new ModelRendererTurbo(this, 73, 371, textureX, textureY); // Box 531
-		bodyModel[629] = new ModelRendererTurbo(this, 31, 357, textureX, textureY, "glow"); // Box 386 glow
-		bodyModel[630] = new ModelRendererTurbo(this, 33, 367, textureX, textureY, "glow"); // Box 386 glow
-		bodyModel[631] = new ModelRendererTurbo(this, 29, 358, textureX, textureY, "glow"); // Box 386 glow
-		bodyModel[632] = new ModelRendererTurbo(this, 3, 403, textureX, textureY, "glow"); // Box 86 glow
+		bodyModel[629] = new ModelRendererTurbo(this, 31, 357, textureX, textureY,"glow"); // Box 386 glow
+		bodyModel[630] = new ModelRendererTurbo(this, 33, 367, textureX, textureY,"glow"); // Box 386 glow
+		bodyModel[631] = new ModelRendererTurbo(this, 29, 358, textureX, textureY,"glow"); // Box 386 glow
+		bodyModel[632] = new ModelRendererTurbo(this, 3, 403, textureX, textureY,"glow"); // Box 86 glow
 		bodyModel[633] = new ModelRendererTurbo(this, 145, 395, textureX, textureY); // Box 128
 		bodyModel[634] = new ModelRendererTurbo(this, 153, 429, textureX, textureY); // Box 128
 		bodyModel[635] = new ModelRendererTurbo(this, 153, 471, textureX, textureY); // Box 642
@@ -2365,7 +2365,7 @@ public class ModelOBLV82_92SeatCoach extends ModelConverter //Same as Filename
 		bodyModel[668] = new ModelRendererTurbo(this, 206, 170, textureX, textureY); // Box 316
 		bodyModel[669] = new ModelRendererTurbo(this, 64, 1, textureX, textureY); // Box 282
 		bodyModel[670] = new ModelRendererTurbo(this, 66, 7, textureX, textureY); // Box 283
-		bodyModel[671] = new ModelRendererTurbo(this, 317, 315, textureX, textureY, "glow"); // Box 86 glow
+		bodyModel[671] = new ModelRendererTurbo(this, 317, 315, textureX, textureY,"glow"); // Box 86 glow
 		bodyModel[672] = new ModelRendererTurbo(this, 321, 234, textureX, textureY); // Box 128
 		bodyModel[673] = new ModelRendererTurbo(this, 112, 385, textureX, textureY,"cull"); // Box 386 cull
 
@@ -2420,67 +2420,67 @@ public class ModelOBLV82_92SeatCoach extends ModelConverter //Same as Filename
 		bodyModel[516].addShapeBox(0F, 0F, 0F, 1, 1, 16, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.51F, 0F, 0F, -0.51F, 0F, 0F, -0.51F, -0.5F, 0F, -0.51F, -0.5F); // Box 128 glow
 		bodyModel[516].setRotationPoint(40.75F, -17.5F, -7.5F);
 
-		bodyModel[517].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[517].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[517].setRotationPoint(-33.5F, -17.5F, -7.5F);
 
-		bodyModel[518].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[518].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[518].setRotationPoint(-29F, -17.5F, -7.5F);
 
-		bodyModel[519].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[519].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[519].setRotationPoint(-24.5F, -17.5F, -7.5F);
 
-		bodyModel[520].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[520].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[520].setRotationPoint(-20F, -17.5F, -7.5F);
 
-		bodyModel[521].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[521].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[521].setRotationPoint(-15.5F, -17.5F, -7.5F);
 
-		bodyModel[522].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[522].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[522].setRotationPoint(-11F, -17.5F, -7.5F);
 
-		bodyModel[523].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[523].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[523].setRotationPoint(-6.5F, -17.5F, -7.5F);
 
-		bodyModel[524].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[524].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[524].setRotationPoint(-2F, -17.5F, -7.5F);
 
-		bodyModel[525].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[525].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[525].setRotationPoint(2.5F, -17.5F, -7.5F);
 
-		bodyModel[526].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[526].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[526].setRotationPoint(7F, -17.5F, -7.5F);
 
-		bodyModel[527].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[527].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[527].setRotationPoint(11.5F, -17.5F, -7.5F);
 
-		bodyModel[528].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[528].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[528].setRotationPoint(16F, -17.5F, -7.5F);
 
-		bodyModel[529].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[529].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[529].setRotationPoint(20.5F, -17.5F, -7.5F);
 
-		bodyModel[530].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[530].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[530].setRotationPoint(25F, -17.5F, -7.5F);
 
-		bodyModel[531].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[531].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[531].setRotationPoint(29.5F, -17.5F, -7.5F);
 
-		bodyModel[532].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[532].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[532].setRotationPoint(34F, -17.5F, -7.5F);
 
-		bodyModel[533].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[533].addShapeBox(0F, 0F, 0F, 1, 2, 16, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[533].setRotationPoint(38.5F, -17.5F, -7.5F);
 
-		bodyModel[534].addShapeBox(0F, 0F, 0F, 1, 1, 9, 0F,0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, -0.5F, 0F, 0F, -0.5F, -1.25F, -0.51F, 0F, 0.25F, -0.51F, 0F, 0.25F, -0.51F, -0.5F, -1.25F, -0.51F, -0.5F); // Box 128 glow
+		bodyModel[534].addShapeBox(0F, 0F, 0F, 1, 1, 9, 0F,0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, -0.5F, 0F, 0F, -0.5F, -1.25F, -0.51F, 0F, 0.25F, -0.51F, 0F, 0.25F, -0.51F, -0.5F, -1.25F, -0.51F, -0.5F); // Box 128
 		bodyModel[534].setRotationPoint(46.25F, -17.5F, -4.25F);
 
 		bodyModel[535].addShapeBox(0F, 0F, 0F, 1, 1, 9, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.51F, 0F, 0F, -0.51F, 0F, 0F, -0.51F, -0.5F, 0F, -0.51F, -0.5F); // Box 128 glow
 		bodyModel[535].setRotationPoint(45.25F, -17.5F, -4.25F);
 
-		bodyModel[536].addShapeBox(0F, 0F, 0F, 1, 2, 9, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[536].addShapeBox(0F, 0F, 0F, 1, 2, 9, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[536].setRotationPoint(43F, -17.5F, -4.25F);
 
-		bodyModel[537].addShapeBox(0F, 0F, 0F, 1, 2, 3, 0F,1.25F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0.25F, 1.25F, 0F, 0.25F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0.25F, -0.5F, -1.51F, 0.25F); // Box 128 glow
+		bodyModel[537].addShapeBox(0F, 0F, 0F, 1, 2, 3, 0F,1.25F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0.25F, 1.25F, 0F, 0.25F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0.25F, -0.5F, -1.51F, 0.25F); // Box 128
 		bodyModel[537].setRotationPoint(43F, -17.5F, -7.5F);
 
 		bodyModel[538].addShapeBox(0F, 0F, 0F, 4, 1, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0.25F, 0F, -0.5F, 0.25F); // Box 128
@@ -2492,13 +2492,13 @@ public class ModelOBLV82_92SeatCoach extends ModelConverter //Same as Filename
 		bodyModel[540].addShapeBox(0F, 0F, 0F, 4, 1, 3, 0F,0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0.25F, 0F, -0.5F, 0.25F, 0F, -0.5F, 0F, 0F, -0.5F, 0F); // Box 669
 		bodyModel[540].setRotationPoint(43.5F, -17.5F, 4.5F);
 
-		bodyModel[541].addShapeBox(0F, 0F, 0F, 1, 1, 9, 0F,0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.51F, 0F, -1F, -0.51F, 0F, -1F, -0.51F, -0.5F, 0F, -0.51F, -0.5F); // Box 128 glow
+		bodyModel[541].addShapeBox(0F, 0F, 0F, 1, 1, 9, 0F,0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.51F, 0F, -1F, -0.51F, 0F, -1F, -0.51F, -0.5F, 0F, -0.51F, -0.5F); // Box 128
 		bodyModel[541].setRotationPoint(-41.5F, -17.5F, -4.25F);
 
-		bodyModel[542].addShapeBox(0F, 0F, 0F, 1, 2, 9, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128 glow
+		bodyModel[542].addShapeBox(0F, 0F, 0F, 1, 2, 9, 0F,1.25F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, -0.5F, 1.25F, 0F, -0.5F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, -0.5F, -0.5F, -1.51F, -0.5F); // Box 128
 		bodyModel[542].setRotationPoint(-38F, -17.5F, -4.25F);
 
-		bodyModel[543].addShapeBox(0F, 0F, 0F, 1, 2, 3, 0F,-0.5F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, 0.25F, -0.5F, 0F, 0.25F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0.25F, -0.5F, -1.51F, 0.25F); // Box 128 glow
+		bodyModel[543].addShapeBox(0F, 0F, 0F, 1, 2, 3, 0F,-0.5F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, 0.25F, -0.5F, 0F, 0.25F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0.25F, -0.5F, -1.51F, 0.25F); // Box 128
 		bodyModel[543].setRotationPoint(-38F, -17.5F, -7.5F);
 
 		bodyModel[544].addShapeBox(0F, 0F, 0F, 1, 2, 3, 0F,-0.5F, 0F, 0.25F, 1.25F, 0F, 0.25F, 1.25F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, -1.51F, 0.25F, -0.5F, -1.51F, 0.25F, -0.5F, -1.51F, 0F, -0.5F, -1.51F, 0F); // Box 668
