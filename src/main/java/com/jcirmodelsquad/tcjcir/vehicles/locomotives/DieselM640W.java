@@ -21,6 +21,7 @@ public class DieselM640W extends DieselTrain {
         textureDescriptionMap.put(0, "COW");
         textureDescriptionMap.put(1, "COW (Special)");
         textureDescriptionMap.put(2, "Blandsville & Blankerston");
+        textureDescriptionMap.put(3, "Kingsland Rail");
 
     }
     public DieselM640W(World world, double d, double d1, double d2){

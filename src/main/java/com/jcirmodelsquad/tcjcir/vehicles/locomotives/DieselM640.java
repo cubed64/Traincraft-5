@@ -21,6 +21,9 @@ public class DieselM640 extends DieselTrain {
         textureDescriptionMap.put(0, "CPRail 4744");
         textureDescriptionMap.put(1, "CPRail 4744 (AC Convertible)");
         textureDescriptionMap.put(2, "Blandsville & Blankerston");
+        textureDescriptionMap.put(3, "Kingsland Rail");
+        textureDescriptionMap.put(4, "Kingsland Rail");
+        textureDescriptionMap.put(5, "Kingsland Rail");
 
     }
     public DieselM640(World world, double d, double d1, double d2){
