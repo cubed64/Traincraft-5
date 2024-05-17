@@ -268,7 +268,7 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		public void processCommand(ICommandSender CommandSender, String[] par2ArrayOfStr) {
 			getCommandSenderAsPlayer(CommandSender).addChatMessage(
 					new ChatComponentText(
-							"this command exists as a placeholder to allow admin permissions in TC via plugins and mds such as GroupManager and Forge Essentials"));
+							"this command exists as a placeholder to allow admin permissions in TC via plugins and mods such as GroupManager and Forge Essentials"));
 
 		}
 	}
