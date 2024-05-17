@@ -1808,29 +1808,24 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 431; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
+		for(ModelRendererTurbo m :bodyModel) {
+			if(m.boxName.equals("lamp")){
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
+				m.render(f5);
 				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
+			}else if(m.boxName.equals("cull")){
 				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
+				m.render(f5);
 				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
+			}else{
+				m.render(f5);
 			}
 		}
-
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 12
-				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4
-				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7
-				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18432
-				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 53546
-				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16
-				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4
-				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1
-				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 10) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 12 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4
+			|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 184
+			|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 535 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16
+			|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1
+			|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 10) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/flexicoil2_Black.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.05, 0.33, 0);
@@ -1865,6 +1860,15 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 8
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/flexicoil2_sp.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(-1.05, 0.33, 0);
+			theTrucks1.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glTranslated(2.13, 0, 0);
+			theTrucks1.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 27) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/flexicoil2_Grey.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.05, 0.33, 0);
 			theTrucks1.render(entity, f, f1, f2, f3, f4, f5);
