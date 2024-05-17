@@ -2867,6 +2867,7 @@ public class ModelBuddDome46SeatCoach extends ModelConverter //Same as Filename
 	ModelBuddDomeUpperSeatsType1 SeatsU1 = new ModelBuddDomeUpperSeatsType1();
 	ModelBuddDomeUpperSeatsType2 SeatsU2 = new ModelBuddDomeUpperSeatsType2();
 	ModelBuddDomeUpperSeatsType3 SeatsU3 = new ModelBuddDomeUpperSeatsType3();
+	ModelBuddDomeUpperSeatsType4 SeatsU4 = new ModelBuddDomeUpperSeatsType4();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
@@ -3047,7 +3048,29 @@ public class ModelBuddDome46SeatCoach extends ModelConverter //Same as Filename
 				SeatsU3.render(entity, f, f1, f2, f3, f4, f5);//upper seats
 				GL11.glPopMatrix();
 			}
-		} else if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==123456){
+		}else if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==21){
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/41-N-11_truck_ATpurple.png"));
+			GL11.glPushMatrix();
+			GL11.glRotatef(0, 0, 1, 0);
+			GL11.glTranslated(-2.75, -0.03, 0);
+			bogie1.render(entity, f, f1, f2, f3, f4, f5);//rear truck
+
+			GL11.glRotatef(0, 0, 1, 0);
+			GL11.glTranslated(5.5, 0, 0);
+			bogie1.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/Budd_lightweight_Dome46SeatCoach_Skin21.png"));
+			GL11.glPushMatrix();
+			GL11.glRotatef(0, 0, 0, 0);
+			GL11.glTranslated(0, 0, 0);
+			SeatsL1.render(entity, f, f1, f2, f3, f4, f5);//lower seats
+
+			GL11.glRotatef(0, 0, 0, 0);
+			GL11.glTranslated(0, 0, 0);
+			SeatsU4.render(entity, f, f1, f2, f3, f4, f5);//upper seats
+			GL11.glPopMatrix();
+		}else if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==123456){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/41-N-11_truck_black.png"));
 			GL11.glPushMatrix();
 			GL11.glRotatef(180, 0, 1, 0);

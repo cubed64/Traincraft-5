@@ -32,6 +32,7 @@ public class BuddDome46SeatCoach extends EntityRollingStock implements IPassenge
 		textureDescriptionMap.put(18, "AMTK 9450");
 		textureDescriptionMap.put(19, "AMTK 9458");
 		textureDescriptionMap.put(20, "FNCC");
+		textureDescriptionMap.put(21, "Auto-Train");
 	}
 
 	public BuddDome46SeatCoach(World world, double d, double d1, double d2) {

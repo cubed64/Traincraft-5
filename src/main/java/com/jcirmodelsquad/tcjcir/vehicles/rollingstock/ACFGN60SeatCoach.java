@@ -13,8 +13,20 @@ public class ACFGN60SeatCoach extends EntityRollingStock implements IPassenger {
 		super(world);
 		textureDescriptionMap.put(0, "GN Internationals (With Conductor's Booth)");
 		textureDescriptionMap.put(1, "GN Internationals");
-		textureDescriptionMap.put(2, "GN Red River (With Conductor's Booth)");
-		textureDescriptionMap.put(3, "GN Red River");
+		textureDescriptionMap.put(2, "GN Internationals (With Conductor's Booth, Late)");
+		textureDescriptionMap.put(3, "GN Internationals (Late)");
+		textureDescriptionMap.put(4, "GN Red River (With Conductor's Booth)");
+		textureDescriptionMap.put(5, "GN Red River");
+		textureDescriptionMap.put(6, "GN Empire Builder (As delivered)");
+		textureDescriptionMap.put(7, "GN Empire Builder");
+		textureDescriptionMap.put(8, "GN Empire Builder (Remodeled)");
+		textureDescriptionMap.put(9, "GN Empire Builder (BSB Scheme)");
+		textureDescriptionMap.put(10, "BN (With Conductor's Booth)");
+		textureDescriptionMap.put(11, "BN");
+		textureDescriptionMap.put(12, "FNCC (With Conductor's Booth)");
+		textureDescriptionMap.put(13, "FNCC");
+		textureDescriptionMap.put(14, "FNCC (With Conductor's Booth, Royal Solar)");
+		textureDescriptionMap.put(15, "FNCC (Royal Solar)");
 	}
 
 	public ACFGN60SeatCoach(World world, double d, double d1, double d2) {

@@ -123,7 +123,7 @@ public class ModelBuddDomeLowerSeatsType1 extends ModelConverter //Same as Filen
 		bodyModel[88] = new ModelRendererTurbo(this, 292, 453, textureX, textureY); // Right seat part
 		bodyModel[89] = new ModelRendererTurbo(this, 292, 442, textureX, textureY); // Right seat part
 		bodyModel[90] = new ModelRendererTurbo(this, 311, 425, textureX, textureY); // Right seat part
-		bodyModel[91] = new ModelRendererTurbo(this, 482, 365, textureX, textureY); // Right seat part
+		bodyModel[91] = new ModelRendererTurbo(this, 481, 365, textureX, textureY); // Right seat part
 		bodyModel[92] = new ModelRendererTurbo(this, 480, 343, textureX, textureY); // Right seat part
 		bodyModel[93] = new ModelRendererTurbo(this, 467, 350, textureX, textureY); // Right seat part
 		bodyModel[94] = new ModelRendererTurbo(this, 462, 352, textureX, textureY); // Right seat part
