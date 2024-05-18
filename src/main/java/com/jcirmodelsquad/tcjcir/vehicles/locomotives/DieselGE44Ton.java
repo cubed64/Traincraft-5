@@ -19,8 +19,8 @@ public class DieselGE44Ton extends DieselTrain {
 		initLoco();
 		textureDescriptionMap.put(0, "VGN");
 		textureDescriptionMap.put(1, "VGN");
-		textureDescriptionMap.put(2, "Blandsville & Blankerston (Early)");
-		textureDescriptionMap.put(3, "Blandsville & Blankerston (Late)");
+		textureDescriptionMap.put(2, "Blandsville & Blankerston (Late)");
+		textureDescriptionMap.put(3, "Blandsville & Blankerston (Early)");
 		textureDescriptionMap.put(4, "DRGW");
 		textureDescriptionMap.put(5, "TIR");
 		textureDescriptionMap.put(6, "TIR");

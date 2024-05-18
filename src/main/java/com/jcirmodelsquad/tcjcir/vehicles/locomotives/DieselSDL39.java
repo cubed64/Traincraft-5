@@ -23,6 +23,8 @@ public class DieselSDL39 extends DieselTrain {
         textureDescriptionMap.put(1, "MILW");
         textureDescriptionMap.put(2, "MILW");
         textureDescriptionMap.put(3, "WC");
+        textureDescriptionMap.put(4, "WFR");
+        textureDescriptionMap.put(5, "WFR (JCIR 6 Years)");
 
     }
     public DieselSDL39(World world, double d, double d1, double d2){

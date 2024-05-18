@@ -106,7 +106,7 @@ public class TenderNP_11C extends Tender implements IInventory {
 	}
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
-		return 1.45F;
+		return 1.3F;
 	}
 
 	@Override

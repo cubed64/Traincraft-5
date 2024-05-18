@@ -1108,7 +1108,7 @@ public class ModelRSFDL extends ModelConverter //Same as Filename
 	public ArrayList<double[]> getSmokePosition() {
 		return new ArrayList<double[]>() {
 			{
-				add(new double[]{0.075D, 1.4D, -0.16D});
+				add(new double[]{0.075D, 1.4D, -0.0D});
 			}
 		};
 	}

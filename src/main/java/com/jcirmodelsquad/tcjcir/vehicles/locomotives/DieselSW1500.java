@@ -42,6 +42,7 @@ public class DieselSW1500 extends DieselTrain {
         textureDescriptionMap.put(21, "Grassland Labratories");
         textureDescriptionMap.put(22, "FURRX");
         textureDescriptionMap.put(23, "FURRX");
+        textureDescriptionMap.put(24, "ADT");
     }
     public DieselSW1500(World world, double d, double d1, double d2){
         this(world);
