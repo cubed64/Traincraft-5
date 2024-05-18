@@ -30,13 +30,13 @@ public class ElectricGM6C_2 extends ElectricTrain {
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Modelpanto_gm6c_down.class, "pantopart_gm6c",
-                        "Pantograph (Both Down)", 0, 3.0, 0)},
+                        "Pantograph (Both Down)", 0, 3.085, 0)},
                 { new CargoSpecification(Modelpanto_gm6c_updown.class, "pantopart_gm6c",
                         "Pantograph (Up Down)", 0, 3.085, 0)},
                 { new CargoSpecification(Modelpanto_gm6c_downup.class, "pantopart_gm6c",
-                        "Pantograph (Down Up)", 0, 3.0, 0)},
+                        "Pantograph (Down Up)", 0, 3.085, 0)},
                 { new CargoSpecification(Modelpanto_gm6c_up.class, "pantopart_gm6c",
-                        "Pantograph (Both Up)", 0, 3.0, 0)},
+                        "Pantograph (Both Up)", 0, 3.085, 0)},
 
         }));
     }
