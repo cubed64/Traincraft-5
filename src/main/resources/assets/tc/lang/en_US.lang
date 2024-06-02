@@ -1299,7 +1299,7 @@ item.tc:minecartJT7.name=CEE JT-7 "Pignose"
 
 item.tc:minecartAEM7.name=EMD AEM-7
 
-item.tc:minecartB_BEL.name=CEE B-BEL
+item.tc:minecartB_BEL.name=CEE B-BEL (2000)
 
 
 entity.tc.EF1.name=GE-MILW EF-1
@@ -1314,7 +1314,7 @@ entity.tc.JT7.name=CEE JT-7 "Pignose"
 
 entity.tc.AEM7.name=EMD AEM-7
 
-entity.tc.B-BEL.name=CEE B-BEL
+entity.tc.B-BEL.name=CEE B-BEL (2000)
 --------------------------------------------------------
 
 item.tc:minecartRoundHopper.name=Round Covered Hopper

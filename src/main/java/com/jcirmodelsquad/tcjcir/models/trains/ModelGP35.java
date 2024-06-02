@@ -1162,22 +1162,22 @@ public class ModelGP35 extends ModelConverter //Same as Filename
 		bodyModel[203].setRotationPoint(-16F, -19F, -6F);
 
 		bodyModel[204].addBox(0F, 0F, 0F, 1, 9, 4, 0F); // Box 412 cs
-		bodyModel[204].setRotationPoint(-25F, -12F, -3F);
+		bodyModel[204].setRotationPoint(-25F, -12F, 3F);
 
 		bodyModel[205].addBox(0F, 0F, 0F, 7, 8, 3, 0F); // Box 413 cs
-		bodyModel[205].setRotationPoint(-25.1F, -11F, -5F);
+		bodyModel[205].setRotationPoint(-25.1F, -11F, 1F);
 		bodyModel[205].rotateAngleY = -0.38397244F;
 
 		bodyModel[206].addShapeBox(-1F, 0F, 0F, 11, 4, 2, 0F,0F, 0F, 0F, -5F, 0F, 0F, -5F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -2F, 0F, -5F, -2F, 0F, -5F, -2F, 0F, 0F, -2F, 0F); // Box 86 cs
-		bodyModel[206].setRotationPoint(-23.5F, -13F, -5F);
+		bodyModel[206].setRotationPoint(-23.5F, -13F, 1F);
 		bodyModel[206].rotateAngleY = -0.38397244F;
 
 		bodyModel[207].addShapeBox(-0.5F, 0F, -1F, 1, 3, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, -1F, -1F, 0F, -1F, -1F); // Box 71 glow speedometer
-		bodyModel[207].setRotationPoint(-22.5F, -15.25F, -4F);
+		bodyModel[207].setRotationPoint(-22.5F, -15.25F, 2F);
 		bodyModel[207].rotateAngleY = 0.78539816F;
 
 		bodyModel[208].addShapeBox(-1.5F, 0F, -1F, 2, 2, 2, 0F,0F, 0F, 0.25F, -0.25F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, 0F, 0F, 0.25F, 0F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, 0F, 0.25F, 0.25F); // Box 307 spedo
-		bodyModel[208].setRotationPoint(-22.5F, -15.25F, -4F);
+		bodyModel[208].setRotationPoint(-22.5F, -15.25F, 2F);
 		bodyModel[208].rotateAngleY = 0.78539816F;
 
 		bodyModel[209].addShapeBox(0F, 0F, 0F, 1, 1, 2, 0F,0F, -1F, 0F, -0.5F, -1F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 260

@@ -15,12 +15,13 @@ public class ElectricB_BEL extends ElectricTrain {
     public ElectricB_BEL(World world) {
         super(world);
         textureDescriptionMap.put(0, "Blandsville & Blankerston");
-        textureDescriptionMap.put(1, "North Fox");
-        textureDescriptionMap.put(2, "Western Pacific");
-        textureDescriptionMap.put(3, "Norfolk Southern");
-        textureDescriptionMap.put(4, "FURRX");
-        textureDescriptionMap.put(5, "Galesburg Clinton & Midland");
-        textureDescriptionMap.put(6, "JCIR 633");
+        textureDescriptionMap.put(1, "FNCC (Kit-L, Big Canon)");
+        textureDescriptionMap.put(2, "FNCC (DAR80, Big Canon)");
+        textureDescriptionMap.put(3, "Western Pacific");
+        textureDescriptionMap.put(4, "Norfolk Southern");
+        textureDescriptionMap.put(5, "FURRX");
+        textureDescriptionMap.put(6, "Galesburg Clinton & Midland");
+        textureDescriptionMap.put(7, "JCIR 633");
     }
 
     public ElectricB_BEL(World world, double d, double d1, double d2) {
@@ -38,20 +39,25 @@ public class ElectricB_BEL extends ElectricTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 3.2;
+        double distance = 3.2; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
+        double distanceLR = -0.35; //how far left/right on the entity you ride; left > 0; right < 0;
         double yOffset = 0.25;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
+        float rotationCosLR1 = (float) Math.cos(Math.toRadians(this.renderYaw));
+        float rotationSinLR1 = (float) Math.sin(Math.toRadians((this.renderYaw)));
         if(side.isServer()){
             rotationCos1 = (float) Math.cos(Math.toRadians(this.serverRealRotation + 90));
             rotationSin1 = (float) Math.sin(Math.toRadians((this.serverRealRotation + 90)));
+            rotationCosLR1 = (float) Math.cos(Math.toRadians(this.serverRealRotation));
+            rotationSinLR1 = (float) Math.sin(Math.toRadians((this.serverRealRotation)));
             anglePitchClient = serverRealPitch*60;
         }
         float pitch = (float) (posY + ((Math.tan(pitchRads) * distance) + getMountedYOffset())
                 + riddenByEntity.getYOffset() + yOffset);
         float pitch1 = (float) (posY + getMountedYOffset() + riddenByEntity.getYOffset() + yOffset);
-        double bogieX1 = (this.posX + (rotationCos1 * distance));
-        double bogieZ1 = (this.posZ + (rotationSin1* distance));
+        double bogieX1 = (this.posX + (rotationCos1 * distance) + (rotationCosLR1 * distanceLR));
+        double bogieZ1 = (this.posZ + (rotationSin1* distance) + (rotationSinLR1 * distanceLR));
         //System.out.println(rotationCos1+" "+rotationSin1);
         if(anglePitchClient>20 && rotationCos1 == 1){
             bogieX1-=pitchRads*2;
@@ -62,10 +68,10 @@ public class ElectricB_BEL extends ElectricTrain {
             pitch-=pitchRads*1.2;
         }
         if (pitchRads == 0.0) {
-            riddenByEntity.setPosition(bogieX1, pitch1, bogieZ1);
+            riddenByEntity.setPosition(bogieX1, pitch1, bogieZ1 -0.0);
         }
         if (pitchRads > -1.01 && pitchRads < 1.01) {
-            riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
+            riddenByEntity.setPosition(bogieX1, pitch, bogieZ1 +0.0);
         }
     }
 

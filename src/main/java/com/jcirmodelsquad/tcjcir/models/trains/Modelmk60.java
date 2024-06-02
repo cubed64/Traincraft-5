@@ -2488,7 +2488,7 @@ public class Modelmk60 extends ModelConverter //Same as Filename
 		}
 	}
 	public float[] getTrans() {
-		return new float[]{-1.2F, 0.15F, 0.00F};
+		return new float[]{-1.2F, 0.16F, 0.00F};
 	}
 
 	public float[] getRotate() {

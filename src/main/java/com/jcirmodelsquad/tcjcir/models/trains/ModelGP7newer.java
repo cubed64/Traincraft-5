@@ -2031,15 +2031,15 @@ public class ModelGP7newer extends ModelConverter //Same as Filename
 		bodyModel[485].setRotationPoint(-26F, -21F, -2.5F);
 
 		bodyModel[486].addBox(0.5F, 0F, 0.5F, 2, 9, 3, 0F); // Box 412 cs1
-		bodyModel[486].setRotationPoint(-16.5F, -13F, -7F);
+		bodyModel[486].setRotationPoint(-16.5F, -13F, -2F);
 		bodyModel[486].rotateAngleY = -0.26179939F;
 
 		bodyModel[487].addBox(0F, 0F, 0F, 6, 7, 3, 0F); // Box 413 cs1
-		bodyModel[487].setRotationPoint(-21.6F, -11F, -3F);
+		bodyModel[487].setRotationPoint(-21.6F, -11F, 2F);
 		bodyModel[487].rotateAngleY = -0.59341195F;
 
 		bodyModel[488].addShapeBox(0F, 0F, 0F, 12, 4, 1, 0F,0F, 0F, 0F, -6F, 0F, 0F, -6F, 0F, 0.5F, 0F, 0F, 0.5F, 0F, -2F, 0F, -6F, -2F, 0F, -6F, -2F, 0.5F, 0F, -2F, 0.5F); // Box 86 cs1
-		bodyModel[488].setRotationPoint(-21.6F, -13F, -3F);
+		bodyModel[488].setRotationPoint(-21.6F, -13F, 2F);
 		bodyModel[488].rotateAngleY = -0.59341195F;
 
 		bodyModel[489].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 364 prime base
@@ -2398,27 +2398,27 @@ public class ModelGP7newer extends ModelConverter //Same as Filename
 		bodyModel[561].setRotationPoint(37.5F, -3F, -2F);
 
 		bodyModel[562].addBox(0F, 0F, 0F, 5, 7, 3, 0F); // Box 586 cs2
-		bodyModel[562].setRotationPoint(-22.1F, -11F, -2F);
+		bodyModel[562].setRotationPoint(-22.1F, -11F, 4F);
 		bodyModel[562].rotateAngleY = -0.80285146F;
 
 		bodyModel[563].addShapeBox(0F, 0F, 1F, 5, 1, 2, 0F,0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 587 cs2
-		bodyModel[563].setRotationPoint(-22.1F, -12F, -2F);
+		bodyModel[563].setRotationPoint(-22.1F, -12F, 4F);
 		bodyModel[563].rotateAngleY = -0.80285146F;
 
 		bodyModel[564].addShapeBox(0F, 0F, 0F, 10, 4, 1, 0F,0F, 0F, -0.5F, -5F, 0F, -0.5F, -5F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, -5F, -2F, 0F, -5F, -2F, 0F, 0F, -2F, 0F); // Box 588 cs2
-		bodyModel[564].setRotationPoint(-22.1F, -14F, -2F);
+		bodyModel[564].setRotationPoint(-22.1F, -14F, 4F);
 		bodyModel[564].rotateAngleY = -0.80285146F;
 
 		bodyModel[565].addShapeBox(0F, 0F, 0F, 5, 1, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F); // Box 589 cs2
-		bodyModel[565].setRotationPoint(-22.1F, -12F, -2F);
+		bodyModel[565].setRotationPoint(-22.1F, -12F, 4F);
 		bodyModel[565].rotateAngleY = -0.80285146F;
 
 		bodyModel[566].addBox(5F, 0F, -5F, 3, 8, 3, 0F); // Box 590 cs2
-		bodyModel[566].setRotationPoint(-22.1F, -12F, -2F);
+		bodyModel[566].setRotationPoint(-22.1F, -12F, 4F);
 		bodyModel[566].rotateAngleY = 0.2268928F;
 
 		bodyModel[567].addShapeBox(0F, 0F, 1F, 4, 6, 1, 0F,0F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, -2F, -3F, 0F, -2F, -3F, 0F, 0F, -3F, 0F); // Box 591 speedoooo
-		bodyModel[567].setRotationPoint(-22.1F, -17F, -2F);
+		bodyModel[567].setRotationPoint(-22.1F, -17F, 4F);
 		bodyModel[567].rotateAngleY = -1.11701072F;
 
 		bodyModel[568].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 592

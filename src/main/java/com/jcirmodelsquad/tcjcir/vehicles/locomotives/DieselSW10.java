@@ -19,10 +19,11 @@ public class DieselSW10 extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "UP");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "North Fox KIT-L (Dual Canon)");
-        textureDescriptionMap.put(3, "TIR 1248 & 1253");
-        textureDescriptionMap.put(4, "TIR 1269");
-        textureDescriptionMap.put(5, "Glonch Rayroa");
+        textureDescriptionMap.put(2, "North Fox KIT-Lm (Dual Canon)");
+        textureDescriptionMap.put(3, "North Fox DAR80 (Dual Canon)");
+        textureDescriptionMap.put(4, "TIR 1248 & 1253");
+        textureDescriptionMap.put(5, "TIR 1269");
+        textureDescriptionMap.put(6, "Glonch Rayroa");
 
     }
     public DieselSW10(World world, double d, double d1, double d2){

@@ -26,7 +26,7 @@ public class DieselCF7round3 extends DieselTrain {
         textureDescriptionMap.put(5, "Drexel Co");
         textureDescriptionMap.put(6, "FURRX (EX CSWR)");
         textureDescriptionMap.put(7, "West Creek Pacific");
-        textureDescriptionMap.put(8, "some bigj railroad that hes probably forgotten about lol");
+        textureDescriptionMap.put(8, "Marshwood Terminal");
         textureDescriptionMap.put(9, "Lisha & Watson");
         textureDescriptionMap.put(10, "");
         textureDescriptionMap.put(11, "");
