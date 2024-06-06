@@ -25,7 +25,9 @@ public class DieselSW1000 extends DieselTrain {
         textureDescriptionMap.put(4, "Nomansi and Eastern Pacific");
         textureDescriptionMap.put(5, "Southern Peenor Belt");
         textureDescriptionMap.put(6, "Southern Port Belt (BN Patch)");
-        textureDescriptionMap.put(7, "Thunder Valley Transportation District");
+        textureDescriptionMap.put(7, "Thunder Valley Transportation District (Falcon Area Rapid Transit)");
+        textureDescriptionMap.put(8, "ANW");
+        textureDescriptionMap.put(9, "ANW (Chevrons)");
     }
     public DieselSW1000(World world, double d, double d1, double d2){
         this(world);

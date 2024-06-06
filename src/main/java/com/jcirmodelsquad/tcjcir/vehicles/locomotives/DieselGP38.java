@@ -30,9 +30,9 @@ public class DieselGP38 extends DieselTrain {
         textureDescriptionMap.put(10, "Seattle & North Coast 301");
         textureDescriptionMap.put(11, "Seattle & North Coast 302");
         textureDescriptionMap.put(12, "GLNT JCIR 6 years");
-        textureDescriptionMap.put(13, "");
-        textureDescriptionMap.put(14, "");
-        textureDescriptionMap.put(15, "");
+        textureDescriptionMap.put(13, "ANW");
+        textureDescriptionMap.put(14, "ANW (Chevrons)");
+        textureDescriptionMap.put(15, "Georgia Northeastern");
         textureDescriptionMap.put(16, "");
         textureDescriptionMap.put(17, "");
         textureDescriptionMap.put(18, "");

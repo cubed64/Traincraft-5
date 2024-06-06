@@ -22,6 +22,8 @@ public class DieselC415S extends DieselTrain {
         textureDescriptionMap.put(2, "Spokane, Portland & Seattle");
         textureDescriptionMap.put(3, "GRN");
         textureDescriptionMap.put(4, "Blandsville & Blankerston");
+        textureDescriptionMap.put(5, "ANW (not to be confused with ANE)");
+        textureDescriptionMap.put(6, "ANW (Chevrons)");
     }
     public DieselC415S(World world, double d, double d1, double d2){
         this(world);
