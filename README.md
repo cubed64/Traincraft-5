@@ -1,40 +1,47 @@
 ![JCIR-Traincraft Logo](https://i.imgur.com/qdcdqsN.png)
-# JCIR-Traincraft - A mod for Minecraft, based on Traincraft but with new stuff.
+# FOXTC - A mod for Minecraft, based on JCIR-Traincraft, in turn based on Traincraft.
 
-This is a fork of Traincraft, but with content specificly desigined for the Minecraft server JC's Industral Railroading. It adds things like:
+Foxtc is the current home of Bidahochi's American Pack, formerly for TiM.
+BAP, as its usually referred to as, adds over 150 new locomotives, freight equipment, and passenger equipment- on top of all the existing TC stock!
 
-- Remote Controlled Trains (soon, in 2.0)
-- Right click to fuel and unfuel (soon, in 2.0)
-- Paintbrushes
-- Driverless trains
+It adds things like:
+
+- Paintbrush item & unlimited* textures
+- New railroad crossings & signs
+- New Cargo states for freight cars
+- Remote Controlled Trains (WIP)
+- Shift right click to fill and empty locomotives
+
+- Driverless trains (WIP)
 - New Trains
 - New skins
-- Signals
+- Intermodal Containers (WIP)
+
+*current max cap is ~40 skins per entity, but it can be increased
 
 Thank you to the original creators:
 
 - Spitfire4466
-- EternalBlueFlame
-- Spitfire4466
-- NitroxydeX
 - MrBrutal
+- NitroxydeX
+- EternalBlueFlame
 
-Also, thank you to our content contributers:
+Also, thank you to our content & code contributors:
 
 - Bidahochi
-- hariesh (hi its me, writing at a later date)
-- PeachMaster (me :D)
-- JCRail
-- Messicrew
+- Cubed64
+- Trains from 1.3.2 to 1.7.10
 - Professor Binky (TrainGoddess)
+- PeachMaster
+- JCRail
+- Roof Asian
+- Messicrew
 - BigJ
-- imWastey  
+- imWastey
+- TheDoctor1138
 - ..and you! If you want to, of course. Make your changes with a pull request, and join the Discord server to stay up to date with things that are happening.
 
-## **1.0 Release deadline: July 2nd**
-## We are currently in 1.9
-
-JCIR Discord Server: https://discord.gg/eF578D
+JCIR Discord Server: https://discord.gg/49Zay5H9uR
 
 (and yes, we did get permission from EternalBlueFlame to do this, so don't complain)
 
