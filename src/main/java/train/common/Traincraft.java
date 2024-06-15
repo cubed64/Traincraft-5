@@ -30,7 +30,7 @@ import org.apache.logging.log4j.Logger;
 import train.common.api.LiquidManager;
 import train.common.blocks.TCBlocks;
 import train.common.core.CommonProxy;
-import train.common.core.CreativeTabTraincraft;
+import train.common.core.creativetab.*;
 import train.common.core.TrainModCore;
 import train.common.core.handlers.*;
 import train.common.generation.ComponentVillageTrainstation;
@@ -99,7 +99,7 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 	public static File configDirectory;
 
 	/* Creative tab for Traincraft */
-	public static CreativeTabs tcTab;
+	public static CreativeTabs tcTab, tcSteamTab, tcDieselTab, tcElectricTab, tcPassengerTab, tcFreightTab;
 
 	public ArmorMaterial armor = EnumHelper.addArmorMaterial("Armor", 5, new int[] { 1, 2, 2, 1 }, 25);
 	public ArmorMaterial armorCloth = EnumHelper.addArmorMaterial("TCcloth", 5, new int[] {1, 2, 2, 1}, 25);
@@ -126,6 +126,11 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		/* Register Items, Blocks, ... */
 		tcLog.info("Initialize blocks, items, and other stuff");
 		tcTab = new CreativeTabTraincraft(CreativeTabs.getNextID(), "Traincraft");
+		tcSteamTab = new CreativeTabTraincraftSteam(CreativeTabs.getNextID(), "Traincraft Steam");
+		tcDieselTab = new CreativeTabTraincraftDiesel(CreativeTabs.getNextID(), "Traincraft Diesel");
+		tcElectricTab = new CreativeTabTraincraftElectric(CreativeTabs.getNextID(), "Traincraft Electric");
+		tcPassengerTab = new CreativeTabTraincraftPassenger(CreativeTabs.getNextID(), "Traincraft Passenger");
+		tcFreightTab = new CreativeTabTraincraftFreight(CreativeTabs.getNextID(), "Traincraft Freight");
 		trainArmor = proxy.addArmor("armor");
 		trainCloth = proxy.addArmor("Paintable");
 		trainCompositeSuit = proxy.addArmor("CompositeSuit");

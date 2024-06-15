@@ -27,6 +27,7 @@ import train.common.items.ItemTCRail.TrackTypes;
 import train.common.library.BlockIDs;
 import train.common.library.EnumTrains;
 import train.common.library.Info;
+import train.common.library.TypeOfRollingStock;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
 
@@ -41,13 +42,52 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
     private String trainNote;
     private int trainColor = -1;
 
-    public ItemRollingStock(String iconName) {
+    public ItemRollingStock(String iconName, TypeOfRollingStock typeOfRollingStock) {
         super(1);
         this.iconName = iconName;
         maxStackSize = 1;
         trainName = this.getUnlocalizedName();
-        setCreativeTab(Traincraft.tcTab);
+
+        if  (!this.iconName.equals("asteri"))
+        {
+            if (typeOfRollingStock == null)
+            {
+                typeOfRollingStock = TypeOfRollingStock.EMPTY;
+            }
+            switch(typeOfRollingStock)
+            {
+                case STEAM:
+                    setCreativeTab(Traincraft.tcSteamTab);
+                    break;
+                case DIESEL:
+                    setCreativeTab(Traincraft.tcDieselTab);
+                    break;
+                case ELECTRIC:
+                    setCreativeTab(Traincraft.tcElectricTab);
+                    break;
+                case PASSENGER:
+                    setCreativeTab(Traincraft.tcPassengerTab);
+                    break;
+                case FREIGHT:
+                    setCreativeTab(Traincraft.tcFreightTab);
+                    break;
+                default:
+                    setCreativeTab(Traincraft.tcTab);
+                    break;
+            }
+        }
     }
+
+	public ItemRollingStock(String iconName) {
+		super(1);
+		this.iconName = iconName;
+		maxStackSize = 1;
+		trainName = this.getUnlocalizedName();
+
+		if  (!this.iconName.equals("asteri")) {
+            setCreativeTab(Traincraft.tcTab);
+		}
+	}
 
     public int setNewUniqueID(ItemStack stack, EntityPlayer player, int numberOfTrains) {
         NBTTagCompound var3 = stack.getTagCompound();
@@ -446,7 +486,7 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
 
     public static ItemStack setPersistentData(@Nullable ItemStack oldStack, @Nullable AbstractTrains train, @Nullable Integer trainID, @Nullable String player, @Nullable String creator, int color, String note) {
 
-        ItemStack stack = oldStack;
+		ItemStack stack = oldStack;
 
         if (train != null) {
             for (EnumTrains trains : EnumTrains.values()) {
