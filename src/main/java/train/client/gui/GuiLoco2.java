@@ -108,7 +108,15 @@ public class GuiLoco2 extends GuiContainer {
 		if (loco instanceof IAT2Compatible) {
 			this.buttonList.add(this.buttonLock = new GuiButton(5, var1 + 108, var2 - 34, 67, 12, "AutoTrain-2"));
 		}
-		loco.guiTCTextFieldTrainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, var2 - 39, 170,15);
+
+		if (loco instanceof SteamTrain)
+		{
+			loco.guiTCTextFieldTrainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, var2 - 30, 170,15);
+		}
+		else
+		{
+			loco.guiTCTextFieldTrainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, var2 - 39, 170,15);
+		}
 		loco.guiTCTextFieldTrainNote.setText(loco.getTrainNote());
 	}
 
