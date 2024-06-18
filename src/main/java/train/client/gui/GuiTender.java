@@ -8,10 +8,12 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ResourceLocation;
+import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.Tender;
+import train.common.core.network.PacketAddNote;
 import train.common.core.network.PacketSetTrainLockedToClient;
 import train.common.inventory.InventoryTender;
 import train.common.library.Info;
@@ -48,7 +50,11 @@ public class GuiTender extends GuiContainer {
 				else
 					this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 128, var2 - 10, 45, 10, "Trusted"));
 		}
+
+		tender.guiTCTextFieldTrainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, var2 - 26, 170,15);
+		tender.guiTCTextFieldTrainNote.setText(tender.getTrainNote());
 	}
+
 	@Override
 	protected void actionPerformed(GuiButton guibutton) {
 		if (guibutton.id == 3) {
@@ -152,6 +158,8 @@ public class GuiTender extends GuiContainer {
 			drawHoveringText(Collections.singletonList("Water: " + (tender.getWater()) + "mb / " + (tender.getCartTankCapacity()) +"mb"),
 					mouseX, mouseY, fontRendererObj);
 		}
+
+		tender.guiTCTextFieldTrainNote.drawTextBox();
 	}
 
 	@Override
@@ -172,5 +180,33 @@ public class GuiTender extends GuiContainer {
 				drawTexturedModalRect(j + 143, (k + 69) - lo, 190, 69 - lo, 18, lo);
 			}
 		}
+	}
+
+	@Override
+	public void updateScreen() {
+		super.updateScreen();
+		if (tender.guiTCTextFieldTrainNote.isFocused()) {
+			tender.guiTCTextFieldTrainNote.updateCursorCounter();
+		}
+	}
+
+	@Override
+	protected void keyTyped(char par1, int par2) {
+
+
+		if (tender.guiTCTextFieldTrainNote.isFocused()) {
+			tender.guiTCTextFieldTrainNote.textboxKeyTyped(par1, par2);
+		} else if (par1 == 1 || (par2 == this.mc.gameSettings.keyBindInventory.getKeyCode() || par2 == Keyboard.KEY_ESCAPE)){
+			Traincraft.lockChannel.sendToServer(new PacketAddNote(tender.getEntityId(), tender.guiTCTextFieldTrainNote.getText()));
+			mc.thePlayer.closeScreen();
+		} else {
+			super.keyTyped(par1, par2);
+		}
+	}
+
+	@Override
+	protected void mouseClicked(int par1, int par2, int par3) {
+		tender.guiTCTextFieldTrainNote.mouseClicked(par1, par2, par3);
+		super.mouseClicked(par1, par2, par3);
 	}
 }

@@ -26,7 +26,6 @@ public class GuiFreight extends GuiContainer {
 	private Freight freight;
 	private int inventoryRows;
 	private EntityPlayer player;
-	private GuiTCTextField trainNote;
 
 	private float yaw;
 	private float roll;
@@ -67,8 +66,8 @@ public class GuiFreight extends GuiContainer {
 					this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 128, var2 - 10, 45, 10, "Trusted"));
 		}
 
-		trainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, height/2 - 120, 170,15);
-		trainNote.setText(freight.getTrainNote());
+		freight.guiTCTextFieldTrainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, var2 - 26, 170,15);
+		freight.guiTCTextFieldTrainNote.setText(freight.getTrainNote());
 	}
 
 
@@ -196,17 +195,18 @@ public class GuiFreight extends GuiContainer {
 		drawTexturedModalRect(j, k, 0, 0, xSize, inventoryRows * 18 + 17);
 		drawTexturedModalRect(j, k + inventoryRows * 18 + 17, 0, 126, xSize, 96);
 	}
+
 	@Override
 	public void drawScreen(int mouseX, int mouseY, float partialTicks) {
 		super.drawScreen(mouseX, mouseY, partialTicks);
-		trainNote.drawTextBox();
+		freight.guiTCTextFieldTrainNote.drawTextBox();
 	}
 
 	@Override
 	public void updateScreen() {
 		super.updateScreen();
-		if (trainNote.isFocused()) {
-			trainNote.updateCursorCounter();
+		if (freight.guiTCTextFieldTrainNote.isFocused()) {
+			freight.guiTCTextFieldTrainNote.updateCursorCounter();
 		}
 	}
 
@@ -214,25 +214,20 @@ public class GuiFreight extends GuiContainer {
 	protected void keyTyped(char par1, int par2) {
 
 
-		if (trainNote.isFocused()) {
-			trainNote.textboxKeyTyped(par1, par2);
+		if (freight.guiTCTextFieldTrainNote.isFocused()) {
+			freight.guiTCTextFieldTrainNote.textboxKeyTyped(par1, par2);
 		} else if (par1 == 1 || (par2 == this.mc.gameSettings.keyBindInventory.getKeyCode() || par2 == Keyboard.KEY_ESCAPE)){
-			Traincraft.lockChannel.sendToServer(new PacketAddNote(freight.getEntityId(), trainNote.getText()));
+			Traincraft.lockChannel.sendToServer(new PacketAddNote(freight.getEntityId(), freight.guiTCTextFieldTrainNote.getText()));
 			mc.thePlayer.closeScreen();
 		} else {
 			super.keyTyped(par1, par2);
 		}
-
-
-
-
-
 	}
 
 
 	@Override
 	protected void mouseClicked(int par1, int par2, int par3) {
-		trainNote.mouseClicked(par1, par2, par3);
+		freight.guiTCTextFieldTrainNote.mouseClicked(par1, par2, par3);
 		super.mouseClicked(par1, par2, par3);
 	}
 }

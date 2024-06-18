@@ -64,12 +64,20 @@ public class GuiTCTextField extends Gui {
 	/** True if this textbox is visible */
 	private boolean visible = true;
 
-	public GuiTCTextField(FontRenderer par1FontRenderer, int par2, int par3, int par4, int par5) {
+	/** Defines a new GuiTCTextField
+	 *
+	 * @param par1FontRenderer
+	 * @param xPos
+	 * @param yPos
+	 * @param width the width of the textbox
+	 * @param height the height of the textbox
+	 */
+	public GuiTCTextField(FontRenderer par1FontRenderer, int xPos, int yPos, int width, int height) {
 		this.fontRenderer = par1FontRenderer;
-		this.xPos = par2;
-		this.yPos = par3;
-		this.width = par4;
-		this.height = par5;
+		this.xPos = xPos;
+		this.yPos = yPos;
+		this.width = width;
+		this.height = height;
 	}
 
 	/**
