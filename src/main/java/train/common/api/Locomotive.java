@@ -1220,7 +1220,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             dataWatcher.updateObject(25, (int) convertSpeed(Math.sqrt(motionX * motionX + motionZ * motionZ)));
             dataWatcher.updateObject(26, guiDetailsJSON());
             dataWatcher.updateObject(27, renderRefs.toString());
-            dataWatcher.updateObject(31, ("1c/" + castToString((int) (currentFuelConsumptionChange)) + " per tick"));
 
 
             if (this.worldObj.handleMaterialAcceleration(this.boundingBox.expand(0.0D, -0.2000000059604645D, 0.0D).contract(0.001D, 0.001D, 0.001D), Material.water, this) && this.updateTicks % 4 == 0) {

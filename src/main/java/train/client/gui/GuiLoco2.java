@@ -13,9 +13,11 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
+import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 import train.common.Traincraft;
 import train.common.api.*;
+import train.common.core.network.PacketAddNote;
 import train.common.core.network.PacketParkingBrake;
 import train.common.core.network.PacketSetLocoTurnedOn;
 import train.common.core.network.PacketSetTrainLockedToClient;
@@ -106,6 +108,16 @@ public class GuiLoco2 extends GuiContainer {
 		if (loco instanceof IAT2Compatible) {
 			this.buttonList.add(this.buttonLock = new GuiButton(5, var1 + 108, var2 - 34, 67, 12, "AutoTrain-2"));
 		}
+
+		if (loco instanceof SteamTrain)
+		{
+			loco.guiTCTextFieldTrainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, var2 - 30, 170,15);
+		}
+		else
+		{
+			loco.guiTCTextFieldTrainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, var2 - 39, 170,15);
+		}
+		loco.guiTCTextFieldTrainNote.setText(loco.getTrainNote());
 	}
 
 	@Override
@@ -268,6 +280,35 @@ public class GuiLoco2 extends GuiContainer {
 				}
 			}
 		}
+		loco.guiTCTextFieldTrainNote.drawTextBox();
+	}
+
+	@Override
+	public void updateScreen() {
+		super.updateScreen();
+		if (loco.guiTCTextFieldTrainNote.isFocused()) {
+			loco.guiTCTextFieldTrainNote.updateCursorCounter();
+		}
+	}
+
+	@Override
+	protected void keyTyped(char par1, int par2) {
+
+
+		if (loco.guiTCTextFieldTrainNote.isFocused()) {
+			loco.guiTCTextFieldTrainNote.textboxKeyTyped(par1, par2);
+		} else if (par1 == 1 || (par2 == this.mc.gameSettings.keyBindInventory.getKeyCode() || par2 == Keyboard.KEY_ESCAPE)){
+			Traincraft.lockChannel.sendToServer(new PacketAddNote(loco.getEntityId(), loco.guiTCTextFieldTrainNote.getText()));
+			mc.thePlayer.closeScreen();
+		} else {
+			super.keyTyped(par1, par2);
+		}
+	}
+
+	@Override
+	protected void mouseClicked(int par1, int par2, int par3) {
+		loco.guiTCTextFieldTrainNote.mouseClicked(par1, par2, par3);
+		super.mouseClicked(par1, par2, par3);
 	}
 
 	@Override

@@ -23,6 +23,7 @@ import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeChunkManager.Ticket;
 import net.minecraftforge.common.util.Constants;
 import org.apache.commons.lang3.ArrayUtils;
+import train.client.gui.GuiTCTextField;
 import train.common.Traincraft;
 import train.common.adminbook.ItemAdminBook;
 import train.common.core.handlers.ConfigHandler;
@@ -134,6 +135,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 
 	public String destination = "";
 
+	public GuiTCTextField guiTCTextFieldTrainNote;
 	public String trainNote = "";
 
 
