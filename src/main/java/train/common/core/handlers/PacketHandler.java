@@ -34,6 +34,7 @@ public class PacketHandler {
 		Traincraft.slotschannel = NetworkRegistry.INSTANCE.newSimpleChannel("slots");
 		Traincraft.ignitionChannel = NetworkRegistry.INSTANCE.newSimpleChannel("ignition");
 		Traincraft.brakeChannel = NetworkRegistry.INSTANCE.newSimpleChannel("brake");
+		Traincraft.locomotiveLightsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("locomotiveLights");
 		Traincraft.lockChannel = NetworkRegistry.INSTANCE.newSimpleChannel("lock");
 		Traincraft.builderChannel = NetworkRegistry.INSTANCE.newSimpleChannel("builder");
 		Traincraft.paintbrushColorChannel = NetworkRegistry.INSTANCE.newSimpleChannel("paintbrushColor");
@@ -55,8 +56,10 @@ public class PacketHandler {
 				3, Side.CLIENT);
 		Traincraft.brakeChannel.registerMessage(PacketParkingBrake.Handler.class, PacketParkingBrake.class,
 				4, Side.SERVER);
+		Traincraft.locomotiveLightsChannel.registerMessage(PacketLocomotiveLights.Handler.class, PacketLocomotiveLights.class,
+				19, Side.SERVER);
 		Traincraft.lockChannel.registerMessage(PacketSetTrainLockedToClient.Handler.class,
-				PacketSetTrainLockedToClient.class, 5, Side.SERVER);
+				PacketSetTrainLockedToClient.class, 6, Side.SERVER);
 		Traincraft.lockChannel.registerMessage(PacketSetTrainLockedToClient.Handler.class,
 				PacketSetTrainLockedToClient.class, 18, Side.CLIENT);
 		Traincraft.lockChannel.registerMessage(PacketAddNote.Handler.class,

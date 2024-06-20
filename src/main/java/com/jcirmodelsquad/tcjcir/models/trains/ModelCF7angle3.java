@@ -19,6 +19,7 @@ import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
 import train.common.api.AbstractTrains;
+import train.common.api.Locomotive;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -2166,16 +2167,23 @@ public class ModelCF7angle3 extends ModelConverter //Same as Filename
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 521; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp") ) {
+		for (int i = 0; i < 521; i++)
+		{
+			Boolean isBoxNameNotNull = bodyModel[i].boxName != null;
+			if (isBoxNameNotNull && bodyModel[i].boxName.contains("lamp") && ((Locomotive) entity).isLocomotiveLightsEnabled())
+			{
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);
 				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
+			}
+			else if (isBoxNameNotNull && bodyModel[i].boxName.contains("cull"))
+			{
 				GL11.glDisable(GL11.GL_CULL_FACE);
 				bodyModel[i].render(f5);
 				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
+			}
+			else
+			{
 				bodyModel[i].render(f5);
 			}
 		}

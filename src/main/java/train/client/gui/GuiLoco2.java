@@ -2,9 +2,7 @@ package train.client.gui;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.jcirmodelsquad.tcjcir.features.autotrain.GUIAipkitInterface;
 import com.jcirmodelsquad.tcjcir.features.autotrain.IAT2Compatible;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.Entity;
@@ -17,10 +15,7 @@ import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 import train.common.Traincraft;
 import train.common.api.*;
-import train.common.core.network.PacketAddNote;
-import train.common.core.network.PacketParkingBrake;
-import train.common.core.network.PacketSetLocoTurnedOn;
-import train.common.core.network.PacketSetTrainLockedToClient;
+import train.common.core.network.*;
 import train.common.inventory.InventoryLoco;
 import train.common.library.Info;
 
@@ -49,7 +44,9 @@ public class GuiLoco2 extends GuiContainer {
 	public void initGui() {
 		super.initGui();
 		buttonList.clear();
-		if (!loco.getParkingBrakeFromPacket()) {
+		//region ParkingBrake
+		if (!loco.getParkingBrakeFromPacket())
+		{
 			if (loco instanceof SteamTrain) {
 				textureX = 41;
 				textureY = 13;
@@ -66,7 +63,8 @@ public class GuiLoco2 extends GuiContainer {
 			buttonPosY = -13;
 			buttonList.add(new GuiCustomButton(2, ((width - xSize) / 2) + buttonPosX - 12, ((height - ySize) / 2) + buttonPosY, textureSizeX, textureSizeY, "", texture, textureX, textureY));//Brake: Off
 		}
-		else {
+		else
+		{
 			if (loco instanceof SteamTrain) {
 				textureX = 0;
 				textureY = 13;
@@ -83,6 +81,9 @@ public class GuiLoco2 extends GuiContainer {
 			buttonPosY = -13;
 			buttonList.add(new GuiCustomButton(2, ((width - xSize) / 2) + buttonPosX, ((height - ySize) / 2) + buttonPosY, textureSizeX, textureSizeY, "", texture, textureX, textureY));//Brake: On
 		}
+		//endregion ParkingBrake
+
+		//region TrainLocked
 		int var1 = (this.width - xSize) / 2;
 		int var2 = (this.height - ySize) / 2;
 		if (!loco.getTrainLockedFromPacket()) {
@@ -97,6 +98,9 @@ public class GuiLoco2 extends GuiContainer {
 				else
 					this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 106, var2 - 10, 69, 10, "Trusted"));
 		}
+		//endregion TrainLocked
+
+		//region Start/Stop Engine
 		if (!(loco instanceof SteamTrain)) {
 			if (loco.isLocoTurnedOn()) {
 				this.buttonList.add(this.buttonLock = new GuiButton(4, var1 + 108, var2 - 22, 67, 12, "Stop Engine"));
@@ -105,10 +109,13 @@ public class GuiLoco2 extends GuiContainer {
 				this.buttonList.add(this.buttonLock = new GuiButton(4, var1 + 108, var2 - 22, 67, 12, "Start Engine"));
 			}
 		}
+		//endregion Start/Stop Engine
+
 		if (loco instanceof IAT2Compatible) {
 			this.buttonList.add(this.buttonLock = new GuiButton(5, var1 + 108, var2 - 34, 67, 12, "AutoTrain-2"));
 		}
 
+		//region guiTCTextFieldTrainNote
 		if (loco instanceof SteamTrain)
 		{
 			loco.guiTCTextFieldTrainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, var2 - 30, 170,15);
@@ -118,73 +125,124 @@ public class GuiLoco2 extends GuiContainer {
 			loco.guiTCTextFieldTrainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, var2 - 39, 170,15);
 		}
 		loco.guiTCTextFieldTrainNote.setText(loco.getTrainNote());
+		//endregion guiTCTextFieldTrainNote
+
+		//region Lights On/Off
+		if (loco.isLocomotiveLightsEnabled())
+		{
+			buttonList.add(this.buttonLock = new GuiButton(6, var1 + 175, var2 + 12, 67, 12, "Lights: On"));
+		}
+		else
+		{
+			buttonList.add(this.buttonLock = new GuiButton(6, var1 + 175, var2 + 12, 67, 12, "Lights: Off"));
+		}
+		//endregion Lights On/Off
 	}
 
 	@Override
-	protected void actionPerformed(GuiButton guibutton) {
-		if (guibutton.id == 2) {
-			if ((!loco.parkingBrake) && loco.getSpeed() < 10) {
-				Traincraft.brakeChannel.sendToServer(new PacketParkingBrake(true, loco.getEntityId()));
-				loco.parkingBrake=true;
-				loco.isBraking=true;
-				guibutton.displayString = "Brake: On";
-				this.initGui();
-			}
-			else if (loco.getSpeed() < 10) {
-				Traincraft.brakeChannel.sendToServer(new PacketParkingBrake(false, loco.getEntityId()));
-				loco.parkingBrake=false;
-				loco.isBraking=false;
-				guibutton.displayString = "Brake: Off";
-				this.initGui();
-			}
-		}
-		if (guibutton.id == 3) {
-			if (loco.riddenByEntity instanceof EntityPlayer && ((EntityPlayer) loco.riddenByEntity).getDisplayName().equals(loco.getTrainOwner())) {
-				if ((!loco.getTrainLockedFromPacket())) {
-					if (!isShiftKeyDown()) {
-						Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(true, loco.getTrustedList(), loco.getEntityId(), false));
-						loco.locked = true;
-						guibutton.displayString = "Locked";
-						this.initGui();
-					}
-				} else {
-					if (!isShiftKeyDown()) {
-						Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(false, loco.getTrustedList(), loco.getEntityId(), false));
-						loco.locked = false;
-						guibutton.displayString = "UnLocked";
-						this.initGui();
-					}
-				}
-			}
-			else if (loco.riddenByEntity instanceof EntityPlayer) {
-				((EntityPlayer) loco.riddenByEntity).addChatMessage(new ChatComponentText("You are not the owner!"));
-			}
-		}
-		if (guibutton.id == 4) {
-			if (loco.isLocoTurnedOn()) {
-				if(loco.getSpeed() <= 1){
-					Traincraft.ignitionChannel.sendToServer(new PacketSetLocoTurnedOn(false));
-					loco.isLocoTurnedOn = false;
-					guibutton.displayString = "Start Engine";
-					/**
-					 * We implemented Auto ParkingBrake since Brutal tried to did it in the Locomotive API when you turn off the damn Train
-					 */
+	protected void actionPerformed(GuiButton guibutton)
+	{
+		switch (guibutton.id)
+		{
+			case 2:
+				if ((!loco.parkingBrake) && loco.getSpeed() < 10) {
 					Traincraft.brakeChannel.sendToServer(new PacketParkingBrake(true, loco.getEntityId()));
-					loco.parkingBrake = true;
-					loco.isBraking = true;
+					loco.parkingBrake=true;
+					loco.isBraking=true;
+					guibutton.displayString = "Brake: On";
 					this.initGui();
-				}else{
-					((EntityPlayer)loco.riddenByEntity).addChatMessage(new ChatComponentText("Stop before turning it Off!"));
 				}
-			}
-			else {
-				Traincraft.ignitionChannel.sendToServer(new PacketSetLocoTurnedOn(true));
-				loco.isLocoTurnedOn = true;
-				guibutton.displayString = "Stop Engine";
-			}
-		}
-		if (guibutton.id == 5) {
-			Minecraft.getMinecraft().displayGuiScreen(new GUIAipkitInterface((Locomotive) Minecraft.getMinecraft().thePlayer.ridingEntity));
+				else if (loco.getSpeed() < 10) {
+					Traincraft.brakeChannel.sendToServer(new PacketParkingBrake(false, loco.getEntityId()));
+					loco.parkingBrake=false;
+					loco.isBraking=false;
+					guibutton.displayString = "Brake: Off";
+					this.initGui();
+				}
+			break;
+			case 3:
+				if (loco.riddenByEntity instanceof EntityPlayer && ((EntityPlayer) loco.riddenByEntity).getDisplayName().equals(loco.getTrainOwner())) {
+					if ((!loco.getTrainLockedFromPacket())) {
+						if (!isShiftKeyDown()) {
+							Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(true, loco.getTrustedList(), loco.getEntityId(), false));
+							loco.locked = true;
+							guibutton.displayString = "Locked";
+							this.initGui();
+						}
+					} else {
+						if (!isShiftKeyDown()) {
+							Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(false, loco.getTrustedList(), loco.getEntityId(), false));
+							loco.locked = false;
+							guibutton.displayString = "UnLocked";
+							this.initGui();
+						}
+					}
+				}
+				else if (loco.riddenByEntity instanceof EntityPlayer) {
+					((EntityPlayer) loco.riddenByEntity).addChatMessage(new ChatComponentText("You are not the owner!"));
+				}
+			break;
+			case 4:
+				if (loco.isLocoTurnedOn())
+				{
+					if(loco.getSpeed() <= 1){
+						Traincraft.ignitionChannel.sendToServer(new PacketSetLocoTurnedOn(false));
+						loco.isLocoTurnedOn = false;
+						guibutton.displayString = "Start Engine";
+						/**
+						 * We implemented Auto ParkingBrake since Brutal tried to did it in the Locomotive API when you turn off the damn Train
+						 */
+						Traincraft.brakeChannel.sendToServer(new PacketParkingBrake(true, loco.getEntityId()));
+						loco.parkingBrake = true;
+						loco.isBraking = true;
+						this.initGui();
+					}else{
+						((EntityPlayer)loco.riddenByEntity).addChatMessage(new ChatComponentText("Stop before turning it Off!"));
+					}
+				}
+				else {
+					Traincraft.ignitionChannel.sendToServer(new PacketSetLocoTurnedOn(true));
+					loco.isLocoTurnedOn = true;
+					guibutton.displayString = "Stop Engine";
+				}
+			break;
+			case 5:
+				if (loco.isLocoTurnedOn()) {
+					if(loco.getSpeed() <= 1){
+						Traincraft.ignitionChannel.sendToServer(new PacketSetLocoTurnedOn(false));
+						loco.isLocoTurnedOn = false;
+						guibutton.displayString = "Start Engine";
+						/**
+						 * We implemented Auto ParkingBrake since Brutal tried to did it in the Locomotive API when you turn off the damn Train
+						 */
+						Traincraft.brakeChannel.sendToServer(new PacketParkingBrake(true, loco.getEntityId()));
+						loco.parkingBrake = true;
+						loco.isBraking = true;
+						this.initGui();
+					}else{
+						((EntityPlayer)loco.riddenByEntity).addChatMessage(new ChatComponentText("Stop before turning it Off!"));
+					}
+				}
+				else {
+					Traincraft.ignitionChannel.sendToServer(new PacketSetLocoTurnedOn(true));
+					loco.isLocoTurnedOn = true;
+					guibutton.displayString = "Stop Engine";
+				}
+			break;
+			case 6: // Lights
+				if (loco.isLocomotiveLightsEnabled())
+				{
+					Traincraft.locomotiveLightsChannel.sendToServer(new PacketLocomotiveLights(false, loco.getEntityId()));
+					loco.isLocomotiveLightsEnabled = false;
+					guibutton.displayString = "Lights: Off";
+				}
+				else
+				{
+					Traincraft.locomotiveLightsChannel.sendToServer(new PacketLocomotiveLights(true, loco.getEntityId()));
+					loco.isLocomotiveLightsEnabled = true;
+					guibutton.displayString = "Lights: On";
+				}
+			break;
 		}
 	}
 

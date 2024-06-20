@@ -144,7 +144,6 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	 */
 	public ArrayList<Integer> acceptedColors;
 
-	public boolean islampOn;
 	/**
 	 * <p>List of players trusted to use the train</p>
 	 */
@@ -273,8 +272,6 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	public String getTrainNote() {
 		return dataWatcher.getWatchableObjectString(31);
 	}
-
-	public boolean lampOn() {return islampOn;}
 
 	public void manageChunkLoading(){
 		//if(this instanceof Locomotive)System.out.println("I'm alive. Remote: " + worldObj.isRemote);
@@ -454,7 +451,6 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		//motionZ = nbttagcompound.getDouble("motionZ");
 		Link1 = nbttagcompound.getDouble("Link1");
 		Link2 = nbttagcompound.getDouble("Link2");
-		islampOn = nbttagcompound.getBoolean("lampOn");
 		if(nbttagcompound.hasKey("Dim")){
 			this.dimension=nbttagcompound.getInteger("Dim");
 		}
