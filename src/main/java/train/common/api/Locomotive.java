@@ -54,8 +54,8 @@ import java.util.*;
 
 
 public abstract class Locomotive extends EntityRollingStock implements IInventory {
-    public boolean lampOn;
-    public boolean dothelightthing;
+    public boolean isLocomotiveLightsEnabled;
+    public boolean isBeaconOn;
     public boolean bellPressed;
     public int inventorySize;
     public boolean parkingBrake = false;
@@ -155,6 +155,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         dataWatcher.addObject(26, guiDetailsJSON());
         dataWatcher.addObject(27, renderRefs.toString());
         dataWatcher.addObject(15, (float) Math.round((getCustomSpeed() * 3.6f)));
+        dataWatcher.addObject(28, String.valueOf(isLocomotiveLightsEnabled));
         //dataWatcher.addObject(32, lineWaypoints);
         setAccel(0);
         setBrake(0);
@@ -451,7 +452,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         nbttagcompound.setString("currentSignalBlock", currentSignalBlock);
         nbttagcompound.setBoolean("isConnected", isConnected);
         nbttagcompound.setBoolean("stationStop", stationStop);
-        nbttagcompound.setBoolean("lampOn", lampOn);
+        nbttagcompound.setBoolean("isLocomotiveLightsEnabled", isLocomotiveLightsEnabled);
     }
 
     @Override
@@ -467,6 +468,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             isLocoTurnedOn = ntc.getBoolean("isLocoTurnedOn");
         }
         trainID = ntc.getString("trainID");
+        isLocomotiveLightsEnabled = ntc.getBoolean("isLocomotiveLightsEnabled");
         speedLimit = ntc.getInteger("speedLimit");
         trainLevel = ntc.getInteger("trainLevel");
         mtcStatus = ntc.getInteger("mtcStatus");
@@ -485,6 +487,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         isConnected = ntc.getBoolean("isConnected");
         stationStop = ntc.getBoolean("stationStop");
         dataWatcher.updateObject(5, trainID);
+        dataWatcher.updateObject(28, String.valueOf(isLocomotiveLightsEnabled));
     }
 
     /**
@@ -506,8 +509,10 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
      * @param i
      */
     @Override
-    public void keyHandlerFromPacket(int i) {
-        if (this.getTrainLockedFromPacket()) {
+    public void keyHandlerFromPacket(int i)
+    {
+        if (this.getTrainLockedFromPacket())
+        {
             // Allow a player to operate locomotive if they are the owner if they are trusted.
             if (this.riddenByEntity instanceof EntityPlayer
                     && !((EntityPlayer) this.riddenByEntity).getDisplayName()
@@ -570,27 +575,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 } else {
                     overspeedOveridePressed = true;
                 }
-            }
-        }
-        if (i == 19) {
-            /*if (lampOn == false) {//if lampon is EQUAL TO false
-                lampOn = true;// make lampon EQUAL true
-            } else if (lampOn == true) {//if lampon is EQUAL TO true
-                lampOn = false; //make lampon EQUAL false
-            }*/
-            lampOn = !lampOn;
-            if (lampOn) {
-                this.dothelightthing = true;
-            }
-            if (!lampOn) {
-                dothelightthing = false;
-            }
-
-            if (lampOn) {
-                System.out.println(lampOn + " loco.java");
-            }
-            if (!lampOn) {
-                System.out.println(lampOn + " loco.java");
             }
         }
 
@@ -679,7 +663,8 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     }
 
     @Override
-    public void onUpdate() {
+    public void onUpdate()
+    {
         if (trainID.equals("") && !worldObj.isRemote && ticksExisted % 40 == 0) {
             trainID = RandomStringUtils.randomAlphanumeric(5);
             dataWatcher.updateObject(5, trainID);
@@ -1220,6 +1205,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             dataWatcher.updateObject(25, (int) convertSpeed(Math.sqrt(motionX * motionX + motionZ * motionZ)));
             dataWatcher.updateObject(26, guiDetailsJSON());
             dataWatcher.updateObject(27, renderRefs.toString());
+            dataWatcher.updateObject(28, String.valueOf(isLocomotiveLightsEnabled));
 
 
             if (this.worldObj.handleMaterialAcceleration(this.boundingBox.expand(0.0D, -0.2000000059604645D, 0.0D).contract(0.001D, 0.001D, 0.001D), Material.water, this) && this.updateTicks % 4 == 0) {
@@ -1280,6 +1266,15 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
      */
     public void setParkingBrakeFromPacket(boolean set) {
         parkingBrake = set;
+    }
+
+    /**
+     *
+     * @param isLocoLightsOn set 0 if parking break is false, 1 if true
+     */
+    public void setPacketLocomotiveLights(boolean isLocoLightsOn)
+    {
+        isLocomotiveLightsEnabled = isLocoLightsOn;
     }
 
     /**
@@ -1377,6 +1372,10 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         return isLocoTurnedOn;
     }
 
+    public boolean isLocomotiveLightsEnabled()
+    {
+        return Boolean.valueOf(dataWatcher.getWatchableObjectString(28));
+    }
     // private int placeInSpecialInvent(ItemStack itemstack1, int i, boolean doAdd) {
     // if (locoInvent[i] == null) {
     // if (doAdd) locoInvent[i] = itemstack1;
