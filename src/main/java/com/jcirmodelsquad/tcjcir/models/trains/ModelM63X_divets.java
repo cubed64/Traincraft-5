@@ -1644,6 +1644,16 @@ public class ModelM63X_divets extends ModelConverter //Same as Filename
 			GL11.glTranslated(-3.5F, 0.0F, 0);
 			boger.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3 ) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/MLW_3_axle_hiad_Grey.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.75F, 0.0F, 0F);
+			boger.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(-3.5F, 0.0F, 0);
+			boger.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/MLW_3_axle_hiad_Blacc.png"));
 			GL11.glPushMatrix();

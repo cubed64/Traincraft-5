@@ -99,8 +99,8 @@ public static final SimpleNetworkWrapper gsfsChannel = NetworkRegistry.INSTANCE.
 public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE.newSimpleChannel("gsfsReturnChannel");*/
 	public static File configDirectory;
 
-	/* Creative tab for Traincraft */
-	public static CreativeTabs tcTab, tcSteamTab, tcDieselTab, tcElectricTab, tcPassengerTab, tcFreightTab;
+	/* Creative tabs for Traincraft */
+	public static CreativeTabs tcTab, tcHeritageTab, tcSteamTab, tcDieselTab, tcElectricTab, tcPassengerTab, tcFreightTab, tcBooseTab;
 
 	public ArmorMaterial armor = EnumHelper.addArmorMaterial("Armor", 5, new int[] { 1, 2, 2, 1 }, 25);
 	public ArmorMaterial armorCloth = EnumHelper.addArmorMaterial("TCcloth", 5, new int[] {1, 2, 2, 1}, 25);
@@ -127,11 +127,13 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		/* Register Items, Blocks, ... */
 		tcLog.info("Initialize blocks, items, and other stuff");
 		tcTab = new CreativeTabTraincraft(CreativeTabs.getNextID(), "Traincraft");
-		tcSteamTab = new CreativeTabTraincraftSteam(CreativeTabs.getNextID(), "Traincraft Steam");
-		tcDieselTab = new CreativeTabTraincraftDiesel(CreativeTabs.getNextID(), "Traincraft Diesel");
-		tcElectricTab = new CreativeTabTraincraftElectric(CreativeTabs.getNextID(), "Traincraft Electric");
-		tcPassengerTab = new CreativeTabTraincraftPassenger(CreativeTabs.getNextID(), "Traincraft Passenger");
-		tcFreightTab = new CreativeTabTraincraftFreight(CreativeTabs.getNextID(), "Traincraft Freight");
+		tcHeritageTab = new CreativeTabTraincraftHeritage(CreativeTabs.getNextID(), "Traincraft Heritage");
+		tcSteamTab = new CreativeTabTraincraftSteam(CreativeTabs.getNextID(), "BAP Steam");
+		tcDieselTab = new CreativeTabTraincraftDiesel(CreativeTabs.getNextID(), "BAP Diesel");
+		tcElectricTab = new CreativeTabTraincraftElectric(CreativeTabs.getNextID(), "BAP Electric");
+		tcPassengerTab = new CreativeTabTraincraftPassenger(CreativeTabs.getNextID(), "BAP Passenger");
+		tcFreightTab = new CreativeTabTraincraftFreight(CreativeTabs.getNextID(), "BAP Freight");
+		tcBooseTab = new CreativeTabTraincraftBoose(CreativeTabs.getNextID(), "BAP Caboosey");
 		trainArmor = proxy.addArmor("armor");
 		trainCloth = proxy.addArmor("Paintable");
 		trainCompositeSuit = proxy.addArmor("CompositeSuit");

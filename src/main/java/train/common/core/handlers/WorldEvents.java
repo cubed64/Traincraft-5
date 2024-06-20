@@ -101,7 +101,7 @@ public class WorldEvents{
  			}
  			else if (event.entity.getUniqueID() == UUID.fromString("b689b5f7-e560-4396-878a-8e78f2dede9c")) {
 				((EntityPlayer)event.entity).addChatComponentMessage(new ChatComponentText(
-						"Hey hariesh! Just wanted to say your a great person and keep on moving!"));
+						"Hey hariesh! Just wanted to say amogus stroka ma balls sussy swaws"));
 			}
  		} else if(event.entity instanceof EntityPlayer && ConfigHandler.FIRST_RUN) {
 			((EntityPlayer)event.entity).addChatComponentMessage(new ChatComponentText(

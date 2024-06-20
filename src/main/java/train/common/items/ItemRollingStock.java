@@ -56,6 +56,9 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
             }
             switch(typeOfRollingStock)
             {
+                case HERITAGE:
+                    setCreativeTab(Traincraft.tcHeritageTab);
+                    break;
                 case STEAM:
                     setCreativeTab(Traincraft.tcSteamTab);
                     break;
@@ -70,6 +73,9 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                     break;
                 case FREIGHT:
                     setCreativeTab(Traincraft.tcFreightTab);
+                    break;
+                case BOOSE:
+                    setCreativeTab(Traincraft.tcBooseTab);
                     break;
                 default:
                     setCreativeTab(Traincraft.tcTab);
