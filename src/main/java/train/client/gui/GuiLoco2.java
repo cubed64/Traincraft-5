@@ -130,11 +130,11 @@ public class GuiLoco2 extends GuiContainer {
 		//region Lights On/Off
 		if (loco.isLocomotiveLightsEnabled())
 		{
-			buttonList.add(this.buttonLock = new GuiButton(6, var1 + 175, var2 + 12, 67, 12, "Lights: On"));
+			buttonList.add(this.buttonLock = new GuiButton(6, var1 + 108, var2 + 166, 67, 12, "Lights: On"));
 		}
 		else
 		{
-			buttonList.add(this.buttonLock = new GuiButton(6, var1 + 175, var2 + 12, 67, 12, "Lights: Off"));
+			buttonList.add(this.buttonLock = new GuiButton(6, var1 + 108, var2 + 166, 67, 12, "Lights: Off"));
 		}
 		//endregion Lights On/Off
 	}
