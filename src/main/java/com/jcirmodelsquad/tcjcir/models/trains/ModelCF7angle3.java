@@ -2172,10 +2172,6 @@ public class ModelCF7angle3 extends ModelConverter //Same as Filename
 	{
 		updateTicks++;
 		Boolean didHaveLightUpdate = false;
-		if (cycleIndex == 4 )
-		{
-			cycleIndex = 0;
-		}
 
 		for (int i = 0; i < 521; i++)
 		{
@@ -2203,6 +2199,10 @@ public class ModelCF7angle3 extends ModelConverter //Same as Filename
 				}
 				else if (isBoxNameNotNull && bodyModel[i].boxName.contains("prime"))
 				{
+					if (cycleIndex == 4 )
+					{
+						cycleIndex = 0;
+					}
 					// prime1 -- Front Facing #1
 					// prime2 -- Right Facing #2
 					// prime3 -- Rear Facing #3
