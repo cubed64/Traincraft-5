@@ -137,6 +137,17 @@ public class GuiLoco2 extends GuiContainer {
 			buttonList.add(this.buttonLock = new GuiButton(6, var1 + 108, var2 + 166, 67, 12, "Lights: Off"));
 		}
 		//endregion Lights On/Off
+
+		//region Beacon On/Off
+		if (loco.isLocomotiveBeaconEnabled())
+		{
+			buttonList.add(this.buttonLock = new GuiButton(7, var1 + 43, var2 + 166, 67, 12, "Beacon: On"));
+		}
+		else
+		{
+			buttonList.add(this.buttonLock = new GuiButton(7, var1 + 43, var2 + 166, 67, 12, "Beacon: Off"));
+		}
+		//endregion Beacon On/Off
 	}
 
 	@Override
@@ -243,6 +254,20 @@ public class GuiLoco2 extends GuiContainer {
 					guibutton.displayString = "Lights: On";
 				}
 			break;
+			case 7: // Beacon
+				if (loco.isLocomotiveBeaconEnabled())
+				{
+					Traincraft.locomotiveBeaconChannel.sendToServer(new PacketLocomotiveBeacon(false, loco.getEntityId()));
+					loco.isLocomotiveBeaconEnabled = false;
+					guibutton.displayString = "Beacon: Off";
+				}
+				else
+				{
+					Traincraft.locomotiveBeaconChannel.sendToServer(new PacketLocomotiveBeacon(true, loco.getEntityId()));
+					loco.isLocomotiveBeaconEnabled = true;
+					guibutton.displayString = "Beacon: On";
+				}
+				break;
 		}
 	}
 

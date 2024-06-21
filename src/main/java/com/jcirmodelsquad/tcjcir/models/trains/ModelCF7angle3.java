@@ -2165,8 +2165,18 @@ public class ModelCF7angle3 extends ModelConverter //Same as Filename
 	ModelBlombergBnew theBlomb = new ModelBlombergBnew();
 	ModelTypeBnew theB = new ModelTypeBnew();
 
+	private byte cycleIndex = 0;
+	private short updateTicks = 0;
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		updateTicks++;
+		Boolean didHaveLightUpdate = false;
+		if (cycleIndex == 4 )
+		{
+			cycleIndex = 0;
+		}
+
 		for (int i = 0; i < 521; i++)
 		{
 			Boolean isBoxNameNotNull = bodyModel[i].boxName != null;
@@ -2175,6 +2185,88 @@ public class ModelCF7angle3 extends ModelConverter //Same as Filename
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);
 				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+			}
+			else if (((Locomotive) entity).isLocomotiveBeaconEnabled())
+			{
+				if (isBoxNameNotNull && bodyModel[i].boxName.contains("commander"))
+				{
+					if (((Locomotive) entity).ticksExisted % 30 == 0)
+					{
+						Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+						bodyModel[i].render(f5);
+						Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+					}
+					else
+					{
+						bodyModel[i].render(f5);
+					}
+				}
+				else if (isBoxNameNotNull && bodyModel[i].boxName.contains("prime"))
+				{
+					// prime1 -- Front Facing #1
+					// prime2 -- Right Facing #2
+					// prime3 -- Rear Facing #3
+					// Prime4 -- Left Facing #4
+					switch (cycleIndex)
+					{
+						case 0:
+							if (bodyModel[i].boxName.contains("prime1"))
+							{
+								didHaveLightUpdate = true;
+								Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+								bodyModel[i].render(f5);
+								Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+							}
+							else
+							{
+								bodyModel[i].render(f5);
+							}
+							break;
+						case 1:
+							if (bodyModel[i].boxName.contains("prime2"))
+							{
+								didHaveLightUpdate = true;
+								Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+								bodyModel[i].render(f5);
+								Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+							}
+							else
+							{
+								bodyModel[i].render(f5);
+							}
+							break;
+						case 2:
+							if (bodyModel[i].boxName.contains("prime3"))
+							{
+								didHaveLightUpdate = true;
+								Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+								bodyModel[i].render(f5);
+								Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+							}
+							else
+							{
+								bodyModel[i].render(f5);
+							}
+							break;
+						case 3:
+							if (bodyModel[i].boxName.contains("prime4"))
+							{
+								didHaveLightUpdate = true;
+								Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+								bodyModel[i].render(f5);
+								Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+							}
+							else
+							{
+								bodyModel[i].render(f5);
+							}
+							break;
+					}
+				}
+				else
+				{
+					bodyModel[i].render(f5);
+				}
 			}
 			else if (isBoxNameNotNull && bodyModel[i].boxName.contains("cull"))
 			{
@@ -2187,49 +2279,84 @@ public class ModelCF7angle3 extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 			}
 		}
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 11||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 21||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 22
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 20||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 27
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 29||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 40
-		) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver_SINGLESHOE.png"));
-			GL11.glPushMatrix();
-			GL11.glTranslated(-1.28, -0.02, 0);
-			theBlomb.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(2.55, 0, 0);
-			theBlomb.render(entity, f, f1, f2, f3, f4, f5);
-			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 23||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_DarkerGrey_SINGLESHOE.png"));
-			GL11.glPushMatrix();
-			GL11.glTranslated(-1.28, -0.02, 0);
-			theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+		if (didHaveLightUpdate && updateTicks % 45 == 0)
+		{
+			cycleIndex++;
+		}
 
-			GL11.glTranslated(2.55, 0, 0);
-			theBlomb.render(entity, f, f1, f2, f3, f4, f5);
-			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Beansniff_SINGLESHOE.png"));
-			GL11.glPushMatrix();
-			GL11.glTranslated(-1.28, -0.02, 0);
-			theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+		if (entity instanceof AbstractTrains)
+		{
+			switch (((AbstractTrains) entity).getColor())
+			{
+				case 11:
+				case 5:
+				case 17:
+				case 19:
+				case 21:
+				case 22:
+				case 20:
+				case 6:
+				case 13:
+				case 27:
+				case 29:
+				case 40:
+					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver_SINGLESHOE.png"));
+					GL11.glPushMatrix();
+					GL11.glTranslated(-1.28, -0.02, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(2.55, 0, 0);
-			theBlomb.render(entity, f, f1, f2, f3, f4, f5);
-			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 25||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 31) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
-			GL11.glPushMatrix();
-			GL11.glTranslated(-1.3, -0.025, 0);
-			theB.render(entity, f, f1, f2, f3, f4, f5);
+					GL11.glTranslated(2.55, 0, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+					GL11.glPopMatrix();
+				return;
+				case 23:
+				case 7:
+					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_DarkerGrey_SINGLESHOE.png"));
+					GL11.glPushMatrix();
+					GL11.glTranslated(-1.28, -0.02, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(2.57, 0, 0);
-			theB.render(entity, f, f1, f2, f3, f4, f5);
-			GL11.glPopMatrix();
-		} else {
+					GL11.glTranslated(2.55, 0, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+					GL11.glPopMatrix();
+				return;
+				case 14:
+					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Beansniff_SINGLESHOE.png"));
+					GL11.glPushMatrix();
+					GL11.glTranslated(-1.28, -0.02, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+
+					GL11.glTranslated(2.55, 0, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+					GL11.glPopMatrix();
+				return;
+				case 25:
+				case 15:
+				case 31:
+					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
+					GL11.glPushMatrix();
+					GL11.glTranslated(-1.3, -0.025, 0);
+					theB.render(entity, f, f1, f2, f3, f4, f5);
+
+					GL11.glTranslated(2.57, 0, 0);
+					theB.render(entity, f, f1, f2, f3, f4, f5);
+					GL11.glPopMatrix();
+				return;
+				default:
+					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Blac_SINGLESHOE.png"));
+					GL11.glPushMatrix();
+					GL11.glTranslated(-1.28, -0.02, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+
+					GL11.glTranslated(2.55, 0, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+					GL11.glPopMatrix();
+				return;
+			}
+		}
+		else
+		{
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Blac_SINGLESHOE.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.28, -0.02, 0);

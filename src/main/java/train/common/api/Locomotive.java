@@ -55,7 +55,7 @@ import java.util.*;
 
 public abstract class Locomotive extends EntityRollingStock implements IInventory {
     public boolean isLocomotiveLightsEnabled;
-    public boolean isBeaconOn;
+    public boolean isLocomotiveBeaconEnabled;
     public boolean bellPressed;
     public int inventorySize;
     public boolean parkingBrake = false;
@@ -156,6 +156,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         dataWatcher.addObject(27, renderRefs.toString());
         dataWatcher.addObject(15, (float) Math.round((getCustomSpeed() * 3.6f)));
         dataWatcher.addObject(28, String.valueOf(isLocomotiveLightsEnabled));
+        dataWatcher.addObject(29, String.valueOf(isLocomotiveBeaconEnabled));
         //dataWatcher.addObject(32, lineWaypoints);
         setAccel(0);
         setBrake(0);
@@ -453,6 +454,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         nbttagcompound.setBoolean("isConnected", isConnected);
         nbttagcompound.setBoolean("stationStop", stationStop);
         nbttagcompound.setBoolean("isLocomotiveLightsEnabled", isLocomotiveLightsEnabled);
+        nbttagcompound.setBoolean("isLocomotiveBeaconEnabled", isLocomotiveBeaconEnabled);
     }
 
     @Override
@@ -469,6 +471,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         }
         trainID = ntc.getString("trainID");
         isLocomotiveLightsEnabled = ntc.getBoolean("isLocomotiveLightsEnabled");
+        isLocomotiveBeaconEnabled = ntc.getBoolean("isLocomotiveBeaconEnabled");
         speedLimit = ntc.getInteger("speedLimit");
         trainLevel = ntc.getInteger("trainLevel");
         mtcStatus = ntc.getInteger("mtcStatus");
@@ -488,6 +491,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         stationStop = ntc.getBoolean("stationStop");
         dataWatcher.updateObject(5, trainID);
         dataWatcher.updateObject(28, String.valueOf(isLocomotiveLightsEnabled));
+        dataWatcher.updateObject(29, String.valueOf(isLocomotiveBeaconEnabled));
     }
 
     /**
@@ -671,7 +675,8 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
         }
 
-        if (worldObj.isRemote && ticksExisted % 2 == 0 && !Minecraft.getMinecraft().ingameGUI.getChatGUI().getChatOpen()) {
+        if (worldObj.isRemote && ticksExisted % 2 == 0 && !Minecraft.getMinecraft().ingameGUI.getChatGUI().getChatOpen())
+        {
             if (Keyboard.isKeyDown(FMLClientHandler.instance().getClient().gameSettings.keyBindForward.getKeyCode())
                     && !forwardPressed) {
                 Traincraft.keyChannel.sendToServer(new PacketKeyPress(4));
@@ -795,7 +800,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                     motionZ *= brake;
                 }
             }
-
 
             if (updateTicks % 20 == 0) HandleMaxAttachedCarts.PullPhysic(this);
             //if (updateTicks % 15 == 0) VBCTracking.getInstance().updateFromRS(Vec3.createVectorHelper(Math.floor(posX), Math.floor(posY), Math.floor(posZ)));
@@ -1206,6 +1210,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             dataWatcher.updateObject(26, guiDetailsJSON());
             dataWatcher.updateObject(27, renderRefs.toString());
             dataWatcher.updateObject(28, String.valueOf(isLocomotiveLightsEnabled));
+            dataWatcher.updateObject(29, String.valueOf(isLocomotiveBeaconEnabled));
 
 
             if (this.worldObj.handleMaterialAcceleration(this.boundingBox.expand(0.0D, -0.2000000059604645D, 0.0D).contract(0.001D, 0.001D, 0.001D), Material.water, this) && this.updateTicks % 4 == 0) {
@@ -1270,11 +1275,20 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
     /**
      *
-     * @param isLocoLightsOn set 0 if parking break is false, 1 if true
+     * @param isLocoLightsOn set 0 if loco lights is false, 1 if true
      */
     public void setPacketLocomotiveLights(boolean isLocoLightsOn)
     {
         isLocomotiveLightsEnabled = isLocoLightsOn;
+    }
+
+    /**
+     *
+     * @param isLocoBeaconEnabled set 0 if loco beacon is false, 1 if true
+     */
+    public void setPacketLocomotiveBeacon(boolean isLocoBeaconEnabled)
+    {
+        isLocomotiveBeaconEnabled = isLocoBeaconEnabled;
     }
 
     /**
@@ -1375,6 +1389,11 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     public boolean isLocomotiveLightsEnabled()
     {
         return Boolean.valueOf(dataWatcher.getWatchableObjectString(28));
+    }
+
+    public boolean isLocomotiveBeaconEnabled()
+    {
+        return Boolean.valueOf(dataWatcher.getWatchableObjectString(29));
     }
     // private int placeInSpecialInvent(ItemStack itemstack1, int i, boolean doAdd) {
     // if (locoInvent[i] == null) {
