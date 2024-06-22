@@ -11,13 +11,13 @@ package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is locat
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergBnew;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.api.Locomotive;
 import train.common.library.Info;
@@ -2166,70 +2166,82 @@ public class ModelCF7angle3 extends ModelConverter //Same as Filename
 	ModelTypeBnew theB = new ModelTypeBnew();
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 521; i++)
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, (Locomotive) entity, f5);
+
+		if (entity instanceof AbstractTrains)
 		{
-			Boolean isBoxNameNotNull = bodyModel[i].boxName != null;
-			if (isBoxNameNotNull && bodyModel[i].boxName.contains("lamp") && ((Locomotive) entity).isLocomotiveLightsEnabled())
+			switch (((AbstractTrains) entity).getColor())
 			{
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}
-			else if (isBoxNameNotNull && bodyModel[i].boxName.contains("cull"))
-			{
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			}
-			else
-			{
-				bodyModel[i].render(f5);
+				case 11:
+				case 5:
+				case 17:
+				case 19:
+				case 21:
+				case 22:
+				case 20:
+				case 6:
+				case 13:
+				case 27:
+				case 29:
+				case 40:
+					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver_SINGLESHOE.png"));
+					GL11.glPushMatrix();
+					GL11.glTranslated(-1.28, -0.02, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+
+					GL11.glTranslated(2.55, 0, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+					GL11.glPopMatrix();
+				return;
+				case 23:
+				case 7:
+					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_DarkerGrey_SINGLESHOE.png"));
+					GL11.glPushMatrix();
+					GL11.glTranslated(-1.28, -0.02, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+
+					GL11.glTranslated(2.55, 0, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+					GL11.glPopMatrix();
+				return;
+				case 14:
+					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Beansniff_SINGLESHOE.png"));
+					GL11.glPushMatrix();
+					GL11.glTranslated(-1.28, -0.02, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+
+					GL11.glTranslated(2.55, 0, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+					GL11.glPopMatrix();
+				return;
+				case 25:
+				case 15:
+				case 31:
+					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
+					GL11.glPushMatrix();
+					GL11.glTranslated(-1.3, -0.025, 0);
+					theB.render(entity, f, f1, f2, f3, f4, f5);
+
+					GL11.glTranslated(2.57, 0, 0);
+					theB.render(entity, f, f1, f2, f3, f4, f5);
+					GL11.glPopMatrix();
+				return;
+				default:
+					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Blac_SINGLESHOE.png"));
+					GL11.glPushMatrix();
+					GL11.glTranslated(-1.28, -0.02, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+
+					GL11.glTranslated(2.55, 0, 0);
+					theBlomb.render(entity, f, f1, f2, f3, f4, f5);
+					GL11.glPopMatrix();
+				return;
 			}
 		}
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 11||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 21||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 22
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 20||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 27
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 29||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 40
-		) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver_SINGLESHOE.png"));
-			GL11.glPushMatrix();
-			GL11.glTranslated(-1.28, -0.02, 0);
-			theBlomb.render(entity, f, f1, f2, f3, f4, f5);
-
-			GL11.glTranslated(2.55, 0, 0);
-			theBlomb.render(entity, f, f1, f2, f3, f4, f5);
-			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 23||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_DarkerGrey_SINGLESHOE.png"));
-			GL11.glPushMatrix();
-			GL11.glTranslated(-1.28, -0.02, 0);
-			theBlomb.render(entity, f, f1, f2, f3, f4, f5);
-
-			GL11.glTranslated(2.55, 0, 0);
-			theBlomb.render(entity, f, f1, f2, f3, f4, f5);
-			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Beansniff_SINGLESHOE.png"));
-			GL11.glPushMatrix();
-			GL11.glTranslated(-1.28, -0.02, 0);
-			theBlomb.render(entity, f, f1, f2, f3, f4, f5);
-
-			GL11.glTranslated(2.55, 0, 0);
-			theBlomb.render(entity, f, f1, f2, f3, f4, f5);
-			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 25||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 31) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
-			GL11.glPushMatrix();
-			GL11.glTranslated(-1.3, -0.025, 0);
-			theB.render(entity, f, f1, f2, f3, f4, f5);
-
-			GL11.glTranslated(2.57, 0, 0);
-			theB.render(entity, f, f1, f2, f3, f4, f5);
-			GL11.glPopMatrix();
-		} else {
+		else
+		{
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Blac_SINGLESHOE.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.28, -0.02, 0);
