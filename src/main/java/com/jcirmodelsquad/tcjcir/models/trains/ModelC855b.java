@@ -18,7 +18,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.api.Locomotive;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -237,10 +239,10 @@ public class ModelC855b extends ModelConverter //Same as Filename
 		bodyModel[192] = new ModelRendererTurbo(this, 305, 97, textureX, textureY); // Box 295
 		bodyModel[193] = new ModelRendererTurbo(this, 49, 105, textureX, textureY); // Box 296
 		bodyModel[194] = new ModelRendererTurbo(this, 105, 105, textureX, textureY); // Box 364 prime base
-		bodyModel[195] = new ModelRendererTurbo(this, 329, 105, textureX, textureY, "lamp"); // Box 6 PRIME1-1
-		bodyModel[196] = new ModelRendererTurbo(this, 345, 105, textureX, textureY, "lamp"); // Box 7 PRIME1-3
-		bodyModel[197] = new ModelRendererTurbo(this, 401, 105, textureX, textureY, "lamp"); // Box 8 PRIME1-2
-		bodyModel[198] = new ModelRendererTurbo(this, 25, 113, textureX, textureY, "lamp"); // Box 9 PRIME1-4
+		bodyModel[195] = new ModelRendererTurbo(this, 329, 105, textureX, textureY, "prime1"); // Box 6 PRIME1-1
+		bodyModel[196] = new ModelRendererTurbo(this, 345, 105, textureX, textureY, "prime3"); // Box 7 PRIME1-3
+		bodyModel[197] = new ModelRendererTurbo(this, 401, 105, textureX, textureY, "prime2"); // Box 8 PRIME1-2
+		bodyModel[198] = new ModelRendererTurbo(this, 25, 113, textureX, textureY, "prime4"); // Box 9 PRIME1-4
 		bodyModel[199] = new ModelRendererTurbo(this, 433, 113, textureX, textureY); // Box 311
 		bodyModel[200] = new ModelRendererTurbo(this, 305, 9, textureX, textureY); // Box 312
 		bodyModel[201] = new ModelRendererTurbo(this, 457, 41, textureX, textureY); // Box 281
@@ -1102,19 +1104,9 @@ public class ModelC855b extends ModelConverter //Same as Filename
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 259; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, (Locomotive) entity, f5);
+
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
 			GL11.glPushMatrix();

@@ -14,6 +14,8 @@ import net.minecraft.entity.Entity;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
+import train.client.renderhelper.ModelRenderHelper;
+import train.common.api.Locomotive;
 
 import java.util.ArrayList;
 
@@ -457,10 +459,10 @@ public class Modelalco2102 extends ModelConverter //Same as Filename
 		bodyModel[418] = new ModelRendererTurbo(this, 60, 230, textureX, textureY); // Box 421
 		bodyModel[419] = new ModelRendererTurbo(this, 60, 230, textureX, textureY); // Box 422
 		bodyModel[420] = new ModelRendererTurbo(this, 0, 23, textureX, textureY); // Box 189
-		bodyModel[421] = new ModelRendererTurbo(this, 27, 25, textureX, textureY, "lamp"); // Box 6 PRIME5-1
-		bodyModel[422] = new ModelRendererTurbo(this, 27, 25, textureX, textureY, "lamp"); // Box 7 PRIME5-3
-		bodyModel[423] = new ModelRendererTurbo(this, 27, 25, textureX, textureY, "lamp"); // Box 8 PRIME5-2
-		bodyModel[424] = new ModelRendererTurbo(this, 27, 25, textureX, textureY, "lamp"); // Box 9 PRIME5-4
+		bodyModel[421] = new ModelRendererTurbo(this, 27, 25, textureX, textureY, "prime1"); // Box 6 PRIME5-1
+		bodyModel[422] = new ModelRendererTurbo(this, 27, 25, textureX, textureY, "prime3"); // Box 7 PRIME5-3
+		bodyModel[423] = new ModelRendererTurbo(this, 27, 25, textureX, textureY, "prime2"); // Box 8 PRIME5-2
+		bodyModel[424] = new ModelRendererTurbo(this, 27, 25, textureX, textureY, "prime4"); // Box 9 PRIME5-4
 		bodyModel[425] = new ModelRendererTurbo(this, 27, 21, textureX, textureY); // Box 428 prime base
 		bodyModel[426] = new ModelRendererTurbo(this, 25, 29, textureX, textureY, "cull"); // Box 330 cull sp beacon holder
 		bodyModel[427] = new ModelRendererTurbo(this, 113, 42, textureX, textureY); // Box 337
@@ -1963,19 +1965,7 @@ public class Modelalco2102 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 
-		for(ModelRendererTurbo m :bodyModel) {
-			if(m.boxName.equals("lamp")){
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				m.render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if(m.boxName.equals("cull")){
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				m.render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			}else{
-				m.render(f5);
-			}
-		}
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, (Locomotive) entity, f5);
 	}
 	public float[] getTrans() {
 		return new float[]{-1.2F, 0.15F, 0.00F};

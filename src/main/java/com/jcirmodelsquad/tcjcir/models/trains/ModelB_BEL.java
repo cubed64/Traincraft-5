@@ -20,7 +20,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.api.Locomotive;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -283,14 +285,14 @@ public class ModelB_BEL extends ModelConverter //Same as Filename
 		bodyModel[236] = new ModelRendererTurbo(this, 145, 82, textureX, textureY); // Box 312
 		bodyModel[237] = new ModelRendererTurbo(this, 145, 84, textureX, textureY); // Box 313
 		bodyModel[238] = new ModelRendererTurbo(this, 148, 12, textureX, textureY); // Box 364 prime base
-		bodyModel[239] = new ModelRendererTurbo(this, 148, 8, textureX, textureY, "lamp"); // Box 6 PRIME2-1
-		bodyModel[240] = new ModelRendererTurbo(this, 148, 8, textureX, textureY, "lamp"); // Box 7 PRIME2-3
-		bodyModel[241] = new ModelRendererTurbo(this, 148, 8, textureX, textureY, "lamp"); // Box 8 PRIME2-2
-		bodyModel[242] = new ModelRendererTurbo(this, 148, 8, textureX, textureY, "lamp"); // Box 9 PRIME2-4
+		bodyModel[239] = new ModelRendererTurbo(this, 148, 8, textureX, textureY, "prime1"); // Box 6 PRIME2-1
+		bodyModel[240] = new ModelRendererTurbo(this, 148, 8, textureX, textureY, "prime3"); // Box 7 PRIME2-3
+		bodyModel[241] = new ModelRendererTurbo(this, 148, 8, textureX, textureY, "prime2"); // Box 8 PRIME2-2
+		bodyModel[242] = new ModelRendererTurbo(this, 148, 8, textureX, textureY, "prime4"); // Box 9 PRIME2-4
 		bodyModel[243] = new ModelRendererTurbo(this, 146, 16, textureX, textureY, "cull"); // Box 330 cull sp beacon holder
 		bodyModel[244] = new ModelRendererTurbo(this, 156, 65, textureX, textureY); // Box 279
 		bodyModel[245] = new ModelRendererTurbo(this, 182, 8, textureX, textureY); // Box 409 commander base
-		bodyModel[246] = new ModelRendererTurbo(this, 182, 4, textureX, textureY, "lamp"); // Box 410 commander beacon
+		bodyModel[246] = new ModelRendererTurbo(this, 182, 4, textureX, textureY, "commander"); // Box 410 commander beacon
 		bodyModel[247] = new ModelRendererTurbo(this, 152, 42, textureX, textureY); // Box 427
 		bodyModel[248] = new ModelRendererTurbo(this, 152, 45, textureX, textureY); // Box 428
 		bodyModel[249] = new ModelRendererTurbo(this, 152, 48, textureX, textureY); // Box 429
@@ -302,20 +304,20 @@ public class ModelB_BEL extends ModelConverter //Same as Filename
 		bodyModel[255] = new ModelRendererTurbo(this, 155, 29, textureX, textureY, "cull"); // Box 562 cull ptc antenna shiz
 		bodyModel[256] = new ModelRendererTurbo(this, 178, 27, textureX, textureY); // Box 563
 		bodyModel[257] = new ModelRendererTurbo(this, 159, 27, textureX, textureY); // Box 564
-		bodyModel[258] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "lamp"); // Box 6 PRIME3-1
-		bodyModel[259] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "lamp"); // Box 7 PRIME3-3
-		bodyModel[260] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "lamp"); // Box 8 PRIME3-2
-		bodyModel[261] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "lamp"); // Box 9 PRIME3-4
+		bodyModel[258] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "prime1"); // Box 6 PRIME3-1
+		bodyModel[259] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "prime3"); // Box 7 PRIME3-3
+		bodyModel[260] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "prime2"); // Box 8 PRIME3-2
+		bodyModel[261] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "prime4"); // Box 9 PRIME3-4
 		bodyModel[262] = new ModelRendererTurbo(this, 161, 56, textureX, textureY, "cull"); // Box 426 cull
 		bodyModel[263] = new ModelRendererTurbo(this, 151, 59, textureX, textureY); // Box 428 prime base
 		bodyModel[264] = new ModelRendererTurbo(this, 201, 65, textureX, textureY); // Box 252
-		bodyModel[265] = new ModelRendererTurbo(this, 201, 60, textureX, textureY, "lamp"); // Box 190 ditchlight f1
-		bodyModel[266] = new ModelRendererTurbo(this, 201, 60, textureX, textureY, "lamp"); // Box 446 ditchlight f1
+		bodyModel[265] = new ModelRendererTurbo(this, 201, 60, textureX, textureY, "ditch"); // Box 190 ditchlight f1
+		bodyModel[266] = new ModelRendererTurbo(this, 201, 60, textureX, textureY, "ditch"); // Box 446 ditchlight f1
 		bodyModel[267] = new ModelRendererTurbo(this, 201, 65, textureX, textureY); // Box 447
 		bodyModel[268] = new ModelRendererTurbo(this, 213, 65, textureX, textureY); // Box 281
-		bodyModel[269] = new ModelRendererTurbo(this, 213, 60, textureX, textureY, "lamp"); // Box 276 ditchlight r1
+		bodyModel[269] = new ModelRendererTurbo(this, 213, 60, textureX, textureY, "ditch"); // Box 276 ditchlight r1
 		bodyModel[270] = new ModelRendererTurbo(this, 213, 65, textureX, textureY); // Box 442
-		bodyModel[271] = new ModelRendererTurbo(this, 213, 60, textureX, textureY, "lamp"); // Box 443 ditchlight r1
+		bodyModel[271] = new ModelRendererTurbo(this, 213, 60, textureX, textureY, "ditch"); // Box 443 ditchlight r1
 		bodyModel[272] = new ModelRendererTurbo(this, 191, 9, textureX, textureY); // Box 114
 		bodyModel[273] = new ModelRendererTurbo(this, 191, 6, textureX, textureY); // Box 74
 		bodyModel[274] = new ModelRendererTurbo(this, 191, 12, textureX, textureY); // Box 78
@@ -342,8 +344,8 @@ public class ModelB_BEL extends ModelConverter //Same as Filename
 		bodyModel[295] = new ModelRendererTurbo(this, 155, 108, textureX, textureY); // Box 412
 		bodyModel[296] = new ModelRendererTurbo(this, 94, 34, textureX, textureY, "cull"); // Box 339 cull ccrcl beacon holdy
 		bodyModel[297] = new ModelRendererTurbo(this, 101, 34, textureX, textureY, "cull"); // Box 340 cull ccrcl beacon holdy
-		bodyModel[298] = new ModelRendererTurbo(this, 102, 30, textureX, textureY, "lamp"); // Box 410 commander beacon ccrcl
-		bodyModel[299] = new ModelRendererTurbo(this, 95, 30, textureX, textureY, "lamp"); // Box 342 commander beacon ccrcl
+		bodyModel[298] = new ModelRendererTurbo(this, 102, 30, textureX, textureY, "commander"); // Box 410 commander beacon ccrcl
+		bodyModel[299] = new ModelRendererTurbo(this, 95, 30, textureX, textureY, "commander"); // Box 342 commander beacon ccrcl
 		bodyModel[300] = new ModelRendererTurbo(this, 30, 197, textureX, textureY); // Box 412 cs
 		bodyModel[301] = new ModelRendererTurbo(this, 42, 197, textureX, textureY); // Box 413 cs
 		bodyModel[302] = new ModelRendererTurbo(this, 28, 189, textureX, textureY); // Box 86 cs
@@ -374,14 +376,14 @@ public class ModelB_BEL extends ModelConverter //Same as Filename
 		bodyModel[327] = new ModelRendererTurbo(this, 125, 138, textureX, textureY, "cull"); // Box 314 cull anticlimber
 		bodyModel[328] = new ModelRendererTurbo(this, 148, 144, textureX, textureY, "cull"); // Box 315 cull anticlimber
 		bodyModel[329] = new ModelRendererTurbo(this, 146, 148, textureX, textureY); // Box 407
-		bodyModel[330] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "lamp"); // Box 6 PRIME4-1
-		bodyModel[331] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "lamp"); // Box 7 PRIME4-3
-		bodyModel[332] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "lamp"); // Box 8 PRIME4-2
-		bodyModel[333] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "lamp"); // Box 9 PRIME4-4
+		bodyModel[330] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "prime1"); // Box 6 PRIME4-1
+		bodyModel[331] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "prime3"); // Box 7 PRIME4-3
+		bodyModel[332] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "prime2"); // Box 8 PRIME4-2
+		bodyModel[333] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "prime4"); // Box 9 PRIME4-4
 		bodyModel[334] = new ModelRendererTurbo(this, 174, 59, textureX, textureY); // Box 428 prime base
 		bodyModel[335] = new ModelRendererTurbo(this, 502, 101, textureX, textureY, "cull"); // Box 561 cull bell holder
 		bodyModel[336] = new ModelRendererTurbo(this, 177, 8, textureX, textureY); // Box 409 commander base
-		bodyModel[337] = new ModelRendererTurbo(this, 177, 4, textureX, textureY, "lamp"); // Box 410 commander beacon
+		bodyModel[337] = new ModelRendererTurbo(this, 177, 4, textureX, textureY, "commander"); // Box 410 commander beacon
 		bodyModel[338] = new ModelRendererTurbo(this, 491, 138, textureX, textureY); // Box 439 honse
 		bodyModel[339] = new ModelRendererTurbo(this, 125, 138, textureX, textureY); // Box 440 honse
 		bodyModel[340] = new ModelRendererTurbo(this, 382, 112, textureX, textureY); // Box 340
@@ -1467,19 +1469,8 @@ public class ModelB_BEL extends ModelConverter //Same as Filename
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 348; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, (Locomotive) entity, f5);
+
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 43231||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 320
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 343) {
 			//fb2 black late
