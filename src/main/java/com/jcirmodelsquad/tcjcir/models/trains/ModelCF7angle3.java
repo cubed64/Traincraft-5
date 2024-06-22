@@ -11,13 +11,13 @@ package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is locat
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergBnew;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.api.Locomotive;
 import train.common.library.Info;
@@ -2165,14 +2165,10 @@ public class ModelCF7angle3 extends ModelConverter //Same as Filename
 	ModelBlombergBnew theBlomb = new ModelBlombergBnew();
 	ModelTypeBnew theB = new ModelTypeBnew();
 
-	private byte cycleIndex = 0;
-	private short updateTicks = 0;
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		updateTicks++;
-		Boolean didHaveLightUpdate = false;
-
+		/*
 		for (int i = 0; i < 521; i++)
 		{
 			Boolean isBoxNameNotNull = bodyModel[i].boxName != null;
@@ -2278,12 +2274,8 @@ public class ModelCF7angle3 extends ModelConverter //Same as Filename
 			{
 				bodyModel[i].render(f5);
 			}
-		}
-
-		if (didHaveLightUpdate && updateTicks % 45 == 0)
-		{
-			cycleIndex++;
-		}
+		}*/
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, (Locomotive) entity, f5);
 
 		if (entity instanceof AbstractTrains)
 		{
