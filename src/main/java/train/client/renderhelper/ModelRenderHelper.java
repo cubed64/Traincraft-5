@@ -1,13 +1,8 @@
 package train.client.renderhelper;
 
-import codechicken.lib.lighting.SimpleBrightnessModel;
-import mods.railcraft.api.carts.locomotive.LocomotiveRenderType;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.OpenGlHelper;
-import net.minecraft.client.renderer.entity.Render;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelRendererTurbo;
-import tmt.Tessellator;
 import train.common.api.Locomotive;
 
 
