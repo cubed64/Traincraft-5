@@ -9,7 +9,7 @@ import train.common.api.Locomotive;
 public class ModelRenderHelper
 {
     /** Renders a locomotive model
-     * Can Render the following spec Special items
+     * Can Render the following Special items
      * lamp,
      * commander,
      * prime1,
@@ -69,7 +69,7 @@ public class ModelRenderHelper
     }
 
     /** Renders a locomotive model
-     * Can Render the following spec Special items
+     * Can Render the following Special items
      * lamp,
      * cull
      * @param bodyModel
