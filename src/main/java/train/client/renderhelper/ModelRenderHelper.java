@@ -23,47 +23,47 @@ public class ModelRenderHelper
      */
     public static void renderLocomotiveModel(ModelRendererTurbo[] bodyModel, Locomotive locomotive, float f5)
     {
-        for (int i = 0; i < bodyModel.length; i++)
+        for (ModelRendererTurbo bm : bodyModel)
         {
-            if (bodyModel[i].boxName.contains("lamp") && locomotive.isLocomotiveLightsEnabled())
+            if (bm.boxName.contains("lamp") && locomotive.isLocomotiveLightsEnabled())
             {
                 Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-                bodyModel[i].render(f5);
+                bm.render(f5);
                 Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
             }
             else if (locomotive.isLocomotiveBeaconEnabled())
             {
-                if (bodyModel[i].boxName.contains("commander"))
+                if (bm.boxName.contains("commander"))
                 {
                     if (locomotive.ticksExisted % 30 == 0)
                     {
                         Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-                        bodyModel[i].render(f5);
+                        bm.render(f5);
                         Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
                     }
                     else
                     {
-                        bodyModel[i].render(f5);
+                        bm.render(f5);
                     }
                 }
-                else if (bodyModel[i].boxName.contains("prime"))
+                else if (bm.boxName.contains("prime"))
                 {
-                    renderPrimeLight(bodyModel[i], locomotive.getBeaconCycleIndex(), f5);
+                    renderPrimeLight(bm, locomotive.getBeaconCycleIndex(), f5);
                 }
                 else
                 {
-                    bodyModel[i].render(f5);
+                    bm.render(f5);
                 }
             }
-            else if (bodyModel[i].boxName.contains("cull"))
+            else if (bm.boxName.contains("cull"))
             {
                 GL11.glDisable(GL11.GL_CULL_FACE);
-                bodyModel[i].render(f5);
+                bm.render(f5);
                 GL11.glEnable(GL11.GL_CULL_FACE);
             }
             else
             {
-                bodyModel[i].render(f5);
+                bm.render(f5);
             }
         }
     }
@@ -78,23 +78,23 @@ public class ModelRenderHelper
      */
     public static void renderLocomotiveModelWithoutBeacon(ModelRendererTurbo[] bodyModel, Locomotive locomotive, float f5)
     {
-        for (int i = 0; i < bodyModel.length; i++)
+        for (ModelRendererTurbo bm : bodyModel)
         {
-            if (bodyModel[i].boxName.contains("lamp") && locomotive.isLocomotiveLightsEnabled())
+            if (bm.boxName.contains("lamp") && locomotive.isLocomotiveLightsEnabled())
             {
                 Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-                bodyModel[i].render(f5);
+                bm.render(f5);
                 Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
             }
-            else if (bodyModel[i].boxName.contains("cull"))
+            else if (bm.boxName.contains("cull"))
             {
                 GL11.glDisable(GL11.GL_CULL_FACE);
-                bodyModel[i].render(f5);
+                bm.render(f5);
                 GL11.glEnable(GL11.GL_CULL_FACE);
             }
             else
             {
-                bodyModel[i].render(f5);
+                bm.render(f5);
             }
         }
     }
