@@ -88,12 +88,6 @@ public class ModelRenderHelper
                     bodyModel.render(f5);
                     Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
                 }
-                else if (bodyModel.boxName.contains("prime4"))
-                {
-                    Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-                    bodyModel.render(f5);
-                    Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-                }
                 else
                 {
                     bodyModel.render(f5);
