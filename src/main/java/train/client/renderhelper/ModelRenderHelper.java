@@ -31,6 +31,12 @@ public class ModelRenderHelper
                 bm.render(f5);
                 Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
             }
+            else if (locomotive.isLocomotiveDitchLightsEnabled() && bm.boxName.contains("ditch"))
+            {
+                Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+                bm.render(f5);
+                Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+            }
             else if (locomotive.isLocomotiveBeaconEnabled() && (bm.boxName.contains("commander") || bm.boxName.contains("prime")))
             {
                 if (bm.boxName.contains("commander"))
