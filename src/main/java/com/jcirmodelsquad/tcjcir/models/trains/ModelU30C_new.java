@@ -18,7 +18,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.api.Locomotive;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -319,23 +321,23 @@ public class ModelU30C_new extends ModelConverter //Same as Filename
 		bodyModel[274] = new ModelRendererTurbo(this, 152, 45, textureX, textureY); // Box 428
 		bodyModel[275] = new ModelRendererTurbo(this, 152, 48, textureX, textureY); // Box 429
 		bodyModel[276] = new ModelRendererTurbo(this, 161, 45, textureX, textureY); // Box 430
-		bodyModel[277] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "lamp"); // Box 6 PRIME3-1
-		bodyModel[278] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "lamp"); // Box 7 PRIME3-3
-		bodyModel[279] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "lamp"); // Box 8 PRIME3-2
-		bodyModel[280] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "lamp"); // Box 9 PRIME3-4
+		bodyModel[277] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "prime1"); // Box 6 PRIME3-1
+		bodyModel[278] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "prime3"); // Box 7 PRIME3-3
+		bodyModel[279] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "prime2"); // Box 8 PRIME3-2
+		bodyModel[280] = new ModelRendererTurbo(this, 151, 55, textureX, textureY, "prime4"); // Box 9 PRIME3-4
 		bodyModel[281] = new ModelRendererTurbo(this, 161, 56, textureX, textureY, "cull"); // Box 426 cull
 		bodyModel[282] = new ModelRendererTurbo(this, 151, 59, textureX, textureY); // Box 428
 		bodyModel[283] = new ModelRendererTurbo(this, 136, 28, textureX, textureY); // Box 184 o2 generator
-		bodyModel[284] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "lamp"); // Box 6 PRIME4-1
-		bodyModel[285] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "lamp"); // Box 7 PRIME4-3
-		bodyModel[286] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "lamp"); // Box 8 PRIME4-2
-		bodyModel[287] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "lamp"); // Box 9 PRIME4-4
+		bodyModel[284] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "prime1"); // Box 6 PRIME4-1
+		bodyModel[285] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "prime3"); // Box 7 PRIME4-3
+		bodyModel[286] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "prime2"); // Box 8 PRIME4-2
+		bodyModel[287] = new ModelRendererTurbo(this, 174, 55, textureX, textureY, "prime4"); // Box 9 PRIME4-4
 		bodyModel[288] = new ModelRendererTurbo(this, 174, 59, textureX, textureY); // Box 428
 		bodyModel[289] = new ModelRendererTurbo(this, 165, 38, textureX, textureY); // Box 364 prime base
-		bodyModel[290] = new ModelRendererTurbo(this, 165, 34, textureX, textureY, "lamp"); // Box 6 PRIME1-1
-		bodyModel[291] = new ModelRendererTurbo(this, 165, 34, textureX, textureY, "lamp"); // Box 7 PRIME1-3
-		bodyModel[292] = new ModelRendererTurbo(this, 165, 34, textureX, textureY, "lamp"); // Box 8 PRIME1-2
-		bodyModel[293] = new ModelRendererTurbo(this, 165, 34, textureX, textureY, "lamp"); // Box 9 PRIME1-4
+		bodyModel[290] = new ModelRendererTurbo(this, 165, 34, textureX, textureY, "prime1"); // Box 6 PRIME1-1
+		bodyModel[291] = new ModelRendererTurbo(this, 165, 34, textureX, textureY, "prime3"); // Box 7 PRIME1-3
+		bodyModel[292] = new ModelRendererTurbo(this, 165, 34, textureX, textureY, "prime2"); // Box 8 PRIME1-2
+		bodyModel[293] = new ModelRendererTurbo(this, 165, 34, textureX, textureY, "prime4"); // Box 9 PRIME1-4
 		bodyModel[294] = new ModelRendererTurbo(this, 322, 124, textureX, textureY); // Box 331 why dont you ALSO filter some biiiitchhheesssssssss
 		bodyModel[295] = new ModelRendererTurbo(this, 332, 124, textureX, textureY); // Box 332 why dont you additonally filter some bitches on you dick
 		bodyModel[296] = new ModelRendererTurbo(this, 142, 47, textureX, textureY, "lamp"); // Box 401 sp emergency gyra
@@ -411,10 +413,10 @@ public class ModelU30C_new extends ModelConverter //Same as Filename
 		bodyModel[366] = new ModelRendererTurbo(this, 165, 31, textureX, textureY); // Box 78
 		bodyModel[367] = new ModelRendererTurbo(this, 163, 23, textureX, textureY); // Box 245
 		bodyModel[368] = new ModelRendererTurbo(this, 125, 58, textureX, textureY); // Box 364 prime base
-		bodyModel[369] = new ModelRendererTurbo(this, 125, 54, textureX, textureY, "lamp"); // Box 6 PRIME2-1
-		bodyModel[370] = new ModelRendererTurbo(this, 125, 54, textureX, textureY, "lamp"); // Box 7 PRIME2-3
-		bodyModel[371] = new ModelRendererTurbo(this, 125, 54, textureX, textureY, "lamp"); // Box 8 PRIME2-2
-		bodyModel[372] = new ModelRendererTurbo(this, 125, 54, textureX, textureY, "lamp"); // Box 9 PRIME2-4
+		bodyModel[369] = new ModelRendererTurbo(this, 125, 54, textureX, textureY, "prime1"); // Box 6 PRIME2-1
+		bodyModel[370] = new ModelRendererTurbo(this, 125, 54, textureX, textureY, "prime3"); // Box 7 PRIME2-3
+		bodyModel[371] = new ModelRendererTurbo(this, 125, 54, textureX, textureY, "prime2"); // Box 8 PRIME2-2
+		bodyModel[372] = new ModelRendererTurbo(this, 125, 54, textureX, textureY, "prime4"); // Box 9 PRIME2-4
 		bodyModel[373] = new ModelRendererTurbo(this, 124, 62, textureX, textureY, "cull"); // Box 426 cull atsf bit
 		bodyModel[374] = new ModelRendererTurbo(this, 124, 68, textureX, textureY, "cull"); // Box 418 cull platform atsf
 		bodyModel[375] = new ModelRendererTurbo(this, 135, 66, textureX, textureY); // Box 308
@@ -443,7 +445,7 @@ public class ModelU30C_new extends ModelConverter //Same as Filename
 		bodyModel[398] = new ModelRendererTurbo(this, 95, 86, textureX, textureY); // Box 425
 		bodyModel[399] = new ModelRendererTurbo(this, 96, 84, textureX, textureY); // Box 426
 		bodyModel[400] = new ModelRendererTurbo(this, 177, 31, textureX, textureY); // Box 409 commander base
-		bodyModel[401] = new ModelRendererTurbo(this, 177, 27, textureX, textureY, "lamp"); // Box 410 commander beacon
+		bodyModel[401] = new ModelRendererTurbo(this, 177, 27, textureX, textureY, "commander"); // Box 410 commander beacon
 		bodyModel[402] = new ModelRendererTurbo(this, 336, 117, textureX, textureY); // Box 433
 		bodyModel[403] = new ModelRendererTurbo(this, 341, 117, textureX, textureY); // Box 434
 		bodyModel[404] = new ModelRendererTurbo(this, 346, 115, textureX, textureY); // Box 435
@@ -453,19 +455,19 @@ public class ModelU30C_new extends ModelConverter //Same as Filename
 		bodyModel[408] = new ModelRendererTurbo(this, 139, 63, textureX, textureY); // Box 439
 		bodyModel[409] = new ModelRendererTurbo(this, 179, 68, textureX, textureY); // Box 281
 		bodyModel[410] = new ModelRendererTurbo(this, 200, 66, textureX, textureY); // Box 101
-		bodyModel[411] = new ModelRendererTurbo(this, 179, 63, textureX, textureY, "lamp"); // Box 276 ditchlight r1
-		bodyModel[412] = new ModelRendererTurbo(this, 200, 61, textureX, textureY, "lamp"); // Box 278 ditchlight r2
+		bodyModel[411] = new ModelRendererTurbo(this, 179, 63, textureX, textureY, "ditch"); // Box 276 ditchlight r1
+		bodyModel[412] = new ModelRendererTurbo(this, 200, 61, textureX, textureY, "ditch"); // Box 278 ditchlight r2
 		bodyModel[413] = new ModelRendererTurbo(this, 200, 66, textureX, textureY); // Box 440
-		bodyModel[414] = new ModelRendererTurbo(this, 200, 61, textureX, textureY, "lamp"); // Box 441 ditchlight r2
+		bodyModel[414] = new ModelRendererTurbo(this, 200, 61, textureX, textureY, "ditch"); // Box 441 ditchlight r2
 		bodyModel[415] = new ModelRendererTurbo(this, 179, 68, textureX, textureY); // Box 442
-		bodyModel[416] = new ModelRendererTurbo(this, 179, 63, textureX, textureY, "lamp"); // Box 443 ditchlight r1
+		bodyModel[416] = new ModelRendererTurbo(this, 179, 63, textureX, textureY, "ditch"); // Box 443 ditchlight r1
 		bodyModel[417] = new ModelRendererTurbo(this, 186, 68, textureX, textureY); // Box 252
 		bodyModel[418] = new ModelRendererTurbo(this, 193, 66, textureX, textureY); // Box 101
-		bodyModel[419] = new ModelRendererTurbo(this, 186, 63, textureX, textureY, "lamp"); // Box 190 ditchlight f1
-		bodyModel[420] = new ModelRendererTurbo(this, 193, 61, textureX, textureY, "lamp"); // Box 275 ditchlight f2
+		bodyModel[419] = new ModelRendererTurbo(this, 186, 63, textureX, textureY, "ditch"); // Box 190 ditchlight f1
+		bodyModel[420] = new ModelRendererTurbo(this, 193, 61, textureX, textureY, "ditch"); // Box 275 ditchlight f2
 		bodyModel[421] = new ModelRendererTurbo(this, 193, 66, textureX, textureY); // Box 444
-		bodyModel[422] = new ModelRendererTurbo(this, 193, 61, textureX, textureY, "lamp"); // Box 445 ditchlight f2
-		bodyModel[423] = new ModelRendererTurbo(this, 186, 63, textureX, textureY, "lamp"); // Box 446 ditchlight f1
+		bodyModel[422] = new ModelRendererTurbo(this, 193, 61, textureX, textureY, "ditch"); // Box 445 ditchlight f2
+		bodyModel[423] = new ModelRendererTurbo(this, 186, 63, textureX, textureY, "ditch"); // Box 446 ditchlight f1
 		bodyModel[424] = new ModelRendererTurbo(this, 186, 68, textureX, textureY); // Box 447
 		bodyModel[425] = new ModelRendererTurbo(this, 308, 239, textureX, textureY); // Box 456 soop line tiny fuel tank
 		bodyModel[426] = new ModelRendererTurbo(this, 246, 231, textureX, textureY); // Box 457 soop line tiny fuel tank
@@ -476,8 +478,8 @@ public class ModelU30C_new extends ModelConverter //Same as Filename
 		bodyModel[431] = new ModelRendererTurbo(this, 185, 32, textureX, textureY); // Box 295
 		bodyModel[432] = new ModelRendererTurbo(this, 153, 71, textureX, textureY, "cull"); // Box 339 cull pw beacon holdy
 		bodyModel[433] = new ModelRendererTurbo(this, 160, 71, textureX, textureY, "cull"); // Box 340 cull pw beacon holdy
-		bodyModel[434] = new ModelRendererTurbo(this, 161, 67, textureX, textureY, "lamp"); // Box 410 commander beacon pw
-		bodyModel[435] = new ModelRendererTurbo(this, 154, 67, textureX, textureY, "lamp"); // Box 342 commander beacon pw
+		bodyModel[434] = new ModelRendererTurbo(this, 161, 67, textureX, textureY, "commander"); // Box 410 commander beacon pw
+		bodyModel[435] = new ModelRendererTurbo(this, 154, 67, textureX, textureY, "commander"); // Box 342 commander beacon pw
 		bodyModel[436] = new ModelRendererTurbo(this, 140, 162, textureX, textureY); // Box 440 honse
 		bodyModel[437] = new ModelRendererTurbo(this, 140, 167, textureX, textureY); // Box 468 honse
 		bodyModel[438] = new ModelRendererTurbo(this, 187, 74, textureX, textureY); // Box 354 cnw bELL
@@ -1840,27 +1842,11 @@ public class ModelU30C_new extends ModelConverter //Same as Filename
 
 	ModelFB3_new theTrucc = new ModelFB3_new();
 
-	@Override//testing this method out
+	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 
-		for(ModelRendererTurbo m :bodyModel) {
-			if(m.boxName.equals("lamp")){
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				m.render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			//}if(m.boxName.equals("lamp")){
-				//Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, (Locomotive) entity, f5);
 
-			}else if(m.boxName.equals("cull")){
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				m.render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			//}if(m.boxName.equals("cull")){
-				//GL11.glEnable(GL11.GL_CULL_FACE);
-			}else{
-				m.render(f5);
-			}
-		}
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1544) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb3_new_earliie_silvers.png"));
 			GL11.glPushMatrix();
