@@ -55,8 +55,8 @@ import java.util.*;
 
 
 public abstract class Locomotive extends EntityRollingStock implements IInventory {
-    public boolean isLocomotiveLightsEnabled;
-    public boolean isLocomotiveBeaconEnabled;
+    public boolean isLocomotiveLightsEnabled = false;
+    public boolean isLocomotiveBeaconEnabled = false;
     public byte ditchLightMode = 0;
     public boolean bellPressed;
     public int inventorySize;
@@ -127,7 +127,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
      */
     protected int fuelRate;
 
-    public byte beaconCycleIndex;
+    public byte beaconCycleIndex = 0;
     public byte beaconCycleSpeed;
 
     private int soundPosition = 0;
@@ -211,6 +211,16 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         locomotiveLightingDetailsJSON.addProperty("beaconCycleIndex", beaconCycleIndex);
         locomotiveLightingDetailsJSON.addProperty("ditchLightMode", ditchLightMode);
         return locomotiveLightingDetailsJSON.toString();
+    }
+
+    public JsonObject locomotiveLightingDetailsAsJSON()
+    {
+        JsonObject locomotiveLightingDetailsJSON = new JsonObject();
+        locomotiveLightingDetailsJSON.addProperty("isLocomotiveLightsEnabled", isLocomotiveLightsEnabled);
+        locomotiveLightingDetailsJSON.addProperty("isLocomotiveBeaconEnabled", isLocomotiveBeaconEnabled);
+        locomotiveLightingDetailsJSON.addProperty("beaconCycleIndex", beaconCycleIndex);
+        locomotiveLightingDetailsJSON.addProperty("ditchLightMode", ditchLightMode);
+        return locomotiveLightingDetailsJSON;
     }
 
     public String guiDetailsDW() {
@@ -491,11 +501,21 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             isLocoTurnedOn = ntc.getBoolean("isLocoTurnedOn");
         }
         trainID = ntc.getString("trainID");
-        JsonObject locomotiveLightingDetailsJSONObject = new JsonParser().parse(ntc.getString("locomotiveLightingDetailsJSON")).getAsJsonObject();
+
+        JsonObject locomotiveLightingDetailsJSONObject;
+        try {
+            locomotiveLightingDetailsJSONObject = new JsonParser().parse(ntc.getString("locomotiveLightingDetailsJSON")).getAsJsonObject();
+        }
+        catch (Exception e)
+        {
+            locomotiveLightingDetailsJSONObject = locomotiveLightingDetailsAsJSON();
+        }
+
         isLocomotiveLightsEnabled = locomotiveLightingDetailsJSONObject.get("isLocomotiveLightsEnabled").getAsBoolean();
         isLocomotiveBeaconEnabled = locomotiveLightingDetailsJSONObject.get("isLocomotiveBeaconEnabled").getAsBoolean();
         ditchLightMode = locomotiveLightingDetailsJSONObject.get("ditchLightMode").getAsByte();
         beaconCycleIndex = locomotiveLightingDetailsJSONObject.get("beaconCycleIndex").getAsByte();
+
         speedLimit = ntc.getInteger("speedLimit");
         trainLevel = ntc.getInteger("trainLevel");
         mtcStatus = ntc.getInteger("mtcStatus");
