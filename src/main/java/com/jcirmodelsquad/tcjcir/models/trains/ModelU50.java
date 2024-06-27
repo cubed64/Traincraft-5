@@ -17,7 +17,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -98,9 +100,9 @@ public class ModelU50 extends ModelConverter //Same as Filename
 		bodyModel[54] = new ModelRendererTurbo(this, 337, 126, textureX, textureY); // Box 92
 		bodyModel[55] = new ModelRendererTurbo(this, 191, 178, textureX, textureY); // Box 93
 		bodyModel[56] = new ModelRendererTurbo(this, 76, 5, textureX, textureY); // Box 409 commander base
-		bodyModel[57] = new ModelRendererTurbo(this, 76, 1, textureX, textureY, "lamp"); // Box 410 commander beacon
+		bodyModel[57] = new ModelRendererTurbo(this, 76, 1, textureX, textureY, BoxName.commander); // Box 410 commander beacon
 		bodyModel[58] = new ModelRendererTurbo(this, 79, 12, textureX, textureY); // Box 409 commander base
-		bodyModel[59] = new ModelRendererTurbo(this, 79, 8, textureX, textureY, "lamp"); // Box 410 commander beacon
+		bodyModel[59] = new ModelRendererTurbo(this, 79, 8, textureX, textureY, BoxName.commander); // Box 410 commander beacon
 		bodyModel[60] = new ModelRendererTurbo(this, 77, 15, textureX, textureY, "cull"); // Box 88 cull
 		bodyModel[61] = new ModelRendererTurbo(this, 173, 127, textureX, textureY); // Box 89
 		bodyModel[62] = new ModelRendererTurbo(this, 412, 84, textureX, textureY); // Box 90
@@ -123,10 +125,10 @@ public class ModelU50 extends ModelConverter //Same as Filename
 		bodyModel[79] = new ModelRendererTurbo(this, 92, 5, textureX, textureY); // Box 110
 		bodyModel[80] = new ModelRendererTurbo(this, 92, 11, textureX, textureY); // Box 111
 		bodyModel[81] = new ModelRendererTurbo(this, 67, 6, textureX, textureY); // Box 364 prime base
-		bodyModel[82] = new ModelRendererTurbo(this, 67, 2, textureX, textureY, "lamp"); // Box 6 PRIME1-1
-		bodyModel[83] = new ModelRendererTurbo(this, 67, 2, textureX, textureY, "lamp"); // Box 7 PRIME1-3
-		bodyModel[84] = new ModelRendererTurbo(this, 67, 2, textureX, textureY, "lamp"); // Box 8 PRIME1-2
-		bodyModel[85] = new ModelRendererTurbo(this, 67, 2, textureX, textureY, "lamp"); // Box 9 PRIME1-4
+		bodyModel[82] = new ModelRendererTurbo(this, 67, 2, textureX, textureY, BoxName.prime1); // Box 6 PRIME1-1
+		bodyModel[83] = new ModelRendererTurbo(this, 67, 2, textureX, textureY, BoxName.prime3); // Box 7 PRIME1-3
+		bodyModel[84] = new ModelRendererTurbo(this, 67, 2, textureX, textureY, BoxName.prime2); // Box 8 PRIME1-2
+		bodyModel[85] = new ModelRendererTurbo(this, 67, 2, textureX, textureY, BoxName.prime4); // Box 9 PRIME1-4
 		bodyModel[86] = new ModelRendererTurbo(this, 183, 75, textureX, textureY, "cull"); // Box 117 walkway up cull
 		bodyModel[87] = new ModelRendererTurbo(this, 408, 68, textureX, textureY); // Box 118
 		bodyModel[88] = new ModelRendererTurbo(this, 479, 154, textureX, textureY); // Box 121
@@ -1093,19 +1095,8 @@ public class ModelU50 extends ModelConverter //Same as Filename
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 257; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 0
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18) {

@@ -5,6 +5,7 @@ import net.minecraft.client.renderer.GLAllocation;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
+import train.common.enums.BoxName;
 
 import java.io.IOException;
 import java.util.*;
@@ -128,6 +129,28 @@ public class ModelRendererTurbo {
      */
     public ModelRendererTurbo(Object Object, int textureX, int textureY, int textureU, int textureV, String boxName) {
         this(Object, boxName);
+        textureOffsetX = textureX;
+        textureOffsetY = textureY;
+        textureWidth = textureU;
+        textureHeight = textureV;
+    }
+
+
+    /** This is a overload of the original that uses a enum
+     * ETERNAL: new object initialization method for animator support
+     * Creates a new ModelRenderTurbo object with a name. It requires the coordinates of the
+     * position of the texture, but also allows you to specify the width and height
+     * of the texture, allowing you to use bigger textures instead.
+     * It also requires a string to define the name of the box, this is used for animation
+     * @param Object the shape.
+     * @param textureX the texture left position
+     * @param textureY the texture top position
+     * @param textureU the texture width
+     * @param textureV the texture heught
+     * @param boxName the name of the shape.
+     */
+    public ModelRendererTurbo(Object Object, int textureX, int textureY, int textureU, int textureV, BoxName boxName) {
+        this(Object, boxName.BoxName);
         textureOffsetX = textureX;
         textureOffsetY = textureY;
         textureWidth = textureU;

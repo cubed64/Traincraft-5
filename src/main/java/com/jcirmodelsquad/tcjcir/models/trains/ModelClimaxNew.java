@@ -13,6 +13,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
+import train.client.renderhelper.ModelRenderHelper;
 
 public class ModelClimaxNew extends ModelConverter //Same as Filename
 {
@@ -562,16 +563,8 @@ public class ModelClimaxNew extends ModelConverter //Same as Filename
 		bodyModel[115].rotateAngleZ = 2.3387412F;
 	}
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-
-		for (ModelRendererTurbo m : bodyModel) {
-			if (m.boxName.equals("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-			}
-			m.render(f5);
-			if (m.boxName.equals("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderLocomotiveModelWithoutBeacon(bodyModel, entity, f5);
 	}
 }

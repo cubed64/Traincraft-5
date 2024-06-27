@@ -18,7 +18,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -46,12 +48,12 @@ public class ModelSD40dash3 extends ModelConverter //Same as Filename
 		bodyModel[1] = new ModelRendererTurbo(this, 9, 1, textureX, textureY); // Box 288
 		bodyModel[2] = new ModelRendererTurbo(this, 25, 1, textureX, textureY); // Box 287
 		bodyModel[3] = new ModelRendererTurbo(this, 41, 1, textureX, textureY); // Box 136
-		bodyModel[4] = new ModelRendererTurbo(this, 57, 1, textureX, textureY, "lamp"); // Box 417 ditchlight r 1
-		bodyModel[5] = new ModelRendererTurbo(this, 65, 1, textureX, textureY, "lamp"); // Box 416 ditchlight r 1
+		bodyModel[4] = new ModelRendererTurbo(this, 57, 1, textureX, textureY, BoxName.ditch); // Box 417 ditchlight r 1
+		bodyModel[5] = new ModelRendererTurbo(this, 65, 1, textureX, textureY, BoxName.ditch); // Box 416 ditchlight r 1
 		bodyModel[6] = new ModelRendererTurbo(this, 73, 1, textureX, textureY); // Box 415
 		bodyModel[7] = new ModelRendererTurbo(this, 81, 1, textureX, textureY); // Box 414
-		bodyModel[8] = new ModelRendererTurbo(this, 89, 1, textureX, textureY, "lamp"); // Box 412 ditchlight f 1
-		bodyModel[9] = new ModelRendererTurbo(this, 97, 1, textureX, textureY, "lamp"); // Box 412 ditchlight f 1
+		bodyModel[8] = new ModelRendererTurbo(this, 89, 1, textureX, textureY, BoxName.ditch); // Box 412 ditchlight f 1
+		bodyModel[9] = new ModelRendererTurbo(this, 97, 1, textureX, textureY, BoxName.ditch); // Box 412 ditchlight f 1
 		bodyModel[10] = new ModelRendererTurbo(this, 105, 1, textureX, textureY); // Box 411
 		bodyModel[11] = new ModelRendererTurbo(this, 113, 1, textureX, textureY); // Box 410
 		bodyModel[12] = new ModelRendererTurbo(this, 17, 1, textureX, textureY); // Box 409
@@ -298,9 +300,9 @@ public class ModelSD40dash3 extends ModelConverter //Same as Filename
 		bodyModel[253] = new ModelRendererTurbo(this, 193, 137, textureX, textureY); // Box 533 sd40-2 vent
 		bodyModel[254] = new ModelRendererTurbo(this, 241, 137, textureX, textureY); // Box 534 sd40-2 vent
 		bodyModel[255] = new ModelRendererTurbo(this, 65, 25, textureX, textureY); // Box 409 commander base csx
-		bodyModel[256] = new ModelRendererTurbo(this, 297, 25, textureX, textureY, "lamp"); // Box 410 commander beacon csx
+		bodyModel[256] = new ModelRendererTurbo(this, 297, 25, textureX, textureY, BoxName.commander); // Box 410 commander beacon csx
 		bodyModel[257] = new ModelRendererTurbo(this, 441, 49, textureX, textureY); // Box 409 commander base csx
-		bodyModel[258] = new ModelRendererTurbo(this, 89, 57, textureX, textureY, "lamp"); // Box 410 commander beacon csx
+		bodyModel[258] = new ModelRendererTurbo(this, 89, 57, textureX, textureY, BoxName.commander); // Box 410 commander beacon csx
 		bodyModel[259] = new ModelRendererTurbo(this, 105, 73, textureX, textureY); // Box 224
 		bodyModel[260] = new ModelRendererTurbo(this, 433, 73, textureX, textureY); // Box 224
 		bodyModel[261] = new ModelRendererTurbo(this, 281, 129, textureX, textureY); // Box 222
@@ -1287,19 +1289,8 @@ public class ModelSD40dash3 extends ModelConverter //Same as Filename
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 303; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 43324 ) {
 			//silver regular truck
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexcoil_c2h_silvers.png"));
