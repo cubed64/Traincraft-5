@@ -19,7 +19,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 public class Modelslugma extends ModelConverter //Same as Filename
@@ -210,10 +212,10 @@ public class Modelslugma extends ModelConverter //Same as Filename
 		bodyModel[166] = new ModelRendererTurbo(this, 388, 49, textureX, textureY); // Box 166
 		bodyModel[167] = new ModelRendererTurbo(this, 388, 49, textureX, textureY); // Box 167
 		bodyModel[168] = new ModelRendererTurbo(this, 64, 107, textureX, textureY); // Box 364 prime base
-		bodyModel[169] = new ModelRendererTurbo(this, 64, 103, textureX, textureY, "lamp"); // Box 6 PRIME2-1
-		bodyModel[170] = new ModelRendererTurbo(this, 64, 103, textureX, textureY, "lamp"); // Box 7 PRIME2-3
-		bodyModel[171] = new ModelRendererTurbo(this, 64, 103, textureX, textureY, "lamp"); // Box 8 PRIME2-2
-		bodyModel[172] = new ModelRendererTurbo(this, 64, 103, textureX, textureY, "lamp"); // Box 9 PRIME2-4
+		bodyModel[169] = new ModelRendererTurbo(this, 64, 103, textureX, textureY, BoxName.prime1); // Box 6 PRIME2-1
+		bodyModel[170] = new ModelRendererTurbo(this, 64, 103, textureX, textureY, BoxName.prime3); // Box 7 PRIME2-3
+		bodyModel[171] = new ModelRendererTurbo(this, 64, 103, textureX, textureY, BoxName.prime2); // Box 8 PRIME2-2
+		bodyModel[172] = new ModelRendererTurbo(this, 64, 103, textureX, textureY, BoxName.prime4); // Box 9 PRIME2-4
 		bodyModel[173] = new ModelRendererTurbo(this, 62, 111, textureX, textureY, "cull"); // Box 173 cull
 		bodyModel[174] = new ModelRendererTurbo(this, 19, 93, textureX, textureY); // Box 336
 		bodyModel[175] = new ModelRendererTurbo(this, 32, 95, textureX, textureY, "lamp"); // Box 337 headlight ane 2 beam front
@@ -265,7 +267,7 @@ public class Modelslugma extends ModelConverter //Same as Filename
 		bodyModel[221] = new ModelRendererTurbo(this, 52, 88, textureX, textureY); // Box 386
 		bodyModel[222] = new ModelRendererTurbo(this, 66, 77, textureX, textureY); // Box 312
 		bodyModel[223] = new ModelRendererTurbo(this, 63, 77, textureX, textureY); // Box 313
-		bodyModel[224] = new ModelRendererTurbo(this, 52, 81, textureX, textureY, "lamp"); // Box 315 glow commander beacon
+		bodyModel[224] = new ModelRendererTurbo(this, 52, 81, textureX, textureY, BoxName.commander); // Box 315 glow commander beacon
 		bodyModel[225] = new ModelRendererTurbo(this, 52, 91, textureX, textureY); // Box 316
 		bodyModel[226] = new ModelRendererTurbo(this, 60, 77, textureX, textureY); // Box 226
 		bodyModel[227] = new ModelRendererTurbo(this, 57, 77, textureX, textureY); // Box 227
@@ -990,20 +992,10 @@ public class Modelslugma extends ModelConverter //Same as Filename
 	ModelTypeBnew theB = new ModelTypeBnew();
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 233; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
 			GL11.glPushMatrix();
