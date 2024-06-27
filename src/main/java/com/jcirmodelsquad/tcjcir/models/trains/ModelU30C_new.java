@@ -9,9 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
-import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB3;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB3_new;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
@@ -21,6 +19,7 @@ import tmt.Tessellator;
 import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.api.Locomotive;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -378,7 +377,7 @@ public class ModelU30C_new extends ModelConverter //Same as Filename
 		bodyModel[331] = new ModelRendererTurbo(this, 186, 49, textureX, textureY); // Box 789
 		bodyModel[332] = new ModelRendererTurbo(this, 142, 63, textureX, textureY); // Box 279
 		bodyModel[333] = new ModelRendererTurbo(this, 172, 31, textureX, textureY); // Box 409 commander base
-		bodyModel[334] = new ModelRendererTurbo(this, 172, 27, textureX, textureY, "lamp"); // Box 410 commander beacon
+		bodyModel[334] = new ModelRendererTurbo(this, 172, 27, textureX, textureY, BoxName.commander); // Box 410 commander beacon
 		bodyModel[335] = new ModelRendererTurbo(this, 142, 66, textureX, textureY); // Box 374
 		bodyModel[336] = new ModelRendererTurbo(this, 112, 38, textureX, textureY); // Box 413
 		bodyModel[337] = new ModelRendererTurbo(this, 133, 64, textureX, textureY); // Box 376 bn bababooey
@@ -1845,7 +1844,7 @@ public class ModelU30C_new extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, (Locomotive) entity, f5);
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1544) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb3_new_earliie_silvers.png"));
