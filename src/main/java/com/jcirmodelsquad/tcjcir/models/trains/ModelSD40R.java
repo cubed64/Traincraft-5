@@ -2111,10 +2111,10 @@ public class ModelSD40R extends ModelConverter //Same as Filename
 		bodyModel[530] = new ModelRendererTurbo(this, 422, 190, textureX, textureY); // Box 393
 		bodyModel[531] = new ModelRendererTurbo(this, 409, 181, textureX, textureY); // Box 394 not a ditchlight will not glow
 		bodyModel[532] = new ModelRendererTurbo(this, 422, 185, textureX, textureY); // Box 395 not a ditchlight will not glow
-		bodyModel[533] = new ModelRendererTurbo(this, 19, 170, textureX, textureY, "lamp"); // Box 578 THIS IS A DITCHLIGHT IT WILL GLOWE
-		bodyModel[534] = new ModelRendererTurbo(this, 19, 170, textureX, textureY, "lamp"); // Box 579THIS IS A DITCHLUIGHT IT WILL GLOW
-		bodyModel[535] = new ModelRendererTurbo(this, 411, 191, textureX, textureY, "lamp"); // Box 580THIS IS A DITCHLIGHT IT WILL GLOW
-		bodyModel[536] = new ModelRendererTurbo(this, 411, 191, textureX, textureY, "lamp"); // Box 581YARR AHOY MATEY THIS BE ERE A DITCHLIGHT AND THAR SHE SHALL GLOWETH
+		bodyModel[533] = new ModelRendererTurbo(this, 19, 170, textureX, textureY, BoxName.ditch); // Box 578 THIS IS A DITCHLIGHT IT WILL GLOWE
+		bodyModel[534] = new ModelRendererTurbo(this, 19, 170, textureX, textureY, BoxName.ditch); // Box 579THIS IS A DITCHLUIGHT IT WILL GLOW
+		bodyModel[535] = new ModelRendererTurbo(this, 411, 191, textureX, textureY, BoxName.ditch); // Box 580THIS IS A DITCHLIGHT IT WILL GLOW
+		bodyModel[536] = new ModelRendererTurbo(this, 411, 191, textureX, textureY, BoxName.ditch); // Box 581YARR AHOY MATEY THIS BE ERE A DITCHLIGHT AND THAR SHE SHALL GLOWETH
 
 		bodyModel[500].addShapeBox(0F, 0F, 0F, 0, 5, 5, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F); // Box 612 front brakewheel
 		bodyModel[500].setRotationPoint(-43.5F, -9.5F, -2.5F);
