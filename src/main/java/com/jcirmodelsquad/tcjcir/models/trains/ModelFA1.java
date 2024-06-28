@@ -2081,9 +2081,9 @@ public class ModelFA1 extends ModelConverter //Same as Filename
 		bodyModel[513] = new ModelRendererTurbo(this, 20, 128, textureX, textureY); // Ditchlight box
 		bodyModel[514] = new ModelRendererTurbo(this, 29, 128, textureX, textureY,BoxName.ditch); // Box 445 ditchlight front b
 		bodyModel[515] = new ModelRendererTurbo(this, 20, 128, textureX, textureY); // Ditchlight box
-		bodyModel[516] = new ModelRendererTurbo(this, 29, 133, textureX, textureY,"lamp"); // Box 443 clip on ditchlight front a
+		bodyModel[516] = new ModelRendererTurbo(this, 29, 133, textureX, textureY,BoxName.ditch); // Box 443 clip on ditchlight front a
 		bodyModel[517] = new ModelRendererTurbo(this, 22, 133, textureX, textureY); // Box 446 clip on
-		bodyModel[518] = new ModelRendererTurbo(this, 29, 133, textureX, textureY,"lamp"); // Box 443 clip on ditchlight front a
+		bodyModel[518] = new ModelRendererTurbo(this, 29, 133, textureX, textureY,BoxName.ditch); // Box 443 clip on ditchlight front a
 		bodyModel[519] = new ModelRendererTurbo(this, 22, 133, textureX, textureY); // Box 446 clip on
 		bodyModel[520] = new ModelRendererTurbo(this, 27, 103, textureX, textureY,"cull"); // Box 0 cull
 		bodyModel[521] = new ModelRendererTurbo(this, 27, 103, textureX, textureY,"cull"); // Box 0 cull
