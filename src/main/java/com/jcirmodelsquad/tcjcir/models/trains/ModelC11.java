@@ -11,14 +11,14 @@ package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is locat
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModellocoC11truckFront;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModellocoC11truckRear;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
-import train.common.api.AbstractTrains;
+import train.client.renderhelper.ModelRenderHelper;
+import train.common.api.Locomotive;
 import train.common.library.Info;
 
 public class ModelC11 extends ModelConverter //Same as Filename
@@ -1633,19 +1633,7 @@ public class ModelC11 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-
-		for(ModelRendererTurbo m :bodyModel)
-		{
-			if(m.boxName.equals("lamp")){
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-			}
-			m.render(f5);
-			if(m.boxName.equals("lamp")){
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}
-		}
-
-
+		ModelRenderHelper.renderLocomotiveModelWithLamp(bodyModel, (Locomotive)entity, f5);
 
 		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/locoC11truckFront.png"));
 
