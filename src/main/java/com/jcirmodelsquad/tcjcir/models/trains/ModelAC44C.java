@@ -1797,7 +1797,7 @@ public class ModelAC44C extends ModelConverter //Same as Filename
 		bodyModel[428].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F); // Box 335 Rear Gyralight R
 		bodyModel[428].setRotationPoint(45.5F, -23.5F, 0F);
 	}
-	
+
 	Modelge_hiad bogie = new Modelge_hiad();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
