@@ -11,14 +11,15 @@ package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is locat
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelHiAd;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -81,15 +82,15 @@ public class ModelC415L extends ModelConverter //Same as Filename
 		bodyModel[36] = new ModelRendererTurbo(this, 448, 99, textureX, textureY); // Box 682
 		bodyModel[37] = new ModelRendererTurbo(this, 448, 110, textureX, textureY); // Box 708
 		bodyModel[38] = new ModelRendererTurbo(this, 490, 110, textureX, textureY); // Box 709
-		bodyModel[39] = new ModelRendererTurbo(this, 434, 132, textureX, textureY, "lamp"); // Box 359 ditchlight fl
+		bodyModel[39] = new ModelRendererTurbo(this, 434, 132, textureX, textureY, BoxName.ditch); // Box 359 ditchlight fl
 		bodyModel[40] = new ModelRendererTurbo(this, 441, 132, textureX, textureY, "cull"); // Box 360 cull
-		bodyModel[41] = new ModelRendererTurbo(this, 434, 97, textureX, textureY, "lamp"); // Box 272 ditchlight r
+		bodyModel[41] = new ModelRendererTurbo(this, 434, 97, textureX, textureY, BoxName.ditch); // Box 272 ditchlight r
 		bodyModel[42] = new ModelRendererTurbo(this, 441, 97, textureX, textureY, "cull"); // Box 273 cull
 		bodyModel[43] = new ModelRendererTurbo(this, 358, 201, textureX, textureY); // Box 318
 		bodyModel[44] = new ModelRendererTurbo(this, 441, 132, textureX, textureY, "cull"); // Box 320 cull
-		bodyModel[45] = new ModelRendererTurbo(this, 434, 132, textureX, textureY, "lamp"); // Box 321 ditchlight fl
+		bodyModel[45] = new ModelRendererTurbo(this, 434, 132, textureX, textureY, BoxName.ditch); // Box 321 ditchlight fl
 		bodyModel[46] = new ModelRendererTurbo(this, 441, 97, textureX, textureY, "cull"); // Box 322 cull
-		bodyModel[47] = new ModelRendererTurbo(this, 434, 97, textureX, textureY, "lamp"); // Box 323 ditchlight r
+		bodyModel[47] = new ModelRendererTurbo(this, 434, 97, textureX, textureY, BoxName.ditch); // Box 323 ditchlight r
 		bodyModel[48] = new ModelRendererTurbo(this, 359, 191, textureX, textureY); // Box 324
 		bodyModel[49] = new ModelRendererTurbo(this, 359, 191, textureX, textureY); // Box 325
 		bodyModel[50] = new ModelRendererTurbo(this, 324, 238, textureX, textureY); // Box 401
@@ -198,12 +199,12 @@ public class ModelC415L extends ModelConverter //Same as Filename
 		bodyModel[153] = new ModelRendererTurbo(this, 474, 97, textureX, textureY); // Box 247
 		bodyModel[154] = new ModelRendererTurbo(this, 441, 126, textureX, textureY); // Box 101
 		bodyModel[155] = new ModelRendererTurbo(this, 441, 126, textureX, textureY); // Box 252
-		bodyModel[156] = new ModelRendererTurbo(this, 434, 127, textureX, textureY, "lamp"); // Box 189 ditchlight fu
-		bodyModel[157] = new ModelRendererTurbo(this, 434, 127, textureX, textureY, "lamp"); // Box 190 ditchlight fu
+		bodyModel[156] = new ModelRendererTurbo(this, 434, 127, textureX, textureY, BoxName.ditch); // Box 189 ditchlight fu
+		bodyModel[157] = new ModelRendererTurbo(this, 434, 127, textureX, textureY, BoxName.ditch); // Box 190 ditchlight fu
 		bodyModel[158] = new ModelRendererTurbo(this, 441, 91, textureX, textureY); // Box 252
-		bodyModel[159] = new ModelRendererTurbo(this, 434, 92, textureX, textureY, "lamp"); // Box 253 ditchlight r
+		bodyModel[159] = new ModelRendererTurbo(this, 434, 92, textureX, textureY, BoxName.ditch); // Box 253 ditchlight r
 		bodyModel[160] = new ModelRendererTurbo(this, 441, 91, textureX, textureY); // Box 254
-		bodyModel[161] = new ModelRendererTurbo(this, 434, 92, textureX, textureY, "lamp"); // Box 255 ditchlight r
+		bodyModel[161] = new ModelRendererTurbo(this, 434, 92, textureX, textureY, BoxName.ditch); // Box 255 ditchlight r
 		bodyModel[162] = new ModelRendererTurbo(this, 98, 112, textureX, textureY); // Box 114
 		bodyModel[163] = new ModelRendererTurbo(this, 98, 109, textureX, textureY); // Box 74
 		bodyModel[164] = new ModelRendererTurbo(this, 98, 115, textureX, textureY); // Box 78
@@ -1200,20 +1201,10 @@ public class ModelC415L extends ModelConverter //Same as Filename
 	ModelHiAd hiAd = new ModelHiAd();
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 281; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 135461 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7234 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 8546 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5546) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
 			GL11.glPushMatrix();
