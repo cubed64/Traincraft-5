@@ -10,6 +10,29 @@ import train.common.api.Locomotive;
 public class ModelRenderHelper
 {
 
+    public static void renderSlugModel(ModelRendererTurbo[] bodyModel, Entity entity, float f5)
+    {
+        for (ModelRendererTurbo bm : bodyModel)
+        {
+            if (bm.boxName.contains("lamp") || bm.boxName.contains("ditch") || bm.boxName.contains("commander") || bm.boxName.contains("prime"))
+            {
+                Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+                bm.render(f5);
+                Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+            }
+            else if (bm.boxName.contains("cull"))
+            {
+                GL11.glDisable(GL11.GL_CULL_FACE);
+                bm.render(f5);
+                GL11.glEnable(GL11.GL_CULL_FACE);
+            }
+            else
+            {
+                bm.render(f5);
+            }
+        }
+    }
+
     /** Renders a locomotive model Coverts Entity -> Locomotive
      * Can Render the following Special items
      * lamp,
