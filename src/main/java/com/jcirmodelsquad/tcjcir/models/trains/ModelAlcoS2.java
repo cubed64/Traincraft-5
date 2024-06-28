@@ -17,7 +17,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 public class ModelAlcoS2 extends ModelConverter //Same as Filename
@@ -188,14 +190,14 @@ public class ModelAlcoS2 extends ModelConverter //Same as Filename
 		bodyModel[147] = new ModelRendererTurbo(this, 273, 65, textureX, textureY); // Box 70
 		bodyModel[148] = new ModelRendererTurbo(this, 377, 65, textureX, textureY); // Box 71
 		bodyModel[149] = new ModelRendererTurbo(this, 385, 41, textureX, textureY, "lamp"); // Box 78 lantern cab light
-		bodyModel[150] = new ModelRendererTurbo(this, 25, 49, textureX, textureY, "lamp"); // Box 211 lamp ditchlight f1
+		bodyModel[150] = new ModelRendererTurbo(this, 25, 49, textureX, textureY, BoxName.ditch); // Box 211 lamp ditchlight f1
 		bodyModel[151] = new ModelRendererTurbo(this, 33, 49, textureX, textureY); // Box 212
 		bodyModel[152] = new ModelRendererTurbo(this, 65, 49, textureX, textureY); // Box 213
-		bodyModel[153] = new ModelRendererTurbo(this, 73, 49, textureX, textureY, "lamp"); // Box 214 lamp ditchlight f1
-		bodyModel[154] = new ModelRendererTurbo(this, 497, 49, textureX, textureY, "lamp"); // Box 160 lamp ditchlight r1
+		bodyModel[153] = new ModelRendererTurbo(this, 73, 49, textureX, textureY, BoxName.ditch); // Box 214 lamp ditchlight f1
+		bodyModel[154] = new ModelRendererTurbo(this, 497, 49, textureX, textureY, BoxName.ditch); // Box 160 lamp ditchlight r1
 		bodyModel[155] = new ModelRendererTurbo(this, 505, 49, textureX, textureY); // Box 161
 		bodyModel[156] = new ModelRendererTurbo(this, 153, 57, textureX, textureY); // Box 162
-		bodyModel[157] = new ModelRendererTurbo(this, 161, 57, textureX, textureY, "lamp"); // Box 163 lamp ditchlight r1
+		bodyModel[157] = new ModelRendererTurbo(this, 161, 57, textureX, textureY, BoxName.ditch); // Box 163 lamp ditchlight r1
 		bodyModel[158] = new ModelRendererTurbo(this, 481, 65, textureX, textureY); // Box 191
 		bodyModel[159] = new ModelRendererTurbo(this, 449, 65, textureX, textureY); // Box 192
 		bodyModel[160] = new ModelRendererTurbo(this, 185, 9, textureX, textureY); // Box 193
@@ -214,7 +216,7 @@ public class ModelAlcoS2 extends ModelConverter //Same as Filename
 		bodyModel[173] = new ModelRendererTurbo(this, 49, 49, textureX, textureY); // Box 209
 		bodyModel[174] = new ModelRendererTurbo(this, 57, 49, textureX, textureY); // Box 211
 		bodyModel[175] = new ModelRendererTurbo(this, 273, 49, textureX, textureY); // Box 212
-		bodyModel[176] = new ModelRendererTurbo(this, 281, 49, textureX, textureY, "lamp"); // Box 399 commander beacon
+		bodyModel[176] = new ModelRendererTurbo(this, 281, 49, textureX, textureY, BoxName.commander); // Box 399 commander beacon
 		bodyModel[177] = new ModelRendererTurbo(this, 425, 49, textureX, textureY); // Box 400
 		bodyModel[178] = new ModelRendererTurbo(this, 137, 17, textureX, textureY); // Box 215
 		bodyModel[179] = new ModelRendererTurbo(this, 177, 73, textureX, textureY); // Box 216
@@ -266,10 +268,10 @@ public class ModelAlcoS2 extends ModelConverter //Same as Filename
 		bodyModel[225] = new ModelRendererTurbo(this, 200, 75, textureX, textureY, "cull"); // Box 221 cull
 		bodyModel[226] = new ModelRendererTurbo(this, 378, 67, textureX, textureY); // Box 140
 		bodyModel[227] = new ModelRendererTurbo(this, 16, 78, textureX, textureY); // Box 364 prime base
-		bodyModel[228] = new ModelRendererTurbo(this, 7, 78, textureX, textureY, "lamp"); // Box 6 PRIME1-1
-		bodyModel[229] = new ModelRendererTurbo(this, 7, 78, textureX, textureY, "lamp"); // Box 7 PRIME1-3
-		bodyModel[230] = new ModelRendererTurbo(this, 7, 78, textureX, textureY, "lamp"); // Box 8 PRIME1-2
-		bodyModel[231] = new ModelRendererTurbo(this, 7, 78, textureX, textureY, "lamp"); // Box 9 PRIME1-4
+		bodyModel[228] = new ModelRendererTurbo(this, 7, 78, textureX, textureY, BoxName.prime1); // Box 6 PRIME1-1
+		bodyModel[229] = new ModelRendererTurbo(this, 7, 78, textureX, textureY, BoxName.prime3); // Box 7 PRIME1-3
+		bodyModel[230] = new ModelRendererTurbo(this, 7, 78, textureX, textureY, BoxName.prime2); // Box 8 PRIME1-2
+		bodyModel[231] = new ModelRendererTurbo(this, 7, 78, textureX, textureY, BoxName.prime4); // Box 9 PRIME1-4
 
 		bodyModel[0].addBox(0F, 0F, 0F, 52, 2, 4, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-26F, 0F, -11F);
@@ -978,20 +980,10 @@ public class ModelAlcoS2 extends ModelConverter //Same as Filename
 	ModelBluntTruck theTrucks = new ModelBluntTruck();
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < bodyModel.length; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blunttruck_Green.png"));
 		} else {
