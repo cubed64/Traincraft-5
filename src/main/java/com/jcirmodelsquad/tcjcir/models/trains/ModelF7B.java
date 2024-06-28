@@ -18,7 +18,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 public class ModelF7B extends ModelConverter //Same as Filename
@@ -98,7 +100,7 @@ public class ModelF7B extends ModelConverter //Same as Filename
 		bodyModel[55] = new ModelRendererTurbo(this, 188, 147, textureX, textureY); // Box 178
 		bodyModel[56] = new ModelRendererTurbo(this, 395, 146, textureX, textureY); // Box 179
 		bodyModel[57] = new ModelRendererTurbo(this, 395, 146, textureX, textureY); // Box 180
-		bodyModel[58] = new ModelRendererTurbo(this, 146, 40, textureX, textureY, "lamp"); // Box 348 commander beacon
+		bodyModel[58] = new ModelRendererTurbo(this, 146, 40, textureX, textureY, BoxName.commander); // Box 348 commander beacon
 		bodyModel[59] = new ModelRendererTurbo(this, 145, 43, textureX, textureY); // Box 349
 		bodyModel[60] = new ModelRendererTurbo(this, 256, 21, textureX, textureY); // Box 186
 		bodyModel[61] = new ModelRendererTurbo(this, 250, 6, textureX, textureY); // Box 187
@@ -166,10 +168,10 @@ public class ModelF7B extends ModelConverter //Same as Filename
 		bodyModel[123] = new ModelRendererTurbo(this, 289, 4, textureX, textureY); // Box 457
 		bodyModel[124] = new ModelRendererTurbo(this, 289, 4, textureX, textureY); // Box 458
 		bodyModel[125] = new ModelRendererTurbo(this, 94, 137, textureX, textureY); // Box 364 prime base
-		bodyModel[126] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, "lamp"); // Box 6 PRIME1-1
-		bodyModel[127] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, "lamp"); // Box 7 PRIME1-3
-		bodyModel[128] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, "lamp"); // Box 8 PRIME1-2
-		bodyModel[129] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, "lamp"); // Box 9 PRIME1-4
+		bodyModel[126] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, BoxName.prime1); // Box 6 PRIME1-1
+		bodyModel[127] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, BoxName.prime3); // Box 7 PRIME1-3
+		bodyModel[128] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, BoxName.prime2); // Box 8 PRIME1-2
+		bodyModel[129] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, BoxName.prime4); // Box 9 PRIME1-4
 		bodyModel[130] = new ModelRendererTurbo(this, 314, 42, textureX, textureY); // Box 464
 		bodyModel[131] = new ModelRendererTurbo(this, 161, 49, textureX, textureY); // Box 372
 		bodyModel[132] = new ModelRendererTurbo(this, 141, 39, textureX, textureY); // Box 488
@@ -952,20 +954,9 @@ public class ModelF7B extends ModelConverter //Same as Filename
 	}
 	ModelBlombergBnew theTrucc = new ModelBlombergBnew();
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 227; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp") ) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 11||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver.png"));
