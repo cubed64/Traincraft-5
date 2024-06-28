@@ -17,7 +17,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -146,14 +148,14 @@ public class ModelGP38H3 extends ModelConverter //Same as Filename
 		bodyModel[102] = new ModelRendererTurbo(this, 227, 135, textureX, textureY); // Box 315
 		bodyModel[103] = new ModelRendererTurbo(this, 232, 134, textureX, textureY); // Box 316
 		bodyModel[104] = new ModelRendererTurbo(this, 159, 199, textureX, textureY); // Box 303
-		bodyModel[105] = new ModelRendererTurbo(this, 464, 43, textureX, textureY, "glow"); // rear lamp
-		bodyModel[106] = new ModelRendererTurbo(this, 471, 43, textureX, textureY, "glow"); // rear lamp
+		bodyModel[105] = new ModelRendererTurbo(this, 464, 43, textureX, textureY, BoxName.ditch); // rear lamp
+		bodyModel[106] = new ModelRendererTurbo(this, 471, 43, textureX, textureY, BoxName.ditch); // rear lamp
 		bodyModel[107] = new ModelRendererTurbo(this, 463, 53, textureX, textureY); // Box 31
 		bodyModel[108] = new ModelRendererTurbo(this, 332, 116, textureX, textureY); // Box 163
 		bodyModel[109] = new ModelRendererTurbo(this, 132, 143, textureX, textureY); // Box 164
 		bodyModel[110] = new ModelRendererTurbo(this, 222, 143, textureX, textureY); // Box 165
 		bodyModel[111] = new ModelRendererTurbo(this, 217, 144, textureX, textureY); // Box 166
-		bodyModel[112] = new ModelRendererTurbo(this, 457, 80, textureX, textureY, "glow"); // Box 115 numberboard rear
+		bodyModel[112] = new ModelRendererTurbo(this, 457, 80, textureX, textureY, BoxName.ditch); // Box 115 numberboard rear
 		bodyModel[113] = new ModelRendererTurbo(this, 457, 80, textureX, textureY); // Box 169
 		bodyModel[114] = new ModelRendererTurbo(this, 453, 15, textureX, textureY); // Box 170
 		bodyModel[115] = new ModelRendererTurbo(this, 437, 11, textureX, textureY); // Box 172
@@ -200,11 +202,11 @@ public class ModelGP38H3 extends ModelConverter //Same as Filename
 		bodyModel[156] = new ModelRendererTurbo(this, 256, 152, textureX, textureY); // Box 256
 		bodyModel[157] = new ModelRendererTurbo(this, 314, 125, textureX, textureY); // Box 247
 		bodyModel[158] = new ModelRendererTurbo(this, 23, 92, textureX, textureY); // Box 189
-		bodyModel[159] = new ModelRendererTurbo(this, 463, 88, textureX, textureY, "glow"); // Box 384 markerlight glow
-		bodyModel[160] = new ModelRendererTurbo(this, 501, 88, textureX, textureY, "glow"); // Box 385 markerlight glow
+		bodyModel[159] = new ModelRendererTurbo(this, 463, 88, textureX, textureY, BoxName.ditch); // Box 384 markerlight glow
+		bodyModel[160] = new ModelRendererTurbo(this, 501, 88, textureX, textureY, BoxName.ditch); // Box 385 markerlight glow
 		bodyModel[161] = new ModelRendererTurbo(this, 101, 50, textureX, textureY); // Box 193
-		bodyModel[162] = new ModelRendererTurbo(this, 105, 37, textureX, textureY, "glow"); // Box 117 numberboard front
-		bodyModel[163] = new ModelRendererTurbo(this, 105, 34, textureX, textureY, "glow"); // Box 118 numberboard front
+		bodyModel[162] = new ModelRendererTurbo(this, 105, 37, textureX, textureY, BoxName.ditch); // Box 117 numberboard front
+		bodyModel[163] = new ModelRendererTurbo(this, 105, 34, textureX, textureY, BoxName.ditch); // Box 118 numberboard front
 		bodyModel[164] = new ModelRendererTurbo(this, 110, 50, textureX, textureY); // Box 196
 		bodyModel[165] = new ModelRendererTurbo(this, 86, 117, textureX, textureY); // Box 281
 		bodyModel[166] = new ModelRendererTurbo(this, 83, 117, textureX, textureY); // Box 282
@@ -214,17 +216,17 @@ public class ModelGP38H3 extends ModelConverter //Same as Filename
 		bodyModel[170] = new ModelRendererTurbo(this, 78, 149, textureX, textureY); // Box 202
 		bodyModel[171] = new ModelRendererTurbo(this, 75, 149, textureX, textureY); // Box 203
 		bodyModel[172] = new ModelRendererTurbo(this, 71, 149, textureX, textureY); // Box 204
-		bodyModel[173] = new ModelRendererTurbo(this, 79, 42, textureX, textureY, "glow"); // emergency light
-		bodyModel[174] = new ModelRendererTurbo(this, 103, 56, textureX, textureY, "glow"); // markerlight glow
-		bodyModel[175] = new ModelRendererTurbo(this, 108, 56, textureX, textureY, "glow"); // markerlight glow
-		bodyModel[176] = new ModelRendererTurbo(this, 1, 51, textureX, textureY, "glow"); // Box 294 lamp canada front
-		bodyModel[177] = new ModelRendererTurbo(this, 1, 46, textureX, textureY, "glow"); // Box 295 lamp canada front
+		bodyModel[173] = new ModelRendererTurbo(this, 79, 42, textureX, textureY, BoxName.ditch); // emergency light
+		bodyModel[174] = new ModelRendererTurbo(this, 103, 56, textureX, textureY, BoxName.ditch); // markerlight glow
+		bodyModel[175] = new ModelRendererTurbo(this, 108, 56, textureX, textureY, BoxName.ditch); // markerlight glow
+		bodyModel[176] = new ModelRendererTurbo(this, 1, 51, textureX, textureY, BoxName.ditch); // Box 294 lamp canada front
+		bodyModel[177] = new ModelRendererTurbo(this, 1, 46, textureX, textureY, BoxName.ditch); // Box 295 lamp canada front
 		bodyModel[178] = new ModelRendererTurbo(this, 282, 51, textureX, textureY); // Box 271
 		bodyModel[179] = new ModelRendererTurbo(this, 282, 45, textureX, textureY); // Box 272
 		bodyModel[180] = new ModelRendererTurbo(this, 319, 22, textureX, textureY); // Box 285
-		bodyModel[181] = new ModelRendererTurbo(this, 172, 5, textureX, textureY, "glow"); // Box 340 glow commander
+		bodyModel[181] = new ModelRendererTurbo(this, 172, 5, textureX, textureY, BoxName.commander); // Box 340 glow commander
 		bodyModel[182] = new ModelRendererTurbo(this, 171, 9, textureX, textureY); // Box 341
-		bodyModel[183] = new ModelRendererTurbo(this, 172, 5, textureX, textureY, "glow"); // glow commander
+		bodyModel[183] = new ModelRendererTurbo(this, 172, 5, textureX, textureY, BoxName.commander); // glow commander
 		bodyModel[184] = new ModelRendererTurbo(this, 171, 9, textureX, textureY); // Box 215
 		bodyModel[185] = new ModelRendererTurbo(this, 88, 122, textureX, textureY); // Box 354
 		bodyModel[186] = new ModelRendererTurbo(this, 90, 119, textureX, textureY); // Box 355
@@ -280,14 +282,14 @@ public class ModelGP38H3 extends ModelConverter //Same as Filename
 		bodyModel[236] = new ModelRendererTurbo(this, 163, 9, textureX, textureY); // Box 74
 		bodyModel[237] = new ModelRendererTurbo(this, 163, 15, textureX, textureY); // Box 78
 		bodyModel[238] = new ModelRendererTurbo(this, 161, 6, textureX, textureY); // Box 245
-		bodyModel[239] = new ModelRendererTurbo(this, 464, 60, textureX, textureY, "glow"); // rear emergency light
+		bodyModel[239] = new ModelRendererTurbo(this, 464, 60, textureX, textureY, BoxName.ditch); // rear emergency light
 		bodyModel[240] = new ModelRendererTurbo(this, 463, 48, textureX, textureY); // Box 277
 		bodyModel[241] = new ModelRendererTurbo(this, 119, 61, textureX, textureY); // Box 43
 		bodyModel[242] = new ModelRendererTurbo(this, 119, 64, textureX, textureY); // Box 43
 		bodyModel[243] = new ModelRendererTurbo(this, 119, 162, textureX, textureY); // Box 412
 		bodyModel[244] = new ModelRendererTurbo(this, 96, 164, textureX, textureY); // Box 413
 		bodyModel[245] = new ModelRendererTurbo(this, 96, 157, textureX, textureY); // Box 86
-		bodyModel[246] = new ModelRendererTurbo(this, 107, 149, textureX, textureY, "glow"); // Box 71 glow speedometer
+		bodyModel[246] = new ModelRendererTurbo(this, 107, 149, textureX, textureY, BoxName.ditch); // Box 71 glow speedometer
 		bodyModel[247] = new ModelRendererTurbo(this, 98, 151, textureX, textureY); // Box 307
 		bodyModel[248] = new ModelRendererTurbo(this, 214, 43, textureX, textureY); // Box 285
 		bodyModel[249] = new ModelRendererTurbo(this, 361, 126, textureX, textureY); // Box 288
@@ -322,14 +324,14 @@ public class ModelGP38H3 extends ModelConverter //Same as Filename
 		bodyModel[278] = new ModelRendererTurbo(this, 159, 187, textureX, textureY); // Box 285
 		bodyModel[279] = new ModelRendererTurbo(this, 63, 180, textureX, textureY); // Box 78
 		bodyModel[280] = new ModelRendererTurbo(this, 63, 180, textureX, textureY); // Box 188
-		bodyModel[281] = new ModelRendererTurbo(this, 70, 180, textureX, textureY, "glow"); // Box 189 ditchlight f
-		bodyModel[282] = new ModelRendererTurbo(this, 70, 180, textureX, textureY, "glow"); // Box 190 ditchlight f
+		bodyModel[281] = new ModelRendererTurbo(this, 70, 180, textureX, textureY, BoxName.ditch); // Box 189 ditchlight f
+		bodyModel[282] = new ModelRendererTurbo(this, 70, 180, textureX, textureY, BoxName.ditch); // Box 190 ditchlight f
 		bodyModel[283] = new ModelRendererTurbo(this, 370, 182, textureX, textureY); // Box 239
-		bodyModel[284] = new ModelRendererTurbo(this, 377, 181, textureX, textureY, "glow"); // Box 240 ditchlight r
-		bodyModel[285] = new ModelRendererTurbo(this, 377, 181, textureX, textureY, "glow"); // Box 241 ditchlight r
+		bodyModel[284] = new ModelRendererTurbo(this, 377, 181, textureX, textureY, BoxName.ditch); // Box 240 ditchlight r
+		bodyModel[285] = new ModelRendererTurbo(this, 377, 181, textureX, textureY, BoxName.ditch); // Box 241 ditchlight r
 		bodyModel[286] = new ModelRendererTurbo(this, 370, 182, textureX, textureY); // Box 242
-		bodyModel[287] = new ModelRendererTurbo(this, 79, 180, textureX, textureY, "glow"); // ditchlight glow
-		bodyModel[288] = new ModelRendererTurbo(this, 79, 180, textureX, textureY, "glow"); // ditchlight glow
+		bodyModel[287] = new ModelRendererTurbo(this, 79, 180, textureX, textureY, BoxName.ditch); // ditchlight glow
+		bodyModel[288] = new ModelRendererTurbo(this, 79, 180, textureX, textureY, BoxName.ditch); // ditchlight glow
 		bodyModel[289] = new ModelRendererTurbo(this, 78, 185, textureX, textureY); // Box 296
 		bodyModel[290] = new ModelRendererTurbo(this, 78, 185, textureX, textureY); // Box 297
 		bodyModel[291] = new ModelRendererTurbo(this, 184, 9, textureX, textureY); // Box 114
@@ -341,9 +343,9 @@ public class ModelGP38H3 extends ModelConverter //Same as Filename
 		bodyModel[297] = new ModelRendererTurbo(this, 190, 15, textureX, textureY); // Box 421
 		bodyModel[298] = new ModelRendererTurbo(this, 480, 19, textureX, textureY); // Box 305
 		bodyModel[299] = new ModelRendererTurbo(this, 480, 22, textureX, textureY); // Box 306
-		bodyModel[300] = new ModelRendererTurbo(this, 506, 23, textureX, textureY, "glow"); // glow commander
+		bodyModel[300] = new ModelRendererTurbo(this, 506, 23, textureX, textureY, BoxName.commander); // glow commander
 		bodyModel[301] = new ModelRendererTurbo(this, 505, 20, textureX, textureY); // Box 308
-		bodyModel[302] = new ModelRendererTurbo(this, 499, 23, textureX, textureY, "glow"); // glow commander
+		bodyModel[302] = new ModelRendererTurbo(this, 499, 23, textureX, textureY, BoxName.commander); // glow commander
 		bodyModel[303] = new ModelRendererTurbo(this, 498, 20, textureX, textureY); // Box 310
 		bodyModel[304] = new ModelRendererTurbo(this, 225, 37, textureX, textureY); // Box 567
 		bodyModel[305] = new ModelRendererTurbo(this, 220, 34, textureX, textureY); // Box 568
@@ -1331,20 +1333,9 @@ public class ModelGP38H3 extends ModelConverter //Same as Filename
 	ModelBlombergBnew theTrucks2 = new ModelBlombergBnew();
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 319; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("glow")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blomber_phase5.png"));
