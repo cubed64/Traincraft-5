@@ -17,10 +17,10 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
-
-import java.util.ArrayList;
 
 public class ModelSMSC1 extends ModelConverter //Same as Filename
 {
@@ -190,10 +190,10 @@ public class ModelSMSC1 extends ModelConverter //Same as Filename
 		bodyModel[146] = new ModelRendererTurbo(this, 132, 73, textureX, textureY); // Box 237
 		bodyModel[147] = new ModelRendererTurbo(this, 157, 73, textureX, textureY); // Box 238
 		bodyModel[148] = new ModelRendererTurbo(this, 380, 204, textureX, textureY); // Box 364 prime base
-		bodyModel[149] = new ModelRendererTurbo(this, 389, 204, textureX, textureY, "lamp"); // Box 6 PRIME2-1
-		bodyModel[150] = new ModelRendererTurbo(this, 389, 204, textureX, textureY, "lamp"); // Box 7 PRIME2-3
-		bodyModel[151] = new ModelRendererTurbo(this, 389, 204, textureX, textureY, "lamp"); // Box 8 PRIME2-2
-		bodyModel[152] = new ModelRendererTurbo(this, 389, 204, textureX, textureY, "lamp"); // Box 9 PRIME2-4
+		bodyModel[149] = new ModelRendererTurbo(this, 389, 204, textureX, textureY, BoxName.prime1); // Box 6 PRIME2-1
+		bodyModel[150] = new ModelRendererTurbo(this, 389, 204, textureX, textureY, BoxName.prime3); // Box 7 PRIME2-3
+		bodyModel[151] = new ModelRendererTurbo(this, 389, 204, textureX, textureY, BoxName.prime2); // Box 8 PRIME2-2
+		bodyModel[152] = new ModelRendererTurbo(this, 389, 204, textureX, textureY, BoxName.prime4); // Box 9 PRIME2-4
 		bodyModel[153] = new ModelRendererTurbo(this, 154, 8, textureX, textureY, "cull"); // Box 282 antenna plate cull
 		bodyModel[154] = new ModelRendererTurbo(this, 161, 16, textureX, textureY); // Box 450
 		bodyModel[155] = new ModelRendererTurbo(this, 367, 177, textureX, textureY); // Box 327
@@ -867,19 +867,8 @@ public class ModelSMSC1 extends ModelConverter //Same as Filename
 	ModelNewBlombergA1ATruck theTruck = new ModelNewBlombergA1ATruck();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 200; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+		ModelRenderHelper.renderSlugModel(bodyModel, entity, f5);
+
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBlombergA1ATruckSilverFncc.png"));
 

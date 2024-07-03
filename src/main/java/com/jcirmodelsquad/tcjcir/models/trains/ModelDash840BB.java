@@ -17,7 +17,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -190,11 +192,11 @@ public class ModelDash840BB extends ModelConverter //Same as Filename
 		bodyModel[146] = new ModelRendererTurbo(this, 107, 132, textureX, textureY, "lamp"); // Box 399 glow marker
 		bodyModel[147] = new ModelRendererTurbo(this, 119, 127, textureX, textureY); // Box 252
 		bodyModel[148] = new ModelRendererTurbo(this, 126, 128, textureX, textureY); // Box 101
-		bodyModel[149] = new ModelRendererTurbo(this, 119, 122, textureX, textureY, "lamp"); // Box 190 ditchlight f u
-		bodyModel[150] = new ModelRendererTurbo(this, 126, 123, textureX, textureY, "lamp"); // Box 275 ditchlight f l
+		bodyModel[149] = new ModelRendererTurbo(this, 119, 122, textureX, textureY, BoxName.ditch); // Box 190 ditchlight f u
+		bodyModel[150] = new ModelRendererTurbo(this, 126, 123, textureX, textureY, BoxName.ditch); // Box 275 ditchlight f l
 		bodyModel[151] = new ModelRendererTurbo(this, 126, 128, textureX, textureY); // Box 444
-		bodyModel[152] = new ModelRendererTurbo(this, 126, 123, textureX, textureY, "lamp"); // Box 445 ditchlight f l
-		bodyModel[153] = new ModelRendererTurbo(this, 119, 122, textureX, textureY, "lamp"); // Box 446 ditchlight f u
+		bodyModel[152] = new ModelRendererTurbo(this, 126, 123, textureX, textureY, BoxName.ditch); // Box 445 ditchlight f l
+		bodyModel[153] = new ModelRendererTurbo(this, 119, 122, textureX, textureY, BoxName.ditch); // Box 446 ditchlight f u
 		bodyModel[154] = new ModelRendererTurbo(this, 119, 127, textureX, textureY); // Box 447
 		bodyModel[155] = new ModelRendererTurbo(this, 261, 218, textureX, textureY); // Box 435
 		bodyModel[156] = new ModelRendererTurbo(this, 261, 218, textureX, textureY); // Box 436
@@ -209,13 +211,13 @@ public class ModelDash840BB extends ModelConverter //Same as Filename
 		bodyModel[165] = new ModelRendererTurbo(this, 118, 196, textureX, textureY); // Box 307
 		bodyModel[166] = new ModelRendererTurbo(this, 130, 196, textureX, textureY); // Box 311
 		bodyModel[167] = new ModelRendererTurbo(this, 140, 128, textureX, textureY); // Box 312
-		bodyModel[168] = new ModelRendererTurbo(this, 140, 123, textureX, textureY, "lamp"); // Box 313 ditchlight r l
+		bodyModel[168] = new ModelRendererTurbo(this, 140, 123, textureX, textureY, BoxName.ditch); // Box 313 ditchlight r l
 		bodyModel[169] = new ModelRendererTurbo(this, 133, 127, textureX, textureY); // Box 314
-		bodyModel[170] = new ModelRendererTurbo(this, 133, 122, textureX, textureY, "lamp"); // Box 315 ditchlight r u
-		bodyModel[171] = new ModelRendererTurbo(this, 140, 123, textureX, textureY, "lamp"); // Box 316 ditchlight r l
+		bodyModel[170] = new ModelRendererTurbo(this, 133, 122, textureX, textureY, BoxName.ditch); // Box 315 ditchlight r u
+		bodyModel[171] = new ModelRendererTurbo(this, 140, 123, textureX, textureY, BoxName.ditch); // Box 316 ditchlight r l
 		bodyModel[172] = new ModelRendererTurbo(this, 140, 128, textureX, textureY); // Box 317
 		bodyModel[173] = new ModelRendererTurbo(this, 133, 127, textureX, textureY); // Box 318
-		bodyModel[174] = new ModelRendererTurbo(this, 133, 122, textureX, textureY, "lamp"); // Box 319 ditchlight r u
+		bodyModel[174] = new ModelRendererTurbo(this, 133, 122, textureX, textureY, BoxName.ditch); // Box 319 ditchlight r u
 		bodyModel[175] = new ModelRendererTurbo(this, 318, 176, textureX, textureY); // Box 320
 		bodyModel[176] = new ModelRendererTurbo(this, 65, 154, textureX, textureY); // Box 322
 		bodyModel[177] = new ModelRendererTurbo(this, 78, 154, textureX, textureY); // Box 323
@@ -247,9 +249,9 @@ public class ModelDash840BB extends ModelConverter //Same as Filename
 		bodyModel[203] = new ModelRendererTurbo(this, 470, 65, textureX, textureY); // Box 310
 		bodyModel[204] = new ModelRendererTurbo(this, 441, 82, textureX, textureY); // Box 311
 		bodyModel[205] = new ModelRendererTurbo(this, 441, 82, textureX, textureY); // Box 312
-		bodyModel[206] = new ModelRendererTurbo(this, 434, 71, textureX, textureY, "lamp"); // Box 162 commander beacon L
+		bodyModel[206] = new ModelRendererTurbo(this, 434, 71, textureX, textureY, BoxName.commander); // Box 162 commander beacon L
 		bodyModel[207] = new ModelRendererTurbo(this, 433, 75, textureX, textureY); // Box 165
-		bodyModel[208] = new ModelRendererTurbo(this, 427, 71, textureX, textureY, "lamp"); // Box 404 commander beacon R
+		bodyModel[208] = new ModelRendererTurbo(this, 427, 71, textureX, textureY, BoxName.commander); // Box 404 commander beacon R
 		bodyModel[209] = new ModelRendererTurbo(this, 426, 75, textureX, textureY); // Box 405
 		bodyModel[210] = new ModelRendererTurbo(this, 433, 66, textureX, textureY, "cull"); // Box 389 support cull
 		bodyModel[211] = new ModelRendererTurbo(this, 424, 66, textureX, textureY); // Box 223
@@ -973,20 +975,10 @@ public class ModelDash840BB extends ModelConverter //Same as Filename
 	}
 	ModelFB2_new theTrucks2 = new ModelFB2_new();
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 228; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14321){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/fb2_up.png"));
 			GL11.glPushMatrix();

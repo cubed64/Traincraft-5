@@ -11,14 +11,15 @@ package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is locat
 
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelGETonnerTruck;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 public class ModelGE44Ton extends ModelConverter //Same as Filename
@@ -86,10 +87,10 @@ public class ModelGE44Ton extends ModelConverter //Same as Filename
 		bodyModel[43] = new ModelRendererTurbo(this, 30, 68, textureX, textureY); // Box 279
 		bodyModel[44] = new ModelRendererTurbo(this, 84, 44, textureX, textureY); // Box 67
 		bodyModel[45] = new ModelRendererTurbo(this, 1, 47, textureX, textureY); // Box 364 prime base
-		bodyModel[46] = new ModelRendererTurbo(this, 1, 43, textureX, textureY, "lamp"); // Box 6 PRIME1-1
-		bodyModel[47] = new ModelRendererTurbo(this, 1, 43, textureX, textureY, "lamp"); // Box 7 PRIME1-3
-		bodyModel[48] = new ModelRendererTurbo(this, 1, 43, textureX, textureY, "lamp"); // Box 8 PRIME1-2
-		bodyModel[49] = new ModelRendererTurbo(this, 1, 43, textureX, textureY, "lamp"); // Box 9 PRIME1-4
+		bodyModel[46] = new ModelRendererTurbo(this, 1, 43, textureX, textureY, BoxName.prime1); // Box 6 PRIME1-1
+		bodyModel[47] = new ModelRendererTurbo(this, 1, 43, textureX, textureY, BoxName.prime3); // Box 7 PRIME1-3
+		bodyModel[48] = new ModelRendererTurbo(this, 1, 43, textureX, textureY, BoxName.prime2); // Box 8 PRIME1-2
+		bodyModel[49] = new ModelRendererTurbo(this, 1, 43, textureX, textureY, BoxName.prime4); // Box 9 PRIME1-4
 		bodyModel[50] = new ModelRendererTurbo(this, 1, 23, textureX, textureY); // Box 287
 		bodyModel[51] = new ModelRendererTurbo(this, 1, 20, textureX, textureY); // Box 288
 		bodyModel[52] = new ModelRendererTurbo(this, 1, 17, textureX, textureY); // Box 289
@@ -956,20 +957,7 @@ public class ModelGE44Ton extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-
-		for (int i = 0; i < 226; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
 
 		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==13 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==5){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/tonnertruck_black_roller.png"));

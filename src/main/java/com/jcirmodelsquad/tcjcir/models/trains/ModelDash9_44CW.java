@@ -12,7 +12,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -101,8 +103,8 @@ public class ModelDash9_44CW extends ModelConverter //Same as my ass
 		bodyModel[62] = new ModelRendererTurbo(this, 105, 73, textureX, textureY); // Box 146
 		bodyModel[63] = new ModelRendererTurbo(this, 337, 49, textureX, textureY); // Box 147
 		bodyModel[64] = new ModelRendererTurbo(this, 129, 9, textureX, textureY); // Box 78
-		bodyModel[65] = new ModelRendererTurbo(this, 209, 9, textureX, textureY, "lamp"); // Box 189 lamp ditch front
-		bodyModel[66] = new ModelRendererTurbo(this, 353, 9, textureX, textureY, "lamp"); // Box 150 lamp lamp ditch front
+		bodyModel[65] = new ModelRendererTurbo(this, 209, 9, textureX, textureY, BoxName.ditch); // Box 189 lamp ditch front
+		bodyModel[66] = new ModelRendererTurbo(this, 353, 9, textureX, textureY, BoxName.ditch); // Box 150 lamp lamp ditch front
 		bodyModel[67] = new ModelRendererTurbo(this, 393, 9, textureX, textureY); // Box 151
 		bodyModel[68] = new ModelRendererTurbo(this, 113, 17, textureX, textureY); // Box 4
 		bodyModel[69] = new ModelRendererTurbo(this, 41, 41, textureX, textureY); // Box 2
@@ -142,7 +144,7 @@ public class ModelDash9_44CW extends ModelConverter //Same as my ass
 		bodyModel[103] = new ModelRendererTurbo(this, 489, 41, textureX, textureY); // Box 200
 		bodyModel[104] = new ModelRendererTurbo(this, 465, 65, textureX, textureY); // Box 205
 		bodyModel[105] = new ModelRendererTurbo(this, 313, 65, textureX, textureY); // Box 206
-		bodyModel[106] = new ModelRendererTurbo(this, 89, 57, textureX, textureY, "lamp"); // Box 207 lamp ditch rear
+		bodyModel[106] = new ModelRendererTurbo(this, 89, 57, textureX, textureY, BoxName.ditch); // Box 207 lamp ditch rear
 		bodyModel[107] = new ModelRendererTurbo(this, 401, 57, textureX, textureY); // Box 211
 		bodyModel[108] = new ModelRendererTurbo(this, 497, 57, textureX, textureY); // Box 212
 		bodyModel[109] = new ModelRendererTurbo(this, 193, 57, textureX, textureY); // Box 213
@@ -150,7 +152,7 @@ public class ModelDash9_44CW extends ModelConverter //Same as my ass
 		bodyModel[111] = new ModelRendererTurbo(this, 73, 81, textureX, textureY); // Box 215
 		bodyModel[112] = new ModelRendererTurbo(this, 329, 81, textureX, textureY); // Box 216
 		bodyModel[113] = new ModelRendererTurbo(this, 129, 65, textureX, textureY); // Box 217
-		bodyModel[114] = new ModelRendererTurbo(this, 153, 65, textureX, textureY, "lamp"); // Box 218 lamp ditch rear
+		bodyModel[114] = new ModelRendererTurbo(this, 153, 65, textureX, textureY, BoxName.ditch); // Box 218 lamp ditch rear
 		bodyModel[115] = new ModelRendererTurbo(this, 185, 1, textureX, textureY); // Box 219
 		bodyModel[116] = new ModelRendererTurbo(this, 161, 65, textureX, textureY); // Box 220
 		bodyModel[117] = new ModelRendererTurbo(this, 169, 65, textureX, textureY); // Box 31
@@ -174,8 +176,8 @@ public class ModelDash9_44CW extends ModelConverter //Same as my ass
 		bodyModel[135] = new ModelRendererTurbo(this, 1, 97, textureX, textureY); // Box 227
 		bodyModel[136] = new ModelRendererTurbo(this, 25, 97, textureX, textureY); // Box 228
 		bodyModel[137] = new ModelRendererTurbo(this, 41, 97, textureX, textureY); // Box 229
-		bodyModel[138] = new ModelRendererTurbo(this, 193, 65, textureX, textureY, "lamp"); // Box 230 lamp lamp ditch front
-		bodyModel[139] = new ModelRendererTurbo(this, 385, 65, textureX, textureY, "lamp"); // Box 231 lamp lamp ditch front
+		bodyModel[138] = new ModelRendererTurbo(this, 193, 65, textureX, textureY, BoxName.ditch); // Box 230 lamp lamp ditch front
+		bodyModel[139] = new ModelRendererTurbo(this, 385, 65, textureX, textureY, BoxName.ditch); // Box 231 lamp lamp ditch front
 		bodyModel[140] = new ModelRendererTurbo(this, 441, 65, textureX, textureY); // Box 232
 		bodyModel[141] = new ModelRendererTurbo(this, 449, 65, textureX, textureY); // Box 233
 		bodyModel[142] = new ModelRendererTurbo(this, 105, 97, textureX, textureY); // Box 88
@@ -205,9 +207,9 @@ public class ModelDash9_44CW extends ModelConverter //Same as my ass
 		bodyModel[166] = new ModelRendererTurbo(this, 12, 138, textureX, textureY); // Box 282
 		bodyModel[167] = new ModelRendererTurbo(this, 17, 138, textureX, textureY); // Box 228
 		bodyModel[168] = new ModelRendererTurbo(this, 12, 138, textureX, textureY); // Box 229
-		bodyModel[169] = new ModelRendererTurbo(this, 106, 76, textureX, textureY, "lamp"); // Box 231 lamp lamp ditch front
+		bodyModel[169] = new ModelRendererTurbo(this, 106, 76, textureX, textureY, BoxName.ditch); // Box 231 lamp lamp ditch front
 		bodyModel[170] = new ModelRendererTurbo(this, 180, 98, textureX, textureY); // Box 232
-		bodyModel[171] = new ModelRendererTurbo(this, 106, 76, textureX, textureY, "lamp"); // Box 231 lamp lamp ditch front
+		bodyModel[171] = new ModelRendererTurbo(this, 106, 76, textureX, textureY, BoxName.ditch); // Box 231 lamp lamp ditch front
 		bodyModel[172] = new ModelRendererTurbo(this, 180, 98, textureX, textureY); // Box 232
 
 		bodyModel[0].addBox(0F, 0F, 0F, 89, 1, 4, 0F); // Box 31
@@ -734,16 +736,9 @@ public class ModelDash9_44CW extends ModelConverter //Same as my ass
 	ModelD9_CabSquareWindow theCabbo1 = new ModelD9_CabSquareWindow();
 	ModelD9_Cab4Window theCabbo2 = new ModelD9_Cab4Window();
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 173; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newgevotruck_LightGrey.png")); //supposed to be LightGrey, is black for testing

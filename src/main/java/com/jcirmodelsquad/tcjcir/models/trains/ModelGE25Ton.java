@@ -9,11 +9,11 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
-import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
+import train.client.renderhelper.ModelRenderHelper;
+import train.common.enums.BoxName;
 
 import java.util.ArrayList;
 
@@ -156,10 +156,10 @@ public class ModelGE25Ton extends ModelConverter //Same as Filename
 		bodyModel[117] = new ModelRendererTurbo(this, 84, 44, textureX, textureY); // Box 67
 		bodyModel[118] = new ModelRendererTurbo(this, 108, 41, textureX, textureY); // Box 281
 		bodyModel[119] = new ModelRendererTurbo(this, 55, 46, textureX, textureY); // Box 364 prime base
-		bodyModel[120] = new ModelRendererTurbo(this, 48, 48, textureX, textureY, "lamp"); // Box 6 PRIME1-1
-		bodyModel[121] = new ModelRendererTurbo(this, 48, 48, textureX, textureY, "lamp"); // Box 7 PRIME1-3
-		bodyModel[122] = new ModelRendererTurbo(this, 48, 48, textureX, textureY, "lamp"); // Box 8 PRIME1-2
-		bodyModel[123] = new ModelRendererTurbo(this, 48, 48, textureX, textureY, "lamp"); // Box 9 PRIME1-4
+		bodyModel[120] = new ModelRendererTurbo(this, 48, 48, textureX, textureY, BoxName.prime1); // Box 6 PRIME1-1
+		bodyModel[121] = new ModelRendererTurbo(this, 48, 48, textureX, textureY, BoxName.prime3); // Box 7 PRIME1-3
+		bodyModel[122] = new ModelRendererTurbo(this, 48, 48, textureX, textureY, BoxName.prime2); // Box 8 PRIME1-2
+		bodyModel[123] = new ModelRendererTurbo(this, 48, 48, textureX, textureY, BoxName.prime4); // Box 9 PRIME1-4
 		bodyModel[124] = new ModelRendererTurbo(this, 1, 8, textureX, textureY); // Box 287
 		bodyModel[125] = new ModelRendererTurbo(this, 1, 5, textureX, textureY); // Box 288
 		bodyModel[126] = new ModelRendererTurbo(this, 1, 17, textureX, textureY); // Box 289
@@ -668,21 +668,11 @@ public class ModelGE25Ton extends ModelConverter //Same as Filename
 		bodyModel[154].setRotationPoint(-14.5F, -7F, -4F);
 	}
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 155; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
 	}
+
 	public float[] getTrans() {
 		return new float[]{-0.5F, 0.15F, 0.00F};
 	}

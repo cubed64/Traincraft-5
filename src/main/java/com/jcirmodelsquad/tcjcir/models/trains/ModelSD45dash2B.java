@@ -18,7 +18,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 public class ModelSD45dash2B extends ModelConverter //Same as Filename
@@ -230,7 +232,7 @@ public class ModelSD45dash2B extends ModelConverter //Same as Filename
 		bodyModel[187] = new ModelRendererTurbo(this, 441, 121, textureX, textureY); // Box 337
 		bodyModel[188] = new ModelRendererTurbo(this, 305, 121, textureX, textureY); // Box 338
 		bodyModel[189] = new ModelRendererTurbo(this, 321, 121, textureX, textureY); // Box 339
-		bodyModel[190] = new ModelRendererTurbo(this, 49, 129, textureX, textureY, "lamp"); // Box 340 commander beacon
+		bodyModel[190] = new ModelRendererTurbo(this, 49, 129, textureX, textureY, BoxName.commander); // Box 340 commander beacon
 		bodyModel[191] = new ModelRendererTurbo(this, 57, 129, textureX, textureY); // Box 341
 		bodyModel[192] = new ModelRendererTurbo(this, 134, 107, textureX, textureY); // Box 629
 		bodyModel[193] = new ModelRendererTurbo(this, 144, 107, textureX, textureY); // Box 630
@@ -1028,15 +1030,8 @@ public class ModelSD45dash2B extends ModelConverter //Same as Filename
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 243; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 154453) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/flexicoil_c2h_Black.png"));
 		} else {

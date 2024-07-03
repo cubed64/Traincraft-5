@@ -17,7 +17,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -335,10 +337,10 @@ public class ModelFAFDL extends ModelConverter //Same as Filename
 		bodyModel[290] = new ModelRendererTurbo(this, 144, 44, textureX, textureY); // Box 294
 		bodyModel[291] = new ModelRendererTurbo(this, 153, 41, textureX, textureY); // Box 293
 		bodyModel[292] = new ModelRendererTurbo(this, 194, 53, textureX, textureY); // Box 364 prime base
-		bodyModel[293] = new ModelRendererTurbo(this, 203, 53, textureX, textureY, "lamp"); // Box 6 PRIME1-1
-		bodyModel[294] = new ModelRendererTurbo(this, 203, 53, textureX, textureY, "lamp"); // Box 7 PRIME1-3
-		bodyModel[295] = new ModelRendererTurbo(this, 203, 53, textureX, textureY, "lamp"); // Box 8 PRIME1-2
-		bodyModel[296] = new ModelRendererTurbo(this, 203, 53, textureX, textureY, "lamp"); // Box 9 PRIME1-4
+		bodyModel[293] = new ModelRendererTurbo(this, 203, 53, textureX, textureY, BoxName.prime1); // Box 6 PRIME1-1
+		bodyModel[294] = new ModelRendererTurbo(this, 203, 53, textureX, textureY, BoxName.prime3); // Box 7 PRIME1-3
+		bodyModel[295] = new ModelRendererTurbo(this, 203, 53, textureX, textureY, BoxName.prime2); // Box 8 PRIME1-2
+		bodyModel[296] = new ModelRendererTurbo(this, 203, 53, textureX, textureY, BoxName.prime4); // Box 9 PRIME1-4
 		bodyModel[297] = new ModelRendererTurbo(this, 185, 53, textureX, textureY, "cull"); // Box 495 c ull
 		bodyModel[298] = new ModelRendererTurbo(this, 142, 61, textureX, textureY); // Box 327
 		bodyModel[299] = new ModelRendererTurbo(this, 144, 55, textureX, textureY); // Box 328
@@ -355,9 +357,9 @@ public class ModelFAFDL extends ModelConverter //Same as Filename
 		bodyModel[310] = new ModelRendererTurbo(this, 184, 93, textureX, textureY); // Box 6 FA2 and after
 		bodyModel[311] = new ModelRendererTurbo(this, 214, 113, textureX, textureY); // Box 6 FA/FPA-2 and 4 vent
 		bodyModel[312] = new ModelRendererTurbo(this, 214, 113, textureX, textureY); // Box 6 FA/FPA-2 and 4 vent
-		bodyModel[313] = new ModelRendererTurbo(this, 29, 128, textureX, textureY, "lamp"); // Box 445 ditchlight front b
+		bodyModel[313] = new ModelRendererTurbo(this, 29, 128, textureX, textureY, BoxName.ditch); // Box 445 ditchlight front b
 		bodyModel[314] = new ModelRendererTurbo(this, 20, 128, textureX, textureY); // Ditchlight box
-		bodyModel[315] = new ModelRendererTurbo(this, 29, 128, textureX, textureY, "lamp"); // Box 445 ditchlight front b
+		bodyModel[315] = new ModelRendererTurbo(this, 29, 128, textureX, textureY, BoxName.ditch); // Box 445 ditchlight front b
 		bodyModel[316] = new ModelRendererTurbo(this, 20, 128, textureX, textureY); // Ditchlight box
 		bodyModel[317] = new ModelRendererTurbo(this, 27, 103, textureX, textureY, "cull"); // Box 0 cull
 		bodyModel[318] = new ModelRendererTurbo(this, 27, 103, textureX, textureY, "cull"); // Box 0 cull
@@ -370,10 +372,10 @@ public class ModelFAFDL extends ModelConverter //Same as Filename
 		bodyModel[325] = new ModelRendererTurbo(this, 463, 150, textureX, textureY); // Box 328
 		bodyModel[326] = new ModelRendererTurbo(this, 95, 150, textureX, textureY); // Box 328
 		bodyModel[327] = new ModelRendererTurbo(this, 158, 57, textureX, textureY); // Box 364 prime base
-		bodyModel[328] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, "lamp"); // Box 6 PRIME1-1
-		bodyModel[329] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, "lamp"); // Box 7 PRIME1-3
-		bodyModel[330] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, "lamp"); // Box 8 PRIME1-2
-		bodyModel[331] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, "lamp"); // Box 9 PRIME1-4
+		bodyModel[328] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, BoxName.prime1); // Box 6 PRIME1-1
+		bodyModel[329] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, BoxName.prime3); // Box 7 PRIME1-3
+		bodyModel[330] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, BoxName.prime2); // Box 8 PRIME1-2
+		bodyModel[331] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, BoxName.prime4); // Box 9 PRIME1-4
 		bodyModel[332] = new ModelRendererTurbo(this, 274, 238, textureX, textureY); // Box 0
 		bodyModel[333] = new ModelRendererTurbo(this, 286, 239, textureX, textureY); // Box 0
 		bodyModel[334] = new ModelRendererTurbo(this, 65, 123, textureX, textureY); // Box 0
@@ -1696,20 +1698,9 @@ public class ModelFAFDL extends ModelConverter //Same as Filename
 	ModelTypeBnew theBetterTrucks = new ModelTypeBnew();
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 408; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 9||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));

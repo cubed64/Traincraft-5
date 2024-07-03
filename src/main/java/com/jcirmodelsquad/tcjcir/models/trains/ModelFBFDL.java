@@ -10,14 +10,15 @@
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -255,10 +256,10 @@ public class ModelFBFDL extends ModelConverter //Same as Filename
 		bodyModel[211] = new ModelRendererTurbo(this, 135, 55, textureX, textureY); // Box 644
 		bodyModel[212] = new ModelRendererTurbo(this, 132, 54, textureX, textureY); // Box 644
 		bodyModel[213] = new ModelRendererTurbo(this, 158, 57, textureX, textureY); // Box 364 prime base
-		bodyModel[214] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, "lamp"); // Box 6 PRIME1-1
-		bodyModel[215] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, "lamp"); // Box 7 PRIME1-3
-		bodyModel[216] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, "lamp"); // Box 8 PRIME1-2
-		bodyModel[217] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, "lamp"); // Box 9 PRIME1-4
+		bodyModel[214] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, BoxName.prime1); // Box 6 PRIME1-1
+		bodyModel[215] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, BoxName.prime3); // Box 7 PRIME1-3
+		bodyModel[216] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, BoxName.prime2); // Box 8 PRIME1-2
+		bodyModel[217] = new ModelRendererTurbo(this, 167, 57, textureX, textureY, BoxName.prime4); // Box 9 PRIME1-4
 
 		bodyModel[0].addBox(0F, 0F, 0F, 3, 2, 3, 0F); // Box 1
 		bodyModel[0].setRotationPoint(-39F, 3F, -1.5F);
@@ -924,20 +925,9 @@ public class ModelFBFDL extends ModelConverter //Same as Filename
 	ModelTypeBnew theBetterTrucks = new ModelTypeBnew();
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 218; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 9
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14) {

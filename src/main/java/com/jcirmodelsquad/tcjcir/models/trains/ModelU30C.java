@@ -22,6 +22,7 @@ import train.common.library.Info;
 
 import java.util.ArrayList;
 
+@Deprecated
 public class ModelU30C extends ModelConverter //Same as Filename
 {
 	int textureX = 512;
