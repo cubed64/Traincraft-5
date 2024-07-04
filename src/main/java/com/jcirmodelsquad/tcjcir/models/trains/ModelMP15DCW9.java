@@ -13,14 +13,15 @@ package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is locat
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergB;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergBnew;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFlexicoil2;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 public class ModelMP15DCW9 extends ModelConverter //Same as Filename
@@ -136,11 +137,11 @@ public class ModelMP15DCW9 extends ModelConverter //Same as Filename
 		bodyModel[90] = new ModelRendererTurbo(this, 81, 33, textureX, textureY); // Box 290
 		bodyModel[91] = new ModelRendererTurbo(this, 425, 25, textureX, textureY); // Box 78
 		bodyModel[92] = new ModelRendererTurbo(this, 433, 25, textureX, textureY); // Box 188
-		bodyModel[93] = new ModelRendererTurbo(this, 449, 25, textureX, textureY, "lamp"); // Box 189 ditchlight rear
-		bodyModel[94] = new ModelRendererTurbo(this, 9, 33, textureX, textureY, "lamp"); // Box 190 ditchlight rear
-		bodyModel[95] = new ModelRendererTurbo(this, 25, 33, textureX, textureY, "lamp"); // Box 182 ditchlight front
+		bodyModel[93] = new ModelRendererTurbo(this, 449, 25, textureX, textureY, BoxName.ditch); // Box 189 ditchlight rear
+		bodyModel[94] = new ModelRendererTurbo(this, 9, 33, textureX, textureY, BoxName.ditch); // Box 190 ditchlight rear
+		bodyModel[95] = new ModelRendererTurbo(this, 25, 33, textureX, textureY, BoxName.ditch); // Box 182 ditchlight front
 		bodyModel[96] = new ModelRendererTurbo(this, 41, 33, textureX, textureY); // Box 183
-		bodyModel[97] = new ModelRendererTurbo(this, 129, 33, textureX, textureY, "lamp"); // Box 186 ditchlight front
+		bodyModel[97] = new ModelRendererTurbo(this, 129, 33, textureX, textureY, BoxName.ditch); // Box 186 ditchlight front
 		bodyModel[98] = new ModelRendererTurbo(this, 137, 33, textureX, textureY); // Box 187
 		bodyModel[99] = new ModelRendererTurbo(this, 473, 33, textureX, textureY); // Box 195
 		bodyModel[100] = new ModelRendererTurbo(this, 105, 41, textureX, textureY); // Box 196
@@ -174,7 +175,7 @@ public class ModelMP15DCW9 extends ModelConverter //Same as Filename
 		bodyModel[128] = new ModelRendererTurbo(this, 465, 41, textureX, textureY); // Box 365
 		bodyModel[129] = new ModelRendererTurbo(this, 497, 41, textureX, textureY); // Box 366
 		bodyModel[130] = new ModelRendererTurbo(this, 41, 25, textureX, textureY); // Box 426
-		bodyModel[131] = new ModelRendererTurbo(this, 409, 25, textureX, textureY, "lamp"); // Box 427 commander beacon
+		bodyModel[131] = new ModelRendererTurbo(this, 409, 25, textureX, textureY, BoxName.commander); // Box 427 commander beacon
 		bodyModel[132] = new ModelRendererTurbo(this, 417, 25, textureX, textureY); // Box 19
 		bodyModel[133] = new ModelRendererTurbo(this, 97, 49, textureX, textureY); // Box 334
 		bodyModel[134] = new ModelRendererTurbo(this, 441, 49, textureX, textureY); // Box 462
@@ -825,20 +826,9 @@ public class ModelMP15DCW9 extends ModelConverter //Same as Filename
 	ModelBlombergBnew theTrucks3 = new ModelBlombergBnew();
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 192; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1345344) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/typeasmol_Green.png"));
