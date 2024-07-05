@@ -11,7 +11,6 @@ package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is locat
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFlexicoil_C_Late;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFlexicoil_C_Mid;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
