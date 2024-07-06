@@ -9,11 +9,11 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
-import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
+import train.client.renderhelper.ModelRenderHelper;
+import train.common.enums.BoxName;
 
 import java.util.ArrayList;
 
@@ -177,10 +177,10 @@ public class Modelmk60 extends ModelConverter //Same as Filename
 		bodyModel[137] = new ModelRendererTurbo(this, 177, 161, textureX, textureY); // Box 359
 		bodyModel[138] = new ModelRendererTurbo(this, 505, 153, textureX, textureY); // Box 190
 		bodyModel[139] = new ModelRendererTurbo(this, 162, 161, textureX, textureY, "cull"); // Box 478 cull
-		bodyModel[140] = new ModelRendererTurbo(this, 162, 165, textureX, textureY, "lamp"); // Box 9 PRIME1-4
-		bodyModel[141] = new ModelRendererTurbo(this, 162, 165, textureX, textureY, "lamp"); // Box 8 PRIME1-2
-		bodyModel[142] = new ModelRendererTurbo(this, 162, 165, textureX, textureY, "lamp"); // Box 7 PRIME1-3
-		bodyModel[143] = new ModelRendererTurbo(this, 162, 165, textureX, textureY, "lamp"); // Box 6 PRIME1-1
+		bodyModel[140] = new ModelRendererTurbo(this, 162, 165, textureX, textureY, BoxName.prime4); // Box 9 PRIME1-4
+		bodyModel[141] = new ModelRendererTurbo(this, 162, 165, textureX, textureY, BoxName.prime2); // Box 8 PRIME1-2
+		bodyModel[142] = new ModelRendererTurbo(this, 162, 165, textureX, textureY, BoxName.prime3); // Box 7 PRIME1-3
+		bodyModel[143] = new ModelRendererTurbo(this, 162, 165, textureX, textureY, BoxName.prime1); // Box 6 PRIME1-1
 		bodyModel[144] = new ModelRendererTurbo(this, 162, 173, textureX, textureY); // Box 364 prime base
 		bodyModel[145] = new ModelRendererTurbo(this, 73, 25, textureX, textureY); // Box 183
 		bodyModel[146] = new ModelRendererTurbo(this, 457, 153, textureX, textureY, "cull"); // Box 231 cull antennae support
@@ -2471,21 +2471,9 @@ public class Modelmk60 extends ModelConverter //Same as Filename
 		bodyModel[592].setRotationPoint(-30.5F, -1F, -6.01F);
 	}
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-
-		for(ModelRendererTurbo m :bodyModel) {
-			if(m.boxName.equals("lamp")){
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				m.render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if(m.boxName.equals("cull")){
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				m.render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			}else{
-				m.render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
 	}
 	public float[] getTrans() {
 		return new float[]{-1.2F, 0.16F, 0.00F};
