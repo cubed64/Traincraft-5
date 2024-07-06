@@ -1689,21 +1689,4 @@ public class ModelGPFDL extends ModelConverter//Same as Filename
 			GL11.glPopMatrix();
 		}
 	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{1.3D, 1.3D, 0.0D});//front
-				//add(new double[]{0.475D, 1.3D, 0.0D});//rear
-			}
-		};
-	}
-	public float[] getTrans() { return new float[]{-1.5F, 0.155F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
 }

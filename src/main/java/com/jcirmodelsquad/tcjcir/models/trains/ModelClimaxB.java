@@ -1213,7 +1213,7 @@ public class ModelClimaxB extends ModelConverter //Same as Filename
 	{
 		ModelRenderHelper.renderLocomotiveModelWithoutBeacon(bodyModel, entity, f5);
 
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 433) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4313) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_DarkGrey.png"));
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/climaxtruck_minelol.png"));
@@ -1227,26 +1227,5 @@ public class ModelClimaxB extends ModelConverter //Same as Filename
 		GL11.glTranslated(1.085, 0.00, 0);
 		bogie.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
-	}
-
-
-	public float[] getTrans() {
-		return new float[]{-0.875F, 0.15F, 0.00F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{2.1D, 1.40D, 0.0D});
-			}
-		};
 	}
 }

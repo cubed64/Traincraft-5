@@ -336,17 +336,6 @@ public class ModelSkookumTender extends ModelConverter //Same as Filename
 		bodyModel[75].addBox(0F, 0F, 0F, 0, 2, 1, 0F); // Box 114
 		bodyModel[75].setRotationPoint(-23.01F, 1F, 11F);
 	}
-	public float[] getTrans() {
-		return new float[]{0.1F, 0.08F, 0.11F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
 
 	ModelSkookumTenderTrucc bogie = new ModelSkookumTenderTrucc();
 	@Override
@@ -371,10 +360,4 @@ public class ModelSkookumTender extends ModelConverter //Same as Filename
 		bogie.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();
 	}
-
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
-	{
-	}
-
-	public ModelRendererTurbo ModelSkookumTender[];
 }

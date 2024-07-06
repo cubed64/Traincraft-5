@@ -2475,23 +2475,4 @@ public class Modelmk60 extends ModelConverter //Same as Filename
 	{
 		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
 	}
-	public float[] getTrans() {
-		return new float[]{-1.2F, 0.16F, 0.00F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{3.3D, 1.60D, 0.0D});
-			}
-		};
-	}
 }

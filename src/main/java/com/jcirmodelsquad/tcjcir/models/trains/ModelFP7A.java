@@ -2012,12 +2012,11 @@ public class ModelFP7A extends ModelConverter //Same as Filename
 	}
 	ModelBlombergBnew theTrucc = new ModelBlombergBnew();
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
-	{
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
 
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.06, -0.01, 0);
@@ -2046,12 +2045,4 @@ public class ModelFP7A extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 	}
-		public ArrayList<double[]> getSmokePosition () {
-			return new ArrayList<double[]>() {
-				{
-					add(new double[]{1.1075D, 1.3D, 0.0D});
-					add(new double[]{0.42D, 1.3D, 0.0D});
-				}
-			};
-		}
-	}
+}

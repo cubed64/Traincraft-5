@@ -410,11 +410,4 @@ public class ModelNP_13C_tender extends ModelConverter //Same as Filename
 		wheel3.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
 	}
-
-	public float[] getTrans() {
-		return new float[]{-0F, 0.155F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 0F, 180F };
-	}
 }

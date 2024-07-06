@@ -1420,9 +1420,6 @@ public class Modelwcp_bucking_bull extends ModelConverter //Same as Filename
 		bodyModel[337].setRotationPoint(-31F, -16F, -5F);
 		bodyModel[337].rotateAngleX = -0.78539816F;
 	}
-	public float[] getTrans() {
-		return new float[]{-1.15F, 0.15F, 0.0F};
-	}
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {

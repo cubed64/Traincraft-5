@@ -1225,30 +1225,10 @@ public class ModelF01 extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 			}
 		}
-
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/F01_bogie_texture.png"));
 			GL11.glPushMatrix();
-			//GL11.glTranslated(-0.9, -0.00, 0);
-			//theTrucc.render(entity, f, f1, f2, f3, f4, f5);
-
 			GL11.glTranslated(1.5, 0, 0);
 			theTrucc.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-	}
-
-	public float[] getTrans() {
-		return new float[]{-1.25F, 0.15F, 0.00F};
-	}
-
-	public float[] getScale() {
-		return null;
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{2.2D, 1.4D, 0.0D});
-			}
-		};
 	}
 }

@@ -2252,25 +2252,4 @@ public class ModelCF7angle3 extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 	}
-
-	public float[] getTrans() {
-		return new float[]{-1.25F, 0.15F, 0.00F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.35D, 1.4D, 0.0D});//rear
-				add(new double[]{0.85D, 1.4D, 0.0D});//front
-			}
-		};
-	}
 }

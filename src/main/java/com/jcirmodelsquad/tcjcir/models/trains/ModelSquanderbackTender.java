@@ -295,16 +295,16 @@ public class ModelSquanderbackTender extends ModelConverter //Same as Filename
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for(ModelRendererTurbo m :bodyModel) {
-			if(m.boxName.equals("lamp")){
+		for (ModelRendererTurbo m : bodyModel) {
+			if (m.boxName.equals("lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				m.render(f5);
 				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if(m.boxName.equals("cull")){
+			} else if (m.boxName.equals("cull")) {
 				GL11.glDisable(GL11.GL_CULL_FACE);
 				m.render(f5);
 				GL11.glEnable(GL11.GL_CULL_FACE);
-			}else{
+			} else {
 				m.render(f5);
 			}
 		}
@@ -318,12 +318,5 @@ public class ModelSquanderbackTender extends ModelConverter //Same as Filename
 		GL11.glTranslated(-1.425F, 0.0F, 0);
 		wheel3.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
-	}
-
-	public float[] getTrans() {
-		return new float[]{-0F, 0.155F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
 	}
 }

@@ -1146,18 +1146,6 @@ public class ModelWCPMacky extends ModelConverter //Same as Filename
 		bodyModel[272].addBox(0F, 0F, 0F, 2, 0, 20, 0F); // Box 274
 		bodyModel[272].setRotationPoint(-36F, 8F, -10F);
 	}
-	public float[] getTrans() {
-		return new float[]{-1.15F, 0.15F, 0.0F};
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{2.8D, 1.5D, -0.0D});
-			}
-		};
-	}
 
 	@Override//tbh i forgot about this variation, should use it more ngl
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {

@@ -628,11 +628,17 @@ RenderEnum {
 	}, "", null, 0, false),
 
 
-	CF7_H_Angle(DieselCF7_H_Angle.class,  new ModelCF7_H_Angle(), "18PX_CF7_Angle_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
-		{ }
+	CF7_H_Angle(DieselCF7_H_Angle.class,  new ModelCF7_H_Angle(), "18PX_CF7_Angle_", true,new float[] {-1.0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.55D, 1.0D, 0.0D});//front 0.62
+			add(new double[]{0.3D, 1.0D, 0.0D});//rear
+		}
 	}, "", null, 0, false),
-	CF7_H_Round(DieselCF7_H_Round.class,  new ModelCF7_H_Round(), "18PX_CF7_Round_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
-		{ }
+	CF7_H_Round(DieselCF7_H_Round.class,  new ModelCF7_H_Round(), "18PX_CF7_Round_", true,new float[] {-1.0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.55D, 1.0D, 0.0D});//front 0.62
+			add(new double[]{0.3D, 1.0D, 0.0D});//rear
+		}
 	}, "", null, 0, false),
 
 
@@ -697,7 +703,7 @@ RenderEnum {
 			add(new double[] { 0.3D, 2.3D, 0.0D });
 		}
 	}, 2, true),
-	Skook(SteamSkook.class, new ModelSkookum(), "skookum", false, new float[] { -0.0F, -0.0F, -0.0F }, new float[] { 0F, 180F, 180F }, null, "largesmoke", 20, new ArrayList<double[]>() {
+	Skook(SteamSkook.class, new ModelSkookum(), "skookum", false, new float[] {-1.15F, 0.15F, 0.07F}, new float[] { 0F, 180F, 180F }, null, "largesmoke", 20, new ArrayList<double[]>() {
 		{
 			add(new double[] { 2.4D, 1.5D, -0.0D });
 		}
@@ -708,8 +714,8 @@ RenderEnum {
 			add(new double[] { -0.5D, 1.5D, 0.0D });
 		}
 	}, 2, true),
-	SkookTender(TenderSkookTender.class, new ModelSkookumTender(), "skookumtender", false, new float[] {-0.00F, 0.0F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
-	Shay3Truck(SteamShay3Truck.class,  new ModelShay3Truck(), "3truckShay_", true,new float[] {0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
+	SkookTender(TenderSkookTender.class, new ModelSkookumTender(), "skookumtender", false, new float[] {0.1F, 0.08F, 0.11F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	Shay3Truck(SteamShay3Truck.class,  new ModelShay3Truck(), "3truckShay_", true,new float[] {0F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[] { 2.15D, 1.3D, -0.17D });//1.1D
 		}
@@ -719,7 +725,7 @@ RenderEnum {
 			//add(new double[] { 0.6D, 1.1D, 0.0D });
 		}
 	}, 2, true),
-	Shay3TruckTender(TenderShay3Truck.class, new ModelShay3TruckTender(), "3truckShay_", true, new float[] { 0.0F, 0.0F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	Shay3TruckTender(TenderShay3Truck.class, new ModelShay3TruckTender(), "3truckShay_", true, new float[] {0F, 0.15F, 0.00F}, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	locoC11(SteamC11.class, new ModelC11(), "locoC11", false, new float[] {  -1.5F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
 		{
@@ -752,20 +758,20 @@ RenderEnum {
 	PETender(TenderPETender.class, new ModelPE_Tender(), "PETender", false, new float[] { 0.1F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	NP_L9(SteamNP_L9.class, new ModelNP_L9(), "np_l9_", true, new float[] {  -1.5F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
 		{
-			add(new double[] { 0D, 0D, 0D });
+			add(new double[] { 2.05D, 1.5D, 0.0D });
 		}
 	}, "explode", new ArrayList<double[]>() {
 		{
 			add(new double[] { 2.2D, -0.2D, 0.75D });//pistons
 		}
 	}, 2, true),
-	NP_11C_Tender(TenderNP_11C.class, new ModelNP_11C_12C_tender(), "np_11c_n_12c_tender_", true, new float[] { 0.0F, 0.0F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
-	NP_13C_Tender(TenderNP_13C.class, new ModelNP_13C_tender(), "np_13c_tender_", true, new float[] { 0.0F, 0.0F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	NP_11C_Tender(TenderNP_11C.class, new ModelNP_11C_12C_tender(), "np_11c_n_12c_tender_", true, new float[] {-0F, 0.155F, 0F}, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	NP_13C_Tender(TenderNP_13C.class, new ModelNP_13C_tender(), "np_13c_tender_", true, new float[] {-0F, 0.155F, 0F}, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 
 
-	F01(SteamF01.class, new ModelF01(), "F01_texture", false, new float[] {  -1.5F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
+	F01(SteamF01.class, new ModelF01(), "F01_texture", false, new float[] {-1.25F, 0.15F, 0.00F}, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
 		{
-			add(new double[] { 0D, 0D, 0D });
+			add(new double[] {2.2D, 1.4D, 0.0D});
 		}
 	}, "explode", new ArrayList<double[]>() {
 		{
@@ -773,7 +779,7 @@ RenderEnum {
 			//add(new double[] { -0.7D, 1.4D, 0.0D });//dynamo
 		}
 	}, 2, true),
-	P01a(SteamP01a.class,  new ModelP01a(), "p01a_", true,new float[] {0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
+	P01a(SteamP01a.class,  new ModelP01a(), "p01a_", true,new float[] {-0.8F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[] { 2.025D, 1.4D, 0.0D });//smoke
 		}
@@ -784,10 +790,10 @@ RenderEnum {
 			add(new double[] { 2.1D, 1.4D, 0.0D });//stack
 		}
 	}, 2, true),
-	VanderbackTender(TenderVanderback.class, new ModelVanderbackTender(), "vanderback_", true, new float[] { 0.0F, 0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	SquanderbackTender(TenderSquanderback.class, new ModelSquanderbackTender(), "squanderback_", true, new float[] { 0.0F, 0.0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	VanderbackTender(TenderVanderback.class, new ModelVanderbackTender(), "vanderback_", true, new float[] {-0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	SquanderbackTender(TenderSquanderback.class, new ModelSquanderbackTender(), "squanderback_", true, new float[] {-0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
-	BKno2a(SteamBKno2a.class, new ModelBKno2a(), "BoothKelly_", true, new float[] {-1.5F, 0.15F, 0.0F}, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
+	BKno2a(SteamBKno2a.class, new ModelBKno2a(), "BoothKelly_", true, new float[] {0.7F, 0.155F, 0F}, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
 		{
 			//add(new double[] { 0D, 0D, 0D });
 		}
@@ -796,16 +802,16 @@ RenderEnum {
 			add(new double[] { 1.2D, -0.2D, 0.75D });//pistons
 		}
 	}, 2, true),
-	BKno2b(SteamBKno2b.class, new ModelBKno2b(), "BoothKelly_", true, new float[] {-1.5F, 0.15F, 0.0F}, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
+	BKno2b(SteamBKno2b.class, new ModelBKno2b(), "BoothKelly_", true, new float[] {0.5F, 0.155F, 0F}, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
 		{
-			add(new double[] { 0D, 0D, 0D });
+			add(new double[] {-1.9D, 1.6D, 0.0D});
 		}
 	}, "explode", new ArrayList<double[]>() {
 		{
 			add(new double[] { -2.2D, -0.2D, 0.75D });//pistons
 		}
 	}, 2, true),
-	WCPBuckingBull(SteamBuckingBull.class, new Modelwcp_bucking_bull(), "wcp_bucking_bull", false, new float[] { -0.0F, -0.0F, -0.0F }, new float[] { 0F, 180F, 180F }, null, "largesmoke", 15, new ArrayList<double[]>() {
+	WCPBuckingBull(SteamBuckingBull.class, new Modelwcp_bucking_bull(), "wcp_bucking_bull", false, new float[] {-1.15F, 0.15F, 0.0F}, new float[] { 0F, 180F, 180F }, null, "largesmoke", 15, new ArrayList<double[]>() {
 		{
 			add(new double[] { 2.8D, 1.5D, -0.0D });
 		}
@@ -815,10 +821,10 @@ RenderEnum {
 			add(new double[] { 1.0D, -0.4D, 0.8D });
 		}
 	}, 2, true),
-	WCPBaler(TenderBaler.class, new Modelwcp_baler_tender(), "wcp_baler", false, new float[] {-0.00F, 0.0F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
-	WCPMacky(SteamMacky.class, new ModelWCPMacky(), "WCP_macky_three", false, new float[] { -0.0F, -0.0F, -0.0F }, new float[] { 0F, 180F, 180F }, null, "largesmoke", 15, new ArrayList<double[]>() {
+	WCPBaler(TenderBaler.class, new Modelwcp_baler_tender(), "wcp_baler", false, new float[] {0F, 0.05F, 0.0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	WCPMacky(SteamMacky.class, new ModelWCPMacky(), "WCP_macky_three", false, new float[] {-1.15F, 0.15F, 0.0F}, new float[] { 0F, 180F, 180F }, null, "largesmoke", 15, new ArrayList<double[]>() {
 		{
-			//add(new double[] { 2.8D, 1.5D, -0.0D });
+			add(new double[] { 2.8D, 1.5D, -0.0D });
 		}
 	}, "explode", new ArrayList<double[]>() {
 		{
@@ -826,9 +832,9 @@ RenderEnum {
 			//add(new double[] { 1.0D, -0.4D, 0.8D });
 		}
 	}, 2, true),
-	ClimaxB(SteamClimaxB.class,  new ModelClimaxB(), "50ton_climax_b_", true,new float[] {0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
+	ClimaxB(SteamClimaxB.class,  new ModelClimaxB(), "50ton_climax_b_", true,new float[] {-0.875F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
 		{
-			//add(new double[] { 2.025D, 1.4D, 0.0D });//smoke
+			add(new double[] {2.1D, 1.40D, 0.0D});//smoke
 		}
 	}, "explode", new ArrayList<double[]>() {
 		{
@@ -837,9 +843,9 @@ RenderEnum {
 			add(new double[] { 2.2D, 1.4D, 0.0D });//stack
 		}
 	}, 2, true),
-	Alco2102(SteamAlco2102.class,  new Modelalco2102(), "alco_2-10-2st_", true,new float[] {0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
+	Alco2102(SteamAlco2102.class,  new Modelalco2102(), "alco_2-10-2st_", true,new float[] {-1.2F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
 		{
-			//add(new double[] { 2.025D, 1.4D, 0.0D });//smoke
+			add(new double[] { 2.8D, 1.40D, 0.0D});//smoke
 		}
 	}, "explode", new ArrayList<double[]>() {
 		{
@@ -848,16 +854,18 @@ RenderEnum {
 			add(new double[] { 2.8D, 1.40D, 0.0D });//stack
 		}
 	}, 2, true),
-	MK60(SteamMK60.class,  new Modelmk60(), "mk60-71_", true,new float[] {0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
-		{ }
+	MK60(SteamMK60.class,  new Modelmk60(), "mk60-71_", true,new float[] {-1.2F, 0.16F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
+		{
+			add(new double[]{3.3D, 1.60D, 0.0D});//smoke
+		}
 	}, "explode", new ArrayList<double[]>() {
 		{
 			add(new double[] { 3.5D, -0.4D, 0.6D });//piston steam
 			add(new double[] { 3.3D, 1.60D, 0.0D });//stack
 		}
 	}, 2, true),
-	Tender10k(Tender10k.class, new ModelTender10k(), "wp_10k_", true, new float[] {-0.00F, 0.0F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
-	TenderDeseret(TenderDeseret.class, new ModelTenderDeseret(), "wp_deserettender_", true, new float[] {-0.00F, 0.0F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	Tender10k(Tender10k.class, new ModelTender10k(), "wp_10k_", true, new float[] {-0F, 0.155F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	TenderDeseret(TenderDeseret.class, new ModelTenderDeseret(), "wp_deserettender_", true, new float[] {-0F, 0.155F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 
 
 	/**EMD**/
@@ -882,33 +890,51 @@ RenderEnum {
 	BUnitF7B(BUnitF7.class, new ModelF7B(), "F7B_", true, new float[]{0,0.15f,0}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
 	FP7A( DieselFP7A.class,  new ModelFP7A(), "FP7A_", true,new float[] {-1.375F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{
-			//add(new double[]{0.9375D, 1.3D, 0.0D});
-			//add(new double[]{0.25D, 1.3D, 0.0D});
+			add(new double[]{1.1075D, 1.3D, 0.0D});
+			add(new double[]{0.42D, 1.3D, 0.0D});
 		}
 	}, "", null, 0, false),
 	FP9A( DieselFP9A.class,  new ModelFP9A(), "FP9A_", true,new float[] {-1.375F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{
-			//add(new double[]{0.9375D, 1.3D, 0.0D});
-			//add(new double[]{0.25D, 1.3D, 0.0D});
+			add(new double[]{1.1075D, 1.3D, 0.0D});
+			add(new double[]{0.42D, 1.3D, 0.0D});
 		}
 	}, "", null, 0, false),
-	CF7angle( DieselCF7angle.class,  new ModelCF7angle2(), "CF7_Angle_", true,new float[] {-0F, -0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
-		{ }
+	CF7angle( DieselCF7angle.class,  new ModelCF7angle2(), "CF7_Angle_", true,new float[] {-1.25F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.35D, 1.4D, 0.0D});//rear
+			add(new double[]{0.85D, 1.4D, 0.0D});//front
+		}
 	}, "", null, 0, false),
-	CF7round( DieselCF7round.class,  new ModelCF7rouny2(), "CF7_Round_", true,new float[] {-0F, -0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
-		{ }
+	CF7round( DieselCF7round.class,  new ModelCF7rouny2(), "CF7_Round_", true,new float[] {-1.25F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.35D, 1.4D, 0.0D});//rear
+			add(new double[]{0.85D, 1.4D, 0.0D});//front
+		}
 	}, "", null, 0, false),
-	CF7round3( DieselCF7round3.class,  new ModelCF7rouny3(), "CF7_Round_F_", true,new float[] {-0F, -0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
-		{ }
+	CF7round3( DieselCF7round3.class,  new ModelCF7rouny3(), "CF7_Round_F_", true,new float[] {-1.25F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.35D, 1.4D, 0.0D});//rear
+			add(new double[]{0.85D, 1.4D, 0.0D});//front
+		}
 	}, "", null, 0, false),
-	CF7angle2( DieselCF7angle2.class,  new ModelCF7angle2(), "CF7_Angle_DBRR_", true,new float[] {-0F, -0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 3,  new ArrayList<double[]>() {
-		{ }
+	CF7angle2( DieselCF7angle2.class,  new ModelCF7angle2(), "CF7_Angle_DBRR_", true,new float[] {-1.25F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.35D, 1.4D, 0.0D});//rear
+			add(new double[]{0.85D, 1.4D, 0.0D});//front
+		}
 	}, "", null, 0, false),
-	CF7angle3( DieselCF7angle3.class,  new ModelCF7angle3(), "CF7_Angle_F_", true,new float[] {-0F, -0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
-		{ }
+	CF7angle3( DieselCF7angle3.class,  new ModelCF7angle3(), "CF7_Angle_F_", true,new float[] {-1.25F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.35D, 1.4D, 0.0D});//rear
+			add(new double[]{0.85D, 1.4D, 0.0D});//front
+		}
 	}, "", null, 0, false),
-	CF7hh( DieselCF7hh.class,  new ModelCF7hh(), "CF7_highhood_", true,new float[] {-0F, -0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 3,  new ArrayList<double[]>() {
-		{ }
+	CF7hh( DieselCF7hh.class,  new ModelCF7hh(), "CF7_highhood_", true,new float[] {-1.25F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.35D, 1.4D, 0.0D});//rear
+			add(new double[]{0.85D, 1.4D, 0.0D});//front
+		}
 	}, "", null, 0, false),
 	F40PH( DieselF40PH.class,  new ModelF40PH(), "f40ph_", true,new float[] {-1.7F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
@@ -917,22 +943,46 @@ RenderEnum {
 	}, "", null, 0, false),
 
 	EMDE7A( DieselE7A.class,  new ModelE7A(), "EMDE7A_", true,new float[] {-1.85F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+		{
+			add(new double[]{2.48D, 1.21D, 0D});
+			add(new double[]{2.3D, 1.21D, 0D});
+			add(new double[]{2.04D, 1.21D, 0D});
+			add(new double[]{1.86D, 1.21D, 0D});
+			add(new double[]{0.92D, 1.21D, 0D});
+			add(new double[]{0.74D, 1.21D, 0D});
+			add(new double[]{0.48D, 1.21D, 0D});
+			add(new double[]{0.3D, 1.21D, 0D});
+		}
 	}, "", null, 0, false),
 
 	EMDE7B( DieselE7B.class,  new ModelE7B(), "EMDE7B_", true,new float[] {-1.75F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+		{
+			add(new double[]{2.56D, 1.21D, 0D});
+			add(new double[]{2.38D, 1.21D, 0D});
+			add(new double[]{2.12D, 1.21D, 0D});
+			add(new double[]{1.94D, 1.21D, 0D});
+			add(new double[]{1.0D, 1.21D, 0D});
+			add(new double[]{0.82D, 1.21D, 0D});
+			add(new double[]{0.56D, 1.21D, 0D});
+			add(new double[]{0.38D, 1.21D, 0D});
+		}
 	}, "", null, 0, false),
 	BUnitEMDE7B( BUnitE7B.class,  new ModelE7B(), "EMDE7B_", true,new float[] {0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{}
 	}, "", null, 0, false),
 
 	E8A( DieselE8A.class,  new ModelE8A(), "EMDE8A_", true,new float[] {-1.85F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+		{
+			add(new double[]{1.93D, 1.23D, 0D});
+			add(new double[]{1.3D, 1.23D, 0D});
+		}
 	}, "", null, 0, false),
 
 	E8B( DieselE8B.class,  new ModelE8B(), "EMDE8B_", true,new float[] {-1.75F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+		{
+			add(new double[]{2.08D, 1.23D, 0D});
+			add(new double[]{1.45D, 1.23D, 0D});
+		}
 	}, "", null, 0, false),
 
 	BUnitE8B( BUnitE8B.class,  new ModelE8B(), "EMDE8B_", true,new float[] {0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
@@ -940,11 +990,17 @@ RenderEnum {
 	}, "", null, 0, false),
 
 	E9A( DieselE9A.class,  new ModelE9A(), "EMDE9A_", true,new float[] {-1.85F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+		{
+			add(new double[]{1.93D, 1.23D, 0D});
+			add(new double[]{1.3D, 1.23D, 0D});
+		}
 	}, "", null, 0, false),
 
 	E9B( DieselE9B.class,  new ModelE9B(), "EMDE9B_", true,new float[] {-1.75F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+		{
+			add(new double[]{2.08D, 1.23D, 0D});
+			add(new double[]{1.45D, 1.23D, 0D});
+		}
 	}, "", null, 0, false),
 
 	BUnitE9B( BUnitE9B.class,  new ModelE9B(), "EMDE9B_", true,new float[] {0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
@@ -952,43 +1008,57 @@ RenderEnum {
 	}, "", null, 0, false),
 
 	CE8( DieselCE8.class,  new ModelCE8(), "CE8_", true,new float[] {-1.85F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+		{
+			add(new double[]{1.94D, 1.3D, 0D});
+			add(new double[]{2.1D, 1.3D, 0D});
+			add(new double[]{0.55D, 1.3D, 0D});
+			add(new double[]{0.4D, 1.3D, 0D});
+		}
 	}, "", null, 0, false),
 
-	GP7( DieselGP7.class,  new ModelGP7newer(), "gp7new_", true,new float[] {-0F, -0.05F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
-		{ }
-	}, "", null, 0, false),
-	GP7b( DieselGP7b.class,  new ModelGP7b(), "gp7b_", true,new float[] {-1.5F, -0.05F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+	GP7( DieselGP7.class,  new ModelGP7newer(), "gp7new_", true,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{
-			add(new double[]{0.45D, 1.35D, 0.0D});
-			add(new double[]{1.25D, 1.35D, 0.0D});
+			add(new double[]{1.225D, 1.3D, 0.0D});//front
+			add(new double[]{0.475D, 1.3D, 0.0D});//rear
+		}
+	}, "", null, 0, false),
+	GP7b( DieselGP7b.class,  new ModelGP7b(), "gp7b_", true,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.225D, 1.3D, 0.0D});//front
+			add(new double[]{0.475D, 1.3D, 0.0D});//rear
 		}
 	}, "", null, 0, false),
 	BUnitGP7b(BUnitGP7b.class, new ModelGP7b(), "gp7b_", true, new float[]{0,-0.05f,0}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
-	GP7u( DieselGP7u.class,  new ModelGP7U_ATSF(), "gp7u_atsf_", true,new float[] {-1.5F, -0.05F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+	GP7u( DieselGP7u.class,  new ModelGP7U_ATSF(), "gp7u_atsf_", true,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{
-			add(new double[]{0.45D, 1.35D, 0.0D});
-			add(new double[]{1.25D, 1.35D, 0.0D});
+			add(new double[]{1.225D, 1.3D, 0.0D});//front
+			add(new double[]{0.475D, 1.3D, 0.0D});//rear
 		}
 	}, "", null, 0, false),
-	GP7f( DieselGP7f.class,  new ModelGP7U_ARR(), "gp7u_arr_", true,new float[] {-0F, -0.05F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 2,  new ArrayList<double[]>() {
-		{ }
-	}, "", null, 0, false),
-	GPFDL( DieselGPFDL.class,  new ModelGPFDL(), "gpfdl_", true,new float[] {-0F, -0.05F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
-		{ }
-	}, "", null, 0, false),
-	GP9( DieselGP9.class,  new ModelGP7newer(), "gp9_", true,new float[] {-1.5F, -0.05F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
-		{ }
-	}, "", null, 0, false),
-	GP9b( DieselGP9b.class,  new ModelGP7b(), "gp9b_", true,new float[] {-1.5F, -0.05F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
-		{ }
-	}, "", null, 0, false),
-	/*GP7old( DieselGP7old.class,  new ModelGP7new(), "gp7old_", true,new float[] {-1.5F, -0.05F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+	GP7f( DieselGP7f.class,  new ModelGP7U_ARR(), "gp7u_arr_", true,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 2,  new ArrayList<double[]>() {
 		{
-			add(new double[]{0.45D, 1.35D, 0.0D});
-			add(new double[]{1.25D, 1.35D, 0.0D});
+			add(new double[]{1.225D, 1.3D, 0.0D});//front
+			add(new double[]{0.475D, 1.3D, 0.0D});//rear
 		}
-	}, "", null, 0, false),*/
+	}, "", null, 0, false),
+	GPFDL( DieselGPFDL.class,  new ModelGPFDL(), "gpfdl_", true,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.3D, 1.3D, 0.0D});//front
+			//add(new double[]{0.475D, 1.3D, 0.0D});//rear
+		}
+	}, "", null, 0, false),
+	GP9( DieselGP9.class,  new ModelGP7newer(), "gp9_", true,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.225D, 1.3D, 0.0D});//front
+			add(new double[]{0.475D, 1.3D, 0.0D});//rear
+		}
+	}, "", null, 0, false),
+	GP9b( DieselGP9b.class,  new ModelGP7b(), "gp9b_", true,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.225D, 1.3D, 0.0D});//front
+			add(new double[]{0.475D, 1.3D, 0.0D});//rear
+		}
+	}, "", null, 0, false),
 	GP13( DieselGP13.class, new ModelGP13(), "gp13_", true, new float[] { -0.8F, -0.55F, 0.0F }, new float[] { 0F, 180F, 0F }, null, "smoke", 4, new ArrayList<double[]>() {
 		{
 			add(new double[] { -0.2D, 1.2D, 0.0D });

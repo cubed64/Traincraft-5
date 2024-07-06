@@ -1111,12 +1111,4 @@ public class ModelE9B extends ModelConverter //Same as Filename
 		GL11.glPopMatrix();
 
 	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{2.08D, 1.23D, 0D});
-				add(new double[]{1.45D, 1.23D, 0D});
-			}
-		};
-	}
 }

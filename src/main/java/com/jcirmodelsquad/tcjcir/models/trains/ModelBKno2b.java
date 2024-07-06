@@ -1253,20 +1253,5 @@ public class ModelBKno2b extends ModelConverter //Same as Filename
 			}
 		}
 	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{-1.9D, 1.6D, 0.0D});//front
-			}
-		};
-	}
-	public float[] getTrans() { return new float[]{0.5F, 0.155F, 0F}; }
 
-	public float[] getRotate() {
-		return new float[] { 0F, 0F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
 }

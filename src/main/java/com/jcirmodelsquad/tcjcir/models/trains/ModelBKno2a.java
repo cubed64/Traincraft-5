@@ -599,13 +599,4 @@ public class ModelBKno2a extends ModelConverter //Same as Filename
 			}
 		}
 	}
-	public float[] getTrans() { return new float[]{0.7F, 0.155F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
 }

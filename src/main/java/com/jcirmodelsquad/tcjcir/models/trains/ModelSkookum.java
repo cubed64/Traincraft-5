@@ -929,18 +929,6 @@ public class ModelSkookum extends ModelConverter //Same as Filename
 		bodyModel[219].setRotationPoint(30F, -7F, 11.01F);
 	}
 
-	public float[] getTrans() {
-		return new float[]{-1.15F, 0.15F, 0.07F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
-
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 

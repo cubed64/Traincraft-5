@@ -1458,18 +1458,4 @@ public class ModelNP_L9 extends ModelConverter //Same as Filename
 			}
 		}
 	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{2.05D, 1.5D, 0.0D});//stack
-			}
-		};
-	}
-
-	public float[] getTrans() {
-		return new float[]{-1.0F, 0.15F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
 }

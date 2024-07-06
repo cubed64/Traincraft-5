@@ -1265,18 +1265,4 @@ public class ModelF3A extends ModelConverter //Same as Filename
 		}
 
 	}
-
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
-	{
-	}
-
-	public ModelRendererTurbo ModelF3A[];
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.9375D, 1.4D, 0.0D});
-				add(new double[]{0.25D, 1.4D, 0.0D});
-			}
-		};
-	}
 }

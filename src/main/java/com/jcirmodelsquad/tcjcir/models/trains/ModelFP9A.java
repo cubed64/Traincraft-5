@@ -2045,12 +2045,4 @@ public class ModelFP9A extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 	}
-	public ArrayList<double[]> getSmokePosition () {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{1.1075D, 1.3D, 0.0D});
-				add(new double[]{0.42D, 1.3D, 0.0D});
-			}
-		};
-	}
 }

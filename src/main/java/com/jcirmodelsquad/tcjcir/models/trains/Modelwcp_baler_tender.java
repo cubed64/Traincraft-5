@@ -334,10 +334,6 @@ public class Modelwcp_baler_tender extends ModelConverter //Same as Filename
 	}
 	ModelFrictionTruck bogie = new ModelFrictionTruck();
 
-	public float[] getTrans() {
-		return new float[]{0F, 0.05F, 0.0F};
-	}
-
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 

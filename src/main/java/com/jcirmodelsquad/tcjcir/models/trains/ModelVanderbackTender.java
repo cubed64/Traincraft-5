@@ -319,22 +319,20 @@ public class ModelVanderbackTender extends ModelConverter //Same as Filename
 		bodyModel[67].addShapeBox(0F, 0F, 0F, 0, 10, 20, 0F,0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 67
 		bodyModel[67].setRotationPoint(18.01F, -9F, -10F);
 	}
-	Modelvanderback_truck wheel = new Modelvanderback_truck();
-	ModelFrictionTruck_Small wheel2 = new ModelFrictionTruck_Small();
 	ModelFrictionTruckTender wheel3 = new ModelFrictionTruckTender();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for(ModelRendererTurbo m :bodyModel) {
-			if(m.boxName.equals("lamp")){
+		for (ModelRendererTurbo m : bodyModel) {
+			if (m.boxName.equals("lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				m.render(f5);
 				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if(m.boxName.equals("cull")){
+			} else if (m.boxName.equals("cull")) {
 				GL11.glDisable(GL11.GL_CULL_FACE);
 				m.render(f5);
 				GL11.glEnable(GL11.GL_CULL_FACE);
-			}else{
+			} else {
 				m.render(f5);
 			}
 		}
@@ -348,12 +346,5 @@ public class ModelVanderbackTender extends ModelConverter //Same as Filename
 		GL11.glTranslated(-1.425F, 0.0F, 0);
 		wheel3.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
-	}
-
-	public float[] getTrans() {
-		return new float[]{-0F, 0.155F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
 	}
 }

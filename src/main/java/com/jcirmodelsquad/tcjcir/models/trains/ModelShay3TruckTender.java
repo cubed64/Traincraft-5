@@ -620,18 +620,6 @@ public class ModelShay3TruckTender extends ModelConverter //Same as Filename
 		bodyModel[145].addShapeBox(0F, 0F, 0F, 5, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F); // Box 57
 		bodyModel[145].setRotationPoint(-4F, 5F, 7F);
 	}
-	public float[] getTrans() {
-		return new float[]{0F, 0.15F, 0.00F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 0F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
-
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 

@@ -1307,19 +1307,4 @@ public class ModelP01a extends ModelConverter //Same as Filename
 			}
 		}
 	}
-
-	/*public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{2.025D, 1.4D, 0.0D});//stack
-			}
-		};
-	}*/
-
-	public float[] getTrans() {
-		return new float[]{-0.8F, 0.15F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
 }

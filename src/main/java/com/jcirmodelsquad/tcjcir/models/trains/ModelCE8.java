@@ -1539,18 +1539,5 @@ public class ModelCE8 extends ModelConverter//Same as Filename
 		GL11.glTranslated(3.35, 0, 0);
 		theTruck.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
-
 	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{1.94D, 1.3D, 0D});
-				add(new double[]{2.1D, 1.3D, 0D});
-				add(new double[]{0.55D, 1.3D, 0D});
-				add(new double[]{0.4D, 1.3D, 0D});
-			}
-		};
-	}
-
-	public float[] getTrans() { return new float[]{-1.85F, 0.15F, 0F}; }
 }
