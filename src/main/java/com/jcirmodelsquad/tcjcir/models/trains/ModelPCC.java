@@ -11,15 +11,9 @@ package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is locat
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
-import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
-import tmt.Tessellator;
-import train.common.api.AbstractTrains;
-import train.common.library.Info;
-
-import java.util.ArrayList;
 
 public class ModelPCC extends ModelConverter //Same as Filename
 {
@@ -1490,6 +1484,4 @@ public class ModelPCC extends ModelConverter //Same as Filename
 			}
 		}
 	}
-	public float[] getTrans() { return new float[]{-1.5F, 0.155F, 0F}; }
-
 }

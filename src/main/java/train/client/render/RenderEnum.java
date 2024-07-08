@@ -11,8 +11,8 @@ import train.common.entity.rollingStock.*;
 
 import java.util.ArrayList;
 
-public enum
-RenderEnum {
+public enum RenderEnum
+{
 
 	/** Passengers */
 	passengerCartBlue(EntityPassengerBlue.class, new ModelPassenger6(), "passenger", true, new float[] { 0.0F, -0.47F, 0.0F }, null, null, "", 0, null, "", null, 0, false),
@@ -1767,29 +1767,29 @@ RenderEnum {
 
 	/**OTHER ROLLING SHIZZLE**/
 	WVcaboose(WVcaboose.class, new ModelWVcaboose(),"wvcaboose_", true, new float[]{0F, 0.1675F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	HBC1C(HBC1Cboose.class, new ModelHBC1C(),"HBC1C_", true, null, null, null, "", 0, null, "", null, 0, false),
-	HBC1B(HBC1Bboose.class, new ModelHBC1B(),"HBC1B_", true, null, null, null, "", 0, null, "", null, 0, false),
-	DRGWCaboose(DRGWboose.class, new ModelDRGW01400Caboose(),"BAP_DRGW_01400_", true, null, null, null, "", 0, null, "", null, 0, false),
-	ICCBaywindowWP(ICCBaywindowWP.class, new ModelICCBaywindowWP(),"iccbaywindow_", true, null, null, null, "", 0, null, "", null, 0, false),
-	WPShops600Series(WPShops600Series.class, new ModelWPShops600Series(),"wp680series_", true, null, null, null, "", 0, null, "", null, 0, false),
+	HBC1C(HBC1Cboose.class, new ModelHBC1C(),"HBC1C_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	HBC1B(HBC1Bboose.class, new ModelHBC1B(),"HBC1B_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	DRGWCaboose(DRGWboose.class, new ModelDRGW01400Caboose(),"BAP_DRGW_01400_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ICCBaywindowWP(ICCBaywindowWP.class, new ModelICCBaywindowWP(),"iccbaywindow_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	WPShops600Series(WPShops600Series.class, new ModelWPShops600Series(),"wp680series_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	BigMeme(BigMeme.class, new ModelBigMeme(),"bigmeme_", true, new float[]{-1F, 0.1875F, 0F}, new float[] { 180F, 180F, 0F }, null, "", 0, null, "", null, 0, false),
 	BombCart(BombCart.class, new ModelBombCart(), "payload_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	Thanos(Thanos.class, new ModelLocoMinetrain(), "thanos", false,new float[] {-0.8F, -0.47F, 0.0F},  new float[] { 0F, 0F, 0F }, null, "", 0, null, "", null, 0, false),
-	TGVmobile( DieselTGVmobile.class,  new ModelTGVMobile(), "tgvmobile_Orange", false,new float[] {-1.5F, 0.2F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	HHgregg( com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselHHgregg.class,  new ModelHH660(), "hhgregg", false,new float[] {-1F, -0.1F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
+	Thanos(Thanos.class, new ModelLocoMinetrain(), "thanos", false, new float[] {-0.8F, -0.47F, 0.0F},  new float[] { 0F, 0F, 0F }, null, "", 0, null, "", null, 0, false),
+	TGVmobile( DieselTGVmobile.class,  new ModelTGVMobile(), "tgvmobile_Orange", false, new float[] {-1.5F, 0.2F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	HHgregg( com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselHHgregg.class,  new ModelHH660(), "hhgregg", false, new float[] {-1F, -0.1F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[]{2.0D, 1.35D, 0D});
 		}
 	}, "", null, 0, false),
 
 
-	KawasakiLRV(ElectricKawasakiLRV.class, new ModelSeptaLRV(), "kawasaki_white", false, new float[] { -1.5F, -0.44F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	CQ310PO(ElectricCQ310PO.class, new Modelcq310(), "CQ_310_", true, new float[] { -1.5F, -0.44F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	CQ310PA(CQ310PA.class, new Modelcq310_again(), "CQ_310_", true, new float[] { 0F, -0.44F, 0.0F }, new float[] { 180F, 180F, 0F }, null, "", 0, null, "", null, 0, false),
-	PCC(ElectricPCC.class, new ModelPCC(), "Pcc_", true, new float[] { -1.5F, -0.44F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	KawasakiLRV(ElectricKawasakiLRV.class, new ModelSeptaLRV(), "kawasaki_white", false, new float[]{-1.5F, 0.12F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	CQ310PO(ElectricCQ310PO.class, new Modelcq310(), "CQ_310_", true, new float[]{-1.5F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	CQ310PA(CQ310PA.class, new Modelcq310_again(), "CQ_310_", true, new float[]{0.0F, 0.155F, 0F}, new float[] { 180F, 180F, 0F }, null, "", 0, null, "", null, 0, false),
+	PCC(ElectricPCC.class, new ModelPCC(), "Pcc_", true, new float[]{-1.5F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
-	Class74(ElectricClass74.class, new Modelclass74(), "Class_74_", true, new float[] { -1.5F, -0.44F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	Class74(ElectricClass74.class, new Modelclass74(), "Class_74_", true, new float[]{-1.0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	TwoBil(ElectricTwoBil.class, new ModelTwoBilEngine(), "2-bil_", true, new float[]{-1.7F, 0.17F, 0F}, new float[]{0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
 	TwoBilTail(PassengerTwoBilTail.class, new ModelTwoBilTail(), "2-bil_", true, new float[]{0.02F, 0.17F, 0F}, new float[]{0F, 0F, 180F}, null, "", 0, null, "", null, 0, false),
 

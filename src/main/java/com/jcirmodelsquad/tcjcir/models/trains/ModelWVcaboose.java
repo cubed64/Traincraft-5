@@ -10,7 +10,6 @@
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelCabooseTruck2;
-import com.jcirmodelsquad.tcjcir.models.trucks.Modelcaboosetruck;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -680,10 +679,6 @@ public class ModelWVcaboose extends ModelConverter //Same as Filename
 		GL11.glTranslated(0.9, 0, 0);
 		bogie.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
-	}
-
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
-	{
 	}
 
 	public ModelRendererTurbo ModelWVcaboose[];
