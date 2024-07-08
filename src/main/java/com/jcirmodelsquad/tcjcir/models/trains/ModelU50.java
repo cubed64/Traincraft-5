@@ -1150,12 +1150,4 @@ public class ModelU50 extends ModelConverter //Same as Filename
 	public float[] getTrans() {
 		return new float[]{-2.15F, 0.15F, 0.00F};
 	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{3.6D, 1.5D, 0.0D});
-				add(new double[]{-0.15D, 1.5D, 0.0D});
-			}
-		};
-	}
 }
