@@ -672,16 +672,4 @@ public class ModelGE25Ton extends ModelConverter //Same as Filename
 	{
 		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
 	}
-
-	public float[] getTrans() {
-		return new float[]{-0.5F, 0.15F, 0.00F};
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.425D, 0.9D, 0.0D});
-			}
-		};
-	}
 }
