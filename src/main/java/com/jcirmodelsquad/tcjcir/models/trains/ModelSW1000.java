@@ -22,8 +22,6 @@ import train.common.api.AbstractTrains;
 import train.common.enums.BoxName;
 import train.common.library.Info;
 
-import java.util.ArrayList;
-
 public class ModelSW1000 extends ModelConverter //Same as Filename
 {
 	int textureX = 512;
@@ -1842,25 +1840,5 @@ public class ModelSW1000 extends ModelConverter //Same as Filename
 			theTypeA.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-	public float[] getTrans() {
-		return new float[]{-1.0F, 0.15F, 0.00F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				//add(new double[]{0.90D, 1.40D, 0.0D});
-				add(new double[]{1.65D, 1.40D, 0.0D});
-			}
-		};
 	}
 }

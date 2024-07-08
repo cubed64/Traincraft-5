@@ -1186,32 +1186,55 @@ public enum RenderEnum
 		}
 	}, "", null, 0, false),
 
-	SW1( DieselSW1.class,  new ModelSW1(), "sw1_new_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
-		{ }
+	SW1( DieselSW1.class,  new ModelSW1(), "sw1_new_", true,new float[]{-1.0F, 0.125F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.2D, 1.20D, 0.0D});
+		}
 	}, "", null, 0, false),
-	SW8( DieselSW8.class,  new ModelSW900(), "SW8_", true,new float[] {-1.0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
-		{ }
+	SW8( DieselSW8.class,  new ModelSW900(), "SW8_", true,new float[]{-1.0F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.35D, 1.30D, 0.0D});
+		}
 	}, "", null, 0, false),
-	SW9( DieselSW9.class,  new ModelSW9(), "SW9_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
-		{ }
+	SW9( DieselSW9.class,  new ModelSW9(), "SW9_", true,new float[]{-1.0F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.95D, 1.30D, 0.0D});
+			add(new double[]{1.575D, 1.30D, 0.0D});
+		}
 	}, "", null, 0, false),
-	SW10( DieselSW10.class,  new ModelSW10(), "sw10_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
-		{ }
+	SW10( DieselSW10.class,  new ModelSW10(), "sw10_", true,new float[]{-1.0F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.95D, 1.27D, 0.0D});
+			add(new double[]{1.6D, 1.27D, 0.0D});
+		}
 	}, "", null, 0, false),
-	SW900( DieselSW900.class,  new ModelSW900(), "SW900_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
-		{ }
+	SW900( DieselSW900.class,  new ModelSW900(), "SW900_", true,new float[]{-1.0F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.35D, 1.30D, 0.0D});
+		}
 	}, "", null, 0, false),
-	SW1000( DieselSW1000.class,  new ModelSW1000(), "sw1000_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
-		{ }
+	SW1000( DieselSW1000.class,  new ModelSW1000(), "sw1000_", true,new float[]{-1.0F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.65D, 1.40D, 0.0D});
+		}
 	}, "", null, 0, false),
-	SW1200( DieselSW1200.class,  new ModelSW1200(), "sw1200_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
-		{ }
+	SW1200( DieselSW1200.class,  new ModelSW1200(), "sw1200_", true,new float[]{-1.0F, 0.15F, 0.00F},   new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.90D, 1.40D, 0.0D});
+			add(new double[]{1.65D, 1.40D, 0.0D});
+		}
 	}, "", null, 0, false),
-	SW1500(DieselSW1500.class,  new ModelSW1500(), "sw1500_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
-		{ }
+	SW1500(DieselSW1500.class,  new ModelSW1500(), "sw1500_", true,new float[]{-1.0F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.90D, 1.40D, 0.0D});
+			add(new double[]{1.65D, 1.40D, 0.0D});
+		}
 	}, "", null, 0, false),
-	MP900(DieselMP900.class,  new ModelMP900(), "mp900_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
-		{ }
+	MP900(DieselMP900.class,  new ModelMP900(), "mp900_", true,new float[]{-1.1F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.10D, 1.25D, 0.0D});
+			add(new double[]{2.1D, 1.25D, 0.0D});
+		}
 	}, "", null, 0, false),
 	MP15DCW9( DieselMP15DCW9.class,  new ModelMP15DCW9(), "mp15dcw-9_", true,new float[] {-1.2F, -0.01F, 0F},  new float[] { 180F, 180F, 0F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{
