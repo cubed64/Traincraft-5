@@ -1496,28 +1496,44 @@ public enum RenderEnum
 
 	/**ALCO**/
 	AlcoPA1( DieselPA1.class,  new ModelPA(), "AlcoPA1_", true,new float[] {-1.6F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+		{
+			add(new double[]{1.06D, 1.19D, 0.12D});
+		}
 	}, "", null, 0, false),
 	AlcoPB1( DieselPB1.class,  new ModelPB(), "AlcoPB1_", true,new float[] {-1.55F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+		{
+			add(new double[]{1.12D, 1.19D, 0.12D});
+		}
 	}, "", null, 0, false),
-	FA1( DieselFA1.class,  new ModelFA1(), "FA1_", true,new float[] {-1.6F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+	FA1( DieselFA1.class,  new ModelFA1(), "FA1_", true,new float[]{-1.4F, 0.125F, 0.00F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.86D, 1.19D, 0.12D});
+		}
 	}, "", null, 0, false),
-	FB1( DieselFB1.class,  new ModelFB1(), "FB1_", true,new float[] {-1.55F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+	FB1( DieselFB1.class,  new ModelFB1(), "FB1_", true,new float[]{-1.4F, 0.125F, 0.00F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.9D, 1.19D, 0.12D});
+		}
 	}, "", null, 0, false),
-	FA2( DieselFA2.class,  new ModelFA2(), "FA2_", true,new float[] {-1.6F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+	FA2( DieselFA2.class,  new ModelFA2(), "FA2_", true,new float[]{-1.4F, 0.125F, 0.00F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.91D, 1.19D, 0.0D});
+		}
 	}, "", null, 0, false),
-	FB2( DieselFB2.class,  new ModelFB2(), "FB2__", true,new float[] {-1.55F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+	FB2( DieselFB2.class,  new ModelFB2(), "FB2__", true,new float[]{-1.4F, 0.125F, 0.00F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.95D, 1.19D, 0.0D});
+		}
 	}, "", null, 0, false),
-	FPA4( DieselFPA4.class,  new ModelFPA4(), "FPA4_", true,new float[] {-1.6F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+	FPA4( DieselFPA4.class,  new ModelFPA4(), "FPA4_", true,new float[]{-1.4F, 0.125F, 0.00F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.91D, 1.19D, 0.0D});
+		}
 	}, "", null, 0, false),
-	FPB4( DieselFPB4.class,  new ModelFPB4(), "FPB4_", true,new float[] {-1.55F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+	FPB4( DieselFPB4.class,  new ModelFPB4(), "FPB4_", true,new float[]{-1.4F, 0.125F, 0.00F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.95D, 1.19D, 0.0D});
+		}
 	}, "", null, 0, false),
 	FAFDL( DieselFAFDL.class,  new ModelFAFDL(), "fafdl_", true,new float[] {-1.6F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{}
@@ -1644,11 +1660,17 @@ public enum RenderEnum
 	}, "", null, 0, false),
 
 	FMH16_66( DieselH16_66.class,  new ModelH16_66(), "FM_H16-66_", true,new float[] {-1.7F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
-		{}
+		{
+			add(new double[]{0.75D, 1.35D, 0.15D});
+			add(new double[]{0.75D, 1.35D, -0.15D});
+		}
 	}, "", null, 0, false),
 
 	FMH24_66( DieselH24_66.class,  new ModelH24_66(), "FM_H24-66_", true,new float[] {-1.9F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
-		{}
+		{
+			add(new double[]{0.78D, 1.35D, 0.15D});
+			add(new double[]{0.78D, 1.35D, -0.15D});
+		}
 	}, "", null, 0, false),
 
 	FMH24_66L( DieselH24_66L.class,  new ModelH24_66L(), "FM_H24-66_L_", true,new float[] {-1.9F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  null, "smoke", 3,  new ArrayList<double[]>() {
