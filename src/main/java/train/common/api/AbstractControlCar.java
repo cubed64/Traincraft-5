@@ -9,9 +9,11 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.Constants;
 import org.lwjgl.input.Keyboard;
 import train.common.Traincraft;
 import train.common.core.handlers.ConfigHandler;
@@ -72,13 +74,35 @@ public abstract class AbstractControlCar extends EntityRollingStock implements I
     protected void writeEntityToNBT(NBTTagCompound nbttagcompound)
     {
         super.writeEntityToNBT(nbttagcompound);
+        writeInventory(nbttagcompound);
+
         nbttagcompound.setString("lightingDetailsJSON", lightingDetailsJSON());
+
+
     }
+
+    private void writeInventory(NBTTagCompound nbttagcompound)
+    {
+        NBTTagList nbttaglist = new NBTTagList();
+        for (int i = 0; i < controlCarInventory.length; i++) {
+            if (controlCarInventory[i] != null) {
+                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+                nbttagcompound1.setByte("Slot", (byte) i);
+                controlCarInventory[i].writeToNBT(nbttagcompound1);
+                nbttaglist.appendTag(nbttagcompound1);
+            }
+        }
+        nbttagcompound.setTag("Items", nbttaglist);
+    }
+
+
 
     @Override
     protected void readEntityFromNBT(NBTTagCompound ntc)
     {
         super.readEntityFromNBT(ntc);
+        readInventory(ntc);
+
         JsonObject lightingDetailsJSONObject;
         try {
             lightingDetailsJSONObject = new JsonParser().parse(ntc.getString("lightingDetailsJSON")).getAsJsonObject();
@@ -94,6 +118,19 @@ public abstract class AbstractControlCar extends EntityRollingStock implements I
         beaconCycleIndex = lightingDetailsJSONObject.get("beaconCycleIndex").getAsByte();
 
         dataWatcher.updateObject(28, lightingDetailsJSON());
+    }
+
+    private void readInventory(NBTTagCompound ntc)
+    {
+        NBTTagList nbttaglist = ntc.getTagList("Items", Constants.NBT.TAG_COMPOUND);
+        controlCarInventory = new ItemStack[getSizeInventory()];
+        for (int i = 0; i < nbttaglist.tagCount(); i++) {
+            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
+            int j = nbttagcompound1.getByte("Slot") & 0xff;
+            if (j >= 0 && j < controlCarInventory.length) {
+                controlCarInventory[j] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
+            }
+        }
     }
 
 
@@ -152,7 +189,6 @@ public abstract class AbstractControlCar extends EntityRollingStock implements I
             dataWatcher.updateObject(28, lightingDetailsJSON());
         }
     }
-
 
     public void soundHorn() {
         for (EnumSounds sounds : EnumSounds.values()) {
@@ -402,8 +438,9 @@ public abstract class AbstractControlCar extends EntityRollingStock implements I
 
     //region Implement IInventory
     @Override
-    public int getSizeInventory() {
-        return 0;
+    public int getSizeInventory()
+    {
+        return inventorySize;
     }
 
     @Override
