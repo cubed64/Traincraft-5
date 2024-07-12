@@ -6,7 +6,7 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import org.lwjgl.opengl.GL11;
-import train.common.api.ControlCar;
+import train.common.api.AbstractControlCar;
 import train.common.api.DieselTrain;
 import train.common.api.Locomotive;
 import train.common.api.SteamTrain;
@@ -31,7 +31,7 @@ public class HUDloco extends GuiScreen {
 				}
 			}
 
-			if (game.thePlayer.ridingEntity instanceof ControlCar && game.theWorld.getEntityByID(game.thePlayer.ridingEntity.getDataWatcher().getWatchableObjectInt(29)) != null) {
+			if (game.thePlayer.ridingEntity instanceof AbstractControlCar && game.theWorld.getEntityByID(game.thePlayer.ridingEntity.getDataWatcher().getWatchableObjectInt(29)) != null) {
 				renderSkillHUD(event, (Locomotive) game.theWorld.getEntityByID(game.thePlayer.ridingEntity.getDataWatcher().getWatchableObjectInt(29)));
 			}
 		} else {

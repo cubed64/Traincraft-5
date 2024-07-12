@@ -14,6 +14,8 @@ import net.minecraft.entity.Entity;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
+import train.client.renderhelper.ModelRenderHelper;
+import train.common.enums.BoxName;
 
 public class ModelAmfleetCab extends ModelConverter //Same as Filename
 {
@@ -143,8 +145,8 @@ public class ModelAmfleetCab extends ModelConverter //Same as Filename
 		bodyModel[106] = new ModelRendererTurbo(this, 177, 33, textureX, textureY); // Box 203
 		bodyModel[107] = new ModelRendererTurbo(this, 161, 41, textureX, textureY); // Box 204
 		bodyModel[108] = new ModelRendererTurbo(this, 505, 33, textureX, textureY); // Box 205
-		bodyModel[109] = new ModelRendererTurbo(this, 22, 27, textureX, textureY, "lamp"); // Box 193 markerlight
-		bodyModel[110] = new ModelRendererTurbo(this, 22, 27, textureX, textureY, "lamp"); // Box 194 markerlight
+		bodyModel[109] = new ModelRendererTurbo(this, 22, 27, textureX, textureY, BoxName.lamp); // Box 193 markerlight
+		bodyModel[110] = new ModelRendererTurbo(this, 22, 27, textureX, textureY, BoxName.lamp); // Box 194 markerlight
 		bodyModel[111] = new ModelRendererTurbo(this, 22, 27, textureX, textureY); // Box 195
 		bodyModel[112] = new ModelRendererTurbo(this, 22, 27, textureX, textureY); // Box 196
 		bodyModel[113] = new ModelRendererTurbo(this, 207, 132, textureX, textureY); // Box 197
@@ -256,9 +258,9 @@ public class ModelAmfleetCab extends ModelConverter //Same as Filename
 		bodyModel[219] = new ModelRendererTurbo(this, 3, 179, textureX, textureY); // Box 223
 		bodyModel[220] = new ModelRendererTurbo(this, 21, 185, textureX, textureY); // Box 224
 		bodyModel[221] = new ModelRendererTurbo(this, 21, 185, textureX, textureY); // Box 225
-		bodyModel[222] = new ModelRendererTurbo(this, 20, 179, textureX, textureY, "lamp"); // Box 226 BLINKY
-		bodyModel[223] = new ModelRendererTurbo(this, 38, 179, textureX, textureY, "lamp"); // Box 227 CLYDE
-		bodyModel[224] = new ModelRendererTurbo(this, 29, 179, textureX, textureY, "lamp"); // Box 228 GLOWEY
+		bodyModel[222] = new ModelRendererTurbo(this, 20, 179, textureX, textureY, BoxName.commander); // Box 226 BLINKY
+		bodyModel[223] = new ModelRendererTurbo(this, 38, 179, textureX, textureY, BoxName.commander); // Box 227 CLYDE
+		bodyModel[224] = new ModelRendererTurbo(this, 29, 179, textureX, textureY, BoxName.commander); // Box 228 GLOWEY
 		bodyModel[225] = new ModelRendererTurbo(this, 52, 184, textureX, textureY); // Box 81
 		bodyModel[226] = new ModelRendererTurbo(this, 52, 172, textureX, textureY); // Box 82
 		bodyModel[227] = new ModelRendererTurbo(this, 50, 181, textureX, textureY); // Box 83
@@ -267,22 +269,22 @@ public class ModelAmfleetCab extends ModelConverter //Same as Filename
 		bodyModel[230] = new ModelRendererTurbo(this, 59, 178, textureX, textureY); // Box 234
 		bodyModel[231] = new ModelRendererTurbo(this, 182, 148, textureX, textureY); // Box 235
 		bodyModel[232] = new ModelRendererTurbo(this, 182, 159, textureX, textureY); // Box 236
-		bodyModel[233] = new ModelRendererTurbo(this, 193, 162, textureX, textureY, "lamp"); // Box 237 HEADLIGHT
-		bodyModel[234] = new ModelRendererTurbo(this, 193, 162, textureX, textureY, "lamp"); // Box 238 HEADLIGHT
+		bodyModel[233] = new ModelRendererTurbo(this, 193, 162, textureX, textureY, BoxName.lamp); // Box 237 HEADLIGHT
+		bodyModel[234] = new ModelRendererTurbo(this, 193, 162, textureX, textureY, BoxName.lamp); // Box 238 HEADLIGHT
 		bodyModel[235] = new ModelRendererTurbo(this, 214, 182, textureX, textureY); // Box 239 door cover 1
 		bodyModel[236] = new ModelRendererTurbo(this, 239, 203, textureX, textureY); // Box 240 door cover 2
-		bodyModel[237] = new ModelRendererTurbo(this, 220, 32, textureX, textureY, "lamp"); // Box 241 DITCHY 1
+		bodyModel[237] = new ModelRendererTurbo(this, 220, 32, textureX, textureY, BoxName.ditch); // Box 241 DITCHY 1
 		bodyModel[238] = new ModelRendererTurbo(this, 227, 32, textureX, textureY); // Box 242
 		bodyModel[239] = new ModelRendererTurbo(this, 227, 32, textureX, textureY); // Box 243
-		bodyModel[240] = new ModelRendererTurbo(this, 220, 32, textureX, textureY, "lamp"); // Box 244 DITCHY 1
-		bodyModel[241] = new ModelRendererTurbo(this, 220, 37, textureX, textureY, "lamp"); // Box 245 DITCHY 2
+		bodyModel[240] = new ModelRendererTurbo(this, 220, 32, textureX, textureY, BoxName.ditch); // Box 244 DITCHY 1
+		bodyModel[241] = new ModelRendererTurbo(this, 220, 37, textureX, textureY, BoxName.ditch); // Box 245 DITCHY 2
 		bodyModel[242] = new ModelRendererTurbo(this, 227, 37, textureX, textureY); // Box 246
-		bodyModel[243] = new ModelRendererTurbo(this, 220, 37, textureX, textureY, "lamp"); // Box 247 DITCHY 2
+		bodyModel[243] = new ModelRendererTurbo(this, 220, 37, textureX, textureY, BoxName.ditch); // Box 247 DITCHY 2
 		bodyModel[244] = new ModelRendererTurbo(this, 227, 37, textureX, textureY); // Box 248
 		bodyModel[245] = new ModelRendererTurbo(this, 227, 27, textureX, textureY); // Box 249
-		bodyModel[246] = new ModelRendererTurbo(this, 220, 27, textureX, textureY, "lamp"); // Box 250 DITCHY 3
+		bodyModel[246] = new ModelRendererTurbo(this, 220, 27, textureX, textureY, BoxName.ditch); // Box 250 DITCHY 3
 		bodyModel[247] = new ModelRendererTurbo(this, 227, 27, textureX, textureY); // Box 251
-		bodyModel[248] = new ModelRendererTurbo(this, 220, 27, textureX, textureY, "lamp"); // Box 252 DITCHY 3
+		bodyModel[248] = new ModelRendererTurbo(this, 220, 27, textureX, textureY, BoxName.ditch); // Box 252 DITCHY 3
 		bodyModel[249] = new ModelRendererTurbo(this, 242, 174, textureX, textureY); // Box 253
 		bodyModel[250] = new ModelRendererTurbo(this, 227, 99, textureX, textureY); // Box 254
 		bodyModel[251] = new ModelRendererTurbo(this, 269, 190, textureX, textureY); // Box 255
@@ -291,7 +293,7 @@ public class ModelAmfleetCab extends ModelConverter //Same as Filename
 		bodyModel[254] = new ModelRendererTurbo(this, 424, 185, textureX, textureY); // Box 1164
 		bodyModel[255] = new ModelRendererTurbo(this, 193, 196, textureX, textureY); // Box 265
 		bodyModel[256] = new ModelRendererTurbo(this, 193, 190, textureX, textureY); // Box 266
-		bodyModel[257] = new ModelRendererTurbo(this, 174, 144, textureX, textureY, "lamp"); // Box 267 numberboard
+		bodyModel[257] = new ModelRendererTurbo(this, 174, 144, textureX, textureY, BoxName.lamp); // Box 267 numberboard
 		bodyModel[258] = new ModelRendererTurbo(this, 105, 184, textureX, textureY); // Box 268
 		bodyModel[259] = new ModelRendererTurbo(this, 95, 115, textureX, textureY); // Box 329
 		bodyModel[260] = new ModelRendererTurbo(this, 95, 112, textureX, textureY); // Box 330
@@ -1469,19 +1471,8 @@ public class ModelAmfleetCab extends ModelConverter //Same as Filename
 		bodyModel[304].rotateAngleY = -3.14159265F;
 	}
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 305; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 	}
 }

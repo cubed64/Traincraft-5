@@ -5,6 +5,7 @@ import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.Entity;
+import train.common.api.IRollingStockLightControls;
 import train.common.api.Locomotive;
 
 public class PacketLocomotiveDitchLights implements IMessage
@@ -39,7 +40,6 @@ public class PacketLocomotiveDitchLights implements IMessage
 
     public static class Handler implements IMessageHandler<PacketLocomotiveDitchLights, IMessage>
     {
-
         @Override
         public IMessage onMessage(PacketLocomotiveDitchLights message, MessageContext context)
         {
@@ -51,6 +51,10 @@ public class PacketLocomotiveDitchLights implements IMessage
 				((Locomotive) TrainEntity).setPacketLocomotiveDitchLightsMode(message.ditchLightsMode);
 
 			}
+			else if (TrainEntity instanceof IRollingStockLightControls)
+            {
+                ((IRollingStockLightControls) TrainEntity).setPacketDitchLightsMode(message.ditchLightsMode);
+            }
 
             return null;
         }

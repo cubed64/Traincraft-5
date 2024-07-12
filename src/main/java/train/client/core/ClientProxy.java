@@ -255,6 +255,8 @@ public class ClientProxy extends CommonProxy {
 			return te != null && te instanceof TileTrainWbench ? new GuiTrainCraftingBlock(player.inventory, player.worldObj, (TileTrainWbench) te) : null;
 		case (GuiIDs.LOCO):
 			return riddenByEntity != null ? new GuiLoco2(riddenByEntity.inventory, entity) : null;
+		case (GuiIDs.CONTROL_CAR):
+			return riddenByEntity != null ? new GuiControlCar(riddenByEntity.inventory, entity) : null;
 		case (GuiIDs.FORNEY):
 			return riddenByEntity != null ? new GuiForney(riddenByEntity.inventory, entity) : null;
 		case (GuiIDs.CRAFTING_CART):
