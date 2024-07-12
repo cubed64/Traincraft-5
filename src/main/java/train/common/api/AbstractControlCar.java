@@ -279,38 +279,38 @@ public abstract class AbstractControlCar extends EntityRollingStock implements I
                         if (riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
                             int dir = MathHelper
                                     .floor_double((((EntityPlayer) riddenByEntity).rotationYaw * 4F) / 360F + 0.5D) & 3;
-                            System.out.println(dir);
+                            //System.out.println(dir);
                             if (dir == 2) {
                                 if (forwardPressed) {
                                     connectedLocomotive.motionZ -= 0.0075 * this.accelerate;
-                                    System.out.println("A");
+                                    //System.out.println("A");
                                 } else {
                                     connectedLocomotive.motionZ += 0.0075 * this.accelerate;
-                                    System.out.println("B");
+                                    //System.out.println("B");
                                 }
                             } else if (dir == 0) {
                                 if (forwardPressed) {
                                     connectedLocomotive.motionZ += 0.0075 * this.accelerate;
-                                    System.out.println("C");
+                                    //System.out.println("C");
                                 } else {
                                     connectedLocomotive.motionZ -= 0.0075 * this.accelerate;
-                                    System.out.println("D");
+                                    //System.out.println("D");
                                 }
                             } else if (dir == 1) {
                                 if (forwardPressed) {
                                     connectedLocomotive.motionX -= 0.0075 * this.accelerate;
-                                    System.out.println("E");
+                                    //System.out.println("E");
                                 } else {
                                     connectedLocomotive.motionX += 0.0075 * this.accelerate;
-                                    System.out.println("F");
+                                    //System.out.println("F");
                                 }
                             } else {
                                 if (forwardPressed) {
                                     connectedLocomotive.motionX += 0.0075 * this.accelerate;
-                                    System.out.println("G");
+                                    //System.out.println("G");
                                 } else {
                                     connectedLocomotive.motionX -= 0.0075 * this.accelerate;
-                                    System.out.println("H");
+                                    //System.out.println("H");
                                 }
                             }
                         }
