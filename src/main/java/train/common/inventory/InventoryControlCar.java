@@ -6,7 +6,9 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import train.common.api.*;
+import train.common.api.AbstractControlCar;
+import train.common.api.EntityRollingStock;
+
 
 public class InventoryControlCar extends Container
 {
