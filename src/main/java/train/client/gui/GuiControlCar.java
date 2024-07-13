@@ -1,5 +1,7 @@
 package train.client.gui;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.jcirmodelsquad.tcjcir.features.autotrain.IAT2Compatible;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
@@ -352,14 +354,26 @@ public class GuiControlCar extends GuiContainer
             drawTexturedModalRect(j + 79 + 18 * k1, k + 53, 190, 0, 18, 18);
         }
 
-        //JsonObject guiDetails = new JsonParser().parse(controlCar.connectedLocomotive.guiDetailsDW()).getAsJsonObject();
-//
-        //fontRendererObj.drawStringWithShadow("Carts pulled: " + guiDetails. get("cartsPulled"), 1, 10, 0xFFFFFF);
-        //fontRendererObj.drawStringWithShadow("Mass pulled: " + guiDetails.get("massPulled"), 1, 20, 0xFFFFFF);
-        //fontRendererObj.drawStringWithShadow("Speed reduction: " + guiDetails.get("slowDown") + " km/h", 1, 30, 0xFFFFFF);
-        //fontRendererObj.drawStringWithShadow("Accel reduction: " + guiDetails.get("accelSlowDown"), 1, 40, 0xFFFFFF);
-        //fontRendererObj.drawStringWithShadow("Brake reduction: " + guiDetails.get("brakeSlowDown"), 1, 50, 0xFFFFFF);
-        //fontRendererObj.drawStringWithShadow("Maximum Speed: " + (controlCar.connectedLocomotive.getCustomSpeedGUI()) + " km/h", 1, 110, 0xFFFFFF);
-        //fontRendererObj.drawStringWithShadow("Destination: " + (controlCar.connectedLocomotive.getDestinationGUI()), 1, 120, 0xFFFFFF);
+        if (locomotiveUnderControl != null)
+        {
+            JsonObject guiDetails = new JsonParser().parse(locomotiveUnderControl.guiDetailsDW()).getAsJsonObject();
+            fontRendererObj.drawStringWithShadow("Carts pulled: " + guiDetails. get("cartsPulled"), 1, 10, 0xFFFFFF);
+            fontRendererObj.drawStringWithShadow("Mass pulled: " + guiDetails.get("massPulled"), 1, 20, 0xFFFFFF);
+            fontRendererObj.drawStringWithShadow("Speed reduction: " + guiDetails.get("slowDown") + " km/h", 1, 30, 0xFFFFFF);
+            fontRendererObj.drawStringWithShadow("Accel reduction: " + guiDetails.get("accelSlowDown"), 1, 40, 0xFFFFFF);
+            fontRendererObj.drawStringWithShadow("Brake reduction: " + guiDetails.get("brakeSlowDown"), 1, 50, 0xFFFFFF);
+
+
+            fontRendererObj.drawStringWithShadow("Fuel consumption: " + ((locomotiveUnderControl.getFuelConsumption() *0.2)+"").substring(0,Math.min(((locomotiveUnderControl.getFuelConsumption() *0.2)+"").length(),4))+ " mB/s", 1,
+                    60, 0xFFFFFF);
+            fontRendererObj.drawStringWithShadow("Fuel: " + locomotiveUnderControl.getFuel(), 1, 70, 0xFFFFFF);
+            fontRendererObj.drawStringWithShadow("Power: " + locomotiveUnderControl.getPower() + " Mhp", 1, 80, 0xFFFFFF);
+            fontRendererObj.drawStringWithShadow("State: " + locomotiveUnderControl.getState(), 1, 90, 0xFFFFFF);
+            fontRendererObj.drawStringWithShadow("Heat level: " + locomotiveUnderControl.getOverheatLevel(), 1, 100, 0xFFFFFF);
+            fontRendererObj.drawStringWithShadow("Maximum Speed: " + (locomotiveUnderControl.getCustomSpeedGUI()) + " km/h", 1, 110, 0xFFFFFF);
+            fontRendererObj.drawStringWithShadow("Destination: " + (locomotiveUnderControl.getDestinationGUI()), 1, 120, 0xFFFFFF);
+            fontRendererObj.drawStringWithShadow("Primary Loco: " + (locomotiveUnderControl.getInventoryName() + " [" + locomotiveUnderControl.getTrainNote() + "]"), 1, 130, 0xFFFFFF);
+
+        }
     }
 }
