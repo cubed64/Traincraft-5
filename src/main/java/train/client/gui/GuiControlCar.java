@@ -103,10 +103,6 @@ public class GuiControlCar extends GuiContainer
         }
         //endregion TrainLocked
 
-        if (controlCar instanceof IAT2Compatible) {
-            this.buttonList.add(this.buttonLock = new GuiButton(5, var1 + 108, var2 - 34, 67, 12, "AutoTrain-2"));
-        }
-
         //region guiTCTextFieldTrainNote
         controlCar.guiTCTextFieldTrainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, var2 - 39, 170,15);
         controlCar.guiTCTextFieldTrainNote.setText(controlCar.getTrainNote());
