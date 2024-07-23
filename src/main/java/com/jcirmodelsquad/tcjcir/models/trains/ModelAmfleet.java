@@ -11,7 +11,6 @@ package com.jcirmodelsquad.tcjcir.models.trains;
 
 
 import net.minecraft.entity.Entity;
-import tmt.ModelBase;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 
@@ -985,10 +984,6 @@ public class ModelAmfleet extends ModelConverter //Same as Filename
 		{
 			bodyModel[i].render(f5);
 		}
-	}
-
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
-	{
 	}
 
 	public ModelRendererTurbo amfleetModel[];

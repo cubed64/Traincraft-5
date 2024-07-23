@@ -10,7 +10,6 @@
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
@@ -21,8 +20,6 @@ import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.enums.BoxName;
 import train.common.library.Info;
-
-import java.util.ArrayList;
 
 public class ModelFA2 extends ModelConverter //Same as Filename
 {
@@ -2299,19 +2296,5 @@ public class ModelFA2 extends ModelConverter //Same as Filename
 			theBetterTrucks.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-
-	}
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5) { }
-	public ModelRendererTurbo ModelFA2[];
-
-	public float[] getTrans() {
-		return new float[]{-1.4F, 0.125F, 0.00F};
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.91D, 1.19D, 0.0D});
-			}
-		};
 	}
 }

@@ -1045,5 +1045,4 @@ public class Modelcq310 extends ModelConverter //Same as Filename
 		bodyModel[252].addBox(0F, 0F, 0F, 1, 1, 8, 0F); // Box 252
 		bodyModel[252].setRotationPoint(34.5F, 3F, -4F);
 	}
-	public float[] getTrans() { return new float[]{-1.5F, 0.155F, 0F}; }
 }

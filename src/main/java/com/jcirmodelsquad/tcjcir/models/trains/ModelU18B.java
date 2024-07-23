@@ -13,7 +13,6 @@ import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergBnew;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2_new;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2_old;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
@@ -24,8 +23,6 @@ import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.enums.BoxName;
 import train.common.library.Info;
-
-import java.util.ArrayList;
 
 public class ModelU18B extends ModelConverter //Same as Filename
 {
@@ -1574,25 +1571,6 @@ public class ModelU18B extends ModelConverter //Same as Filename
 	//blombergB_2_CSXBlue
 	//fb2_CSXBlue
 	//TypeB_2_Black_FNM
-
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.77D, 1.45D, 0.0D});
-			}
-		};
-	}
-	public float[] getTrans() {
-		return new float[]{-1.3F, 0.155F, 0F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
 }
 
 

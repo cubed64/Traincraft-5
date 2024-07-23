@@ -10,7 +10,6 @@
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnewSmol;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
@@ -21,8 +20,6 @@ import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.enums.BoxName;
 import train.common.library.Info;
-
-import java.util.ArrayList;
 
 public class ModelU50 extends ModelConverter //Same as Filename
 {
@@ -1146,16 +1143,5 @@ public class ModelU50 extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 
-	}
-	public float[] getTrans() {
-		return new float[]{-2.15F, 0.15F, 0.00F};
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{3.6D, 1.5D, 0.0D});
-				add(new double[]{-0.15D, 1.5D, 0.0D});
-			}
-		};
 	}
 }

@@ -1952,9 +1952,7 @@ public class Modelclass74 extends ModelConverter //Same as Filename
 		bodyModel[475].addBox(0F, 0F, 0F, 1, 2, 1, 0F); // Box 116
 		bodyModel[475].setRotationPoint(14F, 6.5F, 8F);
 	}
-	public float[] getTrans() {
-		return new float[]{-1.0F, 0.15F, 0.00F};
-	}
+
 	Modelclass74_deets deets = new Modelclass74_deets();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {

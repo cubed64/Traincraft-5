@@ -1227,15 +1227,4 @@ public class ModelHBC1B extends ModelConverter//Same as Filename
 			GL11.glPopMatrix();
 		}
 	}
-	public float[] getTrans() {
-		return new float[]{-0F, 0.15F, 0.00F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
 }
