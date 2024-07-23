@@ -190,11 +190,7 @@ public class CommonProxy implements IGuiHandler {
 		case (GuiIDs.LOCO):
 			return riddenByEntity != null ? new InventoryLoco(riddenByEntity.inventory, (EntityRollingStock) entity) : null;
 		case (GuiIDs.CONTROL_CAR):
-				if (entity instanceof ControlCar && ((ControlCar)entity).connectedLocomotive != null) {
-					Locomotive loco = ((ControlCar)entity).connectedLocomotive;
-					return new InventoryLoco(riddenByEntity.inventory, loco);
-				}
-				//return (entity instanceof ControlCar && ((ControlCar)entity).connectedLocomotive != null) ? new InventoryLoco((Locomotive)((ControlCar)entity).connectedLocomotive).inven, (EntityRollingStock) entity) : null;
+			return riddenByEntity != null ? new InventoryControlCar(riddenByEntity.inventory, (EntityRollingStock) entity) : null;
 		case (GuiIDs.FORNEY):
 			return riddenByEntity != null ? new InventoryForney(player.inventory, (EntityRollingStock) entity) : null;
 		case (GuiIDs.CRAFTING_CART):

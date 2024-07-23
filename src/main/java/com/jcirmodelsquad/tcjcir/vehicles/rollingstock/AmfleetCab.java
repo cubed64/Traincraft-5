@@ -3,10 +3,15 @@ package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
-import train.common.api.ControlCar;
+import net.minecraftforge.common.util.Constants;
+import train.common.api.AbstractControlCar;
+import train.common.library.EnumTrains;
 
-public class AmfleetCab extends ControlCar {
+public class AmfleetCab extends AbstractControlCar
+{
     public AmfleetCab(World world) {
         super(world);
     }
@@ -20,6 +25,12 @@ public class AmfleetCab extends ControlCar {
         prevPosX = d;
         prevPosY = d1;
         prevPosZ = d2;
+    }
+
+    @Override
+    public String getInventoryName()
+    {
+        return EnumTrains.amfleetcab.getInternalName();
     }
 
     @Override

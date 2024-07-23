@@ -4,7 +4,6 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import train.common.api.ControlCar;
 import train.common.api.EntityRollingStock;
 import train.common.api.IPassenger;
 

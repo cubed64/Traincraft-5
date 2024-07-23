@@ -1,13 +1,19 @@
 package train.common.api;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.Constants;
 import org.lwjgl.input.Keyboard;
 import train.common.Traincraft;
 import train.common.core.handlers.ConfigHandler;
@@ -16,36 +22,137 @@ import train.common.library.EnumSounds;
 import train.common.library.GuiIDs;
 import train.common.library.Info;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public abstract class ControlCar extends EntityRollingStock implements IPassenger {
+public abstract class AbstractControlCar extends EntityRollingStock implements IInventory, IPassenger, IRollingStockLightControls {
 
     public Locomotive connectedLocomotive;
     public int whistleDelay;
+
+    //region inventory
+    public int inventorySize;
+    private int slotsFilled=0;
+    protected ItemStack controlCarInventory[];
+    public int numCargoSlots;
+    public int numCargoSlots1;
+    public int numCargoSlots2;
+    //endregion inventory
 
     private boolean forwardPressed = false;
     private boolean backwardPressed = false;
     private boolean brakePressed = false;
 
-    public ControlCar(World world) {
+    public boolean isLightsEnabled = false;
+    public boolean isBeaconEnabled = false;
+    public byte beaconCycleIndex = 0;
+    public byte ditchLightMode = 0;
+    
+    public AbstractControlCar(World world)
+    {
         super(world);
+        numCargoSlots = 3;
+        numCargoSlots1 = 3;
+        numCargoSlots2 = 3;
+        inventorySize = numCargoSlots + numCargoSlots2 + numCargoSlots1 + 1;
+        controlCarInventory = new ItemStack[inventorySize];
+        dataWatcher.addObject(28, lightingDetailsJSON());
         if (connectedLocomotive == null) {
             dataWatcher.addObject(29, 0);
         } else {
             dataWatcher.addObject(29, connectedLocomotive.getEntityId());
         }
+
+
     }
 
-    public ControlCar(World world, double d, double d1, double d2) {
+    public AbstractControlCar(World world, double d, double d1, double d2) {
         super(world);
         
     }
 
     @Override
-    public void onUpdate() {
-        super.onUpdate();
-        if (!worldObj.isRemote) {
+    protected void writeEntityToNBT(NBTTagCompound nbttagcompound)
+    {
+        super.writeEntityToNBT(nbttagcompound);
+        writeInventory(nbttagcompound);
+
+        nbttagcompound.setString("lightingDetailsJSON", lightingDetailsJSON());
+
+
+    }
+
+    private void writeInventory(NBTTagCompound nbttagcompound)
+    {
+        NBTTagList nbttaglist = new NBTTagList();
+        for (int i = 0; i < controlCarInventory.length; i++) {
+            if (controlCarInventory[i] != null) {
+                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+                nbttagcompound1.setByte("Slot", (byte) i);
+                controlCarInventory[i].writeToNBT(nbttagcompound1);
+                nbttaglist.appendTag(nbttagcompound1);
+            }
+        }
+        nbttagcompound.setTag("Items", nbttaglist);
+    }
+
+
+
+    @Override
+    protected void readEntityFromNBT(NBTTagCompound ntc)
+    {
+        super.readEntityFromNBT(ntc);
+        readInventory(ntc);
+
+        JsonObject lightingDetailsJSONObject;
+        try {
+            lightingDetailsJSONObject = new JsonParser().parse(ntc.getString("lightingDetailsJSON")).getAsJsonObject();
+        }
+        catch (Exception e)
+        {
+            lightingDetailsJSONObject = lightingDetailsAsJSON();
+        }
+
+        isLightsEnabled = lightingDetailsJSONObject.get("isLightsEnabled").getAsBoolean();
+        isBeaconEnabled = lightingDetailsJSONObject.get("isBeaconEnabled").getAsBoolean();
+        ditchLightMode = lightingDetailsJSONObject.get("ditchLightMode").getAsByte();
+        beaconCycleIndex = lightingDetailsJSONObject.get("beaconCycleIndex").getAsByte();
+
+        dataWatcher.updateObject(28, lightingDetailsJSON());
+    }
+
+    private void readInventory(NBTTagCompound ntc)
+    {
+        NBTTagList nbttaglist = ntc.getTagList("Items", Constants.NBT.TAG_COMPOUND);
+        controlCarInventory = new ItemStack[getSizeInventory()];
+        for (int i = 0; i < nbttaglist.tagCount(); i++) {
+            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
+            int j = nbttagcompound1.getByte("Slot") & 0xff;
+            if (j >= 0 && j < controlCarInventory.length) {
+                controlCarInventory[j] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
+            }
+        }
+    }
+
+
+    private void cycleBeaconIndex()
+    {
+        if (isBeaconEnabled && ticksExisted % 5 == 0)
+        {
+            beaconCycleIndex++;
+            if (beaconCycleIndex == 4)
+            {
+                beaconCycleIndex = 0;
+            }
+        }
+    }
+
+    @Override
+    public void onUpdate()
+    {
+        cycleBeaconIndex();
+
+        if (worldObj.isRemote == false)
+        {
             //Server side stuff.
 
             if (cartLinked1 != null) {
@@ -67,12 +174,19 @@ public abstract class ControlCar extends EntityRollingStock implements IPassenge
             }
 
 
-        } else {
+        } else
+            {
             //Client side stuff.
         }
         handleTrainMovement();
         if (whistleDelay > 0) {
             whistleDelay--;
+        }
+
+        super.onUpdate();
+        if (!worldObj.isRemote)
+        {
+            dataWatcher.updateObject(28, lightingDetailsJSON());
         }
     }
 
@@ -103,7 +217,8 @@ public abstract class ControlCar extends EntityRollingStock implements IPassenge
 
     @Override
     public void pressKey(int i) {
-        if (i == 7 && riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
+        if (i == 7 && riddenByEntity != null && riddenByEntity instanceof EntityPlayer)
+        {
             System.out.println("UwU");
             ((EntityPlayer) riddenByEntity).openGui(Traincraft.instance, GuiIDs.CONTROL_CAR, worldObj, (int) this.posX, (int) this.posY, (int) this.posZ);
         }
@@ -164,38 +279,38 @@ public abstract class ControlCar extends EntityRollingStock implements IPassenge
                         if (riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
                             int dir = MathHelper
                                     .floor_double((((EntityPlayer) riddenByEntity).rotationYaw * 4F) / 360F + 0.5D) & 3;
-                            System.out.println(dir);
+                            //System.out.println(dir);
                             if (dir == 2) {
                                 if (forwardPressed) {
                                     connectedLocomotive.motionZ -= 0.0075 * this.accelerate;
-                                    System.out.println("A");
+                                    //System.out.println("A");
                                 } else {
                                     connectedLocomotive.motionZ += 0.0075 * this.accelerate;
-                                    System.out.println("B");
+                                    //System.out.println("B");
                                 }
                             } else if (dir == 0) {
                                 if (forwardPressed) {
                                     connectedLocomotive.motionZ += 0.0075 * this.accelerate;
-                                    System.out.println("C");
+                                    //System.out.println("C");
                                 } else {
                                     connectedLocomotive.motionZ -= 0.0075 * this.accelerate;
-                                    System.out.println("D");
+                                    //System.out.println("D");
                                 }
                             } else if (dir == 1) {
                                 if (forwardPressed) {
                                     connectedLocomotive.motionX -= 0.0075 * this.accelerate;
-                                    System.out.println("E");
+                                    //System.out.println("E");
                                 } else {
                                     connectedLocomotive.motionX += 0.0075 * this.accelerate;
-                                    System.out.println("F");
+                                    //System.out.println("F");
                                 }
                             } else {
                                 if (forwardPressed) {
                                     connectedLocomotive.motionX += 0.0075 * this.accelerate;
-                                    System.out.println("G");
+                                    //System.out.println("G");
                                 } else {
                                     connectedLocomotive.motionX -= 0.0075 * this.accelerate;
-                                    System.out.println("H");
+                                    //System.out.println("H");
                                 }
                             }
                         }
@@ -241,4 +356,162 @@ public abstract class ControlCar extends EntityRollingStock implements IPassenge
             brakePressed = false;
         }
     }
+
+    public String lightingDetailsJSON()
+    {
+        JsonObject lightingDetailsJSON = new JsonObject();
+        lightingDetailsJSON.addProperty("isLightsEnabled", isLightsEnabled);
+        lightingDetailsJSON.addProperty("isBeaconEnabled", isBeaconEnabled);
+        lightingDetailsJSON.addProperty("beaconCycleIndex", beaconCycleIndex);
+        lightingDetailsJSON.addProperty("ditchLightMode", ditchLightMode);
+        return lightingDetailsJSON.toString();
+    }
+
+    public JsonObject lightingDetailsAsJSON()
+    {
+        JsonObject lightingDetailsJSON = new JsonObject();
+        lightingDetailsJSON.addProperty("isLightsEnabled", isLightsEnabled);
+        lightingDetailsJSON.addProperty("isBeaconEnabled", isBeaconEnabled);
+        lightingDetailsJSON.addProperty("beaconCycleIndex", beaconCycleIndex);
+        lightingDetailsJSON.addProperty("ditchLightMode", ditchLightMode);
+        return lightingDetailsJSON;
+    }
+
+    /**
+     *
+     * @param isLightsOn set 0 if lights is false, 1 if true
+     */
+    public void setPacketLights(boolean isLightsOn)
+    {
+        isLightsEnabled = isLightsOn;
+    }
+
+    /**
+     *
+     * @param isBeaconOn set 0 if beacon is false, 1 if true
+     */
+    public void setPacketBeacon(boolean isBeaconOn)
+    {
+        isBeaconEnabled = isBeaconOn;
+    }
+
+    /**Sets the Ditch light mode
+     *
+     * @param ditchLightMode set 0 for off,
+     */
+    public void setPacketDitchLightsMode(byte ditchLightMode)
+    {
+        this.ditchLightMode = ditchLightMode;
+    }
+
+    public int getLocomotiveBeingControlledEntityID()
+    {
+        return dataWatcher.getWatchableObjectInt(29);
+    }
+
+    public boolean isLightsEnabled()
+    {
+        return AsJsonObject(dataWatcher.getWatchableObjectString(28)).get("isLightsEnabled").getAsBoolean();
+    }
+
+    public boolean isBeaconEnabled()
+    {
+        return AsJsonObject(dataWatcher.getWatchableObjectString(28)).get("isBeaconEnabled").getAsBoolean();
+    }
+
+    public byte getBeaconCycleIndex()
+    {
+        return AsJsonObject(dataWatcher.getWatchableObjectString(28)).get("beaconCycleIndex").getAsByte();
+    }
+
+    public boolean isDitchLightsEnabled()
+    {
+        return AsJsonObject(dataWatcher.getWatchableObjectString(28)).get("ditchLightMode").getAsByte() > 0;
+    }
+
+    private JsonObject AsJsonObject(String string)
+    {
+        return new JsonParser().parse(string).getAsJsonObject();
+    }
+
+
+
+    //region Implement IInventory
+    @Override
+    public int getSizeInventory()
+    {
+        return inventorySize;
+    }
+
+    @Override
+    public void markDirty() { }
+
+    @Override
+    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
+        return false;
+    }
+
+    @Override
+    public void openInventory() {
+    }
+
+    @Override
+    public void closeInventory() {
+    }
+
+    @Override
+    public int getInventoryStackLimit() {
+        return 64;
+    }
+
+    @Override
+    public ItemStack[] getInventory() {
+        return controlCarInventory;
+    }
+
+    @Override
+    public ItemStack getStackInSlot(int i) {
+        return controlCarInventory[i];
+    }
+
+    @Override
+    public ItemStack getStackInSlotOnClosing(int par1) {
+        if (this.controlCarInventory[par1] != null) {
+            ItemStack var2 = this.controlCarInventory[par1];
+            this.controlCarInventory[par1] = null;
+            return var2;
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public ItemStack decrStackSize(int i, int j) {
+        if (controlCarInventory[i] != null) {
+            if (controlCarInventory[i].stackSize <= j) {
+                ItemStack itemstack = controlCarInventory[i];
+                controlCarInventory[i] = null;
+                return itemstack;
+            }
+            ItemStack itemstack1 = controlCarInventory[i].splitStack(j);
+            if (controlCarInventory[i].stackSize == 0) {
+                controlCarInventory[i] = null;
+            }
+            return itemstack1;
+
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public void setInventorySlotContents(int i, ItemStack itemstack) {
+        controlCarInventory[i] = itemstack;
+        if (itemstack != null && itemstack.stackSize > getInventoryStackLimit())
+        {
+            itemstack.stackSize = getInventoryStackLimit();
+        }
+    }
+
+    //endregion Implement IInventory
 }

@@ -4,11 +4,11 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import train.common.api.ControlCar;
-import train.common.api.LiquidManager;
+import train.common.api.AbstractControlCar;
 import train.common.library.EnumTrains;
 
-public class S1BL extends ControlCar {
+public class S1BL extends AbstractControlCar
+{
     public S1BL(World world) {
         super(world);
     }
@@ -40,6 +40,12 @@ public class S1BL extends ControlCar {
         if ((motionX>0.1 || motionZ>0.1) && ticksExisted % 40 == 0) {
             setDefaultMass(-EnumTrains.SMSC1.getMass() * 1.75);//this should be S1BL
         }
+    }
+
+    @Override
+    public String getInventoryName()
+    {
+        return null;
     }
 
     @Override

@@ -4,10 +4,11 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import train.common.api.ControlCar;
+import train.common.api.AbstractControlCar;
 import train.common.api.IPassenger;
+import train.common.library.EnumTrains;
 
-public class TestControlCar extends ControlCar implements IPassenger {
+public class TestControlCar extends AbstractControlCar {
 
 	public TestControlCar(World world) {
 		super(world);
@@ -22,6 +23,12 @@ public class TestControlCar extends ControlCar implements IPassenger {
 		prevPosX = d;
 		prevPosY = d1;
 		prevPosZ = d2;
+	}
+
+	@Override
+	public String getInventoryName()
+	{
+		return null;
 	}
 
 	@Override

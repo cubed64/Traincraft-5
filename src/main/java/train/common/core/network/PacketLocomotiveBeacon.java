@@ -5,6 +5,7 @@ import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.Entity;
+import train.common.api.IRollingStockLightControls;
 import train.common.api.Locomotive;
 
 public class PacketLocomotiveBeacon implements IMessage
@@ -51,6 +52,10 @@ public class PacketLocomotiveBeacon implements IMessage
 				((Locomotive) TrainEntity).setPacketLocomotiveBeacon(message.beacon);
 
 			}
+            else if (TrainEntity instanceof IRollingStockLightControls)
+            {
+                ((IRollingStockLightControls) TrainEntity).setPacketBeacon(message.beacon);
+            }
 
             return null;
         }
