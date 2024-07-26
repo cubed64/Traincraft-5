@@ -1126,17 +1126,68 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 }
             }
         }
+
+        // Handle Automatic Train Control
+        AutoTrain2Handler();
+
+        super.onUpdate();
+        if (!worldObj.isRemote)
+        {
+            //System.out.println(motionX +" "+motionZ);
+            dataWatcher.updateObject(3, destination);
+            dataWatcher.updateObject(5, trainID);
+            dataWatcher.updateObject(15, getMaxSpeed());
+            dataWatcher.updateObject(20, overheatLevel);
+            dataWatcher.updateObject(22, locoState);
+            dataWatcher.updateObject(24, fuelTrain);
+            dataWatcher.updateObject(25, (int) convertSpeed(Math.sqrt(motionX * motionX + motionZ * motionZ)));
+            dataWatcher.updateObject(26, guiDetailsJSON());
+            dataWatcher.updateObject(27, renderRefs.toString());
+            dataWatcher.updateObject(28, locomotiveLightingDetailsJSON());
+
+
+            if (this.worldObj.handleMaterialAcceleration(this.boundingBox.expand(0.0D, -0.2000000059604645D, 0.0D).contract(0.001D, 0.001D, 0.001D), Material.water, this) && this.updateTicks % 4 == 0)
+            {
+                if (!hasDrowned && !worldObj.isRemote && FMLCommonHandler.instance().getMinecraftServerInstance() != null && this.lastEntityRider instanceof EntityPlayer)
+                {
+                    FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().sendChatMsg(new ChatComponentText(((EntityPlayer) this.lastEntityRider).getDisplayName() + " drowned " + this.getTrainOwner() + "'s locomotive"));
+                    FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().sendChatMsg(new ChatComponentText(((EntityPlayer) this.lastEntityRider).getDisplayName() + " drowned " + this.getTrainOwner() + "'s locomotive"));
+                }
+                //this.attackEntityFrom(DamageSource.generic, 100);
+                this.setCustomSpeed(0);// set speed to normal
+                this.setAccel(0.000001);// simulate a break down
+                this.setBrake(1);
+                this.motionX *= 0.97;// slowly slows down
+                this.motionZ *= 0.97;
+                this.fuelTrain = 0;
+                this.hasDrowned = true;
+                this.canCheckInvent = false;
+                blowUpDelay++;
+                if (blowUpDelay > 20)
+                {
+                    this.attackEntityFrom(DamageSource.drown, 100);
+                }
+            }/*
+             * else{ this.canCheckInvent=true; this.hasDrowned=false; }
+             */
+        }
+    }
+
+    private void AutoTrain2Handler()
+    {
         //Todo: Better packets
         //Minecraft Train Control things.
-        if (!worldObj.isRemote) {
-            boolean autoTrainOn = false;
-            try {
-                AutoTrain2Handler handlerField = (AutoTrain2Handler) getClass().getField("autoTrainHandler").get(this);
-                autoTrainOn = handlerField.autoTrainActivated;
-
-            } catch (IllegalAccessException | NoSuchFieldException e) {
-
-            }
+        if (!worldObj.isRemote)
+        {
+            // Commenting this out as this does nothing right now but cause errors
+            //boolean autoTrainOn = false;
+            //try {
+            //    AutoTrain2Handler handlerField = (AutoTrain2Handler) getClass().getField("autoTrainHandler").get(this);
+            //    autoTrainOn = handlerField.autoTrainActivated;
+            //
+            //} catch (IllegalAccessException | NoSuchFieldException e) {
+            //
+            //}
             if (mtcStatus == 1 | mtcStatus == 2) {
                 if ((mtcType == 2 || mtcType == 3) && !isConnected) {
                     //Send updates every few seconds
@@ -1247,45 +1298,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 }
 
             }
-        }
-
-
-        super.onUpdate();
-        if (!worldObj.isRemote) {
-            //System.out.println(motionX +" "+motionZ);
-            dataWatcher.updateObject(3, destination);
-            dataWatcher.updateObject(5, trainID);
-            dataWatcher.updateObject(15, getMaxSpeed());
-            dataWatcher.updateObject(20, overheatLevel);
-            dataWatcher.updateObject(22, locoState);
-            dataWatcher.updateObject(24, fuelTrain);
-            dataWatcher.updateObject(25, (int) convertSpeed(Math.sqrt(motionX * motionX + motionZ * motionZ)));
-            dataWatcher.updateObject(26, guiDetailsJSON());
-            dataWatcher.updateObject(27, renderRefs.toString());
-            dataWatcher.updateObject(28, locomotiveLightingDetailsJSON());
-
-
-            if (this.worldObj.handleMaterialAcceleration(this.boundingBox.expand(0.0D, -0.2000000059604645D, 0.0D).contract(0.001D, 0.001D, 0.001D), Material.water, this) && this.updateTicks % 4 == 0) {
-                if (!hasDrowned && !worldObj.isRemote && FMLCommonHandler.instance().getMinecraftServerInstance() != null && this.lastEntityRider instanceof EntityPlayer) {
-                    FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().sendChatMsg(new ChatComponentText(((EntityPlayer) this.lastEntityRider).getDisplayName() + " drowned " + this.getTrainOwner() + "'s locomotive"));
-                    FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().sendChatMsg(new ChatComponentText(((EntityPlayer) this.lastEntityRider).getDisplayName() + " drowned " + this.getTrainOwner() + "'s locomotive"));
-                }
-                //this.attackEntityFrom(DamageSource.generic, 100);
-                this.setCustomSpeed(0);// set speed to normal
-                this.setAccel(0.000001);// simulate a break down
-                this.setBrake(1);
-                this.motionX *= 0.97;// slowly slows down
-                this.motionZ *= 0.97;
-                this.fuelTrain = 0;
-                this.hasDrowned = true;
-                this.canCheckInvent = false;
-                blowUpDelay++;
-                if (blowUpDelay > 20) {
-                    this.attackEntityFrom(DamageSource.drown, 100);
-                }
-            }/*
-             * else{ this.canCheckInvent=true; this.hasDrowned=false; }
-             */
         }
     }
 
