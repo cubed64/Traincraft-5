@@ -175,8 +175,8 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		dataWatcher.addObject(13, trainCreator);
 		dataWatcher.addObject(31, trainNote); //train note
 
-		shouldChunkLoad=ConfigHandler.CHUNK_LOADING;
-		this.setFlag(7, shouldChunkLoad);
+		// Chunk loading by default should always be disabled when placing a locomotive
+		this.setFlag(7, false);
 
 
 		for (EnumTrains trains : EnumTrains.values()) {
