@@ -201,6 +201,11 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		this.setPosition(x, y, z);
 	}
 
+	public boolean IsChunkLoading()
+	{
+		return getFlag(7);
+	}
+
 	@Override
 	public AxisAlignedBB getCollisionBox(Entity p_70114_1_) {
 		if(riddenByEntity!=p_70114_1_){
@@ -359,6 +364,18 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			}
 		}
 		return false;
+	}
+
+	public void setPacketChunkLoading(boolean shouldChunkLoad)
+	{
+		this.shouldChunkLoad = shouldChunkLoad;
+		if (getFlag(7))
+		{
+			this.setFlag(7, false);
+
+			ForgeChunkManager.releaseTicket(chunkTicket);
+			chunkTicket = null;
+		}
 	}
 
 	/**

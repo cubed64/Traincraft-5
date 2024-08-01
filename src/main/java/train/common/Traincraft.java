@@ -62,7 +62,7 @@ public class Traincraft {
 	public static SimpleNetworkWrapper modChannel;
 	public static SimpleNetworkWrapper keyChannel;
 	public static SimpleNetworkWrapper rotationChannel;
-
+	public static SimpleNetworkWrapper toggleChunkLoadingChannel;
 
 	public static SimpleNetworkWrapper slotschannel;
 	public static SimpleNetworkWrapper ignitionChannel;
