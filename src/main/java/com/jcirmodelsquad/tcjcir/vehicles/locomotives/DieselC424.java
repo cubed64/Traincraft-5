@@ -19,7 +19,7 @@ public class DieselC424 extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "Spokane, Portland & Seattle");
         textureDescriptionMap.put(1, "Morristown & Erie");
-        textureDescriptionMap.put(2, "Western New York & Pacific");
+        textureDescriptionMap.put(2, "Western New York & Pennsylvania");
         textureDescriptionMap.put(3, "Washaska & Old Fox RR");
         textureDescriptionMap.put(4, "Latrans Range RR");
         textureDescriptionMap.put(5, "NdeM");
