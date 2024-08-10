@@ -1,5 +1,8 @@
 package train.common.api;
 
+import cpw.mods.fml.common.network.NetworkRegistry;
+import io.netty.buffer.ByteBuf;
+import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -8,15 +11,45 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
+import train.common.Traincraft;
 import train.common.adminbook.ServerLogger;
+import train.common.core.handlers.ConfigHandler;
+import train.common.core.network.PacketParkingBrake;
 
-public abstract class Freight extends EntityRollingStock implements IInventory {
+public abstract class Freight extends EntityRollingStock implements IInventory
+{
+	public boolean parkingBrake = false;
+
 	public ItemStack cargoItems[];
 	protected double itemInsideCount = 0;
 	private int slotsFilled=0;
-	public Freight(World world) {
+	public Freight(World world)
+	{
 		super(world);
 		dataWatcher.addObject(22, 0);
+		dataWatcher.addObject(25, (int) convertSpeed(Math.sqrt(Math.abs(motionX * motionX) + Math.abs(motionZ * motionZ))));
+		dataWatcher.addObject(27, "" + parkingBrake);
+	}
+
+	@Override
+	public void readSpawnData(ByteBuf additionalData)
+	{
+		super.readSpawnData(additionalData);
+		parkingBrake = additionalData.readBoolean();
+	}
+
+	@Override
+	public void writeSpawnData(ByteBuf buffer)
+	{
+		super.writeSpawnData(buffer);
+		buffer.writeBoolean(parkingBrake);
+	}
+
+	@Override
+	protected void writeEntityToNBT(NBTTagCompound nbttagcompound)
+	{
+		super.writeEntityToNBT(nbttagcompound);
+		nbttagcompound.setBoolean("parkingBrake", parkingBrake);
 	}
 
 	@Override
@@ -132,15 +165,19 @@ public abstract class Freight extends EntityRollingStock implements IInventory {
 	}
 
 	@Override
-	public void onUpdate() {
+	public void onUpdate()
+	{
 		super.onUpdate();
 		handleMass();
+		handleParkingBrake();
+
 	}
 
 	/**
 	 * Handle mass depending on item count tenders are done differently
 	 */
-	protected void handleMass() {
+	protected void handleMass()
+	{
 		if (this.updateTicks % 10 != 0)
 			return;
 		if (worldObj.isRemote)
@@ -155,6 +192,15 @@ public abstract class Freight extends EntityRollingStock implements IInventory {
 		}
 		mass += (this.itemInsideCount * 0.0005);// original modifier value was 0.0001
 	}
+
+	protected void handleParkingBrake()
+	{
+		if (parkingBrake)
+		{
+			motionX = 0.0;
+			motionZ = 0.0;
+		}
+	}
 	
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
@@ -166,6 +212,9 @@ public abstract class Freight extends EntityRollingStock implements IInventory {
 	@Override
 	protected void readEntityFromNBT(NBTTagCompound nbttagcompound) {
 		super.readEntityFromNBT(nbttagcompound);
+
+		parkingBrake = nbttagcompound.getBoolean("parkingBrake");
+		dataWatcher.updateObject(27, "" + parkingBrake);
 		ItemStack cargoItemsCount[];
 		NBTTagList nbttaglist = nbttagcompound.getTagList("Items", Constants.NBT.TAG_COMPOUND);
 		cargoItemsCount = new ItemStack[getSizeInventory()];
@@ -202,4 +251,44 @@ public abstract class Freight extends EntityRollingStock implements IInventory {
 
 	@Override
 	public ItemStack[] getInventory(){return cargoItems;}
+
+	private double convertSpeed(double speed) {
+		//System.out.println("X "+motionX +" Z "+motionZ);
+		if (ConfigHandler.REAL_TRAIN_SPEED) {
+			speed *= 2;// applying ratio
+		} else {
+			speed *= 6;
+		}
+		speed *= 36;
+		//speed *= 10;// convert in ms
+		//speed *= 6;// applying ratio
+		//speed *= 3.6;// convert in km/h
+		return speed;
+	}
+
+	public boolean getParkingBrakeFromPacket()
+	{
+		return parkingBrake;
+	}
+
+
+	public void setParkingBrakeFromPacket(boolean set) {
+		parkingBrake = set;
+	}
+
+
+	@Override
+	public boolean canBePushed()
+	{
+		return false;
+	}
+
+	@Override
+	public boolean canBeAdjusted(EntityMinecart cart) {
+		return getParkingBrakeFromPacket();
+	}
+
+	public double getSpeed() {
+		return dataWatcher.getWatchableObjectInt(25);
+	}
 }

@@ -6,6 +6,7 @@ import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.Entity;
 import train.common.api.EntityRollingStock;
+import train.common.api.Freight;
 import train.common.api.Locomotive;
 
 public class PacketParkingBrake implements IMessage {
@@ -41,7 +42,10 @@ public class PacketParkingBrake implements IMessage {
 			if (TrainEntity instanceof Locomotive) {
 
 				((Locomotive) TrainEntity).setParkingBrakeFromPacket(message.ParkingBrake);
-
+			}
+			else if (TrainEntity instanceof Freight)
+			{
+				((Freight) TrainEntity).setParkingBrakeFromPacket(message.ParkingBrake);
 			}
 
 			if (TrainEntity instanceof EntityRollingStock) {
