@@ -21,6 +21,18 @@ public class BombCart extends AbstractPassengerCar
 	}
 
     @Override
+    public double getAdditionalYOffset()
+    {
+        return 1.1F;
+    }
+
+    @Override
+    public float getOptimalLinkingDistance()
+    {
+        return 1F;
+    }
+
+    @Override
     public boolean shouldRiderSit(){return true;}
 
     public void pressKey(int i)
@@ -41,17 +53,7 @@ public class BombCart extends AbstractPassengerCar
 
     }
 
-    @Override
-    public double getAdditionalYOffset()
-    {
-        return 1.1F;
-    }
 
-    @Override
-    public float getOptimalLinkingDistance()
-    {
-        return 1F;
-    }
 }
 
 
