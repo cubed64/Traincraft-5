@@ -9,6 +9,8 @@ import net.minecraft.item.ItemStack;
 import org.lwjgl.opengl.GL11;
 import tmt.Tessellator;
 import train.common.Traincraft;
+import train.common.core.network.AdminBook.PacketAdminBookClient;
+import train.common.core.network.AdminBook.PacketAdminBookToggleChunkLoading;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,11 +36,7 @@ public class GUIAdminBook extends GuiScreen {
             list=null;
             return;
         }
-        if(csv.charAt(0) == '<') {
-            isTrainPage=true;
-        } else {
-            isTrainPage = false;
-        }
+        isTrainPage = csv.charAt(0) == '<';
         list = csv.split(",");
     }
     @Override
@@ -53,11 +51,11 @@ public class GUIAdminBook extends GuiScreen {
 
         switch (button.id){
             case -1:{
-                Traincraft.keyChannel.sendToServer(new ItemAdminBook.PacketAdminBookClient( "0:"+list[0].substring(1,list[0].length()), Minecraft.getMinecraft().thePlayer.getEntityId()));//tell server to drop items
+                Traincraft.keyChannel.sendToServer(new PacketAdminBookClient( "0:"+list[0].substring(1), Minecraft.getMinecraft().thePlayer.getEntityId()));//tell server to drop items
                 break;
             }
             case 0:{
-                Traincraft.keyChannel.sendToServer(new ItemAdminBook.PacketAdminBookClient( "1:"+list[0].substring(1), Minecraft.getMinecraft().thePlayer.getEntityId()));//tell server to drop items
+                Traincraft.keyChannel.sendToServer(new PacketAdminBookClient( "1:"+list[0].substring(1), Minecraft.getMinecraft().thePlayer.getEntityId()));//tell server to drop items
                 break;
             }
             case 1:{
@@ -66,7 +64,7 @@ public class GUIAdminBook extends GuiScreen {
                     buttonList = new ArrayList();
                     initGui();
                 } else {
-                    Traincraft.keyChannel.sendToServer(new ItemAdminBook.PacketAdminBookClient( list[1], Minecraft.getMinecraft().thePlayer.getEntityId()));//tell server to send a new gui
+                    Traincraft.keyChannel.sendToServer(new PacketAdminBookClient( list[1], Minecraft.getMinecraft().thePlayer.getEntityId()));//tell server to send a new gui
                 }
 
                 break;
@@ -79,13 +77,19 @@ public class GUIAdminBook extends GuiScreen {
             }
             case 3:{
                 if(list[0]!=null && list[0].length()>1) {
-                    Traincraft.keyChannel.sendToServer(new ItemAdminBook.PacketAdminBookClient("0:" + list[0].substring(1), Minecraft.getMinecraft().thePlayer.getEntityId()));//tell server to drop items
-                    Traincraft.keyChannel.sendToServer(new ItemAdminBook.PacketAdminBookClient("1:" + list[0].substring(1), Minecraft.getMinecraft().thePlayer.getEntityId()));//tell server to drop items
+                    Traincraft.keyChannel.sendToServer(new PacketAdminBookClient("0:" + list[0].substring(1), Minecraft.getMinecraft().thePlayer.getEntityId()));//tell server to drop items
+                    Traincraft.keyChannel.sendToServer(new PacketAdminBookClient("1:" + list[0].substring(1), Minecraft.getMinecraft().thePlayer.getEntityId()));//tell server to drop items
                 }
                 break;
             }
+
+            case 5:
+                Traincraft.toggleChunkLoadingChannel.sendToServer(new PacketAdminBookToggleChunkLoading(false));//tell server to drop items
+            break;
+
+
             default:{
-                Traincraft.keyChannel.sendToServer(new ItemAdminBook.PacketAdminBookClient( list[button.id-3], Minecraft.getMinecraft().thePlayer.getEntityId()));//tell server to send a new gui
+                Traincraft.keyChannel.sendToServer(new PacketAdminBookClient( list[button.id-3], Minecraft.getMinecraft().thePlayer.getEntityId()));//tell server to send a new gui
                 break;
             }
         }
@@ -93,17 +97,25 @@ public class GUIAdminBook extends GuiScreen {
     }
 
     @Override
-    public void initGui() {
+    public void initGui()
+    {
         super.initGui();
-        if(list==null){
+        if(list==null)
+        {
             return;
         }
+
+        this.buttonList.add(new GuiButton(5, guiLeft+10, guiTop+100 , 70, 20, "Stop ALL Locomotive Chunk Loading"));
+
         this.guiLeft = (this.width - 176) / 2;
         this.guiTop = (this.height - 166) / 2;
 
-        if(!isTrainPage) {
+        if(!isTrainPage)
+        {
             int index=0;
-            for (int i = 6 * page; i < 6+(6*page) && i<list.length; i++) {//only show 6 entries per page
+            //only show 6 entries per page
+            for (int i = 6 * page; i < 6+(6*page) && i<list.length; i++)
+            {
                 this.buttonList.add(new GuiButton(i+3, guiLeft-80, guiTop+20 +(index*18), 140, 20,
                         list[i].equals("")?"Back":
                                 list[i].contains("_")?
@@ -115,22 +127,32 @@ public class GUIAdminBook extends GuiScreen {
                 }
                 index++;
             }
-            if(list.length-6-(page*6)>0){
+
+            if(list.length-6-(page*6)>0)
+            {
                 //draw next
                 this.buttonList.add(new GuiButton(2, guiLeft-70, guiTop+140 , 70, 20, "next page"));
             }
-            if (page>0){
+            if (page>0)
+            {
                 this.buttonList.add(new GuiButton(1, guiLeft+10, guiTop+140 , 70, 20, "back"));
             }
-        } else {
-            try {
+        }
+        else
+        {
+            try
+            {
                 //draw back
                 this.buttonList.add(new GuiButton(-1,guiLeft+85,guiTop+140,90,20,"clone inventory"));
                 this.buttonList.add(new GuiButton(0,guiLeft+5,guiTop+140,70,20,"delete entry"));
                 this.buttonList.add(new GuiButton(3,guiLeft+180,guiTop+140,80,20,"clone & delete"));
                 this.buttonList.add(new GuiButton(1, guiLeft-70, guiTop+140 , 70, 20, "back"));
                 items = ServerLogger.getItems(list[9]);
-            } catch (Exception e){}
+            }
+            catch (Exception e)
+            {
+
+            }
         }
 
     }

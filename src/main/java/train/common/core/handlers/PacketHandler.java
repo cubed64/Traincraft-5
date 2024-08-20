@@ -17,8 +17,10 @@ import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import cpw.mods.fml.relauncher.Side;
 import train.common.Traincraft;
-import train.common.adminbook.ItemAdminBook;
 import train.common.core.network.*;
+import train.common.core.network.AdminBook.PacketAdminBook;
+import train.common.core.network.AdminBook.PacketAdminBookClient;
+import train.common.core.network.AdminBook.PacketAdminBookToggleChunkLoading;
 import train.common.library.Info;
 import train.common.mtc.network.*;
 
@@ -43,10 +45,12 @@ public class PacketHandler {
 		Traincraft.switchStandLockChannel = NetworkRegistry.INSTANCE.newSimpleChannel("switchStandLock");
 		Traincraft.cargoSelectionChannel = NetworkRegistry.INSTANCE.newSimpleChannel("cargoSelection");
 
+		Traincraft.toggleChunkLoadingChannel = NetworkRegistry.INSTANCE.newSimpleChannel("ToggleChunkLoading");
 
 
-		Traincraft.keyChannel.registerMessage(ItemAdminBook.PacketAdminBook.Handler.class, ItemAdminBook.PacketAdminBook.class, 4, Side.CLIENT);
-		Traincraft.keyChannel.registerMessage(ItemAdminBook.PacketAdminBookClient.Handler.class, ItemAdminBook.PacketAdminBookClient.class, 5, Side.SERVER);
+		Traincraft.keyChannel.registerMessage(PacketAdminBook.Handler.class, PacketAdminBook.class, 4, Side.CLIENT);
+		Traincraft.keyChannel.registerMessage(PacketAdminBookClient.Handler.class, PacketAdminBookClient.class, 5, Side.SERVER);
+		Traincraft.toggleChunkLoadingChannel.registerMessage(PacketAdminBookToggleChunkLoading.Handler.class, PacketAdminBookToggleChunkLoading.class, 22, Side.SERVER);
 
 		Traincraft.keyChannel.registerMessage(PacketKeyPress.Handler.class, PacketKeyPress.class, 1,
 				Side.SERVER);

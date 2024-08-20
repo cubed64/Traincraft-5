@@ -175,8 +175,8 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		dataWatcher.addObject(13, trainCreator);
 		dataWatcher.addObject(31, trainNote); //train note
 
-		shouldChunkLoad=ConfigHandler.CHUNK_LOADING;
-		this.setFlag(7, shouldChunkLoad);
+		// Chunk loading by default should always be disabled when placing a locomotive
+		this.setFlag(7, false);
 
 
 		for (EnumTrains trains : EnumTrains.values()) {
@@ -199,6 +199,11 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	public AbstractTrains(World world, double x, double y, double z){
 		this(world);
 		this.setPosition(x, y, z);
+	}
+
+	public boolean IsChunkLoading()
+	{
+		return getFlag(7);
 	}
 
 	@Override
@@ -359,6 +364,18 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			}
 		}
 		return false;
+	}
+
+	public void setPacketChunkLoading(boolean shouldChunkLoad)
+	{
+		this.shouldChunkLoad = shouldChunkLoad;
+		if (getFlag(7))
+		{
+			this.setFlag(7, false);
+
+			ForgeChunkManager.releaseTicket(chunkTicket);
+			chunkTicket = null;
+		}
 	}
 
 	/**
