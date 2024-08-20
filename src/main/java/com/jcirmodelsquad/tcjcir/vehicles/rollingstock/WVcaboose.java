@@ -1,15 +1,13 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
-import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import train.common.Traincraft;
-import train.common.api.EntityRollingStock;
-import train.common.api.IPassenger;
+import train.common.api.AbstractPassengerCar;
 import train.common.library.GuiIDs;
 
-public class WVcaboose extends EntityRollingStock implements IPassenger {
+public class WVcaboose extends AbstractPassengerCar
+{
     public WVcaboose(World world) {
         super(world);
         textureDescriptionMap.put(0, "ATSF");
@@ -21,23 +19,11 @@ public class WVcaboose extends EntityRollingStock implements IPassenger {
         textureDescriptionMap.put(6, "Magnolia");
     }
 
-    public WVcaboose(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+    public WVcaboose(World world, double posX, double posY, double posZ)
+	{
+		super(world, posX, posY, posZ);
+	}
 
-    @Override
-    public void updateRiderPosition() {
-        if(riddenByEntity!=null) {
-            riddenByEntity.setPosition(posX + 0.0f, posY + getMountedYOffset() + riddenByEntity.getYOffset() + 0.3125, posZ + 0.0);
-        }
-    }
     /*public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
@@ -71,30 +57,6 @@ public class WVcaboose extends EntityRollingStock implements IPassenger {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
         }
     }*/
-    @Override
-    public void setDead() {
-        super.setDead();
-        isDead = true;
-    }
-
-    @Override
-    public boolean interactFirst(EntityPlayer entityplayer) {
-        playerEntity = entityplayer;
-        if ((super.interactFirst(entityplayer))) {
-            return false;
-        }
-        if (!worldObj.isRemote) {
-            ItemStack itemstack = entityplayer.inventory.getCurrentItem();
-            if(lockThisCart(itemstack, entityplayer))return true;
-            if (riddenByEntity != null && (riddenByEntity instanceof EntityPlayer) && riddenByEntity != entityplayer) {
-                return true;
-            }
-            if (!worldObj.isRemote) {
-                entityplayer.mountEntity(this);
-            }
-        }
-        return true;
-    }
 
     @Override
     public void pressKey(int i) {
@@ -110,22 +72,14 @@ public class WVcaboose extends EntityRollingStock implements IPassenger {
     }
 
     @Override
-    public boolean canBeRidden() {
-        return true;
+    public double getAdditionalYOffset()
+    {
+        return 0.3125F;
     }
 
     @Override
-    public boolean isStorageCart() {
-        return false;
-    }
-
-    @Override
-    public boolean isPoweredCart() {
-        return false;
-    }
-
-    @Override
-    public float getOptimalDistance(EntityMinecart cart) {
+    public float getOptimalLinkingDistance()
+    {
         return 1.9375F;
     }
 }
