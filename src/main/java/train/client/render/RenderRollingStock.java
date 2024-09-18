@@ -220,7 +220,6 @@ public class RenderRollingStock extends Render {
 			GL11.glRotatef(angle, 1.0F, 0.0F, 0.0F);
 		}
 
-		// Start
 		RenderEnum renders = cart.getRenderSpec();
 		try {
 			Method theTransMethod = renders.getModel().getClass().getDeclaredMethod("getTrans");
