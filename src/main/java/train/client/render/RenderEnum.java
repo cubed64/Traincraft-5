@@ -1142,8 +1142,10 @@ public enum RenderEnum
 	SD40A(DieselSD40A.class, new ModelSD40A(), "sd40a_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
-	SDP40(DieselSDP40.class, new ModelSDP40(), "sdp40_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
-		{ }
+	SDP40(DieselSDP40.class, new ModelSDP40(), "sdp40_", true,new float[] {-1.7F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{2.23D, 1.4D, 0.0D});
+		}
 	}, "", null, 0, false),
 	SDP40F( DieselSDP40F.class,  new ModelSDP40F(), "sdp40f_", true,new float[] {-2F, -0.14F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
 		{

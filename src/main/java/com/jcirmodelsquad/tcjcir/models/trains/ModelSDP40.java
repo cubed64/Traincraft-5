@@ -1927,20 +1927,4 @@ public class ModelSDP40 extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{2.23D, 1.4D, 0.0D});
-			}
-		};
-	}
-	public float[] getTrans() { return new float[]{-1.7F, 0.15F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
 }
