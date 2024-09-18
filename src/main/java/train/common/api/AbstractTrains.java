@@ -861,6 +861,11 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		if (this.uniqueID != -1) stack.getTagCompound().setInteger("uniqueID", this.uniqueID);
 		if (this.trainCreator != null && this.trainCreator.length() > 0) stack.getTagCompound().setString("trainCreator", this.trainCreator);
 		if (this.getColor() != -1) stack.getTagCompound().setInteger("trainColor", this.getColor());
+
+		// Only save the overlay configuration to NBT if it exists. No need to store an empty configuration in NBT as it will be initialized as the default when the entity spawns in.
+		if (this.acceptsOverlayTextures && this.getOverlayTextureContainer().getType() != OverlayTextureManager.Type.NONE) {
+			stack.getTagCompound().setTag("overlayTextureConfigTag", getOverlayTextureContainer().getOverlayConfigTag());
+		}
 	}
 
 	protected void setDefaultMass(double def) {
