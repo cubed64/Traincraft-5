@@ -140,19 +140,19 @@ public class ModelRenderHelper
     {
         for (ModelRendererTurbo bm : bodyModel)
         {
-            if (bm.boxName.contains("lamp") && locomotive.isLocomotiveLightsEnabled())
+            if (bm.boxName.contains("lamp") && locomotive.isLightsEnabled())
             {
                 Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
                 bm.render(f5);
                 Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
             }
-            else if (locomotive.isLocomotiveDitchLightsEnabled() && bm.boxName.contains("ditch"))
+            else if (locomotive.isDitchLightsEnabled() && bm.boxName.contains("ditch"))
             {
                 Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
                 bm.render(f5);
                 Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
             }
-            else if (locomotive.isLocomotiveBeaconEnabled() && (bm.boxName.contains("commander") || bm.boxName.contains("prime")))
+            else if (locomotive.isBeaconEnabled() && (bm.boxName.contains("commander") || bm.boxName.contains("prime")))
             {
                 if (bm.boxName.contains("commander"))
                 {
@@ -206,7 +206,7 @@ public class ModelRenderHelper
     {
         for (ModelRendererTurbo bm : bodyModel)
         {
-            if (bm.boxName.contains("lamp") && locomotive.isLocomotiveLightsEnabled())
+            if (bm.boxName.contains("lamp") && locomotive.isLightsEnabled())
             {
                 Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
                 bm.render(f5);
@@ -236,7 +236,7 @@ public class ModelRenderHelper
     {
         for (ModelRendererTurbo bm : bodyModel)
         {
-            if (bm.boxName.contains("lamp") && locomotive.isLocomotiveLightsEnabled())
+            if (bm.boxName.contains("lamp") && locomotive.isLightsEnabled())
             {
                 Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
                 bm.render(f5);

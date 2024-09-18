@@ -19,6 +19,7 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
@@ -1178,7 +1179,10 @@ public class ModelM640 extends ModelConverter //Same as Filename
 	ModelMLW_3axle_Hiad boger = new ModelMLW_3axle_Hiad();
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 		for (int i = 0; i < 280; i++) {
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);

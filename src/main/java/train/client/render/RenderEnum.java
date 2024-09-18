@@ -1078,8 +1078,13 @@ public enum RenderEnum
 		{ }
 	}, "", null, 0, false),
 
-	GP38dash9W( DieselGP38dash9W.class, new ModelGP38dash9W(), "GP38-2W_Fixxed_MTS_2", false,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
-		{ }
+	GP38dash9W( DieselGP38dash9W.class, new ModelGP38dash9W(), "GP38-2W_Fixxed_MTS_2", false,new float[] {-1.8F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.45D, 1.5D, 0.0D});//front
+			add(new double[]{1.2D, 1.5D, 0.0D});//mid 1
+			add(new double[]{0.9D, 1.5D, 0.0D});//mid 2
+			add(new double[]{0.65D, 1.5D, 0.0D});//rear
+		}
 	}, "", null, 0, false),
 	GP38H3( DieselGP38H3.class,  new ModelGP38H3(), "gp38h3_", true,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{ }
@@ -1621,8 +1626,10 @@ public enum RenderEnum
 	M636R(DieselM636R.class, new ModelM63X_round(), "M636R_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
 		{ }
 	}, "", null, 0, false),
-	M640(DieselM640.class, new ModelM640(), "M640_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
-		{ }
+	M640(DieselM640.class, new ModelM640(), "M640_", true,new float[] {-1.7F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.7D, 1.5D, 0.0D});
+		}
 	}, "", null, 0, false),
 	M640W(DieselM640W.class, new ModelM63XW(), "M640W_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
 		{ }

@@ -6,19 +6,18 @@ import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.Entity;
 import train.common.api.IRollingStockLightControls;
-import train.common.api.Locomotive;
 
-public class PacketLocomotiveDitchLights implements IMessage
+public class PacketRollingStockDitchLights implements IMessage
 {
     byte ditchLightsMode;
     int	entityID;
 
-    public PacketLocomotiveDitchLights()
+    public PacketRollingStockDitchLights()
     {
 
     }
 
-    public PacketLocomotiveDitchLights(byte ditchLightsMode, int trainEntity)
+    public PacketRollingStockDitchLights(byte ditchLightsMode, int trainEntity)
     {
     	this.ditchLightsMode = ditchLightsMode;
     	this.entityID = trainEntity;
@@ -38,20 +37,15 @@ public class PacketLocomotiveDitchLights implements IMessage
 		bbuf.writeInt(this.entityID);
     }
 
-    public static class Handler implements IMessageHandler<PacketLocomotiveDitchLights, IMessage>
+    public static class Handler implements IMessageHandler<PacketRollingStockDitchLights, IMessage>
     {
         @Override
-        public IMessage onMessage(PacketLocomotiveDitchLights message, MessageContext context)
+        public IMessage onMessage(PacketRollingStockDitchLights message, MessageContext context)
         {
 			
 			Entity TrainEntity = context.getServerHandler().playerEntity.worldObj.getEntityByID(message.entityID);
 			
-			if (TrainEntity instanceof Locomotive) {
-
-				((Locomotive) TrainEntity).setPacketLocomotiveDitchLightsMode(message.ditchLightsMode);
-
-			}
-			else if (TrainEntity instanceof IRollingStockLightControls)
+			if (TrainEntity instanceof IRollingStockLightControls)
             {
                 ((IRollingStockLightControls) TrainEntity).setPacketDitchLightsMode(message.ditchLightsMode);
             }

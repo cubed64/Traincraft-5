@@ -192,13 +192,13 @@ public class GuiControlCar extends GuiContainer
             case 6: // Lights
                 if (controlCar.isLightsEnabled())
                 {
-                    Traincraft.locomotiveLightsChannel.sendToServer(new PacketLocomotiveLights(false, controlCar.getEntityId()));
+                    Traincraft.rollingStockLightsChannel.sendToServer(new PacketRollingStockLights(false, controlCar.getEntityId()));
                     controlCar.isLightsEnabled = false;
                     guibutton.displayString = "Lights: Off";
                 }
                 else
                 {
-                    Traincraft.locomotiveLightsChannel.sendToServer(new PacketLocomotiveLights(true, controlCar.getEntityId()));
+                    Traincraft.rollingStockLightsChannel.sendToServer(new PacketRollingStockLights(true, controlCar.getEntityId()));
                     controlCar.isLightsEnabled = true;
                     guibutton.displayString = "Lights: On";
                 }
@@ -206,13 +206,13 @@ public class GuiControlCar extends GuiContainer
             case 7: // Beacon
                 if (controlCar.isBeaconEnabled())
                 {
-                    Traincraft.locomotiveBeaconChannel.sendToServer(new PacketLocomotiveBeacon(false, controlCar.getEntityId()));
+                    Traincraft.rollingStockBeaconChannel.sendToServer(new PacketRollingStockBeacon(false, controlCar.getEntityId()));
                     controlCar.isBeaconEnabled = false;
                     guibutton.displayString = "Beacon: Off";
                 }
                 else
                 {
-                    Traincraft.locomotiveBeaconChannel.sendToServer(new PacketLocomotiveBeacon(true, controlCar.getEntityId()));
+                    Traincraft.rollingStockBeaconChannel.sendToServer(new PacketRollingStockBeacon(true, controlCar.getEntityId()));
                     controlCar.isBeaconEnabled = true;
                     guibutton.displayString = "Beacon: On";
                 }
@@ -220,13 +220,13 @@ public class GuiControlCar extends GuiContainer
             case 8: // DitchLights
                 if (controlCar.isDitchLightsEnabled())
                 {
-                    Traincraft.locomotiveDitchLightsChannel.sendToServer(new PacketLocomotiveDitchLights((byte)0, controlCar.getEntityId()));
+                    Traincraft.rollingStockDitchLightsChannel.sendToServer(new PacketRollingStockDitchLights((byte)0, controlCar.getEntityId()));
                     controlCar.ditchLightMode = 0;
                     guibutton.displayString = "Ditch Lights: Off";
                 }
                 else
                 {
-                    Traincraft.locomotiveDitchLightsChannel.sendToServer(new PacketLocomotiveDitchLights((byte)1, controlCar.getEntityId()));
+                    Traincraft.rollingStockDitchLightsChannel.sendToServer(new PacketRollingStockDitchLights((byte)1, controlCar.getEntityId()));
                     controlCar.ditchLightMode = 1;
                     guibutton.displayString = "Ditch Lights: On";
                 }
