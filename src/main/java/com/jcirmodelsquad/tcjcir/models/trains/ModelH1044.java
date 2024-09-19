@@ -18,7 +18,9 @@ import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
 import train.client.render.models.ModelTypeAClassico;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 public class ModelH1044 extends ModelConverter //Same as Filename
@@ -221,7 +223,7 @@ public class ModelH1044 extends ModelConverter //Same as Filename
 		bodyModel[178] = new ModelRendererTurbo(this, 237, 89, textureX, textureY); // Box 179
 		bodyModel[179] = new ModelRendererTurbo(this, 317, 89, textureX, textureY); // Box 180
 		bodyModel[180] = new ModelRendererTurbo(this, 305, 91, textureX, textureY); // Box 181
-		bodyModel[181] = new ModelRendererTurbo(this, 466, 70, textureX, textureY, "lamp"); // Box 182 light commander beacon low
+		bodyModel[181] = new ModelRendererTurbo(this, 466, 70, textureX, textureY, BoxName.commander); // Box 182 light commander beacon low
 		bodyModel[182] = new ModelRendererTurbo(this, 504, 65, textureX, textureY); // Box 183
 		bodyModel[183] = new ModelRendererTurbo(this, 212, 90, textureX, textureY); // Box 184
 		bodyModel[184] = new ModelRendererTurbo(this, 181, 91, textureX, textureY); // Box 185
@@ -232,7 +234,7 @@ public class ModelH1044 extends ModelConverter //Same as Filename
 		bodyModel[189] = new ModelRendererTurbo(this, 2, 69, textureX, textureY); // Box 190
 		bodyModel[190] = new ModelRendererTurbo(this, 329, 71, textureX, textureY); // Box 191
 		bodyModel[191] = new ModelRendererTurbo(this, 329, 68, textureX, textureY); // Box 192
-		bodyModel[192] = new ModelRendererTurbo(this, 457, 67, textureX, textureY, "lamp"); // Box 193 light commander beacon forward
+		bodyModel[192] = new ModelRendererTurbo(this, 457, 67, textureX, textureY, BoxName.commander); // Box 193 light commander beacon forward
 		bodyModel[193] = new ModelRendererTurbo(this, 456, 73, textureX, textureY); // Box 194
 		bodyModel[194] = new ModelRendererTurbo(this, 12, 70, textureX, textureY); // Box 195
 		bodyModel[195] = new ModelRendererTurbo(this, 15, 70, textureX, textureY); // Box 196
@@ -265,7 +267,7 @@ public class ModelH1044 extends ModelConverter //Same as Filename
 		bodyModel[222] = new ModelRendererTurbo(this, 302, 4, textureX, textureY); // Box 204
 		bodyModel[223] = new ModelRendererTurbo(this, 251, 40, textureX, textureY); // Box 204
 		bodyModel[224] = new ModelRendererTurbo(this, 296, 27, textureX, textureY); // Box 204
-		bodyModel[225] = new ModelRendererTurbo(this, 441, 52, textureX, textureY, "lamp"); // Box 162 light commander beacon tall
+		bodyModel[225] = new ModelRendererTurbo(this, 441, 52, textureX, textureY, BoxName.commander); // Box 162 light commander beacon tall
 		bodyModel[226] = new ModelRendererTurbo(this, 505, 61, textureX, textureY); // Box 165
 		bodyModel[227] = new ModelRendererTurbo(this, 12, 67, textureX, textureY); // Box 196
 		bodyModel[228] = new ModelRendererTurbo(this, 15, 67, textureX, textureY); // Box 196
@@ -1052,20 +1054,10 @@ public class ModelH1044 extends ModelConverter //Same as Filename
 	ModelTypeAClassico theTrucks = new ModelTypeAClassico();
 	ModelTypeAnew theTypeA = new ModelTypeAnew();
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 252; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
+
 		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==15345 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==11){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/typeAclassico_Silver.png"));
 			GL11.glPushMatrix();

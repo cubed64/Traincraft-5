@@ -1673,11 +1673,15 @@ public enum RenderEnum
 			add(new double[]{1.68D, 1.32D, 0.22D});
 		}
 	}, "", null, 0, false),
-	RF16( DieselRF16.class,  new ModelRF16(), "RF-16_", true,new float[] {-1.6F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+	RF16( DieselRF16.class,  new ModelRF16(), "RF-16_", true,new float[]{-1.4F, 0.125F, 0.00F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.66D, 1.32D, 0.22D});
+		}
 	}, "", null, 0, false),
-	RF16B( DieselRF16B.class,  new ModelRF16B(), "RF-16B_", true,new float[] {-1.6F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+	RF16B( DieselRF16B.class,  new ModelRF16B(), "RF-16B_", true,new float[]{-1.35F, 0.125F, 0.00F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.68D, 1.32D, 0.22D});
+		}
 	}, "", null, 0, false),
 
 	/**Fairbanks Morse**/
@@ -1703,11 +1707,17 @@ public enum RenderEnum
 	}, "", null, 0, false),
 
 	FMH24_66L( DieselH24_66L.class,  new ModelH24_66L(), "FM_H24-66_L_", true,new float[] {-1.9F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  null, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+		{
+			add(new double[]{0.78D, 1.35D, 0.15D});
+			add(new double[]{0.78D, 1.35D, -0.15D});
+		}
 	}, "", null, 0, false),
 
 	FMH24_66C( DieselH24_66C.class,  new ModelH24_66C(), "FM_H24-66_C_", true,new float[] {-1.9F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  null, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+		{
+			add(new double[]{0.78D, 1.35D, 0.15D});
+			add(new double[]{0.78D, 1.35D, -0.15D});
+		}
 	}, "", null, 0, false),
 
 	/**OTHER DIESELS**/
@@ -1730,11 +1740,18 @@ public enum RenderEnum
 	}, "", null, 0, false),
 	BUnitFOLM1B(BUnitFOLM1B.class, new ModelFOLM1B(), "FOL_M1b_", true, new float[]{-0.25F, 0.05F, 0F}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
 
-	Krautt(DieselKrautt.class,  new ModelKrautt(), "KM_ML4000_", true,new float[] {0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
-		{ }}, "", null, 0, false),
+	Krautt(DieselKrautt.class,  new ModelKrautt(), "KM_ML4000_", true,new float[]{-1.6F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.57D, 1.3D, 0.0D});
+			add(new double[]{2.5D, 1.3D, 0.0D});
+		}
+	}, "", null, 0, false),
 
-	DD55( DieselDD55.class,  new ModelDD55(), "DD55_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 12,  new ArrayList<double[]>() {
-		{ }
+	DD55( DieselDD55.class,  new ModelDD55(), "DD55_", true,new float[]{-1.45F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 12,  new ArrayList<double[]>() {
+		{
+			add(new double[]{2.1D, 1.2D, 0.475D});
+			add(new double[]{2.1D, 1.2D, -0.475D});
+		}
 	}, "", null, 0, false),
 
 	SlugMA(SlugMA.class, new Modelslugma(), "SMA_", true, new float[]{0,-0.05f,0}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),

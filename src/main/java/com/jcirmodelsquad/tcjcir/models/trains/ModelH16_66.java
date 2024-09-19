@@ -2318,7 +2318,7 @@ public class ModelH16_66 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/FM_trimount_TVA_Blue.png"));
@@ -2345,15 +2345,4 @@ public class ModelH16_66 extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 	}
-	//public float[] getTrans() {
-	//	return new float[]{-1.5F, 0.15F, 0.00F};
-	//}
-
-	//public float[] getRotate() {
-	//	return new float[] { 0F, 180F, 180F };
-	//}
-
-	//public float[] getScale() {
-	//	return null;
-	//}
 }
