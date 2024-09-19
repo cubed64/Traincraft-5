@@ -26,7 +26,7 @@ import train.common.enums.BoxName;
 import train.common.library.Info;
 
 import java.util.ArrayList;
-
+@Deprecated
 public class ModelU23Bold extends ModelConverter //Same as Filename
 {
 	int textureX = 512;

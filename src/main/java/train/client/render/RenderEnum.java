@@ -1611,28 +1611,40 @@ public enum RenderEnum
 		{ }
 	}, "", null, 0, false),
 
-	M630(DieselM630.class, new ModelM63X_divets(), "M630_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
-		{ }
+	M630(DieselM630.class, new ModelM63X_divets(), "M630_", true,new float[]{-1.7F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.7D, 1.5D, 0.0D});
+		}
 	}, "", null, 0, false),
-	M630R(DieselM630R.class, new ModelM63X_round(), "M630R_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
-		{ }
+	M630R(DieselM630R.class, new ModelM63X_round(), "M630R_", true,new float[]{-1.7F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.7D, 1.5D, 0.0D});
+		}
 	}, "", null, 0, false),
-	M630W(DieselM630W.class, new ModelM63XW(), "M630W_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
-		{ }
+	M630W(DieselM630W.class, new ModelM63XW(), "M630W_", true,new float[]{-1.7F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.7D, 1.5D, 0.0D});
+		}
 	}, "", null, 0, false),
-	M636(DieselM636.class, new ModelM63X_divets(), "M636_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
-		{ }
+	M636(DieselM636.class, new ModelM63X_divets(), "M636_", true,new float[]{-1.7F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.7D, 1.5D, 0.0D});
+		}
 	}, "", null, 0, false),
-	M636R(DieselM636R.class, new ModelM63X_round(), "M636R_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
-		{ }
+	M636R(DieselM636R.class, new ModelM63X_round(), "M636R_", true,new float[]{-1.7F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.7D, 1.5D, 0.0D});
+		}
 	}, "", null, 0, false),
 	M640(DieselM640.class, new ModelM640(), "M640_", true,new float[] {-1.7F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
 		{
 			add(new double[]{0.7D, 1.5D, 0.0D});
 		}
 	}, "", null, 0, false),
-	M640W(DieselM640W.class, new ModelM63XW(), "M640W_", true,new float[] {-0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
-		{ }
+	M640W(DieselM640W.class, new ModelM63XW(), "M640W_", true,new float[]{-1.7F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 6,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.7D, 1.5D, 0.0D});
+		}
 	}, "", null, 0, false),
 
 	/**BRUHWIN**/
@@ -1641,17 +1653,25 @@ public enum RenderEnum
 			add(new double[]{0.40D, 1.3D, 0D});
 		}
 	}, "", null, 0, false),
-	DS441000( DieselDS441000.class,  new ModelS12(), "DS441000_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
-		{ }
+	DS441000( DieselDS441000.class,  new ModelS12(), "DS441000_", true,new float[]{-1.1F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.8D, 1.30D, -0.18D});
+		}
 	}, "", null, 0, false),
-	S12( DieselS12.class,  new ModelS12(), "S12_", true,new float[] {-0.0F, 0.0F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
-		{ }
+	S12( DieselS12.class,  new ModelS12(), "S12_", true,new float[]{-1.1F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.8D, 1.30D, -0.18D});
+		}
 	}, "", null, 0, false),
-	DR441500Shark( DieselDR441500Shark.class,  new ModelDR441500Shark(), "DR441500Shark_", true,new float[] {-1.6F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+	DR441500Shark( DieselDR441500Shark.class,  new ModelDR441500Shark(), "DR441500Shark_", true,new float[]{-1.4F, 0.125F, 0.00F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.66D, 1.32D, 0.22D});
+		}
 	}, "", null, 0, false),
-	DR441500BShark( DieselDR441500BShark.class,  new ModelDR441500BShark(), "DR441500BShark_", true,new float[] {-1.6F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
-		{}
+	DR441500BShark( DieselDR441500BShark.class,  new ModelDR441500BShark(), "DR441500BShark_", true,new float[]{-1.35F, 0.125F, 0.00F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.68D, 1.32D, 0.22D});
+		}
 	}, "", null, 0, false),
 	RF16( DieselRF16.class,  new ModelRF16(), "RF-16_", true,new float[] {-1.6F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{}

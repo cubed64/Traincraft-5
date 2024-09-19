@@ -1723,23 +1723,4 @@ public class ModelS12 extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 	}
-	public float[] getTrans() {
-		return new float[]{-1.1F, 0.15F, 0.00F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.8D, 1.30D, -0.18D});
-			}
-		};
-	}
 }
