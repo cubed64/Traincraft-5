@@ -866,7 +866,8 @@ public class ModelSMSC1 extends ModelConverter //Same as Filename
 
 	ModelNewBlombergA1ATruck theTruck = new ModelNewBlombergA1ATruck();
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
 		ModelRenderHelper.renderSlugModel(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6) {
@@ -884,6 +885,4 @@ public class ModelSMSC1 extends ModelConverter //Same as Filename
 		GL11.glPopMatrix();
 
 	}
-
-	public float[] getTrans() { return new float[]{0F, 0.15F, 0F}; }
 }
