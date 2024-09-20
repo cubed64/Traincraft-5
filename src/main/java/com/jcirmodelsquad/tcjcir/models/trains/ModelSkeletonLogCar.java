@@ -20,6 +20,7 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.api.Freight;
 import train.common.library.Info;
@@ -251,14 +252,7 @@ public class ModelSkeletonLogCar extends ModelConverter //Same as Filename
 		}
 
 		Freight freight = (Freight)entity;
-		for(int i = 0; i < 45; i++)
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
+		ModelRenderHelper.renderModelWithStandardFreightRollingStock(bodyModel, entity, f5);
 
 		if(freight.getAmmountOfCargo() > 0) {
 			for (ItemStack item : freight.cargoItems) {
@@ -325,7 +319,4 @@ public class ModelSkeletonLogCar extends ModelConverter //Same as Filename
 		GL11.glTranslated(2.5,-0.0,0.00);
 		bogie.render(entity,f,f1,f2,f3,f4,f5);
 	}
-
-	public float[] getTrans() { return new float[]{-0F, 0.15F, 0F}; }
-
 }

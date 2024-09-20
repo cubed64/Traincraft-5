@@ -2013,7 +2013,7 @@ public class ModelFP7A extends ModelConverter //Same as Filename
 	ModelBlombergBnew theTrucc = new ModelBlombergBnew();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17) {

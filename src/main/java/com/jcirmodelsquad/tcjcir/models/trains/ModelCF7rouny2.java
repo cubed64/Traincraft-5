@@ -2181,7 +2181,7 @@ public class ModelCF7rouny2 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, (Locomotive) entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1932||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1249||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6324) {

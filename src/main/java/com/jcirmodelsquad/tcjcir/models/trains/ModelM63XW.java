@@ -1542,7 +1542,7 @@ public class ModelM63XW extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity ,f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity ,f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/MLW_3_axle_hiad_FNCC_Silver.png"));
@@ -1576,21 +1576,5 @@ public class ModelM63XW extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.7D, 1.5D, 0.0D});
-			}
-		};
-	}
-	public float[] getTrans() { return new float[]{-1.7F, 0.15F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
 	}
 }

@@ -354,6 +354,4 @@ public class Model60centerbeam extends ModelConverter //Same as Filename
 
 		((AbstractTrains) entity).getCargoManager().renderCargo((AbstractTrains) entity, f, f1, f2, f3, f4, f5);
 	}
-
-	public float[] getTrans() { return new float[]{-0F, 0.1F, 0F}; }
 }

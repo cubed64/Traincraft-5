@@ -1625,7 +1625,7 @@ public class ModelGP15 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 12345) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/typeb_Black.png"));
@@ -1679,17 +1679,7 @@ public class ModelGP15 extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 	}
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
-	{
-	}
+
 	public ModelRendererTurbo ModelGP15[];
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{1.33D, 1.45D, 0.0D});
-				add(new double[]{0.75D, 1.45D, 0.0D});
-			}
-		};
-	}
 }
 //blombergB_Stale_Egg

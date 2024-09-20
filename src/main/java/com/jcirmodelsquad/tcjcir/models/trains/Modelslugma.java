@@ -1025,13 +1025,4 @@ public class Modelslugma extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 	}
-	public float[] getTrans() { return new float[]{0F, 0.155F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
 }

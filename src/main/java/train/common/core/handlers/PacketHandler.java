@@ -36,9 +36,9 @@ public class PacketHandler {
 		Traincraft.slotschannel = NetworkRegistry.INSTANCE.newSimpleChannel("slots");
 		Traincraft.ignitionChannel = NetworkRegistry.INSTANCE.newSimpleChannel("ignition");
 		Traincraft.brakeChannel = NetworkRegistry.INSTANCE.newSimpleChannel("brake");
-		Traincraft.locomotiveLightsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("locomotiveLights");
-		Traincraft.locomotiveBeaconChannel = NetworkRegistry.INSTANCE.newSimpleChannel("LocomotiveBeacon");
-		Traincraft.locomotiveDitchLightsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("ditchLights");
+		Traincraft.rollingStockLightsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("rollingStockLights");
+		Traincraft.rollingStockBeaconChannel = NetworkRegistry.INSTANCE.newSimpleChannel("rollingStockBeacon");
+		Traincraft.rollingStockDitchLightsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("ditchLights");
 		Traincraft.lockChannel = NetworkRegistry.INSTANCE.newSimpleChannel("lock");
 		Traincraft.builderChannel = NetworkRegistry.INSTANCE.newSimpleChannel("builder");
 		Traincraft.paintbrushColorChannel = NetworkRegistry.INSTANCE.newSimpleChannel("paintbrushColor");
@@ -62,11 +62,11 @@ public class PacketHandler {
 				3, Side.CLIENT);
 		Traincraft.brakeChannel.registerMessage(PacketParkingBrake.Handler.class, PacketParkingBrake.class,
 				4, Side.SERVER);
-		Traincraft.locomotiveLightsChannel.registerMessage(PacketLocomotiveLights.Handler.class, PacketLocomotiveLights.class,
+		Traincraft.rollingStockLightsChannel.registerMessage(PacketRollingStockLights.Handler.class, PacketRollingStockLights.class,
 				19, Side.SERVER);
-		Traincraft.locomotiveBeaconChannel.registerMessage(PacketLocomotiveBeacon.Handler.class, PacketLocomotiveBeacon.class,
+		Traincraft.rollingStockBeaconChannel.registerMessage(PacketRollingStockBeacon.Handler.class, PacketRollingStockBeacon.class,
 				20, Side.SERVER);
-		Traincraft.locomotiveDitchLightsChannel.registerMessage(PacketLocomotiveDitchLights.Handler.class, PacketLocomotiveDitchLights.class,
+		Traincraft.rollingStockDitchLightsChannel.registerMessage(PacketRollingStockDitchLights.Handler.class, PacketRollingStockDitchLights.class,
 				21, Side.SERVER);
 
 		Traincraft.lockChannel.registerMessage(PacketSetTrainLockedToClient.Handler.class,

@@ -11,7 +11,6 @@ package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is locat
 
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelSDL39Truck;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
@@ -21,8 +20,6 @@ import tmt.Tessellator;
 import train.client.renderhelper.ModelRenderHelper;
 import train.common.enums.BoxName;
 import train.common.library.Info;
-
-import java.util.ArrayList;
 
 public class ModelSDL39 extends ModelConverter //Same as Filename
 {
@@ -1252,7 +1249,7 @@ public class ModelSDL39 extends ModelConverter //Same as Filename
 	//fuf
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		ModelRenderHelper.renderLocomotiveModelWithoutBeacon(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/sdl39_lightweight_truck.png"));
 
@@ -1266,13 +1263,5 @@ public class ModelSDL39 extends ModelConverter //Same as Filename
 		GL11.glTranslated(-1.55F, -0.0F, 0);
 		theTrucks.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{1.425D, 1.35D, 0.0D});
-			}
-		};
 	}
 }

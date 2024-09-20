@@ -322,5 +322,4 @@ public class ModelMillGondola extends ModelConverter //Same as Filename
 	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
 	{
 	}
-	public float[] getTrans() { return new float[]{-0F, 0.1F, 0F}; }
 }

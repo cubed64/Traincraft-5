@@ -14,6 +14,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
+import train.client.renderhelper.ModelRenderHelper;
 
 public class ModelTGVMobile extends ModelConverter //Same as Filename
 {
@@ -456,16 +457,10 @@ public class ModelTGVMobile extends ModelConverter //Same as Filename
 		bodyModel[104].addBox(0F, 0F, 0F, 3, 3, 0, 0F); // Box 107
 		bodyModel[104].setRotationPoint(26F, 7F, -6F);
 	}
+
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 105; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 	}
 }

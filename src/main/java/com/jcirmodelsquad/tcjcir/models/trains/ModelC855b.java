@@ -1105,7 +1105,7 @@ public class ModelC855b extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, (Locomotive) entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
@@ -1139,16 +1139,5 @@ public class ModelC855b extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 
-	}
-	public float[] getTrans() {
-		return new float[]{-2.15F, 0.15F, 0.00F};
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{3.0D, 1.5D, 0.0D});
-				add(new double[]{0.3D, 1.5D, 0.0D});
-			}
-		};
 	}
 }
