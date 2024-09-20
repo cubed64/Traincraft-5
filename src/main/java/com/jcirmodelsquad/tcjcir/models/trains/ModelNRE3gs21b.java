@@ -1317,7 +1317,7 @@ public class ModelNRE3gs21b extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 2346||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 2341||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 154325341||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3457||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3458||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3455) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver.png"));
