@@ -321,5 +321,29 @@ public class ModelRenderHelper
             break;
         }
     }
+
+    public static void renderModelWithStandardFreightRollingStock(ModelRendererTurbo[] bodyModel, Entity entity, float f5)
+    {
+        for (ModelRendererTurbo bm : bodyModel)
+        {
+            switch (bm.boxName)
+            {
+                case "lamp":
+                    Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+                    bm.render(f5);
+                    Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+                break;
+                case "cull":
+                    GL11.glDisable(GL11.GL_CULL_FACE);
+                    bm.render(f5);
+                    GL11.glEnable(GL11.GL_CULL_FACE);
+                break;
+                default:
+                    bm.render(f5);
+                break;
+            }
+        }
+    }
+
 }
 

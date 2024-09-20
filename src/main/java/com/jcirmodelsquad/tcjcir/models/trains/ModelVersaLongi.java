@@ -382,5 +382,4 @@ public class ModelVersaLongi extends ModelConverter //Same as Filename
 		bogie2.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();
 	}
-	public float[] getTrans() { return new float[]{-0F, 0.10F, 0F}; }
 }

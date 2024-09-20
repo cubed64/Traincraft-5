@@ -210,5 +210,4 @@ public class ModelOreJenny extends ModelConverter //Same as Filename
 	}
 
 	public ModelRendererTurbo ModelOreJenny[];
-	public float[] getTrans() { return new float[]{-0F, 0.1F, 0F}; }
 }
