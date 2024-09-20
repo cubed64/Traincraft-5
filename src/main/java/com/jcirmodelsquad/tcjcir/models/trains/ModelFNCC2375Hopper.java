@@ -773,5 +773,4 @@ public class ModelFNCC2375Hopper extends ModelConverter //Same as Filename
 		bogie.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();
 	}
-	public float[] getTrans() { return new float[]{-0F, 0.15F, 0F}; }
 }

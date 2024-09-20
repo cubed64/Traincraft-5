@@ -562,5 +562,4 @@ public class ModelHopper6260 extends ModelConverter //Same as Filename
 		GL11.glTranslated(3.87,0,0.00);
 		bogie.render(entity,f,f1,f2,f3,f4,f5);
 	}
-	public float[] getTrans() { return new float[]{-0F, 0.1F, 0F}; }
 }
