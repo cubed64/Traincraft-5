@@ -513,21 +513,4 @@ public class ModelPCH130Coach2 extends ModelConverter //Same as Filename
 		theBogie.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();
 	}
-
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
-	{
-	}
-
-	public float[] getTrans() {
-		return new float[]{0.05F, 0.1F, 0F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
-
 }

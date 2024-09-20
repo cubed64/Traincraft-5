@@ -105,7 +105,7 @@ public enum RenderEnum
 	freightSlateWagon(EntityFreightSlateWagon.class, new ModelSlateWagon(), "freightslatewagon", false, new float[] { 0.0F, 0.2F, 0F }, new float[] { 0F, 180F, 180F }, new float[]{0.9f,1f,0.9f}, "", 0, null, "", null, 0, false),
 	freightIceeWagon(EntityFreightIceWagon.class, new ModelIceWagon(), "icewagon", false, new float[] { 0.0F, 0.2F, 0F }, new float[] { 0F, 180F, 180F }, new float[]{0.9f,1f,0.9f}, "", 0, null, "", null, 0, false),
 	freight100TonHopper(EntityFreight100TonHopper.class, new Model100TonHopper(), "freight_100tonhopper_", true, new float[] { -0.1F, 0.0F, 0F }, new float[] { 0F, 180F, 180F }, new float[]{0.9f,1f,0.9f}, "", 0, null, "", null, 0, false),
-	freightBulkheadFlatCar(EntityBulkheadFlatCart.class, new ModelBulkheadFlat(), "BulkheadFlat_", true, new float[] { 0.0F, 0.1F, 0.0F }, new float[] { 0F, 180F, 180F }, new float[]{0.9f,1f,0.9f}, "", 0, null, "", null, 0, false),
+	freightBulkheadFlatCar(EntityBulkheadFlatCart.class, new ModelBulkheadFlat(), "BulkheadFlat_", true, new float[]{-0F, 0.0F, 0F}, new float[] { 0F, 180F, 180F }, new float[]{0.9f,1f,0.9f}, "", 0, null, "", null, 0, false),
 	drgBaggage(EntityFreightDenverRioGrande.class, new ModelDRGBaggage(), "drg_baggage_", true, new float[] { 0.0F, 0.14F, 0F }, new float[] { 0F, 180F, 180F }, new float[]{0.9f,1f,0.9f}, "", 0, null, "", null, 0, false),
 	MILW1935Baggage(EntityFreightBaggageMILW.class, new ModelMILWBaggage(), "milw_baggage", false, new float[] { 0.1F, 0.1F, 0F }, new float[] { 0F, 180F, 180F }, new float[]{0.9f,0.9f,0.9f}, "", 0, null, "", null, 0, false),
 	HeavyweightMailcar(EntityFreightHeavyweight.class, new ModelHeavyweight(), "heavyweight_mailcar", false, new float[] { 0.1F, 0.18F, 0F }, new float[] { 0F, 180F, 180F }, new float[]{0.9f,1f,0.9f}, "", 0, null, "", null, 0, false),
@@ -665,7 +665,7 @@ public enum RenderEnum
 	//LUengine(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricLUengine.class, new com.jcirmodelsquad.tcjcir.models.trains.ModelLUengine(), "lu_engine", false,new float[] {-1.0F, 0.16F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	//LUpassenger(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.LUpassenger.class, new com.jcirmodelsquad.tcjcir.models.trains.ModelLUpassenger(), "lu_passenger",false,new float[] {0F, 0.16F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	aipkitExplorer(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.AipkitExplorer.class, new ModelAipkitExplorer(), "aipkit_explorer", false, new float[]{0F, 0.03F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	aipkitExplorer2(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.AipkitExplorer2.class, new ModelExplorer2(), "aipkit_explorerii_", true, new float[]{0.6F, 0F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	aipkitExplorer2(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.AipkitExplorer2.class, new ModelExplorer2(), "aipkit_explorerii_", true, new float[]{0.8F, -0.02F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	//Class345(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricClass345.class, new ModelClass345(), "class345", false,new float[] {-1.0F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	//Class345Coach( com.jcirmodelsquad.tcjcir.vehicles.rollingstock.Class345Coach.class, new ModelClass345Coach(),"class345coach", false, new float[] {0F, 0F, 0F},  new float[] { 0F, 180F, 180F },null, "", 0, null, "", null, 0, false),
 	BoulderWagon(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.BoulderWagon.class, new ModelBoulderWagon(),"BoulderWagon_",true, new float[]{0F,0.2F,0F}, new float[] { 0F, 180F, 180F },null, "",0,null,  "",null, 0,false),
@@ -1937,8 +1937,8 @@ public enum RenderEnum
 	/**PASSENGER**/
 	pch120commute(PCH120Commute.class, new ModelPCH120Commute(), "pch120commute_", true,new float[] {-1.3F, 0.01F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	pch120coach(PCH120Coach.class, new ModelPCH120Car(), "pch120car_", true,new float[] {0F, 0.01F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	pch130commute2(PCH130Commute2.class, new ModelPCH130Commute2(), "pch130commute2_", true,new float[] {-1.3F, 0.01F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	pch130coach2(PCH130Coach.class, new ModelPCH130Coach2(), "pch130coach_", true,new float[] {-1.3F, 0.01F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	pch130commute2(PCH130Commute2.class, new ModelPCH130Commute2(), "pch130commute2_", true,new float[]{-1.7F, 0.1F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	pch130coach2(PCH130Coach.class, new ModelPCH130Coach2(), "pch130coach_", true,new float[]{0.05F, 0.1F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	PSRPO(PSRPO.class, new ModelPSRPO(), "PS_lightweight_RPO_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PS85Baggage(PS85Baggage.class, new ModelPS85Baggage(), "PS_lightweight_85_baggage_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

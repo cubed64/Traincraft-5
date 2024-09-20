@@ -510,22 +510,5 @@ public class ModelExplorer2 extends ModelBase
 		GL11.glPopMatrix();
 	}
 
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
-	{
-	}
-
-	public float[] getTrans() {
-		return new float[]{0.8F, -0.02F, 0F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-		//return new float[] { 1, 0.95F, 1 };
-	}
-
 	public ModelRendererTurbo explorer2Model[];
 }
