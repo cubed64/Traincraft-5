@@ -569,6 +569,7 @@ public enum ItemIDs {
 	minecartKrautt("ItemRollingStock", "ML4000", train.common.library.TypeOfRollingStock.DIESEL, 5),
 	//minecartILMC("ItemRollingStock", "ILMC_ICON", 2),
 	minecartDD55("ItemRollingStock", "dd55", train.common.library.TypeOfRollingStock.DIESEL, 3),
+	minecartTB27("ItemRollingStock", "tb27", train.common.library.TypeOfRollingStock.DIESEL, 4),
 
 	minecartSlugMA("ItemRollingStock", "slugma", train.common.library.TypeOfRollingStock.DIESEL, 2),
 	minecartF7BSlug("ItemRollingStock", "f7b", train.common.library.TypeOfRollingStock.DIESEL, 3),

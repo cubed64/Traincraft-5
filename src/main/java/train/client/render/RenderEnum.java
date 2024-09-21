@@ -1850,6 +1850,12 @@ public enum RenderEnum
 			add(new double[]{2.1D, 1.2D, -0.475D});
 		}
 	}, "", null, 0, false),
+	TB27( DieselTB27.class,  new ModelTB27(), "tb27_", true,new float[] {-1.4F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 2,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.95D, 1.25D, 0.0D});
+			add(new double[]{1.75D, 1.25D, 0.0D});
+		}
+	}, "", null, 0, true),
 
 	SlugMA(SlugMA.class, new Modelslugma(), "SMA_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
 	//S1BL(S1BL.class, new ModelS1BL(), "s1bl_", true, new float[]{0,-0.05f,0}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
