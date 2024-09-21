@@ -1918,6 +1918,7 @@ public enum RenderEnum
 	ACF41Gon(ACF41Gon.class, new ModelACF41Gon(),"acf_41-6_gon_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	BethgonII(BethgonII.class, new ModelBethgonII(),"Bethgon_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	gsco67millgon(gsco67millgon.class, new Model67millgon(),"gsco_67_millgon_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	gsco52millgon(gsco52millgon.class, new Modelgsco52millgon(),"gsco_52_millgon_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	AAR50TonHopper(AAR50TonHopper.class, new ModelAAR50TonHopper(),"AAR_50_ton_hopper_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	AAR70TonHopper(AAR70TonHopper.class, new ModelAAR70TonHopper(),"AAR_70_ton_hopper_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 

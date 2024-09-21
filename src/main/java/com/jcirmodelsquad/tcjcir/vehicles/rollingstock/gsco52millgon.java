@@ -1,5 +1,6 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
+import com.jcirmodelsquad.tcjcir.models.loads.*;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -10,34 +11,49 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.Freight;
+import train.common.entity.CargoManager;
+import train.common.entity.CargoSpecification;
 import train.common.library.GuiIDs;
 
-public class PCF6033 extends Freight implements IInventory {
+public class gsco52millgon extends Freight implements IInventory {
     public int freightInventorySize;
     public int numFreightSlots;
-    public PCF6033(World world) {
+    public gsco52millgon(World world) {
         super(world);
         initFreightCart();
-        textureDescriptionMap.put(0, "SP");
-        textureDescriptionMap.put(1, "SSW");
-        textureDescriptionMap.put(2, "Generic Brown");
-        textureDescriptionMap.put(3, "ARR");
-        textureDescriptionMap.put(4, "ATSF (Early)");
-        textureDescriptionMap.put(5, "ATSF");
-        textureDescriptionMap.put(6, "UP");
-        textureDescriptionMap.put(7, "WC");
-        textureDescriptionMap.put(8, "WRX");
-        textureDescriptionMap.put(9, "WRX (Tree Logo)");
-        textureDescriptionMap.put(10, "WRX (Washaska Text)");
-        textureDescriptionMap.put(11, "BNBX");
-        textureDescriptionMap.put(12, "GCM");
-        textureDescriptionMap.put(13, "SP (Paper Service)");
-        textureDescriptionMap.put(14, "");
-        textureDescriptionMap.put(15, "");
-        textureDescriptionMap.put(16, "");
+        textureDescriptionMap.put(0, "BN");
+        textureDescriptionMap.put(1, "CB&Q (Green)");
+        textureDescriptionMap.put(2, "CB&Q (Red)");
+        textureDescriptionMap.put(3, "CB&Q (Brown)");
+        textureDescriptionMap.put(4, "AA");
+        textureDescriptionMap.put(5, "Generic Black");
+        textureDescriptionMap.put(6, "Generic Boxcar Red");
+        textureDescriptionMap.put(7, "NYC");
+        textureDescriptionMap.put(8, "Erie");
+        textureDescriptionMap.put(9, "EL");
+        textureDescriptionMap.put(10, "SLSF (Brown)");
+        textureDescriptionMap.put(11, "SLSF (Black)");
+        textureDescriptionMap.put(12, "RI");
+
+        setCargoManager(new CargoManager(new CargoSpecification[][] {
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_dort",
+                        "Aggregate - Dirt", 0, 2.475, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_peagravel",
+                        "Aggregate - Peagravel", 0, 2.475, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_scrap1",
+                        "Scrapmetal A", 0, 2.475, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_scrap2",
+                        "Scrapmetal B", 0, 2.475, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_cullet2_medium",
+                        "Cullet / Scrap Glass", 0, 2.475, 0)},
+                { new CargoSpecification(Modelrebar_bundle.class, "loads/rebar_bundle2",
+                        "Rebar Bundle", 0, 2.5, 0)},
+                { new CargoSpecification(Modelcoil_load.class, "loads/coils",
+                        "Metal Coils", 0, 2.5, 0)},
+        }));
     }
 
-    public PCF6033(World world, double d, double d1, double d2){
+    public gsco52millgon(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -50,7 +66,7 @@ public class PCF6033 extends Freight implements IInventory {
     }
 
     public void initFreightCart() {
-        numFreightSlots = 6;
+        numFreightSlots = 5;
         freightInventorySize = trainSpec.getCargoCapacity();
         cargoItems = new ItemStack[freightInventorySize];
     }
@@ -93,8 +109,8 @@ public class PCF6033 extends Freight implements IInventory {
 
     @Override
     public String getInventoryName() {
-        return "PC&F 6033 Cu Ft High Rectangular Prism";
-    }
+        return "GSCO 52' Drop-End Mill Gondola";
+    }//GSCO 67' Mill Gondola
 
     @Override
     public int getSizeInventory() {
@@ -104,7 +120,7 @@ public class PCF6033 extends Freight implements IInventory {
     @Override
     public boolean interactFirst(EntityPlayer entityplayer) {
         if ((super.interactFirst(entityplayer))) {
-            return true;
+            return false;
         }
         entityplayer.openGui(Traincraft.instance, GuiIDs.FREIGHT, worldObj, this.getEntityId(), -1, (int) this.posZ);
         return true;
@@ -117,7 +133,7 @@ public class PCF6033 extends Freight implements IInventory {
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
-        return 2.85F;
+        return 3.3F;
     }
 
     @Override

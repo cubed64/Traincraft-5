@@ -26,7 +26,7 @@ public class DieselSD60 extends DieselTrain {
         textureDescriptionMap.put(5, "CR (ohe now thats quality -demoman tf2)");
         textureDescriptionMap.put(6, "Blandsville & Blanklands Terminal Railroad Association");
         textureDescriptionMap.put(7, "GLoNT");
-        textureDescriptionMap.put(8, "");
+        textureDescriptionMap.put(8, "BN (Tiger Stripe)");
         textureDescriptionMap.put(9, "");
     }
     public DieselSD60(World world, double d, double d1, double d2){

@@ -35,6 +35,8 @@ public class DieselGP30 extends DieselTrain {
         textureDescriptionMap.put(15, "B&B");
         textureDescriptionMap.put(16, "WV");
         textureDescriptionMap.put(17, "GLNT");
+        textureDescriptionMap.put(18, "GN (Big Sky Blue)");
+        textureDescriptionMap.put(19, "CB&Q");
     }
     public DieselGP30(World world, double d, double d1, double d2){
         this(world);

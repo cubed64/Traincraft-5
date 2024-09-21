@@ -47,7 +47,7 @@ public class gsco67millgon extends Freight implements IInventory {
                 { new CargoSpecification(Modelrebar_bundle_long.class, "loads/rebar_bundle2_long",
                         "Rebar Bundle", 0, 2.5, 0)},
                 { new CargoSpecification(Modelcoil_load3.class, "loads/coils",
-                        "Metal Coils", 0, 2.375, 0)},
+                        "Metal Coils", 0, 2.5, 0)},
         }));
     }
 
@@ -107,7 +107,7 @@ public class gsco67millgon extends Freight implements IInventory {
 
     @Override
     public String getInventoryName() {
-        return "Greenville Car Co Drop End Gondola";
+        return "GSCO 67' Drop-End Mill Gondola";
     }//GSCO 67' Mill Gondola
 
     @Override

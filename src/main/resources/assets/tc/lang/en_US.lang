@@ -1393,7 +1393,8 @@ item.tc:minecartOreJenny.name=Ore Jenny
 item.tc:minecartPRRGLaHopper.name= PRR GLa Hopper and clones
 item.tc:minecartACF41Gon.name=AC&F 41' 6" Gondola
 item.tc:minecartBethgonII.name=Bethgon II Open Top Hopper
-item.tc:minecart67millgon.name=Greenville Car Co Drop End Gondola
+item.tc:minecart67millgon.name=GSCO 67' Drop-End Mill Gondola
+item.tc:minecart52millgon.name=GSCO 52' Drop-End Mill Gondola
 item.tc:minecartAAR50TonHopper.name=AAR 50 Ton Hopper
 item.tc:minecartAAR70TonHopper.name=AAR 70 Ton Hopper
 
@@ -1405,7 +1406,8 @@ entity.tc.Ore Jenny.name=Ore Jenny
 entity.tc.PRR GLa hopper.name= PRR GLa Hopper and clones
 entity.tc.ACF41Gon.name=AC&F 41' 6" Gondola
 entity.tc.BethgonII.name=Bethgon II Open Top Hopper
-entity.tc.67millgon.name=Greenville Car Co Drop End Gondola
+entity.tc.67millgon.name=GSCO 67' Drop-End Mill Gondola
+entity.tc.52millgon.name=GSCO 52' Drop-End Mill Gondola
 entity.tc.AAR 50 Ton Hopper.name=AAR 50 Ton Hopper
 entity.tc.AAR 70 Ton Hopper.name=AAR 70 Ton Hopper
 
