@@ -17,6 +17,7 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.enums.BoxName;
 import train.common.library.Info;
@@ -1077,19 +1078,8 @@ public class ModelRSFDL extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 
-		for(ModelRendererTurbo m :bodyModel) {
-			if(m.boxName.equals("lamp")){
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				m.render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if(m.boxName.equals("cull")){
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				m.render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			}else{
-				m.render(f5);
-			}
-		}
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
+
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
 		} else {
@@ -1103,24 +1093,5 @@ public class ModelRSFDL extends ModelConverter //Same as Filename
 		boger.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
 
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.075D, 1.4D, -0.0D});
-			}
-		};
-	}
-	public float[] getTrans() {
-		return new float[]{-1.225F, 0.15F, 0F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 0F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
 	}
 }

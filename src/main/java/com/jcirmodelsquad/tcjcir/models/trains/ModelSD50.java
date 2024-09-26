@@ -2023,7 +2023,7 @@ public class ModelSD50 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 12 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3 ) {//for cr early order
 			//silver regular truck
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_c2h_black.png"));
@@ -2070,21 +2070,5 @@ public class ModelSD50 extends ModelConverter //Same as Filename
 			flexLate.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{1.875D, 1.4D, 0.0D});
-			}
-		};
-	}
-	public float[] getTrans() { return new float[]{-1.875F, 0.155F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
 	}
 }

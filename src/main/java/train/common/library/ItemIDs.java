@@ -569,6 +569,7 @@ public enum ItemIDs {
 	minecartKrautt("ItemRollingStock", "ML4000", train.common.library.TypeOfRollingStock.DIESEL, 5),
 	//minecartILMC("ItemRollingStock", "ILMC_ICON", 2),
 	minecartDD55("ItemRollingStock", "dd55", train.common.library.TypeOfRollingStock.DIESEL, 3),
+	minecartTB27("ItemRollingStock", "tb27", train.common.library.TypeOfRollingStock.DIESEL, 4),
 
 	minecartSlugMA("ItemRollingStock", "slugma", train.common.library.TypeOfRollingStock.DIESEL, 2),
 	minecartF7BSlug("ItemRollingStock", "f7b", train.common.library.TypeOfRollingStock.DIESEL, 3),
@@ -634,6 +635,7 @@ public enum ItemIDs {
 	minecartACF41Gon("ItemRollingStock", "ACF_41_6_gon", train.common.library.TypeOfRollingStock.FREIGHT, 3),
 	minecartBethgonII("ItemRollingStock", "Bethgon_icon", train.common.library.TypeOfRollingStock.FREIGHT, 5),
 	minecart67millgon("ItemRollingStock", "gsco_67millgon_icon", train.common.library.TypeOfRollingStock.FREIGHT, 4),
+	minecart52millgon("ItemRollingStock", "gsco_52millgon_icon", train.common.library.TypeOfRollingStock.FREIGHT, 4),
 	minecartAAR50TonHopper("ItemRollingStock", "AAR50TonHopper", train.common.library.TypeOfRollingStock.FREIGHT, 2),
 	minecartAAR70TonHopper("ItemRollingStock", "AAR70TonHopper", train.common.library.TypeOfRollingStock.FREIGHT, 3),
 

@@ -17,7 +17,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -184,7 +186,7 @@ public class ModelDR441500Shark extends ModelConverter //Same as Filename
 		bodyModel[139] = new ModelRendererTurbo(this, 482, 60, textureX, textureY); // Box 153
 		bodyModel[140] = new ModelRendererTurbo(this, 479, 59, textureX, textureY); // Box 128
 		bodyModel[141] = new ModelRendererTurbo(this, 470, 76, textureX, textureY); // Box 128
-		bodyModel[142] = new ModelRendererTurbo(this, 505, 50, textureX, textureY, "glow"); // backing light type 1
+		bodyModel[142] = new ModelRendererTurbo(this, 505, 50, textureX, textureY, BoxName.lamp); // backing light type 1
 		bodyModel[143] = new ModelRendererTurbo(this, 167, 45, textureX, textureY); // Box 0
 		bodyModel[144] = new ModelRendererTurbo(this, 165, 40, textureX, textureY); // Box 0
 		bodyModel[145] = new ModelRendererTurbo(this, 168, 48, textureX, textureY); // Box 0
@@ -326,8 +328,8 @@ public class ModelDR441500Shark extends ModelConverter //Same as Filename
 		bodyModel[281] = new ModelRendererTurbo(this, 31, 137, textureX, textureY); // Box 103
 		bodyModel[282] = new ModelRendererTurbo(this, 31, 131, textureX, textureY); // Box 103
 		bodyModel[283] = new ModelRendererTurbo(this, 31, 140, textureX, textureY); // Box 103
-		bodyModel[284] = new ModelRendererTurbo(this, 48, 128, textureX, textureY, "glow"); // Headlight TL
-		bodyModel[285] = new ModelRendererTurbo(this, 41, 128, textureX, textureY, "glow"); // Headlight TR
+		bodyModel[284] = new ModelRendererTurbo(this, 48, 128, textureX, textureY, BoxName.lamp); // Headlight TL
+		bodyModel[285] = new ModelRendererTurbo(this, 41, 128, textureX, textureY, BoxName.lamp); // Headlight TR
 		bodyModel[286] = new ModelRendererTurbo(this, 27, 124, textureX, textureY); // Box 0
 		bodyModel[287] = new ModelRendererTurbo(this, 16, 124, textureX, textureY); // Box 0
 		bodyModel[288] = new ModelRendererTurbo(this, 11, 131, textureX, textureY); // Box 312
@@ -351,8 +353,8 @@ public class ModelDR441500Shark extends ModelConverter //Same as Filename
 		bodyModel[306] = new ModelRendererTurbo(this, 60, 156, textureX, textureY); // Box 103
 		bodyModel[307] = new ModelRendererTurbo(this, 60, 150, textureX, textureY); // Box 103
 		bodyModel[308] = new ModelRendererTurbo(this, 60, 159, textureX, textureY); // Box 103
-		bodyModel[309] = new ModelRendererTurbo(this, 72, 152, textureX, textureY, "glow"); // Headlight TL
-		bodyModel[310] = new ModelRendererTurbo(this, 65, 152, textureX, textureY, "glow"); // Headlight TR
+		bodyModel[309] = new ModelRendererTurbo(this, 72, 152, textureX, textureY, BoxName.lamp); // Headlight TL
+		bodyModel[310] = new ModelRendererTurbo(this, 65, 152, textureX, textureY, BoxName.lamp); // Headlight TR
 		bodyModel[311] = new ModelRendererTurbo(this, 55, 143, textureX, textureY); // Box 0
 		bodyModel[312] = new ModelRendererTurbo(this, 45, 143, textureX, textureY); // Box 0
 		bodyModel[313] = new ModelRendererTurbo(this, 50, 150, textureX, textureY); // Box 103
@@ -377,14 +379,14 @@ public class ModelDR441500Shark extends ModelConverter //Same as Filename
 		bodyModel[332] = new ModelRendererTurbo(this, 45, 156, textureX, textureY); // Box 392
 		bodyModel[333] = new ModelRendererTurbo(this, 45, 159, textureX, textureY); // Box 393
 		bodyModel[334] = new ModelRendererTurbo(this, 172, 112, textureX, textureY); // Box 0
-		bodyModel[335] = new ModelRendererTurbo(this, 19, 93, textureX, textureY, "glow"); // Box 362 markerlight glow
-		bodyModel[336] = new ModelRendererTurbo(this, 1, 93, textureX, textureY, "glow"); // Box 363 markerlight glow
+		bodyModel[335] = new ModelRendererTurbo(this, 19, 93, textureX, textureY, BoxName.lamp); // Box 362 markerlight glow
+		bodyModel[336] = new ModelRendererTurbo(this, 1, 93, textureX, textureY, BoxName.lamp); // Box 363 markerlight glow
 		bodyModel[337] = new ModelRendererTurbo(this, 32, 143, textureX, textureY); // Box 362
 		bodyModel[338] = new ModelRendererTurbo(this, 7, 143, textureX, textureY); // Box 369
 		bodyModel[339] = new ModelRendererTurbo(this, 213, 73, textureX, textureY); // Box 362
 		bodyModel[340] = new ModelRendererTurbo(this, 213, 31, textureX, textureY); // Box 372
-		bodyModel[341] = new ModelRendererTurbo(this, 214, 35, textureX, textureY, "glow"); // Box 372 glow
-		bodyModel[342] = new ModelRendererTurbo(this, 214, 77, textureX, textureY, "glow"); // Box 362 glow
+		bodyModel[341] = new ModelRendererTurbo(this, 214, 35, textureX, textureY, BoxName.lamp); // Box 372 glow
+		bodyModel[342] = new ModelRendererTurbo(this, 214, 77, textureX, textureY, BoxName.lamp); // Box 362 glow
 		bodyModel[343] = new ModelRendererTurbo(this, 68, 24, textureX, textureY); // Box 88
 		bodyModel[344] = new ModelRendererTurbo(this, 64, 27, textureX, textureY); // Box 88
 		bodyModel[345] = new ModelRendererTurbo(this, 68, 41, textureX, textureY); // Box 378
@@ -503,14 +505,14 @@ public class ModelDR441500Shark extends ModelConverter //Same as Filename
 		bodyModel[458] = new ModelRendererTurbo(this, 274, 175, textureX, textureY); // Box 394
 		bodyModel[459] = new ModelRendererTurbo(this, 233, 113, textureX, textureY); // Box 0
 		bodyModel[460] = new ModelRendererTurbo(this, 233, 107, textureX, textureY); // Box 0
-		bodyModel[461] = new ModelRendererTurbo(this, 55, 126, textureX, textureY, "glow"); // Large single headlight T
-		bodyModel[462] = new ModelRendererTurbo(this, 79, 150, textureX, textureY, "glow"); // Large single headlight B
-		bodyModel[463] = new ModelRendererTurbo(this, 44, 133, textureX, textureY, "glow"); // Headlight TB
-		bodyModel[464] = new ModelRendererTurbo(this, 44, 123, textureX, textureY, "glow"); // Headlight TT
-		bodyModel[465] = new ModelRendererTurbo(this, 68, 157, textureX, textureY, "glow"); // Headlight BB
-		bodyModel[466] = new ModelRendererTurbo(this, 68, 147, textureX, textureY, "glow"); // Headlight BT
-		bodyModel[467] = new ModelRendererTurbo(this, 495, 50, textureX, textureY, "glow"); // backing light type 3
-		bodyModel[468] = new ModelRendererTurbo(this, 500, 47, textureX, textureY, "glow"); // backing light type 1
+		bodyModel[461] = new ModelRendererTurbo(this, 55, 126, textureX, textureY, BoxName.lamp); // Large single headlight T
+		bodyModel[462] = new ModelRendererTurbo(this, 79, 150, textureX, textureY, BoxName.lamp); // Large single headlight B
+		bodyModel[463] = new ModelRendererTurbo(this, 44, 133, textureX, textureY, BoxName.lamp); // Headlight TB
+		bodyModel[464] = new ModelRendererTurbo(this, 44, 123, textureX, textureY, BoxName.lamp); // Headlight TT
+		bodyModel[465] = new ModelRendererTurbo(this, 68, 157, textureX, textureY, BoxName.lamp); // Headlight BB
+		bodyModel[466] = new ModelRendererTurbo(this, 68, 147, textureX, textureY, BoxName.lamp); // Headlight BT
+		bodyModel[467] = new ModelRendererTurbo(this, 495, 50, textureX, textureY, BoxName.lamp); // backing light type 3
+		bodyModel[468] = new ModelRendererTurbo(this, 500, 47, textureX, textureY, BoxName.lamp); // backing light type 1
 		bodyModel[469] = new ModelRendererTurbo(this, 166, 158, textureX, textureY); // Box 509
 		bodyModel[470] = new ModelRendererTurbo(this, 166, 161, textureX, textureY); // Box 0
 		bodyModel[471] = new ModelRendererTurbo(this, 164, 144, textureX, textureY); // Box 0
@@ -536,11 +538,11 @@ public class ModelDR441500Shark extends ModelConverter //Same as Filename
 		bodyModel[491] = new ModelRendererTurbo(this, 200, 124, textureX, textureY); // Box 481
 		bodyModel[492] = new ModelRendererTurbo(this, 172, 168, textureX, textureY); // Box 481
 		bodyModel[493] = new ModelRendererTurbo(this, 7, 90, textureX, textureY); // Box 0
-		bodyModel[494] = new ModelRendererTurbo(this, 8, 93, textureX, textureY, "glow"); // Box 0 glow
-		bodyModel[495] = new ModelRendererTurbo(this, 9, 97, textureX, textureY, "glow"); // Box 0 glow
+		bodyModel[494] = new ModelRendererTurbo(this, 8, 93, textureX, textureY, BoxName.lamp); // Box 0 glow
+		bodyModel[495] = new ModelRendererTurbo(this, 9, 97, textureX, textureY, BoxName.lamp); // Box 0 glow
 		bodyModel[496] = new ModelRendererTurbo(this, 7, 103, textureX, textureY); // Box 0
-		bodyModel[497] = new ModelRendererTurbo(this, 8, 106, textureX, textureY, "glow"); // Box 0 glow
-		bodyModel[498] = new ModelRendererTurbo(this, 9, 110, textureX, textureY, "glow"); // Box 0 glow
+		bodyModel[497] = new ModelRendererTurbo(this, 8, 106, textureX, textureY, BoxName.lamp); // Box 0 glow
+		bodyModel[498] = new ModelRendererTurbo(this, 9, 110, textureX, textureY, BoxName.lamp); // Box 0 glow
 		bodyModel[499] = new ModelRendererTurbo(this, 239, 49, textureX, textureY); // Box 0
 
 		bodyModel[0].addBox(0F, 0F, 0F, 15, 6, 20, 0F); // Box 0
@@ -2097,9 +2099,9 @@ public class ModelDR441500Shark extends ModelConverter //Same as Filename
 		bodyModel[504] = new ModelRendererTurbo(this, 69, 35, textureX, textureY); // Box 80
 		bodyModel[505] = new ModelRendererTurbo(this, 72, 36, textureX, textureY); // Box 80
 		bodyModel[506] = new ModelRendererTurbo(this, 65, 12, textureX, textureY, "cull"); // Box 0 cull
-		bodyModel[507] = new ModelRendererTurbo(this, 65, 9, textureX, textureY, "glow"); // beacon 1 R
+		bodyModel[507] = new ModelRendererTurbo(this, 65, 9, textureX, textureY, BoxName.lamp); // beacon 1 R
 		bodyModel[508] = new ModelRendererTurbo(this, 66, 47, textureX, textureY, "cull"); // Box 612 cull
-		bodyModel[509] = new ModelRendererTurbo(this, 66, 44, textureX, textureY, "glow"); // beacon 1 L
+		bodyModel[509] = new ModelRendererTurbo(this, 66, 44, textureX, textureY, BoxName.lamp); // beacon 1 L
 		bodyModel[510] = new ModelRendererTurbo(this, 13, 83, textureX, textureY); // Box 0
 		bodyModel[511] = new ModelRendererTurbo(this, 1, 83, textureX, textureY); // Box 537
 		bodyModel[512] = new ModelRendererTurbo(this, 232, 59, textureX, textureY); // Box 0
@@ -2118,16 +2120,16 @@ public class ModelDR441500Shark extends ModelConverter //Same as Filename
 		bodyModel[525] = new ModelRendererTurbo(this, 66, 15, textureX, textureY); // Box 88
 		bodyModel[526] = new ModelRendererTurbo(this, 64, 21, textureX, textureY); // Box 88
 		bodyModel[527] = new ModelRendererTurbo(this, 214, 38, textureX, textureY); // Box 372
-		bodyModel[528] = new ModelRendererTurbo(this, 215, 42, textureX, textureY, "glow"); // Box 372 glow
+		bodyModel[528] = new ModelRendererTurbo(this, 215, 42, textureX, textureY, BoxName.lamp); // Box 372 glow
 		bodyModel[529] = new ModelRendererTurbo(this, 214, 80, textureX, textureY); // Box 362
-		bodyModel[530] = new ModelRendererTurbo(this, 215, 84, textureX, textureY, "glow"); // Box 362 glow
-		bodyModel[531] = new ModelRendererTurbo(this, 19, 90, textureX, textureY, "glow"); // Box 362 markerlight glow
-		bodyModel[532] = new ModelRendererTurbo(this, 1, 90, textureX, textureY, "glow"); // Box 363 markerlight glow
+		bodyModel[530] = new ModelRendererTurbo(this, 215, 84, textureX, textureY, BoxName.lamp); // Box 362 glow
+		bodyModel[531] = new ModelRendererTurbo(this, 19, 90, textureX, textureY, BoxName.lamp); // Box 362 markerlight glow
+		bodyModel[532] = new ModelRendererTurbo(this, 1, 90, textureX, textureY, BoxName.lamp); // Box 363 markerlight glow
 		bodyModel[533] = new ModelRendererTurbo(this, 225, 44, textureX, textureY); // Box 481
 		bodyModel[534] = new ModelRendererTurbo(this, 82, 1, textureX, textureY); // Box 82
 		bodyModel[535] = new ModelRendererTurbo(this, 82, 5, textureX, textureY); // Box 561
 		bodyModel[536] = new ModelRendererTurbo(this, 64, 34, textureX, textureY); // Box 409 commander base
-		bodyModel[537] = new ModelRendererTurbo(this, 64, 30, textureX, textureY, "glow"); // Box 410 commander beacon
+		bodyModel[537] = new ModelRendererTurbo(this, 64, 30, textureX, textureY, BoxName.commander); // Box 410 commander beacon
 		bodyModel[538] = new ModelRendererTurbo(this, 272, 2, textureX, textureY); // Box 565
 		bodyModel[539] = new ModelRendererTurbo(this, 310, 19, textureX, textureY); // Box 566
 		bodyModel[540] = new ModelRendererTurbo(this, 75, 33, textureX, textureY); // Box 88
@@ -2384,19 +2386,7 @@ public class ModelDR441500Shark extends ModelConverter //Same as Filename
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 568; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("glow")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 123456) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
@@ -2426,17 +2416,5 @@ public class ModelDR441500Shark extends ModelConverter //Same as Filename
 			theBetterTrucks.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-
-	}
-
-	public float[] getTrans() {
-		return new float[]{-1.4F, 0.125F, 0.00F};
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{1.66D, 1.32D, 0.22D});
-			}
-		};
 	}
 }

@@ -518,5 +518,4 @@ public class ModelBulkheadFlat extends ModelBase
 	}
 
 	public ModelRendererTurbo bulkheadflatModel[];
-	public float[] getTrans() { return new float[]{-0F, 0.0F, 0F}; }
 }

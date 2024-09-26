@@ -71,10 +71,4 @@ public class ModelAEM7 extends ModelConverter //Same as Filename
 		bodyModel[8].addShapeBox(0F, 0F, 0F, 8, 4, 0, 0F,0F, 0F, 0F, -4F, 0F, 0F, -4F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, -4F, -2F, 0F, -4F, -2F, 0F, 0F, -2F, 0F); // Box 9
 		bodyModel[8].setRotationPoint(-2F, 2F, 1.25F);
 	}
-	public float[] getTrans() {
-		return new float[]{-1.15F, 2.5F, 0F};
-	}
-	public float[] getScale() {
-		return new float[] { 4F, 4.5F, 4F };
-	}
 }

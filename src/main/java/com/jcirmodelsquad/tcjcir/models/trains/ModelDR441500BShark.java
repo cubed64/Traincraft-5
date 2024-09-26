@@ -17,7 +17,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -114,7 +116,7 @@ public class ModelDR441500BShark extends ModelConverter //Same as Filename
 		bodyModel[70] = new ModelRendererTurbo(this, 482, 60, textureX, textureY); // Box 153
 		bodyModel[71] = new ModelRendererTurbo(this, 479, 59, textureX, textureY); // Box 128
 		bodyModel[72] = new ModelRendererTurbo(this, 470, 76, textureX, textureY); // Box 128
-		bodyModel[73] = new ModelRendererTurbo(this, 505, 50, textureX, textureY, "glow"); // backing light type 1
+		bodyModel[73] = new ModelRendererTurbo(this, 505, 50, textureX, textureY, BoxName.lamp); // backing light type 1
 		bodyModel[74] = new ModelRendererTurbo(this, 167, 45, textureX, textureY); // Box 0
 		bodyModel[75] = new ModelRendererTurbo(this, 165, 40, textureX, textureY); // Box 0
 		bodyModel[76] = new ModelRendererTurbo(this, 168, 48, textureX, textureY); // Box 0
@@ -225,8 +227,8 @@ public class ModelDR441500BShark extends ModelConverter //Same as Filename
 		bodyModel[181] = new ModelRendererTurbo(this, 287, 167, textureX, textureY); // Box 394
 		bodyModel[182] = new ModelRendererTurbo(this, 274, 170, textureX, textureY); // Box 394
 		bodyModel[183] = new ModelRendererTurbo(this, 274, 175, textureX, textureY); // Box 394
-		bodyModel[184] = new ModelRendererTurbo(this, 495, 50, textureX, textureY, "glow"); // backing light type 3
-		bodyModel[185] = new ModelRendererTurbo(this, 500, 47, textureX, textureY, "glow"); // backing light type 1
+		bodyModel[184] = new ModelRendererTurbo(this, 495, 50, textureX, textureY, BoxName.lamp); // backing light type 3
+		bodyModel[185] = new ModelRendererTurbo(this, 500, 47, textureX, textureY, BoxName.lamp); // backing light type 1
 		bodyModel[186] = new ModelRendererTurbo(this, 69, 35, textureX, textureY); // Box 80
 		bodyModel[187] = new ModelRendererTurbo(this, 72, 36, textureX, textureY); // Box 80
 		bodyModel[188] = new ModelRendererTurbo(this, 272, 2, textureX, textureY); // Box 565
@@ -264,9 +266,9 @@ public class ModelDR441500BShark extends ModelConverter //Same as Filename
 		bodyModel[220] = new ModelRendererTurbo(this, 225, 1, textureX, textureY); // Box 0
 		bodyModel[221] = new ModelRendererTurbo(this, 201, 2, textureX, textureY); // Box 0
 		bodyModel[222] = new ModelRendererTurbo(this, 247, 2, textureX, textureY); // Box 103
-		bodyModel[223] = new ModelRendererTurbo(this, 242, 46, textureX, textureY, "glow"); // backing light type 1
-		bodyModel[224] = new ModelRendererTurbo(this, 252, 46, textureX, textureY, "glow"); // backing light type 3
-		bodyModel[225] = new ModelRendererTurbo(this, 247, 43, textureX, textureY, "glow"); // backing light type 1
+		bodyModel[223] = new ModelRendererTurbo(this, 242, 46, textureX, textureY, BoxName.lamp); // backing light type 1
+		bodyModel[224] = new ModelRendererTurbo(this, 252, 46, textureX, textureY, BoxName.lamp); // backing light type 3
+		bodyModel[225] = new ModelRendererTurbo(this, 247, 43, textureX, textureY, BoxName.lamp); // backing light type 1
 		bodyModel[226] = new ModelRendererTurbo(this, 211, 78, textureX, textureY); // Box 128
 		bodyModel[227] = new ModelRendererTurbo(this, 218, 84, textureX, textureY); // Box 128
 		bodyModel[228] = new ModelRendererTurbo(this, 219, 43, textureX, textureY); // Box 128
@@ -1139,20 +1141,9 @@ public class ModelDR441500BShark extends ModelConverter //Same as Filename
 	ModelTypeBnew theBetterTrucks = new ModelTypeBnew();
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 267; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("glow")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 123456) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
@@ -1183,16 +1174,5 @@ public class ModelDR441500BShark extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 
-	}
-
-	public float[] getTrans() {
-		return new float[]{-1.35F, 0.125F, 0.00F};
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{1.68D, 1.32D, 0.22D});
-			}
-		};
 	}
 }

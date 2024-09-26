@@ -2306,7 +2306,7 @@ public class ModelGP38 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 26
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 27 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 28) {
@@ -2347,22 +2347,5 @@ public class ModelGP38 extends ModelConverter //Same as Filename
 			theBlombi.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{1.45D, 1.3D, 0.0D});//front
-				add(new double[]{0.6D, 1.3D, 0.0D});//rear
-			}
-		};
-	}
-	public float[] getTrans() { return new float[]{-1.45F, 0.155F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
 	}
 }

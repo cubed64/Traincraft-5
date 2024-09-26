@@ -1801,9 +1801,9 @@ public class ModelU23B extends ModelConverter //Same as Filename
 	ModelTypeBnew theTrucks4 = new ModelTypeBnew();
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, (Locomotive) entity, f5);
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
@@ -1881,21 +1881,5 @@ public class ModelU23B extends ModelConverter //Same as Filename
 			theTrucks4.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.75D, 1.35D, 0.0D});
-			}
-		};
-	}
-	public float[] getTrans() { return new float[]{-1.525F, 0.155F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
 	}
 }

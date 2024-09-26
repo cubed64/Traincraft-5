@@ -24,7 +24,7 @@ public class PS2_4750 extends Freight implements IInventory {
 		textureDescriptionMap.put(1, "Generic Tan / Foxmann Industries");
 		textureDescriptionMap.put(2, "KSFX 'Seed Co-Op'");
 		textureDescriptionMap.put(3, "KSFX 'Seed Co-Op'");
-		textureDescriptionMap.put(4, "FNCC Black");
+		textureDescriptionMap.put(4, "FNCC (Carbo Service)");
 		textureDescriptionMap.put(5, "SNEED'S");
 		textureDescriptionMap.put(6, "UP");
 		textureDescriptionMap.put(7, "UP (But Boring)");
@@ -50,6 +50,14 @@ public class PS2_4750 extends Freight implements IInventory {
 		textureDescriptionMap.put(27, "Washington Grain Train (Stale)");
 		textureDescriptionMap.put(28, "HRTX (THE GOCK!!!!1!!!1111111111111111111111111111111111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!?!11111111111111111!!!!!!!!!!!!!!!!/)");
 		textureDescriptionMap.put(29, "GCM");
+		textureDescriptionMap.put(30, "Cornhub");
+		textureDescriptionMap.put(31, "ATSF again");
+		textureDescriptionMap.put(32, "MNS");
+		textureDescriptionMap.put(33, "GTW (1972)");
+		textureDescriptionMap.put(34, "GTW (1979)");
+		textureDescriptionMap.put(35, "MP (Early)");
+		textureDescriptionMap.put(36, "MP (Late)");
+		textureDescriptionMap.put(37, "");
 	}
 
 	public void initFreightGrain() {

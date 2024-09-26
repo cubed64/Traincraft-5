@@ -1700,7 +1700,7 @@ public class ModelFAFDL extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 9||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
@@ -1721,17 +1721,5 @@ public class ModelFAFDL extends ModelConverter //Same as Filename
 			theBetterTrucks.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-
-	public float[] getTrans() {
-		return new float[]{-1.4F, 0.125F, 0.00F};
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{1.0D, 1.19D, 0.0D});
-			}
-		};
 	}
 }

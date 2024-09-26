@@ -18,6 +18,7 @@ import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
 import train.client.render.models.ModelFOL_M1Bogie;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
@@ -631,17 +632,7 @@ public class ModelFOLM1B extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for (ModelRendererTurbo mrt : bodyModel){
-			if(mrt.boxName.equals("lamp")){
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				mrt.render(f5,false);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else {
-				mrt.render(f5,false);
-			}
-		}
-
-
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==8){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/FOL_M1_Bogie_grey.png"));
 		} else {

@@ -25,6 +25,7 @@ public class DieselSDP45 extends DieselTrain {
         textureDescriptionMap.put(3, "Burlington Northern 6596");
         textureDescriptionMap.put(4, "Burlington Northern 6593");
         textureDescriptionMap.put(5, "Steampunk Rail");
+        textureDescriptionMap.put(6, "JCIR 6 Years");
 
     }
     public DieselSDP45(World world, double d, double d1, double d2){

@@ -128,7 +128,7 @@ public class GuiLoco2 extends GuiContainer {
 		//endregion guiTCTextFieldTrainNote
 
 		//region Lights On/Off
-		if (loco.isLocomotiveLightsEnabled())
+		if (loco.isLightsEnabled())
 		{
 			buttonList.add(this.buttonLock = new GuiButton(6, var1 + 108, var2 + 166, 67, 12, "Lights: On"));
 		}
@@ -139,7 +139,7 @@ public class GuiLoco2 extends GuiContainer {
 		//endregion Lights On/Off
 
 		//region Beacon On/Off
-		if (loco.isLocomotiveBeaconEnabled())
+		if (loco.isBeaconEnabled())
 		{
 			buttonList.add(this.buttonLock = new GuiButton(7, var1 + 41, var2 + 166, 67, 12, "Beacon: On"));
 		}
@@ -150,7 +150,7 @@ public class GuiLoco2 extends GuiContainer {
 		//endregion Beacon On/Off
 
 		//region DitchLights On/Off
-		if (loco.isLocomotiveDitchLightsEnabled())
+		if (loco.isDitchLightsEnabled())
 		{
 			buttonList.add(this.buttonLock = new GuiButton(8, var1 + 90, var2 + 178, 85, 12, "Ditch Lights: On"));
 		}
@@ -252,43 +252,43 @@ public class GuiLoco2 extends GuiContainer {
 				}
 			break;
 			case 6: // Lights
-				if (loco.isLocomotiveLightsEnabled())
+				if (loco.isLightsEnabled())
 				{
-					Traincraft.locomotiveLightsChannel.sendToServer(new PacketLocomotiveLights(false, loco.getEntityId()));
+					Traincraft.rollingStockLightsChannel.sendToServer(new PacketRollingStockLights(false, loco.getEntityId()));
 					loco.isLocomotiveLightsEnabled = false;
 					guibutton.displayString = "Lights: Off";
 				}
 				else
 				{
-					Traincraft.locomotiveLightsChannel.sendToServer(new PacketLocomotiveLights(true, loco.getEntityId()));
+					Traincraft.rollingStockLightsChannel.sendToServer(new PacketRollingStockLights(true, loco.getEntityId()));
 					loco.isLocomotiveLightsEnabled = true;
 					guibutton.displayString = "Lights: On";
 				}
 			break;
 			case 7: // Beacon
-				if (loco.isLocomotiveBeaconEnabled())
+				if (loco.isBeaconEnabled())
 				{
-					Traincraft.locomotiveBeaconChannel.sendToServer(new PacketLocomotiveBeacon(false, loco.getEntityId()));
+					Traincraft.rollingStockBeaconChannel.sendToServer(new PacketRollingStockBeacon(false, loco.getEntityId()));
 					loco.isLocomotiveBeaconEnabled = false;
 					guibutton.displayString = "Beacon: Off";
 				}
 				else
 				{
-					Traincraft.locomotiveBeaconChannel.sendToServer(new PacketLocomotiveBeacon(true, loco.getEntityId()));
+					Traincraft.rollingStockBeaconChannel.sendToServer(new PacketRollingStockBeacon(true, loco.getEntityId()));
 					loco.isLocomotiveBeaconEnabled = true;
 					guibutton.displayString = "Beacon: On";
 				}
 			break;
 			case 8: // DitchLights
-				if (loco.isLocomotiveDitchLightsEnabled())
+				if (loco.isDitchLightsEnabled())
 				{
-					Traincraft.locomotiveDitchLightsChannel.sendToServer(new PacketLocomotiveDitchLights((byte)0, loco.getEntityId()));
+					Traincraft.rollingStockDitchLightsChannel.sendToServer(new PacketRollingStockDitchLights((byte)0, loco.getEntityId()));
 					loco.ditchLightMode = 0;
 					guibutton.displayString = "Ditch Lights: Off";
 				}
 				else
 				{
-					Traincraft.locomotiveDitchLightsChannel.sendToServer(new PacketLocomotiveDitchLights((byte)1, loco.getEntityId()));
+					Traincraft.rollingStockDitchLightsChannel.sendToServer(new PacketRollingStockDitchLights((byte)1, loco.getEntityId()));
 					loco.ditchLightMode = 1;
 					guibutton.displayString = "Ditch Lights: On";
 				}

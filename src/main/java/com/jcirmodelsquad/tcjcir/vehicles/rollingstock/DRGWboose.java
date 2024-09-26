@@ -1,13 +1,10 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
-import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import train.common.api.EntityRollingStock;
-import train.common.api.IPassenger;
+import train.common.api.AbstractPassengerCar;
 
-public class DRGWboose extends EntityRollingStock implements IPassenger {
+public class DRGWboose extends AbstractPassengerCar
+{
     public DRGWboose(World world) {
         super(world);
         textureDescriptionMap.put(0, "idk what this is, fix it dominik");
@@ -25,18 +22,17 @@ public class DRGWboose extends EntityRollingStock implements IPassenger {
         textureDescriptionMap.put(12, "idk what this is, fix it dominik");
         textureDescriptionMap.put(13, "DLMR");
         textureDescriptionMap.put(14, "C&PV");
-
     }
 
-    public DRGWboose(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
+    public DRGWboose(World world, double posX, double posY, double posZ)
+	{
+		super(world, posX, posY, posZ);
+	}
+
+    @Override
+    public float getOptimalLinkingDistance()
+    {
+        return 2.4F;
     }
 
     /*@Override
@@ -78,49 +74,4 @@ public class DRGWboose extends EntityRollingStock implements IPassenger {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
         }
     }*/
-
-    @Override
-    public void setDead() {
-        super.setDead();
-        isDead = true;
-    }
-
-    @Override
-    public boolean interactFirst(EntityPlayer entityplayer) {
-        playerEntity = entityplayer;
-        if ((super.interactFirst(entityplayer))) {
-            return false;
-        }
-        if (!worldObj.isRemote) {
-            ItemStack itemstack = entityplayer.inventory.getCurrentItem();
-            if(lockThisCart(itemstack, entityplayer))return true;
-            if (riddenByEntity != null && (riddenByEntity instanceof EntityPlayer) && riddenByEntity != entityplayer) {
-                return true;
-            }
-            if (!worldObj.isRemote) {
-                entityplayer.mountEntity(this);
-            }
-        }
-        return true;
-    }
-
-    @Override
-    public boolean canBeRidden() {
-        return true;
-    }
-
-    @Override
-    public boolean isStorageCart() {
-        return false;
-    }
-
-    @Override
-    public boolean isPoweredCart() {
-        return false;
-    }
-
-    @Override
-    public float getOptimalDistance(EntityMinecart cart) {
-        return 2.4F;
-    }
 }

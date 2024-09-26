@@ -607,7 +607,7 @@ entity.tc.Loco Steam Mogul.name=Mogul (US)
 entity.tc.Loco Steam Shay.name=Shay (US)
 entity.tc.Loco Steam Adler.name=Adler
 entity.tc.Loco Electric Tram NY.name=Kawasaki PA4 (US)
-entity.tc.Loco Electric Yellow Wood Tram.name=wooden Tram
+entity.tc.Loco Electric Yellow Wood Tram.name=Wooden Tram
 entity.tc.Loco Electric High Speed ZeroED.name=High Speed Train
 entity.tc.Loco Electric Minetrain.name=Cart Hauler
 entity.tc.Loco Electric BR_E69.name=BR E69
@@ -1260,6 +1260,7 @@ item.tc:minecartBUnitFOLM1B.name=FOL-M1B (Unpowered)
 item.tc:minecartKrautt.name=Krauss-Maffei ML-4000
 item.tc:minecartILMC.name=I.L.M.C
 item.tc:minecartDD55.name=LA Switcher Company DD55
+item.tc:minecartTB27.name=Masaou TB27
 
 item.tc:minecartSlugMA.name=EMD GP Slug (SlugMA)
 item.tc:minecartF7BSlug.name=EMD F7B Slug
@@ -1277,6 +1278,7 @@ entity.tc.BUnitFOL-M1B.name=FOL-M1B (Unpowered)
 entity.tc.Krautt.name=Krauss-Maffei ML-4000
 entity.tc.ILMC.name=I.L.M.C
 entity.tc.DD55.name=LA Switcher Company DD55
+entity.tc.TB27.name=Masaou TB27
 
 entity.tc.SlugMA.name=EMD GP Slug (SlugMA)
 entity.tc.F7BSlug.name=EMD F7B Slug
@@ -1391,7 +1393,8 @@ item.tc:minecartOreJenny.name=Ore Jenny
 item.tc:minecartPRRGLaHopper.name= PRR GLa Hopper and clones
 item.tc:minecartACF41Gon.name=AC&F 41' 6" Gondola
 item.tc:minecartBethgonII.name=Bethgon II Open Top Hopper
-item.tc:minecart67millgon.name=Greenville Car Co Drop End Gondola
+item.tc:minecart67millgon.name=GSCO 67' Drop-End Mill Gondola
+item.tc:minecart52millgon.name=GSCO 52' Drop-End Mill Gondola
 item.tc:minecartAAR50TonHopper.name=AAR 50 Ton Hopper
 item.tc:minecartAAR70TonHopper.name=AAR 70 Ton Hopper
 
@@ -1403,7 +1406,8 @@ entity.tc.Ore Jenny.name=Ore Jenny
 entity.tc.PRR GLa hopper.name= PRR GLa Hopper and clones
 entity.tc.ACF41Gon.name=AC&F 41' 6" Gondola
 entity.tc.BethgonII.name=Bethgon II Open Top Hopper
-entity.tc.67millgon.name=Greenville Car Co Drop End Gondola
+entity.tc.67millgon.name=GSCO 67' Drop-End Mill Gondola
+entity.tc.52millgon.name=GSCO 52' Drop-End Mill Gondola
 entity.tc.AAR 50 Ton Hopper.name=AAR 50 Ton Hopper
 entity.tc.AAR 70 Ton Hopper.name=AAR 70 Ton Hopper
 

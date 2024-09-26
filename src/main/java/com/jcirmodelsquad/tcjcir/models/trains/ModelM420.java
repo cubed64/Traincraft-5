@@ -1763,7 +1763,7 @@ public class ModelM420 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel ,entity ,f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel ,entity ,f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15464) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
@@ -1794,12 +1794,4 @@ public class ModelM420 extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.65D, 1.4D, 0.0D});
-			}
-		};
-	}
-	public float[] getTrans() { return new float[]{-1.4F, 0.155F, 0F}; }
 }

@@ -1507,7 +1507,7 @@ public class ModelC415H extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 135461 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7234 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 8546 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5546) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
@@ -1547,32 +1547,4 @@ public class ModelC415H extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 	}
-
-	public float[] getTrans() {
-		return new float[]{-1.2F, 0.15F, 0.00F};
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{1.77D, 1.55D, 0.0D});
-			}
-		};
-	}
-	/*public ArrayList<double[]> getSmokePosition(Entity entity) {
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1){
-			return new ArrayList<double[]>() {
-				{
-					add(new double[]{1.15D, 1.55D, 0.0D});
-				}
-			};
-		}else{
-			return new ArrayList<double[]>() {
-				{
-					add(new double[]{1.75D, 1.55D, 0.0D});
-				}
-			};
-		}
-	}*/
 }

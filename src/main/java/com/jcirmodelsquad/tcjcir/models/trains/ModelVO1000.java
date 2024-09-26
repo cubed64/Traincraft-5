@@ -20,6 +20,7 @@ import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
 import train.client.render.models.ModelTypeAClassico;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
@@ -1105,15 +1106,7 @@ public class ModelVO1000 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for(int i = 0; i < 263; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity ,f5);
 
 		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==15){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/typeAclassico_Silver.png"));
@@ -1151,9 +1144,6 @@ public class ModelVO1000 extends ModelConverter //Same as Filename
 		}
 	}
 
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
-	{
-	}
 
 	public ModelRendererTurbo ModelVO1000[];
 }
