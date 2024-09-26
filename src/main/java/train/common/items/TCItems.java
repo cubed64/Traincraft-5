@@ -49,6 +49,7 @@ public class TCItems {
 		ItemIDs.padlock.item = new ItemPadlock();
 
 		ItemIDs.stake.item = new ItemStacked(1200);
+		ItemIDs.brakestick.item = new ItemBrakeHandle();
 		ItemIDs.airship.item = new ItemZeppelins(0);
 		ItemIDs.zeppelin.item = new ItemZeppelins(1);
 		ItemIDs.overalls.item = new ItemTCArmor(ItemIDs.overalls.iconName, Traincraft.instance.armor, Traincraft.trainArmor, 2,0);

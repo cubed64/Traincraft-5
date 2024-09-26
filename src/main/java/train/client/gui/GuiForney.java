@@ -97,7 +97,7 @@ public class GuiForney extends GuiContainer {
 	@Override
 	protected void actionPerformed(GuiButton guibutton) {
 		if (guibutton.id == 2) {
-			if ((!loco.getParkingBrakeFromPacket()) && loco.getSpeed() < 10) {
+			if ((!loco.getParkingBrakeDW()) && loco.getSpeed() < 10) {
 				Traincraft.brakeChannel.sendToServer(new PacketParkingBrake(true, loco.getEntityId()));
 				loco.parkingBrake = true;
 				guibutton.displayString = "Brake: On";

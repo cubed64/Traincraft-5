@@ -15,7 +15,6 @@ import org.lwjgl.opengl.GL11;
 import train.common.Traincraft;
 import train.common.api.Freight;
 import train.common.core.network.PacketAddNote;
-import train.common.core.network.PacketParkingBrake;
 import train.common.core.network.PacketSetTrainLockedToClient;
 import train.common.inventory.InventoryFreight;
 import train.common.library.Info;
@@ -27,8 +26,6 @@ public class GuiFreight extends GuiContainer {
 	private Freight freight;
 	private int inventoryRows;
 	private EntityPlayer player;
-
-	private String handBrakeTexture = Info.guiPrefix + "customButton.png";
 
 	private float yaw;
 	private float roll;
@@ -57,35 +54,6 @@ public class GuiFreight extends GuiContainer {
 		int width = sr.getScaledWidth();
 		int height = sr.getScaledHeight();
 
-		//region FreightCarBrake
-		int textureX = 0;
-		int textureY = 46;
-		int textureSizeX = 40;
-		int textureSizeY = 13;
-		int buttonPosX = 0;
-		int buttonPosY = 0;
-
-		if (!freight.getParkingBrakeFromPacket())
-		{
-			textureX = 126;
-			textureY = 13;
-			textureSizeX = 43;
-			textureSizeY = 13;
-			buttonPosX = 43;
-			buttonPosY = -13;
-			buttonList.add(new GuiCustomButton(2, ((width - xSize) / 2) + buttonPosX - 12, ((height - ySize) / 2) + buttonPosY, textureSizeX, textureSizeY, "", handBrakeTexture, textureX, textureY));//Brake: Off
-		}
-		else
-		{
-			textureX = 82;
-			textureY = 13;
-			textureSizeX = 43;
-			textureSizeY = 13;
-			buttonPosX = 0;
-			buttonPosY = -13;
-			buttonList.add(new GuiCustomButton(2, ((width - xSize) / 2) + buttonPosX, ((height - ySize) / 2) + buttonPosY, textureSizeX, textureSizeY, "", handBrakeTexture, textureX, textureY));//Brake: On
-		}
-		//endregion FreightCarBrake
 
 
 
@@ -112,23 +80,6 @@ public class GuiFreight extends GuiContainer {
 	{
 		switch (guibutton.id)
 		{
-			case 2:
-				if ((!freight.parkingBrake) && freight.getSpeed() < 10) {
-					Traincraft.brakeChannel.sendToServer(new PacketParkingBrake(true, freight.getEntityId()));
-					freight.parkingBrake=true;
-					freight.isBraking=true;
-					guibutton.displayString = "Brake: On";
-					this.initGui();
-				}
-				else if (freight.getSpeed() < 10) {
-					Traincraft.brakeChannel.sendToServer(new PacketParkingBrake(false, freight.getEntityId()));
-					freight.parkingBrake=false;
-					freight.isBraking=false;
-					guibutton.displayString = "Brake: Off";
-					this.initGui();
-				}
-				break;
-
 			case 3:
 				if (player != null && player.getCommandSenderName().equalsIgnoreCase(freight.getTrainOwner())) {
 					if (!freight.getTrainLockedFromPacket() && !isShiftKeyDown()) {

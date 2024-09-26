@@ -38,18 +38,10 @@ public class PacketParkingBrake implements IMessage {
         public IMessage onMessage(PacketParkingBrake message, MessageContext context) {
 			
 			Entity TrainEntity = context.getServerHandler().playerEntity.worldObj.getEntityByID(message.entityID);
-			
-			if (TrainEntity instanceof Locomotive) {
 
-				((Locomotive) TrainEntity).setParkingBrakeFromPacket(message.ParkingBrake);
-			}
-			else if (TrainEntity instanceof Freight)
+			if (TrainEntity instanceof EntityRollingStock)
 			{
-				((Freight) TrainEntity).setParkingBrakeFromPacket(message.ParkingBrake);
-			}
-
-			if (TrainEntity instanceof EntityRollingStock) {
-
+				((EntityRollingStock) TrainEntity).setParkingBrakeFromPacket(message.ParkingBrake);
 				((EntityRollingStock) TrainEntity).isBraking = message.ParkingBrake;
 
 			}

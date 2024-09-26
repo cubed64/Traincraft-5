@@ -18,8 +18,6 @@ import train.common.core.network.PacketParkingBrake;
 
 public abstract class Freight extends EntityRollingStock implements IInventory
 {
-	public boolean parkingBrake = false;
-
 	public ItemStack cargoItems[];
 	protected double itemInsideCount = 0;
 	private int slotsFilled=0;
@@ -28,28 +26,24 @@ public abstract class Freight extends EntityRollingStock implements IInventory
 		super(world);
 		dataWatcher.addObject(22, 0);
 		dataWatcher.addObject(25, (int) convertSpeed(Math.sqrt(Math.abs(motionX * motionX) + Math.abs(motionZ * motionZ))));
-		dataWatcher.addObject(27, "" + parkingBrake);
 	}
 
 	@Override
 	public void readSpawnData(ByteBuf additionalData)
 	{
 		super.readSpawnData(additionalData);
-		parkingBrake = additionalData.readBoolean();
 	}
 
 	@Override
 	public void writeSpawnData(ByteBuf buffer)
 	{
 		super.writeSpawnData(buffer);
-		buffer.writeBoolean(parkingBrake);
 	}
 
 	@Override
 	protected void writeEntityToNBT(NBTTagCompound nbttagcompound)
 	{
 		super.writeEntityToNBT(nbttagcompound);
-		nbttagcompound.setBoolean("parkingBrake", parkingBrake);
 	}
 
 	@Override
@@ -169,8 +163,6 @@ public abstract class Freight extends EntityRollingStock implements IInventory
 	{
 		super.onUpdate();
 		handleMass();
-		handleParkingBrake();
-
 	}
 
 	/**
@@ -192,15 +184,6 @@ public abstract class Freight extends EntityRollingStock implements IInventory
 		}
 		mass += (this.itemInsideCount * 0.0005);// original modifier value was 0.0001
 	}
-
-	protected void handleParkingBrake()
-	{
-		if (parkingBrake)
-		{
-			motionX = 0.0;
-			motionZ = 0.0;
-		}
-	}
 	
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
@@ -212,9 +195,6 @@ public abstract class Freight extends EntityRollingStock implements IInventory
 	@Override
 	protected void readEntityFromNBT(NBTTagCompound nbttagcompound) {
 		super.readEntityFromNBT(nbttagcompound);
-
-		parkingBrake = nbttagcompound.getBoolean("parkingBrake");
-		dataWatcher.updateObject(27, "" + parkingBrake);
 		ItemStack cargoItemsCount[];
 		NBTTagList nbttaglist = nbttagcompound.getTagList("Items", Constants.NBT.TAG_COMPOUND);
 		cargoItemsCount = new ItemStack[getSizeInventory()];
@@ -264,28 +244,6 @@ public abstract class Freight extends EntityRollingStock implements IInventory
 		//speed *= 6;// applying ratio
 		//speed *= 3.6;// convert in km/h
 		return speed;
-	}
-
-	public boolean getParkingBrakeFromPacket()
-	{
-		return parkingBrake;
-	}
-
-
-	public void setParkingBrakeFromPacket(boolean set) {
-		parkingBrake = set;
-	}
-
-
-	@Override
-	public boolean canBePushed()
-	{
-		return false;
-	}
-
-	@Override
-	public boolean canBeAdjusted(EntityMinecart cart) {
-		return getParkingBrakeFromPacket();
 	}
 
 	public double getSpeed() {
