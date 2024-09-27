@@ -683,7 +683,7 @@ public enum EnumTrains {
 	amcafe("AmCafe", AmCafe.class, ItemIDs.minecartAmCafe.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"White", "Grey", "LightGrey", "LightBlue", "Red", "Blue", "Cyan", "Skin16", "Skin17"}), 14, 0, null),
 	amcafe2("AmCafe2", AmCafe2.class, ItemIDs.minecartAmCafe2.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "LightGrey", "Red", "Blue", "Skin16", "Skin17"}), 14, 0, null),
 
-	PEcoach("PEcoach", PEcoach.class, ItemIDs.minecartPEcooch.item, "festive passenger",  0, 0, 6, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan"}), 10, 0),
+	PEcoach("PEcoach", PEcoach.class, ItemIDs.minecartPEcooch.item, "festive passenger",  0, 0, 6, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "Green", "Lime", "Skin16", "Purple"}), 10, 0),
 	PEobserve("PEobserve", PEobserve.class, ItemIDs.minecartPEobserve.item, "festive passenger",  0, 0, 6, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan"}), 10, 0),
 
 	//or as i like to call it the cabussy//
