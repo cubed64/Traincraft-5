@@ -52,9 +52,6 @@ public class SpeedHandler {
 		return MathHelper.cos(player.rotationYaw / 180.0F * (float) Math.PI) * var3 * MathHelper.cos(player.rotationPitch / 180.0F * (float) Math.PI) * var3;
 	}
 
-	/**
-	 * 
-	 */
 	private static float convertSpeed(Entity entity, float maxSpeed) {
 		float speed = ((Locomotive) entity).getMaxSpeed()*0.2775f;// speed is in m/s
 		speed /= ConfigHandler.REAL_TRAIN_SPEED?2f:6f;// applying ratio

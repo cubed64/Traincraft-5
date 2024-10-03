@@ -45,7 +45,7 @@ public class GuiLoco2 extends GuiContainer {
 		super.initGui();
 		buttonList.clear();
 		//region ParkingBrake
-		if (!loco.getParkingBrakeDW())
+		if (!loco.getParkingBrakeFromPacket())
 		{
 			if (loco instanceof SteamTrain) {
 				textureX = 41;

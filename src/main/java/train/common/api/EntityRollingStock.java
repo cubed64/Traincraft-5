@@ -197,7 +197,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		dataWatcher.addObject(20, 0);//heat
 		dataWatcher.addObject(14, 0);
 		dataWatcher.addObject(21, 0);
-		dataWatcher.addObject(29, "" + parkingBrake);
+		dataWatcher.addObject(25, (int) convertSpeed(Math.sqrt(Math.abs(motionX * motionX) + Math.abs(motionZ * motionZ))));//convertSpeed((Math.abs(this.motionX) + Math.abs(this.motionZ))
+		dataWatcher.addObject(30, "" + parkingBrake);
 
 		preventEntitySpawning = true;
 		isImmuneToFire = true;
@@ -684,6 +685,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 
 		super.manageChunkLoading();
 		handleParkingBrake();
+
 		/**
 		 * Set the uniqueID if the entity doesn't have one.
 		 */
@@ -1021,7 +1023,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		}
 		this.dataWatcher.updateObject(14, (int) (motionX * 100));
 		this.dataWatcher.updateObject(21, (int) (motionZ * 100));
-		dataWatcher.updateObject(29, "" + parkingBrake);
+		dataWatcher.updateObject(25, (int) convertSpeed(Math.sqrt(motionX * motionX + motionZ * motionZ)));
+		dataWatcher.updateObject(30, "" + parkingBrake);
 		if (ConfigHandler.ENABLE_LOGGING && !worldObj.isRemote && updateTicks%120==0){
 			ServerLogger.writeWagonToFolder(this);
 		}
@@ -1667,7 +1670,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		this.rotation = nbttagcompound.getFloat("rotation");
 		this.isBraking = nbttagcompound.getBoolean("brake");
 		parkingBrake = nbttagcompound.getBoolean("parkingBrake");
-		dataWatcher.updateObject(29, "" + parkingBrake);
+		dataWatcher.updateObject(30, "" + parkingBrake);
 
 	}
 
@@ -1698,7 +1701,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		if (trainsOnClick.onClickWithBrakeHandle(this,itemstack,playerEntity,worldObj))
 		{
 			setParkingBrakeFromPacket(!parkingBrake);
-			dataWatcher.updateObject(29, !getParkingBrakeDW());
+			dataWatcher.updateObject(30, "" + !getParkingBrakeDW());
 			return true;
 		}
 
@@ -2715,10 +2718,24 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 
 	public boolean getParkingBrakeDW()
 	{
-		return Boolean.parseBoolean(dataWatcher.getWatchableObjectString(29));
+		return Boolean.parseBoolean(dataWatcher.getWatchableObjectString(30));
 	}
 
 
+	/**
+	 * Added for SMP
+	 *
+	 * @return true if on, false if off
+	 */
+	public boolean getParkingBrakeFromPacket() {
+		return parkingBrake;
+	}
+
+	/**
+	 * Added for SMP
+	 *
+	 * @param set set 0 if parking break is false, 1 if true
+	 */
 	public void setParkingBrakeFromPacket(boolean set) {
 		parkingBrake = set;
 	}
@@ -2727,5 +2744,30 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		this.parkingBrake = status;
 		Traincraft.brakeChannel.sendToAllAround(new PacketParkingBrake(false, getEntityId()),
 				new NetworkRegistry.TargetPoint(worldObj.provider.dimensionId, posX, posY, posZ, 150.0D));
+	}
+
+	public double convertSpeed(double speed)
+	{
+		//System.out.println("X "+motionX +" Z "+motionZ);
+		if (ConfigHandler.REAL_TRAIN_SPEED) {
+			speed *= 2;// applying ratio
+		} else {
+			speed *= 6;
+		}
+		speed *= 36;
+		//speed *= 10;// convert in ms
+		//speed *= 6;// applying ratio
+		//speed *= 3.6;// convert in km/h
+		return speed;
+	}
+
+	/**
+	 * added for SMP, used by the HUD
+	 *
+	 * @return
+	 */
+	public double getSpeed()
+	{
+		return dataWatcher.getWatchableObjectInt(25);
 	}
 }

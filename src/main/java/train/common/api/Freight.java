@@ -25,7 +25,7 @@ public abstract class Freight extends EntityRollingStock implements IInventory
 	{
 		super(world);
 		dataWatcher.addObject(22, 0);
-		dataWatcher.addObject(25, (int) convertSpeed(Math.sqrt(Math.abs(motionX * motionX) + Math.abs(motionZ * motionZ))));
+
 	}
 
 	@Override
@@ -231,22 +231,4 @@ public abstract class Freight extends EntityRollingStock implements IInventory
 
 	@Override
 	public ItemStack[] getInventory(){return cargoItems;}
-
-	private double convertSpeed(double speed) {
-		//System.out.println("X "+motionX +" Z "+motionZ);
-		if (ConfigHandler.REAL_TRAIN_SPEED) {
-			speed *= 2;// applying ratio
-		} else {
-			speed *= 6;
-		}
-		speed *= 36;
-		//speed *= 10;// convert in ms
-		//speed *= 6;// applying ratio
-		//speed *= 3.6;// convert in km/h
-		return speed;
-	}
-
-	public double getSpeed() {
-		return dataWatcher.getWatchableObjectInt(25);
-	}
 }

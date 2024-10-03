@@ -157,11 +157,11 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         dataWatcher.addObject(5, trainID);
         dataWatcher.addObject(22, locoState);
         dataWatcher.addObject(24, fuelTrain);
-        dataWatcher.addObject(25, (int) convertSpeed(Math.sqrt(Math.abs(motionX * motionX) + Math.abs(motionZ * motionZ))));//convertSpeed((Math.abs(this.motionX) + Math.abs(this.motionZ))
         dataWatcher.addObject(26, guiDetailsJSON());
         dataWatcher.addObject(27, renderRefs.toString());
         dataWatcher.addObject(15, (float) Math.round((getCustomSpeed() * 3.6f)));
         dataWatcher.addObject(28, lightingDetailsJSON());
+        //// Don't use 30 That is used by EntityRollingStock
         //// Don't use 31 That is used by AbstractTrains
         //dataWatcher.addObject(32, lineWaypoints);
         setAccel(0);
@@ -643,20 +643,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         return destination;
     }
 
-    private double convertSpeed(double speed) {
-        //System.out.println("X "+motionX +" Z "+motionZ);
-        if (ConfigHandler.REAL_TRAIN_SPEED) {
-            speed *= 2;// applying ratio
-        } else {
-            speed *= 6;
-        }
-        speed *= 36;
-        //speed *= 10;// convert in ms
-        //speed *= 6;// applying ratio
-        //speed *= 3.6;// convert in km/h
-        return speed;
-    }
-
     /*public void soundBell() {
         worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "sounds/bell/test.ogg", 1F, 1.0F);
     }*/
@@ -801,10 +787,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         // }
         // }
         if (!worldObj.isRemote) {
-            if (parkingBrake) {
-                motionX = 0.0;
-                motionZ = 0.0;
-            }
             if (this.riddenByEntity instanceof EntityLivingBase) {
                 //EntityLivingBase entity = (EntityLivingBase) this.riddenByEntity;
                 if (forwardPressed || backwardPressed) {
@@ -1344,15 +1326,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     public void setLocomotiveBeaconTick(byte beaconCycleIndex)
     {
         beaconCycleIndex = beaconCycleIndex;
-    }
-
-    /**
-     * added for SMP, used by the HUD
-     *
-     * @return
-     */
-    public double getSpeed() {
-        return dataWatcher.getWatchableObjectInt(25);
     }
 
     /**
