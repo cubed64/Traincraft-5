@@ -92,7 +92,7 @@ public class TrainsOnClick
 
 	public boolean onClickWithBrakeHandle(AbstractTrains entityRollingStock, ItemStack itemstack, EntityPlayer playerEntity, World world)
 	{
-		if (itemstack != null && itemstack.getItem() == ItemIDs.brakestick.item && !world.isRemote
+		if (itemstack != null && itemstack.getItem() == ItemIDs.brakeStick.item && !world.isRemote
 				&& (entityRollingStock instanceof Freight || (entityRollingStock instanceof AbstractPassengerCar || entityRollingStock instanceof IPassenger || entityRollingStock instanceof AbstractWorkCart))
 				&& (FMLCommonHandler.instance().getMinecraftServerInstance().isSinglePlayer()
 					|| entityRollingStock.getTrainOwner().equals(playerEntity.getDisplayName())

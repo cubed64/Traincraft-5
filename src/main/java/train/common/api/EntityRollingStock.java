@@ -1698,13 +1698,6 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		playerEntity = entityplayer;
 		ItemStack itemstack = entityplayer.inventory.getCurrentItem();
 
-		if (trainsOnClick.onClickWithBrakeHandle(this,itemstack,playerEntity,worldObj))
-		{
-			setParkingBrakeFromPacket(!parkingBrake);
-			dataWatcher.updateObject(30, "" + !getParkingBrakeDW());
-			return true;
-		}
-
 		if (this.getTrainLockedFromPacket()) {
 			boolean isTrustedPlayer = isPlayerTrusted(playerEntity.getDisplayName());
 			if (!playerEntity.getDisplayName().equalsIgnoreCase(this.getTrainOwner()) && !canBeRiddenWhileLocked(this) && !isTrustedPlayer) {
@@ -1715,6 +1708,13 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				if (!worldObj.isRemote) entityplayer.addChatMessage(new ChatComponentText("Train is locked by " + this.getTrainOwner() + "."));
 				return true;
 			}
+		}
+
+		if (trainsOnClick.onClickWithBrakeHandle(this,itemstack,playerEntity,worldObj))
+		{
+			setParkingBrakeFromPacket(!parkingBrake);
+			dataWatcher.updateObject(30, "" + !getParkingBrakeDW());
+			return true;
 		}
 
 		if (itemstack != null && itemstack.getItem() instanceof ItemWrench && this instanceof Locomotive
