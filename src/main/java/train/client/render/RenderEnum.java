@@ -1362,7 +1362,7 @@ public enum RenderEnum
 			add(new double[]{0.75D, 1.35D, 0.0D});
 		}
 	}, "", null, 0, false),
-	U23B( DieselU23B.class,  new ModelU23B(), "U23B_", true,new float[]{-1.525F, 0.155F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
+	U23B( DieselU23B.class,  new ModelU23B(), "U23B_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[]{0.75D, 1.35D, 0.0D});
 		}
