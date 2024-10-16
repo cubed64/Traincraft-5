@@ -14,19 +14,13 @@ import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
 
-public class DieselFP7A extends DieselTrain {
-    public DieselFP7A(World world) {
-        super(world, EnumTrains.FP7A.getTankCapacity(), LiquidManager.dieselFilter());
+public class DieselSW1600 extends DieselTrain {
+    public DieselSW1600(World world) {
+        super(world, EnumTrains.SW1600.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        //when the benis sus
-        textureDescriptionMap.put(0, "Readding a fucking book");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "Flatiron Northwestern");
-        textureDescriptionMap.put(3, "Western Pacific");
-        textureDescriptionMap.put(4, "Western Pacific");
-        textureDescriptionMap.put(5, "Joblogh Rail Network");
+        textureDescriptionMap.put(0, "FNCC KIT-L");
     }
-    public DieselFP7A(World world, double d, double d1, double d2){
+    public DieselSW1600(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -46,9 +40,9 @@ public class DieselFP7A extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 2.5; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
+        double distance = -0.1; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
         double distanceLR = -0.35; //how far left/right on the entity you ride; left > 0; right < 0;
-        double yOffset = 0.19;
+        double yOffset = 0.3;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
         float rotationCosLR1 = (float) Math.cos(Math.toRadians(this.renderYaw));
@@ -134,7 +128,7 @@ public class DieselFP7A extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 0.9F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.175F;
     }
 
     @Override
@@ -144,7 +138,7 @@ public class DieselFP7A extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "EMD FP7A";
+        return "FNCC SW1600";
     }
 
     @Override

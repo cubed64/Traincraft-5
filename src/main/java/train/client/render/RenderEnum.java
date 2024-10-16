@@ -617,7 +617,7 @@ public enum RenderEnum
 		}
 	}, 2, true),
 	locoSteamA4Tender(EntityTenderA4.class, new ModelTenderA4(), "tenderA4_UK_", true, new float[] { -0.2F, 0.2F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	PropagandaUS(EntityPropagandaUS.class, new ModelPropagandaCar(), "propaganda_US_", true, new float[] { 1.1F, 0.2F, -0.1F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PropagandaUS(EntityPropagandaUS.class, new ModelPropaganda2(), "propaganda_new_", true, new float[] { 0.0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PropagandaJapan(EntityPropagandaJapan.class, new ModelPropagandaCar(), "propaganda_Japan_", true, new float[] { 1.1F, 0.2F, -0.1F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PropagandaUSSR(EntityPropagandaUSSR.class, new ModelPropagandaCar(), "propaganda_USSR_", true, new float[] { 1.1F, 0.2F, -0.1F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PropagandaBritain(EntityPropagandaBritain.class, new ModelPropagandaCar(), "propaganda_Britain_", true, new float[] { 1.1F, 0.2F, -0.1F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -1297,6 +1297,12 @@ public enum RenderEnum
 			add(new double[]{1.65D, 1.40D, 0.0D});
 		}
 	}, "", null, 0, false),
+	SW1600(DieselSW1600.class,  new ModelSW1600(), "sw1600_", true,new float[]{-1.0F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.90D, 1.40D, 0.0D});
+			add(new double[]{1.625D, 1.40D, 0.0D});
+		}
+	}, "", null, 0, false),
 	MP900(DieselMP900.class,  new ModelMP900(), "mp900_", true,new float[]{-1.1F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{
 			add(new double[]{0.10D, 1.25D, 0.0D});
@@ -1441,6 +1447,11 @@ public enum RenderEnum
 	B23( DieselB23.class,  new ModelB23(), "b23-7_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[]{0.8D, 1.45D, 0.0D});
+		}
+	}, "", null, 0, false),
+	B23S7( DieselB23S7.class,  new ModelB23S7(), "b23-s7_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.9D, 1.45D, 0.0D});
 		}
 	}, "", null, 0, false),
 	BQ23( DieselBQ23.class,  new ModelBQ23(), "bq23-7_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {

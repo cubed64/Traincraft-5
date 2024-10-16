@@ -22,7 +22,7 @@ public class DieselU36C extends DieselTrain {
         textureDescriptionMap.put(2, "ATSF (Kodachrome)");
         textureDescriptionMap.put(3, "ATSF (Freightbonet)");
         textureDescriptionMap.put(4, "Milwaukee Road");
-        textureDescriptionMap.put(5, "North Fox 19 (Kit-80, Big Canon)");// one of a kind Super 7-36CXE
+        textureDescriptionMap.put(5, "FNCC 19");// one of a kind Super 7-36CXE
     }
     public DieselU36C(World world, double d, double d1, double d2){
         this(world);

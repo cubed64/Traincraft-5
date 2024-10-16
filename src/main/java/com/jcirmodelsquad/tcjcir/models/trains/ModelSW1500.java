@@ -198,7 +198,7 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 		bodyModel[154] = new ModelRendererTurbo(this, 195, 108, textureX, textureY); // Box 311 nasa cap
 		bodyModel[155] = new ModelRendererTurbo(this, 1, 41, textureX, textureY); // Box 312
 		bodyModel[156] = new ModelRendererTurbo(this, 4, 41, textureX, textureY); // Box 313
-		bodyModel[157] = new ModelRendererTurbo(this, 21, 12, textureX, textureY, "lamp"); // Box 315 glow commander beacon
+		bodyModel[157] = new ModelRendererTurbo(this, 21, 12, textureX, textureY, BoxName.commander); // Box 315 glow commander beacon
 		bodyModel[158] = new ModelRendererTurbo(this, 20, 16, textureX, textureY); // Box 316
 		bodyModel[159] = new ModelRendererTurbo(this, 126, 185, textureX, textureY, "lamp"); // Box 71 glow speedometer
 		bodyModel[160] = new ModelRendererTurbo(this, 107, 192, textureX, textureY); // Box 296

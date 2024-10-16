@@ -444,6 +444,7 @@ public enum ItemIDs {
 	minecartSW1000("ItemRollingStock", "sw1000", train.common.library.TypeOfRollingStock.DIESEL, 3),
 	minecartSW1200("ItemRollingStock","sw1200", train.common.library.TypeOfRollingStock.DIESEL, 4),
 	minecartSW1500("ItemRollingStock", "sw1500", train.common.library.TypeOfRollingStock.DIESEL, 4),
+	minecartSW1600("ItemRollingStock", "sw1600", train.common.library.TypeOfRollingStock.DIESEL, 4),
 	minecartMP900("ItemRollingStock", "mp900", train.common.library.TypeOfRollingStock.DIESEL, 4),
 	minecartMP15DCW9("ItemRollingStock", "mp15dcw9", train.common.library.TypeOfRollingStock.DIESEL, 4),
 
@@ -475,6 +476,7 @@ public enum ItemIDs {
 	minecartSB18E("ItemRollingStock", "sb18e", train.common.library.TypeOfRollingStock.DIESEL, 3),
 	minecartSB18B("ItemRollingStock", "sb18b", train.common.library.TypeOfRollingStock.DIESEL, 3),
 	minecartB23("ItemRollingStock", "b23", train.common.library.TypeOfRollingStock.DIESEL, 4),
+	minecartB23S7("ItemRollingStock", "b23s7", train.common.library.TypeOfRollingStock.DIESEL, 4),
 	minecartBQ23("ItemRollingStock", "bq23", train.common.library.TypeOfRollingStock.DIESEL, 4),
 	minecartSB23R("ItemRollingStock", "sb23r", train.common.library.TypeOfRollingStock.DIESEL, 4),
 	minecartSB23E("ItemRollingStock", "sb23e", train.common.library.TypeOfRollingStock.DIESEL, 4),

@@ -352,7 +352,7 @@ public class ModelAC44C extends ModelConverter //Same as Filename
 		bodyModel[308] = new ModelRendererTurbo(this, 67, 4, textureX, textureY); // Box 378
 		bodyModel[309] = new ModelRendererTurbo(this, 7, 11, textureX, textureY); // Box 379
 		bodyModel[310] = new ModelRendererTurbo(this, 115, 39, textureX, textureY, "lamp"); // Box 301 markerlight glow
-		bodyModel[311] = new ModelRendererTurbo(this, 115, 42, textureX, textureY); // Box 344
+		bodyModel[311] = new ModelRendererTurbo(this, 115, 42, textureX, textureY, "lamp"); // Box 344
 		bodyModel[312] = new ModelRendererTurbo(this, 4, 110, textureX, textureY); // Box 280
 		bodyModel[313] = new ModelRendererTurbo(this, 15, 112, textureX, textureY); // Box 285
 		bodyModel[314] = new ModelRendererTurbo(this, 41, 90, textureX, textureY); // Box 727

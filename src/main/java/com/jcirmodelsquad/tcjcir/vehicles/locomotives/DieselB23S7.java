@@ -13,20 +13,19 @@ import train.common.api.LiquidManager;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-
-public class DieselFP7A extends DieselTrain {
-    public DieselFP7A(World world) {
-        super(world, EnumTrains.FP7A.getTankCapacity(), LiquidManager.dieselFilter());
+public class DieselB23S7 extends DieselTrain {
+    public DieselB23S7(World world) {
+        super(world, EnumTrains.B23S7.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        //when the benis sus
-        textureDescriptionMap.put(0, "Readding a fucking book");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "Flatiron Northwestern");
-        textureDescriptionMap.put(3, "Western Pacific");
-        textureDescriptionMap.put(4, "Western Pacific");
-        textureDescriptionMap.put(5, "Joblogh Rail Network");
+        textureDescriptionMap.put(0, "GECX 2000");
+        textureDescriptionMap.put(1, "GECX 2002");
+        textureDescriptionMap.put(2, "Monongahela");
+        textureDescriptionMap.put(3, "Blandsville & Blankerston");
+        textureDescriptionMap.put(4, "FNCC (KIT-L)");
+        textureDescriptionMap.put(5, "");
+
     }
-    public DieselFP7A(World world, double d, double d1, double d2){
+    public DieselB23S7(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -46,9 +45,9 @@ public class DieselFP7A extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 2.5; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
+        double distance = 3.1; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
         double distanceLR = -0.35; //how far left/right on the entity you ride; left > 0; right < 0;
-        double yOffset = 0.19;
+        double yOffset = 0.25;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
         float rotationCosLR1 = (float) Math.cos(Math.toRadians(this.renderYaw));
@@ -134,7 +133,7 @@ public class DieselFP7A extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 0.9F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.315F;
     }
 
     @Override
@@ -144,7 +143,7 @@ public class DieselFP7A extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "EMD FP7A";
+        return "GE B23-S7";
     }
 
     @Override

@@ -11,6 +11,8 @@ public class PEcoach extends AbstractPassengerCar {
         textureDescriptionMap.put(3, "CDC&S");
         textureDescriptionMap.put(4, "CDC&S Baggage");
         textureDescriptionMap.put(5, "Thanosman");
+        textureDescriptionMap.put(6, "GCM");
+        textureDescriptionMap.put(7, "GCM");
     }
 
     public PEcoach(World world, double posX, double posY, double posZ)
