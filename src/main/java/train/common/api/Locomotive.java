@@ -139,7 +139,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     private Entity lastEntityRider;
     private boolean hasDrowned = false;
     private int slotsFilled = 0;
-    private int fuelUpdateTicks = 0;
     private boolean backwardPressed = false;
     /**
      * state of the loco
@@ -874,14 +873,12 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 Traincraft.slotschannel.sendToAllAround(new PacketSlotsFilled(this, slotsFilled), new TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 150.0D));
             }
             /**
-             * Fuel consumption
+             * Fuel consumption - Current Locomotive and fuel from other cars
              */
             //if (this instanceof DieselTrain) consumption /= 5;
-            if (fuelUpdateTicks >= 100) {
-                fuelUpdateTicks = 0;
+            if (ticksExisted % 100 == 0) {
                 updateFuelTrain(this.getFuelConsumption());
             }
-            fuelUpdateTicks++;
 
         }
         if (whistleDelay > 0) {
@@ -1444,14 +1441,22 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
      *
      * @param consumption
      */
-    protected void updateFuelTrain(int consumption) {
-        if (fuelTrain < 0 && !canBePulled) {
+    protected void updateFuelTrain(int consumption)
+    {
+        if (fuelTrain < 0 && !canBePulled)
+        {
             motionX *= 0.8;
             motionZ *= 0.8;
-        } else {
-            if (this.isLocoTurnedOn()) {
+        }
+        else
+        {
+            if (this.isLocoTurnedOn())
+            {
                 fuelTrain -= consumption;
-                if (fuelTrain < 0) fuelTrain = 0;
+                if (fuelTrain < 0)
+                {
+                    fuelTrain = 0;
+                }
             }
         }
     }
