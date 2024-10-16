@@ -159,10 +159,13 @@ public abstract class DieselTrain extends Locomotive implements IFluidHandler {
 
 	@Override
 	protected void updateFuelTrain(int amount) {
-		if (!this.isLocoTurnedOn() && !this.canBePulled) {
+		if (!this.isLocoTurnedOn() && !this.canBePulled)
+		{
 			motionX *= 0.8;
 			motionZ *= 0.8;
-		} else if (ticksExisted % 5 == 0 && getTank().getFluidAmount() + 100 < maxTank) {
+		}
+		else if (ticksExisted % 5 == 0 && getTank().getFluidAmount() + 100 < maxTank)
+		{
 			FluidStack drain = null;
 			blocksToCheck = new TileEntity[]{worldObj.getTileEntity(MathHelper.floor_double(posX), MathHelper.floor_double(posY - 1), MathHelper.floor_double(posZ)),
 					worldObj.getTileEntity(MathHelper.floor_double(posX), MathHelper.floor_double(posY + 2), MathHelper.floor_double(posZ)),
@@ -170,43 +173,64 @@ public abstract class DieselTrain extends Locomotive implements IFluidHandler {
 					worldObj.getTileEntity(MathHelper.floor_double(posX), MathHelper.floor_double(posY + 4), MathHelper.floor_double(posZ))
 			};
 
-			for (TileEntity block : blocksToCheck) {
-				if (drain == null && block instanceof IFluidHandler) {
-					for (ForgeDirection direction : ForgeDirection.VALID_DIRECTIONS) {
+			for (TileEntity block : blocksToCheck)
+			{
+				if (drain == null && block instanceof IFluidHandler)
+				{
+					for (ForgeDirection direction : ForgeDirection.VALID_DIRECTIONS)
+					{
 						if (((IFluidHandler) block).drain(direction, 100, false) != null &&
 								(getFluid() == null || ((IFluidHandler) block).drain(direction, 100, false).fluid == getTank().getFluid().fluid) &&
 								((IFluidHandler) block).drain(direction, 100, false).amount == 100
-						) {
+						)
+						{
 							drain = ((IFluidHandler) block).drain(
 									direction, 100, true);
 						}
 					}
 				}
 			}
-			if (drain == null && cartLinked1 instanceof LiquidTank && !(cartLinked1 instanceof EntityBUnitEMDF7) && !(cartLinked1 instanceof EntityBUnitEMDF3) && !(cartLinked1 instanceof EntityBUnitDD35)) {
-				if (getFluid() == null) {
+			if (drain == null && cartLinked1 instanceof LiquidTank && !(cartLinked1 instanceof EntityBUnitEMDF7) && !(cartLinked1 instanceof EntityBUnitEMDF3) && !(cartLinked1 instanceof EntityBUnitDD35))
+			{
+				if (getFluid() == null)
+				{
 					drain = ((LiquidTank) cartLinked1).drain(ForgeDirection.UNKNOWN, new FluidStack(LiquidManager.DIESEL, 100), true);
-					if (drain == null) {
+					if (drain == null)
+					{
 						drain = ((LiquidTank) cartLinked1).drain(ForgeDirection.UNKNOWN, new FluidStack(LiquidManager.REFINED_FUEL, 50), true);
 					}
-				} else if (getFluid().getFluid() == LiquidManager.DIESEL) {
+				}
+				else if (getFluid().getFluid() == LiquidManager.DIESEL)
+				{
 					drain = ((LiquidTank) cartLinked1).drain(ForgeDirection.UNKNOWN, new FluidStack(LiquidManager.DIESEL, 100), true);
-				} else {
+				}
+				else
+				{
 					drain = ((LiquidTank) cartLinked1).drain(ForgeDirection.UNKNOWN, new FluidStack(LiquidManager.REFINED_FUEL, 50), true);
 				}
-			} else if (drain == null && cartLinked2 instanceof LiquidTank && !(cartLinked2 instanceof EntityBUnitEMDF7) && !(cartLinked2 instanceof EntityBUnitEMDF3) && !(cartLinked1 instanceof EntityBUnitDD35)) {
-				if (getFluid() == null) {
+			}
+			else if (drain == null && cartLinked2 instanceof LiquidTank && !(cartLinked2 instanceof EntityBUnitEMDF7) && !(cartLinked2 instanceof EntityBUnitEMDF3) && !(cartLinked1 instanceof EntityBUnitDD35))
+			{
+				if (getFluid() == null)
+				{
 					drain = ((LiquidTank) cartLinked2).drain(ForgeDirection.UNKNOWN, new FluidStack(LiquidManager.DIESEL, 100), true);
-					if (drain == null) {
+					if (drain == null)
+					{
 						drain = ((LiquidTank) cartLinked2).drain(ForgeDirection.UNKNOWN, new FluidStack(LiquidManager.REFINED_FUEL, 50), true);
 					}
-				} else if (getFluid().getFluid() == LiquidManager.DIESEL) {
+				}
+				else if (getFluid().getFluid() == LiquidManager.DIESEL)
+				{
 					drain = ((LiquidTank) cartLinked2).drain(ForgeDirection.UNKNOWN, new FluidStack(LiquidManager.DIESEL, 100), true);
-				} else {
+				}
+				else
+				{
 					drain = ((LiquidTank) cartLinked2).drain(ForgeDirection.UNKNOWN, new FluidStack(LiquidManager.REFINED_FUEL, 100), true);
 				}
 			}
-			if (drain != null) {
+
+			if (drain != null)
+			{
 				fill(ForgeDirection.UNKNOWN, drain, true);
 			}
 		}
