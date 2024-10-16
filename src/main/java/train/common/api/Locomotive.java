@@ -139,7 +139,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     private Entity lastEntityRider;
     private boolean hasDrowned = false;
     private int slotsFilled = 0;
-    private int fuelUpdateTicks = 0;
     private boolean backwardPressed = false;
     /**
      * state of the loco
