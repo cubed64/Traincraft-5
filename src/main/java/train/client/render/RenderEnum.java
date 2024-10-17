@@ -2014,6 +2014,8 @@ public enum RenderEnum
 	PSCNW27SeatParlor_Observation(PSCNW27SeatParlor_Observation.class, new ModelPSCNW27SeatParlor_Observation(), "PS_lightweight_CNW27SeatParlor_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	BuddRDG56SeatCoach_Lounge(BuddRDG56SeatCoach_Lounge.class, new ModelBuddRDG56SeatCoach_Lounge(), "Budd_lightweight_RDG56SeatCoach_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	BuddRDGDiner_Lounge(BuddRDGDiner_Lounge.class, new ModelBuddRDGDiner_Lounge(), "Budd_lightweight_Diner_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	BuddRDG56SeatCoach_Observation(BuddRDG56SeatCoach_Observation.class, new ModelBuddRDG56SeatCoach_Observation(), "Budd_lightweight_RDG56SeatCoach_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	BuddCRIP52SeatCoach(BuddCRIP52SeatCoach.class, new ModelBudd52SeatCoach(), "Budd_lightweight_52SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 

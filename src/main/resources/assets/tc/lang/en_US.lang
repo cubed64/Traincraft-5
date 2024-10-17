@@ -1536,6 +1536,8 @@ item.tc:minecartACFUPRPO60.name=American Car & Foundry RPO(60')
 item.tc:minecartBuddDome54SeatCoach.name=Budd Dome-54 Seat Coach
 
 item.tc:minecartBuddRDG56SeatCoachLounge.name=Budd RDG 56 Seat Coach-Lounge
+item.tc:minecartBuddRDGDiner_Lounge.name=Budd RDG Diner-Lounge
+item.tc:minecartBuddRDG56SeatCoach_Observation.name=Budd RDG 56 Seat Coach-Observation
 
 item.tc:minecartBuddCRIP52SeatCoach.name=Budd and Pullman Standard CRIP 52 Seat Coach
 
@@ -1620,6 +1622,8 @@ entity.tc.AC&F UP RPO(60').name=American Car & Foundry RPO(60')
 entity.tc.Budd Dome-54 Seat Coach.name=Budd Dome-54 Seat Coach
 
 entity.tc.Budd RDG 56 Seat Coach-Lounge.name=Budd RDG 56 Seat Coach-Lounge
+entity.tc.Budd RDG Diner-Lounge.name=Budd RDG Diner-Lounge
+entity.tc.Budd RDG 56 Seat Coach-Observation.name=Budd RDG 56 Seat Coach-Observation
 
 entity.tc.Budd CRIP 52 Seat Coach.name=Budd and Pullman Standard CRIP 52 Seat Coach
 

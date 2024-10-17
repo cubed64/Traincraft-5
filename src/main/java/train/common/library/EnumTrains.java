@@ -653,6 +653,8 @@ public enum EnumTrains {
 	PSCNW27SeatParlor_Observation("PS CNW 27 Seat Parlor-Observation", PSCNW27SeatParlor_Observation.class, ItemIDs.minecartPSCNW27SeatParlor_Observation.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Green", "Black", "Lime"}), 10, 0, null),
 
 	BuddRDG56SeatCoach_Lounge("Budd RDG 56 Seat Coach-Lounge", BuddRDG56SeatCoach_Lounge.class, ItemIDs.minecartBuddRDG56SeatCoachLounge.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "Grey", "LightGrey"}), 10, 0, null),
+	BuddRDGDiner_Lounge("Budd RDG Diner-Lounge", BuddRDGDiner_Lounge.class, ItemIDs.minecartBuddRDGDiner_Lounge.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan"}), 10, 0, null),
+	BuddRDG56SeatCoach_Observation("Budd RDG 56 Seat Coach-Observation", BuddRDG56SeatCoach_Observation.class, ItemIDs.minecartBuddRDG56SeatCoach_Observation.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "Grey", "LightGrey", "LightBlue", "White"}), 10, 0, null),
 
 	BuddCRIP52SeatCoach("Budd CRIP 52 Seat Coach", BuddCRIP52SeatCoach.class, ItemIDs.minecartBuddCRIP52SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "LightGrey", "Blue", "White", "Cyan"}), 10, 0, null),
 

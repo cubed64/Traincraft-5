@@ -724,6 +724,8 @@ public enum ItemIDs {
 	minecartPSCNW27SeatParlor_Observation("ItemRollingStock", "PSCNW27SeatParlor_Observation", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 
 	minecartBuddRDG56SeatCoachLounge("ItemRollingStock", "BuddRDG56SeatCoachLounge", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartBuddRDGDiner_Lounge("ItemRollingStock", "BuddRDGDiner_Lounge", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartBuddRDG56SeatCoach_Observation("ItemRollingStock", "BuddRDG56SeatCoach_Observation", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 
 	minecartBuddCRIP52SeatCoach("ItemRollingStock", "BuddCRIP52SeatCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 
