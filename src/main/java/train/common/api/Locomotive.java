@@ -60,7 +60,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     public byte ditchLightMode = 0;
     public boolean bellPressed;
     public int inventorySize;
-    public boolean parkingBrake = false;
     public int numCargoSlots;
     public int numCargoSlots1;
     public int numCargoSlots2;
@@ -157,11 +156,11 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         dataWatcher.addObject(5, trainID);
         dataWatcher.addObject(22, locoState);
         dataWatcher.addObject(24, fuelTrain);
-        dataWatcher.addObject(25, (int) convertSpeed(Math.sqrt(Math.abs(motionX * motionX) + Math.abs(motionZ * motionZ))));//convertSpeed((Math.abs(this.motionX) + Math.abs(this.motionZ))
         dataWatcher.addObject(26, guiDetailsJSON());
         dataWatcher.addObject(27, renderRefs.toString());
         dataWatcher.addObject(15, (float) Math.round((getCustomSpeed() * 3.6f)));
         dataWatcher.addObject(28, lightingDetailsJSON());
+        //// Don't use 30 That is used by EntityRollingStock
         //// Don't use 31 That is used by AbstractTrains
         //dataWatcher.addObject(32, lineWaypoints);
         setAccel(0);
@@ -233,7 +232,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     public void readSpawnData(ByteBuf additionalData) {
         super.readSpawnData(additionalData);
         isLocoTurnedOn = additionalData.readBoolean();
-        parkingBrake = additionalData.readBoolean();
         if (additionalData.readBoolean()) {
             int selectedCargo = additionalData.readInt();
             if (selectedCargo < getCargoManager().getCargoSpecificationList().length + 1)
@@ -245,7 +243,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     public void writeSpawnData(ByteBuf buffer) {
         super.writeSpawnData(buffer);
         buffer.writeBoolean(isLocoTurnedOn);
-        buffer.writeBoolean(parkingBrake);
         buffer.writeBoolean(getCargoManager() != null);
         if (getCargoManager() != null) {
             buffer.writeInt(getCargoManager().getSelectedCargo());
@@ -458,7 +455,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         nbttagcompound.setInteger("overheatLevel", getOverheatLevel());
         nbttagcompound.setString("lastRider", lastRider);
         nbttagcompound.setString("destination", destination);
-        nbttagcompound.setBoolean("parkingBrake", parkingBrake);
         if (!(this instanceof SteamTrain)) {
             nbttagcompound.setBoolean("isLocoTurnedOn", isLocoTurnedOn);
         }
@@ -495,7 +491,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         setOverheatLevel(ntc.getInteger("overheatLevel"));
         lastRider = ntc.getString("lastRider");
         destination = ntc.getString("destination");
-        this.parkingBrake = ntc.getBoolean("parkingBrake");
         if (!(this instanceof SteamTrain)) {
             isLocoTurnedOn = ntc.getBoolean("isLocoTurnedOn");
         }
@@ -647,20 +642,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         return destination;
     }
 
-    private double convertSpeed(double speed) {
-        //System.out.println("X "+motionX +" Z "+motionZ);
-        if (ConfigHandler.REAL_TRAIN_SPEED) {
-            speed *= 2;// applying ratio
-        } else {
-            speed *= 6;
-        }
-        speed *= 36;
-        //speed *= 10;// convert in ms
-        //speed *= 6;// applying ratio
-        //speed *= 3.6;// convert in km/h
-        return speed;
-    }
-
     /*public void soundBell() {
         worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "sounds/bell/test.ogg", 1F, 1.0F);
     }*/
@@ -805,10 +786,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         // }
         // }
         if (!worldObj.isRemote) {
-            if (parkingBrake) {
-                motionX = 0.0;
-                motionZ = 0.0;
-            }
             if (this.riddenByEntity instanceof EntityLivingBase) {
                 //EntityLivingBase entity = (EntityLivingBase) this.riddenByEntity;
                 if (forwardPressed || backwardPressed) {
@@ -889,7 +866,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             this.lastEntityRider = (this.riddenByEntity);
         }
 
-       /* if (!this.worldObj.isRemote && this.getParkingBrakeFromPacket() && !getState().equals("broken")) {
+       /* if (!this.worldObj.isRemote && this.getParkingBrakeDW() && !getState().equals("broken")) {
             motionX *= 0.0;
             motionZ *= 0.0;
         }*/
@@ -1317,24 +1294,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     }
 
     /**
-     * Added for SMP
-     *
-     * @return true if on, false if off
-     */
-    public boolean getParkingBrakeFromPacket() {
-        return parkingBrake;
-    }
-
-    /**
-     * Added for SMP
-     *
-     * @param set set 0 if parking break is false, 1 if true
-     */
-    public void setParkingBrakeFromPacket(boolean set) {
-        parkingBrake = set;
-    }
-
-    /**
      *
      * @param isLocoLightsOn set 0 if loco lights is false, 1 if true
      */
@@ -1364,15 +1323,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     public void setLocomotiveBeaconTick(byte beaconCycleIndex)
     {
         beaconCycleIndex = beaconCycleIndex;
-    }
-
-    /**
-     * added for SMP, used by the HUD
-     *
-     * @return
-     */
-    public double getSpeed() {
-        return dataWatcher.getWatchableObjectInt(25);
     }
 
     /**
@@ -1758,12 +1708,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         this.stationStop3 = stationStop;
         if (stationStop3.xCoord == 0 && stationStop3.yCoord == 0 && stationStop3.zCoord == 0) this.stationStop = false;
         Traincraft.mtcChannel.sendToAllAround(new PacketStopPoint(getEntityId(), stationStop.xCoord, stationStop.yCoord, stationStop.zCoord, 1),
-                new NetworkRegistry.TargetPoint(worldObj.provider.dimensionId, posX, posY, posZ, 150.0D));
-    }
-
-    public void setParkingBrake(boolean status) {
-        this.parkingBrake = status;
-        Traincraft.brakeChannel.sendToAllAround(new PacketParkingBrake(false, getEntityId()),
                 new NetworkRegistry.TargetPoint(worldObj.provider.dimensionId, posX, posY, posZ, 150.0D));
     }
 

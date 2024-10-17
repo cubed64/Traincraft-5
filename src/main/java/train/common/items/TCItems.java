@@ -10,10 +10,8 @@ package train.common.items;
 import cpw.mods.fml.common.registry.GameRegistry;
 import train.common.Traincraft;
 import train.common.adminbook.ItemAdminBook;
-import train.common.library.EnumTrains;
 import train.common.library.Info;
 import train.common.library.ItemIDs;
-import train.common.library.TypeOfRollingStock;
 
 public class TCItems {
 
@@ -49,6 +47,7 @@ public class TCItems {
 		ItemIDs.padlock.item = new ItemPadlock();
 
 		ItemIDs.stake.item = new ItemStacked(1200);
+		ItemIDs.brakeStick.item = new ItemBrakeStick();
 		ItemIDs.airship.item = new ItemZeppelins(0);
 		ItemIDs.zeppelin.item = new ItemZeppelins(1);
 		ItemIDs.overalls.item = new ItemTCArmor(ItemIDs.overalls.iconName, Traincraft.instance.armor, Traincraft.trainArmor, 2,0);

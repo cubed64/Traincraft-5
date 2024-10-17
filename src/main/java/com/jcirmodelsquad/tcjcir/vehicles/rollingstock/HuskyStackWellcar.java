@@ -16,20 +16,22 @@ import train.common.api.EntityRollingStock;
 import train.common.api.IPassenger;
 import train.common.library.BlockIDs;
 
+@Deprecated
+/** Do not use unless you plan to refactor the datawatchers**/
 public class HuskyStackWellcar extends EntityRollingStock implements IPassenger {
     public BasicallyContainer container1;
     public BasicallyContainer container2;
 
     public HuskyStackWellcar(World world) {
         super(world);
-        dataWatcher.addObject(25, "");
-        dataWatcher.addObject(26, "");
+        //dataWatcher.addObject(25, "");
+        //dataWatcher.addObject(26, "");
     }
 
     public HuskyStackWellcar(World world, double d, double d1, double d2) {
         super(world, d, d1, d2);
-        dataWatcher.addObject(25, "");
-        dataWatcher.addObject(26, "");
+        //dataWatcher.addObject(25, "");
+        //dataWatcher.addObject(26, "");
     }
 
     @Override
@@ -39,53 +41,53 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
     @Override
     public void onUpdate() {
         super.onUpdate();
-        if (worldObj == null) return;
-
-        if (!worldObj.isRemote && ticksExisted % 5 == 0) {
-            if (container1 != null) {
-                dataWatcher.updateObject(25, container1.getAsTagCompound().toString());
-                System.out.println(container1.getAsTagCompound().toString());
-            }
-            if (container2 != null) {
-                dataWatcher.updateObject(26, container2.getAsTagCompound().toString());
-            }
-        }
-        if (worldObj.isRemote) {
-            try {
-                if (dataWatcher.getWatchableObjectString(25).equals("")) {
-                    container1 = null;
-                } else {
-                    NBTTagCompound nbt1 = (NBTTagCompound) JsonToNBT.func_150315_a(dataWatcher.getWatchableObjectString(25));
-                    container1 = new BasicallyContainer();
-                    container1.color = nbt1.getString("Color");
-                    container1.type = nbt1.getString("theType");
-                    if (nbt1.hasKey("Items")) {
-                        NBTTagCompound newCompound = new NBTTagCompound();
-                        newCompound.setTag("Items", nbt1.getTagList("Items", Constants.NBT.TAG_COMPOUND));
-                        container1.savedData = newCompound;
-                    }
-                }
-
-                if (dataWatcher.getWatchableObjectString(26).equals("")) {
-                    container2 = null;
-                } else {
-                    NBTTagCompound nbt2 = (NBTTagCompound) JsonToNBT.func_150315_a(dataWatcher.getWatchableObjectString(26));
-                    container2 = new BasicallyContainer();
-                    container2.color = nbt2.getString("Color");
-                    container2.type = nbt2.getString("theType");
-                    if (nbt2.hasKey("Items")) {
-                        NBTTagCompound newCompound = new NBTTagCompound();
-                        newCompound.setTag("Items", nbt2.getTagList("Items", Constants.NBT.TAG_COMPOUND));
-                        container2.savedData = newCompound;
-                    }
-                }
-
-
-
-            } catch (NBTException e) {
-                e.printStackTrace();
-            }
-        }
+        //if (worldObj == null) return;
+//
+        //if (!worldObj.isRemote && ticksExisted % 5 == 0) {
+        //    if (container1 != null) {
+        //        dataWatcher.updateObject(25, container1.getAsTagCompound().toString());
+        //        System.out.println(container1.getAsTagCompound().toString());
+        //    }
+        //    if (container2 != null) {
+        //        dataWatcher.updateObject(26, container2.getAsTagCompound().toString());
+        //    }
+        //}
+        //if (worldObj.isRemote) {
+        //    try {
+        //        if (dataWatcher.getWatchableObjectString(25).equals("")) {
+        //            container1 = null;
+        //        } else {
+        //            NBTTagCompound nbt1 = (NBTTagCompound) JsonToNBT.func_150315_a(dataWatcher.getWatchableObjectString(25));
+        //            container1 = new BasicallyContainer();
+        //            container1.color = nbt1.getString("Color");
+        //            container1.type = nbt1.getString("theType");
+        //            if (nbt1.hasKey("Items")) {
+        //                NBTTagCompound newCompound = new NBTTagCompound();
+        //                newCompound.setTag("Items", nbt1.getTagList("Items", Constants.NBT.TAG_COMPOUND));
+        //                container1.savedData = newCompound;
+        //            }
+        //        }
+//
+        //        if (dataWatcher.getWatchableObjectString(26).equals("")) {
+        //            container2 = null;
+        //        } else {
+        //            NBTTagCompound nbt2 = (NBTTagCompound) JsonToNBT.func_150315_a(dataWatcher.getWatchableObjectString(26));
+        //            container2 = new BasicallyContainer();
+        //            container2.color = nbt2.getString("Color");
+        //            container2.type = nbt2.getString("theType");
+        //            if (nbt2.hasKey("Items")) {
+        //                NBTTagCompound newCompound = new NBTTagCompound();
+        //                newCompound.setTag("Items", nbt2.getTagList("Items", Constants.NBT.TAG_COMPOUND));
+        //                container2.savedData = newCompound;
+        //            }
+        //        }
+//
+//
+//
+        //    } catch (NBTException e) {
+        //        e.printStackTrace();
+        //    }
+        //}
 
 
     }

@@ -70,6 +70,7 @@ public enum ItemIDs {
 	atoCard("ItemATOCard", "ato_card", 5),
 	pennCentral("ItemPennCentralSimCard", "ato_card", 291),
 	paintbrushThing("ItemPaintbrushThing", "paintbrushthing", 9),
+	brakeStick("ItemBrakeStick", "item_brakestick", 2),
 
 
 	minecartWork("ItemRollingStock", "train_work", train.common.library.TypeOfRollingStock.HERITAGE, 4),

@@ -6,6 +6,7 @@ import com.google.gson.JsonParser;
 import com.mojang.authlib.GameProfile;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -47,6 +48,7 @@ import train.common.blocks.BlockTCRail;
 import train.common.blocks.BlockTCRailGag;
 import train.common.core.HandleOverheating;
 import train.common.core.handlers.*;
+import train.common.core.network.PacketParkingBrake;
 import train.common.core.network.PacketRollingStockRotation;
 import train.common.core.network.PacketSetTrainLockedToClient;
 import train.common.core.util.TraincraftUtil;
@@ -119,6 +121,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	private LinkHandler linkhandler;
 	private TrainsOnClick trainsOnClick;
 	public boolean isBraking;
+	public boolean parkingBrake = false;
 	public boolean isClimbing;
 	public int overheatLevel;
 	public int linkageNumber;
@@ -194,6 +197,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		dataWatcher.addObject(20, 0);//heat
 		dataWatcher.addObject(14, 0);
 		dataWatcher.addObject(21, 0);
+		dataWatcher.addObject(25, (int) convertSpeed(Math.sqrt(Math.abs(motionX * motionX) + Math.abs(motionZ * motionZ))));//convertSpeed((Math.abs(this.motionX) + Math.abs(this.motionZ))
+		dataWatcher.addObject(30, "" + parkingBrake);
 
 		preventEntitySpawning = true;
 		isImmuneToFire = true;
@@ -258,6 +263,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			if (selectedCargo < getCargoManager().getCargoSpecificationList().length + 1)
 				getCargoManager().setSelectedCargo(selectedCargo);
 		}
+		parkingBrake = additionalData.readBoolean();
 	}
 
 	/**
@@ -274,6 +280,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		if (getCargoManager() != null) {
 			buffer.writeInt(getCargoManager().getSelectedCargo());
 		}
+		buffer.writeBoolean(parkingBrake);
 	}
 
 	public String getTrainName() {
@@ -677,7 +684,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		}
 
 		super.manageChunkLoading();
-		
+		handleParkingBrake();
+
 		/**
 		 * Set the uniqueID if the entity doesn't have one.
 		 */
@@ -1015,7 +1023,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		}
 		this.dataWatcher.updateObject(14, (int) (motionX * 100));
 		this.dataWatcher.updateObject(21, (int) (motionZ * 100));
-
+		dataWatcher.updateObject(25, (int) convertSpeed(Math.sqrt(motionX * motionX + motionZ * motionZ)));
+		dataWatcher.updateObject(30, "" + parkingBrake);
 		if (ConfigHandler.ENABLE_LOGGING && !worldObj.isRemote && updateTicks%120==0){
 			ServerLogger.writeWagonToFolder(this);
 		}
@@ -1263,6 +1272,34 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			super.onUpdate();
 		}
 
+	}
+
+	protected void handleParkingBrake()
+	{
+		if (worldObj.isRemote == false)
+		{
+			if (parkingBrake)
+			{
+				motionX = 0.0;
+				motionZ = 0.0;
+			}
+			else if (cartLinked1 != null)
+			{
+				if ((cartLinked1).train != null && (cartLinked1).train.getTrains().size() != 0)
+				{
+					for (int j1 = 0; j1 < (cartLinked1).train.getTrains().size(); j1++)
+					{
+						EntityRollingStock daRollingStock = (cartLinked1).train.getTrains().get(j1);
+						if (daRollingStock.getParkingBrakeDW())
+						{
+							motionX = 0.0;
+							motionZ = 0.0;
+							break;
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	private boolean shouldIgnoreSwitch(TileTCRail tile, int i, int j, int k, int meta) {
@@ -1613,6 +1650,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		nbttagcompound.setBoolean("firstLoad", this.firstLoad);
 		nbttagcompound.setFloat("rotation", this.rotation);
 		nbttagcompound.setBoolean("brake", isBraking);
+		nbttagcompound.setBoolean("parkingBrake", parkingBrake);
 
 	}
 
@@ -1631,6 +1669,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		this.firstLoad = nbttagcompound.getBoolean("firstLoad");
 		this.rotation = nbttagcompound.getFloat("rotation");
 		this.isBraking = nbttagcompound.getBoolean("brake");
+		parkingBrake = nbttagcompound.getBoolean("parkingBrake");
+		dataWatcher.updateObject(30, "" + parkingBrake);
 
 	}
 
@@ -1643,7 +1683,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {
-		if (super.interactFirst(entityplayer)){
+		if (super.interactFirst(entityplayer))
+		{
 			return true;
 		}
 		if (entityplayer.ridingEntity == this){
@@ -1667,6 +1708,13 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				if (!worldObj.isRemote) entityplayer.addChatMessage(new ChatComponentText("Train is locked by " + this.getTrainOwner() + "."));
 				return true;
 			}
+		}
+
+		if (trainsOnClick.onClickWithBrakeHandle(this,itemstack,playerEntity,worldObj))
+		{
+			setParkingBrakeFromPacket(!parkingBrake);
+			dataWatcher.updateObject(30, "" + !getParkingBrakeDW());
+			return true;
 		}
 
 		if (itemstack != null && itemstack.getItem() instanceof ItemWrench && this instanceof Locomotive
@@ -1727,7 +1775,10 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				entityplayer.addChatMessage(new ChatComponentText("No other colors available."));
 			}
 		}
-		else if ((trainsOnClick.onClickWithStake(this, itemstack, playerEntity, worldObj))) { return true; }
+		else if ((trainsOnClick.onClickWithStake(this, itemstack, playerEntity, worldObj)))
+		{
+			return true;
+		}
 
 		if (itemstack != null && itemstack.getItem() instanceof ItemPaintbrushThing && entityplayer.isSneaking()) {
 			if (this.acceptedColors != null && this.acceptedColors.size() > 0) {
@@ -2663,5 +2714,60 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	public boolean isInRangeToRenderDist(double p_70112_1_)
 	{
 		return true;
+	}
+
+	public boolean getParkingBrakeDW()
+	{
+		return Boolean.parseBoolean(dataWatcher.getWatchableObjectString(30));
+	}
+
+
+	/**
+	 * Added for SMP
+	 *
+	 * @return true if on, false if off
+	 */
+	public boolean getParkingBrakeFromPacket() {
+		return parkingBrake;
+	}
+
+	/**
+	 * Added for SMP
+	 *
+	 * @param set set 0 if parking break is false, 1 if true
+	 */
+	public void setParkingBrakeFromPacket(boolean set) {
+		parkingBrake = set;
+	}
+
+	public void setParkingBrake(boolean status) {
+		this.parkingBrake = status;
+		Traincraft.brakeChannel.sendToAllAround(new PacketParkingBrake(false, getEntityId()),
+				new NetworkRegistry.TargetPoint(worldObj.provider.dimensionId, posX, posY, posZ, 150.0D));
+	}
+
+	public double convertSpeed(double speed)
+	{
+		//System.out.println("X "+motionX +" Z "+motionZ);
+		if (ConfigHandler.REAL_TRAIN_SPEED) {
+			speed *= 2;// applying ratio
+		} else {
+			speed *= 6;
+		}
+		speed *= 36;
+		//speed *= 10;// convert in ms
+		//speed *= 6;// applying ratio
+		//speed *= 3.6;// convert in km/h
+		return speed;
+	}
+
+	/**
+	 * added for SMP, used by the HUD
+	 *
+	 * @return
+	 */
+	public double getSpeed()
+	{
+		return dataWatcher.getWatchableObjectInt(25);
 	}
 }

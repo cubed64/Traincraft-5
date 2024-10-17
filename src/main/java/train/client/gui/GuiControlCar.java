@@ -49,7 +49,7 @@ public class GuiControlCar extends GuiContainer
         //region ParkingBrake
         if (locomotiveUnderControl != null)
         {
-            if (!locomotiveUnderControl.getParkingBrakeFromPacket())
+            if (!locomotiveUnderControl.getParkingBrakeDW())
             {
                 if (locomotiveUnderControl instanceof SteamTrain) {
                     textureX = 41;

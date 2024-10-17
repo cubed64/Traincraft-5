@@ -301,6 +301,7 @@ item.tc:reinforcedPlastic.name=Fibre-Reinforced Plastic
 item.tc:reinforcedPlates.name=Reinforced Plates
 item.tc:composite_wrench.name=Composite Wrench
 item.tc:paintbrushThing.name=Train Paintbrush
+item.tc:brakeStick.name=Brake Stick
 item.tc:padlock.name=Padlock
 item.tc:adminBook.name=Traincraft Admin Book
 item.tc:wirelessTransmitter.name=MTC Wireless Transmitter
