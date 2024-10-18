@@ -2171,9 +2171,9 @@ public class ModelBuddRDG56SeatCoach_Observation extends ModelConverter//Same as
 		bodyModel[516] = new ModelRendererTurbo(this, 411, 342, textureX, textureY); // Box 588
 		bodyModel[517] = new ModelRendererTurbo(this, 418, 342, textureX, textureY); // Box 589
 		bodyModel[518] = new ModelRendererTurbo(this, 426, 326, textureX, textureY); // Box 590
-		bodyModel[519] = new ModelRendererTurbo(this, 411, 349, textureX, textureY); // Box 591
-		bodyModel[520] = new ModelRendererTurbo(this, 418, 349, textureX, textureY); // Box 592
-		bodyModel[521] = new ModelRendererTurbo(this, 426, 335, textureX, textureY); // Box 593
+		bodyModel[519] = new ModelRendererTurbo(this, 411, 349, textureX, textureY,"glow"); // Box 591 glow
+		bodyModel[520] = new ModelRendererTurbo(this, 418, 349, textureX, textureY,"glow"); // Box 592 glow
+		bodyModel[521] = new ModelRendererTurbo(this, 426, 335, textureX, textureY,"glow"); // Box 593 glow
 		bodyModel[522] = new ModelRendererTurbo(this, 411, 264, textureX, textureY); // Box 128
 		bodyModel[523] = new ModelRendererTurbo(this, 418, 264, textureX, textureY); // Box 177
 		bodyModel[524] = new ModelRendererTurbo(this, 428, 294, textureX, textureY); // Box 128
@@ -2197,16 +2197,16 @@ public class ModelBuddRDG56SeatCoach_Observation extends ModelConverter//Same as
 		bodyModel[542] = new ModelRendererTurbo(this, 346, 73, textureX, textureY); // Box 128
 		bodyModel[543] = new ModelRendererTurbo(this, 308, 220, textureX, textureY,"glow"); // Box 338 glow
 		bodyModel[544] = new ModelRendererTurbo(this, 308, 217, textureX, textureY,"glow"); // Box 338 glow
-		bodyModel[545] = new ModelRendererTurbo(this, 302, 228, textureX, textureY); // Box 128
+		bodyModel[545] = new ModelRendererTurbo(this, 302, 228, textureX, textureY,"glow"); // Box 128 glow
 		bodyModel[546] = new ModelRendererTurbo(this, 426, 276, textureX, textureY); // Box 582
 		bodyModel[547] = new ModelRendererTurbo(this, 446, 301, textureX, textureY); // Box 583
 		bodyModel[548] = new ModelRendererTurbo(this, 326, 13, textureX, textureY); // Box 584
 		bodyModel[549] = new ModelRendererTurbo(this, 299, 200, textureX, textureY); // Box 586
 		bodyModel[550] = new ModelRendererTurbo(this, 301, 205, textureX, textureY); // Box 587
 		bodyModel[551] = new ModelRendererTurbo(this, 301, 208, textureX, textureY); // Box 588
-		bodyModel[552] = new ModelRendererTurbo(this, 308, 205, textureX, textureY); // Box 589
-		bodyModel[553] = new ModelRendererTurbo(this, 308, 208, textureX, textureY); // Box 590
-		bodyModel[554] = new ModelRendererTurbo(this, 302, 198, textureX, textureY); // Box 591
+		bodyModel[552] = new ModelRendererTurbo(this, 308, 205, textureX, textureY,"glow"); // Box 589 glow
+		bodyModel[553] = new ModelRendererTurbo(this, 308, 208, textureX, textureY,"glow"); // Box 590 glow
+		bodyModel[554] = new ModelRendererTurbo(this, 302, 198, textureX, textureY,"glow"); // Box 591 glow
 		bodyModel[555] = new ModelRendererTurbo(this, 341, 35, textureX, textureY); // Box 592
 		bodyModel[556] = new ModelRendererTurbo(this, 335, 18, textureX, textureY); // Box 593
 		bodyModel[557] = new ModelRendererTurbo(this, 346, 20, textureX, textureY); // Box 594
@@ -2330,13 +2330,13 @@ public class ModelBuddRDG56SeatCoach_Observation extends ModelConverter//Same as
 		bodyModel[518].addShapeBox(0F, 0F, 0F, 1, 5, 3, 0F,-0.45F, 0F, -0.2F, 0.3F, 0F, 0.45F, 0.9F, 0F, 0F, -1F, 0F, 0F, -0.45F, 0F, -0.2F, 0.3F, 0F, 0.45F, 1F, 0F, 0F, -1F, 0F, 0F); // Box 590
 		bodyModel[518].setRotationPoint(57.5F, -16F, -6F);
 
-		bodyModel[519].addShapeBox(0F, 0F, 0F, 2, 0, 1, 0F,0F, 0F, 0F, 0.45F, 0F, -0.85F, -0.1F, 0F, 0.7F, 0F, 0F, 0F, 0F, 0F, 0F, 0.45F, 0F, -0.85F, -0.1F, 0F, 0.7F, 0F, 0F, 0F); // Box 591
+		bodyModel[519].addShapeBox(0F, 0F, 0F, 2, 0, 1, 0F,0F, 0F, 0F, 0.45F, 0F, -0.85F, -0.1F, 0F, 0.7F, 0F, 0F, 0F, 0F, 0F, 0F, 0.45F, 0F, -0.85F, -0.1F, 0F, 0.7F, 0F, 0F, 0F); // Box 591 glow
 		bodyModel[519].setRotationPoint(54.5F, -10.99F, -10F);
 
-		bodyModel[520].addShapeBox(0F, 0F, 0F, 3, 0, 1, 0F,-0.55F, 0F, -0.15F, -0.6F, 0F, -2.85F, -1.45F, 0F, 2.5F, 0F, 0F, 0F, -0.55F, 0F, -0.15F, -0.6F, 0F, -2.85F, -1.45F, 0F, 2.5F, 0F, 0F, 0F); // Box 592
+		bodyModel[520].addShapeBox(0F, 0F, 0F, 3, 0, 1, 0F,-0.55F, 0F, -0.15F, -0.6F, 0F, -2.85F, -1.45F, 0F, 2.5F, 0F, 0F, 0F, -0.55F, 0F, -0.15F, -0.6F, 0F, -2.85F, -1.45F, 0F, 2.5F, 0F, 0F, 0F); // Box 592 glow
 		bodyModel[520].setRotationPoint(56.4F, -10.99F, -9.3F);
 
-		bodyModel[521].addShapeBox(0F, 0F, 0F, 1, 0, 3, 0F,-0.45F, 0F, -0.2F, 0.3F, 0F, 0.45F, 0.9F, 0F, 0F, -1F, 0F, 0F, -0.45F, 0F, -0.2F, 0.3F, 0F, 0.45F, 1F, 0F, 0F, -1F, 0F, 0F); // Box 593
+		bodyModel[521].addShapeBox(0F, 0F, 0F, 1, 0, 3, 0F,-0.45F, 0F, -0.2F, 0.3F, 0F, 0.45F, 0.9F, 0F, 0F, -1F, 0F, 0F, -0.45F, 0F, -0.2F, 0.3F, 0F, 0.45F, 1F, 0F, 0F, -1F, 0F, 0F); // Box 593 glow
 		bodyModel[521].setRotationPoint(57.5F, -10.99F, -6F);
 
 		bodyModel[522].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0F, 0F, 0F, -0.1F, 0F, 0.7F, 0.45F, -0.85F, -0.85F, 0F, -0.85F, 0F, 0F, -0.15F, 0F, -0.1F, -0.15F, 0.7F, 0.45F, -0.15F, -0.85F, 0F, -0.15F, 0F); // Box 128
@@ -2408,7 +2408,7 @@ public class ModelBuddRDG56SeatCoach_Observation extends ModelConverter//Same as
 		bodyModel[544].addShapeBox(0F, 0F, 0F, 0, 1, 1, 0F,0F, -0.05F, 0F, 0F, -0.05F, 0F, 0F, -0.02F, 0F, 0F, -0.02F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 338 glow
 		bodyModel[544].setRotationPoint(56.51F, -18.25F, -3F);
 
-		bodyModel[545].addShapeBox(0F, 0F, 0F, 2, 1, 0, 0F,0F, 0F, 0F, -0.24F, -0.04F, -1.585F, -0.24F, -0.04F, 1.585F, 0F, 0F, 0F, 0F, 0F, 0F, -0.24F, 0F, -1.585F, -0.24F, 0F, 1.585F, 0F, 0F, 0F); // Box 128
+		bodyModel[545].addShapeBox(0F, 0F, 0F, 2, 1, 0, 0F,0F, 0F, 0F, -0.24F, -0.04F, -1.585F, -0.24F, -0.04F, 1.585F, 0F, 0F, 0F, 0F, 0F, 0F, -0.24F, 0F, -1.585F, -0.24F, 0F, 1.585F, 0F, 0F, 0F); // Box 128 glow
 		bodyModel[545].setRotationPoint(54.5F, -18.25F, -6.01F);
 
 		bodyModel[546].addShapeBox(0F, 0F, 0F, 1, 1, 3, 0F,-1F, -0.15F, 0F, 0.9F, -0.85F, 0F, 0.3F, -0.85F, 0.45F, -0.45F, 0F, -0.2F, -1F, -0.15F, 0F, 0.9F, -0.15F, 0F, 0.3F, -0.15F, 0.45F, -0.45F, -0.15F, -0.2F); // Box 582
@@ -2429,13 +2429,13 @@ public class ModelBuddRDG56SeatCoach_Observation extends ModelConverter//Same as
 		bodyModel[551].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0F, -0.02F, 0F, 0F, -0.765F, 0F, 0F, -0.8F, 0F, 0F, -0.02F, 0F, 0F, 0F, 0F, 0F, 0.75F, 0F, 0F, 0.75F, 0F, 0F, 0F, 0F); // Box 588
 		bodyModel[551].setRotationPoint(54.5F, -19F, 2F);
 
-		bodyModel[552].addShapeBox(0F, 0F, 0F, 0, 1, 1, 0F,0F, -0.05F, 0.42F, 0F, -0.05F, 0.42F, -0.25F, -0.04F, 0.005F, 0.25F, -0.04F, 0.005F, 0F, 0F, 0.42F, 0F, 0F, 0.42F, -0.25F, 0F, 0.005F, 0.25F, 0F, 0.005F); // Box 589
+		bodyModel[552].addShapeBox(0F, 0F, 0F, 0, 1, 1, 0F,0F, -0.05F, 0.42F, 0F, -0.05F, 0.42F, -0.25F, -0.04F, 0.005F, 0.25F, -0.04F, 0.005F, 0F, 0F, 0.42F, 0F, 0F, 0.42F, -0.25F, 0F, 0.005F, 0.25F, 0F, 0.005F); // Box 589 glow
 		bodyModel[552].setRotationPoint(56.51F, -18.25F, 3.42F);
 
-		bodyModel[553].addShapeBox(0F, 0F, 0F, 0, 1, 1, 0F,0F, -0.02F, 0F, 0F, -0.02F, 0F, 0F, -0.05F, 0F, 0F, -0.05F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 590
+		bodyModel[553].addShapeBox(0F, 0F, 0F, 0, 1, 1, 0F,0F, -0.02F, 0F, 0F, -0.02F, 0F, 0F, -0.05F, 0F, 0F, -0.05F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 590 glow
 		bodyModel[553].setRotationPoint(56.51F, -18.25F, 2F);
 
-		bodyModel[554].addShapeBox(0F, 0F, 0F, 2, 1, 0, 0F,0F, 0F, 0F, -0.24F, -0.04F, 1.585F, -0.24F, -0.04F, -1.585F, 0F, 0F, 0F, 0F, 0F, 0F, -0.24F, 0F, 1.585F, -0.24F, 0F, -1.585F, 0F, 0F, 0F); // Box 591
+		bodyModel[554].addShapeBox(0F, 0F, 0F, 2, 1, 0, 0F,0F, 0F, 0F, -0.24F, -0.04F, 1.585F, -0.24F, -0.04F, -1.585F, 0F, 0F, 0F, 0F, 0F, 0F, -0.24F, 0F, 1.585F, -0.24F, 0F, -1.585F, 0F, 0F, 0F); // Box 591 glow
 		bodyModel[554].setRotationPoint(54.5F, -18.25F, 6.01F);
 
 		bodyModel[555].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,-0.5F, -0.95F, 0F, 1F, -1.51F, 0F, 0.65F, -1.435F, 0F, -0.5F, -0.985F, 0F, -0.5F, -0.05F, 0F, 0F, 0.55F, 0F, 0F, 0.55F, 0F, -0.5F, -0.015F, 0F); // Box 592

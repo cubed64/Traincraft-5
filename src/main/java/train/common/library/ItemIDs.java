@@ -754,6 +754,13 @@ public enum ItemIDs {
 
 	minecartOBHWNH5570_5589Baggage("ItemRollingStock", "OBHWNH5570_5589Baggage", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 
+	minecartBuddCN68SeatCoach_Observation("ItemRollingStock", "BuddCN68SeatCoach_Observation", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartBuddCNCoach("ItemRollingStock", "BuddCNCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartBuddCNDiner_Lounge("ItemRollingStock", "BuddCNDiner_Lounge", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartBuddCN39SeatParlor_Observation("ItemRollingStock", "BuddCN39SeatParlor_Observation", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartBuddCN59SeatCoach_Observation("ItemRollingStock", "BuddCN39SeatParlor_Observation", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartNSCCNBaggage("ItemRollingStock", "NSCCNBaggage", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+
 	minecartAmfleet("ItemRollingStock", "Amfleet", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 	minecartAmfleet2("ItemRollingStock", "Amfleet2", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 	minecartAmfleetCab("ItemRollingStock", "AmfleetCab", train.common.library.TypeOfRollingStock.PASSENGER, 3),

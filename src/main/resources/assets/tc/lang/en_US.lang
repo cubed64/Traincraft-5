@@ -1562,6 +1562,13 @@ item.tc:minecartPSCEI1DR28SeatParlorObservation.name=Pullman Standard C&EI 1DR-2
 
 item.tc:minecartOBHWNH5570_5589Baggage.name=Osgood Bradley NH 5570-5589 Series Baggage
 
+item.tc:minecartBuddCN68SeatCoach_Observation.name=Budd CN 68 Seat Coach-Observation
+item.tc:minecartBuddCNCoach.name=Budd RDG 72 or 54 Seat Coach
+item.tc:minecartBuddCNDiner_Lounge.name=Budd CN Diner-Lounge
+item.tc:minecartBuddCN39SeatParlor_Observation.name=Budd CN 39 Seat Parlor-Observation
+item.tc:minecartBuddCN59SeatCoach_Observation.name=Budd CN 59 Seat Coach-Observation
+item.tc:minecartNSCCNBaggage.name=National Steel Car 76' Baggage
+
 
 entity.tc.Freight PS 85 Baggage.name=Pullman Standard 85' Baggage
 entity.tc.PS 5-6-5 Sleeper.name=Pullman Standard 10-6 Sleeper (Center Bedroom)
@@ -1647,6 +1654,13 @@ entity.tc.PS C&EI Diner.name=Pullman Standard C&EI Diner
 entity.tc.PS C&EI 1DR-28 Seat Parlor-Observation.name=Pullman Standard C&EI 1DR-28 Seat Parlor-Observation
 
 entity.tc.OB HW NH 5570-5589 Series Baggage.name=Osgood Bradley NH 5570-5589 Series Baggage
+
+entity.tc.Budd CN 68 Seat Coach-Observation.name=Budd CN 68 Seat Coach-Observation
+entity.tc.Budd CN 72 or 54 Seat Coach-Lounge.name=Budd CN 72 or 54 Seat Coach
+entity.tc.Budd CN Diner-Lounge.name=Budd CN Diner-Lounge
+entity.tc.Budd CN 39 Seat Parlor-Observation.name=Budd CN 39 Seat Parlor-Observation
+entity.tc.Budd CN 59 Seat Coach-Observation.name=Budd CN 59 Seat Coach-Observation
+entity.tc.NSC CN Baggage.name=National Steel Car 76' Baggage
 
 item.tc:minecartAmfleet.name=Amfleet 1 Coach
 item.tc:minecartAmfleet2.name=Amfleet 2 Coach
