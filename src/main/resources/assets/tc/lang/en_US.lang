@@ -1501,6 +1501,9 @@ item.tc:minecartACFGNRPO_30.name=American Car & Foundry GN RPO (30' mail section
 item.tc:minecartACFGN60SeatCoach.name=American Car & Foundry GN 60 Seat Coach
 item.tc:minecartACFGNDiner_Observation.name=American Car & Foundry GN Diner-Observation
 item.tc:minecartACFGN28SeatCoach_Dinette.name=American Car & Foundry GN 28 Seat Coach-Dinette
+item.tc:minecartACFGN1DR_17SeatParlor_Observation.name=American Car & Foundry GN 1DR-17 Seat Parlor-Observation
+item.tc:minecartPSGNRPO_30.name=Pullman Standard GN RPO (30' mail section)
+
 
 item.tc:minecartOB84SeatCoach.name=Osgood Bradley 84 Seat Coach
 item.tc:minecartOB92SeatCoach.name=Osgood Bradley 92 Seat Coach
@@ -1569,6 +1572,10 @@ item.tc:minecartBuddCN39SeatParlor_Observation.name=Budd CN 39 Seat Parlor-Obser
 item.tc:minecartBuddCN59SeatCoach_Observation.name=Budd CN 59 Seat Coach-Observation
 item.tc:minecartNSCCNBaggage.name=National Steel Car 76' Baggage
 
+item.tc:minecartPSSOUBaggage.name=Pullman Standard SOU Baggage
+item.tc:minecartPSSOURPO_30.name=Pullman Standard SOU RPO (30' mail section)
+
+item.tc:minecartPRECOPendulumCoach.name=Pacific Railway Equipment Company Pendulum Coach
 
 entity.tc.Freight PS 85 Baggage.name=Pullman Standard 85' Baggage
 entity.tc.PS 5-6-5 Sleeper.name=Pullman Standard 10-6 Sleeper (Center Bedroom)
@@ -1595,6 +1602,8 @@ entity.tc.AC&F GN RPO (30' mail).name=American Car & Foundry GN RPO (30' mail se
 entity.tc.AC&F GN 60 Seat Coach.name=American Car & Foundry GN 60 Seat Coach
 entity.tc.AC&F GN Diner-Observation.name=American Car & Foundry GN Diner-Observation
 entity.tc.AC&F GN 28 Seat Coach-Dinette.name=American Car & Foundry GN 28 Seat Coach-Dinette
+entity.tc.AC&F GN 1DR-17 Seat Parlor-Observation.name=American Car & Foundry GN 1DR-17 Seat Parlor-Observation
+entity.tc.PS GN RPO (30' mail).name=Pullman Standard GN RPO (30' mail section)
 
 entity.tc.OB 84 Seat Coach.name=Osgood Bradley 84 Seat Coach
 entity.tc.OB 92 Seat Coach.name=Osgood Bradley 92 Seat Coach
@@ -1661,6 +1670,11 @@ entity.tc.Budd CN Diner-Lounge.name=Budd CN Diner-Lounge
 entity.tc.Budd CN 39 Seat Parlor-Observation.name=Budd CN 39 Seat Parlor-Observation
 entity.tc.Budd CN 59 Seat Coach-Observation.name=Budd CN 59 Seat Coach-Observation
 entity.tc.NSC CN Baggage.name=National Steel Car 76' Baggage
+
+entity.tc.PS SOU Baggage.name=Pullman Standard SOU Baggage
+entity.tc.PS SOU RPO (30' mail).name=Pullman Standard SOU RPO (30' mail section)
+
+entity.tc.PRECO Pendulum Coach.name=Pacific Railway Equipment Company Pendulum Coach
 
 item.tc:minecartAmfleet.name=Amfleet 1 Coach
 item.tc:minecartAmfleet2.name=Amfleet 2 Coach
