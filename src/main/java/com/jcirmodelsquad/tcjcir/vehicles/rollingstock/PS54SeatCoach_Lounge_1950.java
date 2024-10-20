@@ -8,6 +8,8 @@ public class PS54SeatCoach_Lounge_1950 extends AbstractPassengerCar {
 	public PS54SeatCoach_Lounge_1950(World world)
 	{
 		super(world);
+		textureDescriptionMap.put(0, "C&O");
+		textureDescriptionMap.put(1, "PM");
 	}
 
 	public PS54SeatCoach_Lounge_1950(World world, double posX, double posY, double posZ)

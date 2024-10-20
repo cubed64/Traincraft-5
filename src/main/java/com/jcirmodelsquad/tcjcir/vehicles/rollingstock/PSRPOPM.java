@@ -19,6 +19,8 @@ public class PSRPOPM extends Freight implements IInventory {
 	public PSRPOPM(World world) {
 		super(world);
 		initFreightCart();
+		textureDescriptionMap.put(0, "PM");
+		textureDescriptionMap.put(1, "C&O");
 	}
 
 	public void initFreightCart() {
