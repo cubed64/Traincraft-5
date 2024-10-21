@@ -1762,3 +1762,7 @@ item.tc:minecartTwoBil.name=2-Bil Engine
 entity.tc.TwoBil.name=2-Bil Engine
 item.tc:minecartTwoBilTail.name=2-Bil Tail
 entity.tc.TwoBilTail.name=2-Bil Tail
+
+
+item.tc:minecartWorkdayHyrail.name=1980 Pine Workday Hi-rail Truck
+entity.tc.WorkdayHyrail.name=1980 Pine Workday Hi-rail Truck

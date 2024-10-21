@@ -30,6 +30,8 @@ public class DOT11117600 extends LiquidTank {
         textureDescriptionMap.put(6, "UTLX (Casco)");
         textureDescriptionMap.put(7, "Magnolia");
         textureDescriptionMap.put(8, "CCOX (Aragonite Slurry Service)");
+        textureDescriptionMap.put(9, "FWRT (glHUE Service)");
+        textureDescriptionMap.put(10, "FWRT (Glue Service)");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Modelhazmat_plac_17600.class, "loads/hazmat_plac_flammable_number",

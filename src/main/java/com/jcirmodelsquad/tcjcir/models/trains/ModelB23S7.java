@@ -23,6 +23,8 @@ import train.common.api.AbstractTrains;
 import train.common.enums.BoxName;
 import train.common.library.Info;
 
+import java.util.ArrayList;
+
 public class ModelB23S7 extends ModelConverter //Same as Filename
 {
 	int textureX = 512;

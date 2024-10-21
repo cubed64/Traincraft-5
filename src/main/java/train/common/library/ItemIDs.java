@@ -827,8 +827,9 @@ public enum ItemIDs {
 	//minecartLogcarNP( "ItemRollingStock","logcarNP",3),
 	//minecartCF7R("ItemRollingStock", "cf7r", 12),
 	minecartHighrailVan("ItemRollingStock", "highrailvan", 3),
-	//minecartGP9old("ItemRollingStock", "gp9old", 3),
 
+
+	minecartWorkdayHyrail("ItemRollingStock", "workday", 3),
 	;
 
 	public Item item;
