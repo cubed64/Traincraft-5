@@ -36,16 +36,18 @@ public class gsco52millgon extends Freight implements IInventory {
         textureDescriptionMap.put(12, "RI");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
-                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_dort",
-                        "Aggregate - Dirt", 0, 2.475, 0)},
-                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_peagravel",
-                        "Aggregate - Peagravel", 0, 2.475, 0)},
-                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_scrap1",
-                        "Scrapmetal A", 0, 2.475, 0)},
-                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_scrap2",
-                        "Scrapmetal B", 0, 2.475, 0)},
-                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_cullet2_medium",
-                        "Cullet / Scrap Glass", 0, 2.475, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium2.class, "loads/gondola_load_flat_aggregates_medium_dort",
+                        "Aggregate - Dirt", 0, 2.7, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium2.class, "loads/gondola_load_flat_aggregates_medium_peagravel",
+                        "Aggregate - Peagravel", 0, 2.7, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium2.class, "loads/gondola_load_flat_aggregates_medium_gravel",
+                        "Aggregate - Gravel", 0, 2.7, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium2.class, "loads/gondola_load_flat_aggregates_medium_scrap1",
+                        "Scrapmetal A", 0, 2.7, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium2.class, "loads/gondola_load_flat_aggregates_medium_scrap2",
+                        "Scrapmetal B", 0, 2.7, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium2.class, "loads/gondola_load_flat_cullet2_medium",
+                        "Cullet / Scrap Glass", 0, 2.7, 0)},
                 { new CargoSpecification(Modelrebar_bundle.class, "loads/rebar_bundle2",
                         "Rebar Bundle", 0, 2.5, 0)},
                 { new CargoSpecification(Modelcoil_load.class, "loads/coils",
@@ -133,7 +135,7 @@ public class gsco52millgon extends Freight implements IInventory {
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
-        return 3.3F;
+        return 2.6F;
     }
 
     @Override

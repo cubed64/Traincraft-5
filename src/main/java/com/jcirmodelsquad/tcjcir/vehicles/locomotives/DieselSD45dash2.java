@@ -42,7 +42,8 @@ public class DieselSD45dash2 extends DieselTrain {
         textureDescriptionMap.put(20, "Blandsville & Blankerston");
         textureDescriptionMap.put(22, "CSXT (Yn3)");
         textureDescriptionMap.put(23, "Morristown Tenneva & Southern");
-        textureDescriptionMap.put(24, "G");
+        textureDescriptionMap.put(24, "Glitter like the golden beautiful bitch you are");
+        textureDescriptionMap.put(25, "GLC (Cigar Band)");
 
     }
     public DieselSD45dash2(World world, double d, double d1, double d2){

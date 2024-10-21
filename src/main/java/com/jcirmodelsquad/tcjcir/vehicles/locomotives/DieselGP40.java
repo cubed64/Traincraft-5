@@ -37,7 +37,7 @@ public class DieselGP40 extends DieselTrain {
         textureDescriptionMap.put(17, "Milwaukee Road (Billboard)");
         textureDescriptionMap.put(18, "North Fox (Kit-80, Big Canon)");
         textureDescriptionMap.put(19, "IC (Deathstar)");
-        textureDescriptionMap.put(20, "");
+        textureDescriptionMap.put(20, "Falcon Commercial Railroad");
         textureDescriptionMap.put(21, "");
         textureDescriptionMap.put(22, "");
         textureDescriptionMap.put(23, "");

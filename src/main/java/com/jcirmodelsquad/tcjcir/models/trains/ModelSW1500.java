@@ -1795,8 +1795,8 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 		bodyModel[428].rotateAngleY = -0.45378561F;
 
 		bodyModel[429].addShapeBox(0F, 0F, -2F, 1, 4, 3, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F); // Box 275 cs speedo glow
-		bodyModel[429].setRotationPoint(11.5F, -19.5F, 6.5F);
-		bodyModel[429].rotateAngleY = 0.17453293F;
+		bodyModel[429].setRotationPoint(11.5F, -19.5F, 7.5F);
+		//bodyModel[429].rotateAngleY = 0.17453293F;
 
 		bodyModel[430].addShapeBox(0F, 0F, 0F, 2, 6, 2, 0F,0F, 0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F, -3.75F, 0F, 0F, -3.5F, 0F, 0F, -3.5F, 0F, 0F, -3.75F, 0F); // Box 527 why dont you filter some bitches instead
 		bodyModel[430].setRotationPoint(11F, 1F, 8.5F);

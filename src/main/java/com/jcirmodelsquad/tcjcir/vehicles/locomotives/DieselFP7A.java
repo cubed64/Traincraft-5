@@ -25,6 +25,7 @@ public class DieselFP7A extends DieselTrain {
         textureDescriptionMap.put(3, "Western Pacific");
         textureDescriptionMap.put(4, "Western Pacific");
         textureDescriptionMap.put(5, "Joblogh Rail Network");
+        textureDescriptionMap.put(6, "Great Lakes & Northern Territories");
     }
     public DieselFP7A(World world, double d, double d1, double d2){
         this(world);

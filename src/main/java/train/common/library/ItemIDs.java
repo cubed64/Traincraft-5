@@ -783,6 +783,7 @@ public enum ItemIDs {
 	minecartHBC1Bcaboose("ItemRollingStock", "HBC1B", train.common.library.TypeOfRollingStock.BOOSE,3),
 	minecartDRGWCaboose("ItemRollingStock", "DRGW_01400_series_caboose", train.common.library.TypeOfRollingStock.BOOSE,3),
 	minecartICCBaywindowWP("ItemRollingStock", "wp_iccbaywindow_icon", train.common.library.TypeOfRollingStock.BOOSE,3),
+	minecartCA11("ItemRollingStock", "hop_on_paint_dot_net", train.common.library.TypeOfRollingStock.BOOSE,3),
 	minecartWPShops600Series("ItemRollingStock", "wp648680_series_icon", train.common.library.TypeOfRollingStock.BOOSE,3),
 
 	minecartBigMeme("ItemRollingStock", "lol", 69),

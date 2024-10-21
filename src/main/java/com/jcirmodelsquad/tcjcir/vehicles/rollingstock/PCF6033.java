@@ -32,7 +32,7 @@ public class PCF6033 extends Freight implements IInventory {
         textureDescriptionMap.put(11, "BNBX");
         textureDescriptionMap.put(12, "GCM");
         textureDescriptionMap.put(13, "SP (Paper Service)");
-        textureDescriptionMap.put(14, "");
+        textureDescriptionMap.put(14, "WP");
         textureDescriptionMap.put(15, "");
         textureDescriptionMap.put(16, "");
     }

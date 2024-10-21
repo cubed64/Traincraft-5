@@ -1700,6 +1700,7 @@ item.tc:minecartHBC1Ccaboose.name=KSFI HBC1-C Caboose
 item.tc:minecartHBC1Bcaboose.name=KSFI HBC1-B Caboose
 item.tc:minecartDRGWCaboose.name=DRGW 01400 Series Caboose
 item.tc:minecartICCBaywindowWP.name=ICC Baywindow Caboose (WP Config)
+item.tc:minecartCA11.name=ICC CA11 Baywindow Caboose
 item.tc:minecartWPShops600Series.name=WP Shops 600 series Caboose
 
 entity.tc.WVcaboose.name=International Car Co. Wide Vision Caboose
@@ -1707,6 +1708,7 @@ entity.tc.HBC1C.name=KSFI HBC1-C Caboose
 entity.tc.HBC1B.name=KSFI HBC1-B Caboose
 entity.tc.DRGWCaboose.name=DRGW 01400 Series Caboose
 entity.tc.ICCBaywindowWP.name=ICC Baywindow Caboose (WP Config)
+entity.tc.CA11.name=ICC CA11 Baywindow Caboose
 entity.tc.WPShops600Series.name=WP Shops 600 series Caboose
 
 --------------------------------------------------------
@@ -1721,7 +1723,6 @@ item.tc:minecartAipkitExplorer.name=Aipkit Explorer
 item.tc:minecartAipkitExplorer2.name=Explorer-II
 item.tc:minecartHighrailTruck.name=Generic Highrail Truck
 item.tc:minecartHighrailVan.name=Generic Highrail Van
-item.tc:minecartTGVMobile.name=TGV Highrail Van
 item.tc:minecartHustler.name=Hustler Switcher
 item.tc:minecartFRED.name=Flashing Rear End Device (FRED)
 
@@ -1740,7 +1741,6 @@ entity.tc.aipkitExplorer.name=Aipkit Explorer
 entity.tc.Aipkit Explorer-II.name=Explorer-II
 entity.tc.Highrail Truck.name=Generic Highrail Truck
 entity.tc.Highrail Van.name=Generic Highrail Van
-entity.tc.TGVmobile.name=TGV Highrail Van
 entity.tc.Hustler.name=Hustler Switcher
 entity.tc.FRED.name=Flashing Rear End Device (FRED)
 

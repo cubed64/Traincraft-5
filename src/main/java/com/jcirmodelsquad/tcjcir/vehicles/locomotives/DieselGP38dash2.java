@@ -27,7 +27,7 @@ public class DieselGP38dash2 extends DieselTrain {
         textureDescriptionMap.put(7, "Southern Port Belt (NS Patch)");
         textureDescriptionMap.put(8, "Milwaukee Road");
         textureDescriptionMap.put(9, "Milwaukee Road (Billboard)");
-        textureDescriptionMap.put(10, "");
+        textureDescriptionMap.put(10, "GLC (Cigar Band)");
         textureDescriptionMap.put(11, "");
         textureDescriptionMap.put(12, "");
         textureDescriptionMap.put(13, "");

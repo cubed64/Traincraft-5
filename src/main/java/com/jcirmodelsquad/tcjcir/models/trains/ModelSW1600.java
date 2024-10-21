@@ -339,8 +339,8 @@ public class ModelSW1600 extends ModelConverter //Same as Filename
 		bodyModel[295] = new ModelRendererTurbo(this, 51, 140, textureX, textureY); // Box 415
 		bodyModel[296] = new ModelRendererTurbo(this, 33, 26, textureX, textureY); // Box 364 prime base
 		bodyModel[297] = new ModelRendererTurbo(this, 33, 22, textureX, textureY, BoxName.prime1); // Box 6 PRIME3-1
-		bodyModel[298] = new ModelRendererTurbo(this, 33, 22, textureX, textureY, BoxName.prime2); // Box 7 PRIME3-3
-		bodyModel[299] = new ModelRendererTurbo(this, 33, 22, textureX, textureY, BoxName.prime3); // Box 8 PRIME3-2
+		bodyModel[298] = new ModelRendererTurbo(this, 33, 22, textureX, textureY, BoxName.prime3); // Box 7 PRIME3-3
+		bodyModel[299] = new ModelRendererTurbo(this, 33, 22, textureX, textureY, BoxName.prime2); // Box 8 PRIME3-2
 		bodyModel[300] = new ModelRendererTurbo(this, 33, 22, textureX, textureY, BoxName.prime4); // Box 9 PRIME3-4
 		bodyModel[301] = new ModelRendererTurbo(this, 40, 24, textureX, textureY, "cull"); // Box 431 cull support
 		bodyModel[302] = new ModelRendererTurbo(this, 342, 211, textureX, textureY); // Box 412 cs

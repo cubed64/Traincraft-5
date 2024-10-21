@@ -431,7 +431,7 @@ public class ModelDash839B extends ModelConverter //Same as Filename
 		bodyModel[388] = new ModelRendererTurbo(this, 182, 83, textureX, textureY); // Box 396
 		bodyModel[389] = new ModelRendererTurbo(this, 183, 94, textureX, textureY); // Box 397
 		bodyModel[390] = new ModelRendererTurbo(this, 201, 82, textureX, textureY); // Box 398
-		bodyModel[391] = new ModelRendererTurbo(this, 451, 22, textureX, textureY); // Box 399 cull HOLY SHIT WHO WOULD PUT A LADDER THERE WHAT THE FYUCK
+		bodyModel[391] = new ModelRendererTurbo(this, 451, 22, textureX, textureY, "cull"); // Box 399 cull HOLY SHIT WHO WOULD PUT A LADDER THERE WHAT THE FYUCK
 		bodyModel[392] = new ModelRendererTurbo(this, 344, 197, textureX, textureY, "cull"); // Box 561 cull ptc antenna shiz
 		bodyModel[393] = new ModelRendererTurbo(this, 363, 197, textureX, textureY, "cull"); // Box 562 cull ptc antenna shiz
 		bodyModel[394] = new ModelRendererTurbo(this, 327, 216, textureX, textureY); // Box 563

@@ -230,10 +230,10 @@ public class ModelB23S7 extends ModelConverter //Same as Filename
 		bodyModel[185] = new ModelRendererTurbo(this, 9, 129, textureX, textureY); // Box 248
 		bodyModel[186] = new ModelRendererTurbo(this, 367, 99, textureX, textureY); // Box 18 late stack
 		bodyModel[187] = new ModelRendererTurbo(this, 380, 96, textureX, textureY); // Box 21 late stack
-		bodyModel[188] = new ModelRendererTurbo(this, 61, 8, textureX, textureY, BoxName.prime1); // Box 9 PRIME5-4
+		bodyModel[188] = new ModelRendererTurbo(this, 61, 8, textureX, textureY, BoxName.prime4); // Box 9 PRIME5-4
 		bodyModel[189] = new ModelRendererTurbo(this, 61, 8, textureX, textureY, BoxName.prime2); // Box 8 PRIME5-2
 		bodyModel[190] = new ModelRendererTurbo(this, 61, 8, textureX, textureY, BoxName.prime3); // Box 7 PRIME5-3
-		bodyModel[191] = new ModelRendererTurbo(this, 61, 8, textureX, textureY, BoxName.prime4); // Box 6 PRIME5-1
+		bodyModel[191] = new ModelRendererTurbo(this, 61, 8, textureX, textureY, BoxName.prime1); // Box 6 PRIME5-1
 		bodyModel[192] = new ModelRendererTurbo(this, 70, 8, textureX, textureY); // Box 421 prime base
 		bodyModel[193] = new ModelRendererTurbo(this, 71, 4, textureX, textureY); // Box 184 o2 generator
 		bodyModel[194] = new ModelRendererTurbo(this, 72, 6, textureX, textureY); // Box 233
