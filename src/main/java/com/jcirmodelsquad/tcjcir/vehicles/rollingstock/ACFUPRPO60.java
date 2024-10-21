@@ -19,6 +19,17 @@ public class ACFUPRPO60 extends Freight implements IInventory {
 	public ACFUPRPO60(World world) {
 		super(world);
 		initFreightCart();
+		textureDescriptionMap.put(0, "UP");
+		textureDescriptionMap.put(1, "CNW (UP paint)");
+		textureDescriptionMap.put(2, "GN (as delivered)");
+		textureDescriptionMap.put(3, "GN");
+		textureDescriptionMap.put(4, "GN (late)");
+		textureDescriptionMap.put(5, "GN (BSB)");
+		textureDescriptionMap.put(6, "BN");
+		textureDescriptionMap.put(7, "SOU");
+		textureDescriptionMap.put(8, "CNO&TP");
+		textureDescriptionMap.put(9, "SOU (black roof)");
+		textureDescriptionMap.put(10, "CNO&TP (black roof)");
 	}
 
 	public void initFreightCart() {

@@ -1549,6 +1549,7 @@ item.tc:minecartBuddNYC52SeatCoach.name=Budd NYC 52 Seat Coach
 item.tc:minecartBuddCBQ52SeatCoach.name=Budd CB&Q 52 Seat Coach
 item.tc:minecartBuddDome46SeatCoach.name=Budd Dome-46 Seat Coach
 item.tc:minecartBuddCBQDome50SeatCoach.name=Budd CB&Q Dome-50 Seat Coach
+item.tc:minecartBuddPrewarBaggage.name=Budd Prewar Baggage
 
 item.tc:minecartBuddATSF52SeatCoach.name=Budd ATSF 52 Seat Coach
 item.tc:minecartBuddATSF48SeatCoach.name=Budd ATSF 48 Seat Coach (news butcher stand)
@@ -1576,6 +1577,8 @@ item.tc:minecartPSSOUBaggage.name=Pullman Standard SOU Baggage
 item.tc:minecartPSSOURPO_30.name=Pullman Standard SOU RPO (30' mail section)
 
 item.tc:minecartPRECOPendulumCoach.name=Pacific Railway Equipment Company Pendulum Coach
+
+item.tc:minecartPSFNCCBaggage_Dinette.name=Pullman Standard FNCC Baggage-Dinette
 
 entity.tc.Freight PS 85 Baggage.name=Pullman Standard 85' Baggage
 entity.tc.PS 5-6-5 Sleeper.name=Pullman Standard 10-6 Sleeper (Center Bedroom)
@@ -1648,6 +1651,7 @@ entity.tc.Budd NYC 52 Seat Coach.name=Budd NYC 52 Seat Coach
 entity.tc.Budd CB&Q 52 Seat Coach.name=Budd CB&Q 52 Seat Coach
 entity.tc.Budd Dome-46 Seat Coach.name=Budd Dome-46 Seat Coach
 entity.tc.Budd CB&Q Dome-50 Seat Coach.name=Budd CB&Q Dome-50 Seat Coach
+entity.tc.Budd Prewar Baggage.name=Budd Prewar Baggage
 
 entity.tc.Budd ATSF 52 Seat Coach.name=Budd ATSF 52 Seat Coach
 entity.tc.Budd ATSF 48 Seat Coach.name=Budd ATSF 48 Seat Coach (news butcher stand)
@@ -1675,6 +1679,8 @@ entity.tc.PS SOU Baggage.name=Pullman Standard SOU Baggage
 entity.tc.PS SOU RPO (30' mail).name=Pullman Standard SOU RPO (30' mail section)
 
 entity.tc.PRECO Pendulum Coach.name=Pacific Railway Equipment Company Pendulum Coach
+
+entity.tc.PS FNCC Baggage-LC-Lounge.name=Pullman Standard FNCC Baggage-Dinette
 
 item.tc:minecartAmfleet.name=Amfleet 1 Coach
 item.tc:minecartAmfleet2.name=Amfleet 2 Coach

@@ -2026,6 +2026,7 @@ public enum RenderEnum
 	BuddCBQ52SeatCoach(BuddCBQ52SeatCoach.class, new ModelBudd52SeatCoach(), "Budd_lightweight_52SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	BuddDome46SeatCoach(BuddDome46SeatCoach.class, new ModelBuddDome46SeatCoach(), "Budd_lightweight_Dome46SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	BuddCBQDome50SeatCoach(BuddCBQDome50SeatCoach.class, new ModelBuddCBQDome50SeatCoach(), "Budd_lightweight_CBQDome50SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	BuddPrewarBaggage(BuddPrewarBaggage.class, new ModelBuddPrewarBaggage(), "Budd_lightweight_Prewar_Baggage_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	BuddATSF52SeatCoach(BuddATSF52SeatCoach.class, new ModelBuddATSF52SeatCoach(), "Budd_lightweight_ATSF52SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	BuddATSF48SeatCoach(BuddATSF48SeatCoach.class, new ModelBuddATSF52SeatCoach(), "Budd_lightweight_ATSF52SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -2057,6 +2058,8 @@ public enum RenderEnum
 	PSSOURPO_30(PSSOURPO_30.class, new ModelPSSOURPO_30(), "PS_lightweight_SOUPO30_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	PRECOPendulumCoach(PRECOPendulumCoach.class, new ModelPRECOPendulumCoach(), "PRECO_lightweight_PendulumCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+
+	PSFNCCBaggage_Dinette(PSFNCCBaggage_Dinette.class, new ModelPSFNCCBaggage_Dinette(), "PS_lightweight_FNCCBaggage_Dinette_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	amfleet(Amfleet.class, new ModelAmfleet(),"amfleet_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	amfleet2(Amfleet2.class, new ModelAmfleet2(),"amfleet2_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

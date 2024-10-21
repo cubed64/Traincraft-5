@@ -736,6 +736,7 @@ public enum ItemIDs {
 	minecartBuddCBQ52SeatCoach("ItemRollingStock", "BuddCBQ52SeatCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 	minecartBuddDome46SeatCoach("ItemRollingStock", "BuddDome46SeatCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 	minecartBuddCBQDome50SeatCoach("ItemRollingStock", "BuddCBQDome50SeatCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartBuddPrewarBaggage("ItemRollingStock", "BuddPrewarBaggage", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 
 	minecartBuddATSF52SeatCoach("ItemRollingStock", "BuddATSF52SeatCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 	minecartBuddATSF48SeatCoach("ItemRollingStock", "BuddATSF48SeatCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
@@ -767,6 +768,8 @@ public enum ItemIDs {
 	minecartPSSOURPO_30("ItemRollingStock", "PSSOURPO_30", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 
 	minecartPRECOPendulumCoach("ItemRollingStock", "PRECOPendulumCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+
+	minecartPSFNCCBaggage_Dinette("ItemRollingStock", "PSFNCCBaggage_Dinette", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 
 	minecartAmfleet("ItemRollingStock", "Amfleet", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 	minecartAmfleet2("ItemRollingStock", "Amfleet2", train.common.library.TypeOfRollingStock.PASSENGER, 3),

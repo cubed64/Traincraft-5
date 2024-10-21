@@ -44,9 +44,9 @@ public class ModelACFGN28SeatCoach_Dinette extends ModelConverter//Same as Filen
 		bodyModel[1] = new ModelRendererTurbo(this, 1, 115, textureX, textureY); // Box 2
 		bodyModel[2] = new ModelRendererTurbo(this, 44, 116, textureX, textureY); // Box 2
 		bodyModel[3] = new ModelRendererTurbo(this, 335, 120, textureX, textureY); // Box 2
-		bodyModel[4] = new ModelRendererTurbo(this, 299, 132, textureX, textureY); // Box 2
+		bodyModel[4] = new ModelRendererTurbo(this, 301, 132, textureX, textureY); // Box 2
 		bodyModel[5] = new ModelRendererTurbo(this, 29, 123, textureX, textureY); // Box 2
-		bodyModel[6] = new ModelRendererTurbo(this, 46, 132, textureX, textureY); // Box 2
+		bodyModel[6] = new ModelRendererTurbo(this, 48, 132, textureX, textureY); // Box 2
 		bodyModel[7] = new ModelRendererTurbo(this, 74, 132, textureX, textureY); // Box 2
 		bodyModel[8] = new ModelRendererTurbo(this, 310, 119, textureX, textureY); // Box 2
 		bodyModel[9] = new ModelRendererTurbo(this, 64, 119, textureX, textureY); // Box 2
@@ -550,17 +550,17 @@ public class ModelACFGN28SeatCoach_Dinette extends ModelConverter//Same as Filen
 		bodyModel[2].addBox(0F, 0F, 0F, 4, 2, 10, 0F); // Box 2
 		bodyModel[2].setRotationPoint(-60.5F, 1F, -5F);
 
-		bodyModel[3].addBox(0F, 0F, 0F, 4, 2, 3, 0F); // Box 2
-		bodyModel[3].setRotationPoint(59.5F, 3F, -1.5F);
+		bodyModel[3].addBox(0F, 0F, 0F, 3, 2, 3, 0F); // Box 2
+		bodyModel[3].setRotationPoint(60.5F, 3F, -1.5F);
 
-		bodyModel[4].addBox(0F, 0F, 0F, 5, 1, 10, 0F); // Box 2
-		bodyModel[4].setRotationPoint(56.5F, 3F, -5F);
+		bodyModel[4].addBox(0F, 0F, 0F, 4, 3, 8, 0F); // Box 2
+		bodyModel[4].setRotationPoint(56.5F, 3F, -4F);
 
-		bodyModel[5].addBox(0F, 0F, 0F, 4, 2, 3, 0F); // Box 2
+		bodyModel[5].addBox(0F, 0F, 0F, 3, 2, 3, 0F); // Box 2
 		bodyModel[5].setRotationPoint(-63.5F, 3F, -1.5F);
 
-		bodyModel[6].addBox(0F, 0F, 0F, 5, 1, 10, 0F); // Box 2
-		bodyModel[6].setRotationPoint(-61.5F, 3F, -5F);
+		bodyModel[6].addBox(0F, 0F, 0F, 4, 3, 8, 0F); // Box 2
+		bodyModel[6].setRotationPoint(-60.5F, 3F, -4F);
 
 		bodyModel[7].addBox(0F, 0F, 0F, 113, 1, 4, 0F); // Box 2
 		bodyModel[7].setRotationPoint(-56.5F, 3F, -2F);
