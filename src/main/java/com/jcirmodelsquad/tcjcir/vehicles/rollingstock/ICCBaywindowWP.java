@@ -1,12 +1,14 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
+import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import train.common.Traincraft;
 import train.common.api.AbstractPassengerCar;
+import train.common.api.AbstractWorkCart;
 import train.common.library.GuiIDs;
 
-public class ICCBaywindowWP extends AbstractPassengerCar
+public class ICCBaywindowWP extends AbstractWorkCart
 {
     public ICCBaywindowWP(World world) {
         super(world);
@@ -20,21 +22,12 @@ public class ICCBaywindowWP extends AbstractPassengerCar
         textureDescriptionMap.put(7, "North Fox (KIT-L)");
         textureDescriptionMap.put(8, "DLMR");
         textureDescriptionMap.put(9, "DLMR (but somebody spilled the ketchup)");
+        initCabooseWorkCart();
     }
 
     public ICCBaywindowWP(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
-
-    @Override
-    public void pressKey(int i) {
-        if(locked && riddenByEntity != null && riddenByEntity instanceof EntityPlayer&& !((EntityPlayer)riddenByEntity).getDisplayName().toLowerCase().equals(this.trainOwner.toLowerCase())){
-            return;
-        }
-        if (i == 7 && riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
-            ((EntityPlayer) riddenByEntity).openGui(Traincraft.instance, GuiIDs.CRAFTING_CART, worldObj, (int) this.posX, (int) this.posY, (int) this.posZ);
-        }
+    {
+        super(world, posX, posY, posZ);
 
     }
 
@@ -45,8 +38,18 @@ public class ICCBaywindowWP extends AbstractPassengerCar
     }
 
     @Override
-    public float getOptimalLinkingDistance()
+    public float getOptimalDistance(EntityMinecart cart)
     {
         return 2.1F;
+    }
+
+
+    /**
+     * Returns the name of the inventory
+     */
+    @Override
+    public String getInventoryName()
+    {
+        return "ICC Baywindow Caboose (WP Config)";
     }
 }
