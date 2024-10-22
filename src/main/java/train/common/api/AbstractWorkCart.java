@@ -1,10 +1,13 @@
 package train.common.api;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -16,21 +19,106 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
+import train.common.Traincraft;
 import train.common.adminbook.ServerLogger;
+import train.common.library.GuiIDs;
 
-public abstract class AbstractWorkCart extends EntityRollingStock implements IInventory{
-	protected ItemStack[] furnaceItemStacks;
+public abstract class AbstractWorkCart extends EntityRollingStock implements IInventory, IRollingStockLightControls
+{
+	protected ItemStack[] furnaceItemStacks = new ItemStack[3];
 	public int furnaceBurnTime = 0;
 	public int currentItemBurnTime = 0;
 	public int furnaceCookTime = 0;
 
-	public AbstractWorkCart(World world) {
+	public boolean isLightsEnabled = true;
+	public boolean isBeaconEnabled = true;
+	public byte beaconCycleIndex = 0;
+	public byte ditchLightMode = 1;
+
+
+	public AbstractWorkCart(World world)
+	{
 		super(world);
+		initCabooseWorkCart();
+		dataWatcher.addObject(28, lightingDetailsJSON());
+	}
+
+	public void initCabooseWorkCart() {
+		furnaceItemStacks = new ItemStack[3];
+		furnaceBurnTime = 0;
+		currentItemBurnTime = 0;
+		furnaceCookTime = 0;
+	}
+
+	/** Constructor used when a new AbstractWorkCart is placed in the world
+	 *
+	 * Must be implemented in each AbstractWorkCart
+	 * @param world World
+	 * @param posX PosX
+	 * @param posY PosY
+	 * @param posZ PosZ
+	 */
+	public AbstractWorkCart(World world, double posX, double posY, double posZ)
+	{
+		super(world);
+		dataWatcher.addObject(28, lightingDetailsJSON());
+		setPosition(posX, posY + yOffset, posZ);
+		motionX = 0.0D;
+		motionY = 0.0D;
+		motionZ = 0.0D;
+		prevPosX = posX;
+		prevPosY = posY;
+		prevPosZ = posZ;
+	}
+
+
+
+	@Override
+	public void updateRiderPosition() {
+		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset() + getAdditionalYOffset(), posZ);
 	}
 
 	@Override
-	public void onUpdate() {
+	public void pressKey(int i) {
+		if (riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
+			if (locked && !((EntityPlayer) riddenByEntity).getDisplayName().toLowerCase().equals(this.trainOwner.toLowerCase())) {
+				return;
+			}
+			if (i == 7) {
+				((EntityPlayer) riddenByEntity).openGui(Traincraft.instance, GuiIDs.CRAFTING_CART, worldObj, (int) this.posX, (int) this.posY, (int) this.posZ);
+			}
+			if (i == 9) {
+				((EntityPlayer) riddenByEntity).openGui(Traincraft.instance, GuiIDs.FURNACE_CART, worldObj, (int) this.posX, (int) this.posY, (int) this.posZ);
+			}
+		}
+	}
+
+	protected double getAdditionalYOffset()
+	{
+		return 0D;
+	}
+
+	/** Returns the distance that the RollingStockCar Entity
+	 *  should be from the other RollingStockCar Entity being coupled to
+	 */
+
+	@Override
+	public void onUpdate()
+	{
+		cycleBeaconIndex();
 		super.onUpdate();
+		updateBurning();
+		if (!worldObj.isRemote)
+		{
+			dataWatcher.updateObject(28, lightingDetailsJSON());
+		}
+	}
+
+	@Override
+	public void setDead()
+	{
+		super.setDead();
+		isDead = true;
 	}
 
 	@Override
@@ -50,6 +138,7 @@ public abstract class AbstractWorkCart extends EntityRollingStock implements IIn
 			}
 		}
 		nbttagcompound.setTag("Items", var2);
+		nbttagcompound.setString("lightingDetailsJSON", lightingDetailsJSON());
 	}
 
 	@Override
@@ -69,6 +158,115 @@ public abstract class AbstractWorkCart extends EntityRollingStock implements IIn
 		this.furnaceBurnTime = nbttagcompound.getShort("BurnTime");
 		this.furnaceCookTime = nbttagcompound.getShort("CookTime");
 		this.currentItemBurnTime = AbstractWorkCart.getItemBurnTime(this.furnaceItemStacks[1]);
+
+		JsonObject lightingDetailsJSONObject;
+		try {
+			lightingDetailsJSONObject = new JsonParser().parse(nbttagcompound.getString("lightingDetailsJSON")).getAsJsonObject();
+		}
+		catch (Exception e)
+		{
+			lightingDetailsJSONObject = lightingDetailsAsJSON();
+		}
+
+		isLightsEnabled = lightingDetailsJSONObject.get("isLightsEnabled").getAsBoolean();
+		isBeaconEnabled = lightingDetailsJSONObject.get("isBeaconEnabled").getAsBoolean();
+		ditchLightMode = lightingDetailsJSONObject.get("ditchLightMode").getAsByte();
+		beaconCycleIndex = lightingDetailsJSONObject.get("beaconCycleIndex").getAsByte();
+		dataWatcher.updateObject(28, lightingDetailsJSON());
+	}
+
+	private void cycleBeaconIndex()
+	{
+		if (isLightsEnabled && ticksExisted % 5 == 0)
+		{
+			beaconCycleIndex++;
+			if (beaconCycleIndex == 4)
+			{
+				beaconCycleIndex = 0;
+			}
+		}
+	}
+
+	public String lightingDetailsJSON()
+	{
+		JsonObject lightingDetailsJSON = new JsonObject();
+		lightingDetailsJSON.addProperty("isLightsEnabled", isLightsEnabled);
+		lightingDetailsJSON.addProperty("isBeaconEnabled", isBeaconEnabled);
+		lightingDetailsJSON.addProperty("beaconCycleIndex", beaconCycleIndex);
+		lightingDetailsJSON.addProperty("ditchLightMode", ditchLightMode);
+		return lightingDetailsJSON.toString();
+	}
+
+	public JsonObject lightingDetailsAsJSON()
+	{
+		JsonObject lightingDetailsJSON = new JsonObject();
+		lightingDetailsJSON.addProperty("isLightsEnabled", isLightsEnabled);
+		lightingDetailsJSON.addProperty("isBeaconEnabled", isBeaconEnabled);
+		lightingDetailsJSON.addProperty("beaconCycleIndex", beaconCycleIndex);
+		lightingDetailsJSON.addProperty("ditchLightMode", ditchLightMode);
+		return lightingDetailsJSON;
+	}
+
+	/**
+	 *
+	 * @param isLightsOn set 0 if loco lights is false, 1 if true
+	 */
+	public void setPacketLights(boolean isLightsOn)
+	{
+		isLightsEnabled = isLightsOn;
+	}
+
+	/**
+	 *
+	 * @param isBeaconEnabled set 0 if loco beacon is false, 1 if true
+	 */
+	public void setPacketBeacon(boolean isBeaconEnabled)
+	{
+		this.isBeaconEnabled = isBeaconEnabled;
+	}
+
+	/**Sets the Ditch light mode
+	 *
+	 * @param ditchLightMode set 0 for off,
+	 */
+	public void setPacketDitchLightsMode(byte ditchLightMode)
+	{
+		this.ditchLightMode = ditchLightMode;
+	}
+
+	public boolean isLightsEnabled()
+	{
+		return AsJsonObject(dataWatcher.getWatchableObjectString(28)).get("isLightsEnabled").getAsBoolean();
+	}
+
+	public boolean isBeaconEnabled()
+	{
+		return AsJsonObject(dataWatcher.getWatchableObjectString(28)).get("isBeaconEnabled").getAsBoolean();
+	}
+
+	public byte getBeaconCycleIndex()
+	{
+		return AsJsonObject(dataWatcher.getWatchableObjectString(28)).get("beaconCycleIndex").getAsByte();
+	}
+
+	public boolean isDitchLightsEnabled()
+	{
+		return AsJsonObject(dataWatcher.getWatchableObjectString(28)).get("ditchLightMode").getAsByte() > 0;
+	}
+
+	private JsonObject AsJsonObject(String string)
+	{
+		return new JsonParser().parse(string).getAsJsonObject();
+	}
+
+	@Override
+	public boolean isStorageCart() {
+		return false;
+	}
+
+	@Override
+	public boolean canBeRidden() {
+		return true;
 	}
 
 	/**
@@ -79,6 +277,16 @@ public abstract class AbstractWorkCart extends EntityRollingStock implements IIn
 		return 64;
 	}
 
+	/**
+	 * For tile entities, ensures the chunk containing the tile entity is saved to disk later - the game won't think it
+	 * hasn't changed and skip it.
+	 */
+	@Override
+	public void markDirty()
+	{
+
+	}
+
 	@SideOnly(Side.CLIENT)
 	/**
 	 * Returns an integer between 0 and the passed value representing how close the current item is to being completely
@@ -86,6 +294,24 @@ public abstract class AbstractWorkCart extends EntityRollingStock implements IIn
 	 */
 	public int getCookProgressScaled(int par1) {
 		return this.furnaceCookTime * par1 / 200;
+	}
+
+	@Override
+	public boolean interactFirst(EntityPlayer entityplayer) {
+		if ((super.interactFirst(entityplayer))) {
+			return false;
+		}
+		if (!worldObj.isRemote) {
+			ItemStack itemstack = entityplayer.inventory.getCurrentItem();
+			if(lockThisCart(itemstack, entityplayer))return true;
+			if (riddenByEntity != null && (riddenByEntity instanceof EntityPlayer) && riddenByEntity != entityplayer) {
+				return true;
+			}
+			if (!worldObj.isRemote) {
+				entityplayer.mountEntity(this);
+			}
+		}
+		return true;
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -344,5 +570,10 @@ public abstract class AbstractWorkCart extends EntityRollingStock implements IIn
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
 		return true;
+	}
+
+	@Override
+	public String getInventoryName() {
+		return "Blank";
 	}
 }
