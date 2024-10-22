@@ -14,18 +14,22 @@ import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
 
-public class DieselDR441500BShark extends DieselTrain {
-    public DieselDR441500BShark(World world) {
+public class DieselDR441500BPhase2 extends DieselTrain {
+    public DieselDR441500BPhase2(World world) {
         super(world, EnumTrains.RF16B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Demonstrator");
-        textureDescriptionMap.put(1, "Elgin, Joliet & Eastern");
-        textureDescriptionMap.put(2, "Baltimore & Ohio");
-        textureDescriptionMap.put(3, "Baltimore & Ohio (Late)");
-        textureDescriptionMap.put(4, "Blandsville & Blankerston");
+        textureDescriptionMap.put(0, "Missouri Pacific (As delivered)");
+        textureDescriptionMap.put(1, "Missouri Pacific");
+        textureDescriptionMap.put(2, "New York Central (As delivered)");
+        textureDescriptionMap.put(3, "New York Central");
+        textureDescriptionMap.put(4, "New York Central (Dynamics removed)");
+        textureDescriptionMap.put(5, "New York Central (Cigarband)");
+        textureDescriptionMap.put(6, "Blandsville & Blankerston");
+        textureDescriptionMap.put(7, "Galesburg Clinton & Midland");
+        textureDescriptionMap.put(8, "Steampunk Rail");
 
     }
-    public DieselDR441500BShark(World world, double d, double d1, double d2){
+    public DieselDR441500BPhase2(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -45,7 +49,7 @@ public class DieselDR441500BShark extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 3.15; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
+        double distance = 3.35; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
         double distanceLR = -0.47; //how far left/right on the entity you ride; left > 0; right < 0;
         double yOffset = -0.08;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
@@ -143,7 +147,7 @@ public class DieselDR441500BShark extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "BLW DR-4-4-1500B (Phase 3)";
+        return "BLW DR-4-4-1500B (Phase 2)";
     }
 
     @Override

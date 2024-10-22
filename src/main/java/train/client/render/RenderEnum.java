@@ -1771,6 +1771,16 @@ public enum RenderEnum
 			add(new double[]{0.8D, 1.30D, -0.18D});
 		}
 	}, "", null, 0, false),
+	DR441500Phase2( DieselDR441500Phase2.class,  new ModelDR441500Phase2(), "DR441500Phase2_", true,new float[]{-1.4F, 0.125F, 0.00F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.64D, 1.32D, 0.22D});
+		}
+	}, "", null, 0, false),
+	DR441500BPhase2( DieselDR441500BPhase2.class,  new ModelDR441500BPhase2(), "DR441500BPhase2_", true,new float[]{-1.35F, 0.125F, 0.00F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.68D, 1.32D, 0.22D});
+		}
+	}, "", null, 0, false),
 	DR441500Shark( DieselDR441500Shark.class,  new ModelDR441500Shark(), "DR441500Shark_", true,new float[]{-1.4F, 0.125F, 0.00F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{
 			add(new double[]{1.66D, 1.32D, 0.22D});

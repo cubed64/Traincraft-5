@@ -552,6 +552,8 @@ public enum ItemIDs {
 	minecartVO1000("ItemRollingStock", "vo1000", train.common.library.TypeOfRollingStock.DIESEL, 2),
 	minecartS12("ItemRollingStock", "s12", train.common.library.TypeOfRollingStock.DIESEL, 3),
 	minecartDS441000("ItemRollingStock", "ds441000", train.common.library.TypeOfRollingStock.DIESEL, 3),
+	minecartDR441500Phase2("ItemRollingStock", "DR441500Phase2", train.common.library.TypeOfRollingStock.DIESEL,4),
+	minecartDR441500BPhase2("ItemRollingStock", "DR441500BPhase2", train.common.library.TypeOfRollingStock.DIESEL,4),
 	minecartDR441500Shark("ItemRollingStock", "DR441500Shark", train.common.library.TypeOfRollingStock.DIESEL,4),
 	minecartDR441500BShark("ItemRollingStock", "DR441500BShark", train.common.library.TypeOfRollingStock.DIESEL,4),
 	minecartRF16("ItemRollingStock", "RF16", train.common.library.TypeOfRollingStock.DIESEL,4),
