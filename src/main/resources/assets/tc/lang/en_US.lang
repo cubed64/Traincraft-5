@@ -387,7 +387,7 @@ item.tc:tcRailVeryLargeSlopeSnowGravel.name=Very Large Slope Track (Snowy Gravel
 item.tc:tcRailVeryLargeSlopeDynamic.name=Very Large Slope Track (Dynamic)
 
 <!-- ## TC Keybindings ## -->
-key.categories.traincraft=JCIR-Traincraft
+key.categories.traincraft=FoxTC (Traincraft)
 key.traincraft.horn=Horn/Whistle
 key.traincraft.inventory=Inventory
 key.traincraft.up=Up (Airship)
