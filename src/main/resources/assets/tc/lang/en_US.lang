@@ -1355,6 +1355,9 @@ item.tc:minecartGSI60FootBulkhead.name=GSI 60' Bulkhead Flat
 item.tc:minecartGSC60FootFlatcar.name=GSC 60' Flatcar
 item.tc:minecartthrall63centerbeam.name=Thrall 63' Centerbeam
 item.tc:minecartFNCC60FootBulk.name=KSFI 60' Bulkhead Flat
+item.tc:minecartGSC53FootFlatcar.name=GSC 53' Flatcar
+item.tc:minecartGSC5366FootBulkhead.name=GSC 53' Bulkhead Flat (6' 6" Bulkhead)
+item.tc:minecartGSC5386FootBulkhead.name=GSC 53' Bulkhead Flat (8' 6" Bulkhead)
 
 
 entity.tc.60centerbeam.name=60' Center Beam
@@ -1364,6 +1367,9 @@ entity.tc.63centerbeam.name=Thrall 63' Centerbeam
 entity.tc.GSI_Bulkhead.name=GSI 60' Bulkhead Flat
 entity.tc.GSC_Flatcar.name=GSC 60' Flatcar
 entity.tc.FNCC60FootBulk.name=KSFI 60' Bulkhead Flat
+entity.tc.GSC_53Flatcar.name=GSC 53' Flatcar
+entity.tc.GSC_53_66Bulkhead.name=GSC 53' Bulkhead Flat (6' 6" Bulkhead)
+entity.tc.GSC_53_86Bulkhead.name=GSC 53' Bulkhead Flat (8' 6" Bulkhead)
 
 item.tc:minecartPS140.name=Pullman Standard 40' Boxcar
 item.tc:minecartPS150.name=Pullman Standard 50' Boxcar
@@ -1378,6 +1384,8 @@ item.tc:minecartGN40.name=Great Northern Homebuilt 40' Boxcar(s)
 item.tc:minecartR70Reefer.name=PFE R-70-20 Reefer
 item.tc:minecartNSCchildHUH.name=National Steel Car 3294 Mechanical Reefer
 item.tc:minecartPCF6033.name=PC&F 6033 Cu Ft Boxcar
+item.tc:minecartACFRailbox.name=ACF Railbox Boxcar
+item.tc:minecartACFRailboxCushioned.name=ACF Railbox Boxcar (Cushioned)
 
 
 entity.tc.PS140.name=Pullman Standard 40' Boxcar
@@ -1393,6 +1401,8 @@ entity.tc.GN40.name=Great Northern Homebuilt 40' Boxcar(s)
 entity.tc.R70Reefer.name=PFE R-70-20 Reefer
 entity.tc.NSCReefer.name=National Steel Car 3294 Mechanical Reefer
 entity.tc.PCF6033.name=PC&F 6033 Cu Ft Boxcar
+entity.tc.ACF Railbox.name=ACF Railbox Boxcar
+entity.tc.ACF Railbox (Cushioned).name=ACF Railbox Boxcar (Cusioned)
 
 item.tc:minecartVersaLongi.name=Versaflood Longitudinal Hopper
 item.tc:minecartVersaTrans.name=Versaflood Transverse Hopper

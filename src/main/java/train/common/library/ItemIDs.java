@@ -616,6 +616,9 @@ public enum ItemIDs {
 	minecartGSC60FootFlatcar("ItemRollingStock", "gsc_flatass", train.common.library.TypeOfRollingStock.FREIGHT, 3),
 	minecartthrall63centerbeam("ItemRollingStock", "63centerbeam", train.common.library.TypeOfRollingStock.FREIGHT, 3),
 	minecartFNCC60FootBulk("ItemRollingStock", "FNCC60FootBulk", train.common.library.TypeOfRollingStock.FREIGHT, 3),
+	minecartGSC53FootFlatcar("ItemRollingStock", "gsc_53_flat", train.common.library.TypeOfRollingStock.FREIGHT, 3),
+	minecartGSC5366FootBulkhead("ItemRollingStock", "gsc_53_66bulkhead", train.common.library.TypeOfRollingStock.FREIGHT, 3),
+	minecartGSC5386FootBulkhead("ItemRollingStock", "gsc_53_86bulkhead", train.common.library.TypeOfRollingStock.FREIGHT, 3),
 
 	minecartPS140("ItemRollingStock", "ps140", train.common.library.TypeOfRollingStock.FREIGHT, 3),
 	minecartPS150("ItemRollingStock", "ps150", train.common.library.TypeOfRollingStock.FREIGHT,4),
@@ -630,6 +633,8 @@ public enum ItemIDs {
 	minecartR70Reefer("ItemRollingStock", "r70", train.common.library.TypeOfRollingStock.FREIGHT, 5),
 	minecartNSCchildHUH("ItemRollingStock", "NSC_3294_mechanical_reefer", train.common.library.TypeOfRollingStock.FREIGHT, 2),
 	minecartPCF6033("ItemRollingStock", "6033_Icon", train.common.library.TypeOfRollingStock.FREIGHT, 4),
+	minecartACFRailbox("ItemRollingStock", "ACFRailbox", train.common.library.TypeOfRollingStock.FREIGHT, 5),
+	minecartACFRailboxCushioned("ItemRollingStock", "ACFRailboxCushioned", train.common.library.TypeOfRollingStock.FREIGHT, 5),
 
 	minecartVersaLongi("ItemRollingStock", "versalongi", train.common.library.TypeOfRollingStock.FREIGHT, 4),
 	minecartVersaTrans("ItemRollingStock", "versatrans", train.common.library.TypeOfRollingStock.FREIGHT, 4),

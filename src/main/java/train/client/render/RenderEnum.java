@@ -1915,6 +1915,9 @@ public enum RenderEnum
 	GSC60FootFlat(GSC60FootFlat.class, new ModelGSI60FootBulkheadFlat(),"gsc_60flat_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Thrall63centerbeam(Thrall63centerbeam.class, new Modelthrall63centerbeam(),"thrall63centerbeam_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	FNCC60FootBulk(FNCC60FootBulk.class, new ModelFNCC60FootBulk_fix(),"FNCC60FootBulk_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	GSC53FootFlat(GSC53FootFlat.class, new ModelGSC53FootBulkheadFlat(),"gsc_53flat_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	GSC53Foot6_6Bulkhead(GSC53Foot66Bulkhead.class, new ModelGSC53FootBulkheadFlat(),"gsc_53_66flat_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	GSC53Foot8_6Bulkhead(GSC53Foot86Bulkhead.class, new ModelGSC53FootBulkheadFlat(),"gsc_53_86flat_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	PS140(PS140.class, new ModelPS140(),"ps140_", true, new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PS150(PS150.class, new ModelPS150(),"ps150_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -1929,6 +1932,8 @@ public enum RenderEnum
 	R70Reefer(R70Reefer.class, new ModelR70Reefer(),"R70Reefer_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	NSCReefer(NSCReefer.class, new ModelNSCReefer(),"NSCReefer_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PCF6033(PCF6033.class, new ModelPCF6033(),"pcf_6033_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACFRailbox(ACFRailbox.class, new ModelACFRailbox(),"ACFRailbox_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACFRailboxCushioned(ACFRailboxCushioned.class, new ModelACFRailboxCushioned(),"ACFRailboxCushioned_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	VersaLongi(VersaLongi.class, new ModelVersaLongi(),"versa_longi_", true,  new float[]{-0F, 0.10F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	VersaTrans(VersaTrans.class, new ModelVersaTrans(),"versa_trans_", true, new float[]{-0F, 0.10F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

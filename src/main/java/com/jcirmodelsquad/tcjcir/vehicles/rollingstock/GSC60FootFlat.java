@@ -248,7 +248,7 @@ public class GSC60FootFlat extends Freight implements IInventory {
 
     @Override
     public String getInventoryName() {
-        return "GSI 60' Flatcar";
+        return "GSC 60' Flatcar";
     }
 
     @Override
