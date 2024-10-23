@@ -5,7 +5,6 @@ import com.google.gson.JsonParser;
 import com.jcirmodelsquad.tcjcir.extras.PeachyUtil;
 import com.jcirmodelsquad.tcjcir.extras.packets.RemoteControlKeyPacket;
 import com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2;
-import com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2Handler;
 import com.jcirmodelsquad.tcjcir.features.autotrain.IAT2Compatible;
 import com.jcirmodelsquad.tcjcir.features.signal.dynamic.LocoTransceiver;
 import com.jcirmodelsquad.tcjcir.features.signal.dynamic.Message;
@@ -1902,10 +1901,10 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
         if (cartLinked1 != null) {
             Map<Integer, Vec3> distances = new HashMap<>();
-            if ((cartLinked1).train != null && (cartLinked1).train.getTrains().size() != 0 && (cartLinked1).train.getTrains().size() > 1) {
+            if ((cartLinked1).trainHandler != null && (cartLinked1).trainHandler.getTrains().size() != 0 && (cartLinked1).trainHandler.getTrains().size() > 1) {
 
-                for (int i = 0; i < (cartLinked1).train.getTrains().size(); i++) {
-                    EntityRollingStock stock = (cartLinked1).train.getTrains().get(i);
+                for (int i = 0; i < (cartLinked1).trainHandler.getTrains().size(); i++) {
+                    EntityRollingStock stock = (cartLinked1).trainHandler.getTrains().get(i);
                     distances.put((int) getDistance(stock.posX, stock.posY, stock.posZ), PeachyUtil.xyz((int) stock.posX, (int) stock.posY, (int) stock.posZ));
                 }
             }

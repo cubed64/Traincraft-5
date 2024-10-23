@@ -3,7 +3,7 @@ package train.client.render.models.blocks;
 import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.AdvancedModelLoader;
+
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.common.library.Info;
@@ -16,10 +16,10 @@ public class ModelVeryLargeSlopeTCTrack extends ModelBase {
 	private IModelCustom	modelVeryLargeSlopeBallast;
 	
 	public ModelVeryLargeSlopeTCTrack() {
-		modeltrack = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_slope_verylong.obj"));
-		modelVeryLargeSlopeWood = AdvancedModelLoader
+		modeltrack = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_slope_verylong.obj"));
+		modelVeryLargeSlopeWood = net.minecraftforge.client.model.AdvancedModelLoader
 				.loadModel(new ResourceLocation(Info.modelPrefix + "supports_wood_verylong.obj"));
-		modelVeryLargeSlopeBallast = AdvancedModelLoader
+		modelVeryLargeSlopeBallast = net.minecraftforge.client.model.AdvancedModelLoader
 				.loadModel(new ResourceLocation(Info.modelPrefix + "supports_ballast_verylong.obj"));
 	}
 	

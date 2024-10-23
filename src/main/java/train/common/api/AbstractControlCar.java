@@ -156,9 +156,9 @@ public abstract class AbstractControlCar extends EntityRollingStock implements I
             //Server side stuff.
 
             if (cartLinked1 != null) {
-                if ((cartLinked1).train != null && (cartLinked1).train.getTrains().size() != 0) {
-                    for (int j1 = 0; j1 < (cartLinked1).train.getTrains().size(); j1++) {
-                        EntityRollingStock daRollingStock = (cartLinked1).train.getTrains().get(j1);
+                if ((cartLinked1).trainHandler != null && (cartLinked1).trainHandler.getTrains().size() != 0) {
+                    for (int j1 = 0; j1 < (cartLinked1).trainHandler.getTrains().size(); j1++) {
+                        EntityRollingStock daRollingStock = (cartLinked1).trainHandler.getTrains().get(j1);
                         if (daRollingStock instanceof Locomotive) {
                             connectedLocomotive = (Locomotive) daRollingStock;
                             break;

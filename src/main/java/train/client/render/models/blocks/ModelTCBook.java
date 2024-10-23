@@ -13,7 +13,7 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.AdvancedModelLoader;
+
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.common.library.Info;
@@ -27,7 +27,7 @@ public class ModelTCBook extends ModelBase {
 	float rot = 0.0f;
 	
 	public ModelTCBook() {
-		book = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "book2.obj"));
+		book = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "book2.obj"));
 	}
 	
 	public void render(int pages) {

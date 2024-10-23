@@ -14,7 +14,7 @@ import com.jcirmodelsquad.tcjcir.models.trucks.Model70TonTruckEarly;
 import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.AdvancedModelLoader;
+
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
@@ -212,7 +212,7 @@ public class ModelIngotPig extends ModelConverter //Same as Filename
 		GL11.glPopMatrix();*/
 
 		/*GL11.glPushMatrix();
-		modelSmallStraight = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_normal.obj"));
+		modelSmallStraight = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_normal.obj"));
 		tmt.Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
 
 		GL11.glTranslated(-0.0,1.0,-0.0);

@@ -28,7 +28,7 @@ public class TrainHandler {
 			trainPower += ((Locomotive) rolling).getPower();
 		}
 		train.add(rolling);
-		(rolling).train = this;
+		(rolling).trainHandler = this;
 		//System.out.println("added "+rolling);
 		if (rolling.cartLinked1 != null)
 			addRollingStock((rolling.cartLinked1));
@@ -39,7 +39,7 @@ public class TrainHandler {
 	public void resetTrain() {
 		for (int i = 0; i < train.size(); i++) {
 			if (train.get(i) != null)
-				train.get(i).train = null;
+				train.get(i).trainHandler = null;
 		}
 		train.clear();
 	}

@@ -10,7 +10,7 @@ package train.client.render.models.blocks;
 import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.AdvancedModelLoader;
+
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.common.library.Info;
@@ -19,7 +19,7 @@ public class ModelPresent extends ModelBase {
 	private IModelCustom present;
 	
 	public ModelPresent() {
-		present = new AdvancedModelLoader().loadModel(new ResourceLocation(Info.modelPrefix + "present.obj"));
+		present = new net.minecraftforge.client.model.AdvancedModelLoader().loadModel(new ResourceLocation(Info.modelPrefix + "present.obj"));
 	}
 	
 	public void render() {

@@ -9,7 +9,7 @@ package train.client.render.models.blocks;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.AdvancedModelLoader;
+
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelBase;
@@ -22,7 +22,7 @@ public class ModelAmericanStopper extends ModelBase {
 
     public ModelAmericanStopper(float scale) {
 
-        track =  AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "american_bumper.obj"));
+        track =  net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "american_bumper.obj"));
 
 
     }
