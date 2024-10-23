@@ -33,7 +33,7 @@ public class ModelU23B extends ModelConverter //Same as Filename
 
 	public ModelU23B() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[431];
+		bodyModel = new ModelRendererTurbo[434];
 
 		initbodyModel_1();
 
@@ -475,6 +475,9 @@ public class ModelU23B extends ModelConverter //Same as Filename
 		bodyModel[428] = new ModelRendererTurbo(this, 168, 36, textureX, textureY); // Box 433
 		bodyModel[429] = new ModelRendererTurbo(this, 177, 36, textureX, textureY); // Box 434
 		bodyModel[430] = new ModelRendererTurbo(this, 168, 33, textureX, textureY); // Box 436
+		bodyModel[431] = new ModelRendererTurbo(this, 192, 24, textureX, textureY); // Box 361 rv ac
+		bodyModel[432] = new ModelRendererTurbo(this, 185, 21, textureX, textureY); // Box 362 rv ac
+		bodyModel[433] = new ModelRendererTurbo(this, 185, 27, textureX, textureY); // Box 363 rv ac
 
 		bodyModel[0].addBox(0F, 0F, 0F, 76, 2, 22, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-38F, -1F, -11F);
@@ -1795,6 +1798,15 @@ public class ModelU23B extends ModelConverter //Same as Filename
 
 		bodyModel[430].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 436
 		bodyModel[430].setRotationPoint(-34.25F, -23F, 1F);
+
+		bodyModel[431].addBox(0F, 0F, 0F, 5, 2, 4, 0F); // Box 361 rv ac
+		bodyModel[431].setRotationPoint(-26.5F, -24F, -2F);
+
+		bodyModel[432].addShapeBox(0F, 0F, 0F, 1, 1, 4, 0F,-1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 362 rv ac
+		bodyModel[432].setRotationPoint(-27.5F, -24F, -2F);
+
+		bodyModel[433].addShapeBox(0F, 0F, 0F, 1, 1, 4, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F); // Box 363 rv ac
+		bodyModel[433].setRotationPoint(-27.5F, -23F, -2F);
 	}
 	ModelFB2_new theTrucks2 = new ModelFB2_new();
 	ModelBlombergBnew theTrucks3 = new ModelBlombergBnew();
