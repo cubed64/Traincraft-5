@@ -32,11 +32,11 @@ public class HandleMaxAttachedCarts {
 	 */
 	public static void PullPhysic(Locomotive cart1) {
 		double totalMass = 0;
-		if (( cart1).train != null && ( cart1).train.getTrains().size() != 0) {
-			for (int j1 = 0; j1 < ( cart1).train.getTrains().size(); j1++) {
-				totalMass += ( cart1).train.getTrains().get(j1).mass;
+		if (( cart1).trainHandler != null && ( cart1).trainHandler.getTrains().size() != 0) {
+			for (int j1 = 0; j1 < ( cart1).trainHandler.getTrains().size(); j1++) {
+				totalMass += ( cart1).trainHandler.getTrains().get(j1).mass;
 			}
-			(cart1).currentNumCartsPulled = (cart1).train.getTrains().size() - 1;
+			(cart1).currentNumCartsPulled = (cart1).trainHandler.getTrains().size() - 1;
 			( cart1).currentMassPulled = Math.round(totalMass * 10);
 		}
 		else {
@@ -54,15 +54,15 @@ public class HandleMaxAttachedCarts {
 		}
 
 		double power = 0;
-		if ((cart1).train != null && (cart1).train.getTrains().size() != 0 && ( cart1).train.getTrains().size()>1){
+		if ((cart1).trainHandler != null && (cart1).trainHandler.getTrains().size() != 0 && ( cart1).trainHandler.getTrains().size()>1){
 			power = (cart1).getPower();
-			for (int i = 0; i < ( cart1).train.getTrains().size(); i++) {
-				EntityRollingStock stock = (cart1).train.getTrains().get(i);
+			for (int i = 0; i < ( cart1).trainHandler.getTrains().size(); i++) {
+				EntityRollingStock stock = (cart1).trainHandler.getTrains().get(i);
 				if(stock instanceof Locomotive && stock.uniqueID != (cart1).uniqueID){
 					power += ((Locomotive)stock).getPower();
 				}
 			}
-			//power = ((Locomotive) cart1).getPower();//((EntityRollingStock) cart1).train.getTrainPower();
+			//power = ((Locomotive) cart1).getPower();//((EntityRollingStock) cart1).trains.getTrainPower();
 			double maxSpeed = (cart1).getMaxSpeed();// reset speed and get default
 
 			maxSpeed -= totalMass==0?0:(totalMass/(power/74.57));
@@ -74,7 +74,7 @@ public class HandleMaxAttachedCarts {
 			(cart1).currentSpeedSlowDown = totalMass==0?0:(totalMass/(power/74.57));
 			//System.out.println("mass "+totalMass +" power "+power +" "+cart1 );
 			
-		}else if (( cart1).train == null || ( cart1).train.getTrains().size() < 2) {
+		}else if (( cart1).trainHandler == null || ( cart1).trainHandler.getTrains().size() < 2) {
 			double maxSpeed = (cart1).getMaxSpeed();
 			( cart1).setCustomSpeed(maxSpeed);
 			(cart1).currentSpeedSlowDown = 0;

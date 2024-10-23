@@ -10,7 +10,7 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.AdvancedModelLoader;
+
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.common.library.Info;
@@ -22,7 +22,7 @@ public class ModelLantern extends ModelBase {
 	private final RenderItem renderItem;
 
 	public ModelLantern() {
-		modelLantern = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "lantern.obj"));
+		modelLantern = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "lantern.obj"));
 		renderItem = new RenderItem() {
 
 			@Override

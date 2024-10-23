@@ -59,7 +59,10 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	protected Ticket chunkTicket;
 	public float renderYaw;
 	protected float renderPitch;
-	public TrainHandler train;
+    /**
+     * The Train
+     */
+	public TrainHandler trainHandler;
 	public List<ChunkCoordIntPair> loadedChunks = new ArrayList<ChunkCoordIntPair>();
 	public boolean shouldChunkLoad = true;
 	protected boolean itemdropped =false;
@@ -198,10 +201,19 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 				break;
 			}
 		}
-		for (RenderEnum render : RenderEnum.values()) {
-			if (render.getEntityClass().equals(this.getClass())) {
-				renderSpec = render;
-				break;
+
+		GetRenderSpec();
+	}
+
+	private void GetRenderSpec()
+	{
+		if (worldObj.isRemote)
+		{
+			for (RenderEnum render : train.client.render.RenderEnum.values()) {
+				if (render.getEntityClass().equals(this.getClass())) {
+					renderSpec = render;
+					break;
+				}
 			}
 		}
 	}
@@ -1131,7 +1143,12 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		this.cargoManager = cargoManager;
 	}
 
-	public RenderEnum getRenderSpec() {
+	public RenderEnum getRenderSpec()
+	{
+		if (renderSpec == null)
+		{
+			GetRenderSpec();
+		}
 		return renderSpec;
 	}
 

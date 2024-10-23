@@ -484,24 +484,24 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	public void setDead() {
 		super.setDead();
 		this.unLink();
-		if (train != null) {
-			if (train.getTrains() != null) {
-				for (int i2 = 0; i2 < train.getTrains().size(); i2++) {
-					if ((train.getTrains().get(i2)) instanceof Locomotive) {
-						train.getTrains().get(i2).cartLinked1 = null;
-						train.getTrains().get(i2).Link1 = 0;
-						train.getTrains().get(i2).cartLinked2 = null;
-						train.getTrains().get(i2).Link2 = 0;
+		if (trainHandler != null) {
+			if (trainHandler.getTrains() != null) {
+				for (int i2 = 0; i2 < trainHandler.getTrains().size(); i2++) {
+					if ((trainHandler.getTrains().get(i2)) instanceof Locomotive) {
+						trainHandler.getTrains().get(i2).cartLinked1 = null;
+						trainHandler.getTrains().get(i2).Link1 = 0;
+						trainHandler.getTrains().get(i2).cartLinked2 = null;
+						trainHandler.getTrains().get(i2).Link2 = 0;
 					}
-					if ((train.getTrains().get(i2)) != this) {
-						if (train != null && train.getTrains() != null && train.getTrains().get(i2) != null && train.getTrains().get(i2).train != null && train.getTrains().get(i2).train.getTrains() != null) train.getTrains().get(i2).train.getTrains().clear();
+					if ((trainHandler.getTrains().get(i2)) != this) {
+						if (trainHandler != null && trainHandler.getTrains() != null && trainHandler.getTrains().get(i2) != null && trainHandler.getTrains().get(i2).trainHandler != null && trainHandler.getTrains().get(i2).trainHandler.getTrains() != null) trainHandler.getTrains().get(i2).trainHandler.getTrains().clear();
 					}
 				}
 			}
 		}
-		if (train != null && train.getTrains().size() <= 1) {
-			train.getTrains().clear();
-			allTrains.remove(train);
+		if (trainHandler != null && trainHandler.getTrains().size() <= 1) {
+			trainHandler.getTrains().clear();
+			allTrains.remove(trainHandler);
 		}
 		if (this.bogieLoco != null) {
 			bogieLoco.setDead();
@@ -531,11 +531,11 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	}
 
 	private void handleTrain() {
-		if (this instanceof Locomotive && train != null) {
-			for (int i2 = 0; i2 < train.getTrains().size(); i2++) {
-				if (RailTools.isCartLockedDown(train.getTrains().get(i2))) {
+		if (this instanceof Locomotive && trainHandler != null) {
+			for (int i2 = 0; i2 < trainHandler.getTrains().size(); i2++) {
+				if (RailTools.isCartLockedDown(trainHandler.getTrains().get(i2))) {
 					cartLocked = true;
-					/** If something in the train is locked down */
+					/** If something in the trains is locked down */
 					ticksSinceHeld = 40;
 					if (!((Locomotive) this).canBeAdjusted) {
 						((Locomotive) this).setCanBeAdjusted(true);
@@ -556,19 +556,19 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		}
 
 		/*
-		 * if(train!=null && RailTools.isCartLockedDown((EntityMinecart) this)){
-		 * train.setTicksSinceHeld(100); train.setCartLocked(true); for(int
-		 * i2=0;i2<train.getTrains().size();i2++){ if(train.getTrains().get(i2)
+		 * if(trains!=null && RailTools.isCartLockedDown((EntityMinecart) this)){
+		 * trains.setTicksSinceHeld(100); trains.setCartLocked(true); for(int
+		 * i2=0;i2<trains.getTrains().size();i2++){ if(trains.getTrains().get(i2)
 		 * instanceof Locomotive &&
-		 * !((Locomotive)train.getTrains().get(i2)).canBeAdjusted){
-		 * ((Locomotive)train.getTrains().get(i2)).setCanBeAdjusted(true);
+		 * !((Locomotive)trains.getTrains().get(i2)).canBeAdjusted){
+		 * ((Locomotive)trains.getTrains().get(i2)).setCanBeAdjusted(true);
 		 * System
-		 * .out.println(((Locomotive)train.getTrains().get(i2))+"canBeAdjusted=true"
+		 * .out.println(((Locomotive)trains.getTrains().get(i2))+"canBeAdjusted=true"
 		 * ); } } }
 		 */
 
 		/**
-		 * if the global train list is empty this is only used when the first @EntityRollingStock
+		 * if the global trains list is empty this is only used when the first @EntityRollingStock
 		 * is put down or when the world reloads
 		 */
 		if (updateTicks % 40 != 0) return;
@@ -576,36 +576,36 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			//System.out.println("array empty");
 			if ((this.cartLinked1 != null || this.cartLinked2 != null)) {
 				//System.out.println("array empty => add");
-				train = new TrainHandler(this);
+				trainHandler = new TrainHandler(this);
 			}
 			/**
-			 * This is used when global train list isn't empty but this @EntityRollingStock
-			 * isn't part of a train yet
+			 * This is used when global trains list isn't empty but this @EntityRollingStock
+			 * isn't part of a trains yet
 			 */
 		}
-		else if (train == null || (train != null && train.getTrains().size() == 0)) {
+		else if (trainHandler == null || (trainHandler != null && trainHandler.getTrains().size() == 0)) {
 			if ((this.cartLinked1 != null || this.cartLinked2 != null)) {
-				if (this.cartLinked1 != null && cartLinked1.train != null && cartLinked1.train.getTrains() != null && cartLinked1.train.getTrains().size() != 0) {
-					train = cartLinked1.train;
+				if (this.cartLinked1 != null && cartLinked1.trainHandler != null && cartLinked1.trainHandler.getTrains() != null && cartLinked1.trainHandler.getTrains().size() != 0) {
+					trainHandler = cartLinked1.trainHandler;
 					return;
 				}
-				if (this.cartLinked2 != null && cartLinked2.train != null && cartLinked2.train.getTrains() != null && cartLinked2.train.getTrains().size() != 0) {
-					train = cartLinked2.train;
+				if (this.cartLinked2 != null && cartLinked2.trainHandler != null && cartLinked2.trainHandler.getTrains() != null && cartLinked2.trainHandler.getTrains().size() != 0) {
+					trainHandler = cartLinked2.trainHandler;
 					return;
 				}
 				//System.out.println("add");
-				train = new TrainHandler(this);
+				trainHandler = new TrainHandler(this);
 			}
 		}
 		/**
-		 * getting main locomotive of the train and copying its destination to
+		 * getting main locomotive of the trains and copying its destination to
 		 * all attached carts
 		 */
-		if (train != null && train.getTrains().size() > 1) {
+		if (trainHandler != null && trainHandler.getTrains().size() > 1) {
 			if (this instanceof Locomotive && !((Locomotive) this).canBeAdjusted && this.getDestination().length() > 0) {
-				for (int i = 0; i < train.getTrains().size(); i++) {
-					if (train.getTrains().get(i) != null && !train.getTrains().get(i).equals(this)) train.getTrains().get(i).destination = this.getDestination();
-					CartTools.setCartOwner(train.getTrains().get(i), CartTools.getCartOwner(this));
+				for (int i = 0; i < trainHandler.getTrains().size(); i++) {
+					if (trainHandler.getTrains().get(i) != null && !trainHandler.getTrains().get(i).equals(this)) trainHandler.getTrains().get(i).destination = this.getDestination();
+					CartTools.setCartOwner(trainHandler.getTrains().get(i), CartTools.getCartOwner(this));
 				}
 			}
 		}
@@ -1285,11 +1285,11 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			}
 			else if (cartLinked1 != null)
 			{
-				if ((cartLinked1).train != null && (cartLinked1).train.getTrains().size() != 0)
+				if ((cartLinked1).trainHandler != null && (cartLinked1).trainHandler.getTrains().size() != 0)
 				{
-					for (int j1 = 0; j1 < (cartLinked1).train.getTrains().size(); j1++)
+					for (int j1 = 0; j1 < (cartLinked1).trainHandler.getTrains().size(); j1++)
 					{
-						EntityRollingStock daRollingStock = (cartLinked1).train.getTrains().get(j1);
+						EntityRollingStock daRollingStock = (cartLinked1).trainHandler.getTrains().get(j1);
 						if (daRollingStock.getParkingBrakeDW())
 						{
 							motionX = 0.0;

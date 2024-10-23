@@ -71,14 +71,14 @@ public class TrainsOnClick
 					train.isAttaching = false;
 					train.isAttached = false;
 
-					if (((EntityRollingStock) train).train != null) {
-						((EntityRollingStock) train).train.resetTrain();
+					if (((EntityRollingStock) train).trainHandler != null) {
+						((EntityRollingStock) train).trainHandler.resetTrain();
 					}
 
 
-					if (((EntityRollingStock) train).train != null && ((EntityRollingStock) train).train.getTrains().size() <= 1) {
+					if (((EntityRollingStock) train).trainHandler != null && ((EntityRollingStock) train).trainHandler.getTrains().size() <= 1) {
 						/** no more @RollingStocks in the train then remove the train object from the global list */
-						EntityRollingStock.allTrains.remove(((EntityRollingStock) train).train);
+						EntityRollingStock.allTrains.remove(((EntityRollingStock) train).trainHandler);
 						//System.out.println("Train is destroyed, remove it from the global array");
 					}
 				}
@@ -101,9 +101,9 @@ public class TrainsOnClick
 		{
 			if (playerEntity.isSneaking())
 			{
-				if (((EntityRollingStock) entityRollingStock).train != null)
+				if (((EntityRollingStock) entityRollingStock).trainHandler != null)
 				{
-					for (EntityRollingStock rollingStock : ((EntityRollingStock) entityRollingStock).train.getTrains())
+					for (EntityRollingStock rollingStock : ((EntityRollingStock) entityRollingStock).trainHandler.getTrains())
 					{
 						if (rollingStock.getSpeed() >= 10)
 						{

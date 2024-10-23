@@ -5,7 +5,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.AdvancedModelLoader;
+
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.common.library.Info;
@@ -17,10 +17,10 @@ public class ModelLargeSlopeTCTrack extends ModelBase {
 	private IModelCustom modelLargeSlopeWood;
 	private IModelCustom modelLargeSlopeBallast;
 	public ModelLargeSlopeTCTrack() {
-		modeltrack = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_slope_long.obj"));
-		modelLargeSlopeWood = AdvancedModelLoader
+		modeltrack = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_slope_long.obj"));
+		modelLargeSlopeWood = net.minecraftforge.client.model.AdvancedModelLoader
 				.loadModel(new ResourceLocation(Info.modelPrefix + "supports_wood_long.obj"));
-		modelLargeSlopeBallast = AdvancedModelLoader
+		modelLargeSlopeBallast = net.minecraftforge.client.model.AdvancedModelLoader
 				.loadModel(new ResourceLocation(Info.modelPrefix + "supports_ballast_long.obj"));
 	}
 

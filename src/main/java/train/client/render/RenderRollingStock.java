@@ -11,6 +11,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Vec3;
 import org.lwjgl.opengl.GL11;
 import tmt.Tessellator;
+import train.common.api.AbstractTrains;
 import train.common.api.EntityRollingStock;
 import train.common.api.Locomotive;
 import train.common.entity.rollingStock.EntityTracksBuilder;
@@ -421,11 +422,11 @@ public class RenderRollingStock extends Render {
 		return getTexture(entity);
 	}
 
-	public static ResourceLocation getTexture(Entity entity) {
-		for (RenderEnum renders : RenderEnum.values()) {
-			if (renders.getEntityClass() != null && renders.getEntityClass().equals(entity.getClass())) { return getResourceFile(renders.getTexture(), renders.getIsMultiTextured(), (EntityRollingStock) entity); }
-		}
-		return null;
+	public static ResourceLocation getTexture(Entity entity)
+	{
+		RenderEnum renderEnumEntry = ((AbstractTrains) entity).getRenderSpec();
+		return getResourceFile(renderEnumEntry.getTexture(), renderEnumEntry.getIsMultiTextured(), (EntityRollingStock) entity);
+
 	}
 
 	private static boolean renderModeGUI = false;
