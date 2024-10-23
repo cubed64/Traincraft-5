@@ -17,6 +17,7 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
@@ -1392,20 +1393,9 @@ public class ModelFB2 extends ModelConverter //Same as Filename
 	ModelTypeBnew theBetterTrucks = new ModelTypeBnew();
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 335; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderLocomotiveModelWithoutBeacon(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1234556) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
@@ -1427,18 +1417,5 @@ public class ModelFB2 extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 
-	}
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5) { }
-	public ModelRendererTurbo ModelFB2[];
-
-	public float[] getTrans() {
-		return new float[]{-1.4F, 0.125F, 0.00F};
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.95D, 1.19D, 0.0D});
-			}
-		};
 	}
 }

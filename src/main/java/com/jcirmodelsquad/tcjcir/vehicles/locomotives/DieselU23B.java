@@ -19,7 +19,7 @@ public class DieselU23B extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "Union Pacific");
         textureDescriptionMap.put(1, "Fox Union Rail Resources (FURRX)");
-        textureDescriptionMap.put(2, "Fox, North Coast & Cascades (KIT-E 1st Order, Big Canon)");
+        textureDescriptionMap.put(2, "FNCC (KIT-E)");
         textureDescriptionMap.put(3, "Conrail");
         textureDescriptionMap.put(4, "Blandsville & Blankerston");
         textureDescriptionMap.put(5, "Deep Rock Railroad");

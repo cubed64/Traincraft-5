@@ -1155,7 +1155,7 @@ public class ModelGP38dash9W extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 623) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver.png"));
@@ -1176,24 +1176,5 @@ public class ModelGP38dash9W extends ModelConverter //Same as Filename
 			theTrucc.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{1.45D, 1.5D, 0.0D});//front
-				add(new double[]{1.2D, 1.5D, 0.0D});//mid 1
-				add(new double[]{0.9D, 1.5D, 0.0D});//mid 2
-				add(new double[]{0.65D, 1.5D, 0.0D});//rear
-			}
-		};
-	}
-	public float[] getTrans() { return new float[]{-1.8F, 0.155F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
 	}
 }

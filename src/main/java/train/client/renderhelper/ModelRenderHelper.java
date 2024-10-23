@@ -4,11 +4,97 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelRendererTurbo;
+import train.common.api.EntityRollingStock;
+import train.common.api.IRollingStockLightControls;
 import train.common.api.Locomotive;
 
 
 public class ModelRenderHelper
 {
+    /** Renders a model Coverts Entity -> IRollingStockLightControls
+     * Can Render the following Special items
+     * lamp,
+     * commander,
+     * prime1,
+     * prime2,
+     * prime3,
+     * prime4
+     * cull
+     * @param bodyModel
+     * @param entity Entity Compatible with IRollingStockLightControls
+     * @param f5
+     */
+    public static void renderModelWithRollingStockLightControls(ModelRendererTurbo[] bodyModel, Entity entity, float f5)
+    {
+        renderModelWithRollingStockLightControls(bodyModel, (IRollingStockLightControls) entity, f5);
+    }
+
+    private static void renderModelWithRollingStockLightControls(ModelRendererTurbo[] bodyModel, IRollingStockLightControls rollingStock, float f5)
+    {
+        for (ModelRendererTurbo bm : bodyModel)
+        {
+            switch (bm.boxName)
+            {
+                case "cull":
+                    GL11.glDisable(GL11.GL_CULL_FACE);
+                    bm.render(f5);
+                    GL11.glEnable(GL11.GL_CULL_FACE);
+                break;
+                case "lamp":
+                    if (rollingStock.isLightsEnabled())
+                    {
+                        Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+                        bm.render(f5);
+                        Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+                    }
+                    else
+                    {
+                        bm.render(f5);
+                    }
+                break;
+                case "ditch":
+                    if (rollingStock.isDitchLightsEnabled())
+                    {
+                        Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+                        bm.render(f5);
+                        Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+                    }
+                    else
+                    {
+                        bm.render(f5);
+                    }
+                break;
+                case "commander":
+                    if (rollingStock.isBeaconEnabled() && ((EntityRollingStock)rollingStock).ticksExisted % 30 == 0)
+                    {
+                        Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+                        bm.render(f5);
+                        Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+                    }
+                    else
+                    {
+                        bm.render(f5);
+                    }
+                break;
+                case "prime1":
+                case "prime2":
+                case "prime3":
+                case "prime4":
+                    if (rollingStock.isBeaconEnabled())
+                    {
+                        renderPrimeLight(bm, rollingStock.getBeaconCycleIndex(), f5);
+                    }
+                    else
+                    {
+                        bm.render(f5);
+                    }
+                break;
+                default:
+                    bm.render(f5);
+                break;
+            }
+        }
+    }
 
     public static void renderSlugModel(ModelRendererTurbo[] bodyModel, Entity entity, float f5)
     {
@@ -19,90 +105,6 @@ public class ModelRenderHelper
                 Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
                 bm.render(f5);
                 Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-            }
-            else if (bm.boxName.contains("cull"))
-            {
-                GL11.glDisable(GL11.GL_CULL_FACE);
-                bm.render(f5);
-                GL11.glEnable(GL11.GL_CULL_FACE);
-            }
-            else
-            {
-                bm.render(f5);
-            }
-        }
-    }
-
-    /** Renders a locomotive model Coverts Entity -> Locomotive
-     * Can Render the following Special items
-     * lamp,
-     * commander,
-     * prime1,
-     * prime2,
-     * prime3,
-     * prime4
-     * cull
-     * @param bodyModel
-     * @param locomotive
-     * @param f5
-     */
-    public static void renderLocomotiveModel(ModelRendererTurbo[] bodyModel, Entity locomotive, float f5)
-    {
-        renderLocomotiveModel(bodyModel, (Locomotive) locomotive, f5);
-    }
-
-    /** Renders a locomotive model
-     * Can Render the following Special items
-     * lamp,
-     * commander,
-     * prime1,
-     * prime2,
-     * prime3,
-     * prime4
-     * cull
-     * @param bodyModel
-     * @param locomotive
-     * @param f5
-     */
-    public static void renderLocomotiveModel(ModelRendererTurbo[] bodyModel, Locomotive locomotive, float f5)
-    {
-        for (ModelRendererTurbo bm : bodyModel)
-        {
-            if (bm.boxName.contains("lamp") && locomotive.isLocomotiveLightsEnabled())
-            {
-                Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-                bm.render(f5);
-                Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-            }
-            else if (locomotive.isLocomotiveDitchLightsEnabled() && bm.boxName.contains("ditch"))
-            {
-                Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-                bm.render(f5);
-                Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-            }
-            else if (locomotive.isLocomotiveBeaconEnabled() && (bm.boxName.contains("commander") || bm.boxName.contains("prime")))
-            {
-                if (bm.boxName.contains("commander"))
-                {
-                    if (locomotive.ticksExisted % 30 == 0)
-                    {
-                        Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-                        bm.render(f5);
-                        Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-                    }
-                    else
-                    {
-                        bm.render(f5);
-                    }
-                }
-                else if (bm.boxName.contains("prime"))
-                {
-                    renderPrimeLight(bm, locomotive.getBeaconCycleIndex(), f5);
-                }
-                else
-                {
-                    bm.render(f5);
-                }
             }
             else if (bm.boxName.contains("cull"))
             {
@@ -134,7 +136,7 @@ public class ModelRenderHelper
     {
         for (ModelRendererTurbo bm : bodyModel)
         {
-            if (bm.boxName.contains("lamp") && locomotive.isLocomotiveLightsEnabled())
+            if (bm.boxName.contains("lamp") && locomotive.isLightsEnabled())
             {
                 Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
                 bm.render(f5);
@@ -164,7 +166,7 @@ public class ModelRenderHelper
     {
         for (ModelRendererTurbo bm : bodyModel)
         {
-            if (bm.boxName.contains("lamp") && locomotive.isLocomotiveLightsEnabled())
+            if (bm.boxName.contains("lamp") && locomotive.isLightsEnabled())
             {
                 Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
                 bm.render(f5);
@@ -235,5 +237,29 @@ public class ModelRenderHelper
             break;
         }
     }
+
+    public static void renderModelWithStandardFreightRollingStock(ModelRendererTurbo[] bodyModel, Entity entity, float f5)
+    {
+        for (ModelRendererTurbo bm : bodyModel)
+        {
+            switch (bm.boxName)
+            {
+                case "lamp":
+                    Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+                    bm.render(f5);
+                    Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+                break;
+                case "cull":
+                    GL11.glDisable(GL11.GL_CULL_FACE);
+                    bm.render(f5);
+                    GL11.glEnable(GL11.GL_CULL_FACE);
+                break;
+                default:
+                    bm.render(f5);
+                break;
+            }
+        }
+    }
+
 }
 

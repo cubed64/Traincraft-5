@@ -1,77 +1,46 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
-import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import train.common.api.EntityRollingStock;
-import train.common.api.IPassenger;
+import train.common.api.AbstractPassengerCar;
 
-public class PS58SeatCoach_Observation extends EntityRollingStock implements IPassenger {
+public class PS58SeatCoach_Observation extends AbstractPassengerCar {
 
-	public PS58SeatCoach_Observation(World world) {
+	public PS58SeatCoach_Observation(World world)
+	{
 		super(world);
+		textureDescriptionMap.put(0, "PM (conductor's desk)");
+		textureDescriptionMap.put(1, "PM (conductor's desk, rear light off)");
+		textureDescriptionMap.put(2, "PM");
+		textureDescriptionMap.put(3, "PM (rear light off)");
+		textureDescriptionMap.put(4, "C&EI (conductor's desk)");
+		textureDescriptionMap.put(5, "C&EI (conductor's desk, rear light off)");
+		textureDescriptionMap.put(6, "C&EI");
+		textureDescriptionMap.put(7, "C&EI (L&N paint, rear light off)");
+		textureDescriptionMap.put(8, "C&EI (L&N paint, conductor's desk)");
+		textureDescriptionMap.put(9, "C&EI (L&N paint, conductor's desk, rear light off)");
+		textureDescriptionMap.put(10, "C&EI (L&N paint)");
+		textureDescriptionMap.put(11, "C&EI (L&N paint, rear light off)");
+		textureDescriptionMap.put(12, "C&EI (renovated, conductor's desk)");
+		textureDescriptionMap.put(13, "C&EI (renovated)");
+		textureDescriptionMap.put(14, "C&EI (renovated, back roof, conductor's desk)");
+		textureDescriptionMap.put(15, "C&EI (renovated, black roof)");
+		textureDescriptionMap.put(16, "DLMR (fictional)");
 	}
 
-	public PS58SeatCoach_Observation(World world, double d, double d1, double d2) {
-		this(world);
-		setPosition(d, d1 + (double) yOffset, d2);
-		motionX = 0.0D;
-		motionY = 0.0D;
-		motionZ = 0.0D;
-		prevPosX = d;
-		prevPosY = d1;
-		prevPosZ = d2;
-	}
-
-	@Override
-	public void updateRiderPosition() {
-		if(riddenByEntity==null){return;}
-		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset()-0.1F, posZ);
-	}
-
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
-
-	@Override
-	public boolean interactFirst(EntityPlayer entityplayer) {
-		playerEntity = entityplayer;
-		if ((super.interactFirst(entityplayer))) {
-			return false;
-		}
-		if (!worldObj.isRemote) {
-			ItemStack itemstack = entityplayer.inventory.getCurrentItem();
-			if(lockThisCart(itemstack, entityplayer))return true;
-			if (riddenByEntity != null && (riddenByEntity instanceof EntityPlayer) && riddenByEntity != entityplayer) {
-				return true;
-			}
-			if (!worldObj.isRemote) {
-				entityplayer.mountEntity(this);
-			}
-		}
-		return true;
+	public PS58SeatCoach_Observation(World world, double posX, double posY, double posZ)
+	{
+		super(world, posX, posY, posZ);
 	}
 
 	@Override
-	public boolean canBeRidden() {
-		return true;
+	public double getAdditionalYOffset()
+	{
+		return -0.1F;
 	}
 
 	@Override
-	public boolean isStorageCart() {
-		return false;
-	}
-
-	@Override
-	public boolean isPoweredCart() {
-		return false;
-	}
-
-	@Override
-	public float getOptimalDistance(EntityMinecart cart) {
+	public float getOptimalLinkingDistance()
+	{
 		return 3.97F;
 	}
 }

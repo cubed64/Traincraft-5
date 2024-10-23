@@ -14,7 +14,7 @@ import com.jcirmodelsquad.tcjcir.models.trucks.Model70TonTruckEarly;
 import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.AdvancedModelLoader;
+
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
@@ -22,6 +22,7 @@ import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
 import train.client.render.models.blocks.ModelSmallStraightTCTrack;
 import train.client.render.models.blocks.ModelTwoWaysCrossingTCTrack;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
@@ -189,14 +190,7 @@ public class ModelIngotPig extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for(int i = 0; i < 34; i++)
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
+		ModelRenderHelper.renderModelWithStandardFreightRollingStock(bodyModel, entity, f5);
 		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==9345){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Greyish.png"));
 		} else {
@@ -218,7 +212,7 @@ public class ModelIngotPig extends ModelConverter //Same as Filename
 		GL11.glPopMatrix();*/
 
 		/*GL11.glPushMatrix();
-		modelSmallStraight = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_normal.obj"));
+		modelSmallStraight = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_normal.obj"));
 		tmt.Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
 
 		GL11.glTranslated(-0.0,1.0,-0.0);
@@ -228,10 +222,5 @@ public class ModelIngotPig extends ModelConverter //Same as Filename
 		GL11.glPopMatrix();*/
 	}
 
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
-	{
-	}
-
 	public ModelRendererTurbo ModelIngotPig[];
-	public float[] getTrans() { return new float[]{-0F, 0.15F, 0F}; }
 }

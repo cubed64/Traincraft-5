@@ -604,5 +604,4 @@ public class ModelPDH2800 extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 	}
-	public float[] getTrans() { return new float[]{-0F, 0.15F, 0F}; }
 }

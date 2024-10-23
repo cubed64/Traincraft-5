@@ -143,7 +143,7 @@ public class DieselDR441500BShark extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "BLW DR-4-4-1500B";
+        return "BLW DR-4-4-1500B (Phase 3)";
     }
 
     @Override

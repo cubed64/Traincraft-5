@@ -25,7 +25,8 @@ public class DieselRF16B extends DieselTrain {
         textureDescriptionMap.put(4, "New York Central (Late)");
         textureDescriptionMap.put(5, "Monongahela");
         textureDescriptionMap.put(6, "Blandsville & Blankerston");
-
+        textureDescriptionMap.put(7, "Galesburg Clinton & Midland");
+        textureDescriptionMap.put(8, "Steampunk Rail");
     }
     public DieselRF16B(World world, double d, double d1, double d2){
         this(world);

@@ -2437,7 +2437,7 @@ public class ModelSD38 extends ModelConverter//Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity ,f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity ,f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 135245) {
 			//old model, just ignore it
@@ -2543,22 +2543,5 @@ public class ModelSD38 extends ModelConverter//Same as Filename
 			flexLate.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{1.8D, 1.3D, 0.0D});
-				add(new double[]{0.85D, 1.3D, 0.0D});
-			}
-		};
-	}
-	public float[] getTrans() { return new float[]{-1.7F, 0.15F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
 	}
 }

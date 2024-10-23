@@ -57,16 +57,16 @@ public class ModelPS2_4750 extends ModelConverter //Same as Filename
 		bodyModel[17] = new ModelRendererTurbo(this, 263, 1, textureX, textureY); // Box 27
 		bodyModel[18] = new ModelRendererTurbo(this, 201, 37, textureX, textureY); // Box 28
 		bodyModel[19] = new ModelRendererTurbo(this, 251, 21, textureX, textureY); // Box 29
-		bodyModel[20] = new ModelRendererTurbo(this, 247, 1, textureX, textureY); // Box 30 cull
+		bodyModel[20] = new ModelRendererTurbo(this, 247, 1, textureX, textureY, "cull"); // Box 30 cull
 		bodyModel[21] = new ModelRendererTurbo(this, 242, 17, textureX, textureY); // Box 32
 		bodyModel[22] = new ModelRendererTurbo(this, 200, 2, textureX, textureY); // Box 33
-		bodyModel[23] = new ModelRendererTurbo(this, 247, 58, textureX, textureY); // Box 35 cull
-		bodyModel[24] = new ModelRendererTurbo(this, 258, 58, textureX, textureY); // Box 37 cull
+		bodyModel[23] = new ModelRendererTurbo(this, 247, 58, textureX, textureY, "cull"); // Box 35 cull
+		bodyModel[24] = new ModelRendererTurbo(this, 258, 58, textureX, textureY, "cull"); // Box 37 cull
 		bodyModel[25] = new ModelRendererTurbo(this, 264, 27, textureX, textureY); // Box 39
 		bodyModel[26] = new ModelRendererTurbo(this, 242, 74, textureX, textureY); // Box 40
 		bodyModel[27] = new ModelRendererTurbo(this, 251, 78, textureX, textureY); // Box 41
 		bodyModel[28] = new ModelRendererTurbo(this, 264, 25, textureX, textureY); // Box 42
-		bodyModel[29] = new ModelRendererTurbo(this, 258, 1, textureX, textureY); // Box 43 cull
+		bodyModel[29] = new ModelRendererTurbo(this, 258, 1, textureX, textureY, "cull"); // Box 43 cull
 		bodyModel[30] = new ModelRendererTurbo(this, 426, 3, textureX, textureY); // Box 44
 		bodyModel[31] = new ModelRendererTurbo(this, 384, 2, textureX, textureY); // Box 46
 		bodyModel[32] = new ModelRendererTurbo(this, 263, 58, textureX, textureY); // Box 47
@@ -89,10 +89,10 @@ public class ModelPS2_4750 extends ModelConverter //Same as Filename
 		bodyModel[49] = new ModelRendererTurbo(this, 143, 96, textureX, textureY); // Box 87
 		bodyModel[50] = new ModelRendererTurbo(this, 224, 80, textureX, textureY); // Box 73
 		bodyModel[51] = new ModelRendererTurbo(this, 260, 97, textureX, textureY); // Box 74
-		bodyModel[52] = new ModelRendererTurbo(this, 389, 1, textureX, textureY); // Box 30 cull
-		bodyModel[53] = new ModelRendererTurbo(this, 389, 58, textureX, textureY); // Box 35 cull
-		bodyModel[54] = new ModelRendererTurbo(this, 384, 58, textureX, textureY); // Box 37 cull
-		bodyModel[55] = new ModelRendererTurbo(this, 384, 1, textureX, textureY); // Box 43 cull
+		bodyModel[52] = new ModelRendererTurbo(this, 389, 1, textureX, textureY, "cull"); // Box 30 cull
+		bodyModel[53] = new ModelRendererTurbo(this, 389, 58, textureX, textureY, "cull"); // Box 35 cull
+		bodyModel[54] = new ModelRendererTurbo(this, 384, 58, textureX, textureY, "cull"); // Box 37 cull
+		bodyModel[55] = new ModelRendererTurbo(this, 384, 1, textureX, textureY, "cull"); // Box 43 cull
 		bodyModel[56] = new ModelRendererTurbo(this, 404, 37, textureX, textureY); // Box 82
 		bodyModel[57] = new ModelRendererTurbo(this, 368, 80, textureX, textureY); // Box 83
 		bodyModel[58] = new ModelRendererTurbo(this, 388, 101, textureX, textureY); // Box 84
@@ -107,8 +107,8 @@ public class ModelPS2_4750 extends ModelConverter //Same as Filename
 		bodyModel[67] = new ModelRendererTurbo(this, 367, 107, textureX, textureY); // Box 93
 		bodyModel[68] = new ModelRendererTurbo(this, 368, 105, textureX, textureY); // Box 94
 		bodyModel[69] = new ModelRendererTurbo(this, 427, 47, textureX, textureY); // Box 95
-		bodyModel[70] = new ModelRendererTurbo(this, 182, 79, textureX, textureY); // Box 96 crossover cull
-		bodyModel[71] = new ModelRendererTurbo(this, 433, 79, textureX, textureY); // Box 97 crossover cull
+		bodyModel[70] = new ModelRendererTurbo(this, 182, 79, textureX, textureY, "cull"); // Box 96 crossover cull
+		bodyModel[71] = new ModelRendererTurbo(this, 433, 79, textureX, textureY, "cull"); // Box 97 crossover cull
 		bodyModel[72] = new ModelRendererTurbo(this, 362, 25, textureX, textureY); // Box 98
 		bodyModel[73] = new ModelRendererTurbo(this, 362, 27, textureX, textureY); // Box 99
 		bodyModel[74] = new ModelRendererTurbo(this, 143, 96, textureX, textureY); // Box 100
@@ -123,16 +123,16 @@ public class ModelPS2_4750 extends ModelConverter //Same as Filename
 		bodyModel[83] = new ModelRendererTurbo(this, 120, 128, textureX, textureY); // Box 109
 		bodyModel[84] = new ModelRendererTurbo(this, 143, 128, textureX, textureY); // Box 110
 		bodyModel[85] = new ModelRendererTurbo(this, 170, 128, textureX, textureY); // Box 111
-		bodyModel[86] = new ModelRendererTurbo(this, 112, 119, textureX, textureY); // Box 112 cull
-		bodyModel[87] = new ModelRendererTurbo(this, 112, 119, textureX, textureY); // Box 113 cull
-		bodyModel[88] = new ModelRendererTurbo(this, 112, 119, textureX, textureY); // Box 114 cull
+		bodyModel[86] = new ModelRendererTurbo(this, 112, 119, textureX, textureY, "cull"); // Box 112 cull
+		bodyModel[87] = new ModelRendererTurbo(this, 112, 119, textureX, textureY, "cull"); // Box 113 cull
+		bodyModel[88] = new ModelRendererTurbo(this, 112, 119, textureX, textureY, "cull"); // Box 114 cull
 		bodyModel[89] = new ModelRendererTurbo(this, 101, 120, textureX, textureY); // Box 159
 		bodyModel[90] = new ModelRendererTurbo(this, 101, 120, textureX, textureY); // Box 116
 		bodyModel[91] = new ModelRendererTurbo(this, 101, 120, textureX, textureY); // Box 117
-		bodyModel[92] = new ModelRendererTurbo(this, 258, 13, textureX, textureY); // Box 118 cull
-		bodyModel[93] = new ModelRendererTurbo(this, 384, 13, textureX, textureY); // Box 119 cull
-		bodyModel[94] = new ModelRendererTurbo(this, 384, 70, textureX, textureY); // Box 120 cull
-		bodyModel[95] = new ModelRendererTurbo(this, 258, 70, textureX, textureY); // Box 121 cull
+		bodyModel[92] = new ModelRendererTurbo(this, 258, 13, textureX, textureY, "cull"); // Box 118 cull
+		bodyModel[93] = new ModelRendererTurbo(this, 384, 13, textureX, textureY, "cull"); // Box 119 cull
+		bodyModel[94] = new ModelRendererTurbo(this, 384, 70, textureX, textureY, "cull"); // Box 120 cull
+		bodyModel[95] = new ModelRendererTurbo(this, 258, 70, textureX, textureY, "cull"); // Box 121 cull
 		bodyModel[96] = new ModelRendererTurbo(this, 16, 63, textureX, textureY); // Box 106
 		bodyModel[97] = new ModelRendererTurbo(this, 16, 45, textureX, textureY); // Box 107
 		bodyModel[98] = new ModelRendererTurbo(this, 14, 53, textureX, textureY); // Box 108
@@ -174,7 +174,7 @@ public class ModelPS2_4750 extends ModelConverter //Same as Filename
 		bodyModel[134] = new ModelRendererTurbo(this, 233, 103, textureX, textureY); // Box 287
 		bodyModel[135] = new ModelRendererTurbo(this, 224, 115, textureX, textureY); // Box 317
 		bodyModel[136] = new ModelRendererTurbo(this, 227, 113, textureX, textureY); // Box 318
-		bodyModel[137] = new ModelRendererTurbo(this, 238, 113, textureX, textureY); // Box 320 cull
+		bodyModel[137] = new ModelRendererTurbo(this, 238, 113, textureX, textureY, "cull"); // Box 320 cull
 		bodyModel[138] = new ModelRendererTurbo(this, 242, 101, textureX, textureY); // Box 321
 		bodyModel[139] = new ModelRendererTurbo(this, 242, 101, textureX, textureY); // Box 322
 		bodyModel[140] = new ModelRendererTurbo(this, 242, 122, textureX, textureY); // Box 323
@@ -187,7 +187,7 @@ public class ModelPS2_4750 extends ModelConverter //Same as Filename
 		bodyModel[147] = new ModelRendererTurbo(this, 400, 109, textureX, textureY); // Box 330
 		bodyModel[148] = new ModelRendererTurbo(this, 403, 104, textureX, textureY); // Box 331
 		bodyModel[149] = new ModelRendererTurbo(this, 417, 106, textureX, textureY); // Box 332
-		bodyModel[150] = new ModelRendererTurbo(this, 405, 106, textureX, textureY); // Box 333 cull
+		bodyModel[150] = new ModelRendererTurbo(this, 405, 106, textureX, textureY, "cull"); // Box 333 cull
 		bodyModel[151] = new ModelRendererTurbo(this, 222, 113, textureX, textureY); // Box 125
 		bodyModel[152] = new ModelRendererTurbo(this, 208, 111, textureX, textureY); // Box 125
 		bodyModel[153] = new ModelRendererTurbo(this, 217, 113, textureX, textureY); // Box 125
@@ -203,24 +203,24 @@ public class ModelPS2_4750 extends ModelConverter //Same as Filename
 		bodyModel[163] = new ModelRendererTurbo(this, 362, 29, textureX, textureY); // Box 302
 		bodyModel[164] = new ModelRendererTurbo(this, 143, 112, textureX, textureY); // Box 300
 		bodyModel[165] = new ModelRendererTurbo(this, 358, 41, textureX, textureY); // Box 81
-		bodyModel[166] = new ModelRendererTurbo(this, 376, 35, textureX, textureY); // Box 15 cut bar support cull
+		bodyModel[166] = new ModelRendererTurbo(this, 376, 35, textureX, textureY, "cull"); // Box 15 cut bar support cull
 		bodyModel[167] = new ModelRendererTurbo(this, 264, 41, textureX, textureY); // Box 81
-		bodyModel[168] = new ModelRendererTurbo(this, 264, 35, textureX, textureY); // Box 15 cut bar support cull
+		bodyModel[168] = new ModelRendererTurbo(this, 264, 35, textureX, textureY, "cull"); // Box 15 cut bar support cull
 		bodyModel[169] = new ModelRendererTurbo(this, 14, 22, textureX, textureY); // Box 110
 		bodyModel[170] = new ModelRendererTurbo(this, 14, 22, textureX, textureY); // Box 110
 		bodyModel[171] = new ModelRendererTurbo(this, 14, 22, textureX, textureY); // Box 110
 		bodyModel[172] = new ModelRendererTurbo(this, 14, 22, textureX, textureY); // Box 110
 		bodyModel[173] = new ModelRendererTurbo(this, 14, 22, textureX, textureY); // Box 110
 		bodyModel[174] = new ModelRendererTurbo(this, 14, 22, textureX, textureY); // Box 110
-		bodyModel[175] = new ModelRendererTurbo(this, 286, 25, textureX, textureY); // Box 148 cull
-		bodyModel[176] = new ModelRendererTurbo(this, 286, 29, textureX, textureY); // Box 149 cull
-		bodyModel[177] = new ModelRendererTurbo(this, 297, 25, textureX, textureY); // Box 152 cull
-		bodyModel[178] = new ModelRendererTurbo(this, 297, 29, textureX, textureY); // Box 153 cull
+		bodyModel[175] = new ModelRendererTurbo(this, 286, 25, textureX, textureY, "cull"); // Box 148 cull
+		bodyModel[176] = new ModelRendererTurbo(this, 286, 29, textureX, textureY, "cull"); // Box 149 cull
+		bodyModel[177] = new ModelRendererTurbo(this, 297, 25, textureX, textureY, "cull"); // Box 152 cull
+		bodyModel[178] = new ModelRendererTurbo(this, 297, 29, textureX, textureY, "cull"); // Box 153 cull
 		bodyModel[179] = new ModelRendererTurbo(this, 283, 29, textureX, textureY); // Box 158
-		bodyModel[180] = new ModelRendererTurbo(this, 286, 25, textureX, textureY); // Box 148 cull
-		bodyModel[181] = new ModelRendererTurbo(this, 286, 29, textureX, textureY); // Box 149 cull
-		bodyModel[182] = new ModelRendererTurbo(this, 297, 25, textureX, textureY); // Box 152 cull
-		bodyModel[183] = new ModelRendererTurbo(this, 297, 29, textureX, textureY); // Box 153 cull
+		bodyModel[180] = new ModelRendererTurbo(this, 286, 25, textureX, textureY, "cull"); // Box 148 cull
+		bodyModel[181] = new ModelRendererTurbo(this, 286, 29, textureX, textureY, "cull"); // Box 149 cull
+		bodyModel[182] = new ModelRendererTurbo(this, 297, 25, textureX, textureY, "cull"); // Box 152 cull
+		bodyModel[183] = new ModelRendererTurbo(this, 297, 29, textureX, textureY, "cull"); // Box 153 cull
 		bodyModel[184] = new ModelRendererTurbo(this, 283, 29, textureX, textureY); // Box 159
 		bodyModel[185] = new ModelRendererTurbo(this, 460, 24, textureX, textureY); // Box 156
 		bodyModel[186] = new ModelRendererTurbo(this, 460, 47, textureX, textureY); // Box 198
@@ -851,5 +851,4 @@ public class ModelPS2_4750 extends ModelConverter //Same as Filename
 		bogie.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();
 	}
-	public float[] getTrans() { return new float[]{-0F, 0.15F, 0F}; }
 }

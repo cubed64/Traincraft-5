@@ -713,21 +713,5 @@ public class ModelPCH130Commute2 extends ModelConverter {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);*/
 	}
 
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
-	{
-	}
-
-	public float[] getTrans() {
-		return new float[]{-1.7F, 0.1F, 0F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
-
 	public ModelRendererTurbo[] pch130commute2Model;
 }

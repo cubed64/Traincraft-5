@@ -18,7 +18,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 public class ModelICCBaywindowWP extends ModelConverter //Same as Filename
@@ -284,10 +286,10 @@ public class ModelICCBaywindowWP extends ModelConverter //Same as Filename
 		bodyModel[241] = new ModelRendererTurbo(this, 384, 116, textureX, textureY); // Box 373
 		bodyModel[242] = new ModelRendererTurbo(this, 387, 116, textureX, textureY); // Box 373
 		bodyModel[243] = new ModelRendererTurbo(this, 374, 115, textureX, textureY); // Box 421 prime base
-		bodyModel[244] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, "lamp"); // Box 6 PRIME4-1
-		bodyModel[245] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, "lamp"); // Box 7 PRIME4-3
-		bodyModel[246] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, "lamp"); // Box 8 PRIME4-2
-		bodyModel[247] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, "lamp"); // Box 9 PRIME4-4
+		bodyModel[244] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, BoxName.prime1); // Box 6 PRIME4-1
+		bodyModel[245] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, BoxName.prime3); // Box 7 PRIME4-3
+		bodyModel[246] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, BoxName.prime2); // Box 8 PRIME4-2
+		bodyModel[247] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, BoxName.prime4); // Box 9 PRIME4-4
 		bodyModel[248] = new ModelRendererTurbo(this, 374, 123, textureX, textureY, "cull"); // Box 355 support cull
 		bodyModel[249] = new ModelRendererTurbo(this, 148, 5, textureX, textureY, "cull"); // Box 275
 		bodyModel[250] = new ModelRendererTurbo(this, 176, 54, textureX, textureY, "cull"); // Box 561 cull ptc antenna shiz
@@ -1093,20 +1095,10 @@ public class ModelICCBaywindowWP extends ModelConverter //Same as Filename
 	}
 	ModelCabooseTruck2 theTrucks2 = new ModelCabooseTruck2();
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 260; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
+
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck_Silver_generator2.png"));
 			GL11.glPushMatrix();
@@ -1156,16 +1148,5 @@ public class ModelICCBaywindowWP extends ModelConverter //Same as Filename
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-	public float[] getTrans() {
-		return new float[]{-0F, 0.15F, 0.00F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
 	}
 }

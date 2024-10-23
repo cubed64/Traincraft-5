@@ -2489,7 +2489,7 @@ public class ModelRSD15 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModelWithoutBeacon(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14321){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/trimount1_Black.png"));//1 brake cylinder vs 2
@@ -2511,24 +2511,5 @@ public class ModelRSD15 extends ModelConverter //Same as Filename
 			theTruc.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-	public float[] getTrans() {
-		return new float[]{-1.8F, 0.15F, 0.00F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.65D, 1.35D, 0.0D});
-			}
-		};
 	}
 }

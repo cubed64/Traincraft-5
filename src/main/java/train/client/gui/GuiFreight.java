@@ -47,11 +47,15 @@ public class GuiFreight extends GuiContainer {
 	public void initGui() {
 		super.initGui();
 		buttonList.clear();
+
 		ScaledResolution sr = new ScaledResolution(Minecraft.getMinecraft(), Minecraft.getMinecraft().displayWidth, Minecraft.getMinecraft().displayHeight);
 		int var1 = (this.width - xSize) / 2;
 		int var2 = (this.height - ySize) / 2;
 		int width = sr.getScaledWidth();
 		int height = sr.getScaledHeight();
+
+
+
 
 		if (!freight.getTrainLockedFromPacket()) {
 			this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 124, var2 - 10, 51, 10, "Unlocked"));
@@ -66,39 +70,43 @@ public class GuiFreight extends GuiContainer {
 					this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 128, var2 - 10, 45, 10, "Trusted"));
 		}
 
-		freight.guiTCTextFieldTrainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, var2 - 26, 170,15);
+		freight.guiTCTextFieldTrainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, var2 - 30, 170,15);
 		freight.guiTCTextFieldTrainNote.setText(freight.getTrainNote());
 	}
 
 
 	@Override
-	protected void actionPerformed(GuiButton guibutton) {
-		if (guibutton.id == 3) {
-			if (player != null && player.getCommandSenderName().equalsIgnoreCase(freight.getTrainOwner())) {
-				if (!freight.getTrainLockedFromPacket() && !isShiftKeyDown()) {
-					freight.locked = true;
-					guibutton.displayString = "Locked";
-					this.initGui();
-				} else if (!isShiftKeyDown()) {
-					freight.locked = false;
-					guibutton.displayString = "UnLocked";
-					this.initGui();
-				}
-				AxisAlignedBB box = freight.boundingBox.expand(5, 5, 5);
-				List lis3 = freight.worldObj.getEntitiesWithinAABBExcludingEntity(freight, box);
-				if (lis3 != null && lis3.size() > 0) {
-					for (Object entity : lis3) {
-						if (entity instanceof EntityPlayer) {
-							if (!isShiftKeyDown()) {
-								Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(freight.locked, freight.getTrustedList(), freight.getEntityId(), false));
+	protected void actionPerformed(GuiButton guibutton)
+	{
+		switch (guibutton.id)
+		{
+			case 3:
+				if (player != null && player.getCommandSenderName().equalsIgnoreCase(freight.getTrainOwner())) {
+					if (!freight.getTrainLockedFromPacket() && !isShiftKeyDown()) {
+						freight.locked = true;
+						guibutton.displayString = "Locked";
+						this.initGui();
+					} else if (!isShiftKeyDown()) {
+						freight.locked = false;
+						guibutton.displayString = "UnLocked";
+						this.initGui();
+					}
+					AxisAlignedBB box = freight.boundingBox.expand(5, 5, 5);
+					List lis3 = freight.worldObj.getEntitiesWithinAABBExcludingEntity(freight, box);
+					if (lis3 != null && lis3.size() > 0) {
+						for (Object entity : lis3) {
+							if (entity instanceof EntityPlayer) {
+								if (!isShiftKeyDown()) {
+									Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(freight.locked, freight.getTrustedList(), freight.getEntityId(), false));
+								}
 							}
 						}
 					}
 				}
-			}
-			else if (player != null) {
-				player.addChatMessage(new ChatComponentText("You are not the owner!"));
-			}
+				else if (player != null) {
+					player.addChatMessage(new ChatComponentText("You are not the owner!"));
+				}
+			break;
 		}
 	}
 

@@ -11,6 +11,7 @@ package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is locat
 
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelPEtrucc;
+import com.jcirmodelsquad.tcjcir.models.trucks.Modelheavyweight_truck;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -18,6 +19,7 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
 public class ModelPEcoach extends ModelConverter//Same as Filename
@@ -1177,6 +1179,8 @@ public class ModelPEcoach extends ModelConverter//Same as Filename
 		bodyModel[283].setRotationPoint(-56F, -15F, -9F);
 	}
 	ModelPEtrucc theTrucc = new ModelPEtrucc();
+	Modelheavyweight_truck theTrucc2 = new Modelheavyweight_truck();
+
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 		for (int i = 0; i < 284; i++) {
@@ -1192,13 +1196,25 @@ public class ModelPEcoach extends ModelConverter//Same as Filename
 				bodyModel[i].render(f5);
 			}
 		}
-		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/pe_truccs.png"));
-		GL11.glPushMatrix();
-		GL11.glTranslated(-2.18, -0.1, 0);
-		theTrucc.render(entity, f, f1, f2, f3, f4, f5);
 
-		GL11.glTranslated(4.3, 0, 0);
-		theTrucc.render(entity, f, f1, f2, f3, f4, f5);
-		GL11.glPopMatrix();
+		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==4 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==6){
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/pe_truccs.png"));// pe 2 axle
+			GL11.glPushMatrix();
+			GL11.glTranslated(-2.18, -0.1, 0);
+			theTrucc.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glTranslated(4.3, 0, 0);
+			theTrucc.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+		} else {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/heavyweight_truc.png"));//3 axle
+			GL11.glPushMatrix();
+			GL11.glTranslated(-2.18, -0.05, 0);
+			theTrucc2.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glTranslated(4.3, 0, 0);
+			theTrucc2.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+		}
 	}
 }

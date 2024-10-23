@@ -17,7 +17,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 public class ModelHBC1B extends ModelConverter//Same as Filename
@@ -150,10 +152,10 @@ public class ModelHBC1B extends ModelConverter//Same as Filename
 		bodyModel[108] = new ModelRendererTurbo(this, 257, 194, textureX, textureY); // Box 410
 		bodyModel[109] = new ModelRendererTurbo(this, 259, 206, textureX, textureY, "lamp"); // Box 411 front light R
 		bodyModel[110] = new ModelRendererTurbo(this, 259, 201, textureX, textureY, "lamp"); // Box 412 front light L
-		bodyModel[111] = new ModelRendererTurbo(this, 251, 216, textureX, textureY, "lamp"); // Box 6 PRIME1-1
-		bodyModel[112] = new ModelRendererTurbo(this, 251, 216, textureX, textureY, "lamp"); // Box 7 PRIME1-3
-		bodyModel[113] = new ModelRendererTurbo(this, 251, 216, textureX, textureY, "lamp"); // Box 8 PRIME1-2
-		bodyModel[114] = new ModelRendererTurbo(this, 251, 216, textureX, textureY, "lamp"); // Box 9 PRIME1-4
+		bodyModel[111] = new ModelRendererTurbo(this, 251, 216, textureX, textureY, BoxName.prime1.prime1); // Box 6 PRIME1-1
+		bodyModel[112] = new ModelRendererTurbo(this, 251, 216, textureX, textureY, BoxName.prime1.prime3); // Box 7 PRIME1-3
+		bodyModel[113] = new ModelRendererTurbo(this, 251, 216, textureX, textureY, BoxName.prime1.prime2); // Box 8 PRIME1-2
+		bodyModel[114] = new ModelRendererTurbo(this, 251, 216, textureX, textureY, BoxName.prime1.prime4); // Box 9 PRIME1-4
 		bodyModel[115] = new ModelRendererTurbo(this, 251, 212, textureX, textureY); // Box 428
 		bodyModel[116] = new ModelRendererTurbo(this, 25, 170, textureX, textureY); // Box 423
 		bodyModel[117] = new ModelRendererTurbo(this, 25, 170, textureX, textureY); // Box 424
@@ -1187,20 +1189,10 @@ public class ModelHBC1B extends ModelConverter//Same as Filename
 	}
 	ModelCabooseTruck2 theTrucks2 = new ModelCabooseTruck2();
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 281; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
+
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck_Silver.png"));
 			GL11.glPushMatrix();
@@ -1226,16 +1218,5 @@ public class ModelHBC1B extends ModelConverter//Same as Filename
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-	public float[] getTrans() {
-		return new float[]{-0F, 0.15F, 0.00F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
 	}
 }

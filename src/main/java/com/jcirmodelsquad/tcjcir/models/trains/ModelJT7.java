@@ -15,6 +15,8 @@ import net.minecraft.entity.Entity;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
+import train.client.renderhelper.ModelRenderHelper;
+import train.common.enums.BoxName;
 
 public class ModelJT7 extends ModelConverter //Same as Filename
 {
@@ -518,13 +520,13 @@ public class ModelJT7 extends ModelConverter //Same as Filename
 		bodyModel[480] = new ModelRendererTurbo(this, 169, 185, textureX, textureY); // Box 531
 		bodyModel[481] = new ModelRendererTurbo(this, 193, 185, textureX, textureY); // Box 532
 		bodyModel[482] = new ModelRendererTurbo(this, 505, 137, textureX, textureY); // Box 250
-		bodyModel[483] = new ModelRendererTurbo(this, 177, 145, textureX, textureY, "lamp"); // Box 251 ditchlight front b
-		bodyModel[484] = new ModelRendererTurbo(this, 265, 145, textureX, textureY, "lamp"); // Box 252 ditchlight front b
+		bodyModel[483] = new ModelRendererTurbo(this, 177, 145, textureX, textureY, BoxName.ditch); // Box 251 ditchlight front b
+		bodyModel[484] = new ModelRendererTurbo(this, 265, 145, textureX, textureY, BoxName.ditch); // Box 252 ditchlight front b
 		bodyModel[485] = new ModelRendererTurbo(this, 425, 145, textureX, textureY); // Box 253
 		bodyModel[486] = new ModelRendererTurbo(this, 41, 153, textureX, textureY); // Box 254
 		bodyModel[487] = new ModelRendererTurbo(this, 49, 153, textureX, textureY); // Box 255
-		bodyModel[488] = new ModelRendererTurbo(this, 57, 153, textureX, textureY, "lamp"); // Box 256 ditchlight rear b
-		bodyModel[489] = new ModelRendererTurbo(this, 65, 153, textureX, textureY, "lamp"); // Box 257 ditchlight rear b
+		bodyModel[488] = new ModelRendererTurbo(this, 57, 153, textureX, textureY, BoxName.ditch); // Box 256 ditchlight rear b
+		bodyModel[489] = new ModelRendererTurbo(this, 65, 153, textureX, textureY, BoxName.ditch); // Box 257 ditchlight rear b
 		bodyModel[490] = new ModelRendererTurbo(this, 25, 121, textureX, textureY); // Box 338
 		bodyModel[491] = new ModelRendererTurbo(this, 321, 153, textureX, textureY); // Box 339
 		bodyModel[492] = new ModelRendererTurbo(this, 49, 121, textureX, textureY); // Box 340
@@ -2068,21 +2070,10 @@ public class ModelJT7 extends ModelConverter //Same as Filename
 		bodyModel[494].addBox(0F, 0F, 0F, 1, 2, 0, 0F); // Box 446
 		bodyModel[494].setRotationPoint(-20F, -23F, 1F);
 	}
+
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 495; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 	}
-	public float[] getTrans() { return new float[]{-2F, 0.15F, 0F}; }
 }

@@ -5,7 +5,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.AdvancedModelLoader;
+
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.common.library.Info;
@@ -21,7 +21,7 @@ public class ModelWindMill extends ModelBase {
 	public float wheel1 = 0.4188790204786391F;
 
 	public ModelWindMill() {
-		modelWindMill = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "wind_mill.obj"));
+		modelWindMill = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "wind_mill.obj"));
 	}
 
 	public void render() {

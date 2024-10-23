@@ -9,9 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
-import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB3;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB3_new;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
@@ -22,8 +20,6 @@ import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.enums.BoxName;
 import train.common.library.Info;
-
-import java.util.ArrayList;
 
 public class ModelDash840Cnew extends ModelConverter //Same as Filename
 {
@@ -2055,12 +2051,11 @@ public class ModelDash840Cnew extends ModelConverter //Same as Filename
 		bodyModel[488].addBox(0F, 0F, 0F, 1, 1, 2, 0F); // Box 1007 cull
 		bodyModel[488].setRotationPoint(-15F, 0.5F, 7.1F);
 	}
-	ModelFB3 theTrucksOld = new ModelFB3();
 	ModelFB3_new theTrucks2 = new ModelFB3_new();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 8) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb3_new_csxandmpblu.png"));
@@ -2100,24 +2095,5 @@ public class ModelDash840Cnew extends ModelConverter //Same as Filename
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-	public float[] getTrans() {
-		return new float[]{-2.0F, 0.15F, 0F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.925D, 1.5D, 0.0D});
-			}
-		};
 	}
 }

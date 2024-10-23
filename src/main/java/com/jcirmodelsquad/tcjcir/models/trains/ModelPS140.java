@@ -277,11 +277,4 @@ public class ModelPS140 extends ModelConverter //Same as Filename
 		bogie2.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();
 	}
-
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
-	{
-	}
-
-	public ModelRendererTurbo ModelPS140[];
-	public float[] getTrans() { return new float[]{-0F, 0.1F, 0F}; }
 }

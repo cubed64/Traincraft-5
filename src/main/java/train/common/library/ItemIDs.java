@@ -70,6 +70,7 @@ public enum ItemIDs {
 	atoCard("ItemATOCard", "ato_card", 5),
 	pennCentral("ItemPennCentralSimCard", "ato_card", 291),
 	paintbrushThing("ItemPaintbrushThing", "paintbrushthing", 9),
+	brakeStick("ItemBrakeStick", "item_brakestick", 2),
 
 
 	minecartWork("ItemRollingStock", "train_work", train.common.library.TypeOfRollingStock.HERITAGE, 4),
@@ -444,6 +445,7 @@ public enum ItemIDs {
 	minecartSW1000("ItemRollingStock", "sw1000", train.common.library.TypeOfRollingStock.DIESEL, 3),
 	minecartSW1200("ItemRollingStock","sw1200", train.common.library.TypeOfRollingStock.DIESEL, 4),
 	minecartSW1500("ItemRollingStock", "sw1500", train.common.library.TypeOfRollingStock.DIESEL, 4),
+	minecartSW1600("ItemRollingStock", "sw1600", train.common.library.TypeOfRollingStock.DIESEL, 4),
 	minecartMP900("ItemRollingStock", "mp900", train.common.library.TypeOfRollingStock.DIESEL, 4),
 	minecartMP15DCW9("ItemRollingStock", "mp15dcw9", train.common.library.TypeOfRollingStock.DIESEL, 4),
 
@@ -475,6 +477,7 @@ public enum ItemIDs {
 	minecartSB18E("ItemRollingStock", "sb18e", train.common.library.TypeOfRollingStock.DIESEL, 3),
 	minecartSB18B("ItemRollingStock", "sb18b", train.common.library.TypeOfRollingStock.DIESEL, 3),
 	minecartB23("ItemRollingStock", "b23", train.common.library.TypeOfRollingStock.DIESEL, 4),
+	minecartB23S7("ItemRollingStock", "b23s7", train.common.library.TypeOfRollingStock.DIESEL, 4),
 	minecartBQ23("ItemRollingStock", "bq23", train.common.library.TypeOfRollingStock.DIESEL, 4),
 	minecartSB23R("ItemRollingStock", "sb23r", train.common.library.TypeOfRollingStock.DIESEL, 4),
 	minecartSB23E("ItemRollingStock", "sb23e", train.common.library.TypeOfRollingStock.DIESEL, 4),
@@ -549,6 +552,8 @@ public enum ItemIDs {
 	minecartVO1000("ItemRollingStock", "vo1000", train.common.library.TypeOfRollingStock.DIESEL, 2),
 	minecartS12("ItemRollingStock", "s12", train.common.library.TypeOfRollingStock.DIESEL, 3),
 	minecartDS441000("ItemRollingStock", "ds441000", train.common.library.TypeOfRollingStock.DIESEL, 3),
+	minecartDR441500Phase2("ItemRollingStock", "DR441500Phase2", train.common.library.TypeOfRollingStock.DIESEL,4),
+	minecartDR441500BPhase2("ItemRollingStock", "DR441500BPhase2", train.common.library.TypeOfRollingStock.DIESEL,4),
 	minecartDR441500Shark("ItemRollingStock", "DR441500Shark", train.common.library.TypeOfRollingStock.DIESEL,4),
 	minecartDR441500BShark("ItemRollingStock", "DR441500BShark", train.common.library.TypeOfRollingStock.DIESEL,4),
 	minecartRF16("ItemRollingStock", "RF16", train.common.library.TypeOfRollingStock.DIESEL,4),
@@ -569,6 +574,7 @@ public enum ItemIDs {
 	minecartKrautt("ItemRollingStock", "ML4000", train.common.library.TypeOfRollingStock.DIESEL, 5),
 	//minecartILMC("ItemRollingStock", "ILMC_ICON", 2),
 	minecartDD55("ItemRollingStock", "dd55", train.common.library.TypeOfRollingStock.DIESEL, 3),
+	minecartTB27("ItemRollingStock", "tb27", train.common.library.TypeOfRollingStock.DIESEL, 4),
 
 	minecartSlugMA("ItemRollingStock", "slugma", train.common.library.TypeOfRollingStock.DIESEL, 2),
 	minecartF7BSlug("ItemRollingStock", "f7b", train.common.library.TypeOfRollingStock.DIESEL, 3),
@@ -634,6 +640,7 @@ public enum ItemIDs {
 	minecartACF41Gon("ItemRollingStock", "ACF_41_6_gon", train.common.library.TypeOfRollingStock.FREIGHT, 3),
 	minecartBethgonII("ItemRollingStock", "Bethgon_icon", train.common.library.TypeOfRollingStock.FREIGHT, 5),
 	minecart67millgon("ItemRollingStock", "gsco_67millgon_icon", train.common.library.TypeOfRollingStock.FREIGHT, 4),
+	minecart52millgon("ItemRollingStock", "gsco_52millgon_icon", train.common.library.TypeOfRollingStock.FREIGHT, 4),
 	minecartAAR50TonHopper("ItemRollingStock", "AAR50TonHopper", train.common.library.TypeOfRollingStock.FREIGHT, 2),
 	minecartAAR70TonHopper("ItemRollingStock", "AAR70TonHopper", train.common.library.TypeOfRollingStock.FREIGHT, 3),
 
@@ -688,6 +695,8 @@ public enum ItemIDs {
 	minecartACFGN60SeatCoach("ItemRollingStock", "ACFGN60SeatCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 	minecartACFGNDiner_Observation("ItemRollingStock", "ACFGNDiner_Observation", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 	minecartACFGN28SeatCoach_Dinette("ItemRollingStock", "ACFGN28SeatCoach_Dinette", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartACFGN1DR_17SeatParlor_Observation("ItemRollingStock", "ACFGN1DR_17SeatParlor_Observation", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartPSGNRPO_30("ItemRollingStock", "ACFGNRPO_30", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 
 	minecartOB84SeatCoach("ItemRollingStock", "OB84-92SeatCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 	minecartOB92SeatCoach("ItemRollingStock", "OB84-92SeatCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
@@ -719,6 +728,8 @@ public enum ItemIDs {
 	minecartPSCNW27SeatParlor_Observation("ItemRollingStock", "PSCNW27SeatParlor_Observation", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 
 	minecartBuddRDG56SeatCoachLounge("ItemRollingStock", "BuddRDG56SeatCoachLounge", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartBuddRDGDiner_Lounge("ItemRollingStock", "BuddRDGDiner_Lounge", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartBuddRDG56SeatCoach_Observation("ItemRollingStock", "BuddRDG56SeatCoach_Observation", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 
 	minecartBuddCRIP52SeatCoach("ItemRollingStock", "BuddCRIP52SeatCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 
@@ -727,6 +738,7 @@ public enum ItemIDs {
 	minecartBuddCBQ52SeatCoach("ItemRollingStock", "BuddCBQ52SeatCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 	minecartBuddDome46SeatCoach("ItemRollingStock", "BuddDome46SeatCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 	minecartBuddCBQDome50SeatCoach("ItemRollingStock", "BuddCBQDome50SeatCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartBuddPrewarBaggage("ItemRollingStock", "BuddPrewarBaggage", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 
 	minecartBuddATSF52SeatCoach("ItemRollingStock", "BuddATSF52SeatCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 	minecartBuddATSF48SeatCoach("ItemRollingStock", "BuddATSF48SeatCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
@@ -747,6 +759,20 @@ public enum ItemIDs {
 
 	minecartOBHWNH5570_5589Baggage("ItemRollingStock", "OBHWNH5570_5589Baggage", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 
+	minecartBuddCN68SeatCoach_Observation("ItemRollingStock", "BuddCN68SeatCoach_Observation", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartBuddCNCoach("ItemRollingStock", "BuddCNCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartBuddCNDiner_Lounge("ItemRollingStock", "BuddCNDiner_Lounge", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartBuddCN39SeatParlor_Observation("ItemRollingStock", "BuddCN39SeatParlor_Observation", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartBuddCN59SeatCoach_Observation("ItemRollingStock", "BuddCN39SeatParlor_Observation", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartNSCCNBaggage("ItemRollingStock", "NSCCNBaggage", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+
+	minecartPSSOUBaggage("ItemRollingStock", "PSSOUBaggage", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+	minecartPSSOURPO_30("ItemRollingStock", "PSSOURPO_30", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+
+	minecartPRECOPendulumCoach("ItemRollingStock", "PRECOPendulumCoach", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+
+	minecartPSFNCCBaggage_Dinette("ItemRollingStock", "PSFNCCBaggage_Dinette", train.common.library.TypeOfRollingStock.PASSENGER, 3),
+
 	minecartAmfleet("ItemRollingStock", "Amfleet", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 	minecartAmfleet2("ItemRollingStock", "Amfleet2", train.common.library.TypeOfRollingStock.PASSENGER, 3),
 	minecartAmfleetCab("ItemRollingStock", "AmfleetCab", train.common.library.TypeOfRollingStock.PASSENGER, 3),
@@ -762,6 +788,7 @@ public enum ItemIDs {
 	minecartHBC1Bcaboose("ItemRollingStock", "HBC1B", train.common.library.TypeOfRollingStock.BOOSE,3),
 	minecartDRGWCaboose("ItemRollingStock", "DRGW_01400_series_caboose", train.common.library.TypeOfRollingStock.BOOSE,3),
 	minecartICCBaywindowWP("ItemRollingStock", "wp_iccbaywindow_icon", train.common.library.TypeOfRollingStock.BOOSE,3),
+	minecartCA11("ItemRollingStock", "hop_on_paint_dot_net", train.common.library.TypeOfRollingStock.BOOSE,3),
 	minecartWPShops600Series("ItemRollingStock", "wp648680_series_icon", train.common.library.TypeOfRollingStock.BOOSE,3),
 
 	minecartBigMeme("ItemRollingStock", "lol", 69),
@@ -802,8 +829,9 @@ public enum ItemIDs {
 	//minecartLogcarNP( "ItemRollingStock","logcarNP",3),
 	//minecartCF7R("ItemRollingStock", "cf7r", 12),
 	minecartHighrailVan("ItemRollingStock", "highrailvan", 3),
-	//minecartGP9old("ItemRollingStock", "gp9old", 3),
 
+
+	minecartWorkdayHyrail("ItemRollingStock", "workday", 3),
 	;
 
 	public Item item;

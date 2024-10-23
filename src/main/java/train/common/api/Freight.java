@@ -1,5 +1,8 @@
 package train.common.api;
 
+import cpw.mods.fml.common.network.NetworkRegistry;
+import io.netty.buffer.ByteBuf;
+import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -8,15 +11,39 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
+import train.common.Traincraft;
 import train.common.adminbook.ServerLogger;
+import train.common.core.handlers.ConfigHandler;
+import train.common.core.network.PacketParkingBrake;
 
-public abstract class Freight extends EntityRollingStock implements IInventory {
+public abstract class Freight extends EntityRollingStock implements IInventory
+{
 	public ItemStack cargoItems[];
 	protected double itemInsideCount = 0;
 	private int slotsFilled=0;
-	public Freight(World world) {
+	public Freight(World world)
+	{
 		super(world);
 		dataWatcher.addObject(22, 0);
+
+	}
+
+	@Override
+	public void readSpawnData(ByteBuf additionalData)
+	{
+		super.readSpawnData(additionalData);
+	}
+
+	@Override
+	public void writeSpawnData(ByteBuf buffer)
+	{
+		super.writeSpawnData(buffer);
+	}
+
+	@Override
+	protected void writeEntityToNBT(NBTTagCompound nbttagcompound)
+	{
+		super.writeEntityToNBT(nbttagcompound);
 	}
 
 	@Override
@@ -132,7 +159,8 @@ public abstract class Freight extends EntityRollingStock implements IInventory {
 	}
 
 	@Override
-	public void onUpdate() {
+	public void onUpdate()
+	{
 		super.onUpdate();
 		handleMass();
 	}
@@ -140,7 +168,8 @@ public abstract class Freight extends EntityRollingStock implements IInventory {
 	/**
 	 * Handle mass depending on item count tenders are done differently
 	 */
-	protected void handleMass() {
+	protected void handleMass()
+	{
 		if (this.updateTicks % 10 != 0)
 			return;
 		if (worldObj.isRemote)

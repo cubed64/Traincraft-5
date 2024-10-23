@@ -11,15 +11,10 @@ package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is locat
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
-import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
-import tmt.Tessellator;
-import train.common.api.AbstractTrains;
-import train.common.library.Info;
-
-import java.util.ArrayList;
+import train.client.renderhelper.ModelRenderHelper;
 
 public class ModelPCC extends ModelConverter //Same as Filename
 {
@@ -1474,22 +1469,10 @@ public class ModelPCC extends ModelConverter //Same as Filename
 		bodyModel[357].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, 0F, -0.3F, -0.5F, 0F, -0.3F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, -0.6F, -0.5F, -0.5F, -0.6F, -0.5F, -0.5F, -0.3F, 0F, 0F, -0.3F, 0F); // Box 357
 		bodyModel[357].setRotationPoint(-32.5F, -19.2F, -1F);
 	}
-	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (ModelRendererTurbo m : bodyModel) {
-			if (m.boxName.equals("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				m.render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else if (m.boxName.equals("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				m.render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				m.render(f5);
-			}
-		}
-	}
-	public float[] getTrans() { return new float[]{-1.5F, 0.155F, 0F}; }
 
+	@Override
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
+	}
 }

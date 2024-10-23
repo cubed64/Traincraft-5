@@ -1861,5 +1861,4 @@ public class ModelSeptaLRV extends ModelConverter//Same as Filename
 		bodyModel[455].addBox(0F, 0F, 0F, 50, 1, 1, 0F); // Box 455
 		bodyModel[455].setRotationPoint(-25F, -3.5F, 9.65F);
 	}
-	public float[] getTrans() { return new float[]{-1.5F, 0.12F, 0F}; }
 }

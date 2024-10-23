@@ -18,7 +18,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 public class ModelHH660 extends ModelConverter //Same as Filename
@@ -155,14 +157,14 @@ public class ModelHH660 extends ModelConverter //Same as Filename
 		bodyModel[112] = new ModelRendererTurbo(this, 233, 57, textureX, textureY); // Box 70
 		bodyModel[113] = new ModelRendererTurbo(this, 449, 49, textureX, textureY); // Box 71
 		bodyModel[114] = new ModelRendererTurbo(this, 81, 25, textureX, textureY, "lamp"); // Box 78 lantern
-		bodyModel[115] = new ModelRendererTurbo(this, 49, 25, textureX, textureY, "lamp"); // Box 211 ditchlight front
+		bodyModel[115] = new ModelRendererTurbo(this, 49, 25, textureX, textureY, BoxName.ditch); // Box 211 ditchlight front
 		bodyModel[116] = new ModelRendererTurbo(this, 465, 25, textureX, textureY); // Box 212
 		bodyModel[117] = new ModelRendererTurbo(this, 473, 25, textureX, textureY); // Box 213
-		bodyModel[118] = new ModelRendererTurbo(this, 313, 33, textureX, textureY, "lamp"); // Box 214 ditchlight front
-		bodyModel[119] = new ModelRendererTurbo(this, 329, 33, textureX, textureY, "lamp"); // Box 160 ditchlight rear
+		bodyModel[118] = new ModelRendererTurbo(this, 313, 33, textureX, textureY, BoxName.ditch); // Box 214 ditchlight front
+		bodyModel[119] = new ModelRendererTurbo(this, 329, 33, textureX, textureY, BoxName.ditch); // Box 160 ditchlight rear
 		bodyModel[120] = new ModelRendererTurbo(this, 337, 33, textureX, textureY); // Box 161
 		bodyModel[121] = new ModelRendererTurbo(this, 353, 33, textureX, textureY); // Box 162
-		bodyModel[122] = new ModelRendererTurbo(this, 9, 41, textureX, textureY, "lamp"); // Box 163 ditchlight rear
+		bodyModel[122] = new ModelRendererTurbo(this, 9, 41, textureX, textureY, BoxName.ditch); // Box 163 ditchlight rear
 		bodyModel[123] = new ModelRendererTurbo(this, 49, 41, textureX, textureY); // Box 191
 		bodyModel[124] = new ModelRendererTurbo(this, 465, 49, textureX, textureY); // Box 192
 		bodyModel[125] = new ModelRendererTurbo(this, 33, 9, textureX, textureY); // Box 193
@@ -179,7 +181,7 @@ public class ModelHH660 extends ModelConverter //Same as Filename
 		bodyModel[136] = new ModelRendererTurbo(this, 177, 25, textureX, textureY); // Box 207
 		bodyModel[137] = new ModelRendererTurbo(this, 201, 25, textureX, textureY); // Box 208
 		bodyModel[138] = new ModelRendererTurbo(this, 433, 25, textureX, textureY); // Box 209
-		bodyModel[139] = new ModelRendererTurbo(this, 25, 33, textureX, textureY, "lamp"); // Box 399 commander beacon
+		bodyModel[139] = new ModelRendererTurbo(this, 25, 33, textureX, textureY, BoxName.commander); // Box 399 commander beacon
 		bodyModel[140] = new ModelRendererTurbo(this, 305, 33, textureX, textureY); // Box 400
 		bodyModel[141] = new ModelRendererTurbo(this, 489, 9, textureX, textureY); // Box 215
 		bodyModel[142] = new ModelRendererTurbo(this, 233, 49, textureX, textureY); // Box 216
@@ -968,15 +970,8 @@ public class ModelHH660 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for(int i = 0; i < bodyModel.length; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity ,f5);
+
 		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==1453){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blunttruck_Green.png"));
 		} else {
@@ -992,11 +987,6 @@ public class ModelHH660 extends ModelConverter //Same as Filename
 		GL11.glTranslated(-0.75F,0F,0);
 		theTrucks.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();
-	}
-
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
-	{
-
 	}
 
 	public ModelRendererTurbo alcos2Model[];

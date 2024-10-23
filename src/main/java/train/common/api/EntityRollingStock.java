@@ -6,6 +6,7 @@ import com.google.gson.JsonParser;
 import com.mojang.authlib.GameProfile;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -47,6 +48,7 @@ import train.common.blocks.BlockTCRail;
 import train.common.blocks.BlockTCRailGag;
 import train.common.core.HandleOverheating;
 import train.common.core.handlers.*;
+import train.common.core.network.PacketParkingBrake;
 import train.common.core.network.PacketRollingStockRotation;
 import train.common.core.network.PacketSetTrainLockedToClient;
 import train.common.core.util.TraincraftUtil;
@@ -119,6 +121,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	private LinkHandler linkhandler;
 	private TrainsOnClick trainsOnClick;
 	public boolean isBraking;
+	public boolean parkingBrake = false;
 	public boolean isClimbing;
 	public int overheatLevel;
 	public int linkageNumber;
@@ -194,6 +197,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		dataWatcher.addObject(20, 0);//heat
 		dataWatcher.addObject(14, 0);
 		dataWatcher.addObject(21, 0);
+		dataWatcher.addObject(25, (int) convertSpeed(Math.sqrt(Math.abs(motionX * motionX) + Math.abs(motionZ * motionZ))));//convertSpeed((Math.abs(this.motionX) + Math.abs(this.motionZ))
+		dataWatcher.addObject(30, "" + parkingBrake);
 
 		preventEntitySpawning = true;
 		isImmuneToFire = true;
@@ -258,6 +263,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			if (selectedCargo < getCargoManager().getCargoSpecificationList().length + 1)
 				getCargoManager().setSelectedCargo(selectedCargo);
 		}
+		parkingBrake = additionalData.readBoolean();
 	}
 
 	/**
@@ -274,6 +280,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		if (getCargoManager() != null) {
 			buffer.writeInt(getCargoManager().getSelectedCargo());
 		}
+		buffer.writeBoolean(parkingBrake);
 	}
 
 	public String getTrainName() {
@@ -477,24 +484,24 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	public void setDead() {
 		super.setDead();
 		this.unLink();
-		if (train != null) {
-			if (train.getTrains() != null) {
-				for (int i2 = 0; i2 < train.getTrains().size(); i2++) {
-					if ((train.getTrains().get(i2)) instanceof Locomotive) {
-						train.getTrains().get(i2).cartLinked1 = null;
-						train.getTrains().get(i2).Link1 = 0;
-						train.getTrains().get(i2).cartLinked2 = null;
-						train.getTrains().get(i2).Link2 = 0;
+		if (trainHandler != null) {
+			if (trainHandler.getTrains() != null) {
+				for (int i2 = 0; i2 < trainHandler.getTrains().size(); i2++) {
+					if ((trainHandler.getTrains().get(i2)) instanceof Locomotive) {
+						trainHandler.getTrains().get(i2).cartLinked1 = null;
+						trainHandler.getTrains().get(i2).Link1 = 0;
+						trainHandler.getTrains().get(i2).cartLinked2 = null;
+						trainHandler.getTrains().get(i2).Link2 = 0;
 					}
-					if ((train.getTrains().get(i2)) != this) {
-						if (train != null && train.getTrains() != null && train.getTrains().get(i2) != null && train.getTrains().get(i2).train != null && train.getTrains().get(i2).train.getTrains() != null) train.getTrains().get(i2).train.getTrains().clear();
+					if ((trainHandler.getTrains().get(i2)) != this) {
+						if (trainHandler != null && trainHandler.getTrains() != null && trainHandler.getTrains().get(i2) != null && trainHandler.getTrains().get(i2).trainHandler != null && trainHandler.getTrains().get(i2).trainHandler.getTrains() != null) trainHandler.getTrains().get(i2).trainHandler.getTrains().clear();
 					}
 				}
 			}
 		}
-		if (train != null && train.getTrains().size() <= 1) {
-			train.getTrains().clear();
-			allTrains.remove(train);
+		if (trainHandler != null && trainHandler.getTrains().size() <= 1) {
+			trainHandler.getTrains().clear();
+			allTrains.remove(trainHandler);
 		}
 		if (this.bogieLoco != null) {
 			bogieLoco.setDead();
@@ -524,11 +531,11 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	}
 
 	private void handleTrain() {
-		if (this instanceof Locomotive && train != null) {
-			for (int i2 = 0; i2 < train.getTrains().size(); i2++) {
-				if (RailTools.isCartLockedDown(train.getTrains().get(i2))) {
+		if (this instanceof Locomotive && trainHandler != null) {
+			for (int i2 = 0; i2 < trainHandler.getTrains().size(); i2++) {
+				if (RailTools.isCartLockedDown(trainHandler.getTrains().get(i2))) {
 					cartLocked = true;
-					/** If something in the train is locked down */
+					/** If something in the trains is locked down */
 					ticksSinceHeld = 40;
 					if (!((Locomotive) this).canBeAdjusted) {
 						((Locomotive) this).setCanBeAdjusted(true);
@@ -549,19 +556,19 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		}
 
 		/*
-		 * if(train!=null && RailTools.isCartLockedDown((EntityMinecart) this)){
-		 * train.setTicksSinceHeld(100); train.setCartLocked(true); for(int
-		 * i2=0;i2<train.getTrains().size();i2++){ if(train.getTrains().get(i2)
+		 * if(trains!=null && RailTools.isCartLockedDown((EntityMinecart) this)){
+		 * trains.setTicksSinceHeld(100); trains.setCartLocked(true); for(int
+		 * i2=0;i2<trains.getTrains().size();i2++){ if(trains.getTrains().get(i2)
 		 * instanceof Locomotive &&
-		 * !((Locomotive)train.getTrains().get(i2)).canBeAdjusted){
-		 * ((Locomotive)train.getTrains().get(i2)).setCanBeAdjusted(true);
+		 * !((Locomotive)trains.getTrains().get(i2)).canBeAdjusted){
+		 * ((Locomotive)trains.getTrains().get(i2)).setCanBeAdjusted(true);
 		 * System
-		 * .out.println(((Locomotive)train.getTrains().get(i2))+"canBeAdjusted=true"
+		 * .out.println(((Locomotive)trains.getTrains().get(i2))+"canBeAdjusted=true"
 		 * ); } } }
 		 */
 
 		/**
-		 * if the global train list is empty this is only used when the first @EntityRollingStock
+		 * if the global trains list is empty this is only used when the first @EntityRollingStock
 		 * is put down or when the world reloads
 		 */
 		if (updateTicks % 40 != 0) return;
@@ -569,36 +576,36 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			//System.out.println("array empty");
 			if ((this.cartLinked1 != null || this.cartLinked2 != null)) {
 				//System.out.println("array empty => add");
-				train = new TrainHandler(this);
+				trainHandler = new TrainHandler(this);
 			}
 			/**
-			 * This is used when global train list isn't empty but this @EntityRollingStock
-			 * isn't part of a train yet
+			 * This is used when global trains list isn't empty but this @EntityRollingStock
+			 * isn't part of a trains yet
 			 */
 		}
-		else if (train == null || (train != null && train.getTrains().size() == 0)) {
+		else if (trainHandler == null || (trainHandler != null && trainHandler.getTrains().size() == 0)) {
 			if ((this.cartLinked1 != null || this.cartLinked2 != null)) {
-				if (this.cartLinked1 != null && cartLinked1.train != null && cartLinked1.train.getTrains() != null && cartLinked1.train.getTrains().size() != 0) {
-					train = cartLinked1.train;
+				if (this.cartLinked1 != null && cartLinked1.trainHandler != null && cartLinked1.trainHandler.getTrains() != null && cartLinked1.trainHandler.getTrains().size() != 0) {
+					trainHandler = cartLinked1.trainHandler;
 					return;
 				}
-				if (this.cartLinked2 != null && cartLinked2.train != null && cartLinked2.train.getTrains() != null && cartLinked2.train.getTrains().size() != 0) {
-					train = cartLinked2.train;
+				if (this.cartLinked2 != null && cartLinked2.trainHandler != null && cartLinked2.trainHandler.getTrains() != null && cartLinked2.trainHandler.getTrains().size() != 0) {
+					trainHandler = cartLinked2.trainHandler;
 					return;
 				}
 				//System.out.println("add");
-				train = new TrainHandler(this);
+				trainHandler = new TrainHandler(this);
 			}
 		}
 		/**
-		 * getting main locomotive of the train and copying its destination to
+		 * getting main locomotive of the trains and copying its destination to
 		 * all attached carts
 		 */
-		if (train != null && train.getTrains().size() > 1) {
+		if (trainHandler != null && trainHandler.getTrains().size() > 1) {
 			if (this instanceof Locomotive && !((Locomotive) this).canBeAdjusted && this.getDestination().length() > 0) {
-				for (int i = 0; i < train.getTrains().size(); i++) {
-					if (train.getTrains().get(i) != null && !train.getTrains().get(i).equals(this)) train.getTrains().get(i).destination = this.getDestination();
-					CartTools.setCartOwner(train.getTrains().get(i), CartTools.getCartOwner(this));
+				for (int i = 0; i < trainHandler.getTrains().size(); i++) {
+					if (trainHandler.getTrains().get(i) != null && !trainHandler.getTrains().get(i).equals(this)) trainHandler.getTrains().get(i).destination = this.getDestination();
+					CartTools.setCartOwner(trainHandler.getTrains().get(i), CartTools.getCartOwner(this));
 				}
 			}
 		}
@@ -677,7 +684,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		}
 
 		super.manageChunkLoading();
-		
+		handleParkingBrake();
+
 		/**
 		 * Set the uniqueID if the entity doesn't have one.
 		 */
@@ -1015,7 +1023,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		}
 		this.dataWatcher.updateObject(14, (int) (motionX * 100));
 		this.dataWatcher.updateObject(21, (int) (motionZ * 100));
-
+		dataWatcher.updateObject(25, (int) convertSpeed(Math.sqrt(motionX * motionX + motionZ * motionZ)));
+		dataWatcher.updateObject(30, "" + parkingBrake);
 		if (ConfigHandler.ENABLE_LOGGING && !worldObj.isRemote && updateTicks%120==0){
 			ServerLogger.writeWagonToFolder(this);
 		}
@@ -1263,6 +1272,34 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			super.onUpdate();
 		}
 
+	}
+
+	protected void handleParkingBrake()
+	{
+		if (worldObj.isRemote == false)
+		{
+			if (parkingBrake)
+			{
+				motionX = 0.0;
+				motionZ = 0.0;
+			}
+			else if (cartLinked1 != null)
+			{
+				if ((cartLinked1).trainHandler != null && (cartLinked1).trainHandler.getTrains().size() != 0)
+				{
+					for (int j1 = 0; j1 < (cartLinked1).trainHandler.getTrains().size(); j1++)
+					{
+						EntityRollingStock daRollingStock = (cartLinked1).trainHandler.getTrains().get(j1);
+						if (daRollingStock.getParkingBrakeDW())
+						{
+							motionX = 0.0;
+							motionZ = 0.0;
+							break;
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	private boolean shouldIgnoreSwitch(TileTCRail tile, int i, int j, int k, int meta) {
@@ -1613,6 +1650,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		nbttagcompound.setBoolean("firstLoad", this.firstLoad);
 		nbttagcompound.setFloat("rotation", this.rotation);
 		nbttagcompound.setBoolean("brake", isBraking);
+		nbttagcompound.setBoolean("parkingBrake", parkingBrake);
 
 	}
 
@@ -1631,6 +1669,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		this.firstLoad = nbttagcompound.getBoolean("firstLoad");
 		this.rotation = nbttagcompound.getFloat("rotation");
 		this.isBraking = nbttagcompound.getBoolean("brake");
+		parkingBrake = nbttagcompound.getBoolean("parkingBrake");
+		dataWatcher.updateObject(30, "" + parkingBrake);
 
 	}
 
@@ -1643,7 +1683,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {
-		if (super.interactFirst(entityplayer)){
+		if (super.interactFirst(entityplayer))
+		{
 			return true;
 		}
 		if (entityplayer.ridingEntity == this){
@@ -1667,6 +1708,13 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				if (!worldObj.isRemote) entityplayer.addChatMessage(new ChatComponentText("Train is locked by " + this.getTrainOwner() + "."));
 				return true;
 			}
+		}
+
+		if (trainsOnClick.onClickWithBrakeHandle(this,itemstack,playerEntity,worldObj))
+		{
+			setParkingBrakeFromPacket(!parkingBrake);
+			dataWatcher.updateObject(30, "" + !getParkingBrakeDW());
+			return true;
 		}
 
 		if (itemstack != null && itemstack.getItem() instanceof ItemWrench && this instanceof Locomotive
@@ -1727,7 +1775,10 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				entityplayer.addChatMessage(new ChatComponentText("No other colors available."));
 			}
 		}
-		else if ((trainsOnClick.onClickWithStake(this, itemstack, playerEntity, worldObj))) { return true; }
+		else if ((trainsOnClick.onClickWithStake(this, itemstack, playerEntity, worldObj)))
+		{
+			return true;
+		}
 
 		if (itemstack != null && itemstack.getItem() instanceof ItemPaintbrushThing && entityplayer.isSneaking()) {
 			if (this.acceptedColors != null && this.acceptedColors.size() > 0) {
@@ -2663,5 +2714,60 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	public boolean isInRangeToRenderDist(double p_70112_1_)
 	{
 		return true;
+	}
+
+	public boolean getParkingBrakeDW()
+	{
+		return Boolean.parseBoolean(dataWatcher.getWatchableObjectString(30));
+	}
+
+
+	/**
+	 * Added for SMP
+	 *
+	 * @return true if on, false if off
+	 */
+	public boolean getParkingBrakeFromPacket() {
+		return parkingBrake;
+	}
+
+	/**
+	 * Added for SMP
+	 *
+	 * @param set set 0 if parking break is false, 1 if true
+	 */
+	public void setParkingBrakeFromPacket(boolean set) {
+		parkingBrake = set;
+	}
+
+	public void setParkingBrake(boolean status) {
+		this.parkingBrake = status;
+		Traincraft.brakeChannel.sendToAllAround(new PacketParkingBrake(false, getEntityId()),
+				new NetworkRegistry.TargetPoint(worldObj.provider.dimensionId, posX, posY, posZ, 150.0D));
+	}
+
+	public double convertSpeed(double speed)
+	{
+		//System.out.println("X "+motionX +" Z "+motionZ);
+		if (ConfigHandler.REAL_TRAIN_SPEED) {
+			speed *= 2;// applying ratio
+		} else {
+			speed *= 6;
+		}
+		speed *= 36;
+		//speed *= 10;// convert in ms
+		//speed *= 6;// applying ratio
+		//speed *= 3.6;// convert in km/h
+		return speed;
+	}
+
+	/**
+	 * added for SMP, used by the HUD
+	 *
+	 * @return
+	 */
+	public double getSpeed()
+	{
+		return dataWatcher.getWatchableObjectInt(25);
 	}
 }

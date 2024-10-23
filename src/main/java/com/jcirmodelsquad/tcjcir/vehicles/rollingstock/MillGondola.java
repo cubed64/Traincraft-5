@@ -33,7 +33,7 @@ public class MillGondola extends Freight implements IInventory {
         textureDescriptionMap.put(6, "FNCC");
         textureDescriptionMap.put(7, "PRD");
         textureDescriptionMap.put(8, "PRD");
-        textureDescriptionMap.put(9, "PRD (DEMOMAN)");
+        textureDescriptionMap.put(9, "PRD (DEMOMAN GRAFFITI)");
         textureDescriptionMap.put(10, "DJJX / Generic Black");
         textureDescriptionMap.put(11, "Generic Green");
 
@@ -42,6 +42,8 @@ public class MillGondola extends Freight implements IInventory {
                         "Aggregate - Dirt", 0, 2.475, 0)},
                 { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_peagravel",
                         "Aggregate - Peagravel", 0, 2.475, 0)},
+                { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_gravel",
+                        "Aggregate - Gravel", 0, 2.475, 0)},
                 { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_scrap1",
                         "Scrapmetal A", 0, 2.475, 0)},
                 { new CargoSpecification(Modelgondola_load_flat_aggregates_medium.class, "loads/gondola_load_flat_aggregates_medium_scrap2",

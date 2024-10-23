@@ -62,6 +62,8 @@ public class DieselGP9 extends DieselTrain {
         textureDescriptionMap.put(42, "DLMR (Early)");
         textureDescriptionMap.put(43, "DLMR (Late)");
         textureDescriptionMap.put(44, "DLMR (MOW)");
+        textureDescriptionMap.put(45, "MMID (High Nose)");
+        textureDescriptionMap.put(46, "MMID (Chop Nose)");
     }
     public DieselGP9(World world, double d, double d1, double d2){
         this(world);

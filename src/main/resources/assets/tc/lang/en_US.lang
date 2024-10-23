@@ -301,6 +301,7 @@ item.tc:reinforcedPlastic.name=Fibre-Reinforced Plastic
 item.tc:reinforcedPlates.name=Reinforced Plates
 item.tc:composite_wrench.name=Composite Wrench
 item.tc:paintbrushThing.name=Train Paintbrush
+item.tc:brakeStick.name=Brake Stick
 item.tc:padlock.name=Padlock
 item.tc:adminBook.name=Traincraft Admin Book
 item.tc:wirelessTransmitter.name=MTC Wireless Transmitter
@@ -386,7 +387,7 @@ item.tc:tcRailVeryLargeSlopeSnowGravel.name=Very Large Slope Track (Snowy Gravel
 item.tc:tcRailVeryLargeSlopeDynamic.name=Very Large Slope Track (Dynamic)
 
 <!-- ## TC Keybindings ## -->
-key.categories.traincraft=JCIR-Traincraft
+key.categories.traincraft=FoxTC (Traincraft)
 key.traincraft.horn=Horn/Whistle
 key.traincraft.inventory=Inventory
 key.traincraft.up=Up (Airship)
@@ -607,7 +608,7 @@ entity.tc.Loco Steam Mogul.name=Mogul (US)
 entity.tc.Loco Steam Shay.name=Shay (US)
 entity.tc.Loco Steam Adler.name=Adler
 entity.tc.Loco Electric Tram NY.name=Kawasaki PA4 (US)
-entity.tc.Loco Electric Yellow Wood Tram.name=wooden Tram
+entity.tc.Loco Electric Yellow Wood Tram.name=Wooden Tram
 entity.tc.Loco Electric High Speed ZeroED.name=High Speed Train
 entity.tc.Loco Electric Minetrain.name=Cart Hauler
 entity.tc.Loco Electric BR_E69.name=BR E69
@@ -933,6 +934,7 @@ item.tc:minecartSW900.name=EMD SW900
 item.tc:minecartSW1000.name=EMD SW1000
 item.tc:minecartSW1200.name=EMD SW1200
 item.tc:minecartSW1500.name=EMD SW1500
+item.tc:minecartSW1600.name=FNCC SW1600
 item.tc:minecartMP900.name=Masaou MP900
 item.tc:minecartMP15DCW9.name=WFLW MP15BW
 
@@ -1019,6 +1021,7 @@ entity.tc.SW900.name=EMD SW900
 entity.tc.SW1000.name=EMD SW1000
 entity.tc.SW1200.name=EMD SW1200
 entity.tc.SW1500.name=EMD SW1500
+entity.tc.SW1600.name=FNCC SW1600
 entity.tc.MP900.name=Masaou MP900
 entity.tc.MP15DCW9.name=WFLW MP15BW
 
@@ -1052,6 +1055,7 @@ item.tc:minecartSB18R.name=CEE SB18R
 item.tc:minecartSB18E.name=CEE SB18E
 item.tc:minecartSB18B.name=CEE SB18B
 item.tc:minecartB23.name=GE B23-7
+item.tc:minecartB23S7.name=GE B23-S7 (Super 7)
 item.tc:minecartBQ23.name=GE BQ23-7
 item.tc:minecartSB23R.name=CEE SB23R
 item.tc:minecartSB23E.name=CEE SB23E
@@ -1106,6 +1110,7 @@ entity.tc.SB18R.name=CEE SB18R
 entity.tc.SB18E.name=CEE SB18E
 entity.tc.SB18B.name=CEE SB18B
 entity.tc.B23-7.name=GE B23-7
+entity.tc.B23-S7.name=GE B23-S7
 entity.tc.BQ23-7.name=GE BQ23-7
 entity.tc.SB23R.name=CEE/GE SB23R
 entity.tc.SB23E.name=CEE/GE SB23E
@@ -1223,16 +1228,20 @@ entity.tc.RSD15.name=ALCo RSD-15
 item.tc:minecartVO1000.name=BLW VO-1000
 item.tc:minecartS12.name=BLH S12 (606A)
 item.tc:minecartDS441000.name=BLH DS-4-4-1000 (606SC)
-item.tc:minecartDR441500Shark.name=BLW DR-4-4-1500 (Sharknose)
-item.tc:minecartDR441500BShark.name=BLW DR-4-4-1500B (Sharknose)
+item.tc:minecartDR441500Phase2.name=BLW DR-4-4-1500 (Phase 2)
+item.tc:minecartDR441500BPhase2.name=BLW DR-4-4-1500B (Phase 2)
+item.tc:minecartDR441500Shark.name=BLW DR-4-4-1500 (Phase 3)
+item.tc:minecartDR441500BShark.name=BLW DR-4-4-1500B (Phase 3)
 item.tc:minecartRF16.name=BLH RF-16
 item.tc:minecartRF16B.name=BLH RF-16B
 
 entity.tc.VO1000.name=BLW VO-1000
 entity.tc.S12.name=BLH S12 (606A)
 entity.tc.DS441000.name=BLH DS-4-4-1000 (606SC)
-entity.tc.DR441500Shark.name=BLW DR-4-4-1500 (Sharknose)
-entity.tc.DR441500BShark.name=BLW DR-4-4-1500B (Sharknose)
+entity.tc.DR441500Phase2.name=BLW DR-4-4-1500 (Phase 2)
+entity.tc.DR441500BPhase2.name=BLW DR-4-4-1500B (Phase 2)
+entity.tc.DR441500Shark.name=BLW DR-4-4-1500 (Phase 3)
+entity.tc.DR441500BShark.name=BLW DR-4-4-1500B (Phase 3)
 entity.tc.RF16.name=BLH RF-16
 entity.tc.RF16B.name=BLH RF-16B
 
@@ -1260,6 +1269,7 @@ item.tc:minecartBUnitFOLM1B.name=FOL-M1B (Unpowered)
 item.tc:minecartKrautt.name=Krauss-Maffei ML-4000
 item.tc:minecartILMC.name=I.L.M.C
 item.tc:minecartDD55.name=LA Switcher Company DD55
+item.tc:minecartTB27.name=Masaou TB27
 
 item.tc:minecartSlugMA.name=EMD GP Slug (SlugMA)
 item.tc:minecartF7BSlug.name=EMD F7B Slug
@@ -1277,6 +1287,7 @@ entity.tc.BUnitFOL-M1B.name=FOL-M1B (Unpowered)
 entity.tc.Krautt.name=Krauss-Maffei ML-4000
 entity.tc.ILMC.name=I.L.M.C
 entity.tc.DD55.name=LA Switcher Company DD55
+entity.tc.TB27.name=Masaou TB27
 
 entity.tc.SlugMA.name=EMD GP Slug (SlugMA)
 entity.tc.F7BSlug.name=EMD F7B Slug
@@ -1391,7 +1402,8 @@ item.tc:minecartOreJenny.name=Ore Jenny
 item.tc:minecartPRRGLaHopper.name= PRR GLa Hopper and clones
 item.tc:minecartACF41Gon.name=AC&F 41' 6" Gondola
 item.tc:minecartBethgonII.name=Bethgon II Open Top Hopper
-item.tc:minecart67millgon.name=Greenville Car Co Drop End Gondola
+item.tc:minecart67millgon.name=GSCO 67' Drop-End Mill Gondola
+item.tc:minecart52millgon.name=GSCO 52' Drop-End Mill Gondola
 item.tc:minecartAAR50TonHopper.name=AAR 50 Ton Hopper
 item.tc:minecartAAR70TonHopper.name=AAR 70 Ton Hopper
 
@@ -1403,7 +1415,8 @@ entity.tc.Ore Jenny.name=Ore Jenny
 entity.tc.PRR GLa hopper.name= PRR GLa Hopper and clones
 entity.tc.ACF41Gon.name=AC&F 41' 6" Gondola
 entity.tc.BethgonII.name=Bethgon II Open Top Hopper
-entity.tc.67millgon.name=Greenville Car Co Drop End Gondola
+entity.tc.67millgon.name=GSCO 67' Drop-End Mill Gondola
+entity.tc.52millgon.name=GSCO 52' Drop-End Mill Gondola
 entity.tc.AAR 50 Ton Hopper.name=AAR 50 Ton Hopper
 entity.tc.AAR 70 Ton Hopper.name=AAR 70 Ton Hopper
 
@@ -1492,6 +1505,9 @@ item.tc:minecartACFGNRPO_30.name=American Car & Foundry GN RPO (30' mail section
 item.tc:minecartACFGN60SeatCoach.name=American Car & Foundry GN 60 Seat Coach
 item.tc:minecartACFGNDiner_Observation.name=American Car & Foundry GN Diner-Observation
 item.tc:minecartACFGN28SeatCoach_Dinette.name=American Car & Foundry GN 28 Seat Coach-Dinette
+item.tc:minecartACFGN1DR_17SeatParlor_Observation.name=American Car & Foundry GN 1DR-17 Seat Parlor-Observation
+item.tc:minecartPSGNRPO_30.name=Pullman Standard GN RPO (30' mail section)
+
 
 item.tc:minecartOB84SeatCoach.name=Osgood Bradley 84 Seat Coach
 item.tc:minecartOB92SeatCoach.name=Osgood Bradley 92 Seat Coach
@@ -1527,6 +1543,8 @@ item.tc:minecartACFUPRPO60.name=American Car & Foundry RPO(60')
 item.tc:minecartBuddDome54SeatCoach.name=Budd Dome-54 Seat Coach
 
 item.tc:minecartBuddRDG56SeatCoachLounge.name=Budd RDG 56 Seat Coach-Lounge
+item.tc:minecartBuddRDGDiner_Lounge.name=Budd RDG Diner-Lounge
+item.tc:minecartBuddRDG56SeatCoach_Observation.name=Budd RDG 56 Seat Coach-Observation
 
 item.tc:minecartBuddCRIP52SeatCoach.name=Budd and Pullman Standard CRIP 52 Seat Coach
 
@@ -1535,6 +1553,7 @@ item.tc:minecartBuddNYC52SeatCoach.name=Budd NYC 52 Seat Coach
 item.tc:minecartBuddCBQ52SeatCoach.name=Budd CB&Q 52 Seat Coach
 item.tc:minecartBuddDome46SeatCoach.name=Budd Dome-46 Seat Coach
 item.tc:minecartBuddCBQDome50SeatCoach.name=Budd CB&Q Dome-50 Seat Coach
+item.tc:minecartBuddPrewarBaggage.name=Budd Prewar Baggage
 
 item.tc:minecartBuddATSF52SeatCoach.name=Budd ATSF 52 Seat Coach
 item.tc:minecartBuddATSF48SeatCoach.name=Budd ATSF 48 Seat Coach (news butcher stand)
@@ -1551,6 +1570,19 @@ item.tc:minecartPSCEI1DR28SeatParlorObservation.name=Pullman Standard C&EI 1DR-2
 
 item.tc:minecartOBHWNH5570_5589Baggage.name=Osgood Bradley NH 5570-5589 Series Baggage
 
+item.tc:minecartBuddCN68SeatCoach_Observation.name=Budd CN 68 Seat Coach-Observation
+item.tc:minecartBuddCNCoach.name=Budd RDG 72 or 54 Seat Coach
+item.tc:minecartBuddCNDiner_Lounge.name=Budd CN Diner-Lounge
+item.tc:minecartBuddCN39SeatParlor_Observation.name=Budd CN 39 Seat Parlor-Observation
+item.tc:minecartBuddCN59SeatCoach_Observation.name=Budd CN 59 Seat Coach-Observation
+item.tc:minecartNSCCNBaggage.name=National Steel Car 76' Baggage
+
+item.tc:minecartPSSOUBaggage.name=Pullman Standard SOU Baggage
+item.tc:minecartPSSOURPO_30.name=Pullman Standard SOU RPO (30' mail section)
+
+item.tc:minecartPRECOPendulumCoach.name=Pacific Railway Equipment Company Pendulum Coach
+
+item.tc:minecartPSFNCCBaggage_Dinette.name=Pullman Standard FNCC Baggage-Dinette
 
 entity.tc.Freight PS 85 Baggage.name=Pullman Standard 85' Baggage
 entity.tc.PS 5-6-5 Sleeper.name=Pullman Standard 10-6 Sleeper (Center Bedroom)
@@ -1577,6 +1609,8 @@ entity.tc.AC&F GN RPO (30' mail).name=American Car & Foundry GN RPO (30' mail se
 entity.tc.AC&F GN 60 Seat Coach.name=American Car & Foundry GN 60 Seat Coach
 entity.tc.AC&F GN Diner-Observation.name=American Car & Foundry GN Diner-Observation
 entity.tc.AC&F GN 28 Seat Coach-Dinette.name=American Car & Foundry GN 28 Seat Coach-Dinette
+entity.tc.AC&F GN 1DR-17 Seat Parlor-Observation.name=American Car & Foundry GN 1DR-17 Seat Parlor-Observation
+entity.tc.PS GN RPO (30' mail).name=Pullman Standard GN RPO (30' mail section)
 
 entity.tc.OB 84 Seat Coach.name=Osgood Bradley 84 Seat Coach
 entity.tc.OB 92 Seat Coach.name=Osgood Bradley 92 Seat Coach
@@ -1611,6 +1645,8 @@ entity.tc.AC&F UP RPO(60').name=American Car & Foundry RPO(60')
 entity.tc.Budd Dome-54 Seat Coach.name=Budd Dome-54 Seat Coach
 
 entity.tc.Budd RDG 56 Seat Coach-Lounge.name=Budd RDG 56 Seat Coach-Lounge
+entity.tc.Budd RDG Diner-Lounge.name=Budd RDG Diner-Lounge
+entity.tc.Budd RDG 56 Seat Coach-Observation.name=Budd RDG 56 Seat Coach-Observation
 
 entity.tc.Budd CRIP 52 Seat Coach.name=Budd and Pullman Standard CRIP 52 Seat Coach
 
@@ -1619,6 +1655,7 @@ entity.tc.Budd NYC 52 Seat Coach.name=Budd NYC 52 Seat Coach
 entity.tc.Budd CB&Q 52 Seat Coach.name=Budd CB&Q 52 Seat Coach
 entity.tc.Budd Dome-46 Seat Coach.name=Budd Dome-46 Seat Coach
 entity.tc.Budd CB&Q Dome-50 Seat Coach.name=Budd CB&Q Dome-50 Seat Coach
+entity.tc.Budd Prewar Baggage.name=Budd Prewar Baggage
 
 entity.tc.Budd ATSF 52 Seat Coach.name=Budd ATSF 52 Seat Coach
 entity.tc.Budd ATSF 48 Seat Coach.name=Budd ATSF 48 Seat Coach (news butcher stand)
@@ -1634,6 +1671,20 @@ entity.tc.PS C&EI Diner.name=Pullman Standard C&EI Diner
 entity.tc.PS C&EI 1DR-28 Seat Parlor-Observation.name=Pullman Standard C&EI 1DR-28 Seat Parlor-Observation
 
 entity.tc.OB HW NH 5570-5589 Series Baggage.name=Osgood Bradley NH 5570-5589 Series Baggage
+
+entity.tc.Budd CN 68 Seat Coach-Observation.name=Budd CN 68 Seat Coach-Observation
+entity.tc.Budd CN 72 or 54 Seat Coach-Lounge.name=Budd CN 72 or 54 Seat Coach
+entity.tc.Budd CN Diner-Lounge.name=Budd CN Diner-Lounge
+entity.tc.Budd CN 39 Seat Parlor-Observation.name=Budd CN 39 Seat Parlor-Observation
+entity.tc.Budd CN 59 Seat Coach-Observation.name=Budd CN 59 Seat Coach-Observation
+entity.tc.NSC CN Baggage.name=National Steel Car 76' Baggage
+
+entity.tc.PS SOU Baggage.name=Pullman Standard SOU Baggage
+entity.tc.PS SOU RPO (30' mail).name=Pullman Standard SOU RPO (30' mail section)
+
+entity.tc.PRECO Pendulum Coach.name=Pacific Railway Equipment Company Pendulum Coach
+
+entity.tc.PS FNCC Baggage-LC-Lounge.name=Pullman Standard FNCC Baggage-Dinette
 
 item.tc:minecartAmfleet.name=Amfleet 1 Coach
 item.tc:minecartAmfleet2.name=Amfleet 2 Coach
@@ -1659,6 +1710,7 @@ item.tc:minecartHBC1Ccaboose.name=KSFI HBC1-C Caboose
 item.tc:minecartHBC1Bcaboose.name=KSFI HBC1-B Caboose
 item.tc:minecartDRGWCaboose.name=DRGW 01400 Series Caboose
 item.tc:minecartICCBaywindowWP.name=ICC Baywindow Caboose (WP Config)
+item.tc:minecartCA11.name=ICC CA11 Baywindow Caboose
 item.tc:minecartWPShops600Series.name=WP Shops 600 series Caboose
 
 entity.tc.WVcaboose.name=International Car Co. Wide Vision Caboose
@@ -1666,6 +1718,7 @@ entity.tc.HBC1C.name=KSFI HBC1-C Caboose
 entity.tc.HBC1B.name=KSFI HBC1-B Caboose
 entity.tc.DRGWCaboose.name=DRGW 01400 Series Caboose
 entity.tc.ICCBaywindowWP.name=ICC Baywindow Caboose (WP Config)
+entity.tc.CA11.name=ICC CA11 Baywindow Caboose
 entity.tc.WPShops600Series.name=WP Shops 600 series Caboose
 
 --------------------------------------------------------
@@ -1680,7 +1733,6 @@ item.tc:minecartAipkitExplorer.name=Aipkit Explorer
 item.tc:minecartAipkitExplorer2.name=Explorer-II
 item.tc:minecartHighrailTruck.name=Generic Highrail Truck
 item.tc:minecartHighrailVan.name=Generic Highrail Van
-item.tc:minecartTGVMobile.name=TGV Highrail Van
 item.tc:minecartHustler.name=Hustler Switcher
 item.tc:minecartFRED.name=Flashing Rear End Device (FRED)
 
@@ -1699,7 +1751,6 @@ entity.tc.aipkitExplorer.name=Aipkit Explorer
 entity.tc.Aipkit Explorer-II.name=Explorer-II
 entity.tc.Highrail Truck.name=Generic Highrail Truck
 entity.tc.Highrail Van.name=Generic Highrail Van
-entity.tc.TGVmobile.name=TGV Highrail Van
 entity.tc.Hustler.name=Hustler Switcher
 entity.tc.FRED.name=Flashing Rear End Device (FRED)
 
@@ -1715,3 +1766,7 @@ item.tc:minecartTwoBil.name=2-Bil Engine
 entity.tc.TwoBil.name=2-Bil Engine
 item.tc:minecartTwoBilTail.name=2-Bil Tail
 entity.tc.TwoBilTail.name=2-Bil Tail
+
+
+item.tc:minecartWorkdayHyrail.name=1980 Pine Workday Hi-rail Truck
+entity.tc.WorkdayHyrail.name=1980 Pine Workday Hi-rail Truck

@@ -19,6 +19,7 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
@@ -1023,20 +1024,10 @@ public class ModelWPShops600Series extends ModelConverter //Same as Filename
 	ModelCabooseTruck2 theTrucks2 = new ModelCabooseTruck2();
 	ModelAndrews_Truck bogie2 = new ModelAndrews_Truck();
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 239; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
+
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1467|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1567){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/swing-motion_caboose_Truck_Silver.png"));
 			GL11.glPushMatrix();
@@ -1062,16 +1053,5 @@ public class ModelWPShops600Series extends ModelConverter //Same as Filename
 			GL11.glTranslated(1.15,-0.0,0.00);
 			bogie2.render(entity,f,f1,f2,f3,f4,f5);
 			GL11.glPopMatrix();
-	}
-	public float[] getTrans() {
-		return new float[]{-0F, 0.15F, 0.00F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
 	}
 }

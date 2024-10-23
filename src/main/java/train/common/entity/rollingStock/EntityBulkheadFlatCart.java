@@ -46,6 +46,28 @@ public class EntityBulkheadFlatCart extends Freight implements IInventory {
 						"loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", 0, 2.38, 0) },
 				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//wood wash2
 						"loads/WrappedWood3_Washaska_Straps2", "Wrapped Lumber (Washaska)", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//wood foggi
+						"loads/WrappedWood3_FRLC_Straps", "Wrapped Lumber (Foggy River)", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//Thick & Thin
+						"loads/WrappedWood3_Thick_n_Thin_Straps", "Wrapped Lumber (Thick & Thin)", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//Oak
+						"loads/UnwrappedWood_oak", "Unwrapped Lumber (Oak)", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//Spruce
+						"loads/UnwrappedWood_spruce", "Unwrapped Lumber (Spruce)", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//Birch
+						"loads/UnwrappedWood_birch", "Unwrapped Lumber (Birch)", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//Jungle
+						"loads/UnwrappedWood_jungle", "Unwrapped Lumber (Jungle)", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//Acacia
+						"loads/UnwrappedWood_acacia", "Unwrapped Lumber (Acacia)", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//Dark Oak
+						"loads/UnwrappedWood_darkoak", "Unwrapped Lumber (Dark Oak)", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//Pine
+						"loads/UnwrappedWood_pine", "Unwrapped Lumber (Pine)", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//Redwood
+						"loads/UnwrappedWood_redwood", "Unwrapped Lumber (Redwood)", 0, 2.38, 0) },
+				{ new CargoSpecification(Modelwrappedwood_opti_brosbulk.class,//Fir
+						"loads/UnwrappedWood_fir", "Unwrapped Lumber (Fir)", 0, 2.38, 0) },
 		}));
 	}
 	

@@ -10,17 +10,16 @@
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelAlcoPATruck;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
-
-import java.util.ArrayList;
 
 public class ModelPB extends ModelConverter //Same as Filename
 {
@@ -309,12 +308,12 @@ public class ModelPB extends ModelConverter //Same as Filename
 		bodyModel[265] = new ModelRendererTurbo(this, 385, 13, textureX, textureY); // exhaust 1
 		bodyModel[266] = new ModelRendererTurbo(this, 181, 59, textureX, textureY); // Box 301
 		bodyModel[267] = new ModelRendererTurbo(this, 184, 66, textureX, textureY); // Box 302
-		bodyModel[268] = new ModelRendererTurbo(this, 461, 74, textureX, textureY, "glow"); // backing light type 1
-		bodyModel[269] = new ModelRendererTurbo(this, 453, 68, textureX, textureY, "glow"); // backing light type 2
-		bodyModel[270] = new ModelRendererTurbo(this, 461, 68, textureX, textureY, "glow"); // backing light type 4
-		bodyModel[271] = new ModelRendererTurbo(this, 461, 237, textureX, textureY, "glow"); // backing light type 1
-		bodyModel[272] = new ModelRendererTurbo(this, 453, 231, textureX, textureY, "glow"); // backing light type 2
-		bodyModel[273] = new ModelRendererTurbo(this, 461, 231, textureX, textureY, "glow"); // backing light type 4
+		bodyModel[268] = new ModelRendererTurbo(this, 461, 74, textureX, textureY, BoxName.lamp); // backing light type 1
+		bodyModel[269] = new ModelRendererTurbo(this, 453, 68, textureX, textureY, BoxName.lamp); // backing light type 2
+		bodyModel[270] = new ModelRendererTurbo(this, 461, 68, textureX, textureY, BoxName.lamp); // backing light type 4
+		bodyModel[271] = new ModelRendererTurbo(this, 461, 237, textureX, textureY, BoxName.lamp); // backing light type 1
+		bodyModel[272] = new ModelRendererTurbo(this, 453, 231, textureX, textureY, BoxName.lamp); // backing light type 2
+		bodyModel[273] = new ModelRendererTurbo(this, 461, 231, textureX, textureY, BoxName.lamp); // backing light type 4
 		bodyModel[274] = new ModelRendererTurbo(this, 286, 149, textureX, textureY); // Box 84
 		bodyModel[275] = new ModelRendererTurbo(this, 286, 153, textureX, textureY); // Box 88
 		bodyModel[276] = new ModelRendererTurbo(this, 294, 149, textureX, textureY); // Box 85
@@ -339,18 +338,18 @@ public class ModelPB extends ModelConverter //Same as Filename
 		bodyModel[295] = new ModelRendererTurbo(this, 465, 16, textureX, textureY); // Box 0
 		bodyModel[296] = new ModelRendererTurbo(this, 457, 16, textureX, textureY); // Box 0
 		bodyModel[297] = new ModelRendererTurbo(this, 159, 50, textureX, textureY); // Box 336
-		bodyModel[298] = new ModelRendererTurbo(this, 152, 49, textureX, textureY, "glow"); // Box 337 ane 2 beam
-		bodyModel[299] = new ModelRendererTurbo(this, 152, 54, textureX, textureY, "glow"); // Box 338 ane 2 beam
+		bodyModel[298] = new ModelRendererTurbo(this, 152, 49, textureX, textureY, BoxName.lamp); // Box 337 ane 2 beam
+		bodyModel[299] = new ModelRendererTurbo(this, 152, 54, textureX, textureY, BoxName.lamp); // Box 338 ane 2 beam
 		bodyModel[300] = new ModelRendererTurbo(this, 378, 19, textureX, textureY); // Box 114
 		bodyModel[301] = new ModelRendererTurbo(this, 378, 16, textureX, textureY); // Box 74
 		bodyModel[302] = new ModelRendererTurbo(this, 378, 22, textureX, textureY); // Box 78
 		bodyModel[303] = new ModelRendererTurbo(this, 377, 12, textureX, textureY); // Box 245
 		bodyModel[304] = new ModelRendererTurbo(this, 378, 25, textureX, textureY); // Box 257
 		bodyModel[305] = new ModelRendererTurbo(this, 94, 137, textureX, textureY); // Box 364 prime base
-		bodyModel[306] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, "glow"); // Box 6 PRIME1-1
-		bodyModel[307] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, "glow"); // Box 7 PRIME1-3
-		bodyModel[308] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, "glow"); // Box 8 PRIME1-2
-		bodyModel[309] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, "glow"); // Box 9 PRIME1-4
+		bodyModel[306] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, BoxName.prime1); // Box 6 PRIME1-1
+		bodyModel[307] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, BoxName.prime3); // Box 7 PRIME1-3
+		bodyModel[308] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, BoxName.prime2); // Box 8 PRIME1-2
+		bodyModel[309] = new ModelRendererTurbo(this, 94, 133, textureX, textureY, BoxName.prime4); // Box 9 PRIME1-4
 		bodyModel[310] = new ModelRendererTurbo(this, 255, 64, textureX, textureY); // Box 301
 		bodyModel[311] = new ModelRendererTurbo(this, 261, 67, textureX, textureY); // Box 302
 		bodyModel[312] = new ModelRendererTurbo(this, 266, 64, textureX, textureY); // Box 447
@@ -1498,20 +1497,10 @@ public class ModelPB extends ModelConverter //Same as Filename
 	}
 	ModelAlcoPATruck theTruck = new ModelAlcoPATruck();
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 358; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("glow")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
+
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 11 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 24) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/AlcoPATruckSilver.png"));
 		} else {
@@ -1525,12 +1514,5 @@ public class ModelPB extends ModelConverter //Same as Filename
 		theTruck.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
 
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{1.12D, 1.19D, 0.12D});
-			}
-		};
 	}
 }

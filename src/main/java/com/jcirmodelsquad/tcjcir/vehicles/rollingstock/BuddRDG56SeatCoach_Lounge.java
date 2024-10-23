@@ -1,77 +1,33 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
-import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import train.common.api.EntityRollingStock;
-import train.common.api.IPassenger;
+import train.common.api.AbstractPassengerCar;
 
-public class BuddRDG56SeatCoach_Lounge extends EntityRollingStock implements IPassenger {
-
-	public BuddRDG56SeatCoach_Lounge(World world) {
+public class BuddRDG56SeatCoach_Lounge extends AbstractPassengerCar
+{
+	public BuddRDG56SeatCoach_Lounge(World world)
+	{
 		super(world);
+		textureDescriptionMap.put(0, "RDG 2");
+		textureDescriptionMap.put(1, "RDG 4");
+		textureDescriptionMap.put(2, "RDG 2 (post 1953 refurbishment)");
+		textureDescriptionMap.put(3, "RDG 4 (post 1953 refurbishment)");
 	}
 
-	public BuddRDG56SeatCoach_Lounge(World world, double d, double d1, double d2) {
-		this(world);
-		setPosition(d, d1 + (double) yOffset, d2);
-		motionX = 0.0D;
-		motionY = 0.0D;
-		motionZ = 0.0D;
-		prevPosX = d;
-		prevPosY = d1;
-		prevPosZ = d2;
-	}
-
-	@Override
-	public void updateRiderPosition() {
-		if(riddenByEntity==null){return;}
-		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset()-0.1F, posZ);
+	public BuddRDG56SeatCoach_Lounge(World world, double posX, double posY, double posZ)
+	{
+		super(world, posX, posY, posZ);
 	}
 
 	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
+	public double getAdditionalYOffset()
+	{
+		return -0.1F;
 	}
 
 	@Override
-	public boolean interactFirst(EntityPlayer entityplayer) {
-		playerEntity = entityplayer;
-		if ((super.interactFirst(entityplayer))) {
-			return false;
-		}
-		if (!worldObj.isRemote) {
-			ItemStack itemstack = entityplayer.inventory.getCurrentItem();
-			if(lockThisCart(itemstack, entityplayer))return true;
-			if (riddenByEntity != null && (riddenByEntity instanceof EntityPlayer) && riddenByEntity != entityplayer) {
-				return true;
-			}
-			if (!worldObj.isRemote) {
-				entityplayer.mountEntity(this);
-			}
-		}
-		return true;
-	}
-
-	@Override
-	public boolean canBeRidden() {
-		return true;
-	}
-
-	@Override
-	public boolean isStorageCart() {
-		return false;
-	}
-
-	@Override
-	public boolean isPoweredCart() {
-		return false;
-	}
-
-	@Override
-	public float getOptimalDistance(EntityMinecart cart) {
-		return 3.73F;
+	public float getOptimalLinkingDistance()
+	{
+		return 3.72F;
 	}
 }

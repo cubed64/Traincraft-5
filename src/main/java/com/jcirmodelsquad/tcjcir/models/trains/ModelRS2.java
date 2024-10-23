@@ -2029,7 +2029,7 @@ public class ModelRS2 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModelWithoutBeacon(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7324) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
@@ -2068,23 +2068,5 @@ public class ModelRS2 extends ModelConverter //Same as Filename
 			theTrucks4.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{2.025D, 1.35D, -0.0D});
-			}
-		};
-	}
-	public float[] getTrans() {
-		return new float[]{-1.225F, 0.15F, 0F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
 	}
 }

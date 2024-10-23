@@ -343,10 +343,10 @@ public class AutoTrain2 {
         try {
 
 
-            if ((locomotive.cartLinked1).train != null && (locomotive.cartLinked1).train.getTrains().size() != 0 && (locomotive.cartLinked1).train.getTrains().size() > 1) {
+            if ((locomotive.cartLinked1).trainHandler != null && (locomotive.cartLinked1).trainHandler.getTrains().size() != 0 && (locomotive.cartLinked1).trainHandler.getTrains().size() > 1) {
 
-                for (int i = 0; i < (locomotive.cartLinked1).train.getTrains().size(); i++) {
-                    EntityRollingStock stock = (locomotive.cartLinked1).train.getTrains().get(i);
+                for (int i = 0; i < (locomotive.cartLinked1).trainHandler.getTrains().size(); i++) {
+                    EntityRollingStock stock = (locomotive.cartLinked1).trainHandler.getTrains().get(i);
                     if (stock != locomotive && stock instanceof Locomotive) {
                         return (Locomotive) stock;
                     }

@@ -5,9 +5,12 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
+import train.common.Traincraft;
+import train.common.core.network.PacketParkingBrake;
 import train.common.library.ItemIDs;
 
-public class TrainsOnClick {
+public class TrainsOnClick
+{
 	public boolean onClickWithStake(AbstractTrains train, ItemStack itemstack, EntityPlayer playerEntity, World world) {
 		if (itemstack != null && itemstack.getItem() == ItemIDs.stake.item && !world.isRemote &&
 				(FMLCommonHandler.instance().getMinecraftServerInstance().isSinglePlayer() || !train.isLinked() || train.getTrainOwner().equals(playerEntity.getDisplayName()) || train.getTrainOwner().equals("") || train.getTrainOwner()==null)) {
@@ -68,14 +71,14 @@ public class TrainsOnClick {
 					train.isAttaching = false;
 					train.isAttached = false;
 
-					if (((EntityRollingStock) train).train != null) {
-						((EntityRollingStock) train).train.resetTrain();
+					if (((EntityRollingStock) train).trainHandler != null) {
+						((EntityRollingStock) train).trainHandler.resetTrain();
 					}
 
 
-					if (((EntityRollingStock) train).train != null && ((EntityRollingStock) train).train.getTrains().size() <= 1) {
+					if (((EntityRollingStock) train).trainHandler != null && ((EntityRollingStock) train).trainHandler.getTrains().size() <= 1) {
 						/** no more @RollingStocks in the train then remove the train object from the global list */
-						EntityRollingStock.allTrains.remove(((EntityRollingStock) train).train);
+						EntityRollingStock.allTrains.remove(((EntityRollingStock) train).trainHandler);
 						//System.out.println("Train is destroyed, remove it from the global array");
 					}
 				}
@@ -85,6 +88,72 @@ public class TrainsOnClick {
 		} else {
 			return false;
 		}
+	}
 
+	public boolean onClickWithBrakeHandle(AbstractTrains entityRollingStock, ItemStack itemstack, EntityPlayer playerEntity, World world)
+	{
+		if (itemstack != null && itemstack.getItem() == ItemIDs.brakeStick.item && !world.isRemote
+				&& (entityRollingStock instanceof Freight || (entityRollingStock instanceof AbstractPassengerCar || entityRollingStock instanceof IPassenger || entityRollingStock instanceof LiquidTank || entityRollingStock instanceof AbstractWorkCart))
+				&& (FMLCommonHandler.instance().getMinecraftServerInstance().isSinglePlayer()
+					|| entityRollingStock.getTrainOwner().equals(playerEntity.getDisplayName())
+					|| entityRollingStock.getTrainOwner().equals("")
+					|| entityRollingStock.getTrainOwner() == null))
+		{
+			if (playerEntity.isSneaking())
+			{
+				if (((EntityRollingStock) entityRollingStock).trainHandler != null)
+				{
+					for (EntityRollingStock rollingStock : ((EntityRollingStock) entityRollingStock).trainHandler.getTrains())
+					{
+						if (rollingStock.getSpeed() >= 10)
+						{
+							if (!world.isRemote)
+							{
+								playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " is going to fast to engage the brake"));
+							}
+
+							return false;
+						}
+					}
+				}
+				else
+				{
+					if (((EntityRollingStock)entityRollingStock).getSpeed() >= 10)
+					{
+						if (!world.isRemote)
+						{
+							playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " is going to fast to engage the brake"));
+						}
+
+						return false;
+					}
+				}
+
+				if (((EntityRollingStock)entityRollingStock).parkingBrake)
+				{
+					if (!world.isRemote)
+					{
+						playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " disengaged parking brake"));
+					}
+					Traincraft.brakeChannel.sendToServer(new PacketParkingBrake(false, entityRollingStock.getEntityId()));
+
+					return true;
+				}
+				else
+				{
+					if (!world.isRemote)
+					{
+						playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " engaged parking brake"));
+					}
+					Traincraft.brakeChannel.sendToServer(new PacketParkingBrake(true, entityRollingStock.getEntityId()));
+
+					return true;
+				}
+			}
+
+			return false;
+		}
+
+		return false;
 	}
 }

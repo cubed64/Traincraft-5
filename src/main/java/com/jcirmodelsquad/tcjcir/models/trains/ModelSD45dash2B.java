@@ -1030,7 +1030,7 @@ public class ModelSD45dash2B extends ModelConverter //Same as Filename
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 154453) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/flexicoil_c2h_Black.png"));
@@ -1048,10 +1048,6 @@ public class ModelSD45dash2B extends ModelConverter //Same as Filename
 		GL11.glTranslated(-1.95F, -0.32F, 0);
 		theTrucks.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
-	}
-
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
-	{
 	}
 
 	public ModelRendererTurbo SD45dash2Model[];

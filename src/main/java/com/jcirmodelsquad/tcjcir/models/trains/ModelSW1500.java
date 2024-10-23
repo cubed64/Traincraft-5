@@ -22,8 +22,6 @@ import train.common.api.AbstractTrains;
 import train.common.enums.BoxName;
 import train.common.library.Info;
 
-import java.util.ArrayList;
-
 public class ModelSW1500 extends ModelConverter //Same as Filename
 {
 	int textureX = 512;
@@ -200,7 +198,7 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 		bodyModel[154] = new ModelRendererTurbo(this, 195, 108, textureX, textureY); // Box 311 nasa cap
 		bodyModel[155] = new ModelRendererTurbo(this, 1, 41, textureX, textureY); // Box 312
 		bodyModel[156] = new ModelRendererTurbo(this, 4, 41, textureX, textureY); // Box 313
-		bodyModel[157] = new ModelRendererTurbo(this, 21, 12, textureX, textureY, "lamp"); // Box 315 glow commander beacon
+		bodyModel[157] = new ModelRendererTurbo(this, 21, 12, textureX, textureY, BoxName.commander); // Box 315 glow commander beacon
 		bodyModel[158] = new ModelRendererTurbo(this, 20, 16, textureX, textureY); // Box 316
 		bodyModel[159] = new ModelRendererTurbo(this, 126, 185, textureX, textureY, "lamp"); // Box 71 glow speedometer
 		bodyModel[160] = new ModelRendererTurbo(this, 107, 192, textureX, textureY); // Box 296
@@ -1797,8 +1795,8 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 		bodyModel[428].rotateAngleY = -0.45378561F;
 
 		bodyModel[429].addShapeBox(0F, 0F, -2F, 1, 4, 3, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F); // Box 275 cs speedo glow
-		bodyModel[429].setRotationPoint(11.5F, -19.5F, 6.5F);
-		bodyModel[429].rotateAngleY = 0.17453293F;
+		bodyModel[429].setRotationPoint(11.5F, -19.5F, 7.5F);
+		//bodyModel[429].rotateAngleY = 0.17453293F;
 
 		bodyModel[430].addShapeBox(0F, 0F, 0F, 2, 6, 2, 0F,0F, 0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F, -3.75F, 0F, 0F, -3.5F, 0F, 0F, -3.5F, 0F, 0F, -3.75F, 0F); // Box 527 why dont you filter some bitches instead
 		bodyModel[430].setRotationPoint(11F, 1F, 8.5F);
@@ -1810,7 +1808,7 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 12 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4
 			|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 184
@@ -1886,25 +1884,5 @@ public class ModelSW1500 extends ModelConverter //Same as Filename
 			theTypeA.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-	public float[] getTrans() {
-		return new float[]{-1.0F, 0.15F, 0.00F};
-	}
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.90D, 1.40D, 0.0D});
-				add(new double[]{1.65D, 1.40D, 0.0D});
-			}
-		};
 	}
 }

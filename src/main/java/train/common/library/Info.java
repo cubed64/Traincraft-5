@@ -12,7 +12,7 @@ public class Info {
 	/* Mod relevant information */
 	public static final String modID = "tc";
 	public static final String modName = "Fox-Traincraft";
-	public static final String modVersion = "1.9.5.2";
+	public static final String modVersion = "2.0.0.0";
 	public static final String channel = "Traincraft";
 	public static final String keyChannel = "TraincraftKey";
 	public static final String rotationChannel = "TraincraftRotation";
@@ -30,6 +30,7 @@ public class Info {
 	public static final String modelTexPrefix = "textures/models/";
 	public static final String armorPrefix = "textures/armor/";
 	public static final String villagerPrefix = "textures/villager/";
+	public static final String fixedOverlayTexturePrefix = "textures/trains/fixedOverlays/";
 
 	public static final String TEX_TIER_I = guiPrefix + "gui_tierI_ironAge.png";
 	public static final String TEX_TIER_II = guiPrefix + "gui_tierII_steelAge.png";

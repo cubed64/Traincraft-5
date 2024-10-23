@@ -11,7 +11,6 @@ package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is locat
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2_old;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
@@ -22,8 +21,6 @@ import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.enums.BoxName;
 import train.common.library.Info;
-
-import java.util.ArrayList;
 
 public class ModelB30 extends ModelConverter//Same as Filename
 {
@@ -1585,7 +1582,7 @@ public class ModelB30 extends ModelConverter//Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 2347||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3247) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
@@ -1642,12 +1639,5 @@ public class ModelB30 extends ModelConverter//Same as Filename
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.95D, 1.4D, 0.0D});
-			}
-		};
 	}
 }

@@ -20,7 +20,9 @@ public class ACFGNRPO_30 extends Freight implements IInventory {
 		super(world);
 		initFreightCart();
 		textureDescriptionMap.put(0, "GN Internationals");
-		textureDescriptionMap.put(1, "GN Red River");
+		textureDescriptionMap.put(1, "GN Internationals (late)");
+		textureDescriptionMap.put(2, "GN Red River");
+		textureDescriptionMap.put(3, "GN Red River (late)");
 	}
 
 	public void initFreightCart() {

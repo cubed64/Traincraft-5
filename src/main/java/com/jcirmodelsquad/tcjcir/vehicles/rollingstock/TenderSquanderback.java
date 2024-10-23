@@ -23,6 +23,9 @@ public class TenderSquanderback extends Tender implements IInventory {
 	public TenderSquanderback(World world) {
 		super(world, FluidRegistry.WATER, 0, EnumTrains.SquanderbackTender.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initFreightTender();
+		textureDescriptionMap.put(0, "WRX");
+		textureDescriptionMap.put(1, "WRX (Logo)");
+		textureDescriptionMap.put(2, "CDC&S");
 	}
 
 	public void initFreightTender() {

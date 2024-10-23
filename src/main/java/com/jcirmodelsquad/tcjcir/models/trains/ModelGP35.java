@@ -2058,12 +2058,14 @@ public class ModelGP35 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 0
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 9 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15
-				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 23 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 24) {
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 23 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 24
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 26 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 27
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 28|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 25) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.37, -0.0, 0);//front & rear
@@ -2100,21 +2102,5 @@ public class ModelGP35 extends ModelConverter //Same as Filename
 			theBlombi.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{1.65D, 1.3D, 0.0D});//front
-			}
-		};
-	}
-	public float[] getTrans() { return new float[]{-1.45F, 0.155F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
 	}
 }

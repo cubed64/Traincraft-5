@@ -18,6 +18,7 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
@@ -1644,20 +1645,10 @@ public class ModelKrautt extends ModelConverter //Same as Filename
 	}
 	ModelKrauttTrucc theTrucks = new ModelKrauttTrucc();
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 390; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
+
 		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/KM_ML4000_TruckFront.png"));
 		GL11.glPushMatrix();
 		GL11.glTranslatef(-1.73F, 0.0F, 0F);
@@ -1670,23 +1661,5 @@ public class ModelKrautt extends ModelConverter //Same as Filename
 		GL11.glTranslated(-1.73F, 0.0F, 0);
 		theTrucks.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
-	}
-	public float[] getTrans() { return new float[]{-1.6F, 0.155F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
-	}
-
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.57D, 1.3D, 0.0D});
-				add(new double[]{2.5D, 1.3D, 0.0D});
-			}
-		};
 	}
 }

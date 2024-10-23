@@ -10,7 +10,6 @@
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
 import com.jcirmodelsquad.tcjcir.models.trucks.Modelge_hiad;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
@@ -22,7 +21,6 @@ import train.common.api.AbstractTrains;
 import train.common.enums.BoxName;
 import train.common.library.Info;
 
-import java.util.ArrayList;
 
 public class ModelAC44C extends ModelConverter //Same as Filename
 {
@@ -354,7 +352,7 @@ public class ModelAC44C extends ModelConverter //Same as Filename
 		bodyModel[308] = new ModelRendererTurbo(this, 67, 4, textureX, textureY); // Box 378
 		bodyModel[309] = new ModelRendererTurbo(this, 7, 11, textureX, textureY); // Box 379
 		bodyModel[310] = new ModelRendererTurbo(this, 115, 39, textureX, textureY, "lamp"); // Box 301 markerlight glow
-		bodyModel[311] = new ModelRendererTurbo(this, 115, 42, textureX, textureY); // Box 344
+		bodyModel[311] = new ModelRendererTurbo(this, 115, 42, textureX, textureY, "lamp"); // Box 344
 		bodyModel[312] = new ModelRendererTurbo(this, 4, 110, textureX, textureY); // Box 280
 		bodyModel[313] = new ModelRendererTurbo(this, 15, 112, textureX, textureY); // Box 285
 		bodyModel[314] = new ModelRendererTurbo(this, 41, 90, textureX, textureY); // Box 727
@@ -1802,7 +1800,7 @@ public class ModelAC44C extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 12
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/ge_hiad_Silver.png"));
@@ -1838,21 +1836,5 @@ public class ModelAC44C extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 
 		}
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.98D, 1.4D, 0.0D});
-			}
-		};
-	}
-	public float[] getTrans() { return new float[]{-2.0F, 0.15F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
 	}
 }

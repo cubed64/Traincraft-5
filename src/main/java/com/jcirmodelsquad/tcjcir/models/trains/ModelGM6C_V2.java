@@ -1215,7 +1215,7 @@ public class ModelGM6C_V2 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1348) {
@@ -1250,15 +1250,5 @@ public class ModelGM6C_V2 extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 		((AbstractTrains) entity).getCargoManager().renderCargo((AbstractTrains) entity, f, f1, f2, f3, f4, f5);
-	}
-
-	public float[] getTrans() { return new float[]{-1.7F, 0.15F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
 	}
 }

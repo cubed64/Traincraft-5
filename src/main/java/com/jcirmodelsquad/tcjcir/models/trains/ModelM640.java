@@ -19,7 +19,9 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -261,10 +263,10 @@ public class ModelM640 extends ModelConverter //Same as Filename
 		bodyModel[215] = new ModelRendererTurbo(this, 122, 104, textureX, textureY); // Box 413 cs1
 		bodyModel[216] = new ModelRendererTurbo(this, 122, 97, textureX, textureY); // Box 86 cs1
 		bodyModel[217] = new ModelRendererTurbo(this, 151, 97, textureX, textureY); // Box 476 cs1 radio
-		bodyModel[218] = new ModelRendererTurbo(this, 17, 145, textureX, textureY, "lamp"); // Box 359 front ditchlight L
+		bodyModel[218] = new ModelRendererTurbo(this, 17, 145, textureX, textureY, BoxName.ditch); // Box 359 front ditchlight L
 		bodyModel[219] = new ModelRendererTurbo(this, 10, 145, textureX, textureY, "cull"); // Box 360 cull
 		bodyModel[220] = new ModelRendererTurbo(this, 10, 145, textureX, textureY, "cull"); // Box 320 cull
-		bodyModel[221] = new ModelRendererTurbo(this, 17, 145, textureX, textureY, "lamp"); // Box 321 front ditchlight L
+		bodyModel[221] = new ModelRendererTurbo(this, 17, 145, textureX, textureY, BoxName.ditch); // Box 321 front ditchlight L
 		bodyModel[222] = new ModelRendererTurbo(this, 156, 23, textureX, textureY); // Box 114
 		bodyModel[223] = new ModelRendererTurbo(this, 156, 20, textureX, textureY); // Box 74
 		bodyModel[224] = new ModelRendererTurbo(this, 156, 26, textureX, textureY); // Box 78
@@ -1178,20 +1180,10 @@ public class ModelM640 extends ModelConverter //Same as Filename
 	ModelMLW_3axle_Hiad boger = new ModelMLW_3axle_Hiad();
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 280; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
+		
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6324 ) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/MLW_3_axle_hiad_FNCC_Silver.png"));
 			GL11.glPushMatrix();
@@ -1225,21 +1217,5 @@ public class ModelM640 extends ModelConverter //Same as Filename
 			boger.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-	}
-	public ArrayList<double[]> getSmokePosition() {
-		return new ArrayList<double[]>() {
-			{
-				add(new double[]{0.7D, 1.5D, 0.0D});
-			}
-		};
-	}
-	public float[] getTrans() { return new float[]{-1.7F, 0.15F, 0F}; }
-
-	public float[] getRotate() {
-		return new float[] { 0F, 180F, 180F };
-	}
-
-	public float[] getScale() {
-		return null;
 	}
 }

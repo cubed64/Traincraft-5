@@ -324,14 +324,14 @@ public class LinkHandler {
 
 					cart1.isAttached = true;
 
-					if (cart2.cartLinked1.train != null) {
-						EntityRollingStock.allTrains.remove(cart2.cartLinked1.train);
-						cart2.cartLinked1.train.getTrains().clear();
+					if (cart2.cartLinked1.trainHandler != null) {
+						EntityRollingStock.allTrains.remove(cart2.cartLinked1.trainHandler);
+						cart2.cartLinked1.trainHandler.getTrains().clear();
 						//System.out.println("clearing linked 1");
 					}
-					if (cart2.cartLinked2 != null && cart2.cartLinked2.train != null) {
-						EntityRollingStock.allTrains.remove(cart2.cartLinked2.train);
-						cart2.cartLinked2.train.getTrains().clear();
+					if (cart2.cartLinked2 != null && cart2.cartLinked2.trainHandler != null) {
+						EntityRollingStock.allTrains.remove(cart2.cartLinked2.trainHandler);
+						cart2.cartLinked2.trainHandler.getTrains().clear();
 						//System.out.println("clearing linked 2");
 					}
 

@@ -17,6 +17,7 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
@@ -1952,12 +1953,13 @@ public class Modelclass74 extends ModelConverter //Same as Filename
 		bodyModel[475].addBox(0F, 0F, 0F, 1, 2, 1, 0F); // Box 116
 		bodyModel[475].setRotationPoint(14F, 6.5F, 8F);
 	}
-	public float[] getTrans() {
-		return new float[]{-1.0F, 0.15F, 0.00F};
-	}
+
 	Modelclass74_deets deets = new Modelclass74_deets();
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	{
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
+
 		for(ModelRendererTurbo m :bodyModel) {
 			if(m.boxName.equals("lamp")){
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);

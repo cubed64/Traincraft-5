@@ -982,7 +982,7 @@ public class ModelAlcoS2 extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderLocomotiveModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blunttruck_Green.png"));
@@ -999,9 +999,5 @@ public class ModelAlcoS2 extends ModelConverter //Same as Filename
 		GL11.glTranslated(0.98F, 0.25F, 0);
 		theTrucks.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
-	}
-
-	public float[] getTrans() {
-		return new float[]{-1F, 0.15F, 0F};
 	}
 }

@@ -177,6 +177,116 @@ public class FNCC60FootBulk extends Freight implements IInventory {
                         new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
                                 "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Wrapped Lumber (Foggy River)", 0, 2.985, 0)},
 
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//Thick & Thin
+                        "loads/WrappedWood3_Thick_n_Thin_Straps", "Wrapped Lumber (Thick & Thin)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Thick_n_Thin_Straps", "Wrapped Lumber (Thick & Thin)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Thick_n_Thin_Straps", "Wrapped Lumber (Thick & Thin)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/WrappedWood3_Thick_n_Thin_Straps", "Wrapped Lumber (Thick & Thin)", 0, 1.555, 0),
+                        new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Wrapped Lumber (Thick & Thin)", 0, 2.985, 0)},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//Oak
+                        "loads/UnwrappedWood_oak", "Unwrapped Lumber (Oak)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_oak", "Unwrapped Lumber (Oak)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_oak", "Unwrapped Lumber (Oak)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_oak", "Unwrapped Lumber (Oak)", 0, 1.555, 0),
+                        new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Unwrapped Lumber (Oak)", 0, 2.985, 0)},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//Spruce
+                        "loads/UnwrappedWood_spruce", "Unwrapped Lumber (Spruce)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_spruce", "Unwrapped Lumber (Spruce)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_spruce", "Unwrapped Lumber (Spruce)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_spruce", "Unwrapped Lumber (Spruce)", 0, 1.555, 0),
+                        new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Unwrapped Lumber (Spruce)", 0, 2.985, 0)},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//Birch
+                        "loads/UnwrappedWood_birch", "Unwrapped Lumber (Birch)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_birch", "Unwrapped Lumber (Birch)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_birch", "Unwrapped Lumber (Birch)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_birch", "Unwrapped Lumber (Birch)", 0, 1.555, 0),
+                        new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Unwrapped Lumber (Birch)", 0, 2.985, 0)},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//Jungle
+                        "loads/UnwrappedWood_jungle", "Unwrapped Lumber (Jungle)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_jungle", "Unwrapped Lumber (Jungle)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_jungle", "Unwrapped Lumber (Jungle)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_jungle", "Unwrapped Lumber (Jungle)", 0, 1.555, 0),
+                        new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Unwrapped Lumber (Jungle)", 0, 2.985, 0)},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//Acacia
+                        "loads/UnwrappedWood_acacia", "Unwrapped Lumber (Acacia)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_acacia", "Unwrapped Lumber (Acacia)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_acacia", "Unwrapped Lumber (Acacia)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_acacia", "Unwrapped Lumber (Acacia)", 0, 1.555, 0),
+                        new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Unwrapped Lumber (Acacia)", 0, 2.985, 0)},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//Dark Oak
+                        "loads/UnwrappedWood_darkoak", "Unwrapped Lumber (Dark Oak)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_darkoak", "Unwrapped Lumber (Dark Oak)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_darkoak", "Unwrapped Lumber (Dark Oak)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_darkoak", "Unwrapped Lumber (Dark Oak)", 0, 1.555, 0),
+                        new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Unwrapped Lumber (Dark Oak)", 0, 2.985, 0)},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//Pine
+                        "loads/UnwrappedWood_pine", "Unwrapped Lumber (Pine)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_pine", "Unwrapped Lumber (Pine)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_pine", "Unwrapped Lumber (Pine)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_pine", "Unwrapped Lumber (Pine)", 0, 1.555, 0),
+                        new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Unwrapped Lumber (Pine)", 0, 2.985, 0)},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//Redwood
+                        "loads/UnwrappedWood_redwood", "Unwrapped Lumber (Redwood)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_redwood", "Unwrapped Lumber (Redwood)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_redwood", "Unwrapped Lumber (Redwood)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_redwood", "Unwrapped Lumber (Redwood)", 0, 1.555, 0),
+                        new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Unwrapped Lumber (Redwood)", 0, 2.985, 0)},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//Fir
+                        "loads/UnwrappedWood_fir", "Unwrapped Lumber (Fir)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_fir", "Unwrapped Lumber (Fir)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_fir", "Unwrapped Lumber (Fir)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_fir", "Unwrapped Lumber (Fir)", 0, 1.555, 0),
+                        new CargoSpecification(Modelfncc60bulk_wrappedstack_tiedowns.class,
+                                "loads/FNCC60FootBulk_WrappedStack_tiedowns", "Unwrapped Lumber (Fir)", 0, 2.985, 0)},
+
                 { new CargoSpecification(Modelpipeload1.class,
                         "loads/pipe_falling_sfx_1", "Pipes", 0, 2.5, 0) },
         }));
