@@ -753,7 +753,7 @@ public enum EnumTrains {
 	HighrailVan("Highrail Van", DieselHighrailVan.class, ItemIDs.minecartHighrailVan.item, "diesel", 90, 80, 0, 10, 0, 140, 0.7, 0.8, 1000,TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "White", "Grey", "Orange", "Green"}),18, 2.7),
 
 
-	WorkdayHyrail("WorkdayHyrail", DieselWorkdayHyrail.class, ItemIDs.minecartWorkdayHyrail.item, "diesel", 110, 115, 0, 2, 0, 10, 0.95, 0.8, 1000,TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey", "Cyan"}),18, -2.0),
+	WorkdayHyrail("WorkdayHyrail", DieselWorkdayHyrail.class, ItemIDs.minecartWorkdayHyrail.item, "diesel", 110, 115, 0, 2, 0, 10, 0.95, 0.8, 2000,TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey", "Cyan", "Yellow"}),20, -2.0),
 
 	;
 
