@@ -544,7 +544,7 @@ public class Modelgsco52millgon extends ModelConverter //Same as Filename
 		bodyModel[120].setRotationPoint(-39.99F, 2F, -9.5F);
 
 		bodyModel[121].addBox(0F, 0F, 0F, 1, 2, 19, 0F); // Box 133
-		bodyModel[121].setRotationPoint(38.99F, 2.5F, -9.5F);
+		bodyModel[121].setRotationPoint(38.99F, 2F, -9.5F);
 
 		bodyModel[122].addBox(0F, 0F, 0F, 2, 0, 4, 0F); // Box 135
 		bodyModel[122].setRotationPoint(-40.5F, 1.99F, 6F);
