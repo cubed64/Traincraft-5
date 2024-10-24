@@ -258,7 +258,9 @@
   "hhgregg600horn": {"category": "master", "sounds": [{"name": "hhgregg600horn", "stream":  true}]},
   "rtr_horn": {"category": "master", "sounds": [{"name": "rtr_horn","stream": true}]},
   "thanos_horn": {"category": "master", "sounds": [{"name": "thanos_horn","stream": true}]},
-  "truck_horn": {"category": "master", "sounds": [{"name": "truck_horn", "stream":  true}]},
+  "awooga_horn": {"category": "master", "sounds": [{"name": "awooga_horn", "stream":  true}]},
+  "carhorn_1": {"category": "master", "sounds": [{"name": "carhorn_1", "stream":  true}]},
+  "mexican_carhorn": {"category": "master", "sounds": [{"name": "mexican_carhorn", "stream":  true}]},
   "ttte_whistle": {"category": "master", "sounds": [{"name": "ttte_whistle", "stream":  true}]},
   "generic_horn_1": {"category": "master", "sounds": [{"name": "generic_horn_1", "stream":  true}]},
   "generic_horn_2": {"category": "master", "sounds": [{"name": "generic_horn_2", "stream":  true}]},
@@ -346,8 +348,6 @@
   "Baldwin_606A_Notch8": {"category": "master", "sounds": [{"name": "Baldwin_606A_Notch8", "stream":  true}]},
   "Baldwin_608A_Idle": {"category": "master", "sounds": [{"name": "Baldwin_608A_Idle", "stream":  true}]},
   "Baldwin_608A_Notch8": {"category": "master", "sounds": [{"name": "Baldwin_608A_Notch8", "stream":  true}]},
-
-
 
   "EMD_4_645E_Idle": {"category": "master", "sounds": [{"name": "EMD_4_645E_Idle", "stream":  true}]},
   "EMD_4_645E_Notch8": {"category": "master", "sounds": [{"name": "EMD_4_645E_Notch8", "stream":  true}]},
