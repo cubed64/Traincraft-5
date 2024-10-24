@@ -15,13 +15,12 @@ public class ElectricB_BEL extends ElectricTrain {
     public ElectricB_BEL(World world) {
         super(world);
         textureDescriptionMap.put(0, "Blandsville & Blankerston");
-        textureDescriptionMap.put(1, "FNCC (Kit-L, Big Canon)");
-        textureDescriptionMap.put(2, "FNCC (DAR80, Big Canon)");
-        textureDescriptionMap.put(3, "Western Pacific");
-        textureDescriptionMap.put(4, "Norfolk Southern");
-        textureDescriptionMap.put(5, "FURRX");
-        textureDescriptionMap.put(6, "Galesburg Clinton & Midland");
-        textureDescriptionMap.put(7, "JCIR 633");
+        textureDescriptionMap.put(1, "FNCC (DAR80)");
+        textureDescriptionMap.put(2, "Western Pacific");
+        textureDescriptionMap.put(3, "Norfolk Southern");
+        textureDescriptionMap.put(4, "FURRX");
+        textureDescriptionMap.put(5, "Galesburg Clinton & Midland");
+        textureDescriptionMap.put(6, "JCIR 633");
     }
 
     public ElectricB_BEL(World world, double d, double d1, double d2) {

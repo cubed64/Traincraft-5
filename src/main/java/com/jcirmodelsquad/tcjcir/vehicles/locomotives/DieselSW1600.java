@@ -18,7 +18,7 @@ public class DieselSW1600 extends DieselTrain {
     public DieselSW1600(World world) {
         super(world, EnumTrains.SW1600.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "FNCC KIT-L");
+        textureDescriptionMap.put(0, "FNCC (KIT-L)");
     }
     public DieselSW1600(World world, double d, double d1, double d2){
         this(world);

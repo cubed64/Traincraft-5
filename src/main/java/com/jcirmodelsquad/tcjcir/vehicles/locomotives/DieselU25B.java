@@ -19,19 +19,18 @@ public class DieselU25B extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "New Haven");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "FNCC (KIT-E)");
-        textureDescriptionMap.put(3, "FNCC (KIT-L)");
-        textureDescriptionMap.put(4, "Great Northern (BSB)");
-        textureDescriptionMap.put(5, "Great Northern (EB Simp)");
-        textureDescriptionMap.put(6, "the Milwaukee Road");
-        textureDescriptionMap.put(7, "Burlington Northern");
-        textureDescriptionMap.put(8, "Deadwood & La Mesa (hamburger helper rayroad)");
-        textureDescriptionMap.put(9, "Burlington");
-        textureDescriptionMap.put(10, "Nautilus");
-        textureDescriptionMap.put(11, "New York Central (Early 60s)");
-        textureDescriptionMap.put(12, "New York Central (Very Late 60s)");
-        textureDescriptionMap.put(13, "Galesburg Clinton & Midland");
-        textureDescriptionMap.put(14, "Detroit Export System");
+        textureDescriptionMap.put(2, "FNCC (KIT-L)");
+        textureDescriptionMap.put(3, "Great Northern (BSB)");
+        textureDescriptionMap.put(4, "Great Northern (EB Simp)");
+        textureDescriptionMap.put(5, "the Milwaukee Road");
+        textureDescriptionMap.put(6, "Burlington Northern");
+        textureDescriptionMap.put(7, "Deadwood & La Mesa (hamburger helper rayroad)");
+        textureDescriptionMap.put(8, "Burlington");
+        textureDescriptionMap.put(9, "Nautilus");
+        textureDescriptionMap.put(10, "New York Central (Early 60s)");
+        textureDescriptionMap.put(11, "New York Central (Very Late 60s)");
+        textureDescriptionMap.put(12, "Galesburg Clinton & Midland");
+        textureDescriptionMap.put(13, "Detroit Export System");
     }
     public DieselU25B(World world, double d, double d1, double d2){
         this(world);

@@ -28,7 +28,7 @@ public class ModelU50 extends ModelConverter //Same as Filename
 
 	public ModelU50() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[257];
+		bodyModel = new ModelRendererTurbo[269];
 
 		initbodyModel_1();
 
@@ -297,6 +297,18 @@ public class ModelU50 extends ModelConverter //Same as Filename
 		bodyModel[254] = new ModelRendererTurbo(this, 32, 29, textureX, textureY, "lamp"); // Box 275 cs speedo glow
 		bodyModel[255] = new ModelRendererTurbo(this, 1, 76, textureX, textureY); // Box 256 cab backpannel
 		bodyModel[256] = new ModelRendererTurbo(this, 81, 4, textureX, textureY); // Box 256
+		bodyModel[257] = new ModelRendererTurbo(this, 167, 4, textureX, textureY); // Box 257
+		bodyModel[258] = new ModelRendererTurbo(this, 158, 1, textureX, textureY); // Box 258
+		bodyModel[259] = new ModelRendererTurbo(this, 156, 4, textureX, textureY); // Box 259
+		bodyModel[260] = new ModelRendererTurbo(this, 158, 7, textureX, textureY); // Box 260
+		bodyModel[261] = new ModelRendererTurbo(this, 175, 2, textureX, textureY); // Box 261 rear horn
+		bodyModel[262] = new ModelRendererTurbo(this, 180, 4, textureX, textureY); // Box 263 rear horn
+		bodyModel[263] = new ModelRendererTurbo(this, 180, 1, textureX, textureY); // Box 264 rear horn
+		bodyModel[264] = new ModelRendererTurbo(this, 167, 7, textureX, textureY); // Box 265
+		bodyModel[265] = new ModelRendererTurbo(this, 167, 1, textureX, textureY); // Box 266
+		bodyModel[266] = new ModelRendererTurbo(this, 174, 5, textureX, textureY, "cull"); // Box 267 CULL rear horn mount
+		bodyModel[267] = new ModelRendererTurbo(this, 466, 152, textureX, textureY); // Box 270
+		bodyModel[268] = new ModelRendererTurbo(this, 456, 152, textureX, textureY); // Box 271
 
 		bodyModel[0].addBox(0F, 0F, 0F, 16, 7, 22, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-45F, -6.5F, -11F);
@@ -995,19 +1007,19 @@ public class ModelU50 extends ModelConverter //Same as Filename
 		bodyModel[227].setRotationPoint(-53F, -15.5F, 10.25F);
 
 		bodyModel[228].addShapeBox(-1F, 0F, -1F, 11, 3, 3, 0F,0F, 0F, 0F, -7F, 0F, 0F, -7F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -2F, 0F, -7F, -2F, 0F, -7F, -2F, 0F, 0F, -2F, 0F); // Box 86 cs dials
-		bodyModel[228].setRotationPoint(-54.5F, -16.5F, -3F);
+		bodyModel[228].setRotationPoint(-54.5F, -16.5F, 2F);
 		bodyModel[228].rotateAngleY = -0.82030475F;
 
 		bodyModel[229].addBox(0F, 0F, 0F, 4, 8, 2, 0F); // Box 407 cs button pannel backer
-		bodyModel[229].setRotationPoint(-56.1F, -14.5F, -3F);
+		bodyModel[229].setRotationPoint(-56.1F, -14.5F, 2F);
 		bodyModel[229].rotateAngleY = -0.82030475F;
 
 		bodyModel[230].addShapeBox(1F, 0F, 2F, 2, 8, 1, 0F,1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 408 cs button pannel
-		bodyModel[230].setRotationPoint(-56.1F, -14.5F, -3F);
+		bodyModel[230].setRotationPoint(-56.1F, -14.5F, 2F);
 		bodyModel[230].rotateAngleY = -0.82030475F;
 
 		bodyModel[231].addBox(-1F, 1F, -1F, 3, 1, 2, 0F); // Box 409 cs throttle box
-		bodyModel[231].setRotationPoint(-54.5F, -16.5F, -3F);
+		bodyModel[231].setRotationPoint(-54.5F, -16.5F, 2F);
 		bodyModel[231].rotateAngleY = -0.82030475F;
 
 		bodyModel[232].addBox(0F, 0F, 0F, 3, 3, 2, 0F); // Box 412 cs ind brakestand
@@ -1071,15 +1083,15 @@ public class ModelU50 extends ModelConverter //Same as Filename
 		bodyModel[251].setRotationPoint(-51.01F, -20F, 10.5F);
 
 		bodyModel[252].addBox(0F, 0F, 0F, 3, 7, 2, 0F); // Box 253 cs ab brakestand
-		bodyModel[252].setRotationPoint(-52F, -13.5F, -6F);
+		bodyModel[252].setRotationPoint(-52F, -13.5F, -1F);
 		bodyModel[252].rotateAngleY = -0.34906585F;
 
 		bodyModel[253].addShapeBox(0.5F, 0F, 0F, 2, 3, 2, 0F,-0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F, -0.125F, 0F, -0.125F); // Box 254 cs ab brakestand 2
-		bodyModel[253].setRotationPoint(-52F, -16.5F, -6F);
+		bodyModel[253].setRotationPoint(-52F, -16.5F, -1F);
 		bodyModel[253].rotateAngleY = -0.34906585F;
 
 		bodyModel[254].addShapeBox(0F, 0F, -2.5F, 1, 4, 3, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F); // Box 275 cs speedo glow
-		bodyModel[254].setRotationPoint(-55F, -19.5F, -3.5F);
+		bodyModel[254].setRotationPoint(-55F, -19.5F, 1.5F);
 		bodyModel[254].rotateAngleY = 0.75049158F;
 
 		bodyModel[255].addShapeBox(0F, 0F, 0F, 1, 8, 12, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -6F, 0F, 0F, -6F, 0F, -4F, 0F, 0F, -4F, 0F, 0F, -4F, -6F, 0F, -4F, -6F); // Box 256 cab backpannel
@@ -1087,6 +1099,42 @@ public class ModelU50 extends ModelConverter //Same as Filename
 
 		bodyModel[256].addShapeBox(0F, 0F, 0F, 2, 1, 0, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F); // Box 256
 		bodyModel[256].setRotationPoint(-53F, -25.5F, -3F);
+
+		bodyModel[257].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 257
+		bodyModel[257].setRotationPoint(-45.5F, -25F, -5.5F);
+
+		bodyModel[258].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 258
+		bodyModel[258].setRotationPoint(-47F, -25.75F, -4.5F);
+
+		bodyModel[259].addBox(0F, 0F, 0F, 4, 1, 1, 0F); // Box 259
+		bodyModel[259].setRotationPoint(-48F, -26F, -5.5F);
+
+		bodyModel[260].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 260
+		bodyModel[260].setRotationPoint(-47.5F, -25.75F, -6.5F);
+
+		bodyModel[261].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 261 rear horn
+		bodyModel[261].setRotationPoint(57.5F, -25F, 4.5F);
+
+		bodyModel[262].addBox(0F, 0F, 0F, 4, 1, 1, 0F); // Box 263 rear horn
+		bodyModel[262].setRotationPoint(57F, -25.5F, 5F);
+
+		bodyModel[263].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 264 rear horn
+		bodyModel[263].setRotationPoint(57.5F, -25.5F, 4F);
+
+		bodyModel[264].addBox(0F, 0F, 0F, 2, 1, 1, 0F); // Box 265
+		bodyModel[264].setRotationPoint(-46.5F, -27F, -4.85F);
+
+		bodyModel[265].addBox(0F, 0F, 0F, 2, 1, 1, 0F); // Box 266
+		bodyModel[265].setRotationPoint(-46.75F, -27F, -6.13F);
+
+		bodyModel[266].addShapeBox(0F, 0F, 0F, 1, 1, 2, 0F,0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 267 CULL rear horn mount
+		bodyModel[266].setRotationPoint(57F, -24F, 4F);
+
+		bodyModel[267].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 270
+		bodyModel[267].setRotationPoint(60.25F, -1.5F, 2.85F);
+
+		bodyModel[268].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 271
+		bodyModel[268].setRotationPoint(60.25F, -1.5F, -4.85F);
 	}
 	ModelTypeBnewSmol theBetterTrucks = new ModelTypeBnewSmol();
 

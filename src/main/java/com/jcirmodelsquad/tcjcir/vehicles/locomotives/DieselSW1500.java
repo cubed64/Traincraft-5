@@ -25,8 +25,8 @@ public class DieselSW1500 extends DieselTrain {
         textureDescriptionMap.put(4, "Penn Central");
         textureDescriptionMap.put(5, "GM Demonstrator");
         textureDescriptionMap.put(6, "BNSF H1");
-        textureDescriptionMap.put(7, "FNCC (DRW, Dual Canon)");
-        textureDescriptionMap.put(8, "FNCC (KIT-L, Dual Canon)");
+        textureDescriptionMap.put(7, "FNCC (DRW)");
+        textureDescriptionMap.put(8, "FNCC (KIT-L)");
         textureDescriptionMap.put(9, "Indiana Harbor Belt");
         textureDescriptionMap.put(10, "Nomansi and Eastern Pacific? maybe?");
         textureDescriptionMap.put(11, "CSXT (lame future)");
