@@ -15,9 +15,9 @@ public class ElectricCEEslug extends ElectricTrain {
     public ElectricCEEslug(World world) {
         super(world);
         textureDescriptionMap.put(0, "NEP SUB-4");
-        textureDescriptionMap.put(1, "FNCC S111 (Small Canon)");
-        textureDescriptionMap.put(2, "Blandsville & Blankerston");
-        textureDescriptionMap.put(3, "");
+        textureDescriptionMap.put(1, "FNCC S111, S112, & S114");
+        textureDescriptionMap.put(2, "FNCC S113");
+        textureDescriptionMap.put(3, "Blandsville & Blankerston");
         textureDescriptionMap.put(4, "");
     }
 

@@ -30,7 +30,7 @@ public class ModelCEEslug extends ModelConverter //Same as Filename
 
 	public ModelCEEslug() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[327];
+		bodyModel = new ModelRendererTurbo[352];
 
 		initbodyModel_1();
 
@@ -369,6 +369,31 @@ public class ModelCEEslug extends ModelConverter //Same as Filename
 		bodyModel[324] = new ModelRendererTurbo(this, 193, 29, textureX, textureY, "cull"); // Box 562 cull ptc antenna shiz
 		bodyModel[325] = new ModelRendererTurbo(this, 178, 27, textureX, textureY); // Box 563
 		bodyModel[326] = new ModelRendererTurbo(this, 197, 27, textureX, textureY); // Box 564
+		bodyModel[327] = new ModelRendererTurbo(this, 152, 203, textureX, textureY); // box65 emd cab
+		bodyModel[328] = new ModelRendererTurbo(this, 157, 242, textureX, textureY); // Box 224 emd cab
+		bodyModel[329] = new ModelRendererTurbo(this, 107, 242, textureX, textureY); // Box 223 emd cab
+		bodyModel[330] = new ModelRendererTurbo(this, 175, 213, textureX, textureY); // Box 221 emd cab
+		bodyModel[331] = new ModelRendererTurbo(this, 192, 207, textureX, textureY); // Box 220 emd cab
+		bodyModel[332] = new ModelRendererTurbo(this, 105, 224, textureX, textureY); // Box 219 emd cab
+		bodyModel[333] = new ModelRendererTurbo(this, 156, 188, textureX, textureY, "lamp"); // Box 187 headlight front cab emd cab
+		bodyModel[334] = new ModelRendererTurbo(this, 156, 188, textureX, textureY, "lamp"); // Box 186 headlight front cab emd cab
+		bodyModel[335] = new ModelRendererTurbo(this, 152, 193, textureX, textureY); // Box 44 emd cab
+		bodyModel[336] = new ModelRendererTurbo(this, 168, 193, textureX, textureY); // Box 43 emd cab
+		bodyModel[337] = new ModelRendererTurbo(this, 163, 187, textureX, textureY); // Box 48 emd cab
+		bodyModel[338] = new ModelRendererTurbo(this, 137, 224, textureX, textureY); // Box 211 emd cab
+		bodyModel[339] = new ModelRendererTurbo(this, 98, 238, textureX, textureY); // Box 210 emd cab
+		bodyModel[340] = new ModelRendererTurbo(this, 164, 238, textureX, textureY); // Box 11 emd cab
+		bodyModel[341] = new ModelRendererTurbo(this, 140, 219, textureX, textureY); // Box 314 door swing right emd cab
+		bodyModel[342] = new ModelRendererTurbo(this, 80, 205, textureX, textureY); // Box 313 emd cab
+		bodyModel[343] = new ModelRendererTurbo(this, 101, 207, textureX, textureY); // Box 190 emd cab
+		bodyModel[344] = new ModelRendererTurbo(this, 147, 207, textureX, textureY); // Box 72 emd cab
+		bodyModel[345] = new ModelRendererTurbo(this, 154, 205, textureX, textureY); // Box 70 emd cab
+		bodyModel[346] = new ModelRendererTurbo(this, 122, 219, textureX, textureY); // Box 52 door swing right emd cab
+		bodyModel[347] = new ModelRendererTurbo(this, 144, 190, textureX, textureY, "lamp"); // Box 117 numberboard front emd cab
+		bodyModel[348] = new ModelRendererTurbo(this, 144, 190, textureX, textureY, "lamp"); // Box 118 numberboard front emd cab
+		bodyModel[349] = new ModelRendererTurbo(this, 163, 194, textureX, textureY); // Box 133 emd cab
+		bodyModel[350] = new ModelRendererTurbo(this, 175, 205, textureX, textureY); // Box 360 emd cab
+		bodyModel[351] = new ModelRendererTurbo(this, 104, 203, textureX, textureY); // box64 emd cab
 
 		bodyModel[0].addBox(0F, 0F, 0F, 76, 2, 22, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-38F, -1F, -11F);
@@ -1369,6 +1394,83 @@ public class ModelCEEslug extends ModelConverter //Same as Filename
 
 		bodyModel[326].addBox(0F, 0F, 0F, 5, 1, 0, 0F); // Box 564
 		bodyModel[326].setRotationPoint(-27.5F, -23F, 8F);
+
+		bodyModel[327].addShapeBox(0F, 0F, 0F, 6, 2, 1, 0F,1F, 0F, -1F, 1F, 0F, -1F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F); // box65 emd cab
+		bodyModel[327].setRotationPoint(-30F, -19F, -12F);
+
+		bodyModel[328].addShapeBox(0F, 0F, 0F, 1, 3, 4, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 224 emd cab
+		bodyModel[328].setRotationPoint(-33F, -22F, 7F);
+
+		bodyModel[329].addShapeBox(-0.5F, 0F, -3.5F, 1, 3, 4, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 223 emd cab
+		bodyModel[329].setRotationPoint(-20.5F, -22F, 10.5F);
+
+		bodyModel[330].addShapeBox(0F, 0F, 0F, 11, 1, 4, 0F,0F, -1F, 0F, 0F, -1F, 0F, 0F, 2F, 0F, 0F, 2F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, -2F, 0F, 0F, -2F, 0F); // Box 221 emd cab
+		bodyModel[330].setRotationPoint(-32F, -20F, -11F);
+
+		bodyModel[331].addBox(0F, 0F, 0F, 11, 1, 14, 0F); // Box 220 emd cab
+		bodyModel[331].setRotationPoint(-32F, -22F, -7F);
+
+		bodyModel[332].addBox(0F, 0F, 0F, 1, 3, 14, 0F); // Box 219 emd cab
+		bodyModel[332].setRotationPoint(-21F, -22F, -7F);
+
+		bodyModel[333].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 187 headlight front cab emd cab
+		bodyModel[333].setRotationPoint(-35.25F, -20F, -1F);
+
+		bodyModel[334].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 186 headlight front cab emd cab
+		bodyModel[334].setRotationPoint(-35.25F, -22F, -1F);
+
+		bodyModel[335].addShapeBox(0F, 0F, 0F, 2, 4, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F); // Box 44 emd cab
+		bodyModel[335].setRotationPoint(-35F, -22F, 1F);
+
+		bodyModel[336].addShapeBox(0F, 0F, 0F, 2, 4, 5, 0F,-2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 43 emd cab
+		bodyModel[336].setRotationPoint(-35F, -22F, -6F);
+
+		bodyModel[337].addBox(0F, 0F, 0F, 2, 4, 2, 0F); // Box 48 emd cab
+		bodyModel[337].setRotationPoint(-35F, -22F, -1F);
+
+		bodyModel[338].addBox(0F, 0F, 0F, 1, 3, 14, 0F); // Box 211 emd cab
+		bodyModel[338].setRotationPoint(-33F, -22F, -7F);
+
+		bodyModel[339].addShapeBox(0F, 0F, 0F, 1, 3, 4, 0F,0F, -3F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 210 emd cab
+		bodyModel[339].setRotationPoint(-21F, -22F, -11F);
+
+		bodyModel[340].addShapeBox(0F, 0F, 0F, 1, 3, 4, 0F,0F, -3F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 11 emd cab
+		bodyModel[340].setRotationPoint(-33F, -22F, -11F);
+
+		bodyModel[341].addBox(-0.5F, 0F, -3.5F, 1, 14, 4, 0F); // Box 314 door swing right emd cab
+		bodyModel[341].setRotationPoint(-20.5F, -19F, 10.5F);
+
+		bodyModel[342].addBox(0F, 0F, 0F, 1, 14, 18, 0F); // Box 313 emd cab
+		bodyModel[342].setRotationPoint(-33F, -19F, -7F);
+
+		bodyModel[343].addBox(0F, 0F, 0F, 11, 14, 1, 0F); // Box 190 emd cab
+		bodyModel[343].setRotationPoint(-32F, -19F, -11F);
+
+		bodyModel[344].addBox(0F, 0F, 0F, 11, 14, 1, 0F); // Box 72 emd cab
+		bodyModel[344].setRotationPoint(-32F, -19F, 10F);
+
+		bodyModel[345].addBox(0F, 0F, 0F, 1, 14, 18, 0F); // Box 70 emd cab
+		bodyModel[345].setRotationPoint(-21F, -19F, -11F);
+
+		bodyModel[346].addBox(-0.5F, 0F, -0.5F, 1, 14, 4, 0F); // Box 52 door swing right emd cab
+		bodyModel[346].setRotationPoint(-32.5F, -19F, -10.5F);
+
+		bodyModel[347].addShapeBox(0F, 0F, 0F, 1, 2, 5, 0F,0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F); // Box 117 numberboard front emd cab
+		bodyModel[347].setRotationPoint(-33.05F, -20.5F, -6F);
+		bodyModel[347].rotateAngleY = 0.38397244F;
+
+		bodyModel[348].addShapeBox(0F, 0F, -5F, 1, 2, 5, 0F,0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F); // Box 118 numberboard front emd cab
+		bodyModel[348].setRotationPoint(-33.05F, -20.5F, 6F);
+		bodyModel[348].rotateAngleY = -0.38397244F;
+
+		bodyModel[349].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F); // Box 133 emd cab
+		bodyModel[349].setRotationPoint(-35F, -18F, -1F);
+
+		bodyModel[350].addShapeBox(0F, 0F, 0F, 11, 1, 4, 0F,0F, 2F, 0F, 0F, 2F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, 0F, -1F, 0F, 0F, -1F); // Box 360 emd cab
+		bodyModel[350].setRotationPoint(-32F, -20F, 7F);
+
+		bodyModel[351].addShapeBox(0F, 0F, 0F, 6, 2, 1, 0F,1F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, -1F, 1F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F); // box64 emd cab
+		bodyModel[351].setRotationPoint(-30F, -19F, 11F);
 	}
 	ModelFB2_new theTrucks2 = new ModelFB2_new();
 	ModelBlombergBnew theTrucks3 = new ModelBlombergBnew();
@@ -1417,7 +1519,7 @@ public class ModelCEEslug extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.07, 0, 0);
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 29000){
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_silver_a.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.54, 0.0, 0);

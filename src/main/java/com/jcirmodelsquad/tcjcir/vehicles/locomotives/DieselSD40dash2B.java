@@ -19,8 +19,8 @@ public class DieselSD40dash2B extends DieselTrain {
         super(world, EnumTrains.SD40dash2B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
-        textureDescriptionMap.put(0, "Fox, North Coast & Cascades");
-        textureDescriptionMap.put(1, "FURRX (Ex-CSWR)");
+        textureDescriptionMap.put(1, "");
+        textureDescriptionMap.put(0, "FURRX (Ex-CSWR)");
     }
     public DieselSD40dash2B(World world, double d, double d1, double d2){
         this(world);

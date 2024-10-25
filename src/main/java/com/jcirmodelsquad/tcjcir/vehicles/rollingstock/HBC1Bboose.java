@@ -8,13 +8,12 @@ public class HBC1Bboose extends AbstractWorkCart
 {
     public HBC1Bboose(World world) {
         super(world);
-        textureDescriptionMap.put(0, "Fox, North Coast & Cascades");
-        textureDescriptionMap.put(1, "Ann Arbor");
-        textureDescriptionMap.put(2, "WV");
-        textureDescriptionMap.put(3, "GCN");
-        textureDescriptionMap.put(4, "GCM");
+        textureDescriptionMap.put(0, "Ann Arbor");
+        textureDescriptionMap.put(1, "WV");
+        textureDescriptionMap.put(2, "GCN");
+        textureDescriptionMap.put(3, "GCM");
+        textureDescriptionMap.put(4, "TIRY");
         textureDescriptionMap.put(5, "TIRY");
-        textureDescriptionMap.put(6, "TIRY");
     }
 
     public HBC1Bboose(World world, double posX, double posY, double posZ)
