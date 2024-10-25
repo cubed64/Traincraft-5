@@ -362,7 +362,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 
 	@Override
 	public boolean isPassenger() {
-		return (this instanceof IPassenger);
+		return (this instanceof IPassenger || this instanceof AbstractPassengerCar);
 	}
 
 	@Override
@@ -372,7 +372,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 
 	@Override
 	public boolean isFreightOrPassenger() {
-		return (this instanceof Freight || this instanceof IPassenger || this instanceof LiquidTank);
+		return (this instanceof Freight || (this instanceof IPassenger || this instanceof AbstractPassengerCar) || this instanceof LiquidTank);
 	}
 
 	@Override
