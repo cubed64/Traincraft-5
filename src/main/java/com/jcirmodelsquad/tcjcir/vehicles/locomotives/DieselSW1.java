@@ -39,6 +39,7 @@ public class DieselSW1 extends DieselTrain {
         textureDescriptionMap.put(18, "FNCC (Regal)");
         textureDescriptionMap.put(19, "Pacific Electric / SP");
         textureDescriptionMap.put(20, "Sacramento Northern / WP");
+        textureDescriptionMap.put(21, "FRLC");
     }
     public DieselSW1(World world, double d, double d1, double d2){
         this(world);
