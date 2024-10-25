@@ -1694,7 +1694,7 @@ entity.tc.PS SOU RPO (30' mail).name=Pullman Standard SOU RPO (30' mail section)
 
 entity.tc.PRECO Pendulum Coach.name=Pacific Railway Equipment Company Pendulum Coach
 
-entity.tc.PS FNCC Baggage-LC-Lounge.name=Pullman Standard FNCC Baggage-Dinette
+entity.tc.PS FNCC Baggage-Dinette.name=Pullman Standard FNCC Baggage-Dinette
 
 item.tc:minecartAmfleet.name=Amfleet 1 Coach
 item.tc:minecartAmfleet2.name=Amfleet 2 Coach

@@ -163,5 +163,8 @@ public class DieselWorkdayHyrail extends DieselTrain {
         }
         return true;
     }
-
+    @Override
+    public boolean canBeAdjusted(EntityMinecart cart) {
+        return canBeAdjusted;
+    }
 }
