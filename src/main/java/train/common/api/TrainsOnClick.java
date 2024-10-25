@@ -95,9 +95,12 @@ public class TrainsOnClick
 		if (itemstack != null && itemstack.getItem() == ItemIDs.brakeStick.item && !world.isRemote
 				&& (entityRollingStock instanceof Freight || (entityRollingStock instanceof AbstractPassengerCar || entityRollingStock instanceof IPassenger || entityRollingStock instanceof LiquidTank || entityRollingStock instanceof AbstractWorkCart))
 				&& (FMLCommonHandler.instance().getMinecraftServerInstance().isSinglePlayer()
-					|| entityRollingStock.getTrainOwner().equals(playerEntity.getDisplayName())
+					|| entityRollingStock.getTrainOwner() == null
 					|| entityRollingStock.getTrainOwner().equals("")
-					|| entityRollingStock.getTrainOwner() == null))
+					|| entityRollingStock.getTrainOwner().equalsIgnoreCase(playerEntity.getDisplayName())
+					|| entityRollingStock.isPlayerTrusted(playerEntity.getDisplayName())
+					|| entityRollingStock.isPlayerTrustedToBreak(playerEntity.getDisplayName()))
+		)
 		{
 			if (playerEntity.isSneaking())
 			{
