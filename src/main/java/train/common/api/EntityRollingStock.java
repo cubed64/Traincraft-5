@@ -24,6 +24,7 @@ import net.minecraft.entity.*;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.monster.EntityCreeper;
+import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -638,8 +639,9 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	Block l;
 
 	@Override
-	public void onUpdate() {
-
+	public void onUpdate()
+	{
+		handleParkingBrake();
 		try {
 			Method theTransMethod = this.getClass().getDeclaredMethod("getBogieLocation");
 			double theBogiePos = (double) theTransMethod.invoke(this);
@@ -684,7 +686,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		}
 
 		super.manageChunkLoading();
-		handleParkingBrake();
+
 
 		/**
 		 * Set the uniqueID if the entity doesn't have one.
@@ -1887,11 +1889,16 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	public void applyEntityCollision(Entity par1Entity) {
 		//System.out.println(par1Entity +" " +this.bogieLoco +" "+this.bogieUtility[0]);
 		//if(par1Entity instanceof EntityPlayer)return;
-		if (this.bogieLoco == null) return;
-
-		if (par1Entity == this){
+		if (this.bogieLoco == null || par1Entity == this)
+		{
 			return;
 		}
+
+		if (par1Entity instanceof EntityLiving)
+		{
+			handleRunoverEntity(par1Entity);
+		}
+
 		if (par1Entity instanceof EntityBogie) {
 			if (((EntityBogie) par1Entity).entityMainTrainID == this.uniqueID) return;
 		}
@@ -1905,7 +1912,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			getCollisionHandler().onEntityCollision(this, par1Entity);
 			return;
 		}
-		if (!this.worldObj.isRemote) {
+		if (!this.worldObj.isRemote)
+		{
 			if (par1Entity != this.riddenByEntity) {
 				/*
 				 * if (par1Entity instanceof EntityLiving && !(par1Entity
@@ -2131,20 +2139,23 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 							}
 						}
 
-						if (par1Entity instanceof EntityLiving) {
-							float f1 = MathHelper.sqrt_double(this.motionX * this.motionX + this.motionY * this.motionY + this.motionZ * this.motionZ) *60;
-							//f1 *= 6;//ratio
-							//f1 *= 10;//to get speed in "pseudo m/s"
-							if ((f1 * 3.6) < 35) {//if speed is smaller than 35km/h then don't do any damage but push entities
-								return;
-							}
-							int j1 = (int) Math.ceil((f1) * ((par1Entity instanceof EntityCreeper)?100:1));
-							par1Entity.attackEntityFrom(TrainsDamageSource.ranOver, j1);
-						}
+						handleRunoverEntity(par1Entity);
 					}
 				}
 			}
 		}
+	}
+
+	private void handleRunoverEntity(Entity par1Entity)
+	{
+		float f1 = MathHelper.sqrt_double(this.motionX * this.motionX + this.motionY * this.motionY + this.motionZ * this.motionZ) *60;
+		//f1 *= 6;//ratio
+		//f1 *= 10;//to get speed in "pseudo m/s"
+		if ((f1 * 3.6) < 35) {//if speed is smaller than 35km/h then don't do any damage but push entities
+			return;
+		}
+		int j1 = (int) Math.ceil((f1) * ((par1Entity instanceof EntityCreeper)?100:1));
+		par1Entity.attackEntityFrom(TrainsDamageSource.ranOver, j1);
 	}
 
 	/**
