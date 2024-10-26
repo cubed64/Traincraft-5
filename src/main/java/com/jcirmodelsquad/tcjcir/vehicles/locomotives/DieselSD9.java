@@ -23,7 +23,7 @@ public class DieselSD9 extends DieselTrain {
         textureDescriptionMap.put(1, "SP (Trashcan gaming)");
         textureDescriptionMap.put(2, "MILW");
         textureDescriptionMap.put(3, "MILW (Typeface)");
-        textureDescriptionMap.put(4, "FNCC (Kit-L, Dual Canon, Late era)");
+        textureDescriptionMap.put(4, "FNCC 201 & 202 (Kit-L)");
         textureDescriptionMap.put(5, "Blandsville Pacific");
         textureDescriptionMap.put(6, "OC&G");
         textureDescriptionMap.put(7, "DRGW");

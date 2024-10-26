@@ -26,17 +26,16 @@ public class DieselGP30 extends DieselTrain {
         textureDescriptionMap.put(6, "UP");
         textureDescriptionMap.put(7, "BN 2206");
         textureDescriptionMap.put(8, "BN 2222");
-        textureDescriptionMap.put(9, "FNCC (Kit-L, Type Bs, Dual Canon)");
-        textureDescriptionMap.put(10, "FNCC (Kit-L, Blombergs, Big Canon)");
-        textureDescriptionMap.put(11, "OC&G 35");
-        textureDescriptionMap.put(12, "MAG 84");
-        textureDescriptionMap.put(13, "KCS i mean CGW");
-        textureDescriptionMap.put(14, "DLMR");
-        textureDescriptionMap.put(15, "B&B");
-        textureDescriptionMap.put(16, "WV");
-        textureDescriptionMap.put(17, "GLNT");
-        textureDescriptionMap.put(18, "GN (Big Sky Blue)");
-        textureDescriptionMap.put(19, "CB&Q");
+        textureDescriptionMap.put(9, "FNCC 691 (Kit-L)");
+        textureDescriptionMap.put(10, "OC&G 35");
+        textureDescriptionMap.put(11, "MAG 84");
+        textureDescriptionMap.put(12, "KCS i mean CGW");
+        textureDescriptionMap.put(13, "DLMR");
+        textureDescriptionMap.put(14, "B&B");
+        textureDescriptionMap.put(15, "WV");
+        textureDescriptionMap.put(16, "GLNT");
+        textureDescriptionMap.put(17, "GN (Big Sky Blue)");
+        textureDescriptionMap.put(18, "CB&Q");
     }
     public DieselGP30(World world, double d, double d1, double d2){
         this(world);

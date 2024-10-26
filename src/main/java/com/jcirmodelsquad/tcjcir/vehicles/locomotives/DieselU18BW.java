@@ -19,11 +19,10 @@ public class DieselU18BW extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "CEE Demonstrator");
         textureDescriptionMap.put(1, "CEE Leaser");
-        textureDescriptionMap.put(2, "Fox, North Coast & Cascades");
-        textureDescriptionMap.put(3, "Western Pacific");
-        textureDescriptionMap.put(4, "Blank");
-        textureDescriptionMap.put(5, "West Creek Pacific");
-        textureDescriptionMap.put(6, "Galesburg Clinton & Midland");
+        textureDescriptionMap.put(2, "Western Pacific");
+        textureDescriptionMap.put(3, "Blank");
+        textureDescriptionMap.put(4, "West Creek Pacific");
+        textureDescriptionMap.put(5, "Galesburg Clinton & Midland");
     }
     public DieselU18BW(World world, double d, double d1, double d2){
         this(world);

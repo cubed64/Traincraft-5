@@ -23,7 +23,7 @@ public class DieselRS1 extends DieselTrain {
         textureDescriptionMap.put(3, "Blandsville & Blankerston");
         textureDescriptionMap.put(4, "Deadwood & La Mesa (Early)");
         textureDescriptionMap.put(5, "Deadwood & La Mesa (Late)");
-        textureDescriptionMap.put(6, "Fox, North Coast & Cascades (Regal, Dual Canon)");
+        textureDescriptionMap.put(6, "Fox, North Coast & Cascades (Regal)");
         textureDescriptionMap.put(7, "sander faye");
         textureDescriptionMap.put(8, "Glontch");
 
