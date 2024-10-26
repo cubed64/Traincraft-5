@@ -111,7 +111,7 @@ public class ACFRailbox extends Freight implements IInventory {
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
-        return 2.9F;
+        return 2.75F;
     }
 
     @Override

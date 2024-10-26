@@ -521,7 +521,7 @@ public class ModelGSC53FootBulkheadFlat extends ModelConverter //Same as Filenam
 		bodyModel[56].setRotationPoint(-37.5F, 3F, -1.5F);
 
 		bodyModel[57].addShapeBox(0F, 0F, 0F, 3, 1, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F); // Box 28
-		bodyModel[57].setRotationPoint(-28F, 4.5F, -1.5F);
+		bodyModel[57].setRotationPoint(-29F, 4.5F, -1.5F);
 
 		bodyModel[58].addShapeBox(0F, 0F, 0F, 1, 1, 20, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 154
 		bodyModel[58].setRotationPoint(-34.5F, 3F, -10F);
@@ -533,7 +533,7 @@ public class ModelGSC53FootBulkheadFlat extends ModelConverter //Same as Filenam
 		bodyModel[60].setRotationPoint(33.5F, 3F, -10F);
 
 		bodyModel[61].addShapeBox(0F, 0F, 0F, 3, 1, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F); // Box 28
-		bodyModel[61].setRotationPoint(25F, 4.5F, -1.5F);
+		bodyModel[61].setRotationPoint(26F, 4.5F, -1.5F);
 
 		bodyModel[62].addShapeBox(0F, 0F, 0F, 7, 4, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F); // Box 0
 		bodyModel[62].setRotationPoint(-3.5F, 3F, -2.5F);
@@ -1061,10 +1061,10 @@ public class ModelGSC53FootBulkheadFlat extends ModelConverter //Same as Filenam
 		bodyModel[234].setRotationPoint(-38.51F, 2F, -9F);
 
 		bodyModel[235].addShapeBox(0F, 0F, 0F, 2, 1, 20, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 154
-		bodyModel[235].setRotationPoint(25.5F, 3F, -10F);
+		bodyModel[235].setRotationPoint(26.5F, 3F, -10F);
 
 		bodyModel[236].addShapeBox(0F, 0F, 0F, 2, 1, 20, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 154
-		bodyModel[236].setRotationPoint(-27.5F, 3F, -10F);
+		bodyModel[236].setRotationPoint(-28.5F, 3F, -10F);
 
 		bodyModel[237].addShapeBox(0F, 0F, 0F, 1, 14, 1, 0F,0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F); // Box 498
 		bodyModel[237].setRotationPoint(38F, -12F, -6.5F);
@@ -1291,10 +1291,10 @@ public class ModelGSC53FootBulkheadFlat extends ModelConverter //Same as Filenam
 		}
 		GL11.glPushMatrix();
 		GL11.glScalef(1,1,1f);
-		GL11.glTranslated(-1.66,-0.0,-0.0);
+		GL11.glTranslated(-1.72,-0.0,-0.0);
 		bogie.render(entity,f,f1,f2,f3,f4,f5);
 
-		GL11.glTranslated(3.32,-0.0,0.00);
+		GL11.glTranslated(3.44,-0.0,0.00);
 		bogie.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();
 
