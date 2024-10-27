@@ -515,8 +515,8 @@ public class LinkHandler {
 			double stretch = d2 -getOptimalDistance(cart1, cart2);
 			//System.out.println("stretch "+stretch);
 
-			double springX = limitForce(0.2D * stretch * vecX * -1);//0.4 is default, 0.1 lets you couple nose to nose, 0.25 starts accordianing
-			double springZ = limitForce(0.2D * stretch * vecZ * -1);
+			double springX = limitForce(0.4D * stretch * vecX * -1);//0.4 is default, 0.1 lets you couple nose to nose, 0.25 starts accordianing
+			double springZ = limitForce(0.4D * stretch * vecZ * -1);
 
 
 
