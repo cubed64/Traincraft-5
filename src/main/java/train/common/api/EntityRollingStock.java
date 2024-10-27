@@ -642,44 +642,62 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	public void onUpdate()
 	{
 		handleParkingBrake();
-		try {
-			Method theTransMethod = this.getClass().getDeclaredMethod("getBogieLocation");
-			double theBogiePos = (double) theTransMethod.invoke(this);
-			if (theBogiePos != 0.0) {
-				this.bogieShift = theBogiePos;
-				if (addedToChunk && !this.hasSpawnedBogie && bogieLoco == null) {
-					//this.bogieShift = this.trainSpec.getBogieLocoPosition();
-					this.bogieLoco = new EntityBogie(worldObj,
-							(posX - Math.cos(this.serverRealRotation * TraincraftUtil.radian) * this.bogieShift),
-							posY + ((Math.tan(this.renderPitch * TraincraftUtil.radian) * -this.bogieShift) + getMountedYOffset()),
-							(posZ - Math.sin(this.serverRealRotation * TraincraftUtil.radian) * this.bogieShift), this, this.uniqueID, 0, this.bogieShift);
+		// Commenting out as the primary method in the try statement is never once used and is forcing exceptions constantly
+		//try {
+		//	Method theTransMethod = this.getClass().getDeclaredMethod("getBogieLocation");
+		//	double theBogiePos = (double) theTransMethod.invoke(this);
+		//	if (theBogiePos != 0.0) {
+		//		this.bogieShift = theBogiePos;
+		//		if (addedToChunk && !this.hasSpawnedBogie && bogieLoco == null) {
+		//			//this.bogieShift = this.trainSpec.getBogieLocoPosition();
+		//			this.bogieLoco = new EntityBogie(worldObj,
+		//					(posX - Math.cos(this.serverRealRotation * TraincraftUtil.radian) * this.bogieShift),
+		//					posY + ((Math.tan(this.renderPitch * TraincraftUtil.radian) * -this.bogieShift) + getMountedYOffset()),
+		//					(posZ - Math.sin(this.serverRealRotation * TraincraftUtil.radian) * this.bogieShift), this, this.uniqueID, 0, this.bogieShift);
+//
+		//			//if(!worldObj.isRemote)System.out.println("ID: "+this.getID());
+		//			if (!worldObj.isRemote) worldObj.spawnEntityInWorld(bogieLoco);
+		//			this.needsBogieUpdate = true;
+		//		}
+		//		this.hasSpawnedBogie = true;
+		//	} else {
+		//		throw new NoSuchMethodException();
+		//	}
+//
+		//} catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+		//	if (addedToChunk && !this.hasSpawnedBogie && this.trainSpec.getBogieLocoPosition() != 0) {
+		//		//System.out.println(i + " " + this.trainSpec.getBogiePositions()[i]);
+		//		if (bogieLoco == null) {
+		//			this.bogieShift = this.trainSpec.getBogieLocoPosition();
+		//			this.bogieLoco = new EntityBogie(worldObj,
+		//					(posX - Math.cos(this.serverRealRotation * TraincraftUtil.radian) * this.bogieShift),
+		//					posY + ((Math.tan(this.renderPitch * TraincraftUtil.radian) * -this.bogieShift) + getMountedYOffset()),
+		//					(posZ - Math.sin(this.serverRealRotation * TraincraftUtil.radian) * this.bogieShift), this, this.uniqueID, 0, this.bogieShift);
+//
+		//			//if(!worldObj.isRemote)System.out.println("ID: "+this.getID());
+		//			if (!worldObj.isRemote) worldObj.spawnEntityInWorld(bogieLoco);
+		//			this.needsBogieUpdate = true;
+		//		}
+		//		this.hasSpawnedBogie = true;
+		//	}
+		//}
 
-					//if(!worldObj.isRemote)System.out.println("ID: "+this.getID());
-					if (!worldObj.isRemote) worldObj.spawnEntityInWorld(bogieLoco);
-					this.needsBogieUpdate = true;
-				}
-				this.hasSpawnedBogie = true;
-			} else {
-				throw new NoSuchMethodException();
+		if (addedToChunk && !this.hasSpawnedBogie && this.trainSpec.getBogieLocoPosition() != 0) {
+			//System.out.println(i + " " + this.trainSpec.getBogiePositions()[i]);
+			if (bogieLoco == null) {
+				this.bogieShift = this.trainSpec.getBogieLocoPosition();
+				this.bogieLoco = new EntityBogie(worldObj,
+						(posX - Math.cos(this.serverRealRotation * TraincraftUtil.radian) * this.bogieShift),
+						posY + ((Math.tan(this.renderPitch * TraincraftUtil.radian) * -this.bogieShift) + getMountedYOffset()),
+						(posZ - Math.sin(this.serverRealRotation * TraincraftUtil.radian) * this.bogieShift), this, this.uniqueID, 0, this.bogieShift);
+
+				//if(!worldObj.isRemote)System.out.println("ID: "+this.getID());
+				if (!worldObj.isRemote) worldObj.spawnEntityInWorld(bogieLoco);
+				this.needsBogieUpdate = true;
 			}
-
-		} catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
-			if (addedToChunk && !this.hasSpawnedBogie && this.trainSpec.getBogieLocoPosition() != 0) {
-				//System.out.println(i + " " + this.trainSpec.getBogiePositions()[i]);
-				if (bogieLoco == null) {
-					this.bogieShift = this.trainSpec.getBogieLocoPosition();
-					this.bogieLoco = new EntityBogie(worldObj,
-							(posX - Math.cos(this.serverRealRotation * TraincraftUtil.radian) * this.bogieShift),
-							posY + ((Math.tan(this.renderPitch * TraincraftUtil.radian) * -this.bogieShift) + getMountedYOffset()),
-							(posZ - Math.sin(this.serverRealRotation * TraincraftUtil.radian) * this.bogieShift), this, this.uniqueID, 0, this.bogieShift);
-
-					//if(!worldObj.isRemote)System.out.println("ID: "+this.getID());
-					if (!worldObj.isRemote) worldObj.spawnEntityInWorld(bogieLoco);
-					this.needsBogieUpdate = true;
-				}
-				this.hasSpawnedBogie = true;
-			}
+			this.hasSpawnedBogie = true;
 		}
+
 		if (!additionalDataSentToServer && worldObj.isRemote && ticksExisted > 10) { // If client, request overlay packet once entity is fully loaded.
 			Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(getEntityId(), Minecraft.getMinecraft().thePlayer.getEntityId()));
 			additionalDataSentToServer = true;
@@ -1947,10 +1965,14 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				double distancesZ[] = new double[4];
 				double euclidian[] = new double[4];
 				if (par1Entity instanceof EntityRollingStock) {
+				if (par1Entity instanceof EntityRollingStock)
+				{
 					EntityRollingStock entity = (EntityRollingStock)par1Entity;
-					if (((EntityRollingStock) par1Entity).bogieLoco != null || this.bogieLoco != null) {
+					if (((EntityRollingStock) par1Entity).bogieLoco != null || this.bogieLoco != null)
+					{
 
-						if (((EntityRollingStock) par1Entity).bogieLoco != null && this.bogieLoco == null) {
+						if (((EntityRollingStock) par1Entity).bogieLoco != null && this.bogieLoco == null)
+						{
 							distancesX[0] = entity.posX - this.posX;
 							distancesZ[0] = entity.posZ - this.posZ;
 							euclidian[0] = MathHelper.sqrt_double((distancesX[0] * distancesX[0]) + (distancesZ[0] * distancesZ[0]));
@@ -1964,7 +1986,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 							distancesZ[3] = 100;
 							euclidian[3] = MathHelper.sqrt_double((distancesX[3] * distancesX[3]) + (distancesZ[3] * distancesZ[3]));
 						}
-						else if (((EntityRollingStock) par1Entity).bogieLoco == null && this.bogieLoco != null) {
+						else if (((EntityRollingStock) par1Entity).bogieLoco == null && this.bogieLoco != null)
+						{
 							distancesX[0] = entity.posX - this.posX;
 							distancesZ[0] = entity.posZ - this.posZ;
 							euclidian[0] = MathHelper.sqrt_double((distancesX[0] * distancesX[0]) + (distancesZ[0] * distancesZ[0]));
@@ -1978,7 +2001,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 							distancesZ[3] = 100;
 							euclidian[3] = MathHelper.sqrt_double((distancesX[3] * distancesX[3]) + (distancesZ[3] * distancesZ[3]));
 						}
-						else {
+						else
+						{
 							distancesX[0] = entity.posX - this.posX;
 							distancesZ[0] = entity.posZ - this.posZ;
 							euclidian[0] = MathHelper.sqrt_double((distancesX[0] * distancesX[0]) + (distancesZ[0] * distancesZ[0]));
@@ -2010,9 +2034,12 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				{
 					d2 = MathHelper.sqrt_double(d2);
 					double d2Clone = d2;
-					if (d0 != 0) {
+					if (d0 != 0)
+					{
 						d0 /= d2;
-					} else {
+					}
+					else
+					{
 						d2=0;
 					}
 					if (d1 != 0) {
@@ -2020,7 +2047,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 					} else {
 						d2Clone = 0;
 					}
-					if (d2 != d2Clone && d2 != 0) {
+					if (d2 != d2Clone && d2 != 0)
+					{
 						d2 = d2Clone;
 					}
 					if (d2 > 1.0D) {
@@ -2037,51 +2065,62 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 					d1 *= 0.5D;
 
 					// Handling velocity of coupled entities.
-					if ((par1Entity instanceof EntityMinecart ) && !this.isAttached) {
+					if ((par1Entity instanceof EntityMinecart ) && !this.isAttached)
+					{
 
 						Vec3 vec31 = Vec3.createVectorHelper(MathHelper.cos(this.rotationYaw * (float) Math.PI / 180.0F), 0.0D, MathHelper.sin(this.rotationYaw * (float) Math.PI / 180.0F)).normalize();
 
-						if (Math.abs(Vec3.createVectorHelper(par1Entity.posX - this.posX, 0.0D,par1Entity.posZ - this.posZ).normalize().dotProduct(vec31)) < 0.800000011920929D) { return; }
+						if (Math.abs(Vec3.createVectorHelper(par1Entity.posX - this.posX, 0.0D,par1Entity.posZ - this.posZ).normalize().dotProduct(vec31)) < 0.800000011920929D)
+						{
+							return;
+						}
 
 						double d9 = par1Entity.motionX + this.motionX;
 						double d8 = par1Entity.motionZ + this.motionZ;
 
-						if ((par1Entity instanceof Locomotive && !isPoweredCart()) || (((EntityMinecart) par1Entity).isPoweredCart()) && !isPoweredCart()) {
+						if ((par1Entity instanceof Locomotive && !isPoweredCart()) || (((EntityMinecart) par1Entity).isPoweredCart()) && !isPoweredCart())
+						{
 							//System.out.println("1 "+par1Entity +"     "+ this);
 
 							this.motionX *= 0.20000000298023224D;
 							this.motionZ *= 0.20000000298023224D;
 							this.addVelocity(par1Entity.motionX - d0, 0.0D, par1Entity.motionZ - d1);
-							if (!(par1Entity instanceof Locomotive)) {
+							if (!(par1Entity instanceof Locomotive))
+							{
 								par1Entity.motionX *= 0.949999988079071D;
 								par1Entity.motionZ *= 0.949999988079071D;
 							}
 						}
-						else if ((!(par1Entity instanceof Locomotive) && isPoweredCart()) || (!((EntityMinecart) par1Entity).isPoweredCart() && isPoweredCart())) {
+						else if ((!(par1Entity instanceof Locomotive) && isPoweredCart()) || (!((EntityMinecart) par1Entity).isPoweredCart() && isPoweredCart()))
+						{
 							//System.out.println("2 "+par1Entity +"     "+ this);
 							if (par1Entity instanceof EntityBogie && ((EntityBogie) par1Entity).entityMainTrain != null) {
 								this.motionX *= 0.2;
 								this.motionZ *= 0.2;
 								this.addVelocity(this.motionX + d0 * 3, 0.0D, this.motionZ + d1 * 3);
-								if (this instanceof Locomotive && ((EntityBogie) par1Entity).entityMainTrain instanceof Locomotive) {
+								if (this instanceof Locomotive && ((EntityBogie) par1Entity).entityMainTrain instanceof Locomotive)
+								{
 									this.motionX *= 0;
 									this.motionZ *= 0;
 									((EntityBogie) par1Entity).entityMainTrain.motionX *= 0;
 									((EntityBogie) par1Entity).entityMainTrain.motionZ *= 0;
 								}
 							}
-							else {
+							else
+							{
 								par1Entity.motionX *= 0.20000000298023224D;
 								par1Entity.motionZ *= 0.20000000298023224D;
 								par1Entity.addVelocity(this.motionX + d0, 0.0D, this.motionZ + d1);
 							}
-							if (!(this instanceof Locomotive)) {
+							if (!(this instanceof Locomotive))
+							{
 								this.motionX *= 0.949999988079071D;
 								this.motionZ *= 0.949999988079071D;
 							}
 
 						}
-						else {
+						else
+						{
 							//System.out.println("3 "+par1Entity +"     "+ this);
 							d9 *= 0.4D;
 							d8 *= 0.4D;
@@ -2113,7 +2152,6 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 							this.addVelocity(-d0 * 2, 0.0D, -d1 * 2);
 						}
 						else if ((par1Entity instanceof EntityBogie)) {
-							this.addVelocity(-d0, 0.0D, -d1);
 						}
 
 						// Adding velocity to coupled entity with clamping force.
@@ -2138,8 +2176,6 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 								par1Entity.velocityChanged = true;
 							}
 						}
-
-						handleRunoverEntity(par1Entity);
 					}
 				}
 			}
