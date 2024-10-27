@@ -1964,7 +1964,6 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				double distancesX[] = new double[4];
 				double distancesZ[] = new double[4];
 				double euclidian[] = new double[4];
-				if (par1Entity instanceof EntityRollingStock) {
 				if (par1Entity instanceof EntityRollingStock)
 				{
 					EntityRollingStock entity = (EntityRollingStock)par1Entity;
