@@ -32,7 +32,7 @@ public class ModelC855a extends ModelConverter //Same as Filename
 
 	public ModelC855a() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[306];
+		bodyModel = new ModelRendererTurbo[323];
 
 		initbodyModel_1();
 
@@ -350,6 +350,23 @@ public class ModelC855a extends ModelConverter //Same as Filename
 		bodyModel[303] = new ModelRendererTurbo(this, 409, 1, textureX, textureY); // Box 303
 		bodyModel[304] = new ModelRendererTurbo(this, 409, 1, textureX, textureY); // Box 304
 		bodyModel[305] = new ModelRendererTurbo(this, 17, 130, textureX, textureY); // Box 305
+		bodyModel[306] = new ModelRendererTurbo(this, 210, 195, textureX, textureY); // Box 257
+		bodyModel[307] = new ModelRendererTurbo(this, 201, 192, textureX, textureY); // Box 258
+		bodyModel[308] = new ModelRendererTurbo(this, 199, 195, textureX, textureY); // Box 259
+		bodyModel[309] = new ModelRendererTurbo(this, 201, 198, textureX, textureY); // Box 260
+		bodyModel[310] = new ModelRendererTurbo(this, 210, 199, textureX, textureY); // Box 265
+		bodyModel[311] = new ModelRendererTurbo(this, 210, 192, textureX, textureY); // Box 266
+		bodyModel[312] = new ModelRendererTurbo(this, 218, 192, textureX, textureY, "cull"); // Box 312 cull horn piping
+		bodyModel[313] = new ModelRendererTurbo(this, 175, 202, textureX, textureY); // Box 315
+		bodyModel[314] = new ModelRendererTurbo(this, 212, 210, textureX, textureY); // Box 316
+		bodyModel[315] = new ModelRendererTurbo(this, 192, 196, textureX, textureY); // Box 317
+		bodyModel[316] = new ModelRendererTurbo(this, 169, 206, textureX, textureY, "cull"); // Box 318
+		bodyModel[317] = new ModelRendererTurbo(this, 176, 206, textureX, textureY, "cull"); // Box 319
+		bodyModel[318] = new ModelRendererTurbo(this, 212, 203, textureX, textureY); // Box 320
+		bodyModel[319] = new ModelRendererTurbo(this, 192, 196, textureX, textureY); // Box 321
+		bodyModel[320] = new ModelRendererTurbo(this, 163, 201, textureX, textureY); // Box 322
+		bodyModel[321] = new ModelRendererTurbo(this, 211, 216, textureX, textureY); // Box 325
+		bodyModel[322] = new ModelRendererTurbo(this, 218, 216, textureX, textureY); // Box 326
 
 		bodyModel[0].addBox(0F, 0F, 0F, 4, 2, 3, 0F); // Box 1
 		bodyModel[0].setRotationPoint(-65F, 3F, -1.5F);
@@ -1289,7 +1306,59 @@ public class ModelC855a extends ModelConverter //Same as Filename
 
 		bodyModel[305].addBox(0F, 0F, 0F, 1, 4, 0, 0F); // Box 305
 		bodyModel[305].setRotationPoint(-44F, -19F, -11F);
+
+		bodyModel[306].addBox(0F, 0F, 0F, 1, 2, 1, 0F); // Box 257
+		bodyModel[306].setRotationPoint(-40.5F, -25F, -6.5F);
+
+		bodyModel[307].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 258
+		bodyModel[307].setRotationPoint(-42F, -25.75F, -5.5F);
+
+		bodyModel[308].addBox(0F, 0F, 0F, 4, 1, 1, 0F); // Box 259
+		bodyModel[308].setRotationPoint(-43F, -26F, -6.5F);
+
+		bodyModel[309].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 260
+		bodyModel[309].setRotationPoint(-42.5F, -25.75F, -7.5F);
+
+		bodyModel[310].addBox(0F, 0F, 0F, 2, 1, 1, 0F); // Box 265
+		bodyModel[310].setRotationPoint(-41.5F, -27F, -5.85F);
+
+		bodyModel[311].addBox(0F, 0F, 0F, 2, 1, 1, 0F); // Box 266
+		bodyModel[311].setRotationPoint(-41.75F, -27F, -7.13F);
+
+		bodyModel[312].addShapeBox(0F, 0F, 0F, 12, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F); // Box 312 cull horn piping
+		bodyModel[312].setRotationPoint(-5.5F, -24.5F, -7F);
+
+		bodyModel[313].addBox(0F, 0F, 0F, 7, 15, 10, 0F); // Box 315
+		bodyModel[313].setRotationPoint(-62F, -15F, -5F);
+
+		bodyModel[314].addShapeBox(0F, 0F, 0F, 7, 1, 4, 0F,0F, -1F, 0F, 0F, -1F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 316
+		bodyModel[314].setRotationPoint(-62F, -16F, -5F);
+
+		bodyModel[315].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F); // Box 317
+		bodyModel[315].setRotationPoint(-62.75F, -15F, -5F);
+
+		bodyModel[316].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 318 cull
+		bodyModel[316].setRotationPoint(-62F, -15F, -5F);
+
+		bodyModel[317].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, 0.25F, 0F, 0F, 0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 319 cull
+		bodyModel[317].setRotationPoint(-62F, -15F, 3F);
+
+		bodyModel[318].addShapeBox(0F, 0F, 0F, 7, 1, 4, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 320
+		bodyModel[318].setRotationPoint(-62F, -16F, 1F);
+
+		bodyModel[319].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.5F, -0.25F, -0.25F); // Box 321
+		bodyModel[319].setRotationPoint(-62.75F, -15F, 3F);
+
+		bodyModel[320].addShapeBox(0F, 0F, 0F, 7, 1, 2, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 322
+		bodyModel[320].setRotationPoint(-62F, -16F, -1F);
+
+		bodyModel[321].addShapeBox(0F, 0F, 0F, 1, 4, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 325
+		bodyModel[321].setRotationPoint(-62.25F, -4F, -5F);
+
+		bodyModel[322].addShapeBox(0F, 0F, 0F, 1, 4, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 326
+		bodyModel[322].setRotationPoint(-62.25F, -4F, 3F);
 	}
+
 	ModelTypeBnewSmol theBetterTrucks = new ModelTypeBnewSmol();
 
 	@Override
@@ -1328,6 +1397,5 @@ public class ModelC855a extends ModelConverter //Same as Filename
 			theBetterTrucks.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
-
 	}
 }
