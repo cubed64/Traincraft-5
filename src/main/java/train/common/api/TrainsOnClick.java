@@ -113,7 +113,7 @@ public class TrainsOnClick
 						{
 							if (!world.isRemote)
 							{
-								playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " is going to fast to engage the brake"));
+								playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " is going to fast to engage the hand brake"));
 							}
 
 							return false;
@@ -126,7 +126,7 @@ public class TrainsOnClick
 					{
 						if (!world.isRemote)
 						{
-							playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " is going to fast to engage the brake"));
+							playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " is going to fast to engage the hand brake"));
 						}
 
 						return false;
@@ -137,7 +137,7 @@ public class TrainsOnClick
 				{
 					if (!world.isRemote)
 					{
-						playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " disengaged parking brake"));
+						playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " disengaged hand brake"));
 					}
 					else
 					{
@@ -150,7 +150,7 @@ public class TrainsOnClick
 				{
 					if (!world.isRemote)
 					{
-						playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " engaged parking brake"));
+						playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " engaged hand brake"));
 					}
 					else
 					{
