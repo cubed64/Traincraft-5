@@ -22,6 +22,11 @@ public class ItemBrakeStick extends ItemPart
     }
 
     @Override
+    public boolean isFull3D() {
+        return true;
+    }
+
+    @Override
     public boolean shouldRotateAroundWhenRendering() {
 
         return true;
@@ -31,7 +36,7 @@ public class ItemBrakeStick extends ItemPart
     @Override
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
     {
-        par3List.add("\u00a77" + EnumChatFormatting.GREEN + "Shift-right-click" + EnumChatFormatting.GRAY + " on rolling stock to engage the parking brake.");
+        par3List.add("\u00a77" + EnumChatFormatting.GREEN + "Shift-right-click" + EnumChatFormatting.GRAY + " on rolling stock to engage the hand brake.");
     }
 
     @Override
