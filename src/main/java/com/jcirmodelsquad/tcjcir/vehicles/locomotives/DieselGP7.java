@@ -62,6 +62,7 @@ public class DieselGP7 extends DieselTrain {
         textureDescriptionMap.put(42, "Deadwood & Northern");
         textureDescriptionMap.put(43, "CNW 1518");
         textureDescriptionMap.put(44, "Great Lakes & Northern Territories (Ex FNCC)");
+        textureDescriptionMap.put(45, "Monongahela");
     }
     public DieselGP7(World world, double d, double d1, double d2){
         this(world);
