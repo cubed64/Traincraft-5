@@ -802,7 +802,7 @@ public enum RenderEnum
 			add(new double[] { 1.2D, -0.2D, 0.75D });//pistons
 		}
 	}, 2, true),
-	BKno2b(SteamBKno2b.class, new ModelBKno2b(), "BoothKelly_", true, new float[] {0.5F, 0.155F, 0F}, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
+	BKno2b(SteamBKno2b.class, new ModelBKno2b(), "BoothKelly_", true, new float[] {0.5F, 0.155F, 0F}, new float[] { 0, 0, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
 		{
 			add(new double[] {-1.9D, 1.6D, 0.0D});
 		}
