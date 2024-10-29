@@ -190,7 +190,12 @@ public abstract class DieselTrain extends Locomotive implements IFluidHandler {
 					}
 				}
 			}
-			if (drain == null && cartLinked1 instanceof LiquidTank && !(cartLinked1 instanceof EntityBUnitEMDF7) && !(cartLinked1 instanceof EntityBUnitEMDF3) && !(cartLinked1 instanceof EntityBUnitDD35))
+			if (drain == null
+					&& cartLinked1 instanceof LiquidTank
+					&& cartLinked1 instanceof INoFuelTransferEntity == false
+					&& !(cartLinked1 instanceof EntityBUnitEMDF7)
+					&& !(cartLinked1 instanceof EntityBUnitEMDF3)
+					&& !(cartLinked1 instanceof EntityBUnitDD35))
 			{
 				if (getFluid() == null)
 				{
@@ -209,7 +214,12 @@ public abstract class DieselTrain extends Locomotive implements IFluidHandler {
 					drain = ((LiquidTank) cartLinked1).drain(ForgeDirection.UNKNOWN, new FluidStack(LiquidManager.REFINED_FUEL, 50), true);
 				}
 			}
-			else if (drain == null && cartLinked2 instanceof LiquidTank && !(cartLinked2 instanceof EntityBUnitEMDF7) && !(cartLinked2 instanceof EntityBUnitEMDF3) && !(cartLinked1 instanceof EntityBUnitDD35))
+			else if (drain == null
+					&& cartLinked2 instanceof LiquidTank
+					&& cartLinked2 instanceof INoFuelTransferEntity == false
+					&& !(cartLinked2 instanceof EntityBUnitEMDF7)
+					&& !(cartLinked2 instanceof EntityBUnitEMDF3)
+					&& !(cartLinked1 instanceof EntityBUnitDD35))
 			{
 				if (getFluid() == null)
 				{
@@ -246,6 +256,7 @@ public abstract class DieselTrain extends Locomotive implements IFluidHandler {
 			}
 		}
 	}
+
 
 
 	public void setCapacity(int capacity) {

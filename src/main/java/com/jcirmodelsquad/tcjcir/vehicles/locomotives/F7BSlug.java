@@ -10,12 +10,14 @@ import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.*;
 import train.common.Traincraft;
+import train.common.api.INoFuelTransferEntity;
 import train.common.api.LiquidManager;
 import train.common.api.LiquidTank;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class F7BSlug extends LiquidTank implements IFluidHandler {
+public class F7BSlug extends LiquidTank implements IFluidHandler, INoFuelTransferEntity
+{
 	public int freightInventorySize;
 
 	private int update = 8;
