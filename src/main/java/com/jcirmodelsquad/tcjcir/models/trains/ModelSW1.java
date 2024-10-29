@@ -457,9 +457,9 @@ public class ModelSW1 extends ModelConverter //Same as Filename
 		bodyModel[413] = new ModelRendererTurbo(this, 394, 9, textureX, textureY); // Box 313
 		bodyModel[414] = new ModelRendererTurbo(this, 389, 9, textureX, textureY, BoxName.commander); // Box 315 glow commander beacon
 		bodyModel[415] = new ModelRendererTurbo(this, 389, 4, textureX, textureY); // Box 316
-		bodyModel[416] = new ModelRendererTurbo(this, 348, 98, textureX, textureY); // Box 215
+		bodyModel[416] = new ModelRendererTurbo(this, 348, 98, textureX, textureY, "cull"); // Box 215 cull
 		bodyModel[417] = new ModelRendererTurbo(this, 363, 94, textureX, textureY); // Box 228
-		bodyModel[418] = new ModelRendererTurbo(this, 348, 106, textureX, textureY); // Box 231
+		bodyModel[418] = new ModelRendererTurbo(this, 348, 106, textureX, textureY, "cull"); // Box 231 cull
 		bodyModel[419] = new ModelRendererTurbo(this, 349, 96, textureX, textureY); // Box 232
 		bodyModel[420] = new ModelRendererTurbo(this, 380, 100, textureX, textureY); // Box 228
 		bodyModel[421] = new ModelRendererTurbo(this, 402, 100, textureX, textureY); // Box 229
@@ -1743,14 +1743,14 @@ public class ModelSW1 extends ModelConverter //Same as Filename
 		bodyModel[415].addShapeBox(0F, 0F, 0F, 2, 1, 1, 0F,0.3F, -0.5F, 0.1F, -1F, -0.5F, 0.1F, -1F, -0.5F, 0.1F, 0.3F, -0.5F, 0.1F, 0.3F, 0F, 0.1F, -1F, 0F, 0.1F, -1F, 0F, 0.1F, 0.3F, 0F, 0.1F); // Box 316
 		bodyModel[415].setRotationPoint(12.68F, -24.5F, -0.5F);
 
-		bodyModel[416].addBox(0F, 0F, 0F, 4, 4, 3, 0F); // Box 215
+		bodyModel[416].addBox(0F, 0F, 0F, 4, 4, 3, 0F); // Box 215 cull
 		bodyModel[416].setRotationPoint(-9F, -18F, -1.5F);
 
 		bodyModel[417].addBox(-26F, 0F, -0.5F, 28, 1, 0, 0F); // Box 228
 		bodyModel[417].setRotationPoint(-9F, -19F, 0F);
 		bodyModel[417].rotateAngleZ = -0.06981317F;
 
-		bodyModel[418].addBox(0F, 0F, 0F, 4, 1, 3, 0F); // Box 231
+		bodyModel[418].addBox(0F, 0F, 0F, 4, 1, 3, 0F); // Box 231 cull
 		bodyModel[418].setRotationPoint(12F, -21.5F, -2F);
 
 		bodyModel[419].addBox(0F, -0.5F, 0F, 23, 1, 0, 0F); // Box 232

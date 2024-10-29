@@ -1500,12 +1500,12 @@ item.tc:minecartPSRPO.name=Pullman Standard RPO(30')
 item.tc:minecartPSLunchCounter_Lounge.name=Pullman Standard Lunch Counter-Lounge
 item.tc:minecartPS30SeatParlor.name=Pullman Standard C&O 30 Seat Parlor
 
-item.tc:minecartPSRPOPM.name=Pullman Standard RPO(15')
-item.tc:minecartPS73Baggage.name=Pullman Standard 73' Baggage
-item.tc:minecartPSCenterDiner.name=Pullman Standard Center-Kitchen Dining Car
-item.tc:minecartPS54SeatCoach_Lounge.name=Pullman Standard 54 Seat Coach-Lounge (1946 version)
-item.tc:minecartPS54SeatCoach_Lounge_1950.name=Pullman Standard 54 Seat Coach-Lounge (1950 version)
-item.tc:minecartPS58SeatCoach_Observation.name=Pullman Standard 58 Seat Coach-Observation
+item.tc:minecartPSRPOPM.name=Pullman Standard PM RPO(15')
+item.tc:minecartPS73Baggage.name=Pullman Standard PM 73' Baggage
+item.tc:minecartPSCenterDiner.name=Pullman Standard PM Center-Kitchen Dining Car
+item.tc:minecartPS54SeatCoach_Lounge.name=Pullman Standard PM 54 Seat Coach-Lounge (1946 version)
+item.tc:minecartPS54SeatCoach_Lounge_1950.name=Pullman Standard PM 54 Seat Coach-Lounge (1950 version)
+item.tc:minecartPS58SeatCoach_Observation.name=Pullman Standard PM 58 Seat Coach-Observation
 
 item.tc:minecartPSBM56SeatCoach.name=Pullman Standard B&M 56 Seat Coach-Lounge
 item.tc:minecartPSBMCombine.name=Pullman Standard B&M Combine Passenger-Baggage
@@ -1581,7 +1581,7 @@ item.tc:minecartPSCEI1DR28SeatParlorObservation.name=Pullman Standard C&EI 1DR-2
 item.tc:minecartOBHWNH5570_5589Baggage.name=Osgood Bradley NH 5570-5589 Series Baggage
 
 item.tc:minecartBuddCN68SeatCoach_Observation.name=Budd CN 68 Seat Coach-Observation
-item.tc:minecartBuddCNCoach.name=Budd RDG 72 or 54 Seat Coach
+item.tc:minecartBuddCNCoach.name=Budd CN 72 or 54 Seat Coach
 item.tc:minecartBuddCNDiner_Lounge.name=Budd CN Diner-Lounge
 item.tc:minecartBuddCN39SeatParlor_Observation.name=Budd CN 39 Seat Parlor-Observation
 item.tc:minecartBuddCN59SeatCoach_Observation.name=Budd CN 59 Seat Coach-Observation
@@ -1604,12 +1604,12 @@ entity.tc.PSRPO.name=Pullman Standard RPO(30')
 entity.tc.PS Lunch Counter-Lounge.name=Pullman Standard Lunch Counter-Lounge
 entity.tc.PS 30 Seat Parlor.name=Pullman Standard C&O 30 Seat Parlor
 
-entity.tc.Freight PS 73 Baggage.name=Pullman Standard 73' Baggage
-entity.tc.PS Center Diner.name=Pullman Standard Center-Kitchen Dining Car
-entity.tc.PSPMRPO.name=Pullman Standard RPO(15')
-entity.tc.PS 54 Seat Coach-Lounge.name=Pullman Standard 54 Seat Coach-Lounge (1946 version)
-entity.tc.PS 54 Seat Coach-Lounge 1950.name=Pullman Standard 54 Seat Coach-Lounge (1950 version)
-entity.tc.PS 58 Seat Coach-Observation.name=Pullman Standard 58 Seat Coach-Observation
+entity.tc.Freight PS 73 Baggage.name=Pullman Standard PM 73' Baggage
+entity.tc.PS Center Diner.name=Pullman Standard PM Center-Kitchen Dining Car
+entity.tc.PSPMRPO.name=Pullman Standard PM RPO(15')
+entity.tc.PS 54 Seat Coach-Lounge.name=Pullman Standard PM 54 Seat Coach-Lounge (1946 version)
+entity.tc.PS 54 Seat Coach-Lounge 1950.name=Pullman Standard PM 54 Seat Coach-Lounge (1950 version)
+entity.tc.PS 58 Seat Coach-Observation.name=Pullman Standard PM 58 Seat Coach-Observation
 
 entity.tc.PS B&M 56 Seat Coach.name=Pullman Standard B&M 56 Seat Coach-Lounge
 entity.tc.PS B&M Combine.name=Pullman Standard B&M Combine Passenger-Baggage
