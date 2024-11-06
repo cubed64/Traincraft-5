@@ -1,49 +1,51 @@
-![JCIR-Traincraft Logo](https://i.imgur.com/qdcdqsN.png)
+![FOXTC Logo](https://images2.imgbox.com/b7/50/Te3uonVw_o.png)
 # FOXTC - A mod for Minecraft, based on JCIR-Traincraft, in turn based on Traincraft.
 
-Foxtc is the current home of Bidahochi's American Pack, formerly for TiM.
-BAP, as its usually referred to as, adds over 150 new locomotives, freight equipment, and passenger equipment- on top of all the existing TC stock!
+## Foxtc is the current home of Bidahochi's American Pack, formerly for TiM.
+## BAP, as its usually referred to as, adds over 150 new locomotives, freight equipment, and passenger equipment- on top of all the existing TC stock!
 
-It adds things like:
+### On top of all the new BAP rollingstock, it adds things like:
 
-- Paintbrush item & unlimited* textures
-- New railroad crossings & signs
+- Paintbrush Item & unlimited* textures
+- Functional Headlights, Ditchlights, Beacon lights, ect
+- Handbrake for railcars
+- Notebox on cars and locomotives (useful for having car numbers for OPS)
+- New Railroad Crossings & signs
 - New Cargo states for freight cars
-- Remote Controlled Trains (WIP)
-- Shift right click to fill and empty locomotives
-
+- Remote-controlled trains
 - Driverless trains (WIP)
-- New Trains
-- New skins
-- Intermodal Containers (WIP)
+- Functional Intermodal Containers (soonTM)
+- Shift right click to fill and empty locomotives with fuel
+- Pull locomotives dead-in-tow
 
-*current max cap is ~40 skins per entity, but it can be increased
+*current max cap is ~55 skins per entity, but it can be increased as needed.
 
-Thank you to the original creators:
+## Extending a grand Thank you for the folks whom have contributed features and code (and overall just time and effort):
+- Bidahochi
+- TBEA
+- Peachmaster
+- Cubed64
+- Trains from 1.3.2 to 1.7.10
+- Professor Binky (TrainGoddess)
+- JCRail
+- TheDoctor1138
 
+## And a Thank you to the original creators of TC for letting all this happen:
 - Spitfire4466
 - MrBrutal
 - NitroxydeX
 - EternalBlueFlame
 
-Also, thank you to our content & code contributors:
+## And, of course, a final Thank you to everyone whos contributed models, textures, sounds, ect. Far too many people to list but yall know who you are lol.
 
-- Bidahochi
-- Cubed64
-- Trains from 1.3.2 to 1.7.10
-- Professor Binky (TrainGoddess)
-- PeachMaster
-- JCRail
-- Roof Asian
-- Messicrew
-- BigJ
-- imWastey
-- TheDoctor1138
-- ..and you! If you want to, of course. Make your changes with a pull request, and join the Discord server to stay up to date with things that are happening.
-
+### FoxTC's current server home is JC's Industrial Railroading, where most of the mods development work occurs and is posted. However, a Discord server does exist purely for the mod itself, which is somewhat active.
 JCIR Discord Server: https://discord.gg/49Zay5H9uR
+BAP/FoxTC Discord Server: https://discord.gg/QZp59fq
 
 (and yes, we did get permission from EternalBlueFlame to do this, so don't complain)
+
+
+
 
 # Original README.md
 Here you will find the source code for the **Traincraft 1.7.10 Port**.<br/>
