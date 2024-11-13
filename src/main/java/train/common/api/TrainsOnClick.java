@@ -105,34 +105,6 @@ public class TrainsOnClick
 		{
 			if (playerEntity.isSneaking())
 			{
-				if (((EntityRollingStock) entityRollingStock).trainHandler != null)
-				{
-					for (EntityRollingStock rollingStock : ((EntityRollingStock) entityRollingStock).trainHandler.getTrains())
-					{
-						if (rollingStock.getSpeed() >= 10)
-						{
-							if (!world.isRemote)
-							{
-								playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " is going to fast to engage the hand brake"));
-							}
-
-							return false;
-						}
-					}
-				}
-				else
-				{
-					if (((EntityRollingStock)entityRollingStock).getSpeed() >= 10)
-					{
-						if (!world.isRemote)
-						{
-							playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " is going to fast to engage the hand brake"));
-						}
-
-						return false;
-					}
-				}
-
 				if (((EntityRollingStock)entityRollingStock).parkingBrake)
 				{
 					if (!world.isRemote)
