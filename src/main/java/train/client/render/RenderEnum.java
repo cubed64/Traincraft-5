@@ -1124,6 +1124,16 @@ public enum RenderEnum
 			add(new double[]{1.75D, 1.35D, 0.0D});
 		}
 	}, "", null, 0, false),
+	GP39TDash2( DieselGP39TDash2.class,  new ModelGP39T(), "gp39t_", true,new float[]{-1.45F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.75D, 1.35D, 0.0D});
+		}
+	}, "", null, 0, false),
+	GP39TDash2B( DieselGP39TDash2B.class,  new ModelGP39TB(), "gp39tb_", true,new float[]{-1.45F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.75D, 1.35D, 0.0D});
+		}
+	}, "", null, 0, false),
 	GP40( DieselGP40.class,  new ModelGP40new(), "gp40_", true,new float[]{-1.45F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{
 			add(new double[]{1.75D, 1.35D, 0.0D});
@@ -1391,6 +1401,11 @@ public enum RenderEnum
 			add(new double[]{0.925D, 1.4D, 0.0D});
 		}
 	}, "", null, 0, false),
+	U30BH( DieselU30BH.class,  new ModelU30BH(), "U30BH_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.75D, 1.35D, 0.0D});
+		}
+	}, "", null, 0, false),
 	U36B( DieselU36B.class,  new ModelU36B(), "U36B_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[]{0.8D, 1.35D, 0.0D});
@@ -1447,6 +1462,11 @@ public enum RenderEnum
 	B23( DieselB23.class,  new ModelB23(), "b23-7_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[]{0.8D, 1.45D, 0.0D});
+		}
+	}, "", null, 0, false),
+	B23_wrx( DieselB23_wrx.class,  new ModelB23_wrx(), "b23-7_wrx_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.8D, 1.5D, 0.0D});
 		}
 	}, "", null, 0, false),
 	B23S7( DieselB23S7.class,  new ModelB23S7(), "b23-s7_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {

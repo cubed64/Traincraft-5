@@ -13,18 +13,18 @@ import train.common.api.LiquidManager;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class DieselGP39Dash2 extends DieselTrain {
-    public DieselGP39Dash2(World world) {
-        super(world, EnumTrains.GP39Dash2.getTankCapacity(), LiquidManager.dieselFilter());
+public class DieselGP39TDash2B extends DieselTrain {
+    public DieselGP39TDash2B(World world) {
+        super(world, EnumTrains.GP39TDash2B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "MKT");
-        textureDescriptionMap.put(1, "FURRX (Ex CSWR)");
-        textureDescriptionMap.put(2, "Nomansi & Eastern Pacific");
-        textureDescriptionMap.put(3, "NEP (Late)");
-        textureDescriptionMap.put(4, "CSXT (YN3)");
+        textureDescriptionMap.put(0, "DIP");
+        textureDescriptionMap.put(1, "");
+        textureDescriptionMap.put(2, "");
+        textureDescriptionMap.put(3, "");
+        textureDescriptionMap.put(4, "");
 
     }
-    public DieselGP39Dash2(World world, double d, double d1, double d2){
+    public DieselGP39TDash2B(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -45,7 +45,7 @@ public class DieselGP39Dash2 extends DieselTrain {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
         double distance = 2.9; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
-        double distanceLR = -0.325; //how far left/right on the entity you ride; left > 0; right < 0;
+        double distanceLR = -0.0; //how far left/right on the entity you ride; left > 0; right < 0;
         double yOffset = 0.15;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
@@ -142,7 +142,7 @@ public class DieselGP39Dash2 extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "EMD GP39-2";
+        return "EMD GP39T-2";
     }
 
     @Override
