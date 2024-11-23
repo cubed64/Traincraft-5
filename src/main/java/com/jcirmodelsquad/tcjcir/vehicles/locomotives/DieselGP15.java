@@ -23,6 +23,7 @@ public class DieselGP15 extends DieselTrain {
 		textureDescriptionMap.put(3, "Lisha & Watson");
 		textureDescriptionMap.put(4, "Atlas & Red Sands Railroad");
 		textureDescriptionMap.put(5, "Southern Port Belt");
+		textureDescriptionMap.put(6, "GLC (Ex SPB)");
 	}
 
 	public void initLoco() {

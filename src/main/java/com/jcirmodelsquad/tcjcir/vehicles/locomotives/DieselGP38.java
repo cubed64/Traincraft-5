@@ -18,7 +18,7 @@ public class DieselGP38 extends DieselTrain {
         super(world, EnumTrains.GP38.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         textureDescriptionMap.put(0, "Fox Union Rail Resources (FURRX)");
-        textureDescriptionMap.put(1, "FNCC (GP38ac, Kit-L, Dual Canon)");
+        textureDescriptionMap.put(1, "FNCC (GP38ac, Kit-L)");
         textureDescriptionMap.put(2, "Blandsville & Blankerston");
         textureDescriptionMap.put(3, "Nomansi & Eastern Pacific");
         textureDescriptionMap.put(4, "Nomansi & Eastern Pacific (GP38R)");
