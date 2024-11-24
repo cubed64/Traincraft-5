@@ -22,8 +22,9 @@ import net.minecraft.world.World;
 import train.common.blocks.BlockTCRail;
 import train.common.blocks.BlockTCRailGag;
 import train.common.items.ItemTCRail;
-import train.common.items.ItemTCRail.TrackTypes;
+import train.common.items.TCRailTypes;
 import train.common.library.BlockIDs;
+import train.common.library.EnumTracks;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
 
@@ -469,12 +470,12 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 						moveOnTCStraight(j, tileRail.xCoord, tileRail.zCoord, tileRail.getBlockMetadata());
 					}
 
-					else if (ItemTCRail.isTCTwoWaysCrossingTrack(tileRail)) {
+					else if (TCRailTypes.isCrossingTrack(tileRail)) {
 
 					moveOnTCTwoWaysCrossing();
 					}
 
-					else if (ItemTCRail.isTCSlopeTrack(tileRail)) {
+					else if (TCRailTypes.isSlopeTrack(tileRail)) {
 
 						moveOnTCSlope(j, tileRail.xCoord, tileRail.zCoord, tileRail.slopeAngle, tileRail.slopeHeight, tileRail.getBlockMetadata());
 					}
@@ -695,10 +696,7 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 	}
 	private boolean shouldIgnoreSwitch(TileTCRail tile, int i, int j, int k, int meta) {
 		if (tile != null
-				&& (tile.getType().equals(TrackTypes.MEDIUM_RIGHT_TURN.getLabel())
-						|| tile.getType().equals(TrackTypes.MEDIUM_LEFT_TURN.getLabel())
-						|| tile.getType().equals(TrackTypes.LARGE_LEFT_TURN.getLabel())
-						|| tile.getType().equals(TrackTypes.LARGE_RIGHT_TURN.getLabel()))
+				&& TCRailTypes.isTurnTrack(tile)
 				&& tile.canTypeBeModifiedBySwitch) {
 			if (meta == 2) {
 				if (motionZ > 0 && Math.abs(motionX) < 0.01) {

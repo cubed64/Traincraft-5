@@ -8,6 +8,7 @@ import net.minecraft.util.ResourceLocation;
 
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
+import train.common.items.RailVariants;
 import train.common.library.Info;
 import train.common.tile.TileTCRail;
 
@@ -30,10 +31,32 @@ public class ModelLeftParallelCurveTCTrack extends ModelBase {
 
     public void render(String type, TileTCRail tcRail, double x, double y, double z) {
         int facing = tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord);
-        render( type, facing, x, y, z, 1, 1, 1, 1 );
+        render( type, tcRail.getTrackType().getVariant(), facing, x, y, z, 1, 1, 1, 1 );
     }
 
-    public void render(String type, int facing, double x, double y, double z, float r, float g, float b, float a) {
+    private void setRotation(byte facing)
+    {
+        switch(facing)
+        {
+            case 0:
+                GL11.glRotatef(180, 0, 1, 0);
+                GL11.glTranslatef(0, 0.0f, -2.0f);
+                break;
+            case 1:
+                GL11.glRotatef(90, 0, 1, 0);
+                GL11.glTranslatef(-2f, 0.0f, 0f);
+                break;
+            case 3:
+                GL11.glRotatef(-90, 0, 1, 0);
+                GL11.glTranslatef(2.0f, 0.0f, 0);
+                break;
+            default:
+                GL11.glTranslatef(0, 0.0f, 2.0f);
+            break;
+        }
+    }
+
+    public void render(String type, RailVariants variants, int facing, double x, double y, double z, float r, float g, float b, float a) {
 
         // Push a blank matrix onto the stack
         GL11.glPushMatrix();
@@ -42,7 +65,16 @@ public class ModelLeftParallelCurveTCTrack extends ModelBase {
         GL11.glTranslatef((float) x + 0.5f, (float) y, (float) z - 1.5f);
 
         // Bind the texture, so that OpenGL properly textures our block.
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+        switch (variants)
+        {
+            case EMBEDDED:
+                FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_embedded.png"));
+                break;
+            default:
+                FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+                break;
+        }
+
         GL11.glColor4f(r, g, b, a);
         //GL11.glScalef(0.5f, 0.5f, 0.5f);
         /** where l = 0 is SOUTH
@@ -50,60 +82,20 @@ public class ModelLeftParallelCurveTCTrack extends ModelBase {
          *        l = 2 is NORTH
          *        l = 3 is EAST
          */
-        if (facing == 0) {
-            GL11.glRotatef(180, 0, 1, 0);
-            if(type == "small") {
-                GL11.glTranslatef(0, 0.0f, -2.0f);
-            }
-            if(type == "medium") {
-                GL11.glTranslatef(0, 0.0f, -2.0f);
-            }
-            if(type == "large") {
-                GL11.glTranslatef(0, 0.0f, -2.0f);
-            }
-        }
+        setRotation((byte)facing);
 
-        if (facing == 1) {
-            GL11.glRotatef(90, 0, 1, 0);
-            if(type == "small") {
-            GL11.glTranslatef(-2f, 0.0f, 0f);
-             }
-            if(type == "medium") {
-                GL11.glTranslatef(-2f, 0.0f, 0f);
-            }
-            if(type == "large") {
-                GL11.glTranslatef(-2f, 0.0f, 0f);
-            }
+        switch (type)
+        {
+            case "small":
+                this.renderSmall();
+                break;
+            case "medium":
+                this.renderMedium();
+                break;
+            case "large":
+                this.renderLarge();
+                break;
         }
-
-        if (facing == 2) {
-            if (type == "small") {
-                GL11.glTranslatef(0, 0.0f,   2.0f);
-            }
-            if (type == "medium") {
-                GL11.glTranslatef(0, 0.0f, 2.0f);
-            }
-            if (type == "large") {
-                GL11.glTranslatef(0, 0.0f, 2.0f);
-            }
-        }
-
-        if (facing == 3) {
-            GL11.glRotatef(-90, 0, 1, 0);
-            if(type == "small") {
-                GL11.glTranslatef(2.0f, 0.0f, 0);
-            }
-            if(type == "medium") {
-                GL11.glTranslatef(2.0f, 0.0f, 0);
-            }
-            if(type == "large") {
-                GL11.glTranslatef(2.0f, 0.0f, 0);
-            }
-        }
-
-        if(type.equals("small"))this.renderSmall();
-        if(type.equals("medium"))this.renderMedium();
-        if(type.equals("large"))this.renderLarge();
 
         GL11.glPopMatrix();
     }
