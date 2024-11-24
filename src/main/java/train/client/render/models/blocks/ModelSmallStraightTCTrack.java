@@ -6,6 +6,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.ResourceLocation;
 
+import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.common.library.Info;
@@ -22,21 +23,28 @@ public class ModelSmallStraightTCTrack extends ModelBase {
 		modelRoadCrossing = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_roadcrossing.obj"));
 	}
 
-	public void render(String type) {
-		if (type.equals("straight")) {
-			modelSmallStraight.renderAll();
+	private void render(String type)
+	{
+		switch (type)
+		{
+			case "straight":
+			case "embedded":
+				modelSmallStraight.renderAll();
+			break;
+			case "crossing":
+				modelRoadCrossing.renderAll();
+			break;
+			case "crossing1":
+				modelRoadCrossing.renderAll();
+			break;
+			case "crossing2":
+				modelRoadCrossing.renderAll();
+			break;
 		}
-		if (type.equals("crossing")) {
-			modelRoadCrossing.renderAll();
-		}
-		if (type.equals("crossing1")) {
-			modelRoadCrossing.renderAll();
-		}
-		if (type.equals("crossing2")) {
-			modelRoadCrossing.renderAll();
-		}
+
+        //render( type, tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord), x, y, z, 1, 1, 1, 1);
 	}
-	
+
 	public void render(String type, TileTCRail tcRail, double x, double y, double z) {
 		int facing = tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord);
 		render( type, facing, x, y, z, 1, 1, 1, 1 );
@@ -52,24 +60,33 @@ public class ModelSmallStraightTCTrack extends ModelBase {
 		GL11.glColor4f(r, g, b, a);
 
 		// Bind the texture, so that OpenGL properly textures our block.
-		if (type.equals("straight")) {
- 			FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
-		}
-		if (type.equals("crossing")) {
-			FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_roadcrossing.png"));
-		}		
-		if (type.equals("crossing1")) {
-			FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_roadcrossing_1.png"));
-		}		
-		if (type.equals("crossing2")) {
-			FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_roadcrossing_2.png"));
+		switch (type)
+		{
+			case "straight":
+				FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+			break;
+			case "embedded":
+				FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_embedded.png"));
+			break;
+			case "crossing":
+				FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_roadcrossing.png"));
+			break;
+			case "crossing1":
+				FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_roadcrossing_1.png"));
+			break;
+			case "crossing2":
+				FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_roadcrossing_2.png"));
+			break;
 		}
 
-		if (facing == 3) {
-			GL11.glRotatef(90, 0, 1, 0);
-		}
-		if (facing == 1) {
-			GL11.glRotatef(90, 0, 1, 0);
+		switch (facing)
+		{
+			case 3:
+				GL11.glRotatef(90, 0, 1, 0);
+			break;
+			case 1:
+				GL11.glRotatef(90, 0, 1, 0);
+			break;
 		}
 
 		render(type);
