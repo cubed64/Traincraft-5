@@ -15,7 +15,7 @@ import train.common.library.GuiIDs;
 
 public class DieselGP39Dash2 extends DieselTrain {
     public DieselGP39Dash2(World world) {
-        super(world, EnumTrains.GP39.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.GP39Dash2.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         textureDescriptionMap.put(0, "MKT");
         textureDescriptionMap.put(1, "FURRX (Ex CSWR)");

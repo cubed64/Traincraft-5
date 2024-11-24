@@ -25,8 +25,10 @@ public class WoodchipHopper extends Freight implements IInventory  {
         textureDescriptionMap.put(4, "ATSF");
         textureDescriptionMap.put(5, "OWO");
         textureDescriptionMap.put(6, "FNCC");
-        textureDescriptionMap.put(7, "WP");
-        textureDescriptionMap.put(8, "DN");
+        textureDescriptionMap.put(7, "FNCC (Ex BTR)");
+        textureDescriptionMap.put(8, "FNCC (Ex BTR)");
+        textureDescriptionMap.put(9, "WP");
+        textureDescriptionMap.put(10, "DN");
     }
 
     public WoodchipHopper(World world, double d, double d1, double d2){

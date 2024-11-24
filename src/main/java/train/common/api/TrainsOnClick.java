@@ -93,7 +93,7 @@ public class TrainsOnClick
 	public boolean onClickWithBrakeHandle(AbstractTrains entityRollingStock, ItemStack itemstack, EntityPlayer playerEntity, World world)
 	{
 		if (itemstack != null && itemstack.getItem() == ItemIDs.brakeStick.item && !world.isRemote
-				&& (entityRollingStock instanceof Freight || (entityRollingStock instanceof AbstractPassengerCar || entityRollingStock instanceof IPassenger || entityRollingStock instanceof LiquidTank || entityRollingStock instanceof AbstractWorkCart))
+				&& (entityRollingStock instanceof Locomotive == false && entityRollingStock instanceof AbstractControlCar == false)
 				&& (FMLCommonHandler.instance().getMinecraftServerInstance().isSinglePlayer()
 					|| entityRollingStock.getTrainLockedFromPacket() == false
 					|| entityRollingStock.getTrainOwner() == null
@@ -105,34 +105,6 @@ public class TrainsOnClick
 		{
 			if (playerEntity.isSneaking())
 			{
-				if (((EntityRollingStock) entityRollingStock).trainHandler != null)
-				{
-					for (EntityRollingStock rollingStock : ((EntityRollingStock) entityRollingStock).trainHandler.getTrains())
-					{
-						if (rollingStock.getSpeed() >= 10)
-						{
-							if (!world.isRemote)
-							{
-								playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " is going to fast to engage the hand brake"));
-							}
-
-							return false;
-						}
-					}
-				}
-				else
-				{
-					if (((EntityRollingStock)entityRollingStock).getSpeed() >= 10)
-					{
-						if (!world.isRemote)
-						{
-							playerEntity.addChatMessage(new ChatComponentText(((EntityRollingStock)entityRollingStock).getTrainName() + " is going to fast to engage the hand brake"));
-						}
-
-						return false;
-					}
-				}
-
 				if (((EntityRollingStock)entityRollingStock).parkingBrake)
 				{
 					if (!world.isRemote)
