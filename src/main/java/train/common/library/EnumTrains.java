@@ -823,6 +823,11 @@ public enum EnumTrains {
 		this.bogieLocoPosition = bogieLocoPosition;
 	}
 
+	private EnumTrains(String internalName,Class entityClass, Item item, EnumTrainType trainType,int MHP,int maxSpeed, double mass, int fuelConsumption, int waterConsumption, int heatingTime, double accelerationRate, double brakeRate, int tankCapacity, int[] colors, int guiRenderScale, double bogieLocoPosition)
+	{
+		this(  internalName, entityClass,  item,  trainType.TrainType, MHP, maxSpeed,  mass,  fuelConsumption,  waterConsumption,  heatingTime,  accelerationRate,  brakeRate,  tankCapacity,  colors,  guiRenderScale,  bogieLocoPosition);
+	}
+
 	/**
 	 * Constructor for additionnal tooltips on the item
 	 * @param internalName
@@ -863,6 +868,11 @@ public enum EnumTrains {
 		this.additionnalTooltip=additionnalTooltip;
 	}
 
+	private EnumTrains(String internalName,Class entityClass, Item item, EnumTrainType trainType,int MHP,int maxSpeed, double mass, int fuelConsumption,int waterConsumption, int heatingTime, double accelerationRate, double brakeRate, int tankCapacity, int[] colors, int guiRenderScale, double bogieLocoPositions, String[] additionnalTooltip)
+	{
+		this( internalName, entityClass, item, trainType.TrainType, MHP, maxSpeed,  mass,  fuelConsumption, waterConsumption,  heatingTime,  accelerationRate,  brakeRate,  tankCapacity,  colors,  guiRenderScale,  bogieLocoPositions,  additionnalTooltip);
+	}
+
 
 	/**
 	 * Constructor for freight carts
@@ -878,7 +888,8 @@ public enum EnumTrains {
 	 * @param cargoCapacity
 	 * @param additionnalTooltip
 	 */
-	private EnumTrains(String internalName,Class entityClass, Item item, String trainType, double mass, int[] colors, int guiRenderScale, int cargoCapacity, String[] additionnalTooltip){
+	private EnumTrains(String internalName,Class entityClass, Item item, String trainType, double mass, int[] colors, int guiRenderScale, int cargoCapacity, String[] additionnalTooltip)
+	{
 		this.internalName = internalName;
 		this.entityClass = entityClass;
 		this.item = item;
@@ -888,6 +899,11 @@ public enum EnumTrains {
 		this.guiRenderScale = guiRenderScale;
 		this.additionnalTooltip=additionnalTooltip;
 		this.cargoCapacity = cargoCapacity;
+	}
+
+	private EnumTrains(String internalName,Class entityClass, Item item, EnumTrainType trainType, double mass, int[] colors, int guiRenderScale, int cargoCapacity, String[] additionnalTooltip)
+	{
+		this(internalName, entityClass, item, trainType.TrainType, mass, colors, guiRenderScale, cargoCapacity, additionnalTooltip);
 	}
 
 	public String getInternalName(){
