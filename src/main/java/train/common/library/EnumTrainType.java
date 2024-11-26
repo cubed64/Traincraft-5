@@ -39,7 +39,7 @@ public enum EnumTrainType
     {
         for (EnumTrainType trainType : EnumTrainType.values())
         {
-            if (trainType.equals(text))
+            if (trainType.TrainType.equalsIgnoreCase(text))
             {
                 return trainType.TrainTypeCode;
             }
