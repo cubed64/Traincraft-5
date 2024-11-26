@@ -45,12 +45,16 @@ public class DieselES44h extends DieselTrain {
         textureDescriptionMap.put(24, "CSX 1967 (Seaboard Coast Line)");
         textureDescriptionMap.put(25, "CSX 1875 (Pittsburgh & Lake Erie)");
         textureDescriptionMap.put(26, "CSX 1834 (Georgia Railroad)");
-        textureDescriptionMap.put(27, "CSX 1877 (Chicago & Eastern Illinois )");
-        textureDescriptionMap.put(28, "CSX 911 (Fire)");
-        textureDescriptionMap.put(29, "CSX 1776 (Military)");
-        textureDescriptionMap.put(30, "CSX 3194 (Police)");
-        textureDescriptionMap.put(31, "IAIS (513)");
-        textureDescriptionMap.put(32, "IAIS (516)");
+        textureDescriptionMap.put(27, "CSX 1877 (Chicago & Eastern Illinois)");
+        textureDescriptionMap.put(28, "CSX 1901 (Seaboard Air Line)");
+        textureDescriptionMap.put(29, "CSX 1851 (Nashville Chattanooga & St Louis)");
+        textureDescriptionMap.put(30, "CSX 1902 (Clinchfield)");
+        textureDescriptionMap.put(31, "CSX 1981 (Pan Am Railways)");
+        textureDescriptionMap.put(32, "CSX 911 (Fire)");
+        textureDescriptionMap.put(33, "CSX 1776 (Military)");
+        textureDescriptionMap.put(34, "CSX 3194 (Police)");
+        textureDescriptionMap.put(35, "IAIS (513)");
+        textureDescriptionMap.put(36, "IAIS (516)");
     }
     public DieselES44h(World world, double d, double d1, double d2){
         this(world);
