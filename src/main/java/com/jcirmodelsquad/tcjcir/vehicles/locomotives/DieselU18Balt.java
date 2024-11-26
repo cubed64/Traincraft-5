@@ -17,11 +17,14 @@ public class DieselU18Balt extends DieselTrain {
     public DieselU18Balt(World world) {
         super(world, EnumTrains.U18Balt.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Blandsville & Blankerston");
+
+        textureDescriptionMap.put(0, "PW (Late Orange & Brown)");
         textureDescriptionMap.put(1, "FNCC (KIT-L)");
         textureDescriptionMap.put(2, "FCOM (Ex FNCC)");
-        textureDescriptionMap.put(3, "SV 402");
-        textureDescriptionMap.put(4, "SV 406");
+        textureDescriptionMap.put(3, "Blandsville & Blankerston");
+        textureDescriptionMap.put(4, "SV 402");
+        textureDescriptionMap.put(5, "SV 406");
+        textureDescriptionMap.put(6, "SV 1801");
     }
     public DieselU18Balt(World world, double d, double d1, double d2){
         this(world);

@@ -1370,7 +1370,7 @@ public enum RenderEnum
 	}, "", null, 0, false),
 	U18Balt( DieselU18Balt.class,  new ModelU18Bnew(), "u18b_new_", true,new float[]{-1.3F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{
-			add(new double[]{0.79D, 1.35D, 0.0D});
+			add(new double[]{0.81D, 1.35D, 0.0D});
 		}
 	}, "", null, 0, false),
 	U18BWH( DieselU18BWH.class,  new ModelU23BW(), "U18BWH_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {

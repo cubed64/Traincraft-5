@@ -33,7 +33,7 @@ public class ModelU23B extends ModelConverter //Same as Filename
 
 	public ModelU23B() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[434];
+		bodyModel = new ModelRendererTurbo[439];
 
 		initbodyModel_1();
 
@@ -478,6 +478,11 @@ public class ModelU23B extends ModelConverter //Same as Filename
 		bodyModel[431] = new ModelRendererTurbo(this, 192, 24, textureX, textureY); // Box 361 rv ac
 		bodyModel[432] = new ModelRendererTurbo(this, 185, 21, textureX, textureY); // Box 362 rv ac
 		bodyModel[433] = new ModelRendererTurbo(this, 185, 27, textureX, textureY); // Box 363 rv ac
+		bodyModel[434] = new ModelRendererTurbo(this, 1, 102, textureX, textureY); // Box 48 ph2 headlight
+		bodyModel[435] = new ModelRendererTurbo(this, 8, 101, textureX, textureY, "lamp"); // Box 186 Headlight Front up ph2
+		bodyModel[436] = new ModelRendererTurbo(this, 8, 106, textureX, textureY, "lamp"); // Box 187 Headlight Front down ph2
+		bodyModel[437] = new ModelRendererTurbo(this, 1, 109, textureX, textureY); // Box 133 ph2 headlight
+		bodyModel[438] = new ModelRendererTurbo(this, 1, 98, textureX, textureY); // Box 187 ph2 headlight
 
 		bodyModel[0].addBox(0F, 0F, 0F, 76, 2, 22, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-38F, -1F, -11F);
@@ -1807,6 +1812,21 @@ public class ModelU23B extends ModelConverter //Same as Filename
 
 		bodyModel[433].addShapeBox(0F, 0F, 0F, 1, 1, 4, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F); // Box 363 rv ac
 		bodyModel[433].setRotationPoint(-27.5F, -23F, -2F);
+
+		bodyModel[434].addShapeBox(0F, 0F, 0F, 1, 4, 2, 0F,0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F); // Box 48 ph2 headlight
+		bodyModel[434].setRotationPoint(-34F, -21.75F, -1F);
+
+		bodyModel[435].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 186 Headlight Front up ph2
+		bodyModel[435].setRotationPoint(-34.1F, -21.85F, -1F);
+
+		bodyModel[436].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 187 Headlight Front down ph2
+		bodyModel[436].setRotationPoint(-34.1F, -19.95F, -1F);
+
+		bodyModel[437].addShapeBox(0F, 0F, 0F, 1, 1, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F); // Box 133 ph2 headlight
+		bodyModel[437].setRotationPoint(-34F, -18.25F, -1F);
+
+		bodyModel[438].addShapeBox(0F, 0F, 0F, 1, 1, 2, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 187 ph2 headlight
+		bodyModel[438].setRotationPoint(-34F, -22.5F, -1F);
 	}
 	ModelFB2_new theTrucks2 = new ModelFB2_new();
 	ModelBlombergBnew theTrucks3 = new ModelBlombergBnew();

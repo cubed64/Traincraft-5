@@ -1572,61 +1572,65 @@ public class ModelU18Bnew extends ModelConverter //Same as Filename
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7324) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_silver_a.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.3, 0.0, 0);
+			GL11.glTranslated(-1.28, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
-
-			GL11.glTranslated(2.58, 0, 0);
+			GL11.glPopMatrix();
+			GL11.glPushMatrix();
+			GL11.glTranslated(1.28, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6324||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 2436){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.3, -0.025, 0);
+			GL11.glTranslated(-1.28, -0.025, 0);
 			theTrucks4.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(2.6, 0, 0);
+			GL11.glTranslated(2.58, 0, 0);
 			theTrucks4.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7){
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.3, -0.025, 0);
+			GL11.glTranslated(-1.28, -0.025, 0);
 			theTrucks4.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(2.6, 0, 0);
+			GL11.glTranslated(2.58, 0, 0);
 			theTrucks4.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 421 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 923){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Blac.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.3, -0.01, 0);
+			GL11.glTranslated(-1.28, -0.01, 0);
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
-
-			GL11.glTranslated(2.6, 0, 0);
+			GL11.glPopMatrix();
+			GL11.glPushMatrix();
+			GL11.glTranslated(1.28, -0.01, 0);
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_sv_402.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.3, -0.01, 0);
+			GL11.glTranslated(-1.28, -0.01, 0);
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
-
-			GL11.glTranslated(2.6, 0, 0);
+			GL11.glPopMatrix();
+			GL11.glPushMatrix();
+			GL11.glTranslated(1.28, -0.01, 0);
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_sv_406.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.3, -0.01, 0);
+			GL11.glTranslated(-1.28, -0.01, 0);
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
-
-			GL11.glTranslated(2.6, 0, 0);
+			GL11.glPopMatrix();
+			GL11.glPushMatrix();
+			GL11.glTranslated(1.28, -0.01, 0);
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_black_a.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.3, 0.0, 0);
+			GL11.glTranslated(-1.28, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glTranslated(2.58, 0, 0);
