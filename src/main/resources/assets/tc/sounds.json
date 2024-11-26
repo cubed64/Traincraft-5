@@ -295,6 +295,7 @@
   "graham_ebell": {"category": "master", "sounds": [{"name": "graham_ebell", "stream":  true}]},
   "ge_steelbell_1": {"category": "master", "sounds": [{"name": "ge_steelbell_1", "stream":  true}]},
   "ge_steelbell_2": {"category": "master", "sounds": [{"name": "ge_steelbell_2", "stream":  true}]},
+  "ge_steelbell_3": {"category": "master", "sounds": [{"name": "ge_steelbell_3", "stream":  true}]},
 
 
 
