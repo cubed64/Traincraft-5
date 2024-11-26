@@ -515,9 +515,11 @@ public class LinkHandler {
 			double stretch = d2 -getOptimalDistance(cart1, cart2);
 			//System.out.println("stretch "+stretch);
 
+			//spring seems to be the strength behind keeping stuff together
 			double springX = limitForce(0.4D * stretch * vecX * -1);//0.4 is default, 0.1 lets you couple nose to nose, 0.25 starts accordianing
-			double springZ = limitForce(0.4D * stretch * vecZ * -1);
-
+			double springZ = limitForce(0.4D * stretch * vecZ * -1);//the lower the number, the less strength the coupling has
+			//System.out.println("SPRING_X "+springX);
+			//System.out.println("SPRING_Z "+springZ);
 
 
 			if (adj1) {
@@ -531,8 +533,14 @@ public class LinkHandler {
 
 			double dot = (cart1.motionX - cart2.motionX) * unitX + (cart1.motionZ - cart2.motionZ) * unitZ;
 
+			//damp seems to be the "smoothness" of the link / reduces movement. higher the number, the less resistance
 			double dampX = limitForce(0.4D * dot * unitX * -1);// 0.4
-			double dampZ = limitForce(0.4D * dot * unitZ * -1);
+			double dampZ = limitForce(0.4D * dot * unitZ * -1);//higher numbers tend to slowly merge things together, lower causes rapid merge, default doesnt break?
+			//System.out.println("DAMP_X "+dampX);
+			/*if (cart1.motionZ > 1D || cart2.motionZ > 1D){
+				System.out.println("DAMP_Z "+dampZ);
+				System.out.println("SPRING_Z "+springZ);
+			}*/
 
 			if (adj1) {
 				cart1.motionX += dampX;
@@ -546,7 +554,7 @@ public class LinkHandler {
 	}
 
 	private double limitForce(double force) {
-		return Math.copySign(Math.abs(Math.min(Math.abs(force), 14.0D)), force);
+		return Math.copySign(Math.abs(Math.min(Math.abs(force), 14.0D)), force);//14.0D default
 	}
 	private double limitForce(double force, double max) {
 		return Math.copySign(Math.abs(Math.min(Math.abs(force), max)),  force);
