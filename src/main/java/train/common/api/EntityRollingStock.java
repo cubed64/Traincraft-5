@@ -1746,6 +1746,11 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			}
 		}
 
+		if (trainsOnClick.onClickWithInterchangeTransferReportBoard(this, itemstack, playerEntity, worldObj))
+		{
+			return true;
+		}
+
 		if (trainsOnClick.onClickWithBrakeHandle(this,itemstack,playerEntity,worldObj))
 		{
 			setParkingBrakeFromPacket(!parkingBrake);
@@ -1816,7 +1821,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			return true;
 		}
 
-		if (itemstack != null && itemstack.getItem() instanceof ItemPaintbrushThing && entityplayer.isSneaking()) {
+		if (itemstack != null && itemstack.getItem() instanceof ItemPaintbrushThing && entityplayer.isSneaking())
+		{
 			if (this.acceptedColors != null && this.acceptedColors.size() > 0) {
 				entityplayer.openGui(Traincraft.instance, GuiIDs.PAINTBRUSH, entityplayer.getEntityWorld(), this.getEntityId(), -1, (int) this.posZ);
 			}

@@ -1,10 +1,16 @@
 package train.common.api;
 
 import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
+import train.common.core.network.PacketClientSideEvent;
+import train.common.core.network.PacketSetTrainLockedToClient;
+import train.common.utils.InterchangeTransferReportGenerator;
 import train.common.Traincraft;
 import train.common.core.network.PacketParkingBrake;
 import train.common.library.ItemIDs;
@@ -137,5 +143,31 @@ public class TrainsOnClick
 		}
 
 		return false;
+	}
+
+	public boolean onClickWithInterchangeTransferReportBoard(AbstractTrains abstractTrain, ItemStack itemstack, EntityPlayer entityPlayer, World world)
+	{
+		if (entityPlayer.isSneaking() && itemstack != null && itemstack.getItem() == ItemIDs.interchangeTransferReportBoard.item)
+		{
+			if (((EntityRollingStock)abstractTrain).trainHandler != null)
+			{
+				Boolean isRemote = world.isRemote;
+				if (isRemote == false)
+				{
+					PostChatMessage(entityPlayer, "Creating Interchange Report");
+					Traincraft.interchangeChannel.sendTo(new PacketClientSideEvent(new InterchangeTransferReportGenerator().GenerateInterchangeTransferReport("YOUR RAILROAD HERE", abstractTrain.trainHandler, false)), (EntityPlayerMP) entityPlayer);
+					PostChatMessage(entityPlayer, "Completed Interchange Report");
+				}
+
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	private void PostChatMessage(EntityPlayer entityPlayer, String message)
+	{
+		entityPlayer.addChatMessage(new ChatComponentText(message));
 	}
 }

@@ -44,8 +44,9 @@ public class PacketHandler {
 		Traincraft.paintbrushColorChannel = NetworkRegistry.INSTANCE.newSimpleChannel("paintbrushColor");
 		Traincraft.switchStandLockChannel = NetworkRegistry.INSTANCE.newSimpleChannel("switchStandLock");
 		Traincraft.cargoSelectionChannel = NetworkRegistry.INSTANCE.newSimpleChannel("cargoSelection");
-
+		Traincraft.interchangeChannel = NetworkRegistry.INSTANCE.newSimpleChannel("reportChannel");
 		Traincraft.toggleChunkLoadingChannel = NetworkRegistry.INSTANCE.newSimpleChannel("ToggleChunkLoading");
+
 
 
 		Traincraft.keyChannel.registerMessage(PacketAdminBook.Handler.class, PacketAdminBook.class, 4, Side.CLIENT);
@@ -101,6 +102,9 @@ public class PacketHandler {
 		Traincraft.geometryCarChannel.registerMessage(HANDLERS[6], UpdateGeometryCar.class, 206, Side.SERVER);
 		Traincraft.geometryCarChannel.registerMessage(HANDLERS[7], MissionStatusPacket.class, 207, Side.SERVER);
 		Traincraft.remoteControlKey.registerMessage(RemoteControlKeyPacket.Handler.class, RemoteControlKeyPacket.class, 208, Side.SERVER);
+
+
+		Traincraft.interchangeChannel.registerMessage(PacketClientSideEvent.Handler.class, PacketClientSideEvent.class, 25, Side.CLIENT);
 	}
 
 	private static final IMessageHandler[] HANDLERS = new IMessageHandler[]{
