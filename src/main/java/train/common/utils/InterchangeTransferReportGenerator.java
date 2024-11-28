@@ -102,7 +102,7 @@ public class InterchangeTransferReportGenerator
             }
             else
             {
-                if (inventoryStatus == "SOMETHING")
+                if (inventoryStatus != "**EMPTY**")
                 {
                     loadedRollingStockCount++;
                 }
@@ -133,7 +133,7 @@ public class InterchangeTransferReportGenerator
         }
         theReport.add("=========================================================" + "\n");
         String carStats = "CARS- ## LOADS- $$ EMPTIES- !! LOCOS- XX LENGTH- ??m      ";
-        int carTotal = (loadedRollingStockCount +  emptyRollingStockCount);
+        int carTotal = (loadedRollingStockCount +  emptyRollingStockCount + locomotiveCount);
         carStats = carStats.replace("##", carTotal + " ");
         carStats = carStats.replace("$$", loadedRollingStockCount + " ");
         carStats = carStats.replace("!!", emptyRollingStockCount + " " );
