@@ -102,7 +102,7 @@ public class InterchangeTransferReportGenerator
             }
             else
             {
-                if (inventoryStatus == "SOMETHING")
+                if (inventoryStatus != "**EMPTY**")
                 {
                     loadedRollingStockCount++;
                 }
