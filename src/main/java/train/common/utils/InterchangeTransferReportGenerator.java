@@ -132,7 +132,7 @@ public class InterchangeTransferReportGenerator
 
         }
         theReport.add("=========================================================" + "\n");
-        String carStats = "CARS- ## LOADS- $$ EMPTIES- !! LOCOS- XX LENGTH- ??m      ";
+        String carStats = "CARS-## LOADS-$$ EMPTIES-!! LOCOS-XX LENGTH-?? ";
         int carTotal = (loadedRollingStockCount +  emptyRollingStockCount + locomotiveCount);
         carStats = carStats.replace("##", carTotal + " ");
         carStats = carStats.replace("$$", loadedRollingStockCount + " ");
@@ -148,9 +148,9 @@ public class InterchangeTransferReportGenerator
 
         theReport.add(carStats + "\n");
         theReport.add("=========================================================" + "\n");
-        theReport.add("LOCATION:                                                " + "\n");
+        theReport.add("LOCATION: " + "\n");
         theReport.add("=========================================================" + "\n");
-        theReport.add("Cars with brake engaged" + "\n");
+        theReport.add("CARS WITH HANDBRAKE ENGAGED:" + "\n");
         if (carsWithBrakeOn.size() == 0)
         {
             theReport.add("N/A" + "\n");
@@ -198,22 +198,22 @@ public class InterchangeTransferReportGenerator
     {
         if (entityRollingStock instanceof Locomotive)
         {
-            return "Locomotive";
+            return "**LOCO**";
         }
 
         if (entityRollingStock instanceof AbstractWorkCart)
         {
-            return "Caboose/WorkCart";
+            return "**CABOOSE**";
         }
 
         if (entityRollingStock instanceof AbstractControlCar)
         {
-            return "ControlCar";
+            return "CONTROLCAB";
         }
 
         if (entityRollingStock instanceof AbstractPassengerCar)
         {
-            return "Passenger Car";
+            return "PASSENGER";
         }
 
         if (entityRollingStock instanceof LiquidTank)
@@ -239,7 +239,7 @@ public class InterchangeTransferReportGenerator
         {
             if (itemStack != null)
             {
-                return "SOMETHING";
+                return "--SOMETHING--";
             }
         }
 
