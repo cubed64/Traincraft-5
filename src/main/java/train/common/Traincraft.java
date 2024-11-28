@@ -67,6 +67,7 @@ public class Traincraft {
 	public static SimpleNetworkWrapper slotschannel;
 	public static SimpleNetworkWrapper ignitionChannel;
 	public static SimpleNetworkWrapper brakeChannel;
+	public static SimpleNetworkWrapper interchangeChannel;
 	public static SimpleNetworkWrapper lockChannel;
 	public static SimpleNetworkWrapper rollingStockLightsChannel;
 	public static SimpleNetworkWrapper rollingStockBeaconChannel;

@@ -48,6 +48,7 @@ public class TCItems {
 
 		ItemIDs.stake.item = new ItemStacked(1200);
 		ItemIDs.brakeStick.item = new ItemBrakeStick();
+		ItemIDs.interchangeTransferReportBoard.item = new ItemInterchangeTransferReportBoard();
 		ItemIDs.airship.item = new ItemZeppelins(0);
 		ItemIDs.zeppelin.item = new ItemZeppelins(1);
 		ItemIDs.overalls.item = new ItemTCArmor(ItemIDs.overalls.iconName, Traincraft.instance.armor, Traincraft.trainArmor, 2,0);

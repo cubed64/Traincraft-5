@@ -71,6 +71,7 @@ public enum ItemIDs {
 	pennCentral("ItemPennCentralSimCard", "ato_card", 291),
 	paintbrushThing("ItemPaintbrushThing", "paintbrushthing", 9),
 	brakeStick("ItemBrakeStick", "item_brakestick", 2),
+	interchangeTransferReportBoard("ItemInterchangeTransferReportBoard", "item_interchangetransferreportboard", 64),
 
 
 	minecartWork("ItemRollingStock", "train_work", train.common.library.TypeOfRollingStock.HERITAGE, 4),
