@@ -43,6 +43,7 @@ public class DieselU23B extends DieselTrain {
         textureDescriptionMap.put(23, "ADT (Ex UP)");
         textureDescriptionMap.put(24, "Suffern Hoboken Interstate Transfer 211");
         textureDescriptionMap.put(25, "Detroit Export System");
+        textureDescriptionMap.put(26, "Magnolia Properties");
     }
     public DieselU23B(World world, double d, double d1, double d2){
         this(world);

@@ -756,7 +756,7 @@ public enum RenderEnum
 		}
 	}, 2, true),
 	PETender(TenderPETender.class, new ModelPE_Tender(), "PETender", false, new float[] { 0.1F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
-	NP_L9(SteamNP_L9.class, new ModelNP_L9(), "np_l9_", true, new float[] {  -1.5F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
+	NP_L9(SteamNP_L9.class, new ModelNP_L9(), "np_l9_", true, new float[] {  -1.0F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
 		{
 			add(new double[] { 2.05D, 1.5D, 0.0D });
 		}
