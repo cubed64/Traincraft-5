@@ -456,177 +456,405 @@ public class TileTCRail extends TileEntity {
 		super.onDataPacket(net, pkt);
 	}
 
-	public void changeSwitchState(World world, TileTCRail tileEntity, int i, int j, int k) {
-		if (tileEntity.getType() != null && (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()))) {
-			if (tileEntity.getSwitchState()) {
+	public void changeSwitchState(World world, TileTCRail tileEntity, int i, int j, int k)
+	{
+		if (tileEntity.getType() != null  && (tileEntity.getType().contains("SWITCH")))
+		{
+			String smallStraightToUse = RailVariants.NORMAL.equals(tileEntity.getTrackType().getVariant()) ? EnumTracks.SMALL_STRAIGHT.getLabel() : EnumTracks.EMBEDDED_SMALL_STRAIGHT.getLabel();
+
+			if (tileEntity.getSwitchState())
+			{
 				tileEntity.setSwitchState(false, false);
-				if (tileEntity.getBlockMetadata() == 2) {
-					TileEntity te1 = world.getTileEntity(i, j, k - 1);
-					if (te1 != null) {
-						((TileTCRail) te1).setType(EnumTracks.SMALL_STRAIGHT.getLabel());
-						if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel())) {
+				TileEntity te1 = null;
+				switch (tileEntity.getBlockMetadata())
+				{
+					case 2:
+					te1 = world.getTileEntity(i, j, k - 1);
+					if (te1 != null)
+					{
+						((TileTCRail) te1).setType(smallStraightToUse);
+						if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel())
+								|| tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel())
+								|| tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel())
+								|| tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel())
+								|| tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel())
+								|| tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH.getLabel())
+								|| tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_RIGHT_SWITCH.getLabel())
+								|| tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_LEFT_SWITCH.getLabel()))
+						{
 							TileEntity te2 = world.getTileEntity(i, j, k - 2);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.SMALL_STRAIGHT.getLabel());
+							if (te2 != null) ((TileTCRail) te2).setType(smallStraightToUse);
 						}
 					}
-				}
-				if (tileEntity.getBlockMetadata() == 0) {
-					TileEntity te1 = world.getTileEntity(i, j, k + 1);
-					if (te1 instanceof TileTCRail) {
-						((TileTCRail) te1).setType(EnumTracks.SMALL_STRAIGHT.getLabel());
-						if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel())) {
-							TileEntity te2 = world.getTileEntity(i, j, k + 2);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.SMALL_STRAIGHT.getLabel());
+					break;
+					case 0:
+						te1 = world.getTileEntity(i, j, k + 1);
+						if (te1 instanceof TileTCRail)
+						{
+							((TileTCRail) te1).setType(smallStraightToUse);
+							if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_RIGHT_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_LEFT_SWITCH.getLabel()))
+							{
+								TileEntity te2 = world.getTileEntity(i, j, k + 2);
+								if (te2 != null) ((TileTCRail) te2).setType(smallStraightToUse);
+							}
 						}
-					}
-				}
-				if (tileEntity.getBlockMetadata() == 1) {
-					TileEntity te1 = world.getTileEntity(i - 1, j, k);
-					if (te1 != null) {
-						((TileTCRail) te1).setType(EnumTracks.SMALL_STRAIGHT.getLabel());
-						if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel())) {
-							TileEntity te2 = world.getTileEntity(i - 2, j, k);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.SMALL_STRAIGHT.getLabel());
+					break;
+					case 1:
+						te1 = world.getTileEntity(i - 1, j, k);
+						if (te1 != null) {
+							((TileTCRail) te1).setType(smallStraightToUse);
+							if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_RIGHT_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_LEFT_SWITCH.getLabel()))
+							{
+								TileEntity te2 = world.getTileEntity(i - 2, j, k);
+								if (te2 != null) ((TileTCRail) te2).setType(smallStraightToUse);
+							}
 						}
-					}
-				}
-				if (tileEntity.getBlockMetadata() == 3) {
-					TileEntity te1 = world.getTileEntity(i + 1, j, k);
-					if (te1 != null) {
-						((TileTCRail) te1).setType(EnumTracks.SMALL_STRAIGHT.getLabel());
-						if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()) || tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel())) {
-							TileEntity te2 = world.getTileEntity(i + 2, j, k);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.SMALL_STRAIGHT.getLabel());
+					break;
+					case 3:
+						te1 = world.getTileEntity(i + 1, j, k);
+						if (te1 != null)
+						{
+							((TileTCRail) te1).setType(smallStraightToUse);
+							if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_RIGHT_SWITCH.getLabel())
+									|| tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_LEFT_SWITCH.getLabel()))
+							{
+								TileEntity te2 = world.getTileEntity(i + 2, j, k);
+								if (te2 != null) ((TileTCRail) te2).setType(smallStraightToUse);
+							}
 						}
-					}
+					break;
 				}
 			}
-			else if (!tileEntity.getSwitchState()) {
+			else if (!tileEntity.getSwitchState())
+			{
 				tileEntity.setSwitchState(true, false);
-				if (tileEntity.getBlockMetadata() == 2) {
-					TileEntity te1 = world.getTileEntity(i, j, k - 1);
-					if (te1 != null) {
-						if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
+				TileEntity te1;
+				switch (tileEntity.getBlockMetadata())
+				{
+					case 2:
+						te1 = world.getTileEntity(i, j, k - 1);
+						if (te1 != null)
+						{
+							if (smallStraightToUse.contains("EMBEDDED"))
+							{
+								if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k - 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k - 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_LARGE_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k - 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_LARGE_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_LARGE_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k - 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_LARGE_LEFT_TURN.getLabel());
+								}
+							}
+							else
+							{
+								if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k - 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k - 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k - 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k - 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
+								}
+							}
 						}
-						else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
+					break;
+					case 0:
+						te1 = world.getTileEntity(i, j, k + 1);
+						if (te1 != null)
+						{
+							if (smallStraightToUse.contains("EMBEDDED"))
+							{
+								if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k + 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k + 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_LARGE_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k + 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_LARGE_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_LARGE_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k + 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_LARGE_LEFT_TURN.getLabel());
+								}
+							}
+							else
+							{
+								if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k + 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k + 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k + 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i, j, k + 2);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
+								}
+							}
 						}
-						else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i, j, k - 2);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
+					break;
+					case 1:
+						te1 = world.getTileEntity(i - 1, j, k);
+						if (te1 != null)
+						{
+							if (smallStraightToUse.contains("EMBEDDED"))
+							{
+								if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i - 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i - 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_LARGE_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i - 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_LARGE_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_LARGE_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i - 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_LARGE_LEFT_TURN.getLabel());
+								}
+							}
+							else
+							{
+								if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i - 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i - 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i - 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i - 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
+								}
+							}
 						}
-						else if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i, j, k - 2);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
+					break;
+					case 3:
+						te1 = world.getTileEntity(i + 1, j, k);
+						if (te1 != null)
+						{
+							if (smallStraightToUse.contains("EMBEDDED"))
+							{
+								if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i + 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_MEDIUM_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i + 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_LARGE_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i + 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_LARGE_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.EMBEDDED_LARGE_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.EMBEDDED_LARGE_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i + 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.EMBEDDED_LARGE_LEFT_TURN.getLabel());
+								}
+							}
+							else
+							{
+								if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i + 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i + 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i + 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
+								}
+								else if (tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel()))
+								{
+									((TileTCRail) te1).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
+									TileEntity te2 = world.getTileEntity(i + 2, j, k);
+									if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
+								}
+							}
 						}
-						else if (tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i, j, k - 2);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i, j, k - 2);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
-						}
-
-					}
-				}
-				if (tileEntity.getBlockMetadata() == 0) {
-					TileEntity te1 = world.getTileEntity(i, j, k + 1);
-					if (te1 != null) {
-						if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i, j, k + 2);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i, j, k + 2);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i, j, k + 2);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i, j, k + 2);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
-						}
-					}
-				}
-				if (tileEntity.getBlockMetadata() == 1) {
-					TileEntity te1 = world.getTileEntity(i - 1, j, k);
-					if (te1 != null) {
-						if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i - 2, j, k);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i - 2, j, k);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i - 2, j, k);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i - 2, j, k);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
-						}
-					}
-				}
-				if (tileEntity.getBlockMetadata() == 3) {
-					TileEntity te1 = world.getTileEntity(i + 1, j, k);
-					if (te1 != null) {
-						if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i + 2, j, k);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i + 2, j, k);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i + 2, j, k);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_RIGHT_TURN.getLabel());
-						}
-						else if (tileEntity.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel())) {
-							((TileTCRail) te1).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
-							TileEntity te2 = world.getTileEntity(i + 2, j, k);
-							if (te2 != null) ((TileTCRail) te2).setType(EnumTracks.LARGE_LEFT_TURN.getLabel());
-						}
-					}
+					break;
 				}
 			}
 		}
