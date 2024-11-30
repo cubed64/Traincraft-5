@@ -20,6 +20,7 @@ public class DieselTB27 extends DieselTrain {
         textureDescriptionMap.put(0, "Demonstrator");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
         textureDescriptionMap.put(2, "Avanste Northeastern");
+        textureDescriptionMap.put(3, "SPR");
 
     }
     public DieselTB27(World world, double d, double d1, double d2){

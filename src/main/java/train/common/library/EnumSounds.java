@@ -273,7 +273,7 @@ public enum EnumSounds {
 	DieselMP900(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselMP900.class, " ", 1F, "EMD_4_645E_Notch8", 0.45F, 48, "EMD_4_645E_Idle", 0.45F, 54, false, "emd_steelbell_8", 13, new String[] {"nathan_j3_2", "generic_horn_1", "nathan_m3h_1"}),
 	DieselMP15DCW9(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselMP15DCW9.class,"leslie_rs3k_2", 1F, "EMD_12_645E_Notch8", 0.45F, 54, "EMD_12_645E_Idle", 0.45F, 54, false, "emd_steelbell_1", 17),
 	DieselSW1600(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselSW1600.class, " ", 1F, "EMD_12_645E_Notch8", 0.45F, 54, "EMD_12_645E_Idle", 0.45F, 54, false, "emd_steelbell_5", 15, new String[] {"nathan_m3h_3"}),
-	DieselTB27(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselTB27.class, " ", 1F, "EMD_8_645E_Notch8", 0.45F, 48, "EMD_8_645E_Idle", 0.45F, 54, false, "emd_steelbell_8", 13, new String[] {"nathan_n3_1", "generic_horn_1", "nathan_m3h_4"}),
+	DieselTB27(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselTB27.class, " ", 1F, "EMD_8_645E_Notch8", 0.45F, 48, "EMD_8_645E_Idle", 0.45F, 54, false, "emd_steelbell_8", 13, new String[] {"nathan_n3_1", "generic_horn_1", "nathan_m3h_4", "nathan_p5_old_4"}),
 
 
 	//FoxTC Electrics

@@ -499,7 +499,7 @@ public enum EnumTrains {
 	Krautt("Krautt", DieselKrautt.class, ItemIDs.minecartKrautt.item, "diesel", 3540, 113, 0, 65, 0, 200, 0.75, 0.85, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "LightGrey", "Black", "Red"}), 13, -3.3),
 	//ILMC("ILMC", DieselILMC.class, ItemIDs.minecartILMC.item, "diesel", 600, 45, 0, 25, 0, 200, 0.75, 0.85, 7000, TraincraftUtil.getBytesFromColors(new String[]{"Green", "Blue"}), 16, -1),
 	DD55("DD55", DieselDD55.class, ItemIDs.minecartDD55.item, "diesel", 2000, 80, 0, 80, 0, 190, 0.7, 0.9555, 10000, TraincraftUtil.getBytesFromColors(new  String[] {"Lime", "Purple", "LightGrey", "Pink", "Blue"}), 15, -2.9),
-	TB27("TB27",DieselTB27.class, ItemIDs.minecartTB27.item, "diesel", 2700, 110, 0, 40, 0, 200, 0.7, 0.8, 18000, TraincraftUtil.getBytesFromColors(new String[]{"Red", "LightGrey", "White"}), 14, -2.8),
+	TB27("TB27",DieselTB27.class, ItemIDs.minecartTB27.item, "diesel", 2700, 110, 0, 40, 0, 200, 0.7, 0.8, 18000, TraincraftUtil.getBytesFromColors(new String[]{"Red", "LightGrey", "White", "Purple"}), 14, -2.8),
 
 	SlugMA("SlugMA", SlugMA.class, ItemIDs.minecartSlugMA.item, "slug", 0, 0, 7, 0, 0, 0, 0, 0, 18000, TraincraftUtil.getBytesFromColors(new String[] {"White", "Skin16", "Magenta", "Blue"}), 16, 0, (new String[] {"Reduces train weight when fueled"})),
 	F7BSlug("F7BSlug", BUnitF7.class, ItemIDs.minecartF7BSlug.item, "slug", 0, 0, 7, 0, 0, 0, 0, 0, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Skin19"}), 18, 0, (new String[] {"Reduces train weight when fueled"})),
