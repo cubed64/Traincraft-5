@@ -8,6 +8,8 @@ import train.common.items.TCRailTypes;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
 
+import static train.common.items.ItemTCRail.isTCStraightTrack;
+
 public class TiltingHandler {
 
     public int maxTilt;
@@ -54,7 +56,7 @@ public class TiltingHandler {
                     if (theRail.getType().equals("VERY_LARGE_RIGHT_TURN")) {
                         tiltingDirection = "right";
                     }
-                } else if (theRail != null && ItemTCRail.isTCStraightTrack(theRail)) {
+                } else if (theRail != null && isTCStraightTrack(theRail)) {
                     //Tilt out.
 
                     if (!tiltingStatus.equals("nottilt")) {

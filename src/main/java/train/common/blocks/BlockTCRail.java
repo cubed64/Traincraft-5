@@ -130,9 +130,7 @@ public class BlockTCRail extends Block {
 		int l = world.getBlockMetadata(i, j, k);
 
 		if (!world.isRemote && te != null && (te instanceof TileTCRail)) {
-			if (player != null && player.inventory != null && player.inventory.getCurrentItem() != null &&
-                    (player.inventory.getCurrentItem().getItem() instanceof ItemWrench) && ((TileTCRail) te).getType() != null &&
-                    (((TileTCRail) te).getType().equals(EnumTracks.SMALL_STRAIGHT.getLabel()) || ((TileTCRail) te).getType().equals(EnumTracks.EMBEDDED_SMALL_STRAIGHT.getLabel()))) {
+			if (player != null && player.inventory != null && player.inventory.getCurrentItem() != null && (player.inventory.getCurrentItem().getItem() instanceof ItemWrench) && ((TileTCRail) te).getType() != null && ((TileTCRail) te).getType().equals(EnumTracks.SMALL_STRAIGHT.getLabel())) {
 				l++;
 				if (l > 3)
 					l = 0;

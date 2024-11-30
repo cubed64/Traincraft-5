@@ -431,7 +431,7 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 					//	modelTwoWaysCrossing.render("embedded_diamond", railTile, x, y, z);
 					//	break;
 					//}
-					case EMBEDDED_MEDIUM_SWITCH:
+					/*case EMBEDDED_MEDIUM_SWITCH:
 					case EMBEDDED_MEDIUM_RIGHT_SWITCH: {
 						modelRightSwitchTurn.render("medium", railTile, x, y, z);
 						break;
@@ -448,7 +448,7 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 					case EMBEDDED_LARGE_LEFT_SWITCH: {
 						modelLeftSwitchTurn.render("large_90", railTile, x, y, z);
 						break;
-					}
+					}*/
 					/**case EMBEDDED_VERY_LARGE_SWITCH:
 					case EMBEDDED_VERY_LARGE_RIGHT_SWITCH: {
 						modelRightSwitchTurn.render("very_large_90", "embedded", railTile, x, y, z);
@@ -458,15 +458,15 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 						modelLeftSwitchTurn.render("very_large_90", "embedded", railTile, x, y, z);
 						break;
 					}*/
-					case EMBEDDED_MEDIUM_PARALLEL_SWITCH:
-					case EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH: {
-						modelRightSwitchTurn.render("medium_parallel", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH: {
-						modelLeftSwitchTurn.render("medium_parallel", railTile, x, y, z);
-						break;
-					}
+					//case EMBEDDED_MEDIUM_PARALLEL_SWITCH:
+					//case EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH: {
+					//	modelRightSwitchTurn.render("medium_parallel", railTile, x, y, z);
+					//	break;
+					//}
+					//case EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH: {
+					//	modelLeftSwitchTurn.render("medium_parallel", railTile, x, y, z);
+					//	break;
+					//}
 					/**case EMBEDDED_LARGE_PARALLEL_SWITCH:
 					case EMBEDDED_LARGE_RIGHT_PARALLEL_SWITCH: {
 						modelRightSwitchTurn.render("large_parallel", "embedded", railTile, x, y, z);

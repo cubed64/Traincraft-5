@@ -31,13 +31,68 @@ public class ItemTCRail extends ItemPart {
 
 	public static boolean isTCTurnTrack(TileTCRail tile) {
 		if(tile==null || tile.getType()==null){return false;}
-		return (TCRailTypes.isSwitchTrack(tile)  && tile.getSwitchState()) || TCRailTypes.isTurnTrack(tile);
+		return (tile.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel()) && tile.getSwitchState())
+				|| (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel()) && tile.getSwitchState())
+				|| (tile.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel()) && tile.getSwitchState())
+				|| (tile.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()) && tile.getSwitchState())
+				|| (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()) && tile.getSwitchState())
+				|| (tile.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()) && tile.getSwitchState())
+
+				|| tile.getType().equals(EnumTracks.MEDIUM_RIGHT_TURN.getLabel())
+				|| tile.getType().equals(EnumTracks.LARGE_RIGHT_TURN.getLabel())
+				|| tile.getType().equals(EnumTracks.LARGE_LEFT_TURN.getLabel())
+				|| tile.getType().equals(EnumTracks.VERY_LARGE_RIGHT_TURN.getLabel())
+				|| tile.getType().equals(EnumTracks.VERY_LARGE_LEFT_TURN.getLabel())
+				|| tile.getType().equals(EnumTracks.MEDIUM_LEFT_TURN.getLabel())
+				|| tile.getType().equals(EnumTracks.SUPER_LARGE_LEFT_TURN.getLabel())
+				|| tile.getType().equals(EnumTracks.SUPER_LARGE_RIGHT_TURN.getLabel())
+
+				|| tile.getType().equals(EnumTracks.SMALL_RIGHT_PARALLEL_CURVE.getLabel())
+				|| tile.getType().equals(EnumTracks.SMALL_LEFT_PARALLEL_CURVE.getLabel())
+				|| tile.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_CURVE.getLabel())
+				|| tile.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_CURVE.getLabel())
+				|| tile.getType().equals(EnumTracks.LARGE_RIGHT_PARALLEL_CURVE.getLabel())
+				|| tile.getType().equals(EnumTracks.LARGE_LEFT_PARALLEL_CURVE.getLabel())
+
+				|| tile.getType().equals(EnumTracks.EMBEDDED_MEDIUM_RIGHT_TURN.getLabel())
+				|| tile.getType().equals(EnumTracks.EMBEDDED_LARGE_RIGHT_TURN.getLabel())
+				|| tile.getType().equals(EnumTracks.EMBEDDED_LARGE_LEFT_TURN.getLabel())
+				|| tile.getType().equals(EnumTracks.EMBEDDED_VERY_LARGE_RIGHT_TURN.getLabel())
+				|| tile.getType().equals(EnumTracks.EMBEDDED_VERY_LARGE_LEFT_TURN.getLabel())
+				|| tile.getType().equals(EnumTracks.EMBEDDED_MEDIUM_LEFT_TURN.getLabel())
+				|| tile.getType().equals(EnumTracks.EMBEDDED_SUPER_LARGE_LEFT_TURN.getLabel())
+				|| tile.getType().equals(EnumTracks.EMBEDDED_SUPER_LARGE_RIGHT_TURN.getLabel())
+
+				|| tile.getType().equals(EnumTracks.EMBEDDED_SMALL_RIGHT_PARALLEL_CURVE.getLabel())
+				|| tile.getType().equals(EnumTracks.EMBEDDED_SMALL_LEFT_PARALLEL_CURVE.getLabel())
+				|| tile.getType().equals(EnumTracks.EMBEDDED_MEDIUM_RIGHT_PARALLEL_CURVE.getLabel())
+				|| tile.getType().equals(EnumTracks.EMBEDDED_MEDIUM_LEFT_PARALLEL_CURVE.getLabel())
+				|| tile.getType().equals(EnumTracks.EMBEDDED_LARGE_RIGHT_PARALLEL_CURVE.getLabel())
+				|| tile.getType().equals(EnumTracks.EMBEDDED_LARGE_LEFT_PARALLEL_CURVE.getLabel());
+
+
 	}
 
 	public static boolean isTCStraightTrack(TileTCRail tile) {
 		if(tile==null || tile.getType()==null){return false;}
-		return (TCRailTypes.isSwitchTrack(tile) && !tile.getSwitchState()) || TCRailTypes.isStraightTrack(tile)
+		return (tile.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel()) && !tile.getSwitchState())
+				|| (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel()) && !tile.getSwitchState())
+				|| (tile.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel()) && !tile.getSwitchState())
+				|| (tile.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()) && !tile.getSwitchState())
+				|| (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()) && !tile.getSwitchState())
+				|| (tile.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()) && !tile.getSwitchState())
+				|| tile.getType().contains("STRAIGHT")
 				;
+	}
+
+	public static boolean isTCSwitch(TileTCRail tile) {
+		if(tile==null || tile.getType()==null){return false;}
+		return (tile.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel()))
+				|| (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel()))
+				|| (tile.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel()))
+				|| (tile.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()))
+				|| (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()))
+				|| (tile.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()));
 	}
 
 	public ItemTCRail(EnumTracks t) {
@@ -293,16 +348,16 @@ public class ItemTCRail extends ItemPart {
 						{6,3}, {7,3}, {7,4}, {8,4}, {7,5}, {8,5}, {9,5}, {8,6}, {9,6}, {8,7}, {9,7}, {9,8}, {9,9} };
 
 			case MEDIUM_PARALLEL_SWITCH:
-			case EMBEDDED_MEDIUM_PARALLEL_SWITCH:
+			//case EMBEDDED_MEDIUM_PARALLEL_SWITCH:
 			return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {6,0}, {7,0}, {8,0}, {9,0}, {10,0},
 						{2,1}, {3,1}, {4,1}, {5,1},	{4,2}, {5,2}, {6,2}, {7,2}, {8,2}, {6,3}, {7,3}, {8,3}, {9,3}, {10,3}};
 
 			case MEDIUM_SWITCH:
-			case EMBEDDED_MEDIUM_SWITCH:
+			//case EMBEDDED_MEDIUM_SWITCH:
 			return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {2,1}, {3,1}, {3,2}, {3,3} };
 
 			case LARGE_SWITCH:
-			case EMBEDDED_LARGE_SWITCH:
+			//case EMBEDDED_LARGE_SWITCH:
 			return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0},
 					{2,1}, {3,1}, {4,1}, {3,2}, {4,2}, {5,2}, {4,3}, {5,3},	{5,4}, {5,5}};
 			case SUPER_LARGE_TURN:
@@ -552,7 +607,7 @@ public class ItemTCRail extends ItemPart {
 					}
 
 				case MEDIUM_LEFT_PARALLEL_SWITCH:
-				case EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH:
+				//case EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH:
 				{
 					if (l == 2) {
 						if (!parallelLeftSwitchNorth(player, world, x, y, z, l, tempType))
@@ -577,7 +632,7 @@ public class ItemTCRail extends ItemPart {
 				}
 
 				case MEDIUM_RIGHT_PARALLEL_SWITCH:
-				case EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH:
+				//case EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH:
 				{
 					if (l == 2) {
 						if (!parallelRightSwitchNorth(player, world, x, y, z, l, tempType))
@@ -602,7 +657,7 @@ public class ItemTCRail extends ItemPart {
 				}
 
 				case MEDIUM_RIGHT_SWITCH:
-				case EMBEDDED_MEDIUM_RIGHT_SWITCH:
+				//case EMBEDDED_MEDIUM_RIGHT_SWITCH:
 				{
 					if (l == 2) {
 						/** Check if straight exit can be put down */
@@ -716,7 +771,7 @@ public class ItemTCRail extends ItemPart {
 				}
 
 				case MEDIUM_LEFT_SWITCH:
-				case EMBEDDED_MEDIUM_LEFT_SWITCH:
+				//case EMBEDDED_MEDIUM_LEFT_SWITCH:
 				{
 
 
@@ -830,7 +885,7 @@ public class ItemTCRail extends ItemPart {
 				}
 
 				case LARGE_RIGHT_SWITCH:
-				case EMBEDDED_LARGE_RIGHT_SWITCH:
+				//case EMBEDDED_LARGE_RIGHT_SWITCH:
 				{
 					if (l == 2) {
 						/** Check if straight exit can be put down */
@@ -965,7 +1020,7 @@ public class ItemTCRail extends ItemPart {
 				}
 
 				case LARGE_LEFT_SWITCH:
-				case EMBEDDED_LARGE_LEFT_SWITCH:
+				//case EMBEDDED_LARGE_LEFT_SWITCH:
 				{
 					if (l == 2) {
 						/** Check if straight exit can be put down */
@@ -1934,7 +1989,7 @@ public class ItemTCRail extends ItemPart {
                     tempType = EnumTracks.EMBEDDED_LARGE_LEFT_PARALLEL_CURVE;
                 }
             }
-			if (type == EnumTracks.EMBEDDED_MEDIUM_SWITCH) {
+			/*if (type == EnumTracks.EMBEDDED_MEDIUM_SWITCH) {
 				if (getTrackOrientation(l, yaw).equals("right")) {
 					tempType = EnumTracks.EMBEDDED_MEDIUM_RIGHT_SWITCH;
 				}
@@ -1957,7 +2012,7 @@ public class ItemTCRail extends ItemPart {
 				if (getTrackOrientation(l, yaw).equals("left")) {
 					tempType = EnumTracks.EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH;
 				}
-			}
+			}*/
 		}
 
 		return tempType;
