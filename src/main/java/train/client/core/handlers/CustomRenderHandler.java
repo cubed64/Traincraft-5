@@ -319,7 +319,7 @@ public class CustomRenderHandler
             int out_1_1 = 3;
 
             String switchType = "medium";
-            if (item.getTrackType() == EnumTracks.MEDIUM_PARALLEL_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_PARALLEL_SWITCH)
+            if (item.getTrackType() == EnumTracks.MEDIUM_PARALLEL_SWITCH)
             {
                 switchType = "medium_parallel";
                 out_0_start = 5;
@@ -327,7 +327,7 @@ public class CustomRenderHandler
                 out_1_0 = 10;
                 out_1_1 = 3;
             }
-            else if (item.getTrackType() == EnumTracks.LARGE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_SWITCH)
+            else if (item.getTrackType() == EnumTracks.LARGE_SWITCH)
             {
                 switchType = "large_90";
                 out_0_start = 5;
@@ -346,7 +346,7 @@ public class CustomRenderHandler
             for (int out_0 = out_0_start; out_0 < out_0_end + 1; out_0++)
                 RenderTCRail.modelSmallStraight.render(variant, facing, dx * out_0, 0, dz * out_0, r, g, b, a);
 
-            if (item.getTrackType() == EnumTracks.MEDIUM_PARALLEL_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_PARALLEL_SWITCH)
+            if (item.getTrackType() == EnumTracks.MEDIUM_PARALLEL_SWITCH)
             {
                 RenderTCRail.modelSmallStraight.render(variant, facing, dx * out_1_0 + dx_1 * out_1_1, 0, dz * out_1_0 + dz_1 * out_1_1, r, g, b, a);
             }

@@ -92,10 +92,10 @@ public class TCItems {
 		ItemIDs.tcRailEmbeddedTwoWaysCrossing.item = new ItemTCRail(EnumTracks.EMBEDDED_TWO_WAYS_CROSSING);
 
 		/* Embedded Switches*/
-		ItemIDs.tcRailEmbeddedMediumSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_MEDIUM_SWITCH);
-		ItemIDs.tcRailEmbeddedLargeSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_SWITCH);
+		////ItemIDs.tcRailEmbeddedMediumSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_MEDIUM_SWITCH);
+		////ItemIDs.tcRailEmbeddedLargeSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_SWITCH);
 		//ItemIDs.tcRailEmbeddedVeryLargeSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_VERY_LARGE_SWITCH);
-		ItemIDs.tcRailEmbeddedMediumParallelSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_MEDIUM_PARALLEL_SWITCH);
+		//ItemIDs.tcRailEmbeddedMediumParallelSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_MEDIUM_PARALLEL_SWITCH);
 		//ItemIDs.tcRailEmbeddedLargeParallelSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_PARALLEL_SWITCH);
 		//ItemIDs.tcRailEmbeddedMedium45DegreeSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_MEDIUM_45DEGREE_SWITCH);
 		//ItemIDs.tcRailEmbeddedLarge45DegreeSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_45DEGREE_SWITCH);
