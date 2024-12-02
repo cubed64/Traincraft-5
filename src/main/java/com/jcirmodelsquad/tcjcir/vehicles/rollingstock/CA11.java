@@ -14,7 +14,7 @@ public class CA11 extends AbstractPassengerCar
         textureDescriptionMap.put(1, "WP");
         textureDescriptionMap.put(2, "FNCC (Regal)");
         textureDescriptionMap.put(3, "Generic");
-        textureDescriptionMap.put(4, "");
+        textureDescriptionMap.put(4, "GLC");
         textureDescriptionMap.put(5, "");
         textureDescriptionMap.put(6, "");
         textureDescriptionMap.put(7, "");
