@@ -81,6 +81,9 @@ public class ItemTCRail extends ItemPart {
 				|| (tile.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()) && !tile.getSwitchState())
 				|| (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()) && !tile.getSwitchState())
 				|| (tile.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()) && !tile.getSwitchState())
+				|| tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING.getLabel())
+				|| tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING_1.getLabel())
+				|| tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING_2.getLabel())
 				|| tile.getType().contains("STRAIGHT")
 				;
 	}
