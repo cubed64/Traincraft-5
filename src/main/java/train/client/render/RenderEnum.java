@@ -1262,6 +1262,16 @@ public enum RenderEnum
 			add(new double[]{2.2D, 1.5D, 0.0D});
 		}
 	}, "", null, 0, false),
+	SD70ACe( DieselSD70ACe.class,  new ModelSD70ACe(), "sd70ace_", true,new float[]{-2.025F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+		{
+			add(new double[]{2.31D, 1.4D, 0.0D});
+		}
+	}, "", null, 0, false),
+	SD70ACe_H( DieselSD70ACe_H.class,  new ModelSD70ACe(), "sd70ace_h_", true,new float[]{-2.025F, 0.15F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+		{
+			add(new double[]{2.31D, 1.4D, 0.0D});
+		}
+	}, "", null, 0, false),
 
 	SW1( DieselSW1.class,  new ModelSW1(), "sw1_new_", true,new float[]{-1.0F, 0.125F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{
