@@ -19,7 +19,7 @@ public class DieselSD70ACe extends DieselTrain {
         super(world, EnumTrains.SD70ACe.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         textureDescriptionMap.put(0, "Blandsville & Blankerston");
-        textureDescriptionMap.put(1, "");
+        textureDescriptionMap.put(1, "FURRX Lease");
         textureDescriptionMap.put(2, "");
         textureDescriptionMap.put(3, "");
         textureDescriptionMap.put(4, "");
