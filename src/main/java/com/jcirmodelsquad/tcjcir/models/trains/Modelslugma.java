@@ -271,7 +271,7 @@ public class Modelslugma extends ModelConverter //Same as Filename
 		bodyModel[225] = new ModelRendererTurbo(this, 52, 91, textureX, textureY); // Box 316
 		bodyModel[226] = new ModelRendererTurbo(this, 60, 77, textureX, textureY); // Box 226
 		bodyModel[227] = new ModelRendererTurbo(this, 57, 77, textureX, textureY); // Box 227
-		bodyModel[228] = new ModelRendererTurbo(this, 57, 81, textureX, textureY, "lamp"); // Box 228
+		bodyModel[228] = new ModelRendererTurbo(this, 57, 81, textureX, textureY, BoxName.commander); // Box 228
 		bodyModel[229] = new ModelRendererTurbo(this, 52, 97, textureX, textureY); // Box 229
 		bodyModel[230] = new ModelRendererTurbo(this, 133, 48, textureX, textureY); // Box 42
 		bodyModel[231] = new ModelRendererTurbo(this, 102, 35, textureX, textureY); // Box 231
@@ -994,7 +994,7 @@ public class Modelslugma extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		ModelRenderHelper.renderSlugModel(bodyModel, entity, f5);
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
