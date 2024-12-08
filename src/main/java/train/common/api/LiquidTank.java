@@ -33,7 +33,8 @@ public class LiquidTank extends EntityRollingStock implements IFluidHandler, ISi
 	public LiquidTank(World world, Fluid fluid, int quantity, int capacity) {
 			this(new FluidStack(fluid, quantity), capacity, world);
 	}
-	public LiquidTank(World world, int capacity) {
+	public LiquidTank(World world, int capacity)
+	{
 		this(null, capacity,world);
 	}
 
