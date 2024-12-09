@@ -20,9 +20,9 @@ public class DieselSD70ACe extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "Blandsville & Blankerston");
         textureDescriptionMap.put(1, "FURRX Lease");
-        textureDescriptionMap.put(2, "");
-        textureDescriptionMap.put(3, "");
-        textureDescriptionMap.put(4, "");
+        textureDescriptionMap.put(2, "CSXT");
+        textureDescriptionMap.put(3, "PRLX C&O Heritable");
+        textureDescriptionMap.put(4, "CSXT What If Whispercab, Hunter Harrison Killed it");
         textureDescriptionMap.put(5, "P");
     }
     public DieselSD70ACe(World world, double d, double d1, double d2){
