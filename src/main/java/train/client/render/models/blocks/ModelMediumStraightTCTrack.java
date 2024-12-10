@@ -27,14 +27,7 @@ public class ModelMediumStraightTCTrack extends ModelBase {
 	public void render(TileTCRail tcRail, double x, double y, double z)
 	{
 		// Bind the texture, so that OpenGL properly textures our block.
-		if (RailVariants.EMBEDDED.equals(tcRail.getTrackType().getVariant()))
-		{
-			tmt.Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_embedded.png"));
-		}
-		else
-		{
-			tmt.Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
-		}
+		tmt.Tessellator.bindTexture(train.common.enums.TrackResourceLocations.GetResourceLocation(tcRail.getTrackType().getVariant()));
 
 		// Push a blank matrix onto the stack
 		GL11.glPushMatrix();

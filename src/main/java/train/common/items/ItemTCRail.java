@@ -14,6 +14,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import org.lwjgl.util.vector.Matrix2f;
 import org.lwjgl.util.vector.Vector2f;
+import train.common.enums.TCTrackDirection;
 import train.common.library.BlockIDs;
 import train.common.library.EnumTracks;
 import train.common.library.ItemIDs;
@@ -28,6 +29,7 @@ public class ItemTCRail extends ItemPart {
 	EnumTracks tempType;
 
 	private String typeVariantStraightLabel = EnumTracks.SMALL_STRAIGHT.getLabel();
+	private String typeVariantDiagonalStraightLabel = EnumTracks.SMALL_DIAGONAL_STRAIGHT.getLabel();
 
 	public static boolean isTCTurnTrack(TileTCRail tile) {
 		if(tile==null || tile.getType()==null){return false;}
@@ -84,7 +86,7 @@ public class ItemTCRail extends ItemPart {
 				|| tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING.getLabel())
 				|| tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING_1.getLabel())
 				|| tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING_2.getLabel())
-				|| tile.getType().contains("STRAIGHT")
+				|| (tile.getType().contains("STRAIGHT") && TCRailTypes.isDiagonalTrack(tile) == false)
 				;
 	}
 
@@ -282,7 +284,7 @@ public class ItemTCRail extends ItemPart {
 		return vec;
 	}
 
-	private int[][] getUsedSpaceFromType( EnumTracks type )
+	private int[][] getUsedSpaceFromType(EnumTracks type, @Nullable EntityPlayer player)
 	{
 		switch (type)
 		{
@@ -293,6 +295,20 @@ public class ItemTCRail extends ItemPart {
 			case EMBEDDED_SMALL_STRAIGHT:
 			return new int[][]{ {0,0} };
 
+			case SMALL_DIAGONAL_STRAIGHT:
+			case EMBEDDED_SMALL_DIAGONAL_STRAIGHT:
+			return new int[][]{{0, 0}, {1, 0}, {0, 1}};
+
+			case MEDIUM_DIAGONAL_STRAIGHT:
+			case EMBEDDED_MEDIUM_DIAGONAL_STRAIGHT:
+				return new int[][]{{0, 0}, {1, 0}, {0, 1}, {1, 1}, {2, 1}, {1, 2}, {2, 2}, {3, 2}, {2, 3}};
+			case LONG_DIAGONAL_STRAIGHT:
+			case EMBEDDED_LONG_DIAGONAL_STRAIGHT:
+				return new int[][]{{0, 0}, {1, 0}, {0, 1}, {1, 1}, {2, 1}, {1, 2}, {2, 2}, {3, 2}, {2, 3}, {3, 3}, {4, 3}, {3, 4}, {4, 4}, {4, 5}, {5, 4}, {5, 5}, {6, 5}, {5, 6}};
+			case VERY_LONG_DIAGONAL_STRAIGHT:
+			case EMBEDDED_VERY_LONG_DIAGONAL_STRAIGHT:
+				return new int[][]{{0, 0}, {1, 0}, {0, 1}, {1, 1}, {2, 1}, {1, 2}, {2, 2}, {3, 2}, {2, 3}, {3, 3}, {4, 3}, {3, 4}, {4, 4}, {4, 5}, {5, 4}, {5, 5}, {6, 5}, {5, 6},
+						{6, 6}, {6, 7}, {7, 6}, {7, 7}, {8, 7}, {7, 8}, {8, 8}, {9, 8}, {8, 9}, {9, 9}, {10, 9}, {9, 10}, {10, 10}, {11, 10}, {10, 11}, {11, 11}, {12, 11}, {11, 12}};
 			case MEDIUM_STRAIGHT:
 			case EMBEDDED_MEDIUM_STRAIGHT:
 			return new int[][]{ {0,0}, {1,0}, {2,0} };
@@ -383,7 +399,26 @@ public class ItemTCRail extends ItemPart {
 			return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {4,1}, {5,1}, {6,1}, {7,1}, {8,1}, {7,2}, {8,2}, {9,2}, {10,2}, {11,2}, {10,3}, {11,3}, {12,3}, {13,3}, {14,3}, {15,3}};
 
 			default:
-			return null;
+				if ((type == EnumTracks.MEDIUM_45DEGREE_TURN || type == EnumTracks.EMBEDDED_MEDIUM_45DEGREE_TURN) && !player.isSneaking())
+				return new int[][]{{0, 0}, {1, 0}, {2, 0}, {1, 1}, {2, 1}, {3, 1}, {2, 2}};
+				else if ((type == EnumTracks.LARGE_45DEGREE_TURN || type == EnumTracks.EMBEDDED_LARGE_45DEGREE_TURN) && !player.isSneaking())
+					return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {4, 2}, {5, 2}, {6, 2}, {5, 3}};
+				else if ((type == EnumTracks.VERY_LARGE_45DEGREE_TURN || type == EnumTracks.EMBEDDED_VERY_LARGE_45DEGREE_TURN) && !player.isSneaking())
+					return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {6, 1}, {4, 2}, {5, 2}, {6, 2}, {7, 2}, {6, 3}, {7, 3}, {8, 3}, {7, 4}};
+				else if ((type == EnumTracks.SUPER_LARGE_45DEGREE_TURN || type == EnumTracks.EMBEDDED_SUPER_LARGE_45DEGREE_TURN) && !player.isSneaking())
+					return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {6, 1}, {7, 1}, {5, 2}, {6, 2}, {7, 2}, {8, 2}, {9, 2}, {7, 3}, {8, 3}, {9, 3}, {10, 3}, {9, 4}, {10, 4}, {11, 4}, {10, 5}};
+				else if ((type == EnumTracks.MEDIUM_45DEGREE_TURN || type == EnumTracks.EMBEDDED_MEDIUM_45DEGREE_TURN) && player.isSneaking())
+					return new int[][]{{0, 0}, {1, 0}, {2, 0}, {1, 1}, {2, 1}};
+				else if ((type == EnumTracks.LARGE_45DEGREE_TURN || type == EnumTracks.EMBEDDED_LARGE_45DEGREE_TURN) && player.isSneaking())
+					return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {4, 2}, {5, 2}};
+				else if ((type == EnumTracks.VERY_LARGE_45DEGREE_TURN || type == EnumTracks.EMBEDDED_VERY_LARGE_45DEGREE_TURN) && player.isSneaking())
+					return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {6, 1}, {4, 2}, {5, 2}, {6, 2}, {7, 2}, {6, 3}, {7, 3}};
+				else if ((type == EnumTracks.SUPER_LARGE_45DEGREE_TURN || type == EnumTracks.EMBEDDED_SUPER_LARGE_45DEGREE_TURN) && player.isSneaking())
+					return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {6, 1}, {7, 1}, {5, 2}, {6, 2}, {7, 2}, {8, 2}, {9, 2}, {7, 3}, {8, 3}, {9, 3}, {10, 3}, {9, 4}, {10, 4}};
+
+
+
+				return null;
 		}
 	}
 
@@ -403,7 +438,7 @@ public class ItemTCRail extends ItemPart {
 		int facing1 = isLeftTurn ? (facing0 + 4 - 1)%4 : (facing0 + 1)%4;
 		Vector2f dir1 = getDirectionVector( facing1 );
 
-		int[][] trackPositions = getUsedSpaceFromType( item.getTrackType() );
+		int[][] trackPositions = getUsedSpaceFromType(type, player);
 
 		if ( trackPositions != null )
 		{
@@ -437,6 +472,7 @@ public class ItemTCRail extends ItemPart {
 		{
 			case EMBEDDED:
 				typeVariantStraightLabel = EnumTracks.EMBEDDED_SMALL_STRAIGHT.getLabel();
+				typeVariantDiagonalStraightLabel = EnumTracks.EMBEDDED_SMALL_DIAGONAL_STRAIGHT.getLabel();
 				break;
 		}
 	}
@@ -461,11 +497,167 @@ public class ItemTCRail extends ItemPart {
 			 *  l = 2 = NORTH
 			 *  l = 0 = SOUTH
 			 *  l = 3 = east
+			 *  l = 4 = south-west
+			 *  l = 5 = north-west
+			 *  l = 6 = north-east
+			 *  l = 7 = south-east
 			 **/
 			//System.out.println(type +" "+l);
 			setSharedStraightTypeVariant();
 			switch (tempType)
 			{
+				case SMALL_DIAGONAL_STRAIGHT:
+				case EMBEDDED_SMALL_DIAGONAL_STRAIGHT:
+					if (!smallDiagonalStraight(player, world, x, y, z, TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double((player.rotationYaw * 8.0F / 360.0F + 0.5D)) & 7), tempType))
+					{
+						return false;
+					}
+					else
+					{
+						if (player == null || !player.capabilities.isCreativeMode)
+						{
+							--itemstack.stackSize;
+						}
+						return true;
+					}
+
+				case MEDIUM_DIAGONAL_STRAIGHT:
+				case EMBEDDED_MEDIUM_DIAGONAL_STRAIGHT:
+				case LONG_DIAGONAL_STRAIGHT:
+				case EMBEDDED_LONG_DIAGONAL_STRAIGHT:
+				case VERY_LONG_DIAGONAL_STRAIGHT:
+				case EMBEDDED_VERY_LONG_DIAGONAL_STRAIGHT:
+					if (!diagonalStraight(player, world, x, y, z, TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double((player.rotationYaw * 8.0F / 360.0F + 0.5D)) & 7), tempType))
+					{
+						return false;
+					}
+					else
+					{
+						if (player == null || !player.capabilities.isCreativeMode)
+						{
+							--itemstack.stackSize;
+						}
+						return true;
+					}
+
+				case MEDIUM_RIGHT_45DEGREE_TURN:
+				case EMBEDDED_MEDIUM_RIGHT_45DEGREE_TURN:
+					if (!mediumRight45DegreeTurn(player, world, x, y, z, l, tempType))
+					{
+						return false;
+					}
+					else
+					{
+						if (player == null || !player.capabilities.isCreativeMode)
+						{
+							--itemstack.stackSize;
+						}
+						return true;
+					}
+
+				case MEDIUM_LEFT_45DEGREE_TURN:
+				case EMBEDDED_MEDIUM_LEFT_45DEGREE_TURN: //TODO consolidate left/right
+					if (!mediumLeft45DegreeTurn(player, world, x, y, z, l, tempType))
+					{
+						return false;
+					}
+					else
+					{
+						if (player == null || !player.capabilities.isCreativeMode)
+						{
+							--itemstack.stackSize;
+						}
+						return true;
+					}
+
+				case LARGE_RIGHT_45DEGREE_TURN:
+				case EMBEDDED_LARGE_RIGHT_45DEGREE_TURN:
+					if (!largeRight45DegreeTurn(player, world, x, y, z, l, tempType))
+					{
+						return false;
+					}
+					else
+					{
+						if (player == null || !player.capabilities.isCreativeMode)
+						{
+							--itemstack.stackSize;
+						}
+						return true;
+					}
+
+				case LARGE_LEFT_45DEGREE_TURN:
+				case EMBEDDED_LARGE_LEFT_45DEGREE_TURN:
+					if (!largeLeft45DegreeTurn(player, world, x, y, z, l, tempType)) {
+						return false;
+					}
+					else
+					{
+						if (player == null || !player.capabilities.isCreativeMode)
+						{
+							--itemstack.stackSize;
+						}
+						return true;
+					}
+
+				case VERY_LARGE_RIGHT_45DEGREE_TURN:
+				case EMBEDDED_VERY_LARGE_RIGHT_45DEGREE_TURN:
+					if (!veryLargeRight45DegreeTurn(player, world, x, y, z, l, tempType)) {
+						return false;
+					}
+					else
+					{
+						if (player == null || !player.capabilities.isCreativeMode)
+						{
+							--itemstack.stackSize;
+						}
+						return true;
+					}
+
+				case VERY_LARGE_LEFT_45DEGREE_TURN:
+				case EMBEDDED_VERY_LARGE_LEFT_45DEGREE_TURN:
+					if (!veryLargeLeft45DegreeTurn(player, world, x, y, z, l, tempType))
+					{
+						return false;
+					}
+					else
+					{
+						if (player == null || !player.capabilities.isCreativeMode)
+						{
+							--itemstack.stackSize;
+						}
+						return true;
+					}
+
+				case SUPER_LARGE_RIGHT_45DEGREE_TURN:
+				case EMBEDDED_SUPER_LARGE_RIGHT_45DEGREE_TURN:
+					if (!superLargeRight45DegreeTurn(player, world, x, y, z, l, tempType))
+					{
+						return false;
+					}
+					else
+					{
+						if (player == null || !player.capabilities.isCreativeMode)
+						{
+							--itemstack.stackSize;
+						}
+						return true;
+					}
+
+				case SUPER_LARGE_LEFT_45DEGREE_TURN:
+				case EMBEDDED_SUPER_LARGE_LEFT_45DEGREE_TURN:
+					if (!superLargeLeft45DegreeTurn(player, world, x, y, z, l, tempType))
+					{
+						return false;
+					}
+					else
+					{
+						if (player == null || !player.capabilities.isCreativeMode)
+						{
+							--itemstack.stackSize;
+						}
+						return true;
+					}
+
 				case MEDIUM_LEFT_TURN:
 				case MEDIUM_RIGHT_TURN:
 				case EMBEDDED_MEDIUM_LEFT_TURN:
@@ -1852,9 +2044,35 @@ public class ItemTCRail extends ItemPart {
 	{
 		if (!world.isRemote)
 		{
+			tempType = type;
+
+			int facing = TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double((player.rotationYaw * 8.0F / 360.0F + 0.5D)) & 7);
+			if (TCRailTypes.RailTypes.STRAIGHT.equals(type.getRailType()))
+			{
+				if (facing == 6 || facing == 4 || facing == 7 || facing == 5)
+				{
+					switch (type)
+					{
+						case SMALL_STRAIGHT:
+							tempType = EnumTracks.SMALL_DIAGONAL_STRAIGHT;
+							break;
+						case MEDIUM_STRAIGHT:
+							tempType = EnumTracks.MEDIUM_DIAGONAL_STRAIGHT;
+							break;
+						case LONG_STRAIGHT:
+							tempType = EnumTracks.LONG_DIAGONAL_STRAIGHT;
+							break;
+						case VERY_LONG_STRAIGHT:
+							tempType = EnumTracks.VERY_LONG_DIAGONAL_STRAIGHT;
+							break;
+					}
+				}
+
+				return tempType;
+			}
+
 			/** Determines if track is left or right*/
 			float yaw = MathHelper.wrapAngleTo180_float(player!=null?player.rotationYaw:par10);
-			tempType = type;
 
 			if (type == EnumTracks.LARGE_TURN) {
 				if (getTrackOrientation(l, yaw).equals("right")) {
@@ -2016,6 +2234,43 @@ public class ItemTCRail extends ItemPart {
 					tempType = EnumTracks.EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH;
 				}
 			}*/
+			if (type == EnumTracks.MEDIUM_45DEGREE_TURN) {
+				if (getTrackOrientation(l, yaw).equals("right")) {
+					tempType = EnumTracks.MEDIUM_RIGHT_45DEGREE_TURN;
+				}
+				if (getTrackOrientation(l, yaw).equals("left")) {
+					tempType = EnumTracks.MEDIUM_LEFT_45DEGREE_TURN;
+
+				}
+			}
+			if (type == EnumTracks.LARGE_45DEGREE_TURN) {
+				if (getTrackOrientation(l, yaw).equals("right")) {
+					tempType = EnumTracks.LARGE_RIGHT_45DEGREE_TURN;
+				}
+				if (getTrackOrientation(l, yaw).equals("left")) {
+					tempType = EnumTracks.LARGE_LEFT_45DEGREE_TURN;
+
+				}
+			}
+			if (type == EnumTracks.VERY_LARGE_45DEGREE_TURN) {
+				if (getTrackOrientation(l, yaw).equals("right")) {
+					tempType = EnumTracks.VERY_LARGE_RIGHT_45DEGREE_TURN;
+				}
+				if (getTrackOrientation(l, yaw).equals("left")) {
+					tempType = EnumTracks.VERY_LARGE_LEFT_45DEGREE_TURN;
+
+				}
+			}
+			if (type == EnumTracks.SUPER_LARGE_45DEGREE_TURN) {
+				if (getTrackOrientation(l, yaw).equals("right")) {
+					tempType = EnumTracks.SUPER_LARGE_RIGHT_45DEGREE_TURN;
+				}
+				if (getTrackOrientation(l, yaw).equals("left")) {
+					tempType = EnumTracks.SUPER_LARGE_LEFT_45DEGREE_TURN;
+
+				}
+			}
+
 		}
 
 		return tempType;
@@ -2589,6 +2844,139 @@ public class ItemTCRail extends ItemPart {
 		return true;
 	}
 
+	private boolean smallDiagonalStraight(EntityPlayer player, World world, int x, int y, int z, int l, EnumTracks type)
+	{
+		TileTCRailGag[] tileGag = new TileTCRailGag[2];
+
+		int dx = 1;
+		int dz = 1;
+
+		if (l == 6) dz = -1;
+
+		if (l == 4) dx = -1;
+
+		if (l == 5){
+			dx = -1;
+			dz = -1;
+		}
+
+		if (!canPlaceTrack(player, world, x, y + 1, z) || !canPlaceTrack(player, world, x, y + 1, z + dz) || !canPlaceTrack(player, world, x + dx, y + 1, z)) {
+			return false;
+		}
+
+		placeTrack(world, x, y + 1, z, BlockIDs.tcRail.block, l);
+		TileTCRail tcRail = (TileTCRail) world.getTileEntity(x, y + 1, z);
+
+		placeTrack(world, x, y + 1, z + dz, BlockIDs.tcRailGag.block, l);
+		tileGag[0] = (TileTCRailGag) world.getTileEntity(x, y + 1, z + dz);
+		//tileGag[0].canPlaceRollingstock = false;
+
+		placeTrack(world, x + dx , y + 1, z, BlockIDs.tcRailGag.block, l);
+		tileGag[1] = (TileTCRailGag) world.getTileEntity(x + dx, y + 1, z);
+		//tileGag[1].canPlaceRollingstock = false;
+		tcRail.setFacing(l);
+		tcRail.setType(type.getLabel());
+		//tcRail.setRailLength(1D);
+		tcRail.idDrop = this.type.getItem().item;
+
+		for (TileTCRailGag tileTCRailGag : tileGag) {
+			if (player != null && tileTCRailGag == null) {
+				player.addChatMessage(new ChatComponentText("There was a problem when placing the track. Possibly too many tracks around"));
+				return false;
+			}
+			tileTCRailGag.originX = x;
+			tileTCRailGag.originY = y + 1;
+			tileTCRailGag.originZ = z;
+			tileTCRailGag.type = type.getLabel();
+			//tileTCRailGag.canPlaceRollingstock = false;
+		}
+		return true;
+	}
+
+	private boolean diagonalStraight(EntityPlayer player, World world, int x, int y, int z, int l, EnumTracks type) {
+
+		int trackLength = 0;
+		if (type == EnumTracks.LONG_DIAGONAL_STRAIGHT || type == EnumTracks.EMBEDDED_LONG_DIAGONAL_STRAIGHT) trackLength = 3;
+		if (type == EnumTracks.VERY_LONG_DIAGONAL_STRAIGHT || type == EnumTracks.EMBEDDED_VERY_LONG_DIAGONAL_STRAIGHT) trackLength = 9;
+
+		TileTCRail[] tcRail = new TileTCRail[(trackLength / 3) + 1];
+		TileTCRailGag[] tcRailGag = new TileTCRailGag[8 * (trackLength / 3) + 8];
+
+		int dx = 1;
+		int dz = 1;
+
+		if (l == 6) dz = -1;
+
+		if (l == 4) dx = -1;
+
+		if (l == 5){
+			dx = -1;
+			dz = -1;
+		}
+
+		for (int i = 0; i <= trackLength; i += 3){
+			if (!canPlaceTrack(player, world, x + (i * dx), y + 1, z + (i * dz))
+					|| !canPlaceTrack(player, world, x + (i * dx) + dx, y + 1, z + (i * dz) + dz)
+					|| !canPlaceTrack(player, world, x + (i * dx) + (2*dx), y + 1, z + (i * dz) + (2*dz)))
+				return false;
+
+			for(int j = 0; j < 3 ; j++){
+
+				if(!canPlaceTrack(player, world, x + (i * dx) + (j * dx ) + dx , y + 1, z + (i * dz) + (j * dz))
+						|| !canPlaceTrack(player, world, x + (i * dx) + (j * dx), y + 1 , z + (i * dz) + (j * dz) + dz))
+					return false;
+			}
+
+
+		}
+
+		for (int i = 0; i <= trackLength; i += 3){
+			placeTrack(world, x + (i * dx), y+ 1, z + (i * dz), BlockIDs.tcRail.block, l);
+			tcRail[i / 3] = (TileTCRail) world.getTileEntity(x + (i * dx), y+ 1, z + (i * dz));
+			tcRail[i / 3].setFacing(l);
+			tcRail[(i / 3)].setType(type.getLabel());
+			//tcRail[0].setRailLength((double) trackLength + 3);
+			tcRail[0].idDrop = this.type.getItem().item;
+			//tcRail[i / 3].setRailLength(3D);
+			if (i / 3 != 0){
+				tcRail[i / 3].isLinkedToRail = true;
+				tcRail[i / 3].linkedX = x + dx;
+				tcRail[i / 3].linkedY = y + 1;
+				tcRail[i / 3].linkedZ = z + dz;
+			}
+
+			placeTrack(world, x + (i * dx) + dx, y + 1, z + (i * dz) + dz, BlockIDs.tcRailGag.block, l);
+			tcRailGag[(3* i) - (i / 3)] = (TileTCRailGag) world.getTileEntity(x + (i * dx) + dx, y + 1, z + (i * dz) + dz);
+			tcRailGag[(3* i) - (i / 3)].setCanPlaceRollingStock(true);
+			placeTrack(world,x + (i * dx) + (2 * dx), y + 1, z + (i * dz) + (2 * dz), BlockIDs.tcRailGag.block, l);
+			tcRailGag[((3* i) - (i / 3)) + 1] = (TileTCRailGag) world.getTileEntity(x + (i * dx) +  (2 * dx), y + 1, z + (i * dz) + (2 * dz));
+			tcRailGag[((3* i) - (i / 3)) + 1].setCanPlaceRollingStock(true);
+			for (int j = 0; j < 3; j++){
+				placeTrack(world, x + (i * dx) + (j * dx ) + dx , y + 1, z + (i * dz) + (j * dz), BlockIDs.tcRailGag.block, l);
+				tcRailGag[((3 * i) - (i / 3)) + ((2 * j) + 2)] = (TileTCRailGag) world.getTileEntity(x + (i * dx) + (j * dx) + dx, y + 1, z + (i * dz) + (j * dz) );
+				tcRailGag[((3 * i) - (i / 3)) + ((2 * j) + 2)].setCanPlaceRollingStock(false);
+				placeTrack(world, x + (i * dx) + (j * dx), y + 1, z + (i * dz) + (j * dz) + dz, BlockIDs.tcRailGag.block, l);
+				tcRailGag[((3 * i) - (i / 3)) + ((2 * j) + 3)] = (TileTCRailGag) world.getTileEntity(x + (i * dx) + (j * dx), y + 1, z + (i * dz) + (j * dz) + dz);
+				tcRailGag[((3 * i) - (i / 3)) + ((2 * j) + 3)].setCanPlaceRollingStock(false);
+			}
+
+		}
+
+		for (TileTCRailGag tileTCRailGag : tcRailGag) {
+			if (player != null && tileTCRailGag == null) {
+				player.addChatMessage(new ChatComponentText("There was a problem when placing the track. Possibly too many tracks around"));
+				return false;
+			}
+			tileTCRailGag.originX = x;
+			tileTCRailGag.originY = y + 1;
+			tileTCRailGag.originZ = z;
+			tileTCRailGag.type = type.getLabel();
+
+		}
+
+		return true;
+	}
+
 	private boolean turnTrack(EntityPlayer player, World world, int x, int y, int z, int dir, EnumTracks tempType, float pyaw, int[] xArray, int[]zArray, float radius){
 
 		float yaw = MathHelper.wrapAngleTo180_float(player != null ? player.rotationYaw : pyaw);
@@ -2643,6 +3031,268 @@ public class ItemTCRail extends ItemPart {
 				y + 1, z - cz, tempType.getLabel(), tempType.getItem().item))
 			return false;
 
+		return true;
+	}
+
+	private boolean mediumRight45DegreeTurn(EntityPlayer player, World world, int x, int y, int z, int l, EnumTracks tempType) {
+
+		int[] xArray;
+		int[] zArray;
+		if (player.isSneaking()) {
+			xArray = new int[]{0, 0, 0, 1, 1};
+			zArray = new int[]{0, 1, 2, 1, 2};
+		} else {
+			xArray = new int[]{0, 0, 0, 1, 1, 1, 2};
+			zArray = new int[]{0, 1, 2, 1, 2, 3, 2};
+		}
+		if (l == 2) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, false), flipArraySign(zArray, z, true), l, false, 3, x + 1, z - 2, 3.75, x + 4.25,
+					y + 1, z + 1, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 0) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, true), flipArraySign(zArray, z, false), l, false, 1, x - 1, z + 2, 3.75, x - 3.25,
+					y + 1, z, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 1) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, true), flipArraySign(xArray, z, true), l, false, 2, x - 2, z - 1, 3.75, x + 1,
+					y + 1, z - 3.25, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 3) {
+			return putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, false), flipArraySign(xArray, z, false), l, false, 0, x + 2, z + 1, 3.75, x, y + 1,
+					z + 4.25, tempType.getLabel(), tempType.getItem().item);
+		}
+		return true;
+	}
+	private boolean mediumLeft45DegreeTurn(EntityPlayer player, World world, int x, int y, int z, int l, EnumTracks tempType) {
+
+		int[] xArray;
+		int[] zArray;
+		if (player.isSneaking()) {
+			xArray = new int[]{0, 0, 0, 1, 1};
+			zArray = new int[]{0, 1, 2, 1, 2};
+		} else {
+			xArray = new int[]{0, 0, 0, 1, 1, 1, 2};
+			zArray = new int[]{0, 1, 2, 1, 2, 3, 2};
+		}
+
+		if (l == 2) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, true), flipArraySign(zArray, z, true), l, false, 1, x - 1, z - 2, 3.75, x - 3.25,
+					y + 1, z + 1, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 0) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, false), flipArraySign(zArray, z, false), l, false, 3, x + 1, z + 2, 3.75, x + 4.25,
+					y + 1, z, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 1) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, true), flipArraySign(xArray, z, false), l, false, 0, x - 2, z + 1, 3.75, x + 1,
+					y + 1, z + 4.25, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 3) {
+			return putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, false), flipArraySign(xArray, z, true), l, false, 2, x + 2, z - 1, 3.75, x, y + 1,
+					z - 3.25, tempType.getLabel(), tempType.getItem().item);
+		}
+		return true;
+	}
+	private boolean largeRight45DegreeTurn(EntityPlayer player, World world, int x, int y, int z, int l, EnumTracks tempType) {
+		int[] xArray;
+		int[] zArray;
+		if (player.isSneaking()) {
+			xArray = new int[]{0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2};
+			zArray = new int[]{0, 1, 2, 3, 1, 2, 3, 4, 5, 4, 5};
+		} else {
+			xArray = new int[]{0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 3};
+			zArray = new int[]{0, 1, 2, 3, 1, 2, 3, 4, 5, 4, 5, 6, 5};
+		}
+		if (l == 2) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, false), flipArraySign(zArray, z, true), l, false, 3, x + 2, z - 5, 8.49, x + 8.99,
+					y + 1, z + 1, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 0) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, true), flipArraySign(zArray, z, false), l, false, 1, x - 2, z + 5, 8.49, x - 7.99,
+					y + 1, z, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 1) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, true), flipArraySign(xArray, z, true), l, false, 2, x - 5, z - 2, 8.49, x + 1,
+					y + 1, z - 7.99, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 3) {
+			return putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, false), flipArraySign(xArray, z, false), l, false, 0, x + 5, z + 2, 8.49, x,
+					y + 1, z + 8.99, tempType.getLabel(), tempType.getItem().item);
+		}
+		return true;
+	}
+	private boolean largeLeft45DegreeTurn(EntityPlayer player, World world, int x, int y, int z, int l, EnumTracks tempType) {
+		int[] xArray;
+		int[] zArray;
+		if (player.isSneaking()) {
+			xArray = new int[]{0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2};
+			zArray = new int[]{0, 1, 2, 3, 1, 2, 3, 4, 5, 4, 5};
+		} else {
+			xArray = new int[]{0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 3};
+			zArray = new int[]{0, 1, 2, 3, 1, 2, 3, 4, 5, 4, 5, 6, 5};
+		}
+		if (l == 2) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, true), flipArraySign(zArray, z, true), l, false, 1, x - 2, z - 5, 8.49, x - 7.99,
+					y + 1, z + 1, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 0) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, false), flipArraySign(zArray, z, false), l, false, 3, x + 2, z + 5, 8.49, x + 8.99,
+					y + 1, z, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 1) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, true), flipArraySign(xArray, z, false), l, false, 0, x - 5, z + 2, 8.49, x + 1,
+					y + 1, z + 8.99, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 3) {
+			return putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, false), flipArraySign(xArray, z, true), l, false, 2, x + 5, z - 2, 8.49, x,
+					y + 1, z - 7.99, tempType.getLabel(), tempType.getItem().item);
+		}
+		return true;
+	}
+	public boolean veryLargeRight45DegreeTurn(EntityPlayer player, World world, int x, int y, int z, int l, EnumTracks tempType) {
+		int[] xArray;
+		int[] zArray;
+		if (player.isSneaking()) {
+			xArray = new int[]{0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3};
+			zArray = new int[]{0, 1, 2, 3, 4, 1, 2, 3, 4, 5, 6, 4, 5, 6, 7, 6, 7};
+		} else {
+			xArray = new int[]{0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 4};
+			zArray = new int[]{0, 1, 2, 3, 4, 1, 2, 3, 4, 5, 6, 4, 5, 6, 7, 6, 7, 8, 7};
+
+		}
+		if (l == 2) {
+
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, false), flipArraySign(zArray, z, true), l, false, 3, x + 3, z - 7, 10.89, x + 11.39,
+					y + 1, z + 1, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+
+		if (l == 0) {
+
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, true), flipArraySign(zArray, z, false), l, false, 1, x - 3, z + 7, 10.89, x - 10.39,
+					y + 1, z, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 1) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, true), flipArraySign(xArray, z, true), l, false, 2, x - 7, z - 3, 10.89, x + 1,
+					y + 1, z - 10.39, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+
+		if (l == 3) {
+			return putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, false), flipArraySign(xArray, z, false), l, false, 0, x + 7, z + 3, 10.89, x,
+					y + 1, z + 11.39, tempType.getLabel(), tempType.getItem().item);
+		}
+		return true;
+	}
+	public boolean veryLargeLeft45DegreeTurn(EntityPlayer player, World world, int x, int y, int z, int l, EnumTracks tempType) {
+		int[] xArray;
+		int[] zArray;
+		if (player.isSneaking()) {
+			xArray = new int[]{0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3};
+			zArray = new int[]{0, 1, 2, 3, 4, 1, 2, 3, 4, 5, 6, 4, 5, 6, 7, 6, 7};
+		} else {
+			xArray = new int[]{0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 4};
+			zArray = new int[]{0, 1, 2, 3, 4, 1, 2, 3, 4, 5, 6, 4, 5, 6, 7, 6, 7, 8, 7};
+		}
+		if (l == 2) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, true), flipArraySign(zArray, z, true), l, false, 3, x + 3, z - 7, 10.89, x - 10.39,
+					y + 1, z + 1, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 0) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, false), flipArraySign(zArray, z, false), l, false, 1, x - 3, z + 7, 10.89, x + 11.39,
+					y + 1, z, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 1) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, true), flipArraySign(xArray, z, false), l, false, 2, x - 7, z - 3, 10.89, x + 1,
+					y + 1, z + 11.39, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 3) {
+			return putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, false), flipArraySign(xArray, z, true), l, false, 0, x + 7, z + 3, 10.89, x,
+					y + 1, z - 10.39, tempType.getLabel(), tempType.getItem().item);
+		}
+		return true;
+	}
+	public boolean superLargeRight45DegreeTurn(EntityPlayer player, World world, int x, int y, int z, int l, EnumTracks tempType) {
+
+		int[] xArray;
+		int[] zArray;
+		if (player.isSneaking()) {
+			xArray = new int[]{0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4};
+			zArray = new int[]{0, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6, 7, 5, 6, 7, 8, 9, 7, 8, 9, 10, 9, 10};
+		} else {
+			xArray = new int[]{0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5};
+			zArray = new int[]{0, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6, 7, 5, 6, 7, 8, 9, 7, 8, 9, 10, 9, 10, 11, 10};
+		}
+
+		if (l == 2) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, false), flipArraySign(zArray, z, true), l, false, 3, x + 4, z - 11, 15.69, x + 16.19,
+					y + 1, z + 1, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 0) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, true), flipArraySign(zArray, z, false), l, false, 1, x - 4, z + 11, 15.69, x - 15.19,
+					y + 1, z, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 1) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, true), flipArraySign(xArray, z, true), l, false, 2, x - 11, z - 4, 15.69, x + 1,
+					y + 1, z - 15.19, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 3) {
+			return putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, false), flipArraySign(xArray, z, false), l, false, 0, x + 11, z + 4, 15.69, x,
+					y + 1, z + 16.19, tempType.getLabel(), tempType.getItem().item);
+		}
+		return true;
+	}
+	public boolean superLargeLeft45DegreeTurn(EntityPlayer player, World world, int x, int y, int z, int l, EnumTracks tempType) {
+
+		int[] xArray;
+		int[] zArray;
+		if (player.isSneaking()) {
+			xArray = new int[]{0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4};
+			zArray = new int[]{0, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6, 7, 5, 6, 7, 8, 9, 7, 8, 9, 10, 9, 10};
+		} else {
+			xArray = new int[]{0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5};
+			zArray = new int[]{0, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6, 7, 5, 6, 7, 8, 9, 7, 8, 9, 10, 9, 10, 11, 10};
+		}
+		if (l == 2) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, true), flipArraySign(zArray, z, true), l, false, 1, x - 4, z - 11, 15.69, x - 15.19,
+					y + 1, z + 1, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+
+		if (l == 0) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray, x, false), flipArraySign(zArray, z, false), l, false, 3, x + 4, z + 11, 15.69, x + 16.19,
+					y + 1, z, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+		if (l == 1) {
+			if (!putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, true), flipArraySign(xArray, z, false), l, false, 0, x - 11, z + 4, 15.69, x + 1,
+					y + 1, z + 16.19, tempType.getLabel(), tempType.getItem().item))
+				return false;
+		}
+
+		if (l == 3) {
+			return putDownTurn(player, world, false, x, y, z, flipArraySign(zArray, x, false), flipArraySign(xArray, z, true), l, false, 2, x + 11, z - 4, 15.69, x,
+					y + 1, z - 15.19, tempType.getLabel(), tempType.getItem().item);
+		}
 		return true;
 	}
 

@@ -19,6 +19,7 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import train.common.api.pathfinding.PathFindingHelper;
 import train.common.blocks.BlockTCRail;
 import train.common.blocks.BlockTCRailGag;
 import train.common.items.ItemTCRail;
@@ -38,6 +39,7 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 	public World worldObj;
 	public int meta;
 	public EntityRollingStock entityMainTrain;
+	private PathFindingHelper pathFindingHelper;
 	public int entityMainTrainID;
 	protected int bogieIndex;
 	public double bogieShift;
@@ -67,7 +69,7 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 		this.prevDpdx = 0F;
 		this.prevDpdz = 0F;
 		this.worldObj = world;
-
+		pathFindingHelper = new PathFindingHelper();
 		if (entityMainTrain != null) {
 
 			setSize(entityMainTrain.width, entityMainTrain.height);
@@ -421,7 +423,8 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 		                this.setRotation(this.rotationYaw, this.rotationPitch);
 		            }
 		        }
-		        else{
+		        else
+				{
 		        	TileEntity tileEntity = this.worldObj.getTileEntity(i, j, k);
 		        	TileTCRail tileRail;
 
@@ -450,31 +453,38 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 					//applyDragAndPushForces();
 					limitSpeedOnTCRail();
 
-					if (ItemTCRail.isTCTurnTrack(tileRail)) {
+					if (ItemTCRail.isTCTurnTrack(tileRail))
+					{
 
 						int meta = tileRail.getBlockMetadata();
 
-					if (shouldIgnoreSwitch(tileRail, i, j, k, meta)) {
-						moveOnTCStraight(j, tileRail.xCoord, tileRail.zCoord, tileRail.getBlockMetadata());
-					} else {
-						if (ItemTCRail.isTCTurnTrack(tileRail)) moveOnTC90TurnRail(j, tileRail.r, tileRail.cx, tileRail.cz);
+						if (pathFindingHelper.shouldIgnoreSwitch(this,tileRail, i, j, k, meta)) {
+							pathFindingHelper.moveOnTCStraight(this, i, j, k, tileRail.xCoord, tileRail.zCoord, tileRail.getBlockMetadata());
+						} else {
+							if (ItemTCRail.isTCTurnTrack(tileRail)) moveOnTC90TurnRail(j, tileRail.r, tileRail.cx, tileRail.cz);
+						}
+
+						// shouldIgnoreSwitch(tileRail, i, j, k, meta);
+						// if (ItemTCRail.isTCTurnTrack(tileRail)) moveOnTC90TurnRail(i, j, k,
+						// tileRail.r, tileRail.cx, tileRail.cy, tileRail.cz, tileRail.getType(), meta);
 					}
-					
-					// shouldIgnoreSwitch(tileRail, i, j, k, meta);
-					// if (ItemTCRail.isTCTurnTrack(tileRail)) moveOnTC90TurnRail(i, j, k,
-					// tileRail.r, tileRail.cx, tileRail.cy, tileRail.cz, tileRail.getType(), meta);
+					else if (ItemTCRail.isTCStraightTrack(tileRail)) {
+
+						pathFindingHelper.moveOnTCStraight(this, i, j, k, tileRail.xCoord, tileRail.zCoord, tileRail.getBlockMetadata());
+						//moveOnTCStraight(j, tileRail.xCoord, tileRail.zCoord, tileRail.getBlockMetadata());
 					}
-
-					if (ItemTCRail.isTCStraightTrack(tileRail)) {
-
-						moveOnTCStraight(j, tileRail.xCoord, tileRail.zCoord, tileRail.getBlockMetadata());
+					else if (TCRailTypes.isTurnTrack(tileRail))
+					{
+						moveOnNewTC90TurnRail(j, tileRail.r, tileRail.cx, tileRail.cz);
 					}
-
-					else if (TCRailTypes.isCrossingTrack(tileRail)) {
-
-					moveOnTCTwoWaysCrossing();
+					else if (TCRailTypes.isCrossingTrack(tileRail))
+					{
+						moveOnTCTwoWaysCrossing();
 					}
-
+					else if (TCRailTypes.isDiagonalTrack(tileRail))
+					{
+						moveOnTCDiagonal(i, j, k, tileRail.xCoord, tileRail.zCoord, tileRail.getBlockMetadata(), tileRail.getRailLength());
+					}
 					else if (TCRailTypes.isSlopeTrack(tileRail)) {
 
 						moveOnTCSlope(j, tileRail.xCoord, tileRail.zCoord, tileRail.slopeAngle, tileRail.slopeHeight, tileRail.getBlockMetadata());
@@ -528,51 +538,50 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 		}
 	}
 
-	private void moveOnTCStraight(int j, double cx, double cz, int meta) {
-		posY = j + 0.2;
-		if (meta == 2 || meta == 0) {
-			double norm = Math.sqrt(motionX * motionX + motionZ * motionZ);
+	private void moveOnTCDiagonal(int i, int j, int k, double cx, double cz, int meta, double length) {
 
-			setPosition(cx + 0.5, posY + yOffset, posZ);
-			//setPosition(posX, posY + yOffset, posZ);
+		double Y_OFFSET = 0.2;
+		double X_OFFSET = 0.5;
+		double Z_OFFSET = 1.5;
+		posY = j + Y_OFFSET;
 
-			motionX = 0;
-			motionZ = Math.copySign(norm, motionZ);
-			this.boundingBox.offset(0, 0 , Math.copySign(norm, this.motionZ));
+		double exitX = 0;
+		double exitZ = 0;
+		double directionX;
+		double directionZ;
+		double norm = Math.sqrt(motionX * motionX + motionZ * motionZ);
+		double distanceNorm;
 
-			List boxes = worldObj.getCollidingBoundingBoxes(this, boundingBox);
-			for(Object b : boxes){
-				if(!(b instanceof BlockRailBase) && !(b instanceof BlockTCRail) && !(b instanceof BlockTCRailGag) && !(b instanceof BlockAir)){
-					return;
-				}
-			}
-			this.posX = (this.boundingBox.minX + this.boundingBox.maxX) / 2.0D;
-			this.posY = this.boundingBox.minY + (double)this.yOffset - (double)this.ySize;
-			this.posZ = (this.boundingBox.minZ + this.boundingBox.maxZ) / 2.0D;
-
-			//System.out.println("straight z "+Math.copySign(norm, motionZ));
+		if (meta == 6) {
+			exitX = (motionX > 0) ? cx + length + X_OFFSET : cx - X_OFFSET;
+			exitZ = (motionX > 0) ? cz - length + X_OFFSET : cz + Z_OFFSET;
+		} else if (meta == 4) {
+			exitX = (motionX > 0) ? cx + Z_OFFSET : cx - (length - X_OFFSET);
+			exitZ = (motionX > 0) ? cz - X_OFFSET : cz + (length + X_OFFSET);
+		} else if (meta == 5) {
+			exitX = (motionX > 0) ? cx + Z_OFFSET : cx - (length + X_OFFSET);
+			exitZ = (motionX > 0) ? cz + Z_OFFSET : cz - (length + X_OFFSET);
+		} else if (meta == 7) {
+			exitX = (motionX > 0) ? cx + (length + X_OFFSET) : cx - X_OFFSET;
+			exitZ = (motionX > 0) ? cz + (length + X_OFFSET) : cz - X_OFFSET;
 		}
-		if (meta == 1 || meta == 3) {
 
-			setPosition(posX, posY + yOffset, cz + 0.5);
-			//setPosition(posX, posY + yOffset, posZ);
+		directionX = exitX - posX;
+		directionZ = exitZ - posZ;
+		distanceNorm = Math.sqrt(directionX * directionX + directionZ * directionZ);
+		motionX = (directionX / distanceNorm) * norm;
+		motionZ = (directionZ / distanceNorm) * norm;
+		this.boundingBox.offset(Math.copySign(motionX, this.motionX), 0 , Math.copySign(motionZ, this.motionZ));
 
-			motionX = Math.copySign(Math.sqrt(motionX * motionX + motionZ * motionZ), motionX);
-			motionZ = 0;
-			this.boundingBox.offset(motionX, 0 , 0);
-
-			List boxes = worldObj.getCollidingBoundingBoxes(this, boundingBox);
-			for(Object b : boxes){
-				if(!(b instanceof BlockRailBase) && !(b instanceof BlockTCRail) && !(b instanceof BlockTCRailGag) && !(b instanceof BlockAir)){
-					return;
-				}
+		List boxes = worldObj.getCollidingBoundingBoxes(this, boundingBox);
+		for(Object b : boxes){
+			if(!(b instanceof BlockRailBase) && !(b instanceof BlockTCRail) && !(b instanceof BlockTCRailGag) && !(b instanceof BlockAir)){
+				return;
 			}
-			this.posX = (this.boundingBox.minX + this.boundingBox.maxX) / 2.0D;
-			this.posY = this.boundingBox.minY + (double)this.yOffset - (double)this.ySize;
-			this.posZ = (this.boundingBox.minZ + this.boundingBox.maxZ) / 2.0D;
-
-			//System.out.println("straight x "+Math.copySign(norm, motionX));
 		}
+		this.posX = (this.boundingBox.minX + this.boundingBox.maxX) / 2.0D;
+		this.posY = this.boundingBox.minY + (double)this.yOffset - (double)this.ySize;
+		this.posZ = (this.boundingBox.minZ + this.boundingBox.maxZ) / 2.0D;
 	}
 
 	private void moveOnTCTwoWaysCrossing() {
@@ -651,6 +660,52 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 		}
 	}
 
+	private void moveOnNewTC90TurnRail(int j,double r, double cx, double cz){
+
+		posY = j + 0.2;
+		double cpx = posX - cx;
+		double cpz = posZ - cz;
+		double cp_norm = Math.sqrt(cpx * cpx + cpz * cpz);
+
+		double vnorm = Math.sqrt(motionX * motionX + motionZ * motionZ);
+
+		double norm_cpx = cpx / cp_norm; //u
+		double norm_cpz = cpz / cp_norm; //v
+
+		double vx2 = -norm_cpz * vnorm;//-v
+		double vz2 = norm_cpx * vnorm;//u
+
+		double px2 = posX + motionX;
+		double pz2 = posZ + motionZ;
+
+		double px2_cx = px2 - cx;
+		double pz2_cz = pz2 - cz;
+
+		double p2_c_norm = Math.sqrt((px2_cx * px2_cx) + (pz2_cz * pz2_cz));
+
+		double px2_cx_norm = px2_cx / p2_c_norm;
+		double pz2_cz_norm = pz2_cz / p2_c_norm;
+
+		double px3 = cx + (px2_cx_norm * r);
+		double pz3 = cz + (pz2_cz_norm * r);
+
+		double signX = px3 - posX;
+		double signZ = pz3 - posZ;
+
+		vx2 = Math.copySign(vx2, signX);
+		vz2 = Math.copySign(vz2, signZ);
+
+		double p_corr_x = cx + ((cpx / cp_norm) * r);
+		double p_corr_z = cz + ((cpz / cp_norm) * r);
+
+
+		setPosition(p_corr_x, posY + yOffset, p_corr_z);
+		moveEntity(vx2, 0.0D, vz2);
+		motionX = vx2;
+		motionZ = vz2;
+
+	}
+
 	private void moveOnTC90TurnRail(int j,double r, double cx, double cz){
 		posY = j + 0.2;
 		double cpx = posX - cx;
@@ -694,52 +749,7 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 		motionX = vx2;
 		motionZ = vz2;
 	}
-	private boolean shouldIgnoreSwitch(TileTCRail tile, int i, int j, int k, int meta) {
-		if (tile != null
-				&& (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_TURN.getLabel())
-						|| tile.getType().equals(EnumTracks.MEDIUM_LEFT_TURN.getLabel())
-						|| tile.getType().equals(EnumTracks.LARGE_LEFT_TURN.getLabel())
-						|| tile.getType().equals(EnumTracks.LARGE_RIGHT_TURN.getLabel()))
-				&& tile.canTypeBeModifiedBySwitch) {
-			if (meta == 2) {
-				if (motionZ > 0 && Math.abs(motionX) < 0.01) {
-					TileEntity tile2 = worldObj.getTileEntity(i, j, k + 1);
-					if (tile2 != null && tile2 instanceof TileTCRail) {
-						((TileTCRail) tile2).setSwitchState(false, true);
-					}
-					return true;
-				}
-			}
-			if (meta == 0) {
-				if (motionZ < 0 && Math.abs(motionX) < 0.01) {
-					TileEntity tile2 = worldObj.getTileEntity(i, j, k - 1);
-					if (tile2 != null && tile2 instanceof TileTCRail) {
-						((TileTCRail) tile2).setSwitchState(false, true);
-					}
-					return true;
-				}
-			}
-			if (meta == 1) {
-				if (Math.abs(motionZ) < 0.01 && motionX > 0) {
-					TileEntity tile2 = worldObj.getTileEntity(i + 1, j, k);
-					if (tile2 != null && tile2 instanceof TileTCRail) {
-						((TileTCRail) tile2).setSwitchState(false, true);
-					}
-					return true;
-				}
-			}
-			if (meta == 3) {
-				if (Math.abs(motionZ) < 0.01 && motionX < 0) {
-					TileEntity tile2 = worldObj.getTileEntity(i - 1, j, k);
-					if (tile2 != null && tile2 instanceof TileTCRail) {
-						((TileTCRail) tile2).setSwitchState(false, true);
-					}
-					return true;
-				}
-			}
-		}
-		return false;
-	}
+
 	private void limitSpeedOnTCRail() {
 
 		/*

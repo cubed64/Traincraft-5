@@ -1,6 +1,5 @@
 package train.client.render.models.blocks;
 
-import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
@@ -64,14 +63,7 @@ public class ModelRightSwitchTCTrack extends ModelBase {
 		GL11.glTranslatef((float) x + 0.5f, (float) y, (float) z + 0.5f);
 
 		// Bind the texture, so that OpenGL properly textures our block.
-		if (RailVariants.EMBEDDED.equals(railVariant))
-		{
-			tmt.Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_embedded.png"));
-		}
-		else
-		{
-			tmt.Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
-		}
+		tmt.Tessellator.bindTexture(train.common.enums.TrackResourceLocations.GetResourceLocation(railVariant));
 		// Push a blank matrix onto the stack
 
 		GL11.glColor4f(r, g, b, a);
@@ -89,7 +81,7 @@ public class ModelRightSwitchTCTrack extends ModelBase {
 				GL11.glRotatef(-90, 0, 1, 0);
 			}
 		}
-		if (facing == 1) {
+		else if (facing == 1) {
 			if(type.equals("medium")){
 				GL11.glRotatef(180, 0, 1, 0);
 				GL11.glTranslatef(-1.0f, 0.0f, 3.0f);
@@ -102,7 +94,7 @@ public class ModelRightSwitchTCTrack extends ModelBase {
 				GL11.glRotatef(90, 0, 1, 0);
 			}
 		}
-		if(facing == 2){
+		else if(facing == 2){
 			if(type.equals("medium")){
 				GL11.glRotatef(90, 0, 1, 0);
 				GL11.glTranslatef(-1.0f, 0.0f, 3.0f);
@@ -115,7 +107,7 @@ public class ModelRightSwitchTCTrack extends ModelBase {
 				//do something if needed
 			}
 		}
-		if(facing == 0){
+		else if(facing == 0){
 			if(type.equals("medium")){
 				GL11.glRotatef(-90, 0, 1, 0);
 				GL11.glTranslatef(-1.0f, 0.0f, 3.0f);
@@ -128,12 +120,40 @@ public class ModelRightSwitchTCTrack extends ModelBase {
 				GL11.glRotatef(180, 0, 1, 0);
 			}
 		}
-		if(type.equals("medium")&&!active)this.renderMediumInactive();
-		if(type.equals("medium")&&active)this.renderMediumActive();
-		if(type.equals("medium_parallel")&&!active)this.renderMediumParallelInactive();
-		if(type.equals("medium_parallel")&&active)this.renderMediumParallelActive();
-		if(type.equals("large_90")&&!active)this.renderLarge90Inactive();
-		if(type.equals("large_90")&&active)this.renderLarge90Active();
+
+		switch (type)
+		{
+			case "medium":
+				if (active)
+				{
+					this.renderMediumActive();
+				}
+				else
+				{
+					this.renderMediumInactive();
+				}
+				break;
+			case "medium_parallel":
+				if (active)
+				{
+					this.renderMediumParallelActive();
+				}
+				else
+				{
+					this.renderMediumParallelInactive();
+				}
+				break;
+			case "large_90":
+				if (active)
+				{
+					this.renderLarge90Active();
+				}
+				else
+				{
+					this.renderLarge90Inactive();
+				}
+				break;
+		}
 		
 		//if(type.equals("large"))this.renderLarge();
 

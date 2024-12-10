@@ -9,6 +9,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.client.renderhelper.ModelRenderHelper;
+import train.common.enums.TrackResourceLocations;
 import train.common.items.RailVariants;
 import train.common.library.Info;
 import train.common.tile.TileTCRail;
@@ -73,15 +74,7 @@ public class ModelLeftTurnTCTrack extends ModelBase {
 		GL11.glTranslatef((float) x + 1.5f, (float) y, (float) z + 5.5f);
 
 		// Bind the texture, so that OpenGL properly textures our block.
-		switch (variants)
-		{
-			case EMBEDDED:
-				FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_embedded.png"));
-				break;
-			default:
-				FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
-				break;
-		}
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(train.common.enums.TrackResourceLocations.GetResourceLocation(variants));
 
 		GL11.glColor4f(r, g, b, a);
 		//GL11.glScalef(0.5f, 0.5f, 0.5f);

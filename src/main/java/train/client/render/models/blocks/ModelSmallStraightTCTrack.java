@@ -9,6 +9,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
+import train.common.enums.TrackResourceLocations;
 import train.common.library.Info;
 import train.common.tile.TileTCRail;
 
@@ -63,10 +64,10 @@ public class ModelSmallStraightTCTrack extends ModelBase {
 		switch (type)
 		{
 			case "straight":
-				FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+				FMLClientHandler.instance().getClient().renderEngine.bindTexture(TrackResourceLocations.track_normal);
 			break;
 			case "embedded":
-				FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_embedded.png"));
+				FMLClientHandler.instance().getClient().renderEngine.bindTexture(TrackResourceLocations.track_embedded);
 			break;
 			case "crossing":
 				FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_roadcrossing.png"));

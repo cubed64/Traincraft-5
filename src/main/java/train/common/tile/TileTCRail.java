@@ -18,6 +18,7 @@ import train.common.items.RailVariants;
 import train.common.items.TCRailTypes;
 import train.common.library.EnumTracks;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +38,7 @@ public class TileTCRail extends TileEntity {
 	private String type;
 
 	private TCRailTypes.RailTypes railType;
+	private BigDecimal railLength;
 	public int facingMeta;
 	public boolean isLinkedToRail = false;
 	public int linkedX;
@@ -91,6 +93,31 @@ public class TileTCRail extends TileEntity {
 
 		return railType;
 
+	}
+
+	public double getRailLength()
+	{
+		if (railLength ==null)
+		{
+			switch (EnumTracks.valueOf(getType()))
+			{
+				case VERY_LONG_DIAGONAL_STRAIGHT:
+					railLength = new BigDecimal(12);
+					break;
+				case LONG_DIAGONAL_STRAIGHT:
+					railLength = new BigDecimal(6);
+					break;
+
+				case MEDIUM_DIAGONAL_STRAIGHT:
+					railLength = new BigDecimal(3);
+					break;
+				case SMALL_DIAGONAL_STRAIGHT:
+					railLength = new BigDecimal(1);
+					break;
+			}
+		}
+
+		return this.railLength.doubleValue();
 	}
 
 	public void setBallastMaterial(int  ballast) {

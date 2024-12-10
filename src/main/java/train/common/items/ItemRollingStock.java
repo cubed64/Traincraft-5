@@ -244,6 +244,15 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                     || tile.getType().equals(EnumTracks.EMBEDDED_MEDIUM_STRAIGHT.getLabel())
                     || tile.getType().equals(EnumTracks.EMBEDDED_LONG_STRAIGHT.getLabel())
                     || tile.getType().equals(EnumTracks.EMBEDDED_VERY_LONG_STRAIGHT.getLabel())
+
+                    || tile.getType().equals(EnumTracks.SMALL_DIAGONAL_STRAIGHT.getLabel())
+                    || tile.getType().equals(EnumTracks.MEDIUM_DIAGONAL_STRAIGHT.getLabel())
+                    || tile.getType().equals(EnumTracks.LONG_DIAGONAL_STRAIGHT.getLabel())
+                    || tile.getType().equals(EnumTracks.VERY_LONG_DIAGONAL_STRAIGHT.getLabel())
+                    || tile.getType().equals(EnumTracks.EMBEDDED_SMALL_DIAGONAL_STRAIGHT.getLabel())
+                    || tile.getType().equals(EnumTracks.EMBEDDED_MEDIUM_DIAGONAL_STRAIGHT.getLabel())
+                    || tile.getType().equals(EnumTracks.EMBEDDED_LONG_DIAGONAL_STRAIGHT.getLabel())
+                    || tile.getType().equals(EnumTracks.EMBEDDED_VERY_LONG_DIAGONAL_STRAIGHT.getLabel())
             ) {
                 this.placeCart(par2EntityPlayer, par1ItemStack, par3World, par4, par5, par6);
                 return true;
@@ -260,6 +269,14 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                         || tile.getType().equals(EnumTracks.EMBEDDED_MEDIUM_STRAIGHT.getLabel())
                         || tile.getType().equals(EnumTracks.EMBEDDED_LONG_STRAIGHT.getLabel())
                         || tile.getType().equals(EnumTracks.EMBEDDED_VERY_LONG_STRAIGHT.getLabel())
+
+
+                        || tile.getType().equals(EnumTracks.MEDIUM_DIAGONAL_STRAIGHT.getLabel())
+                        || tile.getType().equals(EnumTracks.LONG_DIAGONAL_STRAIGHT.getLabel())
+                        || tile.getType().equals(EnumTracks.VERY_LONG_DIAGONAL_STRAIGHT.getLabel())
+                        || tile.getType().equals(EnumTracks.EMBEDDED_MEDIUM_DIAGONAL_STRAIGHT.getLabel())
+                        || tile.getType().equals(EnumTracks.EMBEDDED_LONG_DIAGONAL_STRAIGHT.getLabel())
+                        || tile.getType().equals(EnumTracks.EMBEDDED_VERY_LONG_DIAGONAL_STRAIGHT.getLabel())
             ) {
 
                 this.placeCart(par2EntityPlayer, par1ItemStack, par3World, par4, par5, par6);
@@ -305,120 +322,343 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                 int dir = 0;
                 int meta = world.getBlockMetadata(i, j, k);
                 if (player != null)
-                    dir = MathHelper.floor_double((player.rotationYaw * 4F) / 360F + 0.5D) & 3;
-                //180 = 3 = EAST
-                //0 = 0 = SOUTH
-                //90 = 1 = WEST
-                // -180 = 2 = NORTH
-                // System.out.println("Direction: " + dir + " Meta: " + meta);
-                if (dir == 2) {
-                    rollingStock.rotationYaw = 0;
-                    if (meta == 0) {
-                        rollingStock.serverRealRotation = -90;
-                    } else {
-                        rollingStock.serverRealRotation = 180;
-                    }
-                    if (world.getBlock(i, j, k) == BlockIDs.tcRail.block || world.getBlock(i, j, k) == BlockIDs.tcRailGag.block) {
-                        if (meta == 0 || meta == 2) {
-                            rollingStock.rotationYaw = 90;
-                        } else {
-                            rollingStock.rotationYaw = 0;
-                        }
-                    }
-                    if (rollingStock instanceof Locomotive) {
-                        if ((world.getBlock(i, j, k - 1) == BlockIDs.tcRail.block || world.getBlock(i, j, k - 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k - 1))) && (world.getBlock(i, j, k - 2) == BlockIDs.tcRail.block || world.getBlock(i, j, k - 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k - 2)))) {
-                            if (meta == 0 || meta == 2) {
-                                rollingStock.serverRealRotation = -90;
-                            }
-                        } else {
-                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
-                            rollingStock.setDead();
-                            return rollingStock;
-                        }
-                    }
-                }
-                if (dir == 1) {
-                    rollingStock.rotationYaw = 90;
-                    if (meta == 1) {
-                        rollingStock.serverRealRotation = 180;
-                    } else {
-                        rollingStock.serverRealRotation = -90;
-                    }
-                    if (world.getBlock(i, j, k) == BlockIDs.tcRail.block || world.getBlock(i, j, k) == BlockIDs.tcRailGag.block) {
-                        if (meta == 1 || meta == 3) {
-                            rollingStock.rotationYaw = 0;
-                        } else {
-                            rollingStock.rotationYaw = 90;
-                        }
-                    }
-                    if (rollingStock instanceof Locomotive) {
-                        if ((world.getBlock(i - 1, j, k) == BlockIDs.tcRail.block || world.getBlock(i - 1, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 1, j, k))) && (world.getBlock(i - 2, j, k) == BlockIDs.tcRail.block || world.getBlock(i - 2, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 2, j, k)))) {
-                            if (meta == 1 || meta == 3) {
-                                rollingStock.serverRealRotation = 180;
-                            }
-                        } else {
-                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
-                            rollingStock.setDead();
-                            return rollingStock;
-                        }
-                    }
-                }
+                    dir = MathHelper.floor_double((player.rotationYaw * 8F) / 360F + 0.5D) & 7;
+                // 0    = 0 = SOUTH
+                // 45   = 1 = SOUTH-WEST
+                // 90   = 2 = WEST
+                // 135  = 3 = NORTH-WEST
+                // 180  = 4 = NORTH
+                // -135 = 5 = NORTH-EAST
+                // -90  = 6 = EAST
+                // -45  = 7 = SOUTH-EAST
+
+
                 if (dir == 0) {
-                    rollingStock.rotationYaw = -178.5F;
+
+                    rollingStock.rotationYaw = 180; // BACK
                     if (meta == 0) {
-                        rollingStock.serverRealRotation = 90;
-                    } else {
-                        rollingStock.serverRealRotation = 0;
+                        rollingStock.serverRealRotation = 90; // RIGHT
+                    }
+                    else {
+                        rollingStock.serverRealRotation = 0; // FRONT
                     }
                     if (world.getBlock(i, j, k) == BlockIDs.tcRail.block || world.getBlock(i, j, k) == BlockIDs.tcRailGag.block) {
+
                         if (meta == 0 || meta == 2) {
-                            rollingStock.rotationYaw = -90;
-                        } else {
-                            rollingStock.rotationYaw = 178.5F;
+                            rollingStock.rotationYaw = -90; // LEFT
+                        }
+                        else if (meta == 6 || meta == 4) {
+                            rollingStock.rotationYaw = -45; // LEFT
+                        }
+                        else if (meta == 5 || meta == 7){
+                            rollingStock.rotationYaw = -135;
+                        }
+                        else {
+                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
+                            rollingStock.setDead();
+                            return rollingStock;
                         }
                     }
-                    if (rollingStock instanceof Locomotive) {
-                        if ((world.getBlock(i, j, k + 1) == BlockIDs.tcRail.block || world.getBlock(i, j, k + 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k + 1))) && (world.getBlock(i, j, k + 2) == BlockIDs.tcRail.block || world.getBlock(i, j, k + 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k + 2)))) {
-                            if (meta == 0 || meta == 2) {
-                                rollingStock.serverRealRotation = 90;
-                            }
+                    if (rollingStock instanceof Locomotive ) {
+                        if ((meta == 2 || meta == 0) && (world.getBlock(i, j, k + 1) == BlockIDs.tcRail.block || world.getBlock(i, j, k + 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k + 1))) && (world.getBlock(i, j, k + 2) == BlockIDs.tcRail.block || world.getBlock(i, j, k + 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k + 2)))) {
+                            rollingStock.serverRealRotation = 90;
+                        } else if ((meta == 6 || meta == 4) && (world.getBlock(i - 1, j, k + 1) == BlockIDs.tcRail.block || world.getBlock(i - 1, j, k + 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 1, j, k + 1))) && (world.getBlock(i - 2, j, k + 2) == BlockIDs.tcRail.block || world.getBlock(i - 2, j, k + 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 2, j, k + 2)))) {
+                            rollingStock.serverRealRotation = 135; //RIGHT
+                        } else if ((meta == 5 || meta == 7) && (world.getBlock(i + 1, j, k + 1) == BlockIDs.tcRail.block || world.getBlock(i + 1, j, k + 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 1, j, k + 1))) && (world.getBlock(i + 2, j, k + 2) == BlockIDs.tcRail.block || world.getBlock(i + 2, j, k + 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 2, j, k + 2)))) {
+                            rollingStock.serverRealRotation = 45;
                         } else {
                             if (player != null) {
                                 player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
                                 rollingStock.setDead();
                                 return rollingStock;
-                            } else {
-                                if (meta == 0 || meta == 2) {
-                                    rollingStock.serverRealRotation = 90;
-                                }
                             }
+
+
                         }
                     }
+
                 }
-                if (dir == 3) {
-                    rollingStock.rotationYaw = 178.5F;
-                    if (meta == 1) {
-                        rollingStock.serverRealRotation = 0;
-                    } else {
-                        rollingStock.serverRealRotation = 90;
+
+                if (dir == 1) {
+                    rollingStock.rotationYaw = -135; // BACK
+                    if (meta == 0) {
+                        rollingStock.serverRealRotation = 90; // RIGHT
+                    }
+                    else {
+                        rollingStock.serverRealRotation = 180; // FRONT
                     }
                     if (world.getBlock(i, j, k) == BlockIDs.tcRail.block || world.getBlock(i, j, k) == BlockIDs.tcRailGag.block) {
-                        if (meta == 1 || meta == 3) {
-                            rollingStock.rotationYaw = 178.5F;
-                        } else {
-                            rollingStock.rotationYaw = 90;
-                        }
-                    }
-                    if (rollingStock instanceof Locomotive) {
-                        if ((world.getBlock(i + 1, j, k) == BlockIDs.tcRail.block || world.getBlock(i + 1, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 1, j, k))) && (world.getBlock(i + 2, j, k) == BlockIDs.tcRail.block || world.getBlock(i + 2, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 2, j, k)))) {
-                            if (meta == 1 || meta == 3) {
-                                rollingStock.serverRealRotation = 0;
-                            }
+                        if (meta == 6 || meta == 4) {
+                            rollingStock.rotationYaw = -45; // LEFT
+                        } else if (meta == 2 || meta == 0) {
+                            rollingStock.rotationYaw = -90; // LEFT
+                        } else if (meta == 1 || meta == 3) {
+                            rollingStock.rotationYaw = 0; // LEFT
                         } else {
                             player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
                             rollingStock.setDead();
                             return rollingStock;
                         }
+                    }
+                    if (rollingStock instanceof Locomotive  ) {
+                        if ((meta == 2 || meta == 0) && (world.getBlock(i, j, k + 1) == BlockIDs.tcRail.block || world.getBlock(i, j, k + 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k + 1))) && (world.getBlock(i, j, k + 2) == BlockIDs.tcRail.block || world.getBlock(i, j, k + 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k + 2)))) {
+                            rollingStock.serverRealRotation = 90;
+                        } else if ((meta == 1 || meta == 3) && (world.getBlock(i - 1, j, k) == BlockIDs.tcRail.block || world.getBlock(i - 1, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 1, j, k))) && (world.getBlock(i - 2, j, k) == BlockIDs.tcRail.block || world.getBlock(i - 2, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 2, j, k)))) {
+                            rollingStock.serverRealRotation = 180;
+
+                        } else if ((meta == 6 || meta == 4) && (world.getBlock(i - 1, j, k + 1) == BlockIDs.tcRail.block || world.getBlock(i - 1, j, k + 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 1, j, k + 1))) && (world.getBlock(i - 2, j, k + 2) == BlockIDs.tcRail.block || world.getBlock(i - 2, j, k + 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 2, j, k + 2)))) {
+                            rollingStock.serverRealRotation = 135; //RIGHT
+                        } else {
+                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
+                            rollingStock.setDead();
+                            return rollingStock;
+                        }
+                    }
+                }
+
+                if (dir == 2) {
+                    rollingStock.rotationYaw = -90; //BACK
+                    if (meta == 1) {
+                        rollingStock.serverRealRotation = 180; //RIGHT
+                    } else {
+                        rollingStock.serverRealRotation = 90; // FRONT
+                    }
+                    if (world.getBlock(i, j, k) == BlockIDs.tcRail.block || world.getBlock(i, j, k) == BlockIDs.tcRailGag.block) {
+                        if (meta == 1 || meta == 3){
+                            rollingStock.rotationYaw = 0; // LEFT
+                        }
+                        else if(meta == 5 || meta == 7){
+                            rollingStock.rotationYaw = 45;
+                        }
+                        else if (meta == 6 || meta == 4){
+                            rollingStock.rotationYaw = -45;
+
+                        }
+                        else {
+                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
+                            rollingStock.setDead();
+                            return rollingStock;
+                        }
+                    }
+                    if (rollingStock instanceof Locomotive ) {
+                        if ((meta == 1 || meta == 3) && (world.getBlock(i - 1, j, k) == BlockIDs.tcRail.block || world.getBlock(i - 1, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 1, j, k))) && (world.getBlock(i - 2, j, k) == BlockIDs.tcRail.block || world.getBlock(i - 2, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 2, j, k)))) {
+                            rollingStock.serverRealRotation = 180; //RIGHT
+                        }
+                        else if ((meta == 5 || meta == 7) && (world.getBlock(i - 1, j, k - 1) == BlockIDs.tcRail.block || world.getBlock(i - 1, j, k - 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 1, j, k - 1))) && (world.getBlock(i - 2, j, k - 2) == BlockIDs.tcRail.block || world.getBlock(i - 2, j, k - 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 2, j, k - 2)))) {
+                            rollingStock.serverRealRotation = -135;
+                        }
+                        else if ((meta == 6 || meta == 4) && (world.getBlock(i - 1, j, k + 1) == BlockIDs.tcRail.block || world.getBlock(i - 1, j, k + 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 1, j, k + 1))) && (world.getBlock(i - 2, j, k + 2) == BlockIDs.tcRail.block || world.getBlock(i - 2, j, k + 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 2, j, k + 2)))) {
+                            rollingStock.serverRealRotation = 135;
+                        }
+
+                        else {
+                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
+                            rollingStock.setDead();
+                            return rollingStock;
+                        }
+                    }
+                }
+
+                if (dir == 3) {
+                    rollingStock.rotationYaw = -45; // BACK
+                    if (meta == 0) {
+                        rollingStock.serverRealRotation = -90; // RIGHT
+                    } else {
+                        rollingStock.serverRealRotation = 180; // FRONT
+                    }
+                    if (world.getBlock(i, j, k) == BlockIDs.tcRail.block || world.getBlock(i, j, k) == BlockIDs.tcRailGag.block) {
+                        if (meta == 5 || meta == 7) {
+                            rollingStock.rotationYaw = 45; // LEFT
+                        }
+                        else if (meta == 2 || meta == 0) {
+                            rollingStock.rotationYaw = 90;
+                        }
+                        else if (meta == 1 || meta == 3){
+                            rollingStock.rotationYaw = 0; // LEFT
+                        }
+                        else {
+                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
+                            rollingStock.setDead();
+                            return rollingStock;
+                        }
+                    }
+                    if (rollingStock instanceof Locomotive ) {
+                        if ((meta == 5 || meta == 7) && (world.getBlock(i - 1, j, k - 1) == BlockIDs.tcRail.block || world.getBlock(i - 1, j, k - 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 1, j, k - 1))) && (world.getBlock(i - 2, j, k - 2) == BlockIDs.tcRail.block || world.getBlock(i - 2, j, k - 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 2, j, k - 2)))) {
+                            rollingStock.serverRealRotation = -135; //RIGHT
+                        }
+                        else if ((meta == 2 || meta == 0) && (world.getBlock(i, j, k + 1) == BlockIDs.tcRail.block || world.getBlock(i, j, k + 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k + 1))) && (world.getBlock(i, j, k + 2) == BlockIDs.tcRail.block || world.getBlock(i, j, k + 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k + 2)))) {rollingStock.serverRealRotation = 90;
+                            rollingStock.serverRealRotation = -90;
+                        }
+                        else if ((meta == 1 || meta == 3) && (world.getBlock(i - 1, j, k) == BlockIDs.tcRail.block || world.getBlock(i - 1, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 1, j, k))) && (world.getBlock(i - 2, j, k) == BlockIDs.tcRail.block || world.getBlock(i - 2, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 2, j, k)))) {
+                            rollingStock.serverRealRotation = 180; //RIGHT
+                        }
+                        else {
+                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
+                            rollingStock.setDead();
+                            return rollingStock;
+                        }
+                    }
+                }
+
+                if (dir == 4) {
+                    rollingStock.rotationYaw = 0; // BACK
+                    if (meta == 0) {
+                        rollingStock.serverRealRotation = -90; // RIGHT
+                    } else {
+                        rollingStock.serverRealRotation = 180; // FRONT
+                    }
+                    if (world.getBlock(i, j, k) == BlockIDs.tcRail.block || world.getBlock(i, j, k) == BlockIDs.tcRailGag.block) {
+                        if (meta == 0 || meta == 2) {
+                            rollingStock.rotationYaw = 90; // LEFT
+                        }
+                        else if (meta == 5 || meta == 7) {
+                            rollingStock.rotationYaw = 45; // LEFT
+                        }
+                        else if (meta == 6 || meta == 4){
+                            rollingStock.rotationYaw = 135;
+                        }
+
+                        else {
+                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
+                            rollingStock.setDead();
+                            return rollingStock;
+                        }
+
+                    }
+
+                    if (rollingStock instanceof Locomotive ) {
+                        if ((meta == 0 || meta == 2) && (world.getBlock(i, j, k - 1) == BlockIDs.tcRail.block || world.getBlock(i, j, k - 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k - 1))) && (world.getBlock(i, j, k - 2) == BlockIDs.tcRail.block || world.getBlock(i, j, k - 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k - 2)))) {
+                            rollingStock.serverRealRotation = -90; // RIGHT
+                        }
+                        else if ((meta == 5 || meta == 7) && (world.getBlock(i - 1, j, k - 1) == BlockIDs.tcRail.block || world.getBlock(i - 1, j, k - 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 1, j, k - 1))) && (world.getBlock(i - 2, j, k - 2) == BlockIDs.tcRail.block || world.getBlock(i - 2, j, k - 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 2, j, k - 2)))) {
+                            rollingStock.serverRealRotation = -135; //RIGHT
+                        }
+                        else if ((meta == 6 || meta == 4) && (world.getBlock(i - 1, j, k + 1) == BlockIDs.tcRail.block || world.getBlock(i - 1, j, k + 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 1, j, k + 1))) && (world.getBlock(i - 2, j, k + 2) == BlockIDs.tcRail.block || world.getBlock(i - 2, j, k + 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 2, j, k + 2)))) {
+                            rollingStock.serverRealRotation = -45;
+                        }else {
+                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
+                            rollingStock.setDead();
+                            return rollingStock;
+                        }
+                    }
+                }
+
+                if (dir == 5) {
+                    rollingStock.rotationYaw = 45; // BACK
+                    if (meta == 0) {
+                        rollingStock.serverRealRotation = -90; // RIGHT
+                    } else {
+                        rollingStock.serverRealRotation = 0; // FRONT
+                    }
+                    if (world.getBlock(i, j, k) == BlockIDs.tcRail.block || world.getBlock(i, j, k) == BlockIDs.tcRailGag.block) {
+                        if (meta == 6 || meta == 4) {
+                            rollingStock.rotationYaw = 135; // LEFT
+                        }
+                        else if (meta == 0 || meta == 2) {
+                            rollingStock.rotationYaw = 90; // LEFT
+                        }
+                        else if (meta == 1 || meta == 3){
+                            rollingStock.rotationYaw = 178.5f; // LEFT
+                        }
+                        else {
+                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
+                            rollingStock.setDead();
+                            return rollingStock;
+                        }
+                    }
+                    if (rollingStock instanceof Locomotive) {
+                        if ((meta == 6 || meta == 4) && (world.getBlock(i + 1, j, k - 1) == BlockIDs.tcRail.block || world.getBlock(i + 1, j, k - 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 1, j, k - 1))) && (world.getBlock(i + 2, j, k - 2) == BlockIDs.tcRail.block || world.getBlock(i + 2, j, k - 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 2, j, k - 2)))) {
+                            rollingStock.serverRealRotation = -45; //RIGHT
+                        }
+                        else if ((meta == 1 || meta == 3) && (world.getBlock(i + 1, j, k) == BlockIDs.tcRail.block || world.getBlock(i + 1, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 1, j, k))) && (world.getBlock(i + 2, j, k) == BlockIDs.tcRail.block || world.getBlock(i + 2, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 2, j, k)))) {
+                            rollingStock.serverRealRotation = 0; //RIGHT
+                        }
+                        else if ((meta == 0 || meta == 2) && (world.getBlock(i, j, k - 1) == BlockIDs.tcRail.block || world.getBlock(i, j, k - 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k - 1))) && (world.getBlock(i, j, k - 2) == BlockIDs.tcRail.block || world.getBlock(i, j, k - 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k - 2)))) {
+                            rollingStock.serverRealRotation = -90; // RIGHT
+                        }else {
+                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
+                            rollingStock.setDead();
+                            return rollingStock;
+                        }
+                    }
+                }
+
+                if (dir == 6) {
+                    rollingStock.rotationYaw = 90; // BACK
+                    if (meta == 1) {
+                        rollingStock.serverRealRotation = 0; // RIGHT
+                    } else {
+                        rollingStock.serverRealRotation = -90; // FRONT
+                    }
+                    if (world.getBlock(i, j, k) == BlockIDs.tcRail.block || world.getBlock(i, j, k) == BlockIDs.tcRailGag.block) {
+                        if (meta == 1 || meta == 3) {
+                            rollingStock.rotationYaw = -178.5f; // LEFT
+                        }
+                        else if (meta == 6 || meta == 4) {
+                            rollingStock.rotationYaw = 135; // LEFT
+                        }
+                        else if (meta == 5 || meta == 7) {
+                            rollingStock.rotationYaw = -135; // LEFT
+                        }else {
+                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
+                            rollingStock.setDead();
+                            return rollingStock;
+                        }
+                    }
+                    if (rollingStock instanceof Locomotive ) {
+                        if ((meta == 1 || meta == 3) && (world.getBlock(i + 1, j, k) == BlockIDs.tcRail.block || world.getBlock(i + 1, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 1, j, k))) && (world.getBlock(i + 2, j, k) == BlockIDs.tcRail.block || world.getBlock(i + 2, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 2, j, k)))) {
+                            rollingStock.serverRealRotation = 0; //RIGHT
+                        } else if ((meta == 5 || meta == 7) && (world.getBlock(i - 1, j, k - 1) == BlockIDs.tcRail.block || world.getBlock(i - 1, j, k - 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 1, j, k - 1))) && (world.getBlock(i - 2, j, k - 2) == BlockIDs.tcRail.block || world.getBlock(i - 2, j, k - 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i - 2, j, k - 2)))) {
+                            rollingStock.serverRealRotation = 45; //RIGHT
+                        }
+                        else if ((meta == 6 || meta == 4) && (world.getBlock(i + 1, j, k - 1) == BlockIDs.tcRail.block || world.getBlock(i + 1, j, k - 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 1, j, k - 1))) && (world.getBlock(i + 2, j, k - 2) == BlockIDs.tcRail.block || world.getBlock(i + 2, j, k - 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 2, j, k - 2)))) {
+                            rollingStock.serverRealRotation = -45; //RIGHT
+                        }else {
+                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
+                            rollingStock.setDead();
+                            return rollingStock;
+                        }
+                    }
+                }
+
+                if (dir == 7) {
+                    rollingStock.rotationYaw = 135; // BACK
+                    if (meta == 0) {
+                        rollingStock.serverRealRotation = 90; // RIGHT
+                    } else {
+                        rollingStock.serverRealRotation = 0; // FRONT
+                    }
+                    if (world.getBlock(i, j, k) == BlockIDs.tcRail.block || world.getBlock(i, j, k) == BlockIDs.tcRailGag.block) {
+                        if (meta == 5 || meta == 7) {
+                            rollingStock.rotationYaw = -135; // LEFT
+                        }
+                        else if (meta == 1 || meta == 3) {
+                            rollingStock.rotationYaw = -178.5f; // LEFT
+                        }
+                        else if (meta == 0 || meta == 2) {
+                            rollingStock.rotationYaw = -90; // LEFT
+                        }
+                        else {
+                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
+                            rollingStock.setDead();
+                            return rollingStock;
+                        }
+                    }
+                    if (rollingStock instanceof Locomotive) {
+                        if ((meta == 5 || meta == 7) && (world.getBlock(i + 1, j, k + 1) == BlockIDs.tcRail.block || world.getBlock(i + 1, j, k + 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 1, j, k + 1))) && (world.getBlock(i + 2, j, k + 2) == BlockIDs.tcRail.block || world.getBlock(i + 2, j, k + 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 2, j, k + 2)))) {
+                            rollingStock.serverRealRotation = 45; //RIGHT
+                        }
+                        else if ((meta == 1 || meta == 3) && (world.getBlock(i + 1, j, k) == BlockIDs.tcRail.block || world.getBlock(i + 1, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 1, j, k))) && (world.getBlock(i + 2, j, k) == BlockIDs.tcRail.block || world.getBlock(i + 2, j, k) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i + 2, j, k)))) {
+                            rollingStock.serverRealRotation = 0; //RIGHT
+                        }
+                        else if ((meta == 0 || meta == 2) && (world.getBlock(i, j, k + 1) == BlockIDs.tcRail.block || world.getBlock(i, j, k + 1) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k + 1))) && (world.getBlock(i, j, k + 2) == BlockIDs.tcRail.block || world.getBlock(i, j, k + 2) == BlockIDs.tcRailGag.block || BlockRailBase.func_150051_a(world.getBlock(i, j, k + 2)))) {
+                            rollingStock.serverRealRotation = 90; // RIGHT
+                        }else {
+                            player.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
+                            rollingStock.setDead();
+                            return rollingStock;
+                        }
+
                     }
                 }
 
