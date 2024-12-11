@@ -19,11 +19,16 @@ public class DieselSD70ACe_H extends DieselTrain {
         super(world, EnumTrains.SD70ACe_H.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         textureDescriptionMap.put(0, "hey louis");
-        textureDescriptionMap.put(1, "");
-        textureDescriptionMap.put(2, "");
-        textureDescriptionMap.put(3, "");
-        textureDescriptionMap.put(4, "");
-        textureDescriptionMap.put(5, "P");
+        textureDescriptionMap.put(1, "NS 1065 (Savannah & Atlanta)");
+        textureDescriptionMap.put(2, "NS 1066 (New York Central)");
+        textureDescriptionMap.put(3, "NS 1067 (Reading)");
+        textureDescriptionMap.put(4, "NS 1068 (Erie)");
+        textureDescriptionMap.put(5, "NS 1069 (Virginian)");
+        textureDescriptionMap.put(6, "NS 1070 (Wabash)");
+        textureDescriptionMap.put(7, "NS 1071 (Central Railroad of New Jersey)");
+        textureDescriptionMap.put(8, "NS 1072 (Illinois Terminal)");
+        textureDescriptionMap.put(9, "NS 1073 (Penn Central)");
+        textureDescriptionMap.put(10, "NS 1074 (Delaware Lackawanna & Western)");
     }
     public DieselSD70ACe_H(World world, double d, double d1, double d2){
         this(world);

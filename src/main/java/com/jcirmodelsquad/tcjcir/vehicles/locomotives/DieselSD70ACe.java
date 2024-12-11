@@ -20,10 +20,19 @@ public class DieselSD70ACe extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "Blandsville & Blankerston");
         textureDescriptionMap.put(1, "FURRX Lease");
-        textureDescriptionMap.put(2, "CSXT");
+        textureDescriptionMap.put(2, "CSXT Thundercab");
         textureDescriptionMap.put(3, "PRLX C&O Heritable");
         textureDescriptionMap.put(4, "CSXT What If Whispercab, Hunter Harrison Killed it");
-        textureDescriptionMap.put(5, "P");
+        textureDescriptionMap.put(5, "BNSF");
+        textureDescriptionMap.put(6, "BNSF Thundercab");
+        textureDescriptionMap.put(7, "BNSF Whispercab");
+        textureDescriptionMap.put(8, "KCS Grey Ghost Thundercab");
+        textureDescriptionMap.put(9, "KCS Belle Thundercab");
+        textureDescriptionMap.put(10, "KCS Belle Whispercab");
+        textureDescriptionMap.put(11, "UP Flag Whispercab");
+        textureDescriptionMap.put(12, "UP Flag Thundercab");
+        textureDescriptionMap.put(13, "UP Lettering Whispercab");
+        textureDescriptionMap.put(14, "UP Lettering Thundercab");
     }
     public DieselSD70ACe(World world, double d, double d1, double d2){
         this(world);

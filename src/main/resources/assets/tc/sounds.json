@@ -127,7 +127,15 @@
   "nathan_k5lar_1": {"category": "master", "sounds": [{"name": "nathan_k5lar_1","stream": true}]},
   "nathan_k5lar_faulty_1": {"category": "master", "sounds": [{"name": "nathan_k5lar_faulty_1","stream": true}]},
   "nathan_k5lla_1": {"category": "master", "sounds": [{"name": "nathan_k5lla_1","stream": true}]},
-
+  "nathan_k5lla_2": {"category": "master", "sounds": [{"name": "nathan_k5lla_2","stream": true}]},
+  "nathan_k5lla_3": {"category": "master", "sounds": [{"name": "nathan_k5lla_3","stream": true}]},
+  "nathan_k5lla_4": {"category": "master", "sounds": [{"name": "nathan_k5lla_4","stream": true}]},
+  "nathan_k5lla_5": {"category": "master", "sounds": [{"name": "nathan_k5lla_5","stream": true}]},
+  "nathan_k5lla_6": {"category": "master", "sounds": [{"name": "nathan_k5lla_6","stream": true}]},
+  "nathan_k5lla_7": {"category": "master", "sounds": [{"name": "nathan_k5lla_7","stream": true}]},
+  "nathan_k5lla_8": {"category": "master", "sounds": [{"name": "nathan_k5lla_8","stream": true}]},
+  "nathan_k5lla_9": {"category": "master", "sounds": [{"name": "nathan_k5lla_9","stream": true}]},
+  "nathan_k5lla_10": {"category": "master", "sounds": [{"name": "nathan_k5lla_10","stream": true}]},
 
   "nathan_m3_1": {"category": "master", "sounds": [{"name": "nathan_m3_1", "stream":  true}]},
   "nathan_m3_2": {"category": "master", "sounds": [{"name": "nathan_m3_2", "stream":  true}]},
@@ -252,6 +260,7 @@
 
   "ateam": {"category": "master", "sounds": [{"name": "ateam", "stream":  true}]},
   "bb_horn": {"category": "master", "sounds": [{"name": "bb_horn","stream": true}]},
+  "heylouis": {"category": "master", "sounds": [{"name": "heylouis","stream": true}]},
   "walterwhite": {"category": "master", "sounds": [{"name": "walterwhite","stream": true}]},
   "aem7_horn": {"category": "master", "sounds": [{"name": "aem7_horn","stream": true}]},
   "fuck_bees": {"category": "master", "sounds": [{"name": "fuck_bees","stream": true}]},
@@ -397,6 +406,8 @@
   "EMD_16_710G3A_Notch8": {"category": "master", "sounds": [{"name": "EMD_16_710G3A_Notch8", "stream":  true}]},
   "EMD_16_710G3B_Idle": {"category": "master", "sounds": [{"name": "EMD_16_710G3B_Idle", "stream":  true}]},
   "EMD_16_710G3B_Notch8": {"category": "master", "sounds": [{"name": "EMD_16_710G3B_Notch8", "stream":  true}]},
+  "EMD_16_710G3C_Idle": {"category": "master", "sounds": [{"name": "EMD_16_710G3C_Idle", "stream":  true}]},
+  "EMD_16_710G3C_Notch8": {"category": "master", "sounds": [{"name": "EMD_16_710G3C_Notch8", "stream":  true}]},
   "EMD_20_645E3_Idle": {"category": "master", "sounds": [{"name": "EMD_16_645E3_Idle", "stream":  true}]},
   "EMD_20_645E3_Notch8": {"category": "master", "sounds": [{"name": "EMD_16_645E3_Notch8", "stream":  true}]},
   "EMD_20_710G3B_Idle": {"category": "master", "sounds": [{"name": "EMD_20_710G3B_Idle", "stream":  true}]},

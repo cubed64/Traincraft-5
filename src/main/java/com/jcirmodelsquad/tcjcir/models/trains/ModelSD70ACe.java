@@ -1601,6 +1601,17 @@ public class ModelSD70ACe extends ModelConverter //Same as Filename
 			bogie.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 
+		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 10) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/HTCR_newer_itsilver.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.97F, 0.0F, 0F);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(-3.95F, 0.0F, 0);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
 		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/HTCR_newer_peter_front.png"));
 			GL11.glPushMatrix();
@@ -1610,6 +1621,72 @@ public class ModelSD70ACe extends ModelConverter //Same as Filename
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/HTCR_newer_peter_back.png"));
 			GL11.glRotatef(180, 0, 1, 0);
 			GL11.glTranslated(-4F, 0.0F, 0);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
+		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/HTCR_newer_bnsilver.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.97F, 0.0F, 0F);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(-3.95F, 0.0F, 0);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
+		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/HTCR_newer_bnsilver.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.97F, 0.0F, 0F);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(-3.95F, 0.0F, 0);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
+		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 23) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/HTCR_newer_upgrey.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.97F, 0.0F, 0F);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(-3.95F, 0.0F, 0);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
+		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 24) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/HTCR_newer_upgrey.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.97F, 0.0F, 0F);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(-3.95F, 0.0F, 0);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
+		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 25) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/HTCR_newer_upgrey.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.97F, 0.0F, 0F);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(-3.95F, 0.0F, 0);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
+		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 26) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/HTCR_newer_upgrey.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.97F, 0.0F, 0F);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(-3.95F, 0.0F, 0);
 			bogie.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 
