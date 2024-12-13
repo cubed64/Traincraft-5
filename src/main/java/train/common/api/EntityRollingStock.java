@@ -1271,7 +1271,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 					// cz, tile.getType(), meta);
 				}
 			}
-			else if (ItemTCRail.isTCStraightTrack(tile))
+			else if (ItemTCRail.isTCStraightTrack(tile) || (TCRailTypes.isSwitchTrack(tile) && !tile.getSwitchState()))
 			{
 				//moveOnTCStraight(i, floor_posY, k, tile.xCoord, tile.zCoord, tile.getBlockMetadata());
 				pathFindingHelper.moveOnTCStraight(this, i, floor_posY, k, tile.xCoord, tile.zCoord, tile.getBlockMetadata());
@@ -1318,9 +1318,10 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			else if (TCRailTypes.isCrossingTrack(tile)) {
 				moveOnTCTwoWaysCrossing(i, floor_posY, k, tile.xCoord, tile.yCoord, tile.zCoord, tile.getBlockMetadata());
 			}
-
-
-
+			else if (TCRailTypes.isDiagonalCrossingTrack(tile))
+			{
+				moveOnTCDiamondCrossing(i, floor_posY, k, tile.xCoord, tile.yCoord, tile.zCoord, tile.getBlockMetadata());
+			}
 		}
 		else if (l == BlockIDs.tcRailGag.block) {
 			//applyDragAndPushForces();
@@ -1374,6 +1375,10 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 					{
 						pathFindingHelper.moveOnTCDiagonal(this, i, floor_posY, k, tile.xCoord, tile.zCoord, tile.getBlockMetadata(), tile.getRailLength());
 					}
+				}
+				else if (TCRailTypes.isDiagonalCrossingTrack(tile))
+				{
+					moveOnTCDiamondCrossing(i, floor_posY, k, tile.xCoord, tile.yCoord, tile.zCoord, tile.getBlockMetadata());
 				}
 			}
 		}
@@ -1583,6 +1588,30 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				moveEntity(0.0D, 0.0D, motionZ);
 			}
 			//moveEntity(motionX, 0.0D, motionZ);
+		}
+	}
+
+	protected void moveOnTCDiamondCrossing(int i, int j, int k, double cx, double cy, double cz, int meta) {
+
+		int l;
+		if ((this.bogieLoco == null)) {
+			l = MathHelper.floor_double(serverRealRotation * 8.0F / 360.0F + 0.5) & 7;
+		} else {
+			l = MathHelper.floor_double(rotationYaw * 8.0F / 360.0F + 0.5) & 7;
+
+		}
+		if (l == 0 || l == 4) {
+			moveEntity(motionX, 0.0D, 0.0D);
+		} else if (l == 2 || l == 6) {
+			moveEntity(0.0D, 0.0D, motionZ);
+		} else if (l == 1) {
+			pathFindingHelper.moveOnTCDiagonal(this, i, j, k, cx, cz, 5, 1);
+		} else if (l == 3) {
+			pathFindingHelper.moveOnTCDiagonal(this, i, j, k, cx, cz, 6, 1);
+		} else if (l == 5) {
+			pathFindingHelper.moveOnTCDiagonal(this, i, j, k, cx, cz, 7, 1);
+		} else if (l == 7) {
+			pathFindingHelper.moveOnTCDiagonal(this, i, j, k, cx, cz, 4, 1);
 		}
 	}
 

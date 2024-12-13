@@ -374,11 +374,13 @@ item.tc:tcRailEmbeddedLargeParallelCurve.name=Sleeperless Large Parallel Curve
 item.tc:tcRailMediumParallelSwitch.name=Parallel Switch
 item.tc:tcRailEmbeddedMediumParallelSwitch.name=Sleeperless Parallel Switch
 item.tc:tcRailMediumSwitch.name=Medium 90 Degree Switch
+item.tc:tcRailLarge45DegreeSwitch.name=45 Degree Switch (4x8)
 item.tc:tcRailEmbeddedMediumSwitch.name=Sleeperless Medium 90 Degree Switch
 item.tc:tcRailLargeSwitch.name=Large 90 Degree Switch
 item.tc:tcRailEmbeddedLargeSwitch.name=Sleeperless Large 90 Degree Switch
 item.tc:tcRailMedium45DegreeSwitch.name=Medium 45 Degree Switch
 item.tc:tcRailEmbeddedMedium45DegreeSwitch.name=Sleeperless Medium 45 Degree Switch
+item.tc:tcRailEmbeddedLarge45DegreeSwitch.name=Sleeperless 45 Degree Switch (4x8)
 
 item.tc:tcRailSlopeWood.name=Slope Track (Wood)
 item.tc:tcRailSlopeGravel.name=Slope Track (Gravel)

@@ -290,6 +290,7 @@ public enum ItemIDs {
 	minecartLocoSD40("ItemRollingStock", "train_sd40", HERITAGE, 10),
 	zeppelin("ItemZeppelin", "item_zeppelin_one_balloon", 1),
 
+	/**Normal Tracks*/
 	tcRailSmallStraight("ItemTCRail", "item_rail_straight_small", 5),
 	tcRailMediumStraight("ItemTCRail", "item_rail_straight_medium", 5),
 	tcRailLongStraight("ItemTCRail", "item_rail_straight_large", 5),
@@ -307,7 +308,16 @@ public enum ItemIDs {
 	tcRailLargeSwitch("ItemTCRail", "item_rail_switch_large", 5),
 	tcRailMediumParallelSwitch("ItemTCRail", "item_rail_switch_parallel", 5),
 
+	tcRailMedium45DegreeSwitch("ItemTCRail","item_rail_switch_45degree_medium", 5 ),
+	tcRailLarge45DegreeSwitch("ItemTCRail", "item_rail_switch_45degree_large", 5),
+
 	tcRailTwoWaysCrossing("ItemTCRail","item_rail_two_ways_crossing",5),
+	// DO NOT UNCOMMENT THIS AS WE DO NOT NEED A SPECIAL ITEM FOR A WHOLE NEW ITEM FOR A ROTATED two_ways_crossing
+	//tcRailDiagonalTwoWaysCrossing("ItemTCRail", "item_rail_two_ways_crossing", 5),
+	tcRailDiamondCrossing("ItemTCRail", "item_rail_diamond_crossing", 5),
+	tcRailDoubleDiamondCrossing("ItemTCRail", "item_rail_tc_double_diamond_crossing", 5),
+
+	tcRailFourWaysCrossing("ItemTCRail", "item_rail_two_ways_crossing", 5),
 
 	tcRailSlopeWood("ItemTCRail", "item_rail_straight_slope_wood", 3),
 	tcRailSlopeGravel("ItemTCRail", "item_rail_straight_slope_gravel", 3),
@@ -374,17 +384,18 @@ public enum ItemIDs {
 
 	tcRailEmbeddedTwoWaysCrossing("ItemTCRail", "item_rail_embedded_two_ways_crossing", 5),
 	tcRailEmbeddedDiamondCrossing("ItemTCRail", "item_rail_embedded_diamond_crossing", 5),
-	//tcRailEmbeddedDoubleDiamondCrossing("ItemTCRail", "item_rail_tc_embedded_double_diamond_crossing", 5),
+	tcRailEmbeddedDoubleDiamondCrossing("ItemTCRail", "item_rail_tc_embedded_double_diamond_crossing", 5),
+	// DO NOT ENABLE WE DO NOT NEED A SEPARATE ITEM FOR DIAGONAL TWO WAY CROSSINGS.
 	//tcRailEmbeddedDiagonalTwoWaysCrossing("ItemTCRail", "item_rail_embedded_two_ways_crossing", 5),
-	//tcRailEmbeddedFourWaysCrossing("ItemTCRail", "item_rail_embedded_two_ways_crossing", 5),
+	tcRailEmbeddedFourWaysCrossing("ItemTCRail", "item_rail_embedded_two_ways_crossing", 5),
 
 	tcRailEmbeddedMediumSwitch("ItemTCRail", "item_rail_embedded_switch_medium", 5),
 	tcRailEmbeddedLargeSwitch("ItemTCRail", "item_rail_embedded_switch_large", 5),
 	tcRailEmbeddedVeryLargeSwitch("ItemTCRail", "item_rail_embedded_switch_large", 5),
 	tcRailEmbeddedMediumParallelSwitch("ItemTCRail", "item_rail_embedded_switch_parallel", 5),
 	tcRailEmbeddedLargeParallelSwitch("ItemTCRail", "item_rail_embedded_switch_parallel", 5),
-	//tcRailEmbeddedMedium45DegreeSwitch("ItemTCRail", "item_rail_embedded_switch_45degree_medium", 5),
-	//tcRailEmbeddedLarge45DegreeSwitch("ItemTCRail", "item_rail_embedded_switch_45degree_large", 5),
+	tcRailEmbeddedMedium45DegreeSwitch("ItemTCRail", "item_rail_embedded_switch_45degree_medium", 5),
+	tcRailEmbeddedLarge45DegreeSwitch("ItemTCRail", "item_rail_embedded_switch_45degree_large", 5),
 
 	tcRailEmbeddedSlopeDynamic("ItemTCRail", "item_rail_embedded_slope_dynamic", 5),
 	tcRailEmbeddedLargeSlopeDynamic("ItemTCRail", "item_rail_embedded_slope_dynamic", 5),

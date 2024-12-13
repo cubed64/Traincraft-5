@@ -29,6 +29,9 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 	public static final ModelRightParallelCurveTCTrack modelRightParallelCurve = new ModelRightParallelCurveTCTrack();
 	public static final ModelLeftParallelCurveTCTrack modelLeftParallelCurve = new ModelLeftParallelCurveTCTrack();
 
+	public static final ModelRightDiamondCrossing modelRightDiamondCrossing = new ModelRightDiamondCrossing();
+	public static final ModelLeftDiamondCrossing modelLeftDiamondCrossing = new ModelLeftDiamondCrossing();
+
 	public RenderTCRail() {
 		
 	}
@@ -125,9 +128,42 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 					case TWO_WAYS_CROSSING:
 					case EMBEDDED_TWO_WAYS_CROSSING:
 					{
-						modelTwoWaysCrossing.render(railTile.getTrackType().getVariant(), x, y, z);
+						modelTwoWaysCrossing.render("twoways_crossing", railTile, x, y, z);
 						break;
 					}
+					case FOUR_WAYS_CROSSING:
+					case EMBEDDED_FOUR_WAYS_CROSSING:
+					{
+						modelTwoWaysCrossing.render("universal_crossing", railTile, x, y, z);
+						break;
+					}
+					case DIAMOND_CROSSING:
+					case RIGHT_DIAMOND_CROSSING:
+					case EMBEDDED_DIAMOND_CROSSING:
+					case EMBEDDED_RIGHT_DIAMOND_CROSSING:
+					{
+						modelRightDiamondCrossing.render(railTile, x, y, z);
+						break;
+					}
+					case LEFT_DIAMOND_CROSSING:
+					case EMBEDDED_LEFT_DIAMOND_CROSSING:
+					{
+						modelLeftDiamondCrossing.render(railTile, x, y, z);
+						break;
+					}
+					case DOUBLE_DIAMOND_CROSSING:
+					case EMBEDDED_DOUBLE_DIAMOND_CROSSING:
+					{
+						modelTwoWaysCrossing.render("diamond", railTile, x, y, z);
+						break;
+					}
+					case DIAGONAL_TWO_WAYS_CROSSING:
+					case EMBEDDED_DIAGONAL_TWO_WAYS_CROSSING:
+					{
+						modelTwoWaysCrossing.render("diagonal_crossing", railTile, x, y, z);
+						break;
+					}
+
 					case SMALL_PARALLEL_CURVE:
 					case SMALL_RIGHT_PARALLEL_CURVE:
 					case EMBEDDED_SMALL_PARALLEL_CURVE:
@@ -263,7 +299,6 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 						modelVeryLargeSlope.render("embedded_dynamic", railTile, x, y, z);
 						break;
 					}
-
 					// Embedded Tracks
 					case EMBEDDED_SMALL_STRAIGHT: {
 						modelSmallStraight.render("embedded", railTile, x, y, z);
@@ -434,31 +469,6 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 					//	modelLeftParallelCurve.render("20x2", "embedded", railTile, x, y, z);
 					//	break;
 					//}
-					//case EMBEDDED_TWO_WAYS_CROSSING: {
-					//	modelTwoWaysCrossing.render("embedded_crossing", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_FOUR_WAYS_CROSSING: {
-					//	modelTwoWaysCrossing.render("embedded_universal_crossing", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_DIAGONAL_TWO_WAYS_CROSSING: {
-					//	modelTwoWaysCrossing.render("embedded_diagonal_crossing", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_DIAMOND_CROSSING:
-					//case EMBEDDED_RIGHT_DIAMOND_CROSSING: {
-					//	modelRightDiamondCrossing.render("embedded", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_LEFT_DIAMOND_CROSSING: {
-					//	modelLeftDiamondCrossing.render("embedded", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_DOUBLE_DIAMOND_CROSSING: {
-					//	modelTwoWaysCrossing.render("embedded_diamond", railTile, x, y, z);
-					//	break;
-					//}
 					/*case EMBEDDED_MEDIUM_SWITCH:
 					case EMBEDDED_MEDIUM_RIGHT_SWITCH: {
 						modelRightSwitchTurn.render("medium", railTile, x, y, z);
@@ -495,33 +505,35 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 					//	modelLeftSwitchTurn.render("medium_parallel", railTile, x, y, z);
 					//	break;
 					//}
-					/**case EMBEDDED_LARGE_PARALLEL_SWITCH:
-					case EMBEDDED_LARGE_RIGHT_PARALLEL_SWITCH: {
-						modelRightSwitchTurn.render("large_parallel", "embedded", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_LARGE_LEFT_PARALLEL_SWITCH: {
-						modelLeftSwitchTurn.render("large_parallel", "embedded", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_MEDIUM_45DEGREE_SWITCH:
+					//case EMBEDDED_LARGE_PARALLEL_SWITCH:
+					//case EMBEDDED_LARGE_RIGHT_PARALLEL_SWITCH: {
+					//	modelRightSwitchTurn.render("large_parallel", "embedded", railTile, x, y, z);
+					//	break;
+					//}
+					//case EMBEDDED_LARGE_LEFT_PARALLEL_SWITCH: {
+					//	modelLeftSwitchTurn.render("large_parallel", "embedded", railTile, x, y, z);
+					//	break;
+					//}
+					case MEDIUM_RIGHT_45DEGREE_SWITCH:
 					case EMBEDDED_MEDIUM_RIGHT_45DEGREE_SWITCH: {
-						modelRightSwitchTurn.render("medium_45degree", "embedded", railTile, x, y, z);
+						modelRightSwitchTurn.render("medium_45degree",  railTile, x, y, z);
 						break;
 					}
+					case MEDIUM_LEFT_45DEGREE_SWITCH:
 					case EMBEDDED_MEDIUM_LEFT_45DEGREE_SWITCH: {
-						modelLeftSwitchTurn.render("medium_45degree", "embedded", railTile, x, y, z);
+						modelLeftSwitchTurn.render("medium_45degree",  railTile, x, y, z);
 						break;
 					}
-					case EMBEDDED_LARGE_45DEGREE_SWITCH:
+					case LARGE_RIGHT_45DEGREE_SWITCH:
 					case EMBEDDED_LARGE_RIGHT_45DEGREE_SWITCH: {
-						modelRightSwitchTurn.render("large_45degree", "embedded", railTile, x, y, z);
+						modelRightSwitchTurn.render("large_45degree",  railTile, x, y, z);
 						break;
 					}
+					case LARGE_LEFT_45DEGREE_SWITCH:
 					case EMBEDDED_LARGE_LEFT_45DEGREE_SWITCH: {
-						modelLeftSwitchTurn.render("large_45degree", "embedded", railTile, x, y, z);
+						modelLeftSwitchTurn.render("large_45degree",  railTile, x, y, z);
 						break;
-					}*/
+					}
 
 					//case EMBEDDED_LARGE_CURVED_SLOPE_DYNAMIC:
 					//case EMBEDDED_LARGE_RIGHT_CURVED_SLOPE_DYNAMIC: {

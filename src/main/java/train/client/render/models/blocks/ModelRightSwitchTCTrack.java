@@ -5,6 +5,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.ResourceLocation;
 
+import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.common.items.RailVariants;
@@ -20,13 +21,26 @@ public class ModelRightSwitchTCTrack extends ModelBase {
 	private IModelCustom modelLargeRightSwitchActive;
 	private IModelCustom modelLargeRightSwitchInactive;
 
+	private IModelCustom modelMediumRight45degreeSwitchActive;
+	private IModelCustom modelMediumRight45degreeSwitchInActive;
+
+	private IModelCustom modelLargeRight45degreeSwitchActive;
+	private IModelCustom modelLargeRight45degreeSwitchInActive;
+
 	public ModelRightSwitchTCTrack() {
 		modelMediumRightSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_small_active.obj"));
 		modelMediumRightSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_small_inactive_new.obj"));
+
 		modelMediumRightParallelSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_parallel_inactive.obj"));
 		modelMediumRightParallelSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_parallel_active.obj"));
+
 		modelLargeRightSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_active.obj"));
 		modelLargeRightSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_inactive.obj"));
+
+		modelMediumRight45degreeSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_45degree_active.obj"));
+		modelMediumRight45degreeSwitchInActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_45degree_inactive.obj"));
+		modelLargeRight45degreeSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_large_45degree_active.obj"));
+		modelLargeRight45degreeSwitchInActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_large_45degree_inactive.obj"));
 		
 	}
 
@@ -47,6 +61,19 @@ public class ModelRightSwitchTCTrack extends ModelBase {
 	}
 	public void renderLarge90Inactive() {
 		modelLargeRightSwitchInactive.renderAll();
+	}
+
+	public void renderMedium45degreeActive() {
+		modelMediumRight45degreeSwitchActive.renderAll();
+	}
+	public void renderMedium45degreeInActive() {
+		modelMediumRight45degreeSwitchInActive.renderAll();
+	}
+	public void renderLarge45degreeActive() {
+		modelLargeRight45degreeSwitchActive.renderAll();
+	}
+	public void renderLarge45degreeInActive() {
+		modelLargeRight45degreeSwitchInActive.renderAll();
 	}
 
 	public void render(String type, TileTCRail tcRail, double x, double y, double z)
@@ -77,11 +104,27 @@ public class ModelRightSwitchTCTrack extends ModelBase {
 				GL11.glRotatef(0, 0, 1, 0);
 				GL11.glTranslatef(0.0f, 0.0f, 4.0f);
 			}
+			if(type.equals("very_large_90")){
+				GL11.glRotatef(-90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
 			if(type.equals("medium_parallel")){
 				GL11.glRotatef(-90, 0, 1, 0);
 			}
+			if(type.equals("large_parallel")){
+				GL11.glRotatef(-90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
+			if(type.equals("medium_45degree")){
+				GL11.glTranslatef(0.0f, 0.0f, 0);
+				GL11.glRotatef(-90, 0, 1, 0);
+			}
+			if(type.equals("large_45degree")){
+				GL11.glRotatef(-90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
+			}
 		}
-		else if (facing == 1) {
+		if (facing == 1) {
 			if(type.equals("medium")){
 				GL11.glRotatef(180, 0, 1, 0);
 				GL11.glTranslatef(-1.0f, 0.0f, 3.0f);
@@ -90,11 +133,27 @@ public class ModelRightSwitchTCTrack extends ModelBase {
 				GL11.glRotatef(180, 0, 1, 0);
 				GL11.glTranslatef(0.0f, 0.0f, 4.0f);
 			}
+			if(type.equals("very_large_90")){
+				GL11.glRotatef(90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
 			if(type.equals("medium_parallel")){
 				GL11.glRotatef(90, 0, 1, 0);
 			}
+			if(type.equals("large_parallel")){
+				GL11.glRotatef(90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
+			if(type.equals("medium_45degree")){
+				GL11.glRotatef(90, 0, 1, 0);
+				GL11.glTranslatef(0.0f, 0.0f, 0);
+			}
+			if(type.equals("large_45degree")){
+				GL11.glRotatef(90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
+			}
 		}
-		else if(facing == 2){
+		if(facing == 2){
 			if(type.equals("medium")){
 				GL11.glRotatef(90, 0, 1, 0);
 				GL11.glTranslatef(-1.0f, 0.0f, 3.0f);
@@ -103,57 +162,73 @@ public class ModelRightSwitchTCTrack extends ModelBase {
 				GL11.glRotatef(90, 0, 1, 0);
 				GL11.glTranslatef(0.0f, 0.0f, 4.0f);
 			}
-			if(type.equals("medium_parallel")){
-				//do something if needed
-			}
-		}
-		else if(facing == 0){
-			if(type.equals("medium")){
-				GL11.glRotatef(-90, 0, 1, 0);
-				GL11.glTranslatef(-1.0f, 0.0f, 3.0f);
-			}
-			if(type.equals("large_90")){
-				GL11.glRotatef(-90, 0, 1, 0);
-				GL11.glTranslatef(0.0f, 0.0f, 4.0f);
+			if(type.equals("very_large_90")){
+				GL11.glRotatef(0, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
 			}
 			if(type.equals("medium_parallel")){
-				GL11.glRotatef(180, 0, 1, 0);
+				GL11.glRotatef(0, 0, 1, 0);
+				GL11.glTranslatef(0.0f, 0.0f, 0.0f);
 			}
-		}
+			if(type.equals("large_parallel")){
+				GL11.glRotatef(0, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
 
-		switch (type)
-		{
-			case "medium":
-				if (active)
-				{
-					this.renderMediumActive();
-				}
-				else
-				{
-					this.renderMediumInactive();
-				}
-				break;
-			case "medium_parallel":
-				if (active)
-				{
-					this.renderMediumParallelActive();
-				}
-				else
-				{
-					this.renderMediumParallelInactive();
-				}
-				break;
-			case "large_90":
-				if (active)
-				{
-					this.renderLarge90Active();
-				}
-				else
-				{
-					this.renderLarge90Inactive();
-				}
-				break;
+			if(type.equals("medium_45degree")){
+				GL11.glRotatef(0, 0, 1, 0);
+				GL11.glTranslatef(0.0f, 0.0f, 0f);
+			}
+
+			if(type.equals("large_45degree")){
+				GL11.glRotatef(0, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
+			}
+
 		}
+		if(facing == 0){
+			if(type.equals("medium")){
+				GL11.glRotatef(-90, 0, 1, 0);
+				GL11.glTranslatef(-1.0f, 0.0f, 3.0f);
+			}
+			if(type.equals("large_90")){
+				GL11.glRotatef(-90, 0, 1, 0);
+				GL11.glTranslatef(0.0f, 0.0f, 4.0f);
+			}
+			if(type.equals("very_large_90")){
+				GL11.glRotatef(180, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
+			if(type.equals("medium_parallel")){
+				GL11.glRotatef(180, 0, 1, 0);
+			}
+			if(type.equals("large_parallel")){
+				GL11.glRotatef(180, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
+			if(type.equals("medium_45degree")){
+				GL11.glRotatef(180, 0, 1, 0);
+				GL11.glTranslatef(0.0f, 0.0f, 0.0f);
+			}
+			if(type.equals("large_45degree")){
+				GL11.glRotatef(180, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
+			}
+		}
+		if(type.equals("medium")&&!active)this.renderMediumInactive();
+		else if(type.equals("medium")&&active)this.renderMediumActive();
+		else if(type.equals("medium_parallel")&&!active)this.renderMediumParallelInactive();
+		else if(type.equals("medium_parallel")&&active)this.renderMediumParallelActive();
+		//if(type.equals("large_parallel")&&!active)this.renderLargeParallelInactive();
+		//if(type.equals("large_parallel")&&active)this.renderLargeParallelActive();
+		else if(type.equals("large_90")&&!active)this.renderLarge90Inactive();
+		else if(type.equals("large_90")&&active)this.renderLarge90Active();
+		//if(type.equals("very_large_90")&&!active)this.renderVeryLarge90Inactive();
+		//if(type.equals("very_large_90")&&active)this.renderVeryLarge90Active();
+		else if(type.equals("medium_45degree")&&active)this.renderMedium45degreeActive();
+		else if(type.equals("medium_45degree")&&!active)this.renderMedium45degreeInActive();
+		else if(type.equals("large_45degree")&&active)this.renderLarge45degreeActive();
+		else if(type.equals("large_45degree")&&!active)this.renderLarge45degreeInActive();
 		
 		//if(type.equals("large"))this.renderLarge();
 

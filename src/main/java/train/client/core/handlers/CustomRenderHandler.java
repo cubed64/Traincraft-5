@@ -9,6 +9,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.client.event.RenderWorldLastEvent;
 import org.lwjgl.opengl.GL11;
@@ -151,27 +152,55 @@ public class CustomRenderHandler
                 }
             }
         }
-        else if (item.getTrackType() == EnumTracks.TWO_WAYS_CROSSING || item.getTrackType() == EnumTracks.EMBEDDED_TWO_WAYS_CROSSING)
+        else if (item.getTrackType() == EnumTracks.DOUBLE_DIAMOND_CROSSING || item.getTrackType() == EnumTracks.EMBEDDED_DOUBLE_DIAMOND_CROSSING) {
+            float dx = dir.getX();
+            float dz = dir.getY();
+
+            RenderTCRail.modelTwoWaysCrossing.render("diamond", facing, item.getTrackType().getVariant(), dx, 0, dz,  r, g, b, a);
+        }
+        else if (item.getTrackType() == EnumTracks.FOUR_WAYS_CROSSING || item.getTrackType() == EnumTracks.EMBEDDED_FOUR_WAYS_CROSSING) {
+            RenderTCRail.modelTwoWaysCrossing.render("universal_crossing", facing, item.getTrackType().getVariant(), 0, 0, 0,  r, g, b, a);
+        }
+        else if (item.getTrackType() == EnumTracks.DIAMOND_CROSSING || item.getTrackType() == EnumTracks.EMBEDDED_DIAMOND_CROSSING)
         {
             float dx = dir.getX();
             float dz = dir.getY();
 
-
-            RenderTCRail.modelTwoWaysCrossing.render(item.getTrackType().getVariant(), dx, 0, dz, r, g, b, 0.5f);
-
-            if (item.getTrackType().getVariant().equals(RailVariants.EMBEDDED))
+            if (item.getTrackOrientation(facing, MathHelper.wrapAngleTo180_float(player.rotationYaw)).equals("left")) {
+                RenderTCRail.modelLeftDiamondCrossing.render(item.getTrackType().getVariant(), dx, 0, dz, facing, r, g, b, a);
+            } else {
+                RenderTCRail.modelRightDiamondCrossing.render(item.getTrackType().getVariant(), dx, 0, dz, facing, r, g, b, a);
+            }
+        }
+        else if (item.getTrackType() == EnumTracks.TWO_WAYS_CROSSING || item.getTrackType() == EnumTracks.EMBEDDED_TWO_WAYS_CROSSING)
+        {
+            facing = TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double((player.rotationYaw * 8.0F / 360.0F + 0.5D)) & 7);
+            if (facing == 6 || facing == 4 || facing == 7 || facing == 5)
             {
-                RenderTCRail.modelSmallStraight.render("embedded", 0, dx, 0, dz + 1, r, g, b, a);
-                RenderTCRail.modelSmallStraight.render("embedded", 1, dx + 1, 0, dz, r, g, b, a);
-                RenderTCRail.modelSmallStraight.render("embedded", 2, dx, 0, dz - 1, r, g, b, a);
-                RenderTCRail.modelSmallStraight.render("embedded", 3, dx - 1, 0, dz, r, g, b, a);
+                RenderTCRail.modelTwoWaysCrossing.render( "diagonal_crossing", facing,item.getTrackType().getVariant(), 0, 0, 0,  r, g, b, a);
             }
             else
             {
-                RenderTCRail.modelSmallStraight.render("straight", 0, dx, 0, dz + 1, r, g, b, a);
-                RenderTCRail.modelSmallStraight.render("straight", 1, dx + 1, 0, dz, r, g, b, a);
-                RenderTCRail.modelSmallStraight.render("straight", 2, dx, 0, dz - 1, r, g, b, a);
-                RenderTCRail.modelSmallStraight.render("straight", 3, dx - 1, 0, dz, r, g, b, a);
+                float dx = dir.getX();
+                float dz = dir.getY();
+
+
+                RenderTCRail.modelTwoWaysCrossing.render("twoways_crossing", 0, item.getTrackType().getVariant(), dx, 0, dz, r, g, b, 0.5f);
+
+                if (item.getTrackType().getVariant().equals(RailVariants.EMBEDDED))
+                {
+                    RenderTCRail.modelSmallStraight.render("embedded", 0, dx, 0, dz + 1, r, g, b, a);
+                    RenderTCRail.modelSmallStraight.render("embedded", 1, dx + 1, 0, dz, r, g, b, a);
+                    RenderTCRail.modelSmallStraight.render("embedded", 2, dx, 0, dz - 1, r, g, b, a);
+                    RenderTCRail.modelSmallStraight.render("embedded", 3, dx - 1, 0, dz, r, g, b, a);
+                }
+                else
+                {
+                    RenderTCRail.modelSmallStraight.render("straight", 0, dx, 0, dz + 1, r, g, b, a);
+                    RenderTCRail.modelSmallStraight.render("straight", 1, dx + 1, 0, dz, r, g, b, a);
+                    RenderTCRail.modelSmallStraight.render("straight", 2, dx, 0, dz - 1, r, g, b, a);
+                    RenderTCRail.modelSmallStraight.render("straight", 3, dx - 1, 0, dz, r, g, b, a);
+                }
             }
         }
         // Slopes
@@ -248,13 +277,19 @@ public class CustomRenderHandler
         {
             blockInfo();
             RenderTCRail.modelVeryLargeSlope.render("dynamic", facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
-        }else if (item.getTrackType() == EnumTracks.EMBEDDED_SLOPE_DYNAMIC) {
+        }
+        else if (item.getTrackType() == EnumTracks.EMBEDDED_SLOPE_DYNAMIC)
+        {
             blockInfo();
             RenderTCRail.modelSlope.render("embedded_dynamic", facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
-        } else if (item.getTrackType() == EnumTracks.EMBEDDED_LARGE_SLOPE_DYNAMIC) {
+        }
+        else if (item.getTrackType() == EnumTracks.EMBEDDED_LARGE_SLOPE_DYNAMIC)
+        {
             blockInfo();
             RenderTCRail.modelLargeSlope.render("embedded_dynamic", facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
-        } else if (item.getTrackType() == EnumTracks.EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC) {
+        }
+        else if (item.getTrackType() == EnumTracks.EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC)
+        {
             blockInfo();
             RenderTCRail.modelVeryLargeSlope.render("embedded_dynamic", facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
         }
@@ -386,33 +421,50 @@ public class CustomRenderHandler
                 out_1_0 = 5;
                 out_1_1 = 5;
             }
+            else if (item.getTrackType() == EnumTracks.MEDIUM_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_45DEGREE_SWITCH) {
+                switchType = "medium_45degree";
+                out_0_start = 0;
+                out_0_end = 0;
+                out_1_0 = 0;
+                out_1_1 = 0;
+            }
+            else if (item.getTrackType() == EnumTracks.LARGE_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_45DEGREE_SWITCH) {
+                switchType = "large_45degree";
+                out_0_start = 0;
+                out_0_end = 0;
+                out_1_0 = 0;
+                out_1_1 = 0;
+            }
 
             Vector2f dir_1 = ItemTCRail.getDirectionVector(facing_1);
+            String variant = item.getTrackType().getVariant().equals(RailVariants.EMBEDDED) ? "embedded" : "straight";
+
             float dx_1 = dir_1.getX();
             float dz_1 = dir_1.getY();
 
             // Render straight tracks
-            String variant = item.getTrackType().getLabel().contains("EMBEDDED") ? "embedded" : "straight";
-            RenderTCRail.modelSmallStraight.render(variant, facing, 0, 0, 0, r, g, b, a);
-            for (int out_0 = out_0_start; out_0 < out_0_end + 1; out_0++)
+            for (int out_0 = out_0_start; out_0 < out_0_end + 1; out_0++) {
                 RenderTCRail.modelSmallStraight.render(variant, facing, dx * out_0, 0, dz * out_0, r, g, b, a);
+            }
 
-            if (item.getTrackType() == EnumTracks.MEDIUM_PARALLEL_SWITCH)
+            if (item.getTrackType() == EnumTracks.MEDIUM_PARALLEL_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_PARALLEL_SWITCH)
             {
+                RenderTCRail.modelSmallStraight.render(variant, facing, 0, 0, 0, r, g, b, a);
                 RenderTCRail.modelSmallStraight.render(variant, facing, dx * out_1_0 + dx_1 * out_1_1, 0, dz * out_1_0 + dz_1 * out_1_1, r, g, b, a);
             }
-            else
+            else if (!(item.getTrackType() == EnumTracks.MEDIUM_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.LARGE_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_45DEGREE_SWITCH /*|| item.getTrackType() == EnumTracks.LARGE_PARALLEL_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_PARALLEL_SWITCH*/))
             {
+                RenderTCRail.modelSmallStraight.render(variant, facing, 0, 0, 0, r, g, b, a);
                 RenderTCRail.modelSmallStraight.render(variant, facing_1, dx * out_1_0 + dx_1 * out_1_1, 0, dz * out_1_0 + dz_1 * out_1_1, r, g, b, a);
             }
 
-            // Render switch
-            if (isLeftTurn)
-            {
-                RenderTCRail.modelLeftSwitchTurn.render(switchType, item.getTrackType().getVariant(), facing, false, dx, 0, dz, r, g, b, a);
+            else{
+
             }
-            else
-            {
+            // Render switch
+            if (isLeftTurn) {
+                RenderTCRail.modelLeftSwitchTurn.render(switchType, item.getTrackType().getVariant(), facing, false, dx, 0, dz, r, g, b, a);
+            } else {
                 RenderTCRail.modelRightSwitchTurn.render(switchType, item.getTrackType().getVariant(), facing, false, dx, 0, dz, r, g, b, a);
             }
         }
