@@ -4,12 +4,14 @@ import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.ResourceLocation;
 
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
+import train.common.enums.TrackResourceLocations;
 import train.common.library.Info;
 import train.common.tile.TileTCRail;
 
@@ -28,44 +30,45 @@ public class ModelLargeSlopeTCTrack extends ModelBase {
 				.loadModel(new ResourceLocation(Info.modelPrefix + "supports_ballast_long.obj"));
 	}
 
-	public void render(String type, String ballast, int ballastColour) {
+	public void render(String type, String ballast, int ballastColour)
+	{
 		if(type.equals("wood")) {
 			FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_slope.png"));
 			modelLargeSlopeWood.renderAll();
-			FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+			FMLClientHandler.instance().getClient().renderEngine.bindTexture(TrackResourceLocations.track_normal);
 			modeltrack.renderAll();}
-		if(type.equals("gravel")) {
+		else if(type.equals("gravel")) {
 			FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/blocks/gravel.png"));
 			modelLargeSlopeBallast.renderAll();
-			FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+			FMLClientHandler.instance().getClient().renderEngine.bindTexture(TrackResourceLocations.track_normal);
 			modeltrack.renderAll();}
-		if(type.equals("ballast")) {
+		else if(type.equals("ballast")) {
 			FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/blocks/ballast_test.png"));
 			modelLargeSlopeBallast.renderAll();
-			FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+			FMLClientHandler.instance().getClient().renderEngine.bindTexture(TrackResourceLocations.track_normal);
 			modeltrack.renderAll();}
-		if (type.equals("snow")) {
+		else if (type.equals("snow")) {
 			FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/blocks/snowgravel.png"));
 			modelLargeSlopeBallast.renderAll();
-			FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+			FMLClientHandler.instance().getClient().renderEngine.bindTexture(TrackResourceLocations.track_normal);
 			modeltrack.renderAll();
 		}
-		if (type.equals("peagravel")) {
+		else if (type.equals("peagravel")) {
 			FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/blocks/peagravel.png"));
 			modelLargeSlopeBallast.renderAll();
-			FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+			FMLClientHandler.instance().getClient().renderEngine.bindTexture(TrackResourceLocations.track_normal);
 			modeltrack.renderAll();
 		}
-		if (type.equals("dynamic")) {
-			tmt.Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+		else if (type.equals("dynamic")) {
+			tmt.Tessellator.bindTexture(TrackResourceLocations.track_normal);
 			modeltrack.renderAll();
 			SetupDynamicBallast(ballast);
 			tmt.Tessellator.bindTexture(new ResourceLocation(ballastTexture[0],  "textures/blocks/" + ballastTexture[1] +".png"));
 			SetupDynamicBallastColour(ballastColour);
 			modelLargeSlopeBallast.renderAll();
 		}
-		if (type.equals("embedded_dynamic")) {
-			tmt.Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_embedded.png"));
+		else if (type.equals("embedded_dynamic")) {
+			tmt.Tessellator.bindTexture(TrackResourceLocations.track_embedded);
 			modeltrack.renderAll();
 			SetupDynamicBallast(ballast);
 			tmt.Tessellator.bindTexture(new ResourceLocation(ballastTexture[0],  "textures/blocks/" + ballastTexture[1] +".png"));

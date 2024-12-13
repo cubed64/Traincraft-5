@@ -43,15 +43,7 @@ public class ModelRightParallelCurveTCTrack extends ModelBase {
         GL11.glTranslatef((float) x + 1.5f, (float) y, (float) z + 5.5f);
 
         // Bind the texture, so that OpenGL properly textures our block.
-        switch (variant)
-        {
-            case EMBEDDED:
-                FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_embedded.png"));
-                break;
-            default:
-                FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
-                break;
-        }
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture(train.common.enums.TrackResourceLocations.GetResourceLocation(variant));
 
         GL11.glColor4f(r, g, b, a);
         //GL11.glScalef(0.5f, 0.5f, 0.5f);
@@ -72,7 +64,7 @@ public class ModelRightParallelCurveTCTrack extends ModelBase {
                 GL11.glTranslatef(1, 0.0f, 5);
             }
         }
-        if (facing == 1) {
+        else if (facing == 1) {
             GL11.glRotatef(90, 0, 1, 0);
             if(type == "small") {
                 GL11.glTranslatef(5, 0.0f, - 1);
@@ -84,7 +76,7 @@ public class ModelRightParallelCurveTCTrack extends ModelBase {
                 GL11.glTranslatef(5, 0.0f, -1);
             }
         }
-        if (facing == 2) {
+        else if (facing == 2) {
             GL11.glRotatef(0, 0, 1, 0);
             if (type == "small") {
                 GL11.glTranslatef(-1, 0.0f, - 5);
@@ -97,7 +89,7 @@ public class ModelRightParallelCurveTCTrack extends ModelBase {
             }
         }
 
-        if (facing == 3) {
+        else if (facing == 3) {
             GL11.glRotatef(-90, 0, 1, 0);
             if (type == "small") {
                 GL11.glTranslatef(-5, 0.0f, 1);
@@ -110,9 +102,18 @@ public class ModelRightParallelCurveTCTrack extends ModelBase {
             }
         }
 
-        if(type.equals("small"))this.renderSmall();
-        if(type.equals("medium"))this.renderMedium();
-        if(type.equals("large"))this.renderLarge();
+        if(type.equals("small"))
+        {
+            this.renderSmall();
+        }
+        else if(type.equals("medium"))
+        {
+            this.renderMedium();
+        }
+        else if(type.equals("large"))
+        {
+            this.renderLarge();
+        }
 
         GL11.glPopMatrix();
     }

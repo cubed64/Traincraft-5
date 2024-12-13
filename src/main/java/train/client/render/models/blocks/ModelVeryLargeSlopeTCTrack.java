@@ -8,6 +8,7 @@ import net.minecraft.util.ResourceLocation;
 
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
+import train.common.enums.TrackResourceLocations;
 import train.common.library.Info;
 import train.common.tile.TileTCRail;
 
@@ -35,7 +36,7 @@ public class ModelVeryLargeSlopeTCTrack extends ModelBase {
 						.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_slope.png"));
 				modelVeryLargeSlopeWood.renderAll();
 				FMLClientHandler.instance().getClient().renderEngine
-						.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+						.bindTexture(TrackResourceLocations.track_normal);
 				modeltrack.renderAll();
 			break;
 			case "gravel":
@@ -43,7 +44,7 @@ public class ModelVeryLargeSlopeTCTrack extends ModelBase {
 						.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/blocks/gravel.png"));
 				modelVeryLargeSlopeBallast.renderAll();
 				FMLClientHandler.instance().getClient().renderEngine
-						.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+						.bindTexture(TrackResourceLocations.track_normal);
 				modeltrack.renderAll();
 			break;
 			case "ballast":
@@ -51,7 +52,7 @@ public class ModelVeryLargeSlopeTCTrack extends ModelBase {
 						.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/blocks/ballast_test.png"));
 				modelVeryLargeSlopeBallast.renderAll();
 				FMLClientHandler.instance().getClient().renderEngine
-						.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+						.bindTexture(TrackResourceLocations.track_normal);
 				modeltrack.renderAll();
 			break;
 			case "snow":
@@ -59,7 +60,7 @@ public class ModelVeryLargeSlopeTCTrack extends ModelBase {
 						.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/blocks/snowgravel.png"));
 				modelVeryLargeSlopeBallast.renderAll();
 				FMLClientHandler.instance().getClient().renderEngine
-						.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+						.bindTexture(TrackResourceLocations.track_normal);
 				modeltrack.renderAll();
 			break;
 			case "peagravel":
@@ -67,11 +68,11 @@ public class ModelVeryLargeSlopeTCTrack extends ModelBase {
 						.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/blocks/peagravel.png"));
 				modelVeryLargeSlopeBallast.renderAll();
 				FMLClientHandler.instance().getClient().renderEngine
-						.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+						.bindTexture(TrackResourceLocations.track_normal);
 				modeltrack.renderAll();
 			break;
 			case "dynamic":
-				tmt.Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
+				tmt.Tessellator.bindTexture(TrackResourceLocations.track_normal);
 				modeltrack.renderAll();
 				SetupDynamicBallast(ballast);
 				tmt.Tessellator.bindTexture(new ResourceLocation(ballastTexture[0],  "textures/blocks/" + ballastTexture[1] +".png"));
@@ -79,7 +80,7 @@ public class ModelVeryLargeSlopeTCTrack extends ModelBase {
 				modelVeryLargeSlopeBallast.renderAll();
 			break;
 			case "embedded_dynamic":
-				tmt.Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_embedded.png"));
+				tmt.Tessellator.bindTexture(TrackResourceLocations.track_embedded);
 				modeltrack.renderAll();
 				SetupDynamicBallast(ballast);
 				tmt.Tessellator.bindTexture(new ResourceLocation(ballastTexture[0],  "textures/blocks/" + ballastTexture[1] +".png"));

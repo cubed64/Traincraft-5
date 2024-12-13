@@ -6,6 +6,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.ResourceLocation;
 
+import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.common.items.RailVariants;
@@ -21,6 +22,11 @@ public class ModelLeftSwitchTCTrack extends ModelBase {
 	private IModelCustom modelLargeLeftSwitchActive;
 	private IModelCustom modelLargeLeftSwitchInactive;
 
+	private IModelCustom modelMediumLeft45degreeSwitchActive;
+	private IModelCustom modelMediumLeft45degreeSwitchInActive;
+	private IModelCustom modelLargeLeft45degreeSwitchActive;
+	private IModelCustom modelLargeLeft45degreeSwitchInActive;
+
 	public ModelLeftSwitchTCTrack() {
 		modelMediumLeftSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_small_active_left_new.obj"));
 		modelMediumLeftSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_small_inactive_left_new.obj"));
@@ -28,7 +34,11 @@ public class ModelLeftSwitchTCTrack extends ModelBase {
 		modelMediumLeftParallelSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_parallel_active_left.obj"));
 		modelLargeLeftSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_active_left.obj"));
 		modelLargeLeftSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_inactive_left.obj"));
-		
+
+		modelMediumLeft45degreeSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_45degree_active_left.obj"));
+		modelMediumLeft45degreeSwitchInActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_45degree_inactive_left.obj"));
+		modelLargeLeft45degreeSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_large_45degree_active_left.obj"));
+		modelLargeLeft45degreeSwitchInActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_large_45degree_inactive_left.obj"));
 	}
 
 	public void renderMediumActive() {
@@ -50,6 +60,12 @@ public class ModelLeftSwitchTCTrack extends ModelBase {
 		modelLargeLeftSwitchInactive.renderAll();
 	}
 
+	public void renderMedium45degreeActive() {modelMediumLeft45degreeSwitchActive.renderAll();}
+	public void renderMedium45degreeInActive() {modelMediumLeft45degreeSwitchInActive.renderAll();}
+
+	public void renderLarge45degreeActive() {modelLargeLeft45degreeSwitchActive.renderAll();}
+	public void renderLarge45degreeInActive() {modelLargeLeft45degreeSwitchInActive.renderAll();}
+
 	public void render(String type, TileTCRail tcRail, double x, double y, double z) {
 		int facing = tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord);
 		render( type, tcRail.getTrackType().getVariant(), facing, tcRail.getSwitchState(), x, y, z, 1, 1, 1, 1);
@@ -63,14 +79,7 @@ public class ModelLeftSwitchTCTrack extends ModelBase {
 		GL11.glTranslatef((float) x + 0.5f, (float) y, (float) z + 0.5f);
 
 		// Bind the texture, so that OpenGL properly textures our block.
-		if (RailVariants.EMBEDDED.equals(railVariant))
-		{
-			tmt.Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_embedded.png"));
-		}
-		else
-		{
-			tmt.Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png"));
-		}
+		tmt.Tessellator.bindTexture(train.common.enums.TrackResourceLocations.GetResourceLocation(railVariant));
 		GL11.glColor4f(r, g, b, a);
 		//GL11.glScalef(0.5f, 0.5f, 0.5f);
 
@@ -85,6 +94,14 @@ public class ModelLeftSwitchTCTrack extends ModelBase {
 			if(type.equals("medium_parallel")){
 				GL11.glRotatef(-90, 0, 1, 0);
 			}
+			if(type.equals("medium_45degree")){
+				GL11.glRotatef(-90, 0, 1, 0);
+				GL11.glTranslatef(0.0f, 0.0f, 0);
+			}
+			if(type.equals("large_45degree")){
+				GL11.glRotatef(-90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
+			}
 		}
 		if (facing == 1) {
 			if(type.equals("medium")){
@@ -97,6 +114,14 @@ public class ModelLeftSwitchTCTrack extends ModelBase {
 			}
 			if(type.equals("medium_parallel")){
 				GL11.glRotatef(90, 0, 1, 0);
+			}
+			if(type.equals("medium_45degree")){
+				GL11.glRotatef(90, 0, 1, 0);
+				GL11.glTranslatef(0.0f, 0.0f, 0);
+			}
+			if(type.equals("large_45degree")){
+				GL11.glRotatef(90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
 			}
 		}
 		if(facing == 2){
@@ -111,6 +136,14 @@ public class ModelLeftSwitchTCTrack extends ModelBase {
 			if(type.equals("medium_parallel")){
 				//do something if needed
 			}
+			if(type.equals("medium_45degree")){
+				GL11.glRotatef(0, 0, 1, 0);
+				GL11.glTranslatef(0.0f, 0.0f, 0f);
+			}
+			if(type.equals("large_45degree")){
+				GL11.glRotatef(0, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
+			}
 		}
 		if(facing == 0){
 			if(type.equals("medium")){
@@ -124,6 +157,14 @@ public class ModelLeftSwitchTCTrack extends ModelBase {
 			if(type.equals("medium_parallel")){
 				GL11.glRotatef(180, 0, 1, 0);
 			}
+			if(type.equals("medium_45degree")){
+				GL11.glRotatef(180, 0, 1, 0);
+				GL11.glTranslatef(0f, 0.0f, 0);
+			}
+			if(type.equals("large_45degree")){
+				GL11.glRotatef(180, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
+			}
 		}
 		if(type.equals("medium")&&!active)this.renderMediumInactive();
 		if(type.equals("medium")&&active)this.renderMediumActive();
@@ -131,6 +172,10 @@ public class ModelLeftSwitchTCTrack extends ModelBase {
 		if(type.equals("medium_parallel")&&active)this.renderMediumParallelActive();
 		if(type.equals("large_90")&&!active)this.renderLarge90Inactive();
 		if(type.equals("large_90")&&active)this.renderLarge90Active();
+		if(type.equals("medium_45degree")&&!active)this.renderMedium45degreeInActive();
+		if(type.equals("medium_45degree")&&active)this.renderMedium45degreeActive();
+		if(type.equals("large_45degree")&&!active)this.renderLarge45degreeInActive();
+		if(type.equals("large_45degree")&&active)this.renderLarge45degreeActive();
 		
 		//if(type.equals("large"))this.renderLarge();
 
