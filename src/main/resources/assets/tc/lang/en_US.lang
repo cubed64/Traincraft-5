@@ -1102,6 +1102,8 @@ item.tc:minecartP32.name=GE P32
 item.tc:minecartGeGenesis.name=GE P40
 item.tc:minecartP42.name=GE P42
 
+item.tc:minecart4ED172T.name=CEE 4ED-172T
+
 entity.tc.GE 44-ton.name=GE 44-Ton
 entity.tc.23 Ton Boxcab.name=GE-23 Ton Boxcab
 entity.tc.GE 25-ton.name=GE 25-Ton
@@ -1158,6 +1160,8 @@ entity.tc.ES44h.name=GE ES44 (Heritable Units)
 entity.tc.P32.name=GE P32
 entity.tc.P40.name=GE P40
 entity.tc.P42.name=GE P42
+
+entity.tc.4ED172T.name=CEE 4ED-172T
 
 --------------------------------------------------------
 
@@ -1402,6 +1406,7 @@ item.tc:minecartReefer64.name=Trinity 64' Mechanical Reefer
 item.tc:minecartFNCC50Foot.name=KSFI 50' Highcube Boxcar
 item.tc:minecartGN40.name=Great Northern Homebuilt 40' Boxcar(s)
 item.tc:minecartR70Reefer.name=PFE R-70-20 Reefer
+item.tc:minecartR70Reefer2.name=PFE R-70-15 Reefer
 item.tc:minecartNSCchildHUH.name=National Steel Car 3294 Mechanical Reefer
 item.tc:minecartPCF6033.name=PC&F 6033 Cu Ft Boxcar
 item.tc:minecartACFRailbox.name=ACF Railbox Boxcar
@@ -1419,6 +1424,7 @@ entity.tc.Reefer64.name=Trinity 64' Mechanical Reefer
 entity.tc.FNCC50FootBoxcar.name=KSFI 50' Highcube Boxcar
 entity.tc.GN40.name=Great Northern Homebuilt 40' Boxcar(s)
 entity.tc.R70Reefer.name=PFE R-70-20 Reefer
+entity.tc.R70Reefer2.name=PFE R-70-15 Reefer
 entity.tc.NSCReefer.name=National Steel Car 3294 Mechanical Reefer
 entity.tc.PCF6033.name=PC&F 6033 Cu Ft Boxcar
 entity.tc.ACF Railbox.name=ACF Railbox Boxcar

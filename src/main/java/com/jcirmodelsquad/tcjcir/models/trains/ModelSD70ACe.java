@@ -21,8 +21,6 @@ import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
-import java.util.ArrayList;
-
 public class ModelSD70ACe extends ModelConverter //Same as Filename
 {
 	int textureX = 512;
@@ -1624,7 +1622,7 @@ public class ModelSD70ACe extends ModelConverter //Same as Filename
 			bogie.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 
-		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18) {
+		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/HTCR_newer_bnsilver.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslatef(-1.97F, 0.0F, 0F);
@@ -1635,51 +1633,8 @@ public class ModelSD70ACe extends ModelConverter //Same as Filename
 			bogie.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 
-		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/HTCR_newer_bnsilver.png"));
-			GL11.glPushMatrix();
-			GL11.glTranslatef(-1.97F, 0.0F, 0F);
-			bogie.render(entity, f, f1, f2, f3, f4, f5);
-
-			GL11.glRotatef(180, 0, 1, 0);
-			GL11.glTranslated(-3.95F, 0.0F, 0);
-			bogie.render(entity, f, f1, f2, f3, f4, f5);
-			GL11.glPopMatrix();
-
-		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 23) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/HTCR_newer_upgrey.png"));
-			GL11.glPushMatrix();
-			GL11.glTranslatef(-1.97F, 0.0F, 0F);
-			bogie.render(entity, f, f1, f2, f3, f4, f5);
-
-			GL11.glRotatef(180, 0, 1, 0);
-			GL11.glTranslated(-3.95F, 0.0F, 0);
-			bogie.render(entity, f, f1, f2, f3, f4, f5);
-			GL11.glPopMatrix();
-
-		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 24) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/HTCR_newer_upgrey.png"));
-			GL11.glPushMatrix();
-			GL11.glTranslatef(-1.97F, 0.0F, 0F);
-			bogie.render(entity, f, f1, f2, f3, f4, f5);
-
-			GL11.glRotatef(180, 0, 1, 0);
-			GL11.glTranslated(-3.95F, 0.0F, 0);
-			bogie.render(entity, f, f1, f2, f3, f4, f5);
-			GL11.glPopMatrix();
-
-		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 25) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/HTCR_newer_upgrey.png"));
-			GL11.glPushMatrix();
-			GL11.glTranslatef(-1.97F, 0.0F, 0F);
-			bogie.render(entity, f, f1, f2, f3, f4, f5);
-
-			GL11.glRotatef(180, 0, 1, 0);
-			GL11.glTranslated(-3.95F, 0.0F, 0);
-			bogie.render(entity, f, f1, f2, f3, f4, f5);
-			GL11.glPopMatrix();
-
-		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 26) {
+		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 23 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 24
+		|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 25 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 26) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/HTCR_newer_upgrey.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslatef(-1.97F, 0.0F, 0F);

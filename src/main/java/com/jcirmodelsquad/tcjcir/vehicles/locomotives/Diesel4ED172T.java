@@ -13,24 +13,25 @@ import train.common.api.LiquidManager;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class DieselGP18 extends DieselTrain {
-    public DieselGP18(World world) {
-        super(world, EnumTrains.GP18.getTankCapacity(), LiquidManager.dieselFilter());
+public class Diesel4ED172T extends DieselTrain {
+    public Diesel4ED172T(World world) {
+        super(world, EnumTrains.CEE4ED172T.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "NP");
-        textureDescriptionMap.put(1, "BN 1996");
-        textureDescriptionMap.put(2, "T&P");
-        textureDescriptionMap.put(3, "MP (highhood)");
-        textureDescriptionMap.put(4, "MP (chop nose)");
-        textureDescriptionMap.put(5, "MP (eagle repaint)");
-        textureDescriptionMap.put(6, "RI");
-        textureDescriptionMap.put(7, "IC (highhood)");
-        textureDescriptionMap.put(8, "IC (chop nose)");
-        textureDescriptionMap.put(9, "Blandsville & Blankerston");
-        textureDescriptionMap.put(10, "Blandsville & Blankerston");
-
+        textureDescriptionMap.put(0, "CEE 1950s Demo units");
+        textureDescriptionMap.put(1, "FMSR Late (FNCC Early)");
+        textureDescriptionMap.put(2, "DLMR");
+        textureDescriptionMap.put(3, "PAMC Early");
+        textureDescriptionMap.put(4, "PAMC Late");
+        textureDescriptionMap.put(5, "Blandsville & Blankerston");
+        textureDescriptionMap.put(6, "Blandsville & Blankerston (Chop)");
+        textureDescriptionMap.put(7, "Southfield");
+        textureDescriptionMap.put(8, "");
+        textureDescriptionMap.put(9, "");
+        textureDescriptionMap.put(10, "");
+        textureDescriptionMap.put(11, "");
+        textureDescriptionMap.put(12, "");
     }
-    public DieselGP18(World world, double d, double d1, double d2){
+    public Diesel4ED172T(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -50,9 +51,9 @@ public class DieselGP18 extends DieselTrain {
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
         double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
-        double distance = 2.55; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
+        double distance = 2.8; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
         double distanceLR = -0.35; //how far left/right on the entity you ride; left > 0; right < 0;
-        double yOffset = 0.15;
+        double yOffset = 0.2;
         float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
         float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
         float rotationCosLR1 = (float) Math.cos(Math.toRadians(this.renderYaw));
@@ -138,7 +139,7 @@ public class DieselGP18 extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.1F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.4F;
     }
 
     @Override
@@ -148,7 +149,7 @@ public class DieselGP18 extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "EMD GP18";
+        return "CEE 4ED-172T";
     }
 
     @Override
