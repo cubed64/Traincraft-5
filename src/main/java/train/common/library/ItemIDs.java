@@ -582,6 +582,9 @@ public enum ItemIDs {
 	minecartP42("ItemRollingStock", "geGenesis", DIESEL, 5),
 
 	minecart4ED172T("ItemRollingStock", "4ed172t", DIESEL, 3),
+	minecart4ED172T_E("ItemRollingStock", "4ed172t_e", DIESEL, 3),
+	minecart4ED172T_G("ItemRollingStock", "4ed172t_g", DIESEL, 3),
+	minecart4ED172T_C("ItemRollingStock", "4ed172t_c", DIESEL, 3),
 
 	//ALCO and its canookistanian counterpart//
 	minecartAlcoPA1("ItemRollingStock", "AlcoPA1Icon", DIESEL,5),
@@ -685,6 +688,7 @@ public enum ItemIDs {
 	minecartACF2Bay("ItemRollingStock", "ACF2Bay", FREIGHT, 3),
 	minecartACF4650("ItemRollingStock", "ACF4650", FREIGHT, 4),
 	minecartPS2_4750("ItemRollingStock", "PS2_4750", FREIGHT, 4),
+	minecartGATC4180Airslide("ItemRollingStock", "Airslide_phase_1b", FREIGHT, 4),
 
 	minecart60centerbeam("ItemRollingStock", "60centerbeam", FREIGHT, 3),
 	minecart66centerbeam("ItemRollingStock", "66centerbeam", FREIGHT, 3),

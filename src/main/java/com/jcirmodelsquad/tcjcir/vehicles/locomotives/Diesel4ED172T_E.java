@@ -13,25 +13,15 @@ import train.common.api.LiquidManager;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class Diesel4ED172T extends DieselTrain {
-    public Diesel4ED172T(World world) {
-        super(world, EnumTrains.CEE4ED172T.getTankCapacity(), LiquidManager.dieselFilter());
+public class Diesel4ED172T_E extends DieselTrain {
+    public Diesel4ED172T_E(World world) {
+        super(world, EnumTrains.CEE4ED172T_E.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "CEE 1950s Demo units");
-        textureDescriptionMap.put(1, "FMSR Late (FNCC Early)");
-        textureDescriptionMap.put(2, "DLMR");
-        textureDescriptionMap.put(3, "PAMC (Early)");
-        textureDescriptionMap.put(4, "Blandsville & Blankerston");
-        textureDescriptionMap.put(5, "Blandsville & Blankerston (Chop)");
-        textureDescriptionMap.put(6, "Southfield");
-        textureDescriptionMap.put(7, "");
-        textureDescriptionMap.put(8, "");
-        textureDescriptionMap.put(9, "");
-        textureDescriptionMap.put(10, "");
-        textureDescriptionMap.put(11, "");
-        textureDescriptionMap.put(12, "");
+        textureDescriptionMap.put(0, "GLNT");
+        textureDescriptionMap.put(1, "Blandsville & Blankerston");
+        textureDescriptionMap.put(2, "");
     }
-    public Diesel4ED172T(World world, double d, double d1, double d2){
+    public Diesel4ED172T_E(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -149,7 +139,7 @@ public class Diesel4ED172T extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "CEE 4ED-172T";
+        return "CEE 4ED-172T (EMD Repower)";
     }
 
     @Override

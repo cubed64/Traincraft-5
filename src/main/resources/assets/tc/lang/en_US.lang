@@ -1103,6 +1103,9 @@ item.tc:minecartGeGenesis.name=GE P40
 item.tc:minecartP42.name=GE P42
 
 item.tc:minecart4ED172T.name=CEE 4ED-172T
+item.tc:minecart4ED172T_E.name=CEE 4ED-172T (EMD 12-567BC Repower)
+item.tc:minecart4ED172T_G.name=CEE 4ED-172T (GE 7FDL-8 Repower)
+item.tc:minecart4ED172T_C.name=CEE 4ED-172T (CAT D399 Repower)
 
 entity.tc.GE 44-ton.name=GE 44-Ton
 entity.tc.23 Ton Boxcab.name=GE-23 Ton Boxcab
@@ -1162,6 +1165,9 @@ entity.tc.P40.name=GE P40
 entity.tc.P42.name=GE P42
 
 entity.tc.4ED172T.name=CEE 4ED-172T
+entity.tc.4ED172T_E.name=CEE 4ED-172T (EMD 12-567BC Repower)
+entity.tc.4ED172T_G.name=CEE 4ED-172T (GE 7FDL-8 Repower)
+entity.tc.4ED172T_C.name=CEE 4ED-172T (CAT D399 Repower)
 
 --------------------------------------------------------
 
@@ -1361,6 +1367,7 @@ item.tc:minecartPDH2800.name=GATX 2800 Cu Ft Pressure Differential Hopper
 item.tc:minecartACF2Bay.name=ACF 2980 Cu Ft 2-Bay Hopper
 item.tc:minecartACF4650.name=ACF 4650 Cu Ft 3-Bay Hopper
 item.tc:minecartPS2_4750.name=PS2 4750 Cu Ft 3-Bay Hopper
+item.tc:minecartGATC4180Airslide.name=GATC 4180 Cu Ft Airslide Hopper
 
 entity.tc.Freight Round Covered Hopper.name=Round Covered Hopper
 entity.tc.Freight Ribbed Covered Hopper.name=Ribbed Covered Hopper
@@ -1371,6 +1378,7 @@ entity.tc.PDH2800.name=GATX 2800 Cu Ft Pressure Differential Hopper
 entity.tc.ACF2Bay.name=ACF 2980 Cu Ft 2-Bay Hopper
 entity.tc.ACF4650.name=ACF 4650 Cu Ft 3-Bay Hopper
 entity.tc.PS2_4750.name=PS2 4750 Cu Ft 3-Bay Hopper
+entity.tc.GATC4180Airslide.name=GATC 4180 Cu Ft Airslide Hopper
 
 item.tc:minecart60centerbeam.name=60' Center Beam
 item.tc:minecart66centerbeam.name=66' Center Beam
