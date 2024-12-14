@@ -432,7 +432,7 @@ public enum EnumTrains {
 	geGenesis("P40", DieselP40.class, ItemIDs.minecartGeGenesis.item, "diesel", 4000, 177, 0, 30, 0, 175, 0.93, 0.84, 15000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey"}), 10, -3.5),
 	P42("P42", DieselP42.class, ItemIDs.minecartP42.item, "diesel", 4250, 177, 0, 30, 0, 175, 0.93, 0.84, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Cyan", "Skin16", "Blue"}), 10, -3.5),
 
-	CEE4ED172T("4ED172T", Diesel4ED172T.class, ItemIDs.minecart4ED172T.item, "diesel", 1725, 95, 0, 25, 0, 200, 0.74, 0.91, 16000, TraincraftUtil.getBytesFromColors(new String[] {"Pink", "Cyan", "Orange", "Black", "Yellow", "LightGrey", "Skin16", "Skin17"}), 14, -2.85),
+	CEE4ED172T("4ED172T", Diesel4ED172T.class, ItemIDs.minecart4ED172T.item, "diesel", 1725, 95, 0, 25, 0, 200, 0.74, 0.91, 16000, TraincraftUtil.getBytesFromColors(new String[] {"Pink", "Cyan", "Orange", "Black", "Yellow", "LightGrey", "Skin16", "Skin17", "Lime"}), 14, -2.85),
 
 	//ALCO//
 	AlcoPA1("PA1", DieselPA1.class, ItemIDs.minecartAlcoPA1.item, "diesel", 2000, 188, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Pink", "Black", "Blue", "Cyan", "Purple", "Yellow", "Orange", "Grey", "Brown", "LightGrey", "Green", "Lime", "LightBlue", "Magenta", "White", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24"}), 12, -3.15),
