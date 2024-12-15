@@ -30,6 +30,7 @@ public class DieselC424 extends DieselTrain {
         textureDescriptionMap.put(10, "Penn Central");
         textureDescriptionMap.put(11, "FNCC 2nd order(KIT-L)");
         textureDescriptionMap.put(12, "Burlington Northern");
+        textureDescriptionMap.put(13, "Great Lakes & Northern Territories");
     }
     public DieselC424(World world, double d, double d1, double d2){
         this(world);

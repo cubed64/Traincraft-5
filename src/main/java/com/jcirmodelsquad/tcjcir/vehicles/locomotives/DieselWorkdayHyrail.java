@@ -21,6 +21,7 @@ public class DieselWorkdayHyrail extends DieselTrain {
         textureDescriptionMap.put(1, "CSXT");
         textureDescriptionMap.put(2, "FNCC MOW");
         textureDescriptionMap.put(3, "WP/NEP MOW");
+        textureDescriptionMap.put(4, "GLC");
     }
     public DieselWorkdayHyrail(World world, double d, double d1, double d2){
         this(world);

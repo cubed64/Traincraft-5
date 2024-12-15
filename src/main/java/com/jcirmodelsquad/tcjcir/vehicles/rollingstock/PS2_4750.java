@@ -58,6 +58,7 @@ public class PS2_4750 extends Freight implements IInventory {
 		textureDescriptionMap.put(35, "MP (Early)");
 		textureDescriptionMap.put(36, "MP (Late)");
 		textureDescriptionMap.put(37, "ICG");
+		textureDescriptionMap.put(38, "GLNT");
 	}
 
 	public void initFreightGrain() {

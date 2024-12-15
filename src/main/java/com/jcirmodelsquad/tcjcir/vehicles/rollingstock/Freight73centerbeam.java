@@ -29,6 +29,8 @@ public class Freight73centerbeam extends Freight implements IInventory {
         textureDescriptionMap.put(3, "WRX (Orange)");
         textureDescriptionMap.put(4, "TTZX");
         textureDescriptionMap.put(5, "Generic Red");
+        textureDescriptionMap.put(6, "GLNT");
+
         setCargoManager(new CargoManager(new CargoSpecification[][] {
 
                 //is 0.315 5 mb? is 0.063 1 mb? bigger positive number means lower, smaller positive number means higher

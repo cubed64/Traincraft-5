@@ -31,6 +31,7 @@ public class Thrall63centerbeam extends Freight implements IInventory {
         textureDescriptionMap.put(4, "WRX");
         textureDescriptionMap.put(5, "FNCC");
         textureDescriptionMap.put(6, "DN");
+        textureDescriptionMap.put(7, "GLNT");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
 
