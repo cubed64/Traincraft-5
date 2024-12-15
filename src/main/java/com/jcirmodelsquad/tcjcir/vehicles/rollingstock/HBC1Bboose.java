@@ -14,6 +14,7 @@ public class HBC1Bboose extends AbstractWorkCart
         textureDescriptionMap.put(3, "GCM");
         textureDescriptionMap.put(4, "TIRY");
         textureDescriptionMap.put(5, "TIRY");
+        textureDescriptionMap.put(6, "CRL");
     }
 
     public HBC1Bboose(World world, double posX, double posY, double posZ)
