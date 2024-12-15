@@ -719,11 +719,11 @@ public enum EnumTrains {
 
 	PSFNCCBaggage_Dinette("PS FNCC Baggage-Dinette", PSFNCCBaggage_Dinette.class, ItemIDs.minecartPSFNCCBaggage_Dinette.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Green"}), 10, 0, null),
 
-	amfleet("Amfleet", Amfleet.class, ItemIDs.minecartAmfleet.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"White", "Grey", "LightGrey", "LightBlue", "Red", "Blue", "Green", "Skin16", "Skin17"}), 14, 0, null),
-	amfleet2("Amfleet2", Amfleet2.class, ItemIDs.minecartAmfleet2.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"Blue","LightGrey", "Grey", "Red", "LightBlue", "Skin16", "Skin17"}), 14, 0, null),
-	amfleetcab("AmfleetCab", AmfleetCab.class, ItemIDs.minecartAmfleetCab.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey", "LightBlue", "Red", "White", "Skin16", "Skin17"}), 14, 0, null),
-	amcafe("AmCafe", AmCafe.class, ItemIDs.minecartAmCafe.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"White", "Grey", "LightGrey", "LightBlue", "Red", "Blue", "Cyan", "Skin16", "Skin17"}), 14, 0, null),
-	amcafe2("AmCafe2", AmCafe2.class, ItemIDs.minecartAmCafe2.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "LightGrey", "Red", "Blue", "Skin16", "Skin17"}), 14, 0, null),
+	amfleet("Amfleet", Amfleet.class, ItemIDs.minecartAmfleet.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"Red", "White", "LightGrey", "Grey", "Blue", "LightBlue", "Green", "Skin16", "Skin17", "Skin18", "Skin19"}), 14, 0, null),
+	amfleet2("Amfleet2", Amfleet2.class, ItemIDs.minecartAmfleet2.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"Grey" ,"LightGrey", "Red", "Blue",  "LightBlue", "Skin16", "Skin17", "Skin18", "Skin19"}), 14, 0, null),
+	amfleetcab("AmfleetCab", AmfleetCab.class, ItemIDs.minecartAmfleetCab.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Grey", "LightGrey", "LightBlue", "White", "Skin16", "Skin17", "Skin18", "Skin19"}), 14, 0, null),
+	amcafe("AmCafe", AmCafe.class, ItemIDs.minecartAmCafe.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "Red", "White", "Grey", "Blue", "LightBlue", "LightGrey", "Skin16", "Skin17", "Skin18", "Skin19"}), 14, 0, null),
+	amcafe2("AmCafe2", AmCafe2.class, ItemIDs.minecartAmCafe2.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "LightGrey", "Red", "Blue", "Skin16", "Skin17", "Skin18", "Skin19"}), 14, 0, null),
 
 	PEcoach("PEcoach", PEcoach.class, ItemIDs.minecartPEcooch.item, "festive passenger",  0, 0, 6, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "Green", "Lime", "Skin16", "Purple", "Red", "Skin17"}), 10, 0),
 	PEobserve("PEobserve", PEobserve.class, ItemIDs.minecartPEobserve.item, "festive passenger",  0, 0, 6, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan"}), 10, 0),

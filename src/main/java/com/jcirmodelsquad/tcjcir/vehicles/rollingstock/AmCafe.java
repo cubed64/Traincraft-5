@@ -5,9 +5,19 @@ import train.common.api.AbstractPassengerCar;
 
 public class AmCafe extends AbstractPassengerCar
 {
-    public AmCafe(World world)
-    {
+    public AmCafe(World world) {
         super(world);
+        textureDescriptionMap.put(0, "AMTK (Phase 1)");
+        textureDescriptionMap.put(1, "AMTK (Phase 2)");
+        textureDescriptionMap.put(2, "AMTK (Phase 3)");
+        textureDescriptionMap.put(3, "AMTK (Phase 4)");
+        textureDescriptionMap.put(4, "AMTK (Phase 4b)");
+        textureDescriptionMap.put(5, "AMTK (Phase 4b Northeast Regional)");
+        textureDescriptionMap.put(6, "AMTK (Acela Regional Cafe)");
+        textureDescriptionMap.put(7, "Generic");
+        textureDescriptionMap.put(8, "JCTransit");
+        textureDescriptionMap.put(9, "CCRL (Chatham and Crator River Lines)");
+        textureDescriptionMap.put(10, "CCL (Crator River Lines)");
     }
 
     public AmCafe(World world, double posX, double posY, double posZ)

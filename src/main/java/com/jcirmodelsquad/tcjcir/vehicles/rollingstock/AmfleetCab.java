@@ -14,6 +14,15 @@ public class AmfleetCab extends AbstractControlCar
 {
     public AmfleetCab(World world) {
         super(world);
+        textureDescriptionMap.put(0, "AMTK (Phase 3)");
+        textureDescriptionMap.put(1, "AMTK (Phase 4)");
+        textureDescriptionMap.put(2, "AMTK (Phase 4B Door 1)");
+        textureDescriptionMap.put(3, "AMTK (Phase 4B Door 2)");
+        textureDescriptionMap.put(4, "AMTK (Phase 4B Conference Car)");
+        textureDescriptionMap.put(5, "Generic");
+        textureDescriptionMap.put(6, "JCTransit");
+        textureDescriptionMap.put(7, "CCRL (Chatham and Crator River Lines)");
+        textureDescriptionMap.put(8, "CCL (Crator River Lines)");
     }
 
     public AmfleetCab(World world, double d, double d1, double d2) {

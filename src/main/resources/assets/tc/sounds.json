@@ -456,6 +456,8 @@
   "aircompresser": {"category": "master", "sounds": [{"name": "aircompresser", "stream":  true}]},
   "CAT_8_D17000_Idle": {"category": "master", "sounds": [{"name": "CAT_8_D17000_Idle", "stream":  true}]},
   "CAT_8_D17000_Notch8": {"category": "master", "sounds": [{"name": "CAT_8_D17000_Notch8", "stream":  true}]},
+  "CAT_D399_Idle": {"category": "master", "sounds": [{"name": "CAT_D399_Idle", "stream":  true}]},
+  "CAT_D399_Notch8": {"category": "master", "sounds": [{"name": "CAT_D399_Notch8", "stream":  true}]},
   "deltic_idle": {"category": "master", "sounds": [{"name": "deltic_idle", "stream":  true}]},
   "deltic_run": {"category": "master", "sounds": [{"name": "deltic_run", "stream":  true}]},
   "Maybach_MD870_16_Idle": {"category": "master", "sounds": [{"name": "Maybach_MD870_16_Idle", "stream":  true}]},
