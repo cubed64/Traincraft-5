@@ -18,9 +18,19 @@ public class PCF_RBL_Ribbed extends Freight implements IInventory {
     public PCF_RBL_Ribbed(World world) {
         super(world);
         initFreightCart();
-        textureDescriptionMap.put(1, "");
-        textureDescriptionMap.put(2, "");
-        textureDescriptionMap.put(3, "");
+        textureDescriptionMap.put(0, "PC");
+        textureDescriptionMap.put(1, "CR");
+        textureDescriptionMap.put(2, "ATSF (As Delivered)");
+        textureDescriptionMap.put(3, "ATSF");
+        textureDescriptionMap.put(4, "SLSF");
+        textureDescriptionMap.put(5, "SLSF");
+        textureDescriptionMap.put(6, "BN (Ex SLSF)");
+        textureDescriptionMap.put(7, "DRGW");
+        textureDescriptionMap.put(8, "MP");
+        textureDescriptionMap.put(9, "T&P");
+        textureDescriptionMap.put(10, "UP");
+        textureDescriptionMap.put(11, "Generic Brown");
+        textureDescriptionMap.put(12, "BB (Youngstown Door)");
     }
 
     public PCF_RBL_Ribbed(World world, double d, double d1, double d2){

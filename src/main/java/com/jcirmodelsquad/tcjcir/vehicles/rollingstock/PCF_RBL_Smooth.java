@@ -18,10 +18,11 @@ public class PCF_RBL_Smooth extends Freight implements IInventory {
     public PCF_RBL_Smooth(World world) {
         super(world);
         initFreightCart();
-        textureDescriptionMap.put(1, "MKT");
-        textureDescriptionMap.put(2, "SP");
+        textureDescriptionMap.put(0, "MKT");
+        textureDescriptionMap.put(1, "SP");
+        textureDescriptionMap.put(2, "SP (Ex EFCX)");
         textureDescriptionMap.put(3, "SP (Ex EFCX)");
-        textureDescriptionMap.put(4, "SP (Ex EFCX)");
+        textureDescriptionMap.put(4, "WP");
         textureDescriptionMap.put(5, "EFCX");
         textureDescriptionMap.put(6, "GN");
         textureDescriptionMap.put(7, "GN");
