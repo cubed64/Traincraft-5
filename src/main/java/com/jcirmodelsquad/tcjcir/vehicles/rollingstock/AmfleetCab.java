@@ -22,7 +22,7 @@ public class AmfleetCab extends AbstractControlCar
         textureDescriptionMap.put(5, "Generic");
         textureDescriptionMap.put(6, "JCTransit");
         textureDescriptionMap.put(7, "CCRL (Chatham and Crator River Lines)");
-        textureDescriptionMap.put(8, "CCL (Crator River Lines)");
+        textureDescriptionMap.put(8, "CRL (Crator River Lines)");
     }
 
     public AmfleetCab(World world, double d, double d1, double d2) {

@@ -17,7 +17,7 @@ public class AmCafe extends AbstractPassengerCar
         textureDescriptionMap.put(7, "Generic");
         textureDescriptionMap.put(8, "JCTransit");
         textureDescriptionMap.put(9, "CCRL (Chatham and Crator River Lines)");
-        textureDescriptionMap.put(10, "CCL (Crator River Lines)");
+        textureDescriptionMap.put(10, "CRL (Crator River Lines)");
     }
 
     public AmCafe(World world, double posX, double posY, double posZ)
