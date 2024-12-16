@@ -309,7 +309,7 @@ public class Modelmk60 extends ModelConverter //Same as Filename
 		bodyModel[269] = new ModelRendererTurbo(this, 257, 81, textureX, textureY); // Box 2
 		bodyModel[270] = new ModelRendererTurbo(this, 321, 129, textureX, textureY); // Box 2
 		bodyModel[271] = new ModelRendererTurbo(this, 401, 105, textureX, textureY); // Box 452
-		bodyModel[272] = new ModelRendererTurbo(this, 177, 129, textureX, textureY); // Box 449
+		bodyModel[272] = new ModelRendererTurbo(this, 177, 129, textureX, textureY,"cull"); // Box 449
 		bodyModel[273] = new ModelRendererTurbo(this, 169, 129, textureX, textureY); // Box 452
 		bodyModel[274] = new ModelRendererTurbo(this, 161, 129, textureX, textureY); // Box 451
 		bodyModel[275] = new ModelRendererTurbo(this, 153, 129, textureX, textureY); // Box 450
@@ -336,7 +336,7 @@ public class Modelmk60 extends ModelConverter //Same as Filename
 		bodyModel[296] = new ModelRendererTurbo(this, 17, 121, textureX, textureY); // Box 402
 		bodyModel[297] = new ModelRendererTurbo(this, 121, 121, textureX, textureY); // Box 401
 		bodyModel[298] = new ModelRendererTurbo(this, 489, 113, textureX, textureY, "cull"); // Box cull
-		bodyModel[299] = new ModelRendererTurbo(this, 329, 121, textureX, textureY); // Box 2
+		bodyModel[299] = new ModelRendererTurbo(this, 329, 121, textureX, textureY, "cull"); // Box 2
 		bodyModel[300] = new ModelRendererTurbo(this, 481, 113, textureX, textureY); // Box 394
 		bodyModel[301] = new ModelRendererTurbo(this, 433, 113, textureX, textureY); // Box 393
 		bodyModel[302] = new ModelRendererTurbo(this, 241, 97, textureX, textureY); // Box 392
