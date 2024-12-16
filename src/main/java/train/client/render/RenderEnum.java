@@ -1307,8 +1307,8 @@ public enum RenderEnum
 	}, "", null, 0, false),
 	SW1200( DieselSW1200.class,  new ModelSW1200(), "sw1200_", true,new float[]{-1.0F, 0.15F, 0.00F},   new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{
-			add(new double[]{0.90D, 1.40D, 0.0D});
-			add(new double[]{1.65D, 1.40D, 0.0D});
+			add(new double[]{0.96D, 1.30D, 0.0D});
+			add(new double[]{1.58D, 1.30D, 0.0D});
 		}
 	}, "", null, 0, false),
 	SW1500(DieselSW1500.class,  new ModelSW1500(), "sw1500_", true,new float[]{-1.0F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {

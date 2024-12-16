@@ -17,7 +17,7 @@ public class Diesel4ED172T_G extends DieselTrain {
     public Diesel4ED172T_G(World world) {
         super(world, EnumTrains.CEE4ED172T_G.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Grasslands Laboratories");
+        textureDescriptionMap.put(0, "Grassland Laboratories");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
         textureDescriptionMap.put(2, "");
     }

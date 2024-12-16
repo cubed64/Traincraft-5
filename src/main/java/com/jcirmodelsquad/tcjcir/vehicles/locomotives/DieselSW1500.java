@@ -39,7 +39,7 @@ public class DieselSW1500 extends DieselTrain {
         textureDescriptionMap.put(18, "Western Pacific (Late)");
         textureDescriptionMap.put(19, "Apalachicola Northern");
         textureDescriptionMap.put(20, "Canadian National (WC)");
-        textureDescriptionMap.put(21, "Grassland Labratories");
+        textureDescriptionMap.put(21, "Grassland Laboratories");
         textureDescriptionMap.put(22, "FURRX");
         textureDescriptionMap.put(23, "FURRX");
         textureDescriptionMap.put(24, "ADT");

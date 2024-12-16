@@ -25,6 +25,7 @@ public class DieselU18Balt extends DieselTrain {
         textureDescriptionMap.put(4, "SV 402");
         textureDescriptionMap.put(5, "SV 406");
         textureDescriptionMap.put(6, "SV 1801");
+        textureDescriptionMap.put(7, "Grassland Laboratories");
     }
     public DieselU18Balt(World world, double d, double d1, double d2){
         this(world);
