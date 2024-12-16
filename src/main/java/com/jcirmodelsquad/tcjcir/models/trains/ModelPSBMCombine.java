@@ -27,7 +27,7 @@ public class ModelPSBMCombine extends ModelConverter//Same as Filename
 
 	public ModelPSBMCombine() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[439];
+		bodyModel = new ModelRendererTurbo[441];
 
 		initbodyModel_1();
 
@@ -478,6 +478,8 @@ public class ModelPSBMCombine extends ModelConverter//Same as Filename
 		bodyModel[436] = new ModelRendererTurbo(this, 202, 331, textureX, textureY,"glow"); // Box 38 glow
 		bodyModel[437] = new ModelRendererTurbo(this, 78, 299, textureX, textureY,"glow"); // Box 38 glow
 		bodyModel[438] = new ModelRendererTurbo(this, 30, 280, textureX, textureY,"glow"); // Box 38 glow
+		bodyModel[439] = new ModelRendererTurbo(this, 462, 315, textureX, textureY); // Box 128
+		bodyModel[440] = new ModelRendererTurbo(this, 386, 319, textureX, textureY); // Box 128
 
 		bodyModel[0].addBox(0F, 0F, 0F, 118, 2, 22, 0F); // Box 2
 		bodyModel[0].setRotationPoint(-61.5F, 1F, -11F);
@@ -1927,12 +1929,18 @@ public class ModelPSBMCombine extends ModelConverter//Same as Filename
 
 		bodyModel[438].addBox(0F, 0F, 0F, 1, 0, 1, 0F); // Box 38 glow
 		bodyModel[438].setRotationPoint(-39.5F, -14.99F, 8F);
+
+		bodyModel[439].addShapeBox(0F, 0F, 0F, 1, 0, 1, 0F,0F, 0F, 0F, -0.5F, 0F, 0F, -1F, 0F, -0.665F, 0F, 0F, -0.665F, 0F, 0F, 0F, -0.5F, 0F, 0F, -1F, 0F, -0.665F, 0F, 0F, -0.665F); // Box 128
+		bodyModel[439].setRotationPoint(53.5F, 0.99F, -3F);
+
+		bodyModel[440].addShapeBox(0F, 0F, 0F, 1, 0, 1, 0F,-0.515F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.675F, -1F, 0F, -0.675F, -0.515F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.675F, -1F, 0F, -0.675F); // Box 128
+		bodyModel[440].setRotationPoint(41.5F, 0.99F, -3F);
 	}
 	ModelPS_Truck bogie1 = new ModelPS_Truck();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for(int i = 0; i < 439; i++)
+		for(int i = 0; i < 441; i++)
 		{
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("glow")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);

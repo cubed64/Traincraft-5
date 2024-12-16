@@ -27,7 +27,7 @@ public class ModelPSBM56SeatCoach extends ModelConverter//Same as Filename
 
 	public ModelPSBM56SeatCoach() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[517];
+		bodyModel = new ModelRendererTurbo[519];
 
 		initbodyModel_1();
 		initbodyModel_2();
@@ -2259,6 +2259,8 @@ public class ModelPSBM56SeatCoach extends ModelConverter//Same as Filename
 		bodyModel[514] = new ModelRendererTurbo(this, 340, 98, textureX, textureY); // Right step part
 		bodyModel[515] = new ModelRendererTurbo(this, 326, 100, textureX, textureY); // Right step part
 		bodyModel[516] = new ModelRendererTurbo(this, 340, 100, textureX, textureY); // Right step part
+		bodyModel[517] = new ModelRendererTurbo(this, 462, 315, textureX, textureY); // Box 128
+		bodyModel[518] = new ModelRendererTurbo(this, 386, 319, textureX, textureY); // Box 128
 
 		bodyModel[500].addShapeBox(0F, 0F, 0F, 0, 1, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 1357
 		bodyModel[500].setRotationPoint(60.5F, 3F, 7.5F);
@@ -2310,12 +2312,18 @@ public class ModelPSBM56SeatCoach extends ModelConverter//Same as Filename
 
 		bodyModel[516].addShapeBox(0F, 0F, 1F, 0, 2, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F); // Right step part
 		bodyModel[516].setRotationPoint(60.49F, 4F, 8F);
+
+		bodyModel[517].addShapeBox(0F, 0F, 0F, 1, 0, 1, 0F,0F, 0F, 0F, -0.5F, 0F, 0F, -1F, 0F, -0.665F, 0F, 0F, -0.665F, 0F, 0F, 0F, -0.5F, 0F, 0F, -1F, 0F, -0.665F, 0F, 0F, -0.665F); // Box 128
+		bodyModel[517].setRotationPoint(53.5F, 0.99F, -3F);
+
+		bodyModel[518].addShapeBox(0F, 0F, 0F, 1, 0, 1, 0F,-0.515F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.675F, -1F, 0F, -0.675F, -0.515F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.675F, -1F, 0F, -0.675F); // Box 128
+		bodyModel[518].setRotationPoint(41.5F, 0.99F, -3F);
 	}
 	ModelPS_Truck bogie1 = new ModelPS_Truck();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for(int i = 0; i < 517; i++)
+		for(int i = 0; i < 519; i++)
 		{
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("glow")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
