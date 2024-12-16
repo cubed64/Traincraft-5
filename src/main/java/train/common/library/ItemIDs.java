@@ -715,6 +715,8 @@ public enum ItemIDs {
 	minecartR70Reefer2("ItemRollingStock", "r70_2", FREIGHT, 4),
 	minecartNSCchildHUH("ItemRollingStock", "NSC_3294_mechanical_reefer", FREIGHT, 2),
 	minecartPCF6033("ItemRollingStock", "6033_Icon", FREIGHT, 5),
+	minecartPCF_RBL_Smooth("ItemRollingStock", "PCF_RBL_smooth_side_plug_door", FREIGHT, 4),
+	minecartPCF_RBL_Ribbed("ItemRollingStock", "PCF_RBL_Exterior_post_plug_door", FREIGHT, 4),
 	minecartACFRailbox("ItemRollingStock", "ACFRailbox", FREIGHT, 5),
 	minecartACFRailboxCushioned("ItemRollingStock", "ACFRailboxCushioned", FREIGHT, 5),
 

@@ -1986,6 +1986,8 @@ public enum RenderEnum
 	R70Reefer2(R70Reefer2.class, new ModelR70Reefer2(),"R-70-15_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	NSCReefer(NSCReefer.class, new ModelNSCReefer(),"NSCReefer_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PCF6033(PCF6033.class, new ModelPCF6033(),"pcf_6033_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PCF_RBL_Smooth(PCF_RBL_Smooth.class, new ModelPCF_RBL_Smoothbrain(),"pcf_rbl_smooth_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PCF_RBL_Ribbed(PCF_RBL_Ribbed.class, new ModelPCF_RBL_Ribbed(),"pcf_rbl_ribbed_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ACFRailbox(ACFRailbox.class, new ModelACFRailbox(),"ACFRailbox_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ACFRailboxCushioned(ACFRailboxCushioned.class, new ModelACFRailboxCushioned(),"ACFRailboxCushioned_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 

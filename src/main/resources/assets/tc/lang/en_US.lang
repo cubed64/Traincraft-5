@@ -1417,6 +1417,8 @@ item.tc:minecartR70Reefer.name=PFE R-70-20 Reefer
 item.tc:minecartR70Reefer2.name=PFE R-70-15 Reefer
 item.tc:minecartNSCchildHUH.name=National Steel Car 3294 Mechanical Reefer
 item.tc:minecartPCF6033.name=PC&F 6033 Cu Ft Boxcar
+item.tc:minecartPCF_RBL_Smooth.name=PC&F RBL Smoothside Boxcar
+item.tc:minecartPCF_RBL_Ribbed.name=PC&F RBL Ribbedside Boxcar
 item.tc:minecartACFRailbox.name=ACF Railbox Boxcar
 item.tc:minecartACFRailboxCushioned.name=ACF Railbox Boxcar (Cushioned)
 
@@ -1435,6 +1437,8 @@ entity.tc.R70Reefer.name=PFE R-70-20 Reefer
 entity.tc.R70Reefer2.name=PFE R-70-15 Reefer
 entity.tc.NSCReefer.name=National Steel Car 3294 Mechanical Reefer
 entity.tc.PCF6033.name=PC&F 6033 Cu Ft Boxcar
+entity.tc.PCF_RBL_Smooth.name=PC&F RBL Smoothside Boxcar
+entity.tc.PCF_RBL_Ribbed.name=PC&F RBL Ribbedside Boxcar
 entity.tc.ACF Railbox.name=ACF Railbox Boxcar
 entity.tc.ACF Railbox (Cushioned).name=ACF Railbox Boxcar (Cusioned)
 
