@@ -20,10 +20,9 @@ public class PSBM56SeatCoach extends AbstractPassengerCar {
 		textureDescriptionMap.put(9, "MP (interior scheme 1)");
 		textureDescriptionMap.put(10, "MP (interior scheme 2)");
 		textureDescriptionMap.put(11, "MP (interior scheme 3)");
-		textureDescriptionMap.put(12, "MP (buzz saw)");
-		textureDescriptionMap.put(13, "WAB (interior scheme 1)");
-		textureDescriptionMap.put(14, "WAB (interior scheme 2)");
-		textureDescriptionMap.put(15, "WAB (interior scheme 3)");
+		textureDescriptionMap.put(12, "MP (buzz saw, interior scheme 1)");
+		textureDescriptionMap.put(13, "MP (buzz saw, interior scheme 2)");
+		textureDescriptionMap.put(14, "WAB");
 	}
 
 	public PSBM56SeatCoach(World world, double posX, double posY, double posZ)

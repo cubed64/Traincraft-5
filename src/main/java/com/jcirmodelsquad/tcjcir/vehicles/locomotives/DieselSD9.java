@@ -30,6 +30,7 @@ public class DieselSD9 extends DieselTrain {
         textureDescriptionMap.put(8, "DRGW (5305, Low Hood)");
         textureDescriptionMap.put(9, "ADT");
         textureDescriptionMap.put(10, "WFR (not arie cus arie cring)");
+        textureDescriptionMap.put(11, "DLMR");
     }
     public DieselSD9(World world, double d, double d1, double d2){
         this(world);
