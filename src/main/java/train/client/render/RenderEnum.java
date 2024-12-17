@@ -2146,6 +2146,7 @@ public enum RenderEnum
 	HBC1C(HBC1Cboose.class, new ModelHBC1C(),"HBC1C_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	HBC1B(HBC1Bboose.class, new ModelHBC1B(),"HBC1B_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	DRGWCaboose(DRGWboose.class, new ModelDRGW01400Caboose(),"BAP_DRGW_01400_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ICC_Bobber(ICC_Bobber.class, new ModelICC_Bobber(),"icc_bobber_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ICCBaywindowWP(ICCBaywindowWP.class, new ModelICCBaywindowWP(),"iccbaywindow_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	CA11(CA11.class, new ModelCA11(),"icc_ca11_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	WPShops600Series(WPShops600Series.class, new ModelWPShops600Series(),"wp680series_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
