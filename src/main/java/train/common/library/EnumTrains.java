@@ -736,7 +736,7 @@ public enum EnumTrains {
 	HBC1C("HBC1C",HBC1Cboose.class, ItemIDs.minecartHBC1Ccaboose.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Purple", "Magenta", "Skin18"}), 16, 0, null),
 	HBC1B("HBC1B",HBC1Bboose.class, ItemIDs.minecartHBC1Bcaboose.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Blue", "Pink", "Purple", "Green", "Skin17", "Skin18"}), 16, 0, null),
 	DRGWCaboose("DRGWCaboose", DRGWboose.class, ItemIDs.minecartDRGWCaboose.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey", "Brown", "Green", "Lime", "Yellow", "Cyan", "Black", "White", "Magenta", "Red", "Orange", "Pink", "Skin16", "Purple"}), 16, 0, null),
-	ICC_Bobber("ICC_Bobber",ICC_Bobber.class, ItemIDs.minecartICC_Bobber.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Red", "Green"}), 16, 0, null),
+	ICC_Bobber("ICC_Bobber",ICC_Bobber.class, ItemIDs.minecartICC_Bobber.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Red", "Green", "Blue"}), 16, 0, null),
 	ICCBaywindowWP("ICCBaywindowWP",ICCBaywindowWP.class, ItemIDs.minecartICCBaywindowWP.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "Red", "Skin16", "Green", "Cyan", "Skin17", "Orange", "Skin18", "Skin19", "Skin20"}), 16, 0, null),
 	CA11("CA11",CA11.class, ItemIDs.minecartCA11.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Red", "Cyan", "Skin17", "Skin18", "Purple"}), 16, 0, null),
 	WPShops600Series("WPShops600Series",WPShops600Series.class, ItemIDs.minecartWPShops600Series.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Brown", "Yellow", "Green"}), 16, 0, null),

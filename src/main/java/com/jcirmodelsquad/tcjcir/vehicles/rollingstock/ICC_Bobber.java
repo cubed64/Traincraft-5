@@ -11,6 +11,7 @@ public class ICC_Bobber extends AbstractWorkCart
         textureDescriptionMap.put(0, "McCloud, As Modified");
         textureDescriptionMap.put(1, "McCloud, As Delivered");
         textureDescriptionMap.put(2, "Blank");
+        textureDescriptionMap.put(3, "Magnolia Acres; Coffeeville");
         initCabooseWorkCart();
     }
 
