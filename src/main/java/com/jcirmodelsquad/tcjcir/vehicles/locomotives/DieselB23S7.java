@@ -24,6 +24,7 @@ public class DieselB23S7 extends DieselTrain {
         textureDescriptionMap.put(4, "FNCC (KIT-L)");
         textureDescriptionMap.put(5, "WP (Early)");
         textureDescriptionMap.put(6, "WP (Late)");
+        textureDescriptionMap.put(7, "CSXT (Yn3)");
 
     }
     public DieselB23S7(World world, double d, double d1, double d2){
