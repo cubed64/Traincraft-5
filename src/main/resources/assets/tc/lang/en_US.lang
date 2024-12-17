@@ -1474,6 +1474,7 @@ item.tc:minecart29080DOT111.name=29,080 Gallon Tank Car
 item.tc:minecart17600DOT111.name=17,600 Gallon Tank Car
 item.tc:minecartNATX30600.name=NATX 30,600 Gallon Tank Car
 item.tc:minecartgatc10000.name=GATC 10,000 Gallon Tank Car
+item.tc:minecartDUPX39200.name=DUPX 39,200 Gallon Tank Car
 
 
 entity.tc.DOT11000.name=11,000 Gallon Tank Car
@@ -1482,6 +1483,7 @@ entity.tc.DOT29080.name=29,080 Gallon Tank Car
 entity.tc.DOT17600.name=17,600 Gallon Tank Car
 entity.tc.NATX30600.name=NATX 30,600 Gallon Tank Car
 entity.tc.gatc10000.name=GATC 10,000 Gallon Tank Car
+entity.tc.DUPX39200.name=DUPX 39,200 Gallon Tank Car
 
 item.tc:minecartCoffinCar.name=Early Coffin Car
 item.tc:minecartSkeletonLogCar.name=45' Skeleton Log Car

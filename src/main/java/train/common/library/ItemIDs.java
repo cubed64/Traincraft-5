@@ -735,10 +735,11 @@ public enum ItemIDs {
 
 	minecart11000DOT111("ItemRollingStock", "11000DOT", FREIGHT, 4),
 	minecart20600DOT111("ItemRollingStock", "20600DOT", FREIGHT, 5),
-	minecart29080DOT111("ItemRollingStock", "29080DOT", FREIGHT, 6),
+	minecart29080DOT111("ItemRollingStock", "29080DOT", FREIGHT, 5),
 	minecart17600DOT111("ItemRollingStock", "17600DOT", FREIGHT, 4),
 	minecartNATX30600("ItemRollingStock", "natx30600", FREIGHT, 5),
 	minecartgatc10000("ItemRollingStock", "gatc10000", FREIGHT, 3),
+	minecartDUPX39200("ItemRollingStock", "dupx39200", FREIGHT, 6),
 
 	minecartCoffinCar("ItemRollingStock", "CoffinCar", FREIGHT, 1),
 	minecartSkeletonLogCar("ItemRollingStock", "Skeleton", FREIGHT, 1),
