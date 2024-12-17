@@ -269,8 +269,8 @@ public enum EnumTrains {
 	WCPMacky("WCPMacky", SteamMacky.class, ItemIDs.minecartWCPMacky.item, "steam", 2069, 66, 0, 25, 90, 170, 0.66, 0.9, 2000, null, 10, -2.2),
 	ClimaxB("ClimaxB", SteamClimaxB.class, ItemIDs.minecartClimaxB.item, "steam", 838, 35, 0, 80, 80, 190, 0.8, 0.9, 9000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey", "LightGrey"}), 15, -1.8),
 	Alco2102("Alco2102", SteamAlco2102.class, ItemIDs.minecartalco2102.item, "steam", 1613, 65, 0, 75, 75, 190, 0.85, 0.8, 17000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20"}), 14, -2.4),
-	MK60("MK60", SteamMK60.class, ItemIDs.minecartMK60.item, "steam", 2765, 98, 0, 75, 75, 190, 0.85, 0.8, 2000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Purple"}), 14, -2.6),
-	Tender10k("Tender10k", Tender10k.class, ItemIDs.minecartTender10k.item,"tender",0,0,3,0,0,0,0,0,38000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Skin17", "Skin18", "Yellow", "Purple", "Pink"}),18,0, (new String[] {"Water capacity: 38000mb."})),
+	MK60("MK60", SteamMK60.class, ItemIDs.minecartMK60.item, "steam", 2765, 98, 0, 75, 75, 190, 0.85, 0.8, 2000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Purple", "Cyan", "Skin22"}), 14, -2.6),
+	Tender10k("Tender10k", Tender10k.class, ItemIDs.minecartTender10k.item,"tender",0,0,3,0,0,0,0,0,38000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Skin17", "Skin18", "Yellow", "Purple", "Pink", "Skin19", "Skin20", "Skin21", "Skin22"}),18,0, (new String[] {"Water capacity: 38000mb."})),
 	TenderDeseret("TenderDeseret", TenderDeseret.class, ItemIDs.minecartTenderDeseret.item,"tender",0,0,4,0,0,0,0,0,57000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Skin17", "Skin18"}),18,0, (new String[] {"Water capacity: 57000mb."})),
 
 	C11("Loco Steam C11", SteamC11.class, ItemIDs.minecartLocoC11.item,"steam", 1030, 97, 0, 80, 100, 200, 0.35, 0.975, 16000, null, 10, -3.0),

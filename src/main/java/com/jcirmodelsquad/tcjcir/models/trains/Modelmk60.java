@@ -24,7 +24,7 @@ public class Modelmk60 extends ModelConverter //Same as Filename
 
 	public Modelmk60() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[593];
+		bodyModel = new ModelRendererTurbo[606];
 
 		initbodyModel_1();
 		initbodyModel_2();
@@ -242,7 +242,7 @@ public class Modelmk60 extends ModelConverter //Same as Filename
 		bodyModel[202] = new ModelRendererTurbo(this, 162, 169, textureX, textureY); // Box 201
 		bodyModel[203] = new ModelRendererTurbo(this, 25, 145, textureX, textureY, "cull"); // Box 524 cull support
 		bodyModel[204] = new ModelRendererTurbo(this, 353, 137, textureX, textureY); // Box 147
-		bodyModel[205] = new ModelRendererTurbo(this, 329, 137, textureX, textureY, "lamp"); // Box 169 glow front lamp
+		bodyModel[205] = new ModelRendererTurbo(this, 329, 137, textureX, textureY, "prime1"); // Box 169 glow front lamp
 		bodyModel[206] = new ModelRendererTurbo(this, 153, 145, textureX, textureY, "cull"); // Box 521 cull
 		bodyModel[207] = new ModelRendererTurbo(this, 121, 145, textureX, textureY, "cull"); // Box 520 cull
 		bodyModel[208] = new ModelRendererTurbo(this, 113, 145, textureX, textureY); // Box 518
@@ -2190,6 +2190,19 @@ public class Modelmk60 extends ModelConverter //Same as Filename
 		bodyModel[590] = new ModelRendererTurbo(this, 73, 1, textureX, textureY); // Box 6
 		bodyModel[591] = new ModelRendererTurbo(this, 49, 1, textureX, textureY); // Box 5
 		bodyModel[592] = new ModelRendererTurbo(this, 5, 229, textureX, textureY); // Box 1
+		bodyModel[593] = new ModelRendererTurbo(this, 100, 159, textureX, textureY); // Box 138 fmsr pilot beam
+		bodyModel[594] = new ModelRendererTurbo(this, 104, 165, textureX, textureY); // Box 214 fmsr pin puller
+		bodyModel[595] = new ModelRendererTurbo(this, 96, 190, textureX, textureY); // Box 595 fmsr steppy
+		bodyModel[596] = new ModelRendererTurbo(this, 100, 195, textureX, textureY, "cull"); // Box 596 cull fmsr step support
+		bodyModel[597] = new ModelRendererTurbo(this, 54, 164, textureX, textureY); // Box 186 fmsr step support
+		bodyModel[598] = new ModelRendererTurbo(this, 52, 190, textureX, textureY); // Box 187 fmsr pilot step
+		bodyModel[599] = new ModelRendererTurbo(this, 89, 193, textureX, textureY, "cull"); // Box 240 cull fmsr headlight baffle
+		bodyModel[600] = new ModelRendererTurbo(this, 84, 195, textureX, textureY); // Box 600 fmsr bit
+		bodyModel[601] = new ModelRendererTurbo(this, 77, 194, textureX, textureY, "cull"); // Box 345 cull fmsr hoses
+		bodyModel[602] = new ModelRendererTurbo(this, 72, 192, textureX, textureY); // Box 346 fmsr hoses
+		bodyModel[603] = new ModelRendererTurbo(this, 72, 195, textureX, textureY); // Box 603 fmsr hoses
+		bodyModel[604] = new ModelRendererTurbo(this, 71, 173, textureX, textureY, "cull"); // Box 604 cull fmsr handrails
+		bodyModel[605] = new ModelRendererTurbo(this, 67, 194, textureX, textureY); // Box 180 fmsr whistle
 
 		bodyModel[500].addShapeBox(0F, 0F, 0F, 6, 2, 1, 0F,0F, 0F, 3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, 3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F); // Box 454
 		bodyModel[500].setRotationPoint(-41F, 6.25F, -1.5F);
@@ -2469,6 +2482,50 @@ public class Modelmk60 extends ModelConverter //Same as Filename
 
 		bodyModel[592].addShapeBox(0F, 0F, 0F, 22, 22, 0, 0F,0F, 0F, 0F, -11F, 0F, 0F, -11F, 0F, 0F, 0F, 0F, 0F, 0F, -11F, 0F, -11F, -11F, 0F, -11F, -11F, 0F, 0F, -11F, 0F); // Box 1
 		bodyModel[592].setRotationPoint(-30.5F, -1F, -6.01F);
+
+		bodyModel[593].addShapeBox(0F, 0F, 0F, 2, 3, 22, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 138 fmsr pilot beam
+		bodyModel[593].setRotationPoint(-47.5F, 1.97F, -11F);
+
+		bodyModel[594].addBox(0F, -3F, 0F, 0, 3, 20, 0F); // Box 214 fmsr pin puller
+		bodyModel[594].setRotationPoint(-47.5F, 3.5F, -10F);
+		bodyModel[594].rotateAngleZ = 0.48869219F;
+
+		bodyModel[595].addShapeBox(0F, 0F, -3F, 22, 1, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F); // Box 595 fmsr steppy
+		bodyModel[595].setRotationPoint(-45F, -1F, -11F);
+		bodyModel[595].rotateAngleY = 1.57079633F;
+
+		bodyModel[596].addShapeBox(0F, 0F, -1F, 20, 4, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, 3F, 0F, 0F, 3F); // Box 596 cull fmsr step support
+		bodyModel[596].setRotationPoint(-44F, -0.5F, -10F);
+		bodyModel[596].rotateAngleY = 1.57079633F;
+
+		bodyModel[597].addShapeBox(0F, 0F, 0F, 0, 4, 21, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 186 fmsr step support
+		bodyModel[597].setRotationPoint(-47.51F, 4.5F, -10.5F);
+
+		bodyModel[598].addShapeBox(0F, 0F, -2F, 21, 0, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 187 fmsr pilot step
+		bodyModel[598].setRotationPoint(-49.51F, 8.5F, -10.5F);
+		bodyModel[598].rotateAngleY = 1.57079633F;
+
+		bodyModel[599].addShapeBox(0F, 0F, 0F, 1, 2, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F); // Box 240 cull fmsr headlight baffle
+		bodyModel[599].setRotationPoint(-46F, -14F, -1.5F);
+
+		bodyModel[600].addShapeBox(0F, 0F, 0F, 1, 2, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F); // Box 600 fmsr bit
+		bodyModel[600].setRotationPoint(-37F, -24F, 4F);
+
+		bodyModel[601].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F); // Box 345 cull fmsr hoses
+		bodyModel[601].setRotationPoint(-48.5F, 1.95F, 3F);
+
+		bodyModel[602].addShapeBox(0F, 0F, 0F, 0, 3, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1.3F, -0.5F, 0F, -1.3F, -0.5F, 0F, -0.625F, 0F, 0F, 0.625F, 0F, 0F); // Box 346 fmsr hoses
+		bodyModel[602].setRotationPoint(-48.5F, 3.45F, 3F);
+
+		bodyModel[603].addShapeBox(0F, 0F, 0F, 0, 2, 2, 0F,0.3F, 0.5F, 0F, -0.3F, 0.5F, 0F, 0.375F, 0F, 0F, -0.375F, 0F, 0F, 0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 603 fmsr hoses
+		bodyModel[603].setRotationPoint(-49.5F, 6.45F, 3F);
+
+		bodyModel[604].addShapeBox(0F, 0F, 0F, 5, 8, 3, 0F,-0.5F, 0F, 0F, 0F, 3F, 0F, 0F, 3F, 13F, -0.5F, 0F, 13F, -0.5F, 0F, 0F, 0F, -3F, 0F, 0F, -3F, 13F, -0.5F, 0F, 13F); // Box 604 cull fmsr handrails
+		bodyModel[604].setRotationPoint(-47F, -5.5F, -8F);
+
+		bodyModel[605].addShapeBox(0F, 0F, 0F, 1, 3, 1, 0F,0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F, 0.25F, 0F, 0.25F); // Box 180 fmsr whistle
+		bodyModel[605].setRotationPoint(15F, -23F, 2.25F);
+		bodyModel[605].rotateAngleZ = 0.9250245F;
 	}
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)

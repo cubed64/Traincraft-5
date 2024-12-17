@@ -22,6 +22,18 @@ public class Tender10k extends Tender implements IInventory {
     public Tender10k(World world) {
         super(world, FluidRegistry.WATER, 0, EnumTrains.Tender10k.getTankCapacity(), LiquidManager.WATER_FILTER);
         initFreightTender();
+        textureDescriptionMap.put(0, "");
+        textureDescriptionMap.put(1, "");
+        textureDescriptionMap.put(2, "");
+        textureDescriptionMap.put(3, "");
+        textureDescriptionMap.put(4, "");
+        textureDescriptionMap.put(5, "k");
+        textureDescriptionMap.put(6, "");
+        textureDescriptionMap.put(7, "FMSR 561");
+        textureDescriptionMap.put(8, "FMSR 570");
+        textureDescriptionMap.put(9, "FMSR 574");
+        textureDescriptionMap.put(10, "FMSR 577");
+
     }
 
     public void initFreightTender() {

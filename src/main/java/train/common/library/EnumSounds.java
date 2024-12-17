@@ -308,7 +308,7 @@ public enum EnumSounds {
 	//FoxTC Alco Steam
 	SteamL9(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamNP_L9.class, "np_5chime_1", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 19),
 	Steam2102(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamAlco2102.class, " ", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 19, new String[] {"generic_5chime_1", "crosby_3chime_2", "usarmy_3chime", "alco_5chime_1", "lima_5chime_2", "shay_whistle_1"}),
-	SteamMK60(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamMK60.class, " ", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 19, new String[] {"generic_5chime_1", "lima_5chime_2", "wp_5chime_1", "wp_5chime_1", "wp_5chime_1", "wp_5chime_1", "wp_5chime_1", "dmir_yellowstone_whistle"}),
+	SteamMK60(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamMK60.class, " ", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 19, new String[] {"generic_5chime_1", "lima_5chime_2", "wp_5chime_1", "wp_5chime_1", "wp_5chime_1", "wp_5chime_1", "wp_5chime_1", "dmir_yellowstone_whistle", "ebt_5chime", "lima_5chime_2"}),
 
 	//FoxTC Baldwin Steam
 	SteamSkook(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamSkook.class,"skookum_whistle", 1F, "skookum_notch8", 0.9F, 8, "skookum_idle", 0.7F, 50, true, "steambell_4", 19),

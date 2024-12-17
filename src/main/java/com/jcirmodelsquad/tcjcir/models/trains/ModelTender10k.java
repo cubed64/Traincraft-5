@@ -9,6 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.trucks.Model70TonTruck2;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelBettendorf_Truck;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTenderTruck3;
 import net.minecraft.client.Minecraft;
@@ -18,6 +19,7 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
 public class ModelTender10k extends ModelConverter //Same as Filename
@@ -27,7 +29,7 @@ public class ModelTender10k extends ModelConverter //Same as Filename
 
 	public ModelTender10k() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[69];
+		bodyModel = new ModelRendererTurbo[84];
 
 		initbodyModel_1();
 
@@ -94,7 +96,7 @@ public class ModelTender10k extends ModelConverter //Same as Filename
 		bodyModel[52] = new ModelRendererTurbo(this, 153, 17, textureX, textureY); // Box 613
 		bodyModel[53] = new ModelRendererTurbo(this, 297, 25, textureX, textureY); // Box 65
 		bodyModel[54] = new ModelRendererTurbo(this, 499, 20, textureX, textureY, "cull"); // Box 175 cull
-		bodyModel[55] = new ModelRendererTurbo(this, 49, 33, textureX, textureY); // Box 73
+		bodyModel[55] = new ModelRendererTurbo(this, 49, 33, textureX, textureY, "cull"); // Box 73
 		bodyModel[56] = new ModelRendererTurbo(this, 261, 26, textureX, textureY, "cull"); // Box cull coupler cut bar
 		bodyModel[57] = new ModelRendererTurbo(this, 325, 29, textureX, textureY, "cull"); // Box cull coupler cut bar
 		bodyModel[58] = new ModelRendererTurbo(this, 153, 17, textureX, textureY); // Box 62
@@ -108,6 +110,21 @@ public class ModelTender10k extends ModelConverter //Same as Filename
 		bodyModel[66] = new ModelRendererTurbo(this, 355, 31, textureX, textureY); // Box 45
 		bodyModel[67] = new ModelRendererTurbo(this, 1, 45, textureX, textureY); // Box 69
 		bodyModel[68] = new ModelRendererTurbo(this, 1, 45, textureX, textureY); // Box 70
+		bodyModel[69] = new ModelRendererTurbo(this, 84, 43, textureX, textureY); // Box 341 fmsr backing light housing
+		bodyModel[70] = new ModelRendererTurbo(this, 117, 43, textureX, textureY, "lamp"); // Box 342 headlight rear fmsr
+		bodyModel[71] = new ModelRendererTurbo(this, 108, 43, textureX, textureY, "cull"); // Box 343 cull fmsr backing light housing
+		bodyModel[72] = new ModelRendererTurbo(this, 97, 43, textureX, textureY, "lamp"); // Box 345 numberboard glow fmsr
+		bodyModel[73] = new ModelRendererTurbo(this, 75, 44, textureX, textureY); // Box 346 fmsr backinglight support
+		bodyModel[74] = new ModelRendererTurbo(this, 127, 43, textureX, textureY); // Box 130 air res
+		bodyModel[75] = new ModelRendererTurbo(this, 128, 44, textureX, textureY); // Box 131 air res
+		bodyModel[76] = new ModelRendererTurbo(this, 128, 44, textureX, textureY); // Box 132 air res
+		bodyModel[77] = new ModelRendererTurbo(this, 144, 43, textureX, textureY); // Box 78 air res support
+		bodyModel[78] = new ModelRendererTurbo(this, 161, 45, textureX, textureY, "cull"); // Box 79 cull fmsr step
+		bodyModel[79] = new ModelRendererTurbo(this, 176, 52, textureX, textureY); // Box 582 i am KING PIN
+		bodyModel[80] = new ModelRendererTurbo(this, 178, 46, textureX, textureY); // Box 138 fmsr pilot beam
+		bodyModel[81] = new ModelRendererTurbo(this, 181, 32, textureX, textureY); // Box 214 fmsr pin puller
+		bodyModel[82] = new ModelRendererTurbo(this, 226, 24, textureX, textureY); // Box 186 fmsr step support
+		bodyModel[83] = new ModelRendererTurbo(this, 224, 50, textureX, textureY); // Box 187 fmsr pilot step
 
 		bodyModel[0].addShapeBox(0F, 0F, 0F, 52, 2, 1, 0F,0F, 0.5F, 0F, 0F, 0.5F, 0F, 0F, 0.5F, 0F, 0F, 0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 254
 		bodyModel[0].setRotationPoint(-26F, 2.5F, -8.5F);
@@ -317,9 +334,57 @@ public class ModelTender10k extends ModelConverter //Same as Filename
 
 		bodyModel[68].addBox(-3F, -3F, 0F, 3, 1, 3, 0F); // Box 70
 		bodyModel[68].setRotationPoint(18F, 7.5F, -1.5F);
+
+		bodyModel[69].addBox(0F, 0F, 0F, 3, 3, 3, 0F); // Box 341 fmsr backing light housing
+		bodyModel[69].setRotationPoint(20F, -15F, -1.5F);
+
+		bodyModel[70].addShapeBox(0F, 0F, 0F, 1, 3, 3, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 342 headlight rear fmsr
+		bodyModel[70].setRotationPoint(22.5F, -15F, -1.5F);
+
+		bodyModel[71].addShapeBox(0F, 0F, 0F, 1, 2, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F); // Box 343 cull fmsr backing light housing
+		bodyModel[71].setRotationPoint(23F, -15F, -1.5F);
+
+		bodyModel[72].addShapeBox(0F, 0F, 0F, 2, 2, 3, 0F,0F, -0.25F, 0.1F, 0F, -0.25F, 0.1F, 0F, -0.25F, 0.1F, 0F, -0.25F, 0.1F, 0F, -0.25F, 0.1F, 0F, -0.25F, 0.1F, 0F, -0.25F, 0.1F, 0F, -0.25F, 0.1F); // Box 345 numberboard glow fmsr
+		bodyModel[72].setRotationPoint(20.5F, -14.5F, -1.5F);
+
+		bodyModel[73].addBox(0F, 0F, 0F, 2, 1, 2, 0F); // Box 346 fmsr backinglight support
+		bodyModel[73].setRotationPoint(20F, -12F, -1F);
+
+		bodyModel[74].addBox(0F, 0F, 0F, 6, 4, 2, 0F); // Box 130 air res
+		bodyModel[74].setRotationPoint(-3.5F, 3F, -6F);
+
+		bodyModel[75].addShapeBox(0F, 0F, 0F, 6, 2, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F); // Box 131 air res
+		bodyModel[75].setRotationPoint(-3.5F, 4F, -7F);
+
+		bodyModel[76].addShapeBox(0F, 0F, 0F, 6, 2, 1, 0F,0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 132 air res
+		bodyModel[76].setRotationPoint(-3.5F, 4F, -4F);
+
+		bodyModel[77].addBox(0F, 0F, 0F, 9, 4, 1, 0F); // Box 78 air res support
+		bodyModel[77].setRotationPoint(-5F, 1.5F, -5.5F);
+
+		bodyModel[78].addShapeBox(0F, 0F, 0F, 3, 1, 4, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F); // Box 79 cull fmsr step
+		bodyModel[78].setRotationPoint(4F, -14F, 3F);
+
+		bodyModel[79].addBox(0F, 0F, 0F, 1, 3, 0, 0F); // Box 582 i am KING PIN
+		bodyModel[79].setRotationPoint(27.5F, 0.28F, 0F);
+
+		bodyModel[80].addShapeBox(0F, 0F, -2F, 22, 3, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 138 fmsr pilot beam
+		bodyModel[80].setRotationPoint(25F, 1.75F, -11F);
+		bodyModel[80].rotateAngleY = 1.57079633F;
+
+		bodyModel[81].addBox(0F, -3F, 0F, 0, 3, 20, 0F); // Box 214 fmsr pin puller
+		bodyModel[81].setRotationPoint(27F, 3.28F, -10F);
+		bodyModel[81].rotateAngleZ = -0.48869219F;
+
+		bodyModel[82].addShapeBox(0F, 0F, 0F, 0, 4, 21, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 186 fmsr step support
+		bodyModel[82].setRotationPoint(27.01F, 4.5F, -10.5F);
+
+		bodyModel[83].addShapeBox(0F, 0F, -2F, 21, 0, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 187 fmsr pilot step
+		bodyModel[83].setRotationPoint(27.01F, 8.5F, -10.5F);
+		bodyModel[83].rotateAngleY = 1.57079633F;
 	}
-	ModelTenderTruck3 truck = new ModelTenderTruck3();
 	ModelBettendorf_Truck truck2 = new ModelBettendorf_Truck();
+	Model70TonTruck2 bogie = new Model70TonTruck2();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
@@ -336,15 +401,29 @@ public class ModelTender10k extends ModelConverter //Same as Filename
 				m.render(f5);
 			}
 		}
-		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/Bettendorf_Truck_black.png"));
-		GL11.glPushMatrix();
-		GL11.glTranslatef(-0.95F, 0.0F, 0F);
-		truck2.render(entity, f, f1, f2, f3, f4, f5);
-		GL11.glPopMatrix();
+		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==19 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==20
+		|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==21 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==22){
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Black.png"));//70Ton_Greyish
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-0.95F, 0.0F, 0F);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
 
-		GL11.glPushMatrix();
-		GL11.glTranslated(1.05F, 0.0F, 0);
-		truck2.render(entity, f, f1, f2, f3, f4, f5);
-		GL11.glPopMatrix();
+			GL11.glPushMatrix();
+			GL11.glTranslated(1.05F, 0.0F, 0);
+			bogie.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+		} else {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/Bettendorf_Truck_black.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-0.95F, 0.0F, 0F);
+			truck2.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
+			GL11.glPushMatrix();
+			GL11.glTranslated(1.05F, 0.0F, 0);
+			truck2.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+		}
 	}
 }

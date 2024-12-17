@@ -25,6 +25,8 @@ public class SteamMK60 extends SteamTrain {
 		textureDescriptionMap.put(5, "WP 334 NEP-WP Condition");
 		textureDescriptionMap.put(6, "WP 334-335");
 		textureDescriptionMap.put(7, "DLMR 199");
+		textureDescriptionMap.put(8, "FMSR 560-574");
+		textureDescriptionMap.put(9, "FMSR 575-579");
 	}
 
 	public void initLocoSteam() {
@@ -49,7 +51,7 @@ public class SteamMK60 extends SteamTrain {
 		double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
 		double distance = -1.2; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
 		double distanceLR = -0.45; //how far left/right on the entity you ride; left > 0; right < 0;
-		double yOffset = 0.1;
+		double yOffset = 0.25;
 		float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
 		float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
 		float rotationCosLR1 = (float) Math.cos(Math.toRadians(this.renderYaw));
