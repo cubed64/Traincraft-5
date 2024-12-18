@@ -34,6 +34,8 @@ public class DieselSD70ACe extends DieselTrain {
         textureDescriptionMap.put(13, "UP Lettering Thundercab");
         textureDescriptionMap.put(14, "NS Second Order");
         textureDescriptionMap.put(15, "Montana Rail Link");
+        textureDescriptionMap.put(16, "EMDX Demonstrator Whispercab");
+        textureDescriptionMap.put(17, "CN Demonstrator Whispercab");
     }
     public DieselSD70ACe(World world, double d, double d1, double d2){
         this(world);
