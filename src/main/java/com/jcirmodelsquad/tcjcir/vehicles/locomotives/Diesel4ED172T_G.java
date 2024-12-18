@@ -129,7 +129,7 @@ public class Diesel4ED172T_G extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.4F;
+    public float getOptimalDistance(EntityMinecart cart) { return 1.3F;
     }
 
     @Override
