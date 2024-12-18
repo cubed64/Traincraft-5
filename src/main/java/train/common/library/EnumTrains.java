@@ -256,6 +256,7 @@ public enum EnumTrains {
 	SkookTender("Skookum Tender", TenderSkookTender.class, ItemIDs.minecartSkookTender.item,"tender",0,0,2,0,0,0,0,0,15000,null,18,0, (new String[] {"Water capacity: 15000mb."})),
 	Shay3Truck("3 Truck Shay", SteamShay3Truck.class, ItemIDs.minecartShay3Truck.item, "steam", 838, 35, 0, 75, 75, 190, 0.8, 0.9, 4000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey", "White"}), 15, -1.8),
 	Shay3TruckTender("3 Truck Shay Tender", TenderShay3Truck.class, ItemIDs.minecartShay3TruckTender.item,"tender",0,0,2,0,0,0,0,0,10000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey", "White"}),22,0,(new String[] {"Water capacity: 10000mb."})),
+	ClimaxB("ClimaxB", SteamClimaxB.class, ItemIDs.minecartClimaxB.item, "steam", 838, 35, 0, 80, 80, 190, 0.8, 0.9, 9000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey", "LightGrey"}), 15, -1.8),
 
 	F01("F01", SteamF01.class, ItemIDs.minecartF01.item, "steam", 450,65,0,50,160,120,0.7,0.8,9000, null,16,-1.7),
 	P01a("P01a", SteamP01a.class, ItemIDs.minecartP01a.item, "steam", 1475, 85, 0, 75, 75, 190, 0.85, 0.8, 4000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "LightGrey", "Green"}), 18, -1.8),
@@ -267,7 +268,7 @@ public enum EnumTrains {
 	WCPBuckingBull("WCPBuckingBull", SteamBuckingBull.class, ItemIDs.minecartWCPBuckingBull.item, "steam", 2200, 70, 0, 25, 70, 170, 0.78, 0.9, 2000, null, 10, -2.4),
 	WCPBaler("WCPBaler", TenderBaler.class, ItemIDs.minecartWCPBaler.item,"tender",0,0,3,0,0,0,0,0,15000, null,18,0, (new String[] {"Water capacity: 15000mb."})),
 	WCPMacky("WCPMacky", SteamMacky.class, ItemIDs.minecartWCPMacky.item, "steam", 2069, 66, 0, 25, 90, 170, 0.66, 0.9, 2000, null, 10, -2.2),
-	ClimaxB("ClimaxB", SteamClimaxB.class, ItemIDs.minecartClimaxB.item, "steam", 838, 35, 0, 80, 80, 190, 0.8, 0.9, 9000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Grey", "LightGrey"}), 15, -1.8),
+
 	Alco2102("Alco2102", SteamAlco2102.class, ItemIDs.minecartalco2102.item, "steam", 1613, 65, 0, 75, 75, 190, 0.85, 0.8, 17000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20"}), 14, -2.4),
 	MK60("MK60", SteamMK60.class, ItemIDs.minecartMK60.item, "steam", 2765, 98, 0, 75, 75, 190, 0.85, 0.8, 2000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Purple", "Cyan", "Skin22"}), 14, -2.6),
 	Tender10k("Tender10k", Tender10k.class, ItemIDs.minecartTender10k.item,"tender",0,0,3,0,0,0,0,0,38000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Skin17", "Skin18", "Yellow", "Purple", "Pink", "Skin19", "Skin20", "Skin21", "Skin22"}),18,0, (new String[] {"Water capacity: 38000mb."})),
@@ -279,6 +280,8 @@ public enum EnumTrains {
 	NP_L9("NP_L9", SteamNP_L9.class, ItemIDs.minecartNP_L9.item, "steam", 1200,65,0,80,180,140,0.7,0.725,3000, TraincraftUtil.getBytesFromColors(new String[] {"Grey"}),16,-1.7),
 	NP_11C_Tender("NP_11C_Tender", TenderNP_11C.class, ItemIDs.minecartNP_11C_tender.item,"tender",0,0,3.5,0,0,0,0,0,26000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Black"}),18,0,(new String[] {"Water capacity: 26000mb."})),
 	NP_13C_Tender("NP_13C_Tender", TenderNP_13C.class, ItemIDs.minecartNP_13C_tender.item,"tender",0,0,3.75,0,0,0,0,0,31000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Black"}),18,0,(new String[] {"Water capacity: 31000mb."})),
+	Alco460("Alco460", SteamAlco460.class, ItemIDs.minecartAlco460.item, "steam", 973,110,0,90,130,160,0.7,0.75,3000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Red", "Yellow", "Skin17", "Skin18"}),16,-1.8),
+	Tender460("Tender460", Tender460.class, ItemIDs.minecartTender460.item,"tender",0,0,3,0,0,0,0,0,26000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Red", "Yellow", "Skin17"}),18,0,(new String[] {"Water capacity: 26000mb."})),
 
 	PELoco("Loco Steam PELoco", SteamPELoco.class, ItemIDs.minecartPELocomotive.item,"steam", 1484, 120, 0, 80, 100, 200, 0.35, 0.975, 4000, null, 10, -3.4 ),
 	PETender("Tender PETender",TenderPETender.class, ItemIDs.minecartPETender.item,"tender",0,0,1.5,0,0,0,0,0,20000,null,18,0,(new String[] {"Water capacity: 20000mb"})),

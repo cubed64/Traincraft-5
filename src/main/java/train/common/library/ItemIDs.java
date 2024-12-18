@@ -410,16 +410,19 @@ public enum ItemIDs {
 	minecartSkookTender("ItemRollingStock", "skookum_tender", STEAM, 4),
 	minecartShay3Truck("ItemRollingStock", "3TruckShay", STEAM, 5),
 	minecartShay3TruckTender("ItemRollingStock", "3TruckShayTender", STEAM, 4),
+	minecartClimaxB("ItemRollingStock", "climaxb", STEAM, 3),
+
 	minecartF01("ItemRollingStock", "f01", STEAM, 3),
 	minecartP01a("ItemRollingStock", "p01a", STEAM, 4),
 	minecartVanderbackTender("ItemRollingStock", "vanderbacktender", STEAM, 2),
 	minecartSquanderbackTender("ItemRollingStock", "squanderbacktender", STEAM, 2),
+
 	minecartBKno2a("ItemRollingStock", "bkno2", STEAM, 3),
 	minecartBKno2b("ItemRollingStock", "bkno2", STEAM, 3),
 	minecartWCPBuckingBull("ItemRollingStock", "wcp_buckingbull", STEAM, 4),
 	minecartWCPBaler("ItemRollingStock", "wcp_baler", STEAM, 2),
 	minecartWCPMacky("ItemRollingStock", "wcp_macky", STEAM, 4),
-	minecartClimaxB("ItemRollingStock", "climaxb", STEAM, 3),
+
 	minecartalco2102("ItemRollingStock", "2-10-2st_icon", STEAM, 4),
 	minecartMK60("ItemRollingStock", "mk60-71_icone", STEAM, 4),
 	minecartTender10k("ItemRollingStock", "10ktender_icon", STEAM, 2),
@@ -431,6 +434,8 @@ public enum ItemIDs {
 	minecartNP_L9("ItemRollingStock", "NP_L-9", STEAM, 3),
 	minecartNP_11C_tender("ItemRollingStock", "NP_11c-12c_tender", STEAM, 3),
 	minecartNP_13C_tender("ItemRollingStock", "NP_13c_tender", STEAM, 3),
+	minecartAlco460("ItemRollingStock", "4-6-0_icon", STEAM, 4),
+	minecartTender460("ItemRollingStock", "4-6-0_tender_icon", STEAM, 3),
 
 	minecartPELocomotive("ItemRollingStock", "PELocoIcon", STEAM,  5),
 	minecartPETender("ItemRollingStock", "PETenderIcon", STEAM,3),
