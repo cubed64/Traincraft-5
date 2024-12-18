@@ -434,6 +434,7 @@ public enum ItemIDs {
 
 	minecartPELocomotive("ItemRollingStock", "PELocoIcon", STEAM,  5),
 	minecartPETender("ItemRollingStock", "PETenderIcon", STEAM,3),
+	minecartPMNstender("ItemRollingStock", "PMNstenderIcon", STEAM,3),
 
 	//EMD//
 	minecartF3A( "ItemRollingStock", "f3a", DIESEL, 4),

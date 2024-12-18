@@ -866,6 +866,7 @@ public enum RenderEnum
 	}, 2, true),
 	Tender10k(Tender10k.class, new ModelTender10k(), "wp_10k_", true, new float[] {-0F, 0.155F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	TenderDeseret(TenderDeseret.class, new ModelTenderDeseret(), "wp_deserettender_", true, new float[] {-0F, 0.155F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	PMNstender(TenderPMNstender.class, new ModelPMNstender(), "pm_n_tender_", true, new float[] {-0F, 0.155F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 
 
 	/**EMD**/
