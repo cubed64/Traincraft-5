@@ -803,16 +803,19 @@ item.tc:minecartSkook.name=Deep River Logging No. 7 Skookum
 item.tc:minecartSkookTender.name=Skookum Tender
 item.tc:minecartShay3Truck.name=Class 3-PC-13 3-Truck Shay
 item.tc:minecartShay3TruckTender.name=Class 3-PC-13 3-Truck Shay Tender
+item.tc:minecartClimaxB.name=50 Ton Class B Climax
+
 item.tc:minecartF01.name=F-01 Class 2-4-4 Forney
 item.tc:minecartP01a.name=P-01a Class 2-6-2 Prairie
 item.tc:minecartVanderbackTender.name=WRX Vanderback Tender
 item.tc:minecartSquanderbackTender.name=WRX Squanderback Tender
+
 item.tc:minecartBKno2a.name=Booth-Kelly Lumber Co. No 2 (Front)
 item.tc:minecartBKno2b.name=Booth-Kelly Lumber Co. No 2 (Rear)
 item.tc:minecartWCPBuckingBull.name=WCP Bucking Bull 2-6-6-0
 item.tc:minecartWCPBaler.name=WCP Baler Tender
 item.tc:minecartWCPMacky.name=WCP Macky 0-10-2
-item.tc:minecartClimaxB.name=50 Ton Class B Climax
+
 item.tc:minecartalco2102.name=Alco 2-10-2ST
 item.tc:minecartMK60.name=WP MK60-71 2-8-2
 item.tc:minecartTender10k.name=WP 10,000 Gal Tender
@@ -825,6 +828,8 @@ item.tc:minecartOnionTender.name=Onion's Tender
 item.tc:minecartNP_L9.name=NP L9 Class 0-6-0
 item.tc:minecartNP_11C_tender.name=NP 11C & 12C Class Tenders
 item.tc:minecartNP_13C_tender.name=NP 13C Class Tender
+item.tc:minecartAlco460.name=ALCo 4-6-0
+item.tc:minecartTender460.name=ALCo 4-6-0 Tender
 
 item.tc:minecartPELocomotive.name=Polar Express 1225
 item.tc:minecartPETender.name=Polar Express Tender
@@ -836,16 +841,19 @@ entity.tc.Skookum.name=Deep River Logging No. 7 Skookum
 entity.tc.Skookum Tender.name=Skookum Tender
 entity.tc.3 Truck Shay.name=Class 3-PC-13 3-Truck Shay
 entity.tc.3 Truck Shay Tender.name=Class 3-PC-13 3-Truck Shay Tender
+entity.tc.ClimaxB.name=50 Ton Class B Climax
+
 entity.tc.F01.name=F-01 Class 2-4-4 Forney
 entity.tc.P01a.name=P-01a Class 2-6-2 Prairie
 entity.tc.VanderbackTender.name=WRX Vanderback Tender
 entity.tc.SquanderbackTender.name=WRX Squanderback Tender
+
 entity.tc.BKno2a.name=Booth-Kelly Lumber Co. No 2 (Front)
 entity.tc.BKno2b.name=Booth-Kelly Lumber Co. No 2 (Rear)
 entity.tc.WCPBuckingBull.name=WCP Bucking Bull 2-6-6-0
 entity.tc.WCPBaler.name=WCP Baler Tender
 entity.tc.WCPMacky.name=WCP Macky 0-10-2
-entity.tc.ClimaxB.name=50 Ton Class B Climax
+
 entity.tc.Alco2102.name=Alco 2-10-2ST
 entity.tc.MK60.name=WP MK60-71 2-8-2
 entity.tc.Tender10k.name=WP 10,000 Gal Tender
@@ -858,6 +866,8 @@ entity.tc.Onion Tender.name=Onion's Tender
 entity.tc.NP_L9.name=NP L9 Class 0-6-0
 entity.tc.NP_11C_Tender.name=NP 11C & 12C Class Tenders
 entity.tc.NP_13C_Tender.name=NP 13C Class Tender
+entity.tc.Alco460.name=ALCo 4-6-0
+entity.tc.Tender460.name=ALCo 4-6-0 Tender
 
 entity.tc.Loco Steam PELoco.name=Polar Express 1225
 entity.tc.Tender PETender.name=Polar Express Tender

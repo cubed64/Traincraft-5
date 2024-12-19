@@ -726,48 +726,17 @@ public enum RenderEnum
 		}
 	}, 2, true),
 	Shay3TruckTender(TenderShay3Truck.class, new ModelShay3TruckTender(), "3truckShay_", true, new float[] {0F, 0.15F, 0.00F}, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
-
-	locoC11(SteamC11.class, new ModelC11(), "locoC11", false, new float[] {  -1.5F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
+	ClimaxB(SteamClimaxB.class,  new ModelClimaxB(), "50ton_climax_b_", true,new float[] {-0.875F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
 		{
-			add(new double[] { 3.05D, 1.25D, 0D });
+			add(new double[] {2.1D, 1.40D, 0.0D});//smoke
 		}
 	}, "explode", new ArrayList<double[]>() {
 		{
-			add(new double[] { 2.9D, 0.00D, 0.75D });
-		}
-	}, 3, true),
-	Onion(SteamOnion.class, new ModelOnion(), "Onion_", true, new float[] { -0.7F, 0.1F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "largesmoke", 20, new ArrayList<double[]>() {
-		{
-			add(new double[] { 0.6D, 1.5D, 0.0D });
-		}
-	}, "explode", new ArrayList<double[]>() {
-		{
-			add(new double[] { 1.2D, -0.4D, 0.8D });
+			add(new double[] { 1.9D, -0.2D, 0.6D });//piston steam
+			add(new double[] { 1.0D, 1.3D, 0.0D });//dynamo
+			add(new double[] { 2.2D, 1.4D, 0.0D });//stack
 		}
 	}, 2, true),
-	OnionTender(TenderOnion.class, new ModelOnionTender(), "Onion_Tender_", true, new float[] { 0.0F, 0.1F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
-	PELoco(SteamPELoco.class, new ModelPE_Loco(), "PELoco", false, new float[] {  -1.5F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 3, new ArrayList<double[]>() {
-		{
-			add(new double[] { 3.1D, 1.4D, 0D });
-		}
-	}, "explode", new ArrayList<double[]>() {
-		{
-			add(new double[] { 2.9D, 0.05D, 0.65D });
-		}
-	}, 2, true),
-	PETender(TenderPETender.class, new ModelPE_Tender(), "PETender", false, new float[] { 0.1F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
-	NP_L9(SteamNP_L9.class, new ModelNP_L9(), "np_l9_", true, new float[] {  -1.0F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
-		{
-			add(new double[] { 2.05D, 1.5D, 0.0D });
-		}
-	}, "explode", new ArrayList<double[]>() {
-		{
-			add(new double[] { 2.2D, -0.2D, 0.75D });//pistons
-		}
-	}, 2, true),
-	NP_11C_Tender(TenderNP_11C.class, new ModelNP_11C_12C_tender(), "np_11c_n_12c_tender_", true, new float[] {-0F, 0.155F, 0F}, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
-	NP_13C_Tender(TenderNP_13C.class, new ModelNP_13C_tender(), "np_13c_tender_", true, new float[] {-0F, 0.155F, 0F}, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
-
 
 	F01(SteamF01.class, new ModelF01(), "F01_texture", false, new float[] {-1.25F, 0.15F, 0.00F}, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
 		{
@@ -832,17 +801,7 @@ public enum RenderEnum
 			//add(new double[] { 1.0D, -0.4D, 0.8D });
 		}
 	}, 2, true),
-	ClimaxB(SteamClimaxB.class,  new ModelClimaxB(), "50ton_climax_b_", true,new float[] {-0.875F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
-		{
-			add(new double[] {2.1D, 1.40D, 0.0D});//smoke
-		}
-	}, "explode", new ArrayList<double[]>() {
-		{
-			add(new double[] { 1.9D, -0.2D, 0.6D });//piston steam
-			add(new double[] { 1.0D, 1.3D, 0.0D });//dynamo
-			add(new double[] { 2.2D, 1.4D, 0.0D });//stack
-		}
-	}, 2, true),
+
 	Alco2102(SteamAlco2102.class,  new Modelalco2102(), "alco_2-10-2st_", true,new float[] {-1.2F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[] { 2.8D, 1.40D, 0.0D});//smoke
@@ -868,6 +827,57 @@ public enum RenderEnum
 	TenderDeseret(TenderDeseret.class, new ModelTenderDeseret(), "wp_deserettender_", true, new float[] {-0F, 0.155F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	PMNstender(TenderPMNstender.class, new ModelPMNstender(), "pm_n_tender_", true, new float[] {-0F, 0.155F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 
+	locoC11(SteamC11.class, new ModelC11(), "locoC11", false, new float[] {  -1.5F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
+		{
+			add(new double[] { 3.05D, 1.25D, 0D });
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] { 2.9D, 0.00D, 0.75D });
+		}
+	}, 3, true),
+	Onion(SteamOnion.class, new ModelOnion(), "Onion_", true, new float[] { -0.7F, 0.1F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "largesmoke", 20, new ArrayList<double[]>() {
+		{
+			add(new double[] { 0.6D, 1.5D, 0.0D });
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] { 1.2D, -0.4D, 0.8D });
+		}
+	}, 2, true),
+	OnionTender(TenderOnion.class, new ModelOnionTender(), "Onion_Tender_", true, new float[] { 0.0F, 0.1F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	NP_L9(SteamNP_L9.class, new ModelNP_L9(), "np_l9_", true, new float[] {  -1.0F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
+		{
+			add(new double[] { 2.05D, 1.5D, 0.0D });
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] { 2.2D, -0.2D, 0.75D });//pistons
+		}
+	}, 2, true),
+	NP_11C_Tender(TenderNP_11C.class, new ModelNP_11C_12C_tender(), "np_11c_n_12c_tender_", true, new float[] {-0F, 0.155F, 0F}, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	NP_13C_Tender(TenderNP_13C.class, new ModelNP_13C_tender(), "np_13c_tender_", true, new float[] {-0F, 0.155F, 0F}, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	Alco460(SteamAlco460.class, new ModelAlco460(), "4-6-0_", true, new float[] {-0.9F, 0.155F, 0F}, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
+		{
+			add(new double[] {2.3D, 1.5D, 0.0D});
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] {2.2D, -0.2D, 0.75D});//pistons
+		}
+	}, 2, true),
+	Tender460(Tender460.class, new ModelTender460(), "4-6-0_tender_", true, new float[] {0.15F, 0.155F, 0F}, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+
+	PELoco(SteamPELoco.class, new ModelPE_Loco(), "PELoco", false, new float[] {  -1.5F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 3, new ArrayList<double[]>() {
+		{
+			add(new double[] { 3.1D, 1.4D, 0D });
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] { 2.9D, 0.05D, 0.65D });
+		}
+	}, 2, true),
+	PETender(TenderPETender.class, new ModelPE_Tender(), "PETender", false, new float[] { 0.1F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	/**EMD**/
 	F3A( DieselF3A.class,  new ModelF3A(), "f3a_", true,new float[] {-1.375F, 0.1F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.1F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
