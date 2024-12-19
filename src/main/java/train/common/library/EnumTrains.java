@@ -285,7 +285,8 @@ public enum EnumTrains {
 
 	PELoco("Loco Steam PELoco", SteamPELoco.class, ItemIDs.minecartPELocomotive.item,"steam", 1484, 120, 0, 80, 100, 200, 0.35, 0.975, 4000, null, 10, -3.4 ),
 	PETender("Tender PETender",TenderPETender.class, ItemIDs.minecartPETender.item,"tender",0,0,1.5,0,0,0,0,0,20000,null,18,0,(new String[] {"Water capacity: 20000mb"})),
-	PMNstender("PMNstender",TenderPMNstender.class, ItemIDs.minecartPMNstender.item,"tender",0,0,1.5,0,0,0,0,0,83000,TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Yellow", "Orange", "White"}),18,0,(new String[] {"Water capacity: 83000mb"})),
+	PMNstender("PMNstender",TenderPMNstender.class, ItemIDs.minecartPMNstender.item,"tender",0,0,1.5,0,0,0,0,0,83000,TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Yellow", "Orange", "White"}),15,0,(new String[] {"Water capacity: 83000mb"})),
+	PMNandN1("PMNandN1", SteamPMNandN1.class, ItemIDs.minecartPMNandN1.item,"steam", 3000, 113, 0, 80, 100, 200, 0.35, 0.975, 6000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Yellow", "Grey", "Orange", "White"}), 12, -3.6 ),
 
 	//EMD//
 	F3A("F3A", DieselF3A.class, ItemIDs.minecartF3A.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "LightGrey", "Grey", "Black"}), 18, -2.5),

@@ -821,6 +821,7 @@ item.tc:minecartMK60.name=WP MK60-71 2-8-2
 item.tc:minecartTender10k.name=WP 10,000 Gal Tender
 item.tc:minecartTenderDeseret.name=WP Deseret Tender
 item.tc:minecartPMNstender.name=PM N Series Tender
+item.tc:minecartPMNandN1.name=Pere Marquette N and N-1
 
 item.tc:minecartLocoC11.name=JNR C11
 item.tc:minecartOnion.name=Onion
@@ -859,6 +860,7 @@ entity.tc.MK60.name=WP MK60-71 2-8-2
 entity.tc.Tender10k.name=WP 10,000 Gal Tender
 entity.tc.TenderDeseret.name=WP Deseret Tender
 entity.tc.TenderPMNstender.name=PM N Series Tender
+entity.tc.PMNandN1.name=Pere Marquette N and N-1
 
 entity.tc.Loco Steam C11.name=JNR C11
 entity.tc.Onion.name=Onion
