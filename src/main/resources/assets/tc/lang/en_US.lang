@@ -859,7 +859,7 @@ entity.tc.Alco2102.name=Alco 2-10-2ST
 entity.tc.MK60.name=WP MK60-71 2-8-2
 entity.tc.Tender10k.name=WP 10,000 Gal Tender
 entity.tc.TenderDeseret.name=WP Deseret Tender
-entity.tc.TenderPMNstender.name=PM N Series Tender
+entity.tc.PMNstender.name=PM N Series Tender
 entity.tc.PMNandN1.name=Pere Marquette N and N-1
 
 entity.tc.Loco Steam C11.name=JNR C11

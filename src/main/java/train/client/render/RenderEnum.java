@@ -826,7 +826,7 @@ public enum RenderEnum
 	Tender10k(Tender10k.class, new ModelTender10k(), "wp_10k_", true, new float[] {-0F, 0.155F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	TenderDeseret(TenderDeseret.class, new ModelTenderDeseret(), "wp_deserettender_", true, new float[] {-0F, 0.155F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	PMNstender(TenderPMNstender.class, new ModelPMNstender(), "pm_n_tender_", true, new float[] {-0F, 0.155F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
-	PMNandN1(SteamPMNandN1.class, new ModelPMNandN1(), "pm_n_locomotive_", true, new float[] {  -1.5F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 3, new ArrayList<double[]>() {
+	PMNandN1(SteamPMNandN1.class, new ModelPMNandN1(), "pm_n_locomotive_", true, new float[]{-2F, 0.155F, 0F}, new float[] { 0, 180, 180 }, null, "largesmoke", 3, new ArrayList<double[]>() {
 		{
 			add(new double[]{3.8D, 1.55D, 0.0D});
 		}
