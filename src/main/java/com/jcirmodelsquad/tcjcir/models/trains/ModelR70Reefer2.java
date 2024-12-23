@@ -26,7 +26,7 @@ public class ModelR70Reefer2 extends ModelConverter //Same as Filename
 
 	public ModelR70Reefer2() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[229];
+		bodyModel = new ModelRendererTurbo[231];
 
 		initbodyModel_1();
 
@@ -267,6 +267,8 @@ public class ModelR70Reefer2 extends ModelConverter //Same as Filename
 		bodyModel[226] = new ModelRendererTurbo(this, 245, 17, textureX, textureY, "cull"); // Box 78 ladder cull
 		bodyModel[227] = new ModelRendererTurbo(this, 1, 187, textureX, textureY, "cull"); // Woofwalk cull shid
 		bodyModel[228] = new ModelRendererTurbo(this, 1, 187, textureX, textureY, "cull"); // Woofwalk cull shid
+		bodyModel[229] = new ModelRendererTurbo(this, 244, 175, textureX, textureY); // Box 230
+		bodyModel[230] = new ModelRendererTurbo(this, 249, 131, textureX, textureY); // Box 231
 
 		bodyModel[0].addBox(0F, 0F, 0F, 4, 1, 4, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-33F, 5F, -2F);
@@ -774,8 +776,8 @@ public class ModelR70Reefer2 extends ModelConverter //Same as Filename
 		bodyModel[163].addShapeBox(0F, 0F, 0F, 16, 1, 1, 0F,0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0.125F, 0F, 0F, 0.125F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0.125F, 0F, 0F, 0.125F); // Box 177 door right
 		bodyModel[163].setRotationPoint(-8F, -5F, 10.5F);
 
-		bodyModel[164].addShapeBox(0F, 0F, 0F, 1, 7, 1, 0F,0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 178 door right
-		bodyModel[164].setRotationPoint(-0.5F, -12F, 10.5F);
+		bodyModel[164].addShapeBox(0F, 0F, 0F, 2, 7, 1, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 178 door right
+		bodyModel[164].setRotationPoint(-1F, -12F, 10.5F);
 
 		bodyModel[165].addShapeBox(0F, 0F, 0F, 16, 1, 1, 0F,0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 179 door right
 		bodyModel[165].setRotationPoint(-8F, -19F, 10.5F);
@@ -978,6 +980,12 @@ public class ModelR70Reefer2 extends ModelConverter //Same as Filename
 
 		bodyModel[228].addShapeBox(0F, 0F, 0F, 4, 1, 8, 0F,0F, -1.25F, 0F, 0F, -1.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1.25F, 0F, 0F, 1.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Woofwalk cull shid
 		bodyModel[228].setRotationPoint(37.5F, -23.75F, -10F);
+
+		bodyModel[229].addBox(0F, 0F, 0F, 1, 7, 1, 0F); // Box 230
+		bodyModel[229].setRotationPoint(-0.5F, -12F, -11.5F);
+
+		bodyModel[230].addBox(0F, 0F, 0F, 1, 7, 1, 0F); // Box 231
+		bodyModel[230].setRotationPoint(-0.5F, -12F, 10.5F);
 	}
 	Model70TonTruck2 bogie = new Model70TonTruck2();
 
