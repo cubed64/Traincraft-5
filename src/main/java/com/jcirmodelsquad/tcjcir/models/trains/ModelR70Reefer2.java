@@ -26,7 +26,7 @@ public class ModelR70Reefer2 extends ModelConverter //Same as Filename
 
 	public ModelR70Reefer2() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[231];
+		bodyModel = new ModelRendererTurbo[232];
 
 		initbodyModel_1();
 
@@ -269,6 +269,7 @@ public class ModelR70Reefer2 extends ModelConverter //Same as Filename
 		bodyModel[228] = new ModelRendererTurbo(this, 1, 187, textureX, textureY, "cull"); // Woofwalk cull shid
 		bodyModel[229] = new ModelRendererTurbo(this, 244, 175, textureX, textureY); // Box 230
 		bodyModel[230] = new ModelRendererTurbo(this, 249, 131, textureX, textureY); // Box 231
+		bodyModel[231] = new ModelRendererTurbo(this, 97, 22, textureX, textureY, "cull");// Box 231 cull
 
 		bodyModel[0].addBox(0F, 0F, 0F, 4, 1, 4, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-33F, 5F, -2F);
@@ -986,6 +987,9 @@ public class ModelR70Reefer2 extends ModelConverter //Same as Filename
 
 		bodyModel[230].addBox(0F, 0F, 0F, 1, 7, 1, 0F); // Box 231
 		bodyModel[230].setRotationPoint(-0.5F, -12F, 10.5F);
+
+		bodyModel[231].addShapeBox(0F, 0F, 0F, 2, 3, 5, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, -2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, -2F, 0F, -1F); // Box 231 cull
+		bodyModel[231].setRotationPoint(-44.51F, -15.5F, 1.99F);
 	}
 	Model70TonTruck2 bogie = new Model70TonTruck2();
 
