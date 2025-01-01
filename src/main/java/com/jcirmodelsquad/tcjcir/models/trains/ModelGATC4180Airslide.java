@@ -27,7 +27,7 @@ public class ModelGATC4180Airslide extends ModelConverter //Same as Filename
 
 	public ModelGATC4180Airslide() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[163];
+		bodyModel = new ModelRendererTurbo[165];
 
 		initbodyModel_1();
 
@@ -202,6 +202,8 @@ public class ModelGATC4180Airslide extends ModelConverter //Same as Filename
 		bodyModel[160] = new ModelRendererTurbo(this, 288, 52, textureX, textureY, "cull"); // Box 124 cull roof walkway
 		bodyModel[161] = new ModelRendererTurbo(this, 361, 129, textureX, textureY); // Box 12
 		bodyModel[162] = new ModelRendererTurbo(this, 381, 129, textureX, textureY); // Box 12
+		bodyModel[163] = new ModelRendererTurbo(this, 230, 2, textureX, textureY); // Box 163
+		bodyModel[164] = new ModelRendererTurbo(this, 230, 2, textureX, textureY); // Box 163
 
 		bodyModel[0].addBox(0F, 0F, 0F, 3, 2, 3, 0F); // Box 178
 		bodyModel[0].setRotationPoint(-38.5F, 4F, -1.5F);
@@ -720,6 +722,12 @@ public class ModelGATC4180Airslide extends ModelConverter //Same as Filename
 
 		bodyModel[162].addShapeBox(-1F, 0F, 0F, 1, 8, 1, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, -0.75F, 0F, -0.5F, -0.75F); // Box 12
 		bodyModel[162].setRotationPoint(35F, -5.5F, 2F);
+
+		bodyModel[163].addBox(0F, 0F, 0F, 42, 0, 1, 0F); // Box 163
+		bodyModel[163].setRotationPoint(-21F, 3.1F, 10.5F);
+
+		bodyModel[164].addBox(0F, 0F, 0F, 42, 0, 1, 0F); // Box 163
+		bodyModel[164].setRotationPoint(-21F, 3.1F, -11.5F);
 	}
 
 	Model70TonTruck2 bogie2 = new Model70TonTruck2();
