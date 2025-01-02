@@ -21,8 +21,8 @@ public class R70Reefer2 extends Freight implements IInventory {
         textureDescriptionMap.put(0, "Blandsville Fruit Express");
         textureDescriptionMap.put(1, "NPM");
         textureDescriptionMap.put(2, "SOO");
-        textureDescriptionMap.put(3, "");
-        textureDescriptionMap.put(4, "");
+        textureDescriptionMap.put(3, "PFE (R-70-15)");
+        textureDescriptionMap.put(4, "PFE (R-10-19)");
         textureDescriptionMap.put(5, "");
     }
 
