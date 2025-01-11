@@ -11,6 +11,7 @@ public class HBC1Cboose extends AbstractWorkCart
         textureDescriptionMap.put(0, "Western Pacific");
         textureDescriptionMap.put(1, "Steampunk Rail");
         textureDescriptionMap.put(2, "Great Lakes & Nice Tiddies");
+        textureDescriptionMap.put(3, "CRL");
     }
 
     public HBC1Cboose(World world, double posX, double posY, double posZ)

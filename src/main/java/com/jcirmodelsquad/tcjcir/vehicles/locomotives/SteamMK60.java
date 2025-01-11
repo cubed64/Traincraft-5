@@ -17,12 +17,16 @@ public class SteamMK60 extends SteamTrain {
 	public SteamMK60(World world) {
 		super(world, EnumTrains.MK60.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
-		textureDescriptionMap.put(0, "B");
-		textureDescriptionMap.put(1, "putting texture names here");
-		textureDescriptionMap.put(2, "will be a cubed problem");
-		textureDescriptionMap.put(3, "eventually");
-		textureDescriptionMap.put(4, "");
-		textureDescriptionMap.put(5, "");
+		textureDescriptionMap.put(0, "Blank");
+		textureDescriptionMap.put(1, "Spoof Texture");
+		textureDescriptionMap.put(2, "WP 320-326");
+		textureDescriptionMap.put(3, "WP 322-323");
+		textureDescriptionMap.put(4, "WP 327-329");
+		textureDescriptionMap.put(5, "WP 334 NEP-WP Condition");
+		textureDescriptionMap.put(6, "WP 334-335");
+		textureDescriptionMap.put(7, "DLMR 199");
+		textureDescriptionMap.put(8, "FMSR 560-574");
+		textureDescriptionMap.put(9, "FMSR 575-579");
 	}
 
 	public void initLocoSteam() {
@@ -47,7 +51,7 @@ public class SteamMK60 extends SteamTrain {
 		double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
 		double distance = -1.2; //how far forward/backwards on the entity you ride; forward > 0; backwards < 0;
 		double distanceLR = -0.45; //how far left/right on the entity you ride; left > 0; right < 0;
-		double yOffset = 0.1;
+		double yOffset = 0.25;
 		float rotationCos1 = (float) Math.cos(Math.toRadians(this.renderYaw + 90));
 		float rotationSin1 = (float) Math.sin(Math.toRadians((this.renderYaw + 90)));
 		float rotationCosLR1 = (float) Math.cos(Math.toRadians(this.renderYaw));

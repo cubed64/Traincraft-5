@@ -18,7 +18,7 @@ public class DieselCF7hh extends DieselTrain {
     public DieselCF7hh(World world) {
         super(world, EnumTrains.CF7hh.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Grasslands Labratories");
+        textureDescriptionMap.put(0, "Grassland Laboratories");
     }
     public DieselCF7hh(World world, double d, double d1, double d2){
         this(world);

@@ -817,20 +817,25 @@ item.tc:minecartSkook.name=Deep River Logging No. 7 Skookum
 item.tc:minecartSkookTender.name=Skookum Tender
 item.tc:minecartShay3Truck.name=Class 3-PC-13 3-Truck Shay
 item.tc:minecartShay3TruckTender.name=Class 3-PC-13 3-Truck Shay Tender
+item.tc:minecartClimaxB.name=50 Ton Class B Climax
+
 item.tc:minecartF01.name=F-01 Class 2-4-4 Forney
 item.tc:minecartP01a.name=P-01a Class 2-6-2 Prairie
 item.tc:minecartVanderbackTender.name=WRX Vanderback Tender
 item.tc:minecartSquanderbackTender.name=WRX Squanderback Tender
+
 item.tc:minecartBKno2a.name=Booth-Kelly Lumber Co. No 2 (Front)
 item.tc:minecartBKno2b.name=Booth-Kelly Lumber Co. No 2 (Rear)
 item.tc:minecartWCPBuckingBull.name=WCP Bucking Bull 2-6-6-0
 item.tc:minecartWCPBaler.name=WCP Baler Tender
 item.tc:minecartWCPMacky.name=WCP Macky 0-10-2
-item.tc:minecartClimaxB.name=50 Ton Class B Climax
+
 item.tc:minecartalco2102.name=Alco 2-10-2ST
 item.tc:minecartMK60.name=WP MK60-71 2-8-2
 item.tc:minecartTender10k.name=WP 10,000 Gal Tender
 item.tc:minecartTenderDeseret.name=WP Deseret Tender
+item.tc:minecartPMNstender.name=PM N Series Tender
+item.tc:minecartPMNandN1.name=Pere Marquette N and N-1
 
 item.tc:minecartLocoC11.name=JNR C11
 item.tc:minecartOnion.name=Onion
@@ -838,6 +843,8 @@ item.tc:minecartOnionTender.name=Onion's Tender
 item.tc:minecartNP_L9.name=NP L9 Class 0-6-0
 item.tc:minecartNP_11C_tender.name=NP 11C & 12C Class Tenders
 item.tc:minecartNP_13C_tender.name=NP 13C Class Tender
+item.tc:minecartAlco460.name=ALCo 4-6-0
+item.tc:minecartTender460.name=ALCo 4-6-0 Tender
 
 item.tc:minecartPELocomotive.name=Polar Express 1225
 item.tc:minecartPETender.name=Polar Express Tender
@@ -849,20 +856,25 @@ entity.tc.Skookum.name=Deep River Logging No. 7 Skookum
 entity.tc.Skookum Tender.name=Skookum Tender
 entity.tc.3 Truck Shay.name=Class 3-PC-13 3-Truck Shay
 entity.tc.3 Truck Shay Tender.name=Class 3-PC-13 3-Truck Shay Tender
+entity.tc.ClimaxB.name=50 Ton Class B Climax
+
 entity.tc.F01.name=F-01 Class 2-4-4 Forney
 entity.tc.P01a.name=P-01a Class 2-6-2 Prairie
 entity.tc.VanderbackTender.name=WRX Vanderback Tender
 entity.tc.SquanderbackTender.name=WRX Squanderback Tender
+
 entity.tc.BKno2a.name=Booth-Kelly Lumber Co. No 2 (Front)
 entity.tc.BKno2b.name=Booth-Kelly Lumber Co. No 2 (Rear)
 entity.tc.WCPBuckingBull.name=WCP Bucking Bull 2-6-6-0
 entity.tc.WCPBaler.name=WCP Baler Tender
 entity.tc.WCPMacky.name=WCP Macky 0-10-2
-entity.tc.ClimaxB.name=50 Ton Class B Climax
+
 entity.tc.Alco2102.name=Alco 2-10-2ST
 entity.tc.MK60.name=WP MK60-71 2-8-2
 entity.tc.Tender10k.name=WP 10,000 Gal Tender
 entity.tc.TenderDeseret.name=WP Deseret Tender
+entity.tc.PMNstender.name=PM N Series Tender
+entity.tc.PMNandN1.name=Pere Marquette N and N-1
 
 entity.tc.Loco Steam C11.name=JNR C11
 entity.tc.Onion.name=Onion
@@ -870,6 +882,8 @@ entity.tc.Onion Tender.name=Onion's Tender
 entity.tc.NP_L9.name=NP L9 Class 0-6-0
 entity.tc.NP_11C_Tender.name=NP 11C & 12C Class Tenders
 entity.tc.NP_13C_Tender.name=NP 13C Class Tender
+entity.tc.Alco460.name=ALCo 4-6-0
+entity.tc.Tender460.name=ALCo 4-6-0 Tender
 
 entity.tc.Loco Steam PELoco.name=Polar Express 1225
 entity.tc.Tender PETender.name=Polar Express Tender
@@ -1116,6 +1130,11 @@ item.tc:minecartP32.name=GE P32
 item.tc:minecartGeGenesis.name=GE P40
 item.tc:minecartP42.name=GE P42
 
+item.tc:minecart4ED172T.name=CEE 4ED-172T
+item.tc:minecart4ED172T_E.name=CEE 4ED-172T (EMD 12-567BC Repower)
+item.tc:minecart4ED172T_G.name=CEE 4ED-172T (GE 7FDL-8 Repower)
+item.tc:minecart4ED172T_C.name=CEE 4ED-172T (CAT D399 Repower)
+
 entity.tc.GE 44-ton.name=GE 44-Ton
 entity.tc.23 Ton Boxcab.name=GE-23 Ton Boxcab
 entity.tc.GE 25-ton.name=GE 25-Ton
@@ -1172,6 +1191,11 @@ entity.tc.ES44h.name=GE ES44 (Heritable Units)
 entity.tc.P32.name=GE P32
 entity.tc.P40.name=GE P40
 entity.tc.P42.name=GE P42
+
+entity.tc.4ED172T.name=CEE 4ED-172T
+entity.tc.4ED172T_E.name=CEE 4ED-172T (EMD 12-567BC Repower)
+entity.tc.4ED172T_G.name=CEE 4ED-172T (GE 7FDL-8 Repower)
+entity.tc.4ED172T_C.name=CEE 4ED-172T (CAT D399 Repower)
 
 --------------------------------------------------------
 
@@ -1371,6 +1395,7 @@ item.tc:minecartPDH2800.name=GATX 2800 Cu Ft Pressure Differential Hopper
 item.tc:minecartACF2Bay.name=ACF 2980 Cu Ft 2-Bay Hopper
 item.tc:minecartACF4650.name=ACF 4650 Cu Ft 3-Bay Hopper
 item.tc:minecartPS2_4750.name=PS2 4750 Cu Ft 3-Bay Hopper
+item.tc:minecartGATC4180Airslide.name=GATC 4180 Cu Ft Airslide Hopper
 
 entity.tc.Freight Round Covered Hopper.name=Round Covered Hopper
 entity.tc.Freight Ribbed Covered Hopper.name=Ribbed Covered Hopper
@@ -1381,6 +1406,7 @@ entity.tc.PDH2800.name=GATX 2800 Cu Ft Pressure Differential Hopper
 entity.tc.ACF2Bay.name=ACF 2980 Cu Ft 2-Bay Hopper
 entity.tc.ACF4650.name=ACF 4650 Cu Ft 3-Bay Hopper
 entity.tc.PS2_4750.name=PS2 4750 Cu Ft 3-Bay Hopper
+entity.tc.GATC4180Airslide.name=GATC 4180 Cu Ft Airslide Hopper
 
 item.tc:minecart60centerbeam.name=60' Center Beam
 item.tc:minecart66centerbeam.name=66' Center Beam
@@ -1416,8 +1442,11 @@ item.tc:minecartReefer64.name=Trinity 64' Mechanical Reefer
 item.tc:minecartFNCC50Foot.name=KSFI 50' Highcube Boxcar
 item.tc:minecartGN40.name=Great Northern Homebuilt 40' Boxcar(s)
 item.tc:minecartR70Reefer.name=PFE R-70-20 Reefer
+item.tc:minecartR70Reefer2.name=PFE R-70-15 Reefer
 item.tc:minecartNSCchildHUH.name=National Steel Car 3294 Mechanical Reefer
 item.tc:minecartPCF6033.name=PC&F 6033 Cu Ft Boxcar
+item.tc:minecartPCF_RBL_Smooth.name=PC&F RBL Smoothside Boxcar
+item.tc:minecartPCF_RBL_Ribbed.name=PC&F RBL Ribbedside Boxcar
 item.tc:minecartACFRailbox.name=ACF Railbox Boxcar
 item.tc:minecartACFRailboxCushioned.name=ACF Railbox Boxcar (Cushioned)
 
@@ -1433,8 +1462,11 @@ entity.tc.Reefer64.name=Trinity 64' Mechanical Reefer
 entity.tc.FNCC50FootBoxcar.name=KSFI 50' Highcube Boxcar
 entity.tc.GN40.name=Great Northern Homebuilt 40' Boxcar(s)
 entity.tc.R70Reefer.name=PFE R-70-20 Reefer
+entity.tc.R70Reefer2.name=PFE R-70-15 Reefer
 entity.tc.NSCReefer.name=National Steel Car 3294 Mechanical Reefer
 entity.tc.PCF6033.name=PC&F 6033 Cu Ft Boxcar
+entity.tc.PCF_RBL_Smooth.name=PC&F RBL Smoothside Boxcar
+entity.tc.PCF_RBL_Ribbed.name=PC&F RBL Ribbedside Boxcar
 entity.tc.ACF Railbox.name=ACF Railbox Boxcar
 entity.tc.ACF Railbox (Cushioned).name=ACF Railbox Boxcar (Cusioned)
 
@@ -1470,6 +1502,7 @@ item.tc:minecart29080DOT111.name=29,080 Gallon Tank Car
 item.tc:minecart17600DOT111.name=17,600 Gallon Tank Car
 item.tc:minecartNATX30600.name=NATX 30,600 Gallon Tank Car
 item.tc:minecartgatc10000.name=GATC 10,000 Gallon Tank Car
+item.tc:minecartDUPX39200.name=DUPX 39,200 Gallon Tank Car
 
 
 entity.tc.DOT11000.name=11,000 Gallon Tank Car
@@ -1478,6 +1511,7 @@ entity.tc.DOT29080.name=29,080 Gallon Tank Car
 entity.tc.DOT17600.name=17,600 Gallon Tank Car
 entity.tc.NATX30600.name=NATX 30,600 Gallon Tank Car
 entity.tc.gatc10000.name=GATC 10,000 Gallon Tank Car
+entity.tc.DUPX39200.name=DUPX 39,200 Gallon Tank Car
 
 item.tc:minecartCoffinCar.name=Early Coffin Car
 item.tc:minecartSkeletonLogCar.name=45' Skeleton Log Car
@@ -1753,6 +1787,7 @@ item.tc:minecartWVcaboose.name=International Car Co. Wide Vision Caboose
 item.tc:minecartHBC1Ccaboose.name=KSFI HBC1-C Caboose
 item.tc:minecartHBC1Bcaboose.name=KSFI HBC1-B Caboose
 item.tc:minecartDRGWCaboose.name=DRGW 01400 Series Caboose
+item.tc:minecartICC_Bobber.name=ICC Bobber Wide Vision Caboose
 item.tc:minecartICCBaywindowWP.name=ICC Baywindow Caboose (WP Config)
 item.tc:minecartCA11.name=ICC CA11 Baywindow Caboose
 item.tc:minecartWPShops600Series.name=WP Shops 600 series Caboose
@@ -1761,6 +1796,7 @@ entity.tc.WVcaboose.name=International Car Co. Wide Vision Caboose
 entity.tc.HBC1C.name=KSFI HBC1-C Caboose
 entity.tc.HBC1B.name=KSFI HBC1-B Caboose
 entity.tc.DRGWCaboose.name=DRGW 01400 Series Caboose
+entity.tc.ICC_Bobber.name=ICC Bobber Wide Vision Caboose
 entity.tc.ICCBaywindowWP.name=ICC Baywindow Caboose (WP Config)
 entity.tc.CA11.name=ICC CA11 Baywindow Caboose
 entity.tc.WPShops600Series.name=WP Shops 600 series Caboose

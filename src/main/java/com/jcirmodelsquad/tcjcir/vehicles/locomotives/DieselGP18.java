@@ -17,8 +17,17 @@ public class DieselGP18 extends DieselTrain {
     public DieselGP18(World world) {
         super(world, EnumTrains.GP18.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Northern Pacific");
-        textureDescriptionMap.put(1, "Burlington Northern 1996");
+        textureDescriptionMap.put(0, "NP");
+        textureDescriptionMap.put(1, "BN 1996");
+        textureDescriptionMap.put(2, "T&P");
+        textureDescriptionMap.put(3, "MP (highhood)");
+        textureDescriptionMap.put(4, "MP (chop nose)");
+        textureDescriptionMap.put(5, "MP (eagle repaint)");
+        textureDescriptionMap.put(6, "RI");
+        textureDescriptionMap.put(7, "IC (highhood)");
+        textureDescriptionMap.put(8, "IC (chop nose)");
+        textureDescriptionMap.put(9, "Blandsville & Blankerston");
+        textureDescriptionMap.put(10, "Blandsville & Blankerston");
 
     }
     public DieselGP18(World world, double d, double d1, double d2){

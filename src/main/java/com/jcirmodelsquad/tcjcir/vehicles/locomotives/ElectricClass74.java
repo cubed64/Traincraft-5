@@ -14,6 +14,11 @@ import train.common.library.GuiIDs;
 public class ElectricClass74 extends ElectricTrain {
     public ElectricClass74(World world) {
         super(world);
+        textureDescriptionMap.put(0, "BR");
+        textureDescriptionMap.put(1, "SPR");
+        textureDescriptionMap.put(2, "GCM");
+        textureDescriptionMap.put(3, "CRL");
+        textureDescriptionMap.put(4, "CRL (Phase 2)");
     }
 
     public ElectricClass74(World world, double d, double d1, double d2) {

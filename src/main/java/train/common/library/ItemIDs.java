@@ -427,16 +427,19 @@ public enum ItemIDs {
 	minecartSkookTender("ItemRollingStock", "skookum_tender", STEAM, 4),
 	minecartShay3Truck("ItemRollingStock", "3TruckShay", STEAM, 5),
 	minecartShay3TruckTender("ItemRollingStock", "3TruckShayTender", STEAM, 4),
+	minecartClimaxB("ItemRollingStock", "climaxb", STEAM, 3),
+
 	minecartF01("ItemRollingStock", "f01", STEAM, 3),
 	minecartP01a("ItemRollingStock", "p01a", STEAM, 4),
 	minecartVanderbackTender("ItemRollingStock", "vanderbacktender", STEAM, 2),
 	minecartSquanderbackTender("ItemRollingStock", "squanderbacktender", STEAM, 2),
+
 	minecartBKno2a("ItemRollingStock", "bkno2", STEAM, 3),
 	minecartBKno2b("ItemRollingStock", "bkno2", STEAM, 3),
 	minecartWCPBuckingBull("ItemRollingStock", "wcp_buckingbull", STEAM, 4),
 	minecartWCPBaler("ItemRollingStock", "wcp_baler", STEAM, 2),
 	minecartWCPMacky("ItemRollingStock", "wcp_macky", STEAM, 4),
-	minecartClimaxB("ItemRollingStock", "climaxb", STEAM, 3),
+
 	minecartalco2102("ItemRollingStock", "2-10-2st_icon", STEAM, 4),
 	minecartMK60("ItemRollingStock", "mk60-71_icone", STEAM, 4),
 	minecartTender10k("ItemRollingStock", "10ktender_icon", STEAM, 2),
@@ -448,9 +451,13 @@ public enum ItemIDs {
 	minecartNP_L9("ItemRollingStock", "NP_L-9", STEAM, 3),
 	minecartNP_11C_tender("ItemRollingStock", "NP_11c-12c_tender", STEAM, 3),
 	minecartNP_13C_tender("ItemRollingStock", "NP_13c_tender", STEAM, 3),
+	minecartAlco460("ItemRollingStock", "4-6-0_icon", STEAM, 4),
+	minecartTender460("ItemRollingStock", "4-6-0_tender_icon", STEAM, 3),
 
 	minecartPELocomotive("ItemRollingStock", "PELocoIcon", STEAM,  5),
 	minecartPETender("ItemRollingStock", "PETenderIcon", STEAM,3),
+	minecartPMNstender("ItemRollingStock", "PMNstenderIcon", STEAM,3),
+	minecartPMNandN1("ItemRollingStock", "PMNandN1Icon", STEAM,  7),
 
 	//EMD//
 	minecartF3A( "ItemRollingStock", "f3a", DIESEL, 4),
@@ -598,6 +605,11 @@ public enum ItemIDs {
 	minecartGeGenesis("ItemRollingStock", "geGenesis3", DIESEL, 5),
 	minecartP42("ItemRollingStock", "geGenesis", DIESEL, 5),
 
+	minecart4ED172T("ItemRollingStock", "4ed172t", DIESEL, 3),
+	minecart4ED172T_E("ItemRollingStock", "4ed172t_e", DIESEL, 3),
+	minecart4ED172T_G("ItemRollingStock", "4ed172t_g", DIESEL, 3),
+	minecart4ED172T_C("ItemRollingStock", "4ed172t_c", DIESEL, 3),
+
 	//ALCO and its canookistanian counterpart//
 	minecartAlcoPA1("ItemRollingStock", "AlcoPA1Icon", DIESEL,5),
 	minecartAlcoPB1("ItemRollingStock", "AlcoPB1Icon", DIESEL,4),
@@ -700,6 +712,7 @@ public enum ItemIDs {
 	minecartACF2Bay("ItemRollingStock", "ACF2Bay", FREIGHT, 3),
 	minecartACF4650("ItemRollingStock", "ACF4650", FREIGHT, 4),
 	minecartPS2_4750("ItemRollingStock", "PS2_4750", FREIGHT, 4),
+	minecartGATC4180Airslide("ItemRollingStock", "Airslide_phase_1b", FREIGHT, 4),
 
 	minecart60centerbeam("ItemRollingStock", "60centerbeam", FREIGHT, 3),
 	minecart66centerbeam("ItemRollingStock", "66centerbeam", FREIGHT, 3),
@@ -722,9 +735,12 @@ public enum ItemIDs {
 	minecartReefer64("ItemRollingStock", "Reefer64", FREIGHT, 5),
 	minecartFNCC50Foot("ItemRollingStock", "FNCC50Foot", FREIGHT, 4),
 	minecartGN40("ItemRollingStock", "gn40", FREIGHT, 3),
-	minecartR70Reefer("ItemRollingStock", "r70", FREIGHT, 5),
+	minecartR70Reefer("ItemRollingStock", "r70", FREIGHT, 4),
+	minecartR70Reefer2("ItemRollingStock", "r70_2", FREIGHT, 4),
 	minecartNSCchildHUH("ItemRollingStock", "NSC_3294_mechanical_reefer", FREIGHT, 2),
-	minecartPCF6033("ItemRollingStock", "6033_Icon", FREIGHT, 4),
+	minecartPCF6033("ItemRollingStock", "6033_Icon", FREIGHT, 5),
+	minecartPCF_RBL_Smooth("ItemRollingStock", "PCF_RBL_smooth_side_plug_door", FREIGHT, 4),
+	minecartPCF_RBL_Ribbed("ItemRollingStock", "PCF_RBL_Exterior_post_plug_door", FREIGHT, 4),
 	minecartACFRailbox("ItemRollingStock", "ACFRailbox", FREIGHT, 5),
 	minecartACFRailboxCushioned("ItemRollingStock", "ACFRailboxCushioned", FREIGHT, 5),
 
@@ -743,10 +759,11 @@ public enum ItemIDs {
 
 	minecart11000DOT111("ItemRollingStock", "11000DOT", FREIGHT, 4),
 	minecart20600DOT111("ItemRollingStock", "20600DOT", FREIGHT, 5),
-	minecart29080DOT111("ItemRollingStock", "29080DOT", FREIGHT, 6),
+	minecart29080DOT111("ItemRollingStock", "29080DOT", FREIGHT, 5),
 	minecart17600DOT111("ItemRollingStock", "17600DOT", FREIGHT, 4),
 	minecartNATX30600("ItemRollingStock", "natx30600", FREIGHT, 5),
 	minecartgatc10000("ItemRollingStock", "gatc10000", FREIGHT, 3),
+	minecartDUPX39200("ItemRollingStock", "dupx39200", FREIGHT, 6),
 
 	minecartCoffinCar("ItemRollingStock", "CoffinCar", FREIGHT, 1),
 	minecartSkeletonLogCar("ItemRollingStock", "Skeleton", FREIGHT, 1),
@@ -884,6 +901,7 @@ public enum ItemIDs {
 	minecartHBC1Ccaboose("ItemRollingStock", "HBC1C", BOOSE,3),
 	minecartHBC1Bcaboose("ItemRollingStock", "HBC1B", BOOSE,3),
 	minecartDRGWCaboose("ItemRollingStock", "DRGW_01400_series_caboose", BOOSE,3),
+	minecartICC_Bobber("ItemRollingStock", "icc_bobber_icon", BOOSE,100),
 	minecartICCBaywindowWP("ItemRollingStock", "wp_iccbaywindow_icon", BOOSE,3),
 	minecartCA11("ItemRollingStock", "hop_on_paint_dot_net", BOOSE,3),
 	minecartWPShops600Series("ItemRollingStock", "wp648680_series_icon", BOOSE,3),

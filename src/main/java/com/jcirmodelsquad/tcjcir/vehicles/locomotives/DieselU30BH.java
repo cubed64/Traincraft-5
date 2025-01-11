@@ -20,6 +20,9 @@ public class DieselU30BH extends DieselTrain {
         textureDescriptionMap.put(0, "Northern Cascades Transit Authority (NOCTA)");
         textureDescriptionMap.put(1, "Blandsville Area Rapid Transporation (BlART)");
         textureDescriptionMap.put(2, "SteamPunk Rail");
+        textureDescriptionMap.put(3, "CRL");
+        textureDescriptionMap.put(4, "CRL (70s)");
+        textureDescriptionMap.put(5, "CRL (80s-90s)");
     }
     public DieselU30BH(World world, double d, double d1, double d2){
         this(world);
