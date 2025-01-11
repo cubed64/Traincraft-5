@@ -1480,11 +1480,11 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 		bodyModel[330].setRotationPoint(-51F, -9F, -3.5F);
 
 		bodyModel[331].addShapeBox(0F, 0F, 0.5F, 36, 1, 19, 0F,0F, 0F, 0F, -18F, 0F, 0F, -18F, 0F, -9.4F, 0F, 0F, -9.4F, 0F, 0F, 0F, -18F, 0F, 0F, -18F, 0F, -9.4F, 0F, 0F, -9.4F); // Box 547
-		bodyModel[331].setRotationPoint(27F, -23.37F, 1F);
+		bodyModel[331].setRotationPoint(27F, -23.38F, 1F);
 		bodyModel[331].rotateAngleX = -0.13613568F;
 
 		bodyModel[332].addShapeBox(0F, 0F, -19.5F, 36, 1, 19, 0F,0F, 0F, -9.4F, -18F, 0F, -9.4F, -18F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -9.4F, -18F, 0F, -9.4F, -18F, 0F, 0F, 0F, 0F, 0F); // Box 345
-		bodyModel[332].setRotationPoint(27F, -23.37F, -1F);
+		bodyModel[332].setRotationPoint(27F, -23.38F, -1F);
 		bodyModel[332].rotateAngleX = 0.13613568F;
 
 		bodyModel[333].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 339 glow markerlight crl

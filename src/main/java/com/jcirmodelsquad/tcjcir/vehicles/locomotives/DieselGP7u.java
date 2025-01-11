@@ -24,6 +24,7 @@ public class DieselGP7u extends DieselTrain {
         textureDescriptionMap.put(4, "Avanste Northeastern (Yard)");
         textureDescriptionMap.put(5, "Fox Union Rail Resources (FURRX)");
         textureDescriptionMap.put(6, "OC&G 15");
+        textureDescriptionMap.put(7, "FNCC 210-213");
 
     }
     public DieselGP7u(World world, double d, double d1, double d2){

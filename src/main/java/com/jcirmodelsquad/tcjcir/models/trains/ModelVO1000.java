@@ -9,17 +9,13 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
-
-import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeA;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeAnew;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
-import train.client.render.models.ModelTypeAClassico;
 import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.library.Info;
@@ -1099,9 +1095,6 @@ public class ModelVO1000 extends ModelConverter //Same as Filename
 		bodyModel[262].addBox(0F, 0F, 0F, 1, 4, 4, 0F); // Box 70
 		bodyModel[262].setRotationPoint(18.5F, -12F, 2F);
 	}
-
-	//ModelTypeA theTrucks = new ModelTypeA();
-	ModelTypeAClassico theTrucks = new ModelTypeAClassico();
 	ModelTypeAnew theTypeA = new ModelTypeAnew();
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
@@ -1109,19 +1102,16 @@ public class ModelVO1000 extends ModelConverter //Same as Filename
 		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity ,f5);
 
 		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==15){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/typeAclassico_Silver.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/TypeA_new_silvers_rolly.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslatef(-1.15F ,-0.1F,0F);
-			//GL11.glScalef(0.9f,0.9f,0.8f);
-			theTrucks.render(entity,f,f1,f2,f3,f4,f5);
-			GL11.glPopMatrix();
+			GL11.glTranslated(-1.155, -0.1, 0);
+			theTypeA.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glPushMatrix();
-			GL11.glTranslated(1.1F,-0.10F,0);
-			theTrucks.render(entity,f,f1,f2,f3,f4,f5);
+			GL11.glTranslated(2.25, 0, 0);
+			theTypeA.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/TypeA_new_Black_fric.png"));
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1634) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/TypeA_new_Black_rolly.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.155, -0.1, 0);
 			theTypeA.render(entity, f, f1, f2, f3, f4, f5);
@@ -1130,20 +1120,14 @@ public class ModelVO1000 extends ModelConverter //Same as Filename
 			theTypeA.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/typeAclassico_Black.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/TypeA_new_Black_fric.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslatef(-1.15F ,-0.1F,0F);
-			//GL11.glScalef(0.9f,0.9f,0.8f);
-			theTrucks.render(entity,f,f1,f2,f3,f4,f5);
-			GL11.glPopMatrix();
+			GL11.glTranslated(-1.155, -0.1, 0);
+			theTypeA.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glPushMatrix();
-			GL11.glTranslated(1.1F,-0.10F,0);
-			theTrucks.render(entity,f,f1,f2,f3,f4,f5);
+			GL11.glTranslated(2.25, 0, 0);
+			theTypeA.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		}
 	}
-
-
-	public ModelRendererTurbo ModelVO1000[];
 }

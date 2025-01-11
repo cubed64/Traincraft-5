@@ -20,6 +20,7 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -308,8 +309,13 @@ public class ModelSquanderbackTender extends ModelConverter //Same as Filename
 				m.render(f5);
 			}
 		}
-		//vanderback_truck
-		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/FrictionTruck_Greyish_small.png"));
+
+		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==2){
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/FrictionTruck_CDCS.png"));
+		} else {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/FrictionTruck_Greyish_small.png"));
+		}
+
 		GL11.glPushMatrix();
 		GL11.glTranslatef(-0.8F, 0.0F, 0F);
 		wheel3.render(entity, f, f1, f2, f3, f4, f5);

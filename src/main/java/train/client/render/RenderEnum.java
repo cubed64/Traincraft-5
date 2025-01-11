@@ -178,7 +178,7 @@ public enum RenderEnum
 	}, "", null, 0, false),
 	locoSD40(EntityLocoDieselSD40.class, new com.jcirmodelsquad.tcjcir.models.trains.ModelSD40heritage(), "locoSD40_", true, new float[] { -1.2F, -0.47F, 0.0F }, new float[] { 180F, 90F, 0F }, new float[] { -1F, -1F, 1F }, "smoke", 5, new ArrayList<double[]>() {
 		{
-			add(new double[]{2.055D, 1.4D, 0.0D});
+			add(new double[]{1.45D, 1.45D, 0.0D});
 		}
 	}, "", null, 0, false),
 	locoSD70(EntityLocoDieselSD70.class, new ModelSD70(), "locoSD70_", true, new float[] { -1.2F, -0.44F, 0.0F }, new float[] { 0F, 90F, 0F }, null, "smoke", 5, new ArrayList<double[]>() {
@@ -738,7 +738,7 @@ public enum RenderEnum
 		}
 	}, 2, true),
 
-	F01(SteamF01.class, new ModelF01(), "F01_texture", false, new float[] {-1.25F, 0.15F, 0.00F}, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
+	F01(SteamF01.class, new ModelF01(), "F01_texture_", true, new float[] {-1.25F, 0.15F, 0.00F}, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
 		{
 			add(new double[] {2.2D, 1.4D, 0.0D});
 		}
