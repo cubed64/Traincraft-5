@@ -162,6 +162,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	
 	private double derailSpeed = 0.46;
 	private int scrollPosition;
+	public TileTCRail lastTrack=null;
 
 	public JsonObject renderRefs = new JsonObject();
 	/**
@@ -1139,7 +1140,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			 //double derailSpeed = 0;//0.46;
 			 //System.out.println(d13);
 			 if(bogieLoco != null) {
-				 if (!bogieLoco.isOnRail()) {
+				 if (! bogieLoco.isOnRail()) {
 					 derailSpeed = 0;
 					 this.unLink();
 				 }

@@ -1,15 +1,21 @@
 package train.common.api.pathfinding;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockAir;
 import net.minecraft.block.BlockRailBase;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.MathHelper;
+import net.minecraft.world.World;
 import train.common.blocks.BlockTCRail;
 import train.common.blocks.BlockTCRailGag;
+import train.common.library.BlockIDs;
 import train.common.library.EnumTracks;
 import train.common.tile.TileTCRail;
 
 import java.util.List;
+
+import static train.common.core.util.TraincraftUtil.isRailBlockAt;
 
 /**Meant to simplifying updates for path finding by having a single dedicated location for shared path finding calculations
  *
@@ -163,6 +169,64 @@ public class PathFindingHelper
                 }
             }
         }
+        return false;
+    }
+
+    /** Used to determine if the bogie is currently on the rail
+     *
+     * @param entityMinecart
+     * @param worldObj
+     * @param isDerail
+     * @return
+     */
+    public boolean isOnRail(EntityMinecart entityMinecart, World worldObj, boolean isDerail)
+    {
+        if(isDerail)
+        {
+            return false;
+        }
+        int i = MathHelper.floor_double(entityMinecart.posX);
+        int j = MathHelper.floor_double(entityMinecart.posY);
+        int k = MathHelper.floor_double(entityMinecart.posZ);
+
+        if (isRailBlockAt(worldObj, i, j - 1, k)
+                || worldObj.getBlock(i, j - 1, k) == BlockIDs.tcRail.block
+                || worldObj.getBlock(i, j - 1, k) == BlockIDs.tcRailGag.block)
+        {
+            j--;
+        }
+        else if (isRailBlockAt(worldObj, i, j + 1, k)
+                || worldObj.getBlock(i, j + 1, k) == BlockIDs.tcRail.block
+                || worldObj.getBlock(i, j + 1, k) == BlockIDs.tcRailGag.block)
+        {
+            j++;
+        }
+        Block block = worldObj.getBlock(i, j, k);
+        if (BlockRailBase.func_150051_a(block) || block == BlockIDs.tcRail.block || block == BlockIDs.tcRailGag.block)
+        {
+            return true;
+        }/* this is test/in-dev anti-derailment code.
+		Vec3f closest = null;
+		double dist = Double.MAX_VALUE;
+		for(int a = -1; a<2;a++) {
+			for(int c = -1;c<2;c++) {
+				if (isRailBlockAt(worldObj, i+a, j, k+c) || worldObj.getBlock(i+a, j, k+c) == BlockIDs.tcRail.block || worldObj.getBlock(i+a, j, k+c) == BlockIDs.tcRailGag.block) {
+					if (closest == null) {
+						closest = new Vec3f(i+a,j,k+c);
+						dist = Math.sqrt(Math.pow(closest.xCoord-posX,2)+Math.pow(closest.zCoord-posZ,2));
+					} else {
+						double tdist = Math.sqrt(Math.pow((i+a)-posX,2)+Math.pow((k+c)-posZ,2));
+						if (tdist < dist) {
+							dist = tdist;
+						}
+					}
+				}
+			}
+		}
+		if (closest != null) {
+			this.setPosition( closest.xCoord, closest.yCoord, closest.zCoord);
+			return true;
+		}*/
         return false;
     }
 }

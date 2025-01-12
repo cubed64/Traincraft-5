@@ -240,27 +240,29 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 			entityMainTrain.motionZ = 0;
 		}
 		}*/
-		if(!this.isOnRail() && (this.entityMainTrain.motionX != 0 || this.entityMainTrain.motionZ != 0)){
+		if(!pathFindingHelper.isOnRail(this, worldObj, isDerail) && (this.entityMainTrain.motionX != 0 || this.entityMainTrain.motionZ != 0)){
 			//this.setPosition(prevX, this.posY, prevZ);
 			this.isDerail = true;
 		}
 	}
 	
 	private boolean isDerail = false;
-	public boolean isOnRail(){
-		if(isDerail) {
-			return false;
-		}
-		
-		int i = MathHelper.floor_double(this.posX);
-		int j = MathHelper.floor_double(this.posY);
-		int k = MathHelper.floor_double(this.posZ);
-		
-		if(this.worldObj.isAirBlock(i, j, k)) {
-			j--;
-		}
-		Block block = this.worldObj.getBlock(i, j, k);
-		return (BlockRailBase.func_150051_a(block) || block == BlockIDs.tcRail.block || block == BlockIDs.tcRailGag.block);
+	public boolean isOnRail()
+	{
+		return pathFindingHelper.isOnRail(this, worldObj, isDerail);
+		//if(isDerail) {
+		//	return false;
+		//}
+		//
+		//int i = MathHelper.floor_double(this.posX);
+		//int j = MathHelper.floor_double(this.posY);
+		//int k = MathHelper.floor_double(this.posZ);
+		//
+		//if(this.worldObj.isAirBlock(i, j, k)) {
+		//	j--;
+		//}
+		//Block block = this.worldObj.getBlock(i, j, k);
+		//return (BlockRailBase.func_150051_a(block) || block == BlockIDs.tcRail.block || block == BlockIDs.tcRailGag.block);
 	}
 
 	@Override
