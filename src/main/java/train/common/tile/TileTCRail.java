@@ -102,16 +102,20 @@ public class TileTCRail extends TileEntity {
 			switch (EnumTracks.valueOf(getType()))
 			{
 				case VERY_LONG_DIAGONAL_STRAIGHT:
+				case EMBEDDED_VERY_LONG_DIAGONAL_STRAIGHT:
 					railLength = new BigDecimal(12);
 					break;
 				case LONG_DIAGONAL_STRAIGHT:
+				case EMBEDDED_LONG_DIAGONAL_STRAIGHT:
 					railLength = new BigDecimal(6);
 					break;
 
 				case MEDIUM_DIAGONAL_STRAIGHT:
+				case EMBEDDED_MEDIUM_DIAGONAL_STRAIGHT:
 					railLength = new BigDecimal(3);
 					break;
 				case SMALL_DIAGONAL_STRAIGHT:
+				case EMBEDDED_SMALL_DIAGONAL_STRAIGHT:
 					railLength = new BigDecimal(1);
 					break;
                 default:
