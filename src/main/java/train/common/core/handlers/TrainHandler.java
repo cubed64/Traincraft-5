@@ -51,4 +51,11 @@ public class TrainHandler {
 	public int getTrainPower() {
 		return trainPower;
 	}
+
+	public boolean hasLocomotive() {
+		if (this == null) { //train is null when there is nothing coupled to the stock
+			return false;
+		}
+		return (this.getTrainPower() != 0);
+	}
 }

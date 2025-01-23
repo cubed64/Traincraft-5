@@ -5,6 +5,8 @@ import cpw.mods.fml.common.registry.IEntityAdditionalSpawnData;
 import io.netty.buffer.ByteBuf;
 import mods.railcraft.api.carts.IMinecart;
 import mods.railcraft.api.carts.IRoutableCart;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockAir;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.item.EntityMinecart;
@@ -27,6 +29,8 @@ import train.client.gui.GuiTCTextField;
 import train.client.render.RenderEnum;
 import train.common.Traincraft;
 import train.common.adminbook.ItemAdminBook;
+import train.common.blocks.BlockTCRail;
+import train.common.blocks.BlockTCRailGag;
 import train.common.core.handlers.ConfigHandler;
 import train.common.core.handlers.TrainHandler;
 import train.common.entity.CargoManager;
@@ -36,6 +40,8 @@ import train.common.items.ItemRollingStock;
 import train.common.items.ItemWrench;
 import train.common.library.EnumTrains;
 import train.common.overlaytexture.OverlayTextureManager;
+import train.common.tile.TileTCRail;
+import train.common.tile.TileTCRailGag;
 
 import java.util.*;
 
@@ -216,6 +222,37 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 				}
 			}
 		}
+	}
+
+	public int numCarsOnSlope() {
+		int count = 0;
+		if (trainHandler == null) {
+			return 1;
+		}
+		for(EntityRollingStock entity: trainHandler.getTrains())
+		{
+			int floorX = (int) Math.floor(entity.posX);
+			int floorY = (int) Math.floor(entity.posY);
+			int floorZ = (int) Math.floor(entity.posZ);
+			Block block = worldObj.getBlock(floorX, floorY, floorZ);
+			TileTCRail tile = null;
+			if (block instanceof BlockAir) {
+				floorY--;
+				block = worldObj.getBlock(floorX, floorY, floorZ);
+			}
+			if (block instanceof BlockTCRail) {
+				tile = (TileTCRail) worldObj.getTileEntity(floorX, floorY, floorZ);
+			} else if (block instanceof BlockTCRailGag) {
+				TileTCRailGag tileGag = (TileTCRailGag) worldObj.getTileEntity(floorX, floorY, floorZ);
+				if (worldObj.getTileEntity(tileGag.originX, tileGag.originY, tileGag.originZ) instanceof TileTCRail) {
+					tile = (TileTCRail) worldObj.getTileEntity(tileGag.originX, tileGag.originY, tileGag.originZ);
+				}
+			}
+			if (tile != null && tile.slopeAngle != 0) {
+				count++;
+			}
+		}
+		return count;
 	}
 
 	public AbstractTrains(World world, double x, double y, double z){

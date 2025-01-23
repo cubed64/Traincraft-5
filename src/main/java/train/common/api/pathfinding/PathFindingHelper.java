@@ -7,8 +7,12 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import train.common.api.AbstractTrains;
+import train.common.api.EntityRollingStock;
+import train.common.api.Locomotive;
 import train.common.blocks.BlockTCRail;
 import train.common.blocks.BlockTCRailGag;
+import train.common.core.handlers.ConfigHandler;
 import train.common.library.BlockIDs;
 import train.common.library.EnumTracks;
 import train.common.tile.TileTCRail;
@@ -125,6 +129,41 @@ public class PathFindingHelper
         entityMinecart.posZ = (entityMinecart.boundingBox.minZ + entityMinecart.boundingBox.maxZ) / 2.0D;
     }
 
+    public void moveOnTCSlope(EntityMinecart abstractTrains, int posY, double posX, double posZ, double slopeAngle, double slopeHeight, int meta)
+    {
+        if (meta == 2) {
+            posZ ++;
+        }
+        if (meta == 1) {
+            posX ++;
+        }
+        double normalizedSpeed = Math.sqrt(abstractTrains.motionX * abstractTrains.motionX + abstractTrains.motionZ * abstractTrains.motionZ);
+
+        if (meta == 2 || meta == 0) {
+            abstractTrains.setPosition(posX + 0.5D, Math.abs(posY + (Math.tan(slopeAngle * Math.abs(posZ - abstractTrains.posZ))) + abstractTrains.yOffset + 0.3), abstractTrains.posZ);
+            abstractTrains.boundingBox.offset(0, 0, Math.copySign(normalizedSpeed, abstractTrains.motionZ));
+        }
+        else if (meta == 1 || meta == 3) {
+            abstractTrains.setPosition(abstractTrains.posX, (posY + (Math.tan(slopeAngle * Math.abs(posX - abstractTrains.posX))) + abstractTrains.yOffset + 0.3), posZ + 0.5D);
+            abstractTrains.boundingBox.offset(Math.copySign(normalizedSpeed, abstractTrains.motionX), 0, 0);
+        } else {
+            return;
+        }
+        abstractTrains.posX = (abstractTrains.boundingBox.minX + abstractTrains.boundingBox.maxX) / 2.0D;
+        abstractTrains.posY = abstractTrains.boundingBox.minY + (double) abstractTrains.yOffset - (double) abstractTrains.ySize;
+        abstractTrains.posZ = (abstractTrains.boundingBox.minZ + abstractTrains.boundingBox.maxZ) / 2.0D;
+        normalizedSpeed = getSlopeAdjustedSpeed((AbstractTrains) abstractTrains, normalizedSpeed, slopeAngle);
+        if (meta == 2 || meta == 0) {
+            abstractTrains.motionX = 0.0D;
+            abstractTrains.motionY = 0.0D;
+            abstractTrains.motionZ = Math.copySign(normalizedSpeed, abstractTrains.motionZ);
+        } else {
+            abstractTrains.motionX = Math.copySign(normalizedSpeed, abstractTrains.motionX);
+            abstractTrains.motionY = 0.0D;
+            abstractTrains.motionZ = 0.0D;
+        }
+    }
+
     public boolean shouldIgnoreSwitch(EntityMinecart entityMinecart, TileTCRail tile, int i, int j, int k, int meta) {
         if (tile != null
                 && (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_TURN.getLabel())
@@ -228,5 +267,44 @@ public class PathFindingHelper
 			return true;
 		}*/
         return false;
+    }
+
+    public double getSlopeAdjustedSpeed(AbstractTrains abstractTrains, double normalizedSpeed, double slopeAngle) {
+            if (abstractTrains instanceof Locomotive && !((Locomotive) abstractTrains).canBePulled) { //make this speedup only happen twice a second
+                if (abstractTrains.ticksExisted % 10 == 0) {
+                    int carsPulled = numCarsTotal(abstractTrains);
+                    carsPulled--; //locomotive counting as two entities?
+                    int carsOnSlope = abstractTrains.numCarsOnSlope();
+                    if ((abstractTrains.posY - abstractTrains.prevPosY < 0)) {
+                        normalizedSpeed *= (((double) carsOnSlope / carsPulled) * (slopeAngle)) + abstractTrains.getDragAir();
+                    } else if ((abstractTrains.posY - abstractTrains.prevPosY) > 0.013) {//0.013 to account for the jank that happens when over slopes back to back.
+                        normalizedSpeed *= 1 - (((double) carsOnSlope / carsPulled) * slopeAngle);
+                        if (normalizedSpeed - 0.001 <= 0) {
+                            normalizedSpeed = -0.001;
+                        }
+                    }
+                }
+            } else if (!abstractTrains.trainHandler.hasLocomotive()) { //traincars. is a bit jumpy but doesn't seem to derail
+                if ((abstractTrains.posY - abstractTrains.prevPosY) < 0) {
+                    if (slopeAngle < 0.05) {
+                        normalizedSpeed *= abstractTrains.getDragAir() + (slopeAngle * 2.7);
+
+                    } else {
+                        normalizedSpeed *= abstractTrains.getDragAir() + (slopeAngle * 2);
+                    }
+                } else if ((abstractTrains.posY - abstractTrains.prevPosY) > 0.013) {
+                    normalizedSpeed *= (0.98 - (slopeAngle));
+                }
+            }
+        return normalizedSpeed;
+    }
+
+    private int numCarsTotal(AbstractTrains abstractTrains)
+    {
+        if (abstractTrains.trainHandler == null)
+        { //train is null when there is nothing coupled to the stock
+            return 2;
+        }
+        return abstractTrains.trainHandler.getTrains().size();
     }
 }
