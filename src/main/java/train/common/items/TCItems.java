@@ -73,18 +73,29 @@ public class TCItems {
 		ItemIDs.composite_wrench.item = new ItemWrench();
 
 		/**Tracks*/
+
+
+		ItemIDs.tcRailSmallStraight.item = new ItemTCRail(EnumTracks.SMALL_STRAIGHT);
+		ItemIDs.tcRailMediumStraight.item = new ItemTCRail(EnumTracks.MEDIUM_STRAIGHT);
+		ItemIDs.tcRailLongStraight.item = new ItemTCRail(EnumTracks.LONG_STRAIGHT);
+		ItemIDs.tcRailVeryLongStraight.item = new ItemTCRail(EnumTracks.VERY_LONG_STRAIGHT);
+
+		ItemIDs.tcRail1X1Turn.item = new ItemTCRail(EnumTracks.TURN_1X1);
 		ItemIDs.tcRailMediumTurn.item = new ItemTCRail(EnumTracks.MEDIUM_TURN);
 		ItemIDs.tcRailLargeTurn.item = new ItemTCRail(EnumTracks.LARGE_TURN);
 		ItemIDs.tcRailVeryLargeTurn.item = new ItemTCRail(EnumTracks.VERY_LARGE_TURN);
-		ItemIDs.tcRailLongStraight.item = new ItemTCRail(EnumTracks.LONG_STRAIGHT);
-		ItemIDs.tcRailMediumStraight.item = new ItemTCRail(EnumTracks.MEDIUM_STRAIGHT);
-		ItemIDs.tcRailSmallStraight.item = new ItemTCRail(EnumTracks.SMALL_STRAIGHT);
+		ItemIDs.tcRailSuperLargeTurn.item = new ItemTCRail(EnumTracks.SUPER_LARGE_TURN);
+		ItemIDs.tcRail29X29Turn.item = new ItemTCRail(EnumTracks.TURN_29X29);
+		ItemIDs.tcRail32X32Turn.item = new ItemTCRail(EnumTracks.TURN_32X32);
+
 		ItemIDs.tcRailMediumSwitch.item = new ItemTCRail(EnumTracks.MEDIUM_SWITCH);
 		ItemIDs.tcRailLargeSwitch.item = new ItemTCRail(EnumTracks.LARGE_SWITCH);
 		ItemIDs.tcRailSmallRoadCrossing.item = new ItemTCRail(EnumTracks.SMALL_ROAD_CROSSING);
 		ItemIDs.tcRailSmallRoadCrossing1.item = new ItemTCRail(EnumTracks.SMALL_ROAD_CROSSING_1);
 		ItemIDs.tcRailSmallRoadCrossing2.item = new ItemTCRail(EnumTracks.SMALL_ROAD_CROSSING_2);
+
 		ItemIDs.tcRailMediumParallelSwitch.item = new ItemTCRail(EnumTracks.MEDIUM_PARALLEL_SWITCH);
+		ItemIDs.tcRailLargeParallelSwitch.item = new ItemTCRail(EnumTracks.LARGE_PARALLEL_SWITCH);
 
 		/* Normal Crossways*/
 		ItemIDs.tcRailTwoWaysCrossing.item = new ItemTCRail(EnumTracks.TWO_WAYS_CROSSING);
@@ -103,11 +114,11 @@ public class TCItems {
 		ItemIDs.tcRailLarge45DegreeSwitch.item = new ItemTCRail(EnumTracks.LARGE_45DEGREE_SWITCH);
 
 		/* Embedded Switches*/
-		////ItemIDs.tcRailEmbeddedMediumSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_MEDIUM_SWITCH);
-		////ItemIDs.tcRailEmbeddedLargeSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_SWITCH);
-		//ItemIDs.tcRailEmbeddedVeryLargeSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_VERY_LARGE_SWITCH);
-		//ItemIDs.tcRailEmbeddedMediumParallelSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_MEDIUM_PARALLEL_SWITCH);
-		//ItemIDs.tcRailEmbeddedLargeParallelSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_PARALLEL_SWITCH);
+		ItemIDs.tcRailEmbeddedMediumSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_MEDIUM_SWITCH);
+		ItemIDs.tcRailEmbeddedLargeSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_SWITCH);
+		ItemIDs.tcRailEmbeddedVeryLargeSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_VERY_LARGE_SWITCH);
+		ItemIDs.tcRailEmbeddedMediumParallelSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_MEDIUM_PARALLEL_SWITCH);
+		ItemIDs.tcRailEmbeddedLargeParallelSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_PARALLEL_SWITCH);
 		ItemIDs.tcRailEmbeddedMedium45DegreeSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_MEDIUM_45DEGREE_SWITCH);
 		ItemIDs.tcRailEmbeddedLarge45DegreeSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_45DEGREE_SWITCH);
 
@@ -131,11 +142,11 @@ public class TCItems {
 		ItemIDs.tcRailVeryLargeSlopePeaGravel.item = new ItemTCRail(EnumTracks.VERY_LARGE_SLOPE_PEA_GRAVEL);
 		ItemIDs.tcRailVeryLargeSlopeDynamic.item = new ItemTCRail(EnumTracks.VERY_LARGE_SLOPE_DYNAMIC);
 
-		ItemIDs.tcRailSuperLargeTurn.item = new ItemTCRail(EnumTracks.SUPER_LARGE_TURN);
-		ItemIDs.tcRailVeryLongStraight.item = new ItemTCRail(EnumTracks.VERY_LONG_STRAIGHT);
+
 		ItemIDs.tcRailSmallParallelCurve.item = new ItemTCRail(EnumTracks.SMALL_PARALLEL_CURVE);
 		ItemIDs.tcRailMediumParallelCurve.item = new ItemTCRail(EnumTracks.MEDIUM_PARALLEL_CURVE);
 		ItemIDs.tcRailLargeParallelCurve.item = new ItemTCRail(EnumTracks.LARGE_PARALLEL_CURVE);
+		ItemIDs.tcRail20x2SCurve.item = new ItemTCRail(EnumTracks.S_CURVE_20x2);
 
 		/*Embedded Straights*/
 		ItemIDs.tcRailEmbeddedSmallStraight.item = new ItemTCRail(EnumTracks.EMBEDDED_SMALL_STRAIGHT);
@@ -147,17 +158,24 @@ public class TCItems {
 		ItemIDs.tcRailEmbeddedSmallParallelCurve.item = new ItemTCRail(EnumTracks.EMBEDDED_SMALL_PARALLEL_CURVE);
 		ItemIDs.tcRailEmbeddedMediumParallelCurve.item = new ItemTCRail(EnumTracks.EMBEDDED_MEDIUM_PARALLEL_CURVE);
 		ItemIDs.tcRailEmbeddedLargeParallelCurve.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_PARALLEL_CURVE);
+		ItemIDs.tcRailEmbedded20x2SCurve.item = new ItemTCRail(EnumTracks.EMBEDDED_S_CURVE_20x2);
 
+		/* Embedded Turns */
+		ItemIDs.tcRailEmbedded1X1Turn.item = new ItemTCRail(EnumTracks.EMBEDDED_TURN_1X1);
 		ItemIDs.tcRailEmbeddedMediumTurn.item = new ItemTCRail(EnumTracks.EMBEDDED_MEDIUM_TURN);
 		ItemIDs.tcRailEmbeddedLargeTurn.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_TURN);
 		ItemIDs.tcRailEmbeddedVeryLargeTurn.item = new ItemTCRail(EnumTracks.EMBEDDED_VERY_LARGE_TURN);
 		ItemIDs.tcRailEmbeddedSuperLargeTurn.item = new ItemTCRail(EnumTracks.EMBEDDED_SUPER_LARGE_TURN);
+		ItemIDs.tcRailEmbedded29X29Turn.item = new ItemTCRail(EnumTracks.EMBEDDED_TURN_29X29);
+		ItemIDs.tcRailEmbedded32X32Turn.item = new ItemTCRail(EnumTracks.EMBEDDED_TURN_32X32);
 
 		/*Normal 45Degree Turns*/
 		ItemIDs.tcRailMedium45DegreeTurn.item = new ItemTCRail(EnumTracks.MEDIUM_45DEGREE_TURN);
 		ItemIDs.tcRailLarge45DegreeTurn.item = new ItemTCRail(EnumTracks.LARGE_45DEGREE_TURN);
 		ItemIDs.tcRailVeryLarge45DegreeTurn.item = new ItemTCRail(EnumTracks.VERY_LARGE_45DEGREE_TURN);
 		ItemIDs.tcRailSuperLarge45DegreeTurn.item = new ItemTCRail(EnumTracks.SUPER_LARGE_45DEGREE_TURN);
+		ItemIDs.tcRail45DegreeTurn9x20.item = new ItemTCRail(EnumTracks.DIAGONAL_TURN_9X20);
+		ItemIDs.tcRail45DegreeTurn10x22.item = new ItemTCRail(EnumTracks.DIAGONAL_TURN_10X22);
 
 
 		/*Embedded 45Degree Turns*/
@@ -165,6 +183,8 @@ public class TCItems {
 		ItemIDs.tcRailEmbeddedLarge45DegreeTurn.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_45DEGREE_TURN);
 		ItemIDs.tcRailEmbeddedVeryLarge45DegreeTurn.item = new ItemTCRail(EnumTracks.EMBEDDED_VERY_LARGE_45DEGREE_TURN);
 		ItemIDs.tcRailEmbeddedSuperLarge45DegreeTurn.item = new ItemTCRail(EnumTracks.EMBEDDED_SUPER_LARGE_45DEGREE_TURN);
+		ItemIDs.tcRailEmbedded45DegreeTurn9x20.item = new ItemTCRail(EnumTracks.EMBEDDED_DIAGONAL_TURN_9X20);
+		ItemIDs.tcRailEmbedded45DegreeTurn10x22.item = new ItemTCRail(EnumTracks.EMBEDDED_DIAGONAL_TURN_10X22);
 
 		/* Embedded Slopes*/
 		ItemIDs.tcRailEmbeddedSlopeDynamic.item = new ItemTCRail(EnumTracks.EMBEDDED_SLOPE_DYNAMIC);

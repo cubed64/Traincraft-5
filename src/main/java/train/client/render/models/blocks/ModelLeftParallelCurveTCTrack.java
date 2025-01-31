@@ -6,6 +6,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.ResourceLocation;
 
+import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.common.enums.TrackResourceLocations;
@@ -19,16 +20,19 @@ public class ModelLeftParallelCurveTCTrack extends ModelBase {
     private IModelCustom modelSmallLeftParallelCurve;
     private IModelCustom modelMediumLeftParallelCurve;
     private IModelCustom modelLargeLeftParallelCurve;
+    private IModelCustom model20x2SCurveLeft;
 
     public ModelLeftParallelCurveTCTrack() {
         modelSmallLeftParallelCurve = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_parallel_s_left.obj"));
         modelMediumLeftParallelCurve = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_parallel_m_left.obj"));
         modelLargeLeftParallelCurve = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_parallel_l_left.obj"));
+        model20x2SCurveLeft = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "20x2_s_curve_left.obj"));
     }
 
     public void renderSmall() {modelSmallLeftParallelCurve.renderAll();}
     public void renderMedium() {modelMediumLeftParallelCurve.renderAll();}
     public void renderLarge() {modelLargeLeftParallelCurve.renderAll();}
+    public void render20x2() {model20x2SCurveLeft.renderAll();}
 
     public void render(String type, TileTCRail tcRail, double x, double y, double z) {
         int facing = tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord);
@@ -87,6 +91,9 @@ public class ModelLeftParallelCurveTCTrack extends ModelBase {
                 break;
             case "large":
                 this.renderLarge();
+                break;
+            case "20x2":
+                this.render20x2();
                 break;
         }
 

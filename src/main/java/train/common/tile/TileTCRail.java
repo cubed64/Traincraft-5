@@ -87,7 +87,7 @@ public class TileTCRail extends TileEntity {
 	{
 		if (railType == null)
 		{
-			railType = EnumTracks.valueOf(getType()).getRailType();
+			railType = EnumTracks.GetTrackByLabel(getType()).getRailType();
 		}
 
 		return railType;
@@ -144,13 +144,17 @@ public class TileTCRail extends TileEntity {
 	}
 
 	private EnumTracks renderType = null;
-	public EnumTracks getTrackType(){
-		if (renderType == null){
-			if(hasModel && getType() != null){
-				for(EnumTracks rail : EnumTracks.values()){
-					if (rail.getLabel().equals(getType())){
-						renderType = rail;
-					}
+	public EnumTracks getTrackType()
+	{
+		if (renderType == null)
+		{
+			if(hasModel && getType() != null)
+			{
+				EnumTracks temp = EnumTracks.GetTrackByLabel(getType());
+
+				if (temp != null)
+				{
+					renderType = temp;
 				}
 			}
 		}

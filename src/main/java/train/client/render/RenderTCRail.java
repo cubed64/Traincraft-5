@@ -45,13 +45,99 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 			{
 				switch (railTile.getTrackType())
 				{
+					case TURN_1X1:
+					case RIGHT_TURN_1X1:
+					case EMBEDDED_TURN_1X1:
+					case EMBEDDED_RIGHT_TURN_1X1:
+					{
+						modelRightTurn.render("1x", railTile, x, y, z);
+						break;
+					}
+					case LEFT_TURN_1X1:
+					case EMBEDDED_LEFT_TURN_1X1:
+					{
+						modelLeftTurn.render("1x", railTile, x, y, z);
+						break;
+					}
 					case MEDIUM_TURN:
-					case MEDIUM_RIGHT_TURN: {
+					case MEDIUM_RIGHT_TURN:
+					case EMBEDDED_MEDIUM_TURN:
+					case EMBEDDED_MEDIUM_RIGHT_TURN:
+					{
 						modelRightTurn.render("medium", railTile, x, y, z);
 						break;
 					}
-					case MEDIUM_LEFT_TURN: {
+					case MEDIUM_LEFT_TURN:
+					case EMBEDDED_MEDIUM_LEFT_TURN:
+					{
 						modelLeftTurn.render("medium", railTile, x, y, z);
+						break;
+					}
+					case LARGE_TURN:
+					case LARGE_RIGHT_TURN:
+					case EMBEDDED_LARGE_TURN:
+					case EMBEDDED_LARGE_RIGHT_TURN:
+					{
+						modelRightTurn.render("large", railTile, x, y, z);
+						break;
+					}
+					case LARGE_LEFT_TURN:
+					case EMBEDDED_LARGE_LEFT_TURN:
+					{
+						modelLeftTurn.render("large", railTile, x, y, z);
+						break;
+					}
+					case VERY_LARGE_TURN:
+					case VERY_LARGE_RIGHT_TURN:
+					case EMBEDDED_VERY_LARGE_TURN:
+					case EMBEDDED_VERY_LARGE_RIGHT_TURN:
+					{
+						modelRightTurn.render("very_large", railTile, x, y, z);
+						break;
+					}
+					case VERY_LARGE_LEFT_TURN:
+					case EMBEDDED_VERY_LARGE_LEFT_TURN:
+					{
+						modelLeftTurn.render("very_large", railTile, x, y, z);
+						break;
+					}
+					case SUPER_LARGE_RIGHT_TURN:
+					case EMBEDDED_SUPER_LARGE_TURN:
+					case EMBEDDED_SUPER_LARGE_RIGHT_TURN:
+					{
+						modelRightTurn.render("super_large", railTile, x , y, z);
+						break;
+					}
+					case SUPER_LARGE_LEFT_TURN:
+					case EMBEDDED_SUPER_LARGE_LEFT_TURN:{
+						modelLeftTurn.render("super_large", railTile, x , y,z);
+						break;
+					}
+					case TURN_29X29:
+					case RIGHT_TURN_29X29:
+					case EMBEDDED_TURN_29X29:
+					case EMBEDDED_RIGHT_TURN_29X29:
+					{
+						modelRightTurn.render("29x", railTile, x, y, z);
+						break;
+					}
+					case EMBEDDED_LEFT_TURN_29X29:
+					case LEFT_TURN_29X29:
+					{
+						modelLeftTurn.render("29x", railTile, x, y, z);
+						break;
+					}
+					case EMBEDDED_TURN_32X32:
+					case EMBEDDED_RIGHT_TURN_32X32:
+					case TURN_32X32:
+					case RIGHT_TURN_32X32:
+					{
+						modelRightTurn.render("32x", railTile, x, y, z);
+						break;
+					}
+					case EMBEDDED_LEFT_TURN_32X32:
+					case LEFT_TURN_32X32:{
+						modelLeftTurn.render("32x", railTile, x, y, z);
 						break;
 					}
 					case MEDIUM_SWITCH:
@@ -81,24 +167,16 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 						modelLeftSwitchTurn.render("medium_parallel", railTile, x, y, z);
 						break;
 					}
-					case LARGE_TURN:
-					case LARGE_RIGHT_TURN: {
-						modelRightTurn.render("large", railTile, x, y, z);
+					case LARGE_PARALLEL_SWITCH:
+					case LARGE_RIGHT_PARALLEL_SWITCH: {
+						modelRightSwitchTurn.render("large_parallel", railTile, x, y, z);
 						break;
 					}
-					case LARGE_LEFT_TURN: {
-						modelLeftTurn.render("large", railTile, x, y, z);
+					case LARGE_LEFT_PARALLEL_SWITCH: {
+						modelLeftSwitchTurn.render("large_parallel", railTile, x, y, z);
 						break;
 					}
-					case VERY_LARGE_TURN:
-					case VERY_LARGE_RIGHT_TURN: {
-						modelRightTurn.render("very_large", railTile, x, y, z);
-						break;
-					}
-					case VERY_LARGE_LEFT_TURN: {
-						modelLeftTurn.render("very_large", railTile, x, y, z);
-						break;
-					}
+
 					case SMALL_STRAIGHT:{
 						modelSmallStraight.render("straight", railTile, x, y, z);
 						break;
@@ -271,14 +349,6 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 						modelVeryLargeSlope.render("snow", railTile, x, y, z);
 						break;
 					}
-					case SUPER_LARGE_RIGHT_TURN: {
-						modelRightTurn.render("super_large", railTile, x , y, z);
-						break;
-					}
-					case SUPER_LARGE_LEFT_TURN: {
-						modelLeftTurn.render("super_large", railTile, x , y,z);
-						break;
-					}
 					case SLOPE_PEA_GRAVEL: {
 						modelSlope.render("peagravel", railTile, x, y, z);
 						break;
@@ -316,10 +386,10 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 						modelRoadCrossing.render("crossing2", railTile, x, y, z);
 						break;
 					}
-					//case SMALL_ROAD_CROSSING_DYNAMIC:{
-					//	modelRoadCrossing.render("dynamic", railTile, x, y, z);
-					//	break;
-					//}
+					case SMALL_ROAD_CROSSING_DYNAMIC:{
+						modelRoadCrossing.render("dynamic", railTile, x, y, z);
+						break;
+					}
 					case EMBEDDED_SMALL_DIAGONAL_STRAIGHT: {
 						modelSmallDiagonalStraight.render("embedded_diagonal", railTile, x, y, z);
 						break;
@@ -330,70 +400,7 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 						modelMediumDiagonalStraight.render("embedded_diagonal", railTile, x, y, z);
 						break;
 					}
-					//case EMBEDDED_TURN_1X1:
-					//case EMBEDDED_RIGHT_TURN_1X1: {
-					//	modelRightTurn.render("embedded_1x", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_LEFT_TURN_1X1: {
-					//	modelLeftTurn.render("embedded_1x", railTile, x, y, z);
-					//	break;
-					//}
 
-					case EMBEDDED_MEDIUM_TURN:
-					case EMBEDDED_MEDIUM_RIGHT_TURN: {
-						modelRightTurn.render("embedded_medium", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_MEDIUM_LEFT_TURN: {
-						modelLeftTurn.render("embedded_medium", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_LARGE_TURN:
-					case EMBEDDED_LARGE_RIGHT_TURN: {
-						modelRightTurn.render("embedded_large", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_LARGE_LEFT_TURN: {
-						modelLeftTurn.render("embedded_large", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_VERY_LARGE_TURN:
-					case EMBEDDED_VERY_LARGE_RIGHT_TURN: {
-						modelRightTurn.render("embedded_very_large", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_VERY_LARGE_LEFT_TURN: {
-						modelLeftTurn.render("embedded_very_large", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_SUPER_LARGE_TURN:
-					case EMBEDDED_SUPER_LARGE_RIGHT_TURN: {
-						modelRightTurn.render("embedded_super_large", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_SUPER_LARGE_LEFT_TURN: {
-						modelLeftTurn.render("embedded_super_large", railTile, x, y, z);
-						break;
-					}
-					//case EMBEDDED_TURN_29X29:
-					//case EMBEDDED_RIGHT_TURN_29X29: {
-					//	modelRightTurn.render("embedded_29x", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_LEFT_TURN_29X29: {
-					//	modelLeftTurn.render("embedded_29x", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_TURN_32X32:
-					//case EMBEDDED_RIGHT_TURN_32X32: {
-					//	modelRightTurn.render("embedded_32x", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_LEFT_TURN_32X32: {
-					//	modelLeftTurn.render("embedded_32x", railTile, x, y, z);
-					//	break;
-					//}
 					case MEDIUM_RIGHT_45DEGREE_TURN:
 					case EMBEDDED_MEDIUM_45DEGREE_TURN:
 					case EMBEDDED_MEDIUM_RIGHT_45DEGREE_TURN:
@@ -440,36 +447,48 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 						model45DegreeLeftTurn.render("superlarge", railTile, x, y, z);
 						break;
 					}
-					//case EMBEDDED_DIAGONAL_TURN_9X20:
-					//case EMBEDDED_DIAGONAL_RIGHT_TURN_9X20: {
-					//	model45DegreeRightTurn.render("9x20","embedded",railTile,x,y,z);
-					//	break;
-					//}
-					//case EMBEDDED_DIAGONAL_LEFT_TURN_9X20: {
-					//	model45DegreeLeftTurn.render("9x20","embedded",railTile,x,y,z);
-					//	break;
-					//}
-					//case EMBEDDED_DIAGONAL_TURN_10X22:
-					//case EMBEDDED_DIAGONAL_RIGHT_TURN_10X22: {
-					//	model45DegreeRightTurn.render("10x22","embedded",railTile,x,y,z);
-					//	break;
-					//}
-					//case EMBEDDED_DIAGONAL_LEFT_TURN_10X22: {
-					//	model45DegreeLeftTurn.render("10x22","embedded",railTile,x,y,z);
-					//	break;
-					//}
+					case DIAGONAL_TURN_9X20:
+					case DIAGONAL_RIGHT_TURN_9X20:
+					case EMBEDDED_DIAGONAL_TURN_9X20:
+					case EMBEDDED_DIAGONAL_RIGHT_TURN_9X20: {
+						model45DegreeRightTurn.render("9x20",railTile,x,y,z);
+						break;
+					}
+					case DIAGONAL_LEFT_TURN_9X20:
+					case EMBEDDED_DIAGONAL_LEFT_TURN_9X20: {
+						model45DegreeLeftTurn.render("9x20",railTile,x,y,z);
+						break;
+					}
+					case DIAGONAL_TURN_10X22:
+					case DIAGONAL_RIGHT_TURN_10X22:
+					case EMBEDDED_DIAGONAL_TURN_10X22:
+					case EMBEDDED_DIAGONAL_RIGHT_TURN_10X22:
+					{
+						model45DegreeRightTurn.render("10x22",railTile,x,y,z);
+						break;
+					}
+					case DIAGONAL_LEFT_TURN_10X22:
+					case EMBEDDED_DIAGONAL_LEFT_TURN_10X22: {
+						model45DegreeLeftTurn.render("10x22",railTile,x,y,z);
+						break;
+					}
 
-					//case EMBEDDED_S_CURVE_20x2:
-					//case EMBEDDED_S_CURVE_20x2_RIGHT: {
-					//	modelRightParallelCurve.render("20x2", "embedded", railTile, x, y, z);
-					//	break;
-					//}
-//
-					//case EMBEDDED_S_CURVE_20x2_LEFT: {
-					//	modelLeftParallelCurve.render("20x2", "embedded", railTile, x, y, z);
-					//	break;
-					//}
-					/*case EMBEDDED_MEDIUM_SWITCH:
+					case EMBEDDED_S_CURVE_20x2:
+					case EMBEDDED_S_CURVE_20x2_RIGHT:
+					case S_CURVE_20x2:
+					case S_CURVE_20x2_RIGHT:
+						{
+						modelRightParallelCurve.render("20x2", railTile, x, y, z);
+						break;
+					}
+
+					case S_CURVE_20x2_LEFT:
+					case EMBEDDED_S_CURVE_20x2_LEFT:
+						{
+						modelLeftParallelCurve.render("20x2", railTile, x, y, z);
+						break;
+					}
+					case EMBEDDED_MEDIUM_SWITCH:
 					case EMBEDDED_MEDIUM_RIGHT_SWITCH: {
 						modelRightSwitchTurn.render("medium", railTile, x, y, z);
 						break;
@@ -486,34 +505,34 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 					case EMBEDDED_LARGE_LEFT_SWITCH: {
 						modelLeftSwitchTurn.render("large_90", railTile, x, y, z);
 						break;
-					}*/
-					/**case EMBEDDED_VERY_LARGE_SWITCH:
+					}
+					case EMBEDDED_VERY_LARGE_SWITCH:
 					case EMBEDDED_VERY_LARGE_RIGHT_SWITCH: {
-						modelRightSwitchTurn.render("very_large_90", "embedded", railTile, x, y, z);
+						modelRightSwitchTurn.render("very_large_90", railTile, x, y, z);
 						break;
 					}
 					case EMBEDDED_VERY_LARGE_LEFT_SWITCH: {
-						modelLeftSwitchTurn.render("very_large_90", "embedded", railTile, x, y, z);
+						modelLeftSwitchTurn.render("very_large_90", railTile, x, y, z);
 						break;
-					}*/
-					//case EMBEDDED_MEDIUM_PARALLEL_SWITCH:
-					//case EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH: {
-					//	modelRightSwitchTurn.render("medium_parallel", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH: {
-					//	modelLeftSwitchTurn.render("medium_parallel", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_LARGE_PARALLEL_SWITCH:
-					//case EMBEDDED_LARGE_RIGHT_PARALLEL_SWITCH: {
-					//	modelRightSwitchTurn.render("large_parallel", "embedded", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_LARGE_LEFT_PARALLEL_SWITCH: {
-					//	modelLeftSwitchTurn.render("large_parallel", "embedded", railTile, x, y, z);
-					//	break;
-					//}
+					}
+					case EMBEDDED_MEDIUM_PARALLEL_SWITCH:
+					case EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH: {
+						modelRightSwitchTurn.render("medium_parallel", railTile, x, y, z);
+						break;
+					}
+					case EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH: {
+						modelLeftSwitchTurn.render("medium_parallel", railTile, x, y, z);
+						break;
+					}
+					case EMBEDDED_LARGE_PARALLEL_SWITCH:
+					case EMBEDDED_LARGE_RIGHT_PARALLEL_SWITCH: {
+						modelRightSwitchTurn.render("large_parallel", railTile, x, y, z);
+						break;
+					}
+					case EMBEDDED_LARGE_LEFT_PARALLEL_SWITCH: {
+						modelLeftSwitchTurn.render("large_parallel", railTile, x, y, z);
+						break;
+					}
 					case MEDIUM_RIGHT_45DEGREE_SWITCH:
 					case EMBEDDED_MEDIUM_RIGHT_45DEGREE_SWITCH: {
 						modelRightSwitchTurn.render("medium_45degree",  railTile, x, y, z);
