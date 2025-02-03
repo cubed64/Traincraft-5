@@ -22,4 +22,37 @@ public class TrackResourceLocations
                 return track_normal;
         }
     }
+    public static final ResourceLocation gravel = new ResourceLocation(Info.resourceLocation, "textures/blocks/gravel.png");
+    public static final ResourceLocation ballast = new ResourceLocation(Info.resourceLocation, "textures/blocks/ballast_test.png");
+    public static final ResourceLocation snowGravel = new ResourceLocation(Info.resourceLocation, "textures/blocks/snowgravel.png");
+    public static final ResourceLocation peaGravel = new ResourceLocation(Info.resourceLocation, "textures/blocks/peagravel.png");
+    public static final ResourceLocation woodSupport = null;
+
+    public static ResourceLocation GetBallasetResourceLocation(BallastTypes ballastType)
+    {
+        switch (ballastType)
+        {
+            case GRAVEL:
+                return gravel;
+            case SNOWGRAVEL:
+                return snowGravel;
+            case PEAGRAVEL:
+                return peaGravel;
+            case BALLAST:
+                return ballast;
+            case WOODSUPPORT:
+                return woodSupport;
+            default:
+                return null;
+        }
+    }
+    public enum BallastTypes
+    {
+        WOODSUPPORT,
+        GRAVEL,
+        BALLAST,
+        SNOWGRAVEL,
+        PEAGRAVEL,
+        DYNAMIC,
+    }
 }

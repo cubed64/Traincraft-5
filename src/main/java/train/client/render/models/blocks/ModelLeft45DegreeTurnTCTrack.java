@@ -18,31 +18,32 @@ public class ModelLeft45DegreeTurnTCTrack {
     private IModelCustom modelLargeLeft45DegreeTurn;
     private IModelCustom modelVeryLarge45DegreeTurn;
     private IModelCustom modelSuperLarge45DegreeTurn;
-    private IModelCustom modelEmbeddedMediumLeft45DegreeTurn;
-    private IModelCustom modelEmbeddedLargeLeft45DegreeTurn;
-    private IModelCustom modelEmbeddedVeryLargeLeft45DegreeTurn;
-    private IModelCustom modelEmbeddedSuperLargeLeft45DegreeTurn;
+    private IModelCustom model9x2045DegreeTurn;
+    private IModelCustom model10x2245DegreeTurn;
 
     public ModelLeft45DegreeTurnTCTrack(){
         modelMediumLeft45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_45degree_medium_left.obj"));
         modelLargeLeft45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_45degree_large_left.obj"));
         modelVeryLarge45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_45degree_very_large_left.obj"));
         modelSuperLarge45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_45degree_super_large_left.obj"));
-
+        model9x2045DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_45degree_9x20_left.obj"));
+        model10x2245DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_45degree_10x22_left.obj"));
     }
 
     public void renderMedium() {modelMediumLeft45DegreeTurn.renderAll();}
     public void renderLarge() {modelLargeLeft45DegreeTurn.renderAll();}
     public void renderVeryLarge() {modelVeryLarge45DegreeTurn.renderAll();}
     public void renderSuperLarge() {modelSuperLarge45DegreeTurn.renderAll();}
+    public void render9x20() {model9x2045DegreeTurn.renderAll();}
+    public void render10x22() {model10x2245DegreeTurn.renderAll();}
 
 
-    public void render(String type, TileTCRail tcRail, double x, double y, double z)
+    public void render(String turnSize, TileTCRail tcRail, double x, double y, double z)
     {
-        render( type, tcRail.getTrackType().getVariant(), tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord), x, y, z, 1, 1, 1, 1);
+        render( turnSize, tcRail.getTrackType().getVariant(), tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord), x, y, z, 1, 1, 1, 1);
     }
 
-    public void render(String type, RailVariants variant, int facing, double x, double y, double z, float r, float g, float b, float a) {
+    public void render(String turnSize, RailVariants variant, int facing, double x, double y, double z, float r, float g, float b, float a) {
 
         // Bind the texture, so that OpenGL properly textures our block.
         tmt.Tessellator.bindTexture(train.common.enums.TrackResourceLocations.GetResourceLocation(variant));
@@ -75,7 +76,7 @@ public class ModelLeft45DegreeTurnTCTrack {
                 break;
         }
 
-        switch (type)
+        switch (turnSize)
         {
             case "medium":
                 this.renderMedium();
@@ -88,6 +89,12 @@ public class ModelLeft45DegreeTurnTCTrack {
                 break;
             case "superlarge":
                 this.renderSuperLarge();
+                break;
+            case "9x20":
+                this.render9x20();
+                break;
+            case "10x22":
+                this.render10x22();
                 break;
         }
 

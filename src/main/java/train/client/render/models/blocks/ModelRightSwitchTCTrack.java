@@ -4,8 +4,6 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.ResourceLocation;
-
-import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.common.items.RailVariants;
@@ -18,8 +16,14 @@ public class ModelRightSwitchTCTrack extends ModelBase {
 	private IModelCustom modelMediumRightSwitchInactive;
 	private IModelCustom modelMediumRightParallelSwitchInactive;
 	private IModelCustom modelMediumRightParallelSwitchActive;
+
+	private IModelCustom modelLargeRightParallelSwitchInactive;
+	private IModelCustom modelLargeRightParallelSwitchActive;
 	private IModelCustom modelLargeRightSwitchActive;
 	private IModelCustom modelLargeRightSwitchInactive;
+
+	private IModelCustom modelVeryLargeRightSwitchActive;
+	private IModelCustom modelVeryLargeRightSwitchInactive;
 
 	private IModelCustom modelMediumRight45degreeSwitchActive;
 	private IModelCustom modelMediumRight45degreeSwitchInActive;
@@ -33,14 +37,20 @@ public class ModelRightSwitchTCTrack extends ModelBase {
 
 		modelMediumRightParallelSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_parallel_inactive.obj"));
 		modelMediumRightParallelSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_parallel_active.obj"));
+		modelLargeRightParallelSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_parallel_large_inactive.obj"));
+		modelLargeRightParallelSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_parallel_large_active.obj"));
 
 		modelLargeRightSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_active.obj"));
 		modelLargeRightSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_inactive.obj"));
 
-		modelMediumRight45degreeSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_45degree_active.obj"));
-		modelMediumRight45degreeSwitchInActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_45degree_inactive.obj"));
-		modelLargeRight45degreeSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_large_45degree_active.obj"));
-		modelLargeRight45degreeSwitchInActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_large_45degree_inactive.obj"));
+
+		modelMediumRight45degreeSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_45degree_active.obj"));
+		modelMediumRight45degreeSwitchInActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_45degree_inactive.obj"));
+		modelLargeRight45degreeSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_large_45degree_active.obj"));
+		modelLargeRight45degreeSwitchInActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_large_45degree_inactive.obj"));
+
+		modelVeryLargeRightSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_very_large_active.obj"));
+		modelVeryLargeRightSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_very_large.obj"));
 		
 	}
 
@@ -56,11 +66,23 @@ public class ModelRightSwitchTCTrack extends ModelBase {
 	public void renderMediumParallelActive() {
 		modelMediumRightParallelSwitchActive.renderAll();
 	}
+	public void renderLargeParallelInactive() {
+		modelLargeRightParallelSwitchInactive.renderAll();
+	}
+	public void renderLargeParallelActive() { modelLargeRightParallelSwitchActive.renderAll();}
+
 	public void renderLarge90Active() {
 		modelLargeRightSwitchActive.renderAll();
 	}
 	public void renderLarge90Inactive() {
 		modelLargeRightSwitchInactive.renderAll();
+	}
+
+	public void renderVeryLarge90Active() {
+		modelVeryLargeRightSwitchActive.renderAll();
+	}
+	public void renderVeryLarge90Inactive() {
+		modelVeryLargeRightSwitchInactive.renderAll();
 	}
 
 	public void renderMedium45degreeActive() {
@@ -219,12 +241,12 @@ public class ModelRightSwitchTCTrack extends ModelBase {
 		else if(type.equals("medium")&&active)this.renderMediumActive();
 		else if(type.equals("medium_parallel")&&!active)this.renderMediumParallelInactive();
 		else if(type.equals("medium_parallel")&&active)this.renderMediumParallelActive();
-		//if(type.equals("large_parallel")&&!active)this.renderLargeParallelInactive();
-		//if(type.equals("large_parallel")&&active)this.renderLargeParallelActive();
+		else if(type.equals("large_parallel")&&!active)this.renderLargeParallelInactive();
+		else if(type.equals("large_parallel")&&active)this.renderLargeParallelActive();
 		else if(type.equals("large_90")&&!active)this.renderLarge90Inactive();
 		else if(type.equals("large_90")&&active)this.renderLarge90Active();
-		//if(type.equals("very_large_90")&&!active)this.renderVeryLarge90Inactive();
-		//if(type.equals("very_large_90")&&active)this.renderVeryLarge90Active();
+		else if(type.equals("very_large_90")&&!active)this.renderVeryLarge90Inactive();
+		else if(type.equals("very_large_90")&&active)this.renderVeryLarge90Active();
 		else if(type.equals("medium_45degree")&&active)this.renderMedium45degreeActive();
 		else if(type.equals("medium_45degree")&&!active)this.renderMedium45degreeInActive();
 		else if(type.equals("large_45degree")&&active)this.renderLarge45degreeActive();

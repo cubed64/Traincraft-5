@@ -6,6 +6,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.ResourceLocation;
 
+import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.client.renderhelper.ModelRenderHelper;
@@ -16,18 +17,25 @@ import train.common.tile.TileTCRail;
 
 @SideOnly(Side.CLIENT)
 public class ModelLeftTurnTCTrack extends ModelBase {
+	private IModelCustom model1XLeftTurn;
 	private IModelCustom modelMediumLeftTurn;
 	private IModelCustom modelLargeLeftTurn;
 	private IModelCustom modelVeryLargeLeftTurn;
 	private IModelCustom modelSuperLargeLeftTurn;
+	private IModelCustom model29XLeftTurn;
+	private IModelCustom model32XLeftTurn;
 
 	public ModelLeftTurnTCTrack() {
-		modelMediumLeftTurn = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_medium.obj"));
-		modelLargeLeftTurn = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_big.obj"));
-		modelVeryLargeLeftTurn = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_very_big.obj"));
-		modelSuperLargeLeftTurn = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_super_big_left.obj"));
+		model1XLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_1x.obj"));
+		modelMediumLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_medium.obj"));
+		modelLargeLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_big.obj"));
+		modelVeryLargeLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_very_big.obj"));
+		modelSuperLargeLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_super_big.obj"));
+		model29XLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_29x.obj"));
+		model32XLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_32x.obj"));
 	}
 
+	public void render1X() {model1XLeftTurn.renderAll();}
 	public void renderMedium() {
 		modelMediumLeftTurn.renderAll();
 	}
@@ -38,6 +46,9 @@ public class ModelLeftTurnTCTrack extends ModelBase {
 		modelVeryLargeLeftTurn.renderAll();
 	}
 	public void renderSuperLarge() { modelSuperLargeLeftTurn.renderAll();}
+
+	public void render29X() {model29XLeftTurn.renderAll();}
+	public void render32X() {model32XLeftTurn.renderAll();}
 
 	private void setRotation(byte facing)
 	{
@@ -56,8 +67,7 @@ public class ModelLeftTurnTCTrack extends ModelBase {
 				GL11.glRotatef(-90, 0, 1, 0);
 				break;
 			default:
-
-				break;
+			break;
 		}
 	}
 
@@ -102,7 +112,7 @@ public class ModelLeftTurnTCTrack extends ModelBase {
 					break;
 				}
 				this.renderSuperLarge();
-			break;
+				break;
 			case "very_large":
 			case "embedded_very_large":
 				switch (facing)
@@ -121,7 +131,7 @@ public class ModelLeftTurnTCTrack extends ModelBase {
 						break;
 				}
 				this.renderVeryLarge();
-			break;
+				break;
 			case "large":
 			case "embedded_large":
 				switch (facing)
@@ -140,7 +150,7 @@ public class ModelLeftTurnTCTrack extends ModelBase {
 						break;
 				}
 				this.renderLarge();
-			break;
+				break;
 			case "medium":
 			case "embedded_medium":
 				switch (facing)
@@ -159,7 +169,61 @@ public class ModelLeftTurnTCTrack extends ModelBase {
 						break;
 				}
 				this.renderMedium();
-			break;
+				break;
+			case "1x":
+				switch (facing)
+				{
+					case 3:
+						GL11.glTranslatef(-5.5f,0,1.5f);
+						break;
+					case 1:
+						GL11.glTranslatef(4.5f,0,-0.5f);
+						break;
+					case 2:
+						GL11.glTranslatef(-1.5f,0,-4.5f);
+						break;
+					default:
+						GL11.glTranslatef(0.5f,0,5.5f);
+						break;
+				}
+				render1X();
+				break;
+			case "29x":
+				switch (facing)
+				{
+					case 3:
+						GL11.glTranslatef(-5.5f,0,1.5f);
+						break;
+					case 1:
+						GL11.glTranslatef(4.5f,0,-0.5f);
+						break;
+					case 2:
+						GL11.glTranslatef(-1.5f,0,-4.5f);
+						break;
+					default:
+						GL11.glTranslatef(0.5f,0,5.5f);
+						break;
+				}
+				render29X();
+				break;
+			case "32x":
+				switch (facing)
+				{
+					case 3:
+						GL11.glTranslatef(-5.5f,0,1.5f);
+						break;
+					case 1:
+						GL11.glTranslatef(4.5f,0,-0.5f);
+						break;
+					case 2:
+						GL11.glTranslatef(-1.5f,0,-4.5f);
+						break;
+					default:
+						GL11.glTranslatef(0.5f,0,5.5f);
+						break;
+				}
+				render32X();
+				break;
 		}
 
 		// Pop this matrix from the stack.

@@ -293,12 +293,7 @@ public class CustomRenderHandler
             blockInfo();
             RenderTCRail.modelVeryLargeSlope.render("embedded_dynamic", facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
         }
-        else if (item.getTrackType() == EnumTracks.SMALL_PARALLEL_CURVE
-                || item.getTrackType() == EnumTracks.MEDIUM_PARALLEL_CURVE
-                || item.getTrackType() == EnumTracks.LARGE_PARALLEL_CURVE
-                || item.getTrackType() == EnumTracks.EMBEDDED_SMALL_PARALLEL_CURVE
-                || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_PARALLEL_CURVE
-                || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_PARALLEL_CURVE)
+        else if (item.getTrackType().getRailType() == TCRailTypes.RailTypes.PARALLEL)
         {
             float yaw = MathHelper.wrapAngleTo180_float(player.rotationYaw);
             boolean isLeftTurn = item.getTrackOrientation(facing, yaw).equals("left");
@@ -315,8 +310,11 @@ public class CustomRenderHandler
                 case EMBEDDED_LARGE_PARALLEL_CURVE:
                     parallelCurve = "large";
                     break;
+                case S_CURVE_20x2:
+                case EMBEDDED_S_CURVE_20x2:
+                    parallelCurve = "20x2";
+                    break;
             }
-
 
             if (isLeftTurn)
             {
@@ -342,6 +340,14 @@ public class CustomRenderHandler
                 turnSize = "superlarge";
             }
 
+            if (item.getTrackType() == EnumTracks.DIAGONAL_TURN_9X20 || item.getTrackType() == EnumTracks.EMBEDDED_DIAGONAL_TURN_9X20) {
+                turnSize = "9x20";
+            }
+
+            if (item.getTrackType() == EnumTracks.DIAGONAL_TURN_10X22 || item.getTrackType() == EnumTracks.EMBEDDED_DIAGONAL_TURN_10X22) {
+                turnSize = "10x22";
+            }
+
             if (item.getTrackOrientation(facing, MathHelper.wrapAngleTo180_float(player.rotationYaw)).equals("left")) {
                 RenderTCRail.model45DegreeLeftTurn.render(turnSize, item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a);
             } else {
@@ -350,14 +356,13 @@ public class CustomRenderHandler
         }
 
         // Turns
-        else if (item.getTrackType() == EnumTracks.MEDIUM_TURN
-                || item.getTrackType() == EnumTracks.LARGE_TURN
-                || item.getTrackType() == EnumTracks.VERY_LARGE_TURN
-                || item.getTrackType() == EnumTracks.SUPER_LARGE_TURN
-                || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_TURN
-                || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_TURN
-                || item.getTrackType() == EnumTracks.EMBEDDED_VERY_LARGE_TURN
-                || item.getTrackType() == EnumTracks.EMBEDDED_SUPER_LARGE_TURN)
+        else if (item.getTrackType() == EnumTracks.MEDIUM_TURN || item.getTrackType() == EnumTracks.LARGE_TURN
+                || item.getTrackType() == EnumTracks.VERY_LARGE_TURN || item.getTrackType() == EnumTracks.SUPER_LARGE_TURN
+                || item.getTrackType() == EnumTracks.TURN_1X1 || item.getTrackType() == EnumTracks.EMBEDDED_TURN_1X1
+                || item.getTrackType() == EnumTracks.TURN_29X29 || item.getTrackType() == EnumTracks.TURN_32X32
+                || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_TURN || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_TURN
+                || item.getTrackType() == EnumTracks.EMBEDDED_VERY_LARGE_TURN || item.getTrackType() == EnumTracks.EMBEDDED_SUPER_LARGE_TURN
+                || item.getTrackType() == EnumTracks.EMBEDDED_TURN_29X29 || item.getTrackType() == EnumTracks.EMBEDDED_TURN_32X32)
         {
             float yaw = MathHelper.wrapAngleTo180_float(player.rotationYaw);
             boolean isLeftTurn = item.getTrackOrientation(facing, yaw).equals("left");
@@ -365,10 +370,14 @@ public class CustomRenderHandler
             String turnSize = "medium";
             switch (item.getTrackType())
             {
+                case TURN_1X1:
+                case EMBEDDED_TURN_1X1:
+                    turnSize = "1x";
+                    break;
                 case LARGE_TURN:
                 case EMBEDDED_LARGE_TURN:
                     turnSize = "large";
-                break;
+                    break;
                 case VERY_LARGE_TURN:
                 case EMBEDDED_VERY_LARGE_TURN:
                     turnSize = "very_large";
@@ -376,6 +385,14 @@ public class CustomRenderHandler
                 case SUPER_LARGE_TURN:
                 case EMBEDDED_SUPER_LARGE_TURN:
                     turnSize = "super_large";
+                    break;
+                case TURN_29X29:
+                case EMBEDDED_TURN_29X29:
+                    turnSize = "29x";
+                    break;
+                case TURN_32X32:
+                case EMBEDDED_TURN_32X32:
+                    turnSize = "32x";
                     break;
             }
 
@@ -387,7 +404,6 @@ public class CustomRenderHandler
             {
                 RenderTCRail.modelRightTurn.render(turnSize, item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a);
             }
-
         }
 
         // switchs
@@ -405,21 +421,35 @@ public class CustomRenderHandler
             int out_1_1 = 3;
 
             String switchType = "medium";
-            if (item.getTrackType() == EnumTracks.MEDIUM_PARALLEL_SWITCH)
-            {
+            if (item.getTrackType() == EnumTracks.MEDIUM_PARALLEL_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_PARALLEL_SWITCH) {
                 switchType = "medium_parallel";
                 out_0_start = 5;
                 out_0_end = 10;
                 out_1_0 = 10;
                 out_1_1 = 3;
             }
-            else if (item.getTrackType() == EnumTracks.LARGE_SWITCH)
+            else if (item.getTrackType() == EnumTracks.LARGE_PARALLEL_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_PARALLEL_SWITCH)
+            {
+                switchType = "large_parallel";
+                out_0_start = 0;
+                out_0_end = 0;
+                out_1_0 = 0;
+            }
+            else if (item.getTrackType() == EnumTracks.LARGE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_SWITCH)
             {
                 switchType = "large_90";
                 out_0_start = 5;
                 out_0_end = 5;
                 out_1_0 = 5;
                 out_1_1 = 5;
+            }
+            else if (item.getTrackType() == EnumTracks.VERY_LARGE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_VERY_LARGE_SWITCH)
+            {
+                switchType = "very_large_90";
+                out_0_start = 0;
+                out_0_end = 0;
+                out_1_0 = 10;
+                out_1_1 = 10;
             }
             else if (item.getTrackType() == EnumTracks.MEDIUM_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_45DEGREE_SWITCH) {
                 switchType = "medium_45degree";
@@ -452,7 +482,7 @@ public class CustomRenderHandler
                 RenderTCRail.modelSmallStraight.render(variant, facing, 0, 0, 0, r, g, b, a);
                 RenderTCRail.modelSmallStraight.render(variant, facing, dx * out_1_0 + dx_1 * out_1_1, 0, dz * out_1_0 + dz_1 * out_1_1, r, g, b, a);
             }
-            else if (!(item.getTrackType() == EnumTracks.MEDIUM_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.LARGE_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_45DEGREE_SWITCH /*|| item.getTrackType() == EnumTracks.LARGE_PARALLEL_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_PARALLEL_SWITCH*/))
+            else if (!(item.getTrackType() == EnumTracks.MEDIUM_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.LARGE_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.LARGE_PARALLEL_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_PARALLEL_SWITCH))
             {
                 RenderTCRail.modelSmallStraight.render(variant, facing, 0, 0, 0, r, g, b, a);
                 RenderTCRail.modelSmallStraight.render(variant, facing_1, dx * out_1_0 + dx_1 * out_1_1, 0, dz * out_1_0 + dz_1 * out_1_1, r, g, b, a);

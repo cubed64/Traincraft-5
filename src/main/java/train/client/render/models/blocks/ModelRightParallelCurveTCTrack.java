@@ -6,6 +6,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.ResourceLocation;
 
+import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.common.items.RailVariants;
@@ -18,18 +19,22 @@ public class ModelRightParallelCurveTCTrack extends ModelBase {
     private IModelCustom modelSmallRightParallelCurve;
     private IModelCustom modelMediumRightParallelCurve;
     private IModelCustom modelLargeRightParallelCurve;
+    private IModelCustom model20x2SCurveRight;
 
     public ModelRightParallelCurveTCTrack() {
         modelSmallRightParallelCurve = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_parallel_s.obj"));
         modelMediumRightParallelCurve = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_parallel_m.obj"));
         modelLargeRightParallelCurve = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_parallel_l.obj"));
+        model20x2SCurveRight = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "20x2_s_curve_right.obj"));
     }
 
     public void renderSmall() {modelSmallRightParallelCurve.renderAll();}
     public void renderMedium() {modelMediumRightParallelCurve.renderAll();}
     public void renderLarge() {modelLargeRightParallelCurve.renderAll();}
+    public void render20x2() {model20x2SCurveRight.renderAll();}
 
-    public void render(String type, TileTCRail tcRail, double x, double y, double z) {
+    public void render(String type, TileTCRail tcRail, double x, double y, double z)
+    {
         int facing = tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord);
         render( type, tcRail.getTrackType().getVariant(), facing, x, y, z, 1, 1, 1, 1 );
     }
@@ -52,67 +57,41 @@ public class ModelRightParallelCurveTCTrack extends ModelBase {
          *        l = 2 is NORTH
          *        l = 3 is EAST
          */
-        if (facing == 0) {
-            GL11.glRotatef(180, 0, 1, 0);
-            if (type == "small") {
+        switch (facing)
+        {
+            case 0:
+                GL11.glRotatef(180, 0, 1, 0);
                 GL11.glTranslatef(1, 0.0f, 5);
-            }
-            if (type == "medium") {
-                GL11.glTranslatef(1, 0.0f, 5);
-            }
-            if (type == "large") {
-                GL11.glTranslatef(1, 0.0f, 5);
-            }
-        }
-        else if (facing == 1) {
-            GL11.glRotatef(90, 0, 1, 0);
-            if(type == "small") {
+                break;
+            case 1:
+                GL11.glRotatef(90, 0, 1, 0);
                 GL11.glTranslatef(5, 0.0f, - 1);
-            }
-            if(type == "medium") {
-                GL11.glTranslatef(5, 0.0f, - 1);
-            }
-            if (type == "large") {
-                GL11.glTranslatef(5, 0.0f, -1);
-            }
-        }
-        else if (facing == 2) {
-            GL11.glRotatef(0, 0, 1, 0);
-            if (type == "small") {
-                GL11.glTranslatef(-1, 0.0f, - 5);
-            }
-            if (type == "medium") {
+                break;
+            case 2:
+                GL11.glRotatef(0, 0, 1, 0);
                 GL11.glTranslatef(-1,0.0f, - 5);
-            }
-            if (type == "large") {
-                GL11.glTranslatef(- 1, 0.0f, - 5);
-            }
-        }
-
-        else if (facing == 3) {
-            GL11.glRotatef(-90, 0, 1, 0);
-            if (type == "small") {
+                break;
+            case 3:
+                GL11.glRotatef(-90, 0, 1, 0);
                 GL11.glTranslatef(-5, 0.0f, 1);
-            }
-            if(type == "medium") {
-                GL11.glTranslatef(-5, 0.0f, + 1);
-            }
-            if (type == "large") {
-                GL11.glTranslatef(-5, 0.0f, +1);
-            }
+                break;
         }
 
-        if(type.equals("small"))
+
+        switch (type)
         {
-            this.renderSmall();
-        }
-        else if(type.equals("medium"))
-        {
-            this.renderMedium();
-        }
-        else if(type.equals("large"))
-        {
-            this.renderLarge();
+            case "small":
+                this.renderSmall();
+                break;
+            case "medium":
+                this.renderMedium();
+                break;
+            case "large":
+                this.renderLarge();
+                break;
+            case "20x2":
+                this.render20x2();
+                break;
         }
 
         GL11.glPopMatrix();

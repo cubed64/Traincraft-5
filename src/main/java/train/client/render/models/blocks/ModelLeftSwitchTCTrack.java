@@ -19,9 +19,13 @@ public class ModelLeftSwitchTCTrack extends ModelBase {
 	private IModelCustom modelMediumLeftSwitchInactive;
 	private IModelCustom modelMediumLeftParallelSwitchInactive;
 	private IModelCustom modelMediumLeftParallelSwitchActive;
+	private IModelCustom modelLargeLeftParallelSwitchInactive;
+	private IModelCustom modelLargeLeftParallelSwitchActive;
 	private IModelCustom modelLargeLeftSwitchActive;
 	private IModelCustom modelLargeLeftSwitchInactive;
 
+	private IModelCustom modelVeryLargeLeftSwitchActive;
+	private IModelCustom modelVeryLargeLeftSwitchInactive;
 	private IModelCustom modelMediumLeft45degreeSwitchActive;
 	private IModelCustom modelMediumLeft45degreeSwitchInActive;
 	private IModelCustom modelLargeLeft45degreeSwitchActive;
@@ -32,6 +36,10 @@ public class ModelLeftSwitchTCTrack extends ModelBase {
 		modelMediumLeftSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_small_inactive_left_new.obj"));
 		modelMediumLeftParallelSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_parallel_inactive_left.obj"));
 		modelMediumLeftParallelSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_parallel_active_left.obj"));
+
+		modelLargeLeftParallelSwitchInactive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_parallel_large_inactive_left.obj"));
+		modelLargeLeftParallelSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_parallel_large_active_left.obj"));
+
 		modelLargeLeftSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_active_left.obj"));
 		modelLargeLeftSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_inactive_left.obj"));
 
@@ -39,6 +47,9 @@ public class ModelLeftSwitchTCTrack extends ModelBase {
 		modelMediumLeft45degreeSwitchInActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_medium_45degree_inactive_left.obj"));
 		modelLargeLeft45degreeSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_large_45degree_active_left.obj"));
 		modelLargeLeft45degreeSwitchInActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_large_45degree_inactive_left.obj"));
+
+		modelVeryLargeLeftSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_very_large_active_left.obj"));
+		modelVeryLargeLeftSwitchInactive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_switch_very_large_left.obj"));
 	}
 
 	public void renderMediumActive() {
@@ -53,11 +64,24 @@ public class ModelLeftSwitchTCTrack extends ModelBase {
 	public void renderMediumParallelActive() {
 		modelMediumLeftParallelSwitchActive.renderAll();
 	}
+	public void renderLargeParallelInactive() {
+		modelLargeLeftParallelSwitchInactive.renderAll();
+	}
+	public void renderLargeParallelActive() {
+		modelLargeLeftParallelSwitchActive.renderAll();
+	}
 	public void renderLarge90Active() {
 		modelLargeLeftSwitchActive.renderAll();
 	}
 	public void renderLarge90Inactive() {
 		modelLargeLeftSwitchInactive.renderAll();
+	}
+
+	public void renderVeryLarge90Active() {
+		modelVeryLargeLeftSwitchActive.renderAll();
+	}
+	public void renderVeryLarge90Inactive() {
+		modelVeryLargeLeftSwitchInactive.renderAll();
 	}
 
 	public void renderMedium45degreeActive() {modelMediumLeft45degreeSwitchActive.renderAll();}
@@ -87,95 +111,129 @@ public class ModelLeftSwitchTCTrack extends ModelBase {
 			if(type.equals("medium")){
 				GL11.glTranslatef(-1.0f, 0.0f, 1.0f);
 			}
-			if(type.equals("large_90")){
+			else if(type.equals("large_90")){
 				GL11.glRotatef(0, 0, 1, 0);
 				GL11.glTranslatef(0.0f, 0.0f, -4.0f);
 			}
-			if(type.equals("medium_parallel")){
+			else if(type.equals("very_large_90")){
+				GL11.glRotatef(-90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
+			else if(type.equals("medium_parallel")){
 				GL11.glRotatef(-90, 0, 1, 0);
 			}
-			if(type.equals("medium_45degree")){
+			else if(type.equals("large_parallel")){
+				GL11.glRotatef(-90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
+			else if(type.equals("medium_45degree")){
 				GL11.glRotatef(-90, 0, 1, 0);
 				GL11.glTranslatef(0.0f, 0.0f, 0);
 			}
-			if(type.equals("large_45degree")){
+			else if(type.equals("large_45degree")){
 				GL11.glRotatef(-90, 0, 1, 0);
 				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
 			}
+
 		}
-		if (facing == 1) {
+		else if (facing == 1) {
 			if(type.equals("medium")){
 				GL11.glRotatef(180, 0, 1, 0);
 				GL11.glTranslatef(-1.0f, 0.0f, 1.0f);
 			}
-			if(type.equals("large_90")){
+			else if(type.equals("large_90")){
 				GL11.glRotatef(180, 0, 1, 0);
 				GL11.glTranslatef(0.0f, 0.0f, -4.0f);
 			}
-			if(type.equals("medium_parallel")){
+			else if(type.equals("very_large_90")){
+				GL11.glRotatef(90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
+			else if(type.equals("medium_parallel")){
 				GL11.glRotatef(90, 0, 1, 0);
 			}
-			if(type.equals("medium_45degree")){
+			else if(type.equals("large_parallel")){
+				GL11.glRotatef(90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
+			else if(type.equals("medium_45degree")){
 				GL11.glRotatef(90, 0, 1, 0);
 				GL11.glTranslatef(0.0f, 0.0f, 0);
 			}
-			if(type.equals("large_45degree")){
+			else if(type.equals("large_45degree")){
 				GL11.glRotatef(90, 0, 1, 0);
 				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
 			}
 		}
-		if(facing == 2){
+		else if(facing == 2){
 			if(type.equals("medium")){
 				GL11.glRotatef(90, 0, 1, 0);
 				GL11.glTranslatef(-1.0f, 0.0f, 1.0f);
 			}
-			if(type.equals("large_90")){
+			else if(type.equals("large_90")){
 				GL11.glRotatef(90, 0, 1, 0);
 				GL11.glTranslatef(0.0f, 0.0f, -4.0f);
 			}
-			if(type.equals("medium_parallel")){
-				//do something if needed
+			else if(type.equals("very_large_90")){
+				GL11.glRotatef(0, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
 			}
-			if(type.equals("medium_45degree")){
+			else if(type.equals("large_parallel")){
+				GL11.glRotatef(0, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
+			else if(type.equals("medium_45degree")){
 				GL11.glRotatef(0, 0, 1, 0);
 				GL11.glTranslatef(0.0f, 0.0f, 0f);
 			}
-			if(type.equals("large_45degree")){
+			else if(type.equals("large_45degree")){
 				GL11.glRotatef(0, 0, 1, 0);
 				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
 			}
 		}
-		if(facing == 0){
+		else if(facing == 0){
 			if(type.equals("medium")){
 				GL11.glRotatef(-90, 0, 1, 0);
 				GL11.glTranslatef(-1.0f, 0.0f, 1.0f);
 			}
-			if(type.equals("large_90")){
+			else if(type.equals("large_90")){
 				GL11.glRotatef(-90, 0, 1, 0);
 				GL11.glTranslatef(.0f, 0.0f, -4.0f);
 			}
-			if(type.equals("medium_parallel")){
+			else if(type.equals("very_large_90")){
+				GL11.glRotatef(180, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
+			else if(type.equals("medium_parallel")){
 				GL11.glRotatef(180, 0, 1, 0);
 			}
-			if(type.equals("medium_45degree")){
+			else if(type.equals("large_parallel")){
+				GL11.glRotatef(180, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
+			else if(type.equals("medium_45degree")){
 				GL11.glRotatef(180, 0, 1, 0);
 				GL11.glTranslatef(0f, 0.0f, 0);
 			}
-			if(type.equals("large_45degree")){
+			else if(type.equals("large_45degree")){
 				GL11.glRotatef(180, 0, 1, 0);
 				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
 			}
 		}
 		if(type.equals("medium")&&!active)this.renderMediumInactive();
-		if(type.equals("medium")&&active)this.renderMediumActive();
-		if(type.equals("medium_parallel")&&!active)this.renderMediumParallelInactive();
-		if(type.equals("medium_parallel")&&active)this.renderMediumParallelActive();
-		if(type.equals("large_90")&&!active)this.renderLarge90Inactive();
-		if(type.equals("large_90")&&active)this.renderLarge90Active();
-		if(type.equals("medium_45degree")&&!active)this.renderMedium45degreeInActive();
-		if(type.equals("medium_45degree")&&active)this.renderMedium45degreeActive();
-		if(type.equals("large_45degree")&&!active)this.renderLarge45degreeInActive();
-		if(type.equals("large_45degree")&&active)this.renderLarge45degreeActive();
+		else if(type.equals("medium")&&active)this.renderMediumActive();
+		else if(type.equals("medium_parallel")&&!active)this.renderMediumParallelInactive();
+		else if(type.equals("medium_parallel")&&active)this.renderMediumParallelActive();
+		else if(type.equals("large_parallel")&&!active)this.renderLargeParallelInactive();
+		else if(type.equals("large_parallel")&&active)this.renderLargeParallelActive();
+		else if(type.equals("large_90")&&!active)this.renderLarge90Inactive();
+		else if(type.equals("large_90")&&active)this.renderLarge90Active();
+		else if(type.equals("very_large_90")&&!active)this.renderVeryLarge90Inactive();
+		else if(type.equals("very_large_90")&&active)this.renderVeryLarge90Active();
+		else if(type.equals("medium_45degree")&&!active)this.renderMedium45degreeInActive();
+		else if(type.equals("medium_45degree")&&active)this.renderMedium45degreeActive();
+		else if(type.equals("large_45degree")&&!active)this.renderLarge45degreeInActive();
+		else if(type.equals("large_45degree")&&active)this.renderLarge45degreeActive();
 		
 		//if(type.equals("large"))this.renderLarge();
 
