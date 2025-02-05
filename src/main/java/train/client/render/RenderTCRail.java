@@ -507,11 +507,16 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 						break;
 					}
 					case EMBEDDED_VERY_LARGE_SWITCH:
-					case EMBEDDED_VERY_LARGE_RIGHT_SWITCH: {
+					case EMBEDDED_VERY_LARGE_RIGHT_SWITCH:
+					case VERY_LARGE_SWITCH:
+					case VERY_LARGE_RIGHT_SWITCH:
+					{
 						modelRightSwitchTurn.render("very_large_90", railTile, x, y, z);
 						break;
 					}
-					case EMBEDDED_VERY_LARGE_LEFT_SWITCH: {
+					case EMBEDDED_VERY_LARGE_LEFT_SWITCH:
+					case VERY_LARGE_LEFT_SWITCH:
+					{
 						modelLeftSwitchTurn.render("very_large_90", railTile, x, y, z);
 						break;
 					}
