@@ -168,11 +168,16 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 						break;
 					}
 					case LARGE_PARALLEL_SWITCH:
-					case LARGE_RIGHT_PARALLEL_SWITCH: {
+					case LARGE_RIGHT_PARALLEL_SWITCH:
+					case EMBEDDED_LARGE_PARALLEL_SWITCH:
+					case EMBEDDED_LARGE_RIGHT_PARALLEL_SWITCH:
+					{
 						modelRightSwitchTurn.render("large_parallel", railTile, x, y, z);
 						break;
 					}
-					case LARGE_LEFT_PARALLEL_SWITCH: {
+					case LARGE_LEFT_PARALLEL_SWITCH:
+					case EMBEDDED_LARGE_LEFT_PARALLEL_SWITCH:
+					{
 						modelLeftSwitchTurn.render("large_parallel", railTile, x, y, z);
 						break;
 					}
@@ -527,15 +532,6 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 					}
 					case EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH: {
 						modelLeftSwitchTurn.render("medium_parallel", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_LARGE_PARALLEL_SWITCH:
-					case EMBEDDED_LARGE_RIGHT_PARALLEL_SWITCH: {
-						modelRightSwitchTurn.render("large_parallel", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_LARGE_LEFT_PARALLEL_SWITCH: {
-						modelLeftSwitchTurn.render("large_parallel", railTile, x, y, z);
 						break;
 					}
 					case MEDIUM_RIGHT_45DEGREE_SWITCH:
