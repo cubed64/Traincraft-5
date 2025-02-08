@@ -204,6 +204,11 @@ public class CustomRenderHandler
             }
         }
         // Slopes
+        else if (EnumTracks.SLOPE_1X3_DYNAMIC.equals(item.getTrackType()))
+        {
+            blockInfo();
+            RenderTCRail.model1X3Slope.render("dynamic", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
+        }
         else if (item.getTrackType() == EnumTracks.SLOPE_BALLAST)
         {
             RenderTCRail.modelSlope.render("ballast", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);

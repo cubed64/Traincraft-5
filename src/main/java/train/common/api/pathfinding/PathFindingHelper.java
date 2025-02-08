@@ -284,7 +284,7 @@ public class PathFindingHelper
                         }
                     }
                 }
-            } else if (!abstractTrains.trainHandler.hasLocomotive()) { //traincars. is a bit jumpy but doesn't seem to derail
+            } else if (abstractTrains.trainHandler == null || !abstractTrains.trainHandler.hasLocomotive()) { //traincars. is a bit jumpy but doesn't seem to derail
                 if ((abstractTrains.posY - abstractTrains.prevPosY) < 0) {
                     if (slopeAngle < 0.05) {
                         normalizedSpeed *= abstractTrains.getDragAir() + (slopeAngle * 2.7);

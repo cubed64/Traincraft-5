@@ -23,6 +23,7 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 	public static final ModelRightSwitchTCTrack modelRightSwitchTurn = new ModelRightSwitchTCTrack();
 	public static final ModelLeftSwitchTCTrack modelLeftSwitchTurn = new ModelLeftSwitchTCTrack();
 	public static final ModelTwoWaysCrossingTCTrack modelTwoWaysCrossing = new ModelTwoWaysCrossingTCTrack();
+	public static final Model1X3SlopeTCTrack model1X3Slope = new Model1X3SlopeTCTrack();
 	public static final ModelSlopeTCTrack modelSlope = new ModelSlopeTCTrack();
 	public static final ModelLargeSlopeTCTrack modelLargeSlope = new ModelLargeSlopeTCTrack();
 	public static final ModelVeryLargeSlopeTCTrack	modelVeryLargeSlope = new ModelVeryLargeSlopeTCTrack();
@@ -288,6 +289,11 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 					case EMBEDDED_LARGE_LEFT_PARALLEL_CURVE:
 					{
 						modelLeftParallelCurve.render("large", railTile, x, y, z);
+						break;
+					}
+					case SLOPE_1X3_DYNAMIC:
+					{
+						model1X3Slope.render("dynamic", railTile, x, y, z);
 						break;
 					}
 					case SLOPE_WOOD: {

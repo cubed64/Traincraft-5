@@ -369,8 +369,7 @@ public class TileTCRail extends TileEntity {
 
 			case tcRailMediumParallelSwitch:
 			case tcRailEmbeddedMediumParallelSwitch:
-				return 2; // This should be 3 but the current code for foxtc is 2 for medium parallel
-			//	return 3;
+			 	return 3;
 
 			case tcRailLargeSwitch:
 			case tcRailEmbeddedLargeSwitch:
@@ -436,7 +435,11 @@ public class TileTCRail extends TileEntity {
 		 * ETERNAL NOTE: checking if it's a slope before checking what kind of slope, in theory, should improve performance
 		 */
 		if(type.contains("SLOPE")) {
-			if (type.equals(EnumTracks.SLOPE_WOOD.getLabel())
+			if (type == EnumTracks.SLOPE_1X3_DYNAMIC.getLabel())
+			{
+				slopeAngle = 0.26;
+			}
+			else if (type.equals(EnumTracks.SLOPE_WOOD.getLabel())
 					|| type.equals(EnumTracks.SLOPE_GRAVEL.getLabel())
 					|| type.equals(EnumTracks.SLOPE_BALLAST.getLabel())
 					|| type.equals(EnumTracks.SLOPE_SNOW_GRAVEL.getLabel())
