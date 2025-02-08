@@ -1,10 +1,13 @@
 package train.common.library;
 
+import train.common.enums.TrackResourceLocations;
+import train.common.items.BallastTypes;
 import train.common.items.RailVariants;
 import train.common.items.TCRailTypes;
 
 import java.util.HashMap;
 
+import static train.common.items.BallastTypes.*;
 import static train.common.items.RailVariants.EMBEDDED;
 import static train.common.items.RailVariants.NORMAL;
 import static train.common.items.TCRailTypes.RailTypes.*;
@@ -117,30 +120,30 @@ public enum EnumTracks
 
     FOUR_WAYS_CROSSING("FOUR_WAYS_CROSSING", DIAGONAL_CROSSING, NORMAL, ItemIDs.tcRailFourWaysCrossing, "3x3"),
 
-    SLOPE_WOOD("SLOPE_WOOD", SLOPE, NORMAL, ItemIDs.tcRailSlopeWood, "1x6"),
-    SLOPE_GRAVEL("SLOPE_GRAVEL", SLOPE, NORMAL, ItemIDs.tcRailSlopeGravel, "1x6"),
-    SLOPE_BALLAST("SLOPE_BALLAST", SLOPE, NORMAL, ItemIDs.tcRailSlopeBallast, "1x6"),
+    SLOPE_WOOD("SLOPE_WOOD", SLOPE, NORMAL, WOODSUPPORT, ItemIDs.tcRailSlopeWood, "1x6"),
+    SLOPE_GRAVEL("SLOPE_GRAVEL", SLOPE, NORMAL, GRAVEL,ItemIDs.tcRailSlopeGravel, "1x6"),
+    SLOPE_BALLAST("SLOPE_BALLAST", SLOPE, NORMAL, BALLAST,ItemIDs.tcRailSlopeBallast, "1x6"),
 
-    LARGE_SLOPE_WOOD("LARGE_SLOPE_WOOD", SLOPE, NORMAL, ItemIDs.tcRailLargeSlopeWood, "1x12"),
-    LARGE_SLOPE_GRAVEL("LARGE_SLOPE_GRAVEL", SLOPE, NORMAL, ItemIDs.tcRailLargeSlopeGravel, "1x12"),
-    LARGE_SLOPE_BALLAST("LARGE_SLOPE_BALLAST", SLOPE, NORMAL, ItemIDs.tcRailLargeSlopeBallast, "1x12"),
+    LARGE_SLOPE_WOOD("LARGE_SLOPE_WOOD", SLOPE, NORMAL, WOODSUPPORT,ItemIDs.tcRailLargeSlopeWood, "1x12"),
+    LARGE_SLOPE_GRAVEL("LARGE_SLOPE_GRAVEL", SLOPE, NORMAL, GRAVEL,ItemIDs.tcRailLargeSlopeGravel, "1x12"),
+    LARGE_SLOPE_BALLAST("LARGE_SLOPE_BALLAST", SLOPE, NORMAL, BALLAST,ItemIDs.tcRailLargeSlopeBallast, "1x12"),
 
-    VERY_LARGE_SLOPE_WOOD("VERY_LARGE_SLOPE_WOOD", SLOPE, NORMAL, ItemIDs.tcRailVeryLargeSlopeWood, "1x18"),
-    VERY_LARGE_SLOPE_GRAVEL("VERY_LARGE_SLOPE_GRAVEL", SLOPE, NORMAL, ItemIDs.tcRailVeryLargeSlopeGravel, "1x18"),
-    VERY_LARGE_SLOPE_BALLAST("VERY_LARGE_SLOPE_BALLAST", SLOPE, NORMAL, ItemIDs.tcRailVeryLargeSlopeBallast, "1x18"),
+    VERY_LARGE_SLOPE_WOOD("VERY_LARGE_SLOPE_WOOD", SLOPE, NORMAL, WOODSUPPORT, ItemIDs.tcRailVeryLargeSlopeWood, "1x18"),
+    VERY_LARGE_SLOPE_GRAVEL("VERY_LARGE_SLOPE_GRAVEL", SLOPE, NORMAL, GRAVEL,ItemIDs.tcRailVeryLargeSlopeGravel, "1x18"),
+    VERY_LARGE_SLOPE_BALLAST("VERY_LARGE_SLOPE_BALLAST", SLOPE, NORMAL, BALLAST, ItemIDs.tcRailVeryLargeSlopeBallast, "1x18"),
 
-    SLOPE_SNOW_GRAVEL("SLOPE_SNOW_GRAVEL", SLOPE, NORMAL, ItemIDs.tcRailSlopeSnowGravel, "1x6"),
-    LARGE_SLOPE_SNOW_GRAVEL("LARGE_SLOPE_SNOW_GRAVEL", SLOPE, NORMAL, ItemIDs.tcRailLargeSlopeSnowGravel, "1x12"),
-    VERY_LARGE_SLOPE_SNOW_GRAVEL("VERY_LARGE_SLOPE_SNOW_GRAVEL", SLOPE, NORMAL, ItemIDs.tcRailVeryLargeSlopeSnowGravel, "1x18"),
+    SLOPE_SNOW_GRAVEL("SLOPE_SNOW_GRAVEL", SLOPE, NORMAL, SNOWGRAVEL, ItemIDs.tcRailSlopeSnowGravel, "1x6"),
+    LARGE_SLOPE_SNOW_GRAVEL("LARGE_SLOPE_SNOW_GRAVEL", SLOPE, NORMAL, SNOWGRAVEL, ItemIDs.tcRailLargeSlopeSnowGravel, "1x12"),
+    VERY_LARGE_SLOPE_SNOW_GRAVEL("VERY_LARGE_SLOPE_SNOW_GRAVEL", SLOPE, NORMAL, SNOWGRAVEL, ItemIDs.tcRailVeryLargeSlopeSnowGravel, "1x18"),
 
-    SLOPE_PEA_GRAVEL("SLOPE_PEA_GRAVEL", SLOPE, NORMAL, ItemIDs.tcRailSlopePeaGravel, "1x6"),
-    LARGE_SLOPE_PEA_GRAVEL("LARGE_SLOPE_PEA_GRAVEL", SLOPE, NORMAL, ItemIDs.tcRailLargeSlopePeaGravel, "1x12"),
-    VERY_LARGE_SLOPE_PEA_GRAVEL("VERY_LARGE_SLOPE_PEA_GRAVEL", SLOPE, NORMAL, ItemIDs.tcRailVeryLargeSlopePeaGravel, "1x18"),
+    SLOPE_PEA_GRAVEL("SLOPE_PEA_GRAVEL", SLOPE, NORMAL, PEAGRAVEL, ItemIDs.tcRailSlopePeaGravel, "1x6"),
+    LARGE_SLOPE_PEA_GRAVEL("LARGE_SLOPE_PEA_GRAVEL", SLOPE, NORMAL, PEAGRAVEL, ItemIDs.tcRailLargeSlopePeaGravel, "1x12"),
+    VERY_LARGE_SLOPE_PEA_GRAVEL("VERY_LARGE_SLOPE_PEA_GRAVEL", SLOPE, NORMAL, PEAGRAVEL, ItemIDs.tcRailVeryLargeSlopePeaGravel, "1x18"),
 
-    SLOPE_1X3_DYNAMIC("SLOPE_1X3_DYNAMIC", SLOPE, NORMAL, ItemIDs.tcRail1X3SlopeDynamic, "1x3"),
-    SLOPE_DYNAMIC("SLOPE_DYNAMIC", SLOPE, NORMAL, ItemIDs.tcRailSlopeDynamic, "1x6"),
-    LARGE_SLOPE_DYNAMIC("LARGE_SLOPE_DYNAMIC", SLOPE, NORMAL, ItemIDs.tcRailLargeSlopeDynamic, "1x12" ),
-    VERY_LARGE_SLOPE_DYNAMIC("VERY_LARGE_SLOPE_DYNAMIC", SLOPE, NORMAL, ItemIDs.tcRailVeryLargeSlopeDynamic,"1x18"),
+    SLOPE_1X3_DYNAMIC("SLOPE_1X3_DYNAMIC", SLOPE, NORMAL, DYNAMIC, ItemIDs.tcRail1X3SlopeDynamic, "1x3"),
+    SLOPE_DYNAMIC("SLOPE_DYNAMIC", SLOPE, NORMAL, DYNAMIC, ItemIDs.tcRailSlopeDynamic, "1x6"),
+    LARGE_SLOPE_DYNAMIC("LARGE_SLOPE_DYNAMIC", SLOPE,  NORMAL, DYNAMIC, ItemIDs.tcRailLargeSlopeDynamic, "1x12" ),
+    VERY_LARGE_SLOPE_DYNAMIC("VERY_LARGE_SLOPE_DYNAMIC", SLOPE, NORMAL, DYNAMIC, ItemIDs.tcRailVeryLargeSlopeDynamic,"1x18"),
 
     SMALL_PARALLEL_CURVE("SMALL_PARALLEL_CURVE", PARALLEL, NORMAL, ItemIDs.tcRailSmallParallelCurve, "2x8"),
     SMALL_RIGHT_PARALLEL_CURVE("SMALL_RIGHT_PARALLEL_CURVE", PARALLEL, NORMAL, ItemIDs.tcRailSmallParallelCurve, ""),
@@ -278,9 +281,9 @@ public enum EnumTracks
     EMBEDDED_LARGE_RIGHT_45DEGREE_SWITCH("EMBEDDED_LARGE_RIGHT_45DEGREE_SWITCH", SWITCH, EMBEDDED,ItemIDs.tcRailEmbeddedLarge45DegreeSwitch, ""),
     EMBEDDED_LARGE_LEFT_45DEGREE_SWITCH("EMBEDDED_LARGE_LEFT_45DEGREE_SWITCH", SWITCH, EMBEDDED, ItemIDs.tcRailEmbeddedLarge45DegreeSwitch,  ""),
 
-    EMBEDDED_SLOPE_DYNAMIC("EMBEDDED_SLOPE_DYNAMIC", SLOPE, EMBEDDED, ItemIDs.tcRailEmbeddedSlopeDynamic, "1x6"),
-    EMBEDDED_LARGE_SLOPE_DYNAMIC("EMBEDDED_LARGE_SLOPE_DYNAMIC", SLOPE, EMBEDDED, ItemIDs.tcRailEmbeddedLargeSlopeDynamic, "1x12"),
-    EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC("EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC", SLOPE, EMBEDDED, ItemIDs.tcRailEmbeddedVeryLargeSlopeDynamic, "1x18"),
+    EMBEDDED_SLOPE_DYNAMIC("EMBEDDED_SLOPE_DYNAMIC", SLOPE, EMBEDDED, DYNAMIC, ItemIDs.tcRailEmbeddedSlopeDynamic, "1x6"),
+    EMBEDDED_LARGE_SLOPE_DYNAMIC("EMBEDDED_LARGE_SLOPE_DYNAMIC", SLOPE, EMBEDDED, DYNAMIC, ItemIDs.tcRailEmbeddedLargeSlopeDynamic, "1x12"),
+    EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC("EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC", SLOPE, EMBEDDED, DYNAMIC, ItemIDs.tcRailEmbeddedVeryLargeSlopeDynamic, "1x18"),
 
     //EMBEDDED_LARGE_CURVED_SLOPE_DYNAMIC("EMBEDDED_LARGE_CURVED_SLOPE_DYNAMIC", CURVED_SLOPE, ItemIDs.tcRailEmbeddedLargeCurvedSlopeDynamic, "5x5"),
     //EMBEDDED_LARGE_RIGHT_CURVED_SLOPE_DYNAMIC("EMBEDDED_LARGE_RIGHT_CURVED_SLOPE_DYNAMIC", CURVED_SLOPE, ItemIDs.tcRailEmbeddedLargeCurvedSlopeDynamic, "xxx"),
@@ -304,6 +307,7 @@ public enum EnumTracks
     private final String label;
     private final String type;
     private final TCRailTypes.RailTypes railType;
+    private final BallastTypes ballastType;
 
     private final RailVariants variant;
     private final ItemIDs item;
@@ -317,6 +321,18 @@ public enum EnumTracks
         this.item = item;
         this.tooltip = tooltip;
         this.variant = variant;
+        this.ballastType = null;
+    }
+
+    EnumTracks(String label, TCRailTypes.RailTypes railType, RailVariants variant, BallastTypes ballastType, ItemIDs item, String tooltip)
+    {
+        this.label = label;
+        this.railType = railType;
+        this.type = railType.toString();
+        this.item = item;
+        this.tooltip = tooltip;
+        this.variant = variant;
+        this.ballastType = ballastType;
     }
 
     private final static HashMap<String, EnumTracks> ENUM_TRACKS_HASHMAP = SetupsHashMap();
@@ -352,6 +368,10 @@ public enum EnumTracks
         return this.railType;
     }
 
+    public BallastTypes getBallastType()
+    {
+        return this.ballastType;
+    }
 
     public ItemIDs getItem() {
         return this.item;

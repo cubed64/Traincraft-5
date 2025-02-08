@@ -3,6 +3,7 @@ package train.client.render;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import train.client.render.models.blocks.*;
+import train.client.render.models.blocks.BaseClass.ModelSlopeTCTrack;
 import train.common.tile.TileTCRail;
 
 public class RenderTCRail extends TileEntitySpecialRenderer {
@@ -23,10 +24,10 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 	public static final ModelRightSwitchTCTrack modelRightSwitchTurn = new ModelRightSwitchTCTrack();
 	public static final ModelLeftSwitchTCTrack modelLeftSwitchTurn = new ModelLeftSwitchTCTrack();
 	public static final ModelTwoWaysCrossingTCTrack modelTwoWaysCrossing = new ModelTwoWaysCrossingTCTrack();
-	public static final Model1X3SlopeTCTrack model1X3Slope = new Model1X3SlopeTCTrack();
-	public static final ModelSlopeTCTrack modelSlope = new ModelSlopeTCTrack();
-	public static final ModelLargeSlopeTCTrack modelLargeSlope = new ModelLargeSlopeTCTrack();
-	public static final ModelVeryLargeSlopeTCTrack	modelVeryLargeSlope = new ModelVeryLargeSlopeTCTrack();
+	public static final ModelSlopeTCTrack model1X3Slope = new ModelSlopeTCTrack("track_slope_1x3.obj", "track_slope_1x3_ballast.obj");
+	public static final ModelSlopeTCTrack modelSlope = new ModelSlopeTCTrack("track_slope.obj", "supports_wood.obj", "supports_ballast.obj");
+	public static final ModelSlopeTCTrack modelLargeSlope = new ModelSlopeTCTrack("track_slope_long.obj", "supports_wood_long.obj", "supports_ballast_long.obj");
+	public static final ModelSlopeTCTrack modelVeryLargeSlope = new ModelSlopeTCTrack("track_slope_verylong.obj", "supports_wood_verylong.obj", "supports_ballast_verylong.obj");
 	public static final ModelRightParallelCurveTCTrack modelRightParallelCurve = new ModelRightParallelCurveTCTrack();
 	public static final ModelLeftParallelCurveTCTrack modelLeftParallelCurve = new ModelLeftParallelCurveTCTrack();
 
@@ -293,91 +294,51 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 					}
 					case SLOPE_1X3_DYNAMIC:
 					{
-						model1X3Slope.render("dynamic", railTile, x, y, z);
+						model1X3Slope.renderDynamic(railTile, x, y, z);
 						break;
 					}
-					case SLOPE_WOOD: {
-						modelSlope.render("wood", railTile, x, y, z);
+					case SLOPE_DYNAMIC:
+					case EMBEDDED_SLOPE_DYNAMIC:
+					{
+						modelSlope.renderDynamic(railTile, x, y, z);
 						break;
 					}
-					case SLOPE_GRAVEL: {
-						modelSlope.render("gravel", railTile, x, y, z);
+					case SLOPE_WOOD:
+					case SLOPE_GRAVEL:
+					case SLOPE_PEA_GRAVEL:
+					case SLOPE_BALLAST:
+					case SLOPE_SNOW_GRAVEL:
+					{
+						modelSlope.render(railTile, x, y, z);
 						break;
 					}
-					case SLOPE_BALLAST: {
-						modelSlope.render("ballast", railTile, x, y, z);
+					case LARGE_SLOPE_DYNAMIC:
+					case EMBEDDED_LARGE_SLOPE_DYNAMIC:
+						modelLargeSlope.renderDynamic(railTile, x, y, z);
+					break;
+
+					case LARGE_SLOPE_WOOD:
+					case LARGE_SLOPE_GRAVEL:
+					case LARGE_SLOPE_BALLAST:
+					case LARGE_SLOPE_SNOW_GRAVEL:
+					case LARGE_SLOPE_PEA_GRAVEL:
+					{
+						modelLargeSlope.render(railTile, x, y, z);
 						break;
 					}
-					case SLOPE_SNOW_GRAVEL: {
-						modelSlope.render("snow", railTile, x, y, z);
+					case VERY_LARGE_SLOPE_DYNAMIC:
+					case EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC:
+					{
+						modelVeryLargeSlope.renderDynamic(railTile, x, y, z);
 						break;
 					}
-					case SLOPE_DYNAMIC: {
-						modelSlope.render("dynamic", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_SLOPE_DYNAMIC: {
-						modelSlope.render("embedded_dynamic", railTile, x, y, z);
-						break;
-					}
-					case LARGE_SLOPE_WOOD: {
-						modelLargeSlope.render("wood", railTile, x, y, z);
-						break;
-					}
-					case LARGE_SLOPE_GRAVEL: {
-						modelLargeSlope.render("gravel", railTile, x, y, z);
-						break;
-					}
-					case LARGE_SLOPE_BALLAST: {
-						modelLargeSlope.render("ballast", railTile, x, y, z);
-						break;
-					}
-					case LARGE_SLOPE_SNOW_GRAVEL: {
-						modelLargeSlope.render("snow", railTile, x, y, z);
-						break;
-					}
-					case LARGE_SLOPE_DYNAMIC: {
-						modelLargeSlope.render("dynamic", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_LARGE_SLOPE_DYNAMIC: {
-						modelLargeSlope.render("embedded_dynamic", railTile, x, y, z);
-						break;
-					}
-					case VERY_LARGE_SLOPE_WOOD: {
-						modelVeryLargeSlope.render("wood", railTile, x, y, z);
-						break;
-					}
-					case VERY_LARGE_SLOPE_GRAVEL: {
-						modelVeryLargeSlope.render("gravel", railTile, x, y, z);
-						break;
-					}
-					case VERY_LARGE_SLOPE_BALLAST: {
-						modelVeryLargeSlope.render("ballast", railTile, x, y, z);
-						break;
-					}
-					case VERY_LARGE_SLOPE_SNOW_GRAVEL: {
-						modelVeryLargeSlope.render("snow", railTile, x, y, z);
-						break;
-					}
-					case SLOPE_PEA_GRAVEL: {
-						modelSlope.render("peagravel", railTile, x, y, z);
-						break;
-					}
-					case LARGE_SLOPE_PEA_GRAVEL: {
-						modelLargeSlope.render("peagravel", railTile, x, y, z);
-						break;
-					}
-					case VERY_LARGE_SLOPE_PEA_GRAVEL: {
-						modelVeryLargeSlope.render("peagravel", railTile, x, y, z);
-						break;
-					}
-					case VERY_LARGE_SLOPE_DYNAMIC: {
-						modelVeryLargeSlope.render("dynamic", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC: {
-						modelVeryLargeSlope.render("embedded_dynamic", railTile, x, y, z);
+					case VERY_LARGE_SLOPE_WOOD:
+					case VERY_LARGE_SLOPE_GRAVEL:
+					case VERY_LARGE_SLOPE_BALLAST:
+					case VERY_LARGE_SLOPE_SNOW_GRAVEL:
+					case VERY_LARGE_SLOPE_PEA_GRAVEL:
+					{
+						modelVeryLargeSlope.render(railTile, x, y, z);
 						break;
 					}
 					// Embedded Tracks

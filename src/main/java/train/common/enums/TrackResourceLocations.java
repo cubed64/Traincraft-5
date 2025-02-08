@@ -1,6 +1,7 @@
 package train.common.enums;
 
 import net.minecraft.util.ResourceLocation;
+import train.common.items.BallastTypes;
 import train.common.items.RailVariants;
 import train.common.library.Info;
 
@@ -26,7 +27,7 @@ public class TrackResourceLocations
     public static final ResourceLocation ballast = new ResourceLocation(Info.resourceLocation, "textures/blocks/ballast_test.png");
     public static final ResourceLocation snowGravel = new ResourceLocation(Info.resourceLocation, "textures/blocks/snowgravel.png");
     public static final ResourceLocation peaGravel = new ResourceLocation(Info.resourceLocation, "textures/blocks/peagravel.png");
-    public static final ResourceLocation woodSupport = null;
+    public static final ResourceLocation woodSupport = new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_slope.png");
 
     public static ResourceLocation GetBallasetResourceLocation(BallastTypes ballastType)
     {
@@ -45,14 +46,5 @@ public class TrackResourceLocations
             default:
                 return null;
         }
-    }
-    public enum BallastTypes
-    {
-        WOODSUPPORT,
-        GRAVEL,
-        BALLAST,
-        SNOWGRAVEL,
-        PEAGRAVEL,
-        DYNAMIC,
     }
 }
