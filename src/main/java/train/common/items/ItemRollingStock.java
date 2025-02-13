@@ -35,7 +35,7 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
     private String iconName = "";
     private String trainName;
     private String trainCreator;
-    private String trainNote;
+    private String trainNote = "";
     private int trainColor = -1;
 
     public ItemRollingStock(String iconName, TypeOfRollingStock typeOfRollingStock) {
