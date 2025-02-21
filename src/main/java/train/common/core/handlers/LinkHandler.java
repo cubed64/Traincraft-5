@@ -315,6 +315,14 @@ public class LinkHandler {
 						cart2.cartLinked2 = cart1;
 					}
 
+					if(!cart1.RollingStock.contains(cart2)){
+						cart1.RollingStock.add(cart2);
+					}
+
+					if(!cart2.RollingStock.contains(cart1)){
+						cart2.RollingStock.add(cart1);
+					}
+
 					cart2.isAttached = true;
 
 					cart2.isAttaching = false;

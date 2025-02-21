@@ -204,94 +204,37 @@ public class CustomRenderHandler
             }
         }
         // Slopes
-        else if (item.getTrackType() == EnumTracks.SLOPE_BALLAST)
-        {
-            RenderTCRail.modelSlope.render("ballast", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-        }
-        else if (item.getTrackType() == EnumTracks.SLOPE_GRAVEL)
-        {
-            RenderTCRail.modelSlope.render("gravel", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-        }
-        else if (item.getTrackType() == EnumTracks.SLOPE_WOOD)
-        {
-            RenderTCRail.modelSlope.render("wood", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-        }
-        else if (item.getTrackType() == EnumTracks.SLOPE_SNOW_GRAVEL)
-        {
-            RenderTCRail.modelSlope.render("snow", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-        }
-        else if (item.getTrackType() == EnumTracks.SLOPE_DYNAMIC)
+        else if (item.getTrackType().getLabel().contains("VERY_LARGE_SLOPE_DYNAMIC"))
         {
             blockInfo();
-            RenderTCRail.modelSlope.render("dynamic", facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
+            RenderTCRail.modelVeryLargeSlope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
         }
-        else if (item.getTrackType() == EnumTracks.SLOPE_PEA_GRAVEL)
+        else if (item.getTrackType().getLabel().contains("VERY_LARGE_SLOPE"))
         {
-            RenderTCRail.modelSlope.render("peagravel", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
+            RenderTCRail.modelVeryLargeSlope.render(item.getTrackType().getVariant(), item.getTrackType().getBallastType(), facing, 0, 0, 0, r, g, b, 0.5f);
         }
-        else if (item.getTrackType() == EnumTracks.LARGE_SLOPE_BALLAST)
-        {
-            RenderTCRail.modelLargeSlope.render("ballast", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-        }
-        else if (item.getTrackType() == EnumTracks.LARGE_SLOPE_GRAVEL)
-        {
-            RenderTCRail.modelLargeSlope.render("gravel", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-        }
-        else if (item.getTrackType() == EnumTracks.LARGE_SLOPE_WOOD)
-        {
-            RenderTCRail.modelLargeSlope.render("wood", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-        }
-        else if (item.getTrackType() == EnumTracks.LARGE_SLOPE_SNOW_GRAVEL)
-        {
-            RenderTCRail.modelLargeSlope.render("snow", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-        }
-        else if (item.getTrackType() == EnumTracks.LARGE_SLOPE_DYNAMIC) {
-            blockInfo();
-            RenderTCRail.modelLargeSlope.render("dynamic", facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
-        }
-        else if (item.getTrackType() == EnumTracks.LARGE_SLOPE_PEA_GRAVEL)
-        {
-            RenderTCRail.modelLargeSlope.render("peagravel", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-        }
-        else if (item.getTrackType() == EnumTracks.VERY_LARGE_SLOPE_BALLAST)
-        {
-            RenderTCRail.modelVeryLargeSlope.render("ballast", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-        }
-        else if (item.getTrackType() == EnumTracks.VERY_LARGE_SLOPE_GRAVEL)
-        {
-            RenderTCRail.modelVeryLargeSlope.render("gravel", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-        }
-        else if (item.getTrackType() == EnumTracks.VERY_LARGE_SLOPE_WOOD)
-        {
-            RenderTCRail.modelVeryLargeSlope.render("wood", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-        }
-        else if (item.getTrackType() == EnumTracks.VERY_LARGE_SLOPE_SNOW_GRAVEL)
-        {
-            RenderTCRail.modelVeryLargeSlope.render("snow", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-        }
-        else if (item.getTrackType() == EnumTracks.VERY_LARGE_SLOPE_PEA_GRAVEL)
-        {
-            RenderTCRail.modelVeryLargeSlope.render("peagravel", facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-        }
-        else if (item.getTrackType() == EnumTracks.VERY_LARGE_SLOPE_DYNAMIC)
+        else if (item.getTrackType().getLabel().contains("LARGE_SLOPE_DYNAMIC"))
         {
             blockInfo();
-            RenderTCRail.modelVeryLargeSlope.render("dynamic", facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
+            RenderTCRail.modelLargeSlope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
         }
-        else if (item.getTrackType() == EnumTracks.EMBEDDED_SLOPE_DYNAMIC)
+        else if (item.getTrackType().getLabel().contains("LARGE_SLOPE"))
+        {
+            RenderTCRail.modelLargeSlope.render(item.getTrackType().getVariant(), item.getTrackType().getBallastType(), facing, 0, 0, 0, r, g, b, 0.5f);
+        }
+        else if  (item.getTrackType().getLabel().contains("SLOPE_1X3_DYNAMIC"))
         {
             blockInfo();
-            RenderTCRail.modelSlope.render("embedded_dynamic", facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
+            RenderTCRail.model1X3Slope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
         }
-        else if (item.getTrackType() == EnumTracks.EMBEDDED_LARGE_SLOPE_DYNAMIC)
+        else if (item.getTrackType().getLabel().contains("SLOPE_DYNAMIC"))
         {
             blockInfo();
-            RenderTCRail.modelLargeSlope.render("embedded_dynamic", facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
+            RenderTCRail.modelSlope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
         }
-        else if (item.getTrackType() == EnumTracks.EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC)
+        else if (item.getTrackType().getLabel().contains("SLOPE"))
         {
-            blockInfo();
-            RenderTCRail.modelVeryLargeSlope.render("embedded_dynamic", facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
+            RenderTCRail.modelSlope.render(item.getTrackType().getVariant(), item.getTrackType().getBallastType(), facing, 0, 0, 0, r, g, b, 0.5f);
         }
         else if (item.getTrackType().getRailType() == TCRailTypes.RailTypes.PARALLEL)
         {

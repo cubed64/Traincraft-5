@@ -269,33 +269,35 @@ public class PathFindingHelper
         return false;
     }
 
-    public double getSlopeAdjustedSpeed(AbstractTrains abstractTrains, double normalizedSpeed, double slopeAngle) {
-            if (abstractTrains instanceof Locomotive && !((Locomotive) abstractTrains).canBePulled) { //make this speedup only happen twice a second
-                if (abstractTrains.ticksExisted % 10 == 0) {
-                    int carsPulled = numCarsTotal(abstractTrains);
-                    carsPulled--; //locomotive counting as two entities?
-                    int carsOnSlope = abstractTrains.numCarsOnSlope();
-                    if ((abstractTrains.posY - abstractTrains.prevPosY < 0)) {
-                        normalizedSpeed *= (((double) carsOnSlope / carsPulled) * (slopeAngle)) + abstractTrains.getDragAir();
-                    } else if ((abstractTrains.posY - abstractTrains.prevPosY) > 0.013) {//0.013 to account for the jank that happens when over slopes back to back.
-                        normalizedSpeed *= 1 - (((double) carsOnSlope / carsPulled) * slopeAngle);
-                        if (normalizedSpeed - 0.001 <= 0) {
-                            normalizedSpeed = -0.001;
-                        }
+    public double getSlopeAdjustedSpeed(AbstractTrains abstractTrains, double normalizedSpeed, double slopeAngle)
+    {
+        /** Turning this off till later as this needs more tweaking
+        if (abstractTrains instanceof Locomotive && !((Locomotive) abstractTrains).canBePulled) { //make this speedup only happen twice a second
+            if (abstractTrains.ticksExisted % 10 == 0) {
+                int carsPulled = numCarsTotal(abstractTrains);
+                carsPulled--; //locomotive counting as two entities?
+                int carsOnSlope = abstractTrains.numCarsOnSlope();
+                if ((abstractTrains.posY - abstractTrains.prevPosY < 0)) {
+                    normalizedSpeed *= (((double) carsOnSlope / carsPulled) * (slopeAngle)) + abstractTrains.getDragAir();
+                } else if ((abstractTrains.posY - abstractTrains.prevPosY) > 0.013) {//0.013 to account for the jank that happens when over slopes back to back.
+                    normalizedSpeed *= 1 - (((double) carsOnSlope / carsPulled) * slopeAngle);
+                    if (normalizedSpeed - 0.001 <= 0) {
+                        normalizedSpeed = -0.001;
                     }
-                }
-            } else if (!abstractTrains.trainHandler.hasLocomotive()) { //traincars. is a bit jumpy but doesn't seem to derail
-                if ((abstractTrains.posY - abstractTrains.prevPosY) < 0) {
-                    if (slopeAngle < 0.05) {
-                        normalizedSpeed *= abstractTrains.getDragAir() + (slopeAngle * 2.7);
-
-                    } else {
-                        normalizedSpeed *= abstractTrains.getDragAir() + (slopeAngle * 2);
-                    }
-                } else if ((abstractTrains.posY - abstractTrains.prevPosY) > 0.013) {
-                    normalizedSpeed *= (0.98 - (slopeAngle));
                 }
             }
+        } else if (abstractTrains.trainHandler == null || !abstractTrains.trainHandler.hasLocomotive()) { //traincars. is a bit jumpy but doesn't seem to derail
+            if ((abstractTrains.posY - abstractTrains.prevPosY) < 0) {
+                if (slopeAngle < 0.05) {
+                    normalizedSpeed *= abstractTrains.getDragAir() + (slopeAngle * 2.7);
+
+                } else {
+                    normalizedSpeed *= abstractTrains.getDragAir() + (slopeAngle * 2);
+                }
+            } else if ((abstractTrains.posY - abstractTrains.prevPosY) > 0.013) {
+                normalizedSpeed *= (0.98 - (slopeAngle));
+            }
+        } */
         return normalizedSpeed;
     }
 

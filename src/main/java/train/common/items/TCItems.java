@@ -8,6 +8,7 @@
 package train.common.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.item.Item;
 import train.common.Traincraft;
 import train.common.adminbook.ItemAdminBook;
 import train.common.library.EnumTracks;
@@ -124,6 +125,7 @@ public class TCItems {
 		ItemIDs.tcRailEmbeddedLarge45DegreeSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_45DEGREE_SWITCH);
 
 		/** Normal Slopes*/
+		ItemIDs.tcRail1X3SlopeDynamic.item = new ItemTCRail(EnumTracks.SLOPE_1X3_DYNAMIC);
 		ItemIDs.tcRailSlopeWood.item = new ItemTCRail(EnumTracks.SLOPE_WOOD);
 		ItemIDs.tcRailSlopeGravel.item = new ItemTCRail(EnumTracks.SLOPE_GRAVEL);
 		ItemIDs.tcRailSlopeBallast.item = new ItemTCRail(EnumTracks.SLOPE_BALLAST);

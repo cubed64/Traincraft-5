@@ -324,6 +324,9 @@ public class ItemTCRail extends ItemPart {
 			case EMBEDDED_VERY_LONG_STRAIGHT:
 			return new int[][]{ {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {6,0}, {7,0}, {8,0}, {9,0}, {10,0}, {11,0}};
 
+			case SLOPE_1X3_DYNAMIC:
+			return new int[][]{ {0,0}, {1,0}, {2,0} };
+
 			case SLOPE_BALLAST:
 			case SLOPE_GRAVEL:
 			case SLOPE_WOOD:
@@ -794,8 +797,6 @@ public class ItemTCRail extends ItemPart {
 					}
 					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 30.22f)) {return false;}
 					break;
-
-
 
 				case LEFT_TURN_1X1:
 				case EMBEDDED_LEFT_TURN_1X1:
@@ -2133,7 +2134,12 @@ public class ItemTCRail extends ItemPart {
 						 * Explanation: normally you would devide 100 by (gagEnd+1) but this seems to be
 						 * against TCs own brain. you need to devide 100 by (gagEnd+1)
 						 **/
-						if (type == EnumTracks.SLOPE_WOOD || type == EnumTracks.SLOPE_GRAVEL
+						if (type == EnumTracks.SLOPE_1X3_DYNAMIC)
+						{
+							gagEnd = 2;
+							slopeAngle = 0.26;
+						}
+						else if (type == EnumTracks.SLOPE_WOOD || type == EnumTracks.SLOPE_GRAVEL
 								|| type == EnumTracks.SLOPE_BALLAST || type == EnumTracks.SLOPE_SNOW_GRAVEL
 								|| type == EnumTracks.SLOPE_PEA_GRAVEL || type == EnumTracks.SLOPE_DYNAMIC
 								|| type == EnumTracks.EMBEDDED_SLOPE_DYNAMIC) {
@@ -3333,7 +3339,7 @@ public class ItemTCRail extends ItemPart {
 			tcRailTurn.hasModel = false;
 
 			/** Switch rail 1 */
-			putDownSingleRail(world, x + 1, y + 1, z, l, x + 0.5, y + 1, z + 9, 8.5, tempType.getLabel(), true, x + 3, y + 1, z + 1, false, false);
+			putDownSingleRail(world, x + 1, y + 1, z, l, x + 0.5, y + 1, z + 9, 8.5, tempType.getLabel(), true, x + 3, y + 1, z + 1, true, false);
 
 			/** Switch rail 2 **/
 			putDownSingleRail(world, x + 2, y + 1, z, l, x + 0.5, y + 1, z + 9, 8.5, typeVariantStraightLabel, false, x + 3, y + 1, z + 1, true, false);
@@ -3384,7 +3390,7 @@ public class ItemTCRail extends ItemPart {
 			tcRailTurn.hasModel = false;
 
 			/** Switch rail 1 */
-			putDownSingleRail(world, x - 1, y + 1, z, l, x + 0.5, y + 1, z - 8, 8.5, tempType.getLabel(), true, x - 3, y + 1, z - 1, false, false);
+			putDownSingleRail(world, x - 1, y + 1, z, l, x + 0.5, y + 1, z - 8, 8.5, tempType.getLabel(), true, x - 3, y + 1, z - 1, true, false);
 
 			/** Switch rail 2 **/
 			putDownSingleRail(world, x - 2, y + 1, z, l, x + 0.5, y + 1, z - 8, 8.5, typeVariantStraightLabel, false, x - 3, y + 1, z - 1, true, false);
@@ -3436,7 +3442,7 @@ public class ItemTCRail extends ItemPart {
 			tcRailTurn.hasModel = false;
 
 			/** Switch rail 1 */
-			putDownSingleRail(world, x, y + 1, z + 1, l, x - 8, y + 1, z + 0.5, 8.5, tempType.getLabel(), true, x - 1, y + 1, z + 3, false, false);
+			putDownSingleRail(world, x, y + 1, z + 1, l, x - 8, y + 1, z + 0.5, 8.5, tempType.getLabel(), true, x - 1, y + 1, z + 3, true, false);
 
 			/** Switch rail 2 **/
 			putDownSingleRail(world, x, y + 1, z + 2, l, x - 8, y + 1, z + 0.5, 8.5, typeVariantStraightLabel, false, x - 1, y + 1, z + 3, true, false);
@@ -3488,7 +3494,7 @@ public class ItemTCRail extends ItemPart {
 			tcRailTurn.hasModel = false;
 
 			/** Switch rail 1 */
-			putDownSingleRail(world, x, y + 1, z - 1, l, x + 9, y + 1, z + 0.5, 8.5, tempType.getLabel(), true, x + 1, y + 1, z - 3, false, false);
+			putDownSingleRail(world, x, y + 1, z - 1, l, x + 9, y + 1, z + 0.5, 8.5, tempType.getLabel(), true, x + 1, y + 1, z - 3, true, false);
 
 			/** Switch rail 2 **/
 			putDownSingleRail(world, x, y + 1, z - 2, l, x + 9, y + 1, z + 0.5, 8.5, typeVariantStraightLabel, false, x + 1, y + 1, z - 3, true, false);
@@ -3539,7 +3545,7 @@ public class ItemTCRail extends ItemPart {
 			tcRailTurn.hasModel = false;
 
 			/** Switch rail 1 */
-			putDownSingleRail(world, x, y + 1, z - 1, l, x - 8, y + 1, z + 0.5, 8.5, tempType.getLabel(), true, x - 1, y + 1, z - 3, false, false);
+			putDownSingleRail(world, x, y + 1, z - 1, l, x - 8, y + 1, z + 0.5, 8.5, tempType.getLabel(), true, x - 1, y + 1, z - 3, true, false);
 
 			/** Switch rail 2 **/
 			putDownSingleRail(world, x, y + 1, z - 2, l, x - 8, y + 1, z + 0.5, 8.5, typeVariantStraightLabel, false, x - 1, y + 1, z - 3, true, false);
@@ -3590,7 +3596,7 @@ public class ItemTCRail extends ItemPart {
 			tcRailTurn.hasModel = false;
 
 			/** Switch rail 1 */
-			putDownSingleRail(world, x, y + 1, z + 1, l, x + 9, y + 1, z + 0.5, 8.5, tempType.getLabel(), true, x + 1, y + 1, z + 3, false, false);
+			putDownSingleRail(world, x, y + 1, z + 1, l, x + 9, y + 1, z + 0.5, 8.5, tempType.getLabel(), true, x + 1, y + 1, z + 3, true, false);
 
 			/** Switch rail 2 **/
 			putDownSingleRail(world, x, y + 1, z + 2, l, x + 9, y + 1, z + 0.5, 8.5, typeVariantStraightLabel, false, x + 1, y + 1, z + 3, true, false);
@@ -3641,7 +3647,7 @@ public class ItemTCRail extends ItemPart {
 			tcRailTurn.hasModel = false;
 
 			/** Switch rail 1 */
-			putDownSingleRail(world, x + 1, y + 1, z, l, x + 0.5, y + 1, z - 8, 8.5, tempType.getLabel(), true, x + 3, y + 1, z - 1, false, false);
+			putDownSingleRail(world, x + 1, y + 1, z, l, x + 0.5, y + 1, z - 8, 8.5, tempType.getLabel(), true, x + 3, y + 1, z - 1, true, false);
 
 			/** Switch rail 2 **/
 			putDownSingleRail(world, x + 2, y + 1, z, l, x + 0.5, y + 1, z - 8, 8.5, typeVariantStraightLabel, false, x + 3, y + 1, z - 1, true, false);
@@ -3694,7 +3700,7 @@ public class ItemTCRail extends ItemPart {
 			tcRailTurn.hasModel = false;
 
 			/** Switch rail 1 */
-			putDownSingleRail(world, x - 1, y + 1, z, l, x + 0.5, y + 1, z + 9, 8.5, tempType.getLabel(), true, x - 3, y + 1, z + 1, false, false);
+			putDownSingleRail(world, x - 1, y + 1, z, l, x + 0.5, y + 1, z + 9, 8.5, tempType.getLabel(), true, x - 3, y + 1, z + 1, true, false);
 
 			/** Switch rail 2 **/
 			putDownSingleRail(world, x - 2, y + 1, z, l, x + 0.5, y + 1, z + 9, 8.5, typeVariantStraightLabel, false, x - 3, y + 1, z + 1, true, false);
