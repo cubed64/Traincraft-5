@@ -31,7 +31,7 @@ public class ModelGP49 extends ModelConverter //Same as Filename
 
 	public ModelGP49() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[295];
+		bodyModel = new ModelRendererTurbo[301];
 
 		initbodyModel_1();
 
@@ -338,6 +338,12 @@ public class ModelGP49 extends ModelConverter //Same as Filename
 		bodyModel[292] = new ModelRendererTurbo(this, 377, 113, textureX, textureY); // Box 86 stand2
 		bodyModel[293] = new ModelRendererTurbo(this, 1, 113, textureX, textureY); // Box 87 stand2
 		bodyModel[294] = new ModelRendererTurbo(this, 401, 113, textureX, textureY); // Box 86 stand2
+		bodyModel[295] = new ModelRendererTurbo(this, 82, 179, textureX, textureY, "lamp"); // Box 292 headlight nose
+		bodyModel[296] = new ModelRendererTurbo(this, 82, 174, textureX, textureY, "lamp"); // Box 293 headlight nose
+		bodyModel[297] = new ModelRendererTurbo(this, 74, 176, textureX, textureY); // Box 114 glontch bell
+		bodyModel[298] = new ModelRendererTurbo(this, 74, 176, textureX, textureY); // Box 74 glontch bell
+		bodyModel[299] = new ModelRendererTurbo(this, 74, 179, textureX, textureY); // Box 78 glontch bell
+		bodyModel[300] = new ModelRendererTurbo(this, 72, 173, textureX, textureY); // Box 245 glontch bell
 
 		bodyModel[0].addBox(0F, 0F, 0F, 70, 1, 4, 0F); // Box 1
 		bodyModel[0].setRotationPoint(-35F, 0F, -11F);
@@ -1236,6 +1242,24 @@ public class ModelGP49 extends ModelConverter //Same as Filename
 		bodyModel[294].addBox(0F, 0F, 0F, 5, 2, 2, 0F); // Box 86 stand2
 		bodyModel[294].setRotationPoint(-26F, -14F, -5F);
 		bodyModel[294].rotateAngleY = -0.38397244F;
+
+		bodyModel[295].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 292 headlight nose
+		bodyModel[295].setRotationPoint(-39F, -10F, -1F);
+
+		bodyModel[296].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 293 headlight nose
+		bodyModel[296].setRotationPoint(-39F, -12F, -1F);
+
+		bodyModel[297].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0.5F, 0F, 0.5F, 0.5F, 0F, 0.5F, 0.5F, 0F, 0.5F, 0.5F, 0F, 0.5F); // Box 114 glontch bell
+		bodyModel[297].setRotationPoint(-32F, -19F, -0.5F);
+
+		bodyModel[298].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,-0.2F, 0F, -0.2F, -0.2F, 0F, -0.2F, -0.2F, 0F, -0.2F, -0.2F, 0F, -0.2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 74 glontch bell
+		bodyModel[298].setRotationPoint(-32F, -20F, -0.5F);
+
+		bodyModel[299].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -0.5F, 0F, 0F, -0.5F); // Box 78 glontch bell
+		bodyModel[299].setRotationPoint(-31.75F, -18.5F, -0.25F);
+
+		bodyModel[300].addShapeBox(0F, 0F, 0F, 3, 1, 1, 0F,0F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F); // Box 245 glontch bell
+		bodyModel[300].setRotationPoint(-32F, -21F, -0.5F);
 	}
 	ModelBlombergBnew theTrucks2 = new ModelBlombergBnew();
 
@@ -1244,10 +1268,10 @@ public class ModelGP49 extends ModelConverter //Same as Filename
 	{
 		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 643||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1235||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 12351||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3457||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3458||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3455) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_Black.png"));
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 12351||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3457||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3458||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3455) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Blac.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.5, 0.15, 0);
+			GL11.glTranslated(-1.5, -0.01, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
 			GL11.glTranslated(3, 0, 0);

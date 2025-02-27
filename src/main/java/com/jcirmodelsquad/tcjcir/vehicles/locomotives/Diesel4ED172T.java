@@ -24,7 +24,7 @@ public class Diesel4ED172T extends DieselTrain {
         textureDescriptionMap.put(4, "Blandsville & Blankerston");
         textureDescriptionMap.put(5, "Blandsville & Blankerston (Chop)");
         textureDescriptionMap.put(6, "Southfield");
-        textureDescriptionMap.put(7, "");
+        textureDescriptionMap.put(7, "NP (Lowey Green)");
         textureDescriptionMap.put(8, "");
         textureDescriptionMap.put(9, "");
         textureDescriptionMap.put(10, "");

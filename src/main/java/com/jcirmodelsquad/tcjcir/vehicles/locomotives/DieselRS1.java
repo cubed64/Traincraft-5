@@ -21,11 +21,12 @@ public class DieselRS1 extends DieselTrain {
         textureDescriptionMap.put(1, "she wabash on my lake till i ann arbor");
         textureDescriptionMap.put(2, "Tidewater Southern");
         textureDescriptionMap.put(3, "Blandsville & Blankerston");
-        textureDescriptionMap.put(4, "Deadwood & La Mesa (Early)");
-        textureDescriptionMap.put(5, "Deadwood & La Mesa (Late)");
-        textureDescriptionMap.put(6, "Fox, North Coast & Cascades (Regal)");
-        textureDescriptionMap.put(7, "sander faye");
+        textureDescriptionMap.put(4, "DLMR (Early)");
+        textureDescriptionMap.put(5, "DLMR (Late)");
+        textureDescriptionMap.put(6, "FMSR (Late)");
+        textureDescriptionMap.put(7, "ATSF");
         textureDescriptionMap.put(8, "Glontch");
+        textureDescriptionMap.put(9, "AGW");
 
     }
     public DieselRS1(World world, double d, double d1, double d2){

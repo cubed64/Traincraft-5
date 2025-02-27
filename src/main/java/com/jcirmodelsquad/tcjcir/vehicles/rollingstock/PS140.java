@@ -35,6 +35,8 @@ public class PS140 extends Freight implements IInventory {
         textureDescriptionMap.put(14, "TIRY");
         textureDescriptionMap.put(15, "TIRY");
         textureDescriptionMap.put(16, "GLNT");
+        textureDescriptionMap.put(17, "AGW");
+        textureDescriptionMap.put(18, "AGW");
     }
 
     public PS140(World world, double d, double d1, double d2){

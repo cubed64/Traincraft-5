@@ -25,16 +25,7 @@ public class DieselU30C extends DieselTrain {
         textureDescriptionMap.put(5, "Deadwood & La Mesa");
         textureDescriptionMap.put(6, "West Creek Pacific");
         textureDescriptionMap.put(7, "Boston & Maine 663 (Guilford)");
-
-        //old textures, old model
-        /*textureDescriptionMap.put(0, "Burlington Northern");
-        textureDescriptionMap.put(1, "Seaboard Systems");
-        textureDescriptionMap.put(2, "Fox, North Coast & Cascades (North Fox)");
-        textureDescriptionMap.put(3, "CB&Q");
-        textureDescriptionMap.put(4, "Chicago Northwestern Railroad");
-        textureDescriptionMap.put(5, "Acworth North Western");
-        textureDescriptionMap.put(6, "Lisha & Watson (EX Seaboard)");
-        textureDescriptionMap.put(7, "West Creek Pacific");*/
+        textureDescriptionMap.put(8, "AGW");
     }
     public DieselU30C(World world, double d, double d1, double d2){
         this(world);

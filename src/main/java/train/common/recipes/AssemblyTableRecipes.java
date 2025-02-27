@@ -56,6 +56,82 @@ public class AssemblyTableRecipes {
 			Item itemSteel = k.getItem();
 			int itemDamageSteel = k.getItemDamage();
 
+			//doing bap recipes first
+			//example of item order
+			cm.addRecipe(3, null, null, null, null, null, null, null, null, null, null, new ItemStack(ItemIDs.pennCentral.item, 1), 1);
+
+
+			//=================== BAP STEAM ===================//
+			for (ItemStack iron : ingotIron) {
+				for (ItemStack c : coal) {
+					cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 2), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 2), null, new ItemStack(ItemIDs.minecartClimaxNew.item, 1), 1);
+					for (ItemStack plank : s1) {
+						cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(plank.getItem(), 3), new ItemStack(ItemIDs.ironBoiler.item, 1), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(iron.getItem(), 2), null, new ItemStack(ItemIDs.minecartVBShay2.item, 1), 1);
+					}
+					for (ItemStack dye : dyeGreen) {
+						cm.addRecipe(2, new ItemStack(Blocks.torch, 1), new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.boiler.item, 4), new ItemStack(ItemIDs.firebox.item, 2), new ItemStack(Items.iron_ingot, 4), dye, new ItemStack(ItemIDs.minecartSkook.item, 1), 1);
+						cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), null, null, null, new ItemStack(itemSteel, 4, itemDamageSteel), new ItemStack(c.getItem(), 2), dye, new ItemStack(ItemIDs.minecartSkookTender.item, 1), 1);
+					}
+					for (ItemStack dye : dyeBlack) {
+						cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 2), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 2), dye, new ItemStack(ItemIDs.minecartShay3Truck.item, 1), 1);
+						cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 2), new ItemStack(ItemIDs.ironFrame.item, 1), new ItemStack(iron.getItem(), 3), null, null, null, new ItemStack(iron.getItem(), 2), new ItemStack(c.getItem(), 2), dye, new ItemStack(ItemIDs.minecartShay3TruckTender.item, 1), 1);
+
+						cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 1), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 2), dye, new ItemStack(ItemIDs.minecartClimaxB.item, 1), 1);
+					}
+					for (ItemStack dye : dyeGray) {
+						cm.addRecipe(1, new ItemStack(Blocks.torch, 1), new ItemStack(ItemIDs.ironBogie.item, 2), new ItemStack(ItemIDs.ironFrame.item, 1), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 1), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 3), dye, new ItemStack(ItemIDs.minecartF01.item, 1), 1);
+						cm.addRecipe(2, new ItemStack(Blocks.torch, 1), new ItemStack(ItemIDs.bogie.item, 3), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.steelchimney.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.boiler.item, 3), new ItemStack(ItemIDs.firebox.item, 1), new ItemStack(c.getItem(), 3), dye, new ItemStack(ItemIDs.minecartP01a.item, 1), 1);
+						cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), null, null, null, new ItemStack(iron.getItem(), 3), new ItemStack(c.getItem(), 2), dye, new ItemStack(ItemIDs.minecartVanderbackTender.item, 1), 1);
+						cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), null, null, null, new ItemStack(iron.getItem(), 3), new ItemStack(c.getItem(), 2), dye, new ItemStack(ItemIDs.minecartSquanderbackTender.item, 1), 1);
+					}
+					for (ItemStack dye : dyeBlack) {
+						for (ItemStack plank : s1) {
+							cm.addRecipe(2, new ItemStack(plank.getItem(), 2), new ItemStack(ItemIDs.bogie.item, 3), new ItemStack(ItemIDs.steelframe.item, 1), new ItemStack(itemSteel, 3, itemDamageSteel), null, null, null, null, new ItemStack(itemSteel, 4, itemDamageSteel), dye, new ItemStack(ItemIDs.minecartBKno2a.item, 1), 1);
+							cm.addRecipe(2, new ItemStack(plank.getItem(), 1), new ItemStack(ItemIDs.bogie.item, 3), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.boiler.item, 4), new ItemStack(ItemIDs.firebox.item, 1), new ItemStack(itemSteel, 4, itemDamageSteel), dye, new ItemStack(ItemIDs.minecartBKno2b.item, 1), 1);
+						}
+					}
+					for (ItemStack dye : dyeLightGray) {
+						cm.addRecipe(1, new ItemStack(Blocks.torch, 1), new ItemStack(ItemIDs.ironBogie.item, 6), new ItemStack(ItemIDs.ironFrame.item, 3), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 4), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(Items.iron_ingot, 4), dye, new ItemStack(ItemIDs.minecartWCPBuckingBull.item, 1), 1);
+						cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), null, null, null, new ItemStack(iron.getItem(), 4), new ItemStack(c.getItem(), 4), dye, new ItemStack(ItemIDs.minecartWCPBaler.item, 1), 1);
+						cm.addRecipe(1, new ItemStack(Blocks.torch, 1), new ItemStack(ItemIDs.ironBogie.item, 5), new ItemStack(ItemIDs.ironFrame.item, 4), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 5), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(Items.iron_ingot, 4), dye, new ItemStack(ItemIDs.minecartWCPMacky.item, 1), 1);
+
+					}
+					for (ItemStack dye : dyeBlack) {
+						cm.addRecipe(2, new ItemStack(Blocks.torch, 1), new ItemStack(ItemIDs.bogie.item, 5), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.boiler.item, 4), new ItemStack(ItemIDs.firebox.item, 1), new ItemStack(itemSteel, 6, itemDamageSteel), dye, new ItemStack(ItemIDs.minecartalco2102.item, 1), 1);
+						cm.addRecipe(2, new ItemStack(Blocks.torch, 1), new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.boiler.item, 5), new ItemStack(ItemIDs.firebox.item, 1), new ItemStack(itemSteel, 4, itemDamageSteel), dye, new ItemStack(ItemIDs.minecartMK60.item, 1), 1);
+						for (ItemStack bucketWater : waterbucket) {
+							cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), null, null, new ItemStack(bucketWater.getItem(), 1), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(c.getItem(), 3), dye, new ItemStack(ItemIDs.minecartTender10k.item, 1), 1);
+							cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), null, null, new ItemStack(bucketWater.getItem(), 1), new ItemStack(itemSteel, 4, itemDamageSteel), new ItemStack(c.getItem(), 4), dye, new ItemStack(ItemIDs.minecartTenderDeseret.item, 1), 1);
+						}
+					}
+					cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 3), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 2), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 1), null, new ItemStack(ItemIDs.minecartLocoC11.item, 1), 1);
+					cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 3), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.boiler.item, 1), new ItemStack(ItemIDs.firebox.item, 2), null, null, new ItemStack(ItemIDs.minecartOnion.item, 1), 1);
+					cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), null, null, null, null, new ItemStack(c.getItem(), 3), null, new ItemStack(ItemIDs.minecartOnionTender.item, 1), 1);
+					for (ItemStack dye : dyeGray) {
+						cm.addRecipe(1, new ItemStack(Blocks.torch, 1), new ItemStack(ItemIDs.ironBogie.item, 2), new ItemStack(ItemIDs.ironFrame.item, 1), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 1), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 3), dye, new ItemStack(ItemIDs.minecartNP_L9.item, 1), 1);
+						cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), null, null, null, new ItemStack(iron.getItem(), 3), new ItemStack(c.getItem(), 2), dye, new ItemStack(ItemIDs.minecartNP_11C_tender.item, 1), 1);
+						cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), null, null, null, new ItemStack(iron.getItem(), 3), new ItemStack(c.getItem(), 2), dye, new ItemStack(ItemIDs.minecartNP_13C_tender.item, 1), 1);
+					}
+					for (ItemStack dye : dyeGreen) {
+						cm.addRecipe(1, new ItemStack(Blocks.torch, 1), new ItemStack(ItemIDs.ironBogie.item, 2), new ItemStack(ItemIDs.ironFrame.item, 1), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 1), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 3), dye, new ItemStack(ItemIDs.minecartAlco460.item, 1), 1);
+						for (ItemStack bucketWater : waterbucket) {
+							cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), null, null, new ItemStack(bucketWater.getItem(), 1), new ItemStack(iron.getItem(), 3), new ItemStack(c.getItem(), 2), dye, new ItemStack(ItemIDs.minecartTender460.item, 1), 1);
+						}
+					}
+					cm.addRecipe(2, new ItemStack(Blocks.torch, 1), new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.boiler.item, 5), new ItemStack(ItemIDs.firebox.item, 1), new ItemStack(itemSteel, 4, itemDamageSteel), null, new ItemStack(ItemIDs.minecartPMNandN1.item, 1), 1);
+					for (ItemStack bucketWater : waterbucket) {
+						cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), null, null, new ItemStack(bucketWater.getItem(), 1), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(c.getItem(), 3), null, new ItemStack(ItemIDs.minecartPMNstender.item, 1), 1);
+					}
+
+				}
+			}
+
+
+
+
+
+
+
 
 			//=================== TIER I ===================//
 
@@ -72,16 +148,16 @@ public class AssemblyTableRecipes {
 					}
 
 				}
-				for (ItemStack dye : dyeBlack){
+				/*for (ItemStack dye : dyeBlack){
 					for (ItemStack c : coal){
 						cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 4), new ItemStack(iron.getItem(), 4), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 3), new ItemStack(ItemIDs.ironFirebox.item, 2), new ItemStack(c.getItem(), 2), dye, new ItemStack(ItemIDs.minecartShay3Truck.item, 1), 1);
 						cm.addRecipe(1, new ItemStack(iron.getItem(), 2), new ItemStack(ItemIDs.ironBogie.item, 2), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), null, null, null, null, new ItemStack(c.getItem(), 2), dye, new ItemStack(ItemIDs.minecartShay3TruckTender.item, 1), 1);
 					}
-				}
+				}*/
 				for (ItemStack c : coal) {
 					cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 3), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 2), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 2), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 1), null, new ItemStack(ItemIDs.minecartLocoSteamShay.item, 1), 1);
-					cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 2), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 2), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 1), null, new ItemStack(ItemIDs.minecartVBShay2.item, 1), 1);
-					cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 2), new ItemStack(ItemIDs.ironFirebox.item, 2), new ItemStack(c.getItem(), 2), null, new ItemStack(ItemIDs.minecartClimaxNew.item, 1), 1);
+					//cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 2), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 2), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 1), null, new ItemStack(ItemIDs.minecartVBShay2.item, 1), 1);
+					//cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 2), new ItemStack(ItemIDs.ironFirebox.item, 2), new ItemStack(c.getItem(), 2), null, new ItemStack(ItemIDs.minecartClimaxNew.item, 1), 1);
 					cm.addRecipe(1, null, new ItemStack(ItemIDs.woodenBogie.item, 2), new ItemStack(ItemIDs.ironFrame.item, 1), new ItemStack(iron.getItem(), 2), null, null, null, null, new ItemStack(c.getItem(), 1), null, new ItemStack(ItemIDs.minecartSlateWagon.item, 1), 1);
 
 					cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 2), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 2), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 1), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 1), null, new ItemStack(ItemIDs.minecartLocoAlcoSC4.item, 1), 1);
@@ -89,7 +165,7 @@ public class AssemblyTableRecipes {
 					cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 6), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 2), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 2), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 1), null, new ItemStack(ItemIDs.minecartLocoC41_080.item, 1), 1);
 					cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 3), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 2), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 2), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 1), null, new ItemStack(ItemIDs.minecartLocoC41T.item, 1), 1);
 					cm.addRecipe(1, new ItemStack(iron.getItem(), 2), new ItemStack(ItemIDs.ironBogie.item, 2), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 2), null, null, null, null, new ItemStack(c.getItem(), 2), null, new ItemStack(ItemIDs.minecartTenderC41.item, 1), 1);
-					cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 3), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 2), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 2), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 1), null, new ItemStack(ItemIDs.minecartLocoC11.item, 1), 1);
+					//cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 3), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 2), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 2), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 1), null, new ItemStack(ItemIDs.minecartLocoC11.item, 1), 1);
 
 					cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 3), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 2), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 2), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 1), null, new ItemStack(ItemIDs.minecartLocoSouthern1102.item, 1), 1);
 					for (ItemStack dye : dyeGray) {
@@ -216,7 +292,7 @@ public class AssemblyTableRecipes {
 
 
 			cm.addRecipe(2, new ItemStack(Blocks.torch,1), new ItemStack(ItemIDs.bogie.item, 3), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.steelcab.item, 2), new ItemStack(ItemIDs.boiler.item, 4), new ItemStack(ItemIDs.firebox.item, 2), new ItemStack(Items.iron_ingot, 2), new ItemStack(Items.iron_ingot,1), new ItemStack(ItemIDs.minecartHeavySteam.item, 1),1);
-			cm.addRecipe(2, new ItemStack(Blocks.torch,1), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.steelcab.item, 2), new ItemStack(ItemIDs.boiler.item, 4), new ItemStack(ItemIDs.firebox.item, 2), new ItemStack(Items.iron_ingot, 2), new ItemStack(Items.iron_ingot,1), new ItemStack(ItemIDs.minecartSkook.item, 1),1);
+			//cm.addRecipe(2, new ItemStack(Blocks.torch,1), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.steelcab.item, 2), new ItemStack(ItemIDs.boiler.item, 4), new ItemStack(ItemIDs.firebox.item, 2), new ItemStack(Items.iron_ingot, 2), new ItemStack(Items.iron_ingot,1), new ItemStack(ItemIDs.minecartSkook.item, 1),1);
 
 			for (ItemStack dye : dyeCyan) {
 				cm.addRecipe(2, new ItemStack(itemSteel, 6, itemDamageSteel), new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 2, itemDamageSteel), null, null, null, null, new ItemStack(Blocks.chest, 4), dye, new ItemStack(ItemIDs.minecartOWO60Verticube.item, 1), 1);
@@ -353,17 +429,9 @@ public class AssemblyTableRecipes {
 						new ItemStack(ItemIDs.firebox.item, 3), null, dye,
 						new ItemStack(ItemIDs.minecartLocoFowler.item, 1), 1);
 				cm.addRecipe(2, new ItemStack(ItemIDs.controls.item, 2), new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.electmotor.item, 4), new ItemStack(ItemIDs.dieselengine.item, 3), new ItemStack(ItemIDs.generator.item, 2), dye, new ItemStack(ItemIDs.minecartHH660.item, 1), 1);
-				cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 3),
-						new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 1),
-						new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.boiler.item, 1),
-						new ItemStack(ItemIDs.firebox.item, 2), null, dye,
-						new ItemStack(ItemIDs.minecartOnion.item, 1), 1);
+				//cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 3), new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.boiler.item, 1), new ItemStack(ItemIDs.firebox.item, 2), null, dye, new ItemStack(ItemIDs.minecartOnion.item, 1), 1);
 				cm.addRecipe(2, new ItemStack(Blocks.iron_bars, 2), new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 3), new ItemStack(itemSteel, 2, itemDamageSteel), null, new ItemStack(Blocks.iron_bars, 2), null, null, new ItemStack(itemSteel, 3, itemDamageSteel), dye, new ItemStack(ItemIDs.minecart60centerbeam.item, 1), 1);
-				cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 4),
-						new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2),
-						new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.boiler.item, 3),
-						new ItemStack(ItemIDs.firebox.item, 3), null, dye,
-						new ItemStack(ItemIDs.minecartPELocomotive.item, 1), 1);
+				//cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.boiler.item, 3), new ItemStack(ItemIDs.firebox.item, 3), null, dye, new ItemStack(ItemIDs.minecartPELocomotive.item, 1), 1);
 				for (ItemStack c : coal) {
 					cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 4),
 							new ItemStack(itemSteel, 2, itemDamageSteel), null, null, null, null,
@@ -373,14 +441,8 @@ public class AssemblyTableRecipes {
 							new ItemStack(itemSteel, 2, itemDamageSteel), null, null, null, null,
 							new ItemStack(c.getItem(), 2), dye,
 							new ItemStack(ItemIDs.minecartFowler4FTender.item, 1), 1);
-					cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 3),
-							new ItemStack(itemSteel, 2, itemDamageSteel), null, null, null, null,
-							new ItemStack(c.getItem(), 1), dye,
-							new ItemStack(ItemIDs.minecartOnionTender.item, 1), 1);
-					cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 4),
-							new ItemStack(itemSteel, 2, itemDamageSteel), null, null, null, null,
-							new ItemStack(c.getItem(), 2), dye,
-							new ItemStack(ItemIDs.minecartPETender.item, 1), 1);
+					//cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 3), new ItemStack(itemSteel, 2, itemDamageSteel), null, null, null, null, new ItemStack(c.getItem(), 1), dye, new ItemStack(ItemIDs.minecartOnionTender.item, 1), 1);
+					//cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 2, itemDamageSteel), null, null, null, null, new ItemStack(c.getItem(), 2), dye, new ItemStack(ItemIDs.minecartPETender.item, 1), 1);
 				}
 
 			}
@@ -499,7 +561,7 @@ public class AssemblyTableRecipes {
 						new ItemStack(ItemIDs.minecart4000GallonTender.item, 1), 1); }
 			for (ItemStack c : coal) {
 				cm.addRecipe(2, new ItemStack(itemSteel, 4, itemDamageSteel), new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 2, itemDamageSteel), null, null, null, null, new ItemStack(c.getItem(), 1), null, new ItemStack(ItemIDs.minecartTenderHeavy.item, 1), 1);
-				cm.addRecipe(2, new ItemStack(itemSteel, 4, itemDamageSteel), new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 2, itemDamageSteel), null, null, null, null, new ItemStack(c.getItem(), 1), null, new ItemStack(ItemIDs.minecartSkookTender.item, 1), 1);
+				//cm.addRecipe(2, new ItemStack(itemSteel, 4, itemDamageSteel), new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 2, itemDamageSteel), null, null, null, null, new ItemStack(c.getItem(), 1), null, new ItemStack(ItemIDs.minecartSkookTender.item, 1), 1);
 			}
 			for (ItemStack rs : redstone) {
 				cm.addRecipe(2, new ItemStack(ItemIDs.controls.item, 1), new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 1), new ItemStack(itemSteel, 1, itemDamageSteel), null, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.transformer.item, 2), new ItemStack(ItemIDs.electmotor.item, 2), new ItemStack(rs.getItem(), 4), null, new ItemStack(ItemIDs.minecartNYTram.item, 1), 1);

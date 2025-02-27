@@ -17,7 +17,7 @@ public class DieselGP9 extends DieselTrain {
     public DieselGP9(World world) {
         super(world, EnumTrains.GP9.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Burlington Northern");
+        textureDescriptionMap.put(0, "BN 1783");
         textureDescriptionMap.put(1, "Southern Pacific (Black Widow Passenger)");
         textureDescriptionMap.put(2, "Southern Pacific (Black Widow)");
         textureDescriptionMap.put(3, "Western Pacific");

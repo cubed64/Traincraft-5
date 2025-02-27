@@ -20,6 +20,7 @@ public class DieselM420 extends DieselTrain {
         textureDescriptionMap.put(0, "BCOL (Zig Zag)");
         textureDescriptionMap.put(1, "COW (Moo)");
         textureDescriptionMap.put(2, "FNCC (KIT-L, Big Canon)");
+        textureDescriptionMap.put(3, "the demon of babylon disguises himself as the righteous");
     }
     public DieselM420(World world, double d, double d1, double d2){
         this(world);

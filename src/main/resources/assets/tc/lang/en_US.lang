@@ -254,8 +254,8 @@ item.tc:stake.name=Stake
 item.tc:steeldust.name=Steel Dust
 item.tc:coaldust.name=Coal Dust
 item.tc:graphite.name=Graphite
-item.tc:boiler.name=Boiler
-item.tc:firebox.name=Firebox
+item.tc:boiler.name=Steel Boiler
+item.tc:firebox.name=Steel Firebox
 item.tc:bogie.name=Steel Wheels
 item.tc:steelframe.name=Steel Frame
 item.tc:steelcab.name=Steel Cab
@@ -321,120 +321,114 @@ item.tc:creditsBook.name=(OBSOLETE) JCIRTC Credits Book
 
 item.tc:zeppelin.name=Zeppelin
 
-<!-- ## TC Track Rails Things ## -->
-item.tc:tcRailSmallStraight.name=Small Straight
-item.tc:tcRailEmbeddedSmallStraight.name=Sleeperless Small Straight
-item.tc:tcRailMediumStraight.name=Medium Straight
-item.tc:tcRailEmbeddedMediumStraight.name=Sleeperless Medium Straight
+<!-- ## TC Tracks - Normal ## -->
+item.tc:tcRailSmallStraight.name=1x1 Straight
+item.tc:tcRailMediumStraight.name=1x3 Straight
+item.tc:tcRailLongStraight.name=1x6 Straight
+item.tc:tcRailVeryLongStraight.name=1x12 Straight
 
-item.tc:tcRailLongStraight.name=Long Straight
-item.tc:tcRailEmbeddedLongStraight.name=Sleeperless Long Straight
-item.tc:tcRailVeryLongStraight.name=Very Long Straight
-item.tc:tcRailEmbeddedVeryLongStraight.name=Sleeperless Very Long Straight
+item.tc:tcRail1X1Turn.name=1x1 Turn
+item.tc:tcRailMediumTurn.name=3x3 Turn
+item.tc:tcRailLargeTurn.name=5x5 Turn
+item.tc:tcRailVeryLargeTurn.name=10x10 Turn
+item.tc:tcRailSuperLargeTurn.name=16x16 Turn
+item.tc:tcRail29X29Turn.name=29x29 Turn
+item.tc:tcRail32X32Turn.name=32x32 Turn
+
+item.tc:tcRailMedium45DegreeTurn.name=3x4 45 Degree Turn
+item.tc:tcRailLarge45DegreeTurn.name=3x6 45 Degree Turn
+item.tc:tcRailVeryLarge45DegreeTurn.name=4x8 45 Degree Turn
+item.tc:tcRailSuperLarge45DegreeTurn.name=5x11 45 Degree Turn
+item.tc:tcRail45DegreeTurn9x20.name=9x20 45 Degree Turn
+item.tc:tcRail45DegreeTurn10x22.name=10x22 45 Degree Turn
+
+item.tc:tcRailSmallParallelCurve.name=2x8 S-Curve
+item.tc:tcRailMediumParallelCurve.name=3x12 S-Curve
+item.tc:tcRailLargeParallelCurve.name=4x16 S-Curve
+item.tc:tcRail20x2SCurve.name=2x20 S-Curve
+
+item.tc:tcRailMediumSwitch.name=4x4 90 Degrees Switch
+item.tc:tcRailLargeSwitch.name=6x6 90 Degrees Switch
+item.tc:tcRailVeryLargeSwitch.name=11x11 90 Degrees Switch
+item.tc:tcRailMediumParallelSwitch.name=4x11 Parallel Switch
+item.tc:tcRailLargeParallelSwitch.name=4x17 Parallel Switch
+item.tc:tcRailMedium45DegreeSwitch.name=3x5 45 Degree Switch
+item.tc:tcRailLarge45DegreeSwitch.name=4x8 45 Degree Switch
+
+item.tc:tcRailTwoWaysCrossing.name=Plus Crossing
+item.tc:tcRailDiamondCrossing.name=X Crossing
+item.tc:tcRailDoubleDiamondCrossing.name=Double X Crossing
+item.tc:tcRailFourWaysCrossing.name=X-Plus Crossing
+
+item.tc:tcRail1X3SlopeDynamic.name=1x3 Slope Track (Dynamic)
+
+item.tc:tcRailSlopeWood.name=1x6 Slope Track (Wood)
+item.tc:tcRailSlopeGravel.name=1x6 Slope Track (Gravel)
+item.tc:tcRailSlopeBallast.name=1x6 Slope Track (Ballast)
+item.tc:tcRailSlopeSnowGravel.name=1x6 Slope Track (Snowy Gravel)
+item.tc:tcRailSlopePeaGravel.name=1x6 Slope Track (Pea Gravel)
+item.tc:tcRailSlopeDynamic.name=1x6 Slope Track (Dynamic)
+
+item.tc:tcRailLargeSlopeWood.name=1x12 Slope Track (Wood)
+item.tc:tcRailLargeSlopeGravel.name=1x12 Slope Track (Gravel)
+item.tc:tcRailLargeSlopeBallast.name=1x12 Slope Track (Ballast)
+item.tc:tcRailLargeSlopePeaGravel.name=1x12 Slope Track (Pea Gravel)
+item.tc:tcRailLargeSlopeSnowGravel.name=1x12 Slope Track (Snowy Gravel)
+item.tc:tcRailLargeSlopeDynamic.name=1x12 Slope Track (Dynamic)
+
+item.tc:tcRailVeryLargeSlopeWood.name=1x18 Slope Track (Wood)
+item.tc:tcRailVeryLargeSlopeGravel.name=1x18 Slope Track (Gravel)
+item.tc:tcRailVeryLargeSlopeBallast.name=1x18 Slope Track (Ballast)
+item.tc:tcRailVeryLargeSlopePeaGravel.name=1x18 Slope Track (Pea Gravel)
+item.tc:tcRailVeryLargeSlopeSnowGravel.name=1x18 Slope Track (Snowy Gravel)
+item.tc:tcRailVeryLargeSlopeDynamic.name=1x18 Slope Track (Dynamic)
+
+<!-- ## TC Tracks - Sleeperless ## -->
+item.tc:tcRailEmbeddedSmallStraight.name=1x1 Sleeperless Straight
+item.tc:tcRailEmbeddedMediumStraight.name=1x3 Sleeperless Straight
+item.tc:tcRailEmbeddedLongStraight.name=1x6 Sleeperless Straight
+item.tc:tcRailEmbeddedVeryLongStraight.name=1x12 Sleeperless Straight
+
+item.tc:tcRailEmbedded1X1Turn.name=1x1 Sleeperless Turn
+item.tc:tcRailEmbeddedMediumTurn.name=3x3 Sleeperless Turn
+item.tc:tcRailEmbeddedLargeTurn.name=5x5 Sleeperless Turn
+item.tc:tcRailEmbeddedVeryLargeTurn.name=10x10 Sleeperless Turn
+item.tc:tcRailEmbeddedSuperLargeTurn.name=16x16 Sleeperless Turn
+item.tc:tcRailEmbedded29X29Turn.name=29x29 Sleeperless Turn
+item.tc:tcRailEmbedded32X32Turn.name=32x32 Sleeperless Turn
+
+item.tc:tcRailEmbeddedMedium45DegreeTurn.name=3x4 Sleeperless 45 Degree Turn
+item.tc:tcRailEmbeddedLarge45DegreeTurn.name=3x6 Sleeperless 45 Degree Turn
+item.tc:tcRailEmbeddedVeryLarge45DegreeTurn.name=4x8 Sleeperless 45 Degree Turn
+item.tc:tcRailEmbeddedSuperLarge45DegreeTurn.name=5x11 Sleeperless 45 Degree Turn
+item.tc:tcRailEmbedded45DegreeTurn9x20.name=9x20 Sleeperless 45 Degree Turn
+item.tc:tcRailEmbedded45DegreeTurn10x22.name=10x22 Sleeperless 45 Degree Turn
+
+item.tc:tcRailEmbeddedSmallParallelCurve.name=2x8 Sleeperless S-Curve
+item.tc:tcRailEmbeddedMediumParallelCurve.name=3x12 Sleeperless S-Curve
+item.tc:tcRailEmbeddedLargeParallelCurve.name=4x16 Sleeperless S-Curve
+
+item.tc:tcRailEmbeddedMediumSwitch.name=4x4 Sleeperless 90 Degrees Switch
+item.tc:tcRailEmbeddedLargeSwitch.name=6x6 Sleeperless 90 Degrees Switch
+item.tc:tcRailEmbeddedVeryLargeSwitch.name=11x11 Sleeperless 90 Degrees Switch
+item.tc:tcRailEmbeddedMediumParallelSwitch.name=4x11 Sleeperless Parallel Switch
+item.tc:tcRailEmbeddedLargeParallelSwitch.name=4x17 Sleeperless Parallel Switch
+item.tc:tcRailEmbeddedMedium45DegreeSwitch.name=3x5 Sleeperless 45 Degree Switch
+item.tc:tcRailEmbeddedLarge45DegreeSwitch.name=4x8 Sleeperless 45 Degree Switch
+
+item.tc:tcRailEmbeddedTwoWaysCrossing.name=Sleeperless Plus Crossing
+item.tc:tcRailEmbeddedDiamondCrossing.name=Sleeperless X Crossing
+item.tc:tcRailEmbeddedDoubleDiamondCrossing.name=Sleeperless Double X Crossing
+item.tc:tcRailEmbeddedFourWaysCrossing.name=Sleeperless X-Plus Crossing
+
+item.tc:tcRailEmbeddedSlopeDynamic.name=1x6 Sleeperless Slope Track (Dynamic)
+item.tc:tcRailEmbeddedLargeSlopeDynamic.name=1x12 Sleeperless Large Slope Track (Dynamic)
+item.tc:tcRailEmbeddedVeryLargeSlopeDynamic.name=1x18 Sleeperless Very Large Slope Track (Dynamic)
 
 item.tc:tcRailSmallRoadCrossing.name=RailRoad Crossing (Black Asphalt)
 item.tc:tcRailSmallRoadCrossing1.name=RailRoad Crossing (Clean Asphalt)
 item.tc:tcRailSmallRoadCrossing2.name=RailRoad Crossing (light Gray Asphalt)
 item.tc:tcRailSmallRoadCrossingDynamic.name=RailRoad Crossing (Dynamic)
-
-item.tc:tcRailTwoWaysCrossing.name=Two Ways Crossing
-item.tc:tcRailDiamondCrossing.name=Diamond Crossing
-item.tc:tcRailDoubleDiamondCrossing.name=Double Diamond Crossing
-item.tc:tcRailFourWaysCrossing.name=Four Ways Crossing
-
-item.tc:tcRailEmbeddedTwoWaysCrossing.name=Sleeperless Two Ways Crossing
-item.tc:tcRailEmbeddedDiamondCrossing.name=Sleeperless Diamond Crossing
-item.tc:tcRailEmbeddedDoubleDiamondCrossing.name=Sleeperless Double Diamond Crossing
-item.tc:tcRailEmbeddedFourWaysCrossing.name=Sleeperless Four Ways Crossing
-
-item.tc:tcRailSmallDiagonalStraight.name=Small Diagonal Straight
-item.tc:tcRailMediumDiagonalStraight.name=Medium Diagonal Straight
-item.tc:tcRailLongDiagonalStraight.name=Long Diagonal Straight
-item.tc:tcRailVeryLongDiagonalStraight.name=Very Long Diagonal Straight
-item.tc:tcRailEmbeddedSmallDiagonalStraight.name=Sleeperless Small Diagonal Straight
-item.tc:tcRailEmbeddedMediumDiagonalStraight.name=Sleeperless Medium Diagonal Straight
-item.tc:tcRailEmbeddedLongDiagonalStraight.name=Sleeperless Long Diagonal Straight
-item.tc:tcRailEmbeddedVeryLongDiagonalStraight.name=Sleeperless Very Long Diagonal Straight
-
-item.tc:tcRail1X1Turn.name=Tiny Turn (1x1)
-item.tc:tcRailMediumTurn.name=Medium Turn
-item.tc:tcRailLargeTurn.name=Large Turn
-item.tc:tcRailVeryLargeTurn.name=Very Large Turn
-item.tc:tcRailSuperLargeTurn.name=Super Large Turn
-item.tc:tcRail29X29Turn.name=Turn (29X29)
-item.tc:tcRail32X32Turn.name=Turn (32x32)
-
-item.tc:tcRailEmbedded1X1Turn.name=Sleeperless Tiny Turn (1x1)
-item.tc:tcRailEmbeddedLargeTurn.name=Sleeperless Large Turn
-item.tc:tcRailEmbeddedMediumTurn.name=Sleeperless Medium Turn
-item.tc:tcRailEmbeddedVeryLargeTurn.name=Sleeperless Very Large Turn
-item.tc:tcRailEmbeddedSuperLargeTurn.name=Sleeperless Super Large Turn
-item.tc:tcRailEmbedded29X29Turn.name=Sleeperless Turn (29X29)
-item.tc:tcRailEmbedded32X32Turn.name=Sleeperless Turn (32x32)
-
-item.tc:tcRailMedium45DegreeTurn.name=45 Degree Turn (3x4)
-item.tc:tcRailLarge45DegreeTurn.name=45 Degree Turn (3x6)
-item.tc:tcRailVeryLarge45DegreeTurn.name=45 Degree Turn (4x8)
-item.tc:tcRailSuperLarge45DegreeTurn.name=45 Degree Turn (5x11)
-item.tc:tcRail45DegreeTurn9x20.name=45 Degree Turn (9x20)
-item.tc:tcRail45DegreeTurn10x22.name=45 Degree Turn (10x22)
-
-item.tc:tcRailEmbeddedMedium45DegreeTurn.name=Sleeperless 45 Degree Turn (3x4)
-item.tc:tcRailEmbeddedLarge45DegreeTurn.name=Sleeperless 45 Degree Turn (3x6)
-item.tc:tcRailEmbeddedVeryLarge45DegreeTurn.name=Sleeperless 45 Degree Turn (4x8)
-item.tc:tcRailEmbeddedSuperLarge45DegreeTurn.name=Sleeperless 45 Degree Turn (5x11)
-item.tc:tcRailEmbedded45DegreeTurn9x20.name=Sleeperless 45 Degree Turn (9x20)
-item.tc:tcRailEmbedded45DegreeTurn10x22.name=Sleeperless 45 Degree Turn (10x22)
-
-item.tc:tcRailSmallParallelCurve.name=Small Parallel Curve
-item.tc:tcRailEmbeddedSmallParallelCurve.name=Sleeperless Small Parallel Curve
-item.tc:tcRailMediumParallelCurve.name=Medium Parallel Curve
-item.tc:tcRailEmbeddedMediumParallelCurve.name=Sleeperless Medium Parallel Curve
-item.tc:tcRailLargeParallelCurve.name=Large Parallel Curve
-item.tc:tcRailEmbeddedLargeParallelCurve.name=Sleeperless Large Parallel Curve
-
-item.tc:tcRail20x2SCurve.name=Parallel Curve (2x20)
-
-item.tc:tcRailMediumSwitch.name=90 Degrees Switch (4x4)
-item.tc:tcRailLargeSwitch.name=90 Degrees Switch (6x6)
-item.tc:tcRailVeryLargeSwitch.name=90 Degrees Switch (11x11)
-item.tc:tcRailMediumParallelSwitch.name=Parallel Switch (4x11)
-item.tc:tcRailLargeParallelSwitch.name=Parallel Switch (4x17)
-item.tc:tcRailMedium45DegreeSwitch.name=45 Degree Switch (3x5)
-item.tc:tcRailLarge45DegreeSwitch.name=45 Degree Switch (4x8)
-
-item.tc:tcRailEmbeddedMediumSwitch.name=Sleeperless 90 Degrees Switch (4x4)
-item.tc:tcRailEmbeddedLargeSwitch.name=Sleeperless 90 Degrees Switch (6x6)
-item.tc:tcRailEmbeddedVeryLargeSwitch.name=Sleeperless 90 Degrees Switch (11x11)
-item.tc:tcRailEmbeddedMediumParallelSwitch.name=Sleeperless Parallel Switch (4x11)
-item.tc:tcRailEmbeddedLargeParallelSwitch.name=Sleeperless Parallel Switch (4x17)
-item.tc:tcRailEmbeddedMedium45DegreeSwitch.name=Sleeperless 45 Degree Switch (3x5)
-item.tc:tcRailEmbeddedLarge45DegreeSwitch.name=Sleeperless 45 Degree Switch (4x8)
-
-item.tc:tcRailSlopeWood.name=Slope Track (Wood)
-item.tc:tcRailSlopeGravel.name=Slope Track (Gravel)
-item.tc:tcRailSlopeBallast.name=Slope Track (Ballast)
-item.tc:tcRailSlopePeaGravel.name=Slope Track (Pea Gravel)
-item.tc:tcRailSlopeSnowGravel.name=Slope Track (Snowy Gravel)
-item.tc:tcRailSlopeDynamic.name=Slope Track (Dynamic)
-
-item.tc:tcRailLargeSlopeWood.name=Large Slope Track (Wood)
-item.tc:tcRailLargeSlopeGravel.name=Large Slope Track (Gravel)
-item.tc:tcRailLargeSlopeBallast.name=Large Slope Track (Ballast)
-item.tc:tcRailLargeSlopePeaGravel.name=Large Slope Track (Pea Gravel)
-item.tc:tcRailLargeSlopeSnowGravel.name=Large Slope Track (Snowy Gravel)
-item.tc:tcRailLargeSlopeDynamic.name=Large Slope Track (Dynamic)
-
-item.tc:tcRailVeryLargeSlopeWood.name=Very Large Slope Track (Wood)
-item.tc:tcRailVeryLargeSlopeGravel.name=Very Large Slope Track (Gravel)
-item.tc:tcRailVeryLargeSlopeBallast.name=Very Large Slope Track (Ballast)
-item.tc:tcRailVeryLargeSlopePeaGravel.name=Very Large Slope Track (Pea Gravel)
-item.tc:tcRailVeryLargeSlopeSnowGravel.name=Very Large Slope Track (Snowy Gravel)
-item.tc:tcRailVeryLargeSlopeDynamic.name=Very Large Slope Track (Dynamic)
-
-item.tc:tcRailEmbeddedSlopeDynamic.name=Sleeperless Slope Track (Dynamic, 1x6)
-item.tc:tcRailEmbeddedLargeSlopeDynamic.name=Sleeperless Large Slope Track (Dynamic, 1x12)
-item.tc:tcRailEmbeddedVeryLargeSlopeDynamic.name=Sleeperless Very Large Slope Track (Dynamic, 1x18)
 
 
 <!-- ## TC Keybindings ## -->
@@ -1137,6 +1131,7 @@ item.tc:minecartSB23E.name=CEE SB23E
 item.tc:minecartB30.name=GE B30-7
 item.tc:minecartSB36X.name=CEE SB36X Prototype
 
+item.tc:minecartDash818BE.name=CEE B18-8E
 item.tc:minecartDash832BWH.name=GE Dash 8-32BWH
 item.tc:minecartDash839C.name=GE C39-8
 item.tc:minecartDash839CE.name=GE C39-8E
@@ -1199,6 +1194,7 @@ entity.tc.SB23E.name=CEE/GE SB23E
 entity.tc.B30-7.name=GE B30-7
 entity.tc.SB36X.name=CEE SB36X Prototype
 
+entity.tc.Dash818BE.name=CEE B18-8E
 entity.tc.Dash832BWH.name=GE Dash 8-32BWH
 entity.tc.Dash839C.name=GE C39-8
 entity.tc.Dash839CE.name=GE C39-8E

@@ -1,5 +1,7 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
+import com.jcirmodelsquad.tcjcir.models.loads.ModelBethgon_load;
+import com.jcirmodelsquad.tcjcir.models.trains.ModelBoxcab23Ton;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -8,8 +10,13 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
+import train.client.render.models.ModelCharB1;
+import train.client.render.models.ModelFT17;
+import train.client.render.models.ModelPanzerI;
 import train.common.Traincraft;
 import train.common.api.Freight;
+import train.common.entity.CargoManager;
+import train.common.entity.CargoSpecification;
 import train.common.library.GuiIDs;
 
 public class BethgonII extends Freight implements IInventory  {
@@ -28,6 +35,15 @@ public class BethgonII extends Freight implements IInventory  {
         textureDescriptionMap.put(7, "C&PV (Rock Service)");
         textureDescriptionMap.put(8, "C&PV (Rock Service)");
         textureDescriptionMap.put(9, "GCM");
+
+        setCargoManager(new CargoManager(new CargoSpecification[][] {
+                { new CargoSpecification(ModelBethgon_load.class,
+                        "loads/bethgon_load_coal", "Coal", 0, 2.95, 0, 0, 0,0) },
+                { new CargoSpecification(ModelBethgon_load.class,
+                        "loads/bethgon_load_rock", "Rock", 0, 2.95, 0, 0, 0,0) },
+                { new CargoSpecification(ModelBethgon_load.class,
+                        "loads/bethgon_load_peterite", "Peterite", 0, 2.95, 0, 0, 0,0) },
+        }));
     }
 
     public BethgonII(World world, double d, double d1, double d2){

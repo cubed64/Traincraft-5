@@ -23,6 +23,7 @@ public class DieselRS2 extends DieselTrain {
         textureDescriptionMap.put(3, "Lehigh & New England");
         textureDescriptionMap.put(4, "Lehigh & New England (late)");
         textureDescriptionMap.put(5, "Nautilus");
+        textureDescriptionMap.put(6, "AGW");
 
     }
     public DieselRS2(World world, double d, double d1, double d2){

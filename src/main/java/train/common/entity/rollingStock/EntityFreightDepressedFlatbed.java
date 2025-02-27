@@ -1,5 +1,9 @@
 package train.common.entity.rollingStock;
 
+import com.jcirmodelsquad.tcjcir.models.ModelFreedomHeli;
+import com.jcirmodelsquad.tcjcir.models.loads.Modelroadrailer_trailer_53;
+import com.jcirmodelsquad.tcjcir.models.loads.Modeltoastertiedown;
+import com.jcirmodelsquad.tcjcir.models.trains.*;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -8,8 +12,14 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
+import train.client.render.models.ModelCharB1;
+import train.client.render.models.ModelFT17;
+import train.client.render.models.ModelGP7;
+import train.client.render.models.ModelPanzerI;
 import train.common.Traincraft;
 import train.common.api.Freight;
+import train.common.entity.CargoManager;
+import train.common.entity.CargoSpecification;
 import train.common.library.GuiIDs;
 
 public class EntityFreightDepressedFlatbed extends Freight implements IInventory {
@@ -18,6 +28,23 @@ public class EntityFreightDepressedFlatbed extends Freight implements IInventory
 	public EntityFreightDepressedFlatbed(World world) {
 		super(world);
 		initFreightCart();
+
+		setCargoManager(new CargoManager(new CargoSpecification[][] {
+				{ new CargoSpecification(ModelCharB1.class,
+						"trains/CharB1", "Char B1", 0.9, 3.075, -0.0425, -0.45, -0.4,-0.4) },
+				{ new CargoSpecification(ModelPanzerI.class,
+						"trains/PanzerI", "Panzer I", 0.45, 3.02, -0.11, -0.4, -0.4,-0.4) },
+				{ new CargoSpecification(ModelFT17.class,
+						"trains/FT17", "FT17", 0.5, 3.0, -0.09, -0.4, -0.4,-0.4) },
+				//{ new CargoSpecification(ModelFreedomHeli.class,
+				//		"trains/helicopterFreedom", "Freedom Helicoper", 0, 2.625, 0, 0.0, 0.0,0.0) },
+				{ new CargoSpecification(ModelBoxcab23Ton.class,
+						"trains/boxcab_White", "23 Ton", 0.3, 2.81, -0.1, -0.1, -0.1,-0.1) },
+				//{ new CargoSpecification(ModelTGVMobile.class,
+				//		"trains/tgvmobile_Orange", "tgv", 0, 2.625, 0, 0.0, 0.0,0.0) },
+
+				//models with the renderrollingstockwithlight shit crash the game when used as cargo loads apparently lol
+		}));
 	}
 
 	public void initFreightCart() {

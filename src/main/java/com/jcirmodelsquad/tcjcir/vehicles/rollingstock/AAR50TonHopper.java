@@ -23,9 +23,13 @@ public class AAR50TonHopper extends Freight implements IInventory  {
         initFreightCart();
         textureDescriptionMap.put(0, "L&NE");
         textureDescriptionMap.put(1, "ATSF");
+        textureDescriptionMap.put(2, "AGW");
+
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(ModelAAR50TonHopperLoad.class,
-                        "loads/AAR_50Ton_hopper_load_coal", "Coal", 0, 3.05, 0) }
+                        "loads/AAR_50Ton_hopper_load_coal", "Coal", 0, 3.05, 0) },
+                { new CargoSpecification(ModelAAR50TonHopperLoad.class,
+                        "loads/AAR_50Ton_hopper_load_gravel", "Gravel", 0, 3.05, 0) }
         }));
     }
 

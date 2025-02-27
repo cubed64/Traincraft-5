@@ -639,7 +639,7 @@ public class ModelBethgonII extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for (int i = 0; i < 146; i++) {
+		for (int i = 0; i < 146; i++) {//this whole block is stupid, fix it at somepoint
 
 			int cargo = ((Freight) entity).getAmmountOfCargo();
 			if (i == 9999) {
@@ -651,7 +651,7 @@ public class ModelBethgonII extends ModelConverter //Same as Filename
 
 			}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("load")) {
 				if (cargo > 0) {
-					bodyModel[i].render(f5);
+					//bodyModel[i].render(f5);
 				}
 				if (cargo == 0) {
 
@@ -660,7 +660,7 @@ public class ModelBethgonII extends ModelConverter //Same as Filename
 				bodyModel[i].render(f5);
 		}
 
-		if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==3235446){
+		if(((AbstractTrains) entity).getColor() == 5 || ((AbstractTrains) entity).getColor() == 16){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Greyish.png"));
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Black.png"));
@@ -672,5 +672,7 @@ public class ModelBethgonII extends ModelConverter //Same as Filename
 		GL11.glTranslated(3.56,-0.0,0.00);
 		bogie2.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();
+
+		((AbstractTrains) entity).getCargoManager().renderCargo((AbstractTrains) entity, f, f1, f2, f3, f4, f5);
 	}
 }

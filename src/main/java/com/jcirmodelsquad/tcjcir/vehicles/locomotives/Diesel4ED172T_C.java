@@ -19,7 +19,7 @@ public class Diesel4ED172T_C extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "PAMC (Late)");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "");
+        textureDescriptionMap.put(2, "SPR");
     }
     public Diesel4ED172T_C(World world, double d, double d1, double d2){
         this(world);

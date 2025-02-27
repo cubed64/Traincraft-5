@@ -38,12 +38,12 @@ public class ModelDepressedFlatbed extends ModelConverter //Same as Filename
 		flipAll();
 	}
 	private ModelFreightTruckM trucks = new ModelFreightTruckM();
-	private ModelCharB1 tank1 = new ModelCharB1();
-	private ModelFT17 tank2 = new ModelFT17();
-	private ModelPanzerI tank3 = new ModelPanzerI();
-	private com.jcirmodelsquad.tcjcir.models.ModelFreedomHeli heli = new com.jcirmodelsquad.tcjcir.models.ModelFreedomHeli();
-	private ModelGP7 gp7 = new ModelGP7();
-	private ModelBoxcab23Ton bawx = new ModelBoxcab23Ton();
+	//private ModelCharB1 tank1 = new ModelCharB1();
+	//private ModelFT17 tank2 = new ModelFT17();
+	//private ModelPanzerI tank3 = new ModelPanzerI();
+	//private com.jcirmodelsquad.tcjcir.models.ModelFreedomHeli heli = new com.jcirmodelsquad.tcjcir.models.ModelFreedomHeli();
+	//private ModelGP7 gp7 = new ModelGP7();
+	//private ModelBoxcab23Ton bawx = new ModelBoxcab23Ton();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
@@ -59,7 +59,7 @@ public class ModelDepressedFlatbed extends ModelConverter //Same as Filename
 		trucks.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();
 
-		if( entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==7) {
+		/*if( entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==7) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/CharB1.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(0.9, 0.14, -0.0425);
@@ -100,7 +100,8 @@ public class ModelDepressedFlatbed extends ModelConverter //Same as Filename
 			GL11.glScalef(0.55f,0.55f,0.55f);
 			tank2.render(entity,f,f1,f2,f3,f4,f5);
 			GL11.glPopMatrix();
-		}
+		}*/
+		((AbstractTrains) entity).getCargoManager().renderCargo((AbstractTrains) entity, f, f1, f2, f3, f4, f5);
 	}
 
 	private void initbodyModel_1()
@@ -446,4 +447,5 @@ public class ModelDepressedFlatbed extends ModelConverter //Same as Filename
 		bodyModel[84].addBox(0F, 0F, 0F, 6, 6, 6, 0F); // Box 156
 		bodyModel[84].setRotationPoint(-13F, -12F, 1.5F);*/
 	}
+
 }

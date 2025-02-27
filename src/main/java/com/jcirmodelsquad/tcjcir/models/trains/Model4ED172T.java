@@ -31,7 +31,7 @@ public class Model4ED172T extends ModelConverter //Same as Filename
 
 	public Model4ED172T() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[349];
+		bodyModel = new ModelRendererTurbo[353];
 
 		initbodyModel_1();
 
@@ -392,6 +392,11 @@ public class Model4ED172T extends ModelConverter //Same as Filename
 		bodyModel[346] = new ModelRendererTurbo(this, 80, 15, textureX, textureY, "commander"); // Box 410 commander beacon
 		bodyModel[347] = new ModelRendererTurbo(this, 427, 23, textureX, textureY); // Box 409 commander base
 		bodyModel[348] = new ModelRendererTurbo(this, 427, 19, textureX, textureY, "commander"); // Box 410 commander beacon
+		bodyModel[349] = new ModelRendererTurbo(this, 27, 61, textureX, textureY); // Box 349 tbea horn
+		bodyModel[350] = new ModelRendererTurbo(this, 18, 64, textureX, textureY); // Box 350 tbea horn
+		bodyModel[351] = new ModelRendererTurbo(this, 16, 61, textureX, textureY); // Box 351 tbea horn
+		bodyModel[352] = new ModelRendererTurbo(this, 18, 58, textureX, textureY); // Box 352 tbea horn
+
 
 		bodyModel[0].addBox(0F, 0F, 0F, 3, 2, 3, 0F); // Box 4
 		bodyModel[0].setRotationPoint(-44.5F, 3F, -1.5F);
@@ -1456,6 +1461,18 @@ public class Model4ED172T extends ModelConverter //Same as Filename
 
 		bodyModel[348].addShapeBox(0F, 0F, 0F, 1, 2, 1, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F); // Box 410 commander beacon
 		bodyModel[348].setRotationPoint(36.75F, -23.1F, -0.5F);
+
+		bodyModel[349].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 349 tbea horn
+		bodyModel[349].setRotationPoint(30.5F, -22F, 3.5F);
+
+		bodyModel[350].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 350 tbea horn
+		bodyModel[350].setRotationPoint(29F, -22.75F, 2.5F);
+
+		bodyModel[351].addBox(0F, 0F, 0F, 4, 1, 1, 0F); // Box 351 tbea horn
+		bodyModel[351].setRotationPoint(28F, -23F, 3.5F);
+
+		bodyModel[352].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 352 tbea horn
+		bodyModel[352].setRotationPoint(30F, -22.75F, 4.5F);
 	}
 	ModelTypeBnew theB = new ModelTypeBnew();
 	Modelgolftruck theG = new Modelgolftruck();

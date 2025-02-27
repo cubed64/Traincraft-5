@@ -30,6 +30,8 @@ public class PS150 extends Freight implements IInventory {
         textureDescriptionMap.put(9, "ANN ARBOR");
         textureDescriptionMap.put(10, "FNCC (Simple)");
         textureDescriptionMap.put(11, "FNCC");
+        textureDescriptionMap.put(12, "AGW");
+        textureDescriptionMap.put(13, "AGW");
     }
 
     public PS150(World world, double d, double d1, double d2){

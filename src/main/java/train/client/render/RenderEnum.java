@@ -889,7 +889,7 @@ public enum RenderEnum
 	PETender(TenderPETender.class, new ModelPE_Tender(), "PETender", false, new float[] { 0.1F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	/**EMD**/
-	F3A( DieselF3A.class,  new ModelF3A(), "f3a_", true,new float[] {-1.375F, 0.1F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.1F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+	F3A( DieselF3A.class,  new ModelF3a_new(), "f3a_", true,new float[] {-1.35F, 0.155F, 0F},  new float[] { 0F, 180F, 180F },  null, "smoke", 3,  new ArrayList<double[]>() {
 		{
 			add(new double[]{0.9375D, 1.4D, 0.0D});
 			add(new double[]{0.25D, 1.4D, 0.0D});
@@ -1530,6 +1530,11 @@ public enum RenderEnum
 		}
 	}, "", null, 0, false),
 
+	Dash818BE( DieselDash818BE.class,  new ModelDash818BE(), "b18-8e_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.8D, 1.35D, 0.0D});
+		}
+	}, "", null, 0, false),
 	Dash832BWH( DieselDash832BWH.class,  new ModelDash832BWH(), "b32-8wh_", true,new float[]{-1.85F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[]{0.8D, 1.35D, 0.0D});
@@ -1624,7 +1629,7 @@ public enum RenderEnum
 		}
 	}, "", null, 0, false),
 
-	CEE4ED172T( Diesel4ED172T.class,  new Model4ED172T(), "4ED-172T_", true,new float[]{-1.45F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 2,  new ArrayList<double[]>() {
+	CEE4ED172T( Diesel4ED172T.class,  new Model4ED172T(), "4ED-172T_", true,new float[]{-1.45F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[]{0.45D, 1.5D, 0.0D});
 		}

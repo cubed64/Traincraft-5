@@ -291,58 +291,65 @@ public enum ItemIDs {
 	zeppelin("ItemZeppelin", "item_zeppelin_one_balloon", 1),
 
 
-	//region Normal Tracks
-	tcRailSmallStraight("ItemTCRail", "item_rail_straight_small", 5),
-	tcRailMediumStraight("ItemTCRail", "item_rail_straight_medium", 5),
-	tcRailLongStraight("ItemTCRail", "item_rail_straight_large", 5),
-	tcRailVeryLongStraight("ItemTCRail", "item_rail_straight_very_large", 5),
+	/** Normal Tracks **/
+	//straights
+	tcRailSmallStraight("ItemTCRail", "track_straight_1", 5),
+	tcRailMediumStraight("ItemTCRail", "track_straight_3", 5),
+	tcRailLongStraight("ItemTCRail", "track_straight_6", 5),
+	tcRailVeryLongStraight("ItemTCRail", "track_straight_12", 5),
 
-	/** Normal Tracks Turns **/
-	tcRail1X1Turn("ItemTCRail", "item_rail_tc_turn_1", 5),
-	tcRailMediumTurn("ItemTCRail", "item_rail_turn_medium", 5),
-	tcRailLargeTurn("ItemTCRail", "item_rail_turn_large", 5),
-	tcRailVeryLargeTurn("ItemTCRail", "item_rail_turn_veryLarge", 5),
-	tcRailSuperLargeTurn("ItemTCRail", "item_rail_tc_super_large_turn", 5),
-	tcRail29X29Turn("ItemTCRail", "item_rail_tc_turn_29", 5),
-	tcRail32X32Turn("ItemTCRail", "item_rail_tc_turn_32", 5),
+	//turns
+	tcRail1X1Turn("ItemTCRail", "track_turn_1", 5),
+	tcRailMediumTurn("ItemTCRail", "track_turn_3", 5),
+	tcRailLargeTurn("ItemTCRail", "track_turn_5", 5),
+	tcRailVeryLargeTurn("ItemTCRail", "track_turn_10", 5),
+	tcRailSuperLargeTurn("ItemTCRail", "track_turn_16", 5),
+	tcRail29X29Turn("ItemTCRail", "track_turn_29", 5),
+	tcRail32X32Turn("ItemTCRail", "track_turn_32", 5),
 
-	/** Normal Tracks 45 Turns **/
-	tcRailMedium45DegreeTurn("ItemTCRail", "item_rail_45degree_turn_medium", 5),
-	tcRailLarge45DegreeTurn("ItemTCRail", "item_rail_45degree_turn_large", 5),
-	tcRailVeryLarge45DegreeTurn("ItemTCRail", "item_rail_45degree_turn_very_large", 5),
-	tcRailSuperLarge45DegreeTurn("ItemTCRail", "item_rail_45degree_turn_super_large", 5),
-	tcRail45DegreeTurn9x20("ItemTCRail", "item_rail_45degree_turn_9x20", 5),
-	tcRail45DegreeTurn10x22("ItemTCRail", "item_rail_45degree_turn_10x22", 5),
+	//45 degree turns
+	tcRailMedium45DegreeTurn("ItemTCRail", "track_45degree_turn_3x4", 5),
+	tcRailLarge45DegreeTurn("ItemTCRail", "track_45degree_turn_3x6", 5),
+	tcRailVeryLarge45DegreeTurn("ItemTCRail", "track_45degree_turn_4x8", 5),
+	tcRailSuperLarge45DegreeTurn("ItemTCRail", "track_45degree_turn_5x11", 5),
+	tcRail45DegreeTurn9x20("ItemTCRail", "track_45degree_turn_9x20", 5),
+	tcRail45DegreeTurn10x22("ItemTCRail", "track_45degree_turn_10x22", 5),
 
-	/** Normal Tracks Switches **/
-	tcRailMediumSwitch("ItemTCRail", "item_rail_switch_medium", 5),
-	tcRailLargeSwitch("ItemTCRail", "item_rail_switch_large", 5),
-	tcRailVeryLargeSwitch("ItemTCRail", "item_rail_switch_very_large", 5),
+	//parallel curves / s curves
+	tcRailSmallParallelCurve("ItemTCRail", "track_s-curve_2x8", 3),
+	tcRailMediumParallelCurve("ItemTCRail", "track_s-curve_3x12", 3),
+	tcRailLargeParallelCurve("ItemTCRail", "track_s-curve_4x16", 3),
+	tcRail20x2SCurve("ItemTCRail", "track_s-curve_2x20", 3),
 
-	tcRailMediumParallelSwitch("ItemTCRail", "item_rail_switch_parallel", 5),
-	tcRailLargeParallelSwitch("ItemTCRail", "item_rail_switch_parallel_4x17", 5),
+	//switches
+	tcRailMediumSwitch("ItemTCRail", "track_switch_4x4", 5),
+	tcRailLargeSwitch("ItemTCRail", "track_switch_6x6", 5),
+	tcRailVeryLargeSwitch("ItemTCRail", "track_switch_11x11", 5),
 
-	tcRailMedium45DegreeSwitch("ItemTCRail","item_rail_switch_45degree_medium", 5 ),
-	tcRailLarge45DegreeSwitch("ItemTCRail", "item_rail_switch_45degree_large", 5),
+	tcRailMediumParallelSwitch("ItemTCRail", "track_switch_p_4x11", 5),
+	tcRailLargeParallelSwitch("ItemTCRail", "track_switch_p_4x17", 5),
 
-	tcRailTwoWaysCrossing("ItemTCRail","item_rail_two_ways_crossing",5),
+	tcRailMedium45DegreeSwitch("ItemTCRail","track_switch_45degree_3x5", 5),
+	tcRailLarge45DegreeSwitch("ItemTCRail", "track_switch_45degree_4x8", 5),
 
-	/** DO NOT UNCOMMENT THIS AS WE DO NOT NEED A SPECIAL ITEM FOR A WHOLE NEW ITEM FOR A ROTATED two_ways_crossing
-	tcRailDiagonalTwoWaysCrossing("ItemTCRail", "item_rail_two_ways_crossing", 5), */
+	//diamonds
+	tcRailTwoWaysCrossing("ItemTCRail","track_plus_crossing",5),
+	tcRailDiamondCrossing("ItemTCRail", "track_x_crossing", 5),
+	tcRailDoubleDiamondCrossing("ItemTCRail", "track_double_x_crossing", 5),
+	tcRailFourWaysCrossing("ItemTCRail", "track_xplus_crossing", 5),
 
-	tcRailDiamondCrossing("ItemTCRail", "item_rail_diamond_crossing", 5),
-	tcRailDoubleDiamondCrossing("ItemTCRail", "item_rail_tc_double_diamond_crossing", 5),
+	//1x3 slope
+	tcRail1X3SlopeDynamic("ItemTCRail", "item_rail_straight_slope_dynamic", 3),
 
-	tcRailFourWaysCrossing("ItemTCRail", "item_rail_two_ways_crossing", 5),
-
+	//1x6 slopes
 	tcRailSlopeWood("ItemTCRail", "item_rail_straight_slope_wood", 3),
 	tcRailSlopeGravel("ItemTCRail", "item_rail_straight_slope_gravel", 3),
 	tcRailSlopeBallast("ItemTCRail", "item_rail_straight_slope_ballast", 3),
-	tcRail1X3SlopeDynamic("ItemTCRail", "item_rail_straight_1X3_slope_dynamic", 3),
-	tcRailSlopeDynamic("ItemTCRail", "item_rail_straight_slope_dynamic", 3),
 	tcRailSlopeSnowGravel("ItemTCRail", "item_rail_straight_slope_snow_gravel", 3),
 	tcRailSlopePeaGravel("ItemTCRail", "item_rail_straight_slope_pea_gravel", 3),
+	tcRailSlopeDynamic("ItemTCRail", "item_rail_straight_slope_dynamic", 3),
 
+	//1x12 slopes
 	tcRailLargeSlopeWood("ItemTCRail", "item_rail_straight_slope_wood", 3),
 	tcRailLargeSlopeGravel("ItemTCRail", "item_rail_straight_slope_gravel", 3),
 	tcRailLargeSlopeBallast("ItemTCRail", "item_rail_straight_slope_ballast", 3),
@@ -350,6 +357,7 @@ public enum ItemIDs {
 	tcRailLargeSlopePeaGravel("ItemTCRail", "item_rail_straight_slope_pea_gravel", 3),
 	tcRailLargeSlopeDynamic("ItemTCRail", "item_rail_straight_slope_dynamic", 3),
 
+	//1x18 slopes
 	tcRailVeryLargeSlopeWood("ItemTCRail", "item_rail_straight_slope_wood", 3),
 	tcRailVeryLargeSlopeGravel("ItemTCRail", "item_rail_straight_slope_gravel", 3),
 	tcRailVeryLargeSlopeBallast("ItemTCRail", "item_rail_straight_slope_ballast", 3),
@@ -357,70 +365,60 @@ public enum ItemIDs {
 	tcRailVeryLargeSlopePeaGravel("ItemTCRail", "item_rail_straight_slope_pea_gravel", 3),
 	tcRailVeryLargeSlopeDynamic("ItemTCRail", "item_rail_straight_slope_dynamic", 3),
 
-	tcRailSmallParallelCurve("ItemTCRail", "item_rail_tc_parallel_curve_small", 3),
-	tcRailMediumParallelCurve("ItemTCRail", "item_rail_tc_parallel_curve_medium", 3),
-	tcRailLargeParallelCurve("ItemTCRail", "item_rail_tc_parallel_curve_large", 3),
-	tcRail20x2SCurve("ItemTCRail", "item_rail_tc_parallel_curve_2x20", 3),
 
-	//endregion Normal Tracks
+	/** Sleeperless Tracks **/
+	//straights
+	tcRailEmbeddedSmallStraight("ItemTCRail", "track_straight_1_e", 5),
+	tcRailEmbeddedMediumStraight("ItemTCRail", "track_straight_3_e", 5),
+	tcRailEmbeddedLongStraight("ItemTCRail", "track_straight_6_e", 5),
+	tcRailEmbeddedVeryLongStraight("ItemTCRail", "track_straight_12_e", 5),
 
+	//turns
+	tcRailEmbedded1X1Turn("ItemTCRail", "track_turn_1_e", 5),
+	tcRailEmbeddedMediumTurn("ItemTCRail", "track_turn_3_e", 5),
+	tcRailEmbeddedLargeTurn("ItemTCRail", "track_turn_5_e", 5),
+	tcRailEmbeddedVeryLargeTurn("ItemTCRail", "track_turn_10_e", 5),
+	tcRailEmbeddedSuperLargeTurn("ItemTCRail", "track_turn_16_e", 5),
+	tcRailEmbedded29X29Turn("ItemTCRail", "track_turn_29_e", 5),
+	tcRailEmbedded32X32Turn("ItemTCRail", "track_turn_32_e", 5),
 
-	 //region Embedded Tracks
-	tcRailEmbeddedSmallStraight("ItemTCRail", "item_rail_straight_embedded_small_", 5),
-	tcRailEmbeddedMediumStraight("ItemTCRail", "item_rail_straight_embedded_medium", 5),
-	tcRailEmbeddedLongStraight("ItemTCRail", "item_rail_straight_embedded_large", 5),
-	tcRailEmbeddedVeryLongStraight("ItemTCRail", "item_rail_straight_embedded_very_large", 5),
+	//45 degree turns
+	tcRailEmbeddedMedium45DegreeTurn("ItemTCRail", "track_45degree_turn_3x4_e", 5),
+	tcRailEmbeddedLarge45DegreeTurn("ItemTCRail", "track_45degree_turn_3x6_e", 5),
+	tcRailEmbeddedVeryLarge45DegreeTurn("ItemTCRail", "track_45degree_turn_4x8_e", 5),
+	tcRailEmbeddedSuperLarge45DegreeTurn("ItemTCRail", "track_45degree_turn_5x11_e", 5),
+	tcRailEmbedded45DegreeTurn9x20("ItemTCRail", "track_45degree_turn_9x20_e", 5),
+	tcRailEmbedded45DegreeTurn10x22("ItemTCRail", "track_45degree_turn_10x22_e", 5),
 
-	// DO NOT ENABLE WE DO NOT NEED A SEPARATE ITEM FOR DIAGONAL STRAIGHTS
-	//tcRailEmbeddedSmallDiagonalStraight("ItemTCRail", "item_rail_embedded_straight_diagonal_small", 5),
-	//tcRailEmbeddedMediumDiagonalStraight("ItemTCRail", "item_rail_embedded_straight_diagonal_medium", 5),
-	//tcRailEmbeddedLongDiagonalStraight("ItemTCRail", "item_rail_embedded_straight_diagonal_long", 5),
-	//tcRailEmbeddedVeryLongDiagonalStraight("ItemTCRail", "item_rail_embedded_straight_diagonal_very_long", 5),
+	//parallel curves / s curves
+	tcRailEmbeddedSmallParallelCurve("ItemTCRail", "track_s-curve_2x8_e", 3),
+	tcRailEmbeddedMediumParallelCurve("ItemTCRail", "track_s-curve_3x12_e", 3),
+	tcRailEmbeddedLargeParallelCurve("ItemTCRail", "track_s-curve_4x16_e", 3),
+	tcRailEmbedded20x2SCurve("ItemTCRail", "track_s-curve_2x20_e", 3),
 
-	tcRailEmbedded1X1Turn("ItemTCRail", "item_rail_tc_embedded_turn_1", 5),
-	tcRailEmbeddedMediumTurn("ItemTCRail", "item_rail_tc_embedded_medium_turn", 5),
-	tcRailEmbeddedLargeTurn("ItemTCRail", "item_rail_tc_embedded_large_turn", 5),
-	tcRailEmbeddedVeryLargeTurn("ItemTCRail", "item_rail_tc_embedded_very_large_turn", 5),
-	tcRailEmbeddedSuperLargeTurn("ItemTCRail", "item_rail_tc_embedded_super_large_turn", 5),
-	tcRailEmbedded29X29Turn("ItemTCRail", "item_rail_tc_embedded_turn_29", 5),
-	tcRailEmbedded32X32Turn("ItemTCRail", "item_rail_tc_embedded_turn_32", 5),
+	//switches
+	tcRailEmbeddedMediumSwitch("ItemtcRailEmbedded", "track_switch_4x4_e", 5),
+	tcRailEmbeddedLargeSwitch("ItemtcRailEmbedded", "track_switch_6x6_e", 5),
+	tcRailEmbeddedVeryLargeSwitch("ItemtcRailEmbedded", "track_switch_11x11_e", 5),
 
-	tcRailEmbeddedMedium45DegreeTurn("ItemTCRail", "item_rail_embedded_45degree_turn_medium", 5),
-	tcRailEmbeddedLarge45DegreeTurn("ItemTCRail", "item_rail_embedded_45degree_turn_large", 5),
-	tcRailEmbeddedVeryLarge45DegreeTurn("ItemTCRail", "item_rail_embedded_45degree_turn_very_large", 5),
-	tcRailEmbeddedSuperLarge45DegreeTurn("ItemTCRail", "item_rail_embedded_45degree_turn_super_large", 5),
-	tcRailEmbedded45DegreeTurn9x20("ItemTCRail", "item_rail_embedded_45degree_turn_9x20", 5),
-	tcRailEmbedded45DegreeTurn10x22("ItemTCRail", "item_rail_embedded_45degree_turn_10x22", 5),
+	tcRailEmbeddedMediumParallelSwitch("ItemtcRailEmbedded", "track_switch_p_4x11_e", 5),
+	tcRailEmbeddedLargeParallelSwitch("ItemtcRailEmbedded", "track_switch_p_4x17_e", 5),
 
-	tcRailEmbeddedSmallParallelCurve("ItemTCRail", "item_rail_tc_embedded_parallel_curve_small", 3),
-	tcRailEmbeddedMediumParallelCurve("ItemTCRail", "item_rail_tc_embedded_parallel_curve_medium", 3),
-	tcRailEmbeddedLargeParallelCurve("ItemTCRail", "item_rail_tc_embedded_parallel_curve_large", 3),
-	tcRailEmbedded20x2SCurve("ItemTCRail", "item_rail_tc_embedded_parallel_curve_2x20", 3),
+	tcRailEmbeddedMedium45DegreeSwitch("ItemtcRailEmbedded","track_switch_45degree_3x5_e", 5),
+	tcRailEmbeddedLarge45DegreeSwitch("ItemtcRailEmbedded", "track_switch_45degree_4x8_e", 5),
 
-	tcRailEmbeddedTwoWaysCrossing("ItemTCRail", "item_rail_embedded_two_ways_crossing", 5),
-	tcRailEmbeddedDiamondCrossing("ItemTCRail", "item_rail_embedded_diamond_crossing", 5),
-	tcRailEmbeddedDoubleDiamondCrossing("ItemTCRail", "item_rail_tc_embedded_double_diamond_crossing", 5),
-	// DO NOT ENABLE WE DO NOT NEED A SEPARATE ITEM FOR DIAGONAL TWO WAY CROSSINGS.
-	//tcRailEmbeddedDiagonalTwoWaysCrossing("ItemTCRail", "item_rail_embedded_two_ways_crossing", 5),
-	tcRailEmbeddedFourWaysCrossing("ItemTCRail", "item_rail_embedded_two_ways_crossing", 5),
+	//diamonds
+	tcRailEmbeddedTwoWaysCrossing("ItemtcRailEmbedded","track_plus_crossing_e",5),
+	tcRailEmbeddedDiamondCrossing("ItemtcRailEmbedded", "track_x_crossing_e",5),
+	tcRailEmbeddedDoubleDiamondCrossing("ItemtcRailEmbedded", "track_double_x_crossing_e",5),
+	tcRailEmbeddedFourWaysCrossing("ItemtcRailEmbedded", "track_xplus_crossing_e",5),
 
-	tcRailEmbeddedMediumSwitch("ItemTCRail", "item_rail_embedded_switch_medium", 5),
-	tcRailEmbeddedLargeSwitch("ItemTCRail", "item_rail_embedded_switch_large", 5),
-	tcRailEmbeddedVeryLargeSwitch("ItemTCRail", "item_rail_embedded_switch_large", 5),
-	tcRailEmbeddedMediumParallelSwitch("ItemTCRail", "item_rail_embedded_switch_parallel", 5),
-	tcRailEmbeddedLargeParallelSwitch("ItemTCRail", "item_rail_embedded_switch_parallel", 5),
-	tcRailEmbeddedMedium45DegreeSwitch("ItemTCRail", "item_rail_embedded_switch_45degree_medium", 5),
-	tcRailEmbeddedLarge45DegreeSwitch("ItemTCRail", "item_rail_embedded_switch_45degree_large", 5),
-
+	//slopes
 	tcRailEmbeddedSlopeDynamic("ItemTCRail", "item_rail_embedded_slope_dynamic", 5),
 	tcRailEmbeddedLargeSlopeDynamic("ItemTCRail", "item_rail_embedded_slope_dynamic", 5),
 	tcRailEmbeddedVeryLargeSlopeDynamic("ItemTCRail", "item_rail_embedded_slope_dynamic", 5),
 
-	//tcRailEmbeddedLargeCurvedSlopeDynamic("ItemTCRail", "item_rail_embedded_slope_curved_large_dynamic", 3),
-	//tcRailEmbeddedVeryLargeCurvedSlopeDynamic("ItemTCRail", "item_rail_embedded_slope_curved_large_dynamic", 3),
-	//tcRailEmbeddedSuperLargeCurvedSlopeDynamic("ItemTCRail", "item_rail_embedded_slope_curved_large_dynamic", 3),
-	//endregion Embedded Tracks
-
+	//road crossings
 	tcRailSmallRoadCrossing("ItemTCRail", "item_rail_small_road_crossing", 5),
 	tcRailSmallRoadCrossing1("ItemTCRail", "item_rail_small_road_crossing_1", 5),
 	tcRailSmallRoadCrossing2("ItemTCRail", "item_rail_small_road_crossing_2", 5),
@@ -428,10 +426,12 @@ public enum ItemIDs {
 
 
 
+	//some heritage model attempts. will likey be removed in the future
 	minecartCF7_H_Angle("ItemRollingStock", "cf7angle", DIESEL, 10),
 	minecartCF7_H_Round("ItemRollingStock", "cf7round", DIESEL, 10),
 
-	//TC-JCIR
+
+	/** FoxTC **/
 	remoteController("ItemRemoteController", "remote_controller", 4),
 	remoteControllerModule("ItemRemoteControllerModule", "remote_controller_module", 4),
 	//signalPairingDevice("ItemSignalPairingDevice", "signal_pairing_device", 14),
@@ -599,6 +599,7 @@ public enum ItemIDs {
 	minecartB30("ItemRollingStock", "b30", DIESEL, 4),
 	minecartSB36X("ItemRollingStock", "sb36x", DIESEL, 5),
 
+	minecartDash818BE("ItemRollingStock", "B18-8E", DIESEL, 3),
 	minecartDash832BWH("ItemRollingStock", "B32-8WH", DIESEL, 4),
 	minecartDash839C("ItemRollingStock", "c39-8_icon", DIESEL, 5),
 	minecartDash839CE("ItemRollingStock", "c39-8e", DIESEL, 5),

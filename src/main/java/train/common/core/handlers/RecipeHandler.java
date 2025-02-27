@@ -35,17 +35,19 @@ public class RecipeHandler {
 		return entries;
 	}
 
-	public static void initBlockRecipes() {
+	public static void initBlockRecipes() {//crafting table recipes
 		ArrayList<ItemStack> iron = OreDictionary.getOres("ingotIron");
+		ArrayList<ItemStack> gold = OreDictionary.getOres("ingotGold");
 
 		TrainCraftingManager.instance.getRecipeList().add(new RecipesArmorDyes());
 		/* Assembly tables */
 		for (ItemStack ironingot : iron) {
 			GameRegistry.addRecipe(new ItemStack(BlockIDs.assemblyTableI.block, 1), "IPI", "S S", "SPS", Character.valueOf('I'), ironingot, Character.valueOf('P'), Blocks.piston, Character.valueOf('S'), Blocks.stone);
 		}
-		GameRegistry.addRecipe(new ItemStack(BlockIDs.assemblyTableII.block, 1),  "GPG", "O O", "OPO", Character.valueOf('G'), Items.gold_ingot, Character.valueOf('P'), Blocks.piston, Character.valueOf('O'), Blocks.obsidian );
-		GameRegistry.addRecipe(new ItemStack(BlockIDs.assemblyTableIII.block, 1),  "GPG", "DLD", "OPO", Character.valueOf('G'), Items.gold_ingot, Character.valueOf('P'), Blocks.piston, Character.valueOf('D'), Items.diamond, Character.valueOf('L'), Blocks.glowstone, Character.valueOf('O'), Blocks.obsidian );
-
+		for (ItemStack goldingot : gold) {
+			GameRegistry.addRecipe(new ItemStack(BlockIDs.assemblyTableII.block, 1), "GPG", "O O", "OPO", 'G', goldingot, 'P', Blocks.piston, 'O', Blocks.obsidian);
+			GameRegistry.addRecipe(new ItemStack(BlockIDs.assemblyTableIII.block, 1), "GPG", "DLD", "OPO", 'G', goldingot, 'P', Blocks.piston, 'D', Items.diamond, 'L', Blocks.glowstone, 'O', Blocks.obsidian);
+		}
 		if (!ConfigHandler.DISABLE_TRAIN_WORKBENCH) {
 			for (ItemStack ironingot : iron) {
 				addDictRecipe(new ItemStack(BlockIDs.trainWorkbench.block, 1), "###", "IFI", "###", Character.valueOf('#'), "plankWood", Character.valueOf('F'), Blocks.furnace, Character.valueOf('I'), ironingot);
@@ -105,7 +107,7 @@ public class RecipeHandler {
 		//here we go paintbrush
 		GameRegistry.addRecipe(new ItemStack(ItemIDs.paintbrushThing.item,1),"GB ","RIS"," ST", Character.valueOf('G'), new ItemStack(Items.dye,1,2), Character.valueOf('B'), new ItemStack(Items.dye,1,4), Character.valueOf('R'), new ItemStack(Items.dye,1,1), Character.valueOf('I'), new ItemStack(Items.iron_ingot), Character.valueOf('S'), new ItemStack(Items.string), Character.valueOf('T'), new ItemStack(Items.stick));
 
-		GameRegistry.addRecipe(new ItemStack(ItemIDs.creditsBook.item,1),"   "," B ","   ", Character.valueOf('B'), ItemIDs.recipeBook.item );
+		//GameRegistry.addRecipe(new ItemStack(ItemIDs.creditsBook.item,1),"   "," B ","   ", Character.valueOf('B'), ItemIDs.recipeBook.item );
 
 		//more recipes, this time switches - hariesh
 		GameRegistry.addRecipe(new ItemStack(BlockIDs.owoYardSwitchStand.block,1), "   ","OS ","IW ", Character.valueOf('O'), new ItemStack(Items.dye, 1, 14), Character.valueOf('S'), Items.stick, Character.valueOf('I'), Items.iron_ingot, Character.valueOf('W'), Blocks.planks);
@@ -136,9 +138,9 @@ public class RecipeHandler {
 
 	}
 
-	public static void initItemRecipes() {
+	public static void initItemRecipes() {//train wb recipes
 
-		ArrayList<ItemStack> steel = OreDictionary.getOres("ingotSteel");
+		ArrayList<ItemStack> steel = OreDictionary.getOres("ingotSteel");//doesnt work with mekanism steel
 		ArrayList<ItemStack> iron = OreDictionary.getOres("ingotIron");
 		ArrayList<ItemStack> planks = OreDictionary.getOres("plankWood");
 		ArrayList<ItemStack> logs = OreDictionary.getOres("logWood");
@@ -280,6 +282,7 @@ public class RecipeHandler {
 					TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.boiler.item, 2), "###", "XXX", "###", Character.valueOf('#'), steelItem, Character.valueOf('X'), bucketWater.getItem());// Boiler
 				}
 				TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.firebox.item, 2),  "###", "#X#", "###", Character.valueOf('#'), steelItem, Character.valueOf('X'), Items.flint_and_steel );// Firebox
+				//TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.firebox.item, 2),  "###", "#X#", "###", '#', new ItemStack(steelItem.getItem(), 1, OreDictionary.WILDCARD_VALUE), 'X', Items.flint_and_steel );// Firebox
 				for (ItemStack ironingot : iron) {
 					TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.bogie.item, 4), " # ", "#X#", " # ", Character.valueOf('#'), steelItem, Character.valueOf('X'), ironingot);// Bogie
 					TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.steelframe.item, 2), "# #", "AAA", Character.valueOf('A'), steelItem, Character.valueOf('#'), ironingot);// Steel Frame
@@ -461,9 +464,13 @@ public class RecipeHandler {
 			ArrayList<ItemStack> steel = OreDictionary.getOres("ingotSteel");
 			ArrayList<ItemStack> iron = OreDictionary.getOres("ingotIron");
 			for (ItemStack s : steel) {
-				for (ItemStack ironitm : iron)
+				for (ItemStack ironitm : iron){
 				TrainCraftingManager.instance.addHearthFurnaceRecipe(ironitm,
 						new ItemStack(ItemIDs.graphite.item), s, 2F, 1000);
+
+				TrainCraftingManager.instance.addHearthFurnaceRecipe(new ItemStack(ItemIDs.graphite.item),
+						ironitm, s, 2F, 1000);//reversed input recipe
+				}
 			}
 		}
 		
