@@ -9,6 +9,11 @@ public class SlugMA extends AbstractTankSlug
 {
 	public SlugMA(World world) {
 		super(world, EnumTrains.SlugMA);
+		textureDescriptionMap.put(0, "ANE SMA-1");
+		textureDescriptionMap.put(1, "ANE SMA-2");
+		textureDescriptionMap.put(2, "Magnolia");
+		textureDescriptionMap.put(3, "CSXT");
+		textureDescriptionMap.put(4, "ATSF");
 	}
 
 	public SlugMA(World world, double d, double d1, double d2) {

@@ -18,27 +18,27 @@ public class DieselCF7angle3 extends DieselTrain {
     public DieselCF7angle3(World world) {
         super(world, EnumTrains.CF7angle3.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Avanste Northeastern");
-        textureDescriptionMap.put(1, "Carbondale & Pine Valley");
-        textureDescriptionMap.put(2, "FNCC (KIT-L, CEE Built, Dual Canon)");
-        textureDescriptionMap.put(3, "FNCC (KIT-L, Ex ATSF, Dual Canon)");
-        textureDescriptionMap.put(4, "KCRC 2583");
-        textureDescriptionMap.put(5, "KCRC 2601");
-        textureDescriptionMap.put(6, "Atlas & Red Sands Railroad");
-        textureDescriptionMap.put(7, "Seattle & North Coast 102 (Post 1983)");
-        textureDescriptionMap.put(8, "Seattle & North Coast 103 (Post 1983)");
-        textureDescriptionMap.put(9, "Port of Latona Terminal Railroad");
-        textureDescriptionMap.put(10, "Fox Union Rail Resources (FURRX)");
-        textureDescriptionMap.put(11, "Washaska & Old Fox RR Co 19");
-        textureDescriptionMap.put(12, "Washaska & Old Fox RR Co 20");
-        textureDescriptionMap.put(13, "TIR 1538");
-        textureDescriptionMap.put(14, "TIR 1539");
-        textureDescriptionMap.put(15, "Great Lakes & Northern Territories");
-        textureDescriptionMap.put(16, "WFR (EX CSWR)");
-        textureDescriptionMap.put(17, "Blandsville & Blankerston");
-        textureDescriptionMap.put(18, "Morristown Tenneva & Southern");
-        textureDescriptionMap.put(19, "Morristown Tenneva & Southern (Ex ANE)");
-        textureDescriptionMap.put(20, "Morristown Tenneva & Southern Spirit of 1776");
+        textureDescriptionMap.put(0, "ANE");
+        textureDescriptionMap.put(1, "FNCC (CEE Rebuilt)");
+        textureDescriptionMap.put(2, "FNCC (Ex CEE Ne WP)");
+        textureDescriptionMap.put(3, "FNCC 27");
+        textureDescriptionMap.put(4, "KCRC 2601 (FNCC 28)");
+        textureDescriptionMap.put(5, "KCRC 2583 (FNCC 29)");
+        textureDescriptionMap.put(6, "SNCT 102 (Post 1983)");
+        textureDescriptionMap.put(7, "SNCT 103 (Post 1983)");
+        textureDescriptionMap.put(8, "SGPR 582");
+        textureDescriptionMap.put(9, "SGPR 585");
+        textureDescriptionMap.put(10, "SGPR 587");
+        textureDescriptionMap.put(11, "SGPR 590");
+        textureDescriptionMap.put(12, "SGPR 924/925 (Arrival Scheme)");
+        textureDescriptionMap.put(13, "SGPR 924/925 (Repaint)");
+        textureDescriptionMap.put(14, "ARSR 2497");
+        textureDescriptionMap.put(15, "ARSR 2610");
+        textureDescriptionMap.put(16, "C&PV");
+        textureDescriptionMap.put(17, "CFW 1504");
+        textureDescriptionMap.put(18, "FURRX");
+        textureDescriptionMap.put(19, "GLNT");
+        textureDescriptionMap.put(20, "");
         textureDescriptionMap.put(21, "");
         textureDescriptionMap.put(22, "");
         textureDescriptionMap.put(23, "");
@@ -181,7 +181,7 @@ public class DieselCF7angle3 extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "EMD CF7 Angle Cab";
+        return "EMD CF7 (Angle Cab)";
     }
 
     @Override
