@@ -1423,9 +1423,11 @@ public enum RenderEnum
 			add(new double[]{0.75D, 1.35D, 0.0D});
 		}
 	}, "", null, 0, false),
-	/*U23Bold( DieselU23Bold.class,  new ModelU23Bold(), "u23b_old_", true,new float[] {-0F, -0.0F, 0F},  null, null, "smoke", 4,  new ArrayList<double[]>() {
-		{ }
-	}, "", null, 0, false),*/
+	SF30B( DieselSF30B.class,  new ModelSF30B(), "sf30b_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.75D, 1.35D, 0.0D});
+		}
+	}, "", null, 0, false),
 	U25B( DieselU25B.class,  new ModelU25B(), "u25b_", true,new float[]{-1.7F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[]{0.925D, 1.4D, 0.0D});
