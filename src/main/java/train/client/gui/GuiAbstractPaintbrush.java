@@ -7,6 +7,7 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
+import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
 import train.common.api.EntityRollingStock;
 import train.common.library.Info;
@@ -193,6 +194,26 @@ public abstract class GuiAbstractPaintbrush extends GuiScreen {
         }
     }
 
+    @Override
+    public void handleMouseInput() {
+        int mouseEvent = Mouse.getEventDWheel();
+        if (mouseEvent != 0) {
+            if (mouseEvent > 0) { // Scroll up.
+                if (currentPage != 0) {
+                    currentPage--;
+                }
+            } else { // Scroll down.
+                if (hasNextPage) {
+                    currentPage++;
+                }
+            }
+            optionsOnCurrentPage = Math.min(RESULTS_PER_PAGE, totalOptions - currentPage * RESULTS_PER_PAGE);
+            hasNextPage = optionsOnCurrentPage + RESULTS_PER_PAGE * currentPage < totalOptions;
+            updateButtons();
+        }
+        super.handleMouseInput();
+    }
+
     public abstract void drawInBackground();
     public abstract void drawInForeground(int mouseX, int mouseY);
     public abstract void selectAndSendUpdatePacket(int choice);
@@ -203,4 +224,5 @@ public abstract class GuiAbstractPaintbrush extends GuiScreen {
     public void closeButtonAction() {
         this.mc.thePlayer.closeScreen();
     }
+
 }

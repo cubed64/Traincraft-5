@@ -30,7 +30,7 @@ import java.util.Collections;
 public class GuiCargoSelection extends GuiAbstractPaintbrush {
     private float yaw = 0;
     private final EnumTrains fakeTrain;
-    private final AbstractTrains renderEntity;
+    private final AbstractTrains[] renderEntities = new AbstractTrains[RESULTS_PER_PAGE];
     private GuiButtonPaintbrushMenu playPauseButton;
     private GuiButtonPaintbrushMenu lightControlButton;
     private GuiButtonPaintbrushMenu renderModelsButton;
@@ -48,8 +48,8 @@ public class GuiCargoSelection extends GuiAbstractPaintbrush {
     public GuiCargoSelection(EntityPlayer editingPlayer, EntityRollingStock rollingStock) {
         super(editingPlayer, rollingStock);
         fakeTrain = EnumTrains.getCurrentTrain(rollingStock.getCartItem().getItem());
-        renderEntity = fakeTrain.getEntity(Minecraft.getMinecraft().theWorld);
-
+        for (int i = 0; i < RESULTS_PER_PAGE; i++)
+            renderEntities[i] = fakeTrain.getEntity(Minecraft.getMinecraft().theWorld);
         /* Need to re-run these even after calling super because cargo uses selectedOption for current page
          and super() uses selectedOption - 1. */
         currentPage = selectedOption / RESULTS_PER_PAGE;
@@ -87,6 +87,10 @@ public class GuiCargoSelection extends GuiAbstractPaintbrush {
                 }
             }
         }
+        for (int i = 0; i < optionsOnCurrentPage; i++) { // Update render entities.
+            renderEntities[i].setColor(rollingStock.getColor());
+            renderEntities[i].getCargoManager().setSelectedCargo(i + RESULTS_PER_PAGE * currentPage);
+        }
     }
 
     @Override
@@ -100,12 +104,13 @@ public class GuiCargoSelection extends GuiAbstractPaintbrush {
         // If the load is dynamic, it will cycle between the different states to show the loading animation.
         if (renderIteration == 10) {
             renderIteration = 0;
-            if (renderEntity instanceof Freight) {
-                if (((Freight) renderEntity).getAmmountOfCargo() == ((Freight) renderEntity).getSizeInventory() - 1) {
-                    renderEntity.getDataWatcher().updateObject(22, 1);
-                }
-                else {
-                    renderEntity.getDataWatcher().updateObject(22, renderEntity.getDataWatcher().getWatchableObjectInt(22) + 1);
+            if (renderEntities[0] instanceof Freight) {
+                for (AbstractTrains renderEntity : renderEntities) {
+                    if (((Freight) renderEntity).getAmmountOfCargo() == ((Freight) renderEntity).getSizeInventory() - 1) {
+                        renderEntity.getDataWatcher().updateObject(22, 1);
+                    } else {
+                        renderEntity.getDataWatcher().updateObject(22, renderEntity.getDataWatcher().getWatchableObjectInt(22) + 1);
+                    }
                 }
             }
         }
@@ -115,15 +120,13 @@ public class GuiCargoSelection extends GuiAbstractPaintbrush {
             RenderRollingStock.setRenderGUIFullBright(disableLighting);
             float bogieOffset = (float) Math.abs(fakeTrain.getBogieLocoPosition()) * 0.5f;
             for (int i = 0; i < optionsOnCurrentPage; i++) {
-                renderEntity.setColor(rollingStock.getColor());
-                renderEntity.getCargoManager().setSelectedCargo(i + RESULTS_PER_PAGE * currentPage);
                 GL11.glColor4f(1, 1, 1, 1);
                 GL11.glPushMatrix();
                 GL11.glTranslated(offsetX + 50, offsetY + 50, 400);
                 GL11.glScalef(-fakeTrain.getGuiRenderScale(), fakeTrain.getGuiRenderScale(), fakeTrain.getGuiRenderScale());
                 GL11.glRotatef(180, 0, 0, 1);
                 GL11.glRotatef(yaw, 0, 1, 0);
-                RenderManager.instance.renderEntityWithPosYaw(renderEntity, bogieOffset, 0, 0, 0, 0);
+                RenderManager.instance.renderEntityWithPosYaw(renderEntities[i], bogieOffset, 0, 0, 0, 0);
                 GL11.glPopMatrix();
 
                 // Handle rotation of entity(s) in GUI.
@@ -225,7 +228,6 @@ public class GuiCargoSelection extends GuiAbstractPaintbrush {
         // Overwrite the arrows in the abstract menu with arrows higher up on the screen.
         this.buttonList.set(0, this.arrowUp = new GuiButtonPaintbrushMenu(0, GUI_ANCHOR_X + 388, GUI_ANCHOR_Y + 37, 12, 38, GuiButtonPaintbrushMenu.Type.ARROWUP));
         this.buttonList.set(1, this.arrowDown = new GuiButtonPaintbrushMenu(1, GUI_ANCHOR_X + 388, GUI_ANCHOR_Y + 79, 12, 38, GuiButtonPaintbrushMenu.Type.ARROWDOWN));
-
         this.buttonList.add(this.playPauseButton = new GuiButtonPaintbrushMenu(12, GUI_ANCHOR_X + 382, GUI_ANCHOR_Y + MENU_TEXTURE_HEIGHT - 29, 22, 22, GuiButtonPaintbrushMenu.Type.PLAY));
         this.buttonList.add(this.lightControlButton = new GuiButtonPaintbrushMenu(13, GUI_ANCHOR_X + 382, GUI_ANCHOR_Y + MENU_TEXTURE_HEIGHT - 77, 22, 22, GuiButtonPaintbrushMenu.Type.LIGHTSOFF));
         this.buttonList.add(this.renderModelsButton = new GuiButtonPaintbrushMenu(14, GUI_ANCHOR_X + 382, GUI_ANCHOR_Y + MENU_TEXTURE_HEIGHT - 53, 22, 22, GuiButtonPaintbrushMenu.Type.STOPRENDER));
