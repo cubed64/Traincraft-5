@@ -27,7 +27,8 @@ public class GSC53Foot66Bulkhead extends Freight implements IInventory {
         textureDescriptionMap.put(1, "GN");
         textureDescriptionMap.put(2, "NP");
         textureDescriptionMap.put(3, "Blandsville & Blankerston");
-        setCargoManager(new CargoManager(new CargoSpecification[][] {
+        textureDescriptionMap.put(4, "Minneapolis and St. Louis");
+                setCargoManager(new CargoManager(new CargoSpecification[][] {
 
                 { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice_For53Ft.class,//washaska wood
                         "loads/WrappedWood3_Washaska_Straps", "Wrapped Lumber (Washaska)", 0, 2.5, 0),
