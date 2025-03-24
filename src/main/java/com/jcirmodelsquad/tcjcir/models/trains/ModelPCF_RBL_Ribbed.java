@@ -26,7 +26,7 @@ public class ModelPCF_RBL_Ribbed extends ModelConverter //Same as Filename
 
 	public ModelPCF_RBL_Ribbed() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[208];
+		bodyModel = new ModelRendererTurbo[212];
 
 		initbodyModel_1();
 
@@ -246,6 +246,10 @@ public class ModelPCF_RBL_Ribbed extends ModelConverter //Same as Filename
 		bodyModel[205] = new ModelRendererTurbo(this, 269, 198, textureX, textureY); // Box 185 door right handle
 		bodyModel[206] = new ModelRendererTurbo(this, 255, 186, textureX, textureY); // Box 178 door right
 		bodyModel[207] = new ModelRendererTurbo(this, 309, 186, textureX, textureY); // Box 178 door right
+		bodyModel[208] = new ModelRendererTurbo(this, 215, 132, textureX, textureY); // Box 208
+		bodyModel[209] = new ModelRendererTurbo(this, 197, 132, textureX, textureY); // Box 208
+		bodyModel[210] = new ModelRendererTurbo(this, 215, 128, textureX, textureY); // Box 208
+		bodyModel[211] = new ModelRendererTurbo(this, 197, 128, textureX, textureY); // Box 208
 
 		bodyModel[0].addBox(0F, 0F, 0F, 17, 1, 1, 0F); // Box 6
 		bodyModel[0].setRotationPoint(-8.5F, 2F, 10F);
@@ -898,6 +902,18 @@ public class ModelPCF_RBL_Ribbed extends ModelConverter //Same as Filename
 
 		bodyModel[207].addShapeBox(0F, 0F, 0F, 2, 21, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F); // Box 178 door right
 		bodyModel[207].setRotationPoint(-1F, -20F, -11.3F);
+
+		bodyModel[208].addShapeBox(0F, 0F, 0F, 6, 1, 1, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F); // Box 208
+		bodyModel[208].setRotationPoint(-29F, 4F, 9.5F);
+
+		bodyModel[209].addShapeBox(0F, 0F, 0F, 6, 1, 1, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F); // Box 208
+		bodyModel[209].setRotationPoint(-29F, 4F, -10.5F);
+
+		bodyModel[210].addShapeBox(0F, 0F, 0F, 6, 1, 1, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F); // Box 208
+		bodyModel[210].setRotationPoint(23F, 4F, 9.5F);
+
+		bodyModel[211].addShapeBox(0F, 0F, 0F, 6, 1, 1, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F); // Box 208
+		bodyModel[211].setRotationPoint(23F, 4F, -10.5F);
 	}
 	Model70TonTruck2 bogie = new Model70TonTruck2();
 
