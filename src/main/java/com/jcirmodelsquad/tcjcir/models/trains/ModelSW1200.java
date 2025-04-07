@@ -2187,7 +2187,7 @@ public class ModelSW1200 extends ModelConverter //Same as Filename
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 9 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3) {
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 9 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 2) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/flexicoil2_Black2.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.0, 0.33, 0);

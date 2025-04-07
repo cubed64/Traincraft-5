@@ -35,6 +35,10 @@ public class GATC4180Airslide extends Freight implements IInventory {
 		textureDescriptionMap.put(12, "CNW");
 		textureDescriptionMap.put(13, "BB (Phase 2)");
 		textureDescriptionMap.put(14, "WP");
+		textureDescriptionMap.put(15, "ATSF");
+		textureDescriptionMap.put(16, "RI");
+		textureDescriptionMap.put(17, "ROCK");
+		textureDescriptionMap.put(18, "GN Grey");
 
 	}
 

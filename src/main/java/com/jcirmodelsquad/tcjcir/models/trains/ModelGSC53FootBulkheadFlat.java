@@ -27,7 +27,7 @@ public class ModelGSC53FootBulkheadFlat extends ModelConverter //Same as Filenam
 
 	public ModelGSC53FootBulkheadFlat() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[305];
+		bodyModel = new ModelRendererTurbo[306];
 
 		initbodyModel_1();
 
@@ -344,6 +344,7 @@ public class ModelGSC53FootBulkheadFlat extends ModelConverter //Same as Filenam
 		bodyModel[302] = new ModelRendererTurbo(this, 407, 43, textureX, textureY); // Box 296
 		bodyModel[303] = new ModelRendererTurbo(this, 376, 39, textureX, textureY); // Box 304
 		bodyModel[304] = new ModelRendererTurbo(this, 376, 5, textureX, textureY); // Box 304
+		bodyModel[305] = new ModelRendererTurbo(this, 383, 72, textureX, textureY); // Box 287 MSTL locker
 
 		bodyModel[0].addShapeBox(0F, 0F, 0F, 77, 3, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, -1F, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-38.5F, 3F, -11F);
@@ -1269,13 +1270,16 @@ public class ModelGSC53FootBulkheadFlat extends ModelConverter //Same as Filenam
 
 		bodyModel[304].addBox(0F, 0F, 0F, 1, 3, 23, 0F); // Box 304
 		bodyModel[304].setRotationPoint(33.5F, -18F, -11.5F);
+
+		bodyModel[305].addBox(0F, 0F, 0F, 4, 13, 12, 0F); // Box 287 MSTL locker
+		bodyModel[305].setRotationPoint(34.52F, -11.01F, -3.01F);
 	}
 	Model70TonTruckEarly bogie = new Model70TonTruckEarly();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for(int i = 0; i < 305; i++)
+		for(int i = 0; i < 306; i++)
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
 				GL11.glDisable(GL11.GL_CULL_FACE);
 				bodyModel[i].render(f5);
