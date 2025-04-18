@@ -41,8 +41,8 @@ public class DieselU18B extends DieselTrain {
         textureDescriptionMap.put(21, "CSXT");
         textureDescriptionMap.put(22, "CSXT");
         textureDescriptionMap.put(23, "CSXT");
-        textureDescriptionMap.put(24, "Galesburg Clinton & Midland");
     }
+
     public DieselU18B(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
