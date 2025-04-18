@@ -27,7 +27,7 @@ public class Tender460 extends Tender implements IInventory {
 		textureDescriptionMap.put(1, "CDC&S");
 		textureDescriptionMap.put(2, "RI");
 		textureDescriptionMap.put(3, "%Lemo");
-		textureDescriptionMap.put(4, "gonzagas cock mormon");
+		textureDescriptionMap.put(4, "GCM");
 	}
 
 	public void initFreightTender() {

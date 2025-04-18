@@ -21,8 +21,8 @@ public class SteamAlco460 extends SteamTrain {
 		textureDescriptionMap.put(1, "CDC&S");
 		textureDescriptionMap.put(2, "RI");
 		textureDescriptionMap.put(3, "%Lemo");
-		textureDescriptionMap.put(4, "gonzagas cock mormon");
-		textureDescriptionMap.put(5, "gonzagas cock mormon 2");
+		textureDescriptionMap.put(4, "GCM 67");
+		textureDescriptionMap.put(5, "GCM 60");
 	}
 
 	public void initLocoSteam() {
