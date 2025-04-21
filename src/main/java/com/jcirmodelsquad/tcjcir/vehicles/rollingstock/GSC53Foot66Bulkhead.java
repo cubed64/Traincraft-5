@@ -1,8 +1,6 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
-import com.jcirmodelsquad.tcjcir.models.loads.ModelWrappedWoodOptimized_bulkhead_slice;
-import com.jcirmodelsquad.tcjcir.models.loads.ModelWrappedWoodOptimized_bulkhead_slice_For53Ft;
-import com.jcirmodelsquad.tcjcir.models.loads.Modelpipeload1;
+import com.jcirmodelsquad.tcjcir.models.loads.*;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -144,6 +142,41 @@ public class GSC53Foot66Bulkhead extends Freight implements IInventory {
 
                 { new CargoSpecification(Modelpipeload1.class,
                         "loads/pipe_falling_sfx_1", "Pipes", 0, 2.5, 0) },
+
+                { new CargoSpecification(ModelMixedLogs_gsi_53_short.class,
+                        "loads/MixedLogs_Spruce", "Spruce Logs", 0, 2.5, 0),
+                        new CargoSpecification(Modelgsi_53_bulk_stakes.class,
+                                "loads/gsi_53_bulk_stakes", "Spruce Logs", 0, 3, 0) },
+
+                { new CargoSpecification(ModelMixedLogs_gsi_53_short.class,
+                        "loads/MixedLogs_Oak", "Oak Logs", 0, 2.5, 0),
+                        new CargoSpecification(Modelgsi_53_bulk_stakes.class,
+                                "loads/gsi_53_bulk_stakes", "Oak Logs", 0, 3, 0) },
+
+                { new CargoSpecification(ModelMixedLogs_gsi_53_short.class,
+                        "loads/MixedLogs_Redwood", "Redwood Logs", 0, 2.5, 0),
+                        new CargoSpecification(Modelgsi_53_bulk_stakes.class,
+                                "loads/gsi_53_bulk_stakes", "Redwood Logs", 0, 3, 0) },
+
+                { new CargoSpecification(ModelMixedLogs_gsi_53_short.class,
+                        "loads/MixedLogs_Pine", "Pine Logs", 0, 2.5, 0),
+                        new CargoSpecification(Modelgsi_53_bulk_stakes.class,
+                                "loads/gsi_53_bulk_stakes", "Pine Logs", 0, 3, 0) },
+
+                { new CargoSpecification(ModelMixedLogs_gsi_53_short.class,
+                        "loads/MixedLogs_Fir", "Fir Logs", 0, 2.5, 0),
+                        new CargoSpecification(Modelgsi_53_bulk_stakes.class,
+                                "loads/gsi_53_bulk_stakes", "Fir Logs", 0, 3, 0) },
+
+                { new CargoSpecification(ModelMixedLogs_gsi_53_short.class,
+                        "loads/MixedLogs_Jungle", "Jungle Logs", 0, 2.5, 0),
+                        new CargoSpecification(Modelgsi_53_bulk_stakes.class,
+                                "loads/gsi_53_bulk_stakes", "Jungle Logs", 0, 3, 0) },
+
+                { new CargoSpecification(ModelMixedLogs_gsi_53_short.class,
+                        "loads/MixedLogs_Birch", "Birch Logs", 0, 2.5, 0),
+                        new CargoSpecification(Modelgsi_53_bulk_stakes.class,
+                                "loads/gsi_53_bulk_stakes", "Birch Logs", 0, 3, 0) },
         }));
     }
 

@@ -27,6 +27,7 @@ public class DieselRS1 extends DieselTrain {
         textureDescriptionMap.put(7, "ATSF");
         textureDescriptionMap.put(8, "Glontch");
         textureDescriptionMap.put(9, "AGW");
+        textureDescriptionMap.put(10, "CYDZ");
 
     }
     public DieselRS1(World world, double d, double d1, double d2){

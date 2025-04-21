@@ -44,6 +44,11 @@ public class DieselGP35 extends DieselTrain {
         textureDescriptionMap.put(24, "GLC 391");
         textureDescriptionMap.put(25, "GLC (Ex Sou)");
         textureDescriptionMap.put(26, "TSBY");
+        textureDescriptionMap.put(27, "BN 2521");
+        textureDescriptionMap.put(28, "BN 2535");
+        textureDescriptionMap.put(29, "BN 2552 (Ex SLSF)");
+        textureDescriptionMap.put(30, "BN 2576 (Ex SLSF)");
+        textureDescriptionMap.put(31, "GLC 393");
     }
     public DieselGP35(World world, double d, double d1, double d2){
         this(world);

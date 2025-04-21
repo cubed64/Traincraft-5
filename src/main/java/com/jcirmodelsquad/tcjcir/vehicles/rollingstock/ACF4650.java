@@ -103,7 +103,7 @@ public class ACF4650 extends Freight implements IInventory {
 	}
 	@Override
 	public String getInventoryName() {
-		return "AC&F 650 Cu Ft 3-Bay Hopper";
+		return "AC&F 4650 Cu Ft 3-Bay Hopper";
 	}
 
 	@Override

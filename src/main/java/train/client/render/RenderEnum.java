@@ -1987,6 +1987,8 @@ public enum RenderEnum
 	ACF4650(ACF4650.class, new ModelACF4650(), "acf_4650_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PS2_4750(PS2_4750.class, new ModelPS2_4750(), "ps2cd_4750_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	GATC4180Airslide(GATC4180Airslide.class, new ModelGATC4180Airslide(), "GATX_Airslide_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACF3500(ACF3500.class, new ModelACF3500(), "ACF_3500_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACF3960(ACF3960.class, new ModelACF3500(), "ACF_3960_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	Freight60centerbeam(Freight60centerbeam.class, new Model60centerbeam(),"60ftcb_", true, new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Freight66centerbeam(Freight66centerbeam.class, new Model66centerbeam(),"66ftcb_", true, new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -2017,6 +2019,7 @@ public enum RenderEnum
 	PCF_RBL_Ribbed(PCF_RBL_Ribbed.class, new ModelPCF_RBL_Ribbed(),"pcf_rbl_ribbed_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ACFRailbox(ACFRailbox.class, new ModelACFRailbox(),"ACFRailbox_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ACFRailboxCushioned(ACFRailboxCushioned.class, new ModelACFRailboxCushioned(),"ACFRailboxCushioned_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	Evans5100(Evans5100.class, new ModelEvans5100(),"Evans_5100_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	VersaLongi(VersaLongi.class, new ModelVersaLongi(),"versa_longi_", true,  new float[]{-0F, 0.10F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	VersaTrans(VersaTrans.class, new ModelVersaTrans(),"versa_trans_", true, new float[]{-0F, 0.10F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

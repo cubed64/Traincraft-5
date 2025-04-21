@@ -731,6 +731,8 @@ public enum ItemIDs {
 	minecartACF4650("ItemRollingStock", "ACF4650", FREIGHT, 4),
 	minecartPS2_4750("ItemRollingStock", "PS2_4750", FREIGHT, 4),
 	minecartGATC4180Airslide("ItemRollingStock", "Airslide_phase_1b", FREIGHT, 4),
+	minecartACF3500("ItemRollingStock", "ACF_3500_icon", FREIGHT, 4),
+	minecartACF3960("ItemRollingStock", "ACF_3960_icon", FREIGHT, 4),
 
 	minecart60centerbeam("ItemRollingStock", "60centerbeam", FREIGHT, 3),
 	minecart66centerbeam("ItemRollingStock", "66centerbeam", FREIGHT, 3),
@@ -761,6 +763,7 @@ public enum ItemIDs {
 	minecartPCF_RBL_Ribbed("ItemRollingStock", "PCF_RBL_Exterior_post_plug_door", FREIGHT, 4),
 	minecartACFRailbox("ItemRollingStock", "ACFRailbox", FREIGHT, 5),
 	minecartACFRailboxCushioned("ItemRollingStock", "ACFRailboxCushioned", FREIGHT, 5),
+	minecartEvans5100("ItemRollingStock", "Evans_5100_icon", FREIGHT, 5),
 
 	minecartVersaLongi("ItemRollingStock", "versalongi", FREIGHT, 4),
 	minecartVersaTrans("ItemRollingStock", "versatrans", FREIGHT, 4),

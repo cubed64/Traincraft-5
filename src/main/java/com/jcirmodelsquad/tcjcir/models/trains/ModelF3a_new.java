@@ -1816,9 +1816,10 @@ public class ModelF3a_new extends ModelConverter //Same as Filename
 		} else {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Blac.png"));
 			GL11.glPushMatrix();
-			GL11.glTranslated(-1.025, -0.025, 0);
+			GL11.glTranslated(-1.05, -0.025, 0);
 			theTrucc.render(entity, f, f1, f2, f3, f4, f5);//front
 			GL11.glPopMatrix();
+
 			GL11.glPushMatrix();
 			GL11.glTranslated(1.25, -0.025, 0);
 			theTrucc.render(entity, f, f1, f2, f3, f4, f5);//rear

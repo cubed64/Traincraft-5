@@ -17,20 +17,18 @@ public class DieselU23BU extends DieselTrain {
     public DieselU23BU(World world) {
         super(world, EnumTrains.U23BU.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "FNCC (KIT-L, 1st Order, Big Canon)");
-        textureDescriptionMap.put(1, "FNCC (KIT-L, 2nd Order, Dual Canon)");
-        textureDescriptionMap.put(2, "FNCC (Experimental 1, Big Canon)");
-        textureDescriptionMap.put(3, "FNCC (100 Years Bicentennial, Dual Canon)");
-        textureDescriptionMap.put(4, "FNCC (Ex Sou, High Hood, Big Canon)");
-        textureDescriptionMap.put(5, "FNCC (Ex Sou, Patch, Big Canon)");
-        textureDescriptionMap.put(6, "Blandsville & Blankerston (Late Phase Blank)");
-        textureDescriptionMap.put(7, "FNCC (KIT-80, Dual Canon)");
-        textureDescriptionMap.put(8, "FNCC (MW-S, Big Canon)");
-        textureDescriptionMap.put(9, "FNCC (591 & 592, Ex Mon, Big Canon)");
-        textureDescriptionMap.put(10, "FNCC (Kit-Lw, 1st Order, Dual Canon)");
-        textureDescriptionMap.put(11, "FNCC (Ex ATSF, Patch, Dual Canon)");
-        textureDescriptionMap.put(12, "FNCC (Ex ATSF, Dual Canon)");
-//"Cyan", "Skin17", "Skin29", "Skin19", "Skin16", "Black"
+        textureDescriptionMap.put(0, "FNCC (1st Order)");//type b
+        textureDescriptionMap.put(1, "FNCC (2nd Order)");//fb2
+        textureDescriptionMap.put(2, "FNCC (3rd Order)");//type b
+        textureDescriptionMap.put(3, "FNCC 100 (American Bicentennial Commemorative Unit)");//type b
+        textureDescriptionMap.put(4, "FNCC (Ex ATSF, Upgraded)");// type b
+        textureDescriptionMap.put(5, "FNCC (Ex ATSF Patch)");// type  b
+        textureDescriptionMap.put(6, "FNCC (Ex UP, Upgraded)");//fb2
+        textureDescriptionMap.put(7, "FNCC (Ex UP Patch)");//fb2
+        textureDescriptionMap.put(8, "FNCC (Ex CSX (C&O), Upgraded)");//blomb
+        textureDescriptionMap.put(9, "FNCC (Ex CSX Patch (3275))");//fb2
+        textureDescriptionMap.put(10, "FNCC (Ex CSX Patch (3317))");//fb2
+
     }
     public DieselU23BU(World world, double d, double d1, double d2){
         this(world);

@@ -30,7 +30,7 @@ public class ModelU23BU extends ModelConverter //Same as Filename
 
 	public ModelU23BU() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[431];
+		bodyModel = new ModelRendererTurbo[439];
 
 		initbodyModel_1();
 
@@ -472,6 +472,14 @@ public class ModelU23BU extends ModelConverter //Same as Filename
 		bodyModel[428] = new ModelRendererTurbo(this, 168, 36, textureX, textureY); // Box 433
 		bodyModel[429] = new ModelRendererTurbo(this, 177, 36, textureX, textureY); // Box 434
 		bodyModel[430] = new ModelRendererTurbo(this, 168, 33, textureX, textureY); // Box 436
+		bodyModel[431] = new ModelRendererTurbo(this, 192, 24, textureX, textureY); // Box 361 rv ac
+		bodyModel[432] = new ModelRendererTurbo(this, 185, 21, textureX, textureY); // Box 362 rv ac
+		bodyModel[433] = new ModelRendererTurbo(this, 185, 27, textureX, textureY); // Box 363 rv ac
+		bodyModel[434] = new ModelRendererTurbo(this, 1, 102, textureX, textureY); // Box 48 ph2 headlight
+		bodyModel[435] = new ModelRendererTurbo(this, 8, 101, textureX, textureY, "lamp"); // Box 186 Headlight Front up ph2
+		bodyModel[436] = new ModelRendererTurbo(this, 8, 106, textureX, textureY, "lamp"); // Box 187 Headlight Front down ph2
+		bodyModel[437] = new ModelRendererTurbo(this, 1, 109, textureX, textureY); // Box 133 ph2 headlight
+		bodyModel[438] = new ModelRendererTurbo(this, 1, 98, textureX, textureY); // Box 187 ph2 headlight
 
 		bodyModel[0].addBox(0F, 0F, 0F, 76, 2, 22, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-38F, -1F, -11F);
@@ -1792,6 +1800,30 @@ public class ModelU23BU extends ModelConverter //Same as Filename
 
 		bodyModel[430].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 436
 		bodyModel[430].setRotationPoint(-34.25F, -23F, 1F);
+
+		bodyModel[431].addBox(0F, 0F, 0F, 5, 2, 4, 0F); // Box 361 rv ac
+		bodyModel[431].setRotationPoint(-26.5F, -24F, -2F);
+
+		bodyModel[432].addShapeBox(0F, 0F, 0F, 1, 1, 4, 0F,-1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 362 rv ac
+		bodyModel[432].setRotationPoint(-27.5F, -24F, -2F);
+
+		bodyModel[433].addShapeBox(0F, 0F, 0F, 1, 1, 4, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F); // Box 363 rv ac
+		bodyModel[433].setRotationPoint(-27.5F, -23F, -2F);
+
+		bodyModel[434].addShapeBox(0F, 0F, 0F, 1, 4, 2, 0F,0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F); // Box 48 ph2 headlight
+		bodyModel[434].setRotationPoint(-34F, -21.75F, -1F);
+
+		bodyModel[435].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 186 Headlight Front up ph2
+		bodyModel[435].setRotationPoint(-34.1F, -21.85F, -1F);
+
+		bodyModel[436].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 187 Headlight Front down ph2
+		bodyModel[436].setRotationPoint(-34.1F, -19.95F, -1F);
+
+		bodyModel[437].addShapeBox(0F, 0F, 0F, 1, 1, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F); // Box 133 ph2 headlight
+		bodyModel[437].setRotationPoint(-34F, -18.25F, -1F);
+
+		bodyModel[438].addShapeBox(0F, 0F, 0F, 1, 1, 2, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 187 ph2 headlight
+		bodyModel[438].setRotationPoint(-34F, -22.5F, -1F);
 	}
 	ModelFB2_new theTrucks2 = new ModelFB2_new();
 	ModelBlombergBnew theTrucks3 = new ModelBlombergBnew();
@@ -1802,8 +1834,18 @@ public class ModelU23BU extends ModelConverter //Same as Filename
 
 		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 0||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 7) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_black_a.png"));
+		//FB2s
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 11||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 4
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5) {
+
+			if (((AbstractTrains) entity).getColor() == 4 || ((AbstractTrains) entity).getColor() == 5) {
+				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_black_a.png"));
+			}else if (((AbstractTrains) entity).getColor() == 11){
+				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_up_early.png"));
+			}else{
+				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_silver_a.png"));
+			}
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.54, 0.0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
@@ -1811,18 +1853,11 @@ public class ModelU23BU extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.07, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 23
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 22345){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
-			GL11.glPushMatrix();
-			GL11.glTranslated(-1.54, -0.025, 0);
-			theTrucks4.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(3.07, 0, 0);
-			theTrucks4.render(entity, f, f1, f2, f3, f4, f5);
-			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5342 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1348){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Blac.png"));
+		//Blombergs
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 20){
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver.png"));
+
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.54, -0.01, 0);
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
@@ -1830,18 +1865,18 @@ public class ModelU23BU extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.07, 0, 0);
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 20){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_silver_a.png"));
-			GL11.glPushMatrix();
-			GL11.glTranslated(-1.54, 0.0, 0);
-			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glTranslated(3.07, 0, 0);
-			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
-			GL11.glPopMatrix();
+		//Type Bs
 		} else {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
+			if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15) {
+				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_FNCC_specialblack.png"));
+			}else if (((AbstractTrains) entity).getColor() == 12){
+				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
+			}else if (((AbstractTrains) entity).getColor() == 17){
+				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_FNCC_c855.png"));
+			}else{
+				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_FNCC.png"));//TypeB_2_Silver
+			}
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.54, -0.025, 0);
 			theTrucks4.render(entity, f, f1, f2, f3, f4, f5);

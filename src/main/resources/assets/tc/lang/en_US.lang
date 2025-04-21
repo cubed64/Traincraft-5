@@ -1423,6 +1423,8 @@ item.tc:minecartACF2Bay.name=ACF 2980 Cu Ft 2-Bay Hopper
 item.tc:minecartACF4650.name=ACF 4650 Cu Ft 3-Bay Hopper
 item.tc:minecartPS2_4750.name=PS2 4750 Cu Ft 3-Bay Hopper
 item.tc:minecartGATC4180Airslide.name=GATC 4180 Cu Ft Airslide Hopper
+item.tc:minecartACF3500.name=ACF 3500 Cu Ft Hopper
+item.tc:minecartACF3960.name=ACF 3960 Cu Ft Hopper
 
 entity.tc.Freight Round Covered Hopper.name=Round Covered Hopper
 entity.tc.Freight Ribbed Covered Hopper.name=Ribbed Covered Hopper
@@ -1434,6 +1436,8 @@ entity.tc.ACF2Bay.name=ACF 2980 Cu Ft 2-Bay Hopper
 entity.tc.ACF4650.name=ACF 4650 Cu Ft 3-Bay Hopper
 entity.tc.PS2_4750.name=PS2 4750 Cu Ft 3-Bay Hopper
 entity.tc.GATC4180Airslide.name=GATC 4180 Cu Ft Airslide Hopper
+entity.tc.ACF3500.name=ACF 3500 Cu Ft Hopper
+entity.tc.ACF3960.name=ACF 3960 Cu Ft Hopper
 
 item.tc:minecart60centerbeam.name=60' Center Beam
 item.tc:minecart66centerbeam.name=66' Center Beam
@@ -1476,6 +1480,7 @@ item.tc:minecartPCF_RBL_Smooth.name=PC&F RBL Smoothside Boxcar
 item.tc:minecartPCF_RBL_Ribbed.name=PC&F RBL Ribbedside Boxcar
 item.tc:minecartACFRailbox.name=ACF Railbox Boxcar
 item.tc:minecartACFRailboxCushioned.name=ACF Railbox Boxcar (Cushioned)
+item.tc:minecartEvans5100.name=Evans-USRE 5100 Cu Ft Boxcar
 
 
 entity.tc.PS140.name=Pullman Standard 40' Boxcar
@@ -1496,6 +1501,7 @@ entity.tc.PCF_RBL_Smooth.name=PC&F RBL Smoothside Boxcar
 entity.tc.PCF_RBL_Ribbed.name=PC&F RBL Ribbedside Boxcar
 entity.tc.ACF Railbox.name=ACF Railbox Boxcar
 entity.tc.ACF Railbox (Cushioned).name=ACF Railbox Boxcar (Cusioned)
+entity.tc.Evans5100.name=Evans-USRE 5100 Cu Ft Boxcar
 
 item.tc:minecartVersaLongi.name=Versaflood Longitudinal Hopper
 item.tc:minecartVersaTrans.name=Versaflood Transverse Hopper
