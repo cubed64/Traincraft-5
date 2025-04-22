@@ -1579,30 +1579,30 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 		bodyModel[361].rotateAngleZ = -1.48352986F;
 
 		bodyModel[362].addShapeBox(0F, 0F, 0F, 3, 10, 2, 0F,1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 412 cs
-		bodyModel[362].setRotationPoint(-31.8F, -16F, -5F);
+		bodyModel[362].setRotationPoint(-31.8F, -16F, 1F);
 
 		bodyModel[363].addShapeBox(0F, 0F, 0F, 6, 4, 3, 0F,0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 413 cs
-		bodyModel[363].setRotationPoint(-38.5F, -14F, -3F);
+		bodyModel[363].setRotationPoint(-38.5F, -14F, 3F);
 		bodyModel[363].rotateAngleY = -0.45378561F;
 
 		bodyModel[364].addShapeBox(0F, 0F, 0F, 11, 4, 2, 0F,0F, 0F, -0.5F, -5F, 0F, -0.5F, -5F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, -0.5F, -5F, -2F, -0.5F, -5F, -2F, 0F, 0F, -2F, 0F); // Box 86 cs
-		bodyModel[364].setRotationPoint(-38.5F, -16F, -3F);
+		bodyModel[364].setRotationPoint(-38.5F, -16F, 3F);
 		bodyModel[364].rotateAngleY = -0.45378561F;
 
 		bodyModel[365].addShapeBox(0F, 0F, 0F, 6, 4, 2, 0F,0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 531 cs
-		bodyModel[365].setRotationPoint(-38.5F, -10F, -3F);
+		bodyModel[365].setRotationPoint(-38.5F, -10F, 3F);
 		bodyModel[365].rotateAngleY = -0.45378561F;
 
-		bodyModel[366].addShapeBox(0F, 0F, -2F, 1, 4, 3, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F); // Box 275 cs speedo glow
+		bodyModel[366].addShapeBox(0F, 0F, -1F, 1, 4, 3, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F); // Box 275 cs speedo glow
 		bodyModel[366].setRotationPoint(-38F, -19F, 6.5F);
 		bodyModel[366].rotateAngleY = 0.17453293F;
 
 		bodyModel[367].addShapeBox(-0.5F, 0F, -1F, 1, 3, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, -1F, -1F, 0F, -1F, -1F); // Box 71 glow speedometer
-		bodyModel[367].setRotationPoint(-35F, -18.25F, -3F);
+		bodyModel[367].setRotationPoint(-35F, -18.25F, 3F);
 		bodyModel[367].rotateAngleY = 0.78539816F;
 
 		bodyModel[368].addShapeBox(-1.5F, 0F, -1F, 2, 2, 2, 0F,0F, 0F, 0.25F, -0.25F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, 0F, 0F, 0.25F, 0F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, 0F, 0.25F, 0.25F); // Box 307 spedo
-		bodyModel[368].setRotationPoint(-35F, -18.25F, -3F);
+		bodyModel[368].setRotationPoint(-35F, -18.25F, 3F);
 		bodyModel[368].rotateAngleY = 0.78539816F;
 
 		bodyModel[369].addBox(0F, 0F, 0F, 3, 8, 0, 0F); // Box 461 nose stairs hand rail inside your ass

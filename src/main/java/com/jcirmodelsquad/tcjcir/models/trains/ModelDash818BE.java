@@ -957,9 +957,9 @@ public class ModelDash818BE extends ModelConverter //Same as Filename
 		bodyModel[179].setRotationPoint(-31.5F, -9F, 3F);
 		bodyModel[179].rotateAngleY = -0.45378561F;
 
-		bodyModel[180].addShapeBox(0F, 0F, -2F, 1, 4, 3, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F); // Box 275 cs speedo glow
+		bodyModel[180].addShapeBox(0F, 0F, -1F, 1, 4, 3, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F, 0F, -1F, -0.5F); // Box 275 cs speedo glow
 		bodyModel[180].setRotationPoint(-31F, -18F, 6.5F);
-		bodyModel[180].rotateAngleY = 0.17453293F;
+		//bodyModel[180].rotateAngleY = 0.17453293F;
 
 		bodyModel[181].addShapeBox(-0.5F, 0F, -1F, 1, 3, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, -1F, -1F, 0F, -1F, -1F); // Box 71 glow speedometer
 		bodyModel[181].setRotationPoint(-28F, -17.25F, 3F);

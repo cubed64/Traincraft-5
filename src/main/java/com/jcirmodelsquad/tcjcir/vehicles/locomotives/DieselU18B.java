@@ -24,23 +24,22 @@ public class DieselU18B extends DieselTrain {
         textureDescriptionMap.put(4, "Blandsville & Blankerston");
         textureDescriptionMap.put(5, "Pickens Railway");
         textureDescriptionMap.put(6, "CSXT MOW");
-        textureDescriptionMap.put(7, "Fox, North Coast & Cascades");
-        textureDescriptionMap.put(8, "Carbondale & Pine Valley");
-        textureDescriptionMap.put(9, "West Creek Pacific");
-        textureDescriptionMap.put(10, "Seaboard Coast Line");
-        textureDescriptionMap.put(11, "Seaboard System");
-        textureDescriptionMap.put(12, "Seaboard System (Family Lines)");
-        textureDescriptionMap.put(13, "SCL Blank");
-        textureDescriptionMap.put(14, "Texas Utilities");
-        textureDescriptionMap.put(15, "Texas Utilities (RCO Gear)");
+        textureDescriptionMap.put(7, "Carbondale & Pine Valley");
+        textureDescriptionMap.put(8, "West Creek Pacific");
+        textureDescriptionMap.put(9, "Seaboard Coast Line");
+        textureDescriptionMap.put(10, "Seaboard System");
+        textureDescriptionMap.put(11, "Seaboard System (Family Lines)");
+        textureDescriptionMap.put(12, "SCL Blank");
+        textureDescriptionMap.put(13, "Texas Utilities");
+        textureDescriptionMap.put(14, "Texas Utilities (RCO Gear)");
         //textureDescriptionMap.put(16, "NEP");
-        textureDescriptionMap.put(17, "NDEM (Red & Olive)");
-        textureDescriptionMap.put(18, "FMN (Two Tone Blue)");
+        textureDescriptionMap.put(16, "NDEM (Red & Olive)");
+        textureDescriptionMap.put(17, "FMN (Two Tone Blue)");
+        textureDescriptionMap.put(18, "CSXT");
         textureDescriptionMap.put(19, "CSXT");
         textureDescriptionMap.put(20, "CSXT");
         textureDescriptionMap.put(21, "CSXT");
         textureDescriptionMap.put(22, "CSXT");
-        textureDescriptionMap.put(23, "CSXT");
     }
 
     public DieselU18B(World world, double d, double d1, double d2){

@@ -19,7 +19,7 @@ public class DieselSB23E extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "Western Pacific (Early)");
         textureDescriptionMap.put(1, "Western Pacific (Late)");
-        textureDescriptionMap.put(2, "North Fox (Dar80, Dual Canon)");
+        textureDescriptionMap.put(2, "FNCC (Dar80)");
         textureDescriptionMap.put(3, "Blandsville & Blankerston");
         textureDescriptionMap.put(4, "CSXT");
         textureDescriptionMap.put(5, "Morristown Tenneva & Southern");

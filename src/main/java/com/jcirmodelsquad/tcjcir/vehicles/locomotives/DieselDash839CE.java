@@ -20,7 +20,7 @@ public class DieselDash839CE extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "North Fox (KIT-L)");
         textureDescriptionMap.put(1, "North Fox (KIT-80)");
-        textureDescriptionMap.put(2, "North Fox 835 (KIT-80 OLS Unit)");
+        textureDescriptionMap.put(2, "North Fox 475 (KIT-80 OLS Unit)");
         textureDescriptionMap.put(3, "Norfolk Southern");
         textureDescriptionMap.put(4, "Blandsville & Blankerston");
     }

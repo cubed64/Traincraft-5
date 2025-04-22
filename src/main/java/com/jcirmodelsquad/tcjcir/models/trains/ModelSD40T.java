@@ -1261,14 +1261,14 @@ public class ModelSD40T extends ModelConverter //Same as Filename
 		bodyModel[247].setRotationPoint(25F, -8.5F, -7.25F);
 
 		bodyModel[248].addBox(0F, 0F, 0F, 1, 9, 4, 0F); // Box 412
-		bodyModel[248].setRotationPoint(-30F, -13F, -3F);
+		bodyModel[248].setRotationPoint(-30F, -13F, 3F);
 
 		bodyModel[249].addBox(0F, 0F, 0F, 7, 8, 3, 0F); // Box 413
-		bodyModel[249].setRotationPoint(-30.1F, -12F, -5F);
+		bodyModel[249].setRotationPoint(-30.1F, -12F, 1F);
 		bodyModel[249].rotateAngleY = -0.38397244F;
 
 		bodyModel[250].addShapeBox(-1F, 0F, 0F, 11, 4, 2, 0F,0F, 0F, 0F, -5F, 0F, 0F, -5F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, -2F, 0F, -5F, -2F, 0F, -5F, -2F, 0F, 0F, -2F, 0F); // Box 86
-		bodyModel[250].setRotationPoint(-28.5F, -14F, -5F);
+		bodyModel[250].setRotationPoint(-28.5F, -14F, 1F);
 		bodyModel[250].rotateAngleY = -0.38397244F;
 
 		bodyModel[251].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 364 prime base
@@ -1677,11 +1677,11 @@ public class ModelSD40T extends ModelConverter //Same as Filename
 		bodyModel[379].rotateAngleY = -3.14159265F;
 
 		bodyModel[380].addShapeBox(-0.5F, 0F, -1F, 1, 3, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, -1F, -1F, 0F, -1F, -1F); // Box 71 glow speedometer
-		bodyModel[380].setRotationPoint(-27.5F, -16.25F, -4F);
+		bodyModel[380].setRotationPoint(-27.5F, -16.25F, 2F);
 		bodyModel[380].rotateAngleY = 0.78539816F;
 
 		bodyModel[381].addShapeBox(-1.5F, 0F, -1F, 2, 2, 2, 0F,0F, 0F, 0.25F, -0.25F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, 0F, 0F, 0.25F, 0F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, -0.25F, 0.25F, 0.25F, 0F, 0.25F, 0.25F); // Box 307
-		bodyModel[381].setRotationPoint(-27.5F, -16.25F, -4F);
+		bodyModel[381].setRotationPoint(-27.5F, -16.25F, 2F);
 		bodyModel[381].rotateAngleY = 0.78539816F;
 
 		bodyModel[382].addBox(0F, 0F, 0F, 5, 4, 8, 0F); // Box 184 o2 generator

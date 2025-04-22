@@ -17,8 +17,8 @@ public class DieselRSFDL extends DieselTrain {
     public DieselRSFDL(World world) {
         super(world, EnumTrains.RSFDL.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "FNCC (MW-S, Big Canon)");
-        textureDescriptionMap.put(1, "FNCC 9919, (Regal, Big Canon)");
+        textureDescriptionMap.put(0, "not FNCC");
+        textureDescriptionMap.put(1, "peenor lol");
 
     }
     public DieselRSFDL(World world, double d, double d1, double d2){

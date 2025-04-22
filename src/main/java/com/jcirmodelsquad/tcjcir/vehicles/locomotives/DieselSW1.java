@@ -35,8 +35,8 @@ public class DieselSW1 extends DieselTrain {
         textureDescriptionMap.put(14, "NYC");
         textureDescriptionMap.put(15, "NYC");
         textureDescriptionMap.put(16, "ur mom");
-        textureDescriptionMap.put(17, "Deadwood & Northern");
-        textureDescriptionMap.put(18, "FNCC (Regal)");
+        textureDescriptionMap.put(17, "Deadwood & Northern (Ex FMSR)");
+        textureDescriptionMap.put(18, "FMSR");
         textureDescriptionMap.put(19, "Pacific Electric / SP");
         textureDescriptionMap.put(20, "Sacramento Northern / WP");
         textureDescriptionMap.put(21, "FRLC");

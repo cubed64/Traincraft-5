@@ -26,7 +26,7 @@ public class DieselGP30 extends DieselTrain {
         textureDescriptionMap.put(6, "UP");
         textureDescriptionMap.put(7, "BN 2206");
         textureDescriptionMap.put(8, "BN 2222");
-        textureDescriptionMap.put(9, "FNCC 691 (Kit-L)");
+        textureDescriptionMap.put(9, "FNCC 250");
         textureDescriptionMap.put(10, "OC&G 35");
         textureDescriptionMap.put(11, "MAG 84");
         textureDescriptionMap.put(12, "KCS i mean CGW");

@@ -20,16 +20,15 @@ public class DieselSW900 extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "Electric Fuels Corperation");
         textureDescriptionMap.put(1, "Conrail Shared Assets");
-        textureDescriptionMap.put(2, "Fox, North Coast & Cascades (DRW, Dual Canon)");
-        textureDescriptionMap.put(3, "Avanste Northeastern");
-        textureDescriptionMap.put(4, "Blandsville & Blankerston");
-        textureDescriptionMap.put(5, "Deadwood & La Mesa");
+        textureDescriptionMap.put(2, "Avanste Northeastern");
+        textureDescriptionMap.put(3, "Blandsville & Blankerston");
+        textureDescriptionMap.put(4, "Deadwood & La Mesa");
+        textureDescriptionMap.put(5, "New York Central");
         textureDescriptionMap.put(6, "New York Central");
-        textureDescriptionMap.put(7, "New York Central");
-        textureDescriptionMap.put(8, "Great Lakes & Northern Territories");
-        textureDescriptionMap.put(9, "Wesser Valley");
-        textureDescriptionMap.put(10, "Falcon Area Rapid Transit MOW");
-        textureDescriptionMap.put(11, "Sacramento Northern (Ex FNCC 111)");
+        textureDescriptionMap.put(7, "Great Lakes & Northern Territories");
+        textureDescriptionMap.put(8, "Wesser Valley");
+        textureDescriptionMap.put(9, "Falcon Area Rapid Transit MOW");
+        textureDescriptionMap.put(10, "Sacramento Northern (Ex FNCC)");
     }
     public DieselSW900(World world, double d, double d1, double d2){
         this(world);
