@@ -36,7 +36,7 @@ public class DieselSD40dash2 extends DieselTrain {
         textureDescriptionMap.put(14, "Norfolk Southern (Ex-SOU)");
         textureDescriptionMap.put(15, "Blandsville & Blankerston");
         textureDescriptionMap.put(16, "CSLX");
-        textureDescriptionMap.put(17, "CSX (Yn3)");
+        textureDescriptionMap.put(17, "CSX (Yn3 RCO)");
         textureDescriptionMap.put(18, "Fort Worth Western Railroad");
         textureDescriptionMap.put(19, "FURRX");
         textureDescriptionMap.put(20, "FURRX");
@@ -52,6 +52,7 @@ public class DieselSD40dash2 extends DieselTrain {
         textureDescriptionMap.put(30, "Plainview");
         textureDescriptionMap.put(31, "FURRX");
         textureDescriptionMap.put(32, "Wesser Valley");
+        textureDescriptionMap.put(33, "CSX (Yn3 Non-RCO)");
     }
     public DieselSD40dash2(World world, double d, double d1, double d2){
         this(world);
