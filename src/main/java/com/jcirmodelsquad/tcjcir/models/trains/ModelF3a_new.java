@@ -31,6 +31,7 @@ public class ModelF3a_new extends ModelConverter //Same as Filename
 		bodyModel = new ModelRendererTurbo[526];
 
 		initbodyModel_1();
+		initbodyModel_2();
 
 		translateAll(0F, 0F, 0F);
 
