@@ -289,10 +289,11 @@ public enum EnumTrains {
 	PMNandN1("PMNandN1", SteamPMNandN1.class, ItemIDs.minecartPMNandN1.item,"steam", 3000, 113, 0, 80, 100, 200, 0.65, 0.6, 6000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Yellow", "Grey", "Orange", "White"}), 12, -3.6 ),
 
 	//EMD//
-	F3A("F3A", DieselF3A.class, ItemIDs.minecartF3A.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey"}), 18, -2.6),
+	F3A("F3A", DieselF3A.class, ItemIDs.minecartF3A.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Magenta", "Grey"}), 18, -2.6),
 	F7A("F7A", DieselF7A.class, ItemIDs.minecartF7A.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "LightGrey", "White", "Orange", "Black", "Yellow", "Grey", "Magenta", "LightBlue", "Pink", "Cyan", "Brown", "Red", "Lime", "Blue", "Purple", "Skin17", "Skin25", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24", "Skin26", "Skin27"}), 18, -2.70),
 	F7B("F7B", DieselF7B.class, ItemIDs.minecartF7B.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "LightGrey", "White", "Orange", "Black", "Yellow", "Grey", "Magenta", "LightBlue", "Pink", "Cyan", "Brown", "Red", "Lime", "Blue", "Purple", "Skin17", "Skin25", "Skin18", "Skin21", "Skin22", "Skin26", "Skin27"}), 18, -2.4),
 	//BUnitF7B("BUnitF7B", BUnitF7.class, ItemIDs.minecartBUnitF7B.item, "b-unit", 0, 0, 7, 0, 0, 0, 0, 0, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Green", "LightGrey", "White", "Orange", "Black", "Yellow", "Grey", "Magenta", "LightBlue", "Pink", "Cyan", "Brown", "Red", "Lime", "Blue", "Purple", "Skin16", "Skin17", "Skin18", "Skin21", "Skin22", "Skin19"}), 18, 0, (new String[] {"Reduces weight carried by 70 tons when fueled"})),
+	F9A("F9A", DieselF9A.class, ItemIDs.minecartF9A.item, "diesel", 1750, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Cyan"}), 18, -2.6),
 	FP7A("FP7A", DieselFP7A.class, ItemIDs.minecartFP7A.item, "diesel", 1500, 192, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "LightGrey", "Skin16", "Orange", "Skin17", "Cyan", "Purple"}), 16, -2.70),
 	FP9A("FP9A", DieselFP9A.class, ItemIDs.minecartFP9A.item, "diesel", 1750, 169, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Blue"}), 16, -2.70),
 

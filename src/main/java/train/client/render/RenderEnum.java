@@ -889,10 +889,10 @@ public enum RenderEnum
 	PETender(TenderPETender.class, new ModelPE_Tender(), "PETender", false, new float[] { 0.1F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	/**EMD**/
-	F3A( DieselF3A.class,  new ModelF3a_new(), "f3a_", true,new float[] {-1.35F, 0.155F, 0F},  new float[] { 0F, 180F, 180F },  null, "smoke", 3,  new ArrayList<double[]>() {
+	F3A( DieselF3A.class,  new ModelF3a_new(), "f3a_", true,new float[] {-1.3F, 0.145F, 0F},  new float[] { 0F, 180F, 180F },  null, "smoke", 3,  new ArrayList<double[]>() {
 		{
-			add(new double[]{0.9375D, 1.4D, 0.0D});
-			add(new double[]{0.25D, 1.4D, 0.0D});
+			add(new double[]{0.9675D, 1.25D, 0.0D});
+			add(new double[]{0.19D, 1.25D, 0.0D});
 		}
 	}, "", null, 0, false),
 	F7A( DieselF7A.class,  new ModelF7A(), "F7A_", true,new float[] {-1.375F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
@@ -905,6 +905,12 @@ public enum RenderEnum
 		{
 			add(new double[]{1.35D, 1.3D, 0.0D});
 			add(new double[]{0.55D, 1.3D, 0.0D});
+		}
+	}, "", null, 0, false),
+	F9A( DieselF9A.class,  new ModelF3a_new(), "f9a_", true,new float[] {-1.3F, 0.145F, 0F},  new float[] { 0F, 180F, 180F },  null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.9675D, 1.25D, 0.0D});
+			add(new double[]{0.19D, 1.25D, 0.0D});
 		}
 	}, "", null, 0, false),
 	BUnitF7B(BUnitF7.class, new ModelF7B(), "F7B_", true, new float[]{0,0.15f,0}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),

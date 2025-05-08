@@ -477,9 +477,10 @@ public enum ItemIDs {
 
 	//EMD//
 	minecartF3A( "ItemRollingStock", "f3a", DIESEL, 4),
-	minecartF7A("ItemRollingStock", "f7a", DIESEL, 5),
-	minecartF7B("ItemRollingStock", "f7b", DIESEL, 5),
-	minecartFP7A("ItemRollingStock", "fp7a", DIESEL, 5),
+	minecartF7A("ItemRollingStock", "f7a", DIESEL, 4),
+	minecartF7B("ItemRollingStock", "f7b", DIESEL, 4),
+	minecartF9A( "ItemRollingStock", "f9a", DIESEL, 5),
+	minecartFP7A("ItemRollingStock", "fp7a", DIESEL, 4),
 	minecartFP9A("ItemRollingStock", "fp9a", DIESEL, 5),
 	//minecartBUnitF7B("ItemRollingStock", "f7b", 5),
 	minecartCF7angle("ItemRollingStock", "cf7angle", DIESEL, 3),
