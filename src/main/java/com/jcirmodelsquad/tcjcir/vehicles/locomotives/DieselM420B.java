@@ -19,7 +19,7 @@ public class DieselM420B extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "BCRail (Zig Zag)");
         textureDescriptionMap.put(1, "COW (Calf)");
-        textureDescriptionMap.put(2, "FNCC (KIT-L, Big Canon)");
+        textureDescriptionMap.put(2, "FNCC (KIT-L, Non Canon)");
     }
     public DieselM420B(World world, double d, double d1, double d2){
         this(world);

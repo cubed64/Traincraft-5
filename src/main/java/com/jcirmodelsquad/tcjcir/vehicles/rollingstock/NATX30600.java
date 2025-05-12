@@ -30,6 +30,7 @@ public class NATX30600 extends LiquidTank {
         textureDescriptionMap.put(6, "Magnolia");
         textureDescriptionMap.put(7, "CCOX");
         textureDescriptionMap.put(8, "PCTX PENN CENTRAL WOO OH YEAH WOO");
+        textureDescriptionMap.put(9, "DLMR");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Modelhazmat_plac_natx30600.class, "loads/hazmat_plac_flammable_number",

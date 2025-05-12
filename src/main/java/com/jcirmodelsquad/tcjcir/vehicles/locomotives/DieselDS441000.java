@@ -22,6 +22,7 @@ public class DieselDS441000 extends DieselTrain {
         textureDescriptionMap.put(1, "Chicago & Northwestern (Late)");
         textureDescriptionMap.put(2, "New York Central (Early)");
         textureDescriptionMap.put(3, "New York Central (Late)");
+        textureDescriptionMap.put(4, "AGW");
     }
     public DieselDS441000(World world, double d, double d1, double d2){
         this(world);

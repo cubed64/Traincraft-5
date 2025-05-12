@@ -1870,7 +1870,7 @@ public class ModelU23BU extends ModelConverter //Same as Filename
 		} else {
 			if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 15) {
 				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_FNCC_specialblack.png"));
-			}else if (((AbstractTrains) entity).getColor() == 12){
+			}else if (((AbstractTrains) entity).getColor() == 12 || ((AbstractTrains) entity).getColor() == 9){
 				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
 			}else if (((AbstractTrains) entity).getColor() == 17){
 				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_FNCC_c855.png"));

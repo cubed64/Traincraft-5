@@ -22,6 +22,7 @@ public class ICCBaywindowWP extends AbstractWorkCart
         textureDescriptionMap.put(7, "North Fox (KIT-L)");
         textureDescriptionMap.put(8, "DLMR");
         textureDescriptionMap.put(9, "DLMR (but somebody spilled the ketchup)");
+        textureDescriptionMap.put(10, "AGW");
         initCabooseWorkCart();
     }
 

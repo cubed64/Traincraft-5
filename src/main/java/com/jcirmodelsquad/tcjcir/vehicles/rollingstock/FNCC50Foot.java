@@ -24,7 +24,7 @@ public class FNCC50Foot extends Freight implements IInventory {
         textureDescriptionMap.put(3, "FNCC (Small Logo)");
         textureDescriptionMap.put(4, "FNCC (Olympic Range Logo)");
         textureDescriptionMap.put(5, "LRR");
-        textureDescriptionMap.put(6, "LRR (White Door)");
+        textureDescriptionMap.put(6, "LRR (Words)");
         textureDescriptionMap.put(7, "NSCC");
         textureDescriptionMap.put(8, "UNCLX");
         textureDescriptionMap.put(9, "COW");
@@ -36,6 +36,7 @@ public class FNCC50Foot extends Freight implements IInventory {
         textureDescriptionMap.put(15, "SNCT");
         textureDescriptionMap.put(16, "DLMR");
         textureDescriptionMap.put(17, "DN");
+        textureDescriptionMap.put(18, "AG&W");
 
     }
 

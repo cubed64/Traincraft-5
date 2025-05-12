@@ -28,6 +28,7 @@ public class DieselU23BU extends DieselTrain {
         textureDescriptionMap.put(8, "FNCC (Ex CSX (C&O), Upgraded)");//blomb
         textureDescriptionMap.put(9, "FNCC (Ex CSX Patch (3275))");//fb2
         textureDescriptionMap.put(10, "FNCC (Ex CSX Patch (3317))");//fb2
+        textureDescriptionMap.put(11, "FMSR 101-104 (First Batch)");//type b
 
     }
     public DieselU23BU(World world, double d, double d1, double d2){

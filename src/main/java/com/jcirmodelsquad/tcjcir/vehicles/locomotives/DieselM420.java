@@ -19,8 +19,9 @@ public class DieselM420 extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "BCOL (Zig Zag)");
         textureDescriptionMap.put(1, "COW (Moo)");
-        textureDescriptionMap.put(2, "FNCC (KIT-L, Big Canon)");
+        textureDescriptionMap.put(2, "FNCC (KIT-L, Non Canon)");
         textureDescriptionMap.put(3, "the demon of babylon disguises himself as the righteous");
+        textureDescriptionMap.put(4, "SPR (M424)");
     }
     public DieselM420(World world, double d, double d1, double d2){
         this(world);
