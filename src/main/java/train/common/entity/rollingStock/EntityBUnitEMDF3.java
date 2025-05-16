@@ -68,7 +68,7 @@ public class EntityBUnitEMDF3 extends LiquidTank implements IFluidHandler, INoFu
 			this.dataWatcher.updateObject(4, 0);
 		}
 
-		if (getAmount() > 0) {
+		/*if (getAmount() > 0) {
 			// setColor(getColorFromString("Full"));
 			setDefaultMass(-EnumTrains.BUnitEMDF3.getMass());
 			if ((motionX>0.01 || motionZ>0.01) && ticksExisted % 40 == 0) {
@@ -78,7 +78,7 @@ public class EntityBUnitEMDF3 extends LiquidTank implements IFluidHandler, INoFu
 		} else if (getAmount() <= 0) {
 			// setColor(getColorFromString("Empty"));
 			setDefaultMass(EnumTrains.BUnitEMDF3.getMass());
-		}
+		}*/
 	}
 
 	public int getDiesel() {

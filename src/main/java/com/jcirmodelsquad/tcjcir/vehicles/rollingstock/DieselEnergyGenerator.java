@@ -45,7 +45,7 @@ public class DieselEnergyGenerator extends LiquidTank implements IFluidHandler {
 
         if (getAmount() > 0) {
             // setColor(getColorFromString("Full"));
-            setDefaultMass(-EnumTrains.BUnitEMDF3.getMass());
+            setDefaultMass(-EnumTrains.SMSC1.getMass());
             if (MathHelper.floor_double(Math.abs(posX + posZ)) != lastPos && ticksExisted % 40 == 0) {
                 drain(ForgeDirection.UNKNOWN, 12, true);
                 lastPos = MathHelper.floor_double(Math.abs(posX + posZ));
@@ -53,7 +53,7 @@ public class DieselEnergyGenerator extends LiquidTank implements IFluidHandler {
 
         } else if (getAmount() <= 0) {
             // setColor(getColorFromString("Empty"));
-            setDefaultMass(EnumTrains.BUnitEMDF3.getMass());
+            setDefaultMass(EnumTrains.SMSC1.getMass());
         }
     }
 

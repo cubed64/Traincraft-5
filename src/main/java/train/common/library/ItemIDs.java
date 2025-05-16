@@ -159,10 +159,10 @@ public enum ItemIDs {
 	minecartLocoSD70("ItemRollingStock", "train_sd70", HERITAGE, 10),
 	minecartLocoBP4("ItemRollingStock", "train_bp4", HERITAGE, 10),
 	minecartHeavyweightFreight("ItemRollingStock", "train_heavyweight_freight", HERITAGE, 10),
-	minecartLocoEMDF7("ItemRollingStock", "train_emdf7", HERITAGE, 10),
+	/*minecartLocoEMDF7("ItemRollingStock", "train_emdf7", HERITAGE, 10),
 	minecartLocoEMDF3("ItemRollingStock", "train_emdf3", HERITAGE, 10),
 	minecartLocoEMDF7B("ItemRollingStock", "train_emdf7b", HERITAGE, 10),
-	minecartLocoEMDF3B("ItemRollingStock", "train_emdf3b", HERITAGE, 10),
+	minecartLocoEMDF3B("ItemRollingStock", "train_emdf3b", HERITAGE, 10),*/
 	minecartLocoDD35B("ItemRollingStock", "train_dd35b", HERITAGE, 16),
 	minecartLocoWLs40("ItemRollingStock", "train_wls40", HERITAGE, 10),
 	minecartRotativeDigger("ItemRotativeDigger","modelrotaryexcavator_icon",10),
@@ -427,8 +427,8 @@ public enum ItemIDs {
 
 
 	//some heritage model attempts. will likey be removed in the future
-	minecartCF7_H_Angle("ItemRollingStock", "cf7angle", DIESEL, 10),
-	minecartCF7_H_Round("ItemRollingStock", "cf7round", DIESEL, 10),
+	//minecartCF7_H_Angle("ItemRollingStock", "cf7angle", DIESEL, 10),
+	//minecartCF7_H_Round("ItemRollingStock", "cf7round", DIESEL, 10),
 
 
 	/** FoxTC **/

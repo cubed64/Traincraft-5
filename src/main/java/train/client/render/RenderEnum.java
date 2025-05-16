@@ -208,7 +208,7 @@ public enum RenderEnum
 			add(new double[] { 3.7D, 1.7D, 0D });
 		}
 	}, "", null, 0, false),
-	locoEMDF7(EntityLocoDieselEMDF7.class, new ModelEMDF7(), "emdf7_", true, new float[]{-2.2f,0.1f,0}, new float[] { 0F, 180F, 180F }, new float[]{0.9f,1f,0.9f}, "smoke", 4, new ArrayList<double[]>() {
+	/*locoEMDF7(EntityLocoDieselEMDF7.class, new ModelEMDF7(), "emdf7_", true, new float[]{-2.2f,0.1f,0}, new float[] { 0F, 180F, 180F }, new float[]{0.9f,1f,0.9f}, "smoke", 4, new ArrayList<double[]>() {
 		{
 					add(new double[] { -0.15D, 1.6D, 0.0D });
 					add(new double[] { 0.5D, 1.6D, 0.0D });
@@ -221,7 +221,7 @@ public enum RenderEnum
 		}
 	}, "", null, 0, false),
 	locoEMDF7b(EntityBUnitEMDF7.class, new ModelEMDF7B(), "emdf7b_", true, new float[]{0,0.1f,0}, new float[] { 0F, 180F, 180F }, new float[]{0.9f,1f,0.9f}, "", 4, null, "", null, 0, false),
-	locoEMDF3b(EntityBUnitEMDF3.class, new ModelEMDF3B(), "emdf3b_", true, new float[]{0,0.1f,0}, new float[] { 0F, 180F, 180F }, new float[]{0.9f,1f,0.9f}, "", 4, null, "", null, 0, false),
+	locoEMDF3b(EntityBUnitEMDF3.class, new ModelEMDF3B(), "emdf3b_", true, new float[]{0,0.1f,0}, new float[] { 0F, 180F, 180F }, new float[]{0.9f,1f,0.9f}, "", 4, null, "", null, 0, false),*/
 	DD35b(EntityBUnitDD35.class, new ModelDD35B(), "dd35b_", true, new float[]{0,0.18f,0}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	locoDieselDD35A(EntityLocoDieselDD35A.class, new ModelDD35A(), "dd35a_", true, new float[]{-5,0.18f,0}, new float[] { 0F, 180F, 180F }, null, "smoke", 4, new ArrayList<double[]>() {
 		{
@@ -628,7 +628,7 @@ public enum RenderEnum
 	}, "", null, 0, false),
 
 
-	CF7_H_Angle(DieselCF7_H_Angle.class,  new ModelCF7_H_Angle(), "18PX_CF7_Angle_", true,new float[] {-1.0F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+	/*CF7_H_Angle(DieselCF7_H_Angle.class,  new ModelCF7_H_Angle(), "18PX_CF7_Angle_", true,new float[] {-1.0F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
 		{
 			add(new double[]{0.55D, 1.0D, 0.0D});//front 0.62
 			add(new double[]{0.3D, 1.0D, 0.0D});//rear
@@ -639,7 +639,7 @@ public enum RenderEnum
 			add(new double[]{0.55D, 1.0D, 0.0D});//front 0.62
 			add(new double[]{0.3D, 1.0D, 0.0D});//rear
 		}
-	}, "", null, 0, false),
+	}, "", null, 0, false),*/
 
 
 	/** JCIR-TC **/
