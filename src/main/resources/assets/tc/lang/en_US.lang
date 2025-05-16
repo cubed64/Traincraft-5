@@ -1131,6 +1131,7 @@ item.tc:minecartBQ23.name=GE BQ23-7
 item.tc:minecartSB23R.name=CEE SB23R
 item.tc:minecartSB23E.name=CEE SB23E
 item.tc:minecartB30.name=GE B30-7
+item.tc:minecartB36.name=GE B36-7
 item.tc:minecartSB36X.name=CEE SB36X Prototype
 
 item.tc:minecartDash818BE.name=CEE B18-8E
@@ -1195,6 +1196,7 @@ entity.tc.BQ23-7.name=GE BQ23-7
 entity.tc.SB23R.name=CEE/GE SB23R
 entity.tc.SB23E.name=CEE/GE SB23E
 entity.tc.B30-7.name=GE B30-7
+entity.tc.B36-7.name=GE B36-7
 entity.tc.SB36X.name=CEE SB36X Prototype
 
 entity.tc.Dash818BE.name=CEE B18-8E

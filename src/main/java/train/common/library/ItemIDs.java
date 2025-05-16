@@ -599,6 +599,7 @@ public enum ItemIDs {
 	minecartSB23R("ItemRollingStock", "sb23r", DIESEL, 4),
 	minecartSB23E("ItemRollingStock", "sb23e", DIESEL, 4),
 	minecartB30("ItemRollingStock", "b30", DIESEL, 4),
+	minecartB36("ItemRollingStock", "b36", DIESEL, 4),
 	minecartSB36X("ItemRollingStock", "sb36x", DIESEL, 5),
 
 	minecartDash818BE("ItemRollingStock", "B18-8E", DIESEL, 3),

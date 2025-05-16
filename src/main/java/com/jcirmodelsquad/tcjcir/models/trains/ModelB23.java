@@ -9,6 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.Modelb30_booster_bits;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergBnew;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelFB2_new;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
@@ -30,7 +31,7 @@ public class ModelB23 extends ModelConverter //Same as Filename
 
 	public ModelB23() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[452];
+		bodyModel = new ModelRendererTurbo[455];
 
 		initbodyModel_1();
 
@@ -494,6 +495,9 @@ public class ModelB23 extends ModelConverter //Same as Filename
 		bodyModel[449] = new ModelRendererTurbo(this, 186, 43, textureX, textureY); // Box 787
 		bodyModel[450] = new ModelRendererTurbo(this, 184, 46, textureX, textureY); // Box 788
 		bodyModel[451] = new ModelRendererTurbo(this, 186, 49, textureX, textureY); // Box 789
+		bodyModel[452] = new ModelRendererTurbo(this, 187, 4, textureX, textureY); // Box 104 cnrc antenna
+		bodyModel[453] = new ModelRendererTurbo(this, 153, 51, textureX, textureY); // Box 453
+		bodyModel[454] = new ModelRendererTurbo(this, 153, 39, textureX, textureY); // Box 454
 
 		bodyModel[0].addBox(0F, 0F, 0F, 76, 2, 22, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-38F, -1F, -11F);
@@ -1878,11 +1882,21 @@ public class ModelB23 extends ModelConverter //Same as Filename
 
 		bodyModel[451].addBox(0F, 0F, 0F, 3, 1, 1, 0F); // Box 789
 		bodyModel[451].setRotationPoint(-18F, -22.25F, -5.5F);
+
+		bodyModel[452].addShapeBox(0F, 0F, 0F, 1, 6, 0, 0F,-0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F); // Box 104 cnrc antenna
+		bodyModel[452].setRotationPoint(-24F, -27.5F, 1F);
+
+		bodyModel[453].addBox(0F, 0F, 0F, 2, 1, 1, 0F); // Box 453
+		bodyModel[453].setRotationPoint(-33F, -23.25F, 1.5F);
+
+		bodyModel[454].addBox(0F, 0F, 0F, 2, 1, 1, 0F); // Box 454
+		bodyModel[454].setRotationPoint(-33F, -23.25F, -2.5F);
 	}
 
 	ModelFB2_new theTrucks2 = new ModelFB2_new();
 	ModelBlombergBnew theTrucks3 = new ModelBlombergBnew();
 	ModelTypeBnew theTrucks4 = new ModelTypeBnew();
+	Modelb30_booster_bits bits = new Modelb30_booster_bits();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
@@ -1890,7 +1904,8 @@ public class ModelB23 extends ModelConverter //Same as Filename
 		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 0
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3) {
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 29
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 30||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 31) {
 			//fb2 black late
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_black_a.png"));
 			GL11.glPushMatrix();
@@ -1900,6 +1915,14 @@ public class ModelB23 extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.12, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
+
+			if (((AbstractTrains) entity).getColor() == 30){
+				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/b36-7_Skin30.png"));
+				GL11.glPushMatrix();
+				GL11.glTranslated(0, 0, 0);
+				bits.render(entity, f, f1, f2, f3, f4, f5);
+				GL11.glPopMatrix();
+			}
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14236){
 			//type b silver early
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
