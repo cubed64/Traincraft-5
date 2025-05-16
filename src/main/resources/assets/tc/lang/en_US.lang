@@ -1450,6 +1450,7 @@ item.tc:minecartFNCC60FootBulk.name=KSFI 60' Bulkhead Flat
 item.tc:minecartGSC53FootFlatcar.name=GSC 53' Flatcar
 item.tc:minecartGSC5366FootBulkhead.name=GSC 53' Bulkhead Flat (6' 6" Bulkhead)
 item.tc:minecartGSC5386FootBulkhead.name=GSC 53' Bulkhead Flat (8' 6" Bulkhead)
+item.tc:minecartMaPa35FootFlatcar.name=MA&PA 35' Flatcar
 
 
 entity.tc.60centerbeam.name=60' Center Beam
@@ -1462,6 +1463,7 @@ entity.tc.FNCC60FootBulk.name=KSFI 60' Bulkhead Flat
 entity.tc.GSC_53Flatcar.name=GSC 53' Flatcar
 entity.tc.GSC_53_66Bulkhead.name=GSC 53' Bulkhead Flat (6' 6" Bulkhead)
 entity.tc.GSC_53_86Bulkhead.name=GSC 53' Bulkhead Flat (8' 6" Bulkhead)
+entity.tc.MaPa_35Flatcar.name=MA&PA 35' Flatcar
 
 item.tc:minecartPS140.name=Pullman Standard 40' Boxcar
 item.tc:minecartPS150.name=Pullman Standard 50' Boxcar
@@ -1482,6 +1484,7 @@ item.tc:minecartPCF_RBL_Ribbed.name=PC&F RBL Ribbedside Boxcar
 item.tc:minecartACFRailbox.name=ACF Railbox Boxcar
 item.tc:minecartACFRailboxCushioned.name=ACF Railbox Boxcar (Cushioned)
 item.tc:minecartEvans5100.name=Evans-USRE 5100 Cu Ft Boxcar
+item.tc:minecart1912WoodBoxcar.name=1912 Wood Sheathed Boxcar
 
 
 entity.tc.PS140.name=Pullman Standard 40' Boxcar
@@ -1503,6 +1506,7 @@ entity.tc.PCF_RBL_Ribbed.name=PC&F RBL Ribbedside Boxcar
 entity.tc.ACF Railbox.name=ACF Railbox Boxcar
 entity.tc.ACF Railbox (Cushioned).name=ACF Railbox Boxcar (Cusioned)
 entity.tc.Evans5100.name=Evans-USRE 5100 Cu Ft Boxcar
+entity.tc.1912WoodBoxcar.name=1912 Wood Sheathed Boxcar
 
 item.tc:minecartVersaLongi.name=Versaflood Longitudinal Hopper
 item.tc:minecartVersaTrans.name=Versaflood Transverse Hopper
@@ -1516,6 +1520,7 @@ item.tc:minecart67millgon.name=GSCO 67' Drop-End Mill Gondola
 item.tc:minecart52millgon.name=GSCO 52' Drop-End Mill Gondola
 item.tc:minecartAAR50TonHopper.name=AAR 50 Ton Hopper
 item.tc:minecartAAR70TonHopper.name=AAR 70 Ton Hopper
+item.tc:minecartMaPa35FootGondola.name=MA&PA 35' Gondola
 
 entity.tc.VersaLongi.name=Versaflood Longitudinal Hopper
 entity.tc.VersaTrans.name=Versaflood Transverse Hopper
@@ -1529,6 +1534,7 @@ entity.tc.67millgon.name=GSCO 67' Drop-End Mill Gondola
 entity.tc.52millgon.name=GSCO 52' Drop-End Mill Gondola
 entity.tc.AAR 50 Ton Hopper.name=AAR 50 Ton Hopper
 entity.tc.AAR 70 Ton Hopper.name=AAR 70 Ton Hopper
+entity.tc.MaPa_35Gondola.name=MA&PA 35' Gondola
 
 item.tc:minecart11000DOT111.name=11,000 Gallon Tank Car
 item.tc:minecart20600DOT111.name=20,600 Gallon Tank Car

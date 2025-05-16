@@ -745,6 +745,8 @@ public enum ItemIDs {
 	minecartGSC53FootFlatcar("ItemRollingStock", "gsc_53_flat", FREIGHT, 3),
 	minecartGSC5366FootBulkhead("ItemRollingStock", "gsc_53_66bulkhead", FREIGHT, 3),
 	minecartGSC5386FootBulkhead("ItemRollingStock", "gsc_53_86bulkhead", FREIGHT, 3),
+	minecartMaPa35FootFlatcar("ItemRollingStock", "MaPa_35_flat", FREIGHT, 3),
+
 
 	minecartPS140("ItemRollingStock", "ps140", FREIGHT, 3),
 	minecartPS150("ItemRollingStock", "ps150", FREIGHT,4),
@@ -765,6 +767,7 @@ public enum ItemIDs {
 	minecartACFRailbox("ItemRollingStock", "ACFRailbox", FREIGHT, 5),
 	minecartACFRailboxCushioned("ItemRollingStock", "ACFRailboxCushioned", FREIGHT, 5),
 	minecartEvans5100("ItemRollingStock", "Evans_5100_icon", FREIGHT, 5),
+	minecart1912WoodBoxcar("ItemRollingStock", "1912WoodBoxcar", FREIGHT, 3),
 
 	minecartVersaLongi("ItemRollingStock", "versalongi", FREIGHT, 4),
 	minecartVersaTrans("ItemRollingStock", "versatrans", FREIGHT, 4),
@@ -778,6 +781,8 @@ public enum ItemIDs {
 	minecart52millgon("ItemRollingStock", "gsco_52millgon_icon", FREIGHT, 4),
 	minecartAAR50TonHopper("ItemRollingStock", "AAR50TonHopper", FREIGHT, 2),
 	minecartAAR70TonHopper("ItemRollingStock", "AAR70TonHopper", FREIGHT, 3),
+	minecartMaPa35FootGondola("ItemRollingStock", "MaPa_35_gondola", FREIGHT, 3),
+
 
 	minecart11000DOT111("ItemRollingStock", "11000DOT", FREIGHT, 4),
 	minecart20600DOT111("ItemRollingStock", "20600DOT", FREIGHT, 5),
