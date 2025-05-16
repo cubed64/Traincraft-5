@@ -597,8 +597,6 @@ public enum EnumTrains {
 	gsco52millgon("52millgon", gsco52millgon.class, ItemIDs.minecart52millgon.item, "Gondola", 3.0, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Lime", "Red", "Skin16", "Black", "Grey", "Purple", "Brown", "Skin17", "Skin18", "Skin19", "Skin20", "Skin21"}), 12, 45, (new String[] {"Cargo: Any."})),
 	AAR50TonHopper("AAR 50 Ton Hopper", AAR50TonHopper.class, ItemIDs.minecartAAR50TonHopper.item, "Open Top Hopper", 2, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Purple", "Skin16"}), 16, 27, (new String[] {"Cargo: Ores."})),
 	AAR70TonHopper("AAR 70 Ton Hopper", AAR70TonHopper.class, ItemIDs.minecartAAR70TonHopper.item, "Open Top Hopper", 2, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Magenta", "Skin16"}), 16, 27, (new String[] {"Cargo: Ores."})),
-	AAR50TonHopper("AAR 50 Ton Hopper", AAR50TonHopper.class, ItemIDs.minecartAAR50TonHopper.item, "Open Top Hopper", 2, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Purple"}), 16, 27, (new String[] {"Cargo: Ores."})),
-	AAR70TonHopper("AAR 70 Ton Hopper", AAR70TonHopper.class, ItemIDs.minecartAAR70TonHopper.item, "Open Top Hopper", 2, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Magenta"}), 16, 27, (new String[] {"Cargo: Ores."})),
 	MaPa35FootGondola("MaPa_35Gondola", MaPa35FootGondola.class, ItemIDs.minecartMaPa35FootGondola.item, "Gondola", 3.0, TraincraftUtil.getBytesFromColors(new String[] {"Brown"}), 12, 27, (new String[] {"Cargo: Any."})),
 
 	DOT11111000( "DOT11000", DOT11111000.class, ItemIDs.minecart11000DOT111.item, "Tankcar", 0, 0, 2.25, 0, 0, 0, 0, 0, 41000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "LightGrey", "Grey"}), 16, 0, (new String[] {"Capacity: 41000mb."})),
