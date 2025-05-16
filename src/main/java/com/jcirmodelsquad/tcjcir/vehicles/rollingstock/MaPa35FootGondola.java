@@ -1,8 +1,6 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
-import com.jcirmodelsquad.tcjcir.models.loads.Modelcoil_load;
-import com.jcirmodelsquad.tcjcir.models.loads.Modelgondola_load_flat_aggregates_medium2;
-import com.jcirmodelsquad.tcjcir.models.loads.Modelrebar_bundle;
+import com.jcirmodelsquad.tcjcir.models.loads.*;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -26,6 +24,8 @@ public class MaPa35FootGondola extends Freight implements IInventory {
         textureDescriptionMap.put(0, "MA&PA");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
+                { new CargoSpecification(Model35FootRails.class,
+                        "loads/rails35Foot", "Rails", 0, 3.0, 0) },
         }));
     }
 

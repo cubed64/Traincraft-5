@@ -1,5 +1,6 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
+import com.jcirmodelsquad.tcjcir.models.loads.*;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -23,7 +24,14 @@ public class MaPa35FootFlat extends Freight implements IInventory {
         textureDescriptionMap.put(0, "MA&PA (Stakes)");
         textureDescriptionMap.put(1, "MA&PA");
         setCargoManager(new CargoManager(new CargoSpecification[][] {
-
+                { new CargoSpecification(Model35FootCrate.class,
+                        "loads/crate35Foot", "Crate", 0, 3.0, 0) },
+                { new CargoSpecification(Model35FootDimensionalLumber.class,
+                        "loads/dimensionalLumber_35Foot", "Dimensional Lumber", 0, 3.0, 0) },
+                { new CargoSpecification(Model35FootRails.class,
+                        "loads/rails35Foot", "Rails", 0, 3.0, 0) },
+                { new CargoSpecification(Model35FootTies.class,
+                        "loads/ties35Foot", "Ties", 0, 3.0, 0) },
         }));
     }
 
