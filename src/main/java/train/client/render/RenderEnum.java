@@ -888,6 +888,35 @@ public enum RenderEnum
 	}, 2, true),
 	PETender(TenderPETender.class, new ModelPE_Tender(), "PETender", false, new float[] { 0.1F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 
+	Alco0_6_0T(SteamAlco0_6_0T.class, new ModelAlco0_6_0T(), "Alco0_6_0T_", true, new float[] { -0.55F, 0.16F, -0.0F }, new float[] { 0F, 180F, 180F }, null, "largesmoke", 20, new ArrayList<double[]>() {
+		{
+			add(new double[] { 1.65D, 1.32D, 0.0D });
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] { 1.3D, -0.25D, 0.8D });
+		}
+	}, 2, true),
+	Brank(SteamBrank.class, new ModelBrank(), "Brank_", true, new float[] { -0.5F, 0.16F, -0.0F }, new float[] { 0F, 180F, 180F }, null, "largesmoke", 20, new ArrayList<double[]>() {
+		{
+			add(new double[] { 1.65D, 1.32D, 0.0D });
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] { 1.3D, -0.25D, 0.8D });
+		}
+	}, 2, true),
+	Lima2_8_0(SteamLima2_8_0.class, new ModelLima2_8_0(), "Lima2_8_0_", true, new float[] {-0.9F, 0.155F, 0F}, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
+		{
+			add(new double[] {2.1D, 1.65D, 0.0D});
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] {1.8D, -0.2D, 0.75D});//pistons
+		}
+	}, 2, true),
+	TenderLima2_8_0(TenderLima2_8_0.class, new ModelTenderLima2_8_0(), "Lima_Tender2_8_0_", true, new float[] {-1.1F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+
 	/**EMD**/
 	F3A( DieselF3A.class,  new ModelF3a_new(), "f3a_", true,new float[] {-1.3F, 0.145F, 0F},  new float[] { 0F, 180F, 180F },  null, "smoke", 3,  new ArrayList<double[]>() {
 		{
@@ -2195,6 +2224,7 @@ public enum RenderEnum
 	ICCBaywindowWP(ICCBaywindowWP.class, new ModelICCBaywindowWP(),"iccbaywindow_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	CA11(CA11.class, new ModelCA11(),"icc_ca11_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	WPShops600Series(WPShops600Series.class, new ModelWPShops600Series(),"wp680series_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	CDCScaboose(CDCScaboose.class, new ModelCDCScaboose(),"CDCScaboose_", true, new float[]{0F, 0.1675F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	BigMeme(BigMeme.class, new ModelBigMeme(),"bigmeme_", true, new float[]{-1F, 0.1875F, 0F}, new float[] { 180F, 180F, 0F }, null, "", 0, null, "", null, 0, false),
 	BombCart(BombCart.class, new ModelBombCart(), "payload_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

@@ -872,6 +872,10 @@ item.tc:minecartTender460.name=ALCo 4-6-0 Tender
 item.tc:minecartPELocomotive.name=Polar Express 1225
 item.tc:minecartPETender.name=Polar Express Tender
 
+item.tc:minecartAlco0_6_0T.name=Alco 0-6-0T
+item.tc:minecartBrank.name=2-6-2T Branch Tank "Brank"
+item.tc:minecartLima2_8_0.name=Lima 2-8-0
+item.tc:minecartTenderLima2_8_0.name=Lima 2-8-0 Tender
 
 entity.tc.2TruckClimax.name=2 Truck Climax
 entity.tc.2TruckVerticalBoilerShay.name=2 Truck Class A Shay
@@ -910,6 +914,11 @@ entity.tc.Tender460.name=ALCo 4-6-0 Tender
 
 entity.tc.Loco Steam PELoco.name=Polar Express 1225
 entity.tc.Tender PETender.name=Polar Express Tender
+
+entity.tc.Alco0-6-0T.name=Alco 0-6-0T
+entity.tc.Brank2-6-2T.name=2-6-2T Branch Tank "Brank"
+entity.tc.Lima2-8-0.name=Lima 2-8-0
+entity.tc.TenderLima2_8_0.name=Lima 2-8-0 Tender
 
 --------------------------------------------------------
 
@@ -1833,6 +1842,7 @@ item.tc:minecartICC_Bobber.name=ICC Bobber Wide Vision Caboose
 item.tc:minecartICCBaywindowWP.name=ICC Baywindow Caboose (WP Config)
 item.tc:minecartCA11.name=ICC CA11 Baywindow Caboose
 item.tc:minecartWPShops600Series.name=WP Shops 600 series Caboose
+item.tc:minecartCDCScaboose.name=CDCS Caboose
 
 entity.tc.WVcaboose.name=International Car Co. Wide Vision Caboose
 entity.tc.HBC1C.name=KSFI HBC1-C Caboose
@@ -1842,6 +1852,7 @@ entity.tc.ICC_Bobber.name=ICC Bobber Wide Vision Caboose
 entity.tc.ICCBaywindowWP.name=ICC Baywindow Caboose (WP Config)
 entity.tc.CA11.name=ICC CA11 Baywindow Caboose
 entity.tc.WPShops600Series.name=WP Shops 600 series Caboose
+entity.tc.CDCScaboose.name=CDCS Caboose
 
 --------------------------------------------------------
 

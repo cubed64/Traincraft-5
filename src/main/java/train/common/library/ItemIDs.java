@@ -475,6 +475,11 @@ public enum ItemIDs {
 	minecartPMNstender("ItemRollingStock", "PMNstenderIcon", STEAM,3),
 	minecartPMNandN1("ItemRollingStock", "PMNandN1Icon", STEAM,  7),
 
+	minecartAlco0_6_0T("ItemRollingStock", "Alco0_6_0T", STEAM, 5),
+	minecartBrank("ItemRollingStock", "Brank", STEAM, 5),
+	minecartLima2_8_0("ItemRollingStock", "Lima2-8-0", STEAM, 4),
+	minecartTenderLima2_8_0("ItemRollingStock", "TenderLima2-8-0", STEAM, 3),
+
 	//EMD//
 	minecartF3A( "ItemRollingStock", "f3a", DIESEL, 4),
 	minecartF7A("ItemRollingStock", "f7a", DIESEL, 4),
@@ -933,6 +938,7 @@ public enum ItemIDs {
 	minecartICCBaywindowWP("ItemRollingStock", "wp_iccbaywindow_icon", BOOSE,3),
 	minecartCA11("ItemRollingStock", "hop_on_paint_dot_net", BOOSE,3),
 	minecartWPShops600Series("ItemRollingStock", "wp648680_series_icon", BOOSE,3),
+	minecartCDCScaboose("ItemRollingStock", "CDCScaboose", BOOSE,3),
 
 	minecartBigMeme("ItemRollingStock", "lol", 69),
 	minecartBombCart("ItemRollingStock", "payload", 2),
