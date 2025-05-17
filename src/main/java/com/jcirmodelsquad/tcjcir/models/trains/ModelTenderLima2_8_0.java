@@ -311,12 +311,12 @@ public class ModelTenderLima2_8_0 extends ModelConverter //Same as Filename
 		}
 		Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/FrictionTruck_CDCS.png"));
 		GL11.glPushMatrix();
-		GL11.glTranslatef(0.275F, 0.0F, 0F);
+		GL11.glTranslatef(0.44F, 0F, 0F);
 		bogie.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
 
 		GL11.glPushMatrix();
-		GL11.glTranslated(1.575F, 0.0F, 0);
+		GL11.glTranslated(1.55F, 0F, 0);
 		bogie.render(entity, f, f1, f2, f3, f4, f5);
 		GL11.glPopMatrix();
 
