@@ -827,6 +827,13 @@ public enum ItemIDs {
 	minecartPSLunchCounter_Lounge("ItemRollingStock", "PSLunchCounter_Lounge", PASSENGER, 3),
 	minecartPS30SeatParlor("ItemRollingStock", "PS30SeatParlor", PASSENGER, 3),
 
+	minecartDRGWRPO620Series("ItemRollingStock", "DRGWRPO620Series", PASSENGER, 3),
+	minecartDRGWRPO630Series("ItemRollingStock", "DRGWRPO630Series", PASSENGER, 3),
+	minecartDRGWBaggage700Series("ItemRollingStock", "DRGWBaggage700Series", PASSENGER, 3),
+	minecartDRGWBaggage740Series("ItemRollingStock", "DRGWBaggage740Series", PASSENGER, 3),
+	minecartDRGWCoach1000Series("ItemRollingStock", "DRGWCoach1000Series", PASSENGER, 3),
+	minecartDRGWCoach1005Series("ItemRollingStock", "DRGWCoach1005Series", PASSENGER, 3),
+
 	minecartPSRPOPM("ItemRollingStock", "PSRPOPMIcon", PASSENGER, 3),
 	minecartPS73Baggage("ItemRollingStock", "PS_73_baggage_icon", PASSENGER, 3),
 	minecartPS54SeatCoach_Lounge("ItemRollingStock", "PS54SeatCoach_Lounge", PASSENGER, 3),

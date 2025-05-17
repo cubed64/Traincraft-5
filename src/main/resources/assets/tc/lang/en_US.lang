@@ -1619,6 +1619,13 @@ item.tc:minecartPSRPO.name=Pullman Standard RPO(30')
 item.tc:minecartPSLunchCounter_Lounge.name=Pullman Standard Lunch Counter-Lounge
 item.tc:minecartPS30SeatParlor.name=Pullman Standard C&O 30 Seat Parlor
 
+item.tc:minecartDRGWRPO620Series.name=DRGW 620 Series RPO(30')
+item.tc:minecartDRGWRPO630Series.name=DRGW 630 Series RPO(30')
+item.tc:minecartDRGWBaggage700Series.name=DRGW 700 Series Baggage
+item.tc:minecartDRGWBaggage740Series.name=DRGW 740 Series Baggage
+item.tc:minecartDRGWCoach1000Series.name=DRGW 1000 Series Coach
+item.tc:minecartDRGWCoach1005Series.name=DRGW 1005 Series Coach
+
 item.tc:minecartPSRPOPM.name=Pullman Standard PM RPO(15')
 item.tc:minecartPS73Baggage.name=Pullman Standard PM 73' Baggage
 item.tc:minecartPSCenterDiner.name=Pullman Standard PM Center-Kitchen Dining Car
@@ -1636,7 +1643,6 @@ item.tc:minecartACFGNDiner_Observation.name=American Car & Foundry GN Diner-Obse
 item.tc:minecartACFGN28SeatCoach_Dinette.name=American Car & Foundry GN 28 Seat Coach-Dinette
 item.tc:minecartACFGN1DR_17SeatParlor_Observation.name=American Car & Foundry GN 1DR-17 Seat Parlor-Observation
 item.tc:minecartPSGNRPO_30.name=Pullman Standard GN RPO (30' mail section)
-
 
 item.tc:minecartOB84SeatCoach.name=Osgood Bradley 84 Seat Coach
 item.tc:minecartOB92SeatCoach.name=Osgood Bradley 92 Seat Coach
@@ -1722,6 +1728,13 @@ entity.tc.PS Center Diner 2.name=Pullman Standard Center-Kitchen Dining Car 2
 entity.tc.PSRPO.name=Pullman Standard RPO(30')
 entity.tc.PS Lunch Counter-Lounge.name=Pullman Standard Lunch Counter-Lounge
 entity.tc.PS 30 Seat Parlor.name=Pullman Standard C&O 30 Seat Parlor
+
+entity.tc.D&RGW RPO 620 Series.name=DRGW 620 Series RPO(30')
+entity.tc.D&RGW RPO 630 Series.name=DRGW 630 Series RPO(30')
+entity.tc.D&RGW Baggage 700 Series.name=DRGW 700 Series Baggage
+entity.tc.D&RGW Baggage 740 Series.name=DRGW 740 Series Baggage
+entity.tc.D&RGW Coach 1000 Series.name=DRGW 1000 Series Coach
+entity.tc.D&RGW Coach 1005 Series.name=DRGW 1005 Series Coach
 
 entity.tc.Freight PS 73 Baggage.name=Pullman Standard PM 73' Baggage
 entity.tc.PS Center Diner.name=Pullman Standard PM Center-Kitchen Dining Car
