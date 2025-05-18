@@ -568,6 +568,9 @@ public enum ItemIDs {
 	minecartMP900("ItemRollingStock", "mp900", DIESEL, 4),
 	minecartMP15DCW9("ItemRollingStock", "mp15dcw9", DIESEL, 4),
 
+	minecartTR4("ItemRollingStock","tr4", DIESEL, 3),
+	minecartTR4B("ItemRollingStock","tr4b", DIESEL, 3),
+
 	minecartBeep("ItemRollingStock", "BeepIcon", DIESEL, 2),
 
 	//GE//

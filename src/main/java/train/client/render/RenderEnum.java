@@ -1391,6 +1391,19 @@ public enum RenderEnum
 		}
 	}, "", null, 0, false),
 
+	TR4( DieselTR4.class,  new ModelTR4(), "tr4_", true,new float[]{-1.0F, 0.15F, 0.00F},   new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.96D, 1.30D, 0.0D});
+			add(new double[]{1.58D, 1.30D, 0.0D});
+		}
+	}, "", null, 0, false),
+	TR4B( DieselTR4B.class,  new ModelTR4B(), "tr4b_", true,new float[]{-1.0F, 0.15F, 0.00F},   new float[] { 0F, 180F, 180F }, null, "smoke", 3,  new ArrayList<double[]>() {
+		{
+			add(new double[]{0.96D, 1.30D, 0.0D});
+			add(new double[]{1.58D, 1.30D, 0.0D});
+		}
+	}, "", null, 0, false),
+
 	Beep( DieselBeep.class,  new ModelBeep(), "atsfbeep", false,new float[]{-1.1F, 0.05F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[]{1.45D, 1.25D, 0.0D});

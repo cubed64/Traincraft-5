@@ -1010,6 +1010,9 @@ item.tc:minecartSW1600.name=FNCC SW1600
 item.tc:minecartMP900.name=Masaou MP900
 item.tc:minecartMP15DCW9.name=WFLW MP15BW
 
+item.tc:minecartTR4.name=EMD TR4 Cow
+item.tc:minecartTR4B.name=EMD TR4 Calf
+
 item.tc:minecartBeep.name=ATSF SWBLW (The Beep)
 
 
@@ -1101,6 +1104,9 @@ entity.tc.SW1500.name=EMD SW1500
 entity.tc.SW1600.name=FNCC SW1600
 entity.tc.MP900.name=Masaou MP900
 entity.tc.MP15DCW9.name=WFLW MP15BW
+
+entity.tc.TR4.name=EMD TR4 Cow
+entity.tc.TR4B.name=EMD TR4 Calf
 
 entity.tc.Beep.name=ATSF SWBLW (The Beep)
 

@@ -383,6 +383,9 @@ public enum EnumTrains {
 	MP900("MP900", DieselMP900.class, ItemIDs.minecartMP900.item, "diesel", 950, 81, 0, 45, 0, 200, 0.95, 0.65, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "LightGrey", "Cyan"}), 16, -2),
 	MP15DCW9("MP15DCW9", DieselMP15DCW9.class, ItemIDs.minecartMP15DCW9.item, "diesel", 1500, 97, 0, 0, 0, 200, 0.85, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Skin16", "White"}), 16, -2.3),
 
+	TR4("TR4", DieselTR4.class, ItemIDs.minecartTR4.item, "diesel", 1200, 105, 0, 25, 0, 200, 0.85, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Orange", "Purple", "Cyan", "LightGrey"}), 16, -2),
+	TR4B("TR4B", DieselTR4B.class, ItemIDs.minecartTR4B.item, "diesel", 1200, 105, 0, 25, 0, 200, 0.85, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Orange", "Purple", "Cyan", "LightGrey"}), 16, -2),
+
 	Beep("Beep", DieselBeep.class, ItemIDs.minecartBeep.item, "diesel", 1500, 105, 0, 25, 0, 200, 0.89, 0.8, 9000, null, 10, -2.2),
 
 	//GE//
