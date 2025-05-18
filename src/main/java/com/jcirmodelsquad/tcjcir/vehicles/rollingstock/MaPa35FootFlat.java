@@ -22,7 +22,9 @@ public class MaPa35FootFlat extends Freight implements IInventory {
         super(world);
         initFreightCart();
         textureDescriptionMap.put(0, "MA&PA (Stakes)");
-        textureDescriptionMap.put(1, "MA&PA");
+        textureDescriptionMap.put(1, "MOW (Stakes)");
+        textureDescriptionMap.put(2, "MA&PA");
+        textureDescriptionMap.put(3, "MOW");
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Model35FootCrate.class,
                         "loads/crate35Foot", "Crate", 0, 3.0, 0) },

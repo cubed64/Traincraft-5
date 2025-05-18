@@ -429,25 +429,25 @@ public class ModelAlco0_6_0T extends ModelConverter //Same as Filename
 		bodyModel[20].addBox(0F, 0F, 0F, 8, 14, 1, 0F); // Box 106
 		bodyModel[20].setRotationPoint(7.5F, -14F, -11F);
 
-		bodyModel[21].addShapeBox(0F, 0F, 0F, 16, 1, 2, 0F,0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 132
+		bodyModel[21].addShapeBox(0F, 0F, 0F, 16, 1, 2, 0F,0F, -0.95F, 0F, 0F, -0.95F, 0F, 0F, 0.05F, 0F, 0F, 0.05F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 132
 		bodyModel[21].setRotationPoint(5.5F, -16F, -10F);
 
-		bodyModel[22].addShapeBox(0F, 0F, 0F, 16, 1, 5, 0F,0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 133
+		bodyModel[22].addShapeBox(0F, 0F, 0F, 16, 1, 5, 0F,0F, -0.95F, 0F, 0F, -0.95F, 0F, 0F, 0.05F, 0F, 0F, 0.05F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 133
 		bodyModel[22].setRotationPoint(5.5F, -17F, -8F);
 
-		bodyModel[23].addShapeBox(0F, 0F, 0F, 16, 1, 6, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 135
+		bodyModel[23].addShapeBox(0F, 0F, 0F, 16, 1, 6, 0F,0F, 0.05F, 0F, 0F, 0.05F, 0F, 0F, 0.05F, 0F, 0F, 0.05F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 135
 		bodyModel[23].setRotationPoint(5.5F, -17F, -3F);
 
-		bodyModel[24].addShapeBox(0F, 0F, 0F, 16, 1, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F); // Box 172
+		bodyModel[24].addShapeBox(0F, 0F, 0F, 16, 1, 2, 0F,0F, 0.05F, 0F, 0F, 0.05F, 0F, 0F, -0.95F, 0F, 0F, -0.95F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F); // Box 172
 		bodyModel[24].setRotationPoint(5.5F, -16F, 8F);
 
-		bodyModel[25].addShapeBox(0F, 0F, 0F, 16, 1, 5, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F); // Box 173
+		bodyModel[25].addShapeBox(0F, 0F, 0F, 16, 1, 5, 0F,0F, 0.05F, 0F, 0F, 0.05F, 0F, 0F, -0.95F, 0F, 0F, -0.95F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F); // Box 173
 		bodyModel[25].setRotationPoint(5.5F, -17F, 3F);
 
-		bodyModel[26].addShapeBox(0F, 0F, 0F, 16, 1, 1, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 171
-		bodyModel[26].setRotationPoint(5.5F, -15F, 10F);
+		bodyModel[26].addShapeBox(0F, 0F, 0F, 16, 1, 1, 0F,0F, 0.05F, 0F, 0F, 0.05F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 171
+		bodyModel[26].setRotationPoint(5.5F, -14.99F, 10F);
 
-		bodyModel[27].addShapeBox(0F, 0F, 0F, 16, 1, 1, 0F,0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 113
+		bodyModel[27].addShapeBox(0F, 0F, 0F, 16, 1, 1, 0F,0F, -1F, 0F, 0F, -1F, 0F, 0F, 0.05F, 0F, 0F, 0.05F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 113
 		bodyModel[27].setRotationPoint(5.5F, -15F, -11F);
 
 		bodyModel[28].addBox(0F, 0F, 0F, 8, 14, 1, 0F); // Box 114
@@ -608,7 +608,7 @@ public class ModelAlco0_6_0T extends ModelConverter //Same as Filename
 		bodyModel[79].addShapeBox(0F, 0F, 0F, 3, 1, 1, 0F,0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F); // Box 192
 		bodyModel[79].setRotationPoint(-23.5F, -11.75F, 0F);
 
-		bodyModel[80].addBox(0F, 0F, 0F, 0, 6, 16, 0F); // Switching Pilot
+		bodyModel[80].addBox(0F, 0F, 0F, 0, 6, 16, 0F); // Switching Pilot CULL
 		bodyModel[80].setRotationPoint(-24.51F, 3F, -8F);
 
 		bodyModel[81].addBox(0F, 1.5F, 0F, 9, 2, 0, 0F); // Box 350
@@ -643,7 +643,7 @@ public class ModelAlco0_6_0T extends ModelConverter //Same as Filename
 		bodyModel[89].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // aircompressor inletvalve
 		bodyModel[89].setRotationPoint(-17F, -8.5F, -7F);
 
-		bodyModel[90].addShapeBox(0F, -0.25F, 0F, 10, 3, 3, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // radiator pipes
+		bodyModel[90].addShapeBox(0F, -0.25F, 0F, 10, 3, 3, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // radiator pipes CULL
 		bodyModel[90].setRotationPoint(-14F, -1.5F, 7F);
 		bodyModel[90].rotateAngleX = -0.78539816F;
 
@@ -1390,7 +1390,7 @@ public class ModelAlco0_6_0T extends ModelConverter //Same as Filename
 		bodyModel[322].addShapeBox(0F, 0F, 0F, 21, 6, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, -3F, 0F); // Radiator pipes CULL
 		bodyModel[322].setRotationPoint(-14.01F, -1F, -9.5F);
 
-		bodyModel[323].addShapeBox(0F, 0F, 0F, 21, 6, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, -3F, 0F); // Box 323 radiator pipes CULL
+		bodyModel[323].addShapeBox(0F, 0F, 0F, 21, 6, 3, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, -3F, 0F); // Box 323
 		bodyModel[323].setRotationPoint(-14.01F, -1F, 6.5F);
 
 		bodyModel[324].addShapeBox(0F, 0F, 0F, 1, 2, 10, 0F,-1.5F, 0F, -0.5F, 1F, 0F, -0.5F, -1F, 0F, 0F, 0.5F, 0F, 0F, -0.5F, 0F, -1F, 0F, 0F, -1F, -2F, 0F, 0F, 1.5F, 0F, 0F); // Box 294
