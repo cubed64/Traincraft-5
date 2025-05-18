@@ -22,7 +22,8 @@ public class DieselTR4 extends DieselTrain {
         textureDescriptionMap.put(1, "Milwaukee Road");
         textureDescriptionMap.put(2, "Chesapeake & Ohio");
         textureDescriptionMap.put(3, "Baltimore & Ohio");
-        textureDescriptionMap.put(4, "Blandsville & Blankerston");
+        textureDescriptionMap.put(4, "Great Lakes & Northern Territories");
+        textureDescriptionMap.put(5, "Blandsville & Blankerston");
     }
     public DieselTR4(World world, double d, double d1, double d2){
         this(world);
