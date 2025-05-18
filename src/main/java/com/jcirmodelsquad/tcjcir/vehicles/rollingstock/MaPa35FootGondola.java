@@ -25,6 +25,16 @@ public class MaPa35FootGondola extends Freight implements IInventory {
         textureDescriptionMap.put(1, "MOW");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
+                { new CargoSpecification(Model35FootAggregate.class,
+                        "loads/aggregate35Foot_ballast", "Ballast", 0, 3.0, 0) },
+                { new CargoSpecification(Model35FootAggregate.class,
+                        "loads/aggregate35Foot_coal", "Coal", 0, 3.0, 0) },
+                { new CargoSpecification(Model35FootAggregate.class,
+                        "loads/aggregate35Foot_dirt", "Dirt", 0, 3.0, 0) },
+                { new CargoSpecification(Model35FootAggregate.class,
+                        "loads/aggregate35Foot_dirtyGravel", "Dirty Gravel", 0, 3.0, 0) },
+                { new CargoSpecification(Model35FootAggregate.class,
+                        "loads/aggregate35Foot_gravel", "Gravel", 0, 3.0, 0) },
                 { new CargoSpecification(Model35FootRails.class,
                         "loads/rails35Foot", "Rails", 0, 3.0, 0) },
         }));
