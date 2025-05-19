@@ -538,7 +538,7 @@ public enum EnumTrains implements IEnumTrains
 	DRGWCaboose("DRGWCaboose", DRGWboose.class, ItemIDs.minecartDRGWCaboose.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey", "Brown", "Green", "Lime", "Yellow", "Cyan", "Black", "White", "Magenta", "Red", "Orange", "Pink", "Skin16", "Purple"}), 16, 0, null),
 	ICC_Bobber("ICC_Bobber",ICC_Bobber.class, ItemIDs.minecartICC_Bobber.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Red", "Green", "Blue"}), 16, 0, null),
 	ICCBaywindowWP("ICCBaywindowWP",ICCBaywindowWP.class, ItemIDs.minecartICCBaywindowWP.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "Red", "Skin16", "Green", "Cyan", "Skin17", "Orange", "Skin18", "Skin19", "Skin20", "Skin21"}), 16, 0, null),
-	CA11("CA11",CA11.class, ItemIDs.minecartCA11.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Red", "Cyan", "Skin17", "Skin18", "Purple"}), 16, 0, null),
+	CA11("CA11",CA11.class, ItemIDs.minecartCA11.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Red", "Cyan", "Skin17", "Skin18", "Purple", "Skin19"}), 16, 0, null),
 	WPShops600Series("WPShops600Series",WPShops600Series.class, ItemIDs.minecartWPShops600Series.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Brown", "Yellow", "Green"}), 16, 0, null),
 	CDCScaboose("CDCScaboose",CDCScaboose.class, ItemIDs.minecartCDCScaboose.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Pink", "Brown", "Grey"}), 16, 0, null),
 
