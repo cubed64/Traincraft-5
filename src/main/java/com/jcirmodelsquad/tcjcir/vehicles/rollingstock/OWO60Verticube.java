@@ -35,6 +35,7 @@ public class OWO60Verticube extends Freight implements IInventory {
         textureDescriptionMap.put(14, "FNCC (Dual Logos)");
         textureDescriptionMap.put(15, "FNCC (Olympic Range Logo)");
         textureDescriptionMap.put(16, "FBOX");
+        textureDescriptionMap.put(17, "CNRC");
     }
 
     public OWO60Verticube(World world, double d, double d1, double d2){

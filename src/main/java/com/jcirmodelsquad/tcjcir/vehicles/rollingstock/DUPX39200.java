@@ -25,6 +25,7 @@ public class DUPX39200 extends LiquidTank {
         textureDescriptionMap.put(0, "DUPX");
         textureDescriptionMap.put(1, "MAG");
         textureDescriptionMap.put(2, "MAG (70th Anniversary)");
+        textureDescriptionMap.put(3, "CCOX");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Modelhazmat_plac_DUPX39200.class, "loads/hazmat_plac_corrosive_number",
