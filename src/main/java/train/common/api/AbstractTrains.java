@@ -210,19 +210,22 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			}
 		}
 
-		for (EnumHeritageTrainsLegacy trains : EnumHeritageTrainsLegacy.values()) {
-			if (trains.getEntityClass().equals(this.getClass())) {
-				this.setDefaultMass(trains.getMass());
-				trainSpec = trains;
-				if (trains.getColors() != null) {
-					for (int i = 0; i < trains.getColors().length; i++) {
-						this.acceptedColors.add((trains.getColors()[i]));
+		if (trainSpec == null)
+		{
+			for (EnumHeritageTrainsLegacy trains : EnumHeritageTrainsLegacy.values()) {
+				if (trains.getEntityClass().equals(this.getClass())) {
+					this.setDefaultMass(trains.getMass());
+					trainSpec = trains;
+					if (trains.getColors() != null) {
+						for (int i = 0; i < trains.getColors().length; i++) {
+							this.acceptedColors.add((trains.getColors()[i]));
+						}
 					}
-				}
-				this.setSize(0.98f, 1.98f);
-				this.setMinecartName(trainSpec.name());
+					this.setSize(0.98f, 1.98f);
+					this.setMinecartName(trainSpec.name());
 
-				break;
+					break;
+				}
 			}
 		}
 
