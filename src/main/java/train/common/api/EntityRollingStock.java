@@ -2710,6 +2710,14 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				return items;
 			}
 		}
+
+		for (EnumHeritageTrainsLegacy trains : EnumHeritageTrainsLegacy.values()) {
+			if (trains.getEntityClass().equals(this.getClass())) {
+				items.add(ItemRollingStock.setPersistentData(new ItemStack(trains.getItem()), this,this.getUniqueTrainID(),trainCreator, trainOwner, getColor(), trainNote));
+				return items;
+			}
+		}
+
 		return null;
 	}
 

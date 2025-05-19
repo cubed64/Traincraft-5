@@ -12,13 +12,14 @@ import net.minecraftforge.fluids.FluidRegistry;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.Tender;
+import train.common.library.EnumHeritageTrainsLegacy;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
 public class EntityTenderMILW extends Tender implements IInventory {
 	public int freightInventorySize;
 	public EntityTenderMILW(World world) {
-		super(world, FluidRegistry.WATER, 0, EnumTrains.tenderGS4.getTankCapacity(), LiquidManager.WATER_FILTER);
+		super(world, FluidRegistry.WATER, 0, EnumHeritageTrainsLegacy.tenderGS4.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initFreightTender();
 	}
 

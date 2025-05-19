@@ -171,6 +171,13 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                 return trains.getTrainType();
             }
         }
+
+        for (EnumHeritageTrainsLegacy trains : EnumHeritageTrainsLegacy.values()) {
+            if (trains.getItem() == this) {
+                return trains.getTrainType();
+            }
+        }
+
         return "";
     }
 
@@ -180,6 +187,13 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                 return trains.getMass();
             }
         }
+
+        for (EnumHeritageTrainsLegacy trains : EnumHeritageTrainsLegacy.values()) {
+            if (trains.getItem() == this) {
+                return trains.getMass();
+            }
+        }
+
         return 0;
     }
 
@@ -189,6 +203,13 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                 return trains.getMaxSpeed();
             }
         }
+
+        for (EnumHeritageTrainsLegacy trains : EnumHeritageTrainsLegacy.values()) {
+            if (trains.getItem() == this) {
+                return trains.getMaxSpeed();
+            }
+        }
+
         return 0;
     }
 
@@ -198,6 +219,13 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                 return trains.getMHP();
             }
         }
+
+        for (EnumHeritageTrainsLegacy trains : EnumHeritageTrainsLegacy.values()) {
+            if (trains.getItem() == this) {
+                return trains.getMHP();
+            }
+        }
+
         return 0;
     }
 
@@ -207,6 +235,13 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                 return trains.getAdditionnalTooltip();
             }
         }
+
+        for (EnumHeritageTrainsLegacy trains : EnumHeritageTrainsLegacy.values()) {
+            if (trains.getItem() == this) {
+                return trains.getAdditionnalTooltip();
+            }
+        }
+
         return null;
     }
 
@@ -216,6 +251,13 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                 return trains.getCargoCapacity();
             }
         }
+
+        for (EnumHeritageTrainsLegacy trains : EnumHeritageTrainsLegacy.values()) {
+            if (trains.getItem() == this) {
+                return trains.getCargoCapacity();
+            }
+        }
+
         return 0;
     }
 
@@ -309,6 +351,23 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                 break;
             }
         }
+        for (EnumHeritageTrainsLegacy train : EnumHeritageTrainsLegacy.values()) {
+            if (train.getItem() == itemstack.getItem()) {
+                //System.out.println(train.getItem().getUnlocalizedName());
+                //System.out.println(world!=null);
+                rollingStock = (EntityRollingStock) train.getEntity(world, i + 0.5F, j + 0.5F, k + 0.5F);
+                if (train.getColors() != null) {
+                    if (rollingStock != null) {
+                        //rollingStock.setColor(AbstractTrains.getColorFromString(train.getColors()[0]));
+                        rollingStock.setColor((train.getColors()[0]));
+                    }
+                }
+
+                break;
+            }
+        }
+
+
         if (rollingStock != null) {
             if (!world.isRemote) {
 

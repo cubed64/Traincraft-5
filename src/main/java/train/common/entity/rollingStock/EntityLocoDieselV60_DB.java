@@ -10,12 +10,13 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.library.EnumHeritageTrainsLegacy;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
 public class EntityLocoDieselV60_DB extends DieselTrain {
 	public EntityLocoDieselV60_DB(World world) {
-		super(world, EnumTrains.locoDieselV60_DB.getTankCapacity(), LiquidManager.dieselFilter());
+		super(world, EnumHeritageTrainsLegacy.locoDieselV60_DB.getTankCapacity(), LiquidManager.dieselFilter());
 		initLoco();
 	}
 

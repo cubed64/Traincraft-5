@@ -16,6 +16,7 @@ import train.common.core.handlers.ConfigHandler;
 import train.common.core.network.PacketCargoSelection;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
+import train.common.library.IEnumTrains;
 
 import java.awt.*;
 import java.util.Collections;
@@ -29,7 +30,7 @@ import java.util.Collections;
 @SideOnly(Side.CLIENT)
 public class GuiCargoSelection extends GuiAbstractPaintbrush {
     private float yaw = 0;
-    private final EnumTrains fakeTrain;
+    private final IEnumTrains fakeTrain;
     private final AbstractTrains[] renderEntities = new AbstractTrains[RESULTS_PER_PAGE];
     private GuiButtonPaintbrushMenu playPauseButton;
     private GuiButtonPaintbrushMenu lightControlButton;

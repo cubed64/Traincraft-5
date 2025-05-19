@@ -14,6 +14,7 @@ import train.common.Traincraft;
 import train.common.api.INoFuelTransferEntity;
 import train.common.api.LiquidManager;
 import train.common.api.LiquidTank;
+import train.common.library.EnumHeritageTrainsLegacy;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -25,9 +26,9 @@ public class EntityBUnitEMDF7 extends LiquidTank  implements IFluidHandler, INoF
 	private LiquidManager.StandardTank theTank;
 
 	public EntityBUnitEMDF7(World world) {
-		super(world, EnumTrains.BUnitDD35.getTankCapacity());
+		super(world, EnumHeritageTrainsLegacy.BUnitDD35.getTankCapacity());
 		initFreightWater();
-		this.theTank = LiquidManager.getInstance().new FilteredTank(EnumTrains.BUnitDD35.getTankCapacity(), LiquidManager.dieselFilter());
+		this.theTank = LiquidManager.getInstance().new FilteredTank(EnumHeritageTrainsLegacy.BUnitDD35.getTankCapacity(), LiquidManager.dieselFilter());
 	}
 
 	public EntityBUnitEMDF7(World world, double d, double d1, double d2) {

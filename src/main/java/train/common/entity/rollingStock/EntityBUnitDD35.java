@@ -13,7 +13,8 @@ import net.minecraftforge.fluids.*;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.LiquidTank;
-import train.common.library.EnumTrains;
+import train.common.library.EnumHeritageTrainsLegacy;
+import train.common.library.EnumHeritageTrainsLegacy;
 import train.common.library.GuiIDs;
 
 public class EntityBUnitDD35 extends LiquidTank implements IFluidHandler {
@@ -23,9 +24,9 @@ public class EntityBUnitDD35 extends LiquidTank implements IFluidHandler {
 	private LiquidManager.StandardTank theTank;
 
 	public EntityBUnitDD35(World world) {
-		super(world, EnumTrains.BUnitDD35.getTankCapacity());
+		super(world, EnumHeritageTrainsLegacy.BUnitDD35.getTankCapacity());
 		initFreightWater();
-		this.theTank = LiquidManager.getInstance().new FilteredTank(EnumTrains.BUnitDD35.getTankCapacity(), LiquidManager.dieselFilter());
+		this.theTank = LiquidManager.getInstance().new FilteredTank(EnumHeritageTrainsLegacy.BUnitDD35.getTankCapacity(), LiquidManager.dieselFilter());
 	}
 
 	public EntityBUnitDD35(World world, double d, double d1, double d2) {
@@ -68,14 +69,14 @@ public class EntityBUnitDD35 extends LiquidTank implements IFluidHandler {
 
 		if (getAmount() > 0) {
 			// setColor(getColorFromString("Full"));
-			setDefaultMass(-EnumTrains.BUnitDD35.getMass());
+			setDefaultMass(-EnumHeritageTrainsLegacy.BUnitDD35.getMass());
 			if ((motionX>0.01 || motionZ>0.01) && ticksExisted % 40 == 0) {
 				drain(ForgeDirection.UNKNOWN, 8,true);
 			}
 			
 		} else if (getAmount() <= 0) {
 			// setColor(getColorFromString("Empty"));
-			setDefaultMass(EnumTrains.BUnitDD35.getMass());
+			setDefaultMass(EnumHeritageTrainsLegacy.BUnitDD35.getMass());
 		}
 	}
 

@@ -11,12 +11,13 @@ import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.SteamTrain;
 import train.common.core.util.TraincraftUtil;
+import train.common.library.EnumHeritageTrainsLegacy;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
 public class EntityLocoSteamBerk765 extends SteamTrain {
 	public EntityLocoSteamBerk765(World world) {
-		super(world, EnumTrains.locosteamBerk765.getTankCapacity(), LiquidManager.WATER_FILTER);
+		super(world, EnumHeritageTrainsLegacy.locosteamBerk765.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
 	}
 

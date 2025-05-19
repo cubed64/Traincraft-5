@@ -16,6 +16,7 @@ import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.SteamTrain;
 import train.common.core.FakePlayer;
+import train.common.library.EnumHeritageTrainsLegacy;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -23,7 +24,7 @@ import java.util.Random;
 
 public class EntityLocoSteamSnowPlow extends SteamTrain {
 	public EntityLocoSteamSnowPlow(World world) {
-		super(world, EnumTrains.locoSteamSnowPlow.getTankCapacity(), LiquidManager.WATER_FILTER);
+		super(world, EnumHeritageTrainsLegacy.locoSteamSnowPlow.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
 	}
 

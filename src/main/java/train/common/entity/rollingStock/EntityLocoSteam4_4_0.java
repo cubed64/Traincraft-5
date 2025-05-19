@@ -10,12 +10,13 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.SteamTrain;
+import train.common.library.EnumHeritageTrainsLegacy;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
 public class EntityLocoSteam4_4_0 extends SteamTrain {
 	public EntityLocoSteam4_4_0(World world) {
-		super(world, EnumTrains.locoSteam4_4_0.getTankCapacity(), LiquidManager.WATER_FILTER);
+		super(world, EnumHeritageTrainsLegacy.locoSteam4_4_0.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
 	}
 

@@ -11,12 +11,13 @@ import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
 import train.common.core.util.TraincraftUtil;
+import train.common.library.EnumHeritageTrainsLegacy;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
 public class EntityLocoDieselBamboo extends DieselTrain {
 	public EntityLocoDieselBamboo(World world) {
-		super(world, EnumTrains.locoDieselBamboo.getTankCapacity(), LiquidManager.dieselFilter());
+		super(world, EnumHeritageTrainsLegacy.locoDieselBamboo.getTankCapacity(), LiquidManager.dieselFilter());
 		initLoco();
 	}
 

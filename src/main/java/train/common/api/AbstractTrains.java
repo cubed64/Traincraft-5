@@ -38,7 +38,9 @@ import train.common.entity.TrustedPlayer;
 import train.common.items.ItemChunkLoaderActivator;
 import train.common.items.ItemRollingStock;
 import train.common.items.ItemWrench;
+import train.common.library.EnumHeritageTrainsLegacy;
 import train.common.library.EnumTrains;
+import train.common.library.IEnumTrains;
 import train.common.overlaytexture.OverlayTextureManager;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
@@ -75,7 +77,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	/**
 	 * A reference to EnumTrains containing all spec for this specific train
 	 */
-	protected EnumTrains trainSpec;
+	protected IEnumTrains trainSpec;
 	private RenderEnum renderSpec;
 	/**
 	 * The name of the train based on the item name
@@ -208,6 +210,22 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			}
 		}
 
+		for (EnumHeritageTrainsLegacy trains : EnumHeritageTrainsLegacy.values()) {
+			if (trains.getEntityClass().equals(this.getClass())) {
+				this.setDefaultMass(trains.getMass());
+				trainSpec = trains;
+				if (trains.getColors() != null) {
+					for (int i = 0; i < trains.getColors().length; i++) {
+						this.acceptedColors.add((trains.getColors()[i]));
+					}
+				}
+				this.setSize(0.98f, 1.98f);
+				this.setMinecartName(trainSpec.name());
+
+				break;
+			}
+		}
+
 		GetRenderSpec();
 	}
 
@@ -215,7 +233,8 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	{
 		if (worldObj.isRemote)
 		{
-			for (RenderEnum render : train.client.render.RenderEnum.values()) {
+			for (RenderEnum render : train.client.render.RenderEnum.values())
+			{
 				if (render.getEntityClass().equals(this.getClass())) {
 					renderSpec = render;
 					break;

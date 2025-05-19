@@ -20,6 +20,7 @@ import train.common.core.handlers.ConfigHandler;
 import train.common.core.network.PacketPaintbrushColor;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
+import train.common.library.IEnumTrains;
 import train.common.library.Info;
 
 import java.awt.*;
@@ -74,7 +75,7 @@ public class GuiPaintbrushMenu extends GuiScreen {
     private int optionsOnCurrentPage;
     private final int totalOptions;
     private int currentPage = 0;
-    private final EnumTrains fakeTrain;
+    private final IEnumTrains fakeTrain;
     private final AbstractTrains renderEntity;
     private boolean doAnimation;
 

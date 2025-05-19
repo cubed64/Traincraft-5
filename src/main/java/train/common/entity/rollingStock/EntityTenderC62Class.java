@@ -12,6 +12,7 @@ import net.minecraftforge.fluids.FluidRegistry;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.Tender;
+import train.common.library.EnumHeritageTrainsLegacy;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -20,7 +21,7 @@ public class EntityTenderC62Class extends Tender implements IInventory {
 	public int numFreightSlots;
 
 	public EntityTenderC62Class(World world) {
-		super(world, FluidRegistry.WATER, 0, EnumTrains.tenderC62Class.getTankCapacity(), LiquidManager.WATER_FILTER);
+		super(world, FluidRegistry.WATER, 0, EnumHeritageTrainsLegacy.tenderC62Class.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initFreightTender();
 	}
 

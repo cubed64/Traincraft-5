@@ -9,13 +9,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.LiquidTank;
+import train.common.library.EnumHeritageTrainsLegacy;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
 public class EntityTankWagon2 extends LiquidTank {
 	public int freightInventorySize;
 	public EntityTankWagon2(World world) {
-		super(world, EnumTrains.tankWagonGrey.getTankCapacity());
+		super(world, EnumHeritageTrainsLegacy.tankWagonGrey.getTankCapacity());
 		initFreightWater();
 	}
 
