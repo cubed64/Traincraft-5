@@ -15,10 +15,11 @@ import train.common.library.GuiIDs;
 
 public class DieselSF30B extends DieselTrain {
     public DieselSF30B(World world) {
-        super(world, EnumTrains.U23BW.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.SF30B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         textureDescriptionMap.put(0, "Blandsville & Blankerston");
         textureDescriptionMap.put(1, "MKM Leasing");
+        textureDescriptionMap.put(2, "CNRC 1000 & 1001 (Ex MKM)");
     }
     public DieselSF30B(World world, double d, double d1, double d2){
         this(world);

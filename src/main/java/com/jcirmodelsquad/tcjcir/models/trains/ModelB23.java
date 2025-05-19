@@ -31,7 +31,7 @@ public class ModelB23 extends ModelConverter //Same as Filename
 
 	public ModelB23() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[455];
+		bodyModel = new ModelRendererTurbo[459];
 
 		initbodyModel_1();
 
@@ -498,6 +498,10 @@ public class ModelB23 extends ModelConverter //Same as Filename
 		bodyModel[452] = new ModelRendererTurbo(this, 187, 4, textureX, textureY); // Box 104 cnrc antenna
 		bodyModel[453] = new ModelRendererTurbo(this, 153, 51, textureX, textureY); // Box 453
 		bodyModel[454] = new ModelRendererTurbo(this, 153, 39, textureX, textureY); // Box 454
+		bodyModel[455] = new ModelRendererTurbo(this, 307, 233, textureX, textureY); // Box 455 2900 gal fuel tank
+		bodyModel[456] = new ModelRendererTurbo(this, 186, 65, textureX, textureY); // Box 456 csx floater
+		bodyModel[457] = new ModelRendererTurbo(this, 188, 59, textureX, textureY); // Box 457 csx floater
+		bodyModel[458] = new ModelRendererTurbo(this, 189, 62, textureX, textureY); // Box 458 csx floater
 
 		bodyModel[0].addBox(0F, 0F, 0F, 76, 2, 22, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-38F, -1F, -11F);
@@ -1891,6 +1895,18 @@ public class ModelB23 extends ModelConverter //Same as Filename
 
 		bodyModel[454].addBox(0F, 0F, 0F, 2, 1, 1, 0F); // Box 454
 		bodyModel[454].setRotationPoint(-33F, -23.25F, -2.5F);
+
+		bodyModel[455].addShapeBox(0F, 0F, 0F, 18, 4, 18, 0F,0F, 0F, 2F, 0F, 0F, 2F, 0F, 0F, 2F, 0F, 0F, 2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 455 2900 gal fuel tank
+		bodyModel[455].setRotationPoint(-9F, 4F, -9F);
+
+		bodyModel[456].addBox(0F, 0F, 0F, 2, 0, 2, 0F); // Box 456 csx floater
+		bodyModel[456].setRotationPoint(-23F, -22.5F, 4F);
+
+		bodyModel[457].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F,0F, -0.3F, 0F, 0F, -0.3F, 0F, 0F, -0.3F, 0F, 0F, -0.3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 457 csx floater
+		bodyModel[457].setRotationPoint(-22.5F, -23.51F, 4.5F);
+
+		bodyModel[458].addShapeBox(0F, 0F, 0F, 1, 2, 0, 0F,-0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F); // Box 458 csx floater
+		bodyModel[458].setRotationPoint(-22.5F, -22.5F, 5F);
 	}
 
 	ModelFB2_new theTrucks2 = new ModelFB2_new();
@@ -1905,7 +1921,8 @@ public class ModelB23 extends ModelConverter //Same as Filename
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 0
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 29
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 30||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 31) {
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 30||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 31
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 34) {
 			//fb2 black late
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_black_a.png"));
 			GL11.glPushMatrix();
@@ -1916,8 +1933,12 @@ public class ModelB23 extends ModelConverter //Same as Filename
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 
-			if (((AbstractTrains) entity).getColor() == 30){
-				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/b36-7_Skin30.png"));
+			if (((AbstractTrains) entity).getColor() == 30 || ((AbstractTrains) entity).getColor() == 34){
+				if (((AbstractTrains) entity).getColor() == 30){
+					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/b36-7_Skin30.png"));
+				} else{
+					Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/b30-7_Skin34.png"));
+				}
 				GL11.glPushMatrix();
 				GL11.glTranslated(0, 0, 0);
 				bits.render(entity, f, f1, f2, f3, f4, f5);
@@ -2004,6 +2025,17 @@ public class ModelB23 extends ModelConverter //Same as Filename
 			GL11.glTranslated(3.12, 0, 0);
 			theTrucks2.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 32||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 33
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3434){
+			//type b blacs early
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(-1.52, -0.015, 0);
+			theTrucks4.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glTranslated(3.05, 0, 0);
+			theTrucks4.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
 		} else {
 			//type b black late
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
@@ -2017,3 +2049,4 @@ public class ModelB23 extends ModelConverter //Same as Filename
 		}
 	}
 }
+//holy fucc

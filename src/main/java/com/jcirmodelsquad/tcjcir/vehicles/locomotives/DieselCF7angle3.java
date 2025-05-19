@@ -38,7 +38,7 @@ public class DieselCF7angle3 extends DieselTrain {
         textureDescriptionMap.put(17, "CFW 1504");
         textureDescriptionMap.put(18, "FURRX");
         textureDescriptionMap.put(19, "GLNT");
-        textureDescriptionMap.put(20, "");
+        textureDescriptionMap.put(20, "CNRC 4100 (Ex FNCC 41)");
         textureDescriptionMap.put(21, "");
         textureDescriptionMap.put(22, "");
         textureDescriptionMap.put(23, "");

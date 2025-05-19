@@ -29,7 +29,7 @@ public class ModelSF30B extends ModelConverter //Same as Filename
 
 	public ModelSF30B() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[348];
+		bodyModel = new ModelRendererTurbo[349];
 
 		initbodyModel_1();
 
@@ -389,6 +389,7 @@ public class ModelSF30B extends ModelConverter //Same as Filename
 		bodyModel[345] = new ModelRendererTurbo(this, 295, 94, textureX, textureY); // Box 357
 		bodyModel[346] = new ModelRendererTurbo(this, 257, 77, textureX, textureY); // Box 347
 		bodyModel[347] = new ModelRendererTurbo(this, 185, 42, textureX, textureY); // Box 348
+		bodyModel[348] = new ModelRendererTurbo(this, 208, 14, textureX, textureY); // Box 104 cnrc antenna
 
 		bodyModel[0].addBox(0F, 0F, 0F, 29, 2, 22, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-38F, -1F, -11F);
@@ -1470,7 +1471,11 @@ public class ModelSF30B extends ModelConverter //Same as Filename
 
 		bodyModel[347].addBox(0F, 0F, 0F, 0, 4, 1, 0F); // Box 348
 		bodyModel[347].setRotationPoint(-30F, -16F, -12.4F);
+
+		bodyModel[348].addShapeBox(0F, 0F, 0F, 1, 4, 0, 0F,-0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F); // Box 104 cnrc antenna
+		bodyModel[348].setRotationPoint(-26F, -26F, -1F);
 	}
+
 	ModelFB2_new theTrucks2 = new ModelFB2_new();
 	ModelTypeBnew theTrucks4 = new ModelTypeBnew();
 
@@ -1479,7 +1484,7 @@ public class ModelSF30B extends ModelConverter //Same as Filename
 	{
 		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 116) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_black_a.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.54, 0.0, 0);

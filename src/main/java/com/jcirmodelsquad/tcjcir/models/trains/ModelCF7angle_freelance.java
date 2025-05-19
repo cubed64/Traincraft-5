@@ -29,7 +29,7 @@ public class ModelCF7angle_freelance extends ModelConverter //Same as Filename
 
 	public ModelCF7angle_freelance() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[481];
+		bodyModel = new ModelRendererTurbo[482];
 
 		initbodyModel_1();
 
@@ -521,6 +521,7 @@ public class ModelCF7angle_freelance extends ModelConverter //Same as Filename
 		bodyModel[478] = new ModelRendererTurbo(this, 302, 245, textureX, textureY); // Box 538 rear horn fcen
 		bodyModel[479] = new ModelRendererTurbo(this, 210, 60, textureX, textureY, "cull"); // Box 539 cull fcen 48 spark arrestor
 		bodyModel[480] = new ModelRendererTurbo(this, 212, 56, textureX, textureY, "cull"); // Box 540 cull fcen 48 spark arrestor
+		bodyModel[481] = new ModelRendererTurbo(this, 391, 219, textureX, textureY); // Box 104 cnrc antenna
 
 		bodyModel[0].addBox(0F, 0F, 0F, 3, 2, 3, 0F); // Box 4
 		bodyModel[0].setRotationPoint(-39.5F, 3F, -1.5F);
@@ -2000,6 +2001,9 @@ public class ModelCF7angle_freelance extends ModelConverter //Same as Filename
 
 		bodyModel[480].addShapeBox(0F, 0F, 0F, 11, 1, 2, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 1F); // Box 540 cull fcen 48 spark arrestor
 		bodyModel[480].setRotationPoint(5F, -24F, -1F);
+
+		bodyModel[481].addShapeBox(0F, 0F, 0F, 1, 4, 0, 0F,-0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F); // Box 104 cnrc antenna
+		bodyModel[481].setRotationPoint(-15F, -28F, 0F);
 	}
 
 	ModelBlombergBnew theBlomb = new ModelBlombergBnew();

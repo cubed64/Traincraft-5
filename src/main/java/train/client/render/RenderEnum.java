@@ -1569,9 +1569,9 @@ public enum RenderEnum
 			add(new double[]{0.7D, 1.4D, 0.0D});
 		}
 	}, "", null, 0, false),
-	B30( DieselB30.class,  new ModelB30(), "b30_", true,new float[] {-1.7F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
+	B30( DieselB30.class,  new ModelB23(), "b30-7_", true,new float[] {-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
-			add(new double[]{0.95D, 1.4D, 0.0D});
+			add(new double[]{0.8D, 1.45D, 0.0D});
 		}
 	}, "", null, 0, false),
     B36( DieselB36.class,  new ModelB23(), "b36-7_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
