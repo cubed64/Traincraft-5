@@ -342,7 +342,7 @@ public enum EnumSounds {
 	ElectricPCCCar(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricPCC.class, "tram_bell", 1F, "vl10_idle", 0.45F, 50, "vl10_idle", 0.45F, 50, false, " ", 0),
 	ElectricClass74(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricClass74.class, " ", 0.8F, "chme3_idle", 0.65F, 40, "chme3_idle", 0.65F, 40, false, " ", 0, new String[] {"br_horn", "br_horn", "nathan_p2_1", "br_horn", "br_horn"}),
 	ElectricTwoBil(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricTwoBil.class, "br_horn", 0.8F, "vl10_idle", 0.6F, 50, "vl10_idle", 0.6F, 50, false, " ", 0),
-	DieselWorkdayHyrail(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselWorkdayHyrail.class, " ", 1F, "GE_HBI_600_Notch8", 0.45F, 80, "GE_HBI_600_Idle", 0.45F, 100, false, " ", 0, new String[] {"carhorn_1", "carhorn_1", "buell_b3_1", "nathan_m5_4", "carhorn_1"}),
+	DieselWorkdayHyrail(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselWorkdayHyrail.class, " ", 1F, "GE_HBI_600_Notch8", 0.45F, 80, "GE_HBI_600_Idle", 0.45F, 100, false, " ", 0, new String[] {"carhorn_1", "carhorn_1", "buell_b3_1", "nathan_m5_4", "carhorn_1", "carhorn_1", "carhorn_1"}),
 
 	;
 
