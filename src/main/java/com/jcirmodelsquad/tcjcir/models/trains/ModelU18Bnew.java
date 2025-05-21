@@ -1608,7 +1608,7 @@ public class ModelU18Bnew extends ModelConverter //Same as Filename
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 22 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 24){
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_CSXBleu.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/BlombergB_csxbleu.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.28, -0.01, 0);
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
