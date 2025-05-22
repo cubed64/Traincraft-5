@@ -44,7 +44,8 @@ public class ModelSlopeTCTrack extends ModelBase
     protected void SetupDynamicBallast(String ballast)
     {
         if (ballast.contains(":")) {
-            ballastTexture = ballast.split(":", 5);
+            ballastTexture = ballast.split(":");
+            ballastTexture[0] = ballastTexture[0].toLowerCase();
         }
         else {
             ballastTexture[0] = "minecraft";
