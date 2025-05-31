@@ -20,6 +20,7 @@ import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
 import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
+import train.common.enums.BoxName;
 import train.common.library.Info;
 
 public class ModelICC_Bobber extends ModelConverter //Same as Filename
@@ -240,10 +241,10 @@ public class ModelICC_Bobber extends ModelConverter //Same as Filename
 		bodyModel[196] = new ModelRendererTurbo(this, 96, 32, textureX, textureY); // Box 243
 		bodyModel[197] = new ModelRendererTurbo(this, 95, 9, textureX, textureY, "cull"); // Box 201 cull interiorhandrailing
 		bodyModel[198] = new ModelRendererTurbo(this, 374, 115, textureX, textureY); // Box 421 prime base
-		bodyModel[199] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, "lamp"); // Box 6 PRIME4-1
-		bodyModel[200] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, "lamp"); // Box 7 PRIME4-3
-		bodyModel[201] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, "lamp"); // Box 8 PRIME4-2
-		bodyModel[202] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, "lamp"); // Box 9 PRIME4-4
+		bodyModel[199] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, BoxName.prime1); // Box 6 PRIME4-1
+		bodyModel[200] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, BoxName.prime3); // Box 7 PRIME4-3
+		bodyModel[201] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, BoxName.prime2); // Box 8 PRIME4-2
+		bodyModel[202] = new ModelRendererTurbo(this, 374, 119, textureX, textureY, BoxName.prime4); // Box 9 PRIME4-4
 		bodyModel[203] = new ModelRendererTurbo(this, 391, 119, textureX, textureY); // Box 361
 		bodyModel[204] = new ModelRendererTurbo(this, 383, 125, textureX, textureY); // Box 362
 		bodyModel[205] = new ModelRendererTurbo(this, 384, 119, textureX, textureY); // Box 363

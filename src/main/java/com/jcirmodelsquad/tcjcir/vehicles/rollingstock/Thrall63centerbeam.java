@@ -249,6 +249,45 @@ public class Thrall63centerbeam extends Freight implements IInventory {
                                 "loads/UnwrappedWood_fir", "Unwrapped Lumber (Fir)", -0.0315, 1.283, 0),
                         new CargoSpecification(Modelthrall63tiedownsLoaded.class,
                                 "trains/thrall63footcenterbeam_tiedowns", "Unwrapped Lumber (Fir)", 0, 3, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,//Douglas Fir
+                        "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", -0.0315, 2.54, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", -0.0315, 2.225, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", -0.0315, 1.91, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", -0.0315, 1.595, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", -0.0315, 1.283, 0),
+                        new CargoSpecification(Modelthrall63tiedownsLoaded.class,
+                                "trains/thrall63footcenterbeam_tiedowns", "Unwrapped Lumber (Douglas Fir)", 0, 3, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,//Sitka Spruce
+                        "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", -0.0315, 2.54, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", -0.0315, 2.225, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", -0.0315, 1.91, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", -0.0315, 1.595, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", -0.0315, 1.283, 0),
+                        new CargoSpecification(Modelthrall63tiedownsLoaded.class,
+                                "trains/thrall63footcenterbeam_tiedowns", "Unwrapped Lumber (Sitka Spruce)", 0, 3, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,//Western Red Cedar
+                        "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", -0.0315, 2.54, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", -0.0315, 2.225, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", -0.0315, 1.91, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", -0.0315, 1.595, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_sliceAAA.class,
+                                "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", -0.0315, 1.283, 0),
+                        new CargoSpecification(Modelthrall63tiedownsLoaded.class,
+                                "trains/thrall63footcenterbeam_tiedowns", "Unwrapped Lumber (Western Red Cedar)", 0, 3, 0),},
         }));
     }
 

@@ -203,6 +203,39 @@ public class Freight60centerbeam extends Freight implements IInventory {
                                 "loads/UnwrappedWood_fir", "Unwrapped Lumber (Fir)", 0, 1.492, 0),
                         new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
                                 "loads/UnwrappedWood_fir", "Unwrapped Lumber (Fir)", 0, 1.177, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,//Douglas Fir
+                        "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", 0, 2.437, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", 0, 2.122, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", 0, 1.807, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", 0, 1.492, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", 0, 1.177, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,//Sitka Spruce
+                        "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", 0, 2.437, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", 0, 2.122, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", 0, 1.807, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", 0, 1.492, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", 0, 1.177, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,//Western Red Cedar
+                        "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", 0, 2.437, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", 0, 2.122, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", 0, 1.807, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", 0, 1.492, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice1.class,
+                                "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", 0, 1.177, 0),},
         }));
     }
 

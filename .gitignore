@@ -37,3 +37,5 @@ lib
 classes
 runserver
 run_server/
+
+gradle.properties

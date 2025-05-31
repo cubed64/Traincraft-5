@@ -189,6 +189,33 @@ public class GSC60FootFlat extends Freight implements IInventory {
 
                 { new CargoSpecification(Modelpipeload1.class,
                         "loads/pipe_falling_sfx_1", "Pipes", 0, 2.5, 0) },
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//Douglas Fir
+                        "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", 0, 1.555, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//Sitka Spruce
+                        "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", 0, 1.555, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//Western Red Cedar
+                        "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", 0, 2.5, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", 0, 2.185, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", 0, 1.87, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,
+                                "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", 0, 1.555, 0),},
         }));
     }
 
