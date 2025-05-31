@@ -9,17 +9,15 @@
 
 package com.jcirmodelsquad.tcjcir.render.models; //Path where the model is located
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.Entity;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 
-public class ModelMILWSwitchStandOff extends ModelConverter //Same as Filename
+public class ModelMILWSwitchStandOffItem extends ModelConverter //Same as Filename
 {
 	int textureX = 128;
 	int textureY = 64;
 
-	public ModelMILWSwitchStandOff() //Same as Filename
+	public ModelMILWSwitchStandOffItem() //Same as Filename
 	{
 		bodyModel = new ModelRendererTurbo[35];
 
@@ -59,10 +57,10 @@ public class ModelMILWSwitchStandOff extends ModelConverter //Same as Filename
 		bodyModel[24] = new ModelRendererTurbo(this, 97, 17, textureX, textureY); // Box 21
 		bodyModel[25] = new ModelRendererTurbo(this, 81, 25, textureX, textureY); // Box 26
 		bodyModel[26] = new ModelRendererTurbo(this, 113, 25, textureX, textureY); // Box 2
-		bodyModel[27] = new ModelRendererTurbo(this, 113, 17, textureX, textureY, "lamp"); // Box Glow
-		bodyModel[28] = new ModelRendererTurbo(this, 1, 33, textureX, textureY, "lamp"); // Box Glow
-		bodyModel[29] = new ModelRendererTurbo(this, 9, 33, textureX, textureY, "lamp"); // Box Glow
-		bodyModel[30] = new ModelRendererTurbo(this, 17, 33, textureX, textureY, "lamp"); // Box Glow
+		bodyModel[27] = new ModelRendererTurbo(this, 113, 17, textureX, textureY); // Box Glow
+		bodyModel[28] = new ModelRendererTurbo(this, 1, 33, textureX, textureY); // Box Glow
+		bodyModel[29] = new ModelRendererTurbo(this, 9, 33, textureX, textureY); // Box Glow
+		bodyModel[30] = new ModelRendererTurbo(this, 17, 33, textureX, textureY); // Box Glow
 		bodyModel[31] = new ModelRendererTurbo(this, 89, 25, textureX, textureY); // Box 32
 		bodyModel[32] = new ModelRendererTurbo(this, 25, 33, textureX, textureY); // Box 2
 		bodyModel[33] = new ModelRendererTurbo(this, 97, 33, textureX, textureY); // Box 34
@@ -173,18 +171,4 @@ public class ModelMILWSwitchStandOff extends ModelConverter //Same as Filename
 		bodyModel[34].addShapeBox(0F, 0F, 0F, 12, 1, 1, 0F, 0F, 0F, 0F, 0F, 1.5F, 0F, 0F, 1.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1.5F, 0F, 0F, -1.5F, 0F, 0F, 0F, 0F); // Box 34
 		bodyModel[34].setRotationPoint(-11F, 9F, -0.5F);
 	}
-
-/*
-	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 35; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
-	}*/
 }

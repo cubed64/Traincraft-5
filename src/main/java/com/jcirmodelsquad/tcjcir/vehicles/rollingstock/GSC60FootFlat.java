@@ -25,10 +25,10 @@ public class GSC60FootFlat extends Freight implements IInventory {
         textureDescriptionMap.put(0, "GN");
         textureDescriptionMap.put(1, "ICG");
         textureDescriptionMap.put(2, "UP");
-        textureDescriptionMap.put(3, "MP/ UP MOW");
+        textureDescriptionMap.put(3, "MP/UP MOW");
         textureDescriptionMap.put(4, "ATSF");
         textureDescriptionMap.put(5, "BN");
-        textureDescriptionMap.put(6, "BN");
+        textureDescriptionMap.put(6, "BN (Crooked Letters)");
         setCargoManager(new CargoManager(new CargoSpecification[][] {
 
                 { new CargoSpecification(ModelWrappedWoodOptimized_bulkhead_slice.class,//washaska wood

@@ -174,18 +174,17 @@ public class ModelMILWSwitchStandOn extends ModelConverter //Same as Filename
 		bodyModel[34].addShapeBox(0F, 0F, 0F, 12, 1, 1, 0F, 0F, 0F, 0F, 0F, 1.5F, 0F, 0F, 1.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1.5F, 0F, 0F, -1.5F, 0F, 0F, 0F, 0F); // Box 34
 		bodyModel[34].setRotationPoint(-9F, 9F, -0.5F);
 	}
-
+/*
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-
-		for(ModelRendererTurbo m :bodyModel) {
-			if(m.boxName.equals("lamp")){
+		for (int i = 0; i < 35; i++) {
+			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				m.render(f5);
+				bodyModel[i].render(f5);
 				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			}else{
-				m.render(f5);
+			} else {
+				bodyModel[i].render(f5);
 			}
 		}
-	}
+	}*/
 }

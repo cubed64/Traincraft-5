@@ -1,7 +1,6 @@
 package com.jcirmodelsquad.tcjcir.render;
 
-import com.jcirmodelsquad.tcjcir.render.models.ModelautoSwitchOff;
-import com.jcirmodelsquad.tcjcir.render.models.ModelautoSwitchOn;
+import com.jcirmodelsquad.tcjcir.render.models.ModelautoSwitchOffItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
@@ -10,7 +9,7 @@ import tmt.Tessellator;
 import train.common.library.Info;
 
 public class ItemRenderautoSwitchStand implements IItemRenderer {
-    private static final ModelautoSwitchOff modeSwitch = new ModelautoSwitchOff();
+    private static final ModelautoSwitchOffItem modeSwitch = new ModelautoSwitchOffItem();
     private static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation,Info.modelTexPrefix + "autoswitchoff.png");
 
     public ItemRenderautoSwitchStand() {

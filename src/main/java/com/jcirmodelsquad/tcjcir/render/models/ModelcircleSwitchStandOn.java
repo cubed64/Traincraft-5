@@ -64,10 +64,10 @@ public class ModelcircleSwitchStandOn extends ModelConverter //Same as Filename
 		bodyModel[27] = new ModelRendererTurbo(this, 66, 44, textureX, textureY); // Box 26
 		bodyModel[28] = new ModelRendererTurbo(this, 48, 44, textureX, textureY); // Box 26
 		bodyModel[29] = new ModelRendererTurbo(this, 1, 30, textureX, textureY); // Box 2
-		bodyModel[30] = new ModelRendererTurbo(this, 10, 31, textureX, textureY); // Box Glow
-		bodyModel[31] = new ModelRendererTurbo(this, 1, 36, textureX, textureY); // Box Glow
-		bodyModel[32] = new ModelRendererTurbo(this, 9, 36, textureX, textureY); // Box Glow
-		bodyModel[33] = new ModelRendererTurbo(this, 17, 31, textureX, textureY); // Box Glow
+		bodyModel[30] = new ModelRendererTurbo(this, 10, 31, textureX, textureY,"lamp"); // Box Glow
+		bodyModel[31] = new ModelRendererTurbo(this, 1, 36, textureX, textureY,"lamp"); // Box Glow
+		bodyModel[32] = new ModelRendererTurbo(this, 9, 36, textureX, textureY,"lamp"); // Box Glow
+		bodyModel[33] = new ModelRendererTurbo(this, 17, 31, textureX, textureY,"lamp"); // Box Glow
 		bodyModel[34] = new ModelRendererTurbo(this, 23, 35, textureX, textureY); // Box 32
 		bodyModel[35] = new ModelRendererTurbo(this, 16, 36, textureX, textureY); // Box 2
 
@@ -179,4 +179,17 @@ public class ModelcircleSwitchStandOn extends ModelConverter //Same as Filename
 		bodyModel[35].addShapeBox(0F, 0F, 0F, 2, 1, 2, 0F,-0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.9F, -0.25F, -0.25F, -0.9F, -0.25F, -0.25F, -0.9F, -0.25F, -0.25F, -0.9F, -0.25F); // Box 2
 		bodyModel[35].setRotationPoint(1.5F, -23F, -1F);
 	}
+/*
+	@Override
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+		for (int i = 0; i < 36; i++) {
+			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
+				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+				bodyModel[i].render(f5);
+				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+			} else {
+				bodyModel[i].render(f5);
+			}
+		}
+	}*/
 }

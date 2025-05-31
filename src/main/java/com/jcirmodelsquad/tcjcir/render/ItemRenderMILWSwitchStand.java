@@ -1,6 +1,6 @@
 package com.jcirmodelsquad.tcjcir.render;
 
-import com.jcirmodelsquad.tcjcir.render.models.ModelMILWSwitchStandOff;
+import com.jcirmodelsquad.tcjcir.render.models.ModelMILWSwitchStandOffItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
@@ -9,7 +9,7 @@ import tmt.Tessellator;
 import train.common.library.Info;
 
 public class ItemRenderMILWSwitchStand implements IItemRenderer {
-	private static final ModelMILWSwitchStandOff modeSwitch = new ModelMILWSwitchStandOff();
+	private static final ModelMILWSwitchStandOffItem modeSwitch = new ModelMILWSwitchStandOffItem();
 	private static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "milwswitchoff.png");
 
 	public ItemRenderMILWSwitchStand() {
@@ -17,7 +17,7 @@ public class ItemRenderMILWSwitchStand implements IItemRenderer {
 
 	@Override
 	public boolean handleRenderType(ItemStack item, IItemRenderer.ItemRenderType type) {
-		return false;
+		return true;
 	}
 
 	@Override
