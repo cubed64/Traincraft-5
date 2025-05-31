@@ -17,7 +17,7 @@ public class ItemRenderMILWSwitchStand implements IItemRenderer {
 
 	@Override
 	public boolean handleRenderType(ItemStack item, IItemRenderer.ItemRenderType type) {
-		return true;
+		return false;
 	}
 
 	@Override

@@ -360,4 +360,8 @@ public class ModelSkookumTender extends ModelConverter //Same as Filename
 		bogie.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();
 	}
+	/*public float[] getTrans() {
+		return new float[]{0.0F, 0.08F, -0.13F};
+		//return new float[]{0.1F, 0.08F, 0.11F}; //original
+	}*/
 }
