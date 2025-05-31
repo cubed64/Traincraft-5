@@ -23,6 +23,12 @@ public class DieselGP15 extends DieselTrain {
 		textureDescriptionMap.put(3, "Atlas & Red Sands Railroad");
 		textureDescriptionMap.put(4, "Southern Port Belt");
 		textureDescriptionMap.put(5, "GLC (Ex SPB)");
+		textureDescriptionMap.put(6, "CSXT (Yn3)");
+		textureDescriptionMap.put(7, "CSXT (Ex-Conrail)");
+		textureDescriptionMap.put(8, "Conrail (As Delivered)");
+		textureDescriptionMap.put(9, "Conrail (Post-93)");
+		textureDescriptionMap.put(10, "Conrail (OLS)");
+		textureDescriptionMap.put(11, "Conrail (Just Do It Boston Marathon Unit");
 	}
 
 	public void initLoco() {
