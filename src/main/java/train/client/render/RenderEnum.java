@@ -714,7 +714,7 @@ public enum RenderEnum
 			add(new double[] { -0.5D, 1.5D, 0.0D });
 		}
 	}, 2, true),
-	SkookTender(TenderSkookTender.class, new ModelSkookumTender(), "skookumtender", false, new float[] {0.1F, 0.08F, 0.11F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+	SkookTender(TenderSkookTender.class, new ModelSkookumTender(), "skookumtender", false, new float[] {0.0F, 0.08F, -0.13F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	Shay3Truck(SteamShay3Truck.class,  new ModelShay3Truck(), "3truckShay_", true,new float[] {0F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[] { 2.15D, 1.3D, -0.17D });//1.1D
@@ -1127,7 +1127,10 @@ public enum RenderEnum
 		}
 	}, "", null, 0, false),
 	GP18( DieselGP18.class,  new ModelGP18(), "gp18_", true,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
-		{ }
+		{
+			add(new double[]{1.225D, 1.3D, 0.0D});//front
+			add(new double[]{0.475D, 1.3D, 0.0D});//rear
+		}
 	}, "", null, 0, false),
 	GP30( DieselGP30.class,  new ModelGP30new(), "gp30_", true,new float[]{-1.45F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{

@@ -156,7 +156,7 @@ public class DieselU18Balt extends DieselTrain {
 
     @Override
     public String getInventoryName() {
-        return "GE U18B (MNFP)";
+        return "GE U18B (New Model)";
     }
 
     @Override

@@ -1,9 +1,6 @@
 package com.jcirmodelsquad.tcjcir.render;
 
-import com.jcirmodelsquad.tcjcir.render.models.ModelautoSwitchOff;
-import com.jcirmodelsquad.tcjcir.render.models.ModelautoSwitchOn;
-import com.jcirmodelsquad.tcjcir.render.models.ModelcircleSwitchStandOff;
-import com.jcirmodelsquad.tcjcir.render.models.ModelowoSwitchStandOff;
+import com.jcirmodelsquad.tcjcir.render.models.ModelcircleSwitchStandOffItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
@@ -12,7 +9,7 @@ import tmt.Tessellator;
 import train.common.library.Info;
 
 public class ItemRendercircleSwitchStand implements IItemRenderer {
-    private static final ModelcircleSwitchStandOff modeSwitch = new ModelcircleSwitchStandOff();
+    private static final ModelcircleSwitchStandOffItem modeSwitch = new ModelcircleSwitchStandOffItem();
     private static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation,Info.modelTexPrefix + "circleswitchoff.png");
 
     public ItemRendercircleSwitchStand() {

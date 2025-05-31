@@ -40,8 +40,8 @@ public class ModelautoSwitchOff extends ModelConverter //Same as Filename
 		bodyModel[3] = new ModelRendererTurbo(this, 26, 44, textureX, textureY); // Box 34
 		bodyModel[4] = new ModelRendererTurbo(this, 1, 41, textureX, textureY); // Box 34
 		bodyModel[5] = new ModelRendererTurbo(this, 1, 31, textureX, textureY); // Box 2
-		bodyModel[6] = new ModelRendererTurbo(this, 1, 36, textureX, textureY); // Box Glow
-		bodyModel[7] = new ModelRendererTurbo(this, 9, 36, textureX, textureY); // Box Glow
+		bodyModel[6] = new ModelRendererTurbo(this, 1, 36, textureX, textureY,"lamp"); // Box Glow
+		bodyModel[7] = new ModelRendererTurbo(this, 9, 36, textureX, textureY,"lamp"); // Box Glow
 		bodyModel[8] = new ModelRendererTurbo(this, 16, 35, textureX, textureY); // Box 2
 		bodyModel[9] = new ModelRendererTurbo(this, 26, 15, textureX, textureY); // Box 3
 		bodyModel[10] = new ModelRendererTurbo(this, 1, 14, textureX, textureY); // Box 3
@@ -87,10 +87,10 @@ public class ModelautoSwitchOff extends ModelConverter //Same as Filename
 		bodyModel[12].addShapeBox(0F, 0F, 0F, 11, 1, 1, 0F,0F, 0F, 0F, 0F, 1.5F, 0F, 0F, 1.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1.5F, 0F, 0F, -1.5F, 0F, 0F, 0F, 0F); // Box 34
 		bodyModel[12].setRotationPoint(-11F, 9F, -1.75F);
 	}
-	/*
+/*
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 35; i++) {
+		for (int i = 0; i < 13; i++) {
 			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
 				bodyModel[i].render(f5);
@@ -104,5 +104,5 @@ public class ModelautoSwitchOff extends ModelConverter //Same as Filename
 
 	}
 
-	 */
+*/
 }

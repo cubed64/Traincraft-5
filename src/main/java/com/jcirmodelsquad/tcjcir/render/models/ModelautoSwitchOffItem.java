@@ -9,18 +9,15 @@
 
 package com.jcirmodelsquad.tcjcir.render.models; //Path where the model is located
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.Entity;
-import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 
-public class ModelautoSwitchOn extends ModelConverter //Same as Filename
+public class ModelautoSwitchOffItem extends ModelConverter //Same as Filename
 {
 	int textureX = 128;
 	int textureY = 64;
 
-	public ModelautoSwitchOn() //Same as Filename
+	public ModelautoSwitchOffItem() //Same as Filename
 	{
 		bodyModel = new ModelRendererTurbo[13];
 
@@ -40,8 +37,8 @@ public class ModelautoSwitchOn extends ModelConverter //Same as Filename
 		bodyModel[3] = new ModelRendererTurbo(this, 26, 44, textureX, textureY); // Box 34
 		bodyModel[4] = new ModelRendererTurbo(this, 1, 41, textureX, textureY); // Box 34
 		bodyModel[5] = new ModelRendererTurbo(this, 1, 31, textureX, textureY); // Box 2
-		bodyModel[6] = new ModelRendererTurbo(this, 1, 36, textureX, textureY,"lamp"); // Box Glow
-		bodyModel[7] = new ModelRendererTurbo(this, 9, 36, textureX, textureY,"lamp"); // Box Glow
+		bodyModel[6] = new ModelRendererTurbo(this, 1, 36, textureX, textureY); // Box Glow
+		bodyModel[7] = new ModelRendererTurbo(this, 9, 36, textureX, textureY); // Box Glow
 		bodyModel[8] = new ModelRendererTurbo(this, 16, 35, textureX, textureY); // Box 2
 		bodyModel[9] = new ModelRendererTurbo(this, 26, 15, textureX, textureY); // Box 3
 		bodyModel[10] = new ModelRendererTurbo(this, 1, 14, textureX, textureY); // Box 3
@@ -58,10 +55,10 @@ public class ModelautoSwitchOn extends ModelConverter //Same as Filename
 		bodyModel[2].setRotationPoint(0F, 7F, -3F);
 
 		bodyModel[3].addBox(0F, 0F, 0F, 14, 1, 1, 0F); // Box 34
-		bodyModel[3].setRotationPoint(-23F, 9F, 0.75F);
+		bodyModel[3].setRotationPoint(-25F, 9F, 0.75F);
 
 		bodyModel[4].addShapeBox(0F, 0F, 0F, 11, 1, 1, 0F,0F, 0F, 0F, 0F, 1.5F, 0F, 0F, 1.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1.5F, 0F, 0F, -1.5F, 0F, 0F, 0F, 0F); // Box 34
-		bodyModel[4].setRotationPoint(-9F, 9F, 0.75F);
+		bodyModel[4].setRotationPoint(-11F, 9F, 0.75F);
 
 		bodyModel[5].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 2
 		bodyModel[5].setRotationPoint(2F, 3F, 2F);
@@ -82,25 +79,9 @@ public class ModelautoSwitchOn extends ModelConverter //Same as Filename
 		bodyModel[10].setRotationPoint(1F, 6F, -7F);
 
 		bodyModel[11].addBox(0F, 0F, 0F, 14, 1, 1, 0F); // Box 34
-		bodyModel[11].setRotationPoint(-23F, 9F, -1.75F);
+		bodyModel[11].setRotationPoint(-25F, 9F, -1.75F);
 
 		bodyModel[12].addShapeBox(0F, 0F, 0F, 11, 1, 1, 0F,0F, 0F, 0F, 0F, 1.5F, 0F, 0F, 1.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1.5F, 0F, 0F, -1.5F, 0F, 0F, 0F, 0F); // Box 34
-		bodyModel[12].setRotationPoint(-9F, 9F, -1.75F);
+		bodyModel[12].setRotationPoint(-11F, 9F, -1.75F);
 	}
-/*
-	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		for (int i = 0; i < 13; i++) {
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("lamp")) {
-				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
-				bodyModel[i].render(f5);
-				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
-			} else {
-				bodyModel[i].render(f5);
-			}
-
-
-		}
-
-	}*/
 }

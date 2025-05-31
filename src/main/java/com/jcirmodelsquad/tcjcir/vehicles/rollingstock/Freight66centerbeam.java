@@ -23,15 +23,15 @@ public class Freight66centerbeam extends Freight implements IInventory {
         initFreightCart();
         textureDescriptionMap.put(0, "TNTL");
         textureDescriptionMap.put(1, "WRX");
-        textureDescriptionMap.put(2, "BN?");
-        textureDescriptionMap.put(3, "BN?");
-        textureDescriptionMap.put(4, "GAEX");
-        textureDescriptionMap.put(5, "dominik fill this out if you see it k thanks");
-        textureDescriptionMap.put(6, "dominik fill this out if you see it k thanks");
-        textureDescriptionMap.put(7, "dominik fill this out if you see it k thanks");
-        textureDescriptionMap.put(8, "dominik fill this out if you see it k thanks");
-        textureDescriptionMap.put(9, "dominik fill this out if you see it k thanks");
-        textureDescriptionMap.put(10, "GLNT");
+        textureDescriptionMap.put(2, "NP");
+        textureDescriptionMap.put(3, "BN 1");
+        textureDescriptionMap.put(4, "BN 2");
+        textureDescriptionMap.put(5, "HTCX");
+        textureDescriptionMap.put(6, "GLNT");
+        textureDescriptionMap.put(7, "Generic (Teal)");
+        textureDescriptionMap.put(8, "Generic (Orange)");
+        textureDescriptionMap.put(9, "Generic (Blue)");
+        textureDescriptionMap.put(10, "Generic (Yellow)");
         setCargoManager(new CargoManager(new CargoSpecification[][] {
 
                 //is 0.315 5 mb? is 0.063 1 mb? bigger positive number means lower, smaller positive number means higher
@@ -210,6 +210,39 @@ public class Freight66centerbeam extends Freight implements IInventory {
                                 "loads/UnwrappedWood_fir", "Unwrapped Lumber (Fir)", 0, 1.492, 0),
                         new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
                                 "loads/UnwrappedWood_fir", "Unwrapped Lumber (Fir)", 0, 1.177, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,//Douglas Fir
+                        "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", 0, 2.437, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", 0, 2.122, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", 0, 1.807, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", 0, 1.492, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/UnwrappedWood_douglas_fir", "Unwrapped Lumber (Douglas Fir)", 0, 1.177, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,//Sitka Spruce
+                        "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", 0, 2.437, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", 0, 2.122, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", 0, 1.807, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", 0, 1.492, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/UnwrappedWood_sitka_spruce", "Unwrapped Lumber (Sitka Spruce)", 0, 1.177, 0),},
+
+                { new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,//Western Red Cedar
+                        "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", 0, 2.437, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", 0, 2.122, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", 0, 1.807, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", 0, 1.492, 0),
+                        new CargoSpecification(ModelWrappedWoodOptimized_slice2.class,
+                                "loads/UnwrappedWood_western_red_cedar", "Unwrapped Lumber (Western Red Cedar)", 0, 1.177, 0),},
         }));
     }
 

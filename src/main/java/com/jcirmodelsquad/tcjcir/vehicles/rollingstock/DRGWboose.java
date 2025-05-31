@@ -8,19 +8,19 @@ public class DRGWboose extends AbstractWorkCart
 {
     public DRGWboose(World world) {
         super(world);
-        textureDescriptionMap.put(0, "idk what this is, fix it dominik");
-        textureDescriptionMap.put(1, "idk what this is, fix it dominik");
-        textureDescriptionMap.put(2, "idk what this is, fix it dominik");
-        textureDescriptionMap.put(3, "idk what this is, fix it dominik");
-        textureDescriptionMap.put(4, "idk what this is, fix it dominik");
-        textureDescriptionMap.put(5, "idk what this is, fix it dominik");
-        textureDescriptionMap.put(6, "idk what this is, fix it dominik");
-        textureDescriptionMap.put(7, "idk what this is, fix it dominik");
-        textureDescriptionMap.put(8, "idk what this is, fix it dominik");
-        textureDescriptionMap.put(9, "idk what this is, fix it dominik");
-        textureDescriptionMap.put(10, "idk what this is, fix it dominik");
-        textureDescriptionMap.put(11, "idk what this is, fix it dominik");
-        textureDescriptionMap.put(12, "idk what this is, fix it dominik");
+        textureDescriptionMap.put(0, "DRGW (4 Stripe)");
+        textureDescriptionMap.put(1, "DRGW (1 Stripe)");
+        textureDescriptionMap.put(2, "DRGW (1 Stripe, Removed Windows)");
+        textureDescriptionMap.put(3, "DRGW (01450, Induction Antennas)");
+        textureDescriptionMap.put(4, "DRGW (01451-01459, Induction Antennas)");
+        textureDescriptionMap.put(5, "DRGW (01440-01469, Radio Equipped)");
+        textureDescriptionMap.put(6, "DRGW (01470-01479, Radio Equipped)");
+        textureDescriptionMap.put(7, "DRGW (01400-01449, As built)");
+        textureDescriptionMap.put(8, "DRGW (01407-01439, Late Early)");
+        textureDescriptionMap.put(9, "DRGW (01400-01449)");
+        textureDescriptionMap.put(10, "DRGW (01400-01406, Switch Caboose)");
+        textureDescriptionMap.put(11, "DRGW (The Action Road)");
+        textureDescriptionMap.put(12, "DRGW (The Action Road, Removed Windows)");
         textureDescriptionMap.put(13, "DLMR");
         textureDescriptionMap.put(14, "C&PV");
     }
@@ -38,6 +38,6 @@ public class DRGWboose extends AbstractWorkCart
 
     @Override
     public String getInventoryName() {
-        return "Logging Caboose";
+        return "DRGW 01400 Series Caboose";
     }
 }
