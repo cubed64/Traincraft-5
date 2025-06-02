@@ -95,7 +95,7 @@ public enum EnumSounds {
 	SteamVBShay2(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamVBShay2.class, "shay_horn", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 21),
 	SteamSkook(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamSkook.class,"skookum_whistle", 1F, "skookum_notch8", 0.9F, 8, "skookum_idle", 0.7F, 50, true, "steambell_4", 19),
 	Steam3Truck(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamShay3Truck.class, "shay_horn", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 21),
-	SteamClimaxB(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamClimaxB.class, " ", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 19, new String[] {"shay_whistle_1", "shay_horn", "lukenhimer_3chime_2"}),
+	SteamClimaxB(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamClimaxB.class, " ", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 19, new String[] {"shay_whistle_1", "shay_horn", "lukenhimer_3chime_2", "lukenhimer_3chime_2"}),
 	SteamF01(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamF01.class, "shay_horn", 1F, "steam_run", 0.2F, 20, "steam_idle2", 0.2F, 24, true, "steambell_4", 19),
 	SteamP01a(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamP01a.class, " ", 1F, "steam_run", 0.2F, 20, "steam_idle2", 0.2F, 24, true, "steambell_4", 19, new String[] {"shay_horn", "shay_horn", "usarmy_3chime"}),
 	SteamBKno2a(com.jcirmodelsquad.tcjcir.vehicles.locomotives.SteamBKno2a.class," ", 1F, "skookum_notch8", 0.9F, 8, "skookum_idle", 0.7F, 50, true, " ",0),
