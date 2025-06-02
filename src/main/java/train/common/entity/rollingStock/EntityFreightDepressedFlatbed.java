@@ -1,6 +1,7 @@
 package train.common.entity.rollingStock;
 
 import com.jcirmodelsquad.tcjcir.models.ModelFreedomHeli;
+import com.jcirmodelsquad.tcjcir.models.loads.Modelboulder;
 import com.jcirmodelsquad.tcjcir.models.loads.Modelroadrailer_trailer_53;
 import com.jcirmodelsquad.tcjcir.models.loads.Modeltoastertiedown;
 import com.jcirmodelsquad.tcjcir.models.trains.*;
@@ -44,6 +45,10 @@ public class EntityFreightDepressedFlatbed extends Freight implements IInventory
 				//		"trains/tgvmobile_Orange", "tgv", 0, 2.625, 0, 0.0, 0.0,0.0) },
 
 				//models with the renderrollingstockwithlight shit crash the game when used as cargo loads apparently lol
+
+				{new CargoSpecification(Modelboulder.class,
+						"loads/boulder2", "Washaskan Boulder", new CargoSpecification.RenderParameters().setOffset(0.3, 2.75, -0.1)),
+				},
 		}));
 	}
 
