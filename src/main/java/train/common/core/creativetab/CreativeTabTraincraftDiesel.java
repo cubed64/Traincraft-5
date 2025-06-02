@@ -10,6 +10,12 @@ public class CreativeTabTraincraftDiesel extends CreativeTabs
 	public CreativeTabTraincraftDiesel(int par1, String par2Str)
 	{
 		super(par1, par2Str);
+		setBackgroundImageName("item_search.png");
+	}
+
+	@Override
+	public boolean hasSearchBar() {
+		return true;
 	}
 
 	@Override
