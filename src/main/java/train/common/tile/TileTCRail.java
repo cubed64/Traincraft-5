@@ -2,6 +2,7 @@ package train.common.tile;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
@@ -14,8 +15,8 @@ import net.minecraft.world.World;
 import org.apache.logging.log4j.Level;
 import train.common.Traincraft;
 import train.common.items.ItemTCRail;
-import train.common.items.RailVariants;
 import train.common.items.TCRailTypes;
+import train.common.library.BlockIDs;
 import train.common.library.EnumTracks;
 
 import java.math.BigDecimal;
@@ -399,6 +400,19 @@ public class TileTCRail extends TileEntity {
 
 		this.markDirty();
 		this.worldObj.markBlockForUpdate(this.xCoord, this.yCoord, this.zCoord);
+	}
+
+	@SideOnly(Side.CLIENT)
+	public AxisAlignedBB getRenderBoundingBox()
+	{
+		AxisAlignedBB bb = INFINITE_EXTENT_AABB;
+		Block type = getBlockType();
+		if (type == BlockIDs.tcRail.block )
+		{
+			bb = AxisAlignedBB.getBoundingBox(xCoord - 32, yCoord, zCoord - 32, xCoord + 32, yCoord , zCoord + 32);
+		}
+
+		return bb;
 	}
 
 	@Override
