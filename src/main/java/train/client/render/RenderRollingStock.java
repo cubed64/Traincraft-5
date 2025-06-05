@@ -262,7 +262,7 @@ public class RenderRollingStock extends Render {
 
 		}
 		if (!cart.acceptsOverlayTextures() || cart.getOverlayTextureContainer().getType() == OverlayTextureManager.Type.NONE) {
-			Tessellator.bindTexture(getResourceFile(renders.getTexture(), renders.getIsMultiTextured(), cart));
+			Tessellator.bindTexture(getResourceFile(renders, cart));
 		} else {
 			if (cart.getOverlayTextureContainer().markedForUpdate) {
 				cart.getOverlayTextureContainer().renderTexture();
@@ -313,11 +313,21 @@ public class RenderRollingStock extends Render {
 		GL11.glPopMatrix();
 	}
 
-	private static ResourceLocation getResourceFile(String texture, boolean multiTexture, EntityRollingStock cart) {
-		if (multiTexture) {
-			return new ResourceLocation(Info.resourceLocation, Info.trainsPrefix + texture + cart.getColorAsString() + ".png");
-		} else {
-			return new ResourceLocation(Info.resourceLocation, Info.trainsPrefix + texture + ".png");
+	private static ResourceLocation getResourceFile(RenderEnum renderEnumEntry, EntityRollingStock cart) {
+		if (renderEnumEntry.getIsMultiTextured())
+		{
+			if (renderEnumEntry.isInsideFolder())
+			{
+				return new ResourceLocation(Info.resourceLocation, Info.trainsPrefix + renderEnumEntry.getTexture() + "/" + renderEnumEntry.getTexture() + cart.getColorAsString() + ".png");
+			}
+			else
+			{
+				return new ResourceLocation(Info.resourceLocation, Info.trainsPrefix + renderEnumEntry.getTexture() + cart.getColorAsString() + ".png");
+			}
+		}
+		else
+		{
+			return new ResourceLocation(Info.resourceLocation, Info.trainsPrefix + renderEnumEntry.getTexture() + ".png");
 		}
 	}
 
@@ -425,7 +435,7 @@ public class RenderRollingStock extends Render {
 	public static ResourceLocation getTexture(Entity entity)
 	{
 		RenderEnum renderEnumEntry = ((AbstractTrains) entity).getRenderSpec();
-		return getResourceFile(renderEnumEntry.getTexture(), renderEnumEntry.getIsMultiTextured(), (EntityRollingStock) entity);
+		return getResourceFile(renderEnumEntry, (EntityRollingStock) entity);
 
 	}
 

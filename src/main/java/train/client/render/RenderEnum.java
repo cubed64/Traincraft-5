@@ -1484,7 +1484,7 @@ public enum RenderEnum
 			add(new double[]{0.925D, 1.4D, 0.0D});
 		}
 	}, "", null, 0, false),
-	U30BH( DieselU30BH.class,  new ModelU30BH(), "U30BH_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
+	U30BH( DieselU30BH.class,  new ModelU30BH(), true, "U30BH_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[]{0.75D, 1.35D, 0.0D});
 		}
@@ -2281,6 +2281,7 @@ public enum RenderEnum
 	private ModelBase model;
 	private String texture;
 	private boolean multiTexture;
+	private boolean isTextureInsideFolder = false;
 	private float[] trans;
 	private float[] rotate;
 	private float[] scale;
@@ -2307,7 +2308,20 @@ public enum RenderEnum
 	 * @param explosionFX ArrayList
 	 * @see RenderRollingStock
 	 */
-	RenderEnum(Class<? extends EntityRollingStock> entityClass, ModelBase model, String texture, boolean multiTexture, float[] trans, float[] rotate, float[] scale, String smokeType, int smokeIterations, ArrayList<double[]> smokeFX, String explosionType, ArrayList<double[]> explosionFX, int explosionFXIterations, boolean hasSmokeOnSlopes) {
+	RenderEnum(Class<? extends EntityRollingStock> entityClass,
+			   ModelBase model, String texture,
+			   boolean multiTexture,
+			   float[] trans,
+			   float[] rotate,
+			   float[] scale,
+			   String smokeType,
+			   int smokeIterations,
+			   ArrayList<double[]> smokeFX,
+			   String explosionType,
+			   ArrayList<double[]> explosionFX,
+			   int explosionFXIterations,
+			   boolean hasSmokeOnSlopes)
+	{
 		this.entityClass = entityClass;
 		this.model = model;
 		this.texture = texture;
@@ -2322,6 +2336,43 @@ public enum RenderEnum
 		this.smokeIterations = smokeIterations;
 		this.explosionFXIterations = explosionFXIterations;
 		this.hasSmokeOnSlopes = hasSmokeOnSlopes;
+	}
+
+	/**
+	 * Defines the render @param for a RollingStock
+	 *
+	 * @param model ModelBase
+	 * @param isTextureInsideFolder isTextureInsideFolder identifes if the textures are inside a folder for that specific rollingstock
+	 * @param texture String
+	 * @param multiTexture boolean
+	 * @param trans float[]
+	 * @param rotate float[]
+	 * @param scale float[]
+	 * @param smokeType String
+	 * @param smokeFX ArrayList
+	 * @param explosionType String
+	 * @param explosionFX ArrayList
+	 * @see RenderRollingStock
+	 */
+	RenderEnum(Class<? extends EntityRollingStock> entityClass,
+			   ModelBase model,
+			   boolean isTextureInsideFolder,
+			   String texture,
+			   boolean multiTexture,
+			   float[] trans,
+			   float[] rotate,
+			   float[] scale,
+			   String smokeType,
+			   int smokeIterations,
+			   ArrayList<double[]> smokeFX,
+			   String explosionType,
+			   ArrayList<double[]> explosionFX,
+			   int explosionFXIterations,
+			   boolean hasSmokeOnSlopes
+	)
+	{
+		this (entityClass, model, texture, multiTexture, trans, rotate, scale, smokeType, smokeIterations, smokeFX, explosionType, explosionFX, explosionFXIterations, hasSmokeOnSlopes);
+		this.isTextureInsideFolder = isTextureInsideFolder;
 	}
 
 	public Class<? extends AbstractTrains> getEntityClass() {
@@ -2378,6 +2429,15 @@ public enum RenderEnum
 
 	public String getTexture() {
 		return texture;
+	}
+
+	/** True if the textures for the RollingStock have a folder dedicated for that RollingStock
+	 *
+	 * @return
+	 */
+	public boolean isInsideFolder()
+	{
+		return isTextureInsideFolder;
 	}
 
 	public int getSmokeIterations() {
