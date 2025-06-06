@@ -26,6 +26,7 @@ public class DieselDash840C extends DieselTrain {
         textureDescriptionMap.put(6, "Morristown Tenneva & Southern");
         textureDescriptionMap.put(7, "FURRX");
         textureDescriptionMap.put(8, "CSXT (JCIR 6th Anniversary)");
+        textureDescriptionMap.put(9, "GCM");
     }
     public DieselDash840C(World world, double d, double d1, double d2){
         this(world);
