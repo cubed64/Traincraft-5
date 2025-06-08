@@ -33,7 +33,7 @@ public class ModelU23B extends ModelConverter //Same as Filename
 
 	public ModelU23B() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[439];
+		bodyModel = new ModelRendererTurbo[440];
 
 		initbodyModel_1();
 
@@ -483,6 +483,7 @@ public class ModelU23B extends ModelConverter //Same as Filename
 		bodyModel[436] = new ModelRendererTurbo(this, 8, 106, textureX, textureY, "lamp"); // Box 187 Headlight Front down ph2
 		bodyModel[437] = new ModelRendererTurbo(this, 1, 109, textureX, textureY); // Box 133 ph2 headlight
 		bodyModel[438] = new ModelRendererTurbo(this, 1, 98, textureX, textureY); // Box 187 ph2 headlight
+		bodyModel[439] = new ModelRendererTurbo(this, 187, 4, textureX, textureY); // Box 104 cnrc antenna
 
 		bodyModel[0].addBox(0F, 0F, 0F, 76, 2, 22, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-38F, -1F, -11F);
@@ -1827,6 +1828,9 @@ public class ModelU23B extends ModelConverter //Same as Filename
 
 		bodyModel[438].addShapeBox(0F, 0F, 0F, 1, 1, 2, 0F,0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 187 ph2 headlight
 		bodyModel[438].setRotationPoint(-34F, -22.5F, -1F);
+
+		bodyModel[439].addShapeBox(0F, 0F, 0F, 1, 4, 0, 0F,-0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F); // Box 104 cnrc antenna
+		bodyModel[439].setRotationPoint(-28F, -25.5F, 0F);
 	}
 	ModelFB2_new theTrucks2 = new ModelFB2_new();
 	ModelBlombergBnew theTrucks3 = new ModelBlombergBnew();
@@ -1838,7 +1842,7 @@ public class ModelU23B extends ModelConverter //Same as Filename
 		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 14||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 34) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_black_a.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.54, 0.0, 0);
