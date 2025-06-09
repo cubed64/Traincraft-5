@@ -19,6 +19,7 @@ public class SteamAlco0_6_0T extends SteamTrain {
 		initLocoSteam();
 		textureDescriptionMap.put(0, "Generic");
 		textureDescriptionMap.put(1, "CDCS");
+		textureDescriptionMap.put(2, "SPR");
 	}
 
 	public void initLocoSteam() {

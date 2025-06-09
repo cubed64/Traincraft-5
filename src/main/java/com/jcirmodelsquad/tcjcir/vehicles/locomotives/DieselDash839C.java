@@ -23,11 +23,12 @@ public class DieselDash839C extends DieselTrain {
         textureDescriptionMap.put(2, "Norfolk Southern");
         textureDescriptionMap.put(3, "Nomansi and Eastern Pacific");
         textureDescriptionMap.put(4, "Nomansi and Eastern Pacific (Late)");
-        textureDescriptionMap.put(5, "North Fox (KIT-L, Big Canon)");
+        textureDescriptionMap.put(5, "FNCC (KIT-L)");
         textureDescriptionMap.put(6, "Blandsville & Blankerston");
         textureDescriptionMap.put(7, "Magnolia Acres");
         textureDescriptionMap.put(8, "Nautilus");
         textureDescriptionMap.put(9, "Ann Arbor (but awesomer)");
+        textureDescriptionMap.put(10, "CEEX 101");
     }
     public DieselDash839C(World world, double d, double d1, double d2){
         this(world);
