@@ -2879,7 +2879,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	public void setParkingBrake(boolean status) {
 		this.parkingBrake = status;
 		Traincraft.brakeChannel.sendToAllAround(new PacketParkingBrake(false, getEntityId()),
-				new NetworkRegistry.TargetPoint(worldObj.provider.dimensionId, posX, posY, posZ, 150.0D));
+				new NetworkRegistry.TargetPoint(worldObj.provider.dimensionId, posX, posY, posZ, 300.0D));
 	}
 
 	public double convertSpeed(double speed)
