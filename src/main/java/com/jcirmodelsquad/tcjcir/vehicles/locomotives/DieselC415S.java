@@ -18,12 +18,11 @@ public class DieselC415S extends DieselTrain {
         super(world, EnumTrains.C415S.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         textureDescriptionMap.put(0, "Burlington Northern");
-        textureDescriptionMap.put(1, "Latrans Range (outdated texture)");
-        textureDescriptionMap.put(2, "Spokane, Portland & Seattle");
-        textureDescriptionMap.put(3, "GRN");
-        textureDescriptionMap.put(4, "Blandsville & Blankerston");
-        textureDescriptionMap.put(5, "ANW (not to be confused with ANE)");
-        textureDescriptionMap.put(6, "ANW (Chevrons)");
+        textureDescriptionMap.put(1, "Spokane, Portland & Seattle");
+        textureDescriptionMap.put(2, "GRN");
+        textureDescriptionMap.put(3, "Blandsville & Blankerston");
+        textureDescriptionMap.put(4, "ANW (not to be confused with ANE)");
+        textureDescriptionMap.put(5, "ANW (Chevrons)");
     }
     public DieselC415S(World world, double d, double d1, double d2){
         this(world);

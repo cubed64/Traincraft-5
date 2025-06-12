@@ -242,11 +242,11 @@ public enum EnumTrains implements IEnumTrains
 	RSFDL("RSFDL", DieselRSFDL.class, ItemIDs.minecartRSFDL.item, "diesel", 1800, 105, 0, 40, 0, 200, 0.7, 0.8, 8000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey"}), 16, -2.5),
 
 	C415H("C415H", DieselC415H.class, ItemIDs.minecartC415H.item, "diesel", 1500, 106, 0, 35, 0, 200, 0.87, 0.93, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Purple", "Magenta", "Brown", "Red", "Pink", "Green"}), 16, -2.4),
-	C415S("C415S", DieselC415S.class, ItemIDs.minecartC415S.item, "diesel", 1500, 106, 0, 35, 0, 200, 0.87, 0.93, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Brown", "Yellow", "Blue", "LightGrey", "Skin18", "Skin19"}), 16, -2.5),
+	C415S("C415S", DieselC415S.class, ItemIDs.minecartC415S.item, "diesel", 1500, 106, 0, 35, 0, 200, 0.87, 0.93, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Yellow", "Blue", "LightGrey", "Skin18", "Skin19"}), 16, -2.5),
 	C415L("C415L", DieselC415L.class, ItemIDs.minecartC415L.item, "diesel", 1500, 106, 0, 35, 0, 200, 0.87, 0.93, 17000, TraincraftUtil.getBytesFromColors(new String[] {"Black"}), 16, -2.5),
 	C424("C424",DieselC424.class, ItemIDs.minecartC424.item, "diesel", 2400, 113, 0, 40, 0, 200, 0.7, 0.8, 18000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Red", "Black", "Pink", "Brown", "Magenta", "Skin17", "LightGrey", "Skin16", "Skin18", "Skin19", "Cyan", "Green", "Purple"}), 14, -2.8),
 	C425("C425", DieselC425.class, ItemIDs.minecartC425.item, "diesel", 2500, 113, 0, 40, 0, 200, 0.7, 0.8, 18000, TraincraftUtil.getBytesFromColors(new String[]{"Black", "Yellow", "Skin16", "Green"}), 14, -2.8),
-	DH643("DH643", DieselDH643.class, ItemIDs.minecartDH643.item, "diesel", 4300, 124, 0, 60, 0, 200, 0.7, 0.87, 16000, null, 12, -4.1),
+	DH643("DH643", DieselDH643.class, ItemIDs.minecartDH643.item, "diesel", 4300, 124, 0, 60, 0, 200, 0.7, 0.87, 16000, null, 12, -4.0),
 	C855a("C855a", DieselC855a.class, ItemIDs.minecartC855a.item, "diesel", 5500, 106, 0, 40, 0, 200, 0.8, 0.85, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Cyan", "Skin16"}), 10, -4.25),
 	C855b("C855b", DieselC855b.class, ItemIDs.minecartC855b.item, "diesel", 5500, 106, 0, 40, 0, 200, 0.8, 0.85, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Cyan", "Skin16"}), 10, -4.25),
 
