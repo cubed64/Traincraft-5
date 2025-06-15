@@ -32,6 +32,7 @@ public class ACF2Bay extends Freight implements IInventory {
 		textureDescriptionMap.put(9, "GN (BSB)");
 		textureDescriptionMap.put(10, "NP");
 		textureDescriptionMap.put(11, "CB&Q");
+		textureDescriptionMap.put(12, "LRR");
 	}
 
 	public void initFreightGrain() {
