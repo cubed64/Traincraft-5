@@ -48,7 +48,7 @@ public class DieselGP7 extends DieselTrain {
         textureDescriptionMap.put(28, "New York Central (Lightning Bolt)");
         textureDescriptionMap.put(29, "New York Central (Late)");
         textureDescriptionMap.put(30, "New York Central (Grey Lighting Bolt)");
-        textureDescriptionMap.put(31, "Fox, North Coast & Cascades (KIT-L, Dual Canon)");
+        textureDescriptionMap.put(31, "FNCC (KIT-L)");
         textureDescriptionMap.put(32, "ATSF (Pinstripe)");
         textureDescriptionMap.put(33, "ATSF (Zebrastripe)");
         textureDescriptionMap.put(34, "MKT");
@@ -64,6 +64,7 @@ public class DieselGP7 extends DieselTrain {
         textureDescriptionMap.put(44, "Great Lakes & Northern Territories (Ex FNCC)");
         textureDescriptionMap.put(45, "Monongahela");
         textureDescriptionMap.put(46, "WCP (stupid bozo chop)");
+        textureDescriptionMap.put(47, "CDCS");
     }
     public DieselGP7(World world, double d, double d1, double d2){
         this(world);
