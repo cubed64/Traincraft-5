@@ -357,7 +357,7 @@ public class TileTCRail extends TileEntity {
 		}
 	}
 
-	private int GetSwitchSize(TileTCRail tileTCRail)
+	public int GetSwitchSize(TileTCRail tileTCRail)
 	{
 		switch (tileTCRail.getTrackType().getItem())
 		{
