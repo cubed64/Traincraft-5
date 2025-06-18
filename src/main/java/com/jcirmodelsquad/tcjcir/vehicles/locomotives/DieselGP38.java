@@ -35,7 +35,7 @@ public class DieselGP38 extends DieselTrain {
         textureDescriptionMap.put(15, "Georgia Northeastern");
         textureDescriptionMap.put(16, "Monongahela (Early)");
         textureDescriptionMap.put(17, "Monongahela (Late)");
-        textureDescriptionMap.put(18, "");
+        textureDescriptionMap.put(18, "AA (Fog)");
         textureDescriptionMap.put(19, "");
         textureDescriptionMap.put(20, "");
         textureDescriptionMap.put(21, "");

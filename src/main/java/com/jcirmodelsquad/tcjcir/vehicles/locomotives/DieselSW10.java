@@ -24,6 +24,7 @@ public class DieselSW10 extends DieselTrain {
         textureDescriptionMap.put(4, "TIR 1248 & 1253");
         textureDescriptionMap.put(5, "TIR 1269");
         textureDescriptionMap.put(6, "Glonch Rayroa");
+        textureDescriptionMap.put(7, "Anning my Arbor so good rn");
 
     }
     public DieselSW10(World world, double d, double d1, double d2){

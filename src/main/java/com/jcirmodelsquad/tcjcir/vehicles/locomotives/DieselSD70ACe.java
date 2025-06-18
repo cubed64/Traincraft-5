@@ -23,8 +23,8 @@ public class DieselSD70ACe extends DieselTrain {
         textureDescriptionMap.put(2, "CSXT Thundercab");
         textureDescriptionMap.put(3, "PRLX C&O Heritable");
         textureDescriptionMap.put(4, "CSXT What If Whispercab, Hunter Harrison Killed it");
-        textureDescriptionMap.put(5, "BNSF Thundercab");
-        textureDescriptionMap.put(6, "BNSF Whispercab");
+        textureDescriptionMap.put(5, "BNSF Whispercab");
+        textureDescriptionMap.put(6, "BNSF Thundercab");
         textureDescriptionMap.put(7, "KCS Grey Ghost Thundercab");
         textureDescriptionMap.put(8, "KCS Belle Thundercab");
         textureDescriptionMap.put(9, "KCS Belle Whispercab");

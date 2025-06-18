@@ -24,6 +24,7 @@ public class VersaLongi extends Freight implements IInventory {
         textureDescriptionMap.put(3, "WP");
         textureDescriptionMap.put(4, "CD&P (Crushed Marble Service)");
         textureDescriptionMap.put(5, "FNCC (MOW Ballast Service)");
+        textureDescriptionMap.put(6, "AA");
     }
 
     public VersaLongi(World world, double d, double d1, double d2){

@@ -60,6 +60,7 @@ public class PS2_4750 extends Freight implements IInventory {
 		textureDescriptionMap.put(37, "ICG");
 		textureDescriptionMap.put(38, "GLNT");
 		textureDescriptionMap.put(39, "Creston, IA");
+		textureDescriptionMap.put(40, "AA");
 	}
 
 	public void initFreightGrain() {

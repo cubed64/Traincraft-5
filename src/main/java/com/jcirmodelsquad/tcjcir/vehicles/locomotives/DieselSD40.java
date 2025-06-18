@@ -29,7 +29,7 @@ public class DieselSD40 extends DieselTrain {
         textureDescriptionMap.put(7, "CSXT (YN1)");
         textureDescriptionMap.put(8, "DLMR");
         textureDescriptionMap.put(9, "GLC (Cigar Band)");
-        textureDescriptionMap.put(10, "");
+        textureDescriptionMap.put(10, "AA (Fog)");
     }
     public DieselSD40(World world, double d, double d1, double d2){
         this(world);

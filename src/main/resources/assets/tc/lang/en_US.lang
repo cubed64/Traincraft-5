@@ -1258,7 +1258,7 @@ item.tc:minecartFBFDL.name=CEE FB-FDL
 item.tc:minecartRS1.name=ALCo RS-1
 item.tc:minecartRS2.name=ALCo RS-2
 item.tc:minecartRS3.name=ALCo RS-3
-item.tc:minecartRSFDL.name=FNCC RSFDL
+item.tc:minecartRSFDL.name=ALCo-CEE RSFDL
 
 item.tc:minecartC415H.name=ALCo C415 (High Visibility Cab)
 item.tc:minecartC415S.name=ALCo C415
@@ -1299,7 +1299,7 @@ entity.tc.FBFDL.name=CEE FB-FDL
 entity.tc.RS1.name=ALCo RS-1
 entity.tc.RS2.name=ALCo RS-2
 entity.tc.RS3.name=ALCo RS-3
-entity.tc.RSFDL.name=FNCC RSFDL
+entity.tc.RSFDL.name=ALCo-CEE RSFDL
 
 entity.tc.C415H.name=ALCo C415 (High Visibility Cab)
 entity.tc.C415S.name=ALCo C415
