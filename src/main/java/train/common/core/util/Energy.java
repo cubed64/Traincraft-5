@@ -8,10 +8,11 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import train.common.tile.TileTraincraft;
+import train.common.tile.TileTraincraftWithInventory;
 
 import java.util.Arrays;
 
-public class Energy extends TileTraincraft implements IEnergyProvider {
+public class Energy extends TileTraincraftWithInventory implements IEnergyProvider {
 	public EnergyStorage energy = new EnergyStorage(3000,80); //core energy value the first value is max storage and the second is transfer max.
 	private ForgeDirection[] sides = new ForgeDirection[]{}; //defines supported sides
 

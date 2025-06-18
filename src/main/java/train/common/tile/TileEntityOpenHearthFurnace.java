@@ -20,7 +20,7 @@ import train.common.library.ItemIDs;
 
 import java.util.Random;
 
-public class TileEntityOpenHearthFurnace extends TileTraincraft{
+public class TileEntityOpenHearthFurnace extends TileTraincraftWithInventory{
 
 	private ForgeDirection facing;
 	public int furnaceBurnTime;

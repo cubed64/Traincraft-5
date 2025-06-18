@@ -17,7 +17,7 @@ import train.common.recipes.DistilRecipes;
 
 import java.util.Random;
 
-public class TileEntityDistil extends TileTraincraft implements IFluidHandler {
+public class TileEntityDistil extends TileTraincraftWithInventory implements IFluidHandler {
 
 	private ForgeDirection facing;
 	public int distilBurnTime;
