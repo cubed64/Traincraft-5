@@ -42,9 +42,12 @@ public class BlockTCRail extends Block {
 	}
 
 	@Override
-	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z, EntityPlayer player)  {
+	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z, EntityPlayer player)
+	{
 		TileTCRail tileEntity = (TileTCRail) world.getTileEntity(x, y, z);
-		if (tileEntity != null && tileEntity.idDrop != null) {
+		if (tileEntity != null && tileEntity.idDrop != null)
+		{
+			texture = tileEntity.idDrop.getIconFromDamage(0);
 			return new ItemStack(tileEntity.idDrop);
 		}
 		return null;
@@ -115,9 +118,8 @@ public class BlockTCRail extends Block {
 		}
 		if (tileEntity != null && !world.isRemote) {
 			boolean flag = world.isBlockIndirectlyGettingPowered(i, j, k);
-			if (tileEntity.previousRedstoneState != flag) {
+			if (tileEntity.getSwitchState() != flag) {
 				tileEntity.changeSwitchState(world, tileEntity, i, j, k);
-				tileEntity.previousRedstoneState = flag;
 			}
 		}
 	}

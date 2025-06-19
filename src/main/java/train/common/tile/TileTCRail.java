@@ -174,41 +174,13 @@ public class TileTCRail extends TileEntity {
 	}
 
 	@Override
-	public void updateEntity()
-	{
-		if (worldObj.isRemote || !canTypeBeModifiedBySwitch) {
+	public void updateEntity() {
+		if (worldObj.isRemote || !TCRailTypes.isSwitchTrack(this)) {
 
 			return;
 		}
 
-		updateTicks2++;
-
-		/*if (updateTicks2 % 20 == 0 && !isLinkedToRail && getType() != null && getType().equals(EnumTracks.SMALL_STRAIGHT.getLabel()) && !hasRotated) {
-			TileEntity tileNorth = worldObj.getBlockTileEntity(xCoord, yCoord, zCoord - 1);
-			TileEntity tileSouth = worldObj.getBlockTileEntity(xCoord, yCoord, zCoord + 1);
-			TileEntity tileEast = worldObj.getBlockTileEntity(xCoord + 1, yCoord, zCoord);
-			TileEntity tileWest = worldObj.getBlockTileEntity(xCoord - 1, yCoord, zCoord);
-			if (tileNorth != null && (tileNorth instanceof TileTCRail)) {//&& (tileNorth.getBlockMetadata() == 2 || tileNorth.getBlockMetadata() == 0)) {
-				worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, 2, 2);
-				hasRotated = true;
-			}
-			if (tileSouth != null && (tileSouth instanceof TileTCRail)) {//&& (tileSouth.getBlockMetadata() == 0 || tileSouth.getBlockMetadata() == 2)) {
-				worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, 0, 2);
-				hasRotated = true;
-			}
-			if (tileEast != null && (tileEast instanceof TileTCRail)) {// && ( tileEast.getBlockMetadata() == 3 || tileEast.getBlockMetadata() == 1)) {
-				worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, 3, 2);
-				hasRotated = true;
-			}
-			if (tileWest != null && (tileWest instanceof TileTCRail)) {//&& ( tileWest.getBlockMetadata() == 1 || tileWest.getBlockMetadata() == 3)) {
-				worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, 1, 2);
-				hasRotated = true;
-			}
-		}*/
-
-		if (updateTicks2 % 11 == 0)
-		{
-			updateTicks2 =0;
+		if (updateTicks % 11 == 0 || updateTicks==1) {
 			TileEntity tile1 = null;
 
 			switch (worldObj.getBlockMetadata(xCoord, yCoord, zCoord)) {
@@ -230,128 +202,27 @@ public class TileTCRail extends TileEntity {
 					break;
 				}
 			}
-			if (tile1 instanceof TileTCRail && TCRailTypes.isSwitchTrack((TileTCRail) tile1) )
-			{
+			if (tile1 instanceof TileTCRail && TCRailTypes.isSwitchTrack((TileTCRail) tile1)) {
 
 				TileTCRail tileSwitch = (TileTCRail) tile1;
-				boolean flag1 = worldObj.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord);
-
-				if (tileSwitch.previousRedstoneState != flag1 && ! worldObj.isBlockIndirectlyGettingPowered(tileSwitch.xCoord, tileSwitch.yCoord, tileSwitch.zCoord)) {
-
+				if (tileSwitch.switchActive != worldObj.isBlockIndirectlyGettingPowered(tileSwitch.xCoord, tileSwitch.yCoord, tileSwitch.zCoord)) {
 					tileSwitch.changeSwitchState(worldObj, tileSwitch, tile1.xCoord, tile1.yCoord, tile1.zCoord);
-					tileSwitch.previousRedstoneState = flag1;
-				}
-			}
-			/*
-			 * if (tile2 != null && tile2 instanceof TileTCRail &&
-			 * ItemTCRail.isTCSwitch((TileTCRail) tile2)) { TileTCRail
-			 * tileSwitch = (TileTCRail) tile2; boolean flag1 =
-			 * worldObj.isBlockIndirectlyGettingPowered(xCoord, yCoord,
-			 * zCoord); boolean flag2 =
-			 * worldObj.isBlockIndirectlyGettingPowered(tileSwitch.xCoord,
-			 * tileSwitch.yCoord, tileSwitch.zCoord);
-			 * //System.out.println(flag2+" flag2"); //boolean switchState2
-			 * = tileSwitch.getSwitchState(); if
-			 * (tileSwitch.previousRedstoneState != flag1 && !flag2) {
-			 * tileSwitch.changeSwitchState(worldObj, tile2, tile2.xCoord,
-			 * tile2.yCoord, tile2.zCoord); tileSwitch.previousRedstoneState
-			 * = flag1; } }
-			 */
-		}
-
-		if (manualOverride) {
-
-			updateTicks++;
-
-			if (updateTicks > 60) {
-				List list = worldObj.getEntitiesWithinAABB(EntityMinecart.class, AxisAlignedBB.getBoundingBox(xCoord + f,
-						yCoord, zCoord + f, xCoord + 1 - f, yCoord + 1 - f, zCoord + 1 - f));
-
-				if (list.isEmpty()) {
-
-					manualOverride = false;
-					//setSwitchState(false,false);
-					// worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, facingMeta, 2);
-					// System.out.println("X: " + xCoord + " Y: " + yCoord + " Z: " + zCoord);
-					changeSwitchState(worldObj, this, xCoord, yCoord, zCoord);
-					setSwitchState(previousRedstoneState, false);
-					updateTicks = 0;
-				} else {
-					updateTicks -=20;
 				}
 			}
 		}
 
-		if (!getSwitchState() && updateTicks2 % 10 ==0) {
+		updateTicks++;
+
+		if (!getSwitchState() && updateTicks % 10 ==0) {
 
 			/* Right-handed switch types create a value of 1, left-handed switch types a value of type -1. If neither cases match, value is set to 0. */
 			if (isLeftFlag == -5) {
-				if (type.contains("SWITCH") && type.contains("RIGHT")){
-					isLeftFlag =1;
-				} else if (type.contains("SWITCH") && type.contains("LEFT")){
+				if (type.contains("SWITCH") && type.contains("RIGHT")) {
+					isLeftFlag = 1;
+				} else if (type.contains("SWITCH") && type.contains("LEFT")) {
 					isLeftFlag = -1;
 				} else {
-					isLeftFlag=0;
-				}
-			}
-
-			//if (isLeftFlag == -5) {
-			//	if (EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel().equals(type) || EnumTracks.LARGE_RIGHT_SWITCH.getLabel().equals(type) || EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel().equals(type)){
-			//		isLeftFlag =1;
-			//	} else if (EnumTracks.MEDIUM_LEFT_SWITCH.getLabel().equals(type) || EnumTracks.LARGE_LEFT_SWITCH.getLabel().equals(type) || EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel().equals(type)){
-			//		isLeftFlag = -1;
-			//	} else {
-			//		isLeftFlag=0;
-			//	}
-			//}
-
-			if (isLeftFlag != 0)
-			{
-				List list;
-
-				switch (facingMeta) {
-					// Bounding box generated from -x -z to x z
-					case 0: {
-						if (isLeftFlag == 1) {
-							list = worldObj.getEntitiesWithinAABB(EntityMinecart.class, AxisAlignedBB.getBoundingBox(this.xCoord - 1.0D, this.yCoord, this.zCoord + 1.0D, this.xCoord - f, this.yCoord + 1.0D - f, this.zCoord + Math.min(5.0D,GetSwitchSize(this)) - f));
-						} else {
-							list = worldObj.getEntitiesWithinAABB(EntityMinecart.class, AxisAlignedBB.getBoundingBox(this.xCoord + 1.0D, this.yCoord, this.zCoord + 1.0D, this.xCoord + 2.0D - f, this.yCoord + 1.0D - f, this.zCoord + Math.min(5.0D,GetSwitchSize(this)) - f));
-						}
-						break;
-					}
-					case 1: {
-						if (isLeftFlag == 1) {
-							list = worldObj.getEntitiesWithinAABB(EntityMinecart.class, AxisAlignedBB.getBoundingBox(this.xCoord - Math.min(4.0D,GetSwitchSize(this)), this.yCoord, this.zCoord - 1.0D, this.xCoord - f, this.yCoord + 1.0D - f, this.zCoord - f));
-						} else {
-							list = worldObj.getEntitiesWithinAABB(EntityMinecart.class, AxisAlignedBB.getBoundingBox(this.xCoord - Math.min(4.0D,GetSwitchSize(this)), this.yCoord, this.zCoord + 1.0D, this.xCoord - f, this.yCoord + 1.0D - f, this.zCoord + 2.0D - f));
-						}
-						break;
-					}
-					case 2: {
-						if (isLeftFlag == 1) {
-							list = worldObj.getEntitiesWithinAABB(EntityMinecart.class, AxisAlignedBB.getBoundingBox(this.xCoord + 1.0D, this.yCoord, this.zCoord - Math.min(4.0D,GetSwitchSize(this)), this.xCoord + 2.0D - f, this.yCoord + 1.0D - f, this.zCoord - f));
-						} else {
-							list = worldObj.getEntitiesWithinAABB(EntityMinecart.class, AxisAlignedBB.getBoundingBox(this.xCoord - 1.0D, this.yCoord, this.zCoord - Math.min(4.0D,GetSwitchSize(this)), this.xCoord - f, this.yCoord + 1.0D - f, this.zCoord - f));
-						}
-						break;
-					}
-					case 3: {
-						if (isLeftFlag == 1) {
-							list = worldObj.getEntitiesWithinAABB(EntityMinecart.class, AxisAlignedBB.getBoundingBox(this.xCoord + 1.0D, this.yCoord, this.zCoord + 1.0D, this.xCoord + Math.min(5.0D,GetSwitchSize(this)) - f, this.yCoord + 1.0D - f, this.zCoord + 2.0D - f));
-						} else {
-							list = worldObj.getEntitiesWithinAABB(EntityMinecart.class, AxisAlignedBB.getBoundingBox(this.xCoord + 1.0D, this.yCoord, this.zCoord - 1.0D, this.xCoord + Math.min(5.0D,GetSwitchSize(this)) - f, this.yCoord + 1.0 - f, this.zCoord - f));
-						}
-						break;
-					}
-					default: {
-						list = new ArrayList();
-						break;
-					}
-				}
-				if (!list.isEmpty()) {
-
-					changeSwitchState(worldObj, this, xCoord, yCoord, zCoord);
-					setSwitchState(true, true);
+					isLeftFlag = 0;
 				}
 			}
 		}
@@ -390,14 +261,7 @@ public class TileTCRail extends TileEntity {
 	}
 
 	public void setSwitchState(boolean state, boolean manualOverride) {
-		previousRedstoneState = worldObj.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord);
 		this.switchActive = state;
-		this.manualOverride = manualOverride;
-
-		if (manualOverride) {
-			updateTicks = 0;
-		}
-
 		this.markDirty();
 		this.worldObj.markBlockForUpdate(this.xCoord, this.yCoord, this.zCoord);
 	}
@@ -579,13 +443,16 @@ public class TileTCRail extends TileEntity {
 						if (tileEntity.getType().contains("SWITCH") && tileEntity.getType().contains("LEFT"))
 						{
 							((TileTCRail) te1).setType(EnumTracks.MEDIUM_LEFT_TURN.getLabel());
+							((TileTCRail) te1).switchActive=true;
 						}
 						else if (tileEntity.getType().contains("SWITCH") && tileEntity.getType().contains("RIGHT"))
 						{
 							((TileTCRail) te1).setType(EnumTracks.MEDIUM_RIGHT_TURN.getLabel());
+							((TileTCRail) te1).switchActive=true;
 						}
 					} else {
 						((TileTCRail) te1).setType(EnumTracks.SMALL_STRAIGHT.getLabel());
+						((TileTCRail) te1).switchActive=false;
 					}
 				}
 				offsetX += a;

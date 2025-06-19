@@ -165,6 +165,8 @@ public class PathFindingHelper
     }
 
     public boolean shouldIgnoreSwitch(EntityMinecart entityMinecart, TileTCRail tile, int i, int j, int k, int meta) {
+
+
         if (tile != null
                 && (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_TURN.getLabel())
                 || tile.getType().equals(EnumTracks.MEDIUM_LEFT_TURN.getLabel())
