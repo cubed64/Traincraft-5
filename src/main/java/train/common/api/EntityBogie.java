@@ -555,7 +555,7 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 				if (motionZ > 0 && Math.abs(motionX) < 0.01) {
 					TileEntity tile2 = worldObj.getTileEntity(i, j, k + 1);
 					if (tile2 != null && tile2 instanceof TileTCRail) {
-						((TileTCRail) tile2).setSwitchState(false, true);
+					//	((TileTCRail) tile2).setSwitchState(false, true);
 					}
 					return true;
 				}
@@ -564,7 +564,7 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 				if (motionZ < 0 && Math.abs(motionX) < 0.01) {
 					TileEntity tile2 = worldObj.getTileEntity(i, j, k - 1);
 					if (tile2 != null && tile2 instanceof TileTCRail) {
-						((TileTCRail) tile2).setSwitchState(false, true);
+					//	((TileTCRail) tile2).setSwitchState(false, true);
 					}
 					return true;
 				}
@@ -573,7 +573,7 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 				if (Math.abs(motionZ) < 0.002 && motionX > 0) { //allow a little more off-axis motion
 					TileEntity tile2 = worldObj.getTileEntity(i + 1, j, k);
 					if (tile2 != null && tile2 instanceof TileTCRail) {
-						((TileTCRail) tile2).setSwitchState(false, true);
+					//	((TileTCRail) tile2).setSwitchState(false, true);
 					}
 					return true;
 				}
@@ -582,7 +582,7 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 				if (Math.abs(motionZ) < 0.01 && motionX < 0) {
 					TileEntity tile2 = worldObj.getTileEntity(i - 1, j, k);
 					if (tile2 != null && tile2 instanceof TileTCRail) {
-						((TileTCRail) tile2).setSwitchState(false, true);
+					//	((TileTCRail) tile2).setSwitchState(false, true);
 					}
 					return true;
 				}

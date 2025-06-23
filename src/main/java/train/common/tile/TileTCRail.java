@@ -39,7 +39,7 @@ public class TileTCRail extends TileEntity {
 	private String type;
 
 	private TCRailTypes.RailTypes railType;
-	private BigDecimal railLength;
+	private double railLength = 0;
 	public int facingMeta;
 	public boolean isLinkedToRail = false;
 	public int linkedX;
@@ -97,35 +97,35 @@ public class TileTCRail extends TileEntity {
 
 	public double getRailLength()
 	{
-		if (railLength ==null)
+		if (railLength == 0)
 		{
 			switch (EnumTracks.valueOf(getType()))
 			{
 				case VERY_LONG_DIAGONAL_STRAIGHT:
 				case EMBEDDED_VERY_LONG_DIAGONAL_STRAIGHT:
-					railLength = new BigDecimal(12);
+					railLength = 12;
 					break;
 				case LONG_DIAGONAL_STRAIGHT:
 				case EMBEDDED_LONG_DIAGONAL_STRAIGHT:
-					railLength = new BigDecimal(6);
+					railLength = 6;
 					break;
 
 				case MEDIUM_DIAGONAL_STRAIGHT:
 				case EMBEDDED_MEDIUM_DIAGONAL_STRAIGHT:
-					railLength = new BigDecimal(3);
+					railLength = 3;
 					break;
 				case SMALL_DIAGONAL_STRAIGHT:
 				case EMBEDDED_SMALL_DIAGONAL_STRAIGHT:
-					railLength = new BigDecimal(1);
+					railLength = 1;
 					break;
                 default:
                 {
-                    railLength = new BigDecimal(1);
+                    railLength = 1;
                 }
 			}
 		}
 
-		return this.railLength.doubleValue();
+		return this.railLength;
 	}
 
 	public void setBallastMaterial(int  ballast) {
@@ -174,58 +174,9 @@ public class TileTCRail extends TileEntity {
 	}
 
 	@Override
-	public void updateEntity() {
-		if (worldObj.isRemote || !TCRailTypes.isSwitchTrack(this)) {
-
-			return;
-		}
-
-		if (updateTicks % 11 == 0 || updateTicks==1) {
-			TileEntity tile1 = null;
-
-			switch (worldObj.getBlockMetadata(xCoord, yCoord, zCoord)) {
-
-				case 0: {
-					tile1 = worldObj.getTileEntity(xCoord, yCoord, zCoord - 1);
-					break;
-				}
-				case 1: {
-					tile1 = worldObj.getTileEntity(xCoord + 1, yCoord, zCoord);
-					break;
-				}
-				case 2: {
-					tile1 = worldObj.getTileEntity(xCoord, yCoord, zCoord + 1);
-					break;
-				}
-				case 3: {
-					tile1 = worldObj.getTileEntity(xCoord - 1, yCoord, zCoord);
-					break;
-				}
-			}
-			if (tile1 instanceof TileTCRail && TCRailTypes.isSwitchTrack((TileTCRail) tile1)) {
-
-				TileTCRail tileSwitch = (TileTCRail) tile1;
-				if (tileSwitch.switchActive != worldObj.isBlockIndirectlyGettingPowered(tileSwitch.xCoord, tileSwitch.yCoord, tileSwitch.zCoord)) {
-					tileSwitch.changeSwitchState(worldObj, tileSwitch, tile1.xCoord, tile1.yCoord, tile1.zCoord);
-				}
-			}
-		}
-
-		updateTicks++;
-
-		if (!getSwitchState() && updateTicks % 10 ==0) {
-
-			/* Right-handed switch types create a value of 1, left-handed switch types a value of type -1. If neither cases match, value is set to 0. */
-			if (isLeftFlag == -5) {
-				if (type.contains("SWITCH") && type.contains("RIGHT")) {
-					isLeftFlag = 1;
-				} else if (type.contains("SWITCH") && type.contains("LEFT")) {
-					isLeftFlag = -1;
-				} else {
-					isLeftFlag = 0;
-				}
-			}
-		}
+	public void updateEntity()
+	{
+		return;
 	}
 
 	public int GetSwitchSize(TileTCRail tileTCRail)
@@ -458,6 +409,56 @@ public class TileTCRail extends TileEntity {
 				offsetX += a;
 				offsetY += b;
 				offsetZ += c;
+			}
+		}
+	}
+
+	private void UpdateLeftFlag()
+	{
+		if (updateTicks % 11 == 0 || updateTicks==1) {
+			TileEntity tile1 = null;
+
+			switch (worldObj.getBlockMetadata(xCoord, yCoord, zCoord)) {
+
+				case 0: {
+					tile1 = worldObj.getTileEntity(xCoord, yCoord, zCoord - 1);
+					break;
+				}
+				case 1: {
+					tile1 = worldObj.getTileEntity(xCoord + 1, yCoord, zCoord);
+					break;
+				}
+				case 2: {
+					tile1 = worldObj.getTileEntity(xCoord, yCoord, zCoord + 1);
+					break;
+				}
+				case 3: {
+					tile1 = worldObj.getTileEntity(xCoord - 1, yCoord, zCoord);
+					break;
+				}
+			}
+			if (tile1 instanceof TileTCRail && TCRailTypes.isSwitchTrack((TileTCRail) tile1)) {
+
+				TileTCRail tileSwitch = (TileTCRail) tile1;
+				if (tileSwitch.switchActive != worldObj.isBlockIndirectlyGettingPowered(tileSwitch.xCoord, tileSwitch.yCoord, tileSwitch.zCoord)) {
+					tileSwitch.changeSwitchState(worldObj, tileSwitch, tile1.xCoord, tile1.yCoord, tile1.zCoord);
+				}
+			}
+		}
+
+		updateTicks++;
+
+		if (!getSwitchState() && updateTicks % 10 ==0) {
+
+			/* Right-handed switch types create a value of 1, left-handed switch types a value of type -1. If neither cases match, value is set to 0. */
+			if (isLeftFlag == -5) {
+				if (type.contains("SWITCH") && type.contains("RIGHT")) {
+					isLeftFlag = 1;
+				} else if (type.contains("SWITCH") && type.contains("LEFT")) {
+					isLeftFlag = -1;
+				} else {
+					isLeftFlag = 0;
+				}
 			}
 		}
 	}

@@ -165,7 +165,8 @@ public class BlockTCRail extends Block {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerBlockIcons(IIconRegister iconRegister) {
+	public void registerBlockIcons(IIconRegister iconRegister)
+	{
 		texture = iconRegister.registerIcon(Info.modID.toLowerCase() + ":tracks/rail_normal_turned");
 	}
 
