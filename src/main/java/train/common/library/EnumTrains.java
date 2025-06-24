@@ -522,6 +522,8 @@ public enum EnumTrains implements IEnumTrains
 
 	PSFNCCBaggage_Dinette("PS FNCC Baggage-Dinette", PSFNCCBaggage_Dinette.class, ItemIDs.minecartPSFNCCBaggage_Dinette.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Green"}), 10, 0, null),
 
+	NYCPrewar56SeatCoach("NYC Prewar 56 Seat Coach", NYCPrewar56SeatCoach.class, ItemIDs.minecartNYCPrewar56SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Green", "Red", "Grey", "Magenta", "LightGrey", "White", "Blue", "Lime", "Cyan", "Brown", "Pink", "Yellow", "Purple", "Black", "Orange", "LightBlue", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24", "Skin25", "Skin26", "Skin27", "Skin28", "Skin29", "Skin30", "Skin31", "Skin32", "Skin33", "Skin34", "Skin35", "Skin36", "Skin37", "Skin38", "Skin39"}), 10, 0),
+
 	amfleet("Amfleet", Amfleet.class, ItemIDs.minecartAmfleet.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"Red", "White", "LightGrey", "Grey", "Blue", "LightBlue", "Green", "Skin16", "Skin17", "Skin18", "Skin19"}), 14, 0, null),
 	amfleet2("Amfleet2", Amfleet2.class, ItemIDs.minecartAmfleet2.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"Grey" ,"LightGrey", "Red", "Blue",  "LightBlue", "Skin16", "Skin17", "Skin18", "Skin19"}), 14, 0, null),
 	amfleetcab("AmfleetCab", AmfleetCab.class, ItemIDs.minecartAmfleetCab.item, "passenger", 3, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Grey", "LightGrey", "LightBlue", "White", "Skin16", "Skin17", "Skin18", "Skin19"}), 14, 0, null),
