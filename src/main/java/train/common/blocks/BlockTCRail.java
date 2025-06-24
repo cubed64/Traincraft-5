@@ -116,7 +116,8 @@ public class BlockTCRail extends Block {
 			world.func_147480_a(i, j, k, false);
 			world.removeTileEntity(i, j, k);
 		}
-		if (tileEntity != null && !world.isRemote) {
+		if (tileEntity != null && !world.isRemote)
+		{
 			boolean flag = world.isBlockIndirectlyGettingPowered(i, j, k);
 			if (tileEntity.getSwitchState() != flag) {
 				tileEntity.changeSwitchState(world, tileEntity, i, j, k);
@@ -140,7 +141,8 @@ public class BlockTCRail extends Block {
 	}
 
 	@Override
-	public TileEntity createTileEntity(World world, int metadata) {
+	public TileEntity createTileEntity(World world, int metadata)
+	{
 		return new TileTCRail();
 	}
 
@@ -165,8 +167,7 @@ public class BlockTCRail extends Block {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerBlockIcons(IIconRegister iconRegister)
-	{
+	public void registerBlockIcons(IIconRegister iconRegister) {
 		texture = iconRegister.registerIcon(Info.modID.toLowerCase() + ":tracks/rail_normal_turned");
 	}
 

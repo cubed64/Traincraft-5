@@ -3,7 +3,6 @@ package train.common.tile;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
@@ -18,10 +17,6 @@ import train.common.items.ItemTCRail;
 import train.common.items.TCRailTypes;
 import train.common.library.BlockIDs;
 import train.common.library.EnumTracks;
-
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 public class TileTCRail extends TileEntity {
 
@@ -162,6 +157,24 @@ public class TileTCRail extends TileEntity {
 		return renderType;
 	}
 
+	/** Not meant for main use this is for debug only **/
+	public EnumTracks getTrackTypeByLabel()
+	{
+
+			if (getType() != null)
+			{
+				for (EnumTracks rail : EnumTracks.values())
+				{
+					if (rail.getLabel().equals(getType()))
+					{
+						return renderType;
+
+					}
+				}
+			}
+		return null;
+	}
+
 	public boolean getSwitchState() {
 
 		return switchActive;
@@ -181,34 +194,7 @@ public class TileTCRail extends TileEntity {
 
 	public int GetSwitchSize(TileTCRail tileTCRail)
 	{
-		switch (tileTCRail.getTrackType().getItem())
-		{
-			case tcRailMediumSwitch:
-			case tcRailEmbeddedMediumSwitch:
-				return 2;
-			case tcRailMedium45DegreeSwitch:
-			case tcRailEmbeddedMedium45DegreeSwitch:
-				return 2;
-
-			case tcRailMediumParallelSwitch:
-			case tcRailEmbeddedMediumParallelSwitch:
-			 	return 3;
-
-			case tcRailLargeSwitch:
-			case tcRailEmbeddedLargeSwitch:
-				return 3;
-
-			case tcRailLarge45DegreeSwitch:
-			case tcRailEmbeddedLarge45DegreeSwitch:
-				return 4;
-			case tcRailLargeParallelSwitch:
-			case tcRailEmbeddedLargeParallelSwitch:
-				return 4;
-			case tcRailVeryLargeSwitch:
-			case tcRailEmbeddedVeryLargeSwitch:
-				return 4;
-		}
-		return 0;
+		return EnumTracks.GetSwitchSize(tileTCRail.getTrackType().getItem());
 	}
 
 	public void setSwitchState(boolean state, boolean manualOverride) {
@@ -411,11 +397,14 @@ public class TileTCRail extends TileEntity {
 				offsetZ += c;
 			}
 		}
+		else if (canTypeBeModifiedBySwitch)
+		{
+			UpdateLeftFlag();
+		}
 	}
 
 	private void UpdateLeftFlag()
 	{
-		if (updateTicks % 11 == 0 || updateTicks==1) {
 			TileEntity tile1 = null;
 
 			switch (worldObj.getBlockMetadata(xCoord, yCoord, zCoord)) {
@@ -440,15 +429,13 @@ public class TileTCRail extends TileEntity {
 			if (tile1 instanceof TileTCRail && TCRailTypes.isSwitchTrack((TileTCRail) tile1)) {
 
 				TileTCRail tileSwitch = (TileTCRail) tile1;
-				if (tileSwitch.switchActive != worldObj.isBlockIndirectlyGettingPowered(tileSwitch.xCoord, tileSwitch.yCoord, tileSwitch.zCoord)) {
+				if (tileSwitch.switchActive != worldObj.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)) {
 					tileSwitch.changeSwitchState(worldObj, tileSwitch, tile1.xCoord, tile1.yCoord, tile1.zCoord);
 				}
 			}
-		}
 
-		updateTicks++;
-
-		if (!getSwitchState() && updateTicks % 10 ==0) {
+		if (!getSwitchState())
+		{
 
 			/* Right-handed switch types create a value of 1, left-handed switch types a value of type -1. If neither cases match, value is set to 0. */
 			if (isLeftFlag == -5) {
