@@ -13,6 +13,7 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 import org.apache.logging.log4j.Level;
 import train.common.Traincraft;
+import train.common.enums.TCTrackDirection;
 import train.common.items.ItemTCRail;
 import train.common.items.TCRailTypes;
 import train.common.library.BlockIDs;
@@ -342,7 +343,17 @@ public class TileTCRail extends TileEntity {
 	{
 		if (tileEntity.getType() != null && (tileEntity.getType().contains("SWITCH")))
 		{
-			tileEntity.setSwitchState(!tileEntity.getSwitchState(),false);
+			boolean newSwitchState;
+			if (checkNonSwitchPieceForRedstonePower() || worldObj.isBlockIndirectlyGettingPowered(x, y, z))
+			{
+				newSwitchState = true;
+			}
+			else
+			{
+				newSwitchState = false;
+			}
+
+			tileEntity.setSwitchState(newSwitchState,false);
 			TileEntity te1;
 			int a = 0;
 			int b = 0;
@@ -375,7 +386,7 @@ public class TileTCRail extends TileEntity {
 				te1 = world.getTileEntity(x + offsetX, y + offsetY, z + offsetZ);
 				if (te1 != null && te1 instanceof TileTCRail)
 				{
-					if (tileEntity.getSwitchState())
+					if (newSwitchState)
 					{
 						if (tileEntity.getType().contains("SWITCH") && tileEntity.getType().contains("LEFT"))
 						{
@@ -403,33 +414,70 @@ public class TileTCRail extends TileEntity {
 		}
 	}
 
+	private boolean checkNonSwitchPieceForRedstonePower()
+	{
+		int meta = worldObj.getBlockMetadata(xCoord, yCoord, zCoord);
+		switch (meta) {
+
+			case 0: {
+				return worldObj.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord + 1);
+			}
+			case 1: {
+				return worldObj.isBlockIndirectlyGettingPowered(xCoord - 1, yCoord, zCoord);
+			}
+			case 2: {
+				return worldObj.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord - 1);
+			}
+			case 3: {
+				return worldObj.isBlockIndirectlyGettingPowered(xCoord + 1, yCoord, zCoord);
+			}
+		}
+
+		return false;
+	}
+
 	private void UpdateLeftFlag()
 	{
 			TileEntity tile1 = null;
-
-			switch (worldObj.getBlockMetadata(xCoord, yCoord, zCoord)) {
+			int xCordInvertedDirection = xCoord;
+			int yCordInvertedDirection = yCoord;
+			int zCordInvertedDirection = zCoord;
+			int meta = worldObj.getBlockMetadata(xCoord, yCoord, zCoord);
+			switch (meta) {
 
 				case 0: {
 					tile1 = worldObj.getTileEntity(xCoord, yCoord, zCoord - 1);
+					zCordInvertedDirection += 1;
 					break;
 				}
 				case 1: {
 					tile1 = worldObj.getTileEntity(xCoord + 1, yCoord, zCoord);
+					xCordInvertedDirection -=1;
 					break;
 				}
 				case 2: {
 					tile1 = worldObj.getTileEntity(xCoord, yCoord, zCoord + 1);
+					zCordInvertedDirection -= 1;
 					break;
 				}
 				case 3: {
 					tile1 = worldObj.getTileEntity(xCoord - 1, yCoord, zCoord);
+					xCordInvertedDirection +=1;
 					break;
 				}
 			}
 			if (tile1 instanceof TileTCRail && TCRailTypes.isSwitchTrack((TileTCRail) tile1)) {
 
 				TileTCRail tileSwitch = (TileTCRail) tile1;
-				if (tileSwitch.switchActive != worldObj.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)) {
+				if (tileSwitch.switchActive)
+				{
+					if (worldObj.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)
+							== worldObj.isBlockIndirectlyGettingPowered(tile1.xCoord, tile1.yCoord, tile1.zCoord))
+					{
+						tileSwitch.changeSwitchState(worldObj, tileSwitch, tile1.xCoord, tile1.yCoord, tile1.zCoord);
+					}
+				}
+				else if (tileSwitch.switchActive != worldObj.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)) {
 					tileSwitch.changeSwitchState(worldObj, tileSwitch, tile1.xCoord, tile1.yCoord, tile1.zCoord);
 				}
 			}
