@@ -27,6 +27,7 @@ public class ACFRailboxCushioned extends Freight implements IInventory {
         textureDescriptionMap.put(6, "Blandsville & Blankerston (Cushioned)");
         textureDescriptionMap.put(7, "DLMR (Cushioned)");
         textureDescriptionMap.put(8, "AN (Cushioned)");
+        textureDescriptionMap.put(9, "OC&G (Cushioned)");
     }
 
     public ACFRailboxCushioned(World world, double d, double d1, double d2){

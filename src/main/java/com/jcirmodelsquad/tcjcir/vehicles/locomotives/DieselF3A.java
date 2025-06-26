@@ -21,6 +21,7 @@ public class DieselF3A extends DieselTrain {
         textureDescriptionMap.put(1, "CDC&S");
         textureDescriptionMap.put(2, "Test Blank, F7a");
         textureDescriptionMap.put(3, "FMSR");
+        textureDescriptionMap.put(4, "OC&G 25A, 26B");
     }
     public DieselF3A(World world, double d, double d1, double d2){
         this(world);
