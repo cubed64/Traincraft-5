@@ -1805,16 +1805,42 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			}
 		}
 
-		if (trainsOnClick.onClickWithInterchangeTransferReportBoard(this, itemstack, playerEntity, worldObj))
+		if (itemstack != null)
 		{
-			return true;
-		}
+			if (trainsOnClick.onClickWithInterchangeTransferReportBoard(this, itemstack, playerEntity, worldObj))
+			{
+				return true;
+			}
 
-		if (trainsOnClick.onClickWithBrakeHandle(this,itemstack,playerEntity,worldObj))
-		{
-			setParkingBrakeFromPacket(!parkingBrake);
-			dataWatcher.updateObject(30, "" + !getParkingBrakeDW());
-			return true;
+			if (trainsOnClick.onClickWithBrakeHandle(this,itemstack,playerEntity,worldObj))
+			{
+				setParkingBrakeFromPacket(!parkingBrake);
+				dataWatcher.updateObject(30, "" + !getParkingBrakeDW());
+				return true;
+			}
+
+			if ((trainsOnClick.onClickWithStake(this, itemstack, playerEntity, worldObj)))
+			{
+				return true;
+			}
+
+			if (itemstack.getItem() instanceof ItemPaintbrushThing && entityplayer.isSneaking())
+			{
+				if (this.acceptedColors != null && this.acceptedColors.size() > 0) {
+					entityplayer.openGui(Traincraft.instance, GuiIDs.PAINTBRUSH, entityplayer.getEntityWorld(), this.getEntityId(), -1, (int) this.posZ);
+				}
+
+				if (this.acceptedColors != null && this.acceptedColors.size() == 0) {
+					entityplayer.addChatMessage(new ChatComponentText("There are no other colors available."));
+				}
+				return true;
+			}
+
+			if (entityplayer.isSneaking() && itemstack != null && itemstack.getItem() instanceof ItemPadlock && getTrainOwner().equalsIgnoreCase(entityplayer.getDisplayName()))
+			{
+				entityplayer.openGui(Traincraft.instance, GuiIDs.LOCK_MENU, entityplayer.getEntityWorld(), this.getEntityId(), -1, (int) this.posZ);
+				return true;
+			}
 		}
 
 		if (itemstack != null && itemstack.getItem() instanceof ItemWrench && this instanceof Locomotive
@@ -1823,7 +1849,10 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			entityplayer.addChatMessage(new ChatComponentText("Destination reset"));
 			return true;
 		}
-		if (MinecraftForge.EVENT_BUS.post(new MinecartInteractEvent(this, entityplayer))) { return true; }
+		if (MinecraftForge.EVENT_BUS.post(new MinecartInteractEvent(this, entityplayer)))
+		{
+			return true;
+		}
 		if (itemstack != null && itemstack.hasTagCompound() && getTicketDestination(itemstack) != null && getTicketDestination(itemstack).length() > 0) {
 			this.setDestination(itemstack);
 			/**
@@ -1874,25 +1903,6 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			else if (this.acceptedColors != null && this.acceptedColors.size() == 0) {
 				entityplayer.addChatMessage(new ChatComponentText("No other colors available."));
 			}
-		}
-		else if ((trainsOnClick.onClickWithStake(this, itemstack, playerEntity, worldObj)))
-		{
-			return true;
-		}
-
-		if (itemstack != null && itemstack.getItem() instanceof ItemPaintbrushThing && entityplayer.isSneaking())
-		{
-			if (this.acceptedColors != null && this.acceptedColors.size() > 0) {
-				entityplayer.openGui(Traincraft.instance, GuiIDs.PAINTBRUSH, entityplayer.getEntityWorld(), this.getEntityId(), -1, (int) this.posZ);
-			}
-
-			if (this.acceptedColors != null && this.acceptedColors.size() == 0) {
-				entityplayer.addChatMessage(new ChatComponentText("There are no other colors available."));
-			}
-			return true;
-		} else if (entityplayer.isSneaking() && itemstack != null && itemstack.getItem() instanceof ItemPadlock && getTrainOwner().equalsIgnoreCase(entityplayer.getDisplayName())) {
-			entityplayer.openGui(Traincraft.instance, GuiIDs.LOCK_MENU, entityplayer.getEntityWorld(), this.getEntityId(), -1, (int) this.posZ);
-			return true;
 		}
 
 		if (itemstack != null && itemstack.getItem() instanceof ItemContainer && this instanceof DieselTrain && entityplayer.isSneaking() && !worldObj.isRemote) {
