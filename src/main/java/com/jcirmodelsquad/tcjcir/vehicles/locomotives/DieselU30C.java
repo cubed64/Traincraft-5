@@ -27,6 +27,7 @@ public class DieselU30C extends DieselTrain {
         textureDescriptionMap.put(7, "Boston & Maine 663 (Guilford)");
         textureDescriptionMap.put(8, "AGW");
         textureDescriptionMap.put(9, "GCM");
+        textureDescriptionMap.put(10, "Chicago and North Western");
     }
     public DieselU30C(World world, double d, double d1, double d2){
         this(world);

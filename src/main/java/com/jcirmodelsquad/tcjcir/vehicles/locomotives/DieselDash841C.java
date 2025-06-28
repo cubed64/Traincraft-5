@@ -25,6 +25,7 @@ public class DieselDash841C extends DieselTrain {
         textureDescriptionMap.put(4, "WP (Late)");
         textureDescriptionMap.put(5, "WP (Rebuilt)");
         textureDescriptionMap.put(6, "uhhhhhhhhhh peenor lol");
+        textureDescriptionMap.put(7, "Chicago and North Western");
     }
     public DieselDash841C(World world, double d, double d1, double d2){
         this(world);
