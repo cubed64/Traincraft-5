@@ -1,7 +1,7 @@
 package com.jcirmodelsquad.tcjcir.features.geometry;
 
 
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.ExperimentalGeometryCar;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.misc.ExperimentalGeometryCar;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.Entity;
 

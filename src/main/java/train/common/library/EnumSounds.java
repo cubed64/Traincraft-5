@@ -1,11 +1,8 @@
 package train.common.library;
 
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.*;
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.AmfleetCab;
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.PCH120Coach;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.controlcar.AmfleetCab;
 import train.common.entity.rollingStock.*;
-
-import java.util.List;
 
 public enum EnumSounds {
 

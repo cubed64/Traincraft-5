@@ -19,7 +19,7 @@ import train.common.api.Locomotive;
 import train.common.entity.EntityLasersLines;
 import train.common.entity.rollingStock.EntityStockCar;
 import train.common.entity.rollingStock.EntityStockCarDRWG;
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.StampedeRack;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.misc.StampedeRack;
 
 import java.util.List;
 import java.util.Random;

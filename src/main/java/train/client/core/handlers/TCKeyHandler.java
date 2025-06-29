@@ -1,7 +1,7 @@
 package train.client.core.handlers;
 
 import com.jcirmodelsquad.tcjcir.features.geometry.GuiGeometryCar;
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.ExperimentalGeometryCar;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.misc.ExperimentalGeometryCar;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

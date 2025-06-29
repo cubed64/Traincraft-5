@@ -11,14 +11,13 @@ package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is locat
 
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelPCHBogie;
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.AipkitExplorer;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.AipkitExplorer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
-import train.common.entity.rollingStock.EntityPassengerRheingold;
 
 public class ModelAipkitExplorer extends ModelConverter //Same as Filename
 {

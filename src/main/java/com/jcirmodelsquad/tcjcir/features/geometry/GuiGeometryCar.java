@@ -2,7 +2,7 @@ package com.jcirmodelsquad.tcjcir.features.geometry;
 
 import com.jcirmodelsquad.tcjcir.extras.packets.MissionStatusPacket;
 import com.jcirmodelsquad.tcjcir.extras.packets.UpdateGeometryCar;
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.ExperimentalGeometryCar;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.misc.ExperimentalGeometryCar;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.Minecraft;

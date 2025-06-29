@@ -1,6 +1,5 @@
 package com.jcirmodelsquad.tcjcir.extras.packets;
 
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.ExperimentalGeometryCar;
 import cpw.mods.fml.common.network.ByteBufUtils;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;

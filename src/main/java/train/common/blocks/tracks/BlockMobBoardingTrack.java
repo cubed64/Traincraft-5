@@ -3,7 +3,7 @@
  */
 package train.common.blocks.tracks;
 
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.StampedeRack;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.misc.StampedeRack;
 import mods.railcraft.api.tracks.ITrackEmitter;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;

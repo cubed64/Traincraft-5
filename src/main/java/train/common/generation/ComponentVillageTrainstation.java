@@ -1,6 +1,11 @@
 package train.common.generation;
 
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.*;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.PDH2800;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.PS140;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.Amfleet;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.Amfleet2;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.funny.BombCart;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tanker.GATC10000;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
@@ -9,7 +14,6 @@ import net.minecraft.world.gen.structure.StructureVillagePieces;
 import train.common.api.AbstractTrains;
 import train.common.api.EntityRollingStock;
 import train.common.entity.rollingStock.*;
-import train.common.items.ItemRollingStock;
 import train.common.library.BlockIDs;
 
 import java.util.List;

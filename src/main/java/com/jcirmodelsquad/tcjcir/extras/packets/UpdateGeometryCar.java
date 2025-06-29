@@ -1,13 +1,12 @@
 package com.jcirmodelsquad.tcjcir.extras.packets;
 
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.ExperimentalGeometryCar;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.misc.ExperimentalGeometryCar;
 import cpw.mods.fml.common.network.ByteBufUtils;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraftforge.common.DimensionManager;
-import scala.collection.parallel.ParIterableLike;
 
 public class UpdateGeometryCar implements IMessage {
 

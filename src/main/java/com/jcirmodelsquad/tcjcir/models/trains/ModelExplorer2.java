@@ -11,8 +11,7 @@ package com.jcirmodelsquad.tcjcir.models.trains;
 
 
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelPCHBogie;
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.AipkitExplorer;
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.AipkitExplorer2;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.AipkitExplorer2;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
