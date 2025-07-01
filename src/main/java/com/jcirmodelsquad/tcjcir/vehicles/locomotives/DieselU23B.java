@@ -32,20 +32,23 @@ public class DieselU23B extends DieselTrain {
         textureDescriptionMap.put(12, "Western Pacific");
         textureDescriptionMap.put(13, "Western Pacific");
         textureDescriptionMap.put(14, "Deadwood & La Mesa");
-        textureDescriptionMap.put(15, "CSXT (YN2)");
-        textureDescriptionMap.put(16, "Penn Central");
-        textureDescriptionMap.put(17, "Seaboard System");
-        textureDescriptionMap.put(18, "CFW 558");
-        textureDescriptionMap.put(29, "Morristown Tenneva & Southern");
-        textureDescriptionMap.put(20, "Milwaukee Road");
-        textureDescriptionMap.put(21, "Nomansi & Eastern Pacific");
-        textureDescriptionMap.put(22, "ADT");
-        textureDescriptionMap.put(23, "ADT (Ex UP)");
-        textureDescriptionMap.put(24, "Suffern Hoboken Interstate Transfer 211");
-        textureDescriptionMap.put(25, "Detroit Export System");
-        textureDescriptionMap.put(26, "Magnolia Properties");
-        textureDescriptionMap.put(27, "AGW");
-        textureDescriptionMap.put(28, "CNRC 5001 & 5002");
+        textureDescriptionMap.put(15, "Penn Central");
+        textureDescriptionMap.put(16, "Seaboard System");
+        textureDescriptionMap.put(17, "CFW 558");
+        textureDescriptionMap.put(18, "Morristown Tenneva & Southern");
+        textureDescriptionMap.put(19, "Milwaukee Road");
+        textureDescriptionMap.put(20, "Nomansi & Eastern Pacific");
+        textureDescriptionMap.put(21, "ADT");
+        textureDescriptionMap.put(22, "ADT (Ex UP)");
+        textureDescriptionMap.put(23, "Suffern Hoboken Interstate Transfer 211");
+        textureDescriptionMap.put(24, "Detroit Export System");
+        textureDescriptionMap.put(25, "Magnolia Properties");
+        textureDescriptionMap.put(26, "AGW");
+        textureDescriptionMap.put(27, "CNRC 5001 & 5002");
+        textureDescriptionMap.put(28, "CSXT (Bluedown)");
+        textureDescriptionMap.put(29, "CSXT (Stealth)");
+        textureDescriptionMap.put(30, "CSXT (YN1)");
+        textureDescriptionMap.put(31, "CSXT (YN2)");
     }
     public DieselU23B(World world, double d, double d1, double d2){
         this(world);

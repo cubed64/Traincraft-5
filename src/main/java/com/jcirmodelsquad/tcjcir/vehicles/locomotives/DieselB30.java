@@ -21,9 +21,10 @@ public class DieselB30 extends DieselTrain {
         textureDescriptionMap.put(1, "CNCR 5552");
         textureDescriptionMap.put(2, "CNCR 5553-5555");
         textureDescriptionMap.put(3, "CSXT (Yn2)");
-        textureDescriptionMap.put(4, "");
-        textureDescriptionMap.put(5, "");
-        textureDescriptionMap.put(6, "");
+        textureDescriptionMap.put(4, "CSXT (Yn1)");
+        textureDescriptionMap.put(5, "CSXT (Stealth)");
+        textureDescriptionMap.put(6, "CSXT (Bluedown)");
+        textureDescriptionMap.put(7, "Seaboard");
     }
     public DieselB30(World world, double d, double d1, double d2){
         this(world);

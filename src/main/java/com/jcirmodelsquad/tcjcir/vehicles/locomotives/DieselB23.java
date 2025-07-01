@@ -46,7 +46,9 @@ public class DieselB23 extends DieselTrain {
         textureDescriptionMap.put(26, "Magnolia");
         textureDescriptionMap.put(27, "CNRC 1901 & 1903");
         textureDescriptionMap.put(28, "CNRC 1902");
-        textureDescriptionMap.put(29, "");
+        textureDescriptionMap.put(29, "CSXT (Stealth)");
+        textureDescriptionMap.put(30, "CSXT (Bluedown)");
+        textureDescriptionMap.put(31, "Seaboard");
     }
     public DieselB23(World world, double d, double d1, double d2){
         this(world);

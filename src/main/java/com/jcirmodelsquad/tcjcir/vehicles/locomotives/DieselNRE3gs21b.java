@@ -22,6 +22,7 @@ public class DieselNRE3gs21b extends DieselTrain {
         textureDescriptionMap.put(2, "FURRX");
         textureDescriptionMap.put(3, "FURRX (W/ Plow)");
         textureDescriptionMap.put(4, "Southern Port Belt");
+        textureDescriptionMap.put(5, "CSXT (Yn3)");
     }
     public DieselNRE3gs21b(World world, double d, double d1, double d2){
         this(world);
