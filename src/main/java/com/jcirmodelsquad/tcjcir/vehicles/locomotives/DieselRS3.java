@@ -22,6 +22,9 @@ public class DieselRS3 extends DieselTrain {
         textureDescriptionMap.put(2, "Denver & Rio Grande Western (Early)");
         textureDescriptionMap.put(3, "Denver & Rio Grande Western");
         textureDescriptionMap.put(4, "AGW");
+        textureDescriptionMap.put(5, "CCRL");
+        textureDescriptionMap.put(6, "SER");
+        textureDescriptionMap.put(7, "NSE");
     }
     public DieselRS3(World world, double d, double d1, double d2){
         this(world);

@@ -9,6 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.Modelrs3_details;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTypeBnew;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -163,7 +164,7 @@ public class ModelRS2 extends ModelConverter //Same as Filename
 		bodyModel[117] = new ModelRendererTurbo(this, 191, 37, textureX, textureY); // Box 38
 		bodyModel[118] = new ModelRendererTurbo(this, 258, 77, textureX, textureY); // Box 62
 		bodyModel[119] = new ModelRendererTurbo(this, 56, 72, textureX, textureY); // Box 78 lamp socket
-		bodyModel[120] = new ModelRendererTurbo(this, 8, 20, textureX, textureY, "lamp"); // Box 31 lamp
+		bodyModel[120] = new ModelRendererTurbo(this, 8, 20, textureX, textureY); // Box 31 lamp
 		bodyModel[121] = new ModelRendererTurbo(this, 5, 19, textureX, textureY, "lamp"); // Top short hood light l
 		bodyModel[122] = new ModelRendererTurbo(this, 15, 19, textureX, textureY, "lamp"); // Top short hood light r
 		bodyModel[123] = new ModelRendererTurbo(this, 63, 51, textureX, textureY, "lamp"); // short hood left lamp
@@ -2025,6 +2026,7 @@ public class ModelRS2 extends ModelConverter //Same as Filename
 		bodyModel[487].rotateAngleX = 0.34906585F;
 	}
 	ModelTypeBnew theTrucks4 = new ModelTypeBnew();
+	Modelrs3_details theDeets = new Modelrs3_details();
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
@@ -2067,6 +2069,20 @@ public class ModelRS2 extends ModelConverter //Same as Filename
 			GL11.glTranslated(2.7, 0, 0);
 			theTrucks4.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
+
+			if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 20||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 22) {
+				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/rs3-details-ccrl-nse.png"));
+				GL11.glPushMatrix();
+				//GL11.glTranslated(-1.35, -0.025, 0);
+				theDeets.render(entity, f, f1, f2, f3, f4, f5);
+				GL11.glPopMatrix();
+			} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 21) {
+				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/rs3-details-ser.png"));
+				GL11.glPushMatrix();
+				//GL11.glTranslated(-1.35, -0.025, 0);
+				theDeets.render(entity, f, f1, f2, f3, f4, f5);
+				GL11.glPopMatrix();
+			}
 		}
 	}
 }
