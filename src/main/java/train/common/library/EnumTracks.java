@@ -5,6 +5,7 @@ import train.common.enums.TrackResourceLocations;
 import train.common.items.BallastTypes;
 import train.common.items.RailVariants;
 import train.common.items.TCRailTypes;
+import train.common.tile.TileTCRail;
 
 import javax.annotation.Nullable;
 import java.util.HashMap;
@@ -625,5 +626,37 @@ public enum EnumTracks
             default:
                 return null;
         }
+    }
+
+    public static int GetSwitchSize(ItemIDs itemIDs)
+    {
+        switch (itemIDs)
+        {
+            case tcRailMediumSwitch:
+            case tcRailEmbeddedMediumSwitch:
+                return 2;
+            case tcRailMedium45DegreeSwitch:
+            case tcRailEmbeddedMedium45DegreeSwitch:
+                return 2;
+
+            case tcRailMediumParallelSwitch:
+            case tcRailEmbeddedMediumParallelSwitch:
+                return 3;
+
+            case tcRailLargeSwitch:
+            case tcRailEmbeddedLargeSwitch:
+                return 3;
+
+            case tcRailLarge45DegreeSwitch:
+            case tcRailEmbeddedLarge45DegreeSwitch:
+                return 4;
+            case tcRailLargeParallelSwitch:
+            case tcRailEmbeddedLargeParallelSwitch:
+                return 4;
+            case tcRailVeryLargeSwitch:
+            case tcRailEmbeddedVeryLargeSwitch:
+                return 4;
+        }
+        return 0;
     }
 }

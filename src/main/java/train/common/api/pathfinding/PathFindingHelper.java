@@ -165,6 +165,8 @@ public class PathFindingHelper
     }
 
     public boolean shouldIgnoreSwitch(EntityMinecart entityMinecart, TileTCRail tile, int i, int j, int k, int meta) {
+
+
         if (tile != null
                 && (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_TURN.getLabel())
                 || tile.getType().equals(EnumTracks.MEDIUM_LEFT_TURN.getLabel())
@@ -175,7 +177,7 @@ public class PathFindingHelper
                 if (entityMinecart.motionZ > 0 && Math.abs(entityMinecart.motionX) < 0.01) {
                     TileEntity tile2 = entityMinecart.worldObj.getTileEntity(i, j, k + 1);
                     if (tile2 != null && tile2 instanceof TileTCRail) {
-                        ((TileTCRail) tile2).setSwitchState(false, true);
+                       // ((TileTCRail) tile2).setSwitchState(false, true);
                     }
                     return true;
                 }
@@ -184,7 +186,7 @@ public class PathFindingHelper
                 if (entityMinecart.motionZ < 0 && Math.abs(entityMinecart.motionX) < 0.01) {
                     TileEntity tile2 = entityMinecart.worldObj.getTileEntity(i, j, k - 1);
                     if (tile2 != null && tile2 instanceof TileTCRail) {
-                        ((TileTCRail) tile2).setSwitchState(false, true);
+                        //((TileTCRail) tile2).setSwitchState(false, true);
                     }
                     return true;
                 }
@@ -193,7 +195,7 @@ public class PathFindingHelper
                 if (Math.abs(entityMinecart.motionZ) < 0.01 && entityMinecart.motionX > 0) {
                     TileEntity tile2 = entityMinecart.worldObj.getTileEntity(i + 1, j, k);
                     if (tile2 != null && tile2 instanceof TileTCRail) {
-                        ((TileTCRail) tile2).setSwitchState(false, true);
+                       // ((TileTCRail) tile2).setSwitchState(false, true);
                     }
                     return true;
                 }
@@ -202,7 +204,7 @@ public class PathFindingHelper
                 if (Math.abs(entityMinecart.motionZ) < 0.01 && entityMinecart.motionX < 0) {
                     TileEntity tile2 = entityMinecart.worldObj.getTileEntity(i - 1, j, k);
                     if (tile2 != null && tile2 instanceof TileTCRail) {
-                        ((TileTCRail) tile2).setSwitchState(false, true);
+                        //((TileTCRail) tile2).setSwitchState(false, true);
                     }
                     return true;
                 }

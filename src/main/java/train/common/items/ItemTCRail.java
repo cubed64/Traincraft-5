@@ -78,13 +78,14 @@ public class ItemTCRail extends ItemPart {
 
 	public static boolean isTCStraightTrack(TileTCRail tile) {
 		if(tile==null || tile.getType()==null){return false;}
-		return (tile.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel()) && !tile.getSwitchState())
-				|| (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel()) && !tile.getSwitchState())
-				|| (tile.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel()) && !tile.getSwitchState())
-				|| (tile.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()) && !tile.getSwitchState())
-				|| (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()) && !tile.getSwitchState())
-				|| (tile.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()) && !tile.getSwitchState())
-				|| tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING.getLabel())
+		return
+				//(tile.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel()) && !tile.getSwitchState())
+				//|| (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel()) && !tile.getSwitchState())
+				//|| (tile.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel()) && !tile.getSwitchState())
+				//|| (tile.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()) && !tile.getSwitchState())
+				//|| (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()) && !tile.getSwitchState())
+				//|| (tile.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()) && !tile.getSwitchState())
+				tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING.getLabel())
 				|| tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING_1.getLabel())
 				|| tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING_2.getLabel())
 				|| (tile.getType().contains("STRAIGHT") && TCRailTypes.isDiagonalTrack(tile) == false && TCRailTypes.isSwitchTrack(tile) == false)
@@ -93,12 +94,13 @@ public class ItemTCRail extends ItemPart {
 
 	public static boolean isTCSwitch(TileTCRail tile) {
 		if(tile==null || tile.getType()==null){return false;}
-		return (tile.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel()))
+		return
+				(tile.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel()))
 				|| (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_SWITCH.getLabel()))
 				|| (tile.getType().equals(EnumTracks.LARGE_LEFT_SWITCH.getLabel()))
-				|| (tile.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()))
-				|| (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()))
-				|| (tile.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()));
+				|| (tile.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()));
+				//|| (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()))
+				//|| (tile.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()));
 	}
 
 	public ItemTCRail(EnumTracks t) {
