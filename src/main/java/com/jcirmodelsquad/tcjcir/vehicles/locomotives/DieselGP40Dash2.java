@@ -29,7 +29,7 @@ public class DieselGP40Dash2 extends DieselTrain {
         textureDescriptionMap.put(9, "Norfolk Southern");
         textureDescriptionMap.put(10, "Athearn RTR GP40 (Avanste Northeastern)");
         textureDescriptionMap.put(11, "DRGW (big logo)");
-        textureDescriptionMap.put(12, "Westrn Maryland");
+        textureDescriptionMap.put(12, "Seaboard System");
         textureDescriptionMap.put(13, "");
         textureDescriptionMap.put(14, "");
         textureDescriptionMap.put(15, "");
