@@ -2031,6 +2031,9 @@ public class ModelSD60 extends ModelConverter //Same as Filename
 		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 11) {
 			//up dash 2 truck
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexcoil_c2h_uncle.png"));
+		}else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 20) {
+			//CSX
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexcoil_c2h_csxes.png"));
 		} else {
 			//black dash 2 truck
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_C_dash2_Black.png"));

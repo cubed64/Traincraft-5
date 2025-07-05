@@ -28,8 +28,10 @@ public class DieselSD38 extends DieselTrain {
         textureDescriptionMap.put(6, "FURRX");
         textureDescriptionMap.put(7, "NSCC");
         textureDescriptionMap.put(8, "SPB");
-        textureDescriptionMap.put(9, "CSXT");
-        textureDescriptionMap.put(10, "GLC (EX SPB)");
+        textureDescriptionMap.put(9, "CSXT (Yn2)");
+        textureDescriptionMap.put(10, "CSXT (Yn3)");
+        textureDescriptionMap.put(11, "Seaboard System");
+        textureDescriptionMap.put(12, "GLC (EX SPB)");
     }
     public DieselSD38(World world, double d, double d1, double d2){
         this(world);

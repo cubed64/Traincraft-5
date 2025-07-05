@@ -36,9 +36,10 @@ public class DieselGP38 extends DieselTrain {
         textureDescriptionMap.put(16, "Monongahela (Early)");
         textureDescriptionMap.put(17, "Monongahela (Late)");
         textureDescriptionMap.put(18, "AA (Fog)");
-        textureDescriptionMap.put(19, "");
-        textureDescriptionMap.put(20, "");
-        textureDescriptionMap.put(21, "");
+        textureDescriptionMap.put(19, "CSXT (Yn1)");
+        textureDescriptionMap.put(20, "CSXT (Stealth)");
+        textureDescriptionMap.put(21, "CSXT (Bluedown)");
+        textureDescriptionMap.put(22, "Seaboard System");
     }
     public DieselGP38(World world, double d, double d1, double d2){
         this(world);

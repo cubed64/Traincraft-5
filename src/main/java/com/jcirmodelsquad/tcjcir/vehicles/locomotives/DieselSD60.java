@@ -28,8 +28,11 @@ public class DieselSD60 extends DieselTrain {
         textureDescriptionMap.put(7, "GLoNT");
         textureDescriptionMap.put(8, "BN (Tiger Stripe)");
         textureDescriptionMap.put(9, "CSXT (Yn3)");
-        textureDescriptionMap.put(10, "SOO (White)");
-        textureDescriptionMap.put(11, "SOO (Red)");
+        textureDescriptionMap.put(10, "CSXT (Yn2)");
+        textureDescriptionMap.put(11, "CSXT (Yn1)");
+        textureDescriptionMap.put(12, "CSXT (Stealth)");
+        textureDescriptionMap.put(13, "SOO (White)");
+        textureDescriptionMap.put(14, "SOO (Red)");
 
     }
     public DieselSD60(World world, double d, double d1, double d2){

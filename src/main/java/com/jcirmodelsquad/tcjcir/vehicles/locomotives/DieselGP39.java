@@ -20,6 +20,7 @@ public class DieselGP39 extends DieselTrain {
         textureDescriptionMap.put(0, "Atlanta & St Andrews Bay");
         textureDescriptionMap.put(1, "Blandsville & Blankerston");
         textureDescriptionMap.put(2, "CSXT (YN2)");
+        textureDescriptionMap.put(3, "CSXT (Bluedown)");
 
     }
     public DieselGP39(World world, double d, double d1, double d2){

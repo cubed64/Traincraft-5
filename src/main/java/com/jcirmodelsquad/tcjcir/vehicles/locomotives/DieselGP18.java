@@ -28,6 +28,7 @@ public class DieselGP18 extends DieselTrain {
         textureDescriptionMap.put(8, "IC (chop nose)");
         textureDescriptionMap.put(9, "Blandsville & Blankerston");
         textureDescriptionMap.put(10, "Blandsville & Blankerston");
+        textureDescriptionMap.put(11, "Seaboard System");
 
     }
     public DieselGP18(World world, double d, double d1, double d2){

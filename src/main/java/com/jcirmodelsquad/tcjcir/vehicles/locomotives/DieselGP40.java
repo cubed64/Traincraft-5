@@ -40,10 +40,10 @@ public class DieselGP40 extends DieselTrain {
         textureDescriptionMap.put(20, "Falcon Commercial Railroad");
         textureDescriptionMap.put(21, "SAMM");
         textureDescriptionMap.put(22, "AA (Fog)");
-        textureDescriptionMap.put(23, "");
-        textureDescriptionMap.put(24, "");
-        textureDescriptionMap.put(25, "");
-        textureDescriptionMap.put(26, "");
+        textureDescriptionMap.put(23, "CSXT (Yn1)");
+        textureDescriptionMap.put(24, "CSXT (Stealth)");
+        textureDescriptionMap.put(25, "CSXT (Bluedown)");
+        textureDescriptionMap.put(26, "CSXT (MoW Pumpkin) ");
         textureDescriptionMap.put(27, "");
         textureDescriptionMap.put(28, "");
         textureDescriptionMap.put(29, "");
