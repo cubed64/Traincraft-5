@@ -20,7 +20,7 @@ public class DieselSB23R extends DieselTrain {
         textureDescriptionMap.put(0, "BMC (Plant Switcher)");
         //textureDescriptionMap.put(1, "Western Pacific (Early)");
         //textureDescriptionMap.put(2, "Western Pacific (Late)");
-        textureDescriptionMap.put(1, "FNCC (Dar80)");
+        textureDescriptionMap.put(1, "FNCC 335 (Dar80)");
         textureDescriptionMap.put(2, "Morristown Tennava & Southern");
         textureDescriptionMap.put(3, "Blandsville & Blankerston");
         textureDescriptionMap.put(4, "");
