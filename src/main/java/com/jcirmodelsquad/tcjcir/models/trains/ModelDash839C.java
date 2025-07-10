@@ -29,7 +29,7 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 
 	public ModelDash839C() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[427];
+		bodyModel = new ModelRendererTurbo[429];
 
 		initbodyModel_1();
 
@@ -467,6 +467,8 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 		bodyModel[424] = new ModelRendererTurbo(this, 18, 72, textureX, textureY); // Box 448
 		bodyModel[425] = new ModelRendererTurbo(this, 48, 72, textureX, textureY); // Box 449
 		bodyModel[426] = new ModelRendererTurbo(this, 175, 177, textureX, textureY); // Box 431 backpannel bulgy bit
+		bodyModel[427] = new ModelRendererTurbo(this, 322, 216, textureX, textureY); // Box 104 cnrc antenna
+		bodyModel[428] = new ModelRendererTurbo(this, 334, 135, textureX, textureY); // Box 428 cnrc circumsized fueltank
 
 		bodyModel[0].addBox(0F, 0F, 0F, 92, 2, 4, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-46F, -2F, -11F);
@@ -1786,6 +1788,12 @@ public class ModelDash839C extends ModelConverter //Same as Filename
 
 		bodyModel[426].addShapeBox(0F, 0F, 0F, 1, 10, 10, 0F,0.125F, -0.125F, -0.125F, 0.125F, -0.125F, -0.125F, 0.125F, -0.125F, -5.125F, 0.125F, -0.125F, -5.125F, 0.125F, -5.125F, -0.125F, 0.125F, -5.125F, -0.125F, 0.125F, -5.125F, -5.125F, 0.125F, -5.125F, -5.125F); // Box 431 backpannel bulgy bit
 		bodyModel[426].setRotationPoint(-28F, -20.5F, 0.5F);
+
+		bodyModel[427].addShapeBox(0F, 0F, 0F, 1, 5, 0, 0F,-0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.75F, 0F, 0F); // Box 104 cnrc antenna
+		bodyModel[427].setRotationPoint(-31F, -26.5F, 1F);
+
+		bodyModel[428].addShapeBox(0F, 0F, 0F, 27, 2, 18, 0F,0F, 0F, 2F, 0F, 0F, 2F, 0F, 0F, 2F, 0F, 0F, 2F, 0F, 0F, 0.5F, 0F, 0F, 0.5F, 0F, 0F, 0.5F, 0F, 0F, 0.5F); // Box 428 cnrc circumsized fueltank
+		bodyModel[428].setRotationPoint(-13.5F, 5F, -9F);
 	}
 
 	ModelFB3_new theTrucks2 = new ModelFB3_new();

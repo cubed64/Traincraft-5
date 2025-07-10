@@ -30,6 +30,7 @@ public class DieselDash839C extends DieselTrain {
         textureDescriptionMap.put(9, "Nautilus");
         textureDescriptionMap.put(10, "Ann Arbor (but awesomer)");
         textureDescriptionMap.put(11, "CEEX 101");
+        textureDescriptionMap.put(12, "CNRC (Ex EARR)");
     }
     public DieselDash839C(World world, double d, double d1, double d2){
         this(world);
