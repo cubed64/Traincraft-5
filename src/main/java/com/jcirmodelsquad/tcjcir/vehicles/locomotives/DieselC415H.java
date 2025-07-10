@@ -19,7 +19,7 @@ public class DieselC415H extends DieselTrain {
         initLoco();
         textureDescriptionMap.put(0, "Port of Tillamook Bay 701 (BRJ 701 Early)");
         textureDescriptionMap.put(1, "Port of Tillamook Bay 702 (BRJ 702 Early)");
-        textureDescriptionMap.put(2, "Latrans Range Railroad (outdated texture)");
+        textureDescriptionMap.put(2, "Latrans Range Railroad");
         textureDescriptionMap.put(3, "Southern Pacific");
         textureDescriptionMap.put(4, "Southern Pacific (Red Deckplate)");
         textureDescriptionMap.put(5, "Morristown, Tenneva & Southern");
