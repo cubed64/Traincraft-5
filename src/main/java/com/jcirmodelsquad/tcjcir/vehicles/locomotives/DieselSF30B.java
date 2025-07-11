@@ -20,6 +20,12 @@ public class DieselSF30B extends DieselTrain {
         textureDescriptionMap.put(0, "Blandsville & Blankerston");
         textureDescriptionMap.put(1, "MKM Leasing");
         textureDescriptionMap.put(2, "CNRC 1000 & 1001 (Ex MKM)");
+        textureDescriptionMap.put(3, "ATSF 7200 (Early)");
+        textureDescriptionMap.put(4, "ATSF 6149 (Mid)");
+        textureDescriptionMap.put(5, "ATSF 6419 (Late)");
+        textureDescriptionMap.put(6, "BNSF 4276 (Ex ATSF)");
+        textureDescriptionMap.put(7, "Minnesota Commerical 42 (Patch)");
+        textureDescriptionMap.put(8, "Minnesota Commerical 42");
     }
     public DieselSF30B(World world, double d, double d1, double d2){
         this(world);
