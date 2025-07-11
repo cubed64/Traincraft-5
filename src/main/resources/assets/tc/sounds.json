@@ -259,6 +259,7 @@
 
   "a4_whistle": {"category": "master", "sounds": [{"name": "a4_whistle", "stream":  true}]},
   "br_horn": {"category": "master", "sounds": [{"name": "br_horn", "stream":  true}]},
+  "br_horn_2": {"category": "master", "sounds": [{"name": "br_horn_2", "stream":  true}]},
   "jnr_3chime": {"category": "master", "sounds": [{"name": "jnr_3chime", "stream":  true}]},
   "lu_whistle": {"category": "master", "sounds": [{"name": "lu_whistle", "stream":  true}]},
 

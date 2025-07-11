@@ -20,8 +20,8 @@ public class DieselU23C extends DieselTrain {
         textureDescriptionMap.put(0, "Consolidate DeeZ NUTS");
         textureDescriptionMap.put(1, "Nautilus");
         textureDescriptionMap.put(2, "Blandsville & Blankerston");
-        textureDescriptionMap.put(3, "");
-        textureDescriptionMap.put(4, "Cock Island");
+        textureDescriptionMap.put(3, "ATSF Pinstripe");
+        textureDescriptionMap.put(4, "ATSF Freightbonnet");
         textureDescriptionMap.put(5, "");
         textureDescriptionMap.put(6, "");
         textureDescriptionMap.put(7, "");
