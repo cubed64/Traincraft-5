@@ -4,11 +4,12 @@ import com.jcirmodelsquad.tcjcir.models.trains.*;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.*;
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.misc.ExperimentalGeometryCar;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.misc.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.baggagecar.OBHWNH5570_5589Baggage;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.controlcar.AmfleetCab;
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tanker.GATC10000;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.funny.*;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tanker.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tender.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.workcart.*;
 import tmt.ModelBase;
@@ -2047,21 +2048,21 @@ public enum RenderEnum
 	Hopper6260(Hopper6260.class, new ModelHopper6260(), "6260_", true, new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	FNCC2375Hopper(FNCC2375Hopper.class, new ModelFNCC2375Hopper(), "FNCC2375_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PDH2800(PDH2800.class, new ModelPDH2800(), "gatx_2800_pdh_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	ACF2Bay(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.ACF2Bay.class, new ModelACF2Bay(), "acf_2980_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	ACF4650(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.ACF4650.class, new ModelACF4650(), "acf_4650_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACF2Bay(ACF2Bay.class, new ModelACF2Bay(), "acf_2980_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACF4650(ACF4650.class, new ModelACF4650(), "acf_4650_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PS2_4750(PS2_4750.class, new ModelPS2_4750(), "ps2cd_4750_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	GATC4180Airslide(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.GATC4180Airslide.class, new ModelGATC4180Airslide(), "GATX_Airslide_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	ACF3500(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.ACF3500.class, new ModelACF3500(), "ACF_3500_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	ACF3960(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.ACF3960.class, new ModelACF3500(), "ACF_3960_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	GATC4180Airslide(GATC4180Airslide.class, new ModelGATC4180Airslide(), "GATX_Airslide_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACF3500(ACF3500.class, new ModelACF3500(), "ACF_3500_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACF3960(ACF3960.class, new ModelACF3500(), "ACF_3960_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
-	Freight60centerbeam(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.Freight60centerbeam.class, new Model60centerbeam(),"60ftcb_", true, new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	Freight66centerbeam(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.Freight66centerbeam.class, new Model66centerbeam(),"66ftcb_", true, new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	Freight73centerbeam(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.Freight73centerbeam.class, new Model73centerbeam(),"73ftcb_", true, new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	Freight60centerbeam(Freight60centerbeam.class, new Model60centerbeam(),"60ftcb_", true, new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	Freight66centerbeam(Freight66centerbeam.class, new Model66centerbeam(),"66ftcb_", true, new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	Freight73centerbeam(Freight73centerbeam.class, new Model73centerbeam(),"73ftcb_", true, new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	GSI60FootBulkhead(GSI60FootBulkhead.class, new ModelGSI60FootBulkheadFlat(),"gsi_60bulk_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	GSC60FootFlat(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.GSC60FootFlat.class, new ModelGSI60FootBulkheadFlat(),"gsc_60flat_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	GSC60FootFlat(GSC60FootFlat.class, new ModelGSI60FootBulkheadFlat(),"gsc_60flat_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Thrall63centerbeam(Thrall63centerbeam.class, new Modelthrall63centerbeam(),"thrall63centerbeam_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	FNCC60FootBulk(FNCC60FootBulk.class, new ModelFNCC60FootBulk_fix(),"FNCC60FootBulk_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	GSC53FootFlat(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.GSC53FootFlat.class, new ModelGSC53FootBulkheadFlat(),"gsc_53flat_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	GSC53FootFlat(GSC53FootFlat.class, new ModelGSC53FootBulkheadFlat(),"gsc_53flat_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	GSC53Foot6_6Bulkhead(GSC53Foot66Bulkhead.class, new ModelGSC53FootBulkheadFlat(),"gsc_53_66flat_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	GSC53Foot8_6Bulkhead(GSC53Foot86Bulkhead.class, new ModelGSC53FootBulkheadFlat(),"gsc_53_86flat_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	MaPa35FootFlat(MaPa35FootFlat.class, new ModelMaPa35FootFlat(),"MaPa_35flat_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -2071,7 +2072,7 @@ public enum RenderEnum
 	PS160(PS160.class, new ModelPS160(),"ps160_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	OWO60Verticube(OWO60Verticube.class, new ModelFNCC60FootVerticube(),"verticube60_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	MILW40boxcar(MILW40boxcar.class, new ModelMILW40boxcar(),"milw40_", true, new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	Freight40highcube(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.Freight40highcube.class, new Model40highcube(),"40highcube_", true, new float[]{-0F, 0.09F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	Freight40highcube(Freight40highcube.class, new Model40highcube(),"40highcube_", true, new float[]{-0F, 0.09F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Hicube60(Hicube60foot.class, new Modelhicube60foot(),"hicube60_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Reefer64(Reefer64Foot.class, new ModelReefer64Foot(),"reefer_64_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	FNCC50Foot(FNCC50Foot.class, new ModelFNCC50Foot(),"FNCC50Foot_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -2082,8 +2083,8 @@ public enum RenderEnum
 	PCF6033(PCF6033.class, new ModelPCF6033(),"pcf_6033_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PCF_RBL_Smooth(PCF_RBL_Smooth.class, new ModelPCF_RBL_Smoothbrain(),"pcf_rbl_smooth_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PCF_RBL_Ribbed(PCF_RBL_Ribbed.class, new ModelPCF_RBL_Ribbed(),"pcf_rbl_ribbed_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	ACFRailbox(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.ACFRailbox.class, new ModelACFRailbox(),"ACFRailbox_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	ACFRailboxCushioned(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.ACFRailboxCushioned.class, new ModelACFRailboxCushioned(),"ACFRailboxCushioned_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACFRailbox(ACFRailbox.class, new ModelACFRailbox(),"ACFRailbox_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACFRailboxCushioned(ACFRailboxCushioned.class, new ModelACFRailboxCushioned(),"ACFRailboxCushioned_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Evans5100(Evans5100.class, new ModelEvans5100(),"Evans_5100_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Wood1912Boxcar(Wood1912Boxcar.class, new Model1912WoodBoxcar(),"1912_wood_boxcar_", true, new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
@@ -2093,29 +2094,29 @@ public enum RenderEnum
 	WoodchipHopper(WoodchipHopper.class, new ModelWoodchipHopper(),"woodchiphopper_", true, new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	OreJenny(OreJenny.class, new ModelOreJenny(),"orejenny_", true,  new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PRRGLaHopper(PRRGLaHopper.class, new ModelPRRGLaHopper(),"PRR_GLa_hopper_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	ACF41Gon(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.ACF41Gon.class, new ModelACF41Gon(),"acf_41-6_gon_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	BethgonII(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.BethgonII.class, new ModelBethgonII(),"Bethgon_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACF41Gon(ACF41Gon.class, new ModelACF41Gon(),"acf_41-6_gon_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	BethgonII(BethgonII.class, new ModelBethgonII(),"Bethgon_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	gsco67millgon(gsco67millgon.class, new Model67millgon(),"gsco_67_millgon_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	gsco52millgon(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.gsco52millgon.class, new Modelgsco52millgon(),"gsco_52_millgon_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	AAR50TonHopper(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.AAR50TonHopper.class, new ModelAAR50TonHopper(),"AAR_50_ton_hopper_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	AAR70TonHopper(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.AAR70TonHopper.class, new ModelAAR70TonHopper(),"AAR_70_ton_hopper_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	gsco52millgon(gsco52millgon.class, new Modelgsco52millgon(),"gsco_52_millgon_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	AAR50TonHopper(AAR50TonHopper.class, new ModelAAR50TonHopper(),"AAR_50_ton_hopper_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	AAR70TonHopper(AAR70TonHopper.class, new ModelAAR70TonHopper(),"AAR_70_ton_hopper_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	MaPa35FootGondola(MaPa35FootGondola.class, new ModelMaPa35FootGondola(),"MaPa_35gondola_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
-	DOT11111000(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tanker.DOT11111000.class, new Model11000DOT111(),"dot11K_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	DOT11120600(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tanker.DOT11120600.class, new Model20600DOT111(),"dot206K_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	DOT11129080(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tanker.DOT11129080.class, new Model29080DOT111(),"dot290K_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	DOT11117600(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tanker.DOT11117600.class, new Model17600DOT111(),"17600galTank_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	NATX30600(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tanker.NATX30600.class, new ModelNATX30600(),"natx_30600_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	DOT11111000(DOT11111000.class, new Model11000DOT111(),"dot11K_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	DOT11120600(DOT11120600.class, new Model20600DOT111(),"dot206K_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	DOT11129080(DOT11129080.class, new Model29080DOT111(),"dot290K_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	DOT11117600(DOT11117600.class, new Model17600DOT111(),"17600galTank_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	NATX30600(NATX30600.class, new ModelNATX30600(),"natx_30600_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	gatc10000(GATC10000.class, new Modelgatc10000(),"gatc_10000_gal_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	DUPX39200(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tanker.DUPX39200.class, new ModelDUPX39200(),"dupx_39200_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	DUPX39200(DUPX39200.class, new ModelDUPX39200(),"dupx_39200_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
-	CoffinCar(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tanker.CoffinCar.class, new ModelCoffinCar(), "CoffinCar_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	CoffinCar(CoffinCar.class, new ModelCoffinCar(), "CoffinCar_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Skeleton(SkeletonLogCar.class, new ModelSkeletonLogCar(), "SkeletonLogCar_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	EarlyFlat(EarlyFlat.class, new ModelEarlyFlat(), "EarlyFlatCar", false, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	Gunderson89FootAutorack(Gunderson89ftAutorack.class, new ModelGunderson89FootAutorack(), "89ftAutorack_", true, new float[] { 0.0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Gunderson89FootFlat(Gunderson89ftFlat.class, new ModelGunderson89FootFlat(), "89ftFlat_", true, new float[] { 0.0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	StampedeRack(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.misc.StampedeRack.class, new ModelStampedeRack(), "cswr_stampederack_", true, new float[] { 0.0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	StampedeRack(StampedeRack.class, new ModelStampedeRack(), "cswr_stampederack_", true, new float[] { 0.0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	HuskyStackWellcar(HuskyStack2.class, new ModelHuskyStackWellcar(), "40FT_Husky_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	IngotPig(IngotPig.class, new ModelIngotPig(),"MoltenIngotPig_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -2253,17 +2254,17 @@ public enum RenderEnum
 	HBC1C(HBC1Cboose.class, new ModelHBC1C(),"HBC1C_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	HBC1B(HBC1Bboose.class, new ModelHBC1B(),"HBC1B_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	DRGWCaboose(DRGWboose.class, new ModelDRGW01400Caboose(),"BAP_DRGW_01400_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	ICC_Bobber(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.workcart.ICC_Bobber.class, new ModelICC_Bobber(),"icc_bobber_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	ICCBaywindowWP(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.workcart.ICCBaywindowWP.class, new ModelICCBaywindowWP(),"iccbaywindow_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	CA11(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.workcart.CA11.class, new ModelCA11(),"icc_ca11_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ICC_Bobber(ICC_Bobber.class, new ModelICC_Bobber(),"icc_bobber_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ICCBaywindowWP(ICCBaywindowWP.class, new ModelICCBaywindowWP(),"iccbaywindow_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	CA11(CA11.class, new ModelCA11(),"icc_ca11_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	WPShops600Series(WPShops600Series.class, new ModelWPShops600Series(),"wp680series_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	CDCScaboose(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.workcart.CDCScaboose.class, new ModelCDCScaboose(),"CDCScaboose_", true, new float[]{0F, 0.1675F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	CDCScaboose(CDCScaboose.class, new ModelCDCScaboose(),"CDCScaboose_", true, new float[]{0F, 0.1675F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	BigMeme(BigMeme.class, new ModelBigMeme(),"bigmeme_", true, new float[]{-1F, 0.1875F, 0F}, new float[] { 180F, 180F, 0F }, null, "", 0, null, "", null, 0, false),
-	BombCart(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.funny.BombCart.class, new ModelBombCart(), "payload_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	BombCart(BombCart.class, new ModelBombCart(), "payload_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Thanos(Thanos.class, new ModelLocoMinetrain(), "thanos", false, new float[] {-0.8F, -0.47F, 0.0F},  new float[] { 0F, 0F, 0F }, null, "", 0, null, "", null, 0, false),
-	TGVmobile( DieselTGVmobile.class,  new ModelTGVMobile(), "tgvmobile_Orange", false, new float[] {-1.5F, 0.2F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	HHgregg( com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselHHgregg.class,  new ModelHH660(), "hhgregg", false, new float[] {-1F, -0.1F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
+	TGVmobile(DieselTGVmobile.class,  new ModelTGVMobile(), "tgvmobile_Orange", false, new float[] {-1.5F, 0.2F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	HHgregg(DieselHHgregg.class,  new ModelHH660(), "hhgregg", false, new float[] {-1F, -0.1F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[]{2.0D, 1.35D, 0D});
 		}

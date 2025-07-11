@@ -43,6 +43,18 @@ public class BethgonII extends Freight implements IInventory  {
                         "loads/bethgon_load_rock", "Rock", 0, 2.95, 0, 0, 0,0) },
                 { new CargoSpecification(ModelBethgon_load.class,
                         "loads/bethgon_load_peterite", "Peterite", 0, 2.95, 0, 0, 0,0) },
+                { new CargoSpecification(ModelBethgon_load.class,
+                        "loads/Skinbethgon_loadDirt", "Dirt", 0, 2.95, 0, 0, 0,0) },
+                { new CargoSpecification(ModelBethgon_load.class,
+                        "loads/Skinbethgon_loadGravel", "Gravel", 0, 2.95, 0, 0, 0,0) },
+                { new CargoSpecification(ModelBethgon_load.class,
+                        "loads/Skinbethgon_loadPeagravel", "Pea Gravel", 0, 2.95, 0, 0, 0,0) },
+                { new CargoSpecification(ModelBethgon_load.class,
+                        "loads/Skinbethgon_loadBallast", "Ballast", 0, 2.95, 0, 0, 0,0) },
+                { new CargoSpecification(ModelBethgon_load.class,
+                        "loads/Skinbethgon_loadBallastPeagravel", "Ballasted Peagravel", 0, 2.95, 0, 0, 0,0) },
+                { new CargoSpecification(ModelBethgon_load.class,
+                        "loads/Skinbethgon_loadMarbleDust", "creth cocaiener", 0, 2.95, 0, 0, 0,0) },
         }));
     }
 
