@@ -818,7 +818,7 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                 if (player != null && player.length() > 1) {
                     tag.setString("theOwner", player);
                 }
-                if (color > 0) {
+                if (color != -1) {
                     tag.setInteger("trainColor", color);
                 }
             } else {
