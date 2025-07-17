@@ -68,6 +68,7 @@ public enum BlockIDs {
 	Racor36D_1(false,null),
 	Racor36D_2(false,null),
 	Racor36H(false,null),
+	Racor36H_2(false,null),
 
 	snowGravel(false,null),
     mtcVBCController(false,null ),
