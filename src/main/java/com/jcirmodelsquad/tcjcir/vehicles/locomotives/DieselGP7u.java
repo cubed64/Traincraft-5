@@ -82,11 +82,7 @@ public class DieselGP7u extends DieselTrain {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1 +0.0);
         }
     }
-    @Override
-    public void setDead() {
-        super.setDead();
-        isDead = true;
-    }
+
 
     @Override
     public void pressKey(int i) {

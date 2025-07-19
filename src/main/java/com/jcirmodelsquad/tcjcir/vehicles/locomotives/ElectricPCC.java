@@ -67,11 +67,7 @@ public class ElectricPCC extends ElectricTrain {
 		}
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public void pressKey(int i) {

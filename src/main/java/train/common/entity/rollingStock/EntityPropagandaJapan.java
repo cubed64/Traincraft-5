@@ -50,11 +50,7 @@ public class EntityPropagandaJapan extends EntityRollingStock {
 		return true;
 	}
 	
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 
 	@Override

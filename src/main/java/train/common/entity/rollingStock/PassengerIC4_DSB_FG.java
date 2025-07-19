@@ -29,11 +29,7 @@ public class PassengerIC4_DSB_FG extends EntityRollingStock implements IPassenge
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset(), posZ);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {

@@ -41,11 +41,7 @@ public class EntityTender_Southern1102 extends Tender implements IInventory {
 		prevPosZ = d2;
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public void onUpdate() {

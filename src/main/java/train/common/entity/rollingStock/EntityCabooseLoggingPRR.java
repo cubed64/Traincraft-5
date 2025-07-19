@@ -39,11 +39,7 @@ public class EntityCabooseLoggingPRR extends AbstractWorkCart implements IInvent
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset() + 0.15F, posZ);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public void pressKey(int i) {

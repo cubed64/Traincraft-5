@@ -35,11 +35,7 @@ public class ElectricAEM7 extends ElectricTrain {
 		TraincraftUtil.updateRider(this, 1.0, 0.0);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public void pressKey(int i) {

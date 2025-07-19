@@ -84,11 +84,7 @@ public class PCH100H extends HydrogenTrain{
             riddenByEntity.setPosition(posX +0, posY + getMountedYOffset() + riddenByEntity.getYOffset() + 0.5, posZ + 0.3);
         }
     }*/
-    @Override
-    public void setDead() {
-        super.setDead();
-        isDead = true;
-    }
+    
 
     @Override
     public void onUpdate() {

@@ -70,11 +70,7 @@ public class EntityLocoDieselIC4_DSB_MG extends DieselTrain {
 		}
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public void pressKey(int i) {

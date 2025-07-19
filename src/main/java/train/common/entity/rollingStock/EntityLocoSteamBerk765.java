@@ -42,11 +42,7 @@ public class EntityLocoSteamBerk765 extends SteamTrain {
 		TraincraftUtil.updateRider(this, -1.125, 0.375);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public void pressKey(int i) {

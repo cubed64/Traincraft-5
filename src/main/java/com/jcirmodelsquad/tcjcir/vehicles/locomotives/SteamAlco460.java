@@ -81,11 +81,7 @@ public class SteamAlco460 extends SteamTrain {
 		}
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public void pressKey(int i) {

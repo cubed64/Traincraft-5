@@ -29,11 +29,7 @@ public class EntityPassengerMILW extends EntityRollingStock implements IPassenge
 		TraincraftUtil.updateRider(this, 0.7, 0);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {

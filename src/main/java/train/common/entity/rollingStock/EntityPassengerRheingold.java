@@ -29,11 +29,7 @@ public class EntityPassengerRheingold extends EntityRollingStock implements IPas
 		TraincraftUtil.updateRider(this, -0.3, 0);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {

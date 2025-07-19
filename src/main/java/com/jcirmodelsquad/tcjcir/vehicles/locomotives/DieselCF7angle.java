@@ -113,11 +113,7 @@ public class DieselCF7angle extends DieselTrain {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1 +0.0);
         }
     }
-    @Override
-    public void setDead() {
-        super.setDead();
-        isDead = true;
-    }
+    
 
 
 

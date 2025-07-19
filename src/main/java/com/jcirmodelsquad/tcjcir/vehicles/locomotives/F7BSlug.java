@@ -40,11 +40,7 @@ public class F7BSlug extends LiquidTank implements IFluidHandler, INoFuelTransfe
 		prevPosZ = d2;
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public void onUpdate() {

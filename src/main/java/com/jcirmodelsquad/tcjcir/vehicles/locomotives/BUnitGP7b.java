@@ -38,11 +38,7 @@ public class BUnitGP7b extends LiquidTank implements IFluidHandler {
 		prevPosZ = d2;
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public void onUpdate() {

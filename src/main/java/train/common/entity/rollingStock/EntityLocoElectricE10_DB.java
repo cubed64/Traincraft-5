@@ -33,11 +33,7 @@ public class EntityLocoElectricE10_DB extends ElectricTrain {
 		TraincraftUtil.updateRider(this,  3.75, 0.05);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 
 	@Override
 	public void pressKey(int i) {

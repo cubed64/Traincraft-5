@@ -39,11 +39,7 @@ public class EntityPassengerRheingoldDining2  extends AbstractWorkCart implement
 		TraincraftUtil.updateRider(this, -0.1, 0);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 
 	@Override
 	public void pressKey(int i) {

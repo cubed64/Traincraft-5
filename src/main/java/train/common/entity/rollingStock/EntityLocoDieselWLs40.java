@@ -42,11 +42,7 @@ public class EntityLocoDieselWLs40 extends DieselTrain {
 		TraincraftUtil.updateRider(this, 0, 0.5f);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 
 	@Override
 	public void pressKey(int i) {

@@ -43,11 +43,7 @@ public class EntityBoxCartPRR extends Freight implements IInventory {
 		return (double) height * 0.0D - 0.30000001192092896D;
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 
 	@Override
 	protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {

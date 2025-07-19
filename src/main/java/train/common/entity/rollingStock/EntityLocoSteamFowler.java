@@ -43,11 +43,7 @@ public class EntityLocoSteamFowler extends SteamTrain {
 		TraincraftUtil.updateRider(this, -0.25, 0.25);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 
 	@Override
 	public void pressKey(int i) {

@@ -29,11 +29,7 @@ public class EntityPassengerRheingoldPanorama extends EntityRollingStock impleme
 		TraincraftUtil.updateRider(this,-0.5, 0.4);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {

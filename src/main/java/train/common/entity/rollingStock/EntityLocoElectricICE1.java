@@ -61,11 +61,7 @@ public class EntityLocoElectricICE1 extends ElectricTrain {
 		}
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 
 	@Override
 	public void pressKey(int i) {

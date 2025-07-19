@@ -55,11 +55,7 @@ public class S1BL extends AbstractControlCar
         }
     }
 
-    @Override
-    public void setDead() {
-        super.setDead();
-        isDead = true;
-    }
+    
 
     @Override
     public boolean interactFirst(EntityPlayer entityplayer) {

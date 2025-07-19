@@ -29,11 +29,7 @@ public class EntityPassenger2 extends EntityRollingStock implements IPassenger {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset(), posZ);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {

@@ -29,11 +29,7 @@ public class EntityFlatCart extends EntityRollingStock implements IPassenger {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset() + 0.4, posZ);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 	@Override
 	public void onUpdate(){
 		super.onUpdate();

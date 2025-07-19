@@ -43,11 +43,7 @@ public class EntityLocoSteam262T extends SteamTrain {
 	@Override
 	public boolean shouldRiderSit(){return false;}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public void pressKey(int i) {

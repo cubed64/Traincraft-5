@@ -38,11 +38,7 @@ public class EntityGWRBrakeVan extends AbstractWorkCart implements IInventory {
 	public void updateRiderPosition() {
 		TraincraftUtil.updateRider(this, -1, 0.2);
 	}
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {
 		playerEntity = entityplayer;

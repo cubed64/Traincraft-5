@@ -94,11 +94,7 @@ public class EntityBulkheadFlatCart extends Freight implements IInventory {
 		super.onUpdate();
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {

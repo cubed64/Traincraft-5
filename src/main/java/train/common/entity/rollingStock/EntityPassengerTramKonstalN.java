@@ -29,11 +29,7 @@ public class EntityPassengerTramKonstalN extends EntityRollingStock implements I
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset()+0.1F, posZ);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {

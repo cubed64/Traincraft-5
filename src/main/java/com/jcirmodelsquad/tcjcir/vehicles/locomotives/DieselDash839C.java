@@ -85,11 +85,7 @@ public class DieselDash839C extends DieselTrain {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1 +0.0);
         }
     }
-    @Override
-    public void setDead() {
-        super.setDead();
-        isDead = true;
-    }
+    
     @Override
     public void pressKey(int i) {
         if (i == 7 && riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {

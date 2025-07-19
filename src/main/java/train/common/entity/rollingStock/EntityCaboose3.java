@@ -27,11 +27,7 @@ public class EntityCaboose3 extends EntityRollingStock implements IPassenger {
 	public void updateRiderPosition() {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset(), posZ);
 	}
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {
 		playerEntity = entityplayer;

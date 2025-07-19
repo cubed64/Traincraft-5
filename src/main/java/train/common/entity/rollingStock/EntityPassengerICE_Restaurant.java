@@ -41,11 +41,7 @@ public class EntityPassengerICE_Restaurant extends EntityRollingStock implements
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset() + -0.1, posZ);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {

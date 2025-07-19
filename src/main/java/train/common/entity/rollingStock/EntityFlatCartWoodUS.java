@@ -78,11 +78,7 @@ public class EntityFlatCartWoodUS extends Freight implements IInventory{
 		return 1.74F;
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 
 	@Override
 	protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {

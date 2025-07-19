@@ -70,11 +70,7 @@ public class EntityLocoDieselCD742 extends DieselTrain {
 		}
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 
 	@Override
 	public void pressKey(int i) {

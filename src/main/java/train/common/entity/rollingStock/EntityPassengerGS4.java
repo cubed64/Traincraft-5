@@ -31,11 +31,7 @@ public class EntityPassengerGS4 extends EntityRollingStock implements IPassenger
 		}
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {

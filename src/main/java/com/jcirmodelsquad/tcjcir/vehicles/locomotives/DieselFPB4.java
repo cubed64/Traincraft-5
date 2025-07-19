@@ -78,11 +78,7 @@ public class DieselFPB4 extends DieselTrain {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
         }
     }
-    @Override
-    public void setDead() {
-        super.setDead();
-        isDead = true;
-    }
+
 
     @Override
     public void pressKey(int i) {

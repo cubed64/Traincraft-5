@@ -39,11 +39,7 @@ public class EntityFreightCartUS extends Freight implements IInventory {
 		prevPosZ = d2;
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {

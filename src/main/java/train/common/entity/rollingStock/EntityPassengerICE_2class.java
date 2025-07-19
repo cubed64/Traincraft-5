@@ -41,11 +41,7 @@ public class EntityPassengerICE_2class extends EntityRollingStock implements IPa
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset() + 0.2, posZ);
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {

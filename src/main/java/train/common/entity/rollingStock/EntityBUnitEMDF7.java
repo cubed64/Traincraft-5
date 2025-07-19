@@ -42,11 +42,7 @@ public class EntityBUnitEMDF7 extends LiquidTank  implements IFluidHandler, INoF
 		prevPosZ = d2;
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+	
 
 	@Override
 	public void onUpdate() {

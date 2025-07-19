@@ -75,11 +75,7 @@ public class PCH130Commute2 extends ElectricTrain implements IAT2Compatible {
         }
     }
 
-    @Override
-    public void setDead() {
-        super.setDead();
-        isDead = true;
-    }
+    
 
     @Override
     public void pressKey(int i) {

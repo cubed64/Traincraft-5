@@ -39,11 +39,7 @@ public class EntityFreightHeavyweightBaggage extends Freight implements IInvento
 		prevPosZ = d2;
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {

@@ -31,11 +31,7 @@ public class EntityPassengerGS4_Observatory extends EntityRollingStock implement
 		}
 	}
 
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
+
 
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {
