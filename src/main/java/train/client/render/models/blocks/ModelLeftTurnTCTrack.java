@@ -28,8 +28,8 @@ public class ModelLeftTurnTCTrack extends ModelBase {
 	public ModelLeftTurnTCTrack() {
 		model1XLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_1x.obj"));
 		modelMediumLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_medium.obj"));
-		modelLargeLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_big.obj"));
-		modelVeryLargeLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_very_big.obj"));
+		modelLargeLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_5x.obj"));
+		modelVeryLargeLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_10x.obj"));
 		modelSuperLargeLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_super_big.obj"));
 		model29XLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_29x.obj"));
 		model32XLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_32x.obj"));
@@ -118,16 +118,16 @@ public class ModelLeftTurnTCTrack extends ModelBase {
 				switch (facing)
 				{
 					case 3:
-						GL11.glTranslatef(-5.5f, 0.0f, 1.54f);
+						GL11.glTranslatef(-5.5f,0,1.5f);
 						break;
 					case 1:
-						GL11.glTranslatef(4.5f, 0.0f, -0.455f);
+						GL11.glTranslatef(4.5f,0,-0.5f);
 						break;
 					case 2:
-						GL11.glTranslatef(-1.5f, 0.0f, -4.469f);
+						GL11.glTranslatef(-1.5f,0,-4.5f);
 						break;
 					default:
-						GL11.glTranslatef(0.5f, 0.0f, 5.54f);
+						GL11.glTranslatef(0.5f,0,5.5f);
 						break;
 				}
 				this.renderVeryLarge();
@@ -137,16 +137,16 @@ public class ModelLeftTurnTCTrack extends ModelBase {
 				switch (facing)
 				{
 					case 3:
-						GL11.glTranslatef(-10.0f, 0.0f, 2.0f);
+						GL11.glTranslatef(-5.5f,0,1.5f);
 						break;
 					case 1:
-						GL11.glTranslatef(0.0f, 0.0f, 0.0f);
+						GL11.glTranslatef(4.5f,0,-0.5f);
 						break;
 					case 2:
-						GL11.glTranslatef(-6.0f, 0.0f, -4.0f);
+						GL11.glTranslatef(-1.5f,0,-4.5f);
 						break;
 					default:
-						GL11.glTranslatef(-4.0f, 0.0f, 6.0f);
+						GL11.glTranslatef(0.5f,0,5.5f);
 						break;
 				}
 				this.renderLarge();

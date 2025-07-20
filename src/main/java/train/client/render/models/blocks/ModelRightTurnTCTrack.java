@@ -28,8 +28,8 @@ public class ModelRightTurnTCTrack extends ModelBase
 	{
 		model1XRightTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_1x.obj"));
 		modelMediumRightTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_medium.obj"));
-		modelLargeRightTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_big.obj"));
-		modelVeryLargeRightTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_very_big.obj"));
+		modelLargeRightTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_5x.obj"));
+		modelVeryLargeRightTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_10x.obj"));
 		modelSuperLargeRightTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_super_big.obj"));
 		model29XRightTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_29x.obj"));
 		model32XRightTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track_curve_32x.obj"));
@@ -104,12 +104,12 @@ public class ModelRightTurnTCTrack extends ModelBase
 				break;
 			case "very_large":
 			case "embedded_very_large":
-				GL11.glTranslatef(8.5f, 0.0f, 9.54f);
+				GL11.glTranslatef(8.5f, 0.0f, 9.50f);
 				this.renderVeryLarge();
 				break;
 			case "large":
 			case "embedded_large":
-				GL11.glTranslatef(-1.0f, 0.0f, 5.0f);
+				GL11.glTranslatef(3.5f, 0.0f, 4.5f);
 				this.renderLarge();
 				break;
 			case "medium":
