@@ -46,9 +46,7 @@ public class TileTCRail extends TileEntity {
 	/** stores the latest redstone state */
 	public boolean previousRedstoneState;
 	public boolean canTypeBeModifiedBySwitch = false;
-	private boolean manualOverride = false;
-	private int updateTicks;
-	private int updateTicks2;
+
 	public Item		idDrop;
 	private static final float f = 0.125F;
 	public boolean hasRotated = false;
@@ -188,6 +186,12 @@ public class TileTCRail extends TileEntity {
 	}
 
 	@Override
+	public boolean canUpdate()
+	{
+		return false;
+	}
+
+	@Override
 	public void updateEntity()
 	{
 		return;
@@ -207,6 +211,13 @@ public class TileTCRail extends TileEntity {
 	@SideOnly(Side.CLIENT)
 	public AxisAlignedBB getRenderBoundingBox()
 	{
+		EnumTracks track = getTrackType();
+
+		if (track == null)
+		{
+			return super.getRenderBoundingBox();
+		}
+
 		AxisAlignedBB bb = INFINITE_EXTENT_AABB;
 		Block type = getBlockType();
 		if (type == BlockIDs.tcRail.block )
@@ -282,7 +293,6 @@ public class TileTCRail extends TileEntity {
 		hasModel = nbt.getBoolean("hasModel");
 		switchActive = nbt.getBoolean("switchActive");
 		canTypeBeModifiedBySwitch = nbt.getBoolean("canTypeBeModifiedBySwitch");
-		manualOverride = nbt.getBoolean("manualOverride");
 		idDrop = Item.getItemById(nbt.getInteger("idDrop"));
 		hasRotated = nbt.getBoolean("hasRotated");
 		previousRedstoneState = nbt.getBoolean("previousRedstoneState");
@@ -317,7 +327,6 @@ public class TileTCRail extends TileEntity {
 		nbt.setBoolean("hasModel", hasModel);
 		nbt.setBoolean("switchActive", switchActive);
 		nbt.setBoolean("canTypeBeModifiedBySwitch", canTypeBeModifiedBySwitch);
-		nbt.setBoolean("manualOverride", manualOverride);
 		nbt.setBoolean("hasRotated", hasRotated);
 		nbt.setInteger("idDrop", Item.getIdFromItem(idDrop));
 		nbt.setBoolean("previousRedstoneState", previousRedstoneState);
