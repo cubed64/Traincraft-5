@@ -2319,6 +2319,17 @@ public class ModelSD40 extends ModelConverter //Same as Filename
 			GL11.glTranslated(-3.45F, 0.0F, 0);
 			flexMid.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 23 ) {
+			//hnxr
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexcoil_c2h_grey.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-1.725F, 0.0F, 0F);
+			flexMid.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(-3.45F, 0.0F, 0);
+			flexMid.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
 		} else {
 		//black regular truck
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_c2h_black.png"));

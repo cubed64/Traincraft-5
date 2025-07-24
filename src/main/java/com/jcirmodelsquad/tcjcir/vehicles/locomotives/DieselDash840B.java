@@ -21,10 +21,10 @@ public class DieselDash840B extends DieselTrain {
         textureDescriptionMap.put(1, "CSXT (YN3)");
         textureDescriptionMap.put(2, "ATSF (Freightbonnet)");
         textureDescriptionMap.put(3, "BNSF");
-        textureDescriptionMap.put(4, "Conrail");
+        textureDescriptionMap.put(4, "CR");
         textureDescriptionMap.put(5, "PDR");
-        textureDescriptionMap.put(6, "Galesburg Clinton & Midland");
-        textureDescriptionMap.put(7, "");
+        textureDescriptionMap.put(6, "GC&M");
+        textureDescriptionMap.put(7, "NS");
         textureDescriptionMap.put(8, "");
         textureDescriptionMap.put(9, "");
 
