@@ -97,18 +97,24 @@ public class PathFindingHelper
         double norm = Math.sqrt(entityMinecart.motionX * entityMinecart.motionX + entityMinecart.motionZ * entityMinecart.motionZ);
         double distanceNorm;
 
-        if (meta == 6) {
-            exitX = (entityMinecart.motionX > 0) ? cx + length + X_OFFSET : cx - X_OFFSET;
-            exitZ = (entityMinecart.motionX > 0) ? cz - length + X_OFFSET : cz + Z_OFFSET;
-        } else if (meta == 4) {
-            exitX = (entityMinecart.motionX > 0) ? cx + Z_OFFSET : cx - (length - X_OFFSET);
-            exitZ = (entityMinecart.motionX > 0) ? cz - X_OFFSET : cz + (length + X_OFFSET);
-        } else if (meta == 5) {
-            exitX = (entityMinecart.motionX > 0) ? cx + Z_OFFSET : cx - (length + X_OFFSET);
-            exitZ = (entityMinecart.motionX > 0) ? cz + Z_OFFSET : cz - (length + X_OFFSET);
-        } else if (meta == 7) {
-            exitX = (entityMinecart.motionX > 0) ? cx + (length + X_OFFSET) : cx - X_OFFSET;
-            exitZ = (entityMinecart.motionX > 0) ? cz + (length + X_OFFSET) : cz - X_OFFSET;
+        switch (meta)
+        {
+            case 6:
+                exitX = (entityMinecart.motionX > 0) ? cx + length + X_OFFSET : cx - X_OFFSET;
+                exitZ = (entityMinecart.motionX > 0) ? cz - length + X_OFFSET : cz + Z_OFFSET;
+            break;
+            case 4:
+                exitX = (entityMinecart.motionX > 0) ? cx + Z_OFFSET : cx - (length - X_OFFSET);
+                exitZ = (entityMinecart.motionX > 0) ? cz - X_OFFSET : cz + (length + X_OFFSET);
+            break;
+            case 5:
+                exitX = (entityMinecart.motionX > 0) ? cx + Z_OFFSET : cx - (length + X_OFFSET);
+                exitZ = (entityMinecart.motionX > 0) ? cz + Z_OFFSET : cz - (length + X_OFFSET);
+            break;
+            case 7:
+                exitX = (entityMinecart.motionX > 0) ? cx + (length + X_OFFSET) : cx - X_OFFSET;
+                exitZ = (entityMinecart.motionX > 0) ? cz + (length + X_OFFSET) : cz - X_OFFSET;
+            break;
         }
 
         directionX = exitX - entityMinecart.posX;
@@ -153,14 +159,22 @@ public class PathFindingHelper
         abstractTrains.posY = abstractTrains.boundingBox.minY + (double) abstractTrains.yOffset - (double) abstractTrains.ySize;
         abstractTrains.posZ = (abstractTrains.boundingBox.minZ + abstractTrains.boundingBox.maxZ) / 2.0D;
         normalizedSpeed = getSlopeAdjustedSpeed((AbstractTrains) abstractTrains, normalizedSpeed, slopeAngle);
-        if (meta == 2 || meta == 0) {
-            abstractTrains.motionX = 0.0D;
-            abstractTrains.motionY = 0.0D;
-            abstractTrains.motionZ = Math.copySign(normalizedSpeed, abstractTrains.motionZ);
-        } else {
-            abstractTrains.motionX = Math.copySign(normalizedSpeed, abstractTrains.motionX);
-            abstractTrains.motionY = 0.0D;
-            abstractTrains.motionZ = 0.0D;
+
+        switch (meta)
+        {
+            case 2:
+            case 0:
+                abstractTrains.motionX = 0.0D;
+                abstractTrains.motionY = 0.0D;
+                abstractTrains.motionZ = Math.copySign(normalizedSpeed, abstractTrains.motionZ);
+            break;
+
+            default:
+            {
+                abstractTrains.motionX = Math.copySign(normalizedSpeed, abstractTrains.motionX);
+                abstractTrains.motionY = 0.0D;
+                abstractTrains.motionZ = 0.0D;
+            }
         }
     }
 
