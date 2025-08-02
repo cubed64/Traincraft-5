@@ -483,7 +483,7 @@
   "skookum_notch8": {"category": "master", "sounds": [{"name": "skookum_notch8", "stream":  true}]},
   "steam_idle2": {"category": "master", "sounds": [{"name": "steam_idle2", "stream":  true}]},
 
-
+  "oh_no_shits": {"category": "master", "sounds": [{"name": "oh_no_shits","stream": true}]},
 
   "mtc_speedchange": {"category": "master", "sounds": [{"name": "speedchange","stream": false}]},
   "mtc_overspeed": {"category": "master", "sounds": [{"name": "overspeed","stream": false}]}

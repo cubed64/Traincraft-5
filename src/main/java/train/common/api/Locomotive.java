@@ -668,12 +668,24 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         }
     }
 
-    public void soundHorn() {
-        for (EnumSounds sounds : EnumSounds.values()) {
             if (sounds.getEntityClass() != null && !sounds.getHornString().equals("") && sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0) {
-                if (sounds.getHorns() != null) {
-                    System.out.println(sounds.getHorns()[this.acceptedColors.indexOf(this.getColor())]);
-                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getHorns()[this.acceptedColors.indexOf(this.getColor())], sounds.getHornVolume(), 1.0F);
+    public void soundHorn()
+    {
+        for (EnumSounds sounds : EnumSounds.values())
+        {
+            if (sounds.getEntityClass() != null && !sounds.getHornString().equals("") && sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0)
+            {
+                if (sounds.getHorns() != null)
+                {
+                    if (sounds.getHorns().length < this.acceptedColors.indexOf(this.getColor()))
+                    {
+                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "oh_no_shits", sounds.getHornVolume(), 1.0F);
+                    }
+                    else
+                    {
+                        System.out.println(sounds.getHorns()[this.acceptedColors.indexOf(this.getColor())]);
+                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getHorns()[this.acceptedColors.indexOf(this.getColor())], sounds.getHornVolume(), 1.0F);
+                    }
                 }
                 worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + sounds.getHornString(), sounds.getHornVolume(), 1.0F);
                 whistleDelay = 65;
