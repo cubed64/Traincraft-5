@@ -24,6 +24,7 @@ public class SBMS extends AbstractTankSlug
         textureDescriptionMap.put(11, "TTLC (Pine Green)");
         textureDescriptionMap.put(12, "TTLC (Red Forest Brown)");
         textureDescriptionMap.put(13, "Galesburg Clinton & Midland");
+        textureDescriptionMap.put(14, "UPNS haha lol just kidding its just regular NS");
     }
 
     public SBMS(World world, double d, double d1, double d2) {

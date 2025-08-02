@@ -711,7 +711,6 @@ public enum ItemIDs {
 
 	minecartSlugMA("ItemRollingStock", "slugma", DIESEL, 2),
 	minecartF7BSlug("ItemRollingStock", "f7b", DIESEL, 3),
-	//minecartS1BL("ItemRollingStock", "s1bl", 3),
 	minecartSMSC1("ItemRollingStock", "smsc1", DIESEL, 5),
 	minecartCEEslug("ItemRollingStock", "ceeslug", DIESEL, 4),
 	minecartSBMS("ItemRollingStock", "sbms", DIESEL, 4),

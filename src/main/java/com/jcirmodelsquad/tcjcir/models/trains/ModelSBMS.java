@@ -1102,7 +1102,7 @@ public class ModelSBMS extends ModelConverter //Same as Filename
 	{
 		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
-		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 13244||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3247) {
+		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 0||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3247) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb2_new_black_a.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.54, 0.0, 0);

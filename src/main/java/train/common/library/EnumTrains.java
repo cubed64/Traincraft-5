@@ -302,10 +302,9 @@ public enum EnumTrains implements IEnumTrains
 
 	SlugMA("SlugMA", SlugMA.class, ItemIDs.minecartSlugMA.item, "slug", 0, 0, 7, 0, 0, 0, 0, 0, 18000, TraincraftUtil.getBytesFromColors(new String[] {"White", "Skin16", "Magenta", "Blue", "Yellow"}), 16, 0, (new String[] {"Reduces train weight when fueled"})),
 	F7BSlug("F7BSlug", BUnitF7.class, ItemIDs.minecartF7BSlug.item, "slug", 0, 0, 7, 0, 0, 0, 0, 0, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Skin19"}), 18, 0, (new String[] {"Reduces train weight when fueled"})),
-	//S1BL("S1BL", S1BL.class, ItemIDs.minecartS1BL.item, "road slug", 0, 0, 8, 0, 0, 0, 0, 0, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan"}), 10, 0, (new String[] {"WIP. Reduces train weight. Is also equipped to 'lead' consists"})),
 	SMSC1("SMSC1", SMSC1.class, ItemIDs.minecartSMSC1.item, "slug", 0, 0, 8, 0, 0, 0, 0, 0, 16000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan"}), 12, 0, (new String[] {"It'le pull your socks off, if it wasnt busy having frame sag"})),
 	CEEslug("CEEslug", ElectricCEEslug.class, ItemIDs.minecartCEEslug.item, "'slug'", 3000, 113, 0, 15, 0, 200, 0.89, 0.91, 0, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Cyan", "Skin16", "LightGrey"}), 14, -3.1),
-	SBMS("SBMS", SBMS.class, ItemIDs.minecartSBMS.item, "slug", 0, 0, 7, 0, 0, 0, 0, 0, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "Green", "LightGrey", "Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24", "Skin25", "Skin26", "Pink"}), 12, 0, (new String[] {"Reduces train weight when fueled"})),
+	SBMS("SBMS", SBMS.class, ItemIDs.minecartSBMS.item, "slug", 0, 0, 7, 0, 0, 0, 0, 0, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "Green", "LightGrey", "Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24", "Skin25", "Skin26", "Pink", "Black"}), 12, 0, (new String[] {"Reduces train weight when fueled"})),
 
 	//based electrics//
 	EF1("EF1",ElectricEF1.class, ItemIDs.minecartEF1.item, "electric", 1720, 64, 0, 55, 0, 200, 0.65, 0.75, 12500, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Yellow", "Red", "Green", "Black", "Grey"}), 10, -3.4375),
