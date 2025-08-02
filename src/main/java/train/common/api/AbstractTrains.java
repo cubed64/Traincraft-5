@@ -126,10 +126,10 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	 */
 	public String trainType = "";
 
-	/**
-	 * player who destroyed the train
-	 */
-	protected String trainDestroyer = "";
+	///**
+	// * player who destroyed the train
+	// */
+	//protected String trainDestroyer = "";
 
 	/**
 	 * unique ID for a train. ID is create when item is created. This allows to
@@ -183,7 +183,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		acceptedColors = new ArrayList<Integer>();
 		dataWatcher.addObject(6, trainType);
 		dataWatcher.addObject(7, trainOwner);
-		dataWatcher.addObject(8, trainDestroyer);
+		//dataWatcher.addObject(8, trainDestroyer);
 		dataWatcher.addObject(9, trainName);
 		dataWatcher.addObject(10, numberOfTrains);
 		dataWatcher.addObject(11, uniqueID);
