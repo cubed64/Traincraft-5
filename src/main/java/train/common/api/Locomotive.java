@@ -668,7 +668,6 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         }
     }
 
-            if (sounds.getEntityClass() != null && !sounds.getHornString().equals("") && sounds.getEntityClass().equals(this.getClass()) && whistleDelay == 0) {
     public void soundHorn()
     {
         for (EnumSounds sounds : EnumSounds.values())
