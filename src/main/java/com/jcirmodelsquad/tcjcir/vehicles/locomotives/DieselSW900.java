@@ -29,6 +29,7 @@ public class DieselSW900 extends DieselTrain {
         textureDescriptionMap.put(8, "Wesser Valley");
         textureDescriptionMap.put(9, "Falcon Area Rapid Transit MOW");
         textureDescriptionMap.put(10, "Sacramento Northern (Ex FNCC)");
+        textureDescriptionMap.put(11, "SP Tigerstripe");
     }
     public DieselSW900(World world, double d, double d1, double d2){
         this(world);

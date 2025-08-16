@@ -777,6 +777,8 @@ public enum ItemIDs {
 	minecartACFRailboxCushioned("ItemRollingStock", "ACFRailboxCushioned", FREIGHT, 5),
 	minecartEvans5100("ItemRollingStock", "Evans_5100_icon", FREIGHT, 5),
 	minecart1912WoodBoxcar("ItemRollingStock", "1912WoodBoxcar", FREIGHT, 3),
+	minecartPS_40t_ss_box("ItemRollingStock", "PS_40t_ss_box_icon", FREIGHT, 3),
+	minecartSP_B50("ItemRollingStock", "SP_B50_icon", FREIGHT, 3),
 
 	minecartVersaLongi("ItemRollingStock", "versalongi", FREIGHT, 4),
 	minecartVersaTrans("ItemRollingStock", "versatrans", FREIGHT, 4),
@@ -903,6 +905,8 @@ public enum ItemIDs {
 	minecartBuddATSF34SeatParlorObservation("ItemRollingStock", "BuddATSF34SeatParlorObservation", PASSENGER, 3),
 	minecartBuddATSF58SeatCoachObservation("ItemRollingStock", "BuddATSF34SeatParlorObservation", PASSENGER,3),
 	minecartPSATSF50SeatCoachObservation("ItemRollingStock", "PSATSF50SeatCoachObservation", PASSENGER, 3),
+
+	minecartACF_SP_98seatcoach("ItemRollingStock", "ACF_SP_98seatcoach_icon", PASSENGER, 64),
 
 	minecartACFUPRPO60("ItemRollingStock", "ACFUPRPO60", PASSENGER, 3),
 

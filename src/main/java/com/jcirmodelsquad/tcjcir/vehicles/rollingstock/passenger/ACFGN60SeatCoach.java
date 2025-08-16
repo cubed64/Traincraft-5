@@ -23,6 +23,8 @@ public class ACFGN60SeatCoach extends AbstractPassengerCar
 		textureDescriptionMap.put(13, "FNCC");
 		textureDescriptionMap.put(14, "FNCC (With Conductor's Booth, Royal Solar)");
 		textureDescriptionMap.put(15, "FNCC (Royal Solar)");
+		textureDescriptionMap.put(16, "N&EP As-Delivered");
+		textureDescriptionMap.put(17, "N&EP Modernized (70s)");
 	}
 
 	public ACFGN60SeatCoach(World world, double posX, double posY, double posZ)

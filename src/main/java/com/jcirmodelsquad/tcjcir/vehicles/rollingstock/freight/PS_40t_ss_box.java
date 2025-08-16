@@ -1,6 +1,5 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight;
 
-import com.jcirmodelsquad.tcjcir.models.loads.ModelAAR70TonHopperLoad;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -11,31 +10,26 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.Freight;
-import train.common.entity.CargoManager;
-import train.common.entity.CargoSpecification;
 import train.common.library.GuiIDs;
 
-public class AAR70TonHopper extends Freight implements IInventory  {
+public class PS_40t_ss_box extends Freight implements IInventory {
     public int freightInventorySize;
     public int numFreightSlots;
-    public AAR70TonHopper(World world) {
+    public PS_40t_ss_box(World world) {
         super(world);
         initFreightCart();
-        textureDescriptionMap.put(0, "NKP");
-        textureDescriptionMap.put(1, "GC&M");
-        textureDescriptionMap.put(2, "AGW");
-        textureDescriptionMap.put(3, "TNO As-Delivered");
-        textureDescriptionMap.put(4, "TNO Later");
-
-        setCargoManager(new CargoManager(new CargoSpecification[][] {
-                { new CargoSpecification(ModelAAR70TonHopperLoad.class,
-                        "loads/AAR_70Ton_hopper_load_coal", "Coal", 0, 3.05, 0) },
-                { new CargoSpecification(ModelAAR70TonHopperLoad.class,
-                        "loads/AAR_70Ton_hopper_load_gravel", "Gravel", 0, 3.05, 0) }
-        }));
+        textureDescriptionMap.put(0, "Western Pacific (Later)");
+        textureDescriptionMap.put(1, "Western Pacific (As-Delivered)");
+        textureDescriptionMap.put(2, "UNCLX");
+        textureDescriptionMap.put(3, "Generic Brown");
+        textureDescriptionMap.put(4, "Blank Red");
+        textureDescriptionMap.put(5, "CDC&S");
+        textureDescriptionMap.put(6, "E&ARR");
+        textureDescriptionMap.put(7, "WPSR (Updated)");
+        textureDescriptionMap.put(8, "WPSR (As-Delivered)");
     }
 
-    public AAR70TonHopper(World world, double d, double d1, double d2){
+    public PS_40t_ss_box(World world, double d, double d1, double d2){
         this(world);
         setPosition(d, d1 + yOffset, d2);
         motionX = 0.0D;
@@ -91,7 +85,7 @@ public class AAR70TonHopper extends Freight implements IInventory  {
 
     @Override
     public String getInventoryName() {
-        return "AAR 70 ton hopper";
+        return "Pullman Mfg 40 Ton Single-Sheath Boxcar";
     }
 
     @Override
@@ -102,7 +96,7 @@ public class AAR70TonHopper extends Freight implements IInventory  {
     @Override
     public boolean interactFirst(EntityPlayer entityplayer) {
         if ((super.interactFirst(entityplayer))) {
-            return false;
+            return true;
         }
         entityplayer.openGui(Traincraft.instance, GuiIDs.FREIGHT, worldObj, this.getEntityId(), -1, (int) this.posZ);
         return true;
@@ -115,7 +109,7 @@ public class AAR70TonHopper extends Freight implements IInventory  {
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
-        return 2.275F;
+        return 2.15F;
     }
 
     @Override
