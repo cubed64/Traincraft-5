@@ -2086,6 +2086,8 @@ public enum RenderEnum
 	ACFRailboxCushioned(ACFRailboxCushioned.class, new ModelACFRailboxCushioned(),"ACFRailboxCushioned_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Evans5100(Evans5100.class, new ModelEvans5100(),"Evans_5100_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Wood1912Boxcar(Wood1912Boxcar.class, new Model1912WoodBoxcar(),"1912_wood_boxcar_", true, new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PS_40t_ss_box(PS_40t_ss_box.class, new ModelPS_40t_ss_box(),"ps_40t_ss_box_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	SP_B50(SP_B50.class, new ModelSP_B50(),"sp_b_50_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	VersaLongi(VersaLongi.class, new ModelVersaLongi(),"versa_longi_", true,  new float[]{-0F, 0.10F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	VersaTrans(VersaTrans.class, new ModelVersaTrans(),"versa_trans_", true, new float[]{-0F, 0.10F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -2211,7 +2213,9 @@ public enum RenderEnum
 	BuddATSF58SeatCoach_Observation(BuddATSF58SeatCoach_Observation.class, new ModelBuddATSF50SeatCoach_Observation(), "Budd_lightweight_ATSF50SeatCoach_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSATSF50SeatCoach_Observation(PSATSF50SeatCoach_Observation.class, new ModelPSATSF50SeatCoach_Observation(), "PS_lightweight_ATSF50SeatCoach_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
-	ACFUPRPO60(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.ACFUPRPO60.class, new ModelACFUPRPO60(), "AC&F_lightweight_UPRPO60_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACF_SP_98seatcoach(ACF_SP_98seatcoach.class, new ModelACF_SP_98seatcoach(), "acf_sp_72_c_1_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+
+	ACFUPRPO60(ACFUPRPO60.class, new ModelACFUPRPO60(), "AC&F_lightweight_UPRPO60_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	BuddDome54SeatCoach(BuddDome54SeatCoach.class, new ModelBuddDome54SeatCoach(), "Budd_lightweight_Dome54SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 

@@ -26,6 +26,7 @@ public class DieselS12 extends DieselTrain {
         textureDescriptionMap.put(5, "FMSR");
         textureDescriptionMap.put(6, "OC&G (Ex FMSR 164)");
         textureDescriptionMap.put(7, "Monongahela");
+        textureDescriptionMap.put(8, "SP Tigerstripe");
     }
     public DieselS12(World world, double d, double d1, double d2){
         this(world);

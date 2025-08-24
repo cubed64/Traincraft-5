@@ -1503,6 +1503,8 @@ item.tc:minecartACFRailbox.name=ACF Railbox Boxcar
 item.tc:minecartACFRailboxCushioned.name=ACF Railbox Boxcar (Cushioned)
 item.tc:minecartEvans5100.name=Evans-USRE 5100 Cu Ft Boxcar
 item.tc:minecart1912WoodBoxcar.name=1912 Wood Sheathed Boxcar
+item.tc:minecartPS_40t_ss_box.name=1916 Pullman MFG 40-Ton Boxcar
+item.tc:minecartSP_B50.name=SP B-50-15 and B-50-16 Boxcar
 
 
 entity.tc.PS140.name=Pullman Standard 40' Boxcar
@@ -1525,6 +1527,8 @@ entity.tc.ACF Railbox.name=ACF Railbox Boxcar
 entity.tc.ACF Railbox (Cushioned).name=ACF Railbox Boxcar (Cusioned)
 entity.tc.Evans5100.name=Evans-USRE 5100 Cu Ft Boxcar
 entity.tc.1912WoodBoxcar.name=1912 Wood Sheathed Boxcar
+entity.tc.PS_40t_ss_box.name=1916 Pullman MFG 40-Ton Boxcar
+entity.tc.SP_B50.name=SP B-50-15 and B-50-16
 
 item.tc:minecartVersaLongi.name=Versaflood Longitudinal Hopper
 item.tc:minecartVersaTrans.name=Versaflood Transverse Hopper
@@ -1680,6 +1684,8 @@ item.tc:minecartPSCNW20SeatCoachLounge_1959.name=Pullman Standard CNW 20 Seat Co
 item.tc:minecartPSCNWCommuterLounge.name=Pullman Standard CNW Commuter Lounge
 item.tc:minecartPSCNW27SeatParlor_Observation.name=Pullman Standard CNW 27 Seat Parlor-Observation
 
+item.tc:minecartACF_SP_98seatcoach.name=AC&F SP 98 Seat Coach
+
 item.tc:minecartACFUPRPO60.name=American Car & Foundry RPO(60')
 
 item.tc:minecartBuddDome54SeatCoach.name=Budd Dome-54 Seat Coach
@@ -1791,6 +1797,8 @@ entity.tc.PS CNW Baggage-LC-Diner.name=Pullman Standard CNW Baggage-Lunch Counte
 entity.tc.PS CNW 20 Seat Coach-Lounge (1959).name=Pullman Standard CNW 20 Seat Coach-Lounge (1959 version)
 entity.tc.PS CNW Commuter Lounge.name=Pullman Standard CNW Commuter Lounge
 entity.tc.PS CNW 27 Seat Parlor-Observation.name=Pullman Standard CNW 27 Seat Parlor-Observation
+
+entity.tc.AC&F SP 98 Seat Coach.name=AC&F SP 98 Seat Coach
 
 entity.tc.AC&F UP RPO(60').name=American Car & Foundry RPO(60')
 entity.tc.Budd Dome-54 Seat Coach.name=Budd Dome-54 Seat Coach
