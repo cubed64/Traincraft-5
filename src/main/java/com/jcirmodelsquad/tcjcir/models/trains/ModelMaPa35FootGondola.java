@@ -504,10 +504,10 @@ public class ModelMaPa35FootGondola extends ModelConverter //Same as Filename
 		}
 		GL11.glPushMatrix();
 		GL11.glScalef(1,1,1f);
-		GL11.glTranslated(-1.09,-0.0,-0.0);
+		GL11.glTranslated(-1.0,-0.0,-0.0);
 		bogie.render(entity,f,f1,f2,f3,f4,f5);
 
-		GL11.glTranslated(2.18,-0.0,0.00);
+		GL11.glTranslated(2.0,-0.0,0.00);
 		bogie.render(entity,f,f1,f2,f3,f4,f5);
 		GL11.glPopMatrix();
 

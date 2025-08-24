@@ -10,6 +10,7 @@ import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
+import train.client.renderhelper.ModelRenderHelper;
 import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
@@ -539,24 +540,7 @@ public class ModelPFEr_40_23Reefer extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
-		for(int i = 0; i < 122; i++)
-		{
-			//int cargo = ((Freight) entity).getAmmountOfCargo();
-
-
-			if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("cull")) {
-				GL11.glDisable(GL11.GL_CULL_FACE);
-				bodyModel[i].render(f5);
-				GL11.glEnable(GL11.GL_CULL_FACE);
-			/*}else if (bodyModel[i].boxName != null && bodyModel[i].boxName.contains("load")) {
-				if (cargo > 0) {
-					bodyModel[i].render(f5);
-				}
-				if (cargo == 0) { }*/
-			} else {
-				bodyModel[i].render(f5);
-			}
-		}
+		ModelRenderHelper.renderModelWithStandardFreightRollingStock(bodyModel, entity, f5);
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 12345) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/Bettendorf_Truck_small_PRR_FCC1940s.png"));
 			GL11.glPushMatrix();
