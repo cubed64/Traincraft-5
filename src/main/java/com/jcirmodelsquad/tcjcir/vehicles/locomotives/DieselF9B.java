@@ -127,7 +127,7 @@ public class DieselF9B extends DieselTrain {
     }
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 0.89F;
+    public float getOptimalDistance(EntityMinecart cart) { return 0.87F;
     }
 
     @Override
