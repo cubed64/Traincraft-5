@@ -30,6 +30,8 @@ public class DieselSW1200 extends DieselTrain {
         textureDescriptionMap.put(9, "Fremont & Elkhorn Valley Railroad");
         textureDescriptionMap.put(10, "West Creek Pacific");
         textureDescriptionMap.put(11, "Blandsville & Blankerston");
+        textureDescriptionMap.put(12, "JRN");
+        textureDescriptionMap.put(13, "JRN (Yellow Cab)");
     }
     public DieselSW1200(World world, double d, double d1, double d2){
         this(world);

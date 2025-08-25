@@ -933,7 +933,7 @@ public enum RenderEnum
 			add(new double[]{0.19D, 1.25D, 0.0D});
 		}
 	}, "", null, 0, false),
-	F3B( DieselF3B.class,  new ModelF3b(), "f3b_", true,new float[] {-1.3F, 0.145F, 0F},  new float[] { 0F, 180F, 180F },  null, "smoke", 3,  new ArrayList<double[]>() {
+	F3B( DieselF3B.class,  new ModelF3b(), "f3b_", true,new float[] {-1.22F, 0.145F, 0F},  new float[] { 0F, 180F, 180F },  null, "smoke", 3,  new ArrayList<double[]>() {
 		{
 			add(new double[]{0.9675D, 1.25D, 0.0D});
 			add(new double[]{0.19D, 1.25D, 0.0D});
