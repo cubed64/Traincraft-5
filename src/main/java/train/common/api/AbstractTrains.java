@@ -25,6 +25,7 @@ import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeChunkManager.Ticket;
 import net.minecraftforge.common.util.Constants;
 import org.apache.commons.lang3.ArrayUtils;
+import org.apache.logging.log4j.Level;
 import train.client.gui.GuiTCTextField;
 import train.client.render.RenderEnum;
 import train.common.Traincraft;
@@ -247,6 +248,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			if (renderSpec == null)
 			{
 				renderSpec = RenderEnum.fallback;
+				Traincraft.tcLog.log(Level.ERROR, "ERROR RENDER ENUM IS MISSING FOR " + this.getClass().getName());
 			}
 		}
 	}
