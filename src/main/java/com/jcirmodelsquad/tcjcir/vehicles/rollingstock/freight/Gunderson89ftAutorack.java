@@ -101,11 +101,6 @@ public class Gunderson89ftAutorack extends Freight implements IInventory {
     }
 
     @Override
-    public boolean isStorageCart() {
-        return true;
-    }
-
-    @Override
     public float getOptimalDistance(EntityMinecart cart) {
         return 4.4F;
     }
@@ -115,8 +110,4 @@ public class Gunderson89ftAutorack extends Freight implements IInventory {
         return 1;
     }
 
-    @Override
-    public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-        return true;
-    }
 }

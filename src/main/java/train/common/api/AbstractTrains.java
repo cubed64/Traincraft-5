@@ -243,6 +243,11 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 					break;
 				}
 			}
+
+			if (renderSpec == null)
+			{
+				renderSpec = RenderEnum.fallback;
+			}
 		}
 	}
 
@@ -1190,7 +1195,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	 * @author 02skaplan
 	 * @return CargoManager for entity if entity supports custom cargo, else null.
 	 */
-	public CargoManager getCargoManager() {
+	public final CargoManager getCargoManager() {
 		return cargoManager;
 	}
 

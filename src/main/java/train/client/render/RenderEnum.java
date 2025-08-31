@@ -1,6 +1,8 @@
 package train.client.render;
 
+import com.jcirmodelsquad.tcjcir.models.ModelThisErrorIsERatedForEveryone;
 import com.jcirmodelsquad.tcjcir.models.trains.*;
+import com.jcirmodelsquad.tcjcir.vehicles.ERatedForEveryone;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.*;
@@ -22,6 +24,7 @@ import java.util.ArrayList;
 
 public enum RenderEnum
 {
+	fallback(ERatedForEveryone.class, new ModelThisErrorIsERatedForEveryone(), "Skin_Plane_ThisErrorIsERatedForEveryone", false, new float[] { 0.0F, -0.47F, 0.0F }, null, new float[] { 5F, 5F, 5F }, "", 0, null, "", null, 0, false),
 
 	/** Passengers */
 	passengerCartBlue(EntityPassengerBlue.class, new ModelPassenger6(), "passenger", true, new float[] { 0.0F, -0.47F, 0.0F }, null, null, "", 0, null, "", null, 0, false),

@@ -104,12 +104,6 @@ public class EntityFreightDenverRioGrande extends Freight implements IInventory 
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 3.15F;
 	}
-
-	@Override
-	public int getInventoryStackLimit() {
-		return 64;
-	}
-
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
 		return true;
