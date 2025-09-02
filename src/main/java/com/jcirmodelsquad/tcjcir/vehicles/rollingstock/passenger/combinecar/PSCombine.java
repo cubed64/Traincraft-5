@@ -1,4 +1,4 @@
-package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger;
+package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar;
 
 import net.minecraft.world.World;
 import train.common.api.AbstractPassengerCar;
