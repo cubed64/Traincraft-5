@@ -999,18 +999,23 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 
 	/** Locking for passengers, flat, caboose, jukebox,workcart */
 	protected boolean lockThisCart(ItemStack itemstack, EntityPlayer entityplayer) {
-		if (itemstack != null && (itemstack.getItem() instanceof ItemWrench || itemstack.getItem() instanceof ItemAdminBook)) {
+		if (itemstack != null && (itemstack.getItem() instanceof ItemWrench || itemstack.getItem() instanceof ItemAdminBook))
+		{
 			if (entityplayer.getDisplayName().equals(this.trainOwner) || entityplayer.getGameProfile().getName().equals(this.trainOwner)
-					|| this.trainOwner.equals("") || entityplayer.canCommandSenderUseCommand(2, "")) {
-				if (locked) {
+					|| this.trainOwner.equals("") || entityplayer.canCommandSenderUseCommand(2, ""))
+			{
+				if (locked)
+				{
 					locked = false;
-					if(worldObj.isRemote) {
+					if(worldObj.isRemote)
+					{
 						entityplayer.addChatMessage(new ChatComponentText("Unlocked"));
 					}
 				}
 				else {
 					locked = true;
-					if(worldObj.isRemote) {
+					if(worldObj.isRemote)
+					{
 						entityplayer.addChatMessage(new ChatComponentText("Locked"));
 					}
 				}

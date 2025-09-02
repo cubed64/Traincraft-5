@@ -1782,7 +1782,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		{
 			return true;
 		}
-		if (entityplayer.ridingEntity == this){
+		if (entityplayer.ridingEntity == this)
+		{
 			return false;
 		}
 
@@ -1795,11 +1796,13 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 
 		if (this.getTrainLockedFromPacket()) {
 			boolean isTrustedPlayer = isPlayerTrusted(playerEntity.getDisplayName());
-			if (!playerEntity.getDisplayName().equalsIgnoreCase(this.getTrainOwner()) && !canBeRiddenWhileLocked(this) && !isTrustedPlayer) {
+			if (!playerEntity.getDisplayName().equalsIgnoreCase(this.getTrainOwner()) && !canBeRiddenWhileLocked(this) && !isTrustedPlayer)
+			{
 				if (!worldObj.isRemote) entityplayer.addChatMessage(new ChatComponentText("Train is locked by " + this.getTrainOwner() + "."));
 				return true;
 			}
-			else if (!playerEntity.getDisplayName().equalsIgnoreCase(this.getTrainOwner()) && entityplayer.inventory.getCurrentItem() != null && entityplayer.inventory.getCurrentItem().getItem() instanceof ItemDye && (this instanceof Locomotive) && !isTrustedPlayer) {
+			else if (!playerEntity.getDisplayName().equalsIgnoreCase(this.getTrainOwner()) && entityplayer.inventory.getCurrentItem() != null && entityplayer.inventory.getCurrentItem().getItem() instanceof ItemDye && (this instanceof Locomotive) && !isTrustedPlayer)
+			{
 				if (!worldObj.isRemote) entityplayer.addChatMessage(new ChatComponentText("Train is locked by " + this.getTrainOwner() + "."));
 				return true;
 			}
@@ -1841,138 +1844,147 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				entityplayer.openGui(Traincraft.instance, GuiIDs.LOCK_MENU, entityplayer.getEntityWorld(), this.getEntityId(), -1, (int) this.posZ);
 				return true;
 			}
+
+			if (itemstack.getItem() instanceof ItemWrench && this instanceof Locomotive
+					&& entityplayer.isSneaking() && !worldObj.isRemote) {
+				destination = "";
+				entityplayer.addChatMessage(new ChatComponentText("Destination reset"));
+				return true;
+			}
 		}
 
-		if (itemstack != null && itemstack.getItem() instanceof ItemWrench && this instanceof Locomotive
-				&& entityplayer.isSneaking() && !worldObj.isRemote) {
-			destination = "";
-			entityplayer.addChatMessage(new ChatComponentText("Destination reset"));
-			return true;
-		}
 		if (MinecraftForge.EVENT_BUS.post(new MinecartInteractEvent(this, entityplayer)))
 		{
 			return true;
 		}
-		if (itemstack != null && itemstack.hasTagCompound() && getTicketDestination(itemstack) != null && getTicketDestination(itemstack).length() > 0) {
-			this.setDestination(itemstack);
-			/**
-			 * ticket are single use but golden ones are multiple uses
-			 */
-			ItemStack ticket = GameRegistry.findItemStack("Railcraft", "railcraft.routing.ticket", 1);
-			if (ticket != null && ticket.getItem() != null && itemstack.getItem() == ticket.getItem()) {
-				if (--itemstack.stackSize == 0) {
-					entityplayer.inventory.setInventorySlotContents(entityplayer.inventory.currentItem, null);
-				}
-			}
-			return true;
-		}
-		/**
-		 * If the color is valid for the cart, then change it and reduce
-		 * itemstack size
-		 */
-		if (itemstack != null && itemstack.getItem() instanceof ItemDye) {
-			if (this.acceptedColors != null && this.acceptedColors.size() > 0) {
-				for (int i = 0; i < this.acceptedColors.size(); i++) {
-					if (itemstack.getItemDamage() == this.acceptedColors.get(i)) {
-						this.setColor(itemstack.getItemDamage());
-						itemstack.stackSize--;
 
-						//if (!worldObj.isRemote)PacketHandler.sendPacketToClients(PacketHandler.sendStatsToServer(10,this.uniqueID,trainName ,trainType, this.trainOwner, this.getColorAsString(itemstack.getItemDamage()), (int)posX, (int)posY, (int)posZ),this.worldObj, (int)posX,(int)posY,(int)posZ, 12.0D);
-
-						return true;
+		if (itemstack != null)
+		{
+			if (itemstack.hasTagCompound() && getTicketDestination(itemstack) != null && getTicketDestination(itemstack).length() > 0) {
+				this.setDestination(itemstack);
+				/**
+				 * ticket are single use but golden ones are multiple uses
+				 */
+				ItemStack ticket = GameRegistry.findItemStack("Railcraft", "railcraft.routing.ticket", 1);
+				if (ticket != null && ticket.getItem() != null && itemstack.getItem() == ticket.getItem()) {
+					if (--itemstack.stackSize == 0) {
+						entityplayer.inventory.setInventorySlotContents(entityplayer.inventory.currentItem, null);
 					}
-				}
-				if (worldObj.isRemote && ConfigHandler.SHOW_POSSIBLE_COLORS) {
-					String concatColors = getColorAsString(this.acceptedColors.get(0));
-					int moreColors = 0;
-					for (int t = 1; t < this.acceptedColors.size(); t++) {
-						if (!(this.acceptedColors.get(t) > 15)) {
-							concatColors = concatColors.concat(", " + getColorAsString(this.acceptedColors.get(t)));
-						} else {
-							moreColors++;
-						}
-					}
-					if (moreColors == 0) {
-						entityplayer.addChatMessage(new ChatComponentText("Possible colors: " + concatColors + "."));
-					} else {
-						entityplayer.addChatMessage(new ChatComponentText("Possible colors: " + concatColors + ", and " + moreColors + " more."));
-					}
-					entityplayer.addChatMessage(new ChatComponentText("To paint, use the " + StatCollector.translateToLocal("item.tc:paintbrushThing.name") + " or click me with the right (vanilla) dye."));
-				}
-			}
-			else if (this.acceptedColors != null && this.acceptedColors.size() == 0) {
-				entityplayer.addChatMessage(new ChatComponentText("No other colors available."));
-			}
-		}
-
-		if (itemstack != null && itemstack.getItem() instanceof ItemContainer && this instanceof DieselTrain && entityplayer.isSneaking() && !worldObj.isRemote) {
-
-			Item theItem = itemstack.getItem();
-			DieselTrain thisAsDieselTrain = (DieselTrain) this;
-			if (theItem == ItemIDs.diesel.item || theItem == ItemIDs.refinedFuel.item) {
-				ItemStack result = LiquidManager.getInstance().processContainer(thisAsDieselTrain, 0, thisAsDieselTrain, itemstack);
-				//entityplayer.inventory.setInventorySlotContents(entityplayer.inventory.currentItem, new ItemStack(ItemIDs.diesel.item, itemstack.stackSize - 1));
-				itemstack.stackSize--;
-
-
-				for (int i = 0; i < entityplayer.inventory.getSizeInventory(); i++) {
-					if (entityplayer.inventory.getStackInSlot(i) != null && entityplayer.inventory.getStackInSlot(i).isItemEqual(itemstack)) {
-						if (itemstack.stackSize > 1) {
-							itemstack = new ItemStack(ItemIDs.diesel.item, itemstack.stackSize - 1);
-							entityplayer.inventory.addItemStackToInventory(new ItemStack(ItemIDs.emptyCanister.item, 1));
-							break;
-						} else {
-							entityplayer.inventory.setInventorySlotContents(i, new ItemStack(ItemIDs.emptyCanister.item, 1));
-							break;
-						}
-
-					}
-				}
-
-			} else if (theItem == ItemIDs.emptyCanister.item) {
-				thisAsDieselTrain.getTank().drain(1000, true);
-				for (int i = 0; i < entityplayer.inventory.getSizeInventory(); i++) {
-					if (entityplayer.inventory.getStackInSlot(i) != null && entityplayer.inventory.getStackInSlot(i).isItemEqual(itemstack)) {
-						if (itemstack.stackSize > 1) {
-							entityplayer.inventory.setInventorySlotContents(i, new ItemStack(ItemIDs.emptyCanister.item, itemstack.stackSize - 1));
-						} else {
-							entityplayer.inventory.setInventorySlotContents(i, null);
-						}
-						entityplayer.inventory.addItemStackToInventory(new ItemStack(ItemIDs.diesel.item, 1));
-						break;
-					}
-				}
-			}
-			return true;
-		}
-
-		if (itemstack != null && itemstack.getItem() == ItemIDs.remoteController.item && worldObj.isRemote && this instanceof Locomotive) {
-			Locomotive thisAsLocomotive = (Locomotive)this;
-			if (thisAsLocomotive.trainIsRemoteControlSupported()) {
-				ItemRemoteController theItem2 = ((ItemRemoteController) itemstack.getItem());
-
-				if (theItem2.attachedLocomotive == null) {
-					if (this.locked && this.getTrainOwner().equals(entityplayer.getDisplayName())) {
-						theItem2.attachedLocomotive = thisAsLocomotive;
-						entityplayer.addChatMessage(new ChatComponentText(EnumChatFormatting.GREEN +  "Successfully paired with train! Right click again to unpair."));
-
-					} else if (!this.locked || Objects.equals(entityplayer.getDisplayName(), this.getTrainOwner())) {
-						theItem2.attachedLocomotive = thisAsLocomotive;
-						entityplayer.addChatMessage(new ChatComponentText(EnumChatFormatting.GREEN +"Successfully paired with train! Right click again to unpair."));
-					} else {
-						entityplayer.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "You do not have permission to pair with this train. Maybe you aren't the owner?"));
-					}
-				} else {
-					theItem2.attachedLocomotive = null;
-					entityplayer.addChatMessage(new ChatComponentText(EnumChatFormatting.GREEN +   "Successfully unpaired with train! Right click again to pair."));
 				}
 				return true;
-			} else {
-				entityplayer.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +  "This train does not support remote control."));
 			}
-			return true;
-		} else if (itemstack != null && itemstack.getItem() == ItemIDs.remoteController.item && !worldObj.isRemote && this instanceof Locomotive) {
-			return true;
+			/**
+			 * If the color is valid for the cart, then change it and reduce
+			 * itemstack size
+			 */
+			if (itemstack.getItem() instanceof ItemDye)
+			{
+				if (this.acceptedColors != null && this.acceptedColors.size() > 0) {
+					for (int i = 0; i < this.acceptedColors.size(); i++) {
+						if (itemstack.getItemDamage() == this.acceptedColors.get(i)) {
+							this.setColor(itemstack.getItemDamage());
+							itemstack.stackSize--;
+
+							//if (!worldObj.isRemote)PacketHandler.sendPacketToClients(PacketHandler.sendStatsToServer(10,this.uniqueID,trainName ,trainType, this.trainOwner, this.getColorAsString(itemstack.getItemDamage()), (int)posX, (int)posY, (int)posZ),this.worldObj, (int)posX,(int)posY,(int)posZ, 12.0D);
+
+							return true;
+						}
+					}
+					if (worldObj.isRemote && ConfigHandler.SHOW_POSSIBLE_COLORS) {
+						String concatColors = getColorAsString(this.acceptedColors.get(0));
+						int moreColors = 0;
+						for (int t = 1; t < this.acceptedColors.size(); t++) {
+							if (!(this.acceptedColors.get(t) > 15)) {
+								concatColors = concatColors.concat(", " + getColorAsString(this.acceptedColors.get(t)));
+							} else {
+								moreColors++;
+							}
+						}
+						if (moreColors == 0) {
+							entityplayer.addChatMessage(new ChatComponentText("Possible colors: " + concatColors + "."));
+						} else {
+							entityplayer.addChatMessage(new ChatComponentText("Possible colors: " + concatColors + ", and " + moreColors + " more."));
+						}
+						entityplayer.addChatMessage(new ChatComponentText("To paint, use the " + StatCollector.translateToLocal("item.tc:paintbrushThing.name") + " or click me with the right (vanilla) dye."));
+					}
+				}
+				else if (this.acceptedColors != null && this.acceptedColors.size() == 0) {
+					entityplayer.addChatMessage(new ChatComponentText("No other colors available."));
+				}
+			}
+
+			if (itemstack.getItem() instanceof ItemContainer && this instanceof DieselTrain && entityplayer.isSneaking() && !worldObj.isRemote)
+			{
+				Item theItem = itemstack.getItem();
+				DieselTrain thisAsDieselTrain = (DieselTrain) this;
+				if (theItem == ItemIDs.diesel.item || theItem == ItemIDs.refinedFuel.item) {
+					ItemStack result = LiquidManager.getInstance().processContainer(thisAsDieselTrain, 0, thisAsDieselTrain, itemstack);
+					//entityplayer.inventory.setInventorySlotContents(entityplayer.inventory.currentItem, new ItemStack(ItemIDs.diesel.item, itemstack.stackSize - 1));
+					itemstack.stackSize--;
+
+
+					for (int i = 0; i < entityplayer.inventory.getSizeInventory(); i++) {
+						if (entityplayer.inventory.getStackInSlot(i) != null && entityplayer.inventory.getStackInSlot(i).isItemEqual(itemstack)) {
+							if (itemstack.stackSize > 1) {
+								itemstack = new ItemStack(ItemIDs.diesel.item, itemstack.stackSize - 1);
+								entityplayer.inventory.addItemStackToInventory(new ItemStack(ItemIDs.emptyCanister.item, 1));
+								break;
+							} else {
+								entityplayer.inventory.setInventorySlotContents(i, new ItemStack(ItemIDs.emptyCanister.item, 1));
+								break;
+							}
+
+						}
+					}
+
+				} else if (theItem == ItemIDs.emptyCanister.item) {
+					thisAsDieselTrain.getTank().drain(1000, true);
+					for (int i = 0; i < entityplayer.inventory.getSizeInventory(); i++) {
+						if (entityplayer.inventory.getStackInSlot(i) != null && entityplayer.inventory.getStackInSlot(i).isItemEqual(itemstack)) {
+							if (itemstack.stackSize > 1) {
+								entityplayer.inventory.setInventorySlotContents(i, new ItemStack(ItemIDs.emptyCanister.item, itemstack.stackSize - 1));
+							} else {
+								entityplayer.inventory.setInventorySlotContents(i, null);
+							}
+							entityplayer.inventory.addItemStackToInventory(new ItemStack(ItemIDs.diesel.item, 1));
+							break;
+						}
+					}
+				}
+				return true;
+			}
+
+			if (itemstack.getItem() == ItemIDs.remoteController.item && worldObj.isRemote && this instanceof Locomotive)
+			{
+				Locomotive thisAsLocomotive = (Locomotive)this;
+				if (thisAsLocomotive.trainIsRemoteControlSupported()) {
+					ItemRemoteController theItem2 = ((ItemRemoteController) itemstack.getItem());
+
+					if (theItem2.attachedLocomotive == null) {
+						if (this.locked && this.getTrainOwner().equals(entityplayer.getDisplayName())) {
+							theItem2.attachedLocomotive = thisAsLocomotive;
+							entityplayer.addChatMessage(new ChatComponentText(EnumChatFormatting.GREEN +  "Successfully paired with train! Right click again to unpair."));
+
+						} else if (!this.locked || Objects.equals(entityplayer.getDisplayName(), this.getTrainOwner())) {
+							theItem2.attachedLocomotive = thisAsLocomotive;
+							entityplayer.addChatMessage(new ChatComponentText(EnumChatFormatting.GREEN +"Successfully paired with train! Right click again to unpair."));
+						} else {
+							entityplayer.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "You do not have permission to pair with this train. Maybe you aren't the owner?"));
+						}
+					} else {
+						theItem2.attachedLocomotive = null;
+						entityplayer.addChatMessage(new ChatComponentText(EnumChatFormatting.GREEN +   "Successfully unpaired with train! Right click again to pair."));
+					}
+					return true;
+				} else {
+					entityplayer.addChatMessage(new ChatComponentText(EnumChatFormatting.RED +  "This train does not support remote control."));
+				}
+				return true;
+			}
+			else if (itemstack.getItem() == ItemIDs.remoteController.item && !worldObj.isRemote && this instanceof Locomotive)
+			{
+				return true;
+			}
 		}
 
 		return worldObj.isRemote;

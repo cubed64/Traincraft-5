@@ -444,7 +444,7 @@ public enum EnumTrains implements IEnumTrains
 	PScenterDiner("PS Center Diner", PScenterDiner.class, ItemIDs.minecartPSCenterDiner.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan"}), 10, 0),
 	PS58SeatCoach_Observation("PS 58 Seat Coach-Observation", PS58SeatCoach_Observation.class, ItemIDs.minecartPS58SeatCoach_Observation.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Cyan", "LightBlue", "Purple", "Orange", "Red", "Magenta", "Pink", "Green", "Lime", "Brown", "Black", "LightGrey", "Grey", "White", "Skin16", "Yellow"}), 10, 0, null),
 
-	PSBMCombine("PS B&M Combine", PSBMCombine.class, ItemIDs.minecartPSBMCombine.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Magenta", "Brown", "Green", "Blue"}), 10, 0, null),
+	PSBMCombine("PS B&M Combine", com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSBMCombine.class, ItemIDs.minecartPSBMCombine.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Magenta", "Brown", "Green", "Blue"}), 10, 0, 27,null),
 	PSBM56SeatCoach("PS B&M 56 Seat Coach", PSBM56SeatCoach.class, ItemIDs.minecartPSBM56SeatCoach.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Magenta", "LightGrey", "Grey", "Brown", "Red", "Pink", "Green", "Lime", "Yellow", "Blue", "Cyan", "LightBlue", "Purple", "White", "Black"}), 10, 0, null),
 	PSBMDiner_Lounge("PS B&M Diner_Lounge", PSBMDiner_Lounge.class, ItemIDs.minecartPSBMDiner_Lounge.item, "passenger", 0, 0, 3, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Magenta", "Brown", "Green", "Blue", "Cyan", "LightGrey"}), 10, 0, null),
 
@@ -692,6 +692,27 @@ public enum EnumTrains implements IEnumTrains
 		this.guiRenderScale = guiRenderScale;
 		this.bogieLocoPosition = bogieLocoPositions;
 		this.additionnalTooltip=additionnalTooltip;
+	}
+
+	private EnumTrains(String internalName,Class entityClass, Item item, String trainType,int MHP,int maxSpeed, double mass, int fuelConsumption,int waterConsumption, int heatingTime, double accelerationRate, double brakeRate, int tankCapacity, int[] colors, int guiRenderScale, double bogieLocoPositions, int cargoCapacity, String[] additionnalTooltip){
+		this.internalName = internalName;
+		this.entityClass = entityClass;
+		this.item = item;
+		this.trainType=trainType;
+		this.MHP=MHP;
+		this.maxSpeed=maxSpeed;
+		this.mass=mass;
+		this.fuelConsumption=fuelConsumption;
+		this.waterConsumption=waterConsumption;
+		this.heatingTime=heatingTime;
+		this.accelerationRate=accelerationRate;
+		this.brakeRate=brakeRate;
+		this.tankCapacity=tankCapacity;
+		this.colors=colors;
+		this.guiRenderScale = guiRenderScale;
+		this.bogieLocoPosition = bogieLocoPositions;
+		this.additionnalTooltip = additionnalTooltip;
+		this.cargoCapacity = cargoCapacity;
 	}
 
 	private EnumTrains(String internalName,Class entityClass, Item item, EnumTrainType trainType,int MHP,int maxSpeed, double mass, int fuelConsumption,int waterConsumption, int heatingTime, double accelerationRate, double brakeRate, int tankCapacity, int[] colors, int guiRenderScale, double bogieLocoPositions, String[] additionnalTooltip)
