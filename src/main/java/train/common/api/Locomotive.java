@@ -676,7 +676,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             {
                 if (sounds.getHorns() != null)
                 {
-                    if (sounds.getHorns().length < this.acceptedColors.indexOf(this.getColor()))
+                    if (sounds.getHorns().length <= this.acceptedColors.indexOf(this.getColor()))
                     {
                         worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "oh_no_shits", sounds.getHornVolume(), 1.0F);
                     }
