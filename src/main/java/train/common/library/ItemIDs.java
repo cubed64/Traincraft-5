@@ -462,6 +462,8 @@ public enum ItemIDs {
 	minecartTender10k("ItemRollingStock", "10ktender_icon", STEAM, 2),
 	minecartTenderDeseret("ItemRollingStock", "deseret_tender_icon", STEAM, 2),
 
+	minecartHCS_9k_Tender("ItemRollingStock", "HCS_9k_Tender_icon", STEAM, 2),
+
 	minecartLocoC11("ItemRollingStock", "train_C11", STEAM, 5),
 	minecartOnion("ItemRollingStock", "Onion", STEAM, 10),
 	minecartOnionTender("ItemRollingStock", "OnionTender", STEAM, 10),
