@@ -105,4 +105,10 @@ public abstract class AbstractPassengerCombineCar extends AbstractStandardFreigh
     {
         return getOptimalLinkingDistance();
     }
+
+    @Override
+    public String getInventoryName()
+    {
+        return this.trainName;
+    }
 }

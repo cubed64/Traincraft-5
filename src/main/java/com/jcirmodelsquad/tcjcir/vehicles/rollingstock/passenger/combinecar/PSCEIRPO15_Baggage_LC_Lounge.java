@@ -1,18 +1,18 @@
-package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger;
+package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar;
 
 import net.minecraft.world.World;
 import train.common.api.AbstractPassengerCar;
 import train.common.api.AbstractPassengerCombineCar;
 
-public class PSCEIRPO15_Baggage_38SeatCoach extends AbstractPassengerCombineCar
+public class PSCEIRPO15_Baggage_LC_Lounge extends AbstractPassengerCombineCar
 {
 
-	public PSCEIRPO15_Baggage_38SeatCoach(World world) {
+	public PSCEIRPO15_Baggage_LC_Lounge(World world) {
 		super(world);
 
 	}
 
-	public PSCEIRPO15_Baggage_38SeatCoach(World world, double posX, double posY, double posZ)
+	public PSCEIRPO15_Baggage_LC_Lounge(World world, double posX, double posY, double posZ)
 	{
 		super(world, posX, posY, posZ);
 	}
@@ -22,7 +22,7 @@ public class PSCEIRPO15_Baggage_38SeatCoach extends AbstractPassengerCombineCar
 	{
 		textureDescriptionMap.put(0, "C&EI (As Delivered)");
 		textureDescriptionMap.put(1, "C&EI");
-		textureDescriptionMap.put(2, "C&EI (Semi-Fictional)");
+		textureDescriptionMap.put(2, "FNCC");
 		textureDescriptionMap.put(3, "GC&M");
 	}
 
