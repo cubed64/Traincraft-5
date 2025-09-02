@@ -2146,7 +2146,7 @@ public enum RenderEnum
 
 	PSRPO(PSRPO.class, new ModelPSRPO(), "PS_lightweight_RPO_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PS85Baggage(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.baggagecar.PS85Baggage.class, new ModelPS85Baggage(), "PS_lightweight_85_baggage_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	PSCombine(PSCombine.class, new ModelPSCombine(), "PS_lightweight_baggage-coach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCombine(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSCombine.class, new ModelPSCombine(), "PS_lightweight_baggage-coach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PS52SeatCoach(PS52SeatCoach.class, new ModelPS52SeatCoach(), "PS_lightweight_52seat_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSDamnitAnotherDiner(PSDamnitAnotherDiner.class, new ModelPSscrewyoutoomanydiners(), "PS_lightweight_center_diner_2_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSSleeper565(PSSleeper565.class, new ModelPSSleeper565(), "PS_lightweight_5-6-5_sleeper_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -2168,7 +2168,7 @@ public enum RenderEnum
 	PScenterDiner(PScenterDiner.class, new ModelPScenterDiner(), "PS_lightweight_center_diner_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PS58SeatCoach_Observation(PS58SeatCoach_Observation.class, new ModelPS58SeatCoach_Observation(), "PS_lightweight_58SeatCoach_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
-	PSBMCombine(PSBMCombine.class, new ModelPSBMCombine(), "PS_lightweight_BMCombine_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSBMCombine(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSBMCombine.class, new ModelPSBMCombine(), "PS_lightweight_BMCombine_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSBM56SeatCoach(PSBM56SeatCoach.class, new ModelPSBM56SeatCoach(), "PS_lightweight_BM56SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSBMDiner_Lounge(PSBMDiner_Lounge.class, new ModelPSBMDiner_Lounge(), "PS_lightweight_BMDiner_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
@@ -2183,7 +2183,7 @@ public enum RenderEnum
 	OB92SeatCoach(OB92SeatCoach.class, new ModelOB92SeatCoach(), "OB_lightweight_92SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	OBNHGrillCar(OBNHGrillCar.class, new ModelOBNHGrillCar(), "OB_lightweight_NHGrillCar_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	OBNHLounge5107(OBNHLounge5107.class, new ModelOBNHLounge5107(), "OB_lightweight_NHLounge5107_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	OBBaggage_52SeatDividedCoach(OBBaggage_52SeatDividedCoach.class, new ModelOBBaggage_52SeatDividedCoach(), "OB_lightweight_Baggage_52SeatDividedCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	OBBaggage_52SeatDividedCoach(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.OBBaggage_52SeatDividedCoach.class, new ModelOBBaggage_52SeatDividedCoach(), "OB_lightweight_Baggage_52SeatDividedCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	OB76SeatDividedCoach(OB76SeatDividedCoach.class, new ModelOB76SeatDividedCoach(), "OB_lightweight_76SeatDividedCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	OBLV82_92SeatCoach(OBLV82_92SeatCoach.class, new ModelOBLV82_92SeatCoach(), "OB_lightweight_LV82_92SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	OBRPO15(OBRPO15.class, new ModelOBRPO15(), "OB_lightweight_RPO15_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -2201,8 +2201,8 @@ public enum RenderEnum
 	PSCNW12SeatParlor_Observation(PSCNW12SeatParlor_Observation.class, new ModelPSCNW12SeatParlor_Observation(), "PS_lightweight_CNW12SeatParlor_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCNWRPO15(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.baggagecar.PSCNWRPO15.class, new ModelPSCNWRPO15(), "PS_lightweight_CNWRPO15_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCNWRPO60(PSCNWRPO60.class, new ModelPSCNWRPO60(), "PS_lightweight_CNWRPO60_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	PSCNWBaggage_LC_Lounge(PSCNWBaggage_LC_Lounge.class, new ModelPSCNWBaggage_LC_Lounge(), "PS_lightweight_CNWBaggage_LC_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	PSCNWRPO15_Baggage_LC_Lounge(PSCNWRPO15_Baggage_LC_Lounge.class, new ModelPSCNWRPO15_Baggage_LC_Lounge(), "PS_lightweight_CNWRPO15_Baggage_LC_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCNWBaggage_LC_Lounge(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSCNWBaggage_LC_Lounge.class, new ModelPSCNWBaggage_LC_Lounge(), "PS_lightweight_CNWBaggage_LC_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCNWRPO15_Baggage_LC_Lounge(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSCNWRPO15_Baggage_LC_Lounge.class, new ModelPSCNWRPO15_Baggage_LC_Lounge(), "PS_lightweight_CNWRPO15_Baggage_LC_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCNWBaggage_LC_Diner(PSCNWBaggage_LC_Diner.class, new ModelPSCNWBaggage_LC_Diner(), "PS_lightweight_CNWBaggage_LC_Diner_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCNW20SeatCoach_Lounge_1959(PSCNW20SeatCoach_Lounge_1959.class, new ModelPSCNW20SeatCoach_Lounge_1959(), "PS_lightweight_CNW20SeatCoach_Lounge_1959_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCNWCommuterLounge(PSCNWCommuterLounge.class, new ModelPSCNW20SeatCoach_Lounge_1959(), "PS_lightweight_CNWCommuterLounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -2234,7 +2234,7 @@ public enum RenderEnum
 
 	BuddDome54SeatCoach(BuddDome54SeatCoach.class, new ModelBuddDome54SeatCoach(), "Budd_lightweight_Dome54SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
-	PSCEIRPO15_Baggage_LC_Lounge(PSCEIRPO15_Baggage_LC_Lounge.class, new ModelPSCEIRPO15_Baggage_LC_Lounge(), "PS_lightweight_CEIRPO15_Baggage_LC_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCEIRPO15_Baggage_LC_Lounge(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSCEIRPO15_Baggage_LC_Lounge.class, new ModelPSCEIRPO15_Baggage_LC_Lounge(), "PS_lightweight_CEIRPO15_Baggage_LC_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCEIRPO15_Baggage_38SeatCoach(PSCEIRPO15_Baggage_38SeatCoach.class, new ModelPSCEIRPO15_Baggage_38SeatCoach(), "PS_lightweight_CEIRPO15_Baggage_38SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCEI60SeatCoach(PSCEI60SeatCoach.class, new ModelPSCEI60SeatCoach(), "PS_lightweight_CEI60SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCEIDiner(PSCEIDiner.class, new ModelPSCEIDiner(), "PS_lightweight_CEIDiner_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
