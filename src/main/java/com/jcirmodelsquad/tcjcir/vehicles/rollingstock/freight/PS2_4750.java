@@ -62,7 +62,7 @@ public class PS2_4750 extends Freight implements IInventory {
 		textureDescriptionMap.put(39, "Creston, IA");
 		textureDescriptionMap.put(40, "AA");
 		textureDescriptionMap.put(41, "AA (MIR Ferry in the Fog)");
-		textureDescriptionMap.put(44, "SOUTHERN SERVES THE SOUTH");
+		textureDescriptionMap.put(42, "SOUTHERN SERVES THE SOUTH");
 	}
 
 	public void initFreightGrain() {
