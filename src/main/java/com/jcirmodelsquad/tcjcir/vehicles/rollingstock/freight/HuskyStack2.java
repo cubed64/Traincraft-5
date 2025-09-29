@@ -2,39 +2,35 @@ package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight;
 
 import com.jcirmodelsquad.tcjcir.models.containers.ModelISO_40FT_Item;
 import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.Constants;
-import train.common.Traincraft;
-import train.common.api.Freight;
+import train.common.api.AbstractStandardFreightCar;
 import train.common.entity.CargoManager;
 import train.common.entity.CargoSpecification;
-import train.common.library.GuiIDs;
 
-public class HuskyStack2 extends Freight implements IInventory {
-	public int freightInventorySize;
-	public int numFreightSlots;
-	EntityPlayer playerEntity;
-
+public class HuskyStack2 extends AbstractStandardFreightCar
+{
 	public HuskyStack2(World world) {
 		super(world);
-		initFreightGrain();
 		textureDescriptionMap.put(0, "TTX Corp");
 		textureDescriptionMap.put(1, "Generic Blue");
 		textureDescriptionMap.put(2, "WP");
 		textureDescriptionMap.put(3, "CSLX");
 		textureDescriptionMap.put(4, "CSLX");
 		textureDescriptionMap.put(5, "MT&S");
+	}
 
-		setCargoManager(new CargoManager(new CargoSpecification[][] {
+	public HuskyStack2(World world, double x, double y, double z){
+		super(world, x , y, z);
+	}
+
+	@Override
+	public CargoManager setupCargoManager()
+	{
+		return new CargoManager(new CargoSpecification[][] {
 				{ new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_LightGrey",
 						"Dual Containers (Generic)", 0, 2.845, 0),
 						new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_LightGrey",
-						"Dual Containers (Generic)", 0, 1.533, 0) },
+								"Dual Containers (Generic)", 0, 1.533, 0) },
 
 				{ new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_MAERSK",
 						"Dual Containers (Maersk)", 0, 2.845, 0),
@@ -196,90 +192,27 @@ public class HuskyStack2 extends Freight implements IInventory {
 
 				{ new CargoSpecification(ModelISO_40FT_Item.class, "containers/ISO_40FT_safmarine",
 						"Single Container (Safmarine)", 0, 2.845, 0)},
-		}));
-	}
-
-	public void initFreightGrain() {
-		numFreightSlots = 6;
-		if(trainSpec!=null)freightInventorySize = trainSpec.getCargoCapacity();
-		cargoItems = new ItemStack[freightInventorySize];
-	}
-
-	public HuskyStack2(World world, double d, double d1, double d2) {
-		this(world);
-		setPosition(d, d1 + (double) yOffset, d2);
-		motionX = 0.0D;
-		motionY = 0.0D;
-		motionZ = 0.0D;
-		prevPosX = d;
-		prevPosY = d1;
-		prevPosZ = d2;
+		});
 	}
 
 	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
+	public void setupTextureDescription()
+	{
+		textureDescriptionMap.put(0, "TTX Corp");
+		textureDescriptionMap.put(1, "Generic Blue");
+		textureDescriptionMap.put(2, "WP");
+		textureDescriptionMap.put(3, "CSLX");
+		textureDescriptionMap.put(4, "CSLX");
+		textureDescriptionMap.put(5, "MT&S");
 	}
 
-	@Override
-	protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {
-		super.writeEntityToNBT(nbttagcompound);
-
-		NBTTagList nbttaglist = new NBTTagList();
-		for (int i = 0; i < cargoItems.length; i++) {
-			if (cargoItems[i] != null) {
-				NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-				nbttagcompound1.setByte("Slot", (byte) i);
-				cargoItems[i].writeToNBT(nbttagcompound1);
-				nbttaglist.appendTag(nbttagcompound1);
-			}
-		}
-		nbttagcompound.setTag("Items", nbttaglist);
-	}
-
-	@Override
-	protected void readEntityFromNBT(NBTTagCompound nbttagcompound) {
-		super.readEntityFromNBT(nbttagcompound);
-
-		NBTTagList nbttaglist = nbttagcompound.getTagList("Items", Constants.NBT.TAG_COMPOUND);
-		cargoItems = new ItemStack[getSizeInventory()];
-		for (int i = 0; i < nbttaglist.tagCount(); i++) {
-			NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
-			int j = nbttagcompound1.getByte("Slot") & 0xff;
-			if (j >= 0 && j < cargoItems.length) {
-				cargoItems[j] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
-			}
-		}
-	}
 	@Override
 	public String getInventoryName() {
 		return "Gunderson 40' Husky Stack Wellcar";
 	}
 
 	@Override
-	public int getSizeInventory() {
-		return freightInventorySize;
-	}
-
-	@Override
-	public boolean interactFirst(EntityPlayer entityplayer) {
-		playerEntity = entityplayer;
-		if ((super.interactFirst(entityplayer))) {
-			return false;
-		}
-		if (!this.worldObj.isRemote) {
-			entityplayer.openGui(Traincraft.instance, GuiIDs.FREIGHT, worldObj, this.getEntityId(), -1, (int) this.posZ);
-		}
-		return true;
-	}
-	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 3.3F;
-	}
-
-	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		return true;
 	}
 }

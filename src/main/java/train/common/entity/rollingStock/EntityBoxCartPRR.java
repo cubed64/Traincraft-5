@@ -106,11 +106,6 @@ public class EntityBoxCartPRR extends Freight implements IInventory {
 	}
 
 	@Override
-	public int getInventoryStackLimit() {
-		return 64;
-	}
-
-	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
 		return true;
 	}

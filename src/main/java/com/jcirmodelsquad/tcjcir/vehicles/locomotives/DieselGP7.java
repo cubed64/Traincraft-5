@@ -65,6 +65,8 @@ public class DieselGP7 extends DieselTrain {
         textureDescriptionMap.put(45, "Monongahela");
         textureDescriptionMap.put(46, "WCP (stupid bozo chop)");
         textureDescriptionMap.put(47, "CDCS");
+        textureDescriptionMap.put(48, "JRN");
+        textureDescriptionMap.put(49, "GCCR");
     }
     public DieselGP7(World world, double d, double d1, double d2){
         this(world);

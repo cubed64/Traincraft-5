@@ -149,7 +149,8 @@ public abstract class Freight extends EntityRollingStock implements IInventory
 	 * @return True if this cart should be classified as a storage cart.
 	 */
 	@Override
-	public boolean isStorageCart() {
+	public boolean isStorageCart()
+	{
 		return true;
 	}
 

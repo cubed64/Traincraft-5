@@ -31,7 +31,7 @@ public class DieselGP40Dash2 extends DieselTrain {
         textureDescriptionMap.put(11, "Seaboard System");
         textureDescriptionMap.put(12, "CSXT (YN3)");
         textureDescriptionMap.put(13, "CSXT (YN2)");
-        textureDescriptionMap.put(14, "");
+        textureDescriptionMap.put(14, "JRN");
         textureDescriptionMap.put(15, "");
         textureDescriptionMap.put(16, "");
         textureDescriptionMap.put(17, "");

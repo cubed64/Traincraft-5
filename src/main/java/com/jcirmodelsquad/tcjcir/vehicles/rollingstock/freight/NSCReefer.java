@@ -97,22 +97,9 @@ public class NSCReefer extends Freight implements IInventory {
     }
 
     @Override
-    public boolean isStorageCart() {
-        return true;
-    }
-
-    @Override
     public float getOptimalDistance(EntityMinecart cart) {
         return 2.4F;
     }
 
-    @Override
-    public int getInventoryStackLimit() {
-        return 64;
-    }
 
-    @Override
-    public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-        return true;
-    }
 }

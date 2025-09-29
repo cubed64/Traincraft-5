@@ -28,7 +28,7 @@ public class ModelF3a_new extends ModelConverter //Same as Filename
 
 	public ModelF3a_new() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[526];
+		bodyModel = new ModelRendererTurbo[527];
 
 		initbodyModel_1();
 		initbodyModel_2();
@@ -2142,6 +2142,7 @@ public class ModelF3a_new extends ModelConverter //Same as Filename
 		bodyModel[523] = new ModelRendererTurbo(this, 122, 202, textureX, textureY, "ditch"); // Box 523 ditchlight generic
 		bodyModel[524] = new ModelRendererTurbo(this, 122, 207, textureX, textureY, "cull"); // Box 524 cull ditchlight mount
 		bodyModel[525] = new ModelRendererTurbo(this, 40, 78, textureX, textureY); // Box 184 o2 generator
+		bodyModel[526] = new ModelRendererTurbo(this, 475, 52, textureX, textureY); // Box 501 cull pipe cooler MILW thing WHY DID THE MOVE THIS HERE
 
 		bodyModel[500].addShapeBox(0F, 0F, 0F, 1, 2, 1, 0F,0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F); // Box 500 BAR beacon
 		bodyModel[500].setRotationPoint(-19F, -18.61F, 9.5F);
@@ -2221,6 +2222,9 @@ public class ModelF3a_new extends ModelConverter //Same as Filename
 
 		bodyModel[525].addBox(0F, 0F, 0F, 5, 4, 8, 0F); // Box 184 o2 generator
 		bodyModel[525].setRotationPoint(-18F, -20.75F, -4F);
+
+		bodyModel[526].addShapeBox(0F, 0F, 0F, 8, 2, 10, 0F,0F, -0.5F, 0F, -4F, -0.5F, 0F, -4F, -0.5F, -5F, 0F, -0.5F, -5F, 0.5F, 0F, 0F, -4F, 0F, 0F, -4F, 0F, -5F, 0.5F, 0F, -5F); // Box 501 cull pipe cooler MILW thing WHY DID THE MOVE THIS HERE
+		bodyModel[526].setRotationPoint(-14F, -20.75F, -3F);
 	}
 
 	ModelBlombergBnew theTrucc = new ModelBlombergBnew();

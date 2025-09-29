@@ -1,6 +1,5 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight;
 
-import com.jcirmodelsquad.tcjcir.models.loads.Modelpipeload1;
 import com.jcirmodelsquad.tcjcir.models.loads.Modelroadrailer_trailer_53;
 import com.jcirmodelsquad.tcjcir.models.loads.Modeltoastertiedown;
 import com.jcirmodelsquad.tcjcir.models.trains.ModelAEM7;
@@ -111,11 +110,6 @@ public class Gunderson89ftFlat extends Freight implements IInventory {
     }
 
     @Override
-    public boolean isStorageCart() {
-        return true;
-    }
-
-    @Override
     public float getOptimalDistance(EntityMinecart cart) {
         return 4.4F;
     }
@@ -125,8 +119,4 @@ public class Gunderson89ftFlat extends Freight implements IInventory {
         return 1;
     }
 
-    @Override
-    public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-        return true;
-    }
 }

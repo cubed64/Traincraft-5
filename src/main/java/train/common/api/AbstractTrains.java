@@ -25,6 +25,7 @@ import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeChunkManager.Ticket;
 import net.minecraftforge.common.util.Constants;
 import org.apache.commons.lang3.ArrayUtils;
+import org.apache.logging.log4j.Level;
 import train.client.gui.GuiTCTextField;
 import train.client.render.RenderEnum;
 import train.common.Traincraft;
@@ -242,6 +243,12 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 					renderSpec = render;
 					break;
 				}
+			}
+
+			if (renderSpec == null)
+			{
+				renderSpec = RenderEnum.fallback;
+				Traincraft.tcLog.log(Level.ERROR, "ERROR RENDER ENUM IS MISSING FOR " + this.getClass().getName());
 			}
 		}
 	}
@@ -735,6 +742,18 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			return "Skin54";
 		case 55:
 			return "Skin55";
+		case 56:
+			return "Skin56";
+		case 57:
+			return "Skin57";
+		case 58:
+			return "Skin58";
+		case 59:
+			return "Skin59";
+		case 60:
+			return "Skin60";
+		case 61:
+			return "Skin61";
 		case 100:
 			return "Empty";
 		case 101:
@@ -744,127 +763,9 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		}
 	}
 
-	public String getColorAsString() {
-		switch (getColor()) {
-		case 0:
-			return "Black";
-		case 1:
-			return "Red";
-		case 2:
-			return "Green";
-		case 3:
-			return "Brown";
-		case 4:
-			return "Blue";
-		case 5:
-			return "Purple";
-		case 6:
-			return "Cyan";
-		case 7:
-			return "LightGrey";
-		case 8:
-			return "Grey";
-		case 13:
-			return "Magenta";
-		case 10:
-			return "Lime";
-		case 11:
-			return "Yellow";
-		case 12:
-			return "LightBlue";
-		case 9:
-			return "Pink";
-		case 14:
-			return "Orange";
-		case 15:
-			return "White";
-		case 16:
-			return "Skin16";
-		case 17:
-			return "Skin17";
-		case 18:
-			return "Skin18";
-		case 19:
-			return "Skin19";
-		case 20:
-			return "Skin20";
-		case 21:
-			return "Skin21";
-		case 22:
-			return "Skin22";
-		case 23:
-			return "Skin23";
-		case 24:
-			return "Skin24";
-		case 25:
-			return "Skin25";
-		case 26:
-			return "Skin26";
-		case 27:
-			return "Skin27";
-		case 28:
-			return "Skin28";
-		case 29:
-			return "Skin29";
-		case 30:
-			return "Skin30";
-		case 31:
-			return "Skin31";
-		case 32:
-			return "Skin32";
-		case 33:
-			return "Skin33";
-		case 34:
-			return "Skin34";
-		case 35:
-			return "Skin35";
-		case 36:
-			return "Skin36";
-		case 37:
-			return "Skin37";
-		case 38:
-			return "Skin38";
-		case 39:
-			return "Skin39";
-		case 40:
-			return "Skin40";
-		case 41:
-			return "Skin41";
-		case 42:
-			return "Skin42";
-		case 43:
-			return "Skin43";
-		case 44:
-			return "Skin44";
-		case 45:
-			return "Skin45";
-		case 46:
-			return "Skin46";
-		case 47:
-			return "Skin47";
-		case 48:
-			return "Skin48";
-		case 49:
-			return "Skin49";
-		case 50:
-			return "Skin50";
-		case 51:
-			return "Skin51";
-		case 52:
-			return "Skin52";
-		case 53:
-			return "Skin53";
-		case 54:
-			return "Skin54";
-		case 55:
-			return "Skin55";
-		case 100:
-			return "Empty";
-		case 101:
-			return "Full";
-		default:
-			return "" + getColor();
-		}
+	public String getColorAsString()
+	{
+		return getColorAsString(getColor());
 	}
 
 	public static int getColorFromString(String color) {
@@ -924,6 +825,12 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		if (color.equals("Skin53")) return 53;
 		if (color.equals("Skin54")) return 54;
 		if (color.equals("Skin55")) return 55;
+		if (color.equals("Skin56")) return 56;
+		if (color.equals("Skin57")) return 57;
+		if (color.equals("Skin58")) return 58;
+		if (color.equals("Skin59")) return 59;
+		if (color.equals("Skin60")) return 60;
+		if (color.equals("Skin61")) return 61;
 		if (color.equals("Empty")) return 100;
 		if (color.equals("Full")) return 101;
 		return -1;
@@ -992,18 +899,23 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 
 	/** Locking for passengers, flat, caboose, jukebox,workcart */
 	protected boolean lockThisCart(ItemStack itemstack, EntityPlayer entityplayer) {
-		if (itemstack != null && (itemstack.getItem() instanceof ItemWrench || itemstack.getItem() instanceof ItemAdminBook)) {
+		if (itemstack != null && (itemstack.getItem() instanceof ItemWrench || itemstack.getItem() instanceof ItemAdminBook))
+		{
 			if (entityplayer.getDisplayName().equals(this.trainOwner) || entityplayer.getGameProfile().getName().equals(this.trainOwner)
-					|| this.trainOwner.equals("") || entityplayer.canCommandSenderUseCommand(2, "")) {
-				if (locked) {
+					|| this.trainOwner.equals("") || entityplayer.canCommandSenderUseCommand(2, ""))
+			{
+				if (locked)
+				{
 					locked = false;
-					if(worldObj.isRemote) {
+					if(worldObj.isRemote)
+					{
 						entityplayer.addChatMessage(new ChatComponentText("Unlocked"));
 					}
 				}
 				else {
 					locked = true;
-					if(worldObj.isRemote) {
+					if(worldObj.isRemote)
+					{
 						entityplayer.addChatMessage(new ChatComponentText("Locked"));
 					}
 				}
@@ -1190,7 +1102,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	 * @author 02skaplan
 	 * @return CargoManager for entity if entity supports custom cargo, else null.
 	 */
-	public CargoManager getCargoManager() {
+	public final CargoManager getCargoManager() {
 		return cargoManager;
 	}
 

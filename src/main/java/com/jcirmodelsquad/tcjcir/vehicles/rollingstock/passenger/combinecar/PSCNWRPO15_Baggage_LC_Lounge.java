@@ -1,9 +1,10 @@
-package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger;
+package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar;
 
 import net.minecraft.world.World;
 import train.common.api.AbstractPassengerCar;
+import train.common.api.AbstractPassengerCombineCar;
 
-public class PSCNWRPO15_Baggage_LC_Lounge extends AbstractPassengerCar
+public class PSCNWRPO15_Baggage_LC_Lounge extends AbstractPassengerCombineCar
 {
 
 	public PSCNWRPO15_Baggage_LC_Lounge(World world)
@@ -14,6 +15,12 @@ public class PSCNWRPO15_Baggage_LC_Lounge extends AbstractPassengerCar
 	public PSCNWRPO15_Baggage_LC_Lounge(World world, double posX, double posY, double posZ)
 	{
 		super(world, posX, posY, posZ);
+	}
+
+	@Override
+	public void setupTextureDescription()
+	{
+
 	}
 
 	@Override

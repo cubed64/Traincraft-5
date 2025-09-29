@@ -1,6 +1,7 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight;
 
-import com.jcirmodelsquad.tcjcir.models.loads.*;
+import com.jcirmodelsquad.tcjcir.models.loads.Model35FootAggregate;
+import com.jcirmodelsquad.tcjcir.models.loads.Model35FootRails;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -113,22 +114,9 @@ public class MaPa35FootGondola extends Freight implements IInventory {
     }
 
     @Override
-    public boolean isStorageCart() {
-        return true;
-    }
-
-    @Override
     public float getOptimalDistance(EntityMinecart cart) {
         return 1.87F;
     }
 
-    @Override
-    public int getInventoryStackLimit() {
-        return 64;
-    }
 
-    @Override
-    public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-        return true;
-    }
 }
