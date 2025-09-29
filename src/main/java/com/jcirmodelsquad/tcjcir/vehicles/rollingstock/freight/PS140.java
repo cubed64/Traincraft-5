@@ -45,6 +45,7 @@ public class PS140 extends AbstractStandardFreightCar
         textureDescriptionMap.put(17, "AGW");
         textureDescriptionMap.put(18, "AGW");
         textureDescriptionMap.put(19, "CDCS");
+        textureDescriptionMap.put(20, "SOU");
     }
 
     @Override

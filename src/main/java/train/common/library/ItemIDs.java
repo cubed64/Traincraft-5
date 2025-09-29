@@ -781,6 +781,7 @@ public enum ItemIDs {
 	minecart1912WoodBoxcar("ItemRollingStock", "1912WoodBoxcar", FREIGHT, 3),
 	minecartPS_40t_ss_box("ItemRollingStock", "PS_40t_ss_box_icon", FREIGHT, 3),
 	minecartSP_B50("ItemRollingStock", "SP_B50_icon", FREIGHT, 3),
+	minecartPFEr_40_23Reefer("ItemRollingStock", "PFEr_40_23Reefer_icon", FREIGHT, 4),
 
 	minecartVersaLongi("ItemRollingStock", "versalongi", FREIGHT, 4),
 	minecartVersaTrans("ItemRollingStock", "versatrans", FREIGHT, 4),
