@@ -29,6 +29,7 @@ public class DieselSD50 extends DieselTrain {
         textureDescriptionMap.put(8, "HBRY");
         textureDescriptionMap.put(9, "FNCC KIT-L");
         textureDescriptionMap.put(10, "Seaboard System");
+        textureDescriptionMap.put(11, "Chessie System");
     }
     public DieselSD50(World world, double d, double d1, double d2){
         this(world);

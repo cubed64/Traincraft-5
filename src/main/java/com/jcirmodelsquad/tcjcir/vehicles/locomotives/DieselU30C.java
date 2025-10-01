@@ -30,7 +30,8 @@ public class DieselU30C extends DieselTrain {
         textureDescriptionMap.put(10, "Chicago and North Western");
         textureDescriptionMap.put(11, "CSXT (Stealth)");
         textureDescriptionMap.put(12, "CSXT (Bluedown)");
-        textureDescriptionMap.put(13, "Seaboard");
+        textureDescriptionMap.put(13, "Seaboard System");
+        textureDescriptionMap.put(14, "Chessie System");
     }
     public DieselU30C(World world, double d, double d1, double d2){
         this(world);

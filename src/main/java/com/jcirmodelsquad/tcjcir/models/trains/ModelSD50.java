@@ -2036,7 +2036,7 @@ public class ModelSD50 extends ModelConverter //Same as Filename
 			flexMid.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5 ) {//i have no fuckin idea what the problem is
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 5 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 11 ) {//i have no fuckin idea what the problem is
 			//csx shid
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexcoil_c2h_csxes.png"));//im gonna stab
 			GL11.glPushMatrix();

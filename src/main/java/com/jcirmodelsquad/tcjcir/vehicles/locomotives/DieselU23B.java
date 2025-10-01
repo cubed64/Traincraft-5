@@ -49,6 +49,7 @@ public class DieselU23B extends DieselTrain {
         textureDescriptionMap.put(29, "CSXT (Stealth)");
         textureDescriptionMap.put(30, "CSXT (YN1)");
         textureDescriptionMap.put(31, "CSXT (YN2)");
+        textureDescriptionMap.put(32, "Chessie System");
     }
     public DieselU23B(World world, double d, double d1, double d2){
         this(world);

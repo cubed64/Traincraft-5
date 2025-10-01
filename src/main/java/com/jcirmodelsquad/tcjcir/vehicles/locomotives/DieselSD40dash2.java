@@ -56,6 +56,7 @@ public class DieselSD40dash2 extends DieselTrain {
         textureDescriptionMap.put(34, "Chicago and North Western");
         textureDescriptionMap.put(35, "Seaboard System");
         textureDescriptionMap.put(36, "Southern");
+        textureDescriptionMap.put(37, "Chessie System");
     }
     public DieselSD40dash2(World world, double d, double d1, double d2){
         this(world);

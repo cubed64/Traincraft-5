@@ -1865,7 +1865,7 @@ public class ModelU30C_new extends ModelConverter //Same as Filename
 			GL11.glTranslated(1.775, 0, 0);
 			theTrucc.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 21 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 22 ){
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 21 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 22 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 24){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/fb3_new_csxandmpblu.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.775, 0.0, 0);

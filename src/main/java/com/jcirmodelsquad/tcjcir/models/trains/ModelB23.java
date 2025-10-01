@@ -2037,7 +2037,7 @@ public class ModelB23 extends ModelConverter //Same as Filename
 			theTrucks4.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 35 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 36
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 38 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 41){
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 38 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 41 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 42){
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/BlombergB_csxbleu.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.54, -0.01, 0);

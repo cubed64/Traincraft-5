@@ -40,6 +40,7 @@ public class DieselGP30 extends DieselTrain {
         textureDescriptionMap.put(20, "CB&Q");
         textureDescriptionMap.put(21, "CNW");
         textureDescriptionMap.put(22, "Seaboard System");
+        textureDescriptionMap.put(23, "Chessie System");
     }
     public DieselGP30(World world, double d, double d1, double d2){
         this(world);

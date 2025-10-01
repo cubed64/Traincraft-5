@@ -25,6 +25,7 @@ public class DieselB30 extends DieselTrain {
         textureDescriptionMap.put(5, "CSXT (Stealth)");
         textureDescriptionMap.put(6, "CSXT (Bluedown)");
         textureDescriptionMap.put(7, "Seaboard");
+        textureDescriptionMap.put(8, "Chessie System");
     }
     public DieselB30(World world, double d, double d1, double d2){
         this(world);
