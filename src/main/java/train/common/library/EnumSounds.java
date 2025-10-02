@@ -1,6 +1,6 @@
 package train.common.library;
 
-import com.jcirmodelsquad.tcjcir.vehicles.locomotives.*;
+import com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.controlcar.AmfleetCab;
 import train.common.entity.rollingStock.*;
 
@@ -289,7 +289,7 @@ public enum EnumSounds {
 	DieselM640W(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselM640W.class, " ", 1F, "ALCO_16_251E_Notch8", 0.45F, 64, "ALCO_16_251E_Idle", 0.45F, 65, false, "alco_bronzebell_3", 18, new String[] {"nathan_m5_3", "nathan_m5_3", "generic_horn_1", "nathan_m5_3"}),
 
 	//BALDWIN//
-	DieselVO1000(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselVO1000.class," ", 1F, "Baldwin_8VO_Notch8", 0.45F, 58, "Baldwin_8VO_Idle", 0.45F, 62, false, "baldwin_brassbell_1", 22, new String[] {"wabco_e2_1", "wabco_e2_1", "wabco_e2_1", "leslie_a125_1", "prime_990_1" }),
+	DieselVO1000(com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselVO1000.class," ", 1F, "Baldwin_8VO_Notch8", 0.45F, 58, "Baldwin_8VO_Idle", 0.45F, 62, false, "baldwin_brassbell_1", 22, new String[] {"wabco_e2_1", "wabco_e2_1", "wabco_e2_1", "leslie_a125_1", "prime_990_1" }),
 	DieselDS441000(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDS441000.class," ", 1F, "Baldwin_608A_Notch8", 0.45F, 55, "Baldwin_608A_Idle", 0.45F, 47, false, "baldwin_brassbell_1", 22, new String[] {"leslie_a125_1", "leslie_a125_1", "leslie_a125_1", "leslie_a125_1", "leslie_a125_1"}),
 	DieselS12(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselS12.class," ", 1F, "Baldwin_606A_Notch8", 0.45F, 42, "Baldwin_606A_Idle", 0.45F, 37, false, "baldwin_brassbell_1", 22, new String[] {"leslie_a125_1", "generic_horn_1", "leslie_a125_1", "leslie_rs3l_2", "leslie_s3l_3", "nathan_p3_old_1", "nathan_n3_1", "leslie_a125_1", "leslie_a200_1"}),
 	DieselDR441500APhase2(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDR441500Phase2.class," ", 1F, "Baldwin_608A_Notch8", 0.45F, 55, "Baldwin_608A_Idle", 0.45F, 47, false, "baldwin_brassbell_1", 22, new String[] {"leslie_a200_dual_1", "leslie_a200_dual_1", "leslie_a200_dual_1", "leslie_a200_dual_1", "leslie_a200_dual_1", "leslie_a200_dual_1", "leslie_a200_dual_1", "generic_horn_1", "leslie_rs3k_1", "nathan_p01235_2"}),
@@ -313,33 +313,33 @@ public enum EnumSounds {
 	DieselKrautt(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselKrautt.class,"nathan_p3_old_4", 1F, "Maybach_MD870_16_Notch8", 0.45F, 52, "Maybach_MD870_16_Idle", 0.45F, 42, false, "ge_steelbell_1", 15),
 	DieselDD55(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDD55.class, " ", 1F, "deltic_run", 0.65F, 62, "deltic_idle", 0.65F, 48, false, "alco_bronzebell_3", 18, new String[] {"leslie_a200_triple_1", "nathan_p5_old_4", "generic_horn_2", "nathan_k5la_big_3", "nathan_k5la_hybrid_1"}),
 	DieselTB27(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselTB27.class, " ", 1F, "EMD_8_645E_Notch8", 0.45F, 48, "EMD_8_645E_Idle", 0.45F, 54, false, "emd_steelbell_8", 13, new String[] {"nathan_n3_1", "generic_horn_1", "nathan_m3h_4", "nathan_p5_old_4"}),
-	ElectricCEESlug(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricCEEslug.class, " ", 1F, "MILW_Idle", 0.45F, 40, "MILW_Idle", 0.45F, 50, false, "ge_steelbell_2", 15, new String[] {"nathan_j3_3","nathan_m3r_1", "gp40_2_horn", "generic_horn_2"}),
+	ElectricCEESlug(ElectricCEEslug.class, " ", 1F, "MILW_Idle", 0.45F, 40, "MILW_Idle", 0.45F, 50, false, "ge_steelbell_2", 15, new String[] {"nathan_j3_3","nathan_m3r_1", "gp40_2_horn", "generic_horn_2"}),
 
 	//ELECTRIC//
-	ElectricEF1(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricEF1.class, "wabco_e2_1", 1F, "MILW_Notch8", 0.45F, 40, "MILW_Idle", 0.45F, 50, false, "alco_bronzebell_3", 18),
-	ElectricEF1B(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricEF1B.class, " ", 0, "MILW_Notch8", 0.45F, 40, "MILW_Idle", 0.45F, 50, false, "alco_bronzebell_3", 18),
-	ElectricEP1A(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricEP1A.class, "wabco_e2_1", 2.5F, "MILW_Notch8", 0.45F, 40, "MILW_Idle", 0.45F, 50, false, "alco_bronzebell_3", 18),
-	ElectricGM6C_2(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricGM6C_2.class, " ", 1F, "MILW_Notch8", 0.45F, 40, "MILW_Idle", 0.45F, 50, false, "emd_brassbell_1", 15, new String[] {"leslie_s3l_1", "generic_horn_2", "leslie_s3l_1", "leslie_s3l_1", "leslie_s3l_1", "nathan_h6_1", "nathan_h6_2"}),
-	ElectricJT7(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricJT7.class, " ", 1F, "MILW_Notch8", 0.45F, 40, "MILW_Idle", 0.45F, 50, false, "alco_bronzebell_3", 18, new String[] {"leslie_a200_3", "leslie_a200_triple_1", "generic_horn_2"}),
-	ElectricAEM7(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricAEM7.class, "aem7_horn", 1F, "vl10_idle", 0.45F, 50, "vl10_idle", 0.45F, 50, false, " ", 0),
-	ElectricB_BEL(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricB_BEL.class, " ", 0.8F, "vl10_idle", 0.45F, 40, "vl10_idle", 0.45F, 40, false, "emd_steelbell_4", 10, new String[] {"generic_horn_2", "nathan_p3_new_1", "nathan_m5_4", "nathan_k5la_hybrid_1", "generic_horn_1", "leslie_rs5t_3", "fuck_bees"}),
+	ElectricEF1(com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.ElectricEF1.class, "wabco_e2_1", 1F, "MILW_Notch8", 0.45F, 40, "MILW_Idle", 0.45F, 50, false, "alco_bronzebell_3", 18),
+	ElectricEF1B(com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.ElectricEF1B.class, " ", 0, "MILW_Notch8", 0.45F, 40, "MILW_Idle", 0.45F, 50, false, "alco_bronzebell_3", 18),
+	ElectricEP1A(com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.ElectricEP1A.class, "wabco_e2_1", 2.5F, "MILW_Notch8", 0.45F, 40, "MILW_Idle", 0.45F, 50, false, "alco_bronzebell_3", 18),
+	ElectricGM6C_2(com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.ElectricGM6C_2.class, " ", 1F, "MILW_Notch8", 0.45F, 40, "MILW_Idle", 0.45F, 50, false, "emd_brassbell_1", 15, new String[] {"leslie_s3l_1", "generic_horn_2", "leslie_s3l_1", "leslie_s3l_1", "leslie_s3l_1", "nathan_h6_1", "nathan_h6_2"}),
+	ElectricJT7(com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.ElectricJT7.class, " ", 1F, "MILW_Notch8", 0.45F, 40, "MILW_Idle", 0.45F, 50, false, "alco_bronzebell_3", 18, new String[] {"leslie_a200_3", "leslie_a200_triple_1", "generic_horn_2"}),
+	ElectricAEM7(com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.ElectricAEM7.class, "aem7_horn", 1F, "vl10_idle", 0.45F, 50, "vl10_idle", 0.45F, 50, false, " ", 0),
+	ElectricB_BEL(com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.ElectricB_BEL.class, " ", 0.8F, "vl10_idle", 0.45F, 40, "vl10_idle", 0.45F, 40, false, "emd_steelbell_4", 10, new String[] {"generic_horn_2", "nathan_p3_new_1", "nathan_m5_4", "nathan_k5la_hybrid_1", "generic_horn_1", "leslie_rs5t_3", "fuck_bees"}),
 
 	//PASSENGER//
-	PCH120Commute(com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH120Commute.class, " ", 1F, "mg_run", 0.45F, 8, "mg_idle", 0.45F, 50, false, "transonic_ebell", 11, new String[] {"nathan_p2_1", "eu07_horn", "nathan_p2_1", "lu_whistle", "nathan_k5la_big_2", "eu07_horn"}),
-	PCH130Commute2(com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH130Commute2.class, "mg_horn", 1F, "mg_run", 0.45F, 8, "mg_idle", 0.45F, 50, false, "transonic_ebell", 11),
+	PCH120Commute(com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.PCH120Commute.class, " ", 1F, "mg_run", 0.45F, 8, "mg_idle", 0.45F, 50, false, "transonic_ebell", 11, new String[] {"nathan_p2_1", "eu07_horn", "nathan_p2_1", "lu_whistle", "nathan_k5la_big_2", "eu07_horn"}),
+	PCH130Commute2(com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.PCH130Commute2.class, "mg_horn", 1F, "mg_run", 0.45F, 8, "mg_idle", 0.45F, 50, false, "transonic_ebell", 11),
 	AmfleetCab(AmfleetCab.class, "nathan_k5la_big_1", 1F, " ", 0.45F, 51, " ", 0.45F, 50, false, "emd_steelbell_4",10),
 
 	//MISC//
-	BigMeme(com.jcirmodelsquad.tcjcir.vehicles.locomotives.BigMeme.class, "leslie_a425", 15, "aircompresser", 0.45F, 88, "aircompresser", 0.45F, 88, false, " ", 0),
-	Thanos(com.jcirmodelsquad.tcjcir.vehicles.locomotives.Thanos.class, "thanos_horn", 1, "thanos_run", 0.45F, 82, "thanos_idle", 0.45F, 33, false, " ", 0),
+	BigMeme(com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.BigMeme.class, "leslie_a425", 15, "aircompresser", 0.45F, 88, "aircompresser", 0.45F, 88, false, " ", 0),
+	Thanos(com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.Thanos.class, "thanos_horn", 1, "thanos_run", 0.45F, 82, "thanos_idle", 0.45F, 33, false, " ", 0),
 	DieselTGVMobile(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselTGVmobile.class, "carhorn_1", 1F, "GE_HBI_600_Notch8", 0.45F, 80, "GE_HBI_600_Idle", 0.45F, 100, false, " ", 0),
 	DieselHHGregg(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselHHgregg.class,"hhgregg600horn", 1F, "hhgregg600_run", 0.45F, 216, "hhgregg600_idle", 0.45F, 216, false, " ", 0),
-	ElectricKawasakiLRV(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricKawasakiLRV.class, "tram_bell", 1F, "vl10_idle", 0.45F, 50, "vl10_idle", 0.45F, 50, false, " ", 0),
-	ElectricCQ310(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricCQ310PO.class, " ", 1F, "vl10_idle", 0.45F, 50, "vl10_idle", 0.45F, 50, false, " ", 0, new String[] {"subway_horn", "subway_horn", "br_horn"}),
-	ElectricPCCCar(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricPCC.class, "tram_bell", 1F, "vl10_idle", 0.45F, 50, "vl10_idle", 0.45F, 50, false, " ", 0),
-	ElectricClass74(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricClass74.class, " ", 0.8F, "chme3_idle", 0.65F, 40, "chme3_idle", 0.65F, 40, false, " ", 0, new String[] {"br_horn", "br_horn", "nathan_p2_1", "br_horn", "br_horn"}),
-	ElectricTwoBil(com.jcirmodelsquad.tcjcir.vehicles.locomotives.ElectricTwoBil.class, "br_horn", 0.8F, "vl10_idle", 0.6F, 50, "vl10_idle", 0.6F, 50, false, " ", 0),
-	DieselWorkdayHyrail(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselWorkdayHyrail.class, " ", 1F, "GE_HBI_600_Notch8", 0.45F, 80, "GE_HBI_600_Idle", 0.45F, 100, false, " ", 0, new String[] {"carhorn_1", "carhorn_1", "buell_b3_1", "nathan_m5_4", "carhorn_1", "carhorn_1", "carhorn_1"}),
+	ElectricKawasakiLRV(com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.ElectricKawasakiLRV.class, "tram_bell", 1F, "vl10_idle", 0.45F, 50, "vl10_idle", 0.45F, 50, false, " ", 0),
+	ElectricCQ310(ElectricCQ310PO.class, " ", 1F, "vl10_idle", 0.45F, 50, "vl10_idle", 0.45F, 50, false, " ", 0, new String[] {"subway_horn", "subway_horn", "br_horn"}),
+	ElectricPCCCar(ElectricPCC.class, "tram_bell", 1F, "vl10_idle", 0.45F, 50, "vl10_idle", 0.45F, 50, false, " ", 0),
+	ElectricClass74(com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.ElectricClass74.class, " ", 0.8F, "chme3_idle", 0.65F, 40, "chme3_idle", 0.65F, 40, false, " ", 0, new String[] {"br_horn", "br_horn", "nathan_p2_1", "br_horn", "br_horn"}),
+	ElectricTwoBil(com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.ElectricTwoBil.class, "br_horn", 0.8F, "vl10_idle", 0.6F, 50, "vl10_idle", 0.6F, 50, false, " ", 0),
+	DieselWorkdayHyrail(com.jcirmodelsquad.tcjcir.vehicles.locomotives.foxdrives.DieselWorkdayHyrail.class, " ", 1F, "GE_HBI_600_Notch8", 0.45F, 80, "GE_HBI_600_Idle", 0.45F, 100, false, " ", 0, new String[] {"carhorn_1", "carhorn_1", "buell_b3_1", "nathan_m5_4", "carhorn_1", "carhorn_1", "carhorn_1"}),
 
 	;
 

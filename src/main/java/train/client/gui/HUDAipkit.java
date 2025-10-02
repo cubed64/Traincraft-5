@@ -1,6 +1,6 @@
 package train.client.gui;
 
-import com.jcirmodelsquad.tcjcir.vehicles.locomotives.PCH130Commute2;
+import com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.PCH130Commute2;
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.client.Minecraft;
