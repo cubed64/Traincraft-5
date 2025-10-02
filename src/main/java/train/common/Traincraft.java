@@ -129,12 +129,21 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		tcLog.info("Initialize blocks, items, and other stuff");
 		tcTab = new CreativeTabTraincraft(CreativeTabs.getNextID(), "Traincraft");
 		tcHeritageTab = new CreativeTabTraincraftHeritage(CreativeTabs.getNextID(), "Traincraft Heritage");
-		tcSteamTab = new CreativeTabTraincraftSteam(CreativeTabs.getNextID(), "BAP Steam");
-		tcDieselTab = new CreativeTabTraincraftDiesel(CreativeTabs.getNextID(), "BAP Diesel");
-		tcElectricTab = new CreativeTabTraincraftElectric(CreativeTabs.getNextID(), "BAP Electric");
-		tcPassengerTab = new CreativeTabTraincraftPassenger(CreativeTabs.getNextID(), "BAP Passenger");
-		tcFreightTab = new CreativeTabTraincraftFreight(CreativeTabs.getNextID(), "BAP Freight");
-		tcBooseTab = new CreativeTabTraincraftBoose(CreativeTabs.getNextID(), "BAP Caboosey");
+
+		if (ConfigHandler.ENABLE_BAP_SPLIT_TABS)
+		{
+			tcSteamTab = new CreativeTabTraincraftSteam(CreativeTabs.getNextID(), "BAP Steam");
+			tcDieselTab = new CreativeTabTraincraftDiesel(CreativeTabs.getNextID(), "BAP Diesel");
+			tcElectricTab = new CreativeTabTraincraftElectric(CreativeTabs.getNextID(), "BAP Electric");
+			tcPassengerTab = new CreativeTabTraincraftPassenger(CreativeTabs.getNextID(), "BAP Passenger");
+			tcFreightTab = new CreativeTabTraincraftFreight(CreativeTabs.getNextID(), "BAP Freight");
+			tcBooseTab = new CreativeTabTraincraftBoose(CreativeTabs.getNextID(), "BAP Caboosey");
+		}
+		else
+		{
+			tcDieselTab = new CreativeTabTraincraftDiesel(CreativeTabs.getNextID(), "B.A.P");
+		}
+
 		trainArmor = proxy.addArmor("armor");
 		trainCloth = proxy.addArmor("Paintable");
 		trainCompositeSuit = proxy.addArmor("CompositeSuit");

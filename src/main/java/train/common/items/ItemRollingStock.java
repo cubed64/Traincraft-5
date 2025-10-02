@@ -30,6 +30,8 @@ import train.common.tile.TileTCRailGag;
 import javax.annotation.Nullable;
 import java.util.List;
 
+import static train.common.library.TypeOfRollingStock.HERITAGE;
+
 public class ItemRollingStock extends ItemMinecart implements IMinecart, IMinecartItem {
 
     private String iconName = "";
@@ -50,32 +52,43 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
             {
                 typeOfRollingStock = TypeOfRollingStock.EMPTY;
             }
-            switch(typeOfRollingStock)
+
+            if (typeOfRollingStock == HERITAGE)
             {
-                case HERITAGE:
-                    setCreativeTab(Traincraft.tcHeritageTab);
-                    break;
-                case STEAM:
-                    setCreativeTab(Traincraft.tcSteamTab);
-                    break;
-                case DIESEL:
-                    setCreativeTab(Traincraft.tcDieselTab);
-                    break;
-                case ELECTRIC:
-                    setCreativeTab(Traincraft.tcElectricTab);
-                    break;
-                case PASSENGER:
-                    setCreativeTab(Traincraft.tcPassengerTab);
-                    break;
-                case FREIGHT:
-                    setCreativeTab(Traincraft.tcFreightTab);
-                    break;
-                case BOOSE:
-                    setCreativeTab(Traincraft.tcBooseTab);
-                    break;
-                default:
-                    setCreativeTab(Traincraft.tcTab);
-                    break;
+                setCreativeTab(Traincraft.tcHeritageTab);
+                return;
+            }
+
+            if (ConfigHandler.ENABLE_BAP_SPLIT_TABS)
+            {
+                switch(typeOfRollingStock)
+                {
+                    case STEAM:
+                        setCreativeTab(Traincraft.tcSteamTab);
+                        break;
+                    case DIESEL:
+                        setCreativeTab(Traincraft.tcDieselTab);
+                        break;
+                    case ELECTRIC:
+                        setCreativeTab(Traincraft.tcElectricTab);
+                        break;
+                    case PASSENGER:
+                        setCreativeTab(Traincraft.tcPassengerTab);
+                        break;
+                    case FREIGHT:
+                        setCreativeTab(Traincraft.tcFreightTab);
+                        break;
+                    case BOOSE:
+                        setCreativeTab(Traincraft.tcBooseTab);
+                        break;
+                    default:
+                        setCreativeTab(Traincraft.tcTab);
+                        break;
+                }
+            }
+            else
+            {
+                setCreativeTab(Traincraft.tcDieselTab);
             }
         }
     }
