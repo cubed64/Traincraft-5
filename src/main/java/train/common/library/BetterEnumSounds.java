@@ -1,6 +1,5 @@
 package train.common.library;
 
-import com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselDash944CW;
 
 import java.util.HashMap;
 public enum BetterEnumSounds {;

@@ -5,6 +5,15 @@ import net.minecraft.world.World;
 import train.common.api.AbstractTrains;
 import train.common.core.util.TraincraftUtil;
 import train.common.entity.rollingStock.*;
+import train.common.entity.rollingStock.diesel.*;
+import train.common.entity.rollingStock.electric.*;
+import train.common.entity.rollingStock.freight.*;
+import train.common.entity.rollingStock.passenger.*;
+import train.common.entity.rollingStock.passenger.baggagecar.*;
+import train.common.entity.rollingStock.steam.*;
+import train.common.entity.rollingStock.tanker.*;
+import train.common.entity.rollingStock.tender.*;
+import train.common.entity.rollingStock.workcart.*;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -142,7 +151,7 @@ public enum EnumHeritageTrainsLegacy implements IEnumTrains
     tenderSmall("Tender Small Black", EntityTenderSmall.class, ItemIDs.minecartTender.item, "tender", 0, 0, 0.1, 0, 0, 0, 0, 0, 5000, TraincraftUtil.getBytesFromColors(new String[]{"Black", "Red", "Blue", "Green", "Yellow"}), 18, 0, (new String[]{"Water capacity: 5000mb"})),
     tenderHeavy("Tender Heavy", EntityTenderHeavy.class, ItemIDs.minecartTenderHeavy.item, "tender", 0, 0, 2, 0, 0, 0, 0, 0, 14000, TraincraftUtil.getBytesFromColors(new String[]{"Grey", "LightGrey"}), 18, 0, (new String[]{"Water capacity: 14000mb"})),
     tenderGS4("Tender GS4", EntityTenderGS4.class, ItemIDs.minecartGS4_Tender.item, "tender", 0, 0, 2, 0, 0, 0, 0, 0, 18000, TraincraftUtil.getBytesFromColors(new String[]{"Orange", "White"}), 18, 0, (new String[]{"Water capacity: 18000mb"})),
-    Model4000GallonTender("4000GallonTender",EntityTender4000.class, ItemIDs.minecart4000GallonTender.item,"tender",0,0,2,0,0,0,0,0,15000,TraincraftUtil.getBytesFromColors(new String[]{"Green", "Blue", "Red", "Lime"}),18,0,(new String[] {"Water capacity: 15000mb"})),
+    Model4000GallonTender("4000GallonTender", EntityTender4000.class, ItemIDs.minecart4000GallonTender.item,"tender",0,0,2,0,0,0,0,0,15000,TraincraftUtil.getBytesFromColors(new String[]{"Green", "Blue", "Red", "Lime"}),18,0,(new String[] {"Water capacity: 15000mb"})),
     ModelFowler4FTender("Fowler 4F Tender",EntityTenderFowler4F.class, ItemIDs.minecartFowler4FTender.item,"tender",0,0,2,0,0,0,0,0,15000, null, 18,0,(new String[] {"Water capacity: 15000mb"})),
     Model225Tender("1225 tender",EntityTenderBerk1225.class, ItemIDs.minecarttenderBerk1225.item,"tender",0,0,2,0,0,0,0,0,15000,TraincraftUtil.getBytesFromColors(new String[]{"Black", "Grey","LightGrey"}),18,0,(new String[] {"Water capacity: 15000mb"})),
     tender4_4_0("Tender 4-4-0", EntityTender4_4_0.class,  ItemIDs.minecartSteamRedTender.item, "tender", 0, 0, 0.2, 0, 0, 0, 0, 0, 8000, TraincraftUtil.getBytesFromColors(new String[] { "Black", "White", "Brown", "Blue", "Green", "Red", "Purple" }), 18, 0, (new String[] { "Water capacity: 8000mb" })),
@@ -153,8 +162,8 @@ public enum EnumHeritageTrainsLegacy implements IEnumTrains
     tenderC62Class("Tender C62Class", EntityTenderC62Class.class, ItemIDs.minecartTenderC62Class.item, "tender", 0, 0, 0.5, 0, 0, 0, 0, 0, 14000, TraincraftUtil.getBytesFromColors(new String[] { "Black", "Red" }), 18, 0, (new String[] { "Water capacity: 14000mb" })),
     tenderD51("Tender D51", EntityTenderD51.class, ItemIDs.minecartTenderD51.item, "tender", 0, 0, 0.5, 0, 0, 0, 0, 0, 14000, null, 18, 0, (new String[] { "Water capacity: 12000mb" })),
     tenderAdler("Tender Adler",EntityTenderAdler.class, ItemIDs.minecartTenderAdler.item,"tender",0,0,0.5,0,0,0,0,0,4000,null,18,0,(new String[] {"Water capacity: 4000mb"})),
-    tender_C41("Tender C41",EntityTender_C41.class, ItemIDs.minecartTenderC41.item,"tender",0,0,1.5,0,0,0,0,0,16000,TraincraftUtil.getBytesFromColors(new String[]{"Black", "Grey"}),18,0,(new String[] {"Water capacity: 16000mb"})),
-    tender_Southern1102("Tender Southern1102",EntityTender_Southern1102.class, ItemIDs.minecartTenderSouthern1102.item,"tender",0,0,1.5,0,0,0,0,0,16000,null,18,0,(new String[] {"Water capacity: 16000mb"})),
+    tender_C41("Tender C41", EntityTender_C41.class, ItemIDs.minecartTenderC41.item,"tender",0,0,1.5,0,0,0,0,0,16000,TraincraftUtil.getBytesFromColors(new String[]{"Black", "Grey"}),18,0,(new String[] {"Water capacity: 16000mb"})),
+    tender_Southern1102("Tender Southern1102", EntityTender_Southern1102.class, ItemIDs.minecartTenderSouthern1102.item,"tender",0,0,1.5,0,0,0,0,0,16000,null,18,0,(new String[] {"Water capacity: 16000mb"})),
     tender_MILW("Tender MILW",EntityTenderMILW.class, ItemIDs.minecartMILWTender.item,"tender",0,0,1.5,0,0,0,0,0,16000,null,18,0,(new String[] {"Water capacity: 16000mb"})),
 
     /** Diesel */
@@ -180,7 +189,7 @@ public enum EnumHeritageTrainsLegacy implements IEnumTrains
 
     /** Electric */
     locoElectricVL10("Loco Electric VL10", EntityLocoElectricVL10.class,  ItemIDs.minecartVL10.item, "electric", 6250, 100, 0, 8, 0, 400, 1.1, 0.956, 0, null, 14, -2.3),
-    locoElectricBR_E69("Loco Electric BR_E69",EntityLocoElectricBR_E69.class, ItemIDs.minecartBR_E69.item,"electric",400,50,0,5,0,400,0.9,0.946,0,TraincraftUtil.getBytesFromColors(new String[] {"Green","Red","Black","Grey","Blue","Cyan"}),18,0),
+    locoElectricBR_E69("Loco Electric BR_E69", EntityLocoElectricBR_E69.class, ItemIDs.minecartBR_E69.item,"electric",400,50,0,5,0,400,0.9,0.946,0,TraincraftUtil.getBytesFromColors(new String[] {"Green","Red","Black","Grey","Blue","Cyan"}),18,0),
     locoElectricMineTrain("Loco Electric Minetrain",EntityLocoElectricMinetrain.class,ItemIDs.minecartLocoMineTrain.item,"electric",500,40,0,80,0,160,0.5,0.97,0,null,18,-1),
     locoElectricSpeedZeroED("Loco Electric High Speed ZeroED", EntityLocoElectricHighSpeedZeroED.class, ItemIDs.minecartLocoHighSpeedZeroED.item, "electric", 700, 240, 0, 3, 0,230, 1.4, 0.98, 0, TraincraftUtil.getBytesFromColors(new String[]{"White", "LightGrey", "Grey"}), 13,  -3.4),
     locoElectricICE1("Loco Electric ICE 1", EntityLocoElectricICE1.class, ItemIDs.minecartICE1_Loco.item, "electric", 4300, 280, 0, 4, 0, 250, 1.5, 0.98, 0, TraincraftUtil.getBytesFromColors(new String[]{"White", "Red"}), 13, -5),
@@ -192,7 +201,7 @@ public enum EnumHeritageTrainsLegacy implements IEnumTrains
     locoDieselE103("Loco Electric E103",EntityLocoElectricE103.class, ItemIDs.minecartE103.item,"electric",2806,200,0,8,0,170,0.66,0.96,8000,TraincraftUtil.getBytesFromColors(new String[] {"Red","Blue"}),15,-3.6),
     locoElectricClass85("Loco Electric Class 85", EntityLocoElectricClass85.class, ItemIDs.minecartLocoClass85.item, "electric", 1997, 160, 0, 10, 0, 170, 0.7, 0.965, 0, null, 18, -5),
     locoElectricCD151("Loco Electric CD151", EntityLocoElectricCD151.class, ItemIDs.minecartLocoCD151.item, "electric", 1133, 150, 0, 10, 0, 170, 0.7, 0.965, 6850, TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Yellow", "Red"}), 18, -4),
-    locoElectricBP4("Loco Electric BP4",EntityLocoElectricBP4.class, ItemIDs.minecartLocoBP4.item,"electric",1520,105,0,60,0,200,0.8,0.97,8650,TraincraftUtil.getBytesFromColors(new String[]{"Green", "Purple", "Cyan", "Grey", "Blue"}),14,-3),
+    locoElectricBP4("Loco Electric BP4", EntityLocoElectricBP4.class, ItemIDs.minecartLocoBP4.item,"electric",1520,105,0,60,0,200,0.8,0.97,8650,TraincraftUtil.getBytesFromColors(new String[]{"Green", "Purple", "Cyan", "Grey", "Blue"}),14,-3),
 
     /** Steam */
     locoSteamA4("Loco Steam A4 Mallard", EntityLocoSteamMallardA4.class,  ItemIDs.minecartLocoA4Mallard.item, "steam", 1418, 203, 0, 60, 200, 160, 0.65, 0.97, 10000, TraincraftUtil.getBytesFromColors(new String[] { "Blue", "Lime", "Black", "Green", "White" }), 7, -5 ),

@@ -1,14 +1,15 @@
 package train.common.library;
 
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.*;
-import com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselVO1000;
+import com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.*;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.*;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.foxdrives.DieselWorkdayHyrail;
+import com.jcirmodelsquad.tcjcir.vehicles.locomotives.steam.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.misc.ExperimentalGeometryCar;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.controlcar.AmfleetCab;
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tanker.GATC10000;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tanker.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tender.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.workcart.*;
 import net.minecraft.item.Item;

@@ -14,6 +14,14 @@ import net.minecraft.world.gen.structure.StructureVillagePieces;
 import train.common.api.AbstractTrains;
 import train.common.api.EntityRollingStock;
 import train.common.entity.rollingStock.*;
+import train.common.entity.rollingStock.freight.EntityBoxCartUS;
+import train.common.entity.rollingStock.freight.EntityFreightCart;
+import train.common.entity.rollingStock.freight.EntityFreightCartSmall;
+import train.common.entity.rollingStock.freight.EntityFreightWood2;
+import train.common.entity.rollingStock.passenger.EntityPassenger2;
+import train.common.entity.rollingStock.workcart.EntityCaboose;
+import train.common.entity.rollingStock.workcart.EntityCaboose3;
+import train.common.entity.rollingStock.workcart.EntityCabooseLogging;
 import train.common.library.BlockIDs;
 
 import java.util.List;

@@ -4,15 +4,16 @@ import com.jcirmodelsquad.tcjcir.models.ModelThisErrorIsERatedForEveryone;
 import com.jcirmodelsquad.tcjcir.models.trains.*;
 import com.jcirmodelsquad.tcjcir.vehicles.ERatedForEveryone;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.*;
-import com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselVO1000;
+import com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.*;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.*;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.foxdrives.DieselWorkdayHyrail;
+import com.jcirmodelsquad.tcjcir.vehicles.locomotives.steam.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.misc.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.*;
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.baggagecar.OBHWNH5570_5589Baggage;
-import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.controlcar.AmfleetCab;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.baggagecar.*;
+import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.controlcar.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.funny.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tanker.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tender.*;
@@ -22,6 +23,15 @@ import train.client.render.models.*;
 import train.common.api.AbstractTrains;
 import train.common.api.EntityRollingStock;
 import train.common.entity.rollingStock.*;
+import train.common.entity.rollingStock.diesel.*;
+import train.common.entity.rollingStock.electric.*;
+import train.common.entity.rollingStock.freight.*;
+import train.common.entity.rollingStock.passenger.*;
+import train.common.entity.rollingStock.passenger.baggagecar.*;
+import train.common.entity.rollingStock.steam.*;
+import train.common.entity.rollingStock.tanker.*;
+import train.common.entity.rollingStock.tender.*;
+import train.common.entity.rollingStock.workcart.*;
 
 import java.util.ArrayList;
 
@@ -659,7 +669,7 @@ public enum RenderEnum
 
 	/** JCIR-TC **/
 	geometryCar(ExperimentalGeometryCar.class,new ModelGeometryCar(), "geometrycar_", true, new float[] {0F, 0F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	HighrailTruck( com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselHighrailTruck.class,  new ModelHighrailTruck(), "highrail_", true,new float[] {-1.5F, 0.2F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 1,  new ArrayList<double[]>() {
+	HighrailTruck( DieselHighrailTruck.class,  new ModelHighrailTruck(), "highrail_", true,new float[] {-1.5F, 0.2F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 1,  new ArrayList<double[]>() {
 		{
 			add(new double[]{-0.3D, -0.4D, 0.2D});
 		}
@@ -685,7 +695,7 @@ public enum RenderEnum
 	//Class345Coach( com.jcirmodelsquad.tcjcir.vehicles.rollingstock.Class345Coach.class, new ModelClass345Coach(),"class345coach", false, new float[] {0F, 0F, 0F},  new float[] { 0F, 180F, 180F },null, "", 0, null, "", null, 0, false),
 	BoulderWagon(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.BoulderWagon.class, new ModelBoulderWagon(),"BoulderWagon_",true, new float[]{0F,0.2F,0F}, new float[] { 0F, 180F, 180F },null, "",0,null,  "",null, 0,false),
 	//Hustler(com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselHustler.class, new ModelHustler(), "hustler_", true, new float[]{-1F, 0.2F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	HighrailVan( com.jcirmodelsquad.tcjcir.vehicles.locomotives.DieselHighrailVan.class,  new ModelHighrailVan(), "highrailvan_", true,new float[] {-1.5F, 0.2F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 1,  new ArrayList<double[]>() {
+	HighrailVan( DieselHighrailVan.class,  new ModelHighrailVan(), "highrailvan_", true,new float[] {-1.5F, 0.2F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 1,  new ArrayList<double[]>() {
 		{
 			add(new double[]{-0.3D, -0.4D, 0.2D});
 		}
