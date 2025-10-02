@@ -60,7 +60,8 @@ import java.util.Calendar;
 
 public class ClientProxy extends CommonProxy {
 
-	public static boolean isHoliday() {
+	public static boolean isHoliday()
+	{
 		Calendar cal = Calendar.getInstance();
 		return(cal.get(Calendar.MONTH) == Calendar.DECEMBER || (cal.get(Calendar.MONTH) == Calendar.JANUARY) && cal.get(Calendar.DATE) < 7);
 	}
