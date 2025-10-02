@@ -48,6 +48,8 @@ import train.common.tile.TileTCRailGag;
 
 import java.util.*;
 
+import static train.common.core.handlers.ConfigHandler.CREATIVE_DROP_ROLLINGSTOCK;
+
 public abstract class AbstractTrains extends EntityMinecart implements IMinecart, IRoutableCart, IEntityAdditionalSpawnData {
 
 	/**
@@ -837,18 +839,20 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	}
 
 	public void dropCartAsItem(boolean isCreative) {
-		if (!itemdropped)
+		if (itemdropped == false && (CREATIVE_DROP_ROLLINGSTOCK || isCreative == false))
 		{
 			itemdropped=true;
 			for (ItemStack item : getItemsDropped()) {
 				if (item.getItem() instanceof ItemRollingStock){
 					ItemStack stack = ItemRollingStock.setPersistentData(item,this,this.getUniqueTrainID(),trainCreator, trainOwner, getColor(), trainNote);
 					exportTrustedListToNBT(stack != null ? stack.getTagCompound() : null);
-					if (cargoManager!= null && cargoManager.getSelectedCargo() != 0 && stack != null) {
+					if (cargoManager!= null && cargoManager.getSelectedCargo() != 0 && stack != null)
+					{
 						stack.getTagCompound().setInteger("cargoSelection", cargoManager.getSelectedCargo());
 					}
 					entityDropItem(stack!=null?stack:item,0);
-				} else {
+				} else
+				{
 					setUniqueIDToItem(item);
 					entityDropItem(item, 0);
 				}
