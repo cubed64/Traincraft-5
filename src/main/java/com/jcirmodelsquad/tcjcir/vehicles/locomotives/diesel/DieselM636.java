@@ -18,11 +18,11 @@ public class DieselM636 extends DieselTrain {
     public DieselM636(World world) {
         super(world, EnumTrains.M636.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "FCP (Small Words)");
-        textureDescriptionMap.put(1, "FCP (Big Letters)");
-        textureDescriptionMap.put(2, "FCP (but its BLUe)");
-        textureDescriptionMap.put(3, "FCP (Southern Pacific Obsession)");
-        textureDescriptionMap.put(4, "Blandsville & Blankerston");
+        InsertTexture(0, "FCP (Small Words)");
+        InsertTexture(1, "FCP (Big Letters)");
+        InsertTexture(2, "FCP (but its BLUe)");
+        InsertTexture(3, "FCP (Southern Pacific Obsession)");
+        InsertTexture(4, "Blandsville & Blankerston");
 
     }
     public DieselM636(World world, double d, double d1, double d2){

@@ -24,9 +24,9 @@ public class VersaTrans extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "Generic Blue");
-        textureDescriptionMap.put(1, "Generic Dark Grey");
-        textureDescriptionMap.put(2, "Generic Light Grey");
+        InsertTexture(0, "Generic Blue");
+        InsertTexture(1, "Generic Dark Grey");
+        InsertTexture(2, "Generic Light Grey");
     }
 
     @Override

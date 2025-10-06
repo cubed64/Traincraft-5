@@ -17,20 +17,20 @@ public class DieselC424 extends DieselTrain {
     public DieselC424(World world) {
         super(world, EnumTrains.C424.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Spokane, Portland & Seattle");
-        textureDescriptionMap.put(1, "Morristown & Erie");
-        textureDescriptionMap.put(2, "Western New York & Pennsylvania");
-        textureDescriptionMap.put(3, "Washaska & Old Fox RR");
-        textureDescriptionMap.put(4, "Latrans Range RR");
-        textureDescriptionMap.put(5, "NdeM");
-        textureDescriptionMap.put(6, "NdeM");
-        textureDescriptionMap.put(7, "Blandsville & Blankerston");
-        textureDescriptionMap.put(8, "Nautilus");
-        textureDescriptionMap.put(9, "Deadwood & La Mesa");
-        textureDescriptionMap.put(10, "Penn Central");
-        textureDescriptionMap.put(11, "FNCC 2nd order(KIT-L)");
-        textureDescriptionMap.put(12, "Burlington Northern");
-        textureDescriptionMap.put(13, "Great Lakes & Northern Territories");
+        InsertTexture(0, "Spokane, Portland & Seattle");
+        InsertTexture(1, "Morristown & Erie");
+        InsertTexture(2, "Western New York & Pennsylvania");
+        InsertTexture(3, "Washaska & Old Fox RR");
+        InsertTexture(4, "Latrans Range RR");
+        InsertTexture(5, "NdeM");
+        InsertTexture(6, "NdeM");
+        InsertTexture(7, "Blandsville & Blankerston");
+        InsertTexture(8, "Nautilus");
+        InsertTexture(9, "Deadwood & La Mesa");
+        InsertTexture(10, "Penn Central");
+        InsertTexture(11, "FNCC 2nd order(KIT-L)");
+        InsertTexture(12, "Burlington Northern");
+        InsertTexture(13, "Great Lakes & Northern Territories");
     }
     public DieselC424(World world, double d, double d1, double d2){
         this(world);

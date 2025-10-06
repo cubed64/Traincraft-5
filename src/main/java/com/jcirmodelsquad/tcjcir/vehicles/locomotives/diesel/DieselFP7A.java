@@ -19,13 +19,13 @@ public class DieselFP7A extends DieselTrain {
         super(world, EnumTrains.FP7A.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the benis sus
-        textureDescriptionMap.put(0, "Readding a fucking book");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "Flatiron Northwestern");
-        textureDescriptionMap.put(3, "Western Pacific");
-        textureDescriptionMap.put(4, "Western Pacific");
-        textureDescriptionMap.put(5, "Joblogh Rail Network");
-        textureDescriptionMap.put(6, "Great Lakes & Northern Territories");
+        InsertTexture(0, "Readding a fucking book");
+        InsertTexture(1, "Blandsville & Blankerston");
+        InsertTexture(2, "Flatiron Northwestern");
+        InsertTexture(3, "Western Pacific");
+        InsertTexture(4, "Western Pacific");
+        InsertTexture(5, "Joblogh Rail Network");
+        InsertTexture(6, "Great Lakes & Northern Territories");
     }
     public DieselFP7A(World world, double d, double d1, double d2){
         this(world);

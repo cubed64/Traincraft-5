@@ -25,19 +25,19 @@ public class ACF2Bay extends AbstractStandardFreightCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "B&B");
-		textureDescriptionMap.put(1, "FNCC");
-		textureDescriptionMap.put(2, "GLNT");
-		textureDescriptionMap.put(3, "SPB");
-		textureDescriptionMap.put(4, "BN");
-		textureDescriptionMap.put(5, "WP");
-		textureDescriptionMap.put(6, "AA");
-		textureDescriptionMap.put(7, "DRGW");
-		textureDescriptionMap.put(8, "GN (Early)");
-		textureDescriptionMap.put(9, "GN (BSB)");
-		textureDescriptionMap.put(10, "NP");
-		textureDescriptionMap.put(11, "CB&Q");
-		textureDescriptionMap.put(12, "LRR");
+		InsertTexture(0, "B&B");
+		InsertTexture(1, "FNCC");
+		InsertTexture(2, "GLNT");
+		InsertTexture(3, "SPB");
+		InsertTexture(4, "BN");
+		InsertTexture(5, "WP");
+		InsertTexture(6, "AA");
+		InsertTexture(7, "DRGW");
+		InsertTexture(8, "GN (Early)");
+		InsertTexture(9, "GN (BSB)");
+		InsertTexture(10, "NP");
+		InsertTexture(11, "CB&Q");
+		InsertTexture(12, "LRR");
 	}
 
 	@Override

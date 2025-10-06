@@ -21,27 +21,27 @@ public class NSCCNBaggage extends Freight implements IInventory
 	{
 		super(world);
 		initFreightCart();
-		textureDescriptionMap.put(0, "CN 9031-9080 (early)");
-		textureDescriptionMap.put(1, "CN 9031-9080");
-		textureDescriptionMap.put(2, "CN 9059 (1960 experimental scheme)");
-		textureDescriptionMap.put(3, "CN 9031-9080 (noodle)");
-		textureDescriptionMap.put(4, "CN 9085-9202 (early)");
-		textureDescriptionMap.put(5, "CN 9085-9202");
-		textureDescriptionMap.put(6, "CN 9085-9202 (noodle)");
-		textureDescriptionMap.put(7, "CN 9203-9227, 9233-9302");
-		textureDescriptionMap.put(8, "CN 9203-9227, 9233-9302 (noodle)");
-		textureDescriptionMap.put(9, "CN 9646 (Champlain)");
-		textureDescriptionMap.put(10, "CN 9228-9232 (end door)");
-		textureDescriptionMap.put(11, "CN 9228-9232 (end door, noodle)");
-		textureDescriptionMap.put(12, "VIA CN (6 wheel trucks)");
-		textureDescriptionMap.put(13, "VIA (6 wheel trucks");
-		textureDescriptionMap.put(14, "VIA CN");
-		textureDescriptionMap.put(15, "VIA");
-		textureDescriptionMap.put(16, "VIA CN (end door)");
-		textureDescriptionMap.put(17, "VIA (end door)");
-		textureDescriptionMap.put(18, "ONT 410-412");
-		textureDescriptionMap.put(19, "ONT 410, 412 (late)");
-		textureDescriptionMap.put(20, "AC 308-309 (end door)");
+		InsertTexture(0, "CN 9031-9080 (early)");
+		InsertTexture(1, "CN 9031-9080");
+		InsertTexture(2, "CN 9059 (1960 experimental scheme)");
+		InsertTexture(3, "CN 9031-9080 (noodle)");
+		InsertTexture(4, "CN 9085-9202 (early)");
+		InsertTexture(5, "CN 9085-9202");
+		InsertTexture(6, "CN 9085-9202 (noodle)");
+		InsertTexture(7, "CN 9203-9227, 9233-9302");
+		InsertTexture(8, "CN 9203-9227, 9233-9302 (noodle)");
+		InsertTexture(9, "CN 9646 (Champlain)");
+		InsertTexture(10, "CN 9228-9232 (end door)");
+		InsertTexture(11, "CN 9228-9232 (end door, noodle)");
+		InsertTexture(12, "VIA CN (6 wheel trucks)");
+		InsertTexture(13, "VIA (6 wheel trucks");
+		InsertTexture(14, "VIA CN");
+		InsertTexture(15, "VIA");
+		InsertTexture(16, "VIA CN (end door)");
+		InsertTexture(17, "VIA (end door)");
+		InsertTexture(18, "ONT 410-412");
+		InsertTexture(19, "ONT 410, 412 (late)");
+		InsertTexture(20, "AC 308-309 (end door)");
 	}
 
 	public void initFreightCart() {

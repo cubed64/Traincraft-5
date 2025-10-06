@@ -17,11 +17,11 @@ public class DieselGP39TDash2 extends DieselTrain {
     public DieselGP39TDash2(World world) {
         super(world, EnumTrains.GP39TDash2.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "DIP");
-        textureDescriptionMap.put(1, "");
-        textureDescriptionMap.put(2, "");
-        textureDescriptionMap.put(3, "");
-        textureDescriptionMap.put(4, "");
+        InsertTexture(0, "DIP");
+        InsertTexture(1, "");
+        InsertTexture(2, "");
+        InsertTexture(3, "");
+        InsertTexture(4, "");
 
     }
     public DieselGP39TDash2(World world, double d, double d1, double d2){

@@ -20,13 +20,13 @@ import train.common.library.GuiIDs;
 public class ElectricGM6C_2 extends ElectricTrain {
     public ElectricGM6C_2(World world) {
         super(world);
-        textureDescriptionMap.put(0, "EMDX Demo");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "Conrail");
-        textureDescriptionMap.put(3, "Norfolk Southern");
-        textureDescriptionMap.put(4, "Norfolk Southern (Later in Life)");
-        textureDescriptionMap.put(5, "FNCC (KIT-Lm, Non Canon)");
-        textureDescriptionMap.put(6, "FNCC E630 (TNRJ 6 Years Celebration Unit, Non Canon)");
+        InsertTexture(0, "EMDX Demo");
+        InsertTexture(1, "Blandsville & Blankerston");
+        InsertTexture(2, "Conrail");
+        InsertTexture(3, "Norfolk Southern");
+        InsertTexture(4, "Norfolk Southern (Later in Life)");
+        InsertTexture(5, "FNCC (KIT-Lm, Non Canon)");
+        InsertTexture(6, "FNCC E630 (TNRJ 6 Years Celebration Unit, Non Canon)");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Modelpanto_gm6c_down.class, "pantopart_gm6c",

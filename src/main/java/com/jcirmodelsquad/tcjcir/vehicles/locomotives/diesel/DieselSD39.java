@@ -19,14 +19,14 @@ public class DieselSD39 extends DieselTrain {
         super(world, EnumTrains.SD39.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
-        textureDescriptionMap.put(0, "BNSF");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "TORE");
-        textureDescriptionMap.put(3, "NEP");
-        textureDescriptionMap.put(4, "NEP");
-        textureDescriptionMap.put(5, "NEP");
-        textureDescriptionMap.put(6, "FURRX");
-        textureDescriptionMap.put(7, "Carbondale & Pine Valley");
+        InsertTexture(0, "BNSF");
+        InsertTexture(1, "Blandsville & Blankerston");
+        InsertTexture(2, "TORE");
+        InsertTexture(3, "NEP");
+        InsertTexture(4, "NEP");
+        InsertTexture(5, "NEP");
+        InsertTexture(6, "FURRX");
+        InsertTexture(7, "Carbondale & Pine Valley");
 
     }
     public DieselSD39(World world, double d, double d1, double d2){

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -17,12 +18,12 @@ public class DieselU30BH extends DieselTrain {
     public DieselU30BH(World world) {
         super(world, EnumTrains.U30BH.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Northern Cascades Transit Authority (NOCTA)");
-        textureDescriptionMap.put(1, "Blandsville Area Rapid Transporation (BlART)");
-        textureDescriptionMap.put(2, "SteamPunk Rail");
-        textureDescriptionMap.put(3, "CRL");
-        textureDescriptionMap.put(4, "CRL (70s)");
-        textureDescriptionMap.put(5, "CRL (80s-90s)");
+        InsertTexture(0, "Northern Cascades Transit Authority (NOCTA)");
+        InsertTexture(1, "Blandsville Area Rapid Transporation (BlART)");
+        InsertTexture(2, "Steampunk Rail", LockoutGroup.SPR);
+        InsertTexture(3, "CRL");
+        InsertTexture(4, "CRL (70s)");
+        InsertTexture(5, "CRL (80s-90s)");
     }
     public DieselU30BH(World world, double d, double d1, double d2){
         this(world);

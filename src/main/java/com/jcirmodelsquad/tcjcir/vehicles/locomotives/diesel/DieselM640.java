@@ -18,12 +18,12 @@ public class DieselM640 extends DieselTrain {
     public DieselM640(World world) {
         super(world, EnumTrains.M640.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "CPRail 4744");
-        textureDescriptionMap.put(1, "CPRail 4744 (AC Convertible)");
-        textureDescriptionMap.put(2, "Blandsville & Blankerston");
-        textureDescriptionMap.put(3, "Kingsland Rail");
-        textureDescriptionMap.put(4, "Kingsland Rail");
-        textureDescriptionMap.put(5, "Kingsland Rail");
+        InsertTexture(0, "CPRail 4744");
+        InsertTexture(1, "CPRail 4744 (AC Convertible)");
+        InsertTexture(2, "Blandsville & Blankerston");
+        InsertTexture(3, "Kingsland Rail");
+        InsertTexture(4, "Kingsland Rail");
+        InsertTexture(5, "Kingsland Rail");
 
     }
     public DieselM640(World world, double d, double d1, double d2){

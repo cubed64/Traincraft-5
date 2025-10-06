@@ -17,15 +17,15 @@ public class DieselDash832BWH extends DieselTrain {
     public DieselDash832BWH(World world) {
         super(world, EnumTrains.Dash832BWH.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Amtrak (PH 3)");
-        textureDescriptionMap.put(1, "Amtrak (PH 4)");
-        textureDescriptionMap.put(2, "Amtrak (PH 5)");
-        textureDescriptionMap.put(3, "Western Pacific (Cali Zephyr)");
-        textureDescriptionMap.put(4, "Blandsville & Blankerston");
-        textureDescriptionMap.put(5, "");
-        textureDescriptionMap.put(6, "");
-        textureDescriptionMap.put(7, "");
-        textureDescriptionMap.put(8, "");
+        InsertTexture(0, "Amtrak (PH 3)");
+        InsertTexture(1, "Amtrak (PH 4)");
+        InsertTexture(2, "Amtrak (PH 5)");
+        InsertTexture(3, "Western Pacific (Cali Zephyr)");
+        InsertTexture(4, "Blandsville & Blankerston");
+        InsertTexture(5, "");
+        InsertTexture(6, "");
+        InsertTexture(7, "");
+        InsertTexture(8, "");
 
     }
     public DieselDash832BWH(World world, double d, double d1, double d2){

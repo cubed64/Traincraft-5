@@ -18,25 +18,25 @@ public class DieselU18Balt extends DieselTrain {
         super(world, EnumTrains.U18Balt.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
 
-        textureDescriptionMap.put(0, "PW (Late Orange & Brown)");
-        textureDescriptionMap.put(1, "FNCC (KIT-L)");
-        textureDescriptionMap.put(2, "FCOM (Ex FNCC)");
-        textureDescriptionMap.put(3, "Blandsville & Blankerston");
-        textureDescriptionMap.put(4, "SV 402");
-        textureDescriptionMap.put(5, "SV 406");
-        textureDescriptionMap.put(6, "SV 1801");
-        textureDescriptionMap.put(7, "Grassland Laboratories");
-        textureDescriptionMap.put(8, "GCM");
-        textureDescriptionMap.put(9, "CSXT (Stealth)");
-        textureDescriptionMap.put(10, "CSXT (Blue Stripe)");
-        textureDescriptionMap.put(11, "CSXT (Blue Down)");
-        textureDescriptionMap.put(12, "CSXT (Yn1)");
-        textureDescriptionMap.put(13, "CSXT (Yn2)");
-        textureDescriptionMap.put(14, "CSXT (MoW)");
-        textureDescriptionMap.put(15, "Pickens Railway");
-        textureDescriptionMap.put(16, "Seaboard Coast Line");
-        textureDescriptionMap.put(17, "Family Lines (SCL)");
-        textureDescriptionMap.put(18, "Seaboard System");
+        InsertTexture(0, "PW (Late Orange & Brown)");
+        InsertTexture(1, "FNCC (KIT-L)");
+        InsertTexture(2, "FCOM (Ex FNCC)");
+        InsertTexture(3, "Blandsville & Blankerston");
+        InsertTexture(4, "SV 402");
+        InsertTexture(5, "SV 406");
+        InsertTexture(6, "SV 1801");
+        InsertTexture(7, "Grassland Laboratories");
+        InsertTexture(8, "GCM");
+        InsertTexture(9, "CSXT (Stealth)");
+        InsertTexture(10, "CSXT (Blue Stripe)");
+        InsertTexture(11, "CSXT (Blue Down)");
+        InsertTexture(12, "CSXT (Yn1)");
+        InsertTexture(13, "CSXT (Yn2)");
+        InsertTexture(14, "CSXT (MoW)");
+        InsertTexture(15, "Pickens Railway");
+        InsertTexture(16, "Seaboard Coast Line");
+        InsertTexture(17, "Family Lines (SCL)");
+        InsertTexture(18, "Seaboard System");
     }
     public DieselU18Balt(World world, double d, double d1, double d2){
         this(world);

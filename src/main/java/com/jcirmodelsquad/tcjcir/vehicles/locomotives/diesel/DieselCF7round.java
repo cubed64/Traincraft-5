@@ -18,20 +18,20 @@ public class DieselCF7round extends DieselTrain {
     public DieselCF7round(World world) {
         super(world, EnumTrains.CF7round.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "ATSF (Pinstripe)");
-        textureDescriptionMap.put(1, "ATSF (2568)");
-        textureDescriptionMap.put(2, "ATSF (2640)");
-        textureDescriptionMap.put(3, "Blandsville & Blankerston");
-        textureDescriptionMap.put(4, "");
-        textureDescriptionMap.put(5, "");
-        textureDescriptionMap.put(6, "");
-        textureDescriptionMap.put(7, "");
-        textureDescriptionMap.put(8, "");
-        textureDescriptionMap.put(9, "");
-        textureDescriptionMap.put(10, "");
-        textureDescriptionMap.put(11, "");
-        textureDescriptionMap.put(12, "");
-        textureDescriptionMap.put(13, "");
+        InsertTexture(0, "ATSF (Pinstripe)");
+        InsertTexture(1, "ATSF (2568)");
+        InsertTexture(2, "ATSF (2640)");
+        InsertTexture(3, "Blandsville & Blankerston");
+        InsertTexture(4, "");
+        InsertTexture(5, "");
+        InsertTexture(6, "");
+        InsertTexture(7, "");
+        InsertTexture(8, "");
+        InsertTexture(9, "");
+        InsertTexture(10, "");
+        InsertTexture(11, "");
+        InsertTexture(12, "");
+        InsertTexture(13, "");
     }
     public DieselCF7round(World world, double d, double d1, double d2){
         this(world);

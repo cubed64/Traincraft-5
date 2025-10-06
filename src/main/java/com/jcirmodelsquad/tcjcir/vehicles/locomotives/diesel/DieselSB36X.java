@@ -17,17 +17,17 @@ public class DieselSB36X extends DieselTrain {
     public DieselSB36X(World world) {
         super(world, EnumTrains.SB36X.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "TTLC (Black Forest Blue)");
-        textureDescriptionMap.put(1, "TTLC (Forest Blue)");
-        textureDescriptionMap.put(2, "TTLC (Forest Blue 2)");
-        textureDescriptionMap.put(3, "TTLC (Forest Blue 3)");
-        textureDescriptionMap.put(4, "TTLC (Forest Green)");
-        textureDescriptionMap.put(5, "TTLC (Forest Orange)");
-        textureDescriptionMap.put(6, "TTLC (Forest Pink)");
-        textureDescriptionMap.put(7, "TTLC (Forest Red)");
-        textureDescriptionMap.put(8, "TTLC (Forest Violet)");
-        textureDescriptionMap.put(9, "TTLC (Forest Yellow)");
-        textureDescriptionMap.put(10, "CEEX 360");
+        InsertTexture(0, "TTLC (Black Forest Blue)");
+        InsertTexture(1, "TTLC (Forest Blue)");
+        InsertTexture(2, "TTLC (Forest Blue 2)");
+        InsertTexture(3, "TTLC (Forest Blue 3)");
+        InsertTexture(4, "TTLC (Forest Green)");
+        InsertTexture(5, "TTLC (Forest Orange)");
+        InsertTexture(6, "TTLC (Forest Pink)");
+        InsertTexture(7, "TTLC (Forest Red)");
+        InsertTexture(8, "TTLC (Forest Violet)");
+        InsertTexture(9, "TTLC (Forest Yellow)");
+        InsertTexture(10, "CEEX 360");
 
     }
     public DieselSB36X(World world, double d, double d1, double d2){

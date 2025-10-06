@@ -18,20 +18,20 @@ public class DieselCF7round3 extends DieselTrain {
     public DieselCF7round3(World world) {
         super(world, EnumTrains.CF7round3.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Carbondale & Pine Valley");
-        textureDescriptionMap.put(1, "FNCC (KIT-L, Ex ATSF, Dual Canon)");
-        textureDescriptionMap.put(2, "FNCC (KIT-L, Ex ATSF, Dual Canon)");
-        textureDescriptionMap.put(3, "Avanste Northeastern");
-        textureDescriptionMap.put(4, "Paradox Rail 69");
-        textureDescriptionMap.put(5, "Drexel Co");
-        textureDescriptionMap.put(6, "FURRX (EX CSWR)");
-        textureDescriptionMap.put(7, "West Creek Pacific");
-        textureDescriptionMap.put(8, "Marshwood Terminal");
-        textureDescriptionMap.put(9, "Lisha & Watson");
-        textureDescriptionMap.put(10, "");
-        textureDescriptionMap.put(11, "");
-        textureDescriptionMap.put(12, "");
-        textureDescriptionMap.put(13, "");
+        InsertTexture(0, "Carbondale & Pine Valley");
+        InsertTexture(1, "FNCC (KIT-L, Ex ATSF, Dual Canon)");
+        InsertTexture(2, "FNCC (KIT-L, Ex ATSF, Dual Canon)");
+        InsertTexture(3, "Avanste Northeastern");
+        InsertTexture(4, "Paradox Rail 69");
+        InsertTexture(5, "Drexel Co");
+        InsertTexture(6, "FURRX (EX CSWR)");
+        InsertTexture(7, "West Creek Pacific");
+        InsertTexture(8, "Marshwood Terminal");
+        InsertTexture(9, "Lisha & Watson");
+        InsertTexture(10, "");
+        InsertTexture(11, "");
+        InsertTexture(12, "");
+        InsertTexture(13, "");
     }
     public DieselCF7round3(World world, double d, double d1, double d2){
         this(world);

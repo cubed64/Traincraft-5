@@ -24,24 +24,24 @@ public class OWO60Verticube extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "FNCC (Verti-Cube)");
-        textureDescriptionMap.put(1, "FNCC");
-        textureDescriptionMap.put(2, "WRX (Tree Logo)");
-        textureDescriptionMap.put(3, "LRR");
-        textureDescriptionMap.put(4, "LRR (Large Wording)");
-        textureDescriptionMap.put(5, "ANE");
-        textureDescriptionMap.put(6, "ANE (Mega Cushion)");
-        textureDescriptionMap.put(7, "ANE Mega Cushion (Graffiti)");
-        textureDescriptionMap.put(8, "WRX Tree Logo (Graffiti)");
-        textureDescriptionMap.put(9, "SNCT");
-        textureDescriptionMap.put(10, "UNCLX");
-        textureDescriptionMap.put(11, "WP (Early)");
-        textureDescriptionMap.put(12, "WP (Late)");
-        textureDescriptionMap.put(13, "FNCC (Foxtail Logo)");
-        textureDescriptionMap.put(14, "FNCC (Dual Logos)");
-        textureDescriptionMap.put(15, "FNCC (Olympic Range Logo)");
-        textureDescriptionMap.put(16, "FBOX");
-        textureDescriptionMap.put(17, "CNRC");
+        InsertTexture(0, "FNCC (Verti-Cube)");
+        InsertTexture(1, "FNCC");
+        InsertTexture(2, "WRX (Tree Logo)");
+        InsertTexture(3, "LRR");
+        InsertTexture(4, "LRR (Large Wording)");
+        InsertTexture(5, "ANE");
+        InsertTexture(6, "ANE (Mega Cushion)");
+        InsertTexture(7, "ANE Mega Cushion (Graffiti)");
+        InsertTexture(8, "WRX Tree Logo (Graffiti)");
+        InsertTexture(9, "SNCT");
+        InsertTexture(10, "UNCLX");
+        InsertTexture(11, "WP (Early)");
+        InsertTexture(12, "WP (Late)");
+        InsertTexture(13, "FNCC (Foxtail Logo)");
+        InsertTexture(14, "FNCC (Dual Logos)");
+        InsertTexture(15, "FNCC (Olympic Range Logo)");
+        InsertTexture(16, "FBOX");
+        InsertTexture(17, "CNRC");
     }
 
     @Override

@@ -18,11 +18,11 @@ import train.common.library.GuiIDs;
 public class EntityLocoElectricBP4 extends ElectricTrain {
 	public EntityLocoElectricBP4(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "NS 999");
-		textureDescriptionMap.put(1, "(Formerly) TLR");
-		textureDescriptionMap.put(2, "FURRX (Former OWO)");
-		textureDescriptionMap.put(3, "FURRX");
-		textureDescriptionMap.put(4, "eat at clydes upriver diner or i will personally murder you");
+		InsertTexture(0, "NS 999");
+		InsertTexture(1, "(Formerly) TLR");
+		InsertTexture(2, "FURRX (Former OWO)");
+		InsertTexture(3, "FURRX");
+		InsertTexture(4, "eat at clydes upriver diner or i will personally murder you");
 	}
 
 	public EntityLocoElectricBP4(World world, double d, double d1, double d2) {

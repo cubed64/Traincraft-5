@@ -17,7 +17,7 @@ public class DieselDash818BE extends DieselTrain {
     public DieselDash818BE(World world) {
         super(world, EnumTrains.Dash818BE.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "FNCC (Kit-L)");
+        InsertTexture(0, "FNCC (Kit-L)");
 
     }
     public DieselDash818BE(World world, double d, double d1, double d2){

@@ -8,8 +8,8 @@ public class PScenterDiner extends AbstractPassengerCar
 
 	public PScenterDiner(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "PM");
-		textureDescriptionMap.put(1, "C&O");
+		InsertTexture(0, "PM");
+		InsertTexture(1, "C&O");
 	}
 
 	public PScenterDiner(World world, double posX, double posY, double posZ)

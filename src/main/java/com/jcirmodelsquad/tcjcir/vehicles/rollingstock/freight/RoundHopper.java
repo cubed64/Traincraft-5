@@ -24,10 +24,10 @@ public class RoundHopper extends AbstractStandardFreightCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "CNWX Red");
-		textureDescriptionMap.put(1, "CPRail Multimark");
-		textureDescriptionMap.put(2, "ECYX");
-		textureDescriptionMap.put(3, "FKIX Patchout");
+		InsertTexture(0, "CNWX Red");
+		InsertTexture(1, "CPRail Multimark");
+		InsertTexture(2, "ECYX");
+		InsertTexture(3, "FKIX Patchout");
 	}
 
 	@Override

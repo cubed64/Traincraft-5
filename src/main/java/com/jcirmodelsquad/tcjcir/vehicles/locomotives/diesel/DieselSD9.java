@@ -19,20 +19,20 @@ public class DieselSD9 extends DieselTrain {
         super(world, EnumTrains.SD9.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
-        textureDescriptionMap.put(0, "SP (1980s)");
-        textureDescriptionMap.put(1, "SP (Trashcan gaming)");
-        textureDescriptionMap.put(2, "MILW");
-        textureDescriptionMap.put(3, "MILW (Typeface)");
-        textureDescriptionMap.put(4, "FNCC 201 & 202 (Kit-L)");
-        textureDescriptionMap.put(5, "Blandsville Pacific");
-        textureDescriptionMap.put(6, "OC&G");
-        textureDescriptionMap.put(7, "DRGW");
-        textureDescriptionMap.put(8, "DRGW (5305, Low Hood)");
-        textureDescriptionMap.put(9, "ADT");
-        textureDescriptionMap.put(10, "WFR (not arie cus arie cring)");
-        textureDescriptionMap.put(11, "DLMR");
-        textureDescriptionMap.put(12, "WV");
-        textureDescriptionMap.put(13, "CNRC 6100 - 6102");
+        InsertTexture(0, "SP (1980s)");
+        InsertTexture(1, "SP (Trashcan gaming)");
+        InsertTexture(2, "MILW");
+        InsertTexture(3, "MILW (Typeface)");
+        InsertTexture(4, "FNCC 201 & 202 (Kit-L)");
+        InsertTexture(5, "Blandsville Pacific");
+        InsertTexture(6, "OC&G");
+        InsertTexture(7, "DRGW");
+        InsertTexture(8, "DRGW (5305, Low Hood)");
+        InsertTexture(9, "ADT");
+        InsertTexture(10, "WFR (not arie cus arie cring)");
+        InsertTexture(11, "DLMR");
+        InsertTexture(12, "WV");
+        InsertTexture(13, "CNRC 6100 - 6102");
     }
     public DieselSD9(World world, double d, double d1, double d2){
         this(world);

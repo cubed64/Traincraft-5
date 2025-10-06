@@ -25,11 +25,11 @@ public class OreJenny extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "ORJY");
-        textureDescriptionMap.put(1, "DMIR");
-        textureDescriptionMap.put(2, "MILW");
-        textureDescriptionMap.put(3, "WETX");
-        textureDescriptionMap.put(4, "JC's period mining incorperated");
+        InsertTexture(0, "ORJY");
+        InsertTexture(1, "DMIR");
+        InsertTexture(2, "MILW");
+        InsertTexture(3, "WETX");
+        InsertTexture(4, "JC's period mining incorperated");
     }
 
     @Override

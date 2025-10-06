@@ -7,9 +7,9 @@ public class PSCEIDiner extends AbstractPassengerCar {
 
 	public PSCEIDiner(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "C&EI");
-		textureDescriptionMap.put(1, "C&EI (L&N paint)");
-		textureDescriptionMap.put(2, "GC&M");
+		InsertTexture(0, "C&EI");
+		InsertTexture(1, "C&EI (L&N paint)");
+		InsertTexture(2, "GC&M");
 	}
 
 	public PSCEIDiner(World world, double posX, double posY, double posZ)

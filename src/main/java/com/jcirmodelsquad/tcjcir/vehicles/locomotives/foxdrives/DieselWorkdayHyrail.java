@@ -17,13 +17,13 @@ public class DieselWorkdayHyrail extends DieselTrain {
     public DieselWorkdayHyrail(World world) {
         super(world, EnumTrains.WorkdayHyrail.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Generic");
-        textureDescriptionMap.put(1, "CSXT");
-        textureDescriptionMap.put(2, "FNCC MOW");
-        textureDescriptionMap.put(3, "WP/NEP MOW");
-        textureDescriptionMap.put(4, "GLC");
-        textureDescriptionMap.put(5, "CRIP");
-        textureDescriptionMap.put(6, "GCM");
+        InsertTexture(0, "Generic");
+        InsertTexture(1, "CSXT");
+        InsertTexture(2, "FNCC MOW");
+        InsertTexture(3, "WP/NEP MOW");
+        InsertTexture(4, "GLC");
+        InsertTexture(5, "CRIP");
+        InsertTexture(6, "GCM");
     }
     public DieselWorkdayHyrail(World world, double d, double d1, double d2){
         this(world);

@@ -17,13 +17,13 @@ public class DieselU50 extends DieselTrain {
     public DieselU50(World world) {
         super(world, EnumTrains.U50.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Union Pacific");
-        textureDescriptionMap.put(1, "Southern Pacific");
-        textureDescriptionMap.put(2, "Blandsville & Blankerston");
-        textureDescriptionMap.put(3, "Southfield");
-        textureDescriptionMap.put(4, "Southfield De Mexico");
-        textureDescriptionMap.put(5, "Penn Central the objectively best railroad to own the U50 guys i swear PC owned like 30 of them trust me bro my source is that i MADE IT THE FUCK UP");
-        textureDescriptionMap.put(6, "hamburge helper rayroade");
+        InsertTexture(0, "Union Pacific");
+        InsertTexture(1, "Southern Pacific");
+        InsertTexture(2, "Blandsville & Blankerston");
+        InsertTexture(3, "Southfield");
+        InsertTexture(4, "Southfield De Mexico");
+        InsertTexture(5, "Penn Central the objectively best railroad to own the U50 guys i swear PC owned like 30 of them trust me bro my source is that i MADE IT THE FUCK UP");
+        InsertTexture(6, "hamburge helper rayroade");
     }
     public DieselU50(World world, double d, double d1, double d2){
         this(world);

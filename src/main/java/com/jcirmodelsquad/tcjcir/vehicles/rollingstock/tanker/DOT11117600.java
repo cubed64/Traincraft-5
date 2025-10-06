@@ -21,17 +21,17 @@ public class DOT11117600 extends LiquidTank {
     public DOT11117600(World world) {
         super(world, EnumTrains.DOT11117600.getTankCapacity());
         initFreightWater();
-        textureDescriptionMap.put(0, "CRGX");
-        textureDescriptionMap.put(1, "CRGX");
-        textureDescriptionMap.put(2, "UTLX");
-        textureDescriptionMap.put(3, "UTLX");
-        textureDescriptionMap.put(4, "UTLX (Cargill Foods)");
-        textureDescriptionMap.put(5, "UTLX");
-        textureDescriptionMap.put(6, "UTLX (Casco)");
-        textureDescriptionMap.put(7, "Magnolia");
-        textureDescriptionMap.put(8, "CCOX (Aragonite Slurry Service)");
-        textureDescriptionMap.put(9, "FWRT (glHUE Service)");
-        textureDescriptionMap.put(10, "FWRT (Glue Service)");
+        InsertTexture(0, "CRGX");
+        InsertTexture(1, "CRGX");
+        InsertTexture(2, "UTLX");
+        InsertTexture(3, "UTLX");
+        InsertTexture(4, "UTLX (Cargill Foods)");
+        InsertTexture(5, "UTLX");
+        InsertTexture(6, "UTLX (Casco)");
+        InsertTexture(7, "Magnolia");
+        InsertTexture(8, "CCOX (Aragonite Slurry Service)");
+        InsertTexture(9, "FWRT (glHUE Service)");
+        InsertTexture(10, "FWRT (Glue Service)");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Modelhazmat_plac_17600.class, "loads/hazmat_plac_flammable_number",

@@ -18,18 +18,18 @@ public class DieselSD50 extends DieselTrain {
     public DieselSD50(World world) {
         super(world, EnumTrains.SD50.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "CSX (YN1)");
-        textureDescriptionMap.put(1, "CSX (YN2)");
-        textureDescriptionMap.put(2, "CSX (YN3)");
-        textureDescriptionMap.put(3, "CR (First Order)");
-        textureDescriptionMap.put(4, "NS (Ex CR)");
-        textureDescriptionMap.put(5, "DRGW");
-        textureDescriptionMap.put(6, "ANE (1st & 2nd Orders)");
-        textureDescriptionMap.put(7, "Blandsville & Blanklands Terminal Railroad Association");
-        textureDescriptionMap.put(8, "HBRY");
-        textureDescriptionMap.put(9, "FNCC KIT-L");
-        textureDescriptionMap.put(10, "Seaboard System");
-        textureDescriptionMap.put(11, "Chessie System");
+        InsertTexture(0, "CSX (YN1)");
+        InsertTexture(1, "CSX (YN2)");
+        InsertTexture(2, "CSX (YN3)");
+        InsertTexture(3, "CR (First Order)");
+        InsertTexture(4, "NS (Ex CR)");
+        InsertTexture(5, "DRGW");
+        InsertTexture(6, "ANE (1st & 2nd Orders)");
+        InsertTexture(7, "Blandsville & Blanklands Terminal Railroad Association");
+        InsertTexture(8, "HBRY");
+        InsertTexture(9, "FNCC KIT-L");
+        InsertTexture(10, "Seaboard System");
+        InsertTexture(11, "Chessie System");
     }
     public DieselSD50(World world, double d, double d1, double d2){
         this(world);

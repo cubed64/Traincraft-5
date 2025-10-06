@@ -24,14 +24,14 @@ public class MILW40boxcar extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "themilwaukeeroad");
-        textureDescriptionMap.put(1, "themilwaukeeroad");
-        textureDescriptionMap.put(2, "themilwaukeeroad");
-        textureDescriptionMap.put(3, "themilwaukeeroad");
-        textureDescriptionMap.put(4, "themilwaukeeroad");
-        textureDescriptionMap.put(5, "themilwaukeeroad");
-        textureDescriptionMap.put(6, "FAWX");
-        textureDescriptionMap.put(7, "MRSX");
+        InsertTexture(0, "themilwaukeeroad");
+        InsertTexture(1, "themilwaukeeroad");
+        InsertTexture(2, "themilwaukeeroad");
+        InsertTexture(3, "themilwaukeeroad");
+        InsertTexture(4, "themilwaukeeroad");
+        InsertTexture(5, "themilwaukeeroad");
+        InsertTexture(6, "FAWX");
+        InsertTexture(7, "MRSX");
     }
 
     @Override

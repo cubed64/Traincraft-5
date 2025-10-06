@@ -17,12 +17,12 @@ public class SteamAlco2102 extends SteamTrain {
 	public SteamAlco2102(World world) {
 		super(world, EnumTrains.Alco2102.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
-		textureDescriptionMap.put(0, "Blandsville Forest Products, Inc");
-		textureDescriptionMap.put(1, "Sugar Pine Lumber");
-		textureDescriptionMap.put(2, "Consolidated Builders Inc");
-		textureDescriptionMap.put(3, "Kaiser Steel");
-		textureDescriptionMap.put(4, "Oil Clusters & Garden");
-		textureDescriptionMap.put(5, "Washaska Resources");
+		InsertTexture(0, "Blandsville Forest Products, Inc");
+		InsertTexture(1, "Sugar Pine Lumber");
+		InsertTexture(2, "Consolidated Builders Inc");
+		InsertTexture(3, "Kaiser Steel");
+		InsertTexture(4, "Oil Clusters & Garden");
+		InsertTexture(5, "Washaska Resources");
 	}
 
 	public void initLocoSteam() {

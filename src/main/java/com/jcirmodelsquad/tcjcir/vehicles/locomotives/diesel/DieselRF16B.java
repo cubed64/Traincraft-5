@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -18,15 +19,15 @@ public class DieselRF16B extends DieselTrain {
     public DieselRF16B(World world) {
         super(world, EnumTrains.RF16B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Pennsylvania (1 Stipe)");
-        textureDescriptionMap.put(1, "Baltimore & Ohio");
-        textureDescriptionMap.put(2, "Baltimore & Ohio (Late)");
-        textureDescriptionMap.put(3, "New York Central");
-        textureDescriptionMap.put(4, "New York Central (Late)");
-        textureDescriptionMap.put(5, "Monongahela");
-        textureDescriptionMap.put(6, "Blandsville & Blankerston");
-        textureDescriptionMap.put(7, "Galesburg Clinton & Midland");
-        textureDescriptionMap.put(8, "Steampunk Rail");
+        InsertTexture(0, "Pennsylvania (1 Stipe)");
+        InsertTexture(1, "Baltimore & Ohio");
+        InsertTexture(2, "Baltimore & Ohio (Late)");
+        InsertTexture(3, "New York Central");
+        InsertTexture(4, "New York Central (Late)");
+        InsertTexture(5, "Monongahela");
+        InsertTexture(6, "Blandsville & Blankerston");
+        InsertTexture(7, "Galesburg Clinton & Midland");
+        InsertTexture(8, "Steampunk Rail", LockoutGroup.SPR);
     }
     public DieselRF16B(World world, double d, double d1, double d2){
         this(world);

@@ -17,27 +17,27 @@ public class DieselGP38dash2 extends DieselTrain {
     public DieselGP38dash2(World world) {
         super(world, EnumTrains.GP38Dash2.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Butte, Anaconda & Pacific");
-        textureDescriptionMap.put(1, "MKT (Stripes)");
-        textureDescriptionMap.put(2, "MKT (Solids)");
-        textureDescriptionMap.put(3, "Norfolk Southern (Ex-Sou)");
-        textureDescriptionMap.put(4, "Norfolk Southern");
-        textureDescriptionMap.put(5, "Southern Port Belt");
-        textureDescriptionMap.put(6, "Southern Port Belt (NS Patch)");
-        textureDescriptionMap.put(7, "Milwaukee Road");
-        textureDescriptionMap.put(8, "Milwaukee Road (Billboard)");
-        textureDescriptionMap.put(9, "GLC (Cigar Band)");
-        textureDescriptionMap.put(10, "GLC (Ex SPB)");
-        textureDescriptionMap.put(11, "GLC (Ex NS)");
-        textureDescriptionMap.put(12, "CSXT (Yn3)");
-        textureDescriptionMap.put(13, "CSXT (Yn2)");
-        textureDescriptionMap.put(14, "Seaboard System");
-        textureDescriptionMap.put(15, "");
-        textureDescriptionMap.put(16, "");
-        textureDescriptionMap.put(17, "");
-        textureDescriptionMap.put(18, "");
-        textureDescriptionMap.put(19, "");
-        textureDescriptionMap.put(20, "");
+        InsertTexture(0, "Butte, Anaconda & Pacific");
+        InsertTexture(1, "MKT (Stripes)");
+        InsertTexture(2, "MKT (Solids)");
+        InsertTexture(3, "Norfolk Southern (Ex-Sou)");
+        InsertTexture(4, "Norfolk Southern");
+        InsertTexture(5, "Southern Port Belt");
+        InsertTexture(6, "Southern Port Belt (NS Patch)");
+        InsertTexture(7, "Milwaukee Road");
+        InsertTexture(8, "Milwaukee Road (Billboard)");
+        InsertTexture(9, "GLC (Cigar Band)");
+        InsertTexture(10, "GLC (Ex SPB)");
+        InsertTexture(11, "GLC (Ex NS)");
+        InsertTexture(12, "CSXT (Yn3)");
+        InsertTexture(13, "CSXT (Yn2)");
+        InsertTexture(14, "Seaboard System");
+        InsertTexture(15, "");
+        InsertTexture(16, "");
+        InsertTexture(17, "");
+        InsertTexture(18, "");
+        InsertTexture(19, "");
+        InsertTexture(20, "");
     }
     public DieselGP38dash2(World world, double d, double d1, double d2){
         this(world);

@@ -23,11 +23,11 @@ public class Tender460 extends Tender implements IInventory {
 	public Tender460(World world) {
 		super(world, FluidRegistry.WATER, 0, EnumTrains.Tender460.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initFreightTender();
-		textureDescriptionMap.put(0, "Blank");
-		textureDescriptionMap.put(1, "CDC&S");
-		textureDescriptionMap.put(2, "RI");
-		textureDescriptionMap.put(3, "%Lemo");
-		textureDescriptionMap.put(4, "GCM");
+		InsertTexture(0, "Blank");
+		InsertTexture(1, "CDC&S");
+		InsertTexture(2, "RI");
+		InsertTexture(3, "%Lemo");
+		InsertTexture(4, "GCM");
 	}
 
 	public void initFreightTender() {

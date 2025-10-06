@@ -18,12 +18,12 @@ public class DieselAC4400C extends DieselTrain {
     public DieselAC4400C(World world) {
         super(world, EnumTrains.AC4400C.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Western Pacific");
-        textureDescriptionMap.put(1, "North Fox (KIT-L)");
-        textureDescriptionMap.put(2, "North Fox (KIT-80)");
-        textureDescriptionMap.put(3, "CEFX");
-        textureDescriptionMap.put(4, "Blandsville & Blankerston");
-        textureDescriptionMap.put(5, "NEP");
+        InsertTexture(0, "Western Pacific");
+        InsertTexture(1, "North Fox (KIT-L)");
+        InsertTexture(2, "North Fox (KIT-80)");
+        InsertTexture(3, "CEFX");
+        InsertTexture(4, "Blandsville & Blankerston");
+        InsertTexture(5, "NEP");
     }
     public DieselAC4400C(World world, double d, double d1, double d2){
         this(world);

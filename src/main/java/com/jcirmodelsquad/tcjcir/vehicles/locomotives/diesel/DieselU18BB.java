@@ -17,9 +17,9 @@ public class DieselU18BB extends DieselTrain {
     public DieselU18BB(World world) {
         super(world, EnumTrains.U18BB.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(10, "");
-        textureDescriptionMap.put(0, "West Creek Pacific");
-        textureDescriptionMap.put(1, "Gaesburg Clinton & Midland");
+        InsertTexture(10, "");
+        InsertTexture(0, "West Creek Pacific");
+        InsertTexture(1, "Gaesburg Clinton & Midland");
     }
     public DieselU18BB(World world, double d, double d1, double d2){
         this(world);

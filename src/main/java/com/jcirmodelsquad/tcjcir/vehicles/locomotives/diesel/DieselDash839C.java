@@ -18,19 +18,19 @@ public class DieselDash839C extends DieselTrain {
     public DieselDash839C(World world) {
         super(world, EnumTrains.Dash839C.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Conrail");
-        textureDescriptionMap.put(1, "CSXT (YN2)");
-        textureDescriptionMap.put(2, "CSXT (YN3)");
-        textureDescriptionMap.put(3, "Norfolk Southern");
-        textureDescriptionMap.put(4, "Nomansi and Eastern Pacific");
-        textureDescriptionMap.put(5, "Nomansi and Eastern Pacific (Late)");
-        textureDescriptionMap.put(6, "FNCC (KIT-L)");
-        textureDescriptionMap.put(7, "Blandsville & Blankerston");
-        textureDescriptionMap.put(8, "Magnolia Acres");
-        textureDescriptionMap.put(9, "Nautilus");
-        textureDescriptionMap.put(10, "Ann Arbor (but awesomer)");
-        textureDescriptionMap.put(11, "CEEX 101");
-        textureDescriptionMap.put(12, "CNRC (Ex EARR)");
+        InsertTexture(0, "Conrail");
+        InsertTexture(1, "CSXT (YN2)");
+        InsertTexture(2, "CSXT (YN3)");
+        InsertTexture(3, "Norfolk Southern");
+        InsertTexture(4, "Nomansi and Eastern Pacific");
+        InsertTexture(5, "Nomansi and Eastern Pacific (Late)");
+        InsertTexture(6, "FNCC (KIT-L)");
+        InsertTexture(7, "Blandsville & Blankerston");
+        InsertTexture(8, "Magnolia Acres");
+        InsertTexture(9, "Nautilus");
+        InsertTexture(10, "Ann Arbor (but awesomer)");
+        InsertTexture(11, "CEEX 101");
+        InsertTexture(12, "CNRC (Ex EARR)");
     }
     public DieselDash839C(World world, double d, double d1, double d2){
         this(world);

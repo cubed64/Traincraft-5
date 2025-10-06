@@ -5,6 +5,7 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.AbstractStandardFreightCar;
 import train.common.entity.CargoManager;
+import train.common.enums.LockoutGroup;
 
 public class PFEr_40_23Reefer extends AbstractStandardFreightCar
 {
@@ -15,12 +16,12 @@ public class PFEr_40_23Reefer extends AbstractStandardFreightCar
 @Override
 public void setupTextureDescription()
 {
-    textureDescriptionMap.put(0, "PFE (SP First)");
-    textureDescriptionMap.put(1, "PFE (UP First)");
-    textureDescriptionMap.put(2, "Northern Pacific");
-    textureDescriptionMap.put(3, "DCLX");
-    textureDescriptionMap.put(4, "Steampunk Rail");
-    textureDescriptionMap.put(5, "Not the SCP Foundation");
+    InsertTexture(0, "PFE (SP First)");
+    InsertTexture(1, "PFE (UP First)");
+    InsertTexture(2, "Northern Pacific");
+    InsertTexture(3, "DCLX");
+    InsertTexture(4, "Steampunk Rail", LockoutGroup.SPR);
+    InsertTexture(5, "Not the SCP Foundation");
 }
     public PFEr_40_23Reefer(World world, double d, double d1, double d2){
         super(world,d,d1,d2);

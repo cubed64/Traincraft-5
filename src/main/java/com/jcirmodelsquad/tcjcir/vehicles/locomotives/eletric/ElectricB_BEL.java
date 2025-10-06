@@ -14,13 +14,13 @@ import train.common.library.GuiIDs;
 public class ElectricB_BEL extends ElectricTrain {
     public ElectricB_BEL(World world) {
         super(world);
-        textureDescriptionMap.put(0, "Blandsville & Blankerston");
-        textureDescriptionMap.put(1, "FNCC (DAR80)");
-        textureDescriptionMap.put(2, "Western Pacific");
-        textureDescriptionMap.put(3, "Norfolk Southern");
-        textureDescriptionMap.put(4, "FURRX");
-        textureDescriptionMap.put(5, "Galesburg Clinton & Midland");
-        textureDescriptionMap.put(6, "JCIR 633");
+        InsertTexture(0, "Blandsville & Blankerston");
+        InsertTexture(1, "FNCC (DAR80)");
+        InsertTexture(2, "Western Pacific");
+        InsertTexture(3, "Norfolk Southern");
+        InsertTexture(4, "FURRX");
+        InsertTexture(5, "Galesburg Clinton & Midland");
+        InsertTexture(6, "JCIR 633");
     }
 
     public ElectricB_BEL(World world, double d, double d1, double d2) {

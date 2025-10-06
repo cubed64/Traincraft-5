@@ -17,9 +17,9 @@ public class SteamP01a extends SteamTrain {
 	public SteamP01a(World world) {
 		super(world, EnumTrains.P01a.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
-		textureDescriptionMap.put(0, "WRX 10");
-		textureDescriptionMap.put(1, "WRX 12");
-		textureDescriptionMap.put(2, "CDC&S 7");
+		InsertTexture(0, "WRX 10");
+		InsertTexture(1, "WRX 12");
+		InsertTexture(2, "CDC&S 7");
 	}
 
 	public void initLocoSteam() {

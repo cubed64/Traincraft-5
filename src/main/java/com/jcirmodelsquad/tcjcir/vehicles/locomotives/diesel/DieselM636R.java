@@ -18,9 +18,9 @@ public class DieselM636R extends DieselTrain {
     public DieselM636R(World world) {
         super(world, EnumTrains.M636R.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "CN (Noodle)");
-        textureDescriptionMap.put(1, "CN (Stripes)");
-        textureDescriptionMap.put(2, "Blandsville & Blankerston");
+        InsertTexture(0, "CN (Noodle)");
+        InsertTexture(1, "CN (Stripes)");
+        InsertTexture(2, "Blandsville & Blankerston");
 
     }
     public DieselM636R(World world, double d, double d1, double d2){

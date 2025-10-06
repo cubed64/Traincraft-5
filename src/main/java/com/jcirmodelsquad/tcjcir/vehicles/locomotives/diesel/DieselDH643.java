@@ -17,7 +17,7 @@ public class DieselDH643 extends DieselTrain {
     public DieselDH643(World world) {
         super(world, EnumTrains.DH643.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Latrans Range Railroad");
+        InsertTexture(0, "Latrans Range Railroad");
     }
     public DieselDH643(World world, double d, double d1, double d2){
         this(world);

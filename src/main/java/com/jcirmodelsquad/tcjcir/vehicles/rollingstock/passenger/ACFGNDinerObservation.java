@@ -8,8 +8,8 @@ public class ACFGNDinerObservation extends AbstractPassengerCar
 
 	public ACFGNDinerObservation(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "GN Red River");
-		textureDescriptionMap.put(1, "GN Red River (Late)");
+		InsertTexture(0, "GN Red River");
+		InsertTexture(1, "GN Red River (Late)");
 	}
 
 	public ACFGNDinerObservation(World world, double posX, double posY, double posZ)

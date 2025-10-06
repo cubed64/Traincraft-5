@@ -24,25 +24,25 @@ public class FNCC50Foot extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "FNCC");
-        textureDescriptionMap.put(1, "FNCC (Post '86 Logo)");
-        textureDescriptionMap.put(2, "FNCC (Fast as A Fox)");
-        textureDescriptionMap.put(3, "FNCC (Small Logo)");
-        textureDescriptionMap.put(4, "FNCC (Olympic Range Logo)");
-        textureDescriptionMap.put(5, "LRR");
-        textureDescriptionMap.put(6, "LRR (Words)");
-        textureDescriptionMap.put(7, "NSCC");
-        textureDescriptionMap.put(8, "UNCLX");
-        textureDescriptionMap.put(9, "COW");
-        textureDescriptionMap.put(10, "COW");
-        textureDescriptionMap.put(11, "COW");
-        textureDescriptionMap.put(12, "COW");
-        textureDescriptionMap.put(13, "B&B");
-        textureDescriptionMap.put(14, "SPB");
-        textureDescriptionMap.put(15, "SNCT");
-        textureDescriptionMap.put(16, "DLMR");
-        textureDescriptionMap.put(17, "DN");
-        textureDescriptionMap.put(18, "AG&W");
+        InsertTexture(0, "FNCC");
+        InsertTexture(1, "FNCC (Post '86 Logo)");
+        InsertTexture(2, "FNCC (Fast as A Fox)");
+        InsertTexture(3, "FNCC (Small Logo)");
+        InsertTexture(4, "FNCC (Olympic Range Logo)");
+        InsertTexture(5, "LRR");
+        InsertTexture(6, "LRR (Words)");
+        InsertTexture(7, "NSCC");
+        InsertTexture(8, "UNCLX");
+        InsertTexture(9, "COW");
+        InsertTexture(10, "COW");
+        InsertTexture(11, "COW");
+        InsertTexture(12, "COW");
+        InsertTexture(13, "B&B");
+        InsertTexture(14, "SPB");
+        InsertTexture(15, "SNCT");
+        InsertTexture(16, "DLMR");
+        InsertTexture(17, "DN");
+        InsertTexture(18, "AG&W");
     }
 
     @Override

@@ -10,21 +10,21 @@ public class SBMS extends AbstractTankSlug
     public SBMS(World world)
     {
         super(world, EnumTrains.SBMS);
-        textureDescriptionMap.put(0, "FNCC");
-        textureDescriptionMap.put(1, "WP");
-        textureDescriptionMap.put(2, "Blandsville & Blasic i mean Blankerston");
-        textureDescriptionMap.put(3, "TTLC (Burnt Forest Black)");
-        textureDescriptionMap.put(4, "TTLC (Cedar Blue)");
-        textureDescriptionMap.put(5, "TTLC (Cedar Green)");
-        textureDescriptionMap.put(6, "TTLC (Evergreen)");
-        textureDescriptionMap.put(7, "TTLC (Fern)");
-        textureDescriptionMap.put(8, "TTLC (Fern Green)");
-        textureDescriptionMap.put(9, "TTLC (Fir Green)");
-        textureDescriptionMap.put(10, "TTLC (Jungle Green)");
-        textureDescriptionMap.put(11, "TTLC (Pine Green)");
-        textureDescriptionMap.put(12, "TTLC (Red Forest Brown)");
-        textureDescriptionMap.put(13, "Galesburg Clinton & Midland");
-        textureDescriptionMap.put(14, "UPNS haha lol just kidding its just regular NS");
+        InsertTexture(0, "FNCC");
+        InsertTexture(1, "WP");
+        InsertTexture(2, "Blandsville & Blasic i mean Blankerston");
+        InsertTexture(3, "TTLC (Burnt Forest Black)");
+        InsertTexture(4, "TTLC (Cedar Blue)");
+        InsertTexture(5, "TTLC (Cedar Green)");
+        InsertTexture(6, "TTLC (Evergreen)");
+        InsertTexture(7, "TTLC (Fern)");
+        InsertTexture(8, "TTLC (Fern Green)");
+        InsertTexture(9, "TTLC (Fir Green)");
+        InsertTexture(10, "TTLC (Jungle Green)");
+        InsertTexture(11, "TTLC (Pine Green)");
+        InsertTexture(12, "TTLC (Red Forest Brown)");
+        InsertTexture(13, "Galesburg Clinton & Midland");
+        InsertTexture(14, "UPNS haha lol just kidding its just regular NS");
     }
 
     public SBMS(World world, double d, double d1, double d2) {

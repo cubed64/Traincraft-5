@@ -17,9 +17,9 @@ public class DieselGP9b extends DieselTrain {
     public DieselGP9b(World world) {
         super(world, EnumTrains.GP9b.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Union Pacific");
-        textureDescriptionMap.put(1, "Penn Central");
-        textureDescriptionMap.put(2, "Penn Central");
+        InsertTexture(0, "Union Pacific");
+        InsertTexture(1, "Penn Central");
+        InsertTexture(2, "Penn Central");
     }
     public DieselGP9b(World world, double d, double d1, double d2){
         this(world);

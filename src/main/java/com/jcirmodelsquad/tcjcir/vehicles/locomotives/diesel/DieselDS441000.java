@@ -18,11 +18,11 @@ public class DieselDS441000 extends DieselTrain {
     public DieselDS441000(World world) {
         super(world, EnumTrains.DS441000.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Chicago & Northwestern (Early)");
-        textureDescriptionMap.put(1, "Chicago & Northwestern (Late)");
-        textureDescriptionMap.put(2, "New York Central (Early)");
-        textureDescriptionMap.put(3, "New York Central (Late)");
-        textureDescriptionMap.put(4, "AGW");
+        InsertTexture(0, "Chicago & Northwestern (Early)");
+        InsertTexture(1, "Chicago & Northwestern (Late)");
+        InsertTexture(2, "New York Central (Early)");
+        InsertTexture(3, "New York Central (Late)");
+        InsertTexture(4, "AGW");
     }
     public DieselDS441000(World world, double d, double d1, double d2){
         this(world);

@@ -17,14 +17,14 @@ public class DieselU23C extends DieselTrain {
     public DieselU23C(World world) {
         super(world, EnumTrains.U23C.getTankCapacity(), LiquidManager.dieselFilter());//its like magic guys trust me
         initLoco();
-        textureDescriptionMap.put(0, "Consolidate DeeZ NUTS");
-        textureDescriptionMap.put(1, "Nautilus");
-        textureDescriptionMap.put(2, "Blandsville & Blankerston");
-        textureDescriptionMap.put(3, "ATSF Pinstripe");
-        textureDescriptionMap.put(4, "ATSF Freightbonnet");
-        textureDescriptionMap.put(5, "");
-        textureDescriptionMap.put(6, "");
-        textureDescriptionMap.put(7, "");
+        InsertTexture(0, "Consolidate DeeZ NUTS");
+        InsertTexture(1, "Nautilus");
+        InsertTexture(2, "Blandsville & Blankerston");
+        InsertTexture(3, "ATSF Pinstripe");
+        InsertTexture(4, "ATSF Freightbonnet");
+        InsertTexture(5, "");
+        InsertTexture(6, "");
+        InsertTexture(7, "");
     }
     public DieselU23C(World world, double d, double d1, double d2){
         this(world);

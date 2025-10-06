@@ -20,10 +20,10 @@ public class PSBMCombine extends AbstractPassengerCombineCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "B&M");
-		textureDescriptionMap.put(1, "MEC");
-		textureDescriptionMap.put(2, "MEC (pine tree)");
-		textureDescriptionMap.put(3, "WAB");
+		InsertTexture(0, "B&M");
+		InsertTexture(1, "MEC");
+		InsertTexture(2, "MEC (pine tree)");
+		InsertTexture(3, "WAB");
 	}
 
 	@Override

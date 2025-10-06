@@ -17,8 +17,8 @@ public class DieselU56 extends DieselTrain {
     public DieselU56(World world) {
         super(world, EnumTrains.U56.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "FNCC (KIT-L)");
-        textureDescriptionMap.put(1, "FMSR");
+        InsertTexture(0, "FNCC (KIT-L)");
+        InsertTexture(1, "FMSR");
     }
     public DieselU56(World world, double d, double d1, double d2){
         this(world);

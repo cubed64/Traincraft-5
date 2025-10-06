@@ -8,13 +8,13 @@ public class WVcaboose extends AbstractWorkCart
 {
     public WVcaboose(World world) {
         super(world);
-        textureDescriptionMap.put(0, "ATSF");
-        textureDescriptionMap.put(1, "BN");
-        textureDescriptionMap.put(2, "MT&S");
-        textureDescriptionMap.put(3, "OWO");
-        textureDescriptionMap.put(4, "SOO");
-        textureDescriptionMap.put(5, "Generic Green");
-        textureDescriptionMap.put(6, "Magnolia");
+        InsertTexture(0, "ATSF");
+        InsertTexture(1, "BN");
+        InsertTexture(2, "MT&S");
+        InsertTexture(3, "OWO");
+        InsertTexture(4, "SOO");
+        InsertTexture(5, "Generic Green");
+        InsertTexture(6, "Magnolia");
     }
 
     public WVcaboose(World world, double posX, double posY, double posZ)

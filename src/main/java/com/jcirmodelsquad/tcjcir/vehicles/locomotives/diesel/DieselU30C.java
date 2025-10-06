@@ -17,21 +17,21 @@ public class DieselU30C extends DieselTrain {
     public DieselU30C(World world) {
         super(world, EnumTrains.U30C.getTankCapacity(), LiquidManager.dieselFilter());//its like magic guys trust me
         initLoco();
-        textureDescriptionMap.put(0, "Burlington Northern 5344");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "FNCC (KIT-L)");
-        textureDescriptionMap.put(3, "Southern Pacific");
-        textureDescriptionMap.put(4, "Rock Island");
-        textureDescriptionMap.put(5, "Deadwood & La Mesa");
-        textureDescriptionMap.put(6, "West Creek Pacific");
-        textureDescriptionMap.put(7, "Boston & Maine 663 (Guilford)");
-        textureDescriptionMap.put(8, "AGW");
-        textureDescriptionMap.put(9, "GCM");
-        textureDescriptionMap.put(10, "Chicago and North Western");
-        textureDescriptionMap.put(11, "CSXT (Stealth)");
-        textureDescriptionMap.put(12, "CSXT (Bluedown)");
-        textureDescriptionMap.put(13, "Seaboard System");
-        textureDescriptionMap.put(14, "Chessie System");
+        InsertTexture(0, "Burlington Northern 5344");
+        InsertTexture(1, "Blandsville & Blankerston");
+        InsertTexture(2, "FNCC (KIT-L)");
+        InsertTexture(3, "Southern Pacific");
+        InsertTexture(4, "Rock Island");
+        InsertTexture(5, "Deadwood & La Mesa");
+        InsertTexture(6, "West Creek Pacific");
+        InsertTexture(7, "Boston & Maine 663 (Guilford)");
+        InsertTexture(8, "AGW");
+        InsertTexture(9, "GCM");
+        InsertTexture(10, "Chicago and North Western");
+        InsertTexture(11, "CSXT (Stealth)");
+        InsertTexture(12, "CSXT (Bluedown)");
+        InsertTexture(13, "Seaboard System");
+        InsertTexture(14, "Chessie System");
     }
     public DieselU30C(World world, double d, double d1, double d2){
         this(world);

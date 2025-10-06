@@ -17,16 +17,16 @@ public class SteamMK60 extends SteamTrain {
 	public SteamMK60(World world) {
 		super(world, EnumTrains.MK60.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
-		textureDescriptionMap.put(0, "Blank");
-		textureDescriptionMap.put(1, "Spoof Texture");
-		textureDescriptionMap.put(2, "WP 320-326");
-		textureDescriptionMap.put(3, "WP 322-323");
-		textureDescriptionMap.put(4, "WP 327-329");
-		textureDescriptionMap.put(5, "WP 334 NEP-WP Condition");
-		textureDescriptionMap.put(6, "WP 334-335");
-		textureDescriptionMap.put(7, "DLMR 199");
-		textureDescriptionMap.put(8, "FMSR 560-574");
-		textureDescriptionMap.put(9, "FMSR 575-579");
+		InsertTexture(0, "Blank");
+		InsertTexture(1, "Spoof Texture");
+		InsertTexture(2, "WP 320-326");
+		InsertTexture(3, "WP 322-323");
+		InsertTexture(4, "WP 327-329");
+		InsertTexture(5, "WP 334 NEP-WP Condition");
+		InsertTexture(6, "WP 334-335");
+		InsertTexture(7, "DLMR 199");
+		InsertTexture(8, "FMSR 560-574");
+		InsertTexture(9, "FMSR 575-579");
 	}
 
 	public void initLocoSteam() {

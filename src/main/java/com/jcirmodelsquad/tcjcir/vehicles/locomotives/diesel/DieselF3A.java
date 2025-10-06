@@ -17,12 +17,12 @@ public class DieselF3A extends DieselTrain {
     public DieselF3A(World world) {
         super(world, EnumTrains.F3A.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Test Blank, Phase 2 Early");
-        textureDescriptionMap.put(1, "CDC&S");
-        textureDescriptionMap.put(2, "Test Blank, F7a");
-        textureDescriptionMap.put(3, "FMSR");
-        textureDescriptionMap.put(4, "OC&G 25A, 26B");
-        textureDescriptionMap.put(5, "BAR 49");
+        InsertTexture(0, "Test Blank, Phase 2 Early");
+        InsertTexture(1, "CDC&S");
+        InsertTexture(2, "Test Blank, F7a");
+        InsertTexture(3, "FMSR");
+        InsertTexture(4, "OC&G 25A, 26B");
+        InsertTexture(5, "BAR 49");
     }
     public DieselF3A(World world, double d, double d1, double d2){
         this(world);

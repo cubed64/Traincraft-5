@@ -24,18 +24,18 @@ public class Hicube60foot extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "TBOX");
-        textureDescriptionMap.put(1, "Generic Red");
-        textureDescriptionMap.put(2, "Generic Red (Graffiti)");
-        textureDescriptionMap.put(3, "CSXT");
-        textureDescriptionMap.put(4, "PRD");
-        textureDescriptionMap.put(5, "PRD");
-        textureDescriptionMap.put(6, "UP");
-        textureDescriptionMap.put(7, "Generic White");
-        textureDescriptionMap.put(8, "Generic Blue");
-        textureDescriptionMap.put(9, "MT&S");
-        textureDescriptionMap.put(10, "Generic Yellow");
-        textureDescriptionMap.put(11, "Generic Green");
+        InsertTexture(0, "TBOX");
+        InsertTexture(1, "Generic Red");
+        InsertTexture(2, "Generic Red (Graffiti)");
+        InsertTexture(3, "CSXT");
+        InsertTexture(4, "PRD");
+        InsertTexture(5, "PRD");
+        InsertTexture(6, "UP");
+        InsertTexture(7, "Generic White");
+        InsertTexture(8, "Generic Blue");
+        InsertTexture(9, "MT&S");
+        InsertTexture(10, "Generic Yellow");
+        InsertTexture(11, "Generic Green");
     }
 
     @Override

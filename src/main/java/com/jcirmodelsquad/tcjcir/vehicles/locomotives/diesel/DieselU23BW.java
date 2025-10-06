@@ -17,8 +17,8 @@ public class DieselU23BW extends DieselTrain {
     public DieselU23BW(World world) {
         super(world, EnumTrains.U23BW.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Blandsville & Blankerston");
-        textureDescriptionMap.put(1, "CSXT (Yn2, Protolance)");
+        InsertTexture(0, "Blandsville & Blankerston");
+        InsertTexture(1, "CSXT (Yn2, Protolance)");
     }
     public DieselU23BW(World world, double d, double d1, double d2){
         this(world);

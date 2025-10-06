@@ -17,11 +17,11 @@ public class DieselSB18B extends DieselTrain {
     public DieselSB18B(World world) {
         super(world, EnumTrains.SB18B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "CEE Factory Blank (Phase 1)");
-        textureDescriptionMap.put(1, "TTLC (Alaskan Moss)");
-        textureDescriptionMap.put(2, "TTLC (Coronado Moss)");
-        textureDescriptionMap.put(3, "TTLC (Pond Moss)");
-        textureDescriptionMap.put(4, "TTLC (Turtle Moss)");
+        InsertTexture(0, "CEE Factory Blank (Phase 1)");
+        InsertTexture(1, "TTLC (Alaskan Moss)");
+        InsertTexture(2, "TTLC (Coronado Moss)");
+        InsertTexture(3, "TTLC (Pond Moss)");
+        InsertTexture(4, "TTLC (Turtle Moss)");
     }
     public DieselSB18B(World world, double d, double d1, double d2){
         this(world);

@@ -18,10 +18,10 @@ public class DieselM640W extends DieselTrain {
     public DieselM640W(World world) {
         super(world, EnumTrains.M640W.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "COW");
-        textureDescriptionMap.put(1, "COW (Special)");
-        textureDescriptionMap.put(2, "Blandsville & Blankerston");
-        textureDescriptionMap.put(3, "Kingsland Rail");
+        InsertTexture(0, "COW");
+        InsertTexture(1, "COW (Special)");
+        InsertTexture(2, "Blandsville & Blankerston");
+        InsertTexture(3, "Kingsland Rail");
 
     }
     public DieselM640W(World world, double d, double d1, double d2){

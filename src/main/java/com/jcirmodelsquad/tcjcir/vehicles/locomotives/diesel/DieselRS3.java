@@ -17,14 +17,14 @@ public class DieselRS3 extends DieselTrain {
     public DieselRS3(World world) {
         super(world, EnumTrains.RS3.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Boston & Maine (Simp)");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "Denver & Rio Grande Western (Early)");
-        textureDescriptionMap.put(3, "Denver & Rio Grande Western");
-        textureDescriptionMap.put(4, "AGW");
-        textureDescriptionMap.put(5, "CCRL");
-        textureDescriptionMap.put(6, "SER");
-        textureDescriptionMap.put(7, "NSE");
+        InsertTexture(0, "Boston & Maine (Simp)");
+        InsertTexture(1, "Blandsville & Blankerston");
+        InsertTexture(2, "Denver & Rio Grande Western (Early)");
+        InsertTexture(3, "Denver & Rio Grande Western");
+        InsertTexture(4, "AGW");
+        InsertTexture(5, "CCRL");
+        InsertTexture(6, "SER");
+        InsertTexture(7, "NSE");
     }
     public DieselRS3(World world, double d, double d1, double d2){
         this(world);

@@ -39,16 +39,16 @@ public class MaPa35FootFlat extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "Brown");
-        textureDescriptionMap.put(1, "MOW");
-        textureDescriptionMap.put(2, "Brown (Stakes)");
-        textureDescriptionMap.put(3, "MOW (Stakes)");
-        textureDescriptionMap.put(4, "Black");
-        textureDescriptionMap.put(5, "Green");
-        textureDescriptionMap.put(6, "Green (Stakes)");
-        textureDescriptionMap.put(7, "Oxide Red (Stakes)");
-        textureDescriptionMap.put(8, "Black (Stakes)");
-        textureDescriptionMap.put(9, "Oxide Red (Stakes)");
+        InsertTexture(0, "Brown");
+        InsertTexture(1, "MOW");
+        InsertTexture(2, "Brown (Stakes)");
+        InsertTexture(3, "MOW (Stakes)");
+        InsertTexture(4, "Black");
+        InsertTexture(5, "Green");
+        InsertTexture(6, "Green (Stakes)");
+        InsertTexture(7, "Oxide Red (Stakes)");
+        InsertTexture(8, "Black (Stakes)");
+        InsertTexture(9, "Oxide Red (Stakes)");
     }
 
     @Override

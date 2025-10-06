@@ -17,9 +17,9 @@ public class SteamAlco0_6_0T extends SteamTrain {
 	public SteamAlco0_6_0T(World world) {
 		super(world, EnumTrains.Alco0_6_0T.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
-		textureDescriptionMap.put(0, "Generic");
-		textureDescriptionMap.put(1, "CDCS");
-		textureDescriptionMap.put(2, "SPR");
+		InsertTexture(0, "Generic");
+		InsertTexture(1, "CDCS");
+		InsertTexture(2, "SPR");
 	}
 
 	public void initLocoSteam() {

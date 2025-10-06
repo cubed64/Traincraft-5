@@ -17,14 +17,14 @@ public class DieselB23S7 extends DieselTrain {
     public DieselB23S7(World world) {
         super(world, EnumTrains.B23S7.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "GECX 2000");
-        textureDescriptionMap.put(1, "GECX 2002");
-        textureDescriptionMap.put(2, "Monongahela");
-        textureDescriptionMap.put(3, "Blandsville & Blankerston");
-        textureDescriptionMap.put(4, "FNCC (KIT-L)");
-        textureDescriptionMap.put(5, "WP (Early)");
-        textureDescriptionMap.put(6, "WP (Late)");
-        textureDescriptionMap.put(7, "CSXT (Yn3)");
+        InsertTexture(0, "GECX 2000");
+        InsertTexture(1, "GECX 2002");
+        InsertTexture(2, "Monongahela");
+        InsertTexture(3, "Blandsville & Blankerston");
+        InsertTexture(4, "FNCC (KIT-L)");
+        InsertTexture(5, "WP (Early)");
+        InsertTexture(6, "WP (Late)");
+        InsertTexture(7, "CSXT (Yn3)");
 
     }
     public DieselB23S7(World world, double d, double d1, double d2){

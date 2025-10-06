@@ -7,17 +7,17 @@ public class Amfleet extends AbstractPassengerCar
 {
     public Amfleet(World world) {
         super(world);
-        textureDescriptionMap.put(0, "AMTK (Phase 1)");
-        textureDescriptionMap.put(1, "AMTK (Phase 2)");
-        textureDescriptionMap.put(2, "AMTK (Phase 3)");
-        textureDescriptionMap.put(3, "AMTK (Phase 4)");
-        textureDescriptionMap.put(4, "AMTK (Phase 4b)");
-        textureDescriptionMap.put(5, "AMTK (Acela Regional Coach)");
-        textureDescriptionMap.put(6, "AMTK (Acela Regional Business)");
-        textureDescriptionMap.put(7, "Generic");
-        textureDescriptionMap.put(8, "JCTransit");
-        textureDescriptionMap.put(9, "CCRL (Chatham and Crator River Lines)");
-        textureDescriptionMap.put(10, "CRL (Crator River Lines)");
+        InsertTexture(0, "AMTK (Phase 1)");
+        InsertTexture(1, "AMTK (Phase 2)");
+        InsertTexture(2, "AMTK (Phase 3)");
+        InsertTexture(3, "AMTK (Phase 4)");
+        InsertTexture(4, "AMTK (Phase 4b)");
+        InsertTexture(5, "AMTK (Acela Regional Coach)");
+        InsertTexture(6, "AMTK (Acela Regional Business)");
+        InsertTexture(7, "Generic");
+        InsertTexture(8, "JCTransit");
+        InsertTexture(9, "CCRL (Chatham and Crator River Lines)");
+        InsertTexture(10, "CRL (Crator River Lines)");
     }
 
     public Amfleet(World world, double posX, double posY, double posZ)

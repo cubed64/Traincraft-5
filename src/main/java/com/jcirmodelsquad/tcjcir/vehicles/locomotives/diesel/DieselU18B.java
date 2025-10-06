@@ -17,29 +17,29 @@ public class DieselU18B extends DieselTrain {
     public DieselU18B(World world) {
         super(world, EnumTrains.U18B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "MEC 405");
-        textureDescriptionMap.put(1, "MEC 402");
-        textureDescriptionMap.put(2, "PW 1801 (As Delivered)");
-        textureDescriptionMap.put(3, "PW 1801 (Early)");
-        textureDescriptionMap.put(4, "Blandsville & Blankerston");
-        textureDescriptionMap.put(5, "Pickens Railway");
-        textureDescriptionMap.put(6, "CSXT MOW");
-        textureDescriptionMap.put(7, "Carbondale & Pine Valley");
-        textureDescriptionMap.put(8, "West Creek Pacific");
-        textureDescriptionMap.put(9, "Seaboard Coast Line");
-        textureDescriptionMap.put(10, "Seaboard System");
-        textureDescriptionMap.put(11, "Seaboard System (Family Lines)");
-        textureDescriptionMap.put(12, "SCL Blank");
-        textureDescriptionMap.put(13, "Texas Utilities");
-        textureDescriptionMap.put(14, "Texas Utilities (RCO Gear)");
-        //textureDescriptionMap.put(16, "NEP");
-        textureDescriptionMap.put(16, "NDEM (Red & Olive)");
-        textureDescriptionMap.put(17, "FMN (Two Tone Blue)");
-        textureDescriptionMap.put(18, "CSXT");
-        textureDescriptionMap.put(19, "CSXT");
-        textureDescriptionMap.put(20, "CSXT");
-        textureDescriptionMap.put(21, "CSXT");
-        textureDescriptionMap.put(22, "CSXT");
+        InsertTexture(0, "MEC 405");
+        InsertTexture(1, "MEC 402");
+        InsertTexture(2, "PW 1801 (As Delivered)");
+        InsertTexture(3, "PW 1801 (Early)");
+        InsertTexture(4, "Blandsville & Blankerston");
+        InsertTexture(5, "Pickens Railway");
+        InsertTexture(6, "CSXT MOW");
+        InsertTexture(7, "Carbondale & Pine Valley");
+        InsertTexture(8, "West Creek Pacific");
+        InsertTexture(9, "Seaboard Coast Line");
+        InsertTexture(10, "Seaboard System");
+        InsertTexture(11, "Seaboard System (Family Lines)");
+        InsertTexture(12, "SCL Blank");
+        InsertTexture(13, "Texas Utilities");
+        InsertTexture(14, "Texas Utilities (RCO Gear)");
+        //InsertTexture(16, "NEP");
+        InsertTexture(16, "NDEM (Red & Olive)");
+        InsertTexture(17, "FMN (Two Tone Blue)");
+        InsertTexture(18, "CSXT");
+        InsertTexture(19, "CSXT");
+        InsertTexture(20, "CSXT");
+        InsertTexture(21, "CSXT");
+        InsertTexture(22, "CSXT");
     }
 
     public DieselU18B(World world, double d, double d1, double d2){

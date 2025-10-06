@@ -24,13 +24,13 @@ public class PDH2800 extends AbstractStandardFreightCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "DPCX");
-		textureDescriptionMap.put(1, "DPCX");
-		textureDescriptionMap.put(2, "DPCX");
-		textureDescriptionMap.put(3, "WP");
-		textureDescriptionMap.put(4, "LEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAAAAAANNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN");
-		textureDescriptionMap.put(5, "BN");
-		textureDescriptionMap.put(6, "CB&Q");
+		InsertTexture(0, "DPCX");
+		InsertTexture(1, "DPCX");
+		InsertTexture(2, "DPCX");
+		InsertTexture(3, "WP");
+		InsertTexture(4, "LEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAAAAAANNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN");
+		InsertTexture(5, "BN");
+		InsertTexture(6, "CB&Q");
 	}
 
 	@Override

@@ -18,10 +18,10 @@ public class DieselFAFDL extends DieselTrain {
     public DieselFAFDL(World world) {
         super(world, EnumTrains.FAFDL.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "FMSR");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston (Early FAFDL)");
-        textureDescriptionMap.put(2, "Blandsville & Blankerston (Late FAFDL)");
-        textureDescriptionMap.put(3, "");
+        InsertTexture(0, "FMSR");
+        InsertTexture(1, "Blandsville & Blankerston (Early FAFDL)");
+        InsertTexture(2, "Blandsville & Blankerston (Late FAFDL)");
+        InsertTexture(3, "");
     }
     public DieselFAFDL(World world, double d, double d1, double d2){
         this(world);

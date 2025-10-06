@@ -22,10 +22,10 @@ public class TenderPMNstender extends Tender implements IInventory {
     public TenderPMNstender(World world) {
         super(world, FluidRegistry.WATER, 0, EnumTrains.PMNstender.getTankCapacity(), LiquidManager.WATER_FILTER);
         initFreightTender();
-        textureDescriptionMap.put(0, "Pere Marquette");
-        textureDescriptionMap.put(1, "C&O Early");
-        textureDescriptionMap.put(2, "C&O Late");
-        textureDescriptionMap.put(3, "Polar Express");
+        InsertTexture(0, "Pere Marquette");
+        InsertTexture(1, "C&O Early");
+        InsertTexture(2, "C&O Late");
+        InsertTexture(3, "Polar Express");
     }
 
     public void initFreightTender() {

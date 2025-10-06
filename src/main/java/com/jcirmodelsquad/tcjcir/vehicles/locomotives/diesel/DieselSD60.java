@@ -18,21 +18,21 @@ public class DieselSD60 extends DieselTrain {
     public DieselSD60(World world) {
         super(world, EnumTrains.SD60.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Oakway Lease");
-        textureDescriptionMap.put(1, "Oakway Lease");
-        textureDescriptionMap.put(2, "CN (Ex Oakway i think?)");
-        textureDescriptionMap.put(3, "Uncle Pete");
-        textureDescriptionMap.put(4, "NS (Ex Soup)");
-        textureDescriptionMap.put(5, "CR (ohe now thats quality -demoman tf2)");
-        textureDescriptionMap.put(6, "Blandsville & Blanklands Terminal Railroad Association");
-        textureDescriptionMap.put(7, "GLoNT");
-        textureDescriptionMap.put(8, "BN (Tiger Stripe)");
-        textureDescriptionMap.put(9, "CSXT (Yn3)");
-        textureDescriptionMap.put(10, "CSXT (Yn2)");
-        textureDescriptionMap.put(11, "CSXT (Yn1)");
-        textureDescriptionMap.put(12, "CSXT (Stealth)");
-        textureDescriptionMap.put(13, "SOO (White)");
-        textureDescriptionMap.put(14, "SOO (Red)");
+        InsertTexture(0, "Oakway Lease");
+        InsertTexture(1, "Oakway Lease");
+        InsertTexture(2, "CN (Ex Oakway i think?)");
+        InsertTexture(3, "Uncle Pete");
+        InsertTexture(4, "NS (Ex Soup)");
+        InsertTexture(5, "CR (ohe now thats quality -demoman tf2)");
+        InsertTexture(6, "Blandsville & Blanklands Terminal Railroad Association");
+        InsertTexture(7, "GLoNT");
+        InsertTexture(8, "BN (Tiger Stripe)");
+        InsertTexture(9, "CSXT (Yn3)");
+        InsertTexture(10, "CSXT (Yn2)");
+        InsertTexture(11, "CSXT (Yn1)");
+        InsertTexture(12, "CSXT (Stealth)");
+        InsertTexture(13, "SOO (White)");
+        InsertTexture(14, "SOO (Red)");
 
     }
     public DieselSD60(World world, double d, double d1, double d2){

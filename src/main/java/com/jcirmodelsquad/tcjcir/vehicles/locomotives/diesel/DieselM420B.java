@@ -17,9 +17,9 @@ public class DieselM420B extends DieselTrain {
     public DieselM420B(World world) {
         super(world, EnumTrains.M420B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "BCRail (Zig Zag)");
-        textureDescriptionMap.put(1, "COW (Calf)");
-        textureDescriptionMap.put(2, "FNCC (KIT-L, Non Canon)");
+        InsertTexture(0, "BCRail (Zig Zag)");
+        InsertTexture(1, "COW (Calf)");
+        InsertTexture(2, "FNCC (KIT-L, Non Canon)");
     }
     public DieselM420B(World world, double d, double d1, double d2){
         this(world);

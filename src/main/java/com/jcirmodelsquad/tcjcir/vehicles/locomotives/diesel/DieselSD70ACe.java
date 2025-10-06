@@ -18,24 +18,24 @@ public class DieselSD70ACe extends DieselTrain {
     public DieselSD70ACe(World world) {
         super(world, EnumTrains.SD70ACe.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Blandsville & Blankerston");
-        textureDescriptionMap.put(1, "FURRX Lease");
-        textureDescriptionMap.put(2, "CSXT Thundercab");
-        textureDescriptionMap.put(3, "PRLX C&O Heritable");
-        textureDescriptionMap.put(4, "CSXT What If Whispercab, Hunter Harrison Killed it");
-        textureDescriptionMap.put(5, "BNSF Whispercab");
-        textureDescriptionMap.put(6, "BNSF Thundercab");
-        textureDescriptionMap.put(7, "KCS Grey Ghost Thundercab");
-        textureDescriptionMap.put(8, "KCS Belle Thundercab");
-        textureDescriptionMap.put(9, "KCS Belle Whispercab");
-        textureDescriptionMap.put(10, "UP Flag Whispercab");
-        textureDescriptionMap.put(11, "UP Flag Thundercab");
-        textureDescriptionMap.put(12, "UP Lettering Whispercab");
-        textureDescriptionMap.put(13, "UP Lettering Thundercab");
-        textureDescriptionMap.put(14, "NS Second Order");
-        textureDescriptionMap.put(15, "Montana Rail Link");
-        textureDescriptionMap.put(16, "EMDX Demonstrator Whispercab");
-        textureDescriptionMap.put(17, "CN Demonstrator Whispercab");
+        InsertTexture(0, "Blandsville & Blankerston");
+        InsertTexture(1, "FURRX Lease");
+        InsertTexture(2, "CSXT Thundercab");
+        InsertTexture(3, "PRLX C&O Heritable");
+        InsertTexture(4, "CSXT What If Whispercab, Hunter Harrison Killed it");
+        InsertTexture(5, "BNSF Whispercab");
+        InsertTexture(6, "BNSF Thundercab");
+        InsertTexture(7, "KCS Grey Ghost Thundercab");
+        InsertTexture(8, "KCS Belle Thundercab");
+        InsertTexture(9, "KCS Belle Whispercab");
+        InsertTexture(10, "UP Flag Whispercab");
+        InsertTexture(11, "UP Flag Thundercab");
+        InsertTexture(12, "UP Lettering Whispercab");
+        InsertTexture(13, "UP Lettering Thundercab");
+        InsertTexture(14, "NS Second Order");
+        InsertTexture(15, "Montana Rail Link");
+        InsertTexture(16, "EMDX Demonstrator Whispercab");
+        InsertTexture(17, "CN Demonstrator Whispercab");
     }
     public DieselSD70ACe(World world, double d, double d1, double d2){
         this(world);

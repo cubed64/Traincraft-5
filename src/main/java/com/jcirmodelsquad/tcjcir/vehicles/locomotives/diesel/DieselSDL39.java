@@ -19,12 +19,12 @@ public class DieselSDL39 extends DieselTrain {
         super(world, EnumTrains.SDL39.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
-        textureDescriptionMap.put(0, "MILW");
-        textureDescriptionMap.put(1, "MILW");
-        textureDescriptionMap.put(2, "MILW");
-        textureDescriptionMap.put(3, "WC");
-        textureDescriptionMap.put(4, "WFR");
-        textureDescriptionMap.put(5, "WFR (JCIR 6 Years)");
+        InsertTexture(0, "MILW");
+        InsertTexture(1, "MILW");
+        InsertTexture(2, "MILW");
+        InsertTexture(3, "WC");
+        InsertTexture(4, "WFR");
+        InsertTexture(5, "WFR (JCIR 6 Years)");
 
     }
     public DieselSDL39(World world, double d, double d1, double d2){

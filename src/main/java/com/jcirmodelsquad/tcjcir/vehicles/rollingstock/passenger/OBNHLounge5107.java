@@ -8,8 +8,8 @@ public class OBNHLounge5107 extends AbstractPassengerCar
 
 	public OBNHLounge5107(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "NH");
-		textureDescriptionMap.put(1, "NH (Black Knight Scheme)");
+		InsertTexture(0, "NH");
+		InsertTexture(1, "NH (Black Knight Scheme)");
 	}
 
 	public OBNHLounge5107(World world, double posX, double posY, double posZ)

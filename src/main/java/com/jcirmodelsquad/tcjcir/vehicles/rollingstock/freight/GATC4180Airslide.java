@@ -19,25 +19,25 @@ public class GATC4180Airslide extends AbstractStandardFreightCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "GN (BSB)");
-		textureDescriptionMap.put(1, "NP");
-		textureDescriptionMap.put(2, "UP");
-		textureDescriptionMap.put(3, "BB (Phase 1B)");
-		textureDescriptionMap.put(4, "CBQ");
-		textureDescriptionMap.put(5, "MILW");
-		textureDescriptionMap.put(6, "BB (Phase 1A)");
-		textureDescriptionMap.put(7, "BN");
-		textureDescriptionMap.put(8, "DRGW");
-		textureDescriptionMap.put(9, "MILW");
-		textureDescriptionMap.put(10, "BM");
-		textureDescriptionMap.put(11, "CSX");
-		textureDescriptionMap.put(12, "CNW");
-		textureDescriptionMap.put(13, "BB (Phase 2)");
-		textureDescriptionMap.put(14, "WP");
-		textureDescriptionMap.put(15, "ATSF");
-		textureDescriptionMap.put(16, "RI");
-		textureDescriptionMap.put(17, "ROCK");
-		textureDescriptionMap.put(18, "GN Grey");
+		InsertTexture(0, "GN (BSB)");
+		InsertTexture(1, "NP");
+		InsertTexture(2, "UP");
+		InsertTexture(3, "BB (Phase 1B)");
+		InsertTexture(4, "CBQ");
+		InsertTexture(5, "MILW");
+		InsertTexture(6, "BB (Phase 1A)");
+		InsertTexture(7, "BN");
+		InsertTexture(8, "DRGW");
+		InsertTexture(9, "MILW");
+		InsertTexture(10, "BM");
+		InsertTexture(11, "CSX");
+		InsertTexture(12, "CNW");
+		InsertTexture(13, "BB (Phase 2)");
+		InsertTexture(14, "WP");
+		InsertTexture(15, "ATSF");
+		InsertTexture(16, "RI");
+		InsertTexture(17, "ROCK");
+		InsertTexture(18, "GN Grey");
 	}
 
 	@Override

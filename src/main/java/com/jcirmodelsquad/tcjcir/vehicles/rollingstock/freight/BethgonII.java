@@ -46,16 +46,16 @@ public class BethgonII extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "Generic Black");
-        textureDescriptionMap.put(1, "Generic Silver W/Green End");
-        textureDescriptionMap.put(2, "Generic Silver W/Orange End");
-        textureDescriptionMap.put(3, "CSXT");
-        textureDescriptionMap.put(4, "Generic Silver");
-        textureDescriptionMap.put(5, "UP");
-        textureDescriptionMap.put(6, "NS");
-        textureDescriptionMap.put(7, "C&PV (Rock Service)");
-        textureDescriptionMap.put(8, "C&PV (Rock Service)");
-        textureDescriptionMap.put(9, "GCM");
+        InsertTexture(0, "Generic Black");
+        InsertTexture(1, "Generic Silver W/Green End");
+        InsertTexture(2, "Generic Silver W/Orange End");
+        InsertTexture(3, "CSXT");
+        InsertTexture(4, "Generic Silver");
+        InsertTexture(5, "UP");
+        InsertTexture(6, "NS");
+        InsertTexture(7, "C&PV (Rock Service)");
+        InsertTexture(8, "C&PV (Rock Service)");
+        InsertTexture(9, "GCM");
     }
 
     @Override

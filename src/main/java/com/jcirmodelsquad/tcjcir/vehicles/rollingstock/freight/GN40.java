@@ -25,8 +25,8 @@ public class GN40 extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "GN (Aluminum Express Boxcar)");
-        textureDescriptionMap.put(1, "GN (Plywood Side Homebuilt Boxcar)");
+        InsertTexture(0, "GN (Aluminum Express Boxcar)");
+        InsertTexture(1, "GN (Plywood Side Homebuilt Boxcar)");
     }
 
     @Override

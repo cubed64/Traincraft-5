@@ -18,20 +18,20 @@ public class DieselSW1200 extends DieselTrain {
     public DieselSW1200(World world) {
         super(world, EnumTrains.SW1200.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Illinois Terminal");
-        textureDescriptionMap.put(1, "Burlington Northern");
-        textureDescriptionMap.put(2, "Denver & Rio Grande Western");
-        textureDescriptionMap.put(3, "Denver & Rio Grande Western (Late)");
-        textureDescriptionMap.put(4, "Chicago & North Western");
-        textureDescriptionMap.put(5, "Great Northern");
-        textureDescriptionMap.put(6, "Milwaukee Road");
-        textureDescriptionMap.put(7, "Minneapolis, Northfield and Southern");
-        textureDescriptionMap.put(8, "Great Lakes & Northern Territories");
-        textureDescriptionMap.put(9, "Fremont & Elkhorn Valley Railroad");
-        textureDescriptionMap.put(10, "West Creek Pacific");
-        textureDescriptionMap.put(11, "Blandsville & Blankerston");
-        textureDescriptionMap.put(12, "JRN");
-        textureDescriptionMap.put(13, "JRN (Yellow Cab)");
+        InsertTexture(0, "Illinois Terminal");
+        InsertTexture(1, "Burlington Northern");
+        InsertTexture(2, "Denver & Rio Grande Western");
+        InsertTexture(3, "Denver & Rio Grande Western (Late)");
+        InsertTexture(4, "Chicago & North Western");
+        InsertTexture(5, "Great Northern");
+        InsertTexture(6, "Milwaukee Road");
+        InsertTexture(7, "Minneapolis, Northfield and Southern");
+        InsertTexture(8, "Great Lakes & Northern Territories");
+        InsertTexture(9, "Fremont & Elkhorn Valley Railroad");
+        InsertTexture(10, "West Creek Pacific");
+        InsertTexture(11, "Blandsville & Blankerston");
+        InsertTexture(12, "JRN");
+        InsertTexture(13, "JRN (Yellow Cab)");
     }
     public DieselSW1200(World world, double d, double d1, double d2){
         this(world);

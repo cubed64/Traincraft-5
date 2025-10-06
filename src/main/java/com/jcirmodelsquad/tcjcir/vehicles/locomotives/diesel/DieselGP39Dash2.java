@@ -17,11 +17,11 @@ public class DieselGP39Dash2 extends DieselTrain {
     public DieselGP39Dash2(World world) {
         super(world, EnumTrains.GP39Dash2.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "MKT");
-        textureDescriptionMap.put(1, "FURRX (Ex CSWR)");
-        textureDescriptionMap.put(2, "Nomansi & Eastern Pacific");
-        textureDescriptionMap.put(3, "NEP (Late)");
-        textureDescriptionMap.put(4, "CSXT (YN3)");
+        InsertTexture(0, "MKT");
+        InsertTexture(1, "FURRX (Ex CSWR)");
+        InsertTexture(2, "Nomansi & Eastern Pacific");
+        InsertTexture(3, "NEP (Late)");
+        InsertTexture(4, "CSXT (YN3)");
 
     }
     public DieselGP39Dash2(World world, double d, double d1, double d2){

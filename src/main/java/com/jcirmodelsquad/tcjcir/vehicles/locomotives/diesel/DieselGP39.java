@@ -17,10 +17,10 @@ public class DieselGP39 extends DieselTrain {
     public DieselGP39(World world) {
         super(world, EnumTrains.GP39.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Atlanta & St Andrews Bay");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "CSXT (YN2)");
-        textureDescriptionMap.put(3, "CSXT (Bluedown)");
+        InsertTexture(0, "Atlanta & St Andrews Bay");
+        InsertTexture(1, "Blandsville & Blankerston");
+        InsertTexture(2, "CSXT (YN2)");
+        InsertTexture(3, "CSXT (Bluedown)");
 
     }
     public DieselGP39(World world, double d, double d1, double d2){

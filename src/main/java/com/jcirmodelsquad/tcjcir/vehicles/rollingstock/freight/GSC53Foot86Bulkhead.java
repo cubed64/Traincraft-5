@@ -242,15 +242,15 @@ public class GSC53Foot86Bulkhead extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "CGW/CNW");
-        textureDescriptionMap.put(1, "BN");
-        textureDescriptionMap.put(2, "CB&Q");
-        textureDescriptionMap.put(3, "CRIP");
-        textureDescriptionMap.put(4, "DRGW");
-        textureDescriptionMap.put(5, "GN");
-        textureDescriptionMap.put(6, "NP");
-        textureDescriptionMap.put(7, "Blandsville & Blankerston");
-        textureDescriptionMap.put(8, "UP");
+        InsertTexture(0, "CGW/CNW");
+        InsertTexture(1, "BN");
+        InsertTexture(2, "CB&Q");
+        InsertTexture(3, "CRIP");
+        InsertTexture(4, "DRGW");
+        InsertTexture(5, "GN");
+        InsertTexture(6, "NP");
+        InsertTexture(7, "Blandsville & Blankerston");
+        InsertTexture(8, "UP");
     }
 
     @Override

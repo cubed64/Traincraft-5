@@ -249,13 +249,13 @@ public class GSI60FootBulkhead extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "GN 1");
-        textureDescriptionMap.put(1, "GN 2");
-        textureDescriptionMap.put(2, "BN");
-        textureDescriptionMap.put(3, "SCL");
-        textureDescriptionMap.put(4, "ACL 1");
-        textureDescriptionMap.put(5, "ACL 2");
-        textureDescriptionMap.put(6, "FNCC");
+        InsertTexture(0, "GN 1");
+        InsertTexture(1, "GN 2");
+        InsertTexture(2, "BN");
+        InsertTexture(3, "SCL");
+        InsertTexture(4, "ACL 1");
+        InsertTexture(5, "ACL 2");
+        InsertTexture(6, "FNCC");
     }
 
     @Override

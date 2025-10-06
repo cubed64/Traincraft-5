@@ -18,11 +18,11 @@ public class OBBaggage_52SeatDividedCoach extends AbstractPassengerCombineCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "SAL");
-		textureDescriptionMap.put(1, "SAL (Silver)");
-		textureDescriptionMap.put(2, "SAL (After Renovation, Late)");
-		textureDescriptionMap.put(3, "SAL (After Renovation, Silver)");
-		textureDescriptionMap.put(4, "SAL (After Renovation, Late)");
+		InsertTexture(0, "SAL");
+		InsertTexture(1, "SAL (Silver)");
+		InsertTexture(2, "SAL (After Renovation, Late)");
+		InsertTexture(3, "SAL (After Renovation, Silver)");
+		InsertTexture(4, "SAL (After Renovation, Late)");
 	}
 
 	@Override

@@ -17,7 +17,7 @@ public class SteamF01 extends SteamTrain {
 	public SteamF01(World world) {
 		super(world, EnumTrains.F01.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
-		textureDescriptionMap.put(0, "CDC&S 4");
+		InsertTexture(0, "CDC&S 4");
 	}
 
 	public void initLocoSteam() {

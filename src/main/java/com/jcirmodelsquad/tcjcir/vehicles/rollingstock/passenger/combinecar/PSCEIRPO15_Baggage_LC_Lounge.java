@@ -20,10 +20,10 @@ public class PSCEIRPO15_Baggage_LC_Lounge extends AbstractPassengerCombineCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "C&EI (As Delivered)");
-		textureDescriptionMap.put(1, "C&EI");
-		textureDescriptionMap.put(2, "FNCC");
-		textureDescriptionMap.put(3, "GC&M");
+		InsertTexture(0, "C&EI (As Delivered)");
+		InsertTexture(1, "C&EI");
+		InsertTexture(2, "FNCC");
+		InsertTexture(3, "GC&M");
 	}
 
 	@Override

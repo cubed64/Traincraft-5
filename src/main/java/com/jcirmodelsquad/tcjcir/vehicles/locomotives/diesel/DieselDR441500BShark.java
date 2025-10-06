@@ -18,11 +18,11 @@ public class DieselDR441500BShark extends DieselTrain {
     public DieselDR441500BShark(World world) {
         super(world, EnumTrains.RF16B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Demonstrator");
-        textureDescriptionMap.put(1, "Elgin, Joliet & Eastern");
-        textureDescriptionMap.put(2, "Baltimore & Ohio");
-        textureDescriptionMap.put(3, "Baltimore & Ohio (Late)");
-        textureDescriptionMap.put(4, "Blandsville & Blankerston");
+        InsertTexture(0, "Demonstrator");
+        InsertTexture(1, "Elgin, Joliet & Eastern");
+        InsertTexture(2, "Baltimore & Ohio");
+        InsertTexture(3, "Baltimore & Ohio (Late)");
+        InsertTexture(4, "Blandsville & Blankerston");
 
     }
     public DieselDR441500BShark(World world, double d, double d1, double d2){

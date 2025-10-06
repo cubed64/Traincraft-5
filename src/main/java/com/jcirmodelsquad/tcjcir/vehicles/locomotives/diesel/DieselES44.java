@@ -19,25 +19,25 @@ public class DieselES44 extends DieselTrain {
         super(world, EnumTrains.ES44.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //i think i need a scooby doo tie-fighter now
-        textureDescriptionMap.put(0, "Evolution Series Demonstrator");
-        textureDescriptionMap.put(1, "BNSF (H2)");
-        textureDescriptionMap.put(2, "BNSF (H3)");
-        textureDescriptionMap.put(3, "Canadian Pacific");
-        textureDescriptionMap.put(4, "Union Pacific");
-        textureDescriptionMap.put(5, "Savatrans");
-        textureDescriptionMap.put(6, "CitiRail");
-        textureDescriptionMap.put(7, "Canadian National (CN)");
-        textureDescriptionMap.put(8, "Norfolk Southern (NS)");
-        textureDescriptionMap.put(9, "Blandsville & Blankerston");
-        textureDescriptionMap.put(10, "CSXT");
-        textureDescriptionMap.put(11, "Kansas City Southern");
-        textureDescriptionMap.put(12, "Cemex");
-        textureDescriptionMap.put(13, "Ferromex");
-        textureDescriptionMap.put(14, "LMX");
-        textureDescriptionMap.put(15, "LMX");
-        textureDescriptionMap.put(16, "IAIS");
-        textureDescriptionMap.put(17, "GLNT");
-        textureDescriptionMap.put(18, "Ann Arbor");
+        InsertTexture(0, "Evolution Series Demonstrator");
+        InsertTexture(1, "BNSF (H2)");
+        InsertTexture(2, "BNSF (H3)");
+        InsertTexture(3, "Canadian Pacific");
+        InsertTexture(4, "Union Pacific");
+        InsertTexture(5, "Savatrans");
+        InsertTexture(6, "CitiRail");
+        InsertTexture(7, "Canadian National (CN)");
+        InsertTexture(8, "Norfolk Southern (NS)");
+        InsertTexture(9, "Blandsville & Blankerston");
+        InsertTexture(10, "CSXT");
+        InsertTexture(11, "Kansas City Southern");
+        InsertTexture(12, "Cemex");
+        InsertTexture(13, "Ferromex");
+        InsertTexture(14, "LMX");
+        InsertTexture(15, "LMX");
+        InsertTexture(16, "IAIS");
+        InsertTexture(17, "GLNT");
+        InsertTexture(18, "Ann Arbor");
     }
     public DieselES44(World world, double d, double d1, double d2){
         this(world);

@@ -14,11 +14,11 @@ import train.common.library.GuiIDs;
 public class ElectricCEEslug extends ElectricTrain {
     public ElectricCEEslug(World world) {
         super(world);
-        textureDescriptionMap.put(0, "NEP SUB-4");
-        textureDescriptionMap.put(1, "FNCC S111, S112, & S114");
-        textureDescriptionMap.put(2, "FNCC S113");
-        textureDescriptionMap.put(3, "Blandsville & Blankerston");
-        textureDescriptionMap.put(4, "");
+        InsertTexture(0, "NEP SUB-4");
+        InsertTexture(1, "FNCC S111, S112, & S114");
+        InsertTexture(2, "FNCC S113");
+        InsertTexture(3, "Blandsville & Blankerston");
+        InsertTexture(4, "");
     }
 
     public ElectricCEEslug(World world, double d, double d1, double d2) {

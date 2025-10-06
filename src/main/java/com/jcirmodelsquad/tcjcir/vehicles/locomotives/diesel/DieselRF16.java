@@ -18,17 +18,17 @@ public class DieselRF16 extends DieselTrain {
     public DieselRF16(World world) {
         super(world, EnumTrains.RF16.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Pennsylvania (1 Stipe)");
-        textureDescriptionMap.put(1, "Delaware & Hudson");
-        textureDescriptionMap.put(2, "Michigan Northern");
-        textureDescriptionMap.put(3, "Baltimore & Ohio");
-        textureDescriptionMap.put(4, "Baltimore & Ohio (Late)");
-        textureDescriptionMap.put(5, "Baltimore & Ohio (Late, with plow)");
-        textureDescriptionMap.put(6, "New York Central");
-        textureDescriptionMap.put(7, "New York Central (Late)");
-        textureDescriptionMap.put(8, "Monongahela");
-        textureDescriptionMap.put(9, "Blandsville & Blankerston");
-        textureDescriptionMap.put(10, "A-Team");
+        InsertTexture(0, "Pennsylvania (1 Stipe)");
+        InsertTexture(1, "Delaware & Hudson");
+        InsertTexture(2, "Michigan Northern");
+        InsertTexture(3, "Baltimore & Ohio");
+        InsertTexture(4, "Baltimore & Ohio (Late)");
+        InsertTexture(5, "Baltimore & Ohio (Late, with plow)");
+        InsertTexture(6, "New York Central");
+        InsertTexture(7, "New York Central (Late)");
+        InsertTexture(8, "Monongahela");
+        InsertTexture(9, "Blandsville & Blankerston");
+        InsertTexture(10, "A-Team");
 
     }
     public DieselRF16(World world, double d, double d1, double d2){

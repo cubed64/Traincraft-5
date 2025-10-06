@@ -772,31 +772,11 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                 if (player == null)
                     rollingStock.setInformation(((ItemRollingStock) itemstack.getItem()).getTrainType(), "", trainCreator, (itemstack.getItem()).getItemStackDisplayName(itemstack), uniID);
 
-                if (ConfigHandler.SHOW_POSSIBLE_COLORS && rollingStock.acceptedColors != null && rollingStock.acceptedColors.size() > 0) {
-                    String concatColors = "";
-                    int moreColors = 0;
-                    for (int t = 0; t < rollingStock.acceptedColors.size(); t++) {
-                        if (!AbstractTrains.getColorAsString(rollingStock.acceptedColors.get(t)).equals("Empty")
-                                && !AbstractTrains.getColorAsString(rollingStock.acceptedColors.get(t)).equals("Full")
-                                && !(rollingStock.acceptedColors.get(t) > 15)) {
-                            if (!concatColors.isEmpty())
-                                concatColors = concatColors
-                                        .concat(", " + AbstractTrains.getColorAsString(rollingStock.acceptedColors.get(t)));
-                            else
-                                concatColors = AbstractTrains.getColorAsString(rollingStock.acceptedColors.get(t));
-                        } else if (rollingStock.acceptedColors.get(t) > 15) {
-                            moreColors++;
-                        }
-                    }
-                    if (concatColors.length() > 4) {
-                        if (player != null) {
-                            if (moreColors == 0) {
-                                player.addChatMessage(new ChatComponentText("Possible colors: " + concatColors + "."));
-                            } else {
-                                player.addChatMessage(new ChatComponentText("Possible colors: " + concatColors + ", and " + moreColors + " more."));
-                            }
-                            player.addChatMessage(new ChatComponentText("To paint, use the " + StatCollector.translateToLocal("item.tc:paintbrushThing.name") + " or click me with the right (vanilla) dye."));
-                        }
+                if (ConfigHandler.SHOW_POSSIBLE_COLORS && rollingStock.acceptedColors != null && rollingStock.acceptedColors.size() > 0)
+                {
+                    if (player != null)
+                    {
+                        player.addChatMessage(new ChatComponentText("To paint, use the " + StatCollector.translateToLocal("item.tc:paintbrushThing.name")));
                     }
                 }
                 world.spawnEntityInWorld(rollingStock);

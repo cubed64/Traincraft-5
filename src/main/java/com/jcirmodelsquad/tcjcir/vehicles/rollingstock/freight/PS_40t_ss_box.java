@@ -24,15 +24,15 @@ public class PS_40t_ss_box extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "Western Pacific (Later)");
-        textureDescriptionMap.put(1, "Western Pacific (As-Delivered)");
-        textureDescriptionMap.put(2, "UNCLX");
-        textureDescriptionMap.put(3, "Generic Brown");
-        textureDescriptionMap.put(4, "Blank Red");
-        textureDescriptionMap.put(5, "CDC&S");
-        textureDescriptionMap.put(6, "E&ARR");
-        textureDescriptionMap.put(7, "WPSR (Updated)");
-        textureDescriptionMap.put(8, "WPSR (As-Delivered)");
+        InsertTexture(0, "Western Pacific (Later)");
+        InsertTexture(1, "Western Pacific (As-Delivered)");
+        InsertTexture(2, "UNCLX");
+        InsertTexture(3, "Generic Brown");
+        InsertTexture(4, "Blank Red");
+        InsertTexture(5, "CDC&S");
+        InsertTexture(6, "E&ARR");
+        InsertTexture(7, "WPSR (Updated)");
+        InsertTexture(8, "WPSR (As-Delivered)");
     }
 
     @Override

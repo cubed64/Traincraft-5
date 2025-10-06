@@ -17,10 +17,10 @@ public class DieselGPFDL extends DieselTrain {
     public DieselGPFDL(World world) {
         super(world, EnumTrains.GPFDL.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "North Fox (KIT-L, Big Canon)");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "Sacramento Northern (Ex FNCC 6&7)");
-        textureDescriptionMap.put(3, "Sacramento Northern (Ex FNCC 6&7)");
+        InsertTexture(0, "North Fox (KIT-L, Big Canon)");
+        InsertTexture(1, "Blandsville & Blankerston");
+        InsertTexture(2, "Sacramento Northern (Ex FNCC 6&7)");
+        InsertTexture(3, "Sacramento Northern (Ex FNCC 6&7)");
     }
     public DieselGPFDL(World world, double d, double d1, double d2){
         this(world);

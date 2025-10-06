@@ -8,10 +8,10 @@ public class CDCScaboose extends AbstractWorkCart
 {
     public CDCScaboose(World world) {
         super(world);
-        textureDescriptionMap.put(0, "CDCS");
-        textureDescriptionMap.put(1, "CDCS (Modernized)");
-        textureDescriptionMap.put(2, "NPS");
-        textureDescriptionMap.put(3, "MOW");
+        InsertTexture(0, "CDCS");
+        InsertTexture(1, "CDCS (Modernized)");
+        InsertTexture(2, "NPS");
+        InsertTexture(3, "MOW");
     }
 
     public CDCScaboose(World world, double posX, double posY, double posZ)

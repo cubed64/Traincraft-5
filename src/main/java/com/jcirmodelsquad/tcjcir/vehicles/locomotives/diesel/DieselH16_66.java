@@ -17,19 +17,19 @@ public class DieselH16_66 extends DieselTrain {
     public DieselH16_66(World world) {
         super(world, EnumTrains.H24_66.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "TVA");
-        textureDescriptionMap.put(1, "Chicago Northwestern (Stripes)");
-        textureDescriptionMap.put(2, "Chicago Northwestern (No Stripes)");
-        textureDescriptionMap.put(3, "Chicago Northwestern");
-        textureDescriptionMap.put(4, "Chicago Northwestern (Zito Yellow)");
-        textureDescriptionMap.put(5, "TVA (Early Black)");
-        textureDescriptionMap.put(6, "TVA (Late Black)");
-        textureDescriptionMap.put(7, "The Milwaukee Road (Early)");
-        textureDescriptionMap.put(8, "The Milwaukee Road (Late)");
-        textureDescriptionMap.put(9, "Squaw Creek Coal (Yellow Steps)");
-        textureDescriptionMap.put(10, "Squaw Creek Coal");
-        textureDescriptionMap.put(11, "Canadian Pacific");
-        textureDescriptionMap.put(12, "DLMR");
+        InsertTexture(0, "TVA");
+        InsertTexture(1, "Chicago Northwestern (Stripes)");
+        InsertTexture(2, "Chicago Northwestern (No Stripes)");
+        InsertTexture(3, "Chicago Northwestern");
+        InsertTexture(4, "Chicago Northwestern (Zito Yellow)");
+        InsertTexture(5, "TVA (Early Black)");
+        InsertTexture(6, "TVA (Late Black)");
+        InsertTexture(7, "The Milwaukee Road (Early)");
+        InsertTexture(8, "The Milwaukee Road (Late)");
+        InsertTexture(9, "Squaw Creek Coal (Yellow Steps)");
+        InsertTexture(10, "Squaw Creek Coal");
+        InsertTexture(11, "Canadian Pacific");
+        InsertTexture(12, "DLMR");
     }
     public DieselH16_66(World world, double d, double d1, double d2){
         this(world);

@@ -18,7 +18,7 @@ public class DieselM630R extends DieselTrain {
     public DieselM630R(World world) {
         super(world, EnumTrains.M630R.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Blandsville & Blankerston");
+        InsertTexture(0, "Blandsville & Blankerston");
 
     }
     public DieselM630R(World world, double d, double d1, double d2){

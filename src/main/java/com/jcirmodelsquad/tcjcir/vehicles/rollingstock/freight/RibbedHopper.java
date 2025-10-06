@@ -24,22 +24,22 @@ public class RibbedHopper extends AbstractStandardFreightCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "Generic Light Grey");
-		textureDescriptionMap.put(1, "Penn Central");
-		textureDescriptionMap.put(2, "FM Chemicals");
-		textureDescriptionMap.put(3, "ATSF");
-		textureDescriptionMap.put(4, "BNSF");
-		textureDescriptionMap.put(5, "Generic Tan");
-		textureDescriptionMap.put(6, "messicews underwear");
-		textureDescriptionMap.put(7, "messicews underwear");
-		textureDescriptionMap.put(8, "DRGW");
-		textureDescriptionMap.put(9, "Ex DRGW Patch");
-		textureDescriptionMap.put(10, "ADMX");
-		textureDescriptionMap.put(11, "Generic Bown");
-		textureDescriptionMap.put(12, "CR");
-		textureDescriptionMap.put(13, "CSXT");
-		textureDescriptionMap.put(14, "MT&S");
-		textureDescriptionMap.put(15, "SPB");
+		InsertTexture(0, "Generic Light Grey");
+		InsertTexture(1, "Penn Central");
+		InsertTexture(2, "FM Chemicals");
+		InsertTexture(3, "ATSF");
+		InsertTexture(4, "BNSF");
+		InsertTexture(5, "Generic Tan");
+		InsertTexture(6, "messicews underwear");
+		InsertTexture(7, "messicews underwear");
+		InsertTexture(8, "DRGW");
+		InsertTexture(9, "Ex DRGW Patch");
+		InsertTexture(10, "ADMX");
+		InsertTexture(11, "Generic Bown");
+		InsertTexture(12, "CR");
+		InsertTexture(13, "CSXT");
+		InsertTexture(14, "MT&S");
+		InsertTexture(15, "SPB");
 	}
 
 	@Override

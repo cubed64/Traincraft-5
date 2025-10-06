@@ -238,10 +238,10 @@ public class Freight60centerbeam extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "Generic Black");
-        textureDescriptionMap.put(1, "UP");
-        textureDescriptionMap.put(2, "BCOL");
-        textureDescriptionMap.put(3, "Centex");
+        InsertTexture(0, "Generic Black");
+        InsertTexture(1, "UP");
+        InsertTexture(2, "BCOL");
+        InsertTexture(3, "Centex");
     }
 
     @Override

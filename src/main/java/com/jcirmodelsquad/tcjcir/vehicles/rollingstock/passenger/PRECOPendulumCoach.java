@@ -7,18 +7,18 @@ public class PRECOPendulumCoach extends AbstractPassengerCar
 {
 	public PRECOPendulumCoach(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "ATSF");
-		textureDescriptionMap.put(1, "ATSF (shadowline)");
-		textureDescriptionMap.put(2, "ATSF (silver)");
-		textureDescriptionMap.put(3, "ATSF (late)");
-		textureDescriptionMap.put(4, "CB&Q");
-		textureDescriptionMap.put(5, "CB&Q (removed center skirting");
-		textureDescriptionMap.put(6, "GN (as delivered)");
-		textureDescriptionMap.put(7, "GN (as put into service)");
-		textureDescriptionMap.put(8, "GN (silver)");
-		textureDescriptionMap.put(9, "GN (Empire Builder)");
-		textureDescriptionMap.put(10, "GN");
-		textureDescriptionMap.put(11, "AA (fictional)");
+		InsertTexture(0, "ATSF");
+		InsertTexture(1, "ATSF (shadowline)");
+		InsertTexture(2, "ATSF (silver)");
+		InsertTexture(3, "ATSF (late)");
+		InsertTexture(4, "CB&Q");
+		InsertTexture(5, "CB&Q (removed center skirting");
+		InsertTexture(6, "GN (as delivered)");
+		InsertTexture(7, "GN (as put into service)");
+		InsertTexture(8, "GN (silver)");
+		InsertTexture(9, "GN (Empire Builder)");
+		InsertTexture(10, "GN");
+		InsertTexture(11, "AA (fictional)");
 	}
 
 	public PRECOPendulumCoach(World world, double posX, double posY, double posZ)

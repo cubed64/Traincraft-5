@@ -19,12 +19,12 @@ public class DieselSD40A extends DieselTrain {
         super(world, EnumTrains.SD40A.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
-        textureDescriptionMap.put(0, "NEP (Later)");
-        textureDescriptionMap.put(1, "NEP (Early)");
-        textureDescriptionMap.put(2, "Illinois Central 6009 (Death Star)");
-        textureDescriptionMap.put(3, "Illinois Central 6009 (Operation Lifesaver)");
-        textureDescriptionMap.put(4, "Illinois Central (1970's)");
-        textureDescriptionMap.put(5, "Blandsville & Blankerston");
+        InsertTexture(0, "NEP (Later)");
+        InsertTexture(1, "NEP (Early)");
+        InsertTexture(2, "Illinois Central 6009 (Death Star)");
+        InsertTexture(3, "Illinois Central 6009 (Operation Lifesaver)");
+        InsertTexture(4, "Illinois Central (1970's)");
+        InsertTexture(5, "Blandsville & Blankerston");
     }
     public DieselSD40A(World world, double d, double d1, double d2){
         this(world);

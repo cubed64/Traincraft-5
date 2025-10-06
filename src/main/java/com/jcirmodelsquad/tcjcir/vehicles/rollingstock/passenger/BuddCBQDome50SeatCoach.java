@@ -7,7 +7,7 @@ public class BuddCBQDome50SeatCoach extends AbstractPassengerCar
 {
 	public BuddCBQDome50SeatCoach(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "CB&Q Silver Bluff");
+		InsertTexture(0, "CB&Q Silver Bluff");
 	}
 
 	public BuddCBQDome50SeatCoach(World world, double posX, double posY, double posZ)

@@ -18,11 +18,11 @@ public class DieselCE8 extends DieselTrain {
     public DieselCE8(World world) {
         super(world, EnumTrains.CE8.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "FNCC 99 (KIT-L)");
-        textureDescriptionMap.put(1, "Nomansi Sugar Cane Corperation");
-        textureDescriptionMap.put(2, "Blandsville & Blankerston (No Dynamics)");
-        textureDescriptionMap.put(3, "Blandsville & Blankerston (Dynamics)");
-        textureDescriptionMap.put(4, "L&W");
+        InsertTexture(0, "FNCC 99 (KIT-L)");
+        InsertTexture(1, "Nomansi Sugar Cane Corperation");
+        InsertTexture(2, "Blandsville & Blankerston (No Dynamics)");
+        InsertTexture(3, "Blandsville & Blankerston (Dynamics)");
+        InsertTexture(4, "L&W");
     }
     public DieselCE8(World world, double d, double d1, double d2){
         this(world);

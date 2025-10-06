@@ -20,20 +20,20 @@ public class ACF3500 extends AbstractStandardFreightCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "CB&Q");
-		textureDescriptionMap.put(1, "Chessie System");
-		textureDescriptionMap.put(2, "CNJ");
-		textureDescriptionMap.put(3, "CSX");
-		textureDescriptionMap.put(4, "CSX (with placard holder)");
-		textureDescriptionMap.put(5, "EL");
-		textureDescriptionMap.put(6, "SP (BLCX)");
-		textureDescriptionMap.put(7, "TPW");
-		textureDescriptionMap.put(8, "UP");
-		textureDescriptionMap.put(9, "Blandsville & Blankerston");
-		textureDescriptionMap.put(10, "ARR (ph4)");
-		textureDescriptionMap.put(11, "MP (ph4)");
-		textureDescriptionMap.put(12, "MP/KOG (ph4)");
-		textureDescriptionMap.put(13, "Blandsville & Blankerston (ph4)");
+		InsertTexture(0, "CB&Q");
+		InsertTexture(1, "Chessie System");
+		InsertTexture(2, "CNJ");
+		InsertTexture(3, "CSX");
+		InsertTexture(4, "CSX (with placard holder)");
+		InsertTexture(5, "EL");
+		InsertTexture(6, "SP (BLCX)");
+		InsertTexture(7, "TPW");
+		InsertTexture(8, "UP");
+		InsertTexture(9, "Blandsville & Blankerston");
+		InsertTexture(10, "ARR (ph4)");
+		InsertTexture(11, "MP (ph4)");
+		InsertTexture(12, "MP/KOG (ph4)");
+		InsertTexture(13, "Blandsville & Blankerston (ph4)");
 	}
 
 	@Override

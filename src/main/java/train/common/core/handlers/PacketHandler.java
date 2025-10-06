@@ -21,6 +21,8 @@ import train.common.core.network.*;
 import train.common.core.network.AdminBook.PacketAdminBook;
 import train.common.core.network.AdminBook.PacketAdminBookClient;
 import train.common.core.network.AdminBook.PacketAdminBookToggleChunkLoading;
+import train.common.core.network.lockout.PacketLockoutAddUserToSkinGroup;
+import train.common.core.network.lockout.PacketPaintBrushClientSideUpdate;
 import train.common.library.Info;
 import train.common.mtc.network.*;
 
@@ -46,7 +48,7 @@ public class PacketHandler {
 		Traincraft.cargoSelectionChannel = NetworkRegistry.INSTANCE.newSimpleChannel("cargoSelection");
 		Traincraft.interchangeChannel = NetworkRegistry.INSTANCE.newSimpleChannel("reportChannel");
 		Traincraft.toggleChunkLoadingChannel = NetworkRegistry.INSTANCE.newSimpleChannel("ToggleChunkLoading");
-
+		Traincraft.lockoutCommChannel = NetworkRegistry.INSTANCE.newSimpleChannel("lockoutCommChannel");
 
 
 		Traincraft.keyChannel.registerMessage(PacketAdminBook.Handler.class, PacketAdminBook.class, 4, Side.CLIENT);
@@ -85,6 +87,8 @@ public class PacketHandler {
 		Traincraft.builderChannel.registerMessage(PacketTrackBuilderFollow.Handler.class,
 				PacketTrackBuilderFollow.class, 9, Side.SERVER);
 		Traincraft.paintbrushColorChannel.registerMessage(PacketPaintbrushColor.Handler.class, PacketPaintbrushColor.class, 11, Side.SERVER);
+		Traincraft.paintbrushColorChannel.registerMessage(PacketPaintBrushClientSideUpdate.Handler.class, PacketPaintBrushClientSideUpdate.class, 27, Side.CLIENT);
+
 		Traincraft.switchStandLockChannel.registerMessage(PacketUpdateSwitchStand.Handler.class,
 				PacketUpdateSwitchStand.class, 17, Side.SERVER);
 		Traincraft.cargoSelectionChannel.registerMessage(PacketCargoSelection.Handler.class,
@@ -105,6 +109,8 @@ public class PacketHandler {
 
 
 		Traincraft.interchangeChannel.registerMessage(PacketClientSideEvent.Handler.class, PacketClientSideEvent.class, 25, Side.CLIENT);
+
+		Traincraft.lockoutCommChannel.registerMessage(PacketLockoutAddUserToSkinGroup.Handler.class, PacketLockoutAddUserToSkinGroup.class, 26, Side.SERVER);
 	}
 
 	private static final IMessageHandler[] HANDLERS = new IMessageHandler[]{

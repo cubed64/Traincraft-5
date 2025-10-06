@@ -19,13 +19,13 @@ public class OBHWNH5570_5589Baggage extends Freight implements IInventory {
 	public OBHWNH5570_5589Baggage(World world) {
 		super(world);
 		initFreightCart();
-		textureDescriptionMap.put(0, "NH");
-		textureDescriptionMap.put(1, "NH (Mail Poles Installed)");
-		textureDescriptionMap.put(2, "NH (East Wind)");
-		textureDescriptionMap.put(3, "NH (Steel Doors)");
-		textureDescriptionMap.put(4, "NH (Steel Doors, Mail Poles Installed)");
-		textureDescriptionMap.put(5, "NH (Black Knight Scheme)");
-		textureDescriptionMap.put(6, "NH (Black Knight Scheme, Red Doors)");
+		InsertTexture(0, "NH");
+		InsertTexture(1, "NH (Mail Poles Installed)");
+		InsertTexture(2, "NH (East Wind)");
+		InsertTexture(3, "NH (Steel Doors)");
+		InsertTexture(4, "NH (Steel Doors, Mail Poles Installed)");
+		InsertTexture(5, "NH (Black Knight Scheme)");
+		InsertTexture(6, "NH (Black Knight Scheme, Red Doors)");
 	}
 
 	public void initFreightCart() {

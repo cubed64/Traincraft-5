@@ -7,13 +7,13 @@ public class BuddDome54SeatCoach extends AbstractPassengerCar
 {
 	public BuddDome54SeatCoach(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "WAB 200");
-		textureDescriptionMap.put(1, "WAB 201");
-		textureDescriptionMap.put(2, "WAB 202");
-		textureDescriptionMap.put(3, "CB&Q Silver Scene");
-		textureDescriptionMap.put(4, "CB&Q Silver Island");
-		textureDescriptionMap.put(5, "CB&Q Silver Vision");
-		textureDescriptionMap.put(6, "AMTK 9562");
+		InsertTexture(0, "WAB 200");
+		InsertTexture(1, "WAB 201");
+		InsertTexture(2, "WAB 202");
+		InsertTexture(3, "CB&Q Silver Scene");
+		InsertTexture(4, "CB&Q Silver Island");
+		InsertTexture(5, "CB&Q Silver Vision");
+		InsertTexture(6, "AMTK 9562");
 	}
 
 	public BuddDome54SeatCoach(World world, double posX, double posY, double posZ)

@@ -17,9 +17,9 @@ public class DieselF9A extends DieselTrain {
     public DieselF9A(World world) {
         super(world, EnumTrains.F9A.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "BN 814");
-        textureDescriptionMap.put(1, "FMSR");
-        textureDescriptionMap.put(2, "");
+        InsertTexture(0, "BN 814");
+        InsertTexture(1, "FMSR");
+        InsertTexture(2, "");
     }
     public DieselF9A(World world, double d, double d1, double d2){
         this(world);

@@ -17,8 +17,8 @@ public class DieselB23_wrx extends DieselTrain {
     public DieselB23_wrx(World world) {
         super(world, EnumTrains.B23_wrx.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "WRXR Washaskan Woods RR");
-        textureDescriptionMap.put(1, "WRXR Washaskan Woods RR (Extended DB)");
+        InsertTexture(0, "WRXR Washaskan Woods RR");
+        InsertTexture(1, "WRXR Washaskan Woods RR (Extended DB)");
     }
     public DieselB23_wrx(World world, double d, double d1, double d2){
         this(world);

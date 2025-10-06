@@ -17,14 +17,14 @@ public class DieselGP7u extends DieselTrain {
     public DieselGP7u(World world) {
         super(world, EnumTrains.GP7u.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "ATSF (Kodachrome)");
-        textureDescriptionMap.put(1, "ATSF (Freightbonnet)");
-        textureDescriptionMap.put(2, "Blandsville & Blankerston");
-        textureDescriptionMap.put(3, "Avanste Northeastern (Radio Equipped)");
-        textureDescriptionMap.put(4, "Avanste Northeastern (Yard)");
-        textureDescriptionMap.put(5, "Fox Union Rail Resources (FURRX)");
-        textureDescriptionMap.put(6, "OC&G 15");
-        textureDescriptionMap.put(7, "FNCC 210-213");
+        InsertTexture(0, "ATSF (Kodachrome)");
+        InsertTexture(1, "ATSF (Freightbonnet)");
+        InsertTexture(2, "Blandsville & Blankerston");
+        InsertTexture(3, "Avanste Northeastern (Radio Equipped)");
+        InsertTexture(4, "Avanste Northeastern (Yard)");
+        InsertTexture(5, "Fox Union Rail Resources (FURRX)");
+        InsertTexture(6, "OC&G 15");
+        InsertTexture(7, "FNCC 210-213");
 
     }
     public DieselGP7u(World world, double d, double d1, double d2){

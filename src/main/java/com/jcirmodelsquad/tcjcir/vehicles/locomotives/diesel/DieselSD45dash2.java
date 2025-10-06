@@ -19,32 +19,32 @@ public class DieselSD45dash2 extends DieselTrain {
         super(world, EnumTrains.SD45.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
-        textureDescriptionMap.put(0, "Great Northern (Big Sky)");
-        textureDescriptionMap.put(1, "Great Northern (Empire Simplified");
-        textureDescriptionMap.put(2, "Burlington Northern");
-        textureDescriptionMap.put(3, "Northern Pacific");
-        textureDescriptionMap.put(4, "Southern Pacific (Early)");
-        textureDescriptionMap.put(5, "Penn Central");
-        textureDescriptionMap.put(6, "Denver & Rio Grande Western");
-        textureDescriptionMap.put(7, "Denver & Rio Grande Western");
-        textureDescriptionMap.put(8, "THE MILWAUKEE ROAD");
-        textureDescriptionMap.put(9, "THE MILWAUKEE ROAD");
-        textureDescriptionMap.put(10, "Chicago Northwestern");
-        textureDescriptionMap.put(11, "Chicago Northwestern (Zito Yellow)");
-        textureDescriptionMap.put(12, "Frisco");
-        textureDescriptionMap.put(13, "ATSF 5691 (Freightbonnet");
-        textureDescriptionMap.put(14, "ATSF 5712 (Freightbonnet)");
-        textureDescriptionMap.put(15, "ATSF (Bicentennial)");
-        textureDescriptionMap.put(16, "BNSF (Ex-ATSF Patched)");
-        textureDescriptionMap.put(17, "BNSF (H1)");
-        textureDescriptionMap.put(18, "BNSF (H3)");
-        textureDescriptionMap.put(19, "Blandsville & Blankerston (Flared Radiator)");
-        textureDescriptionMap.put(20, "Blandsville & Blankerston");
-        textureDescriptionMap.put(22, "CSXT (Yn3)");
-        textureDescriptionMap.put(23, "Morristown Tenneva & Southern");
-        textureDescriptionMap.put(24, "Glitter like the golden beautiful bitch you are");
-        textureDescriptionMap.put(25, "GLC (Cigar Band)");
-        textureDescriptionMap.put(26, "AA (Fog)");
+        InsertTexture(0, "Great Northern (Big Sky)");
+        InsertTexture(1, "Great Northern (Empire Simplified");
+        InsertTexture(2, "Burlington Northern");
+        InsertTexture(3, "Northern Pacific");
+        InsertTexture(4, "Southern Pacific (Early)");
+        InsertTexture(5, "Penn Central");
+        InsertTexture(6, "Denver & Rio Grande Western");
+        InsertTexture(7, "Denver & Rio Grande Western");
+        InsertTexture(8, "THE MILWAUKEE ROAD");
+        InsertTexture(9, "THE MILWAUKEE ROAD");
+        InsertTexture(10, "Chicago Northwestern");
+        InsertTexture(11, "Chicago Northwestern (Zito Yellow)");
+        InsertTexture(12, "Frisco");
+        InsertTexture(13, "ATSF 5691 (Freightbonnet");
+        InsertTexture(14, "ATSF 5712 (Freightbonnet)");
+        InsertTexture(15, "ATSF (Bicentennial)");
+        InsertTexture(16, "BNSF (Ex-ATSF Patched)");
+        InsertTexture(17, "BNSF (H1)");
+        InsertTexture(18, "BNSF (H3)");
+        InsertTexture(19, "Blandsville & Blankerston (Flared Radiator)");
+        InsertTexture(20, "Blandsville & Blankerston");
+        InsertTexture(22, "CSXT (Yn3)");
+        InsertTexture(23, "Morristown Tenneva & Southern");
+        InsertTexture(24, "Glitter like the golden beautiful bitch you are");
+        InsertTexture(25, "GLC (Cigar Band)");
+        InsertTexture(26, "AA (Fog)");
 
     }
     public DieselSD45dash2(World world, double d, double d1, double d2){

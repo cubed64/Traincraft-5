@@ -17,11 +17,11 @@ public class DieselVO1000 extends DieselTrain {
     public DieselVO1000(World world) {
         super(world, EnumTrains.VO1000.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Spokane Portland & Seattle");
-        textureDescriptionMap.put(1, "LC&BC 9");
-        textureDescriptionMap.put(2, "ATSF (Pinstripe)");
-        textureDescriptionMap.put(3, "Bigj Stupid Thing");
-        textureDescriptionMap.put(4, "Dee Dee Valley");
+        InsertTexture(0, "Spokane Portland & Seattle");
+        InsertTexture(1, "LC&BC 9");
+        InsertTexture(2, "ATSF (Pinstripe)");
+        InsertTexture(3, "Bigj Stupid Thing");
+        InsertTexture(4, "Dee Dee Valley");
 
     }
     public DieselVO1000(World world, double d, double d1, double d2) {

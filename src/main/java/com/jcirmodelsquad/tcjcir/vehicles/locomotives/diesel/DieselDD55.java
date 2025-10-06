@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -17,11 +18,11 @@ public class DieselDD55 extends DieselTrain {
     public DieselDD55(World world) {
         super(world, EnumTrains.DD55.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "West Creek Pacific");
-        textureDescriptionMap.put(1, "Steampunk Rail");
-        textureDescriptionMap.put(2, "LA Switcher Company Primer");
-        textureDescriptionMap.put(3, "CSX (but awesome)");
-        textureDescriptionMap.put(4, "CSX (but awesome)");
+        InsertTexture(0, "West Creek Pacific");
+        InsertTexture(1, "Steampunk Rail", LockoutGroup.SPR);
+        InsertTexture(2, "LA Switcher Company Primer");
+        InsertTexture(3, "CSX (but awesome)");
+        InsertTexture(4, "CSX (but awesome)");
 
     }
     public DieselDD55(World world, double d, double d1, double d2){

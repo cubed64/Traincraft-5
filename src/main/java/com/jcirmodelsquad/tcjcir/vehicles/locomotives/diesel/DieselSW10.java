@@ -17,14 +17,14 @@ public class DieselSW10 extends DieselTrain {
     public DieselSW10(World world) {
         super(world, EnumTrains.SW10.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "UP");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "North Fox (KIT-L)");
-        textureDescriptionMap.put(3, "North Fox (DAR80)");
-        textureDescriptionMap.put(4, "TIR 1248 & 1253");
-        textureDescriptionMap.put(5, "TIR 1269");
-        textureDescriptionMap.put(6, "Glonch Rayroa");
-        textureDescriptionMap.put(7, "Anning my Arbor so good rn");
+        InsertTexture(0, "UP");
+        InsertTexture(1, "Blandsville & Blankerston");
+        InsertTexture(2, "North Fox (KIT-L)");
+        InsertTexture(3, "North Fox (DAR80)");
+        InsertTexture(4, "TIR 1248 & 1253");
+        InsertTexture(5, "TIR 1269");
+        InsertTexture(6, "Glonch Rayroa");
+        InsertTexture(7, "Anning my Arbor so good rn");
 
     }
     public DieselSW10(World world, double d, double d1, double d2){

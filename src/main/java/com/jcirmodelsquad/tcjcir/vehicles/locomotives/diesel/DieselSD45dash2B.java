@@ -19,10 +19,10 @@ public class DieselSD45dash2B extends DieselTrain {
         super(world, EnumTrains.SD45dash2B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
-        textureDescriptionMap.put(0, "ATSF (Pinstripe)");
-        textureDescriptionMap.put(1, "ATSF (Freightbonnet)");
-        textureDescriptionMap.put(2, "ATSF (Kodachrome)");
-        textureDescriptionMap.put(3, "ATSF (Bicentennial)");
+        InsertTexture(0, "ATSF (Pinstripe)");
+        InsertTexture(1, "ATSF (Freightbonnet)");
+        InsertTexture(2, "ATSF (Kodachrome)");
+        InsertTexture(3, "ATSF (Bicentennial)");
     }
     public DieselSD45dash2B(World world, double d, double d1, double d2){
         this(world);

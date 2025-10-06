@@ -18,13 +18,13 @@ public class DieselFB1 extends DieselTrain {
     public DieselFB1(World world) {
         super(world, EnumTrains.FB1.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "New Haven");
-        textureDescriptionMap.put(1, "New Haven 2");
-        textureDescriptionMap.put(2, "Lehigh Valley");
-        textureDescriptionMap.put(3, "Reading");
-        textureDescriptionMap.put(4, "Great Northern");
-        textureDescriptionMap.put(5, "Great Northern (Solid)");
-        textureDescriptionMap.put(6, "Lehigh & New England");
+        InsertTexture(0, "New Haven");
+        InsertTexture(1, "New Haven 2");
+        InsertTexture(2, "Lehigh Valley");
+        InsertTexture(3, "Reading");
+        InsertTexture(4, "Great Northern");
+        InsertTexture(5, "Great Northern (Solid)");
+        InsertTexture(6, "Lehigh & New England");
     }
     public DieselFB1(World world, double d, double d1, double d2){
         this(world);

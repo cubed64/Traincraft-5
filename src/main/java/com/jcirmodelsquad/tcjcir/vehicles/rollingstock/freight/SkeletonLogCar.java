@@ -30,9 +30,9 @@ public class SkeletonLogCar extends AbstractStandardFreightCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "Generic");
-		textureDescriptionMap.put(1, "FPRRR");
-		textureDescriptionMap.put(2, "Generic");
+		InsertTexture(0, "Generic");
+		InsertTexture(1, "FPRRR");
+		InsertTexture(2, "Generic");
 	}
 
 	@Override

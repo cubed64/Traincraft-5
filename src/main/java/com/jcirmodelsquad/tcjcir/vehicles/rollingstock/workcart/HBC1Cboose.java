@@ -3,15 +3,16 @@ package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.workcart;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.AbstractWorkCart;
+import train.common.enums.LockoutGroup;
 
 public class HBC1Cboose extends AbstractWorkCart
 {
     public HBC1Cboose(World world) {
         super(world);
-        textureDescriptionMap.put(0, "Western Pacific");
-        textureDescriptionMap.put(1, "Steampunk Rail");
-        textureDescriptionMap.put(2, "Great Lakes & Nice Tiddies");
-        textureDescriptionMap.put(3, "CRL");
+        InsertTexture(0, "Western Pacific");
+        InsertTexture(1, "Steampunk Rail", LockoutGroup.SPR);
+        InsertTexture(2, "Great Lakes & Northern Territories"); // Great Lakes & Nice Tiddies
+        InsertTexture(3, "CRL");
     }
 
     public HBC1Cboose(World world, double posX, double posY, double posZ)

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -18,16 +19,16 @@ public class DieselDR441500Phase2 extends DieselTrain {
     public DieselDR441500Phase2(World world) {
         super(world, EnumTrains.RF16.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Missouri Pacific (As delivered)");
-        textureDescriptionMap.put(1, "Missouri Pacific");
-        textureDescriptionMap.put(2, "New York Central (As delivered)");
-        textureDescriptionMap.put(3, "New York Central");
-        textureDescriptionMap.put(4, "New York Central (3800, footboards)");
-        textureDescriptionMap.put(5, "New York Central (Dynamics removed)");
-        textureDescriptionMap.put(6, "New York Central (Cigarband)");
-        textureDescriptionMap.put(7, "Blandsville & Blankerston");
-        textureDescriptionMap.put(8, "Galesburg Clinton & Midland");
-        textureDescriptionMap.put(9, "Steampunk Rail");
+        InsertTexture(0, "Missouri Pacific (As delivered)");
+        InsertTexture(1, "Missouri Pacific");
+        InsertTexture(2, "New York Central (As delivered)");
+        InsertTexture(3, "New York Central");
+        InsertTexture(4, "New York Central (3800, footboards)");
+        InsertTexture(5, "New York Central (Dynamics removed)");
+        InsertTexture(6, "New York Central (Cigarband)");
+        InsertTexture(7, "Blandsville & Blankerston");
+        InsertTexture(8, "Galesburg Clinton & Midland");
+        InsertTexture(9, "Steampunk Rail", LockoutGroup.SPR);
     }
     public DieselDR441500Phase2(World world, double d, double d1, double d2){
         this(world);

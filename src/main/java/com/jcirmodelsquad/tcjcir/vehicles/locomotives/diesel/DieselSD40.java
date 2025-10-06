@@ -19,20 +19,20 @@ public class DieselSD40 extends DieselTrain {
         super(world, EnumTrains.SD40.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
-        textureDescriptionMap.put(0, "ATSF (Pinstripe)");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "FURRX");
-        textureDescriptionMap.put(3, "Wisconsin & Southern");
-        textureDescriptionMap.put(4, "Flatiron Northwestern");
-        textureDescriptionMap.put(5, "FNCC (KIT-L)");
-        textureDescriptionMap.put(6, "Pennsylvania Railroad");
-        textureDescriptionMap.put(7, "CSXT (YN1)");
-        textureDescriptionMap.put(8, "DLMR");
-        textureDescriptionMap.put(9, "GLC (Cigar Band)");
-        textureDescriptionMap.put(10, "AA (Fog)");
-        textureDescriptionMap.put(11, "Seaboard System");
-        textureDescriptionMap.put(12, "Honex Lines (HNXR)");
-        textureDescriptionMap.put(13, "Chessie System");
+        InsertTexture(0, "ATSF (Pinstripe)");
+        InsertTexture(1, "Blandsville & Blankerston");
+        InsertTexture(2, "FURRX");
+        InsertTexture(3, "Wisconsin & Southern");
+        InsertTexture(4, "Flatiron Northwestern");
+        InsertTexture(5, "FNCC (KIT-L)");
+        InsertTexture(6, "Pennsylvania Railroad");
+        InsertTexture(7, "CSXT (YN1)");
+        InsertTexture(8, "DLMR");
+        InsertTexture(9, "GLC (Cigar Band)");
+        InsertTexture(10, "AA (Fog)");
+        InsertTexture(11, "Seaboard System");
+        InsertTexture(12, "Honex Lines (HNXR)");
+        InsertTexture(13, "Chessie System");
     }
     public DieselSD40(World world, double d, double d1, double d2){
         this(world);

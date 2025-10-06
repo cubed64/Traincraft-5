@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -19,13 +20,13 @@ public class DieselSDP45 extends DieselTrain {
         super(world, EnumTrains.SDP45.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
-        textureDescriptionMap.put(0, "Southern Pacific");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "Great Northern");
-        textureDescriptionMap.put(3, "Burlington Northern 6596");
-        textureDescriptionMap.put(4, "Burlington Northern 6593");
-        textureDescriptionMap.put(5, "Steampunk Rail");
-        textureDescriptionMap.put(6, "JCIR 6 Years");
+        InsertTexture(0, "Southern Pacific");
+        InsertTexture(1, "Blandsville & Blankerston");
+        InsertTexture(2, "Great Northern");
+        InsertTexture(3, "Burlington Northern 6596");
+        InsertTexture(4, "Burlington Northern 6593");
+        InsertTexture(5, "Steampunk Rail", LockoutGroup.SPR);
+        InsertTexture(6, "JCIR 6 Years");
 
     }
     public DieselSDP45(World world, double d, double d1, double d2){

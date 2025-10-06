@@ -17,15 +17,15 @@ public class DieselSB23R extends DieselTrain {
     public DieselSB23R(World world) {
         super(world, EnumTrains.SB23R.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "BMC (Plant Switcher)");
-        //textureDescriptionMap.put(1, "Western Pacific (Early)");
-        //textureDescriptionMap.put(2, "Western Pacific (Late)");
-        textureDescriptionMap.put(1, "FNCC 335 (Dar80)");
-        textureDescriptionMap.put(2, "Morristown Tennava & Southern");
-        textureDescriptionMap.put(3, "Blandsville & Blankerston");
-        textureDescriptionMap.put(4, "");
-        textureDescriptionMap.put(5, "");
-        textureDescriptionMap.put(6, "");
+        InsertTexture(0, "BMC (Plant Switcher)");
+        //InsertTexture(1, "Western Pacific (Early)");
+        //InsertTexture(2, "Western Pacific (Late)");
+        InsertTexture(1, "FNCC 335 (Dar80)");
+        InsertTexture(2, "Morristown Tennava & Southern");
+        InsertTexture(3, "Blandsville & Blankerston");
+        InsertTexture(4, "");
+        InsertTexture(5, "");
+        InsertTexture(6, "");
     }
     public DieselSB23R(World world, double d, double d1, double d2){
         this(world);

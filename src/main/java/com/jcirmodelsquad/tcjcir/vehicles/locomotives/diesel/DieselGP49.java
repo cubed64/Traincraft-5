@@ -26,9 +26,9 @@ public class DieselGP49 extends DieselTrain {
     public DieselGP49(World world) {
         super(world, EnumTrains.GP49.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Alaska Railroad");
-        textureDescriptionMap.put(1, "Fox Union Rail Resources (FURRX)");
-        textureDescriptionMap.put(2, "Great Lakes & Northern Testicles");
+        InsertTexture(0, "Alaska Railroad");
+        InsertTexture(1, "Fox Union Rail Resources (FURRX)");
+        InsertTexture(2, "Great Lakes & Northern Testicles");
     }
     public DieselGP49(World world, double d, double d1, double d2){
         this(world);

@@ -17,18 +17,18 @@ public class DieselGE44Ton extends DieselTrain {
 	public DieselGE44Ton(World world) {
 		super(world, EnumTrains.GE44Ton.getTankCapacity(), LiquidManager.dieselFilter());
 		initLoco();
-		textureDescriptionMap.put(0, "VGN");
-		textureDescriptionMap.put(1, "VGN");
-		textureDescriptionMap.put(2, "Blandsville & Blankerston (Late)");
-		textureDescriptionMap.put(3, "Blandsville & Blankerston (Early)");
-		textureDescriptionMap.put(4, "DRGW");
-		textureDescriptionMap.put(5, "TIR");
-		textureDescriptionMap.put(6, "TIR");
-		textureDescriptionMap.put(7, "Generic Industrial");
-		textureDescriptionMap.put(8, "Generic Industrial");
-		textureDescriptionMap.put(9, "DLMR");
-		textureDescriptionMap.put(10, "TNRJ (Temporarily Named Spawn Railroad Company of JCIR)");
-		textureDescriptionMap.put(11, "D(eez)N(uts)");
+		InsertTexture(0, "VGN");
+		InsertTexture(1, "VGN");
+		InsertTexture(2, "Blandsville & Blankerston (Late)");
+		InsertTexture(3, "Blandsville & Blankerston (Early)");
+		InsertTexture(4, "DRGW");
+		InsertTexture(5, "TIR");
+		InsertTexture(6, "TIR");
+		InsertTexture(7, "Generic Industrial");
+		InsertTexture(8, "Generic Industrial");
+		InsertTexture(9, "DLMR");
+		InsertTexture(10, "TNRJ (Temporarily Named Spawn Railroad Company of JCIR)");
+		InsertTexture(11, "D(eez)N(uts)");
 	}
 
 	public void initLoco() {

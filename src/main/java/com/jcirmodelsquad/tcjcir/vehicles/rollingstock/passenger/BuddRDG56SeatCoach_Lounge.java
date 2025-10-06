@@ -8,10 +8,10 @@ public class BuddRDG56SeatCoach_Lounge extends AbstractPassengerCar
 	public BuddRDG56SeatCoach_Lounge(World world)
 	{
 		super(world);
-		textureDescriptionMap.put(0, "RDG 2");
-		textureDescriptionMap.put(1, "RDG 4");
-		textureDescriptionMap.put(2, "RDG 2 (post 1953 refurbishment)");
-		textureDescriptionMap.put(3, "RDG 4 (post 1953 refurbishment)");
+		InsertTexture(0, "RDG 2");
+		InsertTexture(1, "RDG 4");
+		InsertTexture(2, "RDG 2 (post 1953 refurbishment)");
+		InsertTexture(3, "RDG 4 (post 1953 refurbishment)");
 	}
 
 	public BuddRDG56SeatCoach_Lounge(World world, double posX, double posY, double posZ)

@@ -19,12 +19,12 @@ public class OBRPO15 extends Freight implements IInventory {
 	public OBRPO15(World world) {
 		super(world);
 		initFreightCart();
-		textureDescriptionMap.put(0, "BAR (566-568)");
-		textureDescriptionMap.put(1, "BAR (569)");
-		textureDescriptionMap.put(2, "BAR (566-568, Grey and Sapphire)");
-		textureDescriptionMap.put(3, "BAR (568, Grey and Sapphire, Aroostook Flyer)");
-		textureDescriptionMap.put(4, "BAR (569, Grey and Sapphire)");
-		textureDescriptionMap.put(5, "NEP");
+		InsertTexture(0, "BAR (566-568)");
+		InsertTexture(1, "BAR (569)");
+		InsertTexture(2, "BAR (566-568, Grey and Sapphire)");
+		InsertTexture(3, "BAR (568, Grey and Sapphire, Aroostook Flyer)");
+		InsertTexture(4, "BAR (569, Grey and Sapphire)");
+		InsertTexture(5, "NEP");
 	}
 
 	public void initFreightCart() {

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -18,26 +19,26 @@ public class DieselSD40T2 extends DieselTrain {
     public DieselSD40T2(World world) {
         super(world, EnumTrains.SD40T2.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Denver and Rio Grande Western");
-        textureDescriptionMap.put(1, "Southern Pacific 8491 (Early)");
-        textureDescriptionMap.put(2, "Southern Pacific 8251 (Early)");
-        textureDescriptionMap.put(3, "Southern Pacific 8491 (Late)");
-        textureDescriptionMap.put(4, "Union Pacific (Ex-SP Patched)");
-        textureDescriptionMap.put(5, "Northern Railroad");
-        textureDescriptionMap.put(6, "EMD Demo/Lease");
-        textureDescriptionMap.put(7, "Blandsville & Blankerston");
-        textureDescriptionMap.put(8, "NEP");
-        textureDescriptionMap.put(9, "Magnolia Acres");
-        textureDescriptionMap.put(10, "Run 8 & Western");
-        textureDescriptionMap.put(11, "Paradox Rail");
-        textureDescriptionMap.put(12, "Avanste Northeastern");
-        textureDescriptionMap.put(13, "FNCC (KIT-L)");
-        textureDescriptionMap.put(14, "FNCC (KIT-80)");
-        textureDescriptionMap.put(15, "Southern Port Belt");
-        textureDescriptionMap.put(16, "Steampunk Rail");
-        textureDescriptionMap.put(17, "CRL");
-        textureDescriptionMap.put(18, "CRL (Phase 1)");
-        textureDescriptionMap.put(19, "CRL (Phase 2)");
+        InsertTexture(0, "Denver and Rio Grande Western");
+        InsertTexture(1, "Southern Pacific 8491 (Early)");
+        InsertTexture(2, "Southern Pacific 8251 (Early)");
+        InsertTexture(3, "Southern Pacific 8491 (Late)");
+        InsertTexture(4, "Union Pacific (Ex-SP Patched)");
+        InsertTexture(5, "Northern Railroad");
+        InsertTexture(6, "EMD Demo/Lease");
+        InsertTexture(7, "Blandsville & Blankerston");
+        InsertTexture(8, "NEP");
+        InsertTexture(9, "Magnolia Acres");
+        InsertTexture(10, "Run 8 & Western");
+        InsertTexture(11, "Paradox Rail");
+        InsertTexture(12, "Avanste Northeastern");
+        InsertTexture(13, "FNCC (KIT-L)");
+        InsertTexture(14, "FNCC (KIT-80)");
+        InsertTexture(15, "Southern Port Belt");
+        InsertTexture(16, "Steampunk Rail", LockoutGroup.SPR);
+        InsertTexture(17, "CRL");
+        InsertTexture(18, "CRL (Phase 1)");
+        InsertTexture(19, "CRL (Phase 2)");
     }
     public DieselSD40T2(World world, double d, double d1, double d2){
         this(world);

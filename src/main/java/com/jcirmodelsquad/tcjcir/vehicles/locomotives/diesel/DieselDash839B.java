@@ -17,15 +17,15 @@ public class DieselDash839B extends DieselTrain {
     public DieselDash839B(World world) {
         super(world, EnumTrains.Dash839B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Southern Pacific");
-        textureDescriptionMap.put(1, "LMX (1990s)");
-        textureDescriptionMap.put(2, "Western Pacific (Early)");
-        textureDescriptionMap.put(3, "Western Pacific (Late)");
-        textureDescriptionMap.put(4, "Western Pacific (OLS)");
-        textureDescriptionMap.put(5, "Blandsville & Blankerston");
-        textureDescriptionMap.put(6, "North Fox (KIT-L)");
-        textureDescriptionMap.put(7, "North Fox (KIT-80)");
-        textureDescriptionMap.put(8, "CEEX 90s Lease Scheme");
+        InsertTexture(0, "Southern Pacific");
+        InsertTexture(1, "LMX (1990s)");
+        InsertTexture(2, "Western Pacific (Early)");
+        InsertTexture(3, "Western Pacific (Late)");
+        InsertTexture(4, "Western Pacific (OLS)");
+        InsertTexture(5, "Blandsville & Blankerston");
+        InsertTexture(6, "North Fox (KIT-L)");
+        InsertTexture(7, "North Fox (KIT-80)");
+        InsertTexture(8, "CEEX 90s Lease Scheme");
 
     }
     public DieselDash839B(World world, double d, double d1, double d2){

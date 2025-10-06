@@ -17,17 +17,17 @@ public class DieselSB18R extends DieselTrain {
     public DieselSB18R(World world) {
         super(world, EnumTrains.SB18R.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "CEE Factory Blank (Phase 1)");
-        textureDescriptionMap.put(1, "CEE Factory Blank (Phase 2)");
-        textureDescriptionMap.put(2, "Western Pacific (Early)");
-        textureDescriptionMap.put(3, "Western Pacific (Late)");
-        textureDescriptionMap.put(4, "TTLC (Highlands Moss)");
-        textureDescriptionMap.put(5, "TTLC (Koke Moss)");
-        textureDescriptionMap.put(6, "TTLC (Moss)");
-        textureDescriptionMap.put(7, "TTLC (Oak Moss)");
-        textureDescriptionMap.put(8, "TTLC (Reindeer Moss)");
-        textureDescriptionMap.put(9, "TTLC (Swamp Moss)");
-        textureDescriptionMap.put(10, "Morristown Tenneva & Southern");
+        InsertTexture(0, "CEE Factory Blank (Phase 1)");
+        InsertTexture(1, "CEE Factory Blank (Phase 2)");
+        InsertTexture(2, "Western Pacific (Early)");
+        InsertTexture(3, "Western Pacific (Late)");
+        InsertTexture(4, "TTLC (Highlands Moss)");
+        InsertTexture(5, "TTLC (Koke Moss)");
+        InsertTexture(6, "TTLC (Moss)");
+        InsertTexture(7, "TTLC (Oak Moss)");
+        InsertTexture(8, "TTLC (Reindeer Moss)");
+        InsertTexture(9, "TTLC (Swamp Moss)");
+        InsertTexture(10, "Morristown Tenneva & Southern");
     }
     public DieselSB18R(World world, double d, double d1, double d2){
         this(world);

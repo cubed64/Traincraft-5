@@ -5,7 +5,13 @@ import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
+import train.common.Traincraft;
 import train.common.api.EntityRollingStock;
+import train.common.core.network.lockout.PacketPaintBrushClientSideUpdate;
+import train.common.utils.lockout.ILockoutGroup;
+import train.common.utils.lockout.LockoutPermissionsUtil;
 
 public class PacketPaintbrushColor implements IMessage {
 
@@ -30,8 +36,21 @@ public class PacketPaintbrushColor implements IMessage {
         @Override
         public IMessage onMessage(PacketPaintbrushColor message, MessageContext context) {
             Entity rollingStockEntity = context.getServerHandler().playerEntity.worldObj.getEntityByID(message.entityID);
-            if (rollingStockEntity instanceof EntityRollingStock) {
-                ((EntityRollingStock) rollingStockEntity).setColor(message.paintbrushColor);
+            if (rollingStockEntity instanceof EntityRollingStock)
+            {
+                int convertedColor = ((EntityRollingStock) rollingStockEntity).acceptedColors.indexOf(message.paintbrushColor);
+                ILockoutGroup lockoutGroup = ((EntityRollingStock) rollingStockEntity).lockoutMap.get(convertedColor);
+
+                if (lockoutGroup == null || Traincraft.lockoutPermissionsUtil.IsUserMemberOfGroup(context.getServerHandler().playerEntity.getUniqueID(), lockoutGroup.name()))
+                {
+
+                    ((EntityRollingStock) rollingStockEntity).setColor(message.paintbrushColor);
+                    Traincraft.paintbrushColorChannel.sendToAll(new PacketPaintBrushClientSideUpdate(message.paintbrushColor, rollingStockEntity.getEntityId()));
+                }
+                else
+                {
+                    context.getServerHandler().playerEntity.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "Lockout:" + EnumChatFormatting.GRAY + " You must be a member of [" + lockoutGroup.name() + "]"));
+                }
             }
             return null;
         }

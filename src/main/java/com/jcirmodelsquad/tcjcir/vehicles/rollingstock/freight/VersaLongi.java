@@ -24,13 +24,13 @@ public class VersaLongi extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "Generic Light Grey");
-        textureDescriptionMap.put(1, "Generic Black");
-        textureDescriptionMap.put(2, "OWO (Ballast Service)");
-        textureDescriptionMap.put(3, "WP");
-        textureDescriptionMap.put(4, "CD&P (Crushed Marble Service)");
-        textureDescriptionMap.put(5, "FNCC (MOW Ballast Service)");
-        textureDescriptionMap.put(6, "AA");
+        InsertTexture(0, "Generic Light Grey");
+        InsertTexture(1, "Generic Black");
+        InsertTexture(2, "OWO (Ballast Service)");
+        InsertTexture(3, "WP");
+        InsertTexture(4, "CD&P (Crushed Marble Service)");
+        InsertTexture(5, "FNCC (MOW Ballast Service)");
+        InsertTexture(6, "AA");
     }
 
     @Override

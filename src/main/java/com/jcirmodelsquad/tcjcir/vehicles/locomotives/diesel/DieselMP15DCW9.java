@@ -18,9 +18,9 @@ public class DieselMP15DCW9 extends DieselTrain {
     public DieselMP15DCW9(World world) {
         super(world, EnumTrains.MP15DCW9.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "buttsecks poopyhead dead rayroad boner ;)");
-        textureDescriptionMap.put(1, "WFR but AWESOME");
-        textureDescriptionMap.put(2, "SST but AWESOMER");
+        InsertTexture(0, "buttsecks poopyhead dead rayroad boner ;)");
+        InsertTexture(1, "WFR but AWESOME");
+        InsertTexture(2, "SST but AWESOMER");
         //when the
     }
     public DieselMP15DCW9(World world, double d, double d1, double d2){

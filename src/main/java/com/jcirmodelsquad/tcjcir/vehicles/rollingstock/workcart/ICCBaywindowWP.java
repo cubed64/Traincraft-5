@@ -12,17 +12,17 @@ public class ICCBaywindowWP extends AbstractWorkCart
 {
     public ICCBaywindowWP(World world) {
         super(world);
-        textureDescriptionMap.put(0, "WP");
-        textureDescriptionMap.put(1, "WP (Later)");
-        textureDescriptionMap.put(2, "WP (Yard)");
-        textureDescriptionMap.put(3, "Generic");
-        textureDescriptionMap.put(4, "Fox, North Coast & Cascades (Regal)");
-        textureDescriptionMap.put(5, "Fox, North Coast & Cascades (Regal Late)");
-        textureDescriptionMap.put(6, "Fox, North Coast & Cascades (KIT-L)");
-        textureDescriptionMap.put(7, "North Fox (KIT-L)");
-        textureDescriptionMap.put(8, "DLMR");
-        textureDescriptionMap.put(9, "DLMR (but somebody spilled the ketchup)");
-        textureDescriptionMap.put(10, "AGW");
+        InsertTexture(0, "WP");
+        InsertTexture(1, "WP (Later)");
+        InsertTexture(2, "WP (Yard)");
+        InsertTexture(3, "Generic");
+        InsertTexture(4, "Fox, North Coast & Cascades (Regal)");
+        InsertTexture(5, "Fox, North Coast & Cascades (Regal Late)");
+        InsertTexture(6, "Fox, North Coast & Cascades (KIT-L)");
+        InsertTexture(7, "North Fox (KIT-L)");
+        InsertTexture(8, "DLMR");
+        InsertTexture(9, "DLMR (but somebody spilled the ketchup)");
+        InsertTexture(10, "AGW");
         initCabooseWorkCart();
     }
 

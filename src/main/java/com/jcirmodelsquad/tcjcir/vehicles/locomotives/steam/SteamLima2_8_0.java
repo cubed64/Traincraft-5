@@ -17,12 +17,12 @@ public class SteamLima2_8_0 extends SteamTrain {
 	public SteamLima2_8_0(World world) {
 		super(world, EnumTrains.Lima2_8_0.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
-		textureDescriptionMap.put(0, "Generic");
-		textureDescriptionMap.put(1, "CDCS 20");
-		textureDescriptionMap.put(2, "CDCS 21");
-		textureDescriptionMap.put(3, "CDCS 22");
-		textureDescriptionMap.put(4, "A&WRR");
-		textureDescriptionMap.put(5, "CRIP");
+		InsertTexture(0, "Generic");
+		InsertTexture(1, "CDCS 20");
+		InsertTexture(2, "CDCS 21");
+		InsertTexture(3, "CDCS 22");
+		InsertTexture(4, "A&WRR");
+		InsertTexture(5, "CRIP");
 	}
 
 	public void initLocoSteam() {

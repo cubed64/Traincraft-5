@@ -36,6 +36,7 @@ import train.common.core.handlers.ConfigHandler;
 import train.common.core.handlers.TrainHandler;
 import train.common.entity.CargoManager;
 import train.common.entity.TrustedPlayer;
+import train.common.enums.LockoutGroup;
 import train.common.items.ItemChunkLoaderActivator;
 import train.common.items.ItemRollingStock;
 import train.common.items.ItemWrench;
@@ -45,6 +46,7 @@ import train.common.library.IEnumTrains;
 import train.common.overlaytexture.OverlayTextureManager;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
+import train.common.utils.lockout.ILockoutGroup;
 
 import java.util.*;
 
@@ -167,7 +169,40 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	 */
 	private List<TrustedPlayer> trustedList = new ArrayList<>();
 	private CargoManager cargoManager = null;
-	public final Map<Integer, String> textureDescriptionMap = new HashMap<>();
+	private final Map<Integer, String> textureDescriptionMap = new HashMap<>();
+
+	public boolean isTextureDescriptionMapEmpty()
+	{
+		return textureDescriptionMap.isEmpty();
+	}
+
+	public boolean textureDescriptionMapContainsKey(int key)
+	{
+		return textureDescriptionMap.containsKey(key);
+	}
+
+	public String textureDescriptionGet(int key)
+	{
+		return textureDescriptionMap.get(key);
+	}
+
+	public void InsertTexture(int pos, String desc, ILockoutGroup lockoutGroup)
+	{
+		textureDescriptionMap.put(pos, desc);
+		lockoutMap.put(pos, lockoutGroup);
+	}
+
+	public void InsertTexture(int pos, String desc)
+	{
+		textureDescriptionMap.put(pos, desc);
+	}
+
+	public final Map<Integer, ILockoutGroup> lockoutMap = new HashMap<>();
+
+	public final boolean IsSkinLockedByLockout(int i)
+	{
+		return lockoutMap.get(i) != null;
+	}
 
 	@Override
 	public float getBrightness(float p_70013_1_) {

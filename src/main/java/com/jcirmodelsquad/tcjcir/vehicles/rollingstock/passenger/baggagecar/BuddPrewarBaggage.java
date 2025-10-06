@@ -19,12 +19,12 @@ public class BuddPrewarBaggage extends Freight implements IInventory {
 	public BuddPrewarBaggage(World world) {
 		super(world);
 		initFreightCart();
-		textureDescriptionMap.put(0, "CB&Q 900 \"Silver Light\" (early)");
-		textureDescriptionMap.put(1, "CB&Q 900 \"Silver Light\"");
-		textureDescriptionMap.put(2, "CB&Q 900 \"Silver Light\" (late)");
-		textureDescriptionMap.put(3, "ATSF 3432-3445");
-		textureDescriptionMap.put(4, "ATSF 3446-3452");
-		textureDescriptionMap.put(5, "ATSF 3440 (late)");
+		InsertTexture(0, "CB&Q 900 \"Silver Light\" (early)");
+		InsertTexture(1, "CB&Q 900 \"Silver Light\"");
+		InsertTexture(2, "CB&Q 900 \"Silver Light\" (late)");
+		InsertTexture(3, "ATSF 3432-3445");
+		InsertTexture(4, "ATSF 3446-3452");
+		InsertTexture(5, "ATSF 3440 (late)");
 	}
 
 	public void initFreightCart() {

@@ -24,25 +24,25 @@ public class PCF_RBL_Smooth extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "MKT");
-        textureDescriptionMap.put(1, "SP");
-        textureDescriptionMap.put(2, "SP (Ex EFCX)");
-        textureDescriptionMap.put(3, "SP (Ex EFCX)");
-        textureDescriptionMap.put(4, "WP");
-        textureDescriptionMap.put(5, "EFCX");
-        textureDescriptionMap.put(6, "GN");
-        textureDescriptionMap.put(7, "GN");
-        textureDescriptionMap.put(8, "BN");
-        textureDescriptionMap.put(9, "BN");
-        textureDescriptionMap.put(10, "BN");
-        textureDescriptionMap.put(11, "BN");
-        textureDescriptionMap.put(12, "RBBN");
-        textureDescriptionMap.put(13, "WFE");
-        textureDescriptionMap.put(14, "SLSF");
-        textureDescriptionMap.put(15, "SLSF");
-        textureDescriptionMap.put(16, "BB (Plug Door Early)");
-        textureDescriptionMap.put(17, "BB (Plug Door)");
-        textureDescriptionMap.put(18, "BB (Youngstown Door)");
+        InsertTexture(0, "MKT");
+        InsertTexture(1, "SP");
+        InsertTexture(2, "SP (Ex EFCX)");
+        InsertTexture(3, "SP (Ex EFCX)");
+        InsertTexture(4, "WP");
+        InsertTexture(5, "EFCX");
+        InsertTexture(6, "GN");
+        InsertTexture(7, "GN");
+        InsertTexture(8, "BN");
+        InsertTexture(9, "BN");
+        InsertTexture(10, "BN");
+        InsertTexture(11, "BN");
+        InsertTexture(12, "RBBN");
+        InsertTexture(13, "WFE");
+        InsertTexture(14, "SLSF");
+        InsertTexture(15, "SLSF");
+        InsertTexture(16, "BB (Plug Door Early)");
+        InsertTexture(17, "BB (Plug Door)");
+        InsertTexture(18, "BB (Youngstown Door)");
     }
 
     @Override

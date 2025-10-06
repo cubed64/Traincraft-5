@@ -17,18 +17,18 @@ public class DieselGP15 extends DieselTrain {
 	public DieselGP15(World world) {
 		super(world, EnumTrains.GP15.getTankCapacity(), LiquidManager.dieselFilter());
 		initLoco();
-		textureDescriptionMap.put(0, "UPY");
-		textureDescriptionMap.put(1, "FURRX (old nasty ass texture if i see this in game somewhjer i will kill you");
-		textureDescriptionMap.put(2, "Lisha & Watson");
-		textureDescriptionMap.put(3, "Atlas & Red Sands Railroad");
-		textureDescriptionMap.put(4, "Southern Port Belt");
-		textureDescriptionMap.put(5, "GLC (Ex SPB)");
-		textureDescriptionMap.put(6, "CSXT (Yn3)");
-		textureDescriptionMap.put(7, "CSXT (Ex-Conrail)");
-		textureDescriptionMap.put(8, "Conrail (As Delivered)");
-		textureDescriptionMap.put(9, "Conrail (Post-93)");
-		textureDescriptionMap.put(10, "Conrail (OLS)");
-		textureDescriptionMap.put(11, "Conrail (Just Do It Boston Marathon Unit");
+		InsertTexture(0, "UPY");
+		InsertTexture(1, "FURRX"); // (old nasty ass texture if i see this in game somewhjer i will kill you)
+		InsertTexture(2, "Lisha & Watson");
+		InsertTexture(3, "Atlas & Red Sands Railroad");
+		InsertTexture(4, "Southern Port Belt");
+		InsertTexture(5, "GLC (Ex SPB)");
+		InsertTexture(6, "CSXT (Yn3)");
+		InsertTexture(7, "CSXT (Ex-Conrail)");
+		InsertTexture(8, "Conrail (As Delivered)");
+		InsertTexture(9, "Conrail (Post-93)");
+		InsertTexture(10, "Conrail (OLS)");
+		InsertTexture(11, "Conrail (Just Do It Boston Marathon Unit");
 	}
 
 	public void initLoco() {

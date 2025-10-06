@@ -17,18 +17,18 @@ public class DieselS2 extends DieselTrain {
     public DieselS2(World world) {
         super(world, EnumTrains.S2.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Penn Central");
-        textureDescriptionMap.put(2, "Great Northern");
-        textureDescriptionMap.put(3, "The Milwaukee Road");
-        textureDescriptionMap.put(4, "Morristown Tennrva and Southern");
-        textureDescriptionMap.put(5, "FURRX");
-        textureDescriptionMap.put(6, "ATSF (Pinstripe)");
-        textureDescriptionMap.put(7, "Amtrak (Phase I)");
-        textureDescriptionMap.put(8, "Amtrak (Phase II)");
-        textureDescriptionMap.put(9, "CP Rail");
-        textureDescriptionMap.put(10, "Dee Dee Valley Railroad");
-        textureDescriptionMap.put(11, "Ann Arbor");
-        textureDescriptionMap.put(12, "AGW");
+        InsertTexture(0, "Penn Central");
+        InsertTexture(2, "Great Northern");
+        InsertTexture(3, "The Milwaukee Road");
+        InsertTexture(4, "Morristown Tennrva and Southern");
+        InsertTexture(5, "FURRX");
+        InsertTexture(6, "ATSF (Pinstripe)");
+        InsertTexture(7, "Amtrak (Phase I)");
+        InsertTexture(8, "Amtrak (Phase II)");
+        InsertTexture(9, "CP Rail");
+        InsertTexture(10, "Dee Dee Valley Railroad");
+        InsertTexture(11, "Ann Arbor");
+        InsertTexture(12, "AGW");
     }
     public DieselS2(World world, double d, double d1, double d2) {
         this(world);

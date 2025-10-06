@@ -23,10 +23,10 @@ public class TenderLima2_8_0 extends Tender implements IInventory {
 	public TenderLima2_8_0(World world) {
 		super(world, FluidRegistry.WATER, 0, EnumTrains.TenderLima2_8_0.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initFreightTender();
-		textureDescriptionMap.put(0, "Generic");
-		textureDescriptionMap.put(1, "CDCS");
-		textureDescriptionMap.put(2, "A&WRR");
-		textureDescriptionMap.put(3, "CRIP");
+		InsertTexture(0, "Generic");
+		InsertTexture(1, "CDCS");
+		InsertTexture(2, "A&WRR");
+		InsertTexture(3, "CRIP");
 	}
 
 	public void initFreightTender() {

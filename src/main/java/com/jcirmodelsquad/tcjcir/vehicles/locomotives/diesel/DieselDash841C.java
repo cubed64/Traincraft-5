@@ -18,14 +18,14 @@ public class DieselDash841C extends DieselTrain {
     public DieselDash841C(World world) {
         super(world, EnumTrains.Dash841C.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Canadian National");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "CSLX");
-        textureDescriptionMap.put(3, "WP (Early)");
-        textureDescriptionMap.put(4, "WP (Late)");
-        textureDescriptionMap.put(5, "WP (Rebuilt)");
-        textureDescriptionMap.put(6, "uhhhhhhhhhh peenor lol");
-        textureDescriptionMap.put(7, "Chicago and North Western");
+        InsertTexture(0, "Canadian National");
+        InsertTexture(1, "Blandsville & Blankerston");
+        InsertTexture(2, "CSLX");
+        InsertTexture(3, "WP (Early)");
+        InsertTexture(4, "WP (Late)");
+        InsertTexture(5, "WP (Rebuilt)");
+        InsertTexture(6, "uhhhhhhhhhh peenor lol");
+        InsertTexture(7, "Chicago and North Western");
     }
     public DieselDash841C(World world, double d, double d1, double d2){
         this(world);

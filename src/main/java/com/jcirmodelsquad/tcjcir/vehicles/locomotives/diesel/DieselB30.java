@@ -17,15 +17,15 @@ public class DieselB30 extends DieselTrain {
     public DieselB30(World world) {
         super(world, EnumTrains.B30.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "CNCR 5550");
-        textureDescriptionMap.put(1, "CNCR 5552");
-        textureDescriptionMap.put(2, "CNCR 5553-5555");
-        textureDescriptionMap.put(3, "CSXT (Yn2)");
-        textureDescriptionMap.put(4, "CSXT (Yn1)");
-        textureDescriptionMap.put(5, "CSXT (Stealth)");
-        textureDescriptionMap.put(6, "CSXT (Bluedown)");
-        textureDescriptionMap.put(7, "Seaboard");
-        textureDescriptionMap.put(8, "Chessie System");
+        InsertTexture(0, "CNCR 5550");
+        InsertTexture(1, "CNCR 5552");
+        InsertTexture(2, "CNCR 5553-5555");
+        InsertTexture(3, "CSXT (Yn2)");
+        InsertTexture(4, "CSXT (Yn1)");
+        InsertTexture(5, "CSXT (Stealth)");
+        InsertTexture(6, "CSXT (Bluedown)");
+        InsertTexture(7, "Seaboard");
+        InsertTexture(8, "Chessie System");
     }
     public DieselB30(World world, double d, double d1, double d2){
         this(world);

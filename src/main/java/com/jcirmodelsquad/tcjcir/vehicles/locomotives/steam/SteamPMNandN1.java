@@ -17,11 +17,11 @@ public class SteamPMNandN1 extends SteamTrain {
 	public SteamPMNandN1(World world) {
 		super(world, EnumTrains.PMNandN1.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
-		textureDescriptionMap.put(0, "Pere Marquette N Class");
-		textureDescriptionMap.put(1, "C&O N Class");
-		textureDescriptionMap.put(2, "Pere Marquette N-1 Class");
-		textureDescriptionMap.put(3, "C&O N-1 Class");
-		textureDescriptionMap.put(4, "Polar Express");
+		InsertTexture(0, "Pere Marquette N Class");
+		InsertTexture(1, "C&O N Class");
+		InsertTexture(2, "Pere Marquette N-1 Class");
+		InsertTexture(3, "C&O N-1 Class");
+		InsertTexture(4, "Polar Express");
 	}
 
 	public void initLocoSteam() {

@@ -17,20 +17,20 @@ public class DieselU25B extends DieselTrain {
     public DieselU25B(World world) {
         super(world, EnumTrains.U25B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "New Haven");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "FNCC (KIT-L)");
-        textureDescriptionMap.put(3, "Great Northern (BSB)");
-        textureDescriptionMap.put(4, "Great Northern (EB Simp)");
-        textureDescriptionMap.put(5, "the Milwaukee Road");
-        textureDescriptionMap.put(6, "Burlington Northern");
-        textureDescriptionMap.put(7, "Deadwood & La Mesa (hamburger helper rayroad)");
-        textureDescriptionMap.put(8, "Burlington");
-        textureDescriptionMap.put(9, "Nautilus");
-        textureDescriptionMap.put(10, "New York Central (Early 60s)");
-        textureDescriptionMap.put(11, "New York Central (Very Late 60s)");
-        textureDescriptionMap.put(12, "Galesburg Clinton & Midland");
-        textureDescriptionMap.put(13, "Detroit Export System");
+        InsertTexture(0, "New Haven");
+        InsertTexture(1, "Blandsville & Blankerston");
+        InsertTexture(2, "FNCC (KIT-L)");
+        InsertTexture(3, "Great Northern (BSB)");
+        InsertTexture(4, "Great Northern (EB Simp)");
+        InsertTexture(5, "the Milwaukee Road");
+        InsertTexture(6, "Burlington Northern");
+        InsertTexture(7, "Deadwood & La Mesa (hamburger helper rayroad)");
+        InsertTexture(8, "Burlington");
+        InsertTexture(9, "Nautilus");
+        InsertTexture(10, "New York Central (Early 60s)");
+        InsertTexture(11, "New York Central (Very Late 60s)");
+        InsertTexture(12, "Galesburg Clinton & Midland");
+        InsertTexture(13, "Detroit Export System");
     }
     public DieselU25B(World world, double d, double d1, double d2){
         this(world);

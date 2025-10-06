@@ -7,14 +7,14 @@ public class AmCafe2 extends AbstractPassengerCar
 {
     public AmCafe2(World world) {
         super(world);
-        textureDescriptionMap.put(0, "AMTK (Phase 2)");
-        textureDescriptionMap.put(1, "AMTK (Phase 3)");
-        textureDescriptionMap.put(2, "AMTK (Phase 4)");
-        textureDescriptionMap.put(3, "AMTK (Phase 4b)");
-        textureDescriptionMap.put(4, "Generic");
-        textureDescriptionMap.put(5, "JCTransit");
-        textureDescriptionMap.put(6, "CCRL (Chatham and Crator River Lines)");
-        textureDescriptionMap.put(7, "CRL (Crator River Lines)");
+        InsertTexture(0, "AMTK (Phase 2)");
+        InsertTexture(1, "AMTK (Phase 3)");
+        InsertTexture(2, "AMTK (Phase 4)");
+        InsertTexture(3, "AMTK (Phase 4b)");
+        InsertTexture(4, "Generic");
+        InsertTexture(5, "JCTransit");
+        InsertTexture(6, "CCRL (Chatham and Crator River Lines)");
+        InsertTexture(7, "CRL (Crator River Lines)");
     }
 
     public AmCafe2(World world, double posX, double posY, double posZ)

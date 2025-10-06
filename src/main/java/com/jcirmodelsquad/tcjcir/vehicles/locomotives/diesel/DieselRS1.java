@@ -17,17 +17,17 @@ public class DieselRS1 extends DieselTrain {
     public DieselRS1(World world) {
         super(world, EnumTrains.RS1.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "she ann on my arbor till i bankruptcy");
-        textureDescriptionMap.put(1, "she wabash on my lake till i ann arbor");
-        textureDescriptionMap.put(2, "Tidewater Southern");
-        textureDescriptionMap.put(3, "Blandsville & Blankerston");
-        textureDescriptionMap.put(4, "DLMR (Early)");
-        textureDescriptionMap.put(5, "DLMR (Late)");
-        textureDescriptionMap.put(6, "FMSR");
-        textureDescriptionMap.put(7, "ATSF");
-        textureDescriptionMap.put(8, "Glontch");
-        textureDescriptionMap.put(9, "AGW");
-        textureDescriptionMap.put(10, "CYDZ");
+        InsertTexture(0, "she ann on my arbor till i bankruptcy");
+        InsertTexture(1, "she wabash on my lake till i ann arbor");
+        InsertTexture(2, "Tidewater Southern");
+        InsertTexture(3, "Blandsville & Blankerston");
+        InsertTexture(4, "DLMR (Early)");
+        InsertTexture(5, "DLMR (Late)");
+        InsertTexture(6, "FMSR");
+        InsertTexture(7, "ATSF");
+        InsertTexture(8, "Glontch");
+        InsertTexture(9, "AGW");
+        InsertTexture(10, "CYDZ");
 
     }
     public DieselRS1(World world, double d, double d1, double d2){

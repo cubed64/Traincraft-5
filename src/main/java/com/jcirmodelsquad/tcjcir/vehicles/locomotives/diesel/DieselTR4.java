@@ -18,12 +18,12 @@ public class DieselTR4 extends DieselTrain {
     public DieselTR4(World world) {
         super(world, EnumTrains.TR4.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Belt Railroad of Chicago");
-        textureDescriptionMap.put(1, "Milwaukee Road");
-        textureDescriptionMap.put(2, "Chesapeake & Ohio");
-        textureDescriptionMap.put(3, "Baltimore & Ohio");
-        textureDescriptionMap.put(4, "Great Lakes & Northern Territories");
-        textureDescriptionMap.put(5, "Blandsville & Blankerston");
+        InsertTexture(0, "Belt Railroad of Chicago");
+        InsertTexture(1, "Milwaukee Road");
+        InsertTexture(2, "Chesapeake & Ohio");
+        InsertTexture(3, "Baltimore & Ohio");
+        InsertTexture(4, "Great Lakes & Northern Territories");
+        InsertTexture(5, "Blandsville & Blankerston");
     }
     public DieselTR4(World world, double d, double d1, double d2){
         this(world);

@@ -18,11 +18,11 @@ public class DieselDash839CE extends DieselTrain {
     public DieselDash839CE(World world) {
         super(world, EnumTrains.Dash839CE.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "North Fox (KIT-L)");
-        textureDescriptionMap.put(1, "North Fox (KIT-80)");
-        textureDescriptionMap.put(2, "North Fox 475 (KIT-80 OLS Unit)");
-        textureDescriptionMap.put(3, "Norfolk Southern");
-        textureDescriptionMap.put(4, "Blandsville & Blankerston");
+        InsertTexture(0, "North Fox (KIT-L)");
+        InsertTexture(1, "North Fox (KIT-80)");
+        InsertTexture(2, "North Fox 475 (KIT-80 OLS Unit)");
+        InsertTexture(3, "Norfolk Southern");
+        InsertTexture(4, "Blandsville & Blankerston");
     }
     public DieselDash839CE(World world, double d, double d1, double d2){
         this(world);

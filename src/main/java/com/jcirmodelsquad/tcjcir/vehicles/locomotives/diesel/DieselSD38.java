@@ -19,19 +19,19 @@ public class DieselSD38 extends DieselTrain {
         super(world, EnumTrains.SD38.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
-        textureDescriptionMap.put(0, "Yankee(with no brim)town Dock Corporation");
-        textureDescriptionMap.put(1, "McCloud River Railroad");
-        textureDescriptionMap.put(2, "Conrail");
-        textureDescriptionMap.put(3, "LLPX");
-        textureDescriptionMap.put(4, "Masaou");
-        textureDescriptionMap.put(5, "FURRX");
-        textureDescriptionMap.put(6, "FURRX");
-        textureDescriptionMap.put(7, "NSCC");
-        textureDescriptionMap.put(8, "SPB");
-        textureDescriptionMap.put(9, "CSXT (Yn2)");
-        textureDescriptionMap.put(10, "CSXT (Yn3)");
-        textureDescriptionMap.put(11, "Seaboard System");
-        textureDescriptionMap.put(12, "GLC (EX SPB)");
+        InsertTexture(0, "Yankee(with no brim)town Dock Corporation");
+        InsertTexture(1, "McCloud River Railroad");
+        InsertTexture(2, "Conrail");
+        InsertTexture(3, "LLPX");
+        InsertTexture(4, "Masaou");
+        InsertTexture(5, "FURRX");
+        InsertTexture(6, "FURRX");
+        InsertTexture(7, "NSCC");
+        InsertTexture(8, "SPB");
+        InsertTexture(9, "CSXT (Yn2)");
+        InsertTexture(10, "CSXT (Yn3)");
+        InsertTexture(11, "Seaboard System");
+        InsertTexture(12, "GLC (EX SPB)");
     }
     public DieselSD38(World world, double d, double d1, double d2){
         this(world);

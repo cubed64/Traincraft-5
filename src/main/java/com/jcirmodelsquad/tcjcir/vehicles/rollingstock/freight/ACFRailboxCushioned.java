@@ -24,16 +24,16 @@ public class ACFRailboxCushioned extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "ASAB (Cushioned)");
-        textureDescriptionMap.put(1, "ADN (Cushioned)");
-        textureDescriptionMap.put(2, "BN (Cushioned)");
-        textureDescriptionMap.put(3, "MP (Cushioned)");
-        textureDescriptionMap.put(4, "T&P (Cushioned)");
-        textureDescriptionMap.put(5, "St, Maries (Cushioned)");
-        textureDescriptionMap.put(6, "Blandsville & Blankerston (Cushioned)");
-        textureDescriptionMap.put(7, "DLMR (Cushioned)");
-        textureDescriptionMap.put(8, "AN (Cushioned)");
-        textureDescriptionMap.put(9, "OC&G (Cushioned)");
+        InsertTexture(0, "ASAB (Cushioned)");
+        InsertTexture(1, "ADN (Cushioned)");
+        InsertTexture(2, "BN (Cushioned)");
+        InsertTexture(3, "MP (Cushioned)");
+        InsertTexture(4, "T&P (Cushioned)");
+        InsertTexture(5, "St, Maries (Cushioned)");
+        InsertTexture(6, "Blandsville & Blankerston (Cushioned)");
+        InsertTexture(7, "DLMR (Cushioned)");
+        InsertTexture(8, "AN (Cushioned)");
+        InsertTexture(9, "OC&G (Cushioned)");
     }
 
     @Override

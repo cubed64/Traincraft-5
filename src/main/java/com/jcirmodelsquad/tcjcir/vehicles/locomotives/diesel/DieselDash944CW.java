@@ -18,22 +18,22 @@ public class DieselDash944CW extends DieselTrain {
     public DieselDash944CW(World world) {
         super(world, EnumTrains.Dash944CW.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Norfolk Southern");
-        textureDescriptionMap.put(1, "Norfolk Southern (9634)");
-        textureDescriptionMap.put(2, "Blandsvill & Blankerston");
-        textureDescriptionMap.put(3, "Fox Union Rail Resources (FURRX)");
-        textureDescriptionMap.put(4, "BNSF (H1)");
-        textureDescriptionMap.put(5, "Southern Pacific");
-        textureDescriptionMap.put(6, "Southern Pacific (UP Patch)");
-        textureDescriptionMap.put(7, "Chicago Northwestern");
-        textureDescriptionMap.put(8, "Morristown Tenneva & Southern");
-        textureDescriptionMap.put(9, "Avanste Northeastern");
-        textureDescriptionMap.put(10, "Galesburg Clinton & Midland");
-        textureDescriptionMap.put(11, "CSLX (EX CSWR)");
-        textureDescriptionMap.put(12, "ATSF");
-        textureDescriptionMap.put(13, "ATSF (BNSF Patch)");
-        textureDescriptionMap.put(14, "Plainsview");
-        textureDescriptionMap.put(15, "Galesburg Clinton & Midland");
+        InsertTexture(0, "Norfolk Southern");
+        InsertTexture(1, "Norfolk Southern (9634)");
+        InsertTexture(2, "Blandsvill & Blankerston");
+        InsertTexture(3, "Fox Union Rail Resources (FURRX)");
+        InsertTexture(4, "BNSF (H1)");
+        InsertTexture(5, "Southern Pacific");
+        InsertTexture(6, "Southern Pacific (UP Patch)");
+        InsertTexture(7, "Chicago Northwestern");
+        InsertTexture(8, "Morristown Tenneva & Southern");
+        InsertTexture(9, "Avanste Northeastern");
+        InsertTexture(10, "Galesburg Clinton & Midland");
+        InsertTexture(11, "CSLX (EX CSWR)");
+        InsertTexture(12, "ATSF");
+        InsertTexture(13, "ATSF (BNSF Patch)");
+        InsertTexture(14, "Plainsview");
+        InsertTexture(15, "Galesburg Clinton & Midland");
     }
     public DieselDash944CW(World world, double d, double d1, double d2){
         this(world);

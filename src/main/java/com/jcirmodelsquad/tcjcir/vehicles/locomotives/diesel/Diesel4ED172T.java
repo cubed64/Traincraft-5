@@ -17,19 +17,19 @@ public class Diesel4ED172T extends DieselTrain {
     public Diesel4ED172T(World world) {
         super(world, EnumTrains.CEE4ED172T.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "CEE 1950s Demo units");
-        textureDescriptionMap.put(1, "FMSR Late (FNCC Early)");
-        textureDescriptionMap.put(2, "DLMR");
-        textureDescriptionMap.put(3, "PAMC (Early)");
-        textureDescriptionMap.put(4, "Blandsville & Blankerston");
-        textureDescriptionMap.put(5, "Blandsville & Blankerston (Chop)");
-        textureDescriptionMap.put(6, "Southfield");
-        textureDescriptionMap.put(7, "NP (Lowey Green)");
-        textureDescriptionMap.put(8, "");
-        textureDescriptionMap.put(9, "");
-        textureDescriptionMap.put(10, "");
-        textureDescriptionMap.put(11, "");
-        textureDescriptionMap.put(12, "");
+        InsertTexture(0, "CEE 1950s Demo units");
+        InsertTexture(1, "FMSR Late (FNCC Early)");
+        InsertTexture(2, "DLMR");
+        InsertTexture(3, "PAMC (Early)");
+        InsertTexture(4, "Blandsville & Blankerston");
+        InsertTexture(5, "Blandsville & Blankerston (Chop)");
+        InsertTexture(6, "Southfield");
+        InsertTexture(7, "NP (Lowey Green)");
+        InsertTexture(8, "");
+        InsertTexture(9, "");
+        InsertTexture(10, "");
+        InsertTexture(11, "");
+        InsertTexture(12, "");
     }
     public Diesel4ED172T(World world, double d, double d1, double d2){
         this(world);

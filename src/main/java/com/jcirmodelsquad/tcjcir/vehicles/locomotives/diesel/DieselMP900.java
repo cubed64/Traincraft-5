@@ -18,9 +18,9 @@ public class DieselMP900 extends DieselTrain {
     public DieselMP900(World world) {
         super(world, EnumTrains.MP900.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Masaou Demo");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "Washaska Resources #906");
+        InsertTexture(0, "Masaou Demo");
+        InsertTexture(1, "Blandsville & Blankerston");
+        InsertTexture(2, "Washaska Resources #906");
 
     }
     public DieselMP900(World world, double d, double d1, double d2){

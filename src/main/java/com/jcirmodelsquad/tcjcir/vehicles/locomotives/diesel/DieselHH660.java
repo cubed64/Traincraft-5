@@ -17,17 +17,17 @@ public class DieselHH660 extends DieselTrain {
     public DieselHH660(World world) {
         super(world, EnumTrains.HH660.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "RE 601");
-        textureDescriptionMap.put(1, "RE 606");
-        textureDescriptionMap.put(2, "ATSF (Zebra)");
-        textureDescriptionMap.put(3, "DLMR");
-        textureDescriptionMap.put(4, "FPRR");
-        textureDescriptionMap.put(5, "FURRX (Ex FPRR)");
-        textureDescriptionMap.put(6, "CCRL");
-        textureDescriptionMap.put(7, "CCRL MOW/Shunter");
-        textureDescriptionMap.put(8, "Moonguy Quarry");
-        textureDescriptionMap.put(9, "Moonguy Quarry (Ex CCRL)");
-        textureDescriptionMap.put(10, "SER");
+        InsertTexture(0, "RE 601");
+        InsertTexture(1, "RE 606");
+        InsertTexture(2, "ATSF (Zebra)");
+        InsertTexture(3, "DLMR");
+        InsertTexture(4, "FPRR");
+        InsertTexture(5, "FURRX (Ex FPRR)");
+        InsertTexture(6, "CCRL");
+        InsertTexture(7, "CCRL MOW/Shunter");
+        InsertTexture(8, "Moonguy Quarry");
+        InsertTexture(9, "Moonguy Quarry (Ex CCRL)");
+        InsertTexture(10, "SER");
 
     }
     public DieselHH660(World world, double d, double d1, double d2) {

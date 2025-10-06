@@ -17,12 +17,12 @@ public class SteamAlco460 extends SteamTrain {
 	public SteamAlco460(World world) {
 		super(world, EnumTrains.Alco460.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
-		textureDescriptionMap.put(0, "Blank");
-		textureDescriptionMap.put(1, "CDC&S");
-		textureDescriptionMap.put(2, "RI");
-		textureDescriptionMap.put(3, "%Lemo");
-		textureDescriptionMap.put(4, "GCM 67");
-		textureDescriptionMap.put(5, "GCM 60");
+		InsertTexture(0, "Blank");
+		InsertTexture(1, "CDC&S");
+		InsertTexture(2, "RI");
+		InsertTexture(3, "%Lemo");
+		InsertTexture(4, "GCM 67");
+		InsertTexture(5, "GCM 60");
 	}
 
 	public void initLocoSteam() {

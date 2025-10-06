@@ -17,12 +17,12 @@ public class DieselGP7f extends DieselTrain {
     public DieselGP7f(World world) {
         super(world, EnumTrains.GP7f.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "ARR 1803");
-        textureDescriptionMap.put(1, "ARR 1807");
-        textureDescriptionMap.put(2, "ARR 1802");
-        textureDescriptionMap.put(3, "Blandsville & Blankerston");
-        textureDescriptionMap.put(4, "Seattle & North Coast 401");
-        textureDescriptionMap.put(5, "Seattle & North Coast 402");
+        InsertTexture(0, "ARR 1803");
+        InsertTexture(1, "ARR 1807");
+        InsertTexture(2, "ARR 1802");
+        InsertTexture(3, "Blandsville & Blankerston");
+        InsertTexture(4, "Seattle & North Coast 401");
+        InsertTexture(5, "Seattle & North Coast 402");
     }
     public DieselGP7f(World world, double d, double d1, double d2){
         this(world);

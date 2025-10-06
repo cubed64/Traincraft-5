@@ -18,16 +18,16 @@ public class DieselSW1000 extends DieselTrain {
     public DieselSW1000(World world) {
         super(world, EnumTrains.SW1000.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Burlington Northern");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "Carbondale & Pine Valley");
-        textureDescriptionMap.put(3, "Rio Grande");
-        textureDescriptionMap.put(4, "Nomansi and Eastern Pacific");
-        textureDescriptionMap.put(5, "Southern Peenor Belt");
-        textureDescriptionMap.put(6, "Southern Port Belt (BN Patch)");
-        textureDescriptionMap.put(7, "Thunder Valley Transportation District (Falcon Area Rapid Transit)");
-        textureDescriptionMap.put(8, "ANW");
-        textureDescriptionMap.put(9, "ANW (Chevrons)");
+        InsertTexture(0, "Burlington Northern");
+        InsertTexture(1, "Blandsville & Blankerston");
+        InsertTexture(2, "Carbondale & Pine Valley");
+        InsertTexture(3, "Rio Grande");
+        InsertTexture(4, "Nomansi and Eastern Pacific");
+        InsertTexture(5, "Southern Peenor Belt");
+        InsertTexture(6, "Southern Port Belt (BN Patch)");
+        InsertTexture(7, "Thunder Valley Transportation District (Falcon Area Rapid Transit)");
+        InsertTexture(8, "ANW");
+        InsertTexture(9, "ANW (Chevrons)");
     }
     public DieselSW1000(World world, double d, double d1, double d2){
         this(world);

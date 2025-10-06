@@ -47,18 +47,18 @@ public class MillGondola extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "WCRC");
-        textureDescriptionMap.put(1, "GONX");
-        textureDescriptionMap.put(2, "OWO");
-        textureDescriptionMap.put(3, "MT&S");
-        textureDescriptionMap.put(4, "FNCC");
-        textureDescriptionMap.put(5, "FNCC");
-        textureDescriptionMap.put(6, "FNCC");
-        textureDescriptionMap.put(7, "PRD");
-        textureDescriptionMap.put(8, "PRD");
-        textureDescriptionMap.put(9, "PRD (DEMOMAN GRAFFITI)");
-        textureDescriptionMap.put(10, "DJJX / Generic Black");
-        textureDescriptionMap.put(11, "Generic Green");
+        InsertTexture(0, "WCRC");
+        InsertTexture(1, "GONX");
+        InsertTexture(2, "OWO");
+        InsertTexture(3, "MT&S");
+        InsertTexture(4, "FNCC");
+        InsertTexture(5, "FNCC");
+        InsertTexture(6, "FNCC");
+        InsertTexture(7, "PRD");
+        InsertTexture(8, "PRD");
+        InsertTexture(9, "PRD (DEMOMAN GRAFFITI)");
+        InsertTexture(10, "DJJX / Generic Black");
+        InsertTexture(11, "Generic Green");
     }
 
     @Override

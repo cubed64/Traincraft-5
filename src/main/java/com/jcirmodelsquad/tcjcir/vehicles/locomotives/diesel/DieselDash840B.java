@@ -17,16 +17,16 @@ public class DieselDash840B extends DieselTrain {
     public DieselDash840B(World world) {
         super(world, EnumTrains.Dash840B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "CSXT (YN2)");
-        textureDescriptionMap.put(1, "CSXT (YN3)");
-        textureDescriptionMap.put(2, "ATSF (Freightbonnet)");
-        textureDescriptionMap.put(3, "BNSF");
-        textureDescriptionMap.put(4, "CR");
-        textureDescriptionMap.put(5, "PDR");
-        textureDescriptionMap.put(6, "GC&M");
-        textureDescriptionMap.put(7, "NS");
-        textureDescriptionMap.put(8, "");
-        textureDescriptionMap.put(9, "");
+        InsertTexture(0, "CSXT (YN2)");
+        InsertTexture(1, "CSXT (YN3)");
+        InsertTexture(2, "ATSF (Freightbonnet)");
+        InsertTexture(3, "BNSF");
+        InsertTexture(4, "CR");
+        InsertTexture(5, "PDR");
+        InsertTexture(6, "GC&M");
+        InsertTexture(7, "NS");
+        InsertTexture(8, "");
+        InsertTexture(9, "");
 
     }
     public DieselDash840B(World world, double d, double d1, double d2){

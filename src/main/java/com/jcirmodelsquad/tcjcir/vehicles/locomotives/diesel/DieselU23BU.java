@@ -17,18 +17,18 @@ public class DieselU23BU extends DieselTrain {
     public DieselU23BU(World world) {
         super(world, EnumTrains.U23BU.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "FNCC (1st Order)");//type b
-        textureDescriptionMap.put(1, "FNCC (2nd Order)");//fb2
-        textureDescriptionMap.put(2, "FNCC (3rd Order)");//type b
-        textureDescriptionMap.put(3, "FNCC 100 (American Bicentennial Commemorative Unit)");//type b
-        textureDescriptionMap.put(4, "FNCC (Ex ATSF, Upgraded)");// type b
-        textureDescriptionMap.put(5, "FNCC (Ex ATSF Patch)");// type  b
-        textureDescriptionMap.put(6, "FNCC (Ex UP, Upgraded)");//fb2
-        textureDescriptionMap.put(7, "FNCC (Ex UP Patch)");//fb2
-        textureDescriptionMap.put(8, "FNCC (Ex CSX (C&O), Upgraded)");//blomb
-        textureDescriptionMap.put(9, "FNCC (Ex CSX Patch (3275))");//fb2
-        textureDescriptionMap.put(10, "FNCC (Ex CSX Patch (3317))");//fb2
-        textureDescriptionMap.put(11, "FMSR 101-104 (First Batch)");//type b
+        InsertTexture(0, "FNCC (1st Order)");//type b
+        InsertTexture(1, "FNCC (2nd Order)");//fb2
+        InsertTexture(2, "FNCC (3rd Order)");//type b
+        InsertTexture(3, "FNCC 100 (American Bicentennial Commemorative Unit)");//type b
+        InsertTexture(4, "FNCC (Ex ATSF, Upgraded)");// type b
+        InsertTexture(5, "FNCC (Ex ATSF Patch)");// type  b
+        InsertTexture(6, "FNCC (Ex UP, Upgraded)");//fb2
+        InsertTexture(7, "FNCC (Ex UP Patch)");//fb2
+        InsertTexture(8, "FNCC (Ex CSX (C&O), Upgraded)");//blomb
+        InsertTexture(9, "FNCC (Ex CSX Patch (3275))");//fb2
+        InsertTexture(10, "FNCC (Ex CSX Patch (3317))");//fb2
+        InsertTexture(11, "FMSR 101-104 (First Batch)");//type b
 
     }
     public DieselU23BU(World world, double d, double d1, double d2){

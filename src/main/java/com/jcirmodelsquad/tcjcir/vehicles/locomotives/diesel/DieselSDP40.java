@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -19,16 +20,16 @@ public class DieselSDP40 extends DieselTrain {
         super(world, EnumTrains.SDP40.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the
-        textureDescriptionMap.put(0, "Burlington Northern");
-        textureDescriptionMap.put(1, "NEP");
-        textureDescriptionMap.put(2, "NEPKIN");
-        textureDescriptionMap.put(3, "that one chopass SDP that cubed is obsessed with");
-        textureDescriptionMap.put(4, "Blandsville & Blankerston");
-        textureDescriptionMap.put(5, "Burlington Northern 6396");
-        textureDescriptionMap.put(6, "MRL (80s-90s)");
-        textureDescriptionMap.put(7, "GN (BSB)");
-        textureDescriptionMap.put(8, "GN (EB)");
-        textureDescriptionMap.put(9, "Steampunk Rail");
+        InsertTexture(0, "Burlington Northern");
+        InsertTexture(1, "NEP");
+        InsertTexture(2, "NEPKIN");
+        InsertTexture(3, "that one chopass SDP that cubed is obsessed with");
+        InsertTexture(4, "Blandsville & Blankerston");
+        InsertTexture(5, "Burlington Northern 6396");
+        InsertTexture(6, "MRL (80s-90s)");
+        InsertTexture(7, "GN (BSB)");
+        InsertTexture(8, "GN (EB)");
+        InsertTexture(9, "Steampunk Rail", LockoutGroup.SPR);
     }
     public DieselSDP40(World world, double d, double d1, double d2){
         this(world);

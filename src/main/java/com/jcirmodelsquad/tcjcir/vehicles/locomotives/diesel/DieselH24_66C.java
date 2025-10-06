@@ -17,9 +17,9 @@ public class DieselH24_66C extends DieselTrain {
     public DieselH24_66C(World world) {
         super(world, EnumTrains.H24_66C.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Canadian Pacific");
-        textureDescriptionMap.put(1, "Canadian Pacific (Demonstrator)");
-        textureDescriptionMap.put(2, "Canadian Pacific (Twin Steam Generators)");
+        InsertTexture(0, "Canadian Pacific");
+        InsertTexture(1, "Canadian Pacific (Demonstrator)");
+        InsertTexture(2, "Canadian Pacific (Twin Steam Generators)");
     }
     public DieselH24_66C(World world, double d, double d1, double d2){
         this(world);

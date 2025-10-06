@@ -24,11 +24,11 @@ public class Wood1912Boxcar extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "CDCS");
-        textureDescriptionMap.put(1, "Generic");
-        textureDescriptionMap.put(2, "Generic (Red)");
-        textureDescriptionMap.put(3, "Generic (Yellow)");
-        textureDescriptionMap.put(4, "Generic (Green)");
+        InsertTexture(0, "CDCS");
+        InsertTexture(1, "Generic");
+        InsertTexture(2, "Generic (Red)");
+        InsertTexture(3, "Generic (Yellow)");
+        InsertTexture(4, "Generic (Green)");
     }
 
     @Override

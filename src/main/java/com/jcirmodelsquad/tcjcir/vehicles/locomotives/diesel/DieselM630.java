@@ -18,11 +18,11 @@ public class DieselM630 extends DieselTrain {
     public DieselM630(World world) {
         super(world, EnumTrains.M630.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Pacific Great Eastern");
-        textureDescriptionMap.put(1, "Blandsville & Blankerston");
-        textureDescriptionMap.put(2, "North Fox & Yukon Route (FNCC, KIT-L, Big Canon)");
-        textureDescriptionMap.put(3, "Great Lakes & Northern Territories");
-        textureDescriptionMap.put(4, "Latrans Range Railroad");
+        InsertTexture(0, "Pacific Great Eastern");
+        InsertTexture(1, "Blandsville & Blankerston");
+        InsertTexture(2, "North Fox & Yukon Route (FNCC, KIT-L, Big Canon)");
+        InsertTexture(3, "Great Lakes & Northern Territories");
+        InsertTexture(4, "Latrans Range Railroad");
 
     }
     public DieselM630(World world, double d, double d1, double d2){

@@ -8,7 +8,7 @@ public class PSSleeper565DRGW extends AbstractPassengerCar
 
 	public PSSleeper565DRGW(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "D&RGW");
+		InsertTexture(0, "D&RGW");
 	}
 
 	public PSSleeper565DRGW(World world, double posX, double posY, double posZ)

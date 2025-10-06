@@ -18,7 +18,7 @@ public class DieselDash940C extends DieselTrain {
     public DieselDash940C(World world) {
         super(world, EnumTrains.Dash940C.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        textureDescriptionMap.put(0, "Avanste Northeastern");
+        InsertTexture(0, "Avanste Northeastern");
     }
     public DieselDash940C(World world, double d, double d1, double d2){
         this(world);

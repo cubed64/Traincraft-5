@@ -7,12 +7,12 @@ public class DRGWCoach1000Series extends AbstractPassengerCar {
 
 	public DRGWCoach1000Series(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "D&RGW (1000)");
-		textureDescriptionMap.put(1, "D&RGW (1001)");
-		textureDescriptionMap.put(2, "D&RGW (1002-1004)");
-		textureDescriptionMap.put(3, "D&RGW (Prospector Scheme)");
-		textureDescriptionMap.put(4, "D&RGW (4 Stripe)");
-		textureDescriptionMap.put(5, "D&RGW (4 Stripe, 1000-1001 Late)");
+		InsertTexture(0, "D&RGW (1000)");
+		InsertTexture(1, "D&RGW (1001)");
+		InsertTexture(2, "D&RGW (1002-1004)");
+		InsertTexture(3, "D&RGW (Prospector Scheme)");
+		InsertTexture(4, "D&RGW (4 Stripe)");
+		InsertTexture(5, "D&RGW (4 Stripe, 1000-1001 Late)");
 	}
 
 	public DRGWCoach1000Series(World world, double posX, double posY, double posZ)

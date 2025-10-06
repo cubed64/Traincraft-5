@@ -17,10 +17,10 @@ public class SteamClimaxB extends SteamTrain {
 	public SteamClimaxB(World world) {
 		super(world, EnumTrains.ClimaxB.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
-		textureDescriptionMap.put(0, "Hillcrest Lumber Co #9");
-		textureDescriptionMap.put(1, "Washaska Resources #6");
-		textureDescriptionMap.put(2, "Washaska Resources #7");
-		textureDescriptionMap.put(3, "Clarks Milling & Lumber Co");
+		InsertTexture(0, "Hillcrest Lumber Co #9");
+		InsertTexture(1, "Washaska Resources #6");
+		InsertTexture(2, "Washaska Resources #7");
+		InsertTexture(3, "Clarks Milling & Lumber Co");
 	}
 
 	public void initLocoSteam() {
