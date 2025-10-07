@@ -88,6 +88,7 @@ public class PacketHandler {
 				PacketTrackBuilderFollow.class, 9, Side.SERVER);
 		Traincraft.paintbrushColorChannel.registerMessage(PacketPaintbrushColor.Handler.class, PacketPaintbrushColor.class, 11, Side.SERVER);
 		Traincraft.paintbrushColorChannel.registerMessage(PacketPaintBrushClientSideUpdate.Handler.class, PacketPaintBrushClientSideUpdate.class, 27, Side.CLIENT);
+		Traincraft.ignitionChannel.registerMessage(PacketDropFire.Handler.class, PacketDropFire.class, 28, Side.SERVER);
 
 		Traincraft.switchStandLockChannel.registerMessage(PacketUpdateSwitchStand.Handler.class,
 				PacketUpdateSwitchStand.class, 17, Side.SERVER);
