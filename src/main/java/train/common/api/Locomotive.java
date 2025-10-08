@@ -26,9 +26,11 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.*;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.Constants;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.lwjgl.input.Keyboard;
 import train.client.MovingTrainSound;
@@ -488,6 +490,18 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         nbttagcompound.setBoolean("isConnected", isConnected);
         nbttagcompound.setBoolean("stationStop", stationStop);
         nbttagcompound.setString("lightingDetailsJSON", lightingDetailsJSON());
+
+        nbttagcompound.setShort("fuelTrain", (short) fuelTrain);
+        NBTTagList nbttaglist = new NBTTagList();
+        for (int i = 0; i < locoInvent.length; i++) {
+            if (locoInvent[i] != null) {
+                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+                nbttagcompound1.setByte("Slot", (byte) i);
+                locoInvent[i].writeToNBT(nbttagcompound1);
+                nbttaglist.appendTag(nbttagcompound1);
+            }
+        }
+        nbttagcompound.setTag("Items", nbttaglist);
     }
 
     @Override
@@ -536,7 +550,19 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         stationStop = ntc.getBoolean("stationStop");
         dataWatcher.updateObject(5, trainID);
         dataWatcher.updateObject(28, lightingDetailsJSON());
+
+        fuelTrain = ntc.getShort("fuelTrain");
+        NBTTagList nbttaglist = ntc.getTagList("Items", Constants.NBT.TAG_COMPOUND);
+        locoInvent = new ItemStack[getSizeInventory()];
+        for (int i = 0; i < nbttaglist.tagCount(); i++) {
+            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
+            int j = nbttagcompound1.getByte("Slot") & 0xff;
+            if (j >= 0 && j < locoInvent.length) {
+                locoInvent[j] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
+            }
+        }
     }
+
 
     /**
      * Returns true if this entity should push and be pushed by other entities

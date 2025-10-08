@@ -96,22 +96,7 @@ public class SteamAlco0_6_0T extends SteamTrain {
 		checkInvent(locoInvent[0], locoInvent[1], this);
 	}
 
-	@Override
-	protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {
-		super.writeEntityToNBT(nbttagcompound);
-
-		nbttagcompound.setShort("fuelTrain", (short) fuelTrain);
-		NBTTagList nbttaglist = new NBTTagList();
-		for (int i = 0; i < locoInvent.length; i++) {
-			if (locoInvent[i] != null) {
-				NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-				nbttagcompound1.setByte("Slot", (byte) i);
-				locoInvent[i].writeToNBT(nbttagcompound1);
-				nbttaglist.appendTag(nbttagcompound1);
-			}
-		}
-		nbttagcompound.setTag("Items", nbttaglist);
-	}
+	
 
 	@Override
 	protected void readEntityFromNBT(NBTTagCompound nbttagcompound) {

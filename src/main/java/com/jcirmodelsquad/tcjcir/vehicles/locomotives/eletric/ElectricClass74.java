@@ -9,13 +9,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.ElectricTrain;
+import train.common.enums.LockoutGroup;
 import train.common.library.GuiIDs;
 
 public class ElectricClass74 extends ElectricTrain {
     public ElectricClass74(World world) {
         super(world);
         InsertTexture(0, "BR");
-        InsertTexture(1, "SPR");
+        InsertTexture(1, "SPR", LockoutGroup.SPR);
         InsertTexture(2, "GCM");
         InsertTexture(3, "CRL");
         InsertTexture(4, "CRL (Phase 2)");
@@ -81,38 +82,7 @@ public class ElectricClass74 extends ElectricTrain {
         }
     }
 
-    @Override
-    protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {
-        super.writeEntityToNBT(nbttagcompound);
-
-        nbttagcompound.setShort("fuelTrain", (short) fuelTrain);
-        NBTTagList nbttaglist = new NBTTagList();
-        for (int i = 0; i < locoInvent.length; i++) {
-            if (locoInvent[i] != null) {
-                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-                nbttagcompound1.setByte("Slot", (byte) i);
-                locoInvent[i].writeToNBT(nbttagcompound1);
-                nbttaglist.appendTag(nbttagcompound1);
-            }
-        }
-        nbttagcompound.setTag("Items", nbttaglist);
-    }
-
-    @Override
-    protected void readEntityFromNBT(NBTTagCompound nbttagcompound) {
-        super.readEntityFromNBT(nbttagcompound);
-
-        fuelTrain = nbttagcompound.getShort("fuelTrain");
-        NBTTagList nbttaglist = nbttagcompound.getTagList("Items", Constants.NBT.TAG_COMPOUND);
-        locoInvent = new ItemStack[getSizeInventory()];
-        for (int i = 0; i < nbttaglist.tagCount(); i++) {
-            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
-            int j = nbttagcompound1.getByte("Slot") & 0xff;
-            if (j >= 0 && j < locoInvent.length) {
-                locoInvent[j] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
-            }
-        }
-    }
+    
 
     @Override
     public int getSizeInventory() {
