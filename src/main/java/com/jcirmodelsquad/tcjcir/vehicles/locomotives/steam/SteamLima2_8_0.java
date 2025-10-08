@@ -117,10 +117,7 @@ public class SteamLima2_8_0 extends SteamTrain {
 		}
 	}
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 
 	@Override
 	public String getInventoryName() {

@@ -60,10 +60,7 @@ public class EntityLocoSteamMogulBlue extends SteamTrain {
 
 	
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "Mogul";

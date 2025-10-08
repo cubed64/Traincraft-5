@@ -88,10 +88,7 @@ public class EntityLocoDieselIC4_DSB_MG extends DieselTrain {
 		checkInvent(locoInvent[0]);
 	}
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "IC4MG";

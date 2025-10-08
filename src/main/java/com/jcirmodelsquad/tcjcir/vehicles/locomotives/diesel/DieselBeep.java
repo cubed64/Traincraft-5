@@ -86,10 +86,7 @@ public class DieselBeep extends DieselTrain {
 
     
 
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+
 
 
     @Override

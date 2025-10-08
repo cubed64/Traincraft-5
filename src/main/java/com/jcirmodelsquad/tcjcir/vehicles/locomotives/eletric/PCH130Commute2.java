@@ -87,10 +87,7 @@ public class PCH130Commute2 extends ElectricTrain implements IAT2Compatible {
 
     
 
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+
 
     @Override
     public String getInventoryName() {

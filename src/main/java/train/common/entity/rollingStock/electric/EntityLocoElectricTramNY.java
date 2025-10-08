@@ -70,10 +70,7 @@ public class EntityLocoElectricTramNY extends ElectricTrain {
 		}
 	}
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "Kawasaki PA4";

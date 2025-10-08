@@ -66,10 +66,7 @@ public class EntityLocoSteamHallClass extends SteamTrain {
 
 	
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "Hall Class";

@@ -90,10 +90,7 @@ public class EntityLocoSteamCoranationClass extends SteamTrain {
 
 	
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "Coranation Class";

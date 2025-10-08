@@ -90,10 +90,7 @@ public class EntityLocoSteamC41_080 extends SteamTrain {
 
 	
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 
 	@Override
 	public String getInventoryName() {

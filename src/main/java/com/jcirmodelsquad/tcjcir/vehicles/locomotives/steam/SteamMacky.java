@@ -91,10 +91,7 @@ public class SteamMacky extends SteamTrain {
 
     
 
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+
 
     @Override
     public String getInventoryName() {

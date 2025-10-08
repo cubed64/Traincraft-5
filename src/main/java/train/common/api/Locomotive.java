@@ -62,6 +62,13 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     public byte ditchLightMode = 0;
     public boolean bellPressed;
     public int inventorySize;
+
+    @Override
+    public final int getSizeInventory()
+    {
+        return inventorySize;
+    }
+
     public int numCargoSlots;
     public int numCargoSlots1;
     public int numCargoSlots2;

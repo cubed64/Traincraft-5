@@ -56,10 +56,7 @@ public class EntityLocoDieselShunter extends DieselTrain {
 		super.onUpdate();
 	}
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "Class 08 Shunter";

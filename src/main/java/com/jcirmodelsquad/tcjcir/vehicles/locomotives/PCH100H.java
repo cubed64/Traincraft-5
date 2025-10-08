@@ -164,10 +164,7 @@ public class PCH100H extends HydrogenTrain{
         }
     }
 
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+
 
     @Override
     public String getInventoryName() {

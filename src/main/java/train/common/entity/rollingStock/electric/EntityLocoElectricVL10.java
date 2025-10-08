@@ -68,12 +68,6 @@ public class EntityLocoElectricVL10 extends ElectricTrain {
 	}
 
 	@Override
-	/** return the loco inventory size **/
-	public int getSizeInventory() {
-
-		return inventorySize;
-	}
-	@Override
 	public String getInventoryName() {
 		return "VL10";
 	}

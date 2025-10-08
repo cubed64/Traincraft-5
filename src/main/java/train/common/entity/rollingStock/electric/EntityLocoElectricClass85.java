@@ -72,10 +72,7 @@ public class EntityLocoElectricClass85 extends ElectricTrain {
 
 	
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "Class 85";

@@ -99,10 +99,7 @@ public class DieselSD70ACe_H extends DieselTrain {
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.45F;
     }
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+
     @Override
     public String getInventoryName() {
         return "EMD SD70ACe";

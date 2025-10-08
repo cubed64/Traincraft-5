@@ -107,10 +107,7 @@ public class SteamOnion extends SteamTrain {
 		}
 	}
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "Onion";

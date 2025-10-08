@@ -59,10 +59,7 @@ public class EntityLocoSteamU57 extends SteamTrain {
 
 	
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "USSR 0-5-0";

@@ -89,10 +89,7 @@ public class AdvancedHighSpeedTrainPrototype extends ElectricTrain {
 		}
 	}
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "Advanced High Speed Train (Prototype)";

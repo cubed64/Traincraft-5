@@ -103,10 +103,7 @@ public class ElectricGM6C_2 extends ElectricTrain {
 
 
 
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+
 
     @Override
     public String getInventoryName() {

@@ -66,10 +66,7 @@ public class EntityLocoSteamMILWClassA extends SteamTrain {
 
 	
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "MILW Class A";

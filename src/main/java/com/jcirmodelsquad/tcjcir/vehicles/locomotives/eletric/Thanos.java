@@ -45,10 +45,7 @@ public class Thanos extends ElectricTrain {
 
 
 
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+
 
     @Override
     public String getInventoryName() {

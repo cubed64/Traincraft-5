@@ -56,7 +56,7 @@ public class Traincraft {
 	@SidedProxy(clientSide = "train.client.core.ClientProxy", serverSide = "train.common.core.CommonProxy")
 	public static CommonProxy proxy;
 
-	public static LockoutPermissionsUtil lockoutPermissionsUtil = new LockoutPermissionsUtil();
+	public static final LockoutPermissionsUtil lockoutPermissionsUtil = new LockoutPermissionsUtil();
 
 	/* TrainCraft Logger */
 	public static Logger tcLog = LogManager.getLogger(Info.modName);

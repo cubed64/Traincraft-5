@@ -60,10 +60,7 @@ public class EntityLocoDieselSD40 extends DieselTrain {
 		checkInvent(locoInvent[0]);
 	}
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 
 	@Override
 	public String getInventoryName() {

@@ -84,10 +84,7 @@ public class EntityLocoDieselEMDF7 extends DieselTrain {
 		super.onUpdate();
 	}
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 
 	@Override
 	public String getInventoryName() {

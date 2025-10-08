@@ -59,10 +59,7 @@ public class DieselFOLM1B extends DieselTrain {
 
 
 
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+    
 
     @Override
     public String getInventoryName() {

@@ -84,10 +84,7 @@ public class ElectricClass74 extends ElectricTrain {
 
     
 
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+
 
     @Override
     public String getInventoryName() {

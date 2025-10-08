@@ -72,10 +72,7 @@ public class ElectricCQ310PO extends ElectricTrain {
 
 	
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "CQ-310";

@@ -95,10 +95,7 @@ public class DieselF45 extends DieselTrain {
     public float getOptimalDistance(EntityMinecart cart) { return 1.35F;
     }
 
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+    
 
     @Override
     public String getInventoryName() {

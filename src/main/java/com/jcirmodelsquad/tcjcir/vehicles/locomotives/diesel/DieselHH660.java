@@ -97,10 +97,7 @@ public class DieselHH660 extends DieselTrain {
 
 
 
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+
 
 
     @Override

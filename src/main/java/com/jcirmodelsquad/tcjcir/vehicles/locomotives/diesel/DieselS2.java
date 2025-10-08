@@ -98,10 +98,7 @@ public class DieselS2 extends DieselTrain {
 
     
 
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+
 
 
     @Override

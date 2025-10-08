@@ -81,12 +81,9 @@ public class PCH120Commute extends ElectricTrain {
         }
     }
 
-    
 
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+
+
 
     @Override
     public String getInventoryName() {

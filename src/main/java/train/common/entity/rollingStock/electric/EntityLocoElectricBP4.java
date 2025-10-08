@@ -52,10 +52,7 @@ public class EntityLocoElectricBP4 extends ElectricTrain {
 
 	
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 
 	@Override
 	public String getInventoryName() {

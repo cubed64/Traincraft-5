@@ -63,10 +63,7 @@ public class EntityLocoSteamGLYN042T extends SteamTrain {
 
 	
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "0-4-2 GLYN";

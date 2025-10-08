@@ -88,10 +88,7 @@ public class EntityLocoDieselGP7Red extends DieselTrain {
 		checkInvent(locoInvent[0]);
 	}
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "GP7";

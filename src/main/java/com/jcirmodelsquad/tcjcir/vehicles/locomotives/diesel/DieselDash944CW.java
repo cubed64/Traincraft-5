@@ -104,10 +104,7 @@ public class DieselDash944CW extends DieselTrain {
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.3F;
     }
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+    
     @Override
     public String getInventoryName() {
         return "GE Dash 9-44CW";

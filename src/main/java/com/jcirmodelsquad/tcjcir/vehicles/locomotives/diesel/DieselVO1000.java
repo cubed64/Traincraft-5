@@ -92,10 +92,7 @@ public class DieselVO1000 extends DieselTrain {
 
 
 
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+    
 
 
     @Override

@@ -114,10 +114,7 @@ public class SteamAlco0_6_0T extends SteamTrain {
 		}
 	}
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 
 	@Override
 	public String getInventoryName() {

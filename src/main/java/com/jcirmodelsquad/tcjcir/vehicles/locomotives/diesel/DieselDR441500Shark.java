@@ -101,10 +101,7 @@ public class DieselDR441500Shark extends DieselTrain {
     public float getOptimalDistance(EntityMinecart cart) { return 1.08F;
     }
 
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+    
 
     @Override
     public String getInventoryName() {

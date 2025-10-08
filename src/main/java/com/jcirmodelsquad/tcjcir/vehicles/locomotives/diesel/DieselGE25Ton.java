@@ -111,10 +111,7 @@ public class DieselGE25Ton extends DieselTrain {
 		}
 	}
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 
 	@Override
 	public String getInventoryName() {

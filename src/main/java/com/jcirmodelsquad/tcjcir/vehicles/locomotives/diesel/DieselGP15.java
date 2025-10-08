@@ -117,10 +117,7 @@ public class DieselGP15 extends DieselTrain {
 		}
 	}
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "EMD GP15-1";

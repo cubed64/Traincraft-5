@@ -41,10 +41,7 @@ public class EntityLocoSteamCherepanov extends SteamTrain {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset() + 0.154, posZ);
 	}
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 
 	
 	@Override

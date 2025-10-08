@@ -96,10 +96,7 @@ public class DieselDash841C extends DieselTrain {
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.34F;
     }
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+    
     @Override
     public String getInventoryName() {
         return "GE C41-8";

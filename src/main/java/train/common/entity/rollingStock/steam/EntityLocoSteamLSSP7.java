@@ -61,10 +61,7 @@ public class EntityLocoSteamLSSP7 extends SteamTrain {
 
 	
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "LSSP 7";

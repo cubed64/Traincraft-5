@@ -72,10 +72,7 @@ public class ElectricKawasakiLRV extends ElectricTrain {
 
 	
 
-	@Override
-	public int getSizeInventory() {
-		return inventorySize;
-	}
+	
 	@Override
 	public String getInventoryName() {
 		return "Kawasaki LRV";

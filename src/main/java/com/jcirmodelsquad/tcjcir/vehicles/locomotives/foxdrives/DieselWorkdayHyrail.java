@@ -102,10 +102,7 @@ public class DieselWorkdayHyrail extends DieselTrain {
     public float getOptimalDistance(EntityMinecart cart) { return 0.6F;
     }
 
-    @Override
-    public int getSizeInventory() {
-        return inventorySize;
-    }
+    
 
     @Override
     public String getInventoryName() {
