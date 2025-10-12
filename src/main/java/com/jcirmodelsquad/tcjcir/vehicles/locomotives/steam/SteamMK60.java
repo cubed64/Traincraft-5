@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.SteamTrain;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -25,8 +26,8 @@ public class SteamMK60 extends SteamTrain {
 		InsertTexture(5, "WP 334 NEP-WP Condition");
 		InsertTexture(6, "WP 334-335");
 		InsertTexture(7, "DLMR 199");
-		InsertTexture(8, "FMSR 560-574");
-		InsertTexture(9, "FMSR 575-579");
+		InsertTexture(8, "FMSR 560-574", LockoutGroup.FMSR);
+		InsertTexture(9, "FMSR 575-579", LockoutGroup.FMSR);
 	}
 
 	public void initLocoSteam() {

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -18,7 +19,7 @@ public class DieselFAFDL extends DieselTrain {
     public DieselFAFDL(World world) {
         super(world, EnumTrains.FAFDL.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        InsertTexture(0, "FMSR");
+        InsertTexture(0, "FMSR", LockoutGroup.FMSR);
         InsertTexture(1, "Blandsville & Blankerston (Early FAFDL)");
         InsertTexture(2, "Blandsville & Blankerston (Late FAFDL)");
         InsertTexture(3, "");

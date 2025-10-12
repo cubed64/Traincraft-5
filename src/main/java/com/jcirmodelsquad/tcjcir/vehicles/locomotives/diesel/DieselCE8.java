@@ -19,7 +19,7 @@ public class DieselCE8 extends DieselTrain {
     public DieselCE8(World world) {
         super(world, EnumTrains.CE8.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        InsertTexture(0, "FNCC 99 (KIT-L)");
+        InsertTexture(0, "FNCC 99 (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(1, "Nomansi Sugar Cane Corperation");
         InsertTexture(2, "Blandsville & Blankerston (No Dynamics)");
         InsertTexture(3, "Blandsville & Blankerston (Dynamics)");

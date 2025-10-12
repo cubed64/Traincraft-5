@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -19,7 +20,7 @@ public class DieselU30C extends DieselTrain {
         initLoco();
         InsertTexture(0, "Burlington Northern 5344");
         InsertTexture(1, "Blandsville & Blankerston");
-        InsertTexture(2, "FNCC (KIT-L)");
+        InsertTexture(2, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(3, "Southern Pacific");
         InsertTexture(4, "Rock Island");
         InsertTexture(5, "Deadwood & La Mesa");

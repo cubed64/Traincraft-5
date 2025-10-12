@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.SteamTrain;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -17,8 +18,8 @@ public class SteamP01a extends SteamTrain {
 	public SteamP01a(World world) {
 		super(world, EnumTrains.P01a.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
-		InsertTexture(0, "WRX 10");
-		InsertTexture(1, "WRX 12");
+		InsertTexture(0, "WRX 10", LockoutGroup.BIDA);
+		InsertTexture(1, "WRX 12", LockoutGroup.BIDA);
 		InsertTexture(2, "CDC&S 7");
 	}
 

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -17,7 +18,7 @@ public class DieselDH643 extends DieselTrain {
     public DieselDH643(World world) {
         super(world, EnumTrains.DH643.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        InsertTexture(0, "Latrans Range Railroad");
+        InsertTexture(0, "Latrans Range Railroad", LockoutGroup.LRR);
     }
     public DieselDH643(World world, double d, double d1, double d2){
         this(world);

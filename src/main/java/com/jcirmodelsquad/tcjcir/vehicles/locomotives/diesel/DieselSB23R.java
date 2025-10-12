@@ -21,7 +21,7 @@ public class DieselSB23R extends DieselTrain {
         InsertTexture(0, "BMC (Plant Switcher)");
         //InsertTexture(1, "Western Pacific (Early)");
         //InsertTexture(2, "Western Pacific (Late)");
-        InsertTexture(1, "FNCC 335 (Dar80)");
+        InsertTexture(1, "FNCC 335 (Dar80)", LockoutGroup.FNCC);
         InsertTexture(2, "Morristown Tennava & Southern", LockoutGroup.MTS);
         InsertTexture(3, "Blandsville & Blankerston");
         InsertTexture(4, "");

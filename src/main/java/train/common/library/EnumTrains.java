@@ -50,8 +50,8 @@ public enum EnumTrains implements IEnumTrains
 
 	Alco2102("Alco2102", SteamAlco2102.class, ItemIDs.minecartalco2102.item, "steam", 1613, 65, 0, 75, 75, 190, 0.85, 0.8, 17000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20"}), 14, -2.4),
 	MK60("MK60", SteamMK60.class, ItemIDs.minecartMK60.item, "steam", 2765, 98, 0, 75, 75, 190, 0.85, 0.8, 2000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Purple", "Cyan", "Skin22"}), 14, -2.6),
-	Tender10k("Tender10k", com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tender.Tender10k.class, ItemIDs.minecartTender10k.item,"tender",0,0,3,0,0,0,0,0,38000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Skin17", "Skin18", "Yellow", "Purple", "Pink", "Skin19", "Skin20", "Skin21", "Skin22"}),18,0, (new String[] {"Water capacity: 38000mb."})),
-	TenderDeseret("TenderDeseret", com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tender.TenderDeseret.class, ItemIDs.minecartTenderDeseret.item,"tender",0,0,4,0,0,0,0,0,57000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Skin17", "Skin18"}),18,0, (new String[] {"Water capacity: 57000mb."})),
+	Tender10k("Tender10k", Tender10k.class, ItemIDs.minecartTender10k.item,"tender",0,0,3,0,0,0,0,0,38000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Skin17", "Skin18", "Yellow", "Purple", "Pink", "Skin19", "Skin20", "Skin21", "Skin22"}),18,0, (new String[] {"Water capacity: 38000mb."})),
+	TenderDeseret("TenderDeseret", TenderDeseret.class, ItemIDs.minecartTenderDeseret.item,"tender",0,0,4,0,0,0,0,0,57000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Skin17", "Skin18"}),18,0, (new String[] {"Water capacity: 57000mb."})),
 
 	C11("Loco Steam C11", SteamC11.class, ItemIDs.minecartLocoC11.item,"steam", 1030, 97, 0, 80, 100, 200, 0.35, 0.975, 16000, null, 10, -3.0),
 	Onion("Onion", SteamOnion.class, ItemIDs.minecartOnion.item, "steam", 350,1555,0,50,140,100,0.7,0.99,8000, TraincraftUtil.getBytesFromColors(new String[]{"Black", "Orange", "Blue", "Grey", "Red", "Yellow", "White", "Brown", "LightGrey", "Pink"}),17,-1.3),
@@ -60,7 +60,7 @@ public enum EnumTrains implements IEnumTrains
 	NP_11C_Tender("NP_11C_Tender", TenderNP_11C.class, ItemIDs.minecartNP_11C_tender.item,"tender",0,0,3.5,0,0,0,0,0,26000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Black"}),18,0,(new String[] {"Water capacity: 26000mb."})),
 	NP_13C_Tender("NP_13C_Tender", TenderNP_13C.class, ItemIDs.minecartNP_13C_tender.item,"tender",0,0,3.75,0,0,0,0,0,31000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Black"}),18,0,(new String[] {"Water capacity: 31000mb."})),
 	Alco460("Alco460", SteamAlco460.class, ItemIDs.minecartAlco460.item, "steam", 973,110,0,90,130,160,0.7,0.75,3000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Red", "Yellow", "Skin17", "Skin18"}),16,-1.8),
-	Tender460("Tender460", com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tender.Tender460.class, ItemIDs.minecartTender460.item,"tender",0,0,3,0,0,0,0,0,26000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Red", "Yellow", "Skin17"}),18,0,(new String[] {"Water capacity: 26000mb."})),
+	Tender460("Tender460", Tender460.class, ItemIDs.minecartTender460.item,"tender",0,0,3,0,0,0,0,0,26000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "Red", "Yellow", "Skin17"}),18,0,(new String[] {"Water capacity: 26000mb."})),
 
 	PELoco("Loco Steam PELoco", SteamPELoco.class, ItemIDs.minecartPELocomotive.item,"steam", 1484, 120, 0, 80, 100, 200, 0.35, 0.975, 4000, null, 10, -3.4 ),
 	PETender("Tender PETender",TenderPETender.class, ItemIDs.minecartPETender.item,"tender",0,0,1.5,0,0,0,0,0,20000,null,18,0,(new String[] {"Water capacity: 20000mb"})),
@@ -70,7 +70,7 @@ public enum EnumTrains implements IEnumTrains
 	Alco0_6_0T("Alco0-6-0T", SteamAlco0_6_0T.class, ItemIDs.minecartAlco0_6_0T.item, "steam", 360,50,0,50,160,120,0.7,0.8,8000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Green", "Purple"}),15,-1.2),
 	Brank("Brank2-6-2T", SteamBrank.class, ItemIDs.minecartBrank.item, "steam", 360,50,0,50,160,120,0.7,0.8,8000, TraincraftUtil.getBytesFromColors(new String[] {"Green"}),15,-1.0),
 	Lima2_8_0("Lima2-8-0", SteamLima2_8_0.class, ItemIDs.minecartLima2_8_0.item, "steam", 1250,65,0,90,130,160,0.7,0.75,3000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Green", "Lime", "Grey", "Yellow", "Red"}),16,-1.65),
-	TenderLima2_8_0("TenderLima2_8_0", com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tender.TenderLima2_8_0.class, ItemIDs.minecartTenderLima2_8_0.item,"tender",0,0,3,0,0,0,0,0,26000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Green", "Yellow", "Red"}),18,0,(new String[] {"Water capacity: 26000mb."})),
+	TenderLima2_8_0("TenderLima2_8_0", TenderLima2_8_0.class, ItemIDs.minecartTenderLima2_8_0.item,"tender",0,0,3,0,0,0,0,0,26000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Green", "Yellow", "Red"}),18,0,(new String[] {"Water capacity: 26000mb."})),
 
 	//EMD//
 	F3A("F3A", DieselF3A.class, ItemIDs.minecartF3A.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Cyan", "Skin17", "Magenta", "Skin16", "Red"}), 18, -2.6),

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -19,7 +20,7 @@ public class DieselWorkdayHyrail extends DieselTrain {
         initLoco();
         InsertTexture(0, "Generic");
         InsertTexture(1, "CSXT");
-        InsertTexture(2, "FNCC MOW");
+        InsertTexture(2, "FNCC MOW", LockoutGroup.FNCC);
         InsertTexture(3, "WP/NEP MOW");
         InsertTexture(4, "GLC");
         InsertTexture(5, "CRIP");

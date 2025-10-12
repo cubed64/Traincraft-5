@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -20,7 +21,7 @@ public class DieselB23 extends DieselTrain {
         InsertTexture(0, "Franklin Industrial Minerals (FIMX Early)");
         InsertTexture(1, "Southern Pacific (Early)");
         InsertTexture(2, "Southern Pacific (Late)");
-        InsertTexture(3, "FNCC (KIT-L)");
+        InsertTexture(3, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(4, "Blandsville & Blankerston");
         InsertTexture(5, "Western Pacific");
         InsertTexture(6, "Western Pacific (Post 90s)");
@@ -44,8 +45,8 @@ public class DieselB23 extends DieselTrain {
         InsertTexture(24, "BNSF H1 (Ex ATSF)");
         InsertTexture(25, "Atlas & Red Sands Railroad");
         InsertTexture(26, "Magnolia");
-        InsertTexture(27, "CNRC 1901 & 1903");
-        InsertTexture(28, "CNRC 1902");
+        InsertTexture(27, "CNRC 1901 & 1903", LockoutGroup.CNRC);
+        InsertTexture(28, "CNRC 1902", LockoutGroup.CNRC);
         InsertTexture(29, "CSXT (Stealth)");
         InsertTexture(30, "CSXT (Bluedown)");
         InsertTexture(31, "Seaboard");

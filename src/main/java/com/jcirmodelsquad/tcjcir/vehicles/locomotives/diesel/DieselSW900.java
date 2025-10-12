@@ -18,7 +18,7 @@ public class DieselSW900 extends DieselTrain {
     public DieselSW900(World world) {
         super(world, EnumTrains.SW900.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        InsertTexture(0, "Electric Fuels Corperation");
+        InsertTexture(0, "Electric Fuels Corporation");
         InsertTexture(1, "Conrail Shared Assets");
         InsertTexture(2, "Avanste Northeastern");
         InsertTexture(3, "Blandsville & Blankerston");

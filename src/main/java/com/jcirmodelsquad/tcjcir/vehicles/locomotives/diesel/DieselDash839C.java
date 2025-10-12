@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -24,13 +25,13 @@ public class DieselDash839C extends DieselTrain {
         InsertTexture(3, "Norfolk Southern");
         InsertTexture(4, "Nomansi and Eastern Pacific");
         InsertTexture(5, "Nomansi and Eastern Pacific (Late)");
-        InsertTexture(6, "FNCC (KIT-L)");
+        InsertTexture(6, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(7, "Blandsville & Blankerston");
         InsertTexture(8, "Magnolia Acres");
         InsertTexture(9, "Nautilus");
         InsertTexture(10, "Ann Arbor (but awesomer)");
         InsertTexture(11, "CEEX 101");
-        InsertTexture(12, "CNRC (Ex EARR)");
+        InsertTexture(12, "CNRC (Ex EARR)", LockoutGroup.CNRC);
     }
     public DieselDash839C(World world, double d, double d1, double d2){
         this(world);

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -26,7 +27,7 @@ public class DieselSW1 extends DieselTrain {
         InsertTexture(5, "WP");
         InsertTexture(6, "WP");
         InsertTexture(7, "Magnolia");
-        InsertTexture(8, "Carbondale & Pine Valley");
+        InsertTexture(8, "Carbondale & Pine Valley", LockoutGroup.CPV);
         InsertTexture(9, "DLMR");
         InsertTexture(10, "DLMR");
         InsertTexture(11, "POOP TRAIN RAILROAD");
@@ -36,7 +37,7 @@ public class DieselSW1 extends DieselTrain {
         InsertTexture(15, "NYC");
         InsertTexture(16, "ur mom");
         InsertTexture(17, "Deadwood & Northern (Ex FMSR)");
-        InsertTexture(18, "FMSR");
+        InsertTexture(18, "FMSR", LockoutGroup.FMSR);
         InsertTexture(19, "Pacific Electric / SP");
         InsertTexture(20, "Sacramento Northern / WP");
         InsertTexture(21, "FRLC");

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -17,7 +18,7 @@ public class DieselGPFDL extends DieselTrain {
     public DieselGPFDL(World world) {
         super(world, EnumTrains.GPFDL.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        InsertTexture(0, "North Fox (KIT-L, Big Canon)");
+        InsertTexture(0, "North Fox (KIT-L, Non Canon)", LockoutGroup.FNCC);
         InsertTexture(1, "Blandsville & Blankerston");
         InsertTexture(2, "Sacramento Northern (Ex FNCC 6&7)");
         InsertTexture(3, "Sacramento Northern (Ex FNCC 6&7)");

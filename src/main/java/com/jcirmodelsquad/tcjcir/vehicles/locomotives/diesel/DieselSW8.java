@@ -21,7 +21,7 @@ public class DieselSW8 extends DieselTrain {
         InsertTexture(1, "Blandsville & Blankerston");
         InsertTexture(2, "NYC");
         InsertTexture(3, "NYC");
-        InsertTexture(4, "Strasbooger/Strasboner/Strasburger/Strasburry Dough Boy");
+        InsertTexture(4, "Strasbooger/Strasboner/Strasburger/Strasburry Dough Boy");//if you change this i will end your life
         InsertTexture(5, "EMDX");
     }
     public DieselSW8(World world, double d, double d1, double d2){

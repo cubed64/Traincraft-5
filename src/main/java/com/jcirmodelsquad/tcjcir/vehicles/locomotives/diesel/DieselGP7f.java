@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -21,8 +22,8 @@ public class DieselGP7f extends DieselTrain {
         InsertTexture(1, "ARR 1807");
         InsertTexture(2, "ARR 1802");
         InsertTexture(3, "Blandsville & Blankerston");
-        InsertTexture(4, "Seattle & North Coast 401");
-        InsertTexture(5, "Seattle & North Coast 402");
+        InsertTexture(4, "SNCT 401 (Protolance)", LockoutGroup.SNCT);
+        InsertTexture(5, "SNCT 402 (Protolance)", LockoutGroup.SNCT);
     }
     public DieselGP7f(World world, double d, double d1, double d2){
         this(world);

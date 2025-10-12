@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -23,7 +24,7 @@ public class DieselRS1 extends DieselTrain {
         InsertTexture(3, "Blandsville & Blankerston");
         InsertTexture(4, "DLMR (Early)");
         InsertTexture(5, "DLMR (Late)");
-        InsertTexture(6, "FMSR");
+        InsertTexture(6, "FMSR", LockoutGroup.FMSR);
         InsertTexture(7, "ATSF");
         InsertTexture(8, "Glontch");
         InsertTexture(9, "AGW");

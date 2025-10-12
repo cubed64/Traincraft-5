@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -19,7 +20,7 @@ public class DieselSF30B extends DieselTrain {
         initLoco();
         InsertTexture(0, "Blandsville & Blankerston");
         InsertTexture(1, "MKM Leasing");
-        InsertTexture(2, "CNRC 1000 & 1001 (Ex MKM)");
+        InsertTexture(2, "CNRC 1000 & 1001 (Ex MKM)", LockoutGroup.CNRC);
         InsertTexture(3, "ATSF 7200 (Early)");
         InsertTexture(4, "ATSF 6149 (Mid)");
         InsertTexture(5, "ATSF 6419 (Late)");

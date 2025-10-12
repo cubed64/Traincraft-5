@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -19,8 +20,8 @@ public class DieselAC4400C extends DieselTrain {
         super(world, EnumTrains.AC4400C.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         InsertTexture(0, "Western Pacific");
-        InsertTexture(1, "North Fox (KIT-L)");
-        InsertTexture(2, "North Fox (KIT-80)");
+        InsertTexture(1, "North Fox (KIT-L)", LockoutGroup.FNCC);
+        InsertTexture(2, "North Fox (KIT-80)", LockoutGroup.FNCC);
         InsertTexture(3, "CEFX");
         InsertTexture(4, "Blandsville & Blankerston");
         InsertTexture(5, "NEP");

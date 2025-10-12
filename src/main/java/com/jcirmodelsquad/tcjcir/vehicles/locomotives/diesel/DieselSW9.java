@@ -16,7 +16,7 @@ import train.common.library.GuiIDs;
 
 public class DieselSW9 extends DieselTrain {
     public DieselSW9(World world) {
-        super(world, EnumTrains.SW900.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.SW9.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         InsertTexture(0, "Western Pacific (As delivered)");
         InsertTexture(1, "Western Pacific");

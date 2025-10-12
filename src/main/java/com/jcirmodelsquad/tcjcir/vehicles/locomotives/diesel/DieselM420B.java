@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -19,7 +20,7 @@ public class DieselM420B extends DieselTrain {
         initLoco();
         InsertTexture(0, "BCRail (Zig Zag)");
         InsertTexture(1, "COW (Calf)");
-        InsertTexture(2, "FNCC (KIT-L, Non Canon)");
+        InsertTexture(2, "FNCC (KIT-L, Non Canon)", LockoutGroup.FNCC);
     }
     public DieselM420B(World world, double d, double d1, double d2){
         this(world);

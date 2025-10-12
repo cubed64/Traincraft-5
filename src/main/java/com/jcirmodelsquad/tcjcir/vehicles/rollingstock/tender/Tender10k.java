@@ -12,6 +12,7 @@ import net.minecraftforge.fluids.FluidRegistry;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.Tender;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -29,10 +30,10 @@ public class Tender10k extends Tender implements IInventory {
         InsertTexture(4, "WPMW");
         InsertTexture(5, "DLMR Herald Logo");
         InsertTexture(6, "DLMR Text Logo");
-        InsertTexture(7, "FMSR 561");
-        InsertTexture(8, "FMSR 570");
-        InsertTexture(9, "FMSR 574");
-        InsertTexture(10, "FMSR 577");
+        InsertTexture(7, "FMSR 561", LockoutGroup.BIDA);
+        InsertTexture(8, "FMSR 570", LockoutGroup.BIDA);
+        InsertTexture(9, "FMSR 574", LockoutGroup.BIDA);
+        InsertTexture(10, "FMSR 577", LockoutGroup.BIDA);
 
     }
 

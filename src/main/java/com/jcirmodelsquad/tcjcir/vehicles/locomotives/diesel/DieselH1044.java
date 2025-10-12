@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -25,7 +26,7 @@ public class DieselH1044 extends DieselTrain {
         InsertTexture(5, "New York Central");
         InsertTexture(6, "Apache Railway");
         InsertTexture(7, "The Milwaukee Road");
-        InsertTexture(8, "Garry (The First FURRX Unit)");
+        InsertTexture(8, "Garry (The First FURRX Unit)", LockoutGroup.BIDA);
         InsertTexture(9, "Chicago Northwestern");
         InsertTexture(10, "Illinois Harbor Belt");
         InsertTexture(11, "Dee Dee Valley Railroad");

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -18,7 +19,7 @@ public class DieselGP38 extends DieselTrain {
         super(world, EnumTrains.GP38.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         InsertTexture(0, "Fox Union Rail Resources (FURRX)");
-        InsertTexture(1, "FNCC (GP38ac, Kit-L)");
+        InsertTexture(1, "FNCC (GP38ac, Kit-L)", LockoutGroup.FNCC);
         InsertTexture(2, "Blandsville & Blankerston");
         InsertTexture(3, "Nomansi & Eastern Pacific");
         InsertTexture(4, "Nomansi & Eastern Pacific (GP38R)");
@@ -27,8 +28,8 @@ public class DieselGP38 extends DieselTrain {
         InsertTexture(7, "ATSF (Kodachrome)");
         InsertTexture(8, "Penn Central");
         InsertTexture(9, "Great Lakes & Northern Territories");
-        InsertTexture(10, "Seattle & North Coast 301");
-        InsertTexture(11, "Seattle & North Coast 302");
+        InsertTexture(10, "SNCT 301 (Protolance)", LockoutGroup.SNCT);
+        InsertTexture(11, "SNCT 302 (Protolance)", LockoutGroup.SNCT);
         InsertTexture(12, "GLNT JCIR 6 years");
         InsertTexture(13, "ANW");
         InsertTexture(14, "ANW (Chevrons)");

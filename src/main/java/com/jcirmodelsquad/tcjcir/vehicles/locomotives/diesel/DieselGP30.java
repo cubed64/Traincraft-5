@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -28,7 +29,7 @@ public class DieselGP30 extends DieselTrain {
         InsertTexture(8, "UP");
         InsertTexture(9, "BN 2206");
         InsertTexture(10, "BN 2222");
-        InsertTexture(11, "FNCC 250");
+        InsertTexture(11, "FNCC 250", LockoutGroup.FNCC);
         InsertTexture(12, "OC&G 35");
         InsertTexture(13, "MAG 84");
         InsertTexture(14, "KCS i mean CGW");

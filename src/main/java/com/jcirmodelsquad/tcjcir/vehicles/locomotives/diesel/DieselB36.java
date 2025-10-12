@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -17,9 +18,9 @@ public class DieselB36 extends DieselTrain {
     public DieselB36(World world) {
         super(world, EnumTrains.B36.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        InsertTexture(0, "CNRC 7772 & 7773");
-        InsertTexture(1, "CNRC 7771");
-        InsertTexture(2, "CNRC 7774");
+        InsertTexture(0, "CNRC 7772 & 7773", LockoutGroup.CNRC);
+        InsertTexture(1, "CNRC 7771", LockoutGroup.CNRC);
+        InsertTexture(2, "CNRC 7774", LockoutGroup.CNRC);
         InsertTexture(3, "CSXT (Yn2)");
         InsertTexture(4, "CSXT (Yn1)");
         InsertTexture(5, "CSXT (Stealth)");

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -24,7 +25,7 @@ public class DieselU18B extends DieselTrain {
         InsertTexture(4, "Blandsville & Blankerston");
         InsertTexture(5, "Pickens Railway");
         InsertTexture(6, "CSXT MOW");
-        InsertTexture(7, "Carbondale & Pine Valley");
+        InsertTexture(7, "Carbondale & Pine Valley", LockoutGroup.CPV);
         InsertTexture(8, "West Creek Pacific");
         InsertTexture(9, "Seaboard Coast Line");
         InsertTexture(10, "Seaboard System");

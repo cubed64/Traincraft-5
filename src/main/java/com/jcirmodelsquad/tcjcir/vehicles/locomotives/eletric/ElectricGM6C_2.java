@@ -15,6 +15,7 @@ import train.common.Traincraft;
 import train.common.api.ElectricTrain;
 import train.common.entity.CargoManager;
 import train.common.entity.CargoSpecification;
+import train.common.enums.LockoutGroup;
 import train.common.library.GuiIDs;
 
 public class ElectricGM6C_2 extends ElectricTrain {
@@ -25,8 +26,8 @@ public class ElectricGM6C_2 extends ElectricTrain {
         InsertTexture(2, "Conrail");
         InsertTexture(3, "Norfolk Southern");
         InsertTexture(4, "Norfolk Southern (Later in Life)");
-        InsertTexture(5, "FNCC (KIT-Lm, Non Canon)");
-        InsertTexture(6, "FNCC E630 (TNRJ 6 Years Celebration Unit, Non Canon)");
+        InsertTexture(5, "FNCC (KIT-Lm, Non Canon)", LockoutGroup.FNCC);
+        InsertTexture(6, "FNCC E630 (TNRJ 6 Years Celebration Unit, Non Canon)", LockoutGroup.FNCC);
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Modelpanto_gm6c_down.class, "pantopart_gm6c",

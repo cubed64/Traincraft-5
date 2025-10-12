@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -21,14 +22,14 @@ public class DieselC424 extends DieselTrain {
         InsertTexture(1, "Morristown & Erie");
         InsertTexture(2, "Western New York & Pennsylvania");
         InsertTexture(3, "Washaska & Old Fox RR");
-        InsertTexture(4, "Latrans Range RR");
+        InsertTexture(4, "Latrans Range RR", LockoutGroup.LRR);
         InsertTexture(5, "NdeM");
         InsertTexture(6, "NdeM");
         InsertTexture(7, "Blandsville & Blankerston");
         InsertTexture(8, "Nautilus");
         InsertTexture(9, "Deadwood & La Mesa");
         InsertTexture(10, "Penn Central");
-        InsertTexture(11, "FNCC 2nd order(KIT-L)");
+        InsertTexture(11, "FNCC 2nd order(KIT-L)", LockoutGroup.FNCC);
         InsertTexture(12, "Burlington Northern");
         InsertTexture(13, "Great Lakes & Northern Territories");
     }

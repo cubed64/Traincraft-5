@@ -22,12 +22,12 @@ public class DieselSW1500 extends DieselTrain {
         InsertTexture(0, "Denver SUCK MY FUCKIN BALLS cock sucker island (stupid) mofo Volkswagon 1083 deez nuts express");
         InsertTexture(1, "Blandsville & Blankerston");
         InsertTexture(2, "Southern Pacific");
-        InsertTexture(3, "CFW 1136");
+        InsertTexture(3, "CFW 1136", LockoutGroup.BIDA);
         InsertTexture(4, "Penn Central");
         InsertTexture(5, "GM Demonstrator");
         InsertTexture(6, "BNSF H1");
-        InsertTexture(7, "FNCC (DRW)");
-        InsertTexture(8, "FNCC (KIT-L)");
+        InsertTexture(7, "FNCC (DRW)", LockoutGroup.FNCC);
+        InsertTexture(8, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(9, "Indiana Harbor Belt");
         InsertTexture(10, "Nomansi and Eastern Pacific? maybe?");
         InsertTexture(11, "CSXT (Yn3)");

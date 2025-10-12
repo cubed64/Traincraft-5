@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -18,7 +19,7 @@ public class DieselCF7angle2 extends DieselTrain {
     public DieselCF7angle2(World world) {
         super(world, EnumTrains.CF7angle2.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        InsertTexture(6, "CFW 1504");
+        InsertTexture(6, "CFW 1504", LockoutGroup.BIDA);
     }
     public DieselCF7angle2(World world, double d, double d1, double d2){
         this(world);

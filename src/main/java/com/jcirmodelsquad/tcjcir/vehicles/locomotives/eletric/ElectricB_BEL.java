@@ -9,13 +9,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.ElectricTrain;
+import train.common.enums.LockoutGroup;
 import train.common.library.GuiIDs;
 
 public class ElectricB_BEL extends ElectricTrain {
     public ElectricB_BEL(World world) {
         super(world);
         InsertTexture(0, "Blandsville & Blankerston");
-        InsertTexture(1, "FNCC (DAR80)");
+        InsertTexture(1, "FNCC (DAR80)", LockoutGroup.FNCC);
         InsertTexture(2, "Western Pacific");
         InsertTexture(3, "Norfolk Southern");
         InsertTexture(4, "FURRX");

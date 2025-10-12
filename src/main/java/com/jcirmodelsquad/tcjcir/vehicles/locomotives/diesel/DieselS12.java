@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -20,10 +21,10 @@ public class DieselS12 extends DieselTrain {
         initLoco();
         InsertTexture(0, "Amador Central Railroad");
         InsertTexture(1, "Blandsville & Blankerston");
-        InsertTexture(2, "Latrans Range Railroad");
+        InsertTexture(2, "Latrans Range Railroad", LockoutGroup.LRR);
         InsertTexture(3, "hamburger helper railroad");
         InsertTexture(4, "DDVR 30 & 31");
-        InsertTexture(5, "FMSR");
+        InsertTexture(5, "FMSR", LockoutGroup.FMSR);
         InsertTexture(6, "OC&G (Ex FMSR 164)");
         InsertTexture(7, "Monongahela");
         InsertTexture(8, "SP Tigerstripe");

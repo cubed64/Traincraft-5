@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -35,7 +36,7 @@ public class DieselGP40 extends DieselTrain {
         InsertTexture(15, "Western Maryland");
         InsertTexture(16, "Milwaukee Road");
         InsertTexture(17, "Milwaukee Road (Billboard)");
-        InsertTexture(18, "North Fox (Kit-80, Big Canon)");
+        InsertTexture(18, "North Fox (Kit-80)", LockoutGroup.FNCC);
         InsertTexture(19, "IC (Deathstar)");
         InsertTexture(20, "Falcon Commercial Railroad");
         InsertTexture(21, "SAMM");
