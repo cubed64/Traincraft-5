@@ -19,7 +19,7 @@ import train.common.core.util.TraincraftUtil;
 
 import java.lang.reflect.InvocationTargetException;
 
-public enum EnumTrains implements IEnumTrains
+public enum EnumTrains implements IEnumTrains, ITrainRecord
 {
 	/** Heritage*/
 	//CF7_H_Angle("CF7_H_Angle", DieselCF7_H_Angle.class, ItemIDs.minecartCF7_H_Angle.item, "diesel", 1500, 116, 0, 50,0,200,0.74,0.96,18000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Pink", "White", "Purple"}), 16, -2, (new String[] {"Heritage"})),
@@ -829,82 +829,5 @@ public enum EnumTrains implements IEnumTrains
 
 	public int getCargoCapacity(){
 		return cargoCapacity;
-	}
-
-	public static IEnumTrains getCurrentTrain(Item item)
-	{
-		if(item==null)return null;
-		for (EnumTrains trains : EnumTrains.values()) {
-			if(trains!=null && trains.getItem()!=null && trains.getItem() == item){
-				return trains;
-			}
-		}
-
-		for (EnumHeritageTrainsLegacy trains : EnumHeritageTrainsLegacy.values()) {
-			if(trains!=null && trains.getItem()!=null && trains.getItem() == item){
-				return trains;
-			}
-		}
-
-		return null;
-	}
-
-	public static AbstractTrains getEntityWithItem(Item item, World world, double x, double y, double z){
-		if(item==null)return null;
-		for (EnumTrains trains : EnumTrains.values()) {
-			if(trains!=null && trains.getItem()!=null && trains.getItem() == item){
-				return trains.getEntity(world, x, y, z);
-			}
-		}
-
-		for (EnumHeritageTrainsLegacy trains : EnumHeritageTrainsLegacy.values()) {
-			if(trains!=null && trains.getItem()!=null && trains.getItem() == item){
-				return trains.getEntity(world, x, y, z);
-			}
-		}
-
-		return null;
-	}
-
-	public AbstractTrains getEntity(World world){
-		try {
-			return (AbstractTrains) entityClass.getConstructor(World.class).newInstance(world);
-		} catch (IllegalArgumentException e) {
-			e.printStackTrace();
-		} catch (SecurityException e) {
-			e.printStackTrace();
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		} catch (InvocationTargetException e) {
-			e.printStackTrace();
-		} catch (NoSuchMethodException e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
-
-	public AbstractTrains getEntity(World world, double x, double y, double z){
-		try {
-			if(world.isRemote){
-				entityClass.getConstructor(World.class).newInstance(world);
-			} else {
-				return (AbstractTrains) entityClass.getConstructor(World.class, double.class, double.class, double.class).newInstance(world, x, y, z);
-			}
-		} catch (IllegalArgumentException e) {
-			e.printStackTrace();
-		} catch (SecurityException e) {
-			e.printStackTrace();
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		} catch (InvocationTargetException e) {
-			e.printStackTrace();
-		} catch (NoSuchMethodException e) {
-			e.printStackTrace();
-		}
-		return null;
 	}
 }

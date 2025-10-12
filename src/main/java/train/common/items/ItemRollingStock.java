@@ -347,39 +347,18 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
         }
     }
 
-    public EntityMinecart placeCart(EntityPlayer player, ItemStack itemstack, World world, int i, int j, int k) {
-        EntityRollingStock rollingStock = null;
-        for (EnumTrains train : EnumTrains.values()) {
-            if (train.getItem() == itemstack.getItem()) {
-                //System.out.println(train.getItem().getUnlocalizedName());
-                //System.out.println(world!=null);
-                rollingStock = (EntityRollingStock) train.getEntity(world, i + 0.5F, j + 0.5F, k + 0.5F);
-                if (train.getColors() != null) {
-                    if (rollingStock != null) {
-                        //rollingStock.setColor(AbstractTrains.getColorFromString(train.getColors()[0]));
-                        rollingStock.setColor((train.getColors()[0]));
-                    }
-                }
-
-                break;
+    public EntityMinecart placeCart(EntityPlayer player, ItemStack itemstack, World world, int i, int j, int k)
+    {
+        //System.out.println(train.getItem().getUnlocalizedName());
+        //System.out.println(world!=null);
+        ITrainRecord trainRecord = Traincraft.traincraftRegistry.getCurrentTrain(itemstack.getItem());
+        EntityRollingStock rollingStock = (EntityRollingStock) Traincraft.traincraftRegistry.getEntity(trainRecord.getEntityClass(), world, i + 0.5F, j + 0.5F, k + 0.5F);
+        if (trainRecord.getColors() != null) {
+            if (rollingStock != null) {
+                //rollingStock.setColor(AbstractTrains.getColorFromString(train.getColors()[0]));
+                rollingStock.setColor((trainRecord.getColors()[0]));
             }
         }
-        for (EnumHeritageTrainsLegacy train : EnumHeritageTrainsLegacy.values()) {
-            if (train.getItem() == itemstack.getItem()) {
-                //System.out.println(train.getItem().getUnlocalizedName());
-                //System.out.println(world!=null);
-                rollingStock = (EntityRollingStock) train.getEntity(world, i + 0.5F, j + 0.5F, k + 0.5F);
-                if (train.getColors() != null) {
-                    if (rollingStock != null) {
-                        //rollingStock.setColor(AbstractTrains.getColorFromString(train.getColors()[0]));
-                        rollingStock.setColor((train.getColors()[0]));
-                    }
-                }
-
-                break;
-            }
-        }
-
 
         if (rollingStock != null) {
             if (!world.isRemote) {

@@ -17,6 +17,7 @@ import train.common.core.network.PacketCargoSelection;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 import train.common.library.IEnumTrains;
+import train.common.library.ITrainRecord;
 
 import java.awt.*;
 import java.util.Collections;
@@ -30,7 +31,7 @@ import java.util.Collections;
 @SideOnly(Side.CLIENT)
 public class GuiCargoSelection extends GuiAbstractPaintbrush {
     private float yaw = 0;
-    private final IEnumTrains fakeTrain;
+    private final ITrainRecord fakeTrain;
     private final AbstractTrains[] renderEntities = new AbstractTrains[RESULTS_PER_PAGE];
     private GuiButtonPaintbrushMenu playPauseButton;
     private GuiButtonPaintbrushMenu lightControlButton;
@@ -48,9 +49,9 @@ public class GuiCargoSelection extends GuiAbstractPaintbrush {
      */
     public GuiCargoSelection(EntityPlayer editingPlayer, EntityRollingStock rollingStock) {
         super(editingPlayer, rollingStock);
-        fakeTrain = EnumTrains.getCurrentTrain(rollingStock.getCartItem().getItem());
+        fakeTrain = Traincraft.traincraftRegistry.getCurrentTrain(rollingStock.getCartItem().getItem());
         for (int i = 0; i < RESULTS_PER_PAGE; i++)
-            renderEntities[i] = fakeTrain.getEntity(Minecraft.getMinecraft().theWorld);
+            renderEntities[i] = Traincraft.traincraftRegistry.getEntity(fakeTrain.getEntityClass(), Minecraft.getMinecraft().theWorld);
         /* Need to re-run these even after calling super because cargo uses selectedOption for current page
          and super() uses selectedOption - 1. */
         currentPage = selectedOption / RESULTS_PER_PAGE;

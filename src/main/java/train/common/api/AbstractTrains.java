@@ -43,6 +43,7 @@ import train.common.items.ItemWrench;
 import train.common.library.EnumHeritageTrainsLegacy;
 import train.common.library.EnumTrains;
 import train.common.library.IEnumTrains;
+import train.common.library.ITrainRecord;
 import train.common.overlaytexture.OverlayTextureManager;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
@@ -82,7 +83,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	/**
 	 * A reference to EnumTrains containing all spec for this specific train
 	 */
-	protected IEnumTrains trainSpec;
+	protected ITrainRecord trainSpec;
 	private RenderEnum renderSpec;
 	/**
 	 * The name of the train based on the item name
@@ -231,41 +232,18 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		// Chunk loading by default should always be disabled when placing a locomotive
 		this.setFlag(7, false);
 
+		trainSpec = Traincraft.traincraftRegistry.getTrainRecord(this.getClass());
+		this.setDefaultMass(trainSpec.getMass());
 
-		for (EnumTrains trains : EnumTrains.values()) {
-			if (trains.getEntityClass().equals(this.getClass())) {
-				this.setDefaultMass(trains.getMass());
-				trainSpec = trains;
-				if (trains.getColors() != null) {
-					for (int i = 0; i < trains.getColors().length; i++) {
-						this.acceptedColors.add((trains.getColors()[i]));
-					}
-				}
-				this.setSize(0.98f, 1.98f);
-				this.setMinecartName(trainSpec.name());
-
-				break;
-			}
-		}
-
-		if (trainSpec == null)
+		if (trainSpec.getColors() != null)
 		{
-			for (EnumHeritageTrainsLegacy trains : EnumHeritageTrainsLegacy.values()) {
-				if (trains.getEntityClass().equals(this.getClass())) {
-					this.setDefaultMass(trains.getMass());
-					trainSpec = trains;
-					if (trains.getColors() != null) {
-						for (int i = 0; i < trains.getColors().length; i++) {
-							this.acceptedColors.add((trains.getColors()[i]));
-						}
-					}
-					this.setSize(0.98f, 1.98f);
-					this.setMinecartName(trainSpec.name());
-
-					break;
-				}
+			for (int i = 0; i < trainSpec.getColors().length; i++)
+			{
+				this.acceptedColors.add((trainSpec.getColors()[i]));
 			}
 		}
+		this.setSize(0.98f, 1.98f);
+		this.setMinecartName(trainSpec.name());
 
 		GetRenderSpec();
 	}
@@ -515,10 +493,13 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		}
 		dataWatcher.updateObject(12, color);
 	}*/
-	public void setColor(int color) {
-		if (EnumTrains.getCurrentTrain(getCartItem().getItem()).getColors()!=null){
-			if (color==-1 || !ArrayUtils.contains(EnumTrains.getCurrentTrain(getCartItem().getItem()).getColors(),(byte)color)) {
-				color = (EnumTrains.getCurrentTrain(getCartItem().getItem()).getColors()[0]);
+	public void setColor(int color)
+	{
+		int[] colors = Traincraft.traincraftRegistry.getCurrentTrain(getCartItem().getItem()).getColors();
+		if (colors != null)
+		{
+			if (color==-1 || !ArrayUtils.contains(colors,(byte)color)) {
+				color = (colors[0]);
 			}
 		}
 		dataWatcher.updateObject(12, color);

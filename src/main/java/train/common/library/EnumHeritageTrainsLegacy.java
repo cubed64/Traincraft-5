@@ -17,7 +17,7 @@ import train.common.entity.rollingStock.workcart.*;
 
 import java.lang.reflect.InvocationTargetException;
 
-public enum EnumHeritageTrainsLegacy implements IEnumTrains
+public enum EnumHeritageTrainsLegacy implements IEnumTrains, ITrainRecord
 {
     /**
      * Passengers
@@ -460,47 +460,5 @@ public enum EnumHeritageTrainsLegacy implements IEnumTrains
 
     public int getCargoCapacity(){
         return cargoCapacity;
-    }
-
-    public AbstractTrains getEntity(World world){
-        try {
-            return (AbstractTrains) entityClass.getConstructor(World.class).newInstance(world);
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    public AbstractTrains getEntity(World world, double x, double y, double z){
-        try {
-            if(world.isRemote){
-                entityClass.getConstructor(World.class).newInstance(world);
-            } else {
-                return (AbstractTrains) entityClass.getConstructor(World.class, double.class, double.class, double.class).newInstance(world, x, y, z);
-            }
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 }

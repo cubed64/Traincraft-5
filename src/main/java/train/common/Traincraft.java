@@ -37,6 +37,7 @@ import train.common.generation.WorldGenWorld;
 import train.common.items.TCItems;
 import train.common.library.BetterEnumSounds;
 import train.common.library.Info;
+import train.common.library.TraincraftRegistry;
 import train.common.recipes.AssemblyTableRecipes;
 import train.common.utils.lockout.ILockoutGroup;
 import train.common.utils.lockout.LockoutPermissionsUtil;
@@ -57,6 +58,7 @@ public class Traincraft {
 	public static CommonProxy proxy;
 
 	public static final LockoutPermissionsUtil lockoutPermissionsUtil = new LockoutPermissionsUtil();
+	public static final TraincraftRegistry traincraftRegistry = new TraincraftRegistry();
 
 	/* TrainCraft Logger */
 	public static Logger tcLog = LogManager.getLogger(Info.modName);

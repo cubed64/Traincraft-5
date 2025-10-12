@@ -18,10 +18,7 @@ import train.common.api.AbstractTrains;
 import train.common.api.EntityRollingStock;
 import train.common.core.handlers.ConfigHandler;
 import train.common.core.network.PacketPaintbrushColor;
-import train.common.library.EnumTrains;
-import train.common.library.GuiIDs;
-import train.common.library.IEnumTrains;
-import train.common.library.Info;
+import train.common.library.*;
 
 import java.awt.*;
 import java.util.Collections;
@@ -75,7 +72,7 @@ public class GuiPaintbrushMenu extends GuiScreen {
     private int optionsOnCurrentPage;
     private final int totalOptions;
     private int currentPage = 0;
-    private final IEnumTrains fakeTrain;
+    private final ITrainRecord fakeTrain;
     private final AbstractTrains renderEntity;
     private boolean doAnimation;
 
@@ -87,7 +84,7 @@ public class GuiPaintbrushMenu extends GuiScreen {
     public GuiPaintbrushMenu(EntityPlayer editingPlayer, EntityRollingStock rollingStock) {
         this.editingPlayer = editingPlayer;
         this.rollingStock = rollingStock;
-        fakeTrain = EnumTrains.getCurrentTrain(rollingStock.getCartItem().getItem());
+        fakeTrain = Traincraft.traincraftRegistry.getCurrentTrain(rollingStock.getCartItem().getItem());
         totalOptions = fakeTrain.getColors().length;
         for (int i = 0; i < totalOptions; i++) { // Set page to the page with the currently selected texture.
             if (fakeTrain.getColors()[i] == rollingStock.getColor()) {
@@ -95,7 +92,7 @@ public class GuiPaintbrushMenu extends GuiScreen {
                 break;
             }
         }
-        renderEntity = fakeTrain.getEntity(Minecraft.getMinecraft().theWorld);
+        renderEntity = Traincraft.traincraftRegistry.getEntity(fakeTrain.getEntityClass(), Minecraft.getMinecraft().theWorld);
         optionsOnCurrentPage = Math.min(RESULTS_PER_PAGE, totalOptions - currentPage * RESULTS_PER_PAGE);
         hasNextPage = optionsOnCurrentPage + RESULTS_PER_PAGE * currentPage < totalOptions;
         doAnimation = !ConfigHandler.DISABLE_PAINTBRUSH_GUI_ANIMATION;

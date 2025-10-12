@@ -4,7 +4,7 @@ import net.minecraft.item.Item;
 import net.minecraft.world.World;
 import train.common.api.AbstractTrains;
 
-public interface IEnumTrains
+public interface ITrainRecord
 {
     String getInternalName();
 
@@ -43,4 +43,5 @@ public interface IEnumTrains
     int getCargoCapacity();
 
     String name();
+
 }

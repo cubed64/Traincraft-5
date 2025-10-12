@@ -12,15 +12,13 @@ import train.client.gui.sideTabs.SideTabInfo;
 import train.client.gui.sideTabs.SideTabRecipes;
 import train.client.gui.sideTabs.SideTabSlots;
 import train.client.render.RenderRollingStock;
+import train.common.Traincraft;
 import train.common.api.AbstractTrains;
 import train.common.containers.ContainerTier;
 import train.common.core.interfaces.ITier;
 import train.common.core.managers.TierRecipe;
 import train.common.core.managers.TierRecipeManager;
-import train.common.library.EnumTrains;
-import train.common.library.IEnumTrains;
-import train.common.library.Info;
-import train.common.library.ItemIDs;
+import train.common.library.*;
 
 import java.util.List;
 
@@ -119,9 +117,9 @@ public class GuiCrafterTier extends GuiTraincraft {
 				GL11.glTranslatef(guiLeft-70, this.guiTop+170, 350);
 				RenderHelper.enableGUIStandardItemLighting();
 				Item item = currentKnownItem;
-				IEnumTrains train = EnumTrains.getCurrentTrain(item);
-				if(EnumTrains.getEntityWithItem(item, this.mc.theWorld, 0, 0, 0)!=null && !Item.itemRegistry.getNameForObject(item).equals(Item.itemRegistry.getNameForObject(previousItem))){
-					renderEntity = EnumTrains.getEntityWithItem(item, this.mc.theWorld, 0, 0, 0);
+				ITrainRecord train = Traincraft.traincraftRegistry.getCurrentTrain(item);
+				if(Traincraft.traincraftRegistry.getEntityWithItem(item, this.mc.theWorld, 0, 0, 0)!=null && !Item.itemRegistry.getNameForObject(item).equals(Item.itemRegistry.getNameForObject(previousItem))){
+					renderEntity = Traincraft.traincraftRegistry.getEntityWithItem(item, this.mc.theWorld, 0, 0, 0);
 					previousItem = item;
 				}
 				if(train.getColors()!=null){

@@ -9,7 +9,7 @@ import train.common.entity.rollingStock.diesel.*;
 import train.common.entity.rollingStock.electric.*;
 import train.common.entity.rollingStock.steam.*;
 
-public enum EnumSounds {
+public enum EnumSounds implements TrainSoundRecord {
 
     //TC DIESEL & ELECTRIC//
 	locoDieselKof_DB(EntityLocoDieselKof_DB.class, "chme3_horn", 0.8F, "chme3_idle", 0.65F, 40, "chme3_idle", 0.65F, 40, false, " ", 0),
