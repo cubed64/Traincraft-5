@@ -12,6 +12,7 @@ import net.minecraftforge.fluids.FluidRegistry;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.Tender;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -22,17 +23,17 @@ public class Tender10k extends Tender implements IInventory {
     public Tender10k(World world) {
         super(world, FluidRegistry.WATER, 0, EnumTrains.Tender10k.getTankCapacity(), LiquidManager.WATER_FILTER);
         initFreightTender();
-        textureDescriptionMap.put(0, "Blank");
-        textureDescriptionMap.put(1, "Spoof");
-        textureDescriptionMap.put(2, "WP");
-        textureDescriptionMap.put(3, "NEP-WP 334 aux tender");
-        textureDescriptionMap.put(4, "WPMW");
-        textureDescriptionMap.put(5, "DLMR Herald Logo");
-        textureDescriptionMap.put(6, "DLMR Text Logo");
-        textureDescriptionMap.put(7, "FMSR 561");
-        textureDescriptionMap.put(8, "FMSR 570");
-        textureDescriptionMap.put(9, "FMSR 574");
-        textureDescriptionMap.put(10, "FMSR 577");
+        InsertTexture(0, "Blank");
+        InsertTexture(1, "Spoof");
+        InsertTexture(2, "WP");
+        InsertTexture(3, "NEP-WP 334 aux tender");
+        InsertTexture(4, "WPMW");
+        InsertTexture(5, "DLMR Herald Logo");
+        InsertTexture(6, "DLMR Text Logo");
+        InsertTexture(7, "FMSR 561", LockoutGroup.BIDA);
+        InsertTexture(8, "FMSR 570", LockoutGroup.BIDA);
+        InsertTexture(9, "FMSR 574", LockoutGroup.BIDA);
+        InsertTexture(10, "FMSR 577", LockoutGroup.BIDA);
 
     }
 

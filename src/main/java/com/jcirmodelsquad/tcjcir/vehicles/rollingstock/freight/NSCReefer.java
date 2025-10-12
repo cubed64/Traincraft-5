@@ -18,9 +18,9 @@ public class NSCReefer extends Freight implements IInventory {
     public NSCReefer(World world) {
         super(world);
         initFreightCart();
-        textureDescriptionMap.put(0, "CP Script");
-        textureDescriptionMap.put(1, "PIX Generic Express Baggage (NOT A REEFER)");
-        textureDescriptionMap.put(2, "DLMR");
+        InsertTexture(0, "CP Script");
+        InsertTexture(1, "PIX Generic Express Baggage (NOT A REEFER)");
+        InsertTexture(2, "DLMR");
     }
 
     public NSCReefer(World world, double d, double d1, double d2){

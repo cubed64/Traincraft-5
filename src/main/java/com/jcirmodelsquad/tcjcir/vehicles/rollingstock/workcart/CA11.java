@@ -12,16 +12,16 @@ public class CA11 extends AbstractWorkCart
 {
     public CA11(World world) {
         super(world);
-        textureDescriptionMap.put(0, "UP");
-        textureDescriptionMap.put(1, "WP");
-        textureDescriptionMap.put(2, "FNCC (Regal)");
-        textureDescriptionMap.put(3, "Generic");
-        textureDescriptionMap.put(4, "GLC");
-        textureDescriptionMap.put(5, "GLNT");
-        textureDescriptionMap.put(6, "CNCR C1-C5");
-        textureDescriptionMap.put(7, "");
-        textureDescriptionMap.put(8, "");
-        textureDescriptionMap.put(9, "");
+        InsertTexture(0, "UP");
+        InsertTexture(1, "WP");
+        InsertTexture(2, "FNCC (Regal)");
+        InsertTexture(3, "Generic");
+        InsertTexture(4, "GLC");
+        InsertTexture(5, "GLNT");
+        InsertTexture(6, "CNCR C1-C5");
+        InsertTexture(7, "");
+        InsertTexture(8, "");
+        InsertTexture(9, "");
     }
 
     public CA11(World world, double posX, double posY, double posZ)

@@ -47,19 +47,19 @@ public class gsco52millgon extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "BN");
-        textureDescriptionMap.put(1, "CB&Q (Green)");
-        textureDescriptionMap.put(2, "CB&Q (Red)");
-        textureDescriptionMap.put(3, "CB&Q (Brown)");
-        textureDescriptionMap.put(4, "AA");
-        textureDescriptionMap.put(5, "Generic Black");
-        textureDescriptionMap.put(6, "Generic Boxcar Red");
-        textureDescriptionMap.put(7, "NYC");
-        textureDescriptionMap.put(8, "Erie");
-        textureDescriptionMap.put(9, "EL");
-        textureDescriptionMap.put(10, "SLSF (Brown)");
-        textureDescriptionMap.put(11, "SLSF (Black)");
-        textureDescriptionMap.put(12, "RI");
+        InsertTexture(0, "BN");
+        InsertTexture(1, "CB&Q (Green)");
+        InsertTexture(2, "CB&Q (Red)");
+        InsertTexture(3, "CB&Q (Brown)");
+        InsertTexture(4, "AA");
+        InsertTexture(5, "Generic Black");
+        InsertTexture(6, "Generic Boxcar Red");
+        InsertTexture(7, "NYC");
+        InsertTexture(8, "Erie");
+        InsertTexture(9, "EL");
+        InsertTexture(10, "SLSF (Brown)");
+        InsertTexture(11, "SLSF (Black)");
+        InsertTexture(12, "RI");
     }
 
     @Override

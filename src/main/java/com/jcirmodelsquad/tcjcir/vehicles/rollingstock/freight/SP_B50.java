@@ -24,16 +24,16 @@ public class SP_B50 extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "B-50-15 SP As-Delivered");
-        textureDescriptionMap.put(1, "B-50-15 MT&L As-Delivered");
-        textureDescriptionMap.put(2, "B-50-15 SP Steelsides");
-        textureDescriptionMap.put(3, "B-50-15 SP OVERNIGHT Scheme");
-        textureDescriptionMap.put(4, "B-50-15 SP Head-End Car");
-        textureDescriptionMap.put(5, "B-50-16 SP As-Delivered");
-        textureDescriptionMap.put(6, "B-50-16 SD&AE");
-        textureDescriptionMap.put(7, "B-50-15 Steelsides Blank");
-        textureDescriptionMap.put(8, "B-50-16 Blank");
-        textureDescriptionMap.put(9, "B-50-15 Blank");
+        InsertTexture(0, "B-50-15 SP As-Delivered");
+        InsertTexture(1, "B-50-15 MT&L As-Delivered");
+        InsertTexture(2, "B-50-15 SP Steelsides");
+        InsertTexture(3, "B-50-15 SP OVERNIGHT Scheme");
+        InsertTexture(4, "B-50-15 SP Head-End Car");
+        InsertTexture(5, "B-50-16 SP As-Delivered");
+        InsertTexture(6, "B-50-16 SD&AE");
+        InsertTexture(7, "B-50-15 Steelsides Blank");
+        InsertTexture(8, "B-50-16 Blank");
+        InsertTexture(9, "B-50-15 Blank");
     }
 
     @Override

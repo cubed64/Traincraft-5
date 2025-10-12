@@ -21,16 +21,16 @@ public class NATX30600 extends LiquidTank {
     public NATX30600(World world) {
         super(world, EnumTrains.NATX30600.getTankCapacity());
         initFreightWater();
-        textureDescriptionMap.put(0, "NATX");
-        textureDescriptionMap.put(1, "NATX (National Byproducts)");
-        textureDescriptionMap.put(2, "NATX (Monoco)");
-        textureDescriptionMap.put(3, "NATX (America's 100 Years Bicentennial)");
-        textureDescriptionMap.put(4, "NATX (Cider something)");
-        textureDescriptionMap.put(5, "NATX (Indiana Trash Society)");
-        textureDescriptionMap.put(6, "Magnolia");
-        textureDescriptionMap.put(7, "CCOX");
-        textureDescriptionMap.put(8, "PCTX PENN CENTRAL WOO OH YEAH WOO");
-        textureDescriptionMap.put(9, "DLMR");
+        InsertTexture(0, "NATX");
+        InsertTexture(1, "NATX (National Byproducts)");
+        InsertTexture(2, "NATX (Monoco)");
+        InsertTexture(3, "NATX (America's 100 Years Bicentennial)");
+        InsertTexture(4, "NATX (Cider something)");
+        InsertTexture(5, "NATX (Indiana Trash Society)");
+        InsertTexture(6, "Magnolia");
+        InsertTexture(7, "CCOX");
+        InsertTexture(8, "PCTX PENN CENTRAL WOO OH YEAH WOO");
+        InsertTexture(9, "DLMR");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Modelhazmat_plac_natx30600.class, "loads/hazmat_plac_flammable_number",

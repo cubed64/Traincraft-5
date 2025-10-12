@@ -214,13 +214,13 @@ public class GSC60FootFlat extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "GN");
-        textureDescriptionMap.put(1, "ICG");
-        textureDescriptionMap.put(2, "UP");
-        textureDescriptionMap.put(3, "MP/UP MOW");
-        textureDescriptionMap.put(4, "ATSF");
-        textureDescriptionMap.put(5, "BN");
-        textureDescriptionMap.put(6, "BN (Crooked Letters)");
+        InsertTexture(0, "GN");
+        InsertTexture(1, "ICG");
+        InsertTexture(2, "UP");
+        InsertTexture(3, "MP/UP MOW");
+        InsertTexture(4, "ATSF");
+        InsertTexture(5, "BN");
+        InsertTexture(6, "BN (Crooked Letters)");
     }
 
     @Override

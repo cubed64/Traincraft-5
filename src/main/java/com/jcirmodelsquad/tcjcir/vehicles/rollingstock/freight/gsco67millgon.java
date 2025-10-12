@@ -23,15 +23,15 @@ public class gsco67millgon extends Freight implements IInventory {
     public gsco67millgon(World world) {
         super(world);
         initFreightCart();
-        textureDescriptionMap.put(0, "Generic Red");
-        textureDescriptionMap.put(1, "Generic Green");
-        textureDescriptionMap.put(2, "WP");
-        textureDescriptionMap.put(3, "Magnolia");
-        textureDescriptionMap.put(4, "FNCC");
-        textureDescriptionMap.put(5, "DN");
-        textureDescriptionMap.put(6, "DLMR");
-        textureDescriptionMap.put(7, "GLNT");
-        textureDescriptionMap.put(8, "GLONTCHJ 2");
+        InsertTexture(0, "Generic Red");
+        InsertTexture(1, "Generic Green");
+        InsertTexture(2, "WP");
+        InsertTexture(3, "Magnolia");
+        InsertTexture(4, "FNCC");
+        InsertTexture(5, "DN");
+        InsertTexture(6, "DLMR");
+        InsertTexture(7, "GLNT");
+        InsertTexture(8, "GLONTCHJ 2");
 
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Modelgondola_load_flat_aggregates_large.class, "loads/gondola_load_flat_aggregates_medium_dort",

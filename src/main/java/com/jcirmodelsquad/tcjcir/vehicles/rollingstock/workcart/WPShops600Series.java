@@ -8,10 +8,10 @@ public class WPShops600Series extends AbstractWorkCart
 {
     public WPShops600Series(World world) {
         super(world);
-        textureDescriptionMap.put(0, "WP");
-        textureDescriptionMap.put(1, "WP");
-        textureDescriptionMap.put(2, "WP MOW");
-        textureDescriptionMap.put(3, "SN");
+        InsertTexture(0, "WP");
+        InsertTexture(1, "WP");
+        InsertTexture(2, "WP MOW");
+        InsertTexture(3, "SN");
     }
 
     public WPShops600Series(World world, double posX, double posY, double posZ)

@@ -24,15 +24,15 @@ public class R70Reefer2 extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "Blandsville Fruit Express");
-        textureDescriptionMap.put(1, "NPM");
-        textureDescriptionMap.put(2, "SOO");
-        textureDescriptionMap.put(3, "PFE (R-70-15)");
-        textureDescriptionMap.put(4, "PFE (R-10-19)");
-        textureDescriptionMap.put(5, "BNFE");
-        textureDescriptionMap.put(6, "MKT (BKTY)");
-        textureDescriptionMap.put(7, "ARMN (MP/NW)");
-        textureDescriptionMap.put(8, "EL");
+        InsertTexture(0, "Blandsville Fruit Express");
+        InsertTexture(1, "NPM");
+        InsertTexture(2, "SOO");
+        InsertTexture(3, "PFE (R-70-15)");
+        InsertTexture(4, "PFE (R-10-19)");
+        InsertTexture(5, "BNFE");
+        InsertTexture(6, "MKT (BKTY)");
+        InsertTexture(7, "ARMN (MP/NW)");
+        InsertTexture(8, "EL");
     }
 
     @Override

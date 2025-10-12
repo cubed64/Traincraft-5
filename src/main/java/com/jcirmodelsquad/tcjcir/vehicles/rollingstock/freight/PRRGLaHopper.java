@@ -24,12 +24,12 @@ public class PRRGLaHopper extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "PRR");
-        textureDescriptionMap.put(1, "NYC");
-        textureDescriptionMap.put(2, "PRR MOW");
-        textureDescriptionMap.put(3, "PRR MOW");
-        textureDescriptionMap.put(4, "NEP");
-        textureDescriptionMap.put(5, "NEP NOW");
+        InsertTexture(0, "PRR");
+        InsertTexture(1, "NYC");
+        InsertTexture(2, "PRR MOW");
+        InsertTexture(3, "PRR MOW");
+        InsertTexture(4, "NEP");
+        InsertTexture(5, "NEP NOW");
     }
 
     @Override

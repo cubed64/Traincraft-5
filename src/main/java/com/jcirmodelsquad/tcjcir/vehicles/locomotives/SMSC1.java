@@ -3,6 +3,7 @@ package com.jcirmodelsquad.tcjcir.vehicles.locomotives;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.AbstractTankSlug;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 
 public class SMSC1 extends AbstractTankSlug
@@ -10,7 +11,7 @@ public class SMSC1 extends AbstractTankSlug
     public SMSC1(World world)
     {
         super(world, EnumTrains.SMSC1);
-        textureDescriptionMap.put(0, "FNCC S99 (KIT-L, Dual Canon)");
+        InsertTexture(0, "FNCC S99 (KIT-L)", LockoutGroup.FNCC);
     }
 
     public SMSC1(World world, double d, double d1, double d2)

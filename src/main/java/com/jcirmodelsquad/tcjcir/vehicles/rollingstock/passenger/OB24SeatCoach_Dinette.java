@@ -8,12 +8,12 @@ public class OB24SeatCoach_Dinette extends AbstractPassengerCar
 
 	public OB24SeatCoach_Dinette(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "BAR (150)");
-		textureDescriptionMap.put(1, "BAR (151)");
-		textureDescriptionMap.put(2, "BAR (152)");
-		textureDescriptionMap.put(3, "BAR (Semi-Fictional)");
-		textureDescriptionMap.put(4, "BAR (150-151, Grey and Sapphire)");
-		textureDescriptionMap.put(5, "BAR (152, Grey and Sapphire, Aroostook Flyer)");
+		InsertTexture(0, "BAR (150)");
+		InsertTexture(1, "BAR (151)");
+		InsertTexture(2, "BAR (152)");
+		InsertTexture(3, "BAR (Semi-Fictional)");
+		InsertTexture(4, "BAR (150-151, Grey and Sapphire)");
+		InsertTexture(5, "BAR (152, Grey and Sapphire, Aroostook Flyer)");
 	}
 
 	public OB24SeatCoach_Dinette(World world, double posX, double posY, double posZ)

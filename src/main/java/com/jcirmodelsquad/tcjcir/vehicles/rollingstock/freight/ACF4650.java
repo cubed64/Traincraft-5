@@ -24,32 +24,32 @@ public class ACF4650 extends AbstractStandardFreightCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "BN");
-		textureDescriptionMap.put(1, "BN (ex FWD)");
-		textureDescriptionMap.put(2, "BN (ex GN/NP)");
-		textureDescriptionMap.put(3, "ACFX (Blue Swaws)");
-		textureDescriptionMap.put(4, "BB (1964-1965)");
-		textureDescriptionMap.put(5, "BB (1966-1970)");
-		textureDescriptionMap.put(6, "BB (1970+)");
-		textureDescriptionMap.put(7, "LRR");
-		textureDescriptionMap.put(8, "WP (Early)");
-		textureDescriptionMap.put(9, "GN (Early)");
-		textureDescriptionMap.put(10, "GN (BSB)");
-		textureDescriptionMap.put(11, "Far-Mar CO-OP");
-		textureDescriptionMap.put(12, "SP (H-100-12)");
-		textureDescriptionMap.put(13, "SP (H-100-18)");
-		textureDescriptionMap.put(14, "SP (H-100-39)");
-		textureDescriptionMap.put(15, "MRL");
-		textureDescriptionMap.put(16, "NS");
-		textureDescriptionMap.put(17, "SNEEDY");
-		textureDescriptionMap.put(18, "SOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOup");
-		textureDescriptionMap.put(19, "Washington Grain Train");
-		textureDescriptionMap.put(20, "Washington Grain Train (Stale)");
-		textureDescriptionMap.put(21, "AD&N");
-		textureDescriptionMap.put(22, "Cornhub");
-		textureDescriptionMap.put(23, "NP");
-		textureDescriptionMap.put(24, "NYC");
-		textureDescriptionMap.put(25, "GLNT");
+		InsertTexture(0, "BN");
+		InsertTexture(1, "BN (ex FWD)");
+		InsertTexture(2, "BN (ex GN/NP)");
+		InsertTexture(3, "ACFX (Blue Swaws)");
+		InsertTexture(4, "BB (1964-1965)");
+		InsertTexture(5, "BB (1966-1970)");
+		InsertTexture(6, "BB (1970+)");
+		InsertTexture(7, "LRR");
+		InsertTexture(8, "WP (Early)");
+		InsertTexture(9, "GN (Early)");
+		InsertTexture(10, "GN (BSB)");
+		InsertTexture(11, "Far-Mar CO-OP");
+		InsertTexture(12, "SP (H-100-12)");
+		InsertTexture(13, "SP (H-100-18)");
+		InsertTexture(14, "SP (H-100-39)");
+		InsertTexture(15, "MRL");
+		InsertTexture(16, "NS");
+		InsertTexture(17, "SNEEDY");
+		InsertTexture(18, "SOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOup");
+		InsertTexture(19, "Washington Grain Train");
+		InsertTexture(20, "Washington Grain Train (Stale)");
+		InsertTexture(21, "AD&N");
+		InsertTexture(22, "Cornhub");
+		InsertTexture(23, "NP");
+		InsertTexture(24, "NYC");
+		InsertTexture(25, "GLNT");
 	}
 
 	@Override

@@ -8,9 +8,9 @@ public class PSCEI1DR_28SeatParlor_Observation extends AbstractPassengerCar {
 	public PSCEI1DR_28SeatParlor_Observation(World world)
 	{
 		super(world);
-		textureDescriptionMap.put(0, "C&EI (As Delivered)");
-		textureDescriptionMap.put(1, "C&EI");
-		textureDescriptionMap.put(2, "GC&M");
+		InsertTexture(0, "C&EI (As Delivered)");
+		InsertTexture(1, "C&EI");
+		InsertTexture(2, "GC&M");
 	}
 
 	public PSCEI1DR_28SeatParlor_Observation(World world, double posX, double posY, double posZ)

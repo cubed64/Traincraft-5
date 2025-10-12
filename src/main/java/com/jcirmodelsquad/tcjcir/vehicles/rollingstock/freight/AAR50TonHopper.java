@@ -33,9 +33,9 @@ public class AAR50TonHopper extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "L&NE");
-        textureDescriptionMap.put(1, "ATSF");
-        textureDescriptionMap.put(2, "AGW");
+        InsertTexture(0, "L&NE");
+        InsertTexture(1, "ATSF");
+        InsertTexture(2, "AGW");
     }
 
     @Override

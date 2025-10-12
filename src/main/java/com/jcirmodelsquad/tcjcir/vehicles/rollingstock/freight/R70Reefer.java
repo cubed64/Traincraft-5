@@ -24,29 +24,29 @@ public class R70Reefer extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "PFE (White W/ Orange Logo)");
-        textureDescriptionMap.put(1, "Blandsville Fruit Exprees");
-        textureDescriptionMap.put(2, "FNCC");
-        textureDescriptionMap.put(3, "BNFE (White)");
-        textureDescriptionMap.put(4, "BNFE (Yellow)");
-        textureDescriptionMap.put(5, "BNFE (Yellow but with a white roof for some reason)");
-        textureDescriptionMap.put(6, "PFE (Orange)");
-        textureDescriptionMap.put(7, "MILW");
-        textureDescriptionMap.put(8, "SOO");
-        textureDescriptionMap.put(9, "Railway Express Agency");
-        textureDescriptionMap.put(10, "UPFE");
-        textureDescriptionMap.put(11, "UPFE (post 1970 roof)");
-        textureDescriptionMap.put(12, "PFE (post 1970 roof)");
-        textureDescriptionMap.put(13, "NPM (foobie)");
-        textureDescriptionMap.put(14, "Golden West");
-        textureDescriptionMap.put(15, "Golden West (post 1970 roof)");
-        textureDescriptionMap.put(16, "BAR early");
-        textureDescriptionMap.put(17, "BAR Late");
-        textureDescriptionMap.put(18, "ATSF As-delivered");
-        textureDescriptionMap.put(19, "ATSF Late");
-        textureDescriptionMap.put(20, "WP Ice Service");
-        textureDescriptionMap.put(21, "FGE (Real Cold)");
-        textureDescriptionMap.put(22, "GCM");
+        InsertTexture(0, "PFE (White W/ Orange Logo)");
+        InsertTexture(1, "Blandsville Fruit Exprees");
+        InsertTexture(2, "FNCC");
+        InsertTexture(3, "BNFE (White)");
+        InsertTexture(4, "BNFE (Yellow)");
+        InsertTexture(5, "BNFE (Yellow but with a white roof for some reason)");
+        InsertTexture(6, "PFE (Orange)");
+        InsertTexture(7, "MILW");
+        InsertTexture(8, "SOO");
+        InsertTexture(9, "Railway Express Agency");
+        InsertTexture(10, "UPFE");
+        InsertTexture(11, "UPFE (post 1970 roof)");
+        InsertTexture(12, "PFE (post 1970 roof)");
+        InsertTexture(13, "NPM (foobie)");
+        InsertTexture(14, "Golden West");
+        InsertTexture(15, "Golden West (post 1970 roof)");
+        InsertTexture(16, "BAR early");
+        InsertTexture(17, "BAR Late");
+        InsertTexture(18, "ATSF As-delivered");
+        InsertTexture(19, "ATSF Late");
+        InsertTexture(20, "WP Ice Service");
+        InsertTexture(21, "FGE (Real Cold)");
+        InsertTexture(22, "GCM");
     }
 
     @Override

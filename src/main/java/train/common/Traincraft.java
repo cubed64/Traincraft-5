@@ -1,7 +1,5 @@
 package train.common;
 
-import com.jcirmodelsquad.tcjcir.extras.JCIRQuote;
-import com.jcirmodelsquad.tcjcir.extras.QuoteList;
 import com.jcirmodelsquad.tcjcir.features.signal.dynamic.TrainTalk;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Loader;
@@ -14,11 +12,8 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.VillagerRegistry;
-import net.minecraft.command.CommandBase;
-import net.minecraft.command.ICommandSender;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.MapGenVillage;
@@ -29,6 +24,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import train.common.api.LiquidManager;
 import train.common.blocks.TCBlocks;
+import train.common.commands.lockout.tcAddUserToSkinGroup;
+import train.common.commands.lockout.tcSetSkinGroupOwner;
+import train.common.commands.tcAdminPerm;
+import train.common.commands.lockout.tcRemoveUserFromSkinGroup;
 import train.common.core.CommonProxy;
 import train.common.core.creativetab.*;
 import train.common.core.TrainModCore;
@@ -39,10 +38,12 @@ import train.common.items.TCItems;
 import train.common.library.BetterEnumSounds;
 import train.common.library.Info;
 import train.common.recipes.AssemblyTableRecipes;
+import train.common.utils.lockout.ILockoutGroup;
+import train.common.utils.lockout.LockoutPermissionsUtil;
 
 import java.io.File;
 import java.util.Arrays;
-import java.util.Random;
+import java.util.HashMap;
 
 @Mod(modid = Info.modID, name = Info.modName, version = Info.modVersion)
 public class Traincraft {
@@ -54,6 +55,8 @@ public class Traincraft {
 	/* TrainCraft proxy files */
 	@SidedProxy(clientSide = "train.client.core.ClientProxy", serverSide = "train.common.core.CommonProxy")
 	public static CommonProxy proxy;
+
+	public static final LockoutPermissionsUtil lockoutPermissionsUtil = new LockoutPermissionsUtil();
 
 	/* TrainCraft Logger */
 	public static Logger tcLog = LogManager.getLogger(Info.modName);
@@ -88,6 +91,8 @@ public class Traincraft {
 	public static SimpleNetworkWrapper remoteControlKey = NetworkRegistry.INSTANCE.newSimpleChannel("RemoteControl");
 	public static SimpleNetworkWrapper brakeUpdateFromServer = NetworkRegistry.INSTANCE.newSimpleChannel("BUpdateFromServer");
 	public static SimpleNetworkWrapper updateEtiChannel = NetworkRegistry.INSTANCE.newSimpleChannel("UpdateETI");
+
+	public static SimpleNetworkWrapper lockoutCommChannel;
 
 	/*public static  SimpleNetworkWrapper itsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("TransmitterSpeed");
 //public static  SimpleNetworkWrapper mtcsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MTCSysSetSpeed");
@@ -131,12 +136,21 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		tcLog.info("Initialize blocks, items, and other stuff");
 		tcTab = new CreativeTabTraincraft(CreativeTabs.getNextID(), "Traincraft");
 		tcHeritageTab = new CreativeTabTraincraftHeritage(CreativeTabs.getNextID(), "Traincraft Heritage");
-		tcSteamTab = new CreativeTabTraincraftSteam(CreativeTabs.getNextID(), "BAP Steam");
-		tcDieselTab = new CreativeTabTraincraftDiesel(CreativeTabs.getNextID(), "BAP Diesel");
-		tcElectricTab = new CreativeTabTraincraftElectric(CreativeTabs.getNextID(), "BAP Electric");
-		tcPassengerTab = new CreativeTabTraincraftPassenger(CreativeTabs.getNextID(), "BAP Passenger");
-		tcFreightTab = new CreativeTabTraincraftFreight(CreativeTabs.getNextID(), "BAP Freight");
-		tcBooseTab = new CreativeTabTraincraftBoose(CreativeTabs.getNextID(), "BAP Caboosey");
+
+		if (ConfigHandler.ENABLE_BAP_SPLIT_TABS)
+		{
+			tcSteamTab = new CreativeTabTraincraftSteam(CreativeTabs.getNextID(), "BAP Steam");
+			tcDieselTab = new CreativeTabTraincraftDiesel(CreativeTabs.getNextID(), "BAP Diesel");
+			tcElectricTab = new CreativeTabTraincraftElectric(CreativeTabs.getNextID(), "BAP Electric");
+			tcPassengerTab = new CreativeTabTraincraftPassenger(CreativeTabs.getNextID(), "BAP Passenger");
+			tcFreightTab = new CreativeTabTraincraftFreight(CreativeTabs.getNextID(), "BAP Freight");
+			tcBooseTab = new CreativeTabTraincraftBoose(CreativeTabs.getNextID(), "BAP Caboosey");
+		}
+		else
+		{
+			tcDieselTab = new CreativeTabTraincraftDiesel(CreativeTabs.getNextID(), "Bidahochi's American Pack");
+		}
+
 		trainArmor = proxy.addArmor("armor");
 		trainCloth = proxy.addArmor("Paintable");
 		trainCompositeSuit = proxy.addArmor("CompositeSuit");
@@ -186,7 +200,8 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 	}
 
 	@EventHandler
-	public void load(FMLInitializationEvent event) {
+	public void load(FMLInitializationEvent event)
+	{
 		tcLog.info("Entering Initialization.");
 
 		//proxy.getCape();
@@ -249,9 +264,6 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		}
 
 		//Just for the laffs :)
-		Random rand = new Random();
-		JCIRQuote quoteOfTheDay = QuoteList.getQuotes().get(rand.nextInt(QuoteList.getQuotes().size()));
-		tcLog.info(quoteOfTheDay.quote + " -" + quoteOfTheDay.from);
 		/*TrainTalk.getInstance().init();
 		DynamicSignalServer thing = new DynamicSignalServer(0, "AutoTrain Test");
 		thing.init();*/
@@ -267,22 +279,20 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 	@EventHandler
 	public void serverLoad(FMLServerStartingEvent event)
 	{
-		event.registerServerCommand(new tcAdminPerm());
-	}
-
-
-	public class tcAdminPerm extends CommandBase {
-		public String getCommandName() {return "tc.admin";}
-		public String getCommandUsage(ICommandSender CommandSender) {return "/tcadmin";}
-		public int getRequiredPermissionLevel() {return 2;}
-
-		public void processCommand(ICommandSender CommandSender, String[] par2ArrayOfStr) {
-			getCommandSenderAsPlayer(CommandSender).addChatMessage(
-					new ChatComponentText(
-							"this command exists as a placeholder to allow admin permissions in TC via plugins and mods such as GroupManager and Forge Essentials"));
-
+		lockoutPermissionsUtil.SetupLockoutFolders();
+		tcLog.info("Traincraft: Project Locked Folders Initialized");
+		for(HashMap.Entry<String, ILockoutGroup> record : lockoutPermissionsUtil.GetLockoutGroupReg().entrySet())
+		{
+			lockoutPermissionsUtil.SetupSkinGroup(record.getKey(), record.getValue().groupUUIDOwner());
 		}
+		tcLog.info("Traincraft: Project Locked Folders Skin Groups Initialized");
+
+		event.registerServerCommand(new tcAdminPerm());
+		event.registerServerCommand(new tcAddUserToSkinGroup());
+		event.registerServerCommand(new tcSetSkinGroupOwner());
+		event.registerServerCommand(new tcRemoveUserFromSkinGroup());
 	}
+
 
 
 }

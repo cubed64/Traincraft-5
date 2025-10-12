@@ -45,11 +45,11 @@ public class ACF41Gon extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "SP&S");
-        textureDescriptionMap.put(1, "NP");
-        textureDescriptionMap.put(2, "NP");
-        textureDescriptionMap.put(3, "FNCC");
-        textureDescriptionMap.put(4, "FNCC");
+        InsertTexture(0, "SP&S");
+        InsertTexture(1, "NP");
+        InsertTexture(2, "NP");
+        InsertTexture(3, "FNCC");
+        InsertTexture(4, "FNCC");
     }
 
     @Override

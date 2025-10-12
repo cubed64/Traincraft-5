@@ -19,10 +19,10 @@ public class PSSOURPO_30 extends Freight implements IInventory {
 	public PSSOURPO_30(World world) {
 		super(world);
 		initFreightCart();
-		textureDescriptionMap.put(0, "SOU (early)");
-		textureDescriptionMap.put(1, "SOU");
-		textureDescriptionMap.put(2, "SOU 1725 \"Lenoir City\" (late)");
-		textureDescriptionMap.put(3, "SOU 1726 \"Athens\" (late)");
+		InsertTexture(0, "SOU (early)");
+		InsertTexture(1, "SOU");
+		InsertTexture(2, "SOU 1725 \"Lenoir City\" (late)");
+		InsertTexture(3, "SOU 1726 \"Athens\" (late)");
 	}
 
 	public void initFreightCart() {

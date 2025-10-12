@@ -8,10 +8,10 @@ public class OBLV82_92SeatCoach extends AbstractPassengerCar
 
 	public OBLV82_92SeatCoach(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "LV (82 Seat Coach)");
-		textureDescriptionMap.put(1, "LV (82 Seat Coach, Late)");
-		textureDescriptionMap.put(2, "LV (92 Seat Coach)");
-		textureDescriptionMap.put(3, "LV (92 Seat Coach, Late)");
+		InsertTexture(0, "LV (82 Seat Coach)");
+		InsertTexture(1, "LV (82 Seat Coach, Late)");
+		InsertTexture(2, "LV (92 Seat Coach)");
+		InsertTexture(3, "LV (92 Seat Coach, Late)");
 	}
 
 	public OBLV82_92SeatCoach(World world, double posX, double posY, double posZ)

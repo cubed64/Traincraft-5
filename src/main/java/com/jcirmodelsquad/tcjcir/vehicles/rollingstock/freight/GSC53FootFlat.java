@@ -164,14 +164,14 @@ public class GSC53FootFlat extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "UP (1970)");
-        textureDescriptionMap.put(1, "UP (1962)");
-        textureDescriptionMap.put(2, "BN");
-        textureDescriptionMap.put(3, "BN (Alternate Ends)");
-        textureDescriptionMap.put(4, "NP (1965)");
-        textureDescriptionMap.put(5, "NP (1967)");
-        textureDescriptionMap.put(6, "Blandsville & Blankerston");
-        textureDescriptionMap.put(7, "Blandsville & Blankerston (Alternate Ends)");
+        InsertTexture(0, "UP (1970)");
+        InsertTexture(1, "UP (1962)");
+        InsertTexture(2, "BN");
+        InsertTexture(3, "BN (Alternate Ends)");
+        InsertTexture(4, "NP (1965)");
+        InsertTexture(5, "NP (1967)");
+        InsertTexture(6, "Blandsville & Blankerston");
+        InsertTexture(7, "Blandsville & Blankerston (Alternate Ends)");
     }
 
     @Override

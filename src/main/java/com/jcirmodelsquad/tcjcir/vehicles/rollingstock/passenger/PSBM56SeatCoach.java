@@ -8,21 +8,21 @@ public class PSBM56SeatCoach extends AbstractPassengerCar {
 	public PSBM56SeatCoach(World world)
 	{
 		super(world);
-		textureDescriptionMap.put(0, "B&M (interior scheme 1)");
-		textureDescriptionMap.put(1, "B&M (interior scheme 2)");
-		textureDescriptionMap.put(2, "B&M (interior scheme 3)");
-		textureDescriptionMap.put(3, "MEC (interior scheme 1)");
-		textureDescriptionMap.put(4, "MEC (interior scheme 2)");
-		textureDescriptionMap.put(5, "MEC (interior scheme 3)");
-		textureDescriptionMap.put(6, "MEC (pine tree, interior scheme 1)");
-		textureDescriptionMap.put(7, "MEC (pine tree, interior scheme 2)");
-		textureDescriptionMap.put(8, "MEC (pine tree, interior scheme 3)");
-		textureDescriptionMap.put(9, "MP (interior scheme 1)");
-		textureDescriptionMap.put(10, "MP (interior scheme 2)");
-		textureDescriptionMap.put(11, "MP (interior scheme 3)");
-		textureDescriptionMap.put(12, "MP (buzz saw, interior scheme 1)");
-		textureDescriptionMap.put(13, "MP (buzz saw, interior scheme 2)");
-		textureDescriptionMap.put(14, "WAB");
+		InsertTexture(0, "B&M (interior scheme 1)");
+		InsertTexture(1, "B&M (interior scheme 2)");
+		InsertTexture(2, "B&M (interior scheme 3)");
+		InsertTexture(3, "MEC (interior scheme 1)");
+		InsertTexture(4, "MEC (interior scheme 2)");
+		InsertTexture(5, "MEC (interior scheme 3)");
+		InsertTexture(6, "MEC (pine tree, interior scheme 1)");
+		InsertTexture(7, "MEC (pine tree, interior scheme 2)");
+		InsertTexture(8, "MEC (pine tree, interior scheme 3)");
+		InsertTexture(9, "MP (interior scheme 1)");
+		InsertTexture(10, "MP (interior scheme 2)");
+		InsertTexture(11, "MP (interior scheme 3)");
+		InsertTexture(12, "MP (buzz saw, interior scheme 1)");
+		InsertTexture(13, "MP (buzz saw, interior scheme 2)");
+		InsertTexture(14, "WAB");
 	}
 
 	public PSBM56SeatCoach(World world, double posX, double posY, double posZ)

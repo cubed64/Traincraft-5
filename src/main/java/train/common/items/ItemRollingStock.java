@@ -30,6 +30,8 @@ import train.common.tile.TileTCRailGag;
 import javax.annotation.Nullable;
 import java.util.List;
 
+import static train.common.library.TypeOfRollingStock.HERITAGE;
+
 public class ItemRollingStock extends ItemMinecart implements IMinecart, IMinecartItem {
 
     private String iconName = "";
@@ -50,32 +52,43 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
             {
                 typeOfRollingStock = TypeOfRollingStock.EMPTY;
             }
-            switch(typeOfRollingStock)
+
+            if (typeOfRollingStock == HERITAGE)
             {
-                case HERITAGE:
-                    setCreativeTab(Traincraft.tcHeritageTab);
-                    break;
-                case STEAM:
-                    setCreativeTab(Traincraft.tcSteamTab);
-                    break;
-                case DIESEL:
-                    setCreativeTab(Traincraft.tcDieselTab);
-                    break;
-                case ELECTRIC:
-                    setCreativeTab(Traincraft.tcElectricTab);
-                    break;
-                case PASSENGER:
-                    setCreativeTab(Traincraft.tcPassengerTab);
-                    break;
-                case FREIGHT:
-                    setCreativeTab(Traincraft.tcFreightTab);
-                    break;
-                case BOOSE:
-                    setCreativeTab(Traincraft.tcBooseTab);
-                    break;
-                default:
-                    setCreativeTab(Traincraft.tcTab);
-                    break;
+                setCreativeTab(Traincraft.tcHeritageTab);
+                return;
+            }
+
+            if (ConfigHandler.ENABLE_BAP_SPLIT_TABS)
+            {
+                switch(typeOfRollingStock)
+                {
+                    case STEAM:
+                        setCreativeTab(Traincraft.tcSteamTab);
+                        break;
+                    case DIESEL:
+                        setCreativeTab(Traincraft.tcDieselTab);
+                        break;
+                    case ELECTRIC:
+                        setCreativeTab(Traincraft.tcElectricTab);
+                        break;
+                    case PASSENGER:
+                        setCreativeTab(Traincraft.tcPassengerTab);
+                        break;
+                    case FREIGHT:
+                        setCreativeTab(Traincraft.tcFreightTab);
+                        break;
+                    case BOOSE:
+                        setCreativeTab(Traincraft.tcBooseTab);
+                        break;
+                    default:
+                        setCreativeTab(Traincraft.tcTab);
+                        break;
+                }
+            }
+            else
+            {
+                setCreativeTab(Traincraft.tcDieselTab);
             }
         }
     }
@@ -759,31 +772,11 @@ public class ItemRollingStock extends ItemMinecart implements IMinecart, IMineca
                 if (player == null)
                     rollingStock.setInformation(((ItemRollingStock) itemstack.getItem()).getTrainType(), "", trainCreator, (itemstack.getItem()).getItemStackDisplayName(itemstack), uniID);
 
-                if (ConfigHandler.SHOW_POSSIBLE_COLORS && rollingStock.acceptedColors != null && rollingStock.acceptedColors.size() > 0) {
-                    String concatColors = "";
-                    int moreColors = 0;
-                    for (int t = 0; t < rollingStock.acceptedColors.size(); t++) {
-                        if (!AbstractTrains.getColorAsString(rollingStock.acceptedColors.get(t)).equals("Empty")
-                                && !AbstractTrains.getColorAsString(rollingStock.acceptedColors.get(t)).equals("Full")
-                                && !(rollingStock.acceptedColors.get(t) > 15)) {
-                            if (!concatColors.isEmpty())
-                                concatColors = concatColors
-                                        .concat(", " + AbstractTrains.getColorAsString(rollingStock.acceptedColors.get(t)));
-                            else
-                                concatColors = AbstractTrains.getColorAsString(rollingStock.acceptedColors.get(t));
-                        } else if (rollingStock.acceptedColors.get(t) > 15) {
-                            moreColors++;
-                        }
-                    }
-                    if (concatColors.length() > 4) {
-                        if (player != null) {
-                            if (moreColors == 0) {
-                                player.addChatMessage(new ChatComponentText("Possible colors: " + concatColors + "."));
-                            } else {
-                                player.addChatMessage(new ChatComponentText("Possible colors: " + concatColors + ", and " + moreColors + " more."));
-                            }
-                            player.addChatMessage(new ChatComponentText("To paint, use the " + StatCollector.translateToLocal("item.tc:paintbrushThing.name") + " or click me with the right (vanilla) dye."));
-                        }
+                if (ConfigHandler.SHOW_POSSIBLE_COLORS && rollingStock.acceptedColors != null && rollingStock.acceptedColors.size() > 0)
+                {
+                    if (player != null)
+                    {
+                        player.addChatMessage(new ChatComponentText("To paint, use the " + StatCollector.translateToLocal("item.tc:paintbrushThing.name")));
                     }
                 }
                 world.spawnEntityInWorld(rollingStock);

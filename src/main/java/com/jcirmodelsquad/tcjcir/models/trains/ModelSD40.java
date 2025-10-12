@@ -2308,7 +2308,7 @@ public class ModelSD40 extends ModelConverter //Same as Filename
 			GL11.glPushMatrix();
 			stupid.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18 ) {
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 18 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 41 ) {
 			//csx shid
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_C2_middy_blue.png"));
 			GL11.glPushMatrix();

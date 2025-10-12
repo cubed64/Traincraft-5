@@ -8,10 +8,10 @@ public class PSDamnitAnotherDiner extends AbstractPassengerCar
 
 	public PSDamnitAnotherDiner(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "D&RGW");
-		textureDescriptionMap.put(1, "D&RGW (No Lounge)");
-		textureDescriptionMap.put(2, "C&O (Semi-Fictional)");
-		textureDescriptionMap.put(3, "PM (Semi-Fictional) ");
+		InsertTexture(0, "D&RGW");
+		InsertTexture(1, "D&RGW (No Lounge)");
+		InsertTexture(2, "C&O (Semi-Fictional)");
+		InsertTexture(3, "PM (Semi-Fictional) ");
 	}
 
 	public PSDamnitAnotherDiner(World world, double posX, double posY, double posZ)

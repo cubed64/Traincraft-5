@@ -56,6 +56,12 @@ public abstract class GuiAbstractPaintbrush extends GuiScreen {
     protected int currentPage;
     protected Integer selectedOption;
 
+    @Override
+    public boolean doesGuiPauseGame()
+    {
+        return false;
+    }
+
     /**
      * @author 02skaplan
      */

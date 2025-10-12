@@ -24,17 +24,17 @@ public class WoodchipHopper extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "CHIP");
-        textureDescriptionMap.put(1, "GN");
-        textureDescriptionMap.put(2, "BN");
-        textureDescriptionMap.put(3, "MILW");
-        textureDescriptionMap.put(4, "ATSF");
-        textureDescriptionMap.put(5, "OWO");
-        textureDescriptionMap.put(6, "FNCC");
-        textureDescriptionMap.put(7, "FNCC (Ex BTR)");
-        textureDescriptionMap.put(8, "FNCC (Ex BTR)");
-        textureDescriptionMap.put(9, "WP");
-        textureDescriptionMap.put(10, "DN");
+        InsertTexture(0, "CHIP");
+        InsertTexture(1, "GN");
+        InsertTexture(2, "BN");
+        InsertTexture(3, "MILW");
+        InsertTexture(4, "ATSF");
+        InsertTexture(5, "OWO");
+        InsertTexture(6, "FNCC");
+        InsertTexture(7, "FNCC (Ex BTR)");
+        InsertTexture(8, "FNCC (Ex BTR)");
+        InsertTexture(9, "WP");
+        InsertTexture(10, "DN");
     }
 
     @Override

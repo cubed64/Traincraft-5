@@ -8,10 +8,10 @@ public class ICC_Bobber extends AbstractWorkCart
 {
     public ICC_Bobber(World world) {
         super(world);
-        textureDescriptionMap.put(0, "McCloud, As Modified");
-        textureDescriptionMap.put(1, "McCloud, As Delivered");
-        textureDescriptionMap.put(2, "Blank");
-        textureDescriptionMap.put(3, "Magnolia Acres; Coffeeville");
+        InsertTexture(0, "McCloud, As Modified");
+        InsertTexture(1, "McCloud, As Delivered");
+        InsertTexture(2, "Blank");
+        InsertTexture(3, "Magnolia Acres; Coffeeville");
         initCabooseWorkCart();
     }
 

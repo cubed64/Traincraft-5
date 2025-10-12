@@ -24,17 +24,17 @@ public class ACFRailbox extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "Railbox (XAF-10)");
-        textureDescriptionMap.put(1, "Railbox (XAF-11)");
-        textureDescriptionMap.put(2, "Railbox (XAF-20)");
-        textureDescriptionMap.put(3, "Railbox (XAF-20a)");
-        textureDescriptionMap.put(4, "Railbox (XAF-20b)");
-        textureDescriptionMap.put(5, "Railbox (XAF-20c)");
-        textureDescriptionMap.put(6, "Railbox (XAF-20, modern)");
-        textureDescriptionMap.put(7, "Railbox (XAF-20a, modern)");
-        textureDescriptionMap.put(8, "Railbox (XAF-20b & XAF-20c, modern)");
-        textureDescriptionMap.put(9, "MNS");
-        textureDescriptionMap.put(10, "Blandsville & Blankerston");
+        InsertTexture(0, "Railbox (XAF-10)");
+        InsertTexture(1, "Railbox (XAF-11)");
+        InsertTexture(2, "Railbox (XAF-20)");
+        InsertTexture(3, "Railbox (XAF-20a)");
+        InsertTexture(4, "Railbox (XAF-20b)");
+        InsertTexture(5, "Railbox (XAF-20c)");
+        InsertTexture(6, "Railbox (XAF-20, modern)");
+        InsertTexture(7, "Railbox (XAF-20a, modern)");
+        InsertTexture(8, "Railbox (XAF-20b & XAF-20c, modern)");
+        InsertTexture(9, "MNS");
+        InsertTexture(10, "Blandsville & Blankerston");
     }
 
     @Override

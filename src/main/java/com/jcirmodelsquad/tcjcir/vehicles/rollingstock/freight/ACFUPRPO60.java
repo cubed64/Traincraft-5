@@ -26,17 +26,17 @@ public class ACFUPRPO60 extends AbstractStandardFreightCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "UP");
-		textureDescriptionMap.put(1, "CNW (UP paint)");
-		textureDescriptionMap.put(2, "GN (as delivered)");
-		textureDescriptionMap.put(3, "GN");
-		textureDescriptionMap.put(4, "GN (late)");
-		textureDescriptionMap.put(5, "GN (BSB)");
-		textureDescriptionMap.put(6, "BN");
-		textureDescriptionMap.put(7, "SOU");
-		textureDescriptionMap.put(8, "CNO&TP");
-		textureDescriptionMap.put(9, "SOU (black roof)");
-		textureDescriptionMap.put(10, "CNO&TP (black roof)");
+		InsertTexture(0, "UP");
+		InsertTexture(1, "CNW (UP paint)");
+		InsertTexture(2, "GN (as delivered)");
+		InsertTexture(3, "GN");
+		InsertTexture(4, "GN (late)");
+		InsertTexture(5, "GN (BSB)");
+		InsertTexture(6, "BN");
+		InsertTexture(7, "SOU");
+		InsertTexture(8, "CNO&TP");
+		InsertTexture(9, "SOU (black roof)");
+		InsertTexture(10, "CNO&TP (black roof)");
 	}
 
 	@Override

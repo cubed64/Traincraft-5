@@ -24,23 +24,23 @@ public class Freight40highcube extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "BAWX");
-        textureDescriptionMap.put(1, "BN");
-        textureDescriptionMap.put(2, "NP");
-        textureDescriptionMap.put(3, "IC");
-        textureDescriptionMap.put(4, "BEEPX & BOOPX");
-        textureDescriptionMap.put(5, "ATSF");
-        textureDescriptionMap.put(6, "MT&S");
-        textureDescriptionMap.put(7, "MILW");
-        textureDescriptionMap.put(8, "CBQ");
-        textureDescriptionMap.put(9, "CBQ");
-        textureDescriptionMap.put(10, "CBQ");
-        textureDescriptionMap.put(11, "DRGW");
-        textureDescriptionMap.put(12, "DRGW");
-        textureDescriptionMap.put(13, "ICG");
-        textureDescriptionMap.put(14, "FNCC");
-        textureDescriptionMap.put(15, "FNCC (Foxtail logo)");
-        textureDescriptionMap.put(16, "OC&G");
+        InsertTexture(0, "BAWX");
+        InsertTexture(1, "BN");
+        InsertTexture(2, "NP");
+        InsertTexture(3, "IC");
+        InsertTexture(4, "BEEPX & BOOPX");
+        InsertTexture(5, "ATSF");
+        InsertTexture(6, "MT&S");
+        InsertTexture(7, "MILW");
+        InsertTexture(8, "CBQ");
+        InsertTexture(9, "CBQ");
+        InsertTexture(10, "CBQ");
+        InsertTexture(11, "DRGW");
+        InsertTexture(12, "DRGW");
+        InsertTexture(13, "ICG");
+        InsertTexture(14, "FNCC");
+        InsertTexture(15, "FNCC (Foxtail logo)");
+        InsertTexture(16, "OC&G");
     }
 
     @Override

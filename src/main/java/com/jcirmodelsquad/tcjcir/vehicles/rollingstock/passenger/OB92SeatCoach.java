@@ -8,15 +8,15 @@ public class OB92SeatCoach extends AbstractPassengerCar
 
 	public OB92SeatCoach(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "NH (As Delivered)");
-		textureDescriptionMap.put(1, "NH");
-		textureDescriptionMap.put(2, "NH (RDC Scheme 1)");
-		textureDescriptionMap.put(3, "NH (RDC Scheme 2");
-		textureDescriptionMap.put(4, "NH (Late)");
-		textureDescriptionMap.put(5, "NH (McGinnis Scheme)");
-		textureDescriptionMap.put(6, "NH (Black Knight Scheme)");
-		textureDescriptionMap.put(7, "PC");
-		textureDescriptionMap.put(8, "Spunch Bop Rayroad");
+		InsertTexture(0, "NH (As Delivered)");
+		InsertTexture(1, "NH");
+		InsertTexture(2, "NH (RDC Scheme 1)");
+		InsertTexture(3, "NH (RDC Scheme 2");
+		InsertTexture(4, "NH (Late)");
+		InsertTexture(5, "NH (McGinnis Scheme)");
+		InsertTexture(6, "NH (Black Knight Scheme)");
+		InsertTexture(7, "PC");
+		InsertTexture(8, "Spunch Bop Rayroad");
 	}
 
 	public OB92SeatCoach(World world, double posX, double posY, double posZ)

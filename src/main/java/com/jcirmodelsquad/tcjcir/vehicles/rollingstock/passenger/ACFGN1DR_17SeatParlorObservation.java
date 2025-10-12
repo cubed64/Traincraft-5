@@ -8,10 +8,10 @@ public class ACFGN1DR_17SeatParlorObservation extends AbstractPassengerCar
 
 	public ACFGN1DR_17SeatParlorObservation(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "GN Internationals");
-		textureDescriptionMap.put(1, "GN Internationals (Late)");
-		textureDescriptionMap.put(2, "AMTK (Abraham Lincoln)");
-		textureDescriptionMap.put(3, "AMTK");
+		InsertTexture(0, "GN Internationals");
+		InsertTexture(1, "GN Internationals (Late)");
+		InsertTexture(2, "AMTK (Abraham Lincoln)");
+		InsertTexture(3, "AMTK");
 	}
 
 	public ACFGN1DR_17SeatParlorObservation(World world, double posX, double posY, double posZ)

@@ -24,23 +24,23 @@ public class PCF6033 extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "SP");
-        textureDescriptionMap.put(1, "SSW");
-        textureDescriptionMap.put(2, "Generic Brown");
-        textureDescriptionMap.put(3, "ARR");
-        textureDescriptionMap.put(4, "ATSF (Early)");
-        textureDescriptionMap.put(5, "ATSF");
-        textureDescriptionMap.put(6, "UP");
-        textureDescriptionMap.put(7, "WC");
-        textureDescriptionMap.put(8, "WRX");
-        textureDescriptionMap.put(9, "WRX (Tree Logo)");
-        textureDescriptionMap.put(10, "WRX (Washaska Text)");
-        textureDescriptionMap.put(11, "BNBX");
-        textureDescriptionMap.put(12, "GCM");
-        textureDescriptionMap.put(13, "SP (Paper Service)");
-        textureDescriptionMap.put(14, "WP");
-        textureDescriptionMap.put(15, "");
-        textureDescriptionMap.put(16, "");
+        InsertTexture(0, "SP");
+        InsertTexture(1, "SSW");
+        InsertTexture(2, "Generic Brown");
+        InsertTexture(3, "ARR");
+        InsertTexture(4, "ATSF (Early)");
+        InsertTexture(5, "ATSF");
+        InsertTexture(6, "UP");
+        InsertTexture(7, "WC");
+        InsertTexture(8, "WRX");
+        InsertTexture(9, "WRX (Tree Logo)");
+        InsertTexture(10, "WRX (Washaska Text)");
+        InsertTexture(11, "BNBX");
+        InsertTexture(12, "GCM");
+        InsertTexture(13, "SP (Paper Service)");
+        InsertTexture(14, "WP");
+        InsertTexture(15, "");
+        InsertTexture(16, "");
     }
 
     @Override

@@ -237,13 +237,13 @@ public class Freight73centerbeam extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "Transgenderbeam");
-        textureDescriptionMap.put(1, "WRX (Green)");
-        textureDescriptionMap.put(2, "MT&S");
-        textureDescriptionMap.put(3, "WRX (Orange)");
-        textureDescriptionMap.put(4, "TTZX");
-        textureDescriptionMap.put(5, "Generic Red");
-        textureDescriptionMap.put(6, "GLNT");
+        InsertTexture(0, "Transgenderbeam");
+        InsertTexture(1, "WRX (Green)");
+        InsertTexture(2, "MT&S");
+        InsertTexture(3, "WRX (Orange)");
+        InsertTexture(4, "TTZX");
+        InsertTexture(5, "Generic Red");
+        InsertTexture(6, "GLNT");
     }
 
     @Override

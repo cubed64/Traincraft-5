@@ -284,14 +284,14 @@ public class Thrall63centerbeam extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "BN");
-        textureDescriptionMap.put(1, "TTZX");
-        textureDescriptionMap.put(2, "Generic Red");
-        textureDescriptionMap.put(3, "COER 'CENTERBEAM'");
-        textureDescriptionMap.put(4, "WRX");
-        textureDescriptionMap.put(5, "FNCC");
-        textureDescriptionMap.put(6, "DN");
-        textureDescriptionMap.put(7, "GLNT");
+        InsertTexture(0, "BN");
+        InsertTexture(1, "TTZX");
+        InsertTexture(2, "Generic Red");
+        InsertTexture(3, "COER 'CENTERBEAM'");
+        InsertTexture(4, "WRX");
+        InsertTexture(5, "FNCC");
+        InsertTexture(6, "DN");
+        InsertTexture(7, "GLNT");
     }
 
     @Override

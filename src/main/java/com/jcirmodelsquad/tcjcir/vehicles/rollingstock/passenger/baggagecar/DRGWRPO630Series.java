@@ -19,8 +19,8 @@ public class DRGWRPO630Series extends Freight implements IInventory {
 	public DRGWRPO630Series(World world) {
 		super(world);
 		initFreightCart();
-		textureDescriptionMap.put(0, "D&RGW");
-		textureDescriptionMap.put(1, "D&RGW (4 stripe)");
+		InsertTexture(0, "D&RGW");
+		InsertTexture(1, "D&RGW (4 stripe)");
 	}
 
 	public void initFreightCart() {

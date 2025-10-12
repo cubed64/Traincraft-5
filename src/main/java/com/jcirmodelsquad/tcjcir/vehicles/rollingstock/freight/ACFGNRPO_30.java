@@ -24,10 +24,10 @@ public class ACFGNRPO_30 extends AbstractStandardFreightCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "GN Internationals");
-		textureDescriptionMap.put(1, "GN Internationals (late)");
-		textureDescriptionMap.put(2, "GN Red River");
-		textureDescriptionMap.put(3, "GN Red River (late)");
+		InsertTexture(0, "GN Internationals");
+		InsertTexture(1, "GN Internationals (late)");
+		InsertTexture(2, "GN Red River");
+		InsertTexture(3, "GN Red River (late)");
 	}
 
 	@Override

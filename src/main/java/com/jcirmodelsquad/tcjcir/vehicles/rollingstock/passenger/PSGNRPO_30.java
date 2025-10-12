@@ -19,10 +19,10 @@ public class PSGNRPO_30 extends Freight implements IInventory {
 	public PSGNRPO_30(World world) {
 		super(world);
 		initFreightCart();
-		textureDescriptionMap.put(0, "GN Empire Builder (as delivered)");
-		textureDescriptionMap.put(1, "GN Empire Builder");
-		textureDescriptionMap.put(2, "GN Winnipeg Limited");
-		textureDescriptionMap.put(3, "GN Winnipeg Limited (late)");
+		InsertTexture(0, "GN Empire Builder (as delivered)");
+		InsertTexture(1, "GN Empire Builder");
+		InsertTexture(2, "GN Winnipeg Limited");
+		InsertTexture(3, "GN Winnipeg Limited (late)");
 	}
 
 	public void initFreightCart() {

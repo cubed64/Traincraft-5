@@ -11,12 +11,12 @@ public class HuskyStack2 extends AbstractStandardFreightCar
 {
 	public HuskyStack2(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "TTX Corp");
-		textureDescriptionMap.put(1, "Generic Blue");
-		textureDescriptionMap.put(2, "WP");
-		textureDescriptionMap.put(3, "CSLX");
-		textureDescriptionMap.put(4, "CSLX");
-		textureDescriptionMap.put(5, "MT&S");
+		InsertTexture(0, "TTX Corp");
+		InsertTexture(1, "Generic Blue");
+		InsertTexture(2, "WP");
+		InsertTexture(3, "CSLX");
+		InsertTexture(4, "CSLX");
+		InsertTexture(5, "MT&S");
 	}
 
 	public HuskyStack2(World world, double x, double y, double z){
@@ -198,12 +198,12 @@ public class HuskyStack2 extends AbstractStandardFreightCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "TTX Corp");
-		textureDescriptionMap.put(1, "Generic Blue");
-		textureDescriptionMap.put(2, "WP");
-		textureDescriptionMap.put(3, "CSLX");
-		textureDescriptionMap.put(4, "CSLX");
-		textureDescriptionMap.put(5, "MT&S");
+		InsertTexture(0, "TTX Corp");
+		InsertTexture(1, "Generic Blue");
+		InsertTexture(2, "WP");
+		InsertTexture(3, "CSLX");
+		InsertTexture(4, "CSLX");
+		InsertTexture(5, "MT&S");
 	}
 
 	@Override

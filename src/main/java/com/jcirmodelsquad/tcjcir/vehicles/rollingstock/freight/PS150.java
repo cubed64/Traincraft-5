@@ -24,20 +24,20 @@ public class PS150 extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "BAR (State of Maine)");
-        textureDescriptionMap.put(1, "Penn Central (The Best Railroad)");
-        textureDescriptionMap.put(2, "ATSF");
-        textureDescriptionMap.put(3, "DRGW");
-        textureDescriptionMap.put(4, "BLUX");
-        textureDescriptionMap.put(5, "REDX");
-        textureDescriptionMap.put(6, "TIRY");
-        textureDescriptionMap.put(7, "DLMR");
-        textureDescriptionMap.put(8, "DLMR 2");
-        textureDescriptionMap.put(9, "ANN ARBOR");
-        textureDescriptionMap.put(10, "FNCC (Simple)");
-        textureDescriptionMap.put(11, "FNCC");
-        textureDescriptionMap.put(12, "AGW");
-        textureDescriptionMap.put(13, "AGW");
+        InsertTexture(0, "BAR (State of Maine)");
+        InsertTexture(1, "Penn Central (The Best Railroad)");
+        InsertTexture(2, "ATSF");
+        InsertTexture(3, "DRGW");
+        InsertTexture(4, "BLUX");
+        InsertTexture(5, "REDX");
+        InsertTexture(6, "TIRY");
+        InsertTexture(7, "DLMR");
+        InsertTexture(8, "DLMR 2");
+        InsertTexture(9, "ANN ARBOR");
+        InsertTexture(10, "FNCC (Simple)");
+        InsertTexture(11, "FNCC");
+        InsertTexture(12, "AGW");
+        InsertTexture(13, "AGW");
     }
 
     @Override

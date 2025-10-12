@@ -5,6 +5,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
@@ -56,7 +57,7 @@ public abstract class AbstractStandardFreightCar extends Freight
                 nbttaglist.appendTag(nbttagcompound1);
             }
         }
-//
+
         nbttagcompound.setTag("Items", nbttaglist);
     }
 
@@ -87,12 +88,31 @@ public abstract class AbstractStandardFreightCar extends Freight
     }
 
     @Override
-    public final boolean interactFirst(EntityPlayer entityplayer)
+    public boolean interactFirst(EntityPlayer entityplayer)
     {
-        if ((super.interactFirst(entityplayer))) {
+        if ((super.interactFirst(entityplayer)))
+        {
             return false;
         }
-        entityplayer.openGui(Traincraft.instance, GuiIDs.FREIGHT, worldObj, this.getEntityId(), -1, (int) this.posZ);
+
+        boolean isTrustedPlayer = isPlayerTrusted(playerEntity.getDisplayName());
+        if (!playerEntity.getDisplayName().equalsIgnoreCase(this.getTrainOwner()) && !isTrustedPlayer)
+        {
+            if (!worldObj.isRemote)
+            {
+                if (entityplayer.isSneaking() || this instanceof AbstractPassengerCombineCar == false)
+                {
+                    entityplayer.addChatMessage(new ChatComponentText("Train is locked by " + this.getTrainOwner() + "."));
+                }
+            }
+            return true;
+        }
+
+        if (this instanceof AbstractPassengerCombineCar == false || this instanceof AbstractPassengerCombineCar && entityplayer.isSneaking())
+        {
+            entityplayer.openGui(Traincraft.instance, GuiIDs.FREIGHT, worldObj, this.getEntityId(), -1, (int) this.posZ);
+        }
+
         return true;
     }
 

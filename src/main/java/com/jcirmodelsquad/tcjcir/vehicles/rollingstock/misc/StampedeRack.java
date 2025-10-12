@@ -11,7 +11,7 @@ public class StampedeRack extends AbstractPassengerCar
 {
 	public StampedeRack(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "Stampeed Rack");
+		InsertTexture(0, "Stampeed Rack");
 	}
 
 	public StampedeRack(World world, double posX, double posY, double posZ)

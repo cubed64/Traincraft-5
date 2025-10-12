@@ -18,13 +18,13 @@ public class Gunderson89ftAutorack extends Freight implements IInventory {
     public Gunderson89ftAutorack(World world) {
         super(world);
         initFreightCart();
-        textureDescriptionMap.put(0, "TrailerTrain Cooperation");
-        textureDescriptionMap.put(1, "BNSF");
-        textureDescriptionMap.put(2, "KCS");
-        textureDescriptionMap.put(3, "CSXT");
-        textureDescriptionMap.put(4, "NS");
-        textureDescriptionMap.put(5, "NS");
-        textureDescriptionMap.put(6, "UP");
+        InsertTexture(0, "TrailerTrain Cooperation");
+        InsertTexture(1, "BNSF");
+        InsertTexture(2, "KCS");
+        InsertTexture(3, "CSXT");
+        InsertTexture(4, "NS");
+        InsertTexture(5, "NS");
+        InsertTexture(6, "UP");
     }
 
     public Gunderson89ftAutorack(World world, double d, double d1, double d2){

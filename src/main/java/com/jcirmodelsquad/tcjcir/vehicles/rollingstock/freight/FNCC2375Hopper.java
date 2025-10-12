@@ -24,23 +24,23 @@ public class FNCC2375Hopper extends AbstractStandardFreightCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "FNCC (Plain)");
-		textureDescriptionMap.put(1, "FNCC (Big Block Text)");
-		textureDescriptionMap.put(2, "FNCC (Carbon Black)");
-		textureDescriptionMap.put(3, "Blandsville & Blankerston");
-		textureDescriptionMap.put(4, "UNCLX");
-		textureDescriptionMap.put(5, "UNCLX");
-		textureDescriptionMap.put(6, "Magnolia");
-		textureDescriptionMap.put(7, "RUVX");
-		textureDescriptionMap.put(8, "RUVX");
-		textureDescriptionMap.put(9, "RUVX");
-		textureDescriptionMap.put(10, "CBRR");
-		textureDescriptionMap.put(11, "DLMR");
-		textureDescriptionMap.put(12, "hamburger helper rayroa");
-		textureDescriptionMap.put(13, "AA");
-		textureDescriptionMap.put(14, "AA (Ferry in the Fog)");
-		textureDescriptionMap.put(15, "SPB");
-		textureDescriptionMap.put(16, "GLNT");
+		InsertTexture(0, "FNCC (Plain)");
+		InsertTexture(1, "FNCC (Big Block Text)");
+		InsertTexture(2, "FNCC (Carbon Black)");
+		InsertTexture(3, "Blandsville & Blankerston");
+		InsertTexture(4, "UNCLX");
+		InsertTexture(5, "UNCLX");
+		InsertTexture(6, "Magnolia");
+		InsertTexture(7, "RUVX");
+		InsertTexture(8, "RUVX");
+		InsertTexture(9, "RUVX");
+		InsertTexture(10, "CBRR");
+		InsertTexture(11, "DLMR");
+		InsertTexture(12, "hamburger helper rayroa");
+		InsertTexture(13, "AA");
+		InsertTexture(14, "AA (Ferry in the Fog)");
+		InsertTexture(15, "SPB");
+		InsertTexture(16, "GLNT");
 	}
 
 	@Override

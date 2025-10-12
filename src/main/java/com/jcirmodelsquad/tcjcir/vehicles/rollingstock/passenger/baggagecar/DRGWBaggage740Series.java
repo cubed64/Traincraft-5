@@ -19,15 +19,15 @@ public class DRGWBaggage740Series extends Freight implements IInventory {
 	public DRGWBaggage740Series(World world) {
 		super(world);
 		initFreightCart();
-		textureDescriptionMap.put(0, "D&RGW (740)");
-		textureDescriptionMap.put(1, "D&RGW (741)");
-		textureDescriptionMap.put(2, "D&RGW (742)");
-		textureDescriptionMap.put(3, "D&RGW (743)");
-		textureDescriptionMap.put(4, "D&RGW (740, 4 stripe)");
-		textureDescriptionMap.put(5, "D&RGW (741, 4 stripe)");
-		textureDescriptionMap.put(6, "D&RGW (742, Late)");
-		textureDescriptionMap.put(7, "D&RGW (743, 4 stripe)");
-		textureDescriptionMap.put(8, "D&RGW (743, 4 stripe, Late)");
+		InsertTexture(0, "D&RGW (740)");
+		InsertTexture(1, "D&RGW (741)");
+		InsertTexture(2, "D&RGW (742)");
+		InsertTexture(3, "D&RGW (743)");
+		InsertTexture(4, "D&RGW (740, 4 stripe)");
+		InsertTexture(5, "D&RGW (741, 4 stripe)");
+		InsertTexture(6, "D&RGW (742, Late)");
+		InsertTexture(7, "D&RGW (743, 4 stripe)");
+		InsertTexture(8, "D&RGW (743, 4 stripe, Late)");
 	}
 
 	public void initFreightCart() {

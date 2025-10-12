@@ -12,6 +12,7 @@ import net.minecraftforge.fluids.FluidRegistry;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.Tender;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -23,6 +24,7 @@ public class TenderVanderback extends Tender implements IInventory {
 	public TenderVanderback(World world) {
 		super(world, FluidRegistry.WATER, 0, EnumTrains.VanderbackTender.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initFreightTender();
+		InsertTexture(0, "WRX", LockoutGroup.BIDA);
 	}
 
 	public void initFreightTender() {

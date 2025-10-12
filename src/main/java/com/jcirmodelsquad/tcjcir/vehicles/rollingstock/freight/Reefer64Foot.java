@@ -24,16 +24,16 @@ public class Reefer64Foot extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "ARMN");
-        textureDescriptionMap.put(1, "Naked Juice");
-        textureDescriptionMap.put(2, "Tropicana");
-        textureDescriptionMap.put(3, "Cryotrans");
-        textureDescriptionMap.put(4, "Cryotrans (Cavendish)");
-        textureDescriptionMap.put(5, "Cryotrans (Carnation)");
-        textureDescriptionMap.put(6, "Cryotrans (McCain)");
-        textureDescriptionMap.put(7, "OWO (Coolsville)");
-        textureDescriptionMap.put(8, "NEP");
-        textureDescriptionMap.put(9, "NEP");
+        InsertTexture(0, "ARMN");
+        InsertTexture(1, "Naked Juice");
+        InsertTexture(2, "Tropicana");
+        InsertTexture(3, "Cryotrans");
+        InsertTexture(4, "Cryotrans (Cavendish)");
+        InsertTexture(5, "Cryotrans (Carnation)");
+        InsertTexture(6, "Cryotrans (McCain)");
+        InsertTexture(7, "OWO (Coolsville)");
+        InsertTexture(8, "NEP");
+        InsertTexture(9, "NEP");
     }
 
     @Override

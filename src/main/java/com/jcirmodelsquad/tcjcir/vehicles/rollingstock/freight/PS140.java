@@ -25,26 +25,27 @@ public class PS140 extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "ATSF");
-        textureDescriptionMap.put(1, "NYC (Pacemaker)");
-        textureDescriptionMap.put(2, "RI");
-        textureDescriptionMap.put(3, "CPR (Multimark)");
-        textureDescriptionMap.put(4, "FNCC");
-        textureDescriptionMap.put(5, "FNCC (Quick Scheme)");
-        textureDescriptionMap.put(6, "BLUX");
-        textureDescriptionMap.put(7, "REDX");
-        textureDescriptionMap.put(8, "REDX (Smudge)");
-        textureDescriptionMap.put(9, "TFIndustries Generic");
-        textureDescriptionMap.put(10, "BNNA");
-        textureDescriptionMap.put(11, "DLMR");
-        textureDescriptionMap.put(12, "DLMR");
-        textureDescriptionMap.put(13, "DLMR");
-        textureDescriptionMap.put(14, "TIRY");
-        textureDescriptionMap.put(15, "TIRY");
-        textureDescriptionMap.put(16, "GLNT");
-        textureDescriptionMap.put(17, "AGW");
-        textureDescriptionMap.put(18, "AGW");
-        textureDescriptionMap.put(19, "CDCS");
+        InsertTexture(0, "ATSF");
+        InsertTexture(1, "NYC (Pacemaker)");
+        InsertTexture(2, "RI");
+        InsertTexture(3, "CPR (Multimark)");
+        InsertTexture(4, "FNCC");
+        InsertTexture(5, "FNCC (Quick Scheme)");
+        InsertTexture(6, "BLUX");
+        InsertTexture(7, "REDX");
+        InsertTexture(8, "REDX (Smudge)");
+        InsertTexture(9, "TFIndustries Generic");
+        InsertTexture(10, "BNNA");
+        InsertTexture(11, "DLMR");
+        InsertTexture(12, "DLMR");
+        InsertTexture(13, "DLMR");
+        InsertTexture(14, "TIRY");
+        InsertTexture(15, "TIRY");
+        InsertTexture(16, "GLNT");
+        InsertTexture(17, "AGW");
+        InsertTexture(18, "AGW");
+        InsertTexture(19, "CDCS");
+        InsertTexture(20, "SOU");
     }
 
     @Override

@@ -24,19 +24,19 @@ public class PCF_RBL_Ribbed extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "PC");
-        textureDescriptionMap.put(1, "CR");
-        textureDescriptionMap.put(2, "ATSF (As Delivered)");
-        textureDescriptionMap.put(3, "ATSF");
-        textureDescriptionMap.put(4, "SLSF");
-        textureDescriptionMap.put(5, "SLSF");
-        textureDescriptionMap.put(6, "BN (Ex SLSF)");
-        textureDescriptionMap.put(7, "DRGW");
-        textureDescriptionMap.put(8, "MP");
-        textureDescriptionMap.put(9, "T&P");
-        textureDescriptionMap.put(10, "UP");
-        textureDescriptionMap.put(11, "Generic Brown");
-        textureDescriptionMap.put(12, "BB (Youngstown Door)");
+        InsertTexture(0, "PC");
+        InsertTexture(1, "CR");
+        InsertTexture(2, "ATSF (As Delivered)");
+        InsertTexture(3, "ATSF");
+        InsertTexture(4, "SLSF");
+        InsertTexture(5, "SLSF");
+        InsertTexture(6, "BN (Ex SLSF)");
+        InsertTexture(7, "DRGW");
+        InsertTexture(8, "MP");
+        InsertTexture(9, "T&P");
+        InsertTexture(10, "UP");
+        InsertTexture(11, "Generic Brown");
+        InsertTexture(12, "BB (Youngstown Door)");
     }
 
     @Override

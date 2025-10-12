@@ -24,8 +24,8 @@ public class IngotPig extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "FAWX");
-        textureDescriptionMap.put(1, "Generic");
+        InsertTexture(0, "FAWX");
+        InsertTexture(1, "Generic");
     }
 
     @Override

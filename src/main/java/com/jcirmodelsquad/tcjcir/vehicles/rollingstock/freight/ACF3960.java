@@ -24,13 +24,13 @@ public class ACF3960 extends AbstractStandardFreightCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "BN (Silver)");
-		textureDescriptionMap.put(1, "BN (Green)");
-		textureDescriptionMap.put(2, "GN (White)");
-		textureDescriptionMap.put(3, "GN (Silver)");
-		textureDescriptionMap.put(4, "the P in SP stands for PISS LETTERING");
-		textureDescriptionMap.put(5, "WABussy");
-		textureDescriptionMap.put(6, "BNB");
+		InsertTexture(0, "BN (Silver)");
+		InsertTexture(1, "BN (Green)");
+		InsertTexture(2, "GN (White)");
+		InsertTexture(3, "GN (Silver)");
+		InsertTexture(4, "the P in SP stands for PISS LETTERING");
+		InsertTexture(5, "WABussy");
+		InsertTexture(6, "BNB");
 	}
 
 	@Override

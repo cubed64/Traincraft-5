@@ -19,7 +19,7 @@ import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import train.common.api.*;
-import train.common.entity.rollingStock.*;
+import train.common.entity.rollingStock.freight.*;
 import train.common.items.ItemBlockOreTC;
 import train.common.items.ItemTCRail;
 

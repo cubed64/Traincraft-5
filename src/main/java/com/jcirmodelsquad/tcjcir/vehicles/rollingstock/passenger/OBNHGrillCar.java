@@ -7,9 +7,9 @@ public class OBNHGrillCar extends AbstractPassengerCar {
 
 	public OBNHGrillCar(World world) {
 		super(world);
-		textureDescriptionMap.put(0, "NH");
-		textureDescriptionMap.put(1, "NH (East Wind)");
-		textureDescriptionMap.put(2, "NH (Late)");
+		InsertTexture(0, "NH");
+		InsertTexture(1, "NH (East Wind)");
+		InsertTexture(2, "NH (Late)");
 	}
 
 	public OBNHGrillCar(World world, double posX, double posY, double posZ)

@@ -24,34 +24,34 @@ public class Evans5100 extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "Evans Demo (USLX)");
-        textureDescriptionMap.put(1, "PMA (USLX)");
-        textureDescriptionMap.put(2, "PMA (USLX) 2");
-        textureDescriptionMap.put(3, "Ogden (USLX)");
-        textureDescriptionMap.put(4, "Purina (USLX)");
-        textureDescriptionMap.put(5, "PIMP");
-        textureDescriptionMap.put(6, "BCOL");
-        textureDescriptionMap.put(7, "Georgia Pacific");
-        textureDescriptionMap.put(8, "Sargento (WSOR)");
-        textureDescriptionMap.put(9, "WSOR");
-        textureDescriptionMap.put(10, "UP");
-        textureDescriptionMap.put(11, "SFLC");
-        textureDescriptionMap.put(12, "IC");
-        textureDescriptionMap.put(13, "MP");
-        textureDescriptionMap.put(14, "FWD");
-        textureDescriptionMap.put(15, "MNS");
-        textureDescriptionMap.put(16, "ITC");
-        textureDescriptionMap.put(17, "GT");
-        textureDescriptionMap.put(18, "CNW (Red)");
-        textureDescriptionMap.put(19, "TPW");
-        textureDescriptionMap.put(20, "Blandsville & Blankerston (USRE Ends)");
-        textureDescriptionMap.put(21, "Aloha Shake (USLX)");
-        textureDescriptionMap.put(22, "PMA (USLX) 3");
-        textureDescriptionMap.put(23, "Louisiana Pacific");
-        textureDescriptionMap.put(24, "CNW (Yellow)");
-        textureDescriptionMap.put(25, "BM");
-        textureDescriptionMap.put(26, "Blandsville & Blankerston (PS Ends)");
-        textureDescriptionMap.put(27, "");
+        InsertTexture(0, "Evans Demo (USLX)");
+        InsertTexture(1, "PMA (USLX)");
+        InsertTexture(2, "PMA (USLX) 2");
+        InsertTexture(3, "Ogden (USLX)");
+        InsertTexture(4, "Purina (USLX)");
+        InsertTexture(5, "PIMP");
+        InsertTexture(6, "BCOL");
+        InsertTexture(7, "Georgia Pacific");
+        InsertTexture(8, "Sargento (WSOR)");
+        InsertTexture(9, "WSOR");
+        InsertTexture(10, "UP");
+        InsertTexture(11, "SFLC");
+        InsertTexture(12, "IC");
+        InsertTexture(13, "MP");
+        InsertTexture(14, "FWD");
+        InsertTexture(15, "MNS");
+        InsertTexture(16, "ITC");
+        InsertTexture(17, "GT");
+        InsertTexture(18, "CNW (Red)");
+        InsertTexture(19, "TPW");
+        InsertTexture(20, "Blandsville & Blankerston (USRE Ends)");
+        InsertTexture(21, "Aloha Shake (USLX)");
+        InsertTexture(22, "PMA (USLX) 3");
+        InsertTexture(23, "Louisiana Pacific");
+        InsertTexture(24, "CNW (Yellow)");
+        InsertTexture(25, "BM");
+        InsertTexture(26, "Blandsville & Blankerston (PS Ends)");
+        InsertTexture(27, "");
     }
 
     @Override

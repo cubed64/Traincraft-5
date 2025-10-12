@@ -321,17 +321,17 @@ public class FNCC60FootBulk extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "FNCC (No Stakes)");
-        textureDescriptionMap.put(1, "FNCC (Stakes)");
-        textureDescriptionMap.put(2, "TTPX (No Stakes)");
-        textureDescriptionMap.put(3, "FNCC (No Equipment Pockets)");
-        textureDescriptionMap.put(4, "TTPX");
-        textureDescriptionMap.put(5, "CDP");
-        textureDescriptionMap.put(6, "DN");
-        textureDescriptionMap.put(7, "DN");
-        textureDescriptionMap.put(8, "BN");
-        textureDescriptionMap.put(9, "BN (Stakes)");
-        textureDescriptionMap.put(10, "GCM");
+        InsertTexture(0, "FNCC (No Stakes)");
+        InsertTexture(1, "FNCC (Stakes)");
+        InsertTexture(2, "TTPX (No Stakes)");
+        InsertTexture(3, "FNCC (No Equipment Pockets)");
+        InsertTexture(4, "TTPX");
+        InsertTexture(5, "CDP");
+        InsertTexture(6, "DN");
+        InsertTexture(7, "DN");
+        InsertTexture(8, "BN");
+        InsertTexture(9, "BN (Stakes)");
+        InsertTexture(10, "GCM");
     }
 
     @Override

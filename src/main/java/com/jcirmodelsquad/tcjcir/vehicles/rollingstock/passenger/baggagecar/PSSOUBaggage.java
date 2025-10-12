@@ -19,12 +19,12 @@ public class PSSOUBaggage extends Freight implements IInventory {
 	public PSSOUBaggage(World world) {
 		super(world);
 		initFreightCart();
-		textureDescriptionMap.put(0, "SOU (early)");
-		textureDescriptionMap.put(1, "SOU (early, without mail poles");
-		textureDescriptionMap.put(2, "SOU");
-		textureDescriptionMap.put(3, "SOU (without mail poles");
-		textureDescriptionMap.put(4, "SOU (late)");
-		textureDescriptionMap.put(5, "SOU (late, without mail poles)");
+		InsertTexture(0, "SOU (early)");
+		InsertTexture(1, "SOU (early, without mail poles");
+		InsertTexture(2, "SOU");
+		InsertTexture(3, "SOU (without mail poles");
+		InsertTexture(4, "SOU (late)");
+		InsertTexture(5, "SOU (late, without mail poles)");
 	}
 
 	public void initFreightCart() {

@@ -237,17 +237,17 @@ public class Freight66centerbeam extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "TNTL");
-        textureDescriptionMap.put(1, "WRX");
-        textureDescriptionMap.put(2, "NP");
-        textureDescriptionMap.put(3, "BN 1");
-        textureDescriptionMap.put(4, "BN 2");
-        textureDescriptionMap.put(5, "HTCX");
-        textureDescriptionMap.put(6, "GLNT");
-        textureDescriptionMap.put(7, "Generic (Teal)");
-        textureDescriptionMap.put(8, "Generic (Orange)");
-        textureDescriptionMap.put(9, "Generic (Blue)");
-        textureDescriptionMap.put(10, "Generic (Yellow)");
+        InsertTexture(0, "TNTL");
+        InsertTexture(1, "WRX");
+        InsertTexture(2, "NP");
+        InsertTexture(3, "BN 1");
+        InsertTexture(4, "BN 2");
+        InsertTexture(5, "HTCX");
+        InsertTexture(6, "GLNT");
+        InsertTexture(7, "Generic (Teal)");
+        InsertTexture(8, "Generic (Orange)");
+        InsertTexture(9, "Generic (Blue)");
+        InsertTexture(10, "Generic (Yellow)");
     }
 
     @Override

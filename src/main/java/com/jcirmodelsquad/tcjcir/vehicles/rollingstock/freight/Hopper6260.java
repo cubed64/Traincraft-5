@@ -24,12 +24,12 @@ public class Hopper6260 extends AbstractStandardFreightCar
 	@Override
 	public void setupTextureDescription()
 	{
-		textureDescriptionMap.put(0, "Generic Light Grey");
-		textureDescriptionMap.put(1, "GATX");
-		textureDescriptionMap.put(2, "CSWR");
-		textureDescriptionMap.put(3, "Generic Brown");
-		textureDescriptionMap.put(4, "GATX TWO");
-		textureDescriptionMap.put(5, "WP");
+		InsertTexture(0, "Generic Light Grey");
+		InsertTexture(1, "GATX");
+		InsertTexture(2, "CSWR");
+		InsertTexture(3, "Generic Brown");
+		InsertTexture(4, "GATX TWO");
+		InsertTexture(5, "WP");
 	}
 
 	@Override

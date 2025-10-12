@@ -24,7 +24,7 @@ public class EarlyFlat extends AbstractStandardFreightCar
 	@Override
 	public void setupTextureDescription()
 	{
-		//textureDescriptionMap.put(0, "TrailerTrain Cooperation");
+		//InsertTexture(0, "TrailerTrain Cooperation");
 	}
 
 	@Override

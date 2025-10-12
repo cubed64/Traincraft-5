@@ -25,10 +25,10 @@ public class PS160 extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "GT");
-        textureDescriptionMap.put(1, "IC");
-        textureDescriptionMap.put(2, "WRX (Tree Logo)");
-        textureDescriptionMap.put(3, "WRX (Slant Scheme)");
+        InsertTexture(0, "GT");
+        InsertTexture(1, "IC");
+        InsertTexture(2, "WRX (Tree Logo)");
+        InsertTexture(3, "WRX (Slant Scheme)");
     }
 
     @Override

@@ -201,11 +201,11 @@ public class GSC53Foot66Bulkhead extends AbstractStandardFreightCar
     @Override
     public void setupTextureDescription()
     {
-        textureDescriptionMap.put(0, "ICG");
-        textureDescriptionMap.put(1, "GN");
-        textureDescriptionMap.put(2, "NP");
-        textureDescriptionMap.put(3, "Blandsville & Blankerston");
-        textureDescriptionMap.put(4, "Minneapolis and St. Louis");
+        InsertTexture(0, "ICG");
+        InsertTexture(1, "GN");
+        InsertTexture(2, "NP");
+        InsertTexture(3, "Blandsville & Blankerston");
+        InsertTexture(4, "Minneapolis and St. Louis");
     }
 
     @Override

@@ -19,17 +19,17 @@ public class DRGWBaggage700Series extends Freight implements IInventory {
 	public DRGWBaggage700Series(World world) {
 		super(world);
 		initFreightCart();
-		textureDescriptionMap.put(0, "D&RG (As Delivered)");
-		textureDescriptionMap.put(1, "D&RGW");
-		textureDescriptionMap.put(2, "D&RGW (Roof Vents)");
-		textureDescriptionMap.put(3, "D&RGW (717 Ski Train)");
-		textureDescriptionMap.put(4, "D&RGW (4 stripe, Messenger)");
-		textureDescriptionMap.put(5, "D&RGW (4 stripe, Alternate Messenger)");
-		textureDescriptionMap.put(6, "D&RGW (4 stripe)");
-		textureDescriptionMap.put(7, "D&RGW (4 stripe, Large Doors, Messenger)");
-		textureDescriptionMap.put(8, "D&RGW (4 stripe, Large Doors)");
-		textureDescriptionMap.put(9, "D&RGW (4 stripe, 715 Ski Train)");
-		textureDescriptionMap.put(10, "WP");
+		InsertTexture(0, "D&RG (As Delivered)");
+		InsertTexture(1, "D&RGW");
+		InsertTexture(2, "D&RGW (Roof Vents)");
+		InsertTexture(3, "D&RGW (717 Ski Train)");
+		InsertTexture(4, "D&RGW (4 stripe, Messenger)");
+		InsertTexture(5, "D&RGW (4 stripe, Alternate Messenger)");
+		InsertTexture(6, "D&RGW (4 stripe)");
+		InsertTexture(7, "D&RGW (4 stripe, Large Doors, Messenger)");
+		InsertTexture(8, "D&RGW (4 stripe, Large Doors)");
+		InsertTexture(9, "D&RGW (4 stripe, 715 Ski Train)");
+		InsertTexture(10, "WP");
 	}
 
 	public void initFreightCart() {

@@ -79,6 +79,11 @@ public class GuiPaintbrushMenu extends GuiScreen {
     private final AbstractTrains renderEntity;
     private boolean doAnimation;
 
+    @Override
+    public boolean doesGuiPauseGame() {
+        return false;
+    }
+
     public GuiPaintbrushMenu(EntityPlayer editingPlayer, EntityRollingStock rollingStock) {
         this.editingPlayer = editingPlayer;
         this.rollingStock = rollingStock;
@@ -247,8 +252,8 @@ public class GuiPaintbrushMenu extends GuiScreen {
             for (int i = 0; i < optionsOnCurrentPage; i++) {
                 loopRenderColor = i + RESULTS_PER_PAGE * currentPage;
                 ((GuiButtonPaintbrushMenu) this.buttonList.get(i + 3)).setType(GuiButtonPaintbrushMenu.Type.SELECTIONBOX, (fakeTrain.getColors()[i + RESULTS_PER_PAGE * currentPage] == rollingStock.getColor()) ? GuiButtonPaintbrushMenu.Texture.ACTIVE : GuiButtonPaintbrushMenu.Texture.INACTIVE);
-                if (rollingStock.textureDescriptionMap.containsKey(loopRenderColor))
-                    colorName = rollingStock.textureDescriptionMap.get(loopRenderColor);
+                if (rollingStock.textureDescriptionMapContainsKey(loopRenderColor))
+                    colorName = rollingStock.textureDescriptionGet(loopRenderColor);
                 else
                     colorName = AbstractTrains.getColorAsString(fakeTrain.getColors()[loopRenderColor]);
                 fontRendererObj.drawSplitString(colorName, (int) ((offsetX + 14) - (0.5 * fontRendererObj.splitStringWidth(colorName, 82))), (int) offsetY, 82, fontColor);
@@ -293,14 +298,14 @@ public class GuiPaintbrushMenu extends GuiScreen {
         } else { // If the mouse is anywhere else on the screen...
             if (renderModels) {
                 // Draw texture descriptions if they exist...
-                if (!rollingStock.textureDescriptionMap.isEmpty()) {
+                if (!rollingStock.isTextureDescriptionMapEmpty()) {
                     GuiButtonPaintbrushMenu loopButton;
                     for (int i = 0; i < optionsOnCurrentPage; i++) {
                         loopRenderColor = i + RESULTS_PER_PAGE * currentPage;
                         loopButton = ((GuiButtonPaintbrushMenu) buttonList.get(i + 3));
                         if (mouseX > loopButton.xPosition && mouseX < loopButton.xPosition + loopButton.width && mouseY > loopButton.yPosition && mouseY < loopButton.yPosition + loopButton.height)
-                            if (rollingStock.textureDescriptionMap.containsKey(loopRenderColor))
-                                drawHoveringText(Collections.singletonList(rollingStock.textureDescriptionMap.get(loopRenderColor)), mouseX, mouseY, fontRendererObj);
+                            if (rollingStock.textureDescriptionMapContainsKey(loopRenderColor))
+                                drawHoveringText(Collections.singletonList(rollingStock.textureDescriptionGet(loopRenderColor)), mouseX, mouseY, fontRendererObj);
                     }
                 }
             }
@@ -338,8 +343,9 @@ public class GuiPaintbrushMenu extends GuiScreen {
                 case 9:
                 case 10: // Color selection button.
                     int newColor = fakeTrain.getColors()[(currentPage * RESULTS_PER_PAGE) + (clickedButton.id - 3)];
-                    rollingStock.setColor(newColor);
                     Traincraft.paintbrushColorChannel.sendToServer(new PacketPaintbrushColor(newColor, rollingStock.getEntityId()));
+                    //rollingStock.setColor(newColor);
+
                     break;
                 case 14:
                     this.mc.thePlayer.closeScreen();
@@ -382,7 +388,7 @@ public class GuiPaintbrushMenu extends GuiScreen {
                     if (Character.getNumericValue(eventChar) <= optionsOnCurrentPage) {
                         editingPlayer.playSound("random.click", 1f, 1f);
                         int newColor = fakeTrain.getColors()[(currentPage * RESULTS_PER_PAGE) + (Character.getNumericValue(eventChar) - 1)];
-                        rollingStock.setColor(newColor);
+                        //rollingStock.setColor(newColor);
                         Traincraft.paintbrushColorChannel.sendToServer(new PacketPaintbrushColor(newColor, rollingStock.getEntityId()));
                     }
                 }
