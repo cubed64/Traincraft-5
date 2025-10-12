@@ -9,14 +9,15 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.ElectricTrain;
+import train.common.enums.LockoutGroup;
 import train.common.library.GuiIDs;
 
 public class ElectricCEEslug extends ElectricTrain {
     public ElectricCEEslug(World world) {
         super(world);
         InsertTexture(0, "NEP SUB-4");
-        InsertTexture(1, "FNCC S111, S112, & S114");
-        InsertTexture(2, "FNCC S113");
+        InsertTexture(1, "FNCC S111, S112, & S114", LockoutGroup.FNCC);
+        InsertTexture(2, "FNCC S113", LockoutGroup.FNCC);
         InsertTexture(3, "Blandsville & Blankerston");
         InsertTexture(4, "");
     }

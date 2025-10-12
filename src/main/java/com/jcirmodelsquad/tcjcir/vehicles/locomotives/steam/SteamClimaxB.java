@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.SteamTrain;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -18,8 +19,8 @@ public class SteamClimaxB extends SteamTrain {
 		super(world, EnumTrains.ClimaxB.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
 		InsertTexture(0, "Hillcrest Lumber Co #9");
-		InsertTexture(1, "Washaska Resources #6");
-		InsertTexture(2, "Washaska Resources #7");
+		InsertTexture(1, "Washaska Resources #6", LockoutGroup.BIDA);
+		InsertTexture(2, "Washaska Resources #7", LockoutGroup.BIDA);
 		InsertTexture(3, "Clarks Milling & Lumber Co");
 	}
 

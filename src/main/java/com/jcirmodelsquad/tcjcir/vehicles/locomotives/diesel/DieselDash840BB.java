@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -18,7 +19,7 @@ public class DieselDash840BB extends DieselTrain {
         super(world, EnumTrains.Dash840BB.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         InsertTexture(0, "ATSF");
-        InsertTexture(1, "North Fox (Early)");
+        InsertTexture(1, "North Fox (Early)", LockoutGroup.FNCC);
     }
     public DieselDash840BB(World world, double d, double d1, double d2){
         this(world);

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -26,7 +27,7 @@ public class DieselDash944CW extends DieselTrain {
         InsertTexture(5, "Southern Pacific");
         InsertTexture(6, "Southern Pacific (UP Patch)");
         InsertTexture(7, "Chicago Northwestern");
-        InsertTexture(8, "Morristown Tenneva & Southern");
+        InsertTexture(8, "Morristown Tenneva & Southern", LockoutGroup.MTS);
         InsertTexture(9, "Avanste Northeastern");
         InsertTexture(10, "Galesburg Clinton & Midland");
         InsertTexture(11, "CSLX (EX CSWR)");

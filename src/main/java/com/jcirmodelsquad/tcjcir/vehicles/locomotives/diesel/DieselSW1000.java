@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -20,7 +21,7 @@ public class DieselSW1000 extends DieselTrain {
         initLoco();
         InsertTexture(0, "Burlington Northern");
         InsertTexture(1, "Blandsville & Blankerston");
-        InsertTexture(2, "Carbondale & Pine Valley");
+        InsertTexture(2, "Carbondale & Pine Valley", LockoutGroup.CPV);
         InsertTexture(3, "Rio Grande");
         InsertTexture(4, "Nomansi and Eastern Pacific");
         InsertTexture(5, "Southern Peenor Belt");

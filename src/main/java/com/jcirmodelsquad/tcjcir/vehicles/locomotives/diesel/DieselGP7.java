@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -26,8 +27,8 @@ public class DieselGP7 extends DieselTrain {
         InsertTexture(6, "Bangor & Aroostook (Early)");
         InsertTexture(7, "Bangor & Aroostook (Late)");
         InsertTexture(8, "West Creek Pacific");
-        InsertTexture(9, "Carbondale & Pine Valley");
-        InsertTexture(10, "Carbondale & Pine Valley (CSWR Buyout)");
+        InsertTexture(9, "Carbondale & Pine Valley", LockoutGroup.CPV);
+        InsertTexture(10, "Carbondale & Pine Valley (CSWR Buyout)", LockoutGroup.CPV);
         InsertTexture(11, "waltuh white gp7");
         InsertTexture(12, "Deadwood & La Mesa (Early)");
         InsertTexture(13, "Deadwood & La Mesa (Late)");
@@ -48,7 +49,7 @@ public class DieselGP7 extends DieselTrain {
         InsertTexture(28, "New York Central (Lightning Bolt)");
         InsertTexture(29, "New York Central (Late)");
         InsertTexture(30, "New York Central (Grey Lighting Bolt)");
-        InsertTexture(31, "FNCC (KIT-L)");
+        InsertTexture(31, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(32, "ATSF (Pinstripe)");
         InsertTexture(33, "ATSF (Zebrastripe)");
         InsertTexture(34, "MKT");

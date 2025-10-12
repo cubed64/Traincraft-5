@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -24,14 +25,14 @@ public class DieselSD40 extends DieselTrain {
         InsertTexture(2, "FURRX");
         InsertTexture(3, "Wisconsin & Southern");
         InsertTexture(4, "Flatiron Northwestern");
-        InsertTexture(5, "FNCC (KIT-L)");
+        InsertTexture(5, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(6, "Pennsylvania Railroad");
         InsertTexture(7, "CSXT (YN1)");
         InsertTexture(8, "DLMR");
         InsertTexture(9, "GLC (Cigar Band)");
         InsertTexture(10, "AA (Fog)");
         InsertTexture(11, "Seaboard System");
-        InsertTexture(12, "Honex Lines (HNXR)");
+        InsertTexture(12, "Honex Lines (HNXR)", LockoutGroup.BIDA);
         InsertTexture(13, "Chessie System");
     }
     public DieselSD40(World world, double d, double d1, double d2){

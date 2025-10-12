@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -21,7 +22,7 @@ public class DieselB23S7 extends DieselTrain {
         InsertTexture(1, "GECX 2002");
         InsertTexture(2, "Monongahela");
         InsertTexture(3, "Blandsville & Blankerston");
-        InsertTexture(4, "FNCC (KIT-L)");
+        InsertTexture(4, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(5, "WP (Early)");
         InsertTexture(6, "WP (Late)");
         InsertTexture(7, "CSXT (Yn3)");

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -18,7 +19,7 @@ public class Diesel4ED172T extends DieselTrain {
         super(world, EnumTrains.CEE4ED172T.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         InsertTexture(0, "CEE 1950s Demo units");
-        InsertTexture(1, "FMSR Late (FNCC Early)");
+        InsertTexture(1, "FMSR Late (FNCC Early)", LockoutGroup.FMSR);
         InsertTexture(2, "DLMR");
         InsertTexture(3, "PAMC (Early)");
         InsertTexture(4, "Blandsville & Blankerston");

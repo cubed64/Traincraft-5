@@ -12,6 +12,7 @@ import net.minecraftforge.fluids.FluidRegistry;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.Tender;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -23,8 +24,8 @@ public class TenderSquanderback extends Tender implements IInventory {
 	public TenderSquanderback(World world) {
 		super(world, FluidRegistry.WATER, 0, EnumTrains.SquanderbackTender.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initFreightTender();
-		InsertTexture(0, "WRX (Logo)");
-		InsertTexture(1, "WRX");
+		InsertTexture(0, "WRX (Logo)", LockoutGroup.BIDA);
+		InsertTexture(1, "WRX", LockoutGroup.BIDA);
 		InsertTexture(2, "CDC&S");
 	}
 

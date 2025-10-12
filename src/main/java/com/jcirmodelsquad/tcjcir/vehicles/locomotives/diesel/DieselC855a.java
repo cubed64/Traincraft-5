@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -18,7 +19,7 @@ public class DieselC855a extends DieselTrain {
         super(world, EnumTrains.C855a.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         InsertTexture(0, "Union Pacific");
-        InsertTexture(1, "FNCC (KIT-L)");
+        InsertTexture(1, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(2, "Great Lakes & Northern Territories");
     }
     public DieselC855a(World world, double d, double d1, double d2){

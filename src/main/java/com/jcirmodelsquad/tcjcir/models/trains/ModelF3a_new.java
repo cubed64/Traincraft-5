@@ -218,8 +218,8 @@ public class ModelF3a_new extends ModelConverter //Same as Filename
 		bodyModel[174] = new ModelRendererTurbo(this, 40, 63, textureX, textureY); // Box 405 she wheel on my antenna till i wagon
 		bodyModel[175] = new ModelRendererTurbo(this, 220, 192, textureX, textureY); // Box 429 front mu hose extender
 		bodyModel[176] = new ModelRendererTurbo(this, 227, 192, textureX, textureY); // Box 430 front mu hose extender
-		bodyModel[177] = new ModelRendererTurbo(this, 1, 156, textureX, textureY); // Box 431 headlight nose plate
-		bodyModel[178] = new ModelRendererTurbo(this, 1, 156, textureX, textureY); // Box 432 headlight nose plate
+		bodyModel[177] = new ModelRendererTurbo(this, 1, 156, textureX, textureY, "lamp"); // Box 431 headlight nose plate
+		bodyModel[178] = new ModelRendererTurbo(this, 1, 156, textureX, textureY, "lamp"); // Box 432 headlight nose plate
 		bodyModel[179] = new ModelRendererTurbo(this, 1, 161, textureX, textureY); // Box 433 nose headlight plate
 		bodyModel[180] = new ModelRendererTurbo(this, 288, 57, textureX, textureY, "cull"); // Box 186 winterization hatch cull tall
 		bodyModel[181] = new ModelRendererTurbo(this, 444, 158, textureX, textureY, "cull"); // Box 522 atsf tall arrestor cull

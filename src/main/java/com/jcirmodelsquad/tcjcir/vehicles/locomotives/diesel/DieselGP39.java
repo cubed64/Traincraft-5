@@ -21,6 +21,7 @@ public class DieselGP39 extends DieselTrain {
         InsertTexture(1, "Blandsville & Blankerston");
         InsertTexture(2, "CSXT (YN2)");
         InsertTexture(3, "CSXT (Bluedown)");
+        InsertTexture(4, "Chessie System");
 
     }
     public DieselGP39(World world, double d, double d1, double d2){

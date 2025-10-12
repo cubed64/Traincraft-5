@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.SteamTrain;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -22,7 +23,7 @@ public class SteamAlco2102 extends SteamTrain {
 		InsertTexture(2, "Consolidated Builders Inc");
 		InsertTexture(3, "Kaiser Steel");
 		InsertTexture(4, "Oil Clusters & Garden");
-		InsertTexture(5, "Washaska Resources");
+		InsertTexture(5, "Washaska Resources", LockoutGroup.BIDA);
 	}
 
 	public void initLocoSteam() {

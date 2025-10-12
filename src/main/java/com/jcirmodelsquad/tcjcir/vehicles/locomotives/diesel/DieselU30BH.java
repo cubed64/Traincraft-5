@@ -18,7 +18,7 @@ public class DieselU30BH extends DieselTrain {
     public DieselU30BH(World world) {
         super(world, EnumTrains.U30BH.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        InsertTexture(0, "Northern Cascades Transit Authority (NOCTA)");
+        InsertTexture(0, "Northern Cascades Transit Authority (NOCTA)", LockoutGroup.BIDA);
         InsertTexture(1, "Blandsville Area Rapid Transporation (BlART)");
         InsertTexture(2, "Steampunk Rail", LockoutGroup.SPR);
         InsertTexture(3, "CRL");

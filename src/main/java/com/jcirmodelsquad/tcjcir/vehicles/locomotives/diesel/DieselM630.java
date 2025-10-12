@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -20,9 +21,9 @@ public class DieselM630 extends DieselTrain {
         initLoco();
         InsertTexture(0, "Pacific Great Eastern");
         InsertTexture(1, "Blandsville & Blankerston");
-        InsertTexture(2, "North Fox & Yukon Route (FNCC, KIT-L, Big Canon)");
+        InsertTexture(2, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(3, "Great Lakes & Northern Territories");
-        InsertTexture(4, "Latrans Range Railroad");
+        InsertTexture(4, "Latrans Range Railroad", LockoutGroup.LRR);
 
     }
     public DieselM630(World world, double d, double d1, double d2){

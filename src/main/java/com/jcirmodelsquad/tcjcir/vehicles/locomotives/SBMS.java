@@ -3,6 +3,7 @@ package com.jcirmodelsquad.tcjcir.vehicles.locomotives;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.AbstractTankSlug;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 
 public class SBMS extends AbstractTankSlug
@@ -10,7 +11,7 @@ public class SBMS extends AbstractTankSlug
     public SBMS(World world)
     {
         super(world, EnumTrains.SBMS);
-        InsertTexture(0, "FNCC");
+        InsertTexture(0, "FNCC", LockoutGroup.FNCC);
         InsertTexture(1, "WP");
         InsertTexture(2, "Blandsville & Blasic i mean Blankerston");
         InsertTexture(3, "TTLC (Burnt Forest Black)");

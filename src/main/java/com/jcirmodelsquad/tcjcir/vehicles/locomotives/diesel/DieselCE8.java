@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -18,11 +19,11 @@ public class DieselCE8 extends DieselTrain {
     public DieselCE8(World world) {
         super(world, EnumTrains.CE8.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        InsertTexture(0, "FNCC 99 (KIT-L)");
+        InsertTexture(0, "FNCC 99 (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(1, "Nomansi Sugar Cane Corperation");
         InsertTexture(2, "Blandsville & Blankerston (No Dynamics)");
         InsertTexture(3, "Blandsville & Blankerston (Dynamics)");
-        InsertTexture(4, "L&W");
+        InsertTexture(4, "L&W", LockoutGroup.LW);
     }
     public DieselCE8(World world, double d, double d1, double d2){
         this(world);

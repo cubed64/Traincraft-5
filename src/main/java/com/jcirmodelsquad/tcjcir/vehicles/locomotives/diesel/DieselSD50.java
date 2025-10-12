@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -27,7 +28,7 @@ public class DieselSD50 extends DieselTrain {
         InsertTexture(6, "ANE (1st & 2nd Orders)");
         InsertTexture(7, "Blandsville & Blanklands Terminal Railroad Association");
         InsertTexture(8, "HBRY");
-        InsertTexture(9, "FNCC KIT-L");
+        InsertTexture(9, "FNCC KIT-L", LockoutGroup.FNCC);
         InsertTexture(10, "Seaboard System");
         InsertTexture(11, "Chessie System");
     }

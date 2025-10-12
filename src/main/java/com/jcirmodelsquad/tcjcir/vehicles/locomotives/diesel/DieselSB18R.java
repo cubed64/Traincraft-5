@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -27,7 +28,7 @@ public class DieselSB18R extends DieselTrain {
         InsertTexture(7, "TTLC (Oak Moss)");
         InsertTexture(8, "TTLC (Reindeer Moss)");
         InsertTexture(9, "TTLC (Swamp Moss)");
-        InsertTexture(10, "Morristown Tenneva & Southern");
+        InsertTexture(10, "Morristown Tenneva & Southern", LockoutGroup.MTS);
     }
     public DieselSB18R(World world, double d, double d1, double d2){
         this(world);

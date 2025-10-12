@@ -27,6 +27,7 @@ public class VersaTrans extends AbstractStandardFreightCar
         InsertTexture(0, "Generic Blue");
         InsertTexture(1, "Generic Dark Grey");
         InsertTexture(2, "Generic Light Grey");
+        InsertTexture(3, "CSXT");
     }
 
     @Override

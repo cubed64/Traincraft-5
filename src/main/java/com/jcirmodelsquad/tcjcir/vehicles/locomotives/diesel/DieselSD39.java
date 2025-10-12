@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -26,7 +27,7 @@ public class DieselSD39 extends DieselTrain {
         InsertTexture(4, "NEP");
         InsertTexture(5, "NEP");
         InsertTexture(6, "FURRX");
-        InsertTexture(7, "Carbondale & Pine Valley");
+        InsertTexture(7, "Carbondale & Pine Valley", LockoutGroup.CPV);
 
     }
     public DieselSD39(World world, double d, double d1, double d2){

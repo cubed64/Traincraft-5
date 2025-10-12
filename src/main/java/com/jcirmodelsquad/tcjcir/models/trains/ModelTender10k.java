@@ -10,6 +10,7 @@
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
 import com.jcirmodelsquad.tcjcir.models.trucks.Model70TonTruck2;
+import com.jcirmodelsquad.tcjcir.models.trucks.ModelASF_crown_LS_truck;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelBettendorf_Truck;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelTenderTruck3;
 import net.minecraft.client.Minecraft;
@@ -383,7 +384,7 @@ public class ModelTender10k extends ModelConverter //Same as Filename
 		bodyModel[83].setRotationPoint(27.01F, 8.5F, -10.5F);
 		bodyModel[83].rotateAngleY = 1.57079633F;
 	}
-	ModelBettendorf_Truck truck2 = new ModelBettendorf_Truck();
+	ModelASF_crown_LS_truck truck2 = new ModelASF_crown_LS_truck();
 	Model70TonTruck2 bogie = new Model70TonTruck2();
 
 	@Override
@@ -414,7 +415,7 @@ public class ModelTender10k extends ModelConverter //Same as Filename
 			bogie.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
 		} else {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/Bettendorf_Truck_black.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/asf_crown_ls_truck_black.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslatef(-0.95F, 0.0F, 0F);
 			truck2.render(entity, f, f1, f2, f3, f4, f5);

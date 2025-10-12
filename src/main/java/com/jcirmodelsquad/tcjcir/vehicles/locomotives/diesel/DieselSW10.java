@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -19,8 +20,8 @@ public class DieselSW10 extends DieselTrain {
         initLoco();
         InsertTexture(0, "UP");
         InsertTexture(1, "Blandsville & Blankerston");
-        InsertTexture(2, "North Fox (KIT-L)");
-        InsertTexture(3, "North Fox (DAR80)");
+        InsertTexture(2, "North Fox (KIT-L)", LockoutGroup.FNCC);
+        InsertTexture(3, "North Fox (DAR80)", LockoutGroup.FNCC);
         InsertTexture(4, "TIR 1248 & 1253");
         InsertTexture(5, "TIR 1269");
         InsertTexture(6, "Glonch Rayroa");

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -19,12 +20,12 @@ public class DieselU18Balt extends DieselTrain {
         initLoco();
 
         InsertTexture(0, "PW (Late Orange & Brown)");
-        InsertTexture(1, "FNCC (KIT-L)");
+        InsertTexture(1, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(2, "FCOM (Ex FNCC)");
         InsertTexture(3, "Blandsville & Blankerston");
-        InsertTexture(4, "SV 402");
-        InsertTexture(5, "SV 406");
-        InsertTexture(6, "SV 1801");
+        InsertTexture(4, "SV 402", LockoutGroup.BIDA);
+        InsertTexture(5, "SV 406", LockoutGroup.BIDA);
+        InsertTexture(6, "SV 1801", LockoutGroup.BIDA);
         InsertTexture(7, "Grassland Laboratories");
         InsertTexture(8, "GCM");
         InsertTexture(9, "CSXT (Stealth)");

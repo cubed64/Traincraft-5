@@ -12,6 +12,7 @@ import net.minecraftforge.fluids.*;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.LiquidTank;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -24,6 +25,8 @@ public class BUnitF7 extends LiquidTank implements IFluidHandler {
 	public BUnitF7(World world) {
 		super(world, EnumTrains.F7B.getTankCapacity());
 		initFreightWater();
+		InsertTexture(0, "CPV", LockoutGroup.CPV);
+
 		this.theTank = LiquidManager.getInstance().new FilteredTank(EnumTrains.F7B.getTankCapacity(), LiquidManager.dieselFilter());
 	}
 

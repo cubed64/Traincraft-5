@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -19,7 +20,7 @@ public class DieselGP15 extends DieselTrain {
 		initLoco();
 		InsertTexture(0, "UPY");
 		InsertTexture(1, "FURRX"); // (old nasty ass texture if i see this in game somewhjer i will kill you)
-		InsertTexture(2, "Lisha & Watson");
+		InsertTexture(2, "Lisha & Watson", LockoutGroup.LW);
 		InsertTexture(3, "Atlas & Red Sands Railroad");
 		InsertTexture(4, "Southern Port Belt");
 		InsertTexture(5, "GLC (Ex SPB)");

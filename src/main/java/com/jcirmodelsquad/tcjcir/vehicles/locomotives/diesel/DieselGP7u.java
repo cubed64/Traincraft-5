@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -24,7 +25,7 @@ public class DieselGP7u extends DieselTrain {
         InsertTexture(4, "Avanste Northeastern (Yard)");
         InsertTexture(5, "Fox Union Rail Resources (FURRX)");
         InsertTexture(6, "OC&G 15");
-        InsertTexture(7, "FNCC 210-213");
+        InsertTexture(7, "FNCC 210-213", LockoutGroup.FNCC);
 
     }
     public DieselGP7u(World world, double d, double d1, double d2){

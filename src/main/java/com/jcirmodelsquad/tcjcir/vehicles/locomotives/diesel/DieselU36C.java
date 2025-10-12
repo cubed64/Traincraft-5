@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -22,7 +23,7 @@ public class DieselU36C extends DieselTrain {
         InsertTexture(2, "ATSF (Kodachrome)");
         InsertTexture(3, "ATSF (Freightbonet)");
         InsertTexture(4, "Milwaukee Road");
-        InsertTexture(5, "FNCC 19");// one of a kind Super 7-36CXE
+        InsertTexture(5, "FNCC 19", LockoutGroup.FNCC);// one of a kind Super 7-36CXE
     }
     public DieselU36C(World world, double d, double d1, double d2){
         this(world);

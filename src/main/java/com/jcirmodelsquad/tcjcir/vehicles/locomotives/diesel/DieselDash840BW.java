@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -20,7 +21,7 @@ public class DieselDash840BW extends DieselTrain {
         InsertTexture(0, "ATSF");
         InsertTexture(1, "borgborg");
         InsertTexture(2, "Blandsville & Blankerston");
-        InsertTexture(3, "Morristown Tenneva & Southern");
+        InsertTexture(3, "Morristown Tenneva & Southern", LockoutGroup.MTS);
         InsertTexture(4, "Galesburg Clinton & Midland");
         InsertTexture(5, "");
         InsertTexture(6, "");

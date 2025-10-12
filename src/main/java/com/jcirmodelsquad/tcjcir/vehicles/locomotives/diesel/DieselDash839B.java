@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -23,8 +24,8 @@ public class DieselDash839B extends DieselTrain {
         InsertTexture(3, "Western Pacific (Late)");
         InsertTexture(4, "Western Pacific (OLS)");
         InsertTexture(5, "Blandsville & Blankerston");
-        InsertTexture(6, "North Fox (KIT-L)");
-        InsertTexture(7, "North Fox (KIT-80)");
+        InsertTexture(6, "North Fox (KIT-L)", LockoutGroup.FNCC);
+        InsertTexture(7, "North Fox (KIT-80)", LockoutGroup.FNCC);
         InsertTexture(8, "CEEX 90s Lease Scheme");
 
     }

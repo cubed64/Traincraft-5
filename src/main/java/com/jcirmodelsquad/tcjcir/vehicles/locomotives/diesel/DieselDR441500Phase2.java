@@ -17,7 +17,7 @@ import train.common.library.GuiIDs;
 
 public class DieselDR441500Phase2 extends DieselTrain {
     public DieselDR441500Phase2(World world) {
-        super(world, EnumTrains.RF16.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.DR441500Phase2.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         InsertTexture(0, "Missouri Pacific (As delivered)");
         InsertTexture(1, "Missouri Pacific");

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -18,7 +19,7 @@ public class DieselSW1600 extends DieselTrain {
     public DieselSW1600(World world) {
         super(world, EnumTrains.SW1600.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        InsertTexture(0, "FNCC (KIT-L)");
+        InsertTexture(0, "FNCC (KIT-L)", LockoutGroup.FNCC);
     }
     public DieselSW1600(World world, double d, double d1, double d2){
         this(world);

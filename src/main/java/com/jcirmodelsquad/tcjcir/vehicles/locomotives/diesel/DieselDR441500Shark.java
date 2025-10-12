@@ -16,7 +16,7 @@ import train.common.library.GuiIDs;
 
 public class DieselDR441500Shark extends DieselTrain {
     public DieselDR441500Shark(World world) {
-        super(world, EnumTrains.RF16.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.DR441500Shark.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         InsertTexture(0, "Demonstrator");
         InsertTexture(1, "Elgin, Joliet & Eastern");

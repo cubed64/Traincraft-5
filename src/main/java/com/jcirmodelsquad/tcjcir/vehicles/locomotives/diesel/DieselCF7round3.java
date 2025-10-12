@@ -28,7 +28,7 @@ public class DieselCF7round3 extends DieselTrain {
         InsertTexture(6, "FURRX (EX CSWR)");
         InsertTexture(7, "West Creek Pacific");
         InsertTexture(8, "Marshwood Terminal");
-        InsertTexture(9, "Lisha & Watson");
+        InsertTexture(9, "Lisha & Watson", LockoutGroup.LW);
         InsertTexture(10, "");
         InsertTexture(11, "");
         InsertTexture(12, "");

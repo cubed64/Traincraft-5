@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -23,7 +24,7 @@ public class DieselSD9 extends DieselTrain {
         InsertTexture(1, "SP (Trashcan gaming)");
         InsertTexture(2, "MILW");
         InsertTexture(3, "MILW (Typeface)");
-        InsertTexture(4, "FNCC 201 & 202 (Kit-L)");
+        InsertTexture(4, "FNCC 201 & 202 (Kit-L)", LockoutGroup.FNCC);
         InsertTexture(5, "Blandsville Pacific");
         InsertTexture(6, "OC&G");
         InsertTexture(7, "DRGW");
@@ -32,7 +33,7 @@ public class DieselSD9 extends DieselTrain {
         InsertTexture(10, "WFR (not arie cus arie cring)");
         InsertTexture(11, "DLMR");
         InsertTexture(12, "WV");
-        InsertTexture(13, "CNRC 6100 - 6102");
+        InsertTexture(13, "CNRC 6100 - 6102", LockoutGroup.CNRC);
     }
     public DieselSD9(World world, double d, double d1, double d2){
         this(world);

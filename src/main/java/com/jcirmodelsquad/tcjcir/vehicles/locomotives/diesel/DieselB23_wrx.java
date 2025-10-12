@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -17,8 +18,8 @@ public class DieselB23_wrx extends DieselTrain {
     public DieselB23_wrx(World world) {
         super(world, EnumTrains.B23_wrx.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        InsertTexture(0, "WRXR Washaskan Woods RR");
-        InsertTexture(1, "WRXR Washaskan Woods RR (Extended DB)");
+        InsertTexture(0, "WRXR Washaskan Woods RR", LockoutGroup.BIDA);
+        InsertTexture(1, "WRXR Washaskan Woods RR (Extended DB)", LockoutGroup.BIDA);
     }
     public DieselB23_wrx(World world, double d, double d1, double d2){
         this(world);
