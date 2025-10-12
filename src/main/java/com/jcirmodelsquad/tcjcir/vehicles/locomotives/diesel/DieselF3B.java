@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -18,8 +19,8 @@ public class DieselF3B extends DieselTrain {
         super(world, EnumTrains.F3B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         InsertTexture(0, "Phase 2 Early");
-        InsertTexture(1, "FMSR");
-        InsertTexture(2, "");
+        InsertTexture(1, "FMSR", LockoutGroup.FMSR);
+        InsertTexture(2, "DES", LockoutGroup.DES);
         InsertTexture(3, "");
         InsertTexture(4, "");
     }
@@ -79,7 +80,6 @@ public class DieselF3B extends DieselTrain {
         }
     }
 
-
     @Override
     public void pressKey(int i) {
         if (i == 7 && riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
@@ -93,13 +93,9 @@ public class DieselF3B extends DieselTrain {
         super.onUpdate();
     }
 
-    
-
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 0.87F;
     }
-
-
 
     @Override
     public String getInventoryName() {

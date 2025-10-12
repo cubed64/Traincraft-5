@@ -148,7 +148,7 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		}
 		else
 		{
-			tcDieselTab = new CreativeTabTraincraftDiesel(CreativeTabs.getNextID(), "B.A.P");
+			tcDieselTab = new CreativeTabTraincraftDiesel(CreativeTabs.getNextID(), "Bidahochi's American Pack");
 		}
 
 		trainArmor = proxy.addArmor("armor");

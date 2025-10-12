@@ -955,16 +955,16 @@ public enum RenderEnum
 			add(new double[]{0.19D, 1.25D, 0.0D});
 		}
 	}, "", null, 0, false),
-	F7A( DieselF7A.class,  new ModelF7A(), "F7A_", true,new float[] {-1.375F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+	F7A( DieselF7A.class,  new ModelF3a_new(), "f7a_", true,new float[] {-1.3F, 0.145F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{
-			add(new double[]{0.9375D, 1.3D, 0.0D});
-			add(new double[]{0.25D, 1.3D, 0.0D});
+			add(new double[]{0.9675D, 1.25D, 0.0D});
+			add(new double[]{0.19D, 1.25D, 0.0D});
 		}
 	}, "", null, 0, false),
-	F7B( DieselF7B.class,  new ModelF7B(), "F7B_", true,new float[] {-1.25F, 0.15F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
+	F7B( DieselF7B.class,  new ModelF3b(), "f7b_", true,new float[] {-1.22F, 0.145F, 0F},  new float[] { 0F, 180F, 180F },  new float[] { 1F, 1.0F, 1F }, "smoke", 3,  new ArrayList<double[]>() {
 		{
-			add(new double[]{1.35D, 1.3D, 0.0D});
-			add(new double[]{0.55D, 1.3D, 0.0D});
+			add(new double[]{0.9675D, 1.25D, 0.0D});
+			add(new double[]{0.19D, 1.25D, 0.0D});
 		}
 	}, "", null, 0, false),
 	F9A( DieselF9A.class,  new ModelF3a_new(), "f9a_", true,new float[] {-1.298F, 0.145F, 0F},  new float[] { 0F, 180F, 180F },  null, "smoke", 3,  new ArrayList<double[]>() {
@@ -2110,6 +2110,7 @@ public enum RenderEnum
 	PCF6033(PCF6033.class, new ModelPCF6033(),"pcf_6033_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PCF_RBL_Smooth(PCF_RBL_Smooth.class, new ModelPCF_RBL_Smoothbrain(),"pcf_rbl_smooth_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PCF_RBL_Ribbed(PCF_RBL_Ribbed.class, new ModelPCF_RBL_Ribbed(),"pcf_rbl_ribbed_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PCF_B100(PCF_B100.class, new ModelPCF_B100_40(),"pcf_b_100_40_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ACFRailbox(ACFRailbox.class, new ModelACFRailbox(),"ACFRailbox_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ACFRailboxCushioned(ACFRailboxCushioned.class, new ModelACFRailboxCushioned(),"ACFRailboxCushioned_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Evans5100(Evans5100.class, new ModelEvans5100(),"Evans_5100_", true, new float[]{0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

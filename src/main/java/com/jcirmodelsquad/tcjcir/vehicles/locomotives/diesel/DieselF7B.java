@@ -19,6 +19,8 @@ public class DieselF7B extends DieselTrain {
         super(world, EnumTrains.F7B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the benis sus
+        InsertTexture(0, "PC (Ex NYC)");
+        InsertTexture(1, "P");
     }
     public DieselF7B(World world, double d, double d1, double d2){
         this(world);
@@ -75,7 +77,6 @@ public class DieselF7B extends DieselTrain {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1 +0.0);
         }
     }
-    
 
     @Override
     public void pressKey(int i) {
@@ -90,17 +91,13 @@ public class DieselF7B extends DieselTrain {
         super.onUpdate();
     }
 
-    
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 0.9375F;
+    public float getOptimalDistance(EntityMinecart cart) { return 0.87F;
     }
-
-
 
     @Override
     public String getInventoryName() {
-        return "EMD F7B";
+        return "EMD F7b";
     }
 
     @Override
