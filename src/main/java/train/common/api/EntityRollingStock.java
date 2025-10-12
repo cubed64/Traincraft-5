@@ -1873,45 +1873,6 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				}
 				return true;
 			}
-			/**
-			 * If the color is valid for the cart, then change it and reduce
-			 * itemstack size
-			 */
-			if (itemstack.getItem() instanceof ItemDye)
-			{
-				if (this.acceptedColors != null && this.acceptedColors.size() > 0) {
-					for (int i = 0; i < this.acceptedColors.size(); i++) {
-						if (itemstack.getItemDamage() == this.acceptedColors.get(i)) {
-							this.setColor(itemstack.getItemDamage());
-							itemstack.stackSize--;
-
-							//if (!worldObj.isRemote)PacketHandler.sendPacketToClients(PacketHandler.sendStatsToServer(10,this.uniqueID,trainName ,trainType, this.trainOwner, this.getColorAsString(itemstack.getItemDamage()), (int)posX, (int)posY, (int)posZ),this.worldObj, (int)posX,(int)posY,(int)posZ, 12.0D);
-
-							return true;
-						}
-					}
-					if (worldObj.isRemote && ConfigHandler.SHOW_POSSIBLE_COLORS) {
-						String concatColors = getColorAsString(this.acceptedColors.get(0));
-						int moreColors = 0;
-						for (int t = 1; t < this.acceptedColors.size(); t++) {
-							if (!(this.acceptedColors.get(t) > 15)) {
-								concatColors = concatColors.concat(", " + getColorAsString(this.acceptedColors.get(t)));
-							} else {
-								moreColors++;
-							}
-						}
-						if (moreColors == 0) {
-							entityplayer.addChatMessage(new ChatComponentText("Possible colors: " + concatColors + "."));
-						} else {
-							entityplayer.addChatMessage(new ChatComponentText("Possible colors: " + concatColors + ", and " + moreColors + " more."));
-						}
-						entityplayer.addChatMessage(new ChatComponentText("To paint, use the " + StatCollector.translateToLocal("item.tc:paintbrushThing.name") + " or click me with the right (vanilla) dye."));
-					}
-				}
-				else if (this.acceptedColors != null && this.acceptedColors.size() == 0) {
-					entityplayer.addChatMessage(new ChatComponentText("No other colors available."));
-				}
-			}
 
 			if (itemstack.getItem() instanceof ItemContainer && this instanceof DieselTrain && entityplayer.isSneaking() && !worldObj.isRemote)
 			{
