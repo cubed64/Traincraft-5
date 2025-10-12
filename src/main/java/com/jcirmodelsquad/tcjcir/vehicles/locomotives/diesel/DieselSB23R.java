@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -21,7 +22,7 @@ public class DieselSB23R extends DieselTrain {
         //InsertTexture(1, "Western Pacific (Early)");
         //InsertTexture(2, "Western Pacific (Late)");
         InsertTexture(1, "FNCC 335 (Dar80)");
-        InsertTexture(2, "Morristown Tennava & Southern");
+        InsertTexture(2, "Morristown Tennava & Southern", LockoutGroup.MTS);
         InsertTexture(3, "Blandsville & Blankerston");
         InsertTexture(4, "");
         InsertTexture(5, "");

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -21,7 +22,7 @@ public class DieselGP40Dash2 extends DieselTrain {
         InsertTexture(1, "Paradox Rail");
         InsertTexture(2, "Western Pacific");
         InsertTexture(3, "Western Pacific");
-        InsertTexture(4, "Morristown Tenneva & Southern");
+        InsertTexture(4, "Morristown Tenneva & Southern", LockoutGroup.MTS);
         InsertTexture(5, "Avanste Northeastern");
         InsertTexture(6, "Avanste Northeastern (Snow Service)");
         InsertTexture(7, "Amtrak (PH III)");
@@ -32,7 +33,7 @@ public class DieselGP40Dash2 extends DieselTrain {
         InsertTexture(12, "CSXT (YN3)");
         InsertTexture(13, "CSXT (YN2)");
         InsertTexture(14, "JRN");
-        InsertTexture(15, "");
+        InsertTexture(15, "Chessie System");
         InsertTexture(16, "");
         InsertTexture(17, "");
         InsertTexture(18, "");

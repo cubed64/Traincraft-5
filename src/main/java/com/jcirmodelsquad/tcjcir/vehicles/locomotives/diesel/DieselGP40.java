@@ -44,7 +44,7 @@ public class DieselGP40 extends DieselTrain {
         InsertTexture(24, "CSXT (Stealth)");
         InsertTexture(25, "CSXT (Bluedown)");
         InsertTexture(26, "CSXT (MoW Pumpkin) ");
-        InsertTexture(27, "");
+        InsertTexture(27, "Chessie System");
         InsertTexture(28, "");
         InsertTexture(29, "");
         InsertTexture(30, "");

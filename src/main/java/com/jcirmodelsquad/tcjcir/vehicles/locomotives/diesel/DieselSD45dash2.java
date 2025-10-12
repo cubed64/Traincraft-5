@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -41,7 +42,7 @@ public class DieselSD45dash2 extends DieselTrain {
         InsertTexture(19, "Blandsville & Blankerston (Flared Radiator)");
         InsertTexture(20, "Blandsville & Blankerston");
         InsertTexture(22, "CSXT (Yn3)");
-        InsertTexture(23, "Morristown Tenneva & Southern");
+        InsertTexture(23, "Morristown Tenneva & Southern", LockoutGroup.MTS);
         InsertTexture(24, "Glitter like the golden beautiful bitch you are");
         InsertTexture(25, "GLC (Cigar Band)");
         InsertTexture(26, "AA (Fog)");

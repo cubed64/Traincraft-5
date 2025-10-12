@@ -31,6 +31,8 @@ public class VersaLongi extends AbstractStandardFreightCar
         InsertTexture(4, "CD&P (Crushed Marble Service)");
         InsertTexture(5, "FNCC (MOW Ballast Service)");
         InsertTexture(6, "AA");
+        InsertTexture(7, "CSXT");
+        InsertTexture(8, "CSXT (MoW Service)");
     }
 
     @Override

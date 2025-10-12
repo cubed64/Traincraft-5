@@ -40,6 +40,7 @@ public class DieselGP38 extends DieselTrain {
         InsertTexture(20, "CSXT (Stealth)");
         InsertTexture(21, "CSXT (Bluedown)");
         InsertTexture(22, "Seaboard System");
+        InsertTexture(23, "Chessie System");
     }
     public DieselGP38(World world, double d, double d1, double d2){
         this(world);

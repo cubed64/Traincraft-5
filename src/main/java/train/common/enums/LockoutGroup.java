@@ -17,6 +17,11 @@ public enum LockoutGroup implements ILockoutGroup
     CPV("d46213e9-ea09-40e7-9ec9-595903d98e17"), //carbondale & pine valley
     CNRC("d46213e9-ea09-40e7-9ec9-595903d98e17"), //cedar northern
 
+    //messi
+    MTS("8eb7bc43-c2c4-4b45-8329-4c5260c0fbf0"), //Morristown Tenneva & Southern
+    LW ("8eb7bc43-c2c4-4b45-8329-4c5260c0fbf0"), //Lisha & Watson
+
+
     JCTransit()
     ;
 

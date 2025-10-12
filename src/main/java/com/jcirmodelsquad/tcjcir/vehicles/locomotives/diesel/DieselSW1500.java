@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -31,8 +32,8 @@ public class DieselSW1500 extends DieselTrain {
         InsertTexture(10, "Nomansi and Eastern Pacific? maybe?");
         InsertTexture(11, "CSXT (Yn3)");
         InsertTexture(12, "Port of Latona Terminal Railroad");
-        InsertTexture(13, "Morristown Tenneva & Southern (The 1701 Trekkie Unit)");
-        InsertTexture(14, "Morristown Tenneva & Southern");
+        InsertTexture(13, "Morristown Tenneva & Southern (The 1701 Trekkie Unit)", LockoutGroup.MTS);
+        InsertTexture(14, "Morristown Tenneva & Southern", LockoutGroup.MTS);
         InsertTexture(15, "Southern Port Belt");
         InsertTexture(16, "Western Pacific (Preserved)");
         InsertTexture(17, "Western Pacific");

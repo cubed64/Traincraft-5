@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -26,7 +27,7 @@ public class DieselSD70Mac extends DieselTrain {
         InsertTexture(6, "Norfolk Southern");
         InsertTexture(7, "Burlington Northern (Executive)");
         InsertTexture(8, "BNSF (H2)");
-        InsertTexture(9, "Morristown Tenneva & Southern");
+        InsertTexture(9, "Morristown Tenneva & Southern", LockoutGroup.MTS);
         InsertTexture(10, "Southern Pacific");
         InsertTexture(11, "Union Pacific (Ex-SP Patched)");
         InsertTexture(12, "SST");

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -23,7 +24,7 @@ public class DieselSB18E extends DieselTrain {
         InsertTexture(3, "Western Pacific");
         InsertTexture(4, "Galesburg Clinton & Midland i think");
         InsertTexture(5, "CSXT (Yn2, Protolance)");
-        InsertTexture(6, "Morristown Tenneva & Southern");
+        InsertTexture(6, "Morristown Tenneva & Southern", LockoutGroup.MTS);
     }
     public DieselSB18E(World world, double d, double d1, double d2){
         this(world);

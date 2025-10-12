@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -23,9 +24,9 @@ public class DieselGP9 extends DieselTrain {
         InsertTexture(3, "Western Pacific");
         InsertTexture(4, "Western Pacific");
         InsertTexture(5, "Avanste Northeastern (Late)");
-        InsertTexture(6, "Morristown Tenneva & Southern");
-        InsertTexture(7, "Lisha & Watson (High Hood)");
-        InsertTexture(8, "Lisha & Watson (Chop Nose)");
+        InsertTexture(6, "Morristown Tenneva & Southern", LockoutGroup.MTS);
+        InsertTexture(7, "Lisha & Watson (High Hood)", LockoutGroup.LW);
+        InsertTexture(8, "Lisha & Watson (Chop Nose)", LockoutGroup.LW);
         InsertTexture(9, "Blandsville & Blankerston");
         InsertTexture(10, "Nomansi & Eastern Pacific (Early)");
         InsertTexture(11, "Nomansi & Eastern Pacific");

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -35,7 +36,7 @@ public class DieselU23B extends DieselTrain {
         InsertTexture(15, "Penn Central");
         InsertTexture(16, "Seaboard System");
         InsertTexture(17, "CFW 558");
-        InsertTexture(18, "Morristown Tenneva & Southern");
+        InsertTexture(18, "Morristown Tenneva & Southern", LockoutGroup.MTS);
         InsertTexture(19, "Milwaukee Road");
         InsertTexture(20, "Nomansi & Eastern Pacific");
         InsertTexture(21, "ADT");
