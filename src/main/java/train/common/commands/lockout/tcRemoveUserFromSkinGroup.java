@@ -5,6 +5,7 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.command.WrongUsageException;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.util.ChatComponentText;
 import train.common.Traincraft;
 
 import java.util.List;
@@ -27,7 +28,7 @@ public class tcRemoveUserFromSkinGroup extends CommandBase
     @Override
     public String getCommandUsage(ICommandSender sender)
     {
-        return "/DelUserFromSkinGroup [user] [group]";
+        return "//DelUserFromSkinGroup [user] [group]";
     }
 
     @Override
@@ -50,6 +51,7 @@ public class tcRemoveUserFromSkinGroup extends CommandBase
         if (sender.canCommandSenderUseCommand(2, "") || Traincraft.lockoutPermissionsUtil.GetGroupOwner(strings[1]).trim().equalsIgnoreCase(getPlayer(sender, sender.getCommandSenderName()).getUniqueID().toString().trim()))
         {
             Traincraft.lockoutPermissionsUtil.RemoveUserFromGroup(test.getDisplayName(), userID.toString(), strings[1]);
+            sender.addChatMessage(new ChatComponentText("Lockout: Removed user from skin group."));
         }
         else
         {

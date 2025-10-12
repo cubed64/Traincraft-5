@@ -5,6 +5,7 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.command.WrongUsageException;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.util.ChatComponentText;
 import train.common.Traincraft;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class tcSetSkinGroupOwner extends CommandBase
     @Override
     public String getCommandUsage(ICommandSender sender)
     {
-        return "/SetSkinGroupOwner [user] [group]";
+        return "//SetSkinGroupOwner [user] [group]";
     }
 
     @Override
@@ -44,6 +45,7 @@ public class tcSetSkinGroupOwner extends CommandBase
         if (sender.canCommandSenderUseCommand(4, ""))
         {
             Traincraft.lockoutPermissionsUtil.SetSkinGroupOwner(userID.toString(), strings[1]);
+            sender.addChatMessage(new ChatComponentText("Lockout: Skin Group Owner set."));
         }
         else
         {
