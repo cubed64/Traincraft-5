@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -18,7 +19,7 @@ public class DieselF9B extends DieselTrain {
         super(world, EnumTrains.F9B.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         InsertTexture(0, "Blandsville & Blankerstoner");
-        InsertTexture(1, "FMSR");
+        InsertTexture(1, "FMSR", LockoutGroup.FMSR);
         InsertTexture(2, "");
         InsertTexture(3, "");
         InsertTexture(4, "");

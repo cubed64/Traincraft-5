@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -19,8 +20,8 @@ public class DieselCF7angle3 extends DieselTrain {
         super(world, EnumTrains.CF7angle3.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         InsertTexture(0, "ANE");
-        InsertTexture(1, "FNCC (CEE Rebuilt)");
-        InsertTexture(2, "FNCC (Ex CEE Ne WP)");
+        InsertTexture(1, "FNCC (CEE Rebuilt)", LockoutGroup.FNCC);
+        InsertTexture(2, "FNCC (Ex CEE Ne WP)", LockoutGroup.FNCC);
         InsertTexture(3, "FNCC 27");
         InsertTexture(4, "KCRC 2601 (FNCC 28)");
         InsertTexture(5, "KCRC 2583 (FNCC 29)");

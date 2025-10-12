@@ -8,7 +8,15 @@ public enum LockoutGroup implements ILockoutGroup
     DEFAULT,
     SPR("932ac07f-59c3-43ec-b11d-a26ea08c77d9"), //TBEA
     SCP("932ac07f-59c3-43ec-b11d-a26ea08c77d9"), //TBEA
-    FNCC("d46213e9-ea09-40e7-9ec9-595903d98e17"), //BIDA
+
+    //begin the bida spam of reporting marks
+    FNCC("d46213e9-ea09-40e7-9ec9-595903d98e17"), //fox, north coast & cascades
+    FMSR("d46213e9-ea09-40e7-9ec9-595903d98e17"), //fox, marble & seaboard ry
+    DES("d46213e9-ea09-40e7-9ec9-595903d98e17"), //detroit export system
+    //ANE("d46213e9-ea09-40e7-9ec9-595903d98e17"), //avanste northeastern - tbd if i want to lock it or not
+    CPV("d46213e9-ea09-40e7-9ec9-595903d98e17"), //carbondale & pine valley
+    CNRC("d46213e9-ea09-40e7-9ec9-595903d98e17"), //cedar northern
+
     JCTransit()
     ;
 

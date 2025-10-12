@@ -32,8 +32,8 @@ public class DieselSD40T2 extends DieselTrain {
         InsertTexture(10, "Run 8 & Western");
         InsertTexture(11, "Paradox Rail");
         InsertTexture(12, "Avanste Northeastern");
-        InsertTexture(13, "FNCC (KIT-L)");
-        InsertTexture(14, "FNCC (KIT-80)");
+        InsertTexture(13, "FNCC (KIT-L)", LockoutGroup.FNCC);
+        InsertTexture(14, "FNCC (KIT-80)", LockoutGroup.FNCC);
         InsertTexture(15, "Southern Port Belt");
         InsertTexture(16, "Steampunk Rail", LockoutGroup.SPR);
         InsertTexture(17, "CRL");

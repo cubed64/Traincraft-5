@@ -19,6 +19,8 @@ public class DieselF7A extends DieselTrain {
         super(world, EnumTrains.F7A.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
         //when the benis sus
+        InsertTexture(0, "PC (Ex NYC)");
+        InsertTexture(1, "ouggghhhhh");
     }
     public DieselF7A(World world, double d, double d1, double d2){
         this(world);
@@ -76,7 +78,6 @@ public class DieselF7A extends DieselTrain {
         }
     }
 
-
     @Override
     public void pressKey(int i) {
         if (i == 7 && riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
@@ -90,17 +91,13 @@ public class DieselF7A extends DieselTrain {
         super.onUpdate();
     }
 
-    
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 0.75F;
+    public float getOptimalDistance(EntityMinecart cart) { return 0.91F;
     }
-
-    
 
     @Override
     public String getInventoryName() {
-        return "EMD F7A";
+        return "EMD F7a";
     }
 
     @Override

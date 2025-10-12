@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
@@ -18,9 +19,9 @@ public class DieselCF7round3 extends DieselTrain {
     public DieselCF7round3(World world) {
         super(world, EnumTrains.CF7round3.getTankCapacity(), LiquidManager.dieselFilter());
         initLoco();
-        InsertTexture(0, "Carbondale & Pine Valley");
-        InsertTexture(1, "FNCC (KIT-L, Ex ATSF, Dual Canon)");
-        InsertTexture(2, "FNCC (KIT-L, Ex ATSF, Dual Canon)");
+        InsertTexture(0, "Carbondale & Pine Valley", LockoutGroup.CPV);
+        InsertTexture(1, "FNCC (KIT-L, Ex ATSF, Dual Canon)", LockoutGroup.FNCC);
+        InsertTexture(2, "FNCC (KIT-L, Ex ATSF, Dual Canon)", LockoutGroup.FNCC);
         InsertTexture(3, "Avanste Northeastern");
         InsertTexture(4, "Paradox Rail 69");
         InsertTexture(5, "Drexel Co");
