@@ -19,7 +19,7 @@ import train.common.core.util.TraincraftUtil;
 
 import java.lang.reflect.InvocationTargetException;
 
-public enum EnumTrains implements IEnumTrains, ITrainRecord
+public enum EnumTrains implements ITrainRecord
 {
 	/** Heritage*/
 	//CF7_H_Angle("CF7_H_Angle", DieselCF7_H_Angle.class, ItemIDs.minecartCF7_H_Angle.item, "diesel", 1500, 116, 0, 50,0,200,0.74,0.96,18000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Pink", "White", "Purple"}), 16, -2, (new String[] {"Heritage"})),

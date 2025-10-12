@@ -17,7 +17,7 @@ import train.common.entity.rollingStock.workcart.*;
 
 import java.lang.reflect.InvocationTargetException;
 
-public enum EnumHeritageTrainsLegacy implements IEnumTrains, ITrainRecord
+public enum EnumHeritageTrainsLegacy implements ITrainRecord
 {
     /**
      * Passengers

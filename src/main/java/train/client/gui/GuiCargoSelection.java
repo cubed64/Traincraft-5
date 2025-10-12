@@ -14,9 +14,7 @@ import train.common.api.EntityRollingStock;
 import train.common.api.Freight;
 import train.common.core.handlers.ConfigHandler;
 import train.common.core.network.PacketCargoSelection;
-import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
-import train.common.library.IEnumTrains;
 import train.common.library.ITrainRecord;
 
 import java.awt.*;
