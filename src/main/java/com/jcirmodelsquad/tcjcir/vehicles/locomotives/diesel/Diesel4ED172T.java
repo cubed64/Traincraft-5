@@ -33,7 +33,7 @@ public class Diesel4ED172T extends DieselTrain {
         InsertTexture(5, "Blandsville & Blankerston (Chop)");
         InsertTexture(6, "Southfield");
         InsertTexture(7, "NP (Lowey Green)");
-        InsertTexture(8, "");
+        InsertTexture(8, "UP");
         InsertTexture(9, "");
         InsertTexture(10, "");
         InsertTexture(11, "");
