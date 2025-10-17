@@ -127,14 +127,9 @@ public class DieselCF7angle extends DieselTrain {
         super.onUpdate();
     }
 
-    
-
-
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.2F;
     }
-
-    
 
     @Override
     public String getInventoryName() {

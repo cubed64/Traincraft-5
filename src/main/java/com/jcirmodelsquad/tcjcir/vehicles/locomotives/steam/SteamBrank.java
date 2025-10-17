@@ -24,7 +24,7 @@ public class SteamBrank extends SteamTrain {
 	public SteamBrank(World world) {
 		super(world, EnumTrains.Brank.getTankCapacity(), LiquidManager.WATER_FILTER);
 		initLocoSteam();
-		InsertTexture(0, "CDCS");
+		InsertTexture(0, "pregnant man railroad company");
 	}
 
 	public void initLocoSteam() {
