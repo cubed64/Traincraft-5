@@ -24,10 +24,16 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 	public static final ModelRightSwitchTCTrack modelRightSwitchTurn = new ModelRightSwitchTCTrack();
 	public static final ModelLeftSwitchTCTrack modelLeftSwitchTurn = new ModelLeftSwitchTCTrack();
 	public static final ModelTwoWaysCrossingTCTrack modelTwoWaysCrossing = new ModelTwoWaysCrossingTCTrack();
-	public static final ModelSlopeTCTrack model1X3Slope = new ModelSlopeTCTrack("track_slope_1x3.obj", "track_slope_1x3_ballast.obj");
-	public static final ModelSlopeTCTrack modelSlope = new ModelSlopeTCTrack("track_slope.obj", "supports_wood.obj", "supports_ballast.obj");
-	public static final ModelSlopeTCTrack modelLargeSlope = new ModelSlopeTCTrack("track_slope_long.obj", "supports_wood_long.obj", "supports_ballast_long.obj");
-	public static final ModelSlopeTCTrack modelVeryLargeSlope = new ModelSlopeTCTrack("track_slope_verylong.obj", "supports_wood_verylong.obj", "supports_ballast_verylong.obj");
+
+	public static final ModelSlopeTCTrack model1X3Slope = new ModelSlopeTCTrack("track/slope/straight/1x3_rails.obj", "track/slope/straight/1x3_ballast.obj");
+	public static final ModelSlopeTCTrack modelSlope = new ModelSlopeTCTrack("track/slope/straight/1x6_rails.obj", "track/slope/straight/1x6_supports.obj", "track/slope/straight/1x6_ballast.obj");
+	public static final ModelSlopeTCTrack modelLargeSlope = new ModelSlopeTCTrack("track/slope/straight/1x12_rails.obj", "track/slope/straight/1x12_supports.obj", "track/slope/straight/1x12_ballast.obj");
+	public static final ModelSlopeTCTrack modelVeryLargeSlope = new ModelSlopeTCTrack("track/slope/straight/1x18_rails.obj", "track/slope/straight/1x18_supports.obj", "track/slope/straight/1x18_ballast.obj");
+	public static final ModelSlopeTCTrack model1x3DiagonalSlope = new ModelSlopeTCTrack("track/slope/45-deg/1x3_rails.obj","track/slope/45-deg/1x3_ballast.obj");
+	public static final ModelSlopeTCTrack model1x6DiagonalSlope = new ModelSlopeTCTrack("track/slope/45-deg/1x6_rails.obj","track/slope/45-deg/1x6_ballast.obj");
+	public static final ModelSlopeTCTrack model1x12DiagonalSlope = new ModelSlopeTCTrack("track/slope/45-deg/1x12_rails.obj","track/slope/45-deg/1x12_ballast.obj");
+	public static final ModelSlopeTCTrack model1x18DiagonalSlope = new ModelSlopeTCTrack("track/slope/45-deg/1x18_rails.obj","track/slope/45-deg/1x18_ballast.obj");
+
 	public static final ModelRightParallelCurveTCTrack modelRightParallelCurve = new ModelRightParallelCurveTCTrack();
 	public static final ModelLeftParallelCurveTCTrack modelLeftParallelCurve = new ModelLeftParallelCurveTCTrack();
 
@@ -292,9 +298,30 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 						modelLeftParallelCurve.render("large", railTile, x, y, z);
 						break;
 					}
+					case EMBEDDED_SLOPE_1X3_DYNAMIC:
 					case SLOPE_1X3_DYNAMIC:
 					{
 						model1X3Slope.renderDynamic(railTile, x, y, z);
+						break;
+					}
+					case EMBEDDED_SLOPE_1X3_DYNAMIC_DIAGONAL:
+					case SLOPE_1X3_DYNAMIC_DIAGONAL: {
+						model1x3DiagonalSlope.renderDynamic(railTile, x, y, z);
+						break;
+					}
+					case EMBEDDED_SLOPE_1X6_DYNAMIC_DIAGONAL:
+					case SLOPE_1X6_DYNAMIC_DIAGONAL: {
+						model1x6DiagonalSlope.renderDynamic(railTile, x, y, z);
+						break;
+					}
+					case EMBEDDED_SLOPE_1X12_DYNAMIC_DIAGONAL:
+					case SLOPE_1X12_DYNAMIC_DIAGONAL: {
+						model1x12DiagonalSlope.renderDynamic(railTile, x, y, z);
+						break;
+					}
+					case EMBEDDED_SLOPE_1X18_DYNAMIC_DIAGONAL:
+					case SLOPE_1X18_DYNAMIC_DIAGONAL: {
+						model1x18DiagonalSlope.renderDynamic(railTile, x, y, z);
 						break;
 					}
 					case SLOPE_DYNAMIC:
