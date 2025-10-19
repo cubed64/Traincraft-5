@@ -2438,10 +2438,6 @@ public enum RenderEnum implements ITrainRenderRecord
 		return smokeType.length() > 0;
 	}
 
-	public boolean hasSmokeOnSlopes() {
-		return hasSmokeOnSlopes;
-	}
-
 	public String getSmokeType() {
 		return smokeType;
 	}
