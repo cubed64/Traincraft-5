@@ -2340,7 +2340,6 @@ public enum RenderEnum implements ITrainRenderRecord
 	private ArrayList<double[]> explosionFX;
 	private int smokeIterations;
 	private int explosionFXIterations;
-	private boolean hasSmokeOnSlopes;
 
 	/**
 	 * Defines the render @param for a RollingStock
@@ -2384,7 +2383,6 @@ public enum RenderEnum implements ITrainRenderRecord
 		this.explosionFX = explosionFX;
 		this.smokeIterations = smokeIterations;
 		this.explosionFXIterations = explosionFXIterations;
-		this.hasSmokeOnSlopes = hasSmokeOnSlopes;
 	}
 
 	/**
