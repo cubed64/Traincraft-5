@@ -33,7 +33,7 @@ import train.common.entity.rollingStock.steam.*;
 import train.common.entity.rollingStock.tanker.*;
 import train.common.entity.rollingStock.tender.*;
 import train.common.entity.rollingStock.workcart.*;
-import train.common.library.ITrainRenderRecord;
+import train.client.render.register.ITrainRenderRecord;
 import train.common.library.Info;
 
 import java.util.ArrayList;
@@ -2489,6 +2489,12 @@ public enum RenderEnum implements ITrainRenderRecord
 
 	public int getExplosionFXIterations() {
 		return explosionFXIterations;
+	}
+
+	@Override
+	public String GetModID()
+	{
+		return Info.resourceLocation;
 	}
 
 	public ResourceLocation getTextureFile(String colorAsString)

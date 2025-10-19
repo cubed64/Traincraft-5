@@ -1,4 +1,4 @@
-package train.common.library;
+package train.client.render.register;
 
 import net.minecraft.util.ResourceLocation;
 import tmt.ModelBase;
@@ -41,4 +41,6 @@ public interface ITrainRenderRecord
     int getSmokeIterations();
 
     int getExplosionFXIterations();
+
+    String GetModID();
 }

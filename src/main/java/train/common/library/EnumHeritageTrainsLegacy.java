@@ -1,8 +1,6 @@
 package train.common.library;
 
 import net.minecraft.item.Item;
-import net.minecraft.world.World;
-import train.common.api.AbstractTrains;
 import train.common.core.util.TraincraftUtil;
 import train.common.entity.rollingStock.*;
 import train.common.entity.rollingStock.diesel.*;
@@ -14,8 +12,7 @@ import train.common.entity.rollingStock.steam.*;
 import train.common.entity.rollingStock.tanker.*;
 import train.common.entity.rollingStock.tender.*;
 import train.common.entity.rollingStock.workcart.*;
-
-import java.lang.reflect.InvocationTargetException;
+import train.common.library.register.ITrainRecord;
 
 public enum EnumHeritageTrainsLegacy implements ITrainRecord
 {
