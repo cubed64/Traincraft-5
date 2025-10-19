@@ -8,10 +8,13 @@ import java.util.ArrayList;
 
 public interface ITrainRenderRecord
 {
+    String GetModID();
 
     Class<? extends AbstractTrains> getEntityClass();
 
     ModelBase getModel();
+
+    String getTexturePrefix();
 
     boolean hasSmoke();
 
@@ -42,5 +45,5 @@ public interface ITrainRenderRecord
 
     int getExplosionFXIterations();
 
-    String GetModID();
+
 }
