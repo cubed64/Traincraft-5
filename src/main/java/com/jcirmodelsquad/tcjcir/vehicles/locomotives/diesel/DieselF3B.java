@@ -28,8 +28,12 @@ public class DieselF3B extends DieselTrain {
         InsertTexture(0, "Phase 2 Early");
         InsertTexture(1, "FMSR", LockoutGroup.FMSR);
         InsertTexture(2, "DES", LockoutGroup.DES);
-        InsertTexture(3, "");
-        InsertTexture(4, "");
+        InsertTexture(3, "DRGW (Black with yellow stripes)");
+        InsertTexture(4, "DRGW (4 stripe)");
+        InsertTexture(5, "DRGW (4 stripe, late)");
+        InsertTexture(6, "DRGW (1 stripe)");
+        InsertTexture(7, "MON (freight scheme)");
+        InsertTexture(8, "MON (freight scheme, late)");
     }
     public DieselF3B(World world, double d, double d1, double d2){
         this(world);

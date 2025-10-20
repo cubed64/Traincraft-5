@@ -31,6 +31,16 @@ public class DieselF3A extends DieselTrain {
         InsertTexture(3, "CDC&S");
         InsertTexture(4, "OC&G 25A, 26B");
         InsertTexture(5, "BAR 49");
+        InsertTexture(6, "DRGW (Black with yellow stripes)");
+        InsertTexture(7, "DRGW (4 stripe)");
+        InsertTexture(8, "DRGW (4 stripe, late)");
+        InsertTexture(9, "DRGW (1 stripe)");
+        InsertTexture(10, "MON (passenger scheme, early)");
+        InsertTexture(11, "MON (passenger scheme)");
+        InsertTexture(12, "MON (freight scheme, passenger)");
+        InsertTexture(13, "MON (freight scheme, passenger, 203)");
+        InsertTexture(14, "MON (freight scheme)");
+        InsertTexture(15, "MON (freight scheme, late)");
     }
     public DieselF3A(World world, double d, double d1, double d2){
         this(world);
