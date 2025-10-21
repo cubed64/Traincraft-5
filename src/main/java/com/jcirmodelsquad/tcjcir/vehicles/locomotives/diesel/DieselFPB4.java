@@ -108,15 +108,9 @@ public class DieselFPB4 extends DieselTrain {
         return "MLW FPB-4";
     }
 
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
-    }
+    
 
 
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
+
 
 }

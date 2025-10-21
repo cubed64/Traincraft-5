@@ -110,15 +110,9 @@ public class DieselDR441500BShark extends DieselTrain {
         return "BLW DR-4-4-1500B (Phase 3)";
     }
 
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
-    }
+    
 
     
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
+    
 
 }

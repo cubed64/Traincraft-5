@@ -114,15 +114,9 @@ public class DieselSB36X extends DieselTrain {
         return "CEE SB36X Prototype";
     }
 
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
-    }
+    
 
 
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
+    
 
 }

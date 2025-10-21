@@ -99,15 +99,9 @@ public class DieselGP40TC extends DieselTrain {
         return "EMD GP40TC";
     }
 
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
-    }
+
 
     
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
+
 
 }

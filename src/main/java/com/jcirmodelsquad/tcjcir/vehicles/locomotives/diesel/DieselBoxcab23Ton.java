@@ -101,15 +101,9 @@ public class DieselBoxcab23Ton extends DieselTrain {
         return "GE 23 Ton Boxcab";
     }
 
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
-    }
 
 
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
+
+
 
 }

@@ -103,15 +103,9 @@ public class DieselF40PH extends DieselTrain {
         return "EMD F40PH";
     }
 
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
-    }
+    
 
     
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
+    
 
 }

@@ -103,15 +103,9 @@ public class DieselNRE3gs21b extends DieselTrain {
         return "NRE 3GS21B Genset";
     }
 
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
-    }
+    
 
     
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
+    
 
 }

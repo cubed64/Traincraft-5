@@ -86,8 +86,5 @@ public class EntityLocoElectricVL10 extends ElectricTrain {
 		return canBeAdjusted;
 
 	}
-	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		return true;
-	}
+	
 }

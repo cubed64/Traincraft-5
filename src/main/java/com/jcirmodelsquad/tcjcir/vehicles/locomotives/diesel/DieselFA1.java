@@ -110,15 +110,9 @@ public class DieselFA1 extends DieselTrain {
         return "Alco FA-1";
     }
 
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
-    }
+
 
     
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
+
 
 }

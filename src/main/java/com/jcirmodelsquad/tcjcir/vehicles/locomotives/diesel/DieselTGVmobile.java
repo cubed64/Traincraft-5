@@ -97,10 +97,7 @@ public class DieselTGVmobile extends DieselTrain {
         return "TGV Highrail Van Thing";
     }
 
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
-    }
+
 
     
 

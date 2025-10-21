@@ -109,13 +109,7 @@ public class DieselDash839C extends DieselTrain {
     public String getInventoryName() {
         return "GE C39-8";
     }
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
-    }
 
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
+
+
 }

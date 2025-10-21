@@ -141,15 +141,9 @@ public class DieselES44h extends DieselTrain {
         return "GE ES44 (Hertiable Units)";
     }
 
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
-    }
 
 
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
+
+
 
 }

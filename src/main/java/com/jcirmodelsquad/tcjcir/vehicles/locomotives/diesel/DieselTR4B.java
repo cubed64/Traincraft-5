@@ -111,15 +111,9 @@ public class DieselTR4B extends DieselTrain {
         return "EMD TR4 Calf";
     }
 
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
-    }
+
 
     
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
+
 
 }

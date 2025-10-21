@@ -102,13 +102,7 @@ public class SteamSkook extends SteamTrain {
         return 1.4F;
     }
 
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
+    
 
-    @Override
-    public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-        return true;
-    }
+    
 }

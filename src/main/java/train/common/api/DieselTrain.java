@@ -319,5 +319,10 @@ public abstract class DieselTrain extends Locomotive implements IFluidHandler {
 	public int getFluidAmount() {
 		return theTank.getFluidAmount();
 	}
+
+	@Override
+	public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
+		return false;
+	}
 }
 

@@ -81,12 +81,6 @@ public class ElectricEF1 extends ElectricTrain {
         return 1.135F;
     }
 
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
-    @Override
-    public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-        return true;
-    }
+
+    
 }

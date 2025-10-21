@@ -105,15 +105,9 @@ public class DieselB23_wrx extends DieselTrain {
         return "CEE B23-7 (WRX special order)";
     }
 
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
-    }
+    
 
 
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
+    
 
 }

@@ -122,15 +122,9 @@ public class PCH130Commute2 extends ElectricTrain implements IAT2Compatible {
         return 1F;
     }
 
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
+    
 
-    @Override
-    public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-        return true;
-    }
+    
 
     @Override
     public void setLocoTurnedOnFromPacket(boolean set) {

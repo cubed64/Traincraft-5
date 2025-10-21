@@ -100,12 +100,5 @@ public class EntityLocoDieselDD35A extends DieselTrain {
 		return 1.3F;
 	}
 
-	@Override
-	public boolean canBeAdjusted(EntityMinecart cart) {
-		return canBeAdjusted;
-	}
-	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		return true;
-	}
+	
 }

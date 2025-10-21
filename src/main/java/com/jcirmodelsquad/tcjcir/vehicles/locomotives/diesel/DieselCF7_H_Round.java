@@ -104,15 +104,9 @@ public class DieselCF7_H_Round extends DieselTrain {
         return "CF7 Roundcab (Heritage Model)";
     }
 
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
-    }
+    
 
 
-    @Override
-    public boolean canBeAdjusted(EntityMinecart cart) {
-        return canBeAdjusted;
-    }
+    
 
 }
