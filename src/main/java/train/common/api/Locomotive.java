@@ -195,6 +195,21 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         }*/
     }
 
+    @Override
+    public boolean interactFirst(EntityPlayer entityplayer) {
+        playerEntity = entityplayer;
+        if ((super.interactFirst(entityplayer))) {
+            return false;
+        }
+        if (!worldObj.isRemote) {
+            if (riddenByEntity != null && (riddenByEntity instanceof EntityPlayer) && riddenByEntity != entityplayer) {
+                return true;
+            }
+            entityplayer.mountEntity(this);
+        }
+        return true;
+    }
+
     public static boolean isBetween(double x, double min, double max) {
         return x > min && x < max;
     }
