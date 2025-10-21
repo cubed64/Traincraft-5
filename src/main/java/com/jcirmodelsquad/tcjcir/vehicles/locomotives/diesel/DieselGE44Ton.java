@@ -24,7 +24,7 @@ public class DieselGE44Ton extends DieselTrain {
 	}
 	public DieselGE44Ton(World world) {
 		super(world, EnumTrains.GE44Ton.getTankCapacity(), LiquidManager.dieselFilter());
-		initLoco();
+		
 		InsertTexture(0, "VGN");
 		InsertTexture(1, "VGN");
 		InsertTexture(2, "Blandsville & Blankerston (Late)");
@@ -94,14 +94,7 @@ public class DieselGE44Ton extends DieselTrain {
 
 	
 
-	@Override
-	public void onUpdate() {
-		super.onUpdate();
-		if (worldObj.isRemote) {
-			return;
-		}
-		checkInvent(locoInvent[0]);
-	}
+	
 
 	
 

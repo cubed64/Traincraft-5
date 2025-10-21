@@ -24,13 +24,10 @@ public class EntityLocoSteamD51Long extends SteamTrain {
 	}
 	public EntityLocoSteamD51Long(World world) {
 		super(world, EnumHeritageTrainsLegacy.locoSteamC62Class.getTankCapacity(), LiquidManager.WATER_FILTER);
-		initLocoSteam();
+		
 	}
 
-	public void initLocoSteam() {
-		fuelTrain = 0;
-		locoInvent = new ItemStack[inventorySize];
-	}
+	
 
 	public EntityLocoSteamD51Long(World world, double d, double d1, double d2) {
 		this(world);
@@ -57,14 +54,7 @@ public class EntityLocoSteamD51Long extends SteamTrain {
 
 	
 
-	@Override
-	public void onUpdate() {
-		super.onUpdate();
-		if (worldObj.isRemote) {
-			return;
-		}
-		checkInvent(locoInvent[0], locoInvent[1], this);
-	}
+	
 @Override
 	public String getInventoryName() {
 		return "D51 [JNR]";
@@ -77,13 +67,5 @@ public class EntityLocoSteamD51Long extends SteamTrain {
 		return (0.5F);
 	}
 
-	@Override
-	public boolean canBeAdjusted(EntityMinecart cart) {
-		return canBeAdjusted;
-	}
-
-	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		return true;
-	}
+	
 }

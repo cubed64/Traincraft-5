@@ -22,13 +22,10 @@ public class EntityLocoSteamHeavy extends SteamTrain {
 	}
 	public EntityLocoSteamHeavy(World world) {
 		super(world, 5000/*change value here to EnumTrains..getTankCapacity()*/, LiquidManager.WATER_FILTER);
-		initLocoSteam();
+		
 	}
 
-	public void initLocoSteam() {
-		fuelTrain = 0;
-		locoInvent = new ItemStack[inventorySize];
-	}
+	
 
 	public EntityLocoSteamHeavy(World world, double d, double d1, double d2) {
 		this(world);
@@ -50,14 +47,7 @@ public class EntityLocoSteamHeavy extends SteamTrain {
 
 	
 
-	@Override
-	public void onUpdate() {
-		super.onUpdate();
-		if (worldObj.isRemote) {
-			return;
-		}
-		checkInvent(locoInvent[0], locoInvent[1], this);
-	}
+	
 
 	
 
@@ -75,13 +65,5 @@ public class EntityLocoSteamHeavy extends SteamTrain {
 		return 1F;
 	}
 
-	@Override
-	public boolean canBeAdjusted(EntityMinecart cart) {
-		return canBeAdjusted;
-	}
-
-	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		return true;
-	}
+	
 }

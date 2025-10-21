@@ -25,7 +25,7 @@ public class DieselGP9 extends DieselTrain {
     }
     public DieselGP9(World world) {
         super(world, EnumTrains.GP9.getTankCapacity(), LiquidManager.dieselFilter());
-        initLoco();
+
         InsertTexture(0, "BN 1783");
         InsertTexture(1, "Southern Pacific (Black Widow Passenger)");
         InsertTexture(2, "Southern Pacific (Black Widow)");
@@ -86,10 +86,7 @@ public class DieselGP9 extends DieselTrain {
         prevPosZ = d2;
     }
 
-    public void initLoco() {
-        fuelTrain = 0;
-        locoInvent = new ItemStack[inventorySize];
-    }
+
 
     @Override
     public void updateRiderPosition() {
@@ -134,11 +131,7 @@ public class DieselGP9 extends DieselTrain {
 
 
 
-    @Override
-    public void onUpdate() {
-        checkInvent(locoInvent[0]);
-        super.onUpdate();
-    }
+
 
 
 

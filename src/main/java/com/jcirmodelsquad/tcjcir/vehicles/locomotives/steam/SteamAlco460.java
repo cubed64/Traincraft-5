@@ -23,7 +23,7 @@ public class SteamAlco460 extends SteamTrain {
 	}
 	public SteamAlco460(World world) {
 		super(world, EnumTrains.Alco460.getTankCapacity(), LiquidManager.WATER_FILTER);
-		initLocoSteam();
+		
 		InsertTexture(0, "Blank");
 		InsertTexture(1, "CDC&S");
 		InsertTexture(2, "RI");
@@ -32,10 +32,7 @@ public class SteamAlco460 extends SteamTrain {
 		InsertTexture(5, "GCM 60");
 	}
 
-	public void initLocoSteam() {
-		fuelTrain = 0;
-		locoInvent = new ItemStack[inventorySize];
-	}
+	
 
 	public SteamAlco460(World world, double d, double d1, double d2) {
 		this(world);
@@ -88,14 +85,7 @@ public class SteamAlco460 extends SteamTrain {
 		}
 	}
 
-	@Override
-	public void onUpdate() {
-		super.onUpdate();
-		if (worldObj.isRemote) {
-			return;
-		}
-		checkInvent(locoInvent[0], locoInvent[1], this);
-	}
+	
 
 	
 

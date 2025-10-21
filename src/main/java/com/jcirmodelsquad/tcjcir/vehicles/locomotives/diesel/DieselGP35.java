@@ -23,7 +23,7 @@ public class DieselGP35 extends DieselTrain {
     }
     public DieselGP35(World world) {
         super(world, EnumTrains.GP35.getTankCapacity(), LiquidManager.dieselFilter());
-        initLoco();
+        
         InsertTexture(0, "Ann Arbor");
         InsertTexture(1, "Ann Arbor (Ferry in the Fog)");
         InsertTexture(2, "Southern");
@@ -72,10 +72,7 @@ public class DieselGP35 extends DieselTrain {
         prevPosZ = d2;
     }
 
-    public void initLoco() {
-        fuelTrain = 0;
-        locoInvent = new ItemStack[inventorySize];
-    }
+    
 
     @Override
     public void updateRiderPosition() {
@@ -120,11 +117,7 @@ public class DieselGP35 extends DieselTrain {
 
 
 
-    @Override
-    public void onUpdate() {
-        checkInvent(locoInvent[0]);
-        super.onUpdate();
-    }
+    
 
 
 
