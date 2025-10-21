@@ -28,6 +28,23 @@ public class DieselF7A extends DieselTrain {
         //when the benis sus
         InsertTexture(0, "PC (Ex NYC)");
         InsertTexture(1, "Mesa Desert");
+        InsertTexture(2, "Amtrak (Ex NP)");
+        InsertTexture(3, "Amtrak (Ex NP)");
+        InsertTexture(4, "ATSF (Bluebonnet)");
+        InsertTexture(5, "ATSF (As Delivered)");
+        InsertTexture(6, "ATSF (Early)");
+        InsertTexture(7, "ATSF (Rebuilt)");
+        InsertTexture(8, "ATSF (Yellowbonnet 1)");
+        InsertTexture(9, "ATSF (Yellowbonnet 2)");
+        InsertTexture(10, "MMID 100");
+        InsertTexture(11, "MMID 101");
+        InsertTexture(12, "NYC (Early)");
+        InsertTexture(13, "NYC (Grey)");
+        InsertTexture(14, "NYC (Black)");
+        InsertTexture(15, "EMD Demonstrator");
+        InsertTexture(16, "WM (Speed Lettering)");
+        InsertTexture(17, "WM (Circus");
+        InsertTexture(18, "WM (Fireball)");
     }
     public DieselF7A(World world, double d, double d1, double d2){
         this(world);
