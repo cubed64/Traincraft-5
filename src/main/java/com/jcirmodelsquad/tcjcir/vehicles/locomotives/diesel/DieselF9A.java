@@ -27,7 +27,11 @@ public class DieselF9A extends DieselTrain {
         initLoco();
         InsertTexture(0, "BN 814");
         InsertTexture(1, "FMSR", LockoutGroup.FMSR);
-        InsertTexture(2, "");
+        InsertTexture(2, "EMD Demonstrator");
+        InsertTexture(3, "Norfolk Southern");
+        InsertTexture(4, "DRGW (4 stripe)");
+        InsertTexture(5, "DRGW (4 stripe, late)");
+        InsertTexture(6, "DRGW (1 stripe)");
     }
     public DieselF9A(World world, double d, double d1, double d2){
         this(world);

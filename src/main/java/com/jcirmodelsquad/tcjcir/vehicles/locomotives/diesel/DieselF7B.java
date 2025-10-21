@@ -28,22 +28,25 @@ public class DieselF7B extends DieselTrain {
         //when the benis sus
         InsertTexture(0, "PC (Ex NYC)");
         InsertTexture(1, "Mesa Desert");
-        InsertTexture(2, "Amtrak (Ex GN)");
-        InsertTexture(3, "Amtrak (Ex NP)");
-        InsertTexture(4, "Amtrak (Ex SP)");
-        InsertTexture(5, "ATSF (Bluebonnet)");
-        InsertTexture(6, "ATSF (As Delivered)");
-        InsertTexture(7, "ATSF (Early)");
-        InsertTexture(8, "ATSF (Rebuilt)");
-        InsertTexture(9, "ATSF (Yellowbonnet)");
-        InsertTexture(10, "MMID 100");
-        InsertTexture(11, "MMID 101");
-        InsertTexture(12, "Norfolk Southern");
-        InsertTexture(13, "EMD Demonstrator");
-        InsertTexture(14, "WM (Speed Lettering)");
-        InsertTexture(15, "WM (Circus");
-        InsertTexture(16, "NYC (Early)");
-        InsertTexture(17, "NYC (Black)");
+        InsertTexture(2, "DRGW (Black with yellow stripes)");
+        InsertTexture(3, "DRGW (4 stripe)");
+        InsertTexture(4, "DRGW (4 stripe, late)");
+        InsertTexture(5, "DRGW (1 stripe)");
+        InsertTexture(6, "Amtrak (Ex GN)");
+        InsertTexture(7, "Amtrak (Ex NP)");
+        InsertTexture(8, "Amtrak (Ex SP)");
+        InsertTexture(9, "ATSF (Bluebonnet)");
+        InsertTexture(10, "ATSF (As Delivered)");
+        InsertTexture(11, "ATSF (Early)");
+        InsertTexture(12, "ATSF (Rebuilt)");
+        InsertTexture(13, "ATSF (Yellowbonnet)");
+        InsertTexture(14, "Norfolk Southern");
+        InsertTexture(15, "EMD Demonstrator");
+        InsertTexture(16, "WM (Speed Lettering)");
+        InsertTexture(17, "WM (Circus");
+        InsertTexture(18, "CB&Q");
+        InsertTexture(19, "CB&Q (Late)");
+        InsertTexture(20, "MILW (Grey scheme)");
     }
     public DieselF7B(World world, double d, double d1, double d2){
         this(world);
