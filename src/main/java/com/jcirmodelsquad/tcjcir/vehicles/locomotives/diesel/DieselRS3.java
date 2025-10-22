@@ -32,6 +32,10 @@ public class DieselRS3 extends DieselTrain {
         InsertTexture(5, "CCRL");
         InsertTexture(6, "SER");
         InsertTexture(7, "NSE");
+        InsertTexture(8, "WM (Fireball)");
+        InsertTexture(9, "WM (Fireball Hammerhead)");
+        InsertTexture(10, "WM (Speed Lettering)");
+        InsertTexture(11, "WM (Speed Lettering Hammerhead)");
     }
     public DieselRS3(World world, double d, double d1, double d2){
         this(world);

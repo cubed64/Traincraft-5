@@ -60,6 +60,8 @@ public class DieselGP35 extends DieselTrain {
         InsertTexture(33, "CSXT (Yn1)");
         InsertTexture(34, "Seaboard System");
         InsertTexture(35, "Chessie System");
+        InsertTexture(36, "WM (Speed Lettering)");
+        InsertTexture(37, "WM (Circus)");
     }
     public DieselGP35(World world, double d, double d1, double d2){
         this(world);
