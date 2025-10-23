@@ -1614,10 +1614,12 @@ entity.tc.40ftHuskyStackWellcar.name=Gunderson 40' Husky Stack Wellcar
 
 item.tc:minecartIngotPig.name=Molten Ingot "Pig"
 item.tc:minecartSteelSlabFlat.name=15' Steel Slab Flat
+item.tc:minecartEvansCoilCar.name=Evans Coil Car
 
 
 entity.tc.IngotPig.name=Molten Ingot Pig
 entity.tc.SteelSlabFlat.name=15' Steel Slab Flat
+entity.tc.EvansCoilCar.name=Evans Coil Car
 
 --------------------------------------------------------
 

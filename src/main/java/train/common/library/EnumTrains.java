@@ -400,6 +400,7 @@ public enum EnumTrains implements ITrainRecord
 
 	IngotPig("IngotPig", IngotPig.class, ItemIDs.minecartIngotPig.item, "Other", 2, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "Black"}), 18, 9, (new String[] {"Cargo: Ingots."})),
 	SteelSlabFlat("SteelSlabFlat", SteelSlabFlat.class, ItemIDs.minecartSteelSlabFlat.item, "Other", 2.5, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "Black"}), 16, 9, (new String[] {"Cargo: steel and metal ig."})),
+	EvansCoilCar("EvansCoilCar", EvansCoilCar.class, ItemIDs.minecartEvansCoilCar.item, "Other", 3, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey"}), 16, 18, (new String[] {"Cargo: Steel Coils & Likewise"})),
 
 
 	// Passenger //
