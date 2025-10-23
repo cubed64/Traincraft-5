@@ -41,6 +41,8 @@ public class DieselSD40 extends DieselTrain {
         InsertTexture(11, "Seaboard System");
         InsertTexture(12, "Honex Lines (HNXR)", LockoutGroup.BIDA);
         InsertTexture(13, "Chessie System");
+        InsertTexture(14, "WM (Speed Lettering)");
+        InsertTexture(15, "WM (Circus)");
     }
     public DieselSD40(World world, double d, double d1, double d2){
         this(world);

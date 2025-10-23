@@ -36,6 +36,8 @@ public class DieselFA2 extends DieselTrain {
         InsertTexture(8, "Canadian National (Old)");
         InsertTexture(9, "Canadian National (Stripes)");
         InsertTexture(10, "Galesburg Clinton & Midland (FPA-2)");
+        InsertTexture(11, "WM (Speed Lettering)");
+        InsertTexture(12, "WM (Circus)");
     }
     public DieselFA2(World world, double d, double d1, double d2){
         this(world);

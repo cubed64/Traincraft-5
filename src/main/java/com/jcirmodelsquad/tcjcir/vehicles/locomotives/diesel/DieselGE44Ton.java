@@ -37,6 +37,8 @@ public class DieselGE44Ton extends DieselTrain {
 		InsertTexture(9, "DLMR");
 		InsertTexture(10, "TNRJ (Temporarily Named Spawn Railroad Company of JCIR)");
 		InsertTexture(11, "D(eez)N(uts)");
+		InsertTexture(12, "WM (Fireball Early)");
+		InsertTexture(13, "WM (Fireball Late)");
 	}
 
 	public void initLoco() {
