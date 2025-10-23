@@ -72,19 +72,7 @@ public class EntityLocoSteamAlcoSC4 extends SteamTrain {
 		if (pitchRads > -1.01 && pitchRads < 1.01) {
 			riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
 		}
-	}
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+	}@Override
 	public String getInventoryName() {
 		return "Alco SC4";
 	}

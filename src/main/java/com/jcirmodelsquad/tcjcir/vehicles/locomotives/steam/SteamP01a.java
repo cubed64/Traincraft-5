@@ -84,19 +84,7 @@ public class SteamP01a extends SteamTrain {
 		}
 	}
 
-
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+@Override
 	public String getInventoryName() {
 		return "P01a 2-6-2 Prairie";
 	}

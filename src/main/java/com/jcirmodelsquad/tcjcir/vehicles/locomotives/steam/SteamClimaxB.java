@@ -84,19 +84,7 @@ public class SteamClimaxB extends SteamTrain {
 		}
 	}
 
-
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+@Override
 	public String getInventoryName() {
 		return "50 Ton Class B Climax";
 	}

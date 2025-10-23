@@ -47,12 +47,6 @@ public class EntityLocoSteamHeavy extends SteamTrain {
 
 	
 
-	
-
-	
-
-	
-
 	@Override
 	public String getInventoryName() {
 		return "Heavy Steam Locomotive";

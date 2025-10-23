@@ -88,12 +88,6 @@ public class DieselGE25Ton extends DieselTrain {
 
 
 
-	
-
-	
-
-	
-
 	@Override
 	public String getInventoryName() {
 		return "GE 25 Ton Switcher";

@@ -50,12 +50,6 @@ public class EntityLocoSteamMILWClassA extends SteamTrain {
 		*/
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset(), posZ);
 	}
-
-	
-
-	
-
-	
 @Override
 	public String getInventoryName() {
 		return "MILW Class A";

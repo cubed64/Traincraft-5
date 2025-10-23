@@ -85,19 +85,7 @@ public class SteamLima2_8_0 extends SteamTrain {
 		}
 	}
 
-
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+@Override
 	public String getInventoryName() {
 		return "Lima 2-8-0";
 	}

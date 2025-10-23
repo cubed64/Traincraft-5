@@ -43,19 +43,7 @@ public class EntityLocoSteamEr_Ussr extends SteamTrain {
 	@Override
 	public void updateRiderPosition() {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset() + 0.5F, posZ);
-	}
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+	}@Override
 	public String getInventoryName() {
 		return "USSR 0-5-0";
 	}

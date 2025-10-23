@@ -45,19 +45,7 @@ public class EntityLocoSteamClimax extends SteamTrain {
 	@Override
 	public void updateRiderPosition() {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset()+0.6F, posZ);// default
-	}
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+	}@Override
 	public String getInventoryName() {
 		return "4-0-4 Climax";
 	}

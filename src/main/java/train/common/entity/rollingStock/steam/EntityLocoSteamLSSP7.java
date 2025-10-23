@@ -44,12 +44,6 @@ public class EntityLocoSteamLSSP7 extends SteamTrain {
 	public void updateRiderPosition() {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset(), posZ);// default
 	}
-
-	
-
-	
-
-	
 @Override
 	public String getInventoryName() {
 		return "LSSP 7";

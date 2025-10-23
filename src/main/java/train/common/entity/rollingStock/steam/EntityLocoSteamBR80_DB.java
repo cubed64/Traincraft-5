@@ -67,12 +67,6 @@ public class EntityLocoSteamBR80_DB extends SteamTrain {
 
 	
 
-	
-
-	
-
-	
-
 	@Override
 	public String getInventoryName() {
 		return "BR80";

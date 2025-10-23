@@ -94,12 +94,6 @@ public class DieselGP15 extends DieselTrain {
 	
 
 	
-
-	
-
-	
-
-	
 	@Override
 	public String getInventoryName() {
 		return "EMD GP15-1";

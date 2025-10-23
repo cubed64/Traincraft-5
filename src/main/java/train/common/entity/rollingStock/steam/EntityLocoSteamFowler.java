@@ -47,12 +47,6 @@ public class EntityLocoSteamFowler extends SteamTrain {
 	public void updateRiderPosition() {
 		TraincraftUtil.updateRider(this, -0.25, 0.25);
 	}
-
-	
-
-	
-
-	
 @Override
 	public String getInventoryName() {
 		return "Fowler 4F";

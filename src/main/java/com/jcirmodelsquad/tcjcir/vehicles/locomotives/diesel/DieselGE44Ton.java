@@ -90,19 +90,7 @@ public class DieselGE44Ton extends DieselTrain {
 		}
 	}
 
-
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+@Override
 	public String getInventoryName() {
 		return "GE 44 Ton Switcher";
 	}

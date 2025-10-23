@@ -61,19 +61,7 @@ public class EntityLocoSteamAdler extends SteamTrain {
 			pitch-=pitchRads*0.3;
 		}
 		riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
-	}
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+	}@Override
 	public String getInventoryName() {
 		return "Adler";
 	}

@@ -80,19 +80,7 @@ public class SteamBrank extends SteamTrain {
 		}
 	}
 
-
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+@Override
 	public String getInventoryName() {
 		return "2-6-2T Branch Tank \"Brank\"";
 	}

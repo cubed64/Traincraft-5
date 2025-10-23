@@ -47,12 +47,6 @@ public class EntityLocoSteamAlice0_4_0 extends SteamTrain {
 	}
 	@Override
 	public boolean shouldRiderSit(){return false;}
-
-	
-
-	
-
-	
 @Override
 	public String getInventoryName() {
 		return "0-4-0 Alice";

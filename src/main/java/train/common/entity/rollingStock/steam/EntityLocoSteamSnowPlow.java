@@ -81,13 +81,7 @@ public class EntityLocoSteamSnowPlow extends SteamTrain {
 		if (pitchRads > -1.01 && pitchRads < 1.01) {
 			riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
 		}
-	}
-
-	
-
-	
-
-	private static final double[][]	blockpos	= { { 4, 0, 1 }, { 4, 0, -1 }, { 4, 0, 0 }};
+	}private static final double[][]	blockpos	= { { 4, 0, 1 }, { 4, 0, -1 }, { 4, 0, 0 }};
 	private double[] point1;
 	private FakePlayer fakePlayer = null;
 	private int rotation =0;
@@ -183,13 +177,7 @@ public class EntityLocoSteamSnowPlow extends SteamTrain {
 			xyz[2] = (offset[0] * sin) + (offset[2] * cos);
 		}
 		return xyz;
-	}
-
-	
-
-	
-
-	@Override
+	}@Override
 	public String getInventoryName() {
 		return "Steam Snow Plow";
 	}

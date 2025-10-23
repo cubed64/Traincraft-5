@@ -79,12 +79,6 @@ public class SteamPELoco extends SteamTrain {
 
 	
 
-	
-
-	
-
-	
-
 	@Override
 	public String getInventoryName() {
 		return "Polar Express Locomotive";

@@ -90,19 +90,7 @@ public class SteamMK60 extends SteamTrain {
 		}
 	}
 
-
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+@Override
 	public String getInventoryName() {
 		return "WP MK60-71 2-8-2";
 	}

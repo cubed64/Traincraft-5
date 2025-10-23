@@ -74,19 +74,7 @@ public class SteamBKno2a extends SteamTrain {
 		}
 	}
 
-
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+@Override
 	public String getInventoryName() {
 		return "Booth-Kelly Lumber Co. No2";
 	}

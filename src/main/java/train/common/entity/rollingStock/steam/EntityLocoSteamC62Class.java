@@ -49,12 +49,6 @@ public class EntityLocoSteamC62Class extends SteamTrain {
 		*/
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset() + 0.45F, posZ);
 	}
-
-	
-
-	
-
-	
 @Override
 	public String getInventoryName() {
 		return "C62 Class [JNR]";

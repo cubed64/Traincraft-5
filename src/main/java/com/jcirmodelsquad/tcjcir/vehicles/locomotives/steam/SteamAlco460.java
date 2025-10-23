@@ -87,12 +87,6 @@ public class SteamAlco460 extends SteamTrain {
 
 	
 
-	
-
-	
-
-	
-
 	@Override
 	public String getInventoryName() {
 		return "ALCo 4-6-0";

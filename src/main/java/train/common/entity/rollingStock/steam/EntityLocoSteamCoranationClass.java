@@ -73,12 +73,6 @@ public class EntityLocoSteamCoranationClass extends SteamTrain {
 			riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
 		}
 	}
-
-	
-
-	
-
-	
 @Override
 	public String getInventoryName() {
 		return "Coranation Class";

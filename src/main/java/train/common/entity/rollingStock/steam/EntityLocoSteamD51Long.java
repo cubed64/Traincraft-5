@@ -49,12 +49,6 @@ public class EntityLocoSteamD51Long extends SteamTrain {
 		*/
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset() + 0.45F, posZ);
 	}
-
-	
-
-	
-
-	
 @Override
 	public String getInventoryName() {
 		return "D51 [JNR]";

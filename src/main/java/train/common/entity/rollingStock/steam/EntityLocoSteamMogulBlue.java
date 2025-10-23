@@ -43,12 +43,6 @@ public class EntityLocoSteamMogulBlue extends SteamTrain {
 	public void updateRiderPosition() {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset() + 0.45, posZ);// default
 	}
-
-	
-
-	
-
-	
 @Override
 	public String getInventoryName() {
 		return "Mogul";

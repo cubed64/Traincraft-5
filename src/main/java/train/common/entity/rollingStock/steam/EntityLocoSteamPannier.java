@@ -46,19 +46,7 @@ public class EntityLocoSteamPannier extends SteamTrain {
 	@Override
 	public void updateRiderPosition() {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset()+0.3F, posZ);// default
-	}
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+	}@Override
 	public String getInventoryName() {
 		return "0-6-0 Pannier";
 	}

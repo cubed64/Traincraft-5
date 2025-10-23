@@ -45,12 +45,6 @@ public class EntityLocoSteam4_4_0 extends SteamTrain {
 	public void updateRiderPosition() {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset() + 0.45, posZ);// default
 	}
-
-	
-
-	
-
-	
 @Override
 	public String getInventoryName() {
 		return "4-4-0 (US)";

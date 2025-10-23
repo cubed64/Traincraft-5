@@ -45,19 +45,7 @@ public class SteamClimaxNew extends SteamTrain {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset()+0.25F, posZ);// default
 	}
 
-
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+@Override
 	public String getInventoryName() {
 		return "2 Truck Climax";
 	}

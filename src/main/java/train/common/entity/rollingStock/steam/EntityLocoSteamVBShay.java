@@ -48,12 +48,6 @@ public class EntityLocoSteamVBShay extends SteamTrain {
 	}
 	@Override
 	public boolean shouldRiderSit(){return false;}
-
-	
-
-	
-
-	
 @Override
 	public String getInventoryName() {
 		return "Vertical Boiler Shay";

@@ -79,19 +79,7 @@ public class SteamNP_L9 extends SteamTrain {
 		}
 	}
 
-
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+@Override
 	public String getInventoryName() {
 		return "NP L9 Class 0-6-0";
 	}

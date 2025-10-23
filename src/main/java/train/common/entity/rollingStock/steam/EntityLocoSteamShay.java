@@ -44,19 +44,7 @@ public class EntityLocoSteamShay extends SteamTrain {
 	@Override
 	public void updateRiderPosition() {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset()+0.4F, posZ);// default
-	}
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+	}@Override
 	public String getInventoryName() {
 		return "Shay";
 	}

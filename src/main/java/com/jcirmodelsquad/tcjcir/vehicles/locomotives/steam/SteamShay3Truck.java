@@ -45,19 +45,7 @@ public class SteamShay3Truck extends SteamTrain {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset()+0.0F, posZ);// default
 	}
 
-
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+@Override
 	public String getInventoryName() {
 		return "Class 3-PC-13 3-Truck Shay";
 	}

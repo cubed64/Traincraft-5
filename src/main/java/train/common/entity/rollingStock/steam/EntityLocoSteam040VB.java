@@ -51,12 +51,6 @@ public class EntityLocoSteam040VB extends SteamTrain {
 
 	
 
-	
-
-	
-
-	
-
 	@Override
 	public String getInventoryName() {
 		return "0-4-0 Vertical Boiler";

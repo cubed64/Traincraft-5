@@ -85,12 +85,6 @@ public class SteamOnion extends SteamTrain {
 	}
 
 	
-
-	
-
-	
-
-	
 	@Override
 	public String getInventoryName() {
 		return "Onion";

@@ -43,12 +43,6 @@ public class EntityLocoSteamGS4 extends SteamTrain {
 	public void updateRiderPosition() {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset() + 0.5F, posZ);
 	}
-
-	
-
-	
-
-	
 @Override
 	public String getInventoryName() {
 		return "Daylight";

@@ -86,19 +86,7 @@ public class SteamAlco2102 extends SteamTrain {
 		}
 	}
 
-
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+@Override
 	public String getInventoryName() {
 		return "Alco 2-10-2ST";
 	}

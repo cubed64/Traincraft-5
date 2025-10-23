@@ -46,19 +46,7 @@ public class SteamVBShay2 extends SteamTrain {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset()+0.4F, posZ);// default
 	}
 
-
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+@Override
 	public String getInventoryName() {
 		return "2 Truck Vertical Boiler Shay";
 	}

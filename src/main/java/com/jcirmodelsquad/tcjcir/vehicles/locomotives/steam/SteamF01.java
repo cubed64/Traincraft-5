@@ -75,19 +75,7 @@ public class SteamF01 extends SteamTrain {
 		}
 	}
 
-
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+@Override
 	public String getInventoryName() {
 		return "F-01 Class 2-4-4 Forney";
 	}

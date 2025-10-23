@@ -78,12 +78,6 @@ public class SteamC11 extends SteamTrain {
 
 	
 
-	
-
-	
-
-	
-
 	@Override
 	public String getInventoryName() {
 		return "JNR C411";

@@ -84,19 +84,7 @@ public class SteamPMNandN1 extends SteamTrain {
 		}
 	}
 
-
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	@Override
+@Override
 	public String getInventoryName() {
 		return "Pere Marquette N and N-1";
 	}

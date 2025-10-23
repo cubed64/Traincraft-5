@@ -47,12 +47,6 @@ public class EntityLocoSteamGLYN042T extends SteamTrain {
 	}
 	@Override
 	public boolean shouldRiderSit(){return false;}
-
-	
-
-	
-
-	
 @Override
 	public String getInventoryName() {
 		return "0-4-2 GLYN";
