@@ -1143,7 +1143,7 @@ public enum RenderEnum implements ITrainRenderRecord
 			//add(new double[]{0.475D, 1.3D, 0.0D});//rear
 		}
 	}, "", null, 0, false),
-	GP9( DieselGP9.class,  new ModelGP7newer(), "gp9_", true,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+	GP9( DieselGP9.class,  new ModelGP9newer(), "gp9_", true,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{
 			add(new double[]{1.225D, 1.3D, 0.0D});//front
 			add(new double[]{0.475D, 1.3D, 0.0D});//rear
