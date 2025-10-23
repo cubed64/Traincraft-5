@@ -9,16 +9,24 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
+import train.common.api.AbstractStandardFixedFreightCar;
 import train.common.api.Freight;
 import train.common.library.GuiIDs;
 
-public class MILWPrewarBaggage extends Freight implements IInventory {
-	public int freightInventorySize;
-	public int numFreightSlots;
-
+public class MILWPrewarBaggage extends AbstractStandardFixedFreightCar
+{
 	public MILWPrewarBaggage(World world) {
 		super(world);
-		initFreightCart();
+	}
+
+	public MILWPrewarBaggage(World world, double x, double y, double z)
+	{
+		super(world, x, y, z);
+	}
+
+	@Override
+	public void setupTextureDescription()
+	{
 		InsertTexture(0, "MILW (1935, As built)");
 		InsertTexture(1, "MILW (1935, Hiawatha)");
 		InsertTexture(2, "MILW (1935, 1938 Scheme)");
@@ -52,87 +60,13 @@ public class MILWPrewarBaggage extends Freight implements IInventory {
 		InsertTexture(30, "MILW (1935, UP scheme, new doors)");
 	}
 
-	public void initFreightCart() {
-		numFreightSlots = 9;
-		if(trainSpec!=null)freightInventorySize = trainSpec.getCargoCapacity();
-		cargoItems = new ItemStack[freightInventorySize];
-	}
-
-	public MILWPrewarBaggage(World world, double d, double d1, double d2) {
-		this(world);
-		setPosition(d, d1 + (double) yOffset, d2);
-		motionX = 0.0D;
-		motionY = 0.0D;
-		motionZ = 0.0D;
-		prevPosX = d;
-		prevPosY = d1;
-		prevPosZ = d2;
-	}
-
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
-
-	@Override
-	protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {
-		super.writeEntityToNBT(nbttagcompound);
-
-		NBTTagList nbttaglist = new NBTTagList();
-		for (int i = 0; i < cargoItems.length; i++) {
-			if (cargoItems[i] != null) {
-				NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-				nbttagcompound1.setByte("Slot", (byte) i);
-				cargoItems[i].writeToNBT(nbttagcompound1);
-				nbttaglist.appendTag(nbttagcompound1);
-			}
-		}
-		nbttagcompound.setTag("Items", nbttaglist);
-	}
-
-	@Override
-	protected void readEntityFromNBT(NBTTagCompound nbttagcompound) {
-		super.readEntityFromNBT(nbttagcompound);
-
-		NBTTagList nbttaglist = nbttagcompound.getTagList("Items", Constants.NBT.TAG_COMPOUND);
-		cargoItems = new ItemStack[getSizeInventory()];
-		for (int i = 0; i < nbttaglist.tagCount(); i++) {
-			NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
-			int j = nbttagcompound1.getByte("Slot") & 0xff;
-			if (j >= 0 && j < cargoItems.length) {
-				cargoItems[j] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
-			}
-		}
-	}
-
 	@Override
 	public String getInventoryName() {
 		return "Milwaukee Road Prewar Baggage";
 	}
 
 	@Override
-	public int getSizeInventory() {
-		return freightInventorySize;
-	}
-
-	@Override
-	public boolean interactFirst(EntityPlayer entityplayer) {
-		playerEntity = entityplayer;
-		if ((super.interactFirst(entityplayer))) {
-			return false;
-		}
-		entityplayer.openGui(Traincraft.instance, GuiIDs.FREIGHT, worldObj, this.getEntityId(), -1, (int) this.posZ);
-		return true;
-	}
-
-	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 3.38F;
-	}
-
-	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		return true;
 	}
 }
