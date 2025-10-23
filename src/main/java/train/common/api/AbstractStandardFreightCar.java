@@ -88,7 +88,7 @@ public abstract class AbstractStandardFreightCar extends Freight
     }
 
     @Override
-    public final boolean interactFirst(EntityPlayer entityplayer)
+    public boolean interactFirst(EntityPlayer entityplayer)
     {
         if ((super.interactFirst(entityplayer)))
         {
