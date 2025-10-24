@@ -2279,6 +2279,8 @@ public enum RenderEnum implements ITrainRenderRecord
 	NYCPrewar56SeatCoach(NYCPrewar56SeatCoach.class, new ModelNYCPrewar56SeatCoach(), "NYC_lightweight_Prewar56SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	MILWPrewarBaggage(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.baggagecar.MILWPrewarBaggage.class, new ModelMILWPrewarBaggage(), "MILW_prewar_baggage_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	MILW1935Baggage_Dinette(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.MILW1935Baggage_Dinette.class, new ModelMILW1935Baggage_Dinette(), "MILW1935Baggage_Dinette_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	MILW1935Tap_Dinette(MILW1935Tap_Dinette.class, new ModelMILW1935Tap_Dinette(), "MILW1935Tap_Dinette_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	amfleet(Amfleet.class, new ModelAmfleet(),"amfleet_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	amfleet2(Amfleet2.class, new ModelAmfleet2(),"amfleet2_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

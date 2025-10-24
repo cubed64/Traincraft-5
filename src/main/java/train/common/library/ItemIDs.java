@@ -945,6 +945,8 @@ public enum ItemIDs {
 	minecartNYCPrewar56SeatCoach("ItemRollingStock", "NYCPrewar56SeatCoach", PASSENGER, 3),
 
 	minecartMILWPrewarBaggage("ItemRollingStock", "MILWPrewarBaggage", PASSENGER, 3),
+	minecartMILW1935Baggage_Dinette("ItemRollingStock", "MILW1935Baggage_Dinette", PASSENGER, 3),
+	minecartMILW1935Tap_Dinette("ItemRollingStock", "MILW1935Tap_Dinette", PASSENGER, 3),
 
 	minecartAmfleet("ItemRollingStock", "Amfleet", PASSENGER, 3),
 	minecartAmfleet2("ItemRollingStock", "Amfleet2", PASSENGER, 3),
