@@ -96,7 +96,7 @@ public abstract class AbstractStandardFreightCar extends Freight
         }
 
         boolean isTrustedPlayer = isPlayerTrusted(playerEntity.getDisplayName());
-        if (!playerEntity.getDisplayName().equalsIgnoreCase(this.getTrainOwner()) && !isTrustedPlayer)
+        if (this.getTrainLockedFromPacket() && !playerEntity.getDisplayName().equalsIgnoreCase(this.getTrainOwner()) && !isTrustedPlayer)
         {
             if (!worldObj.isRemote)
             {
