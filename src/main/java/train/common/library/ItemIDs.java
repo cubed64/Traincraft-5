@@ -983,6 +983,10 @@ public enum ItemIDs {
 	minecartKawasakiLRV("ItemRollingStock", "KawasakiLRV", PASSENGER,3),
 	minecartPCC("ItemRollingStock", "PCC", PASSENGER, 3),
 
+	minecartW_A11("ItemRollingStock", "W_A11", PASSENGER,3),
+	minecartW_A55("ItemRollingStock", "W_A55", PASSENGER,3),
+	minecartW_A55_Combine("ItemRollingStock", "W_A55_Combine", PASSENGER,3),
+
 	//peach moments
 	minecartGeometryCar("ItemRollingStock", "geometry_car", 15),
 	minecartExperimentalHydrogenTrain("ItemRollingStock", "pch100h", PASSENGER, 21),

@@ -558,6 +558,12 @@ public enum EnumTrains implements ITrainRecord
 	WPShops600Series("WPShops600Series",WPShops600Series.class, ItemIDs.minecartWPShops600Series.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Brown", "Yellow", "Green"}), 16, 0, null),
 	CDCScaboose("CDCScaboose", com.jcirmodelsquad.tcjcir.vehicles.rollingstock.workcart.CDCScaboose.class, ItemIDs.minecartCDCScaboose.item, "caboose", 2, TraincraftUtil.getBytesFromColors(new String[] {"Red", "Pink", "Brown", "Grey"}), 16, 0, null),
 
+	//interurbans and streetcars
+	W_A11("SEC W-A11", ElectricW_A11.class,  ItemIDs.minecartW_A11.item, "electric", 200, 80, 0, 10, 0, 170, 0.7, 0.9, 0, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Red", "Green"}), 10, -2.5, null),
+	W_A55("SEC W-A55", ElectricW_A55.class,  ItemIDs.minecartW_A55.item, "electric", 200, 80, 0, 10, 0, 170, 0.7, 0.9, 0, TraincraftUtil.getBytesFromColors(new String[] {"Black"}), 10, -2.55, null),
+	W_A55_Combine("SEC W-A55 Combine", ElectricW_A55_Combine.class,  ItemIDs.minecartW_A55_Combine.item, "electric", 200, 80, 0, 10, 0, 170, 0.7, 0.9, 0, TraincraftUtil.getBytesFromColors(new String[] {"Black"}), 10, -2.55, null),
+
+
 	//meme
 	BigMeme("BigMeme", BigMeme.class, ItemIDs.minecartBigMeme.item, "awesome", 1, 200, 0, 50, 0, 0, 0.9, 0.9, 8000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Grey"}),16 , -1.1),
 	BombCart("Payload", com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.funny.BombCart.class, ItemIDs.minecartBombCart.item, "misc", 1.5, TraincraftUtil.getBytesFromColors(new String[]{"LightBlue", "Red", "Black", "Blue", "Cyan", "Green", "Grey", "Brown", "LightGrey", "Lime", "Magenta", "Orange", "Pink", "Purple", "Yellow", "White"}), 18, 0, (new String[] {"Who is not pushing ze Cart!?"})),

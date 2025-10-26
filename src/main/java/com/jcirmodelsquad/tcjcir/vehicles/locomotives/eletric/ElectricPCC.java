@@ -47,7 +47,7 @@ public class ElectricPCC extends ElectricTrain {
 	
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
-		return 0.8F;
+		return 0.83F;
 	}
 
 	

@@ -2295,7 +2295,7 @@ public enum RenderEnum implements ITrainRenderRecord
 	PEcoach(PEcoach.class, new ModelPEcoach(),"PECoach_", true, new float[]{0F,  0.105F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PEobserve(PEobserve.class, new ModelPEobserve(),"PEObserve_", true, new float[]{0F,  0.105F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
-	/**OTHER ROLLING SHIZZLE**/
+	/**CABOOSE**/
 	WVcaboose(WVcaboose.class, new ModelWVcaboose(),"wvcaboose_", true, new float[]{0F, 0.1675F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	HBC1C(HBC1Cboose.class, new ModelHBC1C(),"HBC1C_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	HBC1B(HBC1Bboose.class, new ModelHBC1B(),"HBC1B_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -2306,6 +2306,12 @@ public enum RenderEnum implements ITrainRenderRecord
 	WPShops600Series(WPShops600Series.class, new ModelWPShops600Series(),"wp680series_", true, new float[]{-0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	CDCScaboose(CDCScaboose.class, new ModelCDCScaboose(),"CDCScaboose_", true, new float[]{0F, 0.1675F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
+	/**INTERURBAN AND STREETCAR **/
+	W_A11(ElectricW_A11.class, new ModelW_A11(), "W_A11_", true, new float[]{-1.25F, 0.12F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	W_A55(ElectricW_A55.class, new ModelW_A55(), "W_A55_", true, new float[]{-1.25F, 0.12F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	W_A55_Combine(ElectricW_A55_Combine.class, new ModelW_A55_Combine(), "W_A55_Combine_", true, new float[]{-1.25F, 0.12F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+
+	/**OTHER ROLLING SHIZZLE**/
 	BigMeme(BigMeme.class, new ModelBigMeme(),"bigmeme_", true, new float[]{-1F, 0.1875F, 0F}, new float[] { 180F, 180F, 0F }, null, "", 0, null, "", null, 0, false),
 	BombCart(BombCart.class, new ModelBombCart(), "payload_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	Thanos(Thanos.class, new ModelLocoMinetrain(), "thanos", false, new float[] {-0.8F, -0.47F, 0.0F},  new float[] { 0F, 0F, 0F }, null, "", 0, null, "", null, 0, false),

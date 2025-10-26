@@ -1919,6 +1919,14 @@ entity.tc.WPShops600Series.name=WP Shops 600 series Caboose
 entity.tc.CDCScaboose.name=CDCS Caboose
 
 --------------------------------------------------------
+item.tc:minecartW_A11.name=SEC W-A11
+item.tc:minecartW_A55.name=SEC W-A55
+item.tc:minecartW_A55_Combine.name=SEC W-A55 Combine
+
+entity.tc.SEC W-A11.name=SEC W-A11
+entity.tc.SEC W-A55.name=SEC W-A55
+entity.tc.SEC W-A55.name=SEC W-A55 Combine
+--------------------------------------------------------
 
 item.tc:minecartBigMeme.name=Leslie A425 Trailer
 item.tc:minecartBombCart.name=TF2 Payload Cart
