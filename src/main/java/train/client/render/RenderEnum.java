@@ -2285,6 +2285,7 @@ public enum RenderEnum implements ITrainRenderRecord
 	MILW1935_22SeatParlor(MILW1935_22SeatParlor.class, new ModelMILW1935_22SeatParlor(), "MILW1935_22SeatParlor_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	MILW1935_21SeatParlor_Observation(MILW1935_21SeatParlor_Observation.class, new ModelMILW1935_21SeatParlor_Observation(), "MILW1935_21SeatParlor_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	MILW1935_44SeatCoach_Observation(MILW1935_44SeatCoach_Observation.class, new ModelMILW1935_44SeatCoach_Observation(), "MILW1935_44SeatCoach_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	MILW1935Dorm_56SeatCoach(MILW1935Dorm_56SeatCoach.class, new ModelMILW1935Dorm_56SeatCoach(), "MILW1935Dorm_56SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	amfleet(Amfleet.class, new ModelAmfleet(),"amfleet_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	amfleet2(Amfleet2.class, new ModelAmfleet2(),"amfleet2_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

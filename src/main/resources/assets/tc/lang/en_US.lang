@@ -1757,6 +1757,7 @@ item.tc:minecartMILW1935_48SeatCoach.name=Milwaukee Road 1935 48 Seat Coach
 item.tc:minecartMILW1935_22SeatParlor.name=Milwaukee Road 1935 22 Seat Parlor
 item.tc:minecartMILW1935_21SeatParlor_Observation.name=Milwaukee Road 1935 21 Seat Parlor Observation
 item.tc:minecartMILW1935_44SeatCoach_Observation.name=Milwaukee Road 1935 44 Seat Coach Observation
+item.tc:minecartMILW1935Dorm_56SeatCoach.name=Milwaukee Road 1935 Dormitory-56 Seat Coach
 
 entity.tc.Freight PS 85 Baggage.name=Pullman Standard 85' Baggage
 entity.tc.PS 5-6-5 Sleeper.name=Pullman Standard 10-6 Sleeper (Center Bedroom)
@@ -1878,6 +1879,7 @@ entity.tc.MILW 1935 48 Seat Coach.name=Milwaukee Road 1935 48 Seat Coach
 entity.tc.MILW 1935 22 Seat Parlor.name=Milwaukee Road 1935 22 Seat Parlor
 entity.tc.MILW 1935 21 Seat Parlor Observation.name=Milwaukee Road 1935 21 Seat Parlor Observation
 entity.tc.MILW 1935 44 Seat Coach Observation.name=Milwaukee Road 1935 44 Seat Coach Observation
+entity.tc.MILW 1935 Dormitory-56 Seat Coach.name=Milwaukee Road 1935 Dormitory-56 Seat Coach
 
 item.tc:minecartAmfleet.name=Amfleet 1 Coach
 item.tc:minecartAmfleet2.name=Amfleet 2 Coach
