@@ -23,10 +23,7 @@ public class PSCEI60SeatCoach extends AbstractPassengerCar {
 		InsertTexture(13, "IC (Interior Scheme 2)");
 	}
 
-	public PSCEI60SeatCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

@@ -25,16 +25,7 @@ public class DieselBeep extends DieselTrain {
         super(world, EnumTrains.Beep.getTankCapacity(), LiquidManager.dieselFilter());
 
     }
-    public DieselBeep(World world, double d, double d1, double d2) {
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+    
 
 
 

@@ -49,16 +49,7 @@ public class DieselF7B extends DieselTrain {
         InsertTexture(19, "CB&Q (Late)");
         InsertTexture(20, "MILW (Grey scheme)");
     }
-    public DieselF7B(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+    
 
     
 

@@ -11,10 +11,6 @@ public class ACF3960 extends AbstractStandardFreightCar
 		super(world);
 	}
 
-	public ACF3960(World world, double d, double d1, double d2) {
-		super(world, d, d1, d2);
-	}
-
 	@Override
 	public CargoManager setupCargoManager()
 	{

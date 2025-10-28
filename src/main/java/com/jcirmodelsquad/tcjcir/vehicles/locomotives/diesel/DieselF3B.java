@@ -45,16 +45,7 @@ public class DieselF3B extends DieselTrain {
         InsertTexture(16, "NYC (Late)");
         InsertTexture(17, "EMD Passenger Demo");
     }
-    public DieselF3B(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
 
 

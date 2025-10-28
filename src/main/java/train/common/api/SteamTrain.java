@@ -33,7 +33,8 @@ public abstract class SteamTrain extends Locomotive implements IFluidHandler {
 	 * @param world
 	 * @param capacity
 	 */
-	public SteamTrain(World world, int capacity) {
+	public SteamTrain(World world, int capacity)
+	{
 		this(capacity, world, null);
 	}
 

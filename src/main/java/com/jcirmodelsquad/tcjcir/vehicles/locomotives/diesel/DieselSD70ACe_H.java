@@ -38,16 +38,7 @@ public class DieselSD70ACe_H extends DieselTrain {
         InsertTexture(9, "NS 1073 (Penn Central)");
         InsertTexture(10, "NS 1074 (Delaware Lackawanna & Western)");
     }
-    public DieselSD70ACe_H(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 4.15, 0.4, -0.35); }

@@ -11,9 +11,7 @@ public class Reefer64Foot extends AbstractStandardFreightCar
         super(world);
     }
 
-    public Reefer64Foot(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+
 
     @Override
     public CargoManager setupCargoManager()

@@ -31,16 +31,7 @@ public class DieselNRE3gs21b extends DieselTrain {
         InsertTexture(4, "Southern Port Belt");
         InsertTexture(5, "CSXT (Yn3)");
     }
-    public DieselNRE3gs21b(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
     
 

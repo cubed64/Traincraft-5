@@ -16,9 +16,7 @@ public class GSI60FootBulkhead extends AbstractStandardFreightCar
         super(world);
     }
 
-    public GSI60FootBulkhead(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+
 
     @Override
     public CargoManager setupCargoManager()

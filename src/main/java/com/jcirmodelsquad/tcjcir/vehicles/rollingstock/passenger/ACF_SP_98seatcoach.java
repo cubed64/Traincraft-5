@@ -18,10 +18,7 @@ public class ACF_SP_98seatcoach extends AbstractPassengerCar
 		InsertTexture(8, "Blank As-Modified");
 	}
 
-	public ACF_SP_98seatcoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

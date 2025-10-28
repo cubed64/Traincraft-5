@@ -16,10 +16,7 @@ public class EntityCabooseWorkCart extends AbstractWorkCart
 		super(world);
 	}
 
-	public EntityCabooseWorkCart(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

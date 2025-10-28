@@ -14,9 +14,7 @@ public class GSC53FootFlat extends AbstractStandardFreightCar
         super(world);
     }
 
-    public GSC53FootFlat(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+    
 
     @Override
     public CargoManager setupCargoManager()

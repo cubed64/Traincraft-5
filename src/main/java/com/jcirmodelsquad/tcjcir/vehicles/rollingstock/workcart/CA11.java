@@ -24,10 +24,7 @@ public class CA11 extends AbstractWorkCart
         InsertTexture(9, "");
     }
 
-    public CA11(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+    
 
     @Override
     public double getAdditionalYOffset()

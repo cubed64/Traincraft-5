@@ -59,16 +59,7 @@ public class DieselGP40 extends DieselTrain {
         InsertTexture(30, "");
         InsertTexture(31, "");
     }
-    public DieselGP40(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
 
 

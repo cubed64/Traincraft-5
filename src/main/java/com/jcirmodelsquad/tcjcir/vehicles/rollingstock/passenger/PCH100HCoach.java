@@ -9,9 +9,7 @@ public class PCH100HCoach extends AbstractPassengerCar {
         super(world);
     }
 
-    public PCH100HCoach(World world, double d, double d1, double d2) {
-        super(world, d, d1, d2);
-    }
+
 
     @Override
     public double getAdditionalYOffset()

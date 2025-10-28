@@ -12,10 +12,7 @@ public class PSCEIDiner extends AbstractPassengerCar {
 		InsertTexture(2, "GC&M");
 	}
 
-	public PSCEIDiner(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

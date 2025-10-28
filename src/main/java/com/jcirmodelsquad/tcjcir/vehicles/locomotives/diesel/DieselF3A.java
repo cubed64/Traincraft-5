@@ -57,16 +57,7 @@ public class DieselF3A extends DieselTrain {
         InsertTexture(28, "WM (Fireball)");
     }
 
-    public DieselF3A(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
 
 

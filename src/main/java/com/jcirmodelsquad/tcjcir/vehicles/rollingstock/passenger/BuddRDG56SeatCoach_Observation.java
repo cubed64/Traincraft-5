@@ -16,10 +16,7 @@ public class BuddRDG56SeatCoach_Observation extends AbstractPassengerCar
 		InsertTexture(5, "RDG 1 and 5 (post 1953 refurbishment, marker lights off)");
 	}
 
-	public BuddRDG56SeatCoach_Observation(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

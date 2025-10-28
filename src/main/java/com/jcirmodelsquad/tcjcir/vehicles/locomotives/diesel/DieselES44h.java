@@ -64,16 +64,7 @@ public class DieselES44h extends DieselTrain {
         InsertTexture(35, "IAIS (513)");
         InsertTexture(36, "IAIS (516)");
     }
-    public DieselES44h(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
     
 

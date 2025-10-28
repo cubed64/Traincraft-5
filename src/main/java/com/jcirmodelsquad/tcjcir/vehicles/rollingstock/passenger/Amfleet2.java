@@ -18,10 +18,7 @@ public class Amfleet2 extends AbstractPassengerCar
         InsertTexture(8, "CRL (Crator River Lines)");
     }
 
-    public Amfleet2(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+    
 
     @Override
     public double getAdditionalYOffset()

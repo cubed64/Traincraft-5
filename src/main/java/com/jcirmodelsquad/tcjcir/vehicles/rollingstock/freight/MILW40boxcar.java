@@ -11,9 +11,7 @@ public class MILW40boxcar extends AbstractStandardFreightCar
         super(world);
     }
 
-    public MILW40boxcar(World world, double x, double y, double z) {
-        super(world, x , y, z);
-    }
+    
 
     @Override
     public CargoManager setupCargoManager()

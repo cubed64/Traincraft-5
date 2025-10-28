@@ -11,9 +11,7 @@ public class Wood1912Boxcar extends AbstractStandardFreightCar
         super(world);
     }
 
-    public Wood1912Boxcar(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+
 
     @Override
     public CargoManager setupCargoManager()

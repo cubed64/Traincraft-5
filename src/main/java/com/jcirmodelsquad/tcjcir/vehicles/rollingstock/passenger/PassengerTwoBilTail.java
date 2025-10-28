@@ -11,10 +11,7 @@ public class PassengerTwoBilTail extends AbstractPassengerCar {
         super(world);
     }
 
-    public PassengerTwoBilTail(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+    
 
     @Override
     public float getOptimalLinkingDistance()

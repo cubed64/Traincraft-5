@@ -9,13 +9,9 @@ import train.common.entity.CargoSpecification;
 
 public class Freight60centerbeam extends AbstractStandardFreightCar
 {
-    public Freight60centerbeam(World world) {
+    public Freight60centerbeam(World world)
+    {
         super(world);
-
-    }
-
-    public Freight60centerbeam(World world, double x, double y, double z){
-        super(world, x , y, z);
     }
 
     @Override

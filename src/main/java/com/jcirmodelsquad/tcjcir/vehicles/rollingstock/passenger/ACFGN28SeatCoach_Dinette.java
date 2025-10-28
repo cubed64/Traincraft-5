@@ -14,10 +14,7 @@ public class ACFGN28SeatCoach_Dinette extends AbstractPassengerCar
 		InsertTexture(3, "AMTK (ex-GN)");
 	}
 
-	public ACFGN28SeatCoach_Dinette(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

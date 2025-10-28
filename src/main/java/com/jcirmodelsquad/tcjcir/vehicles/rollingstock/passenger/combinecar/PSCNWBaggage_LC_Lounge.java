@@ -12,10 +12,7 @@ public class PSCNWBaggage_LC_Lounge extends AbstractPassengerCombineCar
 		super(world);
 	}
 
-	public PSCNWBaggage_LC_Lounge(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public void setupTextureDescription()

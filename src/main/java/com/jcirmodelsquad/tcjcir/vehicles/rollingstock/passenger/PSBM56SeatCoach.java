@@ -25,10 +25,7 @@ public class PSBM56SeatCoach extends AbstractPassengerCar {
 		InsertTexture(14, "WAB");
 	}
 
-	public PSBM56SeatCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

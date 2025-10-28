@@ -10,11 +10,6 @@ public class Evans5100 extends AbstractStandardFreightCar
     public Evans5100(World world) {
         super(world);
     }
-
-    public Evans5100(World world, double x, double y, double z){
-        super(world, x, y, z);
-    }
-
     @Override
     public CargoManager setupCargoManager()
     {

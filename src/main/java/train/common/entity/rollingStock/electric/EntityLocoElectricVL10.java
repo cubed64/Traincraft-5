@@ -24,17 +24,7 @@ public class EntityLocoElectricVL10 extends ElectricTrain {
 		super(world);
 	}
 
-	public EntityLocoElectricVL10(World world, double d, double d1, double d2) {
-		this(world);
-		setPosition(d, d1 + yOffset, d2);
-		motionX = 0.0D;
-		motionY = 0.0D;
-		motionZ = 0.0D;
-		prevPosX = d;
-		prevPosY = d1;
-		prevPosZ = d2;
-	}
-	@Override
+		@Override
 	public void updateRiderPosition() {
 		double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
 		double distance = 2.1;

@@ -20,10 +20,7 @@ public class AmCafe extends AbstractPassengerCar
         InsertTexture(10, "CRL (Crator River Lines)");
     }
 
-    public AmCafe(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+    
 
     @Override
     public double getAdditionalYOffset()

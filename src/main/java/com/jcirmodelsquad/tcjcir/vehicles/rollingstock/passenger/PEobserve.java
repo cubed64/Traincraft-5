@@ -10,10 +10,7 @@ public class PEobserve extends AbstractPassengerCar
         super(world);
     }
 
-    public PEobserve(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
     @Override
     public float getOptimalLinkingDistance()

@@ -16,10 +16,7 @@ public class EntityMailWagen_DB extends AbstractWorkCart
 		super(world);
 	}
 
-	public EntityMailWagen_DB(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

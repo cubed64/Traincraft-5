@@ -47,16 +47,7 @@ public class DieselU18Balt extends DieselTrain {
         InsertTexture(17, "Family Lines (SCL)");
         InsertTexture(18, "Seaboard System");
     }
-    public DieselU18Balt(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
     
 

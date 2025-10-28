@@ -13,10 +13,7 @@ public class PSCEI1DR_28SeatParlor_Observation extends AbstractPassengerCar {
 		InsertTexture(2, "GC&M");
 	}
 
-	public PSCEI1DR_28SeatParlor_Observation(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

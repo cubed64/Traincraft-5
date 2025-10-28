@@ -13,17 +13,7 @@ public class EntityPassengerDenverRioGrande extends EntityRollingStock implement
 		super(world);
 	}
 
-	public EntityPassengerDenverRioGrande(World world, double d, double d1, double d2) {
-		this(world);
-		setPosition(d, d1 + yOffset, d2);
-		motionX = 0.0D;
-		motionY = 0.0D;
-		motionZ = 0.0D;
-		prevPosX = d;
-		prevPosY = d1;
-		prevPosZ = d2;
-	}
-	@Override
+		@Override
 	public void updateRiderPosition() {
 		//if(this.bogie[0]!=null){
 			/*double dX = this.posX - this.bogie[0].posX;

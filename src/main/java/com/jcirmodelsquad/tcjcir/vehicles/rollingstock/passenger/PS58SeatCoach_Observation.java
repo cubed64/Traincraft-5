@@ -27,10 +27,7 @@ public class PS58SeatCoach_Observation extends AbstractPassengerCar {
 		InsertTexture(16, "DLMR (fictional)");
 	}
 
-	public PS58SeatCoach_Observation(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

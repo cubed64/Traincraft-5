@@ -33,16 +33,7 @@ public class DieselGP7f extends DieselTrain {
         InsertTexture(4, "SNCT 401 (Protolance)", LockoutGroup.SNCT);
         InsertTexture(5, "SNCT 402 (Protolance)", LockoutGroup.SNCT);
     }
-    public DieselGP7f(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
     
 

@@ -16,10 +16,7 @@ public class BuddCN68SeatCoach_Observation extends AbstractPassengerCar
 		InsertTexture(5, "CN 304 (late, marker lights off)");
 	}
 
-	public BuddCN68SeatCoach_Observation(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

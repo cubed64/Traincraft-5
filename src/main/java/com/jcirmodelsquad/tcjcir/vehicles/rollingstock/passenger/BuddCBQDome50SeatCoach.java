@@ -10,10 +10,7 @@ public class BuddCBQDome50SeatCoach extends AbstractPassengerCar
 		InsertTexture(0, "CB&Q Silver Bluff");
 	}
 
-	public BuddCBQDome50SeatCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

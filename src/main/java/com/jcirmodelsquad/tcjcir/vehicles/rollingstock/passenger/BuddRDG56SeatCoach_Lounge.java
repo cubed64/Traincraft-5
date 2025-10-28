@@ -14,10 +14,7 @@ public class BuddRDG56SeatCoach_Lounge extends AbstractPassengerCar
 		InsertTexture(3, "RDG 4 (post 1953 refurbishment)");
 	}
 
-	public BuddRDG56SeatCoach_Lounge(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

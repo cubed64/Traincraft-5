@@ -10,10 +10,7 @@ public class PCH120Coach extends AbstractPassengerCar
         super(world);
     }
 
-    public PCH120Coach(World world, double d, double d1, double d2)
-    {
-       super(world, d, d1, d2);
-    }
+    
 
     @Override
     public double getAdditionalYOffset()

@@ -14,10 +14,7 @@ public class ACFGN1DR_17SeatParlorObservation extends AbstractPassengerCar
 		InsertTexture(3, "AMTK");
 	}
 
-	public ACFGN1DR_17SeatParlorObservation(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

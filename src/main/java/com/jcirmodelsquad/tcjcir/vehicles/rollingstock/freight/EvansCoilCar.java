@@ -12,11 +12,6 @@ public class EvansCoilCar extends AbstractStandardFreightCar
     public EvansCoilCar(World world) {
         super(world);
     }
-
-    public EvansCoilCar(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
-
     @Override
     public CargoManager setupCargoManager()
     {

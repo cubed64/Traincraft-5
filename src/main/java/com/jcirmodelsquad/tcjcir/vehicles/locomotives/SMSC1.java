@@ -14,11 +14,6 @@ public class SMSC1 extends AbstractTankSlug
         InsertTexture(0, "FNCC S99 (KIT-L)", LockoutGroup.FNCC);
     }
 
-    public SMSC1(World world, double d, double d1, double d2)
-    {
-        super(world, EnumTrains.SMSC1, d, d1, d2);
-    }
-
     @Override
     public String getInventoryName() {
         return "Slug Motor System, C-C, Type 1";

@@ -14,10 +14,7 @@ public class BuddCN39SeatParlor_Observation extends AbstractPassengerCar
 		InsertTexture(3, "CN 302 (marker lights off)");
 	}
 
-	public BuddCN39SeatParlor_Observation(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

@@ -36,16 +36,7 @@ public class DieselGE25Ton extends DieselTrain {
 		locoInvent = new ItemStack[inventorySize];
 	}
 
-	public DieselGE25Ton(World world, double d, double d1, double d2) {
-		this(world);
-		setPosition(d, d1 + yOffset, d2);
-		motionX = 0.0D;
-		motionY = 0.0D;
-		motionZ = 0.0D;
-		prevPosX = d;
-		prevPosY = d1;
-		prevPosZ = d2;
-	}
+	
 
 	@Override
 	public void updateRiderPosition() {

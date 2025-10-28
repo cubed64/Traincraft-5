@@ -22,18 +22,6 @@ public class EntityPassengerRheingoldDining2  extends AbstractWorkCart implement
 		currentItemBurnTime = 0;
 		furnaceCookTime = 0;
 	}
-
-	public EntityPassengerRheingoldDining2(World world, double d, double d1, double d2) {
-		this(world);
-		setPosition(d, d1 + (double) yOffset, d2);
-		motionX = 0.0D;
-		motionY = 0.0D;
-		motionZ = 0.0D;
-		prevPosX = d;
-		prevPosY = d1;
-		prevPosZ = d2;
-	}
-
 	@Override
 	public void updateRiderPosition() {
 		TraincraftUtil.updateRider(this, -0.1, 0);

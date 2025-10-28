@@ -16,10 +16,7 @@ public class PSBMDiner_Lounge extends AbstractPassengerCar {
 		InsertTexture(5, "C&EI (silver)");
 	}
 
-	public PSBMDiner_Lounge(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

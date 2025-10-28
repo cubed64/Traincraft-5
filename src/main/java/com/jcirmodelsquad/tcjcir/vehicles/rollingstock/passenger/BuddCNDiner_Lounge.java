@@ -13,10 +13,7 @@ public class BuddCNDiner_Lounge extends AbstractPassengerCar
 		InsertTexture(2, "CN 300 (post snack bar-lounge conversion)");
 	}
 
-	public BuddCNDiner_Lounge(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

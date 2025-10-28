@@ -18,10 +18,6 @@ public class GSC53Foot86Bulkhead extends AbstractStandardFreightCar
         super(world);
     }
 
-    public GSC53Foot86Bulkhead(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
-
     @Override
     public CargoManager setupCargoManager()
     {

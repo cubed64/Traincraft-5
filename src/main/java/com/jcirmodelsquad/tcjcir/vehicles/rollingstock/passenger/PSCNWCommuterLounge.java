@@ -11,10 +11,7 @@ public class PSCNWCommuterLounge extends AbstractPassengerCar
 		super(world);
 	}
 
-	public PSCNWCommuterLounge(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

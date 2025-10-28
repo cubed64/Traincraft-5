@@ -10,11 +10,6 @@ public class Freight40highcube extends AbstractStandardFreightCar
     public Freight40highcube(World world) {
         super(world);
     }
-
-    public Freight40highcube(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
-
     @Override
     public CargoManager setupCargoManager()
     {

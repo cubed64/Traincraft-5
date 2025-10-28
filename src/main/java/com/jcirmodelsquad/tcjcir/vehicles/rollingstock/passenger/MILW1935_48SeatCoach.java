@@ -21,10 +21,7 @@ public class MILW1935_48SeatCoach extends AbstractPassengerCar {
 		InsertTexture(10, "CGW (MARS light)");
 	}
 
-	public MILW1935_48SeatCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

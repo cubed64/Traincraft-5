@@ -18,10 +18,7 @@ public class PSSleeper565 extends AbstractPassengerCar
 		InsertTexture(7, "C&O (PM Scheme) (Semi-Fictional)");
 	}
 
-	public PSSleeper565(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

@@ -21,10 +21,7 @@ public class PS52SeatCoach extends AbstractPassengerCar {
 		InsertTexture(11, "DLMR");
 	}
 
-	public PS52SeatCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

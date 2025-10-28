@@ -11,9 +11,7 @@ public class PDH2800 extends AbstractStandardFreightCar
 		super(world);
 	}
 
-	public PDH2800(World world, double x, double y, double z){
-		super(world, x , y, z);
-	}
+
 
 	@Override
 	public CargoManager setupCargoManager()

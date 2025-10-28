@@ -14,10 +14,7 @@ public class OBLV82_92SeatCoach extends AbstractPassengerCar
 		InsertTexture(3, "LV (92 Seat Coach, Late)");
 	}
 
-	public OBLV82_92SeatCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

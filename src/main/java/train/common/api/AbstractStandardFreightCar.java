@@ -29,18 +29,6 @@ public abstract class AbstractStandardFreightCar extends Freight
         setCargoManager(setupCargoManager());
     }
 
-    public AbstractStandardFreightCar(World world, double x, double y, double z)
-    {
-        this(world);
-        setPosition(x, y + (double) yOffset, z);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = x;
-        prevPosY = y;
-        prevPosZ = z;
-    }
-
     public abstract CargoManager setupCargoManager();
 
     public abstract void setupTextureDescription();

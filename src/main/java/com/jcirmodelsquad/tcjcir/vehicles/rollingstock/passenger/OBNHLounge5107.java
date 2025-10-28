@@ -12,10 +12,7 @@ public class OBNHLounge5107 extends AbstractPassengerCar
 		InsertTexture(1, "NH (Black Knight Scheme)");
 	}
 
-	public OBNHLounge5107(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

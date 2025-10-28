@@ -16,10 +16,7 @@ public class HBC1Cboose extends AbstractWorkCart
         InsertTexture(4, "CRL (MOW)");
     }
 
-    public HBC1Cboose(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+    
 
     @Override
     public double getAdditionalYOffset()

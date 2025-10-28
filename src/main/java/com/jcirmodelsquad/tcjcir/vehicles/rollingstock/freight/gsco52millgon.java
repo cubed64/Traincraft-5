@@ -17,9 +17,7 @@ public class gsco52millgon extends AbstractStandardFreightCar
         super(world);
     }
 
-    public gsco52millgon(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+
 
     @Override
     public CargoManager setupCargoManager()

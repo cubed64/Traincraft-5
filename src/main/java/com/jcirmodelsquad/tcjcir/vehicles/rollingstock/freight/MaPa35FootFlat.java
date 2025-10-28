@@ -16,9 +16,7 @@ public class MaPa35FootFlat extends AbstractStandardFreightCar
         super(world);
     }
 
-    public MaPa35FootFlat(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+    
 
     @Override
     public CargoManager setupCargoManager()

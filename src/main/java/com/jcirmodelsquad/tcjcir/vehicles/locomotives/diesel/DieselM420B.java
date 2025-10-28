@@ -30,16 +30,7 @@ public class DieselM420B extends DieselTrain {
         InsertTexture(1, "COW (Calf)");
         InsertTexture(2, "FNCC (KIT-L, Non Canon)", LockoutGroup.FNCC);
     }
-    public DieselM420B(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
     
 

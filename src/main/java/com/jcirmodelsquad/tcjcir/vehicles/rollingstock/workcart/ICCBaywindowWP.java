@@ -26,11 +26,7 @@ public class ICCBaywindowWP extends AbstractWorkCart
         initCabooseWorkCart();
     }
 
-    public ICCBaywindowWP(World world, double posX, double posY, double posZ)
-    {
-        super(world, posX, posY, posZ);
-
-    }
+    
 
     @Override
     public double getAdditionalYOffset()

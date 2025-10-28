@@ -29,16 +29,7 @@ public class DieselSD40dash2B extends DieselTrain {
         InsertTexture(1, "");
         InsertTexture(0, "FURRX (Ex-CSWR)");
     }
-    public DieselSD40dash2B(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
     
 

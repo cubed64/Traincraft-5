@@ -10,10 +10,7 @@ public class PS73Baggage extends AbstractStandardFixedFreightCar
 		super(world);
 	}
 
-	public PS73Baggage(World world, double x, double y, double z)
-	{
-		super(world, x, y, z);
-	}
+
 
 	@Override
 	public void setupTextureDescription()

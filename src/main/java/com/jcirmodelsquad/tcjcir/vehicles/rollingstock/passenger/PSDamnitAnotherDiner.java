@@ -14,10 +14,7 @@ public class PSDamnitAnotherDiner extends AbstractPassengerCar
 		InsertTexture(3, "PM (Semi-Fictional) ");
 	}
 
-	public PSDamnitAnotherDiner(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

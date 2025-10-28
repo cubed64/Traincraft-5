@@ -11,9 +11,7 @@ public class PCF_B100 extends AbstractStandardFreightCar
         super(world);
     }
 
-    public PCF_B100(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+    
 
     @Override
     public CargoManager setupCargoManager()

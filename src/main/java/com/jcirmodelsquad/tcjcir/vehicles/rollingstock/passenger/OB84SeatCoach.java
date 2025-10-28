@@ -38,10 +38,7 @@ public class OB84SeatCoach extends AbstractPassengerCar
 		InsertTexture(27, "PC (68 Seat Coach-Lounge)");
 	}
 
-	public OB84SeatCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

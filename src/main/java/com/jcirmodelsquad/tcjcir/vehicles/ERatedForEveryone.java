@@ -16,10 +16,7 @@ public class ERatedForEveryone extends EntityRollingStock
         super(world);
     }
 
-    public ERatedForEveryone(World world, double x, double y, double z)
-    {
-        super(world, x, y, z);
-    }
+
 
     @Override
     public GameProfile getOwner()

@@ -12,10 +12,7 @@ public class FRED extends AbstractPassengerCar
         super(world);
     }
 
-    public FRED(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+    
 
     @Override
     public boolean shouldRiderSit(){return false;}

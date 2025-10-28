@@ -16,10 +16,7 @@ public class BuddDome54SeatCoach extends AbstractPassengerCar
 		InsertTexture(6, "AMTK 9562");
 	}
 
-	public BuddDome54SeatCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

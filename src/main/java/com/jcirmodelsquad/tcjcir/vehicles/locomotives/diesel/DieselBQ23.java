@@ -34,16 +34,7 @@ public class DieselBQ23 extends DieselTrain {
         InsertTexture(6, "breaking bad if it was good");
         InsertTexture(7, "Nautilussy so sussy");
     }
-    public DieselBQ23(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
     
     @Override

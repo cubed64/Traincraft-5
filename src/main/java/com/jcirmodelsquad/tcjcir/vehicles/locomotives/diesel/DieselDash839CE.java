@@ -33,16 +33,7 @@ public class DieselDash839CE extends DieselTrain {
         InsertTexture(3, "Norfolk Southern");
         InsertTexture(4, "Blandsville & Blankerston");
     }
-    public DieselDash839CE(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 4.05, 0.3, -0.35); }

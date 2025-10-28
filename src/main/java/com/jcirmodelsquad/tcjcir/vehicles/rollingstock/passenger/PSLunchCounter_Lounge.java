@@ -11,10 +11,7 @@ public class PSLunchCounter_Lounge extends AbstractPassengerCar
 		super(world);
 	}
 
-	public PSLunchCounter_Lounge(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

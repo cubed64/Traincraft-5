@@ -14,17 +14,6 @@ public abstract class AbstractPassengerCombineCar extends AbstractStandardFreigh
         super(world);
     }
 
-    public AbstractPassengerCombineCar(World world, double posX, double posY, double posZ)
-    {
-        super(world, posX, posY, posZ);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = posX;
-        prevPosY = posY;
-        prevPosZ = posZ;
-    }
-
     @Override
     public final CargoManager setupCargoManager()
     {

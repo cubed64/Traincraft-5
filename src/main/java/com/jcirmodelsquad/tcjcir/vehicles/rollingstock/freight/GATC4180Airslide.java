@@ -11,11 +11,6 @@ public class GATC4180Airslide extends AbstractStandardFreightCar
 	{
 		super(world);
 	}
-
-	public GATC4180Airslide(World world, double x, double y, double z) {
-		super(world, x, y, z);
-	}
-
 	@Override
 	public void setupTextureDescription()
 	{

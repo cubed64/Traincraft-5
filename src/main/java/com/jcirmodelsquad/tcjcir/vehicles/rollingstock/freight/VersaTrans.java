@@ -11,9 +11,7 @@ public class VersaTrans extends AbstractStandardFreightCar
         super(world);
     }
 
-    public VersaTrans(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+    
 
     @Override
     public CargoManager setupCargoManager()

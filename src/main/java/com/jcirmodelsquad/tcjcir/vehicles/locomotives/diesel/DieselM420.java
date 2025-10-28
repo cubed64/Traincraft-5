@@ -32,16 +32,7 @@ public class DieselM420 extends DieselTrain {
         InsertTexture(3, "the demon of babylon disguises himself as the righteous");
         InsertTexture(4, "SPR (M424)");
     }
-    public DieselM420(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
 
 

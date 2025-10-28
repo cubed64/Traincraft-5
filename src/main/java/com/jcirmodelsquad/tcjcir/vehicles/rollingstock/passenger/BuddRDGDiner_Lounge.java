@@ -12,10 +12,7 @@ public class BuddRDGDiner_Lounge extends AbstractPassengerCar
 		InsertTexture(1, "RDG 3 (post 1953 refurbishment)");
 	}
 
-	public BuddRDGDiner_Lounge(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

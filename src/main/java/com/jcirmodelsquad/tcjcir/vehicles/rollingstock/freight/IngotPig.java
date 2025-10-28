@@ -11,9 +11,7 @@ public class IngotPig extends AbstractStandardFreightCar
         super(world);
     }
 
-    public IngotPig(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+    
 
     @Override
     public CargoManager setupCargoManager()

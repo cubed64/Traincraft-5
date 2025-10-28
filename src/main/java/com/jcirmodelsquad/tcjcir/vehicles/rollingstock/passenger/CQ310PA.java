@@ -11,10 +11,7 @@ public class CQ310PA extends AbstractPassengerCar
 		super(world);
 	}
 
-	public CQ310PA(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

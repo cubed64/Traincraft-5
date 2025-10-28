@@ -11,9 +11,7 @@ public class RibbedHopper extends AbstractStandardFreightCar
 		super(world);
 	}
 
-	public RibbedHopper(World world, double x, double y, double z){
-		super(world, x , y, z);
-	}
+	
 
 	@Override
 	public CargoManager setupCargoManager()

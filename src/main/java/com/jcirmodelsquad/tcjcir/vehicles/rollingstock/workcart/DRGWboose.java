@@ -25,10 +25,7 @@ public class DRGWboose extends AbstractWorkCart
         InsertTexture(14, "C&PV");
     }
 
-    public DRGWboose(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
     @Override
     public float getOptimalDistance(EntityMinecart cart)

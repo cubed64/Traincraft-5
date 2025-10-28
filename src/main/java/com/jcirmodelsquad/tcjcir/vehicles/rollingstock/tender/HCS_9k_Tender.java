@@ -31,26 +31,6 @@ public class HCS_9k_Tender extends Tender  {
         InsertTexture(5, "Union Pacific (Late)");
     }
 
-    
-
-    public HCS_9k_Tender(World world, double d, double d1, double d2) {
-        this(world);
-        setPosition(d, d1 + (double) yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
-
-    
-
-    
-
-    
-
-    
     @Override
     public String getInventoryName() {
         return "UP - SP 9000 Gallon Tender";

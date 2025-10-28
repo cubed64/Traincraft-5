@@ -60,16 +60,7 @@ public class DieselU23B extends DieselTrain {
         InsertTexture(31, "CSXT (YN2)");
         InsertTexture(32, "Chessie System");
     }
-    public DieselU23B(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+    
 
 
 

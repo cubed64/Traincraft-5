@@ -30,16 +30,7 @@ public class BUnitF7 extends LiquidTank implements IFluidHandler {
 		this.theTank = LiquidManager.getInstance().new FilteredTank(EnumTrains.F7B.getTankCapacity(), LiquidManager.dieselFilter());
 	}
 
-	public BUnitF7(World world, double d, double d1, double d2) {
-		this(world);
-		setPosition(d, d1 + yOffset, d2);
-		motionX = 0.0D;
-		motionY = 0.0D;
-		motionZ = 0.0D;
-		prevPosX = d;
-		prevPosY = d1;
-		prevPosZ = d2;
-	}
+
 
 
 

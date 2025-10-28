@@ -30,16 +30,7 @@ public class DieselSB18B extends DieselTrain {
         InsertTexture(3, "TTLC (Pond Moss)");
         InsertTexture(4, "TTLC (Turtle Moss)");
     }
-    public DieselSB18B(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
     
 

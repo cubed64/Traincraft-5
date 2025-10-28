@@ -32,16 +32,7 @@ public class DieselSW8 extends DieselTrain {
         InsertTexture(4, "Strasbooger/Strasboner/Strasburger/Strasburry Dough Boy");//if you change this i will end your life
         InsertTexture(5, "EMDX");
     }
-    public DieselSW8(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
     
 

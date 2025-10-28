@@ -11,10 +11,7 @@ public class PSSleeper565DRGW extends AbstractPassengerCar
 		InsertTexture(0, "D&RGW");
 	}
 
-	public PSSleeper565DRGW(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

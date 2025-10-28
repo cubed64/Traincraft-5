@@ -14,10 +14,7 @@ public class EntityCaboose extends AbstractWorkCart
 		super(world);
 	}
 
-	public EntityCaboose(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {

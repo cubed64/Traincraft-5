@@ -10,10 +10,7 @@ public class PSCNW48SeatCoach_Lounge extends AbstractPassengerCar {
 		super(world);
 	}
 
-	public PSCNW48SeatCoach_Lounge(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

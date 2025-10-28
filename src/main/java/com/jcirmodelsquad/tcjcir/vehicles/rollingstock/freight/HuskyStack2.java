@@ -19,9 +19,7 @@ public class HuskyStack2 extends AbstractStandardFreightCar
 		InsertTexture(5, "MT&S");
 	}
 
-	public HuskyStack2(World world, double x, double y, double z){
-		super(world, x , y, z);
-	}
+
 
 	@Override
 	public CargoManager setupCargoManager()

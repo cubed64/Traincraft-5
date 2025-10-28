@@ -18,10 +18,7 @@ public class MILW1935Tap_Dinette extends AbstractPassengerCar {
 		InsertTexture(7, "MILW (5251, Postwar, ribbed)");
 	}
 
-	public MILW1935Tap_Dinette(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

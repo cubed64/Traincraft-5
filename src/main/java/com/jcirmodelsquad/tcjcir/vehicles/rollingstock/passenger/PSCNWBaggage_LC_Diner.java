@@ -10,10 +10,7 @@ public class PSCNWBaggage_LC_Diner extends AbstractPassengerCar {
 		super(world);
 	}
 
-	public PSCNWBaggage_LC_Diner(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

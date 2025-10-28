@@ -11,9 +11,7 @@ public class Hopper6260 extends AbstractStandardFreightCar
 		super(world);
 	}
 
-	public Hopper6260(World world, double x, double y, double z){
-		super(world, x , y, z);
-	}
+	
 
 	@Override
 	public CargoManager setupCargoManager()

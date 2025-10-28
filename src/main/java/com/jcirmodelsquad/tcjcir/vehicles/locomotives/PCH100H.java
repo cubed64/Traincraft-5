@@ -35,17 +35,7 @@ public class PCH100H extends HydrogenTrain{
         autoTrainHandler = new AutoTrain2Handler();
         initLoco();
     }
-    public PCH100H(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
-    public void initLoco() {
+        public void initLoco() {
         fuelTrain = 0;
         inventorySize = 10;
         locoInvent = new ItemStack[inventorySize];

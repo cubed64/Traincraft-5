@@ -13,10 +13,6 @@ public class Freight73centerbeam extends AbstractStandardFreightCar
         super(world);
     }
 
-    public Freight73centerbeam(World world, double x, double y, double z) {
-        super(world, x, y, z);
-    }
-
     @Override
     public CargoManager setupCargoManager()
     {

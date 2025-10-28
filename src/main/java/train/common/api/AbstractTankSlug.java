@@ -36,17 +36,6 @@ public abstract class AbstractTankSlug extends LiquidTank implements IFluidHandl
         dataWatcher.addObject(28, lightingDetailsJSON());
     }
 
-    public AbstractTankSlug(World world, EnumTrains enumTrains, double d, double d1, double d2) {
-        this(world, enumTrains);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
-
     @Override
     public void setDead() {
         super.setDead();

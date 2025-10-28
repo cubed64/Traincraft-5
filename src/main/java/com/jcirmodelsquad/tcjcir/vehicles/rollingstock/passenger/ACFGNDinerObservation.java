@@ -12,10 +12,7 @@ public class ACFGNDinerObservation extends AbstractPassengerCar
 		InsertTexture(1, "GN Red River (Late)");
 	}
 
-	public ACFGNDinerObservation(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

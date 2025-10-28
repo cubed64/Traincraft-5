@@ -50,29 +50,6 @@ public abstract class AbstractWorkCart extends EntityRollingStock implements IIn
 		furnaceCookTime = 0;
 	}
 
-	/** Constructor used when a new AbstractWorkCart is placed in the world
-	 *
-	 * Must be implemented in each AbstractWorkCart
-	 * @param world World
-	 * @param posX PosX
-	 * @param posY PosY
-	 * @param posZ PosZ
-	 */
-	public AbstractWorkCart(World world, double posX, double posY, double posZ)
-	{
-		super(world);
-		dataWatcher.addObject(28, lightingDetailsJSON());
-		setPosition(posX, posY + yOffset, posZ);
-		motionX = 0.0D;
-		motionY = 0.0D;
-		motionZ = 0.0D;
-		prevPosX = posX;
-		prevPosY = posY;
-		prevPosZ = posZ;
-	}
-
-
-
 	@Override
 	public void updateRiderPosition() {
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset() + getAdditionalYOffset(), posZ);

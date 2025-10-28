@@ -10,10 +10,7 @@ public class PSCNW12SeatParlor_Observation extends AbstractPassengerCar {
 		super(world);
 	}
 
-	public PSCNW12SeatParlor_Observation(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

@@ -12,10 +12,7 @@ public class PSBMCombine extends AbstractPassengerCombineCar
 
 	}
 
-	public PSBMCombine(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public void setupTextureDescription()

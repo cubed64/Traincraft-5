@@ -13,10 +13,7 @@ public class MILW1935_22SeatParlor extends AbstractPassengerCar {
 		InsertTexture(2, "MILW (Early postwar)");
 	}
 
-	public MILW1935_22SeatParlor(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

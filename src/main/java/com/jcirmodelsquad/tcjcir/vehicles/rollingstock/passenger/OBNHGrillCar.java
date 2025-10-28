@@ -12,10 +12,7 @@ public class OBNHGrillCar extends AbstractPassengerCar {
 		InsertTexture(2, "NH (Late)");
 	}
 
-	public OBNHGrillCar(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

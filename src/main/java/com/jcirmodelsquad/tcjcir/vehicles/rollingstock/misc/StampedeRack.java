@@ -14,10 +14,7 @@ public class StampedeRack extends AbstractPassengerCar
 		InsertTexture(0, "Stampeed Rack");
 	}
 
-	public StampedeRack(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {

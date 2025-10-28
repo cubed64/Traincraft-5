@@ -16,10 +16,6 @@ public class SlugMA extends AbstractTankSlug
 		InsertTexture(4, "ATSF");
 	}
 
-	public SlugMA(World world, double d, double d1, double d2) {
-		super(world, EnumTrains.SlugMA, d, d1, d2);
-	}
-
 	@Override
 	public String getInventoryName() {
 		return "Slug";

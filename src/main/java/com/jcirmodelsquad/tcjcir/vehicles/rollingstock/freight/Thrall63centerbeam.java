@@ -16,9 +16,7 @@ public class Thrall63centerbeam extends AbstractStandardFreightCar
         super(world);
     }
 
-    public Thrall63centerbeam(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+    
 
     @Override
     public CargoManager setupCargoManager()

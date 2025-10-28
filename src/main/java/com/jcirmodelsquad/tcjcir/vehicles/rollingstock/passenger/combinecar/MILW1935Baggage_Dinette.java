@@ -12,10 +12,7 @@ public class MILW1935Baggage_Dinette extends AbstractPassengerCombineCar
 
 	}
 
-	public MILW1935Baggage_Dinette(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public void setupTextureDescription()

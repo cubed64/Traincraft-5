@@ -49,10 +49,7 @@ public class NYCPrewar56SeatCoach extends AbstractPassengerCar {
 		InsertTexture(39, "NYC Budd (Later Postwar, Interior Scheme 4)");
 	}
 
-	public NYCPrewar56SeatCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

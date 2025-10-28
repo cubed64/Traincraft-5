@@ -14,11 +14,6 @@ public class ACF41Gon extends AbstractStandardFreightCar
     public ACF41Gon(World world) {
         super(world);
     }
-
-    public ACF41Gon(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
-
     @Override
     public CargoManager setupCargoManager()
     {

@@ -10,11 +10,6 @@ public class FNCC50Foot extends AbstractStandardFreightCar
     public FNCC50Foot(World world) {
         super(world);
     }
-
-    public FNCC50Foot(World world, double x, double y, double z){
-        super(world, x, y, z);
-    }
-
     @Override
     public CargoManager setupCargoManager()
     {

@@ -11,9 +11,7 @@ public class OWO60Verticube extends AbstractStandardFreightCar
         super(world);
     }
 
-    public OWO60Verticube(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+    
 
     @Override
     public CargoManager setupCargoManager()

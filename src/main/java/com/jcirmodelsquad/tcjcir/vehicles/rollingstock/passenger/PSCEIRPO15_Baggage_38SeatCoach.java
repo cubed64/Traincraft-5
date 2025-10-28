@@ -12,10 +12,7 @@ public class PSCEIRPO15_Baggage_38SeatCoach extends AbstractPassengerCombineCar
 
 	}
 
-	public PSCEIRPO15_Baggage_38SeatCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public void setupTextureDescription()

@@ -12,10 +12,6 @@ public class ACF2Bay extends AbstractStandardFreightCar
 		super(world);
 	}
 
-	public ACF2Bay(World world, double x, double y, double z) {
-		super(world, x , y, z);
-	}
-
 	@Override
 	public CargoManager setupCargoManager()
 	{

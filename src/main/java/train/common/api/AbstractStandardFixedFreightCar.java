@@ -10,10 +10,7 @@ public abstract class AbstractStandardFixedFreightCar extends AbstractStandardFr
         super(world);
     }
 
-    public AbstractStandardFixedFreightCar(World world, double x, double y, double z)
-    {
-        super(world, x, y, z);
-    }
+
 
     @Override
     public final CargoManager setupCargoManager()

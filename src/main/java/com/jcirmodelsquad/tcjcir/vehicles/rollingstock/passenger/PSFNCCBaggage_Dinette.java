@@ -10,10 +10,7 @@ public class PSFNCCBaggage_Dinette extends AbstractPassengerCar {
 		InsertTexture(0, "FNCC");
 	}
 
-	public PSFNCCBaggage_Dinette(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

@@ -31,10 +31,7 @@ public class BuddDome46SeatCoach extends AbstractPassengerCar
 		InsertTexture(21, "Auto-Train");
 	}
 
-	public BuddDome46SeatCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

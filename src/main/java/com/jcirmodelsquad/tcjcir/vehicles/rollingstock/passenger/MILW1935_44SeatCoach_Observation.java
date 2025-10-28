@@ -11,10 +11,7 @@ public class MILW1935_44SeatCoach_Observation extends AbstractPassengerCar {
 		InsertTexture(0, "MILW (Coach observation 4449-4450 were built in this form but were modified into parlor dinettes before being placed into service)");
 	}
 
-	public MILW1935_44SeatCoach_Observation(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

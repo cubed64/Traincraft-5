@@ -35,16 +35,7 @@ public class DieselFP7A extends DieselTrain {
         InsertTexture(5, "Joblogh Rail Network");
         InsertTexture(6, "Great Lakes & Northern Territories");
     }
-    public DieselFP7A(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
 
 

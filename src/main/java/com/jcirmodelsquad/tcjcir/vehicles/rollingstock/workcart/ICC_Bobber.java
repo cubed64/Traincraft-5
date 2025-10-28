@@ -15,11 +15,7 @@ public class ICC_Bobber extends AbstractWorkCart
         initCabooseWorkCart();
     }
 
-    public ICC_Bobber(World world, double posX, double posY, double posZ)
-    {
-        super(world, posX, posY, posZ);
-
-    }
+    
 
     @Override
     public double getAdditionalYOffset()

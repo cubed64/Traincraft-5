@@ -10,10 +10,7 @@ public class OBHWNH5570_5589Baggage extends AbstractStandardFixedFreightCar
 		super(world);
 	}
 
-	public OBHWNH5570_5589Baggage(World world, double x, double y, double z)
-	{
-		super(world, x, y, z);
-	}
+	
 
 	@Override
 	public void setupTextureDescription()

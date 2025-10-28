@@ -28,19 +28,6 @@ public class SteamBrank extends SteamTrain {
 		InsertTexture(0, "pregnant man railroad company");
 	}
 
-	
-
-	public SteamBrank(World world, double d, double d1, double d2) {
-		this(world);
-		setPosition(d, d1 + (double) yOffset, d2);
-		motionX = 0.0D;
-		motionY = 0.0D;
-		motionZ = 0.0D;
-		prevPosX = d;
-		prevPosY = d1;
-		prevPosZ = d2;
-	}
-
 	@Override
 	public void updateRiderPosition() { TraincraftUtil.updateRider(this, -0.28, -0.23, -0.45); }
 

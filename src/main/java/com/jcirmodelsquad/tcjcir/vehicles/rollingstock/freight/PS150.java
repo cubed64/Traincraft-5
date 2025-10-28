@@ -11,9 +11,7 @@ public class PS150 extends AbstractStandardFreightCar
         super(world);
     }
 
-    public PS150(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+
 
     @Override
     public CargoManager setupCargoManager()

@@ -13,10 +13,6 @@ public class AAR70TonHopper extends AbstractStandardFreightCar
         super(world);
     }
 
-    public AAR70TonHopper(World world, double x, double y, double z){
-        super(world, x, y, z);
-    }
-
     @Override
     public CargoManager setupCargoManager()
     {

@@ -10,10 +10,7 @@ public class PSCNW16_1_3Sleeper extends AbstractPassengerCar {
 		super(world);
 	}
 
-	public PSCNW16_1_3Sleeper(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

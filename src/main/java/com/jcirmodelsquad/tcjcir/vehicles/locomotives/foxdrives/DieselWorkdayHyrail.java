@@ -33,16 +33,7 @@ public class DieselWorkdayHyrail extends DieselTrain {
         InsertTexture(5, "CRIP");
         InsertTexture(6, "GCM");
     }
-    public DieselWorkdayHyrail(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 1.3, -0.4, 0.30); }

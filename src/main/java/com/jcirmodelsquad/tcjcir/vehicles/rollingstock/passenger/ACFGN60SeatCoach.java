@@ -27,10 +27,7 @@ public class ACFGN60SeatCoach extends AbstractPassengerCar
 		InsertTexture(17, "N&EP Modernized (70s)");
 	}
 
-	public ACFGN60SeatCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

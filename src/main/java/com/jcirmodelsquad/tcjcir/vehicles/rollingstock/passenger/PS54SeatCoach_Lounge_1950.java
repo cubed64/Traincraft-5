@@ -12,10 +12,7 @@ public class PS54SeatCoach_Lounge_1950 extends AbstractPassengerCar {
 		InsertTexture(1, "PM");
 	}
 
-	public PS54SeatCoach_Lounge_1950(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

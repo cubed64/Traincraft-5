@@ -17,10 +17,7 @@ public class DRGWCoach1005Series extends AbstractPassengerCar {
 		InsertTexture(7, "D&RGW (1009, Late)");
 	}
 
-	public DRGWCoach1005Series(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

@@ -32,19 +32,6 @@ public class SteamP01a extends SteamTrain {
 		InsertTexture(2, "CDC&S 7");
 	}
 
-	
-
-	public SteamP01a(World world, double d, double d1, double d2) {
-		this(world);
-		setPosition(d, d1 + (double) yOffset, d2);
-		motionX = 0.0D;
-		motionY = 0.0D;
-		motionZ = 0.0D;
-		prevPosX = d;
-		prevPosY = d1;
-		prevPosZ = d2;
-	}
-
 	@Override
 	public void updateRiderPosition() { TraincraftUtil.updateRider(this, -0.9, 0.1, -0.4); }
 

@@ -19,11 +19,6 @@ public class MILW1935Dorm_56SeatCoach extends AbstractPassengerCar {
 		InsertTexture(8, "PGE (Ribbed)");
 	}
 
-	public MILW1935Dorm_56SeatCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
-
 	@Override
 	public double getAdditionalYOffset()
 	{

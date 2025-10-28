@@ -16,9 +16,7 @@ public class MillGondola extends AbstractStandardFreightCar
 
     }
 
-    public MillGondola(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+    
 
     @Override
     public CargoManager setupCargoManager()

@@ -11,9 +11,7 @@ public class PS_40t_ss_box extends AbstractStandardFreightCar
         super(world);
     }
 
-    public PS_40t_ss_box(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+
 
     @Override
     public CargoManager setupCargoManager()

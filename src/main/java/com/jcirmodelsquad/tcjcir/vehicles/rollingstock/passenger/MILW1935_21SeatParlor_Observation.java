@@ -16,10 +16,7 @@ public class MILW1935_21SeatParlor_Observation extends AbstractPassengerCar {
 		InsertTexture(5, "MILW (Early postwar, removed handrails)");
 	}
 
-	public MILW1935_21SeatParlor_Observation(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

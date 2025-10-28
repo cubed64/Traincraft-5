@@ -29,16 +29,7 @@ public class DieselU56 extends DieselTrain {
         InsertTexture(0, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(1, "FMSR", LockoutGroup.FMSR);
     }
-    public DieselU56(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
     
 

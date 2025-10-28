@@ -11,11 +11,6 @@ public class GN40 extends AbstractStandardFreightCar
         super(world);
 
     }
-
-    public GN40(World world, double d, double d1, double d2) {
-        super(world, d, d1, d2);
-    }
-
     @Override
     public CargoManager setupCargoManager()
     {

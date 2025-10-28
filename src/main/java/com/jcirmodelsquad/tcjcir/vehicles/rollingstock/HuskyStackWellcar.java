@@ -28,12 +28,6 @@ public class HuskyStackWellcar extends EntityRollingStock implements IPassenger 
         //dataWatcher.addObject(26, "");
     }
 
-    public HuskyStackWellcar(World world, double d, double d1, double d2) {
-        super(world, d, d1, d2);
-        //dataWatcher.addObject(25, "");
-        //dataWatcher.addObject(26, "");
-    }
-
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
         return 3.3F;

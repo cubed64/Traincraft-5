@@ -175,19 +175,6 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		return CartTools.getCartOwner(this);
 	}
 
-
-	public EntityRollingStock(World world, double d, double d1, double d2) {
-		super(world,d,d1,d2);
-		initRollingStock(world);
-		setPosition(d, d1 + yOffset, d2);
-		motionX = 0.0D;
-		motionY = 0.0D;
-		motionZ = 0.0D;
-		prevPosX = d;
-		prevPosY = d1;
-		prevPosZ = d2;
-	}
-
 	public void initRollingStock(World world) {
 		dataWatcher.addObject(20, 0);//heat
 		dataWatcher.addObject(14, 0);

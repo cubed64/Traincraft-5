@@ -11,10 +11,7 @@ public class PSCNW1DR_22SeatParlor extends AbstractPassengerCar
 		super(world);
 	}
 
-	public PSCNW1DR_22SeatParlor(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

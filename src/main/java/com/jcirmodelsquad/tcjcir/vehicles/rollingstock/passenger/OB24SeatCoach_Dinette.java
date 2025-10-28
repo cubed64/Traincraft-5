@@ -16,10 +16,7 @@ public class OB24SeatCoach_Dinette extends AbstractPassengerCar
 		InsertTexture(5, "BAR (152, Grey and Sapphire, Aroostook Flyer)");
 	}
 
-	public OB24SeatCoach_Dinette(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

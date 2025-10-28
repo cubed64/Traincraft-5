@@ -12,10 +12,7 @@ public class PSCEIRPO15_Baggage_LC_Lounge extends AbstractPassengerCombineCar
 
 	}
 
-	public PSCEIRPO15_Baggage_LC_Lounge(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public void setupTextureDescription()

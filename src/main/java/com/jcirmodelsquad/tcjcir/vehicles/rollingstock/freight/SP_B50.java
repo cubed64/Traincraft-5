@@ -11,9 +11,7 @@ public class SP_B50 extends AbstractStandardFreightCar
         super(world);
     }
 
-    public SP_B50(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+    
 
     @Override
     public CargoManager setupCargoManager()

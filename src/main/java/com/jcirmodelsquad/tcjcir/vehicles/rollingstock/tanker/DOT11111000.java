@@ -28,17 +28,6 @@ public class DOT11111000 extends LiquidTank {
         cargoItems = new ItemStack[freightInventorySize];
     }
 
-    public DOT11111000(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + (double) yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
-
     @Override
     public void setDead() {
         super.setDead();

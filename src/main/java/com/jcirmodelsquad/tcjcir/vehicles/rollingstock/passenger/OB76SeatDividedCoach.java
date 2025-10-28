@@ -21,10 +21,7 @@ public class OB76SeatDividedCoach extends AbstractPassengerCar
 		InsertTexture(10, "OCG");
 	}
 
-	public OB76SeatDividedCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

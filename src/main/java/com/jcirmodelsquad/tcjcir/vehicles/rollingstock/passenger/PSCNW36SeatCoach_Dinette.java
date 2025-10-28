@@ -10,10 +10,7 @@ public class PSCNW36SeatCoach_Dinette extends AbstractPassengerCar {
 		super(world);
 	}
 
-	public PSCNW36SeatCoach_Dinette(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

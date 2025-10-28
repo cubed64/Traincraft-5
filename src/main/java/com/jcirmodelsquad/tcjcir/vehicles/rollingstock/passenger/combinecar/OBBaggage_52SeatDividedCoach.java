@@ -10,10 +10,7 @@ public class OBBaggage_52SeatDividedCoach extends AbstractPassengerCombineCar
 		super(world);
 	}
 
-	public OBBaggage_52SeatDividedCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public void setupTextureDescription()

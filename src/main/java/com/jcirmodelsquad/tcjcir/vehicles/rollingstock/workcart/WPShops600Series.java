@@ -14,10 +14,7 @@ public class WPShops600Series extends AbstractWorkCart
         InsertTexture(3, "SN");
     }
 
-    public WPShops600Series(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+    
 
     @Override
     public double getAdditionalYOffset()

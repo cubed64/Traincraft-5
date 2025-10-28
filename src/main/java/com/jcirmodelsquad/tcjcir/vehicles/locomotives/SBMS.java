@@ -28,10 +28,6 @@ public class SBMS extends AbstractTankSlug
         InsertTexture(14, "UPNS haha lol just kidding its just regular NS");
     }
 
-    public SBMS(World world, double d, double d1, double d2) {
-        super(world, EnumTrains.SBMS, d, d1, d2);
-    }
-
     @Override
     public String getInventoryName() {
         return "CEE SB Motor System";

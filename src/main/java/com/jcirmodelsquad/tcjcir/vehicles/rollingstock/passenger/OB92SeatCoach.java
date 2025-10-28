@@ -19,10 +19,7 @@ public class OB92SeatCoach extends AbstractPassengerCar
 		InsertTexture(8, "Spunch Bop Rayroad");
 	}
 
-	public OB92SeatCoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

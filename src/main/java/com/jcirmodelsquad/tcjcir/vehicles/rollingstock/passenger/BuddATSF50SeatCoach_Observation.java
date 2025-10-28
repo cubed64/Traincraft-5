@@ -10,10 +10,7 @@ public class BuddATSF50SeatCoach_Observation extends AbstractPassengerCar
 		super(world);
 	}
 
-	public BuddATSF50SeatCoach_Observation(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

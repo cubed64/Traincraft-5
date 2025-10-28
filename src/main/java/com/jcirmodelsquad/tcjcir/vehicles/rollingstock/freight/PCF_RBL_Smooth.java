@@ -11,9 +11,7 @@ public class PCF_RBL_Smooth extends AbstractStandardFreightCar
         super(world);
     }
 
-    public PCF_RBL_Smooth(World world, double x, double y, double z){
-        super(world, x , y, z);
-    }
+    
 
     @Override
     public CargoManager setupCargoManager()

@@ -32,16 +32,7 @@ public class DieselC415H extends DieselTrain {
         InsertTexture(4, "Southern Pacific (Red Deckplate)");
         InsertTexture(5, "Morristown, Tenneva & Southern", LockoutGroup.MTS);
     }
-    public DieselC415H(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+
 
     
 

@@ -15,10 +15,7 @@ public class PS54SeatCoach_Lounge extends AbstractPassengerCar {
 		InsertTexture(4, "C&EI (renovated, black roof)");
 	}
 
-	public PS54SeatCoach_Lounge(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

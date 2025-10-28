@@ -13,10 +13,7 @@ public class PEcoach extends AbstractPassengerCar {
         InsertTexture(5, "Thanosman");
     }
 
-    public PEcoach(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
     @Override
     public float getOptimalLinkingDistance()

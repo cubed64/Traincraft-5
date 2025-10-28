@@ -10,10 +10,7 @@ public class PSCNWRPO15 extends AbstractStandardFixedFreightCar
 		super(world);
 	}
 
-	public PSCNWRPO15(World world, double x, double y, double z)
-	{
-		super(world, x, y, z);
-	}
+
 
 	@Override
 	public void setupTextureDescription()

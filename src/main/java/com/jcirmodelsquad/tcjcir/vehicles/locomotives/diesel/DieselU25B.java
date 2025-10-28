@@ -40,16 +40,7 @@ public class DieselU25B extends DieselTrain {
         InsertTexture(12, "Galesburg Clinton & Midland");
         InsertTexture(13, "Detroit Export System", LockoutGroup.DES);
     }
-    public DieselU25B(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+    
 
     
 

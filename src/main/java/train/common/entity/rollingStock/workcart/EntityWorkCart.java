@@ -15,10 +15,7 @@ public class EntityWorkCart extends AbstractWorkCart
 		super(world);
 	}
 
-	public EntityWorkCart(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public String getInventoryName() {

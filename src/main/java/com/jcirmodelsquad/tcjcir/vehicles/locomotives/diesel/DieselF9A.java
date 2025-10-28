@@ -34,16 +34,7 @@ public class DieselF9A extends DieselTrain {
         InsertTexture(5, "DRGW (4 stripe, late)");
         InsertTexture(6, "DRGW (1 stripe)");
     }
-    public DieselF9A(World world, double d, double d1, double d2){
-        this(world);
-        setPosition(d, d1 + yOffset, d2);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = d;
-        prevPosY = d1;
-        prevPosZ = d2;
-    }
+    
 
     
 

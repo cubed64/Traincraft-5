@@ -12,10 +12,7 @@ public class OBBAR52SeatCoach_Dinette extends AbstractPassengerCar
 		InsertTexture(1, "BAR (231)");
 	}
 
-	public OBBAR52SeatCoach_Dinette(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+
 
 	@Override
 	public double getAdditionalYOffset()

@@ -23,10 +23,7 @@ public void setupTextureDescription()
     InsertTexture(4, "Steampunk Rail", LockoutGroup.SPR);
     InsertTexture(5, "Not the SCP Foundation");
 }
-    public PFEr_40_23Reefer(World world, double d, double d1, double d2){
-        super(world,d,d1,d2);
-
-    }
+    
 
     @Override
     public String getInventoryName() {

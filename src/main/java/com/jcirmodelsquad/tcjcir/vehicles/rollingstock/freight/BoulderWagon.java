@@ -11,10 +11,6 @@ public class BoulderWagon extends AbstractStandardFreightCar
         super(world);
     }
 
-    public BoulderWagon(World world, double x, double y, double z){
-        super(world, x, y, z);
-    }
-
     @Override
     public CargoManager setupCargoManager()
     {

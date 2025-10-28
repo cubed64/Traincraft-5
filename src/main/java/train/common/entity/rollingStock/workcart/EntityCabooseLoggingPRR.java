@@ -17,10 +17,7 @@ public class EntityCabooseLoggingPRR extends AbstractWorkCart
 
 	}
 
-	public EntityCabooseLoggingPRR(World world, double posX, double posY, double posZ)
-	{
-		super(world, posX, posY, posZ);
-	}
+	
 
 	@Override
 	public double getAdditionalYOffset()

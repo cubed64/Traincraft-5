@@ -17,26 +17,6 @@ public abstract class AbstractPassengerCar extends EntityRollingStock implements
         super(world);
     }
 
-    /** Constructor used when a new AbstractPassengerCar is placed in the world
-     *
-     * Must be implemented in each AbstractPassengerCar
-     * @param world World
-     * @param posX PosX
-     * @param posY PosY
-     * @param posZ PosZ
-     */
-    public AbstractPassengerCar(World world, double posX, double posY, double posZ)
-    {
-        super(world);
-        setPosition(posX, posY + yOffset, posZ);
-        motionX = 0.0D;
-        motionY = 0.0D;
-        motionZ = 0.0D;
-        prevPosX = posX;
-        prevPosY = posY;
-        prevPosZ = posZ;
-    }
-
     protected double getAdditionalYOffset()
     {
         return 0D;
