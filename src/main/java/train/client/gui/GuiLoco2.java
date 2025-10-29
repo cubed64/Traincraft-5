@@ -291,7 +291,7 @@ public class GuiLoco2 extends GuiContainer {
 					loco.ditchLightMode = 1;
 					guibutton.displayString = "Ditch Lights: On";
 				}
-   break:
+   break;
 			case 9: //drop fire
 				Traincraft.ignitionChannel.sendToServer(new PacketDropFire(loco.getEntityId()));
 				loco.fuelTrain=0;
