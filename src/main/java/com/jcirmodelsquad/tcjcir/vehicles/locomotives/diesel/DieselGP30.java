@@ -50,6 +50,7 @@ public class DieselGP30 extends DieselTrain {
         InsertTexture(21, "CNW");
         InsertTexture(22, "Seaboard System");
         InsertTexture(23, "Chessie System");
+        InsertTexture(24, "Southern Pacific (Bloodynose)");
     }
 
 

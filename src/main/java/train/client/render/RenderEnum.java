@@ -864,6 +864,17 @@ public enum RenderEnum implements ITrainRenderRecord
 		}
 	}, 2, true),
 
+	HCS_c57(SteamHCS_c57.class,  new ModelHCS_c57(), "HCS_c57_", true,new float[] {-1.2F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "largesmoke", 4,  new ArrayList<double[]>() {
+		{
+			add(new double[] { 2.5D, 1.50D, 0.0D});//smoke
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] { 2.45D, -0.4D, 0.6D });//piston steam
+			//add(new double[] { 0.0D, 1.3D, 0.0D });//dynamo
+			add(new double[] { 2.5D, 1.50D, 0.0D });//stack
+		}
+	}, 2, true),
 	HCS_9k_Tender(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tender.HCS_9k_Tender.class, new ModelHCS_9k_tender(), "hcs_9kgal_", true, new float[] {-0F, 0.155F, 0F},  new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	locoC11(SteamC11.class, new ModelC11(), "locoC11", false, new float[] {  -1.5F, 0.15F, 0.0F }, new float[] { 0, 180, 180 }, null, "largesmoke", 5, new ArrayList<double[]>() {
