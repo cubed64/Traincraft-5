@@ -11,7 +11,7 @@ public class ElectricW_A55_Combine extends ElectricTrain {
     @Override
     public SoundRecord getSoundRecord()
     {
-        return EnumSounds.ElectricPCCCar;
+        return EnumSounds.ElectricW_A55_Combine;
     }
     public ElectricW_A55_Combine(World world) {
         super(world);
