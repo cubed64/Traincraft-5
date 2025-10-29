@@ -9,29 +9,18 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
+import train.common.api.AbstractStandardTankerCar;
 import train.common.api.LiquidTank;
 import train.common.entity.CargoManager;
 import train.common.entity.CargoSpecification;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class NATX30600 extends LiquidTank {
-    public int freightInventorySize;
-
+public class NATX30600 extends AbstractStandardTankerCar
+{
     public NATX30600(World world) {
         super(world, EnumTrains.NATX30600.getTankCapacity());
-        initFreightWater();
-        InsertTexture(0, "NATX");
-        InsertTexture(1, "NATX (National Byproducts)");
-        InsertTexture(2, "NATX (Monoco)");
-        InsertTexture(3, "NATX (America's 100 Years Bicentennial)");
-        InsertTexture(4, "NATX (Cider something)");
-        InsertTexture(5, "NATX (Indiana Trash Society)");
-        InsertTexture(6, "Magnolia");
-        InsertTexture(7, "CCOX");
-        InsertTexture(8, "PCTX PENN CENTRAL WOO OH YEAH WOO");
-        InsertTexture(9, "DLMR");
-
+        
         setCargoManager(new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Modelhazmat_plac_natx30600.class, "loads/hazmat_plac_flammable_number",
                         "Hazmat Placard - Flammable (Bluk)", 0, 3.0, 0)},
@@ -58,82 +47,24 @@ public class NATX30600 extends LiquidTank {
         }));
     }
 
-
-
-    public void initFreightWater() {
-        freightInventorySize = 2;
-        cargoItems = new ItemStack[freightInventorySize];
-    }
-
     @Override
-    public void setDead() {
-        super.setDead();
-        isDead = true;
-    }
-
-    @Override
-    public void onUpdate() {
-        super.onUpdate();
-        checkInvent(cargoItems[0]);
-    }
-
-    @Override
-    protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {
-        super.writeEntityToNBT(nbttagcompound);
-        NBTTagList nbttaglist = new NBTTagList();
-        for (int i = 0; i < cargoItems.length; i++) {
-            if (cargoItems[i] != null) {
-                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-                nbttagcompound1.setByte("Slot", (byte) i);
-                cargoItems[i].writeToNBT(nbttagcompound1);
-                nbttaglist.appendTag(nbttagcompound1);
-            }
-        }
-    }
-
-    @Override
-    protected void readEntityFromNBT(NBTTagCompound nbttagcompound) {
-        super.readEntityFromNBT(nbttagcompound);
-
-        NBTTagList nbttaglist = nbttagcompound.getTagList("Items", Constants.NBT.TAG_COMPOUND);
-        cargoItems = new ItemStack[getSizeInventory()];
-        for (int i = 0; i < nbttaglist.tagCount(); i++) {
-            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
-            int j = nbttagcompound1.getByte("Slot") & 0xff;
-            if (j >= 0 && j < cargoItems.length) {
-                cargoItems[j] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
-            }
-        }
+    public void setupTextureDescription()
+    {
+        InsertTexture(0, "NATX");
+        InsertTexture(1, "NATX (National Byproducts)");
+        InsertTexture(2, "NATX (Monoco)");
+        InsertTexture(3, "NATX (America's 100 Years Bicentennial)");
+        InsertTexture(4, "NATX (Cider something)");
+        InsertTexture(5, "NATX (Indiana Trash Society)");
+        InsertTexture(6, "Magnolia");
+        InsertTexture(7, "CCOX");
+        InsertTexture(8, "PCTX PENN CENTRAL WOO OH YEAH WOO");
+        InsertTexture(9, "DLMR");
     }
 
     @Override
     public String getInventoryName() {
         return "NATX 30,600 Gallon Tank car";
-    }
-
-    @Override
-    public int getSizeInventory() {
-        return freightInventorySize;
-    }
-
-    @Override
-    public boolean interactFirst(EntityPlayer entityplayer) {
-        if ((super.interactFirst(entityplayer))) {
-            return false;
-        }
-        if (!this.worldObj.isRemote) {
-            entityplayer.openGui(Traincraft.instance, GuiIDs.LIQUID, worldObj, this.getEntityId(), -1, (int) this.posZ);
-        }
-        return true;
-    }
-    @Override
-    public boolean isUseableByPlayer(EntityPlayer entityplayer) {
-        return !isDead && entityplayer.getDistanceSqToEntity(this) <= 64D;
-    }
-
-    @Override
-    public boolean isStorageCart() {
-        return true;
     }
 
     @Override
