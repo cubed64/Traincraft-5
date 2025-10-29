@@ -67,6 +67,7 @@
   "leslie_rs5t_2": {"category": "master", "sounds": [{"name": "leslie_rs5t_2", "stream":  true}]},
   "leslie_rs5t_3": {"category": "master", "sounds": [{"name": "leslie_rs5t_3", "stream":  true}]},
   "leslie_rs5t_4": {"category": "master", "sounds": [{"name": "leslie_rs5t_4", "stream":  true}]},
+  "leslie_rs5t_5": {"category": "master", "sounds": [{"name": "leslie_rs5t_5", "stream":  true}]},
 
   "leslie_s2m_1": {"category": "master", "sounds": [{"name": "leslie_s2m_1", "stream":  true}]},
   "leslie_s3_1": {"category": "master", "sounds": [{"name": "leslie_s3_1", "stream":  true}]},
@@ -112,6 +113,7 @@
   "nathan_k5la_big_1": {"category": "master", "sounds": [{"name": "nathan_k5la_big_1","stream": true}]},
   "nathan_k5la_big_2": {"category": "master", "sounds": [{"name": "nathan_k5la_big_2","stream": true}]},
   "nathan_k5la_big_3": {"category": "master", "sounds": [{"name": "nathan_k5la_big_3","stream": true}]},
+  "nathan_k5la_big_4": {"category": "master", "sounds": [{"name": "nathan_k5la_big_4","stream": true}]},
   "nathan_k5la_hybrid_1": {"category": "master", "sounds": [{"name": "nathan_k5la_hybrid_1","stream": true}]},
   "nathan_k5la_hybrid_2": {"category": "master", "sounds": [{"name": "nathan_k5la_hybrid_2","stream": true}]},
   "nathan_k5la_raised_1": {"category": "master", "sounds": [{"name": "nathan_k5la_raised_1","stream": true}]},
@@ -317,6 +319,7 @@
   "gongbell": {"category": "master", "sounds": [{"name": "gongbell", "stream":  true}]},
   "prime_speakerbell": {"category": "master", "sounds": [{"name": "prime_speakerbell", "stream":  true}]},
   "tram_bell": {"category": "master", "sounds": [{"name": "tram_bell", "stream":  true}]},
+  "tram_ding": {"category": "master", "sounds": [{"name": "tram_ding", "stream":  true}]},
   "transonic_ebell": {"category": "master", "sounds": [{"name": "transonic_ebell", "stream":  true}]},
 
   "ge_crossing_ebell": {"category": "master", "sounds": [{"name": "ge_crossing_ebell", "stream":  true}]},

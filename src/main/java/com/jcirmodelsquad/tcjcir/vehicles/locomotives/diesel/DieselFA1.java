@@ -35,7 +35,13 @@ public class DieselFA1 extends DieselTrain {
         InsertTexture(7, "Lehigh & New England (late)");
         InsertTexture(8, "Deadwood & La Mesa");
         InsertTexture(9, "Deadwood & La Mesa");
-
+        InsertTexture(10, "LIRR (Experimental)");
+        InsertTexture(11, "LIRR (MTA Scheme #1 Grills)");
+        InsertTexture(12, "LIRR (MTA Scheme #1 No Grills)");
+        InsertTexture(13, "LIRR (MTA Scheme #1 Alt NBoards Grills)");
+        InsertTexture(14, "LIRR (MTA Scheme #1 Alt NBoards No Grills)");
+        InsertTexture(15, "LIRR (MTA Scheme #2)");
+        InsertTexture(16, "LIRR (MTA Scheme #3)");
     }
 
 
