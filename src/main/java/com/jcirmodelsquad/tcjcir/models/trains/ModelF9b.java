@@ -28,7 +28,7 @@ public class ModelF9b extends ModelConverter //Same as Filename
 
 	public ModelF9b() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[322];
+		bodyModel = new ModelRendererTurbo[323];
 
 		initbodyModel_1();
 
@@ -362,6 +362,7 @@ public class ModelF9b extends ModelConverter //Same as Filename
 		bodyModel[319] = new ModelRendererTurbo(this, 152, 11, textureX, textureY); // Box 131 cs1 haysi
 		bodyModel[320] = new ModelRendererTurbo(this, 157, 4, textureX, textureY); // Box 131 cs1 haysi
 		bodyModel[321] = new ModelRendererTurbo(this, 166, 4, textureX, textureY); // Box 360 cs haysi ab shit
+		bodyModel[322] = new ModelRendererTurbo(this, 99, 98, textureX, textureY); // Box 190 front mu plug
 
 		bodyModel[0].addBox(0F, 0F, 0F, 59, 1, 20, 0F); // Box 0
 		bodyModel[0].setRotationPoint(-29F, 0F, -10F);
@@ -1395,6 +1396,11 @@ public class ModelF9b extends ModelConverter //Same as Filename
 
 		bodyModel[321].addBox(0F, 0F, 0F, 1, 2, 2, 0F); // Box 360 cs haysi ab shit
 		bodyModel[321].setRotationPoint(-30F, -10.5F, -4F);
+
+		bodyModel[322].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 190 front mu plug
+		bodyModel[322].setRotationPoint(-31F, -15F, 2F);
+		bodyModel[322].rotateAngleY = -3.14159265F;
+		bodyModel[322].rotateAngleZ = -0.27925268F;
 	}
 
 	ModelBlombergBnew theTrucc = new ModelBlombergBnew();
