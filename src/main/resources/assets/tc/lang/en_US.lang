@@ -863,6 +863,7 @@ item.tc:minecartTenderDeseret.name=WP Deseret Tender
 item.tc:minecartPMNstender.name=PM N Series Tender
 item.tc:minecartPMNandN1.name=Pere Marquette N and N-1
 
+item.tc:minecartHCS_c57.name=SP-UP C57 2-8-0
 item.tc:minecartHCS_9k_Tender.name=SP-UP 9,000 Gal Tender
 
 item.tc:minecartLocoC11.name=JNR C11
@@ -908,6 +909,7 @@ entity.tc.TenderDeseret.name=WP Deseret Tender
 entity.tc.PMNstender.name=PM N Series Tender
 entity.tc.PMNandN1.name=Pere Marquette N and N-1
 
+entity.tc.HCS_c57.name=SP-UP C57 2-8-0
 entity.tc.HCS_9k_Tender.name=SP-UP 9,000 Gal Tender
 
 entity.tc.Loco Steam C11.name=JNR C11
