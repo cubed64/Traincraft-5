@@ -28,58 +28,44 @@ public class DieselF3A extends DieselTrain {
 
         InsertTexture(0, "Phase 2 Early");
         InsertTexture(1, "FMSR", LockoutGroup.FMSR);
-        InsertTexture(2, "DES", LockoutGroup.DES);
-        InsertTexture(3, "CDC&S");
-        InsertTexture(4, "OC&G 25A, 26B");
-        InsertTexture(5, "BAR 49");
-        InsertTexture(6, "DRGW (Black with yellow stripes)");
-        InsertTexture(7, "DRGW (4 stripe)");
-        InsertTexture(8, "DRGW (4 stripe, late)");
-        InsertTexture(9, "DRGW (1 stripe)");
-        InsertTexture(10, "MON (passenger scheme, early)");
-        InsertTexture(11, "MON (passenger scheme)");
-        InsertTexture(12, "MON (freight scheme, passenger)");
-        InsertTexture(13, "MON (freight scheme, passenger, 203)");
-        InsertTexture(14, "MON (freight scheme)");
-        InsertTexture(15, "MON (freight scheme, late)");
-        InsertTexture(16, "Amtrak (Ex NP)");
-        InsertTexture(17, "ATSF (As Delivered)");
-        InsertTexture(18, "ATSF (Early)");
-        InsertTexture(19, "ATSF (Rebuilt)");
-        InsertTexture(20, "ATSF Late)");
-        InsertTexture(21, "EMD Freight Demo");
-        InsertTexture(22, "NYC (Early)");
-        InsertTexture(23, "NYC (Grey)");
-        InsertTexture(24, "NYC (Late)");
-        InsertTexture(25, "EMD Passenger Demo");
-        InsertTexture(26, "WM (Speed Lettering)");
-        InsertTexture(27, "WM (Circus)");
-        InsertTexture(28, "WM (Fireball)");
+        InsertTexture(2, "FNCC (Ex FMSR)", LockoutGroup.FNCC);
+        InsertTexture(3, "DES", LockoutGroup.DES);
+        InsertTexture(4, "CDC&S");
+        InsertTexture(5, "OC&G 25A, 26B");
+        InsertTexture(6, "BAR 49");
+        InsertTexture(7, "DRGW (Black with yellow stripes)");
+        InsertTexture(8, "DRGW (4 stripe)");
+        InsertTexture(9, "DRGW (4 stripe, late)");
+        InsertTexture(10, "DRGW (1 stripe)");
+        InsertTexture(11, "MON (passenger scheme, early)");
+        InsertTexture(12, "MON (passenger scheme)");
+        InsertTexture(13, "MON (freight scheme, passenger)");
+        InsertTexture(14, "MON (freight scheme, passenger, 203)");
+        InsertTexture(15, "MON (freight scheme)");
+        InsertTexture(16, "MON (freight scheme, late)");
+        InsertTexture(17, "Amtrak (Ex NP)");
+        InsertTexture(18, "ATSF (As Delivered)");
+        InsertTexture(19, "ATSF (Early)");
+        InsertTexture(20, "ATSF (Rebuilt)");
+        InsertTexture(21, "ATSF Late)");
+        InsertTexture(22, "EMD Freight Demo");
+        InsertTexture(23, "NYC (Early)");
+        InsertTexture(24, "NYC (Grey)");
+        InsertTexture(25, "NYC (Late)");
+        InsertTexture(26, "EMD Passenger Demo");
+        InsertTexture(27, "WM (Speed Lettering)");
+        InsertTexture(28, "WM (Circus)");
+        InsertTexture(29, "WM (Fireball)");
     }
-
-
-
-
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.4, 0.19, -0.35); }
 
-
-
-
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 0.91F;
-    }
+    public float getOptimalDistance(EntityMinecart cart) { return 0.91F; }
 
     @Override
     public String getInventoryName() {
         return "EMD F3a";
     }
-
-    
-
-
-
-
 }

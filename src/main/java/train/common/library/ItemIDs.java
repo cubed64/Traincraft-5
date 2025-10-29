@@ -821,7 +821,7 @@ public enum ItemIDs {
 
 	minecartIngotPig("ItemRollingStock", "pigiron", FREIGHT, 3),
 	minecartSteelSlabFlat("ItemRollingStock", "steelflat", FREIGHT, 3),
-	minecartEvansCoilCar("ItemRollingStock", "evans_coil_car_icon", FREIGHT, 5),
+	//minecartEvansCoilCar("ItemRollingStock", "evans_coil_car_icon", FREIGHT, 5),
 
 	//pAssenger//
 	minecartPCH120Commute("ItemRollingStock", "pch120", PASSENGER, 4),

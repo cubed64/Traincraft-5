@@ -14,6 +14,7 @@ import net.minecraft.entity.Entity;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
+import train.client.renderhelper.ModelRenderHelper;
 
 public class Modelfncici_shid extends ModelConverter //Same as Filename
 {
@@ -264,6 +265,12 @@ public class Modelfncici_shid extends ModelConverter //Same as Filename
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
+
+	}
+	/*@Override
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+
 		for(ModelRendererTurbo m :bodyModel) {
 			if(m.boxName.equals("lamp")){
 				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
@@ -277,5 +284,5 @@ public class Modelfncici_shid extends ModelConverter //Same as Filename
 				m.render(f5);
 			}
 		}
-	}
+	}*/
 }

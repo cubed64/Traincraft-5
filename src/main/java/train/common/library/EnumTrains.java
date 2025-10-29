@@ -72,8 +72,8 @@ public enum EnumTrains implements ITrainRecord
 	TenderLima2_8_0("TenderLima2_8_0", TenderLima2_8_0.class, ItemIDs.minecartTenderLima2_8_0.item,"tender",0,0,3,0,0,0,0,0,26000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Green", "Yellow", "Red"}),18,0,(new String[] {"Water capacity: 26000mb."})),
 
 	//EMD//
-	F3A("F3A", DieselF3A.class, ItemIDs.minecartF3A.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Cyan", "Skin17", "Magenta", "Skin16", "Red", "Black", "Yellow", "Grey", "Orange", "White", "Pink", "Blue", "Purple", "LightBlue", "Lime", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24", "Skin25", "Skin26", "Skin27", "Skin28", "Skin29", "Skin30"}), 18, -2.6),
-	F3B("F3B", DieselF3B.class, ItemIDs.minecartF3B.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Cyan", "Skin17", "Black", "Yellow", "Grey", "Orange", "LightBlue", "Lime", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24", "Skin25", "Skin26"}), 18, -2.4),
+	F3A("F3A", DieselF3A.class, ItemIDs.minecartF3A.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Cyan", "Skin31", "Skin17", "Magenta", "Skin16", "Red", "Black", "Yellow", "Grey", "Orange", "White", "Pink", "Blue", "Purple", "LightBlue", "Lime", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24", "Skin25", "Skin26", "Skin27", "Skin28", "Skin29", "Skin30"}), 18, -2.6),
+	F3B("F3B", DieselF3B.class, ItemIDs.minecartF3B.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey", "Cyan", "Skin31", "Skin17", "Black", "Yellow", "Grey", "Orange", "LightBlue", "Lime", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24", "Skin25", "Skin26"}), 18, -2.4),
 	F7A("F7A", DieselF7A.class, ItemIDs.minecartF7A.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin17", "Magenta", "Yellow", "Grey", "Orange", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24", "Skin25", "Skin26", "Skin27", "Skin28", "Skin29", "Skin30", "Skin31", "Skin32", "Skin33", "Red", "Pink", "LightGrey", "White", "Skin34"}), 18, -2.6),
 	F7B("F7B", DieselF7B.class, ItemIDs.minecartF7B.item, "diesel", 1500, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin17", "Magenta", "Yellow", "Grey", "Orange", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24", "Skin25", "Skin26", "Skin27", "Skin28", "Skin29", "Red", "LightGrey", "Skin34"}), 18, -2.4),
 	F9A("F9A", DieselF9A.class, ItemIDs.minecartF9A.item, "diesel", 1750, 133, 0, 25, 0, 200, 0.9, 0.85, 10000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Cyan", "Brown", "Black", "Yellow", "Grey", "Orange"}), 18, -2.6),
@@ -401,7 +401,7 @@ public enum EnumTrains implements ITrainRecord
 
 	IngotPig("IngotPig", IngotPig.class, ItemIDs.minecartIngotPig.item, "Other", 2, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "Black"}), 18, 9, (new String[] {"Cargo: Ingots."})),
 	SteelSlabFlat("SteelSlabFlat", SteelSlabFlat.class, ItemIDs.minecartSteelSlabFlat.item, "Other", 2.5, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "Black"}), 16, 9, (new String[] {"Cargo: steel and metal ig."})),
-	EvansCoilCar("EvansCoilCar", EvansCoilCar.class, ItemIDs.minecartEvansCoilCar.item, "Other", 3, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey"}), 16, 18, (new String[] {"Cargo: Steel Coils & Likewise"})),
+	//EvansCoilCar("EvansCoilCar", EvansCoilCar.class, ItemIDs.minecartEvansCoilCar.item, "Other", 3, TraincraftUtil.getBytesFromColors(new String[] {"LightGrey"}), 16, 18, (new String[] {"Cargo: Steel Coils & Likewise"})),
 
 
 	// Passenger //

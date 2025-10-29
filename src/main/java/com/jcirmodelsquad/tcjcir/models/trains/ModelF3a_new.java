@@ -9,6 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.detailkits.Modelf3a_deets_fncc;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergBnew;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -2246,8 +2247,9 @@ public class ModelF3a_new extends ModelConverter //Same as Filename
 		bodyModel[531].addShapeBox(0F, 0F, 0F, 1, 4, 1, 0F,0F, 0.76F, -3F, -1F, 0.76F, -3F, -1F, 0.76F, 18F, 0F, 0.76F, 19F, -0.98F, -2.69F, 0F, 0.95F, -2.75F, 0F, 0.95F, -2.75F, 21F, -0.98F, -2.69F, 21F); // Box 768 stripe part cull
 		bodyModel[531].setRotationPoint(-23.25F, -12.25F, -11F);
 	}
-
 	ModelBlombergBnew theTrucc = new ModelBlombergBnew();
+	Modelf3a_deets_fncc deets1 = new Modelf3a_deets_fncc();
+
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
@@ -2264,7 +2266,8 @@ public class ModelF3a_new extends ModelConverter //Same as Filename
 			    || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 19
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 20
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 21
-				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 22) {
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 22
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 31) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Silver.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.05, -0.025, 0);
@@ -2275,6 +2278,12 @@ public class ModelF3a_new extends ModelConverter //Same as Filename
 			GL11.glTranslated(1.25, -0.025, 0);
 			theTrucc.render(entity, f, f1, f2, f3, f4, f5);//rear
 			GL11.glPopMatrix();
+			if (((AbstractTrains) entity).getColor() == 31){
+				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/f3a_fncc_deets.png"));
+				GL11.glPushMatrix();
+				deets1.render(entity, f, f1, f2, f3, f4, f5);
+				GL11.glPopMatrix();
+			}
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 832) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Espee.png"));
 			GL11.glPushMatrix();

@@ -28,44 +28,33 @@ public class DieselF3B extends DieselTrain {
 
         InsertTexture(0, "Phase 2 Early");
         InsertTexture(1, "FMSR", LockoutGroup.FMSR);
-        InsertTexture(2, "DES", LockoutGroup.DES);
-        InsertTexture(3, "DRGW (Black with yellow stripes)");
-        InsertTexture(4, "DRGW (4 stripe)");
-        InsertTexture(5, "DRGW (4 stripe, late)");
-        InsertTexture(6, "DRGW (1 stripe)");
-        InsertTexture(7, "MON (freight scheme)");
-        InsertTexture(8, "MON (freight scheme, late)");
-        InsertTexture(9, "Amtrak (Ex NP)");
-        InsertTexture(10, "ATSF (As Delivered)");
-        InsertTexture(11, "ATSF (Early)");
-        InsertTexture(12, "ATSF (Late)");
-        InsertTexture(13, "EMD Freight Demo");
-        InsertTexture(14, "NYC (Early)");
-        InsertTexture(15, "NYC (Grey)");
-        InsertTexture(16, "NYC (Late)");
-        InsertTexture(17, "EMD Passenger Demo");
+        InsertTexture(2, "FNCC (Ex FMSR)", LockoutGroup.FNCC);
+        InsertTexture(3, "DES", LockoutGroup.DES);
+        InsertTexture(4, "DRGW (Black with yellow stripes)");
+        InsertTexture(5, "DRGW (4 stripe)");
+        InsertTexture(6, "DRGW (4 stripe, late)");
+        InsertTexture(7, "DRGW (1 stripe)");
+        InsertTexture(8, "MON (freight scheme)");
+        InsertTexture(9, "MON (freight scheme, late)");
+        InsertTexture(10, "Amtrak (Ex NP)");
+        InsertTexture(11, "ATSF (As Delivered)");
+        InsertTexture(12, "ATSF (Early)");
+        InsertTexture(13, "ATSF (Late)");
+        InsertTexture(14, "EMD Freight Demo");
+        InsertTexture(15, "NYC (Early)");
+        InsertTexture(16, "NYC (Grey)");
+        InsertTexture(17, "NYC (Late)");
+        InsertTexture(18, "EMD Passenger Demo");
     }
-
-
-
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.4, 0.19, -0.35); }
 
-
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 0.87F;
-    }
+    public float getOptimalDistance(EntityMinecart cart) { return 0.87F; }
 
     @Override
     public String getInventoryName() {
         return "EMD F3b";
     }
-
-    
-
-    
-    
-
 }
