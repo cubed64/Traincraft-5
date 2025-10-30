@@ -2343,6 +2343,11 @@ public enum RenderEnum implements ITrainRenderRecord
 	Class74(ElectricClass74.class, new Modelclass74(), "Class_74_", true, new float[]{-1.0F, 0.15F, 0.00F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	TwoBil(ElectricTwoBil.class, new ModelTwoBilEngine(), "2-bil_", true, new float[]{-1.7F, 0.17F, 0F}, new float[]{0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
 	TwoBilTail(PassengerTwoBilTail.class, new ModelTwoBilTail(), "2-bil_", true, new float[]{0.02F, 0.17F, 0F}, new float[]{0F, 0F, 180F}, null, "", 0, null, "", null, 0, false),
+	FourCor(ElectricFourCor.class, new ModelFourCorEngine(), "4-cor_", true, new float[]{-1.7F, 0.17F, 0F}, new float[]{0F, 180F, 180F}, null, "", 0, null, "", null, 0, false),
+	FourCorTrailerComposite(PassengerFourCorTrailerComposite.class, new ModelFourCorTrailerComposite(), "4-cor_trailer_", true, new float[]{0.02F, 0.17F, 0F}, new float[]{0F, 0F, 180F}, null, "", 0, null, "", null, 0, false),
+	FourCorTrailerSecond(PassengerFourCorTrailerSecond.class, new ModelFourCorTrailerSecond(), "4-cor_trailer_", true, new float[]{0.02F, 0.17F, 0F}, new float[]{0F, 0F, 180F}, null, "", 0, null, "", null, 0, false),
+	FourBuf(PassengerFourBuf.class, new ModelFourBuf(), "4-buf_", true, new float[]{0.02F, 0.17F, 0F}, new float[]{0F, 0F, 180F}, null, "", 0, null, "", null, 0, false),
+	FourCorTail(PassengerFourCorTail.class, new ModelFourCorTail(), "4-cor_", true, new float[]{0.02F, 0.17F, 0F}, new float[]{0F, 0F, 180F}, null, "", 0, null, "", null, 0, false),
 
 
 	WorkdayHyrail( DieselWorkdayHyrail.class,  new ModelWorkdayHyrail(), "workday_hyrail_", true,new float[] {-1.0F, 0.155F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 1,  new ArrayList<double[]>() {

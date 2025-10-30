@@ -356,6 +356,7 @@ public class EnumSounds
 	public static final SoundRecord ElectricPCCCar= new SoundRecord(ElectricPCC.class, "tram_bell", 1F, "vl10_idle", 0.45F, 50, "vl10_idle", 0.45F, 50, false, "tram_ding", 14);
 	public static final SoundRecord ElectricClass74= new SoundRecord(ElectricClass74.class, " ", 0.8F, "chme3_idle", 0.65F, 40, "chme3_idle", 0.65F, 40, false, " ", 0, new String[] {"br_horn", "br_horn", "nathan_p2_1", "br_horn", "br_horn"});
 	public static final SoundRecord ElectricTwoBil= new SoundRecord(ElectricTwoBil.class, "br_horn", 0.8F, "vl10_idle", 0.6F, 50, "vl10_idle", 0.6F, 50, false, " ", 0);
+	public static final SoundRecord ElectricFourCor= new SoundRecord(ElectricFourCor.class, "br_horn", 0.8F, "vl10_idle", 0.6F, 50, "vl10_idle", 0.6F, 50, false, " ", 0);
 	public static final SoundRecord DieselWorkdayHyrail= new SoundRecord(com.jcirmodelsquad.tcjcir.vehicles.locomotives.foxdrives.DieselWorkdayHyrail.class, " ", 1F, "GE_HBI_600_Notch8", 0.45F, 80, "GE_HBI_600_Idle", 0.45F, 100, false, " ", 0, new String[] {"carhorn_1", "carhorn_1", "buell_b3_1", "nathan_m5_4", "carhorn_1", "carhorn_1", "carhorn_1"});
 
 }

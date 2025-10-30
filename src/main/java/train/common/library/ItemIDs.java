@@ -1004,6 +1004,11 @@ public enum ItemIDs {
 	minecartClass74("ItemRollingStock", "Class_74_icon", ELECTRIC, 6),
 	minecartTwoBil("ItemRollingStock", "2-bil_icon", PASSENGER, 3),
 	minecartTwoBilTail("ItemRollingStock", "2-bil_tail_icon", PASSENGER, 3),
+	minecartFourCor("ItemRollingStock", "4-cor_icon", PASSENGER, 3),
+	minecartFourCorTrailerComposite("ItemRollingStock", "4-cor_trailer_composite_icon", PASSENGER, 3),
+	minecartFourCorTrailerSecond("ItemRollingStock", "4-cor_trailer_second_icon", PASSENGER, 3),
+	minecartFourBuf("ItemRollingStock", "4-buf_icon", PASSENGER, 3),
+	minecartFourCorTail("ItemRollingStock", "4-cor_tail_icon", PASSENGER, 3),
 
 	//undecided stuff//
 	//minecartBaldwinMineLoco("ItemRollingStock", "baldwinmineloco", 1),
