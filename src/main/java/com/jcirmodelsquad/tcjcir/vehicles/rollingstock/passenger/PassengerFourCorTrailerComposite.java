@@ -31,6 +31,6 @@ public class PassengerFourCorTrailerComposite extends AbstractPassengerCar {
     @Override
     public float getOptimalLinkingDistance()
     {
-        return 2.93F;
+        return 2.91F;
     }
 }
