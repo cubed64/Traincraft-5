@@ -24,12 +24,12 @@ public class ElectricTwoBil extends ElectricTrain {
     public ElectricTwoBil(World world) {
         super(world);
         InsertTexture(0, "SR");
-        InsertTexture(1, "SR (South Eastern Green)");
-        InsertTexture(2, "BR (Green)");
-        InsertTexture(3, "BR (Green, Small Warning Panel)");
-        InsertTexture(4, "BR (Green, Full Yellow Front)");
-        InsertTexture(5, "BR (Blue, Small Warning Panel)");
-        InsertTexture(6, "BR (Blue, Full Yellow Front)");
+        InsertTexture(1, "BR (Green)");
+        InsertTexture(2, "BR (Green, Small Warning Panel)");
+        InsertTexture(3, "BR (Green, Full Yellow Front)");
+        InsertTexture(4, "BR (Blue, Small Warning Panel)");
+        InsertTexture(5, "BR (Blue, Full Yellow Front)");
+        InsertTexture(6, "CCRL (South Eastern Green)");
         InsertTexture(7, "CCRL");
     }
 
