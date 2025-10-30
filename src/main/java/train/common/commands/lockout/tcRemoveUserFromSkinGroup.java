@@ -22,13 +22,13 @@ public class tcRemoveUserFromSkinGroup extends CommandBase
     @Override
     public String getCommandName()
     {
-        return "/DelUserFromSkinGroup";
+        return "DelUserFromSkinGroup";
     }
 
     @Override
     public String getCommandUsage(ICommandSender sender)
     {
-        return "//DelUserFromSkinGroup [user] [group]";
+        return "/DelUserFromSkinGroup [user] [group]";
     }
 
     @Override

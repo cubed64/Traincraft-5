@@ -22,13 +22,13 @@ public class tcAddUserToSkinGroup extends CommandBase
     @Override
     public String getCommandName()
     {
-        return "/AddUserToSkinGroup";
+        return "AddUserToSkinGroup";
     }
 
     @Override
     public String getCommandUsage(ICommandSender sender)
     {
-        return "//AddUserToSkinGroup [user] [group]";
+        return "/AddUserToSkinGroup [user] [group]";
     }
 
     @Override

@@ -16,13 +16,13 @@ public class tcSetSkinGroupOwner extends CommandBase
     @Override
     public String getCommandName()
     {
-        return "/SetSkinGroupOwner";
+        return "SetSkinGroupOwner";
     }
 
     @Override
     public String getCommandUsage(ICommandSender sender)
     {
-        return "//SetSkinGroupOwner [user] [group]";
+        return "/SetSkinGroupOwner [user] [group]";
     }
 
     @Override
