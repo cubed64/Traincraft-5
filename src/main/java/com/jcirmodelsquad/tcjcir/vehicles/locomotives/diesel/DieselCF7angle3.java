@@ -17,7 +17,6 @@ import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 import train.common.library.sounds.SoundRecord;
 
-
 public class DieselCF7angle3 extends DieselTrain {
     @Override
     public SoundRecord getSoundRecord()
@@ -27,7 +26,7 @@ public class DieselCF7angle3 extends DieselTrain {
     public DieselCF7angle3(World world) {
         super(world, EnumTrains.CF7angle3.getTankCapacity(), LiquidManager.dieselFilter());
         
-        InsertTexture(0, "ANE");
+        InsertTexture(0, "ANE", LockoutGroup.ANE);
         InsertTexture(1, "FNCC (CEE Rebuilt)", LockoutGroup.FNCC);
         InsertTexture(2, "FNCC (Ex CEE Ne WP)", LockoutGroup.FNCC);
         InsertTexture(3, "FNCC 27", LockoutGroup.FNCC);
@@ -35,14 +34,14 @@ public class DieselCF7angle3 extends DieselTrain {
         InsertTexture(5, "KCRC 2583 (FNCC 29)", LockoutGroup.FNCC);
         InsertTexture(6, "SNCT 102 (Post 1983) (Protolance)", LockoutGroup.SNCT);
         InsertTexture(7, "SNCT 103 (Post 1983) (Protolance)", LockoutGroup.SNCT);
-        InsertTexture(8, "SGPR 582");
-        InsertTexture(9, "SGPR 585");
-        InsertTexture(10, "SGPR 587");
-        InsertTexture(11, "SGPR 590");
-        InsertTexture(12, "SGPR 924/925 (Arrival Scheme)");
-        InsertTexture(13, "SGPR 924/925 (Repaint)");
-        InsertTexture(14, "ARSR 2497");
-        InsertTexture(15, "ARSR 2610");
+        InsertTexture(8, "SGPR 582", LockoutGroup.SGPR);
+        InsertTexture(9, "SGPR 585", LockoutGroup.SGPR);
+        InsertTexture(10, "SGPR 587", LockoutGroup.SGPR);
+        InsertTexture(11, "SGPR 590", LockoutGroup.SGPR);
+        InsertTexture(12, "SGPR 924/925 (Arrival Scheme)", LockoutGroup.SGPR);
+        InsertTexture(13, "SGPR 924/925 (Repaint)", LockoutGroup.SGPR);
+        InsertTexture(14, "ARSR 2497", LockoutGroup.BIDA);
+        InsertTexture(15, "ARSR 2610", LockoutGroup.BIDA);
         InsertTexture(16, "C&PV", LockoutGroup.CPV);
         InsertTexture(17, "CFW 1504", LockoutGroup.BIDA);
         InsertTexture(18, "FURRX");
@@ -67,33 +66,15 @@ public class DieselCF7angle3 extends DieselTrain {
         InsertTexture(37, "");
         InsertTexture(38, "");
     }
-    
-
-    
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.5, 0.2, -0.35); }
-    
-
-
-    
-
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.2F;
-    }
-
-
+    public float getOptimalDistance(EntityMinecart cart) { return 1.2F; }
 
     @Override
     public String getInventoryName() {
         return "EMD CF7 (Angle Cab)";
     }
-
-
-
-
-
-
-
 }

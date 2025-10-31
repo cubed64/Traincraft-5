@@ -33,34 +33,17 @@ public class DieselU30BH extends DieselTrain {
         InsertTexture(4, "CRL (80s-2006)");
         InsertTexture(5, "CRL (2006-onwards)");
     }
-    
-
-    
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.2, 0.25, -0.35); }
-
-
-    
-
-    
-
-
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.315F;
     }
 
-
-
     @Override
     public String getInventoryName() {
         return "CEE U30B(H)";
     }
-
-    
-
-
-    
 
 }

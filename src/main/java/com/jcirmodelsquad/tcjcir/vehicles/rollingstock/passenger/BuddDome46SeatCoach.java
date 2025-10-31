@@ -2,6 +2,7 @@ package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger;
 
 import net.minecraft.world.World;
 import train.common.api.AbstractPassengerCar;
+import train.common.enums.LockoutGroup;
 
 public class BuddDome46SeatCoach extends AbstractPassengerCar
 {
@@ -27,7 +28,7 @@ public class BuddDome46SeatCoach extends AbstractPassengerCar
 		InsertTexture(17, "AMTK 9476");
 		InsertTexture(18, "AMTK 9450");
 		InsertTexture(19, "AMTK 9458");
-		InsertTexture(20, "FNCC");
+		InsertTexture(20, "FMSR", LockoutGroup.FMSR);
 		InsertTexture(21, "Auto-Train");
 	}
 

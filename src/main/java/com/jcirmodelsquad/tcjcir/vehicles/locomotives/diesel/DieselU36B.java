@@ -37,9 +37,6 @@ public class DieselU36B extends DieselTrain {
         InsertTexture(10, "Drexel Co");
         InsertTexture(11, "Deadwood & La Mesa");
     }
-    
-
-
 
     @Override
     public void updateRiderPosition() {
@@ -75,28 +72,14 @@ public class DieselU36B extends DieselTrain {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
         }
     }
-    
-
-
-
-
-
-    
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.315F;
     }
 
-    
-
     @Override
     public String getInventoryName() {
         return "GE U36B";
     }
-
-
-
-    
-
 
 }

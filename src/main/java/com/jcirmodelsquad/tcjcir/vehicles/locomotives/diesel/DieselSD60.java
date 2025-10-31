@@ -16,7 +16,6 @@ import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 import train.common.library.sounds.SoundRecord;
 
-
 public class DieselSD60 extends DieselTrain {
     @Override
     public SoundRecord getSoundRecord()
@@ -41,36 +40,17 @@ public class DieselSD60 extends DieselTrain {
         InsertTexture(12, "CSXT (Stealth)");
         InsertTexture(13, "SOO (White)");
         InsertTexture(14, "SOO (Red)");
-
     }
-    
-
-    
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.7, 0.2, -0.35); }
-    
-
-    
-
-    
-
-    
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.425F;
-    }
-
-
+    public float getOptimalDistance(EntityMinecart cart) { return 1.425F; }
 
     @Override
     public String getInventoryName() {
         return "EMD SD60";
     }
-
-    
-
-    
-    
 
 }

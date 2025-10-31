@@ -17,7 +17,6 @@ import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 import train.common.library.sounds.SoundRecord;
 
-
 public class DieselDash839C extends DieselTrain {
     @Override
     public SoundRecord getSoundRecord()
@@ -38,25 +37,19 @@ public class DieselDash839C extends DieselTrain {
         InsertTexture(8, "Magnolia Acres");
         InsertTexture(9, "Nautilus");
         InsertTexture(10, "Ann Arbor (but awesomer)");
-        InsertTexture(11, "CEEX 101");
+        InsertTexture(11, "CEEX 101", LockoutGroup.BIDA);
         InsertTexture(12, "CNRC (Ex EARR)", LockoutGroup.CNRC);
     }
         
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 4.05, 0.3, -0.35); }
-    
 
-
-    
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.35F;
-    }
+    public float getOptimalDistance(EntityMinecart cart) { return 1.35F; }
 
     @Override
     public String getInventoryName() {
         return "GE C39-8";
     }
-
-
 
 }

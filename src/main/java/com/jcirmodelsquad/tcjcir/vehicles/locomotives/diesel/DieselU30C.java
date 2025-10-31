@@ -43,33 +43,16 @@ public class DieselU30C extends DieselTrain {
         InsertTexture(14, "Chessie System");
     }
 
-
-
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.6, 0.3, -0.35); }
-
-
-    
-
-    
-
-
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.65F;
     }
 
-
-
     @Override
     public String getInventoryName() {
         return "GE U30C";
     }
-
-    
-
-    
-    
 
 }

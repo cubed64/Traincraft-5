@@ -35,33 +35,16 @@ public class DieselU23C extends DieselTrain {
         InsertTexture(7, "");
     }
 
-
-
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.6, 0.3, -0.35); }
-
-
-    
-
-    
-
-    
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.65F;
     }
 
-    
-
     @Override
     public String getInventoryName() {
         return "GE U23C";
     }
-
-
-
-    
-
 
 }

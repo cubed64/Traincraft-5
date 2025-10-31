@@ -40,33 +40,16 @@ public class DieselGP18 extends DieselTrain {
 
     }
 
-
-
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.55, 0.15, -0.35); }
-
-
-    
-
-    
-
-    
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.1F;
     }
 
-
-
     @Override
     public String getInventoryName() {
         return "EMD GP18";
     }
-
-
-
-
-
 
 }

@@ -33,34 +33,16 @@ public class DieselU50 extends DieselTrain {
         InsertTexture(5, "Penn Central the objectively best railroad to own the U50 guys i swear PC owned like 30 of them trust me bro my source is that i MADE IT THE FUCK UP");
         InsertTexture(6, "hamburge helper rayroade");
     }
-    
-
-    
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 5.3, 0.4, -0.3); }
-
-
-    
-
-    
-
-
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.8F;
     }
 
-
-
     @Override
     public String getInventoryName() {
         return "GE U50";
     }
-
-    
-
-
-    
-
 }

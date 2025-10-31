@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
@@ -23,12 +24,8 @@ public class DieselGP13 extends DieselTrain {
     }
     public DieselGP13(World world) {
         super(world, EnumTrains.GP13.getTankCapacity(), LiquidManager.dieselFilter());
-        
+        InsertTexture(9, "Avanste Northeastern (Late)", LockoutGroup.ANE);
     }
-
-    
-
-
 
     @Override
     public void updateRiderPosition() {
@@ -65,23 +62,14 @@ public class DieselGP13 extends DieselTrain {
         }
     }
 
-
-
-
-
-      
     @Override
     public String getInventoryName() {
         return "EMD GP13";
     }
-    
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
         return (1.14F);
     }
 
-    
-
-    
 }

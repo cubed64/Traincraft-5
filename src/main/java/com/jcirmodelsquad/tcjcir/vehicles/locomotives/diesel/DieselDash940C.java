@@ -11,6 +11,7 @@ import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
 import train.common.core.util.TraincraftUtil;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
@@ -26,25 +27,18 @@ public class DieselDash940C extends DieselTrain {
     public DieselDash940C(World world) {
         super(world, EnumTrains.Dash940C.getTankCapacity(), LiquidManager.dieselFilter());
 
-        InsertTexture(0, "Avanste Northeastern");
+        InsertTexture(0, "Avanste Northeastern", LockoutGroup.ANE);
     }
-
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.9, 0.3, -0.35); }
 
-    
-    
-    
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.3F;
-    }
-    
+    public float getOptimalDistance(EntityMinecart cart) { return 1.3F; }
+
     @Override
     public String getInventoryName() {
         return "GE Dash 9-40C";
     }
-    
-    
-    
+
 }

@@ -35,32 +35,16 @@ public class DieselBQ23 extends DieselTrain {
         InsertTexture(7, "Nautilussy so sussy");
     }
 
-
-    
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.4, 0.35, -0.4); }
-    
-
-
-
-
-
-    
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.315F;
     }
 
-
-
     @Override
     public String getInventoryName() {
         return "GE BQ23-7";
     }
-
-    
-
-    
-    
 
 }

@@ -29,9 +29,6 @@ public class DieselGP9b extends DieselTrain {
         InsertTexture(2, "Penn Central");
     }
 
-
-    
-
     @Override
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
@@ -65,28 +62,14 @@ public class DieselGP9b extends DieselTrain {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
         }
     }
-    
-
-
-
-    
-
-    
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.1F;
     }
 
-
-
     @Override
     public String getInventoryName() {
         return "EMD GP9b";
     }
-
-    
-
-    
-    
 
 }

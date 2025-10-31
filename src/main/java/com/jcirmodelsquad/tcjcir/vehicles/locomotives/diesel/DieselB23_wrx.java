@@ -29,8 +29,6 @@ public class DieselB23_wrx extends DieselTrain {
         InsertTexture(1, "WRXR Washaskan Woods RR (Extended DB)", LockoutGroup.BIDA);
     }
 
-    
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.2, 0.25, -0.35); }
 

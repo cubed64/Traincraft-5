@@ -37,12 +37,8 @@ public class DieselGP49 extends DieselTrain {
         InsertTexture(2, "Great Lakes & Northern Testicles");
     }
 
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.95, 0.15, -0.325); }
-
-
-    
 
     private static final double[][]	blockpos	= { { 4, 0, 1 }, { 4, 0, -1 }, { 4, 0, 0 }};
     private double[] point1;
@@ -142,22 +138,13 @@ public class DieselGP49 extends DieselTrain {
         return xyz;
     }
 
-
-
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.2F;
     }
-
-    
 
     @Override
     public String getInventoryName() {
         return "EMD GP49";
     }
-
-    
-
-    
-    
 
 }

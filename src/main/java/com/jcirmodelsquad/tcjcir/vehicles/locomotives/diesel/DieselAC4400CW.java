@@ -16,7 +16,6 @@ import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 import train.common.library.sounds.SoundRecord;
 
-
 public class DieselAC4400CW extends DieselTrain {
 
     @Override
@@ -30,7 +29,6 @@ public class DieselAC4400CW extends DieselTrain {
         InsertTexture(2, "Blandsville & Blankerston");
     }
 
-        
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.9, 0.45, -0.35); }
 

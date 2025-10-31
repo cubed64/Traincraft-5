@@ -31,9 +31,6 @@ public class DieselGPFDL extends DieselTrain {
         InsertTexture(3, "Sacramento Northern (Ex FNCC 6&7)");
     }
 
-
-
-
     @Override
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
@@ -68,27 +65,12 @@ public class DieselGPFDL extends DieselTrain {
         }
     }
 
-
-
-
-
-
-    
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.1F;
-    }
-
-    
+    public float getOptimalDistance(EntityMinecart cart) { return 1.1F; }
 
     @Override
     public String getInventoryName() {
         return "EMD/CEE GPFDL";
     }
-
-
-
-
-
 
 }

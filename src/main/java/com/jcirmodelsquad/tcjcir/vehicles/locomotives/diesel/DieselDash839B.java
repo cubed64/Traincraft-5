@@ -38,33 +38,15 @@ public class DieselDash839B extends DieselTrain {
 
     }
 
-
-
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.7, 0.25, -0.35); }
 
-
-
-
-    
-
-    
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.4F;
-    }
-
-    
+    public float getOptimalDistance(EntityMinecart cart) { return 1.4F; }
 
     @Override
     public String getInventoryName() {
         return "GE B39-8";
     }
-
-    
-
-
-    
 
 }

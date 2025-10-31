@@ -28,38 +28,20 @@ public class DieselTB27 extends DieselTrain {
 
         InsertTexture(0, "Demonstrator");
         InsertTexture(1, "Blandsville & Blankerston");
-        InsertTexture(2, "Avanste Northeastern");
+        InsertTexture(2, "Avanste Northeastern", LockoutGroup.ANE);
         InsertTexture(3, "SPR", LockoutGroup.SPR);
 
     }
-    
-
-
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.0, 0.35, 0.35); }
 
-
-
-
-
-
-    
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.3F;
-    }
-
-    
+    public float getOptimalDistance(EntityMinecart cart) { return 1.3F; }
 
     @Override
     public String getInventoryName() {
         return "Masaou TB27";
     }
-
-
-
-
-
 
 }

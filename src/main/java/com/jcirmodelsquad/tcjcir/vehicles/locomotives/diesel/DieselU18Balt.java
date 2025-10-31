@@ -48,33 +48,15 @@ public class DieselU18Balt extends DieselTrain {
         InsertTexture(18, "Seaboard System");
     }
 
-
-    
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.6, 0.25, -0.35); }
 
-
-
-
-    
-
-    
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.2F;
-    }
-
-
+    public float getOptimalDistance(EntityMinecart cart) { return 1.2F; }
 
     @Override
     public String getInventoryName() {
         return "GE U18B (New Model)";
     }
-
-
-
-
-
 
 }

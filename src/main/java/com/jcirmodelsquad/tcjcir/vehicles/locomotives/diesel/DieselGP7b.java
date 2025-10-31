@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
@@ -26,11 +27,8 @@ public class DieselGP7b extends DieselTrain {
 
         InsertTexture(0, "ATSF");
         InsertTexture(1, "Blandsville & Blankerston");
-        InsertTexture(2, "Avanste Northeastern");
+        InsertTexture(2, "Avanste Northeastern", LockoutGroup.ANE);
     }
-
-
-
 
     @Override
     public void updateRiderPosition() {
@@ -65,28 +63,14 @@ public class DieselGP7b extends DieselTrain {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
         }
     }
-    
-
-
-
-    
-
-
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.1F;
     }
 
-
-
     @Override
     public String getInventoryName() {
         return "EMD GP7b";
     }
-
-    
-
-
-    
 
 }

@@ -30,8 +30,6 @@ public class Diesel4ED172T_C extends DieselTrain {
         InsertTexture(2, "SPR", LockoutGroup.SPR);
     }
 
-
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.8, 0.2, -0.35); }
 

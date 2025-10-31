@@ -17,7 +17,6 @@ import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 import train.common.library.sounds.SoundRecord;
 
-
 public class DieselSW1600 extends DieselTrain {
     @Override
     public SoundRecord getSoundRecord()
@@ -30,33 +29,15 @@ public class DieselSW1600 extends DieselTrain {
         InsertTexture(0, "FNCC (KIT-L)", LockoutGroup.FNCC);
     }
 
-
-    
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, -0.1, 0.3, -0.35); }
 
-
-    
-
-
-
-
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.175F;
-    }
-
-    
+    public float getOptimalDistance(EntityMinecart cart) { return 1.175F; }
 
     @Override
     public String getInventoryName() {
         return "FNCC SW1600";
     }
-
-    
-
-    
-    
 
 }

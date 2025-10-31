@@ -11,6 +11,7 @@ import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
 import train.common.core.util.TraincraftUtil;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
@@ -42,8 +43,8 @@ public class DieselGP35 extends DieselTrain {
         InsertTexture(14, "DRGW (Big logo)");
         InsertTexture(15, "New York Central");
         InsertTexture(16, "New York Central");
-        InsertTexture(17, "Avanste Northeastern");
-        InsertTexture(18, "AMEX 2019");
+        InsertTexture(17, "Avanste Northeastern", LockoutGroup.ANE);
+        InsertTexture(18, "AMEX 2019", LockoutGroup.BIDA);
         InsertTexture(19, "Great Lakes & North Territories");
         InsertTexture(20, "Ann Arbor (OLS)");
         InsertTexture(21, "Ann Arbor (Ex SouP)");
@@ -64,34 +65,15 @@ public class DieselGP35 extends DieselTrain {
         InsertTexture(36, "WM (Speed Lettering)");
         InsertTexture(37, "WM (Circus)");
     }
-    
-
-    
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.7, 0.15, -0.325); }
-    
-
-
-
-    
-
-
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.15F;
-    }
-
-
+    public float getOptimalDistance(EntityMinecart cart) { return 1.15F; }
 
     @Override
     public String getInventoryName() {
         return "EMD GP35 (Phase 1)";
     }
-
-    
-
-
-    
-
 }

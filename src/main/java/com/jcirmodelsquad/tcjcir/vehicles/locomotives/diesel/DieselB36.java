@@ -35,8 +35,6 @@ public class DieselB36 extends DieselTrain {
         InsertTexture(7, "Seaboard");
     }
 
-    
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.2, 0.25, -0.35); }
 

@@ -39,22 +39,15 @@ public class DieselSD70ACe_H extends DieselTrain {
         InsertTexture(10, "NS 1074 (Delaware Lackawanna & Western)");
     }
 
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 4.15, 0.4, -0.35); }
 
-
-    
-    
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.45F;
-    }
+    public float getOptimalDistance(EntityMinecart cart) { return 1.45F; }
 
     @Override
     public String getInventoryName() {
-        return "EMD SD70ACe";
+        return "EMD SD70ACe (Heritage Units)";
     }
-
-
 
 }

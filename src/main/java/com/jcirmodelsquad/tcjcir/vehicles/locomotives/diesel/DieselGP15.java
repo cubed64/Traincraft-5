@@ -28,7 +28,7 @@ public class DieselGP15 extends DieselTrain {
 		InsertTexture(0, "UPY");
 		InsertTexture(1, "FURRX"); // (old nasty ass texture if i see this in game somewhjer i will kill you)
 		InsertTexture(2, "Lisha & Watson", LockoutGroup.LW);
-		InsertTexture(3, "Atlas & Red Sands Railroad");
+		InsertTexture(3, "Atlas & Red Sands Railroad", LockoutGroup.BIDA);
 		InsertTexture(4, "Southern Port Belt");
 		InsertTexture(5, "GLC (Ex SPB)");
 		InsertTexture(6, "CSXT (Yn3)");
@@ -43,8 +43,6 @@ public class DieselGP15 extends DieselTrain {
 		fuelTrain = 0;
 		locoInvent = new ItemStack[inventorySize];
 	}
-
-	
 
 	@Override
 	public void updateRiderPosition() {
@@ -80,21 +78,13 @@ public class DieselGP15 extends DieselTrain {
 		}
 	}
 
-
-
-	
-
-	
 	@Override
 	public String getInventoryName() {
 		return "EMD GP15-1";
 	}
-	
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return (1.0F);
 	}
-
-	
 }

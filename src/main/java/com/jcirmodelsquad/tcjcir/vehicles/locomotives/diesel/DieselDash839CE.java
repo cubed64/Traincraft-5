@@ -17,7 +17,6 @@ import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 import train.common.library.sounds.SoundRecord;
 
-
 public class DieselDash839CE extends DieselTrain {
     @Override
     public SoundRecord getSoundRecord()
@@ -34,22 +33,14 @@ public class DieselDash839CE extends DieselTrain {
         InsertTexture(4, "Blandsville & Blankerston");
     }
 
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 4.05, 0.3, -0.35); }
-    
-    
-    
-    
+
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.35F;
-    }
+    public float getOptimalDistance(EntityMinecart cart) { return 1.35F; }
 
     @Override
     public String getInventoryName() {
         return "GE C39-8E";
     }
-    
-    
-    
 }

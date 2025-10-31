@@ -27,36 +27,16 @@ public class DieselDash818BE extends DieselTrain {
         super(world, EnumTrains.Dash818BE.getTankCapacity(), LiquidManager.dieselFilter());
         
         InsertTexture(0, "FNCC (Kit-L)", LockoutGroup.FNCC);
-
     }
-    
-
-    
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.1, 0.25, -0.35); }
 
-
-    
-
-
-
-    
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.4F;
-    }
-
-
+    public float getOptimalDistance(EntityMinecart cart) { return 1.4F; }
 
     @Override
     public String getInventoryName() {
         return "GE B18-8E";
     }
-
-    
-
-    
-    
 
 }

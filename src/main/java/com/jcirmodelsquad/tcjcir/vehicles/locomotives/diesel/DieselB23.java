@@ -46,11 +46,11 @@ public class DieselB23 extends DieselTrain {
         InsertTexture(18, "Finger Lakes");
         InsertTexture(19, "Finger Lakes (Ex Camas Prairie)");
         InsertTexture(20, "AOK");
-        InsertTexture(21, "ADT (Ex UP)");
-        InsertTexture(22, "ADT (Ex NS)");
-        InsertTexture(23, "ADT");
+        InsertTexture(21, "ADT (Ex UP)", LockoutGroup.ADT);
+        InsertTexture(22, "ADT (Ex NS)", LockoutGroup.ADT);
+        InsertTexture(23, "ADT", LockoutGroup.ADT);
         InsertTexture(24, "BNSF H1 (Ex ATSF)");
-        InsertTexture(25, "Atlas & Red Sands Railroad");
+        InsertTexture(25, "Atlas & Red Sands Railroad", LockoutGroup.BIDA);
         InsertTexture(26, "Magnolia");
         InsertTexture(27, "CNRC 1901 & 1903", LockoutGroup.CNRC);
         InsertTexture(28, "CNRC 1902", LockoutGroup.CNRC);
@@ -59,7 +59,6 @@ public class DieselB23 extends DieselTrain {
         InsertTexture(31, "Seaboard");
     }
 
-        
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.2, 0.25, -0.35); }
 

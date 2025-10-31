@@ -26,10 +26,6 @@ public class DieselGP38dash9W extends DieselTrain {
         
 
     }
-
-
-    
-
     @Override
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
@@ -64,27 +60,11 @@ public class DieselGP38dash9W extends DieselTrain {
         }
     }
 
-
-    
-
-    
-
-
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.25F;
-    }
-
-
+    public float getOptimalDistance(EntityMinecart cart) { return 1.25F; }
 
     @Override
     public String getInventoryName() {
         return "MT&S GP38-9W";
     }
-
-    
-
-
-    
-
 }

@@ -30,33 +30,15 @@ public class DieselU56 extends DieselTrain {
         InsertTexture(1, "FMSR", LockoutGroup.FMSR);
     }
 
-
-    
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 5.3, 0.4, -0.3); }
 
-
-    
-
-
-
-    
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.8F;
-    }
-
-    
+    public float getOptimalDistance(EntityMinecart cart) { return 1.8F; }
 
     @Override
     public String getInventoryName() {
         return "CEE U56";
     }
-
-    
-
-
-    
 
 }

@@ -39,7 +39,7 @@ public class DieselSD40T2 extends DieselTrain {
         InsertTexture(9, "Magnolia Acres");
         InsertTexture(10, "Run 8 & Western");
         InsertTexture(11, "Paradox Rail");
-        InsertTexture(12, "Avanste Northeastern");
+        InsertTexture(12, "Avanste Northeastern", LockoutGroup.ANE);
         InsertTexture(13, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(14, "FNCC (KIT-80)", LockoutGroup.FNCC);
         InsertTexture(15, "Southern Port Belt");
@@ -48,34 +48,16 @@ public class DieselSD40T2 extends DieselTrain {
         InsertTexture(18, "CRL (Phase 1)");
         InsertTexture(19, "CRL (Phase 2)");
     }
-    
-
-    
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.25, 0.2, -0.35); }
 
-
-
-
-    
-
-
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.55F;
-    }
-
-    
+    public float getOptimalDistance(EntityMinecart cart) { return 1.55F; }
 
     @Override
     public String getInventoryName() {
         return "EMD SD40T-2";
     }
-
-
-
-
-
 
 }

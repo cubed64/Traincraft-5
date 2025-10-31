@@ -11,6 +11,7 @@ import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
 import train.common.core.util.TraincraftUtil;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
@@ -28,7 +29,7 @@ public class DieselSW900 extends DieselTrain {
         
         InsertTexture(0, "Electric Fuels Corporation");
         InsertTexture(1, "Conrail Shared Assets");
-        InsertTexture(2, "Avanste Northeastern");
+        InsertTexture(2, "Avanste Northeastern", LockoutGroup.ANE);
         InsertTexture(3, "Blandsville & Blankerston");
         InsertTexture(4, "Deadwood & La Mesa");
         InsertTexture(5, "New York Central");
@@ -39,34 +40,16 @@ public class DieselSW900 extends DieselTrain {
         InsertTexture(10, "Sacramento Northern (Ex FNCC)");
         InsertTexture(11, "SP Tigerstripe");
     }
-    
-
-    
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, -0.08, 0.2, -0.35); }
 
-
-    
-
-
-
-    
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.1F;
-    }
-
-    
+    public float getOptimalDistance(EntityMinecart cart) { return 1.1F; }
 
     @Override
     public String getInventoryName() {
         return "EMD SW900";
     }
-
-
-
-
-
 
 }

@@ -17,7 +17,6 @@ import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 import train.common.library.sounds.SoundRecord;
 
-
 public class DieselCF7angle2 extends DieselTrain {
     @Override
     public SoundRecord getSoundRecord()
@@ -29,33 +28,17 @@ public class DieselCF7angle2 extends DieselTrain {
         
         InsertTexture(6, "CFW 1504", LockoutGroup.BIDA);
     }
-    
-
-    
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.5, 0.2, -0.35); }
-
-    
-
-    
-
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.2F;
     }
 
-
-
     @Override
     public String getInventoryName() {
         return "EMD CF7 (CBRR)";
     }
-
-    
-
-
-
-    
 
 }

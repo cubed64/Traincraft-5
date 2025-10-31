@@ -17,7 +17,6 @@ import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 import train.common.library.sounds.SoundRecord;
 
-
 public class DieselDash944CW extends DieselTrain {
     @Override
     public SoundRecord getSoundRecord()
@@ -36,7 +35,7 @@ public class DieselDash944CW extends DieselTrain {
         InsertTexture(6, "Southern Pacific (UP Patch)");
         InsertTexture(7, "Chicago Northwestern");
         InsertTexture(8, "Morristown Tenneva & Southern", LockoutGroup.MTS);
-        InsertTexture(9, "Avanste Northeastern");
+        InsertTexture(9, "Avanste Northeastern", LockoutGroup.ANE);
         InsertTexture(10, "Galesburg Clinton & Midland");
         InsertTexture(11, "CSLX (EX CSWR)");
         InsertTexture(12, "ATSF");
@@ -48,18 +47,12 @@ public class DieselDash944CW extends DieselTrain {
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.9, 0.4, -0.35); }
 
-
-
-    
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.3F;
-    }
+    public float getOptimalDistance(EntityMinecart cart) { return 1.3F; }
     
     @Override
     public String getInventoryName() {
         return "GE Dash 9-44CW";
     }
-
-    
 
 }

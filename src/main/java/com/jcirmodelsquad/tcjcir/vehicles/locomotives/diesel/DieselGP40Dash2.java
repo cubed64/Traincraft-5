@@ -31,8 +31,8 @@ public class DieselGP40Dash2 extends DieselTrain {
         InsertTexture(2, "Western Pacific");
         InsertTexture(3, "Western Pacific");
         InsertTexture(4, "Morristown Tenneva & Southern", LockoutGroup.MTS);
-        InsertTexture(5, "Avanste Northeastern");
-        InsertTexture(6, "Avanste Northeastern (Snow Service)");
+        InsertTexture(5, "Avanste Northeastern", LockoutGroup.ANE);
+        InsertTexture(6, "Avanste Northeastern (Snow Service)", LockoutGroup.ANE);
         InsertTexture(7, "Amtrak (PH III)");
         InsertTexture(8, "Norfolk Southern");
         InsertTexture(9, "Athearn RTR GP40 (Avanste Northeastern)");
@@ -59,34 +59,15 @@ public class DieselGP40Dash2 extends DieselTrain {
         InsertTexture(30, "");
         InsertTexture(31, "");
     }
-    
-
-    
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.9, 0.15, -0.325); }
 
-
-    
-
-    
-
-    
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.25F;
-    }
-
-
+    public float getOptimalDistance(EntityMinecart cart) { return 1.25F; }
 
     @Override
     public String getInventoryName() {
         return "EMD GP40";
     }
-
-    
-
-    
-    
-
 }

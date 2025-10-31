@@ -11,21 +11,20 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.AbstractStandardFixedFreightCar;
 import train.common.api.Freight;
+import train.common.enums.LockoutGroup;
 import train.common.library.GuiIDs;
 
 public class PSCNWRPO60 extends AbstractStandardFixedFreightCar
 {
 	public PSCNWRPO60(World world) {
 		super(world);
+		InsertTexture(9, "FMSR",LockoutGroup.FMSR);
+		InsertTexture(10, "FMSR",LockoutGroup.FMSR);
 	}
-
-
 
 	@Override
 	public void setupTextureDescription()
-	{
-
-	}
+	{ }//????
 
 	@Override
 	public String getInventoryName() {

@@ -47,8 +47,8 @@ public class DieselU23B extends DieselTrain {
         InsertTexture(18, "Morristown Tenneva & Southern", LockoutGroup.MTS);
         InsertTexture(19, "Milwaukee Road");
         InsertTexture(20, "Nomansi & Eastern Pacific");
-        InsertTexture(21, "ADT");
-        InsertTexture(22, "ADT (Ex UP)");
+        InsertTexture(21, "ADT", LockoutGroup.ADT);
+        InsertTexture(22, "ADT (Ex UP)", LockoutGroup.ADT);
         InsertTexture(23, "Suffern Hoboken Interstate Transfer 211");
         InsertTexture(24, "Detroit Export System", LockoutGroup.DES);
         InsertTexture(25, "Magnolia Properties");
@@ -60,34 +60,16 @@ public class DieselU23B extends DieselTrain {
         InsertTexture(31, "CSXT (YN2)");
         InsertTexture(32, "Chessie System");
     }
-    
-
-
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.2, 0.25, -0.35); }
-    
-
-    
-
-
-
-
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.315F;
-    }
-
-    
+    public float getOptimalDistance(EntityMinecart cart) { return 1.315F; }
 
     @Override
     public String getInventoryName() {
         return "GE U23B";
     }
-
-    
-
-    
-
 
 }

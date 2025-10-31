@@ -53,33 +53,14 @@ public class DieselGP30 extends DieselTrain {
         InsertTexture(24, "Southern Pacific (Bloodynose)");
     }
 
-
-    
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.75, 0.125, -0.35); }
-    
-
-    
-
-    
-
-    
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.15F;
-    }
-
-    
+    public float getOptimalDistance(EntityMinecart cart) { return 1.15F; }
 
     @Override
     public String getInventoryName() {
         return "EMD GP30";
     }
-
-
-
-
-
-
 }

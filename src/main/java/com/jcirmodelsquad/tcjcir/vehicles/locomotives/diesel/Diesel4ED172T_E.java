@@ -29,8 +29,6 @@ public class Diesel4ED172T_E extends DieselTrain {
         InsertTexture(2, "AA");
     }
 
-    
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.8, 0.2, -0.35); }
 

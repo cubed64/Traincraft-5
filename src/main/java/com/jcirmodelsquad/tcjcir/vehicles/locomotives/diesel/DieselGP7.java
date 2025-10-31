@@ -26,11 +26,11 @@ public class DieselGP7 extends DieselTrain {
     public DieselGP7(World world) {
         super(world, EnumTrains.GP7.getTankCapacity(), LiquidManager.dieselFilter());
 
-        InsertTexture(0, "Avanste Northeastern (Late)");
+        InsertTexture(0, "Avanste Northeastern (Late)", LockoutGroup.ANE);
         InsertTexture(1, "Burlington Northern (Ex CBQ)");
         InsertTexture(2, "Butte, Anaconda & Pacific (Early)");
         InsertTexture(3, "Chicago Northwestern");
-        InsertTexture(4, "Avanste Northeastern (As Delivered)");
+        InsertTexture(4, "Avanste Northeastern (As Delivered)", LockoutGroup.ANE);
         InsertTexture(5, "Fox Union Resources (FURRX)");
         InsertTexture(6, "Bangor & Aroostook (Early)");
         InsertTexture(7, "Bangor & Aroostook (Late)");
@@ -86,33 +86,16 @@ public class DieselGP7 extends DieselTrain {
         InsertTexture(57, "Chessie System");
     }
 
-
-
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.55, 0.15, -0.35); }
-    
-
-
-
-
-
-
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.1F;
     }
 
-    
-
     @Override
     public String getInventoryName() {
         return "EMD GP7";
     }
-
-    
-
-
-    
 
 }

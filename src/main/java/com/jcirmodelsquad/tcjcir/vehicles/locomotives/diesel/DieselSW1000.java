@@ -39,33 +39,14 @@ public class DieselSW1000 extends DieselTrain {
         InsertTexture(9, "ANW (Chevrons)");
     }
 
-
-    
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, -0.1, 0.3, -0.35); }
 
-
-
-
-
-
-
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.175F;
-    }
-
-
+    public float getOptimalDistance(EntityMinecart cart) { return 1.175F; }
 
     @Override
     public String getInventoryName() {
         return "EMD SW1000";
     }
-
-
-
-
-
-
 }

@@ -37,40 +37,21 @@ public class DieselSD9 extends DieselTrain {
         InsertTexture(6, "OC&G");
         InsertTexture(7, "DRGW");
         InsertTexture(8, "DRGW (5305, Low Hood)");
-        InsertTexture(9, "ADT");
+        InsertTexture(9, "ADT", LockoutGroup.ADT);
         InsertTexture(10, "WFR (not arie cus arie cring)");
         InsertTexture(11, "DLMR");
         InsertTexture(12, "WV");
         InsertTexture(13, "CNRC 6100 - 6102", LockoutGroup.CNRC);
     }
 
-
-    
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.9, 0.1, -0.45); }
-    
-
-    
-
-
-
-    
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.39F;
-    }
-
-
+    public float getOptimalDistance(EntityMinecart cart) { return 1.39F; }
 
     @Override
     public String getInventoryName() {
         return "EMD SD9";
     }
-
-    
-
-    
-    
-
 }

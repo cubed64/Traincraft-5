@@ -36,8 +36,6 @@ public class DieselB30 extends DieselTrain {
         InsertTexture(8, "Chessie System");
     }
 
-
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.2, 0.25, -0.35); }
 

@@ -36,34 +36,16 @@ public class DieselB23S7 extends DieselTrain {
         InsertTexture(7, "CSXT (Yn3)");
 
     }
-    
-
-    
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.1, 0.25, -0.35); }
-    
-
-    
-
-    
-
-
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.315F;
-    }
-
-
+    public float getOptimalDistance(EntityMinecart cart) { return 1.315F; }
 
     @Override
     public String getInventoryName() {
         return "GE B23-S7";
     }
-
-
-
-
-
 
 }

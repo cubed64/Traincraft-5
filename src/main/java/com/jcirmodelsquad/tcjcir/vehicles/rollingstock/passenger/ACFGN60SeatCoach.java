@@ -2,6 +2,7 @@ package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger;
 
 import net.minecraft.world.World;
 import train.common.api.AbstractPassengerCar;
+import train.common.enums.LockoutGroup;
 
 public class ACFGN60SeatCoach extends AbstractPassengerCar
 {
@@ -19,15 +20,13 @@ public class ACFGN60SeatCoach extends AbstractPassengerCar
 		InsertTexture(9, "GN Empire Builder (BSB Scheme)");
 		InsertTexture(10, "BN (With Conductor's Booth)");
 		InsertTexture(11, "BN");
-		InsertTexture(12, "FNCC (With Conductor's Booth)");
-		InsertTexture(13, "FNCC");
-		InsertTexture(14, "FNCC (With Conductor's Booth, Royal Solar)");
-		InsertTexture(15, "FNCC (Royal Solar)");
+		InsertTexture(12, "FMSR (With Conductor's Booth)",LockoutGroup.FMSR);
+		InsertTexture(13, "FMSR",LockoutGroup.FMSR);
+		InsertTexture(14, "FMSR (With Conductor's Booth, Royal Solar)",LockoutGroup.FMSR);
+		InsertTexture(15, "FMSR (Royal Solar)",LockoutGroup.FMSR);
 		InsertTexture(16, "N&EP As-Delivered");
 		InsertTexture(17, "N&EP Modernized (70s)");
 	}
-
-	
 
 	@Override
 	public double getAdditionalYOffset()

@@ -11,6 +11,7 @@ import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
 import train.common.core.util.TraincraftUtil;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
@@ -18,48 +19,33 @@ import train.common.library.sounds.SoundRecord;
 
 public class DieselGP39TDash2B extends DieselTrain {
     @Override
-    public SoundRecord getSoundRecord()
-    {
+    public SoundRecord getSoundRecord() {
         return EnumSounds.DieselGP39TDash2B;
     }
+
     public DieselGP39TDash2B(World world) {
         super(world, EnumTrains.GP39TDash2B.getTankCapacity(), LiquidManager.dieselFilter());
-        
-        InsertTexture(0, "DIP");
+
+        InsertTexture(0, "DIP", LockoutGroup.BIDA);
         InsertTexture(1, "");
         InsertTexture(2, "");
         InsertTexture(3, "");
         InsertTexture(4, "");
-
-    }
-    
-
-    
-
-    @Override
-    public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.9, 0.15); }
-    
-
-
-
-
-
-
-
-    @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.25F;
     }
 
-    
+    @Override
+    public void updateRiderPosition() {
+        TraincraftUtil.updateRider(this, 2.9, 0.15);
+    }
+
+    @Override
+    public float getOptimalDistance(EntityMinecart cart) {
+        return 1.25F;
+    }
 
     @Override
     public String getInventoryName() {
         return "EMD GP39T-2";
     }
-
-    
-
-    
-    
 
 }

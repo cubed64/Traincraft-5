@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
@@ -28,8 +29,8 @@ public class DieselSD40dash2 extends DieselTrain {
         //when the
         InsertTexture(0, "LLPX");
         InsertTexture(1, "Burlington Northern");
-        InsertTexture(2, "Avanste Northeastern (Yard Service)");
-        InsertTexture(3, "Avanste Northeastern (Road Service)");
+        InsertTexture(2, "Avanste Northeastern (Yard Service)", LockoutGroup.ANE);
+        InsertTexture(3, "Avanste Northeastern (Road Service)", LockoutGroup.ANE);
         InsertTexture(4, "Union Pacific");
         InsertTexture(5, "BNSF");
         InsertTexture(6, "BNSF");
@@ -65,9 +66,6 @@ public class DieselSD40dash2 extends DieselTrain {
         InsertTexture(36, "Southern");
         InsertTexture(37, "Chessie System");
     }
-    
-
-
 
     @Override
     public void updateRiderPosition() {
@@ -103,28 +101,13 @@ public class DieselSD40dash2 extends DieselTrain {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1 +0.0);
         }
     }
-    
-
-    
-
-    
-
-    
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.4F;
-    }
-
-    
+    public float getOptimalDistance(EntityMinecart cart) { return 1.4F; }
 
     @Override
     public String getInventoryName() {
         return "EMD SD40-2";
     }
-
-
-
-
-
 
 }

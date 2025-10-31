@@ -34,33 +34,16 @@ public class DieselGP7f extends DieselTrain {
         InsertTexture(5, "SNCT 402 (Protolance)", LockoutGroup.SNCT);
     }
 
-
-    
-
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.55, 0.1, -0.35); }
-
-
-
-
-
-
-
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.1F;
     }
 
-    
-
     @Override
     public String getInventoryName() {
         return "ARR GP7u";
     }
-
-
-
-    
-
 
 }

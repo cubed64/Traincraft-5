@@ -40,9 +40,6 @@ public class DieselSD38 extends DieselTrain {
         InsertTexture(11, "Seaboard System");
         InsertTexture(12, "GLC (EX SPB)");
     }
-    
-
-
 
     @Override
     public void updateRiderPosition() {
@@ -78,28 +75,12 @@ public class DieselSD38 extends DieselTrain {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1 +0.0);
         }
     }
-    
-
-    
-
-
-
-
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.3F;
-    }
-
-    
+    public float getOptimalDistance(EntityMinecart cart) { return 1.3F; }
 
     @Override
     public String getInventoryName() {
         return "EMD SD38";
     }
-
-
-
-
-
-
 }

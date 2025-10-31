@@ -32,34 +32,15 @@ public class DieselGP39 extends DieselTrain {
         InsertTexture(4, "Chessie System");
 
     }
-    
-
-
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.9, 0.15, -0.325); }
 
-
-    
-
-    
-
-
-
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.25F;
-    }
-
-    
+    public float getOptimalDistance(EntityMinecart cart) { return 1.25F; }
 
     @Override
     public String getInventoryName() {
         return "EMD GP39";
     }
-
-
-
-
-
-
 }

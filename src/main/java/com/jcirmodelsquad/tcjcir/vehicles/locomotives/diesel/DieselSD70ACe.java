@@ -48,19 +48,13 @@ public class DieselSD70ACe extends DieselTrain {
         
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 4.15, 0.4, -0.35); }
-    
-    
-    
-    
+
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.45F;
-    }
+    public float getOptimalDistance(EntityMinecart cart) { return 1.45F; }
     
     @Override
     public String getInventoryName() {
         return "EMD SD70ACe";
     }
-
-
 
 }

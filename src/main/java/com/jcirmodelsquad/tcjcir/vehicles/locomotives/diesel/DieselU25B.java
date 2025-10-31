@@ -40,9 +40,6 @@ public class DieselU25B extends DieselTrain {
         InsertTexture(12, "Galesburg Clinton & Midland");
         InsertTexture(13, "Detroit Export System", LockoutGroup.DES);
     }
-    
-
-    
 
     @Override
     public void updateRiderPosition() {
@@ -78,28 +75,13 @@ public class DieselU25B extends DieselTrain {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
         }
     }
-    
-
-    
-
-
-
-
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.1F;
-    }
-
-    
+    public float getOptimalDistance(EntityMinecart cart) { return 1.1F; }
 
     @Override
     public String getInventoryName() {
         return "GE U25B Phase 2-4";
     }
-
-    
-
-    
-    
 
 }

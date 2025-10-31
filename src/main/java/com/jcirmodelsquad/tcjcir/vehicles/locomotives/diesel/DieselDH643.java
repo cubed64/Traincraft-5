@@ -28,34 +28,16 @@ public class DieselDH643 extends DieselTrain {
 
         InsertTexture(0, "Latrans Range Railroad", LockoutGroup.LRR);
     }
-    
-
-
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 4.5, 0.25, -0.35); }
-    
-
-    
-
-
-
-    
 
     @Override
-    public float getOptimalDistance(EntityMinecart cart) { return 1.5F;
-    }
-
-    
+    public float getOptimalDistance(EntityMinecart cart) { return 1.5F; }
 
     @Override
     public String getInventoryName() {
         return "ALCo DH643";
     }
-
-
-
-
-
 
 }
