@@ -4,6 +4,7 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.AbstractStandardFreightCar;
 import train.common.entity.CargoManager;
+import train.common.enums.LockoutGroup;
 
 public class OWO60Verticube extends AbstractStandardFreightCar
 {
@@ -29,8 +30,8 @@ public class OWO60Verticube extends AbstractStandardFreightCar
         InsertTexture(4, "LRR (Large Wording)");
         InsertTexture(5, "ANE");
         InsertTexture(6, "ANE (Mega Cushion)");
-        InsertTexture(7, "ANE Mega Cushion (Graffiti)");
-        InsertTexture(8, "WRX Tree Logo (Graffiti)");
+        InsertTexture(7, "ANE Mega Cushion (Graffiti)", LockoutGroup.BIDA);
+        InsertTexture(8, "WRX Tree Logo (Graffiti)", LockoutGroup.BIDA);
         InsertTexture(9, "SNCT");
         InsertTexture(10, "UNCLX");
         InsertTexture(11, "WP (Early)");
