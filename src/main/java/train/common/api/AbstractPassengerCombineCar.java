@@ -47,7 +47,7 @@ public abstract class AbstractPassengerCombineCar extends AbstractStandardFreigh
     @Override
     public boolean interactFirst(EntityPlayer entityplayer)
     {
-        if ((super.interactFirst(entityplayer)) && entityplayer.isSneaking())
+        if ((super.interactFirst(entityplayer)))
         {
             return false;
         }
@@ -65,16 +65,10 @@ public abstract class AbstractPassengerCombineCar extends AbstractStandardFreigh
                 return true;
             }
 
-            if (worldObj.isRemote == false && entityplayer.isSneaking() == false
-                    && (itemstack == null || ((itemstack.getItem() == ItemIDs.padlock.item) == false && (itemstack.getItem() == ItemIDs.stake.item) == false)))
+            if (worldObj.isRemote == false && entityplayer.isSneaking() == false && (itemstack == null || itemstack.getItem() != ItemIDs.stake.item && itemstack.getItem() != ItemIDs.padlock.item))
             {
                 entityplayer.mountEntity(this);
             }
-        }
-
-        if ((super.interactFirst(entityplayer)))
-        {
-            return false;
         }
 
         return true;

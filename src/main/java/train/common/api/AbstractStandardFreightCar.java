@@ -99,9 +99,10 @@ public abstract class AbstractStandardFreightCar extends Freight
         if (this instanceof AbstractPassengerCombineCar == false || this instanceof AbstractPassengerCombineCar && entityplayer.isSneaking())
         {
             entityplayer.openGui(Traincraft.instance, GuiIDs.FREIGHT, worldObj, this.getEntityId(), -1, (int) this.posZ);
+            return true;
         }
 
-        return true;
+        return false;
     }
 
     @Override

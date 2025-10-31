@@ -443,22 +443,27 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	@Override
 	public boolean interactFirst(EntityPlayer entityplayer) {
 		ItemStack itemstack = entityplayer.inventory.getCurrentItem();
-		if (!worldObj.isRemote && ConfigHandler.CHUNK_LOADING && (this instanceof Locomotive) ) {
-			if (itemstack != null && itemstack.getItem() instanceof ItemChunkLoaderActivator) {
+		if (!worldObj.isRemote && ConfigHandler.CHUNK_LOADING && (this instanceof Locomotive) )
+		{
+			if (itemstack != null && itemstack.getItem() instanceof ItemChunkLoaderActivator)
+			{
 				this.playerEntity = entityplayer;
-				if (getFlag(7)) {
+				if (getFlag(7))
+				{
 					this.setFlag(7, false);
 					entityplayer.addChatMessage(new ChatComponentText("Stop loading chunks"));
 					ForgeChunkManager.releaseTicket(chunkTicket);
 					chunkTicket = null;
 				}
-				else if (!getFlag(7)) {
+				else if (!getFlag(7))
+				{
 					this.setFlag(7, true);
 					entityplayer.addChatMessage(new ChatComponentText("Start loading chunks"));
 				}
 				itemstack.damageItem(1, entityplayer);
 				return true;
-			} else if(lockThisCart(itemstack, entityplayer)) {
+			} else if(lockThisCart(itemstack, entityplayer))
+			{
 				return true;
 			}
 		}
