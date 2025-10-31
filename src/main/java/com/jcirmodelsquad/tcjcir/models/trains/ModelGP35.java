@@ -2067,7 +2067,8 @@ public class ModelGP35 extends ModelConverter //Same as Filename
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 26 || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 27
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 28|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 25
 				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 29|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 30
-			    || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 33|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 33) {
+			    || entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 33|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 33
+				|| entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 34) {
 				Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Black.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.37, -0.0, 0);//front & rear

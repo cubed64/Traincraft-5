@@ -2314,9 +2314,9 @@ public enum RenderEnum implements ITrainRenderRecord
 	CDCScaboose(CDCScaboose.class, new ModelCDCScaboose(),"CDCScaboose_", true, new float[]{0F, 0.1675F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	/**INTERURBAN AND STREETCAR **/
-	W_A11(ElectricW_A11.class, new ModelW_A11(), "W_A11_", true, new float[]{-1.25F, 0.12F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	W_A55(ElectricW_A55.class, new ModelW_A55(), "W_A55_", true, new float[]{-1.25F, 0.12F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	W_A55_Combine(ElectricW_A55_Combine.class, new ModelW_A55_Combine(), "W_A55_Combine_", true, new float[]{-1.25F, 0.12F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	W_A11(ElectricW_A11.class, new ModelW_A11(), "W_A11_", true, new float[]{-1.25F, 0.16F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	W_A55(ElectricW_A55.class, new ModelW_A55(), "W_A55_", true, new float[]{-1.25F, 0.16F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	W_A55_Combine(ElectricW_A55_Combine.class, new ModelW_A55_Combine(), "W_A55_Combine_", true, new float[]{-1.25F, 0.16F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	/**OTHER ROLLING SHIZZLE**/
 	BigMeme(BigMeme.class, new ModelBigMeme(),"bigmeme_", true, new float[]{-1F, 0.1875F, 0F}, new float[] { 180F, 180F, 0F }, null, "", 0, null, "", null, 0, false),

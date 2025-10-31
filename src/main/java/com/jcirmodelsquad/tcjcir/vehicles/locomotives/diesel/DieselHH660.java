@@ -38,9 +38,6 @@ public class DieselHH660 extends DieselTrain {
         InsertTexture(10, "SER");
 
     }
-    
-
-
 
     @Override
     public void updateRiderPosition() {
@@ -76,32 +73,13 @@ public class DieselHH660 extends DieselTrain {
         }
     }
 
-    
-
-    
-
-    
-
-
-
-
-
-
     @Override
     public String getInventoryName() {
         return "ALCO HH660";
     }
 
-
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
         return (1F);
     }
-
-
-    
-
-
-
-
 }

@@ -692,7 +692,7 @@ public class ModelW_A55_Combine extends ModelConverter//Same as Filename
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/W_A11_truck.png"));
 			GL11.glPushMatrix();
 			GL11.glRotatef(180, 0, 1, 0);
-			GL11.glTranslated(1.275, -0.03, 0);
+			GL11.glTranslated(1.275, -0.0, 0);
 			bogie1.render(entity, f, f1, f2, f3, f4, f5);//rear truck
 
 			GL11.glRotatef(180, 0, 1, 0);

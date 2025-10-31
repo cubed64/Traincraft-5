@@ -177,9 +177,9 @@ public class ComponentVillageTrainstation extends StructureVillagePieces.Village
 
 		if (structureboundingbox.isVecInside(j1, k1, l1)) {
 			int rD = random.nextInt(14);//bound is the next highest random number you CANT generate. EG: 11 entities, max bound 12
-			EntityRollingStock cart = new EntityCabooseLogging(world);
+			EntityRollingStock cart = new EntityCaboose(world);
 			if (rD == 0)
-				cart = new EntityCaboose(world);
+				cart = new EntityCabooseLogging(world);
 			if (rD == 1)
 				cart = new EntityCaboose3(world);
 			if (rD == 2)
@@ -208,6 +208,9 @@ public class ComponentVillageTrainstation extends StructureVillagePieces.Village
 			cart.setLocationAndAngles(j1 + 0.5D, k1, l1 + 0.5D, 90.0F, 0.0F);
 			cart.setTrainOwner("VillagerJoe");
 			cart.shouldChunkLoad=false;
+			if (rD == 0) {
+				cart.setColor(AbstractTrains.getColorFromString("Red"));
+			}
 			if (rD == 4) {
 				cart.setColor(AbstractTrains.getColorFromString("Blue"));
 			}
@@ -224,7 +227,7 @@ public class ComponentVillageTrainstation extends StructureVillagePieces.Village
 				cart.setColor(AbstractTrains.getColorFromString("Skin16"));
 			}
 			if (rD == 10) {
-				cart.setColor(AbstractTrains.getColorFromString("Blue"));
+				cart.setColor(AbstractTrains.getColorFromString("Red"));
 			}
 			if (rD == 11) {
 				cart.setColor(AbstractTrains.getColorFromString("Black"));
@@ -287,7 +290,7 @@ public class ComponentVillageTrainstation extends StructureVillagePieces.Village
 				cart.setColor(AbstractTrains.getColorFromString("Skin17"));
 			}
 			if (rD == 10) {
-				cart.setColor(AbstractTrains.getColorFromString("Blue"));
+				cart.setColor(AbstractTrains.getColorFromString("LightBlue"));
 			}
 			if (rD == 11) {
 				cart.setColor(AbstractTrains.getColorFromString("Black"));
