@@ -93,6 +93,39 @@ public class LockoutPermissionsUtil
         return "SYSTEM";
     }
 
+    public String[] FindGroupsUserIsMemberOf(UUID uuid, ArrayList<String> lockoutGroups)
+    {
+        File filePath = BuildUserFolderPath(uuid.toString());
+        if (filePath.exists() == false)
+        {
+            return new String[] {};
+        }
+
+        try (FileReader fileReader = new FileReader(BuildUserFolderPath(uuid.toString())))
+        {
+            JsonObject jsonObject = JsonParser.parse(fileReader).getAsJsonObject();
+            JsonArray array = jsonObject.get("groups").getAsJsonArray();
+
+            ArrayList<String> groupsUserIsPartOf = new ArrayList<>();
+            for(String lockoutGroup : lockoutGroups)
+            {
+                if (IsUserMemberOfGroup(array, lockoutGroup))
+                {
+                    groupsUserIsPartOf.add(lockoutGroup);
+                }
+            }
+
+            return groupsUserIsPartOf.toArray(new String[0]);
+        }
+        catch (Exception e)
+        {
+
+        }
+
+        return new String[] {};
+    }
+
+
     public boolean IsUserMemberOfGroup(UUID uuid, String lockoutGroup)
     {
         File filePath = BuildUserFolderPath(uuid.toString());

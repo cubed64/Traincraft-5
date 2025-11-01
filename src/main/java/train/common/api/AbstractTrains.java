@@ -197,7 +197,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 
 	public final boolean IsSkinLockedByLockout(int i)
 	{
-		return lockoutMap.get(i) != null;
+		return lockoutMap.containsKey(i);
 	}
 
 	@Override

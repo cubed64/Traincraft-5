@@ -15,6 +15,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
@@ -27,8 +28,11 @@ import train.common.library.*;
 import train.common.library.register.ITrainRecord;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
+import train.common.utils.lockout.ILockoutGroup;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public abstract class ItemAbstractRollingStock extends ItemMinecart implements IMinecart, IMinecartItem {
@@ -168,9 +172,12 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
         int meta = par3World.getBlockMetadata(par4, par5, par6);
         TileEntity tileentity = par3World.getTileEntity(par4, par5, par6);
         //System.out.println(meta);
-        if (par3World.isRemote) {
+        if (par3World.isRemote)
+        {
             return false;
         }
+
+
         if (tileentity != null && tileentity instanceof TileTCRail) {
             TileTCRail tile = (TileTCRail) tileentity;
             if (tile.getType().equals(EnumTracks.MEDIUM_STRAIGHT.getLabel())
@@ -238,17 +245,90 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
         //System.out.println(world!=null);
         ITrainRecord trainRecord = Traincraft.traincraftRegistry.getCurrentTrain(itemstack.getItem());
         EntityRollingStock rollingStock = (EntityRollingStock) Traincraft.traincraftRegistry.getEntity(trainRecord.getEntityClass(), world, i + 0.5F, j + 0.5F, k + 0.5F);
-        if (trainRecord.getColors() != null) {
-            if (rollingStock != null) {
+        boolean isPlacementWithSkinValid = false;
+        if (trainRecord.getColors() != null)
+        {
+            if (rollingStock != null)
+            {
                 //rollingStock.setColor(AbstractTrains.getColorFromString(train.getColors()[0]));
-                rollingStock.setColor((trainRecord.getColors()[0]));
+                ILockoutGroup lockoutGroup = rollingStock.lockoutMap.get(0);
+                if (rollingStock.IsSkinLockedByLockout(0))
+                {
+                    if (Traincraft.lockoutPermissionsUtil.IsUserMemberOfGroup(player.getUniqueID(), lockoutGroup.name()))
+                    {
+                        isPlacementWithSkinValid = true;
+                        rollingStock.setColor((trainRecord.getColors()[0]));
+                    }
+                    else
+                    {
+                        ArrayList<String> groupsToCheck = new ArrayList<>();
+                        for (ILockoutGroup group : rollingStock.lockoutMap.values())
+                        {
+                            if (groupsToCheck.contains(group.name()) == false)
+                            {
+                                groupsToCheck.add(group.name());
+                            }
+                        }
+
+
+                        for (int colorPos = 0; colorPos < trainRecord.getColors().length; colorPos++)
+                        {
+                            if (rollingStock.lockoutMap.containsKey(colorPos))
+                            {
+                                ILockoutGroup group = rollingStock.lockoutMap.get(colorPos);
+
+
+                                for (String groupPartOf : Traincraft.lockoutPermissionsUtil.FindGroupsUserIsMemberOf(player.getUniqueID(), groupsToCheck))
+                                {
+                                    if (group.equals(groupPartOf))
+                                    {
+                                        rollingStock.setColor((trainRecord.getColors()[colorPos]));
+                                        isPlacementWithSkinValid = true;
+                                        break;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                isPlacementWithSkinValid = true;
+                                rollingStock.setColor((trainRecord.getColors()[colorPos]));
+                                break;
+                            }
+                        }
+                    }
+                    //trainRecord.getColors()
+
+                    //for (rollingStock.lockoutMap.get())
+                }
+                else
+                {
+                    isPlacementWithSkinValid = true;
+                    rollingStock.setColor((trainRecord.getColors()[0]));
+                }
             }
         }
+        else
+        {
+            isPlacementWithSkinValid = true;
+        }
 
-        if (rollingStock != null) {
-            if (!world.isRemote) {
+        if (rollingStock != null)
+        {
+            if (!world.isRemote)
+            {
+                if (isPlacementWithSkinValid == false)
+                {
+                    player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "Lockout:" + EnumChatFormatting.GRAY + " Unable to place no public domain skins available."));
+                    rollingStock.setDead();
+                    return rollingStock;
+                }
 
-                if ((rollingStock instanceof SteamTrain && !ConfigHandler.ENABLE_STEAM) || (rollingStock instanceof ElectricTrain && !ConfigHandler.ENABLE_ELECTRIC) || (rollingStock instanceof DieselTrain && !ConfigHandler.ENABLE_DIESEL) || (rollingStock instanceof EntityTracksBuilder && !ConfigHandler.ENABLE_BUILDER) || (rollingStock instanceof Tender && !ConfigHandler.ENABLE_TENDER)) {
+                if ((rollingStock instanceof SteamTrain && !ConfigHandler.ENABLE_STEAM)
+                    || (rollingStock instanceof ElectricTrain && !ConfigHandler.ENABLE_ELECTRIC)
+                    || (rollingStock instanceof DieselTrain && !ConfigHandler.ENABLE_DIESEL)
+                    || (rollingStock instanceof EntityTracksBuilder && !ConfigHandler.ENABLE_BUILDER)
+                    || (rollingStock instanceof Tender && !ConfigHandler.ENABLE_TENDER))
+                {
                     if (player != null)
                         player.addChatMessage(new ChatComponentText("This type of train has been deactivated by the OP"));
                     rollingStock.setDead();
