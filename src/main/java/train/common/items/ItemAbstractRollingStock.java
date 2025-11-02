@@ -70,7 +70,8 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
     @SideOnly(Side.CLIENT)
     @Override
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
-        if (par1ItemStack.hasTagCompound()) {
+        if (par1ItemStack.hasTagCompound())
+        {
             NBTTagCompound var5 = par1ItemStack.getTagCompound();
             trainCreator = var5.getString("trainCreator");
             trainNote = var5.getString("trainNote");
@@ -89,10 +90,12 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
                 par3List.add("\u00a77" + "Notes: " + trainNote);
             }
         }
-        double mass = getMass();
-        int power = getMHP();
-        int maxSpeed = getMaxSpeed();
-        String[] additionnalInfo = getAdditionnalInfo();
+        ITrainRecord trainRecord = Traincraft.traincraftRegistry.getCurrentTrain(this);
+
+        double mass = trainRecord.getMass();
+        int power = trainRecord.getMHP();
+        int maxSpeed = trainRecord.getMaxSpeed();
+        String[] additionnalInfo = trainRecord.getAdditionalTooltip();
         if (getTrainType().length() > 0) {
             par3List.add("\u00a77" + "Type: " + getTrainType());
         }
@@ -108,6 +111,25 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
         if (getCargoCapacity() > 0) {
             par3List.add("\u00a77" + "Slots: " + getCargoCapacity());
         }
+
+        if (trainRecord.getTankCapacity() > 0)
+        {
+            String trainType = trainRecord.getTrainType().toLowerCase();
+
+            if (trainType.contains("tankcar"))
+            {
+                par3List.add("\u00a77" + "Capacity: " + trainRecord.getTankCapacity() + "mb.");
+            }
+            else if (trainType.contains("tender"))
+            {
+                par3List.add("\u00a77" + "Water capacity: " + trainRecord.getTankCapacity() + "mb.");
+            }
+            else if (trainType.contains("slug"))
+            {
+                par3List.add("\u00a77" + "Reduces train weight when fueled");
+            }
+        }
+
 
         if (additionnalInfo != null) {
             for (String info : additionnalInfo) {
@@ -142,19 +164,6 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
         ITrainRecord trainRecord = Traincraft.traincraftRegistry.getCurrentTrain(this);
 
         return trainRecord.getMaxSpeed();
-    }
-
-    public int getMHP() {
-        ITrainRecord trainRecord = Traincraft.traincraftRegistry.getCurrentTrain(this);
-
-        return trainRecord.getMHP();
-    }
-
-    public String[] getAdditionnalInfo()
-    {
-        ITrainRecord trainRecord = Traincraft.traincraftRegistry.getCurrentTrain(this);
-
-        return trainRecord.getAdditionalTooltip();
     }
 
     public int getCargoCapacity() {
@@ -730,6 +739,17 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
         return rollingStock;
     }
 
+    /**
+     *
+     * @param oldStack oldst ack
+     * @param train train
+     * @param trainID
+     * @param player player
+     * @param creator creator
+     * @param color
+     * @param note
+     * @return
+     */
     public static ItemStack setPersistentData(@Nullable ItemStack oldStack, @Nullable AbstractTrains train, @Nullable Integer trainID, @Nullable String player, @Nullable String creator, int color, String note) {
 
 		ItemStack stack = oldStack;
