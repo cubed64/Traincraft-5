@@ -647,138 +647,48 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		return acceptsOverlayTextures;
 	}
 
-	public static String getColorAsString(int i) {
-		switch (i) {
-		case 0:
-			return "Black";
-		case 1:
-			return "Red";
-		case 2:
-			return "Green";
-		case 3:
-			return "Brown";
-		case 4:
-			return "Blue";
-		case 5:
-			return "Purple";
-		case 6:
-			return "Cyan";
-		case 7:
-			return "LightGrey";
-		case 8:
-			return "Grey";
-		case 13:
-			return "Magenta";
-		case 10:
-			return "Lime";
-		case 11:
-			return "Yellow";
-		case 12:
-			return "LightBlue";
-		case 9:
-			return "Pink";
-		case 14:
-			return "Orange";
-		case 15:
-			return "White";
-		case 16:
-			return "Skin16";
-		case 17:
-			return "Skin17";
-		case 18:
-			return "Skin18";
-		case 19:
-			return "Skin19";
-		case 20:
-			return "Skin20";
-		case 21:
-			return "Skin21";
-		case 22:
-			return "Skin22";
-		case 23:
-			return "Skin23";
-		case 24:
-			return "Skin24";
-		case 25:
-			return "Skin25";
-		case 26:
-			return "Skin26";
-		case 27:
-			return "Skin27";
-		case 28:
-			return "Skin28";
-		case 29:
-			return "Skin29";
-		case 30:
-			return "Skin30";
-		case 31:
-			return "Skin31";
-		case 32:
-			return "Skin32";
-		case 33:
-			return "Skin33";
-		case 34:
-			return "Skin34";
-		case 35:
-			return "Skin35";
-		case 36:
-			return "Skin36";
-		case 37:
-			return "Skin37";
-		case 38:
-			return "Skin38";
-		case 39:
-			return "Skin39";
-		case 40:
-			return "Skin40";
-		case 41:
-			return "Skin41";
-		case 42:
-			return "Skin42";
-		case 43:
-			return "Skin43";
-		case 44:
-			return "Skin44";
-		case 45:
-			return "Skin45";
-		case 46:
-			return "Skin46";
-		case 47:
-			return "Skin47";
-		case 48:
-			return "Skin48";
-		case 49:
-			return "Skin49";
-		case 50:
-			return "Skin50";
-		case 51:
-			return "Skin51";
-		case 52:
-			return "Skin52";
-		case 53:
-			return "Skin53";
-		case 54:
-			return "Skin54";
-		case 55:
-			return "Skin55";
-		case 56:
-			return "Skin56";
-		case 57:
-			return "Skin57";
-		case 58:
-			return "Skin58";
-		case 59:
-			return "Skin59";
-		case 60:
-			return "Skin60";
-		case 61:
-			return "Skin61";
-		case 100:
-			return "Empty";
-		case 101:
-			return "Full";
-		default:
-			return "" + i;
+	public static String getColorAsString(int i)
+	{
+		switch (i)
+		{
+			case 0:
+				return "Black";
+			case 1:
+				return "Red";
+			case 2:
+				return "Green";
+			case 3:
+				return "Brown";
+			case 4:
+				return "Blue";
+			case 5:
+				return "Purple";
+			case 6:
+				return "Cyan";
+			case 7:
+				return "LightGrey";
+			case 8:
+				return "Grey";
+			case 13:
+				return "Magenta";
+			case 10:
+				return "Lime";
+			case 11:
+				return "Yellow";
+			case 12:
+				return "LightBlue";
+			case 9:
+				return "Pink";
+			case 14:
+				return "Orange";
+			case 15:
+				return "White";
+			case 100:
+				return "Empty";
+			case 101:
+				return "Full";
+			default:
+				return "Skin" + i;
 		}
 	}
 
@@ -787,71 +697,59 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		return getColorAsString(getColor());
 	}
 
-	public static int getColorFromString(String color) {
-		if (color.equals("Black")) return 0;
-		if (color.equals("Red")) return 1;
-		if (color.equals("Green")) return 2;
-		if (color.equals("Brown")) return 3;
-		if (color.equals("Blue")) return 4;
-		if (color.equals("Purple")) return 5;
-		if (color.equals("Cyan")) return 6;
-		if (color.equals("LightGrey")) return 7;
-		if (color.equals("Grey")) return 8;
-		if (color.equals("Magenta")) return 13;
-		if (color.equals("Lime")) return 10;
-		if (color.equals("Yellow")) return 11;
-		if (color.equals("LightBlue")) return 12;
-		if (color.equals("Pink")) return 9;
-		if (color.equals("Orange")) return 14;
-		if (color.equals("White")) return 15;
-		if (color.equals("Skin16")) return 16;
-		if (color.equals("Skin17")) return 17;
-		if (color.equals("Skin18")) return 18;
-		if (color.equals("Skin19")) return 19;
-		if (color.equals("Skin20")) return 20;
-		if (color.equals("Skin21")) return 21;
-		if (color.equals("Skin22")) return 22;
-		if (color.equals("Skin23")) return 23;
-		if (color.equals("Skin24")) return 24;
-		if (color.equals("Skin25")) return 25;
-		if (color.equals("Skin26")) return 26;
-		if (color.equals("Skin27")) return 27;
-		if (color.equals("Skin28")) return 28;
-		if (color.equals("Skin29")) return 29;
-		if (color.equals("Skin30")) return 30;
-		if (color.equals("Skin31")) return 31;
-		if (color.equals("Skin32")) return 32;
-		if (color.equals("Skin33")) return 33;
-		if (color.equals("Skin34")) return 34;
-		if (color.equals("Skin35")) return 35;
-		if (color.equals("Skin36")) return 36;
-		if (color.equals("Skin37")) return 37;
-		if (color.equals("Skin38")) return 38;
-		if (color.equals("Skin39")) return 39;
-		if (color.equals("Skin40")) return 40;
-		if (color.equals("Skin41")) return 41;
-		if (color.equals("Skin42")) return 42;
-		if (color.equals("Skin43")) return 43;
-		if (color.equals("Skin44")) return 44;
-		if (color.equals("Skin45")) return 45;
-		if (color.equals("Skin46")) return 46;
-		if (color.equals("Skin47")) return 47;
-		if (color.equals("Skin48")) return 48;
-		if (color.equals("Skin49")) return 49;
-		if (color.equals("Skin50")) return 50;
-		if (color.equals("Skin51")) return 51;
-		if (color.equals("Skin52")) return 52;
-		if (color.equals("Skin53")) return 53;
-		if (color.equals("Skin54")) return 54;
-		if (color.equals("Skin55")) return 55;
-		if (color.equals("Skin56")) return 56;
-		if (color.equals("Skin57")) return 57;
-		if (color.equals("Skin58")) return 58;
-		if (color.equals("Skin59")) return 59;
-		if (color.equals("Skin60")) return 60;
-		if (color.equals("Skin61")) return 61;
-		if (color.equals("Empty")) return 100;
-		if (color.equals("Full")) return 101;
+	public static int getColorFromString(String color)
+	{
+		switch (color)
+		{
+			case "Black":
+				return 0;
+			case "Red":
+				return 1;
+			case "Green":
+				return 2;
+			case "Brown":
+				return 3;
+			case "Blue":
+				return 4;
+			case "Purple":
+				return 5;
+			case "Cyan":
+				return 6;
+			case "LightGrey":
+				return 7;
+			case "Grey":
+				return 8;
+			case "Magenta":
+				return 13;
+			case "Lime":
+				return 10;
+			case "Yellow":
+				return 11;
+			case "LightBlue":
+				return 12;
+			case "Pink":
+				return 9;
+			case "Orange":
+				return 14;
+			case "White":
+				return 15;
+			default:
+			{
+				if (color.startsWith("Skin"))
+				{
+					return Integer.parseInt(color.substring(4));
+				}
+			}
+		}
+
+		if (color.equals("Empty"))
+		{
+			return 100;
+		}
+		if (color.equals("Full"))
+		{
+			return 101;
+		}
 		return -1;
 	}
 

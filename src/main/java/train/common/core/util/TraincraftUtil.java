@@ -114,151 +114,58 @@ public class TraincraftUtil{
         }
     }
 
-    public static int getByteFromColor(String c){
-        if(c.equals("Black")){
-            return 0;
-        } else if (c.equals("Red")){
-            return 1;
-        } else if(c.equals("Green")){
-            return 2;
-        } else if(c.equals("Brown")){
-            return 3;
-        } else if(c.equals("Blue")){
-            return 4;
-        } else if(c.equals("Purple")){
-            return 5;
-        } else if(c.equals("Cyan")){
-            return 6;
-        } else if(c.equals("LightGrey")){
-            return 7;
-        } else if(c.equals("Grey")){
-            return 8;
-        } else if(c.equals("Magenta")){
-            return 13;
-        } else if(c.equals("Lime")){
-            return 10;
-        } else if(c.equals("Yellow")){
-            return 11;
-        } else if(c.equals("LightBlue")){
-            return 12;
-        } else if(c.equals("Pink")){
-            return 9;
-        } else if(c.equals("Orange")){
-            return 14;
-        } else if(c.equals("White")) {
-            return 15;
-        } else if (c.equals("Skin16")) {
-            return 16;
-        } else if (c.equals("Skin17")) {
-            return 17;
-        } else if (c.equals("Skin18")) {
-            return 18;
-        } else if (c.equals("Skin19")) {
-            return 19;
-        } else if (c.equals("Skin20")) {
-            return 20;
-        } else if (c.equals("Skin21")) {
-            return 21;
-        } else if (c.equals("Skin22")) {
-            return 22;
-        } else if (c.equals("Skin23")) {
-            return 23;
-        } else if (c.equals("Skin24")) {
-            return 24;
-        } else if (c.equals("Skin25")) {
-            return 25;
-        } else if (c.equals("Skin26")) {
-            return 26;
-        } else if (c.equals("Skin27")) {
-            return 27;
-        } else if (c.equals("Skin28")) {
-            return 28;
-        } else if (c.equals("Skin29")) {
-            return 29;
-        } else if (c.equals("Skin30")) {
-            return 30;
-        } else if (c.equals("Skin31")) {
-            return 31;
-        } else if (c.equals("Skin32")) {
-            return 32;
-        } else if (c.equals("Skin33")) {
-            return 33;
-        } else if (c.equals("Skin34")) {
-            return 34;
-        } else if (c.equals("Skin35")) {
-            return 35;
-        } else if (c.equals("Skin36")) {
-            return 36;
-        } else if (c.equals("Skin37")) {
-            return 37;
-        } else if (c.equals("Skin38")) {
-            return 38;
-        } else if (c.equals("Skin39")) {
-            return 39;
-        } else if (c.equals("Skin40")) {
-            return 40;
-        } else if (c.equals("Skin41")) {
-            return 41;
-        } else if (c.equals("Skin42")) {
-            return 42;
-        } else if (c.equals("Skin43")) {
-            return 43;
-        } else if (c.equals("Skin44")) {
-            return 44;
-        } else if (c.equals("Skin45")) {
-            return 45;
-        } else if (c.equals("Skin46")) {
-            return 46;
-        } else if (c.equals("Skin47")) {
-            return 47;
-        } else if (c.equals("Skin48")) {
-            return 48;
-        } else if (c.equals("Skin49")) {
-            return 49;
-        } else if (c.equals("Skin50")) {
-            return 50;
-        } else if (c.equals("Skin51")) {
-            return 51;
-        } else if (c.equals("Skin52")) {
-            return 52;
-        } else if (c.equals("Skin53")) {
-            return 53;
-        } else if (c.equals("Skin54")) {
-            return 54;
-        } else if (c.equals("Skin55")) {
-            return 55;
-        } else if (c.equals("Skin56")) {
-            return 56;
-        } else if (c.equals("Skin57")) {
-            return 57;
-        } else if (c.equals("Skin58")) {
-            return 58;
-        } else if (c.equals("Skin59")) {
-            return 59;
-        } else if (c.equals("Skin60")) {
-            return 60;
-        } else if (c.equals("Skin61")) {
-            return 61;
-        } else if (c.equals("Skin62")) {
-            return 62;
-        } else if (c.equals("Skin63")) {
-            return 63;
-        } else if (c.equals("Skin64")) {
-            return 64;
-        } else if (c.equals("Skin65")) {
-            return 65;
-        } else if (c.equals("Skin66")) {
-            return 66;
-        } else if (c.equals("Skin67")) {
-            return 67;
-        } else if (c.equals("Skin68")) {
-            return 68;
-        } else if (c.equals("Skin69")) {
-            return 69;
-        } else if(c.equals("Full")){
-            return 101;
-        } else if (c.equals("Empty")){
+    public static int getByteFromColor(String color)
+    {
+        switch (color)
+        {
+            case "Black":
+                return 0;
+            case "Red":
+                return 1;
+            case "Green":
+                return 2;
+            case "Brown":
+                return 3;
+            case "Blue":
+                return 4;
+            case "Purple":
+                return 5;
+            case "Cyan":
+                return 6;
+            case "LightGrey":
+                return 7;
+            case "Grey":
+                return 8;
+            case "Magenta":
+                return 13;
+            case "Lime":
+                return 10;
+            case "Yellow":
+                return 11;
+            case "LightBlue":
+                return 12;
+            case "Pink":
+                return 9;
+            case "Orange":
+                return 14;
+            case "White":
+                return 15;
+            default:
+            {
+                if (color.startsWith("Skin"))
+                {
+                    return Integer.parseInt(color.substring(4));
+                }
+            }
+        }
+
+        if (color.equals("Empty"))
+        {
             return 100;
+        }
+        if (color.equals("Full"))
+        {
+            return 101;
         }
         return 0;
     }
