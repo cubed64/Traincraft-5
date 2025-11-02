@@ -861,7 +861,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			itemdropped=true;
 			for (ItemStack item : getItemsDropped()) {
 				if (item.getItem() instanceof ItemAbstractRollingStock){
-					ItemStack stack = ItemAbstractRollingStock.setPersistentData(item,this,this.getUniqueTrainID(),trainCreator, trainOwner, getColor(), trainNote);
+					ItemStack stack = ItemAbstractRollingStock.setPersistentData(item,this,this.getUniqueTrainID(), trainOwner, trainCreator, getColor(), trainNote);
 					exportTrustedListToNBT(stack != null ? stack.getTagCompound() : null);
 					if (cargoManager!= null && cargoManager.getSelectedCargo() != 0 && stack != null)
 					{

@@ -2549,7 +2549,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		List<ItemStack> items = new ArrayList<ItemStack>();
 
 		ITrainRecord record = Traincraft.traincraftRegistry.getTrainRecord(getClass());
-		items.add(ItemAbstractRollingStock.setPersistentData(new ItemStack(record.getItem()), this,this.getUniqueTrainID(),trainCreator, trainOwner, getColor(), trainNote));
+		items.add(ItemAbstractRollingStock.setPersistentData(new ItemStack(record.getItem()), this, this.getUniqueTrainID(), trainOwner, trainCreator, getColor(), trainNote));
 
 		return items;
 	}
