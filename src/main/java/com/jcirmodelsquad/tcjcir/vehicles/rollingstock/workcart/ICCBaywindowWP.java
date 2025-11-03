@@ -23,7 +23,6 @@ public class ICCBaywindowWP extends AbstractWorkCart
         InsertTexture(8, "DLMR");
         InsertTexture(9, "DLMR (but somebody spilled the ketchup)");
         InsertTexture(10, "AGW");
-        initCabooseWorkCart();
     }
 
     

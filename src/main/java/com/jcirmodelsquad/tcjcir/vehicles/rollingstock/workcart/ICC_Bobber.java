@@ -12,7 +12,6 @@ public class ICC_Bobber extends AbstractWorkCart
         InsertTexture(1, "McCloud, As Delivered");
         InsertTexture(2, "Blank");
         InsertTexture(3, "Magnolia Acres; Coffeeville");
-        initCabooseWorkCart();
     }
 
     
