@@ -11,6 +11,7 @@ import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.SteamTrain;
 import train.common.core.util.TraincraftUtil;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
@@ -27,7 +28,7 @@ public class SteamAlco0_6_0T extends SteamTrain {
 		
 		InsertTexture(0, "Generic");
 		InsertTexture(1, "CDCS");
-		InsertTexture(2, "SPR");
+		InsertTexture(2, "SPR", LockoutGroup.SPR);
 	}
 
 	@Override

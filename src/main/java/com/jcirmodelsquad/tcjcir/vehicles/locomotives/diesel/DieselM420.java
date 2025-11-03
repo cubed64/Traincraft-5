@@ -30,7 +30,7 @@ public class DieselM420 extends DieselTrain {
         InsertTexture(1, "COW (Moo)");
         InsertTexture(2, "FNCC (KIT-L, Non Canon)", LockoutGroup.FNCC);
         InsertTexture(3, "the demon of babylon disguises himself as the righteous");
-        InsertTexture(4, "SPR (M424)");
+        InsertTexture(4, "SPR (M424)", LockoutGroup.SPR);
     }
 
 
