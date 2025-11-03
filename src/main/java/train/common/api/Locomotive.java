@@ -721,7 +721,8 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
     }
 
-    public void soundBell3() {
+    public void soundBell3()
+    {
         if (!getSoundRecord().getHornString().equals("") && !getSoundRecord().getBellString().equals(""))
         {
 
@@ -736,7 +737,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     {
         SoundRecord trainSoundRecord = getSoundRecord();
 
-        if (!trainSoundRecord.getHornString().equals("") && whistleDelay == 0)
+        if (trainSoundRecord != null && !trainSoundRecord.getHornString().equals("") && whistleDelay == 0)
         {
             if (trainSoundRecord.getHorns() != null)
             {
@@ -750,8 +751,15 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                     worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + trainSoundRecord.getHorns()[this.acceptedColors.indexOf(this.getColor())], trainSoundRecord.getHornVolume(), 1.0F);
                 }
             }
-            worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + trainSoundRecord.getHornString(), trainSoundRecord.getHornVolume(), 1.0F);
+            else
+            {
+                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + trainSoundRecord.getHornString(), trainSoundRecord.getHornVolume(), 1.0F);
+            }
             whistleDelay = 65;
+        }
+        else
+        {
+            worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "oh_no_shits", trainSoundRecord.getHornVolume(), 1.0F);
         }
         List entities = worldObj.getEntitiesWithinAABB(EntityAnimal.class, AxisAlignedBB.getBoundingBox(
                 this.posX - 20, this.posY - 5, this.posZ - 20,

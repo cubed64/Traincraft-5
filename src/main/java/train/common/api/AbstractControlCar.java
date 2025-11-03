@@ -190,10 +190,14 @@ public abstract class AbstractControlCar extends EntityRollingStock implements I
 
     public void soundHorn()
     {
-
-        if (whistleDelay == 0) {
-            worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + getSoundRecord().getHornString(), getSoundRecord().getHornVolume(), 1.0F);
-            whistleDelay = 65;
+        SoundRecord trainSoundRecord = getSoundRecord();
+        if (trainSoundRecord != null && !trainSoundRecord.getHornString().equals(""))
+        {
+            if (whistleDelay == 0)
+            {
+                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + trainSoundRecord.getHornString(), trainSoundRecord.getHornVolume(), 1.0F);
+                whistleDelay = 65;
+            }
         }
 
         List entities = worldObj.getEntitiesWithinAABB(EntityAnimal.class, AxisAlignedBB.getBoundingBox(
