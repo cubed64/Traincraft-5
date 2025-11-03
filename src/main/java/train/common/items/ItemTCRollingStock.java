@@ -66,6 +66,19 @@ public class ItemTCRollingStock extends ItemAbstractRollingStock
     }
 
     @Override
+    public String GetContentPackName()
+    {
+        if (getCreativeTab() == Traincraft.tcHeritageTab)
+        {
+            return "Heritage";
+        }
+        else
+        {
+            return "B.A.P";
+        }
+    }
+
+    @Override
     public String GetTexturePath()
     {
         return Info.modID.toLowerCase() + ":trains/" + this.iconName;

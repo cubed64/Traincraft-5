@@ -69,7 +69,9 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
 
     @SideOnly(Side.CLIENT)
     @Override
-    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
+    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
+    {
+        par3List.add("\u00a77" + "Pack: " + GetContentPackName());
         if (par1ItemStack.hasTagCompound())
         {
             NBTTagCompound var5 = par1ItemStack.getTagCompound();
@@ -96,7 +98,9 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
         int power = trainRecord.getMHP();
         int maxSpeed = trainRecord.getMaxSpeed();
         String[] additionnalInfo = trainRecord.getAdditionalTooltip();
-        if (getTrainType().length() > 0) {
+
+        if (getTrainType().length() > 0)
+        {
             par3List.add("\u00a77" + "Type: " + getTrainType());
         }
         if (power > 0) {
@@ -140,6 +144,8 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
 
         //par3List.add("\u00a77" + "Notes: "+getCargoCapacity());
     }
+
+    public abstract String GetContentPackName();
 
     @Override
     public EnumRarity getRarity(ItemStack par1ItemStack) {
