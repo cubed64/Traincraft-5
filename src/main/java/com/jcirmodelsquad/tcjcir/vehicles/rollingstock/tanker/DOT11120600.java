@@ -8,16 +8,21 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
+import train.common.api.AbstractStandardTankerCar;
 import train.common.api.LiquidTank;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
-public class DOT11120600 extends LiquidTank {
+public class DOT11120600 extends AbstractStandardTankerCar {
     public int freightInventorySize;
 
     public DOT11120600(World world) {
         super(world, EnumTrains.DOT11120600.getTankCapacity());
-        initFreightWater();
+    }
+
+    @Override
+    public void setupTextureDescription()
+    {
         InsertTexture(0, "Generic");
         InsertTexture(1, "PROX");
         InsertTexture(2, "CCOX/ECYX");
@@ -25,82 +30,9 @@ public class DOT11120600 extends LiquidTank {
         InsertTexture(4, "AMPX");
     }
 
-    
-
-    public void initFreightWater() {
-        freightInventorySize = 2;
-        cargoItems = new ItemStack[freightInventorySize];
-    }
-
-    @Override
-    public void setDead() {
-        super.setDead();
-        isDead = true;
-    }
-
-    @Override
-    public void onUpdate() {
-        super.onUpdate();
-        checkInvent(cargoItems[0]);
-    }
-
-    @Override
-    protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {
-        super.writeEntityToNBT(nbttagcompound);
-        NBTTagList nbttaglist = new NBTTagList();
-        for (int i = 0; i < cargoItems.length; i++) {
-            if (cargoItems[i] != null) {
-                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-                nbttagcompound1.setByte("Slot", (byte) i);
-                cargoItems[i].writeToNBT(nbttagcompound1);
-                nbttaglist.appendTag(nbttagcompound1);
-            }
-        }
-    }
-
-    @Override
-    protected void readEntityFromNBT(NBTTagCompound nbttagcompound) {
-        super.readEntityFromNBT(nbttagcompound);
-
-        NBTTagList nbttaglist = nbttagcompound.getTagList("Items", Constants.NBT.TAG_COMPOUND);
-        cargoItems = new ItemStack[getSizeInventory()];
-        for (int i = 0; i < nbttaglist.tagCount(); i++) {
-            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
-            int j = nbttagcompound1.getByte("Slot") & 0xff;
-            if (j >= 0 && j < cargoItems.length) {
-                cargoItems[j] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
-            }
-        }
-    }
-
     @Override
     public String getInventoryName() {
         return "20,600 Gallon Tank car";
-    }
-
-    @Override
-    public int getSizeInventory() {
-        return freightInventorySize;
-    }
-
-    @Override
-    public boolean interactFirst(EntityPlayer entityplayer) {
-        if ((super.interactFirst(entityplayer))) {
-            return false;
-        }
-        if (!this.worldObj.isRemote) {
-            entityplayer.openGui(Traincraft.instance, GuiIDs.LIQUID, worldObj, this.getEntityId(), -1, (int) this.posZ);
-        }
-        return true;
-    }
-    @Override
-    public boolean isUseableByPlayer(EntityPlayer entityplayer) {
-        return !isDead && entityplayer.getDistanceSqToEntity(this) <= 64D;
-    }
-
-    @Override
-    public boolean isStorageCart() {
-        return true;
     }
 
     @Override
