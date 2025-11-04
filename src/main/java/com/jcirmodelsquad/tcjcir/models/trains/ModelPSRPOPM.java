@@ -366,7 +366,7 @@ public class ModelPSRPOPM extends ModelConverter //Same as Filename
 		bodyModel[324] = new ModelRendererTurbo(this, 11, 182, textureX, textureY); // Box 176
 		bodyModel[325] = new ModelRendererTurbo(this, 1, 184, textureX, textureY); // Box 128
 		bodyModel[326] = new ModelRendererTurbo(this, 15, 207, textureX, textureY,"cull"); // Box 401 cull
-		bodyModel[327] = new ModelRendererTurbo(this, 16, 219, textureX, textureY,"glow"); // Box 38 glow
+		bodyModel[327] = new ModelRendererTurbo(this, 16, 218, textureX, textureY,"glow"); // Box 38 glow
 		bodyModel[328] = new ModelRendererTurbo(this, 37, 222, textureX, textureY); // Box 38
 		bodyModel[329] = new ModelRendererTurbo(this, 61, 213, textureX, textureY); // Box 38
 		bodyModel[330] = new ModelRendererTurbo(this, 44, 210, textureX, textureY); // Box 377
