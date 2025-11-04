@@ -6,7 +6,7 @@
 
 ### On top of all the new BAP rollingstock, it adds things like:
 
-- Paintbrush Item & unlimited* textures
+- Paintbrush Item & unlimited textures
 - Functional Headlights, Ditchlights, Beacon lights, ect
 - Handbrake for railcars
 - Notebox on cars and locomotives (useful for having car numbers for OPS)
@@ -17,8 +17,6 @@
 - Functional Intermodal Containers (soonTM)
 - Shift right click to fill and empty locomotives with fuel
 - Pull locomotives dead-in-tow
-
-*current max cap is ~55 skins per entity, but it can be increased as needed.
 
 ## Extending a grand Thank you for the folks whom have contributed features and code (and overall just time and effort):
 - Bidahochi
