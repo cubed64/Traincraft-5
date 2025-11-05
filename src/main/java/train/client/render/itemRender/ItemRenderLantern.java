@@ -1,18 +1,18 @@
-package train.client.render;
+package train.client.render.itemRender;
 
+import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
 import org.lwjgl.opengl.GL11;
-import tmt.Tessellator;
-import train.client.render.models.blocks.Crossings.ModelStandardCrossingArm;
+import train.client.render.models.blocks.ModelLantern;
 import train.common.library.Info;
 
-public class ItemRenderStandardCrossingArm implements IItemRenderer {
-	private static final ModelStandardCrossingArm modeSwitch = new ModelStandardCrossingArm();
-	private static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "Crossings/StandardOff.png");
+public class ItemRenderLantern implements IItemRenderer {
+	private static final ModelLantern modelLantern= new ModelLantern();
+	private static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation,Info.modelTexPrefix + "lantern_uv_draw_2.png");
 
-	public ItemRenderStandardCrossingArm() {
+	public ItemRenderLantern() {
 	}
 
 	@Override
@@ -29,19 +29,19 @@ public class ItemRenderStandardCrossingArm implements IItemRenderer {
 	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
 		switch (type) {
 		case ENTITY: {
-			renderSwitch(0f, 0f, 0f, 1f);
+			renderLantern(0f, 0f, 0f, 1f);
 			return;
 		}
 		case EQUIPPED: {
-			renderSwitch(0.6f, 0.25f, 1f, 1f);
+			renderLantern(0.2f, 1f, 1f, 1f);
 			return;
 		}
 		case EQUIPPED_FIRST_PERSON: {
-			renderSwitch(0.2f, 0.25f, 1f, 0.7f);
+			renderLantern(0.2f, 1f, 1f, 1f);
 			return;
 		}
 		case INVENTORY: {
-			renderSwitch(0f, -0.7f, 0f, 0.5f);
+			renderLantern(0f, 0f, 0f, 0.7f);
 			return;
 		}
 		default:
@@ -49,18 +49,20 @@ public class ItemRenderStandardCrossingArm implements IItemRenderer {
 		}
 	}
 
-	private void renderSwitch(float x, float y, float z, float scale) {
+	private void renderLantern(float x, float y, float z, float scale) {
 		GL11.glPushMatrix();
 		GL11.glDisable(GL11.GL_LIGHTING);
 
 		GL11.glTranslatef(x, y, z);
 		GL11.glScalef(scale, scale, scale);
-		GL11.glRotated(180,0,0,1);
-		GL11.glRotated(180,0,1,0);
 
-		Tessellator.bindTexture(texture);
+		tmt.Tessellator.bindTexture(texture);
+		float f2 = (float) (0x4f4e4a >> 16 & 255) / 255.0F;
+		float f3 = (float) (0x4f4e4a >> 8 & 255) / 255.0F;
+		float f4 = (float) (0x4f4e4a & 255) / 255.0F;
+		GL11.glColor3f(f2, f3, f4);
 
-		modeSwitch.render(null,0,0,0,0,0,0.0625f);
+		modelLantern.render();
 
 		GL11.glEnable(GL11.GL_LIGHTING);
 		GL11.glPopMatrix();

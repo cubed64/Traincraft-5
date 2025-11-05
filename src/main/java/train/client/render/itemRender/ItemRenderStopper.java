@@ -1,27 +1,25 @@
 /*******************************************************************************
- * Copyright (c) 2013 Spitfire4466. All rights reserved.
+ * Copyright (c) 2012 Mrbrutal. All rights reserved.
  * 
  * @name TrainCraft
- * @author Spitfire4466
+ * @author Mrbrutal
  ******************************************************************************/
 
-package train.client.render;
+package train.client.render.itemRender;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
 import org.lwjgl.opengl.GL11;
-import train.client.render.models.blocks.ModelGeneratorDiesel;
+import train.client.render.models.blocks.ModelStopper;
 import train.common.library.Info;
 
-public class ItemRenderGeneratorDiesel implements IItemRenderer {
+public class ItemRenderStopper implements IItemRenderer {
+	private static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation,Info.modelTexPrefix + "buffer.png");
+	private static final ModelStopper stopper = new ModelStopper(1F);
 
-	private static final ModelGeneratorDiesel generator = new ModelGeneratorDiesel(1F);
-	private static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation,Info.modelTexPrefix + "generator_diesel.png");
-
-	public ItemRenderGeneratorDiesel() {
-
+	public ItemRenderStopper() {
 	}
 
 	@Override
@@ -38,19 +36,19 @@ public class ItemRenderGeneratorDiesel implements IItemRenderer {
 	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
 		switch (type) {
 		case ENTITY: {
-			renderGenerator(0.0F, 0F, 0.0F);
+			renderStopper(0.0F, 0F, 0.0F, 0.0F);
 			break;
 		}
 		case EQUIPPED: {
-			renderGenerator(0F, 0.1F, 0F);
+			renderStopper(0F, 0.4F, 0F, 180.0F);
 			break;
 		}
 		case EQUIPPED_FIRST_PERSON: {
-			renderGenerator(0F, 0.1F, 0F);
+			renderStopper(0F, 0.4F, 0F, 180.0F);
 			return;
 		}
 		case INVENTORY: {
-			renderGenerator(0.5F, -0.1F, 0.5F);
+			renderStopper(1F, 0.65F, 1F, 0.0F);
 			break;
 		}
 		default:
@@ -58,12 +56,12 @@ public class ItemRenderGeneratorDiesel implements IItemRenderer {
 		}
 	}
 
-	private void renderGenerator(float f, float g, float h) {
+	private void renderStopper(float f, float g, float h, float rotation) {
 		tmt.Tessellator.bindTexture(texture);
-		GL11.glPushMatrix();
-		GL11.glTranslatef(f, g, h);
-		GL11.glScalef(0.7F, 0.7F, 0.7F);
-		generator.render2(0.0625F);
-		GL11.glPopMatrix();
+		GL11.glPushMatrix(); //start
+		GL11.glTranslatef(f, g, h); //size
+		GL11.glRotatef(rotation, f, g, h);
+		stopper.render2(0.0625F);
+		GL11.glPopMatrix(); //end
 	}
 }

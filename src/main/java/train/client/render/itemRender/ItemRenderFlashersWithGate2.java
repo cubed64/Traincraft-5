@@ -1,18 +1,18 @@
-package train.client.render;
+package train.client.render.itemRender;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
 import org.lwjgl.opengl.GL11;
 import tmt.Tessellator;
-import train.client.render.models.blocks.Crossings.ModelCrossingBase;
+import train.client.render.models.blocks.Crossings.ModelFlashersWithGate2;
 import train.common.library.Info;
 
-public class ItemRenderCrossingBase implements IItemRenderer {
-	private static final ModelCrossingBase modeSwitch = new ModelCrossingBase();
+public class ItemRenderFlashersWithGate2 implements IItemRenderer {
+	private static final ModelFlashersWithGate2 modeSwitch = new ModelFlashersWithGate2();
 	private static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "Crossings/StandardOff.png");
 
-	public ItemRenderCrossingBase() {
+	public ItemRenderFlashersWithGate2() {
 	}
 
 	@Override

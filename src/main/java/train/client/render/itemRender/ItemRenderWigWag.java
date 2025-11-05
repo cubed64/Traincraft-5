@@ -1,18 +1,18 @@
-package train.client.render;
+package train.client.render.itemRender;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
 import org.lwjgl.opengl.GL11;
 import tmt.Tessellator;
-import train.client.render.models.ModelSwitchStandOn;
+import train.client.render.models.blocks.Crossings.ModelWigWag;
 import train.common.library.Info;
 
-public class ItemRenderSwitchStand implements IItemRenderer {
-	private static final ModelSwitchStandOn modeSwitch = new ModelSwitchStandOn();
-	private static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation,Info.modelTexPrefix + "switchStand_uv_draw_1.png");
+public class ItemRenderWigWag implements IItemRenderer {
+	private static final ModelWigWag modeSwitch = new ModelWigWag();
+	private static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "Crossings/WigWag/WigWagCrossingOff.png");
 
-	public ItemRenderSwitchStand() {
+	public ItemRenderWigWag() {
 	}
 
 	@Override
@@ -33,15 +33,15 @@ public class ItemRenderSwitchStand implements IItemRenderer {
 			return;
 		}
 		case EQUIPPED: {
-			renderSwitch(0.2f, 1f, 1f, 1f);
+			renderSwitch(0.6f, 0.25f, 1f, 1f);
 			return;
 		}
 		case EQUIPPED_FIRST_PERSON: {
-			renderSwitch(0.2f, 1f, 1f, 1f);
+			renderSwitch(0.2f, 0.25f, 1f, 0.7f);
 			return;
 		}
 		case INVENTORY: {
-			renderSwitch(0f, 0f, 0f, 0.7f);
+			renderSwitch(0f, -0.7f, 0f, 0.5f);
 			return;
 		}
 		default:
@@ -53,10 +53,10 @@ public class ItemRenderSwitchStand implements IItemRenderer {
 		GL11.glPushMatrix();
 		GL11.glDisable(GL11.GL_LIGHTING);
 
-		GL11.glTranslatef(x, y, z);
+		GL11.glTranslatef(x, y+.2f, z);
 		GL11.glScalef(scale, scale, scale);
 		GL11.glRotated(180,0,0,1);
-		GL11.glRotated(180,0,1,0);
+//		GL11.glRotated(180,0,1,0);
 
 		Tessellator.bindTexture(texture);
 

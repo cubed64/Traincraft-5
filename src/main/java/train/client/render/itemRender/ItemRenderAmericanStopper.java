@@ -5,7 +5,7 @@
  * @author Mrbrutal
  ******************************************************************************/
 
-package train.client.render;
+package train.client.render.itemRender;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;

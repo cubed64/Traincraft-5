@@ -1,18 +1,18 @@
-package train.client.render;
+package train.client.render.itemRender;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
 import org.lwjgl.opengl.GL11;
 import tmt.Tessellator;
-import train.client.render.models.blocks.Crossings.ModelFlashersWithGate2;
+import train.client.render.models.blocks.ModelMFPBWigWag;
 import train.common.library.Info;
 
-public class ItemRenderFlashersWithGate2 implements IItemRenderer {
-	private static final ModelFlashersWithGate2 modeSwitch = new ModelFlashersWithGate2();
-	private static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "Crossings/StandardOff.png");
+public class ItemRenderMFPBWigWag implements IItemRenderer {
+	private static final ModelMFPBWigWag modeSwitch = new ModelMFPBWigWag();
+	private static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "MFPBWigWagOn.png");
 
-	public ItemRenderFlashersWithGate2() {
+	public ItemRenderMFPBWigWag() {
 	}
 
 	@Override
@@ -53,8 +53,8 @@ public class ItemRenderFlashersWithGate2 implements IItemRenderer {
 		GL11.glPushMatrix();
 		GL11.glDisable(GL11.GL_LIGHTING);
 
-		GL11.glTranslatef(x, y+.1f, z);
-		GL11.glScalef(scale*.8f, scale*.8f, scale*.8f);
+		GL11.glTranslatef(x, y, z);
+		GL11.glScalef(scale, scale, scale);
 		GL11.glRotated(180,0,0,1);
 		GL11.glRotated(180,0,1,0);
 
