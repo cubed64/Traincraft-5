@@ -737,25 +737,28 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     {
         SoundRecord trainSoundRecord = getSoundRecord();
 
-        if (trainSoundRecord != null && !trainSoundRecord.getHornString().equals("") && whistleDelay == 0)
+        if (trainSoundRecord != null && !trainSoundRecord.getHornString().equals(""))
         {
-            if (trainSoundRecord.getHorns() != null)
+            if (whistleDelay == 0)
             {
-                if (trainSoundRecord.getHorns().length <= this.acceptedColors.indexOf(this.getColor()))
+                if (trainSoundRecord.getHorns() != null)
                 {
-                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "oh_no_shits", trainSoundRecord.getHornVolume(), 1.0F);
+                    if (trainSoundRecord.getHorns().length <= this.acceptedColors.indexOf(this.getColor()))
+                    {
+                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "oh_no_shits", trainSoundRecord.getHornVolume(), 1.0F);
+                    }
+                    else
+                    {
+                        System.out.println(trainSoundRecord.getHorns()[this.acceptedColors.indexOf(this.getColor())]);
+                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + trainSoundRecord.getHorns()[this.acceptedColors.indexOf(this.getColor())], trainSoundRecord.getHornVolume(), 1.0F);
+                    }
                 }
                 else
                 {
-                    System.out.println(trainSoundRecord.getHorns()[this.acceptedColors.indexOf(this.getColor())]);
-                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + trainSoundRecord.getHorns()[this.acceptedColors.indexOf(this.getColor())], trainSoundRecord.getHornVolume(), 1.0F);
+                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + trainSoundRecord.getHornString(), trainSoundRecord.getHornVolume(), 1.0F);
                 }
+                whistleDelay = 65;
             }
-            else
-            {
-                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + trainSoundRecord.getHornString(), trainSoundRecord.getHornVolume(), 1.0F);
-            }
-            whistleDelay = 65;
         }
         else
         {
