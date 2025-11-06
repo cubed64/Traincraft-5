@@ -21,6 +21,8 @@ import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.workcart.*;
 import net.minecraft.util.ResourceLocation;
 import tmt.ModelBase;
 import train.client.render.models.*;
+import train.client.render.register.ISubTrainRenderRecord;
+import train.client.render.register.SubTrainRenderRecord;
 import train.common.api.AbstractTrains;
 import train.common.api.EntityRollingStock;
 import train.common.entity.rollingStock.*;
@@ -38,7 +40,7 @@ import train.common.library.Info;
 
 import java.util.ArrayList;
 
-public enum RenderEnum implements ITrainRenderRecord
+public enum RenderEnum implements ITrainRenderRecord, ISubTrainRenderRecord
 {
 	fallback(ERatedForEveryone.class, new ModelThisErrorIsERatedForEveryone(), "Skin_Plane_ThisErrorIsERatedForEveryone", false, new float[] { 0.0F, -0.47F, 0.0F }, null, new float[] { 5F, 5F, 5F }, "", 0, null, "", null, 0, false),
 
@@ -2478,10 +2480,6 @@ public enum RenderEnum implements ITrainRenderRecord
 		return smokeFX;
 	}
 
-	public String getExplosionType() {
-		return explosionType;
-	}
-
 	public boolean hasExplosion() {
 		return explosionType.length() > 0;
 	}
@@ -2515,14 +2513,6 @@ public enum RenderEnum implements ITrainRenderRecord
 		return isTextureInsideFolder;
 	}
 
-	public int getSmokeIterations() {
-		return smokeIterations;
-	}
-
-	public int getExplosionFXIterations() {
-		return explosionFXIterations;
-	}
-
 	@Override
 	public String GetModID()
 	{
@@ -2546,5 +2536,11 @@ public enum RenderEnum implements ITrainRenderRecord
 		{
 			return new ResourceLocation(Info.resourceLocation, Info.trainsPrefix + this.getTexture() + ".png");
 		}
+	}
+
+	@Override
+	public SubTrainRenderRecord getSubTrainRenderRecord(short recordID)
+	{
+		return new SubTrainRenderRecord(this.smokeType, this.smokeFX, this.explosionType, this.explosionFX, (short) this.smokeIterations, (short)this.explosionFXIterations);
 	}
 }

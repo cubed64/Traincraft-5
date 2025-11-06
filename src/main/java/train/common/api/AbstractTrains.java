@@ -1,5 +1,6 @@
 package train.common.api;
 
+import com.google.gson.JsonObject;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.registry.IEntityAdditionalSpawnData;
 import io.netty.buffer.ByteBuf;
@@ -26,6 +27,7 @@ import net.minecraftforge.common.ForgeChunkManager.Ticket;
 import net.minecraftforge.common.util.Constants;
 import org.apache.commons.lang3.ArrayUtils;
 import train.client.gui.GuiTCTextField;
+import train.client.render.register.SubTrainRenderRecord;
 import train.common.Traincraft;
 import train.common.adminbook.ItemAdminBook;
 import train.common.blocks.BlockTCRail;
@@ -80,6 +82,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	 */
 	protected ITrainRecord trainSpec;
 	private ITrainRenderRecord renderSpec;
+	private SubTrainRenderRecord subTrainRenderRecordSpec;
 	/**
 	 * The name of the train based on the item name
 	 */
@@ -266,6 +269,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		if (worldObj.isRemote)
 		{
 			renderSpec = Traincraft.traincraftRegistry.getTrainRenderRecord(this.getClass());
+			subTrainRenderRecordSpec = renderSpec.getSubTrainRenderRecord(((short) this.getColor()));
 		}
 	}
 
@@ -1043,4 +1047,12 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		return renderSpec;
 	}
 
+	public SubTrainRenderRecord getSubTrainRenderRecordSpec()
+	{
+		if (subTrainRenderRecordSpec == null)
+		{
+			GetRenderSpec();
+		}
+		return subTrainRenderRecordSpec;
+	}
 }

@@ -1,11 +1,16 @@
 package train.client.render.register;
 
+import com.google.common.primitives.Doubles;
 import net.minecraft.util.ResourceLocation;
+import org.apache.commons.lang3.ArrayUtils;
 import tmt.ModelBase;
+import train.common.Traincraft;
 import train.common.api.AbstractTrains;
 import train.common.library.Info;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TrainRenderRecord implements ITrainRenderRecord
 {
@@ -32,10 +37,11 @@ public class TrainRenderRecord implements ITrainRenderRecord
         this.scale = scale;
         hasSmoke = false;
         hasExplosion = false;
+        subTrainRenderRecords = null;
     }
 
     /**
-     * Uses for diseal or steam locomotives
+     * Uses for Diseal or steam locomotives.
      * @param entityClass
      * @param model
      * @param trans
@@ -59,15 +65,35 @@ public class TrainRenderRecord implements ITrainRenderRecord
         this.trans = trans;
         this.rotate = rotate;
         this.scale = scale;
-        this.smokeType = smokeType;
-        this.smokeFX = smokeFX;
-        this.explosionType = explosionType;
-        this.explosionFX = explosionFX;
-        this.smokeIterations = smokeIterations;
-        this.explosionFXIterations = explosionFXIterations;
         this.hasSmoke = smokeType != null && smokeType.length() > 0;
         this.hasExplosion = explosionType != null && explosionType.length() > 0;
+        subTrainRenderRecords = new HashMap<>();
+        subTrainRenderRecords.put((short) 0, new SubTrainRenderRecord(smokeType, smokeFX, explosionType, explosionFX, (short)smokeIterations, (short)explosionFXIterations));
+    }
 
+    /**
+     * Used to add alternative smoke and explosion positions for specific locomotives.
+     * Only insert a record if your trying to override a locomotive from the default record.
+     * ONLY USED FOR LOCOMOTIVES
+     */
+    public TrainRenderRecord AddSubTrainRenderRecord(HashMap<Short, SubTrainRenderRecord> recordsToInsert)
+    {
+        if (subTrainRenderRecords == null)
+        {
+            Traincraft.tcLog.fatal("ERROR: ATTEMPTED TO INSERT RENDER RECORD INTO NON LOCOMOTIVE RENDER RECORD");
+        }
+
+        for (Map.Entry<Short, SubTrainRenderRecord> entry : recordsToInsert.entrySet())
+        {
+            if (entry.getKey() == 0 || subTrainRenderRecords.containsKey(entry.getKey()))
+            {
+                Traincraft.tcLog.fatal("ERROR: ATTEMPTED TO OVERRIDE RENDER RECORD MUST MODIFY ITS ORIGINAL ID:" + entry.getKey());
+            }
+
+            subTrainRenderRecords.put(entry.getKey(), entry.getValue());
+        }
+
+        return this;
     }
 
     private final Class<? extends AbstractTrains> entityClass;
@@ -77,18 +103,14 @@ public class TrainRenderRecord implements ITrainRenderRecord
      */
     private final String texturePrefix;
 
+    private final HashMap<Short, SubTrainRenderRecord> subTrainRenderRecords;
+
     private float[] trans;
     private float[] rotate;
     private float[] scale;
     private boolean hasSmoke;
-
-    private String smokeType;
-    private ArrayList<double[]> smokeFX;
     private boolean hasExplosion;
     private String explosionType;
-    private ArrayList<double[]> explosionFX;
-    private int smokeIterations;
-    private int explosionFXIterations;
 
     public String GetModID()
     {
@@ -120,33 +142,9 @@ public class TrainRenderRecord implements ITrainRenderRecord
     }
 
     @Override
-    public String getSmokeType()
-    {
-        return smokeType;
-    }
-
-    @Override
-    public ArrayList<double[]> getSmokeFX()
-    {
-        return smokeFX;
-    }
-
-    @Override
-    public String getExplosionType()
-    {
-        return explosionType;
-    }
-
-    @Override
     public boolean hasExplosion()
     {
         return hasExplosion;
-    }
-
-    @Override
-    public ArrayList<double[]> getExplosionFX()
-    {
-        return explosionFX;
     }
 
     @Override
@@ -174,14 +172,15 @@ public class TrainRenderRecord implements ITrainRenderRecord
     }
 
     @Override
-    public int getSmokeIterations()
+    public SubTrainRenderRecord getSubTrainRenderRecord(short record)
     {
-        return smokeIterations;
-    }
+        if (record > 0
+                && subTrainRenderRecords.size() > 1
+                && subTrainRenderRecords.containsKey(record))
+        {
+            return subTrainRenderRecords.get(record);
+        }
 
-    @Override
-    public int getExplosionFXIterations()
-    {
-        return explosionFXIterations;
+        return subTrainRenderRecords.get((short) 0);
     }
 }

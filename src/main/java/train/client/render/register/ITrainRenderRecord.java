@@ -18,15 +18,7 @@ public interface ITrainRenderRecord
 
     boolean hasSmoke();
 
-    String getSmokeType();
-
-    ArrayList<double[]> getSmokeFX();
-
-    String getExplosionType();
-
     boolean hasExplosion();
-
-    ArrayList<double[]> getExplosionFX();
 
     float[] getTrans();
 
@@ -41,9 +33,6 @@ public interface ITrainRenderRecord
      */
     ResourceLocation getTextureFile(String colorString);
 
-    int getSmokeIterations();
 
-    int getExplosionFXIterations();
-
-
+    SubTrainRenderRecord getSubTrainRenderRecord(short recordID);
 }

@@ -11,6 +11,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Vec3;
 import org.lwjgl.opengl.GL11;
 import tmt.Tessellator;
+import train.client.render.register.SubTrainRenderRecord;
 import train.common.api.EntityRollingStock;
 import train.common.api.Locomotive;
 import train.common.entity.rollingStock.EntityTracksBuilder;
@@ -147,9 +148,11 @@ public class RenderRollingStock extends Render {
 			cart.setRenderYaw(newYaw);
 			cart.setRenderPitch(pitch);
 		}
-		else {
+		else
+		{
 			// NOTE: func_150049_b_ = isRailBlockAt
-			if (cart.worldObj!=null && (BlockRailBase.func_150049_b_(cart.worldObj, i, j, k) || BlockRailBase.func_150049_b_(cart.worldObj, i, j-1, k) )){
+			if (cart.worldObj!=null && (BlockRailBase.func_150049_b_(cart.worldObj, i, j, k) || BlockRailBase.func_150049_b_(cart.worldObj, i, j-1, k) ))
+			{
 				if(cart.isClientInReverse){
 					yaw+=180;
 					pitch = -pitch;
@@ -157,7 +160,9 @@ public class RenderRollingStock extends Render {
 				GL11.glRotatef(180.0F - yaw, 0.0F, 1.0F, 0.0F);
 				cart.setRenderYaw(yaw);
 				cart.setRenderPitch(pitch);
-			}else{
+			}
+			else
+			{
 				if (cart.oldClientYaw == 0) cart.oldClientYaw = cart.rotationYawClientReal;
 
 				float rotationYaw = cart.rotationYawClientReal;
@@ -226,7 +231,6 @@ public class RenderRollingStock extends Render {
 		}
 
 		ITrainRenderRecord renders = cart.getRenderSpec();
-
 		if (renders.getTrans() != null)
 		{
 			GL11.glTranslatef(renders.getTrans()[0], renders.getTrans()[1], renders.getTrans()[2]);
@@ -275,21 +279,24 @@ public class RenderRollingStock extends Render {
 		renders.getModel().render(cart, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
 		if (renders.hasSmoke())
 		{
-			ArrayList<double[]> smokePosition = renders.getSmokeFX();
+			SubTrainRenderRecord subTrainRender = cart.getSubTrainRenderRecordSpec();
+			ArrayList<double[]> smokePosition = subTrainRender.getSmokeFX();
 
 			if (cart.bogieLoco != null) {// || cart.bogieUtility[0]!=null){
-				renderSmokeFX(cart, 90 + cart.rotationYawClientReal, (float) cart.anglePitchClient, renders.getSmokeType(), smokePosition, renders.getSmokeIterations(), time);
+				renderSmokeFX(cart, 90 + cart.rotationYawClientReal, (float) cart.anglePitchClient, subTrainRender.getSmokeType(), smokePosition, subTrainRender.getSmokeIterations(), time);
 			}
 			else {
-				renderSmokeFX(cart, (yaw), pitch, renders.getSmokeType(), smokePosition, renders.getSmokeIterations(), time);
+				renderSmokeFX(cart, (yaw), pitch, subTrainRender.getSmokeType(), smokePosition, subTrainRender.getSmokeIterations(), time);
 			}
 		}
-		if (renders.hasExplosion()) {
+		if (renders.hasExplosion())
+		{
+			SubTrainRenderRecord subTrainRender = cart.getSubTrainRenderRecordSpec();
 			if (cart.bogieLoco != null) {// || cart.bogieUtility[0]!=null){
-				renderExplosionFX(cart, 90 + cart.rotationYawClientReal, (float) cart.anglePitchClient, renders.getExplosionType(), renders.getExplosionFX(), renders.getExplosionFXIterations());
+				renderExplosionFX(cart, 90 + cart.rotationYawClientReal, (float) cart.anglePitchClient, subTrainRender.getExplosionType(), subTrainRender.getExplosionFX(), subTrainRender.getExplosionFXIterations());
 			}
 			else {
-				renderExplosionFX(cart, yaw, pitch, renders.getExplosionType(), renders.getExplosionFX(), renders.getExplosionFXIterations());
+				renderExplosionFX(cart, yaw, pitch, subTrainRender.getExplosionType(), subTrainRender.getExplosionFX(), subTrainRender.getExplosionFXIterations());
 			}
 		}
 		GL11.glEnable(GL11.GL_LIGHTING);
