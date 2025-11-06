@@ -509,6 +509,10 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		}
 		dataWatcher.updateObject(12, color);
 		this.getEntityData().setInteger("color", color);
+		if (worldObj.isRemote)
+		{
+			subTrainRenderRecordSpec = getRenderSpec().getSubTrainRenderRecord(((short) this.getColor()));
+		}
 	}
 
 	public void setRenderYaw(float yaw) {
