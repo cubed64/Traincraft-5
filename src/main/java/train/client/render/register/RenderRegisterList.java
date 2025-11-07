@@ -27,6 +27,24 @@ public final class RenderRegisterList
                     new float[] { 0.0F, -0.47F, 0.0F },
                     null,
                     null));
+            add(new TrainRenderRecord(modID,
+                    EntityPassenger2.class, new ModelPassenger2(),
+                    "passenger3_",
+                    new float[] { 0.0F, -0.32F, -0.1F },
+                    null,
+                    null));
+            add(new TrainRenderRecord(modID,
+                    EntityPassenger5.class, new ModelPassenger5(),
+                    "passenger5_",
+                    new float[] { 0.0F, -0.40F, 0.0F },
+                    null,
+                    null));
+            add(new TrainRenderRecord(modID,
+                    EntityPassenger7.class, new ModelPassenger7(),
+                    "passenger7_",
+                    new float[] { 0.0F, -0.44F, 0.0F },
+                    new float[] { 0F, 90F, 0F },
+                    null));
 
         }};
     }

@@ -20,9 +20,9 @@ public enum EnumHeritageTrainsLegacy implements ITrainRecord
      * Passengers
      */
     //passengerCartBlue("Passenger Blue",EntityPassengerBlue .class, ItemIDs.minecartPassengerBlue.item, "passenger", 0, 0, 1, 0, 0, 0, 0, 0, 0,TraincraftUtil.getBytesFromColors(new String[]{"Blue", "Red", "Green", "White", "Black", "Cyan", "Orange", "Grey", "LightGrey", "LightBlue"}), 18, 0),
-    passengerCartBlackSmall("Passenger Small Black",EntityPassenger2 .class, ItemIDs.minecartPassenger2.item, "passenger", 0, 0, 0.5, 0, 0, 0, 0, 0, 0, null, 18, 0),
-    passengerLongGreen("Passenger Green Long",EntityPassenger5 .class, ItemIDs.minecartPassenger5.item, "passenger", 0, 0, 1, 0, 0, 0, 0, 0, 0,TraincraftUtil.getBytesFromColors(new String[]{"Green", "Yellow"}), 18, 0),
-    passengerShortGreen("Passenger Short Green",EntityPassenger7 .class, ItemIDs.minecartPassenger7.item, "passenger", 0, 0, 1, 0, 0, 0, 0, 0, 0, null, 18, 0),
+    //passengerCartBlackSmall("Passenger Small Black",EntityPassenger2 .class, ItemIDs.minecartPassenger2.item, "passenger", 0, 0, 0.5, 0, 0, 0, 0, 0, 0, null, 18, 0),
+    //passengerLongGreen("Passenger Green Long",EntityPassenger5 .class, ItemIDs.minecartPassenger5.item, "passenger", 0, 0, 1, 0, 0, 0, 0, 0, 0,TraincraftUtil.getBytesFromColors(new String[]{"Green", "Yellow"}), 18, 0),
+    //passengerShortGreen("Passenger Short Green",EntityPassenger7 .class, ItemIDs.minecartPassenger7.item, "passenger", 0, 0, 1, 0, 0, 0, 0, 0, 0, null, 18, 0),
     passenger_1class_DB("Passenger 1Class DB",EntityPassenger_1class_DB .class, ItemIDs.minecartPassenger8_1class_DB.item, "passenger", 0, 0, 1.5, 0, 0, 0, 0, 0, 0, null, 18, 0),
     passenger_2class_DB("Passenger 2Class DB", EntityPassenger_2class_DB.class, ItemIDs.minecartPassenger9_2class_DB.item, "passenger", 0, 0, 1.5, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Green", "Cyan"}), 18, 0),
     passengerHighSpeedZeroED("Passenger High Speed Zero ED", EntityPassengerHighSpeedCarZeroED.class, ItemIDs.minecartPassengerHighSpeedCarZeroED.item, "passenger", 0, 0, 2, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"White", "LightGrey", "Grey"}), 18, 0),
