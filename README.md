@@ -21,7 +21,7 @@
 ## Extending a grand Thank you for the folks whom have contributed features and code (and overall just time and effort):
 - Bidahochi
 - TBEA
-- Peachmaster
+- FloofyPeachy
 - Cubed64
 - Trains from 1.3.2 to 1.7.10
 - Professor Binky (TrainGoddess)
