@@ -110,7 +110,6 @@ public class TrainRenderRecord implements ITrainRenderRecord
     private float[] scale;
     private boolean hasSmoke;
     private boolean hasExplosion;
-    private String explosionType;
 
     public String GetModID()
     {
@@ -174,6 +173,11 @@ public class TrainRenderRecord implements ITrainRenderRecord
     @Override
     public SubTrainRenderRecord getSubTrainRenderRecord(short record)
     {
+        if (subTrainRenderRecords == null)
+        {
+            return null;
+        }
+
         if (record > 0
                 && subTrainRenderRecords.size() > 1
                 && subTrainRenderRecords.containsKey(record))

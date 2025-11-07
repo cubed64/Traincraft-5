@@ -23,8 +23,18 @@ public enum EnumTrainType
     Refrigerated("Refrigerated Car", "R"),
     RefrigeratedBoxcar("Refrigerated Boxcar", "R"),
     RefrigeratedTankcar("Refrigerated Tankcar", "R"),
+
     MOW("M.O.W", "M"),
+
     Passenger("Passenger", "N"),
+    Passenger_Combine("Passenger/Combine", "N"),
+    Passenger_CoachLounge("Coach-Lounge", "N"),
+    Passenger_CoachDinette("Coach-Dinette", "N"),
+    Passenger_Sleeper("Sleeper", "N"),
+    Passenger_LunchCounterLounge("Lunch Counter-Lounge", "N"),
+    Passenger_ParlorObservation("Parlor-Observation", "N"),
+
+
     Caboose("Caboose", "N"),
     Wellcar("Wellcar", "Q"),
     Special("Special", "O"),
