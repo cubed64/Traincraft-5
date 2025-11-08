@@ -723,18 +723,21 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
     }
 
-    private String getResourceLocation()
+    private String buildSoundString(String rawString)
     {
-        String modID = Item.itemRegistry.getNameForObject(trainSpec.getItem());
-        return modID.substring(0, modID.indexOf(':')).toLowerCase();
+        if (rawString.contains(":"))
+        {
+            return rawString;
+        }
+
+        return Info.resourceLocation + ":" + rawString;
     }
 
     public void soundBell3()
     {
         if (!getSoundRecord().getHornString().equals("") && !getSoundRecord().getBellString().equals(""))
         {
-
-            worldObj.playSoundAtEntity(this, getResourceLocation() + ":" + getSoundRecord().getBellString(), 1f, 1F);
+            worldObj.playSoundAtEntity(this, buildSoundString(getSoundRecord().getBellString()), 1f, 1F);
             bellCount = getSoundRecord().getBellLength();//default 15 for bronze bell
             //System.out.println(bellCount);
 
@@ -753,17 +756,19 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 {
                     if (trainSoundRecord.getHorns().length <= this.acceptedColors.indexOf(this.getColor()))
                     {
-                        worldObj.playSoundAtEntity(this, getResourceLocation() + ":" + "oh_no_shits", trainSoundRecord.getHornVolume(), 1.0F);
+                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "oh_no_shits", trainSoundRecord.getHornVolume(), 1.0F);
                     }
                     else
                     {
                         System.out.println(trainSoundRecord.getHorns()[this.acceptedColors.indexOf(this.getColor())]);
-                        worldObj.playSoundAtEntity(this, getResourceLocation() + ":" + trainSoundRecord.getHorns()[this.acceptedColors.indexOf(this.getColor())], trainSoundRecord.getHornVolume(), 1.0F);
+
+                        worldObj.playSoundAtEntity(this, buildSoundString(trainSoundRecord.getHorns()[this.acceptedColors.indexOf(this.getColor())]), trainSoundRecord.getHornVolume(), 1.0F);
                     }
                 }
                 else
                 {
-                    worldObj.playSoundAtEntity(this, getResourceLocation() + ":" + trainSoundRecord.getHornString(), trainSoundRecord.getHornVolume(), 1.0F);
+
+                    worldObj.playSoundAtEntity(this, buildSoundString(trainSoundRecord.getHornString()), trainSoundRecord.getHornVolume(), 1.0F);
                 }
                 whistleDelay = 65;
             }
