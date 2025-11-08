@@ -1084,23 +1084,23 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                     if (!soundRecord.getHornString().isEmpty() && whistleDelay == 0) {
                         if (getFuel() > 0 && this.isLocoTurnedOn()) {
                             if (speed > -0.001D && speed < 0.01D && soundPosition == 0) {
-                                worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + soundRecord.getIdleString(), soundRecord.getIdleVolume(), 1F);
+                                worldObj.playSoundAtEntity(this, buildSoundString(soundRecord.getIdleString()), soundRecord.getIdleVolume(), 1F);
                                 soundPosition = soundRecord.getIdleSoundLength();//soundPosition is probably where IN the sound it is currently playing, eg 1 sec int osoudn file
                             }
                             if (soundRecord.getSoundChangeWithSpeed() && !soundRecord.getHornString().isEmpty() && whistleDelay == 0 && !soundRecord.getBellString().isEmpty()) {
                                 if (speed > 0.01D && speed < 0.06D && soundPosition == 0) {
-                                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + soundRecord.getRunString(), soundRecord.getRunVolume(), 0.1F);
+                                    worldObj.playSoundAtEntity(this, buildSoundString(soundRecord.getRunString()), soundRecord.getRunVolume(), 0.1F);
                                     soundPosition = soundRecord.getRunSoundLength();
                                 } else if (speed > 0.06D && speed < 0.2D && soundPosition == 0) {
-                                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + soundRecord.getRunString(), soundRecord.getRunVolume(), 0.4F);
+                                    worldObj.playSoundAtEntity(this, buildSoundString(soundRecord.getRunString()), soundRecord.getRunVolume(), 0.4F);
                                     soundPosition = soundRecord.getRunSoundLength() / 2;
                                 } else if (speed > 0.2D && soundPosition == 0) {
-                                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + soundRecord.getRunString(), soundRecord.getRunVolume(), 0.5F);
+                                    worldObj.playSoundAtEntity(this, buildSoundString(soundRecord.getRunString()), soundRecord.getRunVolume(), 0.5F);
                                     soundPosition = soundRecord.getRunSoundLength() / 3;
                                 }
                             } else {
                                 if (speed > 0.01D && soundPosition == 0) {
-                                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + soundRecord.getRunString(), soundRecord.getRunVolume(), 1F);
+                                    worldObj.playSoundAtEntity(this, buildSoundString(soundRecord.getRunString()), soundRecord.getRunVolume(), 1F);
                                     soundPosition = soundRecord.getRunSoundLength();
                                 }
                             }
