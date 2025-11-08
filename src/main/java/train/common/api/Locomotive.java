@@ -13,8 +13,10 @@ import com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.PCH120Commute;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.PCH130Commute2;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
+import cpw.mods.fml.common.registry.GameRegistry;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -721,12 +723,18 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
     }
 
+    private String getResourceLocation()
+    {
+        String modID = Item.itemRegistry.getNameForObject(trainSpec.getItem());
+        return modID.substring(0, modID.indexOf(':')).toLowerCase();
+    }
+
     public void soundBell3()
     {
         if (!getSoundRecord().getHornString().equals("") && !getSoundRecord().getBellString().equals(""))
         {
 
-            worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + getSoundRecord().getBellString(), 1f, 1F);
+            worldObj.playSoundAtEntity(this, getResourceLocation() + ":" + getSoundRecord().getBellString(), 1f, 1F);
             bellCount = getSoundRecord().getBellLength();//default 15 for bronze bell
             //System.out.println(bellCount);
 
@@ -745,17 +753,17 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 {
                     if (trainSoundRecord.getHorns().length <= this.acceptedColors.indexOf(this.getColor()))
                     {
-                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "oh_no_shits", trainSoundRecord.getHornVolume(), 1.0F);
+                        worldObj.playSoundAtEntity(this, getResourceLocation() + ":" + "oh_no_shits", trainSoundRecord.getHornVolume(), 1.0F);
                     }
                     else
                     {
                         System.out.println(trainSoundRecord.getHorns()[this.acceptedColors.indexOf(this.getColor())]);
-                        worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + trainSoundRecord.getHorns()[this.acceptedColors.indexOf(this.getColor())], trainSoundRecord.getHornVolume(), 1.0F);
+                        worldObj.playSoundAtEntity(this, getResourceLocation() + ":" + trainSoundRecord.getHorns()[this.acceptedColors.indexOf(this.getColor())], trainSoundRecord.getHornVolume(), 1.0F);
                     }
                 }
                 else
                 {
-                    worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + trainSoundRecord.getHornString(), trainSoundRecord.getHornVolume(), 1.0F);
+                    worldObj.playSoundAtEntity(this, getResourceLocation() + ":" + trainSoundRecord.getHornString(), trainSoundRecord.getHornVolume(), 1.0F);
                 }
                 whistleDelay = 65;
             }
