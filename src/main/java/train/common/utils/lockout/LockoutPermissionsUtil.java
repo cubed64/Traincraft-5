@@ -19,8 +19,6 @@ public class LockoutPermissionsUtil
     private final String LockoutGroups = "LockoutGroups";
     private final String LockoutUsers = "LockoutUsers";
 
-    private final JsonParser JsonParser = new JsonParser();
-
     private HashMap<String, ILockoutGroup> lockGroupsReg = new HashMap<>();
 
     public HashMap<String, ILockoutGroup> GetLockoutGroupReg()
@@ -78,7 +76,7 @@ public class LockoutPermissionsUtil
         {
             try (FileReader fileReader = new FileReader(lockoutSkinGroup))
             {
-                JsonObject jsonObject = JsonParser.parse(fileReader).getAsJsonObject();
+                JsonObject jsonObject = Traincraft.jsonParser.parse(fileReader).getAsJsonObject();
                 String uuid = jsonObject.get("uuid").getAsString();
                 fileReader.close();
                 return uuid;
@@ -103,7 +101,7 @@ public class LockoutPermissionsUtil
 
         try (FileReader fileReader = new FileReader(BuildUserFolderPath(uuid.toString())))
         {
-            JsonObject jsonObject = JsonParser.parse(fileReader).getAsJsonObject();
+            JsonObject jsonObject = Traincraft.jsonParser.parse(fileReader).getAsJsonObject();
             JsonArray array = jsonObject.get("groups").getAsJsonArray();
 
             ArrayList<String> groupsUserIsPartOf = new ArrayList<>();
@@ -136,7 +134,7 @@ public class LockoutPermissionsUtil
 
         try (FileReader fileReader = new FileReader(BuildUserFolderPath(uuid.toString())))
         {
-            JsonObject jsonObject = JsonParser.parse(fileReader).getAsJsonObject();
+            JsonObject jsonObject = Traincraft.jsonParser.parse(fileReader).getAsJsonObject();
             JsonArray array = jsonObject.get("groups").getAsJsonArray();
 
             return IsUserMemberOfGroup(array, lockoutGroup);
@@ -165,7 +163,7 @@ public class LockoutPermissionsUtil
         JsonArray array;
         try (FileReader fileReader = new FileReader(user))
         {
-            jsonObject = JsonParser.parse(fileReader).getAsJsonObject();
+            jsonObject = Traincraft.jsonParser.parse(fileReader).getAsJsonObject();
             array = jsonObject.get("groups").getAsJsonArray();
         }
         catch (Exception e)
@@ -242,7 +240,7 @@ public class LockoutPermissionsUtil
         File file = BuildLockGroupFolderPath(lockoutGroup);
         try (FileReader fileReader = new FileReader(file))
         {
-            JsonObject jsonObject = JsonParser.parse(fileReader).getAsJsonObject();
+            JsonObject jsonObject = Traincraft.jsonParser.parse(fileReader).getAsJsonObject();
             jsonObject.addProperty("uuid", uuid);
             fileReader.close();
 
@@ -268,7 +266,7 @@ public class LockoutPermissionsUtil
         JsonArray array;
         try (FileReader fileReader = new FileReader(user))
         {
-            jsonObject = JsonParser.parse(fileReader).getAsJsonObject();
+            jsonObject = Traincraft.jsonParser.parse(fileReader).getAsJsonObject();
             array = jsonObject.get("groups").getAsJsonArray();
             fileReader.close();
         }

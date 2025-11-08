@@ -549,7 +549,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
         JsonObject lightingDetailsJSONObject;
         try {
-            lightingDetailsJSONObject = new JsonParser().parse(ntc.getString("lightingDetailsJSON")).getAsJsonObject();
+            lightingDetailsJSONObject = Traincraft.jsonParser.parse(ntc.getString("lightingDetailsJSON")).getAsJsonObject();
         }
         catch (Exception e)
         {
@@ -1538,7 +1538,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
 
     private JsonObject AsJsonObject(String string)
     {
-        return new JsonParser().parse(string).getAsJsonObject();
+        return Traincraft.jsonParser.parse(string).getAsJsonObject();
     }
     // private int placeInSpecialInvent(ItemStack itemstack1, int i, boolean doAdd) {
     // if (locoInvent[i] == null) {

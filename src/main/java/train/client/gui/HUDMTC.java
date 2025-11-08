@@ -16,6 +16,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Vec3;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import org.lwjgl.opengl.GL11;
+import train.common.Traincraft;
 import train.common.api.Locomotive;
 import train.common.api.SteamTrain;
 import train.common.library.Info;
@@ -175,7 +176,7 @@ public class HUDMTC extends GuiScreen {
 			if (loco.getDataWatcher().getWatchableObjectString(29).isEmpty()) return;
 			StringBuilder output = new StringBuilder();
 			StringBuilder actionDisplay = new StringBuilder();
-			JsonObject status = new JsonParser().parse(loco.getDataWatcher().getWatchableObjectString(29)).getAsJsonObject();
+			JsonObject status = Traincraft.jsonParser.parse(loco.getDataWatcher().getWatchableObjectString(29)).getAsJsonObject();
 			output.append("AutoTrain-2\n");
 			output.append("Status: ").append(status.get("status").getAsString()).append("\n");
 			output.append("Position: ").append(status.get("progress").getAsString()).append("\n");

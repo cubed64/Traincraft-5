@@ -22,7 +22,7 @@ public class DSSConfig {
             if (configFile.exists()) {
                 FileReader reader = new FileReader(configFile);
                 //Oh. Just read it like so.
-                jDssInstances = new JsonParser().parse(reader).getAsJsonArray();
+                jDssInstances = Traincraft.jsonParser.parse(reader).getAsJsonArray();
                 //Okay, now create all the new instances.
 
                 for (JsonElement i : jDssInstances) {

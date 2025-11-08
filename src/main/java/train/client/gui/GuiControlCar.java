@@ -356,7 +356,7 @@ public class GuiControlCar extends GuiContainer
 
         if (locomotiveUnderControl != null)
         {
-            JsonObject guiDetails = new JsonParser().parse(locomotiveUnderControl.guiDetailsDW()).getAsJsonObject();
+            JsonObject guiDetails = Traincraft.jsonParser.parse(locomotiveUnderControl.guiDetailsDW()).getAsJsonObject();
             fontRendererObj.drawStringWithShadow("Carts pulled: " + guiDetails. get("cartsPulled"), 1, 10, 0xFFFFFF);
             fontRendererObj.drawStringWithShadow("Mass pulled: " + guiDetails.get("massPulled"), 1, 20, 0xFFFFFF);
             fontRendererObj.drawStringWithShadow("Speed reduction: " + guiDetails.get("slowDown") + " km/h", 1, 30, 0xFFFFFF);

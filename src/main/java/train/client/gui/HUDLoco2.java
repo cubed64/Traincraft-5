@@ -15,6 +15,7 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import org.lwjgl.opengl.GL11;
+import train.common.Traincraft;
 import train.common.api.Locomotive;
 import train.common.library.Info;
 
@@ -203,7 +204,7 @@ public class HUDLoco2 extends GuiScreen {
             fontRendererObj.drawStringWithShadow("Status: " + status.getString("status"),(int)(guiLeft*0.012f), (int) (guiTop*0.20), 0xFFFFFF);
             fontRendererObj.drawStringWithShadow("Position: " + status.getString("progress"),(int)(guiLeft*0.012f), (int) (guiTop*0.22), 0xFFFFFF);
 
-            JsonArray driveScript = new JsonParser().parse(loco.getDataWatcher().getWatchableObjectString(30)).getAsJsonArray();
+            JsonArray driveScript = Traincraft.jsonParser.parse(loco.getDataWatcher().getWatchableObjectString(30)).getAsJsonArray();
 
             for (int i = 0; i < driveScript.size(); i++) {
                 JsonObject action = driveScript.get(i).getAsJsonObject();

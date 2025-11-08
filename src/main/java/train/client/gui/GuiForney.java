@@ -218,7 +218,7 @@ public class GuiForney extends GuiContainer {
 			}
 		}
 
-		JsonObject guiDetails = new JsonParser().parse(loco.guiDetailsDW()).getAsJsonObject();
+		JsonObject guiDetails = Traincraft.jsonParser.parse(loco.guiDetailsDW()).getAsJsonObject();
 
 		fontRendererObj.drawStringWithShadow("Carts pulled: " + guiDetails. get("cartsPulled"), 1, 10, 0xFFFFFF);
 		fontRendererObj.drawStringWithShadow("Mass pulled: " + guiDetails.get("massPulled"), 1, 20, 0xFFFFFF);

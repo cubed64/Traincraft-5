@@ -5,6 +5,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import net.minecraft.util.Vec3;
+import train.common.Traincraft;
 import train.common.api.EntityRollingStock;
 import train.common.api.Locomotive;
 
@@ -135,7 +136,7 @@ public class AutoTrain2 {
         * */
 
         try {
-            return new JsonParser().parse(input).getAsJsonObject();
+            return Traincraft.jsonParser.parse(input).getAsJsonObject();
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -1,5 +1,6 @@
 package train.common;
 
+import com.google.gson.JsonParser;
 import com.jcirmodelsquad.tcjcir.features.signal.dynamic.TrainTalk;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Loader;
@@ -125,7 +126,7 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 
 	public static WorldGenWorld worldGen;
 
-
+	public static final JsonParser jsonParser = new JsonParser();
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {

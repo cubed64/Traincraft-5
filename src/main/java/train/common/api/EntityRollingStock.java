@@ -2487,11 +2487,11 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	}
 
 	public JsonObject getRenderRefs() {
-		return new JsonParser().parse(dataWatcher.getWatchableObjectString(27)).getAsJsonObject();
+		return Traincraft.jsonParser.parse(dataWatcher.getWatchableObjectString(27)).getAsJsonObject();
 	}
 
 	public JsonElement getRenderRef(String name) {
-		return new JsonParser().parse(dataWatcher.getWatchableObjectString(27)).getAsJsonObject().get(name);
+		return Traincraft.jsonParser.parse(dataWatcher.getWatchableObjectString(27)).getAsJsonObject().get(name);
 	}
 
 

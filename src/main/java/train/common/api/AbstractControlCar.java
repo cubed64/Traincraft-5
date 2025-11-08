@@ -103,7 +103,7 @@ public abstract class AbstractControlCar extends EntityRollingStock implements I
 
         JsonObject lightingDetailsJSONObject;
         try {
-            lightingDetailsJSONObject = new JsonParser().parse(ntc.getString("lightingDetailsJSON")).getAsJsonObject();
+            lightingDetailsJSONObject = Traincraft.jsonParser.parse(ntc.getString("lightingDetailsJSON")).getAsJsonObject();
         }
         catch (Exception e)
         {
@@ -434,7 +434,7 @@ public abstract class AbstractControlCar extends EntityRollingStock implements I
 
     private JsonObject AsJsonObject(String string)
     {
-        return new JsonParser().parse(string).getAsJsonObject();
+        return Traincraft.jsonParser.parse(string).getAsJsonObject();
     }
 
 

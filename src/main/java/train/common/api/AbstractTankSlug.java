@@ -148,7 +148,7 @@ public abstract class AbstractTankSlug extends LiquidTank implements IFluidHandl
 
         JsonObject lightingDetailsJSONObject;
         try {
-            lightingDetailsJSONObject = new JsonParser().parse(nbttagcompound.getString("lightingDetailsJSON")).getAsJsonObject();
+            lightingDetailsJSONObject = Traincraft.jsonParser.parse(nbttagcompound.getString("lightingDetailsJSON")).getAsJsonObject();
         }
         catch (Exception e)
         {
@@ -356,6 +356,6 @@ public abstract class AbstractTankSlug extends LiquidTank implements IFluidHandl
 
     private JsonObject AsJsonObject(String string)
     {
-        return new JsonParser().parse(string).getAsJsonObject();
+        return Traincraft.jsonParser.parse(string).getAsJsonObject();
     }
 }

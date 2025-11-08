@@ -478,7 +478,7 @@ public class GuiLoco2 extends GuiContainer {
 				drawTexturedModalRect(j + 8, (k + 36 + 12) - l, 176, 12 - l, 14, l + 2);
 			}
 		}
-		JsonObject guiDetails = new JsonParser().parse(loco.guiDetailsDW()).getAsJsonObject();
+		JsonObject guiDetails = Traincraft.jsonParser.parse(loco.guiDetailsDW()).getAsJsonObject();
 
 		fontRendererObj.drawStringWithShadow("Carts pulled: " + guiDetails. get("cartsPulled"), 1, 10, 0xFFFFFF);
 		fontRendererObj.drawStringWithShadow("Mass pulled: " + guiDetails.get("massPulled"), 1, 20, 0xFFFFFF);
