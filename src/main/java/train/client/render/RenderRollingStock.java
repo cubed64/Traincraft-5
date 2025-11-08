@@ -1,5 +1,7 @@
 package train.client.render;
 
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheBuilder;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockRailBase;
@@ -22,6 +24,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 @SideOnly(Side.CLIENT)
 public class RenderRollingStock extends Render {
@@ -251,7 +254,7 @@ public class RenderRollingStock extends Render {
 
 		if (!cart.acceptsOverlayTextures() || cart.getOverlayTextureContainer().getType() == OverlayTextureManager.Type.NONE)
 		{
-			Tessellator.bindTexture(renders.getTextureFile(cart.getColorAsString()));
+			Tessellator.bindTexture(getTexture(cart));
 		}
 		else
 		{
@@ -404,12 +407,23 @@ public class RenderRollingStock extends Render {
 		return getTexture(entity);
 	}
 
+	private static Cache<String, ResourceLocation> cache = CacheBuilder.newBuilder()
+			.maximumSize(100)
+			.expireAfterWrite(10, TimeUnit.MINUTES)
+			.build();
+
 	public static ResourceLocation getTexture(Entity entity)
 	{
 		EntityRollingStock entityStock = (EntityRollingStock) entity;
-		ITrainRenderRecord renderEnumEntry = entityStock.getRenderSpec();
+		ResourceLocation temp = cache.getIfPresent(entity.getClass().getName() + "_COLOR_" + entityStock.getColorAsString());
+		if (temp == null)
+		{
+			ITrainRenderRecord renderEnumEntry = entityStock.getRenderSpec();
+			temp = renderEnumEntry.getTextureFile(entityStock.getColorAsString());
+			cache.put(entity.getClass().getName() + "_COLOR_" + entityStock.getColorAsString(), temp);
+		}
 
-		return renderEnumEntry.getTextureFile(entityStock.getColorAsString());
+		return temp;
 
 	}
 
