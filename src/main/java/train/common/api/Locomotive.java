@@ -164,38 +164,41 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     public Locomotive(World world)
     {
         super(world);
-        setFuelConsumption(0);
         inventorySize = numCargoSlots + numCargoSlots2 + numCargoSlots1;
-        dataWatcher.addObject(2, 0);
-        this.setDefaultMass(0);
-        this.setCustomSpeed(getMaxSpeed());
-        dataWatcher.addObject(3, destination);
-        dataWatcher.addObject(5, trainID);
-        dataWatcher.addObject(22, locoState);
-        dataWatcher.addObject(24, fuelTrain);
-        dataWatcher.addObject(26, guiDetailsJSON());
-        dataWatcher.addObject(27, renderRefs.toString());
-        dataWatcher.addObject(15, (float) Math.round((getCustomSpeed() * 3.6f)));
-        dataWatcher.addObject(28, lightingDetailsJSON());
-        //// Don't use 30 That is used by EntityRollingStock
-        //// Don't use 31 That is used by AbstractTrains
-        //dataWatcher.addObject(32, lineWaypoints);
-        setAccel(0);
-        setBrake(0);
-        this.entityCollisionReduction = 0.99F;
-        if (this instanceof SteamTrain) isLocoTurnedOn = true;
-        char[] chars = "abcdefghijklmnopqrstuvwxyz0123456789".toCharArray();
-        StringBuilder sb = new StringBuilder(5);
-        Random random = new Random();
-        for (int i = 0; i < 5; i++) {
-            char c = chars[random.nextInt(chars.length)];
-            sb.append(c);
-        }
-        trainID = sb.toString();
-        //TODO: Re-implement MTC-2
+        if (world != null)
+        {
+            setFuelConsumption(0);
+            dataWatcher.addObject(2, 0);
+            this.setDefaultMass(0);
+            this.setCustomSpeed(getMaxSpeed());
+            dataWatcher.addObject(3, destination);
+            dataWatcher.addObject(5, trainID);
+            dataWatcher.addObject(22, locoState);
+            dataWatcher.addObject(24, fuelTrain);
+            dataWatcher.addObject(26, guiDetailsJSON());
+            dataWatcher.addObject(27, renderRefs.toString());
+            dataWatcher.addObject(15, (float) Math.round((getCustomSpeed() * 3.6f)));
+            dataWatcher.addObject(28, lightingDetailsJSON());
+            //// Don't use 30 That is used by EntityRollingStock
+            //// Don't use 31 That is used by AbstractTrains
+            //dataWatcher.addObject(32, lineWaypoints);
+            setAccel(0);
+            setBrake(0);
+            this.entityCollisionReduction = 0.99F;
+            if (this instanceof SteamTrain) isLocoTurnedOn = true;
+            char[] chars = "abcdefghijklmnopqrstuvwxyz0123456789".toCharArray();
+            StringBuilder sb = new StringBuilder(5);
+            Random random = new Random();
+            for (int i = 0; i < 5; i++) {
+                char c = chars[random.nextInt(chars.length)];
+                sb.append(c);
+            }
+            trainID = sb.toString();
+            //TODO: Re-implement MTC-2
       /*  if (!serverUUID.equals("")) {
             attemptConnection(serverUUID);
         }*/
+        }
     }
 
     @Override

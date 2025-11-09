@@ -214,25 +214,10 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 
 	public AbstractTrains(World world) {
 		super(world);
-		renderDistanceWeight = 2.0D;
 		color = -1;
-		dataWatcher.addObject(12, color);
-		acceptedColors = new ArrayList<Integer>();
-		dataWatcher.addObject(6, trainType);
-		dataWatcher.addObject(7, trainOwner);
-		//dataWatcher.addObject(8, trainDestroyer);
-		dataWatcher.addObject(9, trainName);
-		dataWatcher.addObject(10, numberOfTrains);
-		dataWatcher.addObject(11, uniqueID);
-		dataWatcher.addObject(13, trainCreator);
-		dataWatcher.addObject(31, trainNote); //train note
-
-		// Chunk loading by default should always be disabled when placing a locomotive
-		this.setFlag(7, false);
-
 		trainSpec = Traincraft.traincraftRegistry.getTrainRecord(this.getClass());
-		this.setDefaultMass(trainSpec.getMass());
-
+		acceptedColors = new ArrayList<Integer>();
+		this.setMinecartName(trainSpec.name());
 		if (trainSpec.getColors() != null)
 		{
 			for (int i = 0; i < trainSpec.getColors().length; i++)
@@ -240,10 +225,26 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 				this.acceptedColors.add((trainSpec.getColors()[i]));
 			}
 		}
-		this.setSize(0.98f, 1.98f);
-		this.setMinecartName(trainSpec.name());
+		if (world != null)
+		{
+			renderDistanceWeight = 2.0D;
+			dataWatcher.addObject(12, color);
+			dataWatcher.addObject(6, trainType);
+			dataWatcher.addObject(7, trainOwner);
+			//dataWatcher.addObject(8, trainDestroyer);
+			dataWatcher.addObject(9, trainName);
+			dataWatcher.addObject(10, numberOfTrains);
+			dataWatcher.addObject(11, uniqueID);
+			dataWatcher.addObject(13, trainCreator);
+			dataWatcher.addObject(31, trainNote); //train note
 
-		GetRenderSpec();
+
+			// Chunk loading by default should always be disabled when placing a locomotive
+			this.setFlag(7, false);
+			this.setDefaultMass(trainSpec.getMass());
+			this.setSize(0.98f, 1.98f);
+			GetRenderSpec();
+		}
 	}
 
 	/**

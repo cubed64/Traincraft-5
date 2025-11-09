@@ -28,15 +28,16 @@ public abstract class HydrogenTrain extends Locomotive implements IFluidHandler 
     private HydrogenTrain(int capacity, World world) {
         super(world);
         this.maxTank = capacity;
-
-        this.theTank = LiquidManager.getInstance().new FilteredTank(capacity, new FluidStack(FluidRegistry.getFluid("hydrogen"), 1));
-
-        dataWatcher.addObject(4, 0);
         numCargoSlots = 3;
         numCargoSlots1 = 3;
         numCargoSlots2 = 3;
         inventorySize = numCargoSlots + numCargoSlots2 + numCargoSlots1 + fuelSlot;
-        this.dataWatcher.addObject(23, "null-_-" + 0);
+        if (world != null)
+        {
+            this.dataWatcher.addObject(23, "null-_-" + 0);
+            this.theTank = LiquidManager.getInstance().new FilteredTank(capacity, new FluidStack(FluidRegistry.getFluid("hydrogen"), 1));
+            dataWatcher.addObject(4, 0);
+        }
     }
 
     @Override

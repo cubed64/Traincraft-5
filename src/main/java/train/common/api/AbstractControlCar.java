@@ -51,19 +51,24 @@ public abstract class AbstractControlCar extends EntityRollingStock implements I
     public AbstractControlCar(World world)
     {
         super(world);
-        numCargoSlots = 3;
-        numCargoSlots1 = 3;
-        numCargoSlots2 = 3;
-        inventorySize = numCargoSlots + numCargoSlots2 + numCargoSlots1 + 1;
-        controlCarInventory = new ItemStack[inventorySize];
-        dataWatcher.addObject(28, lightingDetailsJSON());
-        if (connectedLocomotive == null) {
-            dataWatcher.addObject(29, 0);
-        } else {
-            dataWatcher.addObject(29, connectedLocomotive.getEntityId());
+
+        if (world != null)
+        {
+            numCargoSlots = 3;
+            numCargoSlots1 = 3;
+            numCargoSlots2 = 3;
+            inventorySize = numCargoSlots + numCargoSlots2 + numCargoSlots1 + 1;
+            controlCarInventory = new ItemStack[inventorySize];
+            dataWatcher.addObject(28, lightingDetailsJSON());
+            if (connectedLocomotive == null)
+            {
+                dataWatcher.addObject(29, 0);
+            }
+            else
+            {
+                dataWatcher.addObject(29, connectedLocomotive.getEntityId());
+            }
         }
-
-
     }
 
     public abstract SoundRecord getSoundRecord();

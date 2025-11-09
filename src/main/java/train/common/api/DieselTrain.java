@@ -36,30 +36,36 @@ public abstract class DieselTrain extends Locomotive implements IFluidHandler {
 	public DieselTrain(World world, int capacity, FluidStack[] multiFilter)
 	{
 		this(capacity, world, null, multiFilter);
-		fuelTrain = 0;
-		locoInvent = new ItemStack[inventorySize];
+		if (world != null)
+		{
+			fuelTrain = 0;
+			locoInvent = new ItemStack[inventorySize];
+		}
 	}
 
-	private DieselTrain(int capacity, World world, FluidStack filter, FluidStack[] multiFilter) {
+	private DieselTrain(int capacity, World world, FluidStack filter, FluidStack[] multiFilter)
+	{
 		super(world);
 		this.maxTank = capacity;
-		if (filter == null && multiFilter == null) {
-			this.theTank = LiquidManager.getInstance().new StandardTank(capacity);
-		}
-		if (filter != null) {
-			this.theTank = LiquidManager.getInstance().new FilteredTank(capacity, filter);
-		}
-		if (multiFilter != null) {
-			this.theTank = LiquidManager.getInstance().new FilteredTank(capacity, multiFilter);
-		}
-		dataWatcher.addObject(4, 0);
 		numCargoSlots = 3;
 		numCargoSlots1 = 3;
 		numCargoSlots2 = 3;
 		inventorySize = numCargoSlots + numCargoSlots2 + numCargoSlots1 + fuelSlot;
-		this.dataWatcher.addObject(23, "null-_-" + 0);
+		if (world != null)
+		{
+			if (filter == null && multiFilter == null) {
+				this.theTank = LiquidManager.getInstance().new StandardTank(capacity);
+			}
+			if (filter != null) {
+				this.theTank = LiquidManager.getInstance().new FilteredTank(capacity, filter);
+			}
+			if (multiFilter != null) {
+				this.theTank = LiquidManager.getInstance().new FilteredTank(capacity, multiFilter);
+			}
+			dataWatcher.addObject(4, 0);
+			this.dataWatcher.addObject(23, "null-_-" + 0);
+		}
 	}
-
 
 	@Override
 	public void onUpdate()

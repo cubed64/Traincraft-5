@@ -24,8 +24,10 @@ public abstract class Freight extends EntityRollingStock implements IInventory
 	public Freight(World world)
 	{
 		super(world);
-		dataWatcher.addObject(22, 0);
-
+		if (world != null)
+		{
+			dataWatcher.addObject(22, 0);
+		}
 	}
 
 	@Override

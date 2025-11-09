@@ -167,7 +167,10 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 
 	public EntityRollingStock(World world) {
 		super(world);
-		initRollingStock(world);
+		if (world != null)
+		{
+			initRollingStock(world);
+		}
 	}
 
 	@Override
@@ -175,7 +178,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		return CartTools.getCartOwner(this);
 	}
 
-	public void initRollingStock(World world) {
+	public void initRollingStock(World world)
+	{
 		dataWatcher.addObject(20, 0);//heat
 		dataWatcher.addObject(14, 0);
 		dataWatcher.addObject(21, 0);

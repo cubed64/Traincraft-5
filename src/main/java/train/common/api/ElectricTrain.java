@@ -24,17 +24,21 @@ public abstract class ElectricTrain extends Locomotive {
 
 	public ElectricTrain(World world) {
 		super(world);
-		fuelTrain = 0;
+
 
 		numCargoSlots = 5;
 		numCargoSlots1 = 5;
 		numCargoSlots2 = 5;
 		inventorySize = numCargoSlots + numCargoSlots2 + numCargoSlots1 + 1;
-		locoInvent = new ItemStack[inventorySize];
-		//hasUranium = false;
-		//reduceExplosionChance = 1000;
-		Ignite = false;
-		timeSinceIgnited = 0;
+		if (world != null)
+		{
+			fuelTrain = 0;
+			locoInvent = new ItemStack[inventorySize];
+			//hasUranium = false;
+			//reduceExplosionChance = 1000;
+			Ignite = false;
+			timeSinceIgnited = 0;
+		}
 	}
 
 	@Override

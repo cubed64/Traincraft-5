@@ -39,8 +39,11 @@ public abstract class AbstractWorkCart extends EntityRollingStock implements IIn
 	public AbstractWorkCart(World world)
 	{
 		super(world);
-		initCabooseWorkCart();
-		dataWatcher.addObject(28, lightingDetailsJSON());
+		if (world != null)
+		{
+			initCabooseWorkCart();
+			dataWatcher.addObject(28, lightingDetailsJSON());
+		}
 	}
 
 	public void initCabooseWorkCart() {
