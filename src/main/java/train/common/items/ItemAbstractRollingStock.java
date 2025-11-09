@@ -1,5 +1,7 @@
 package train.common.items;
 
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheBuilder;
 import com.mojang.authlib.GameProfile;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -14,10 +16,7 @@ import net.minecraft.item.ItemMinecart;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.MathHelper;
-import net.minecraft.util.StatCollector;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
 import train.common.Traincraft;
 import train.common.api.*;
@@ -32,8 +31,8 @@ import train.common.utils.lockout.ILockoutGroup;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public abstract class ItemAbstractRollingStock extends ItemMinecart implements IMinecart, IMinecartItem {
 
@@ -103,6 +102,9 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
         {
             par3List.add("\u00a77" + "Type: " + getTrainType());
         }
+
+        par3List.add(EnumChatFormatting.RED + "Lockout: " + (hasPublicDomainSkins() ? EnumChatFormatting.GREEN + "Public Skins" : EnumChatFormatting.RED + "No Public Skins"));
+
         if (power > 0) {
             par3List.add("\u00a77" + "Power: " + power + " Mhp");
         }
@@ -115,6 +117,7 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
         if (getCargoCapacity() > 0) {
             par3List.add("\u00a77" + "Slots: " + getCargoCapacity());
         }
+
 
         if (trainRecord.getTankCapacity() > 0)
         {
@@ -134,7 +137,6 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
             }
         }
 
-
         if (additionnalInfo != null) {
             for (String info : additionnalInfo) {
                 par3List.add("\u00a77" + info);
@@ -146,6 +148,31 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
     }
 
     public abstract String GetContentPackName();
+
+    private static Cache<String, RollingStockItemCache> cache = CacheBuilder.newBuilder()
+            .maximumSize(500)
+            .expireAfterWrite(10, TimeUnit.MINUTES)
+            .build();
+
+    public boolean hasPublicDomainSkins()
+    {
+        ITrainRecord trainRecord = Traincraft.traincraftRegistry.getCurrentTrain(this);
+        if (trainRecord.getColors() == null)
+        {
+            return true;
+        }
+
+        RollingStockItemCache itemCacheData = cache.getIfPresent(trainRecord.getInternalName());
+        if (itemCacheData == null)
+        {
+            AbstractTrains train = Traincraft.traincraftRegistry.getEntity(trainRecord.getEntityClass(), null);
+            boolean hasPublicSkin = train.lockoutMap.isEmpty() || train.lockoutMap.size() != trainRecord.getColors().length;
+            itemCacheData = new RollingStockItemCache(hasPublicSkin);
+            cache.put(trainRecord.getInternalName(), itemCacheData);
+        }
+
+        return itemCacheData.HasPublicSkins;
+    }
 
     @Override
     public EnumRarity getRarity(ItemStack par1ItemStack) {
