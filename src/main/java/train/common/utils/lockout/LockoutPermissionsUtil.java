@@ -31,6 +31,14 @@ public class LockoutPermissionsUtil
         lockGroupsReg.put(lockoutGroup.name().toUpperCase(), lockoutGroup);
     }
 
+    public void AddLockGroups(ILockoutGroup[] lockoutGroups)
+    {
+        for (ILockoutGroup lockoutGroup : lockoutGroups)
+        {
+            lockGroupsReg.put(lockoutGroup.name().toUpperCase(), lockoutGroup);
+        }
+    }
+
     public LockoutPermissionsUtil()
     {
         LockoutFolder = Loader.instance().getConfigDir() + File.separator + "traincraft" + File.separator + "Lockout";
