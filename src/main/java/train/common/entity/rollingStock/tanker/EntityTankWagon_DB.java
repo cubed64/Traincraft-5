@@ -10,7 +10,6 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.api.LiquidTank;
 import train.common.library.EnumHeritageTrainsLegacy;
-import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
 public class EntityTankWagon_DB extends LiquidTank {

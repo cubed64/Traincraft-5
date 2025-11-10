@@ -1,9 +1,6 @@
 package train.common.entity.rollingStock.freight;
 
-import com.jcirmodelsquad.tcjcir.models.ModelFreedomHeli;
 import com.jcirmodelsquad.tcjcir.models.loads.Modelboulder;
-import com.jcirmodelsquad.tcjcir.models.loads.Modelroadrailer_trailer_53;
-import com.jcirmodelsquad.tcjcir.models.loads.Modeltoastertiedown;
 import com.jcirmodelsquad.tcjcir.models.trains.*;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,7 +12,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.client.render.models.ModelCharB1;
 import train.client.render.models.ModelFT17;
-import train.client.render.models.ModelGP7;
 import train.client.render.models.ModelPanzerI;
 import train.common.Traincraft;
 import train.common.api.Freight;

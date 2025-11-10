@@ -79,13 +79,6 @@ public class EntityBulkheadFlatCart extends Freight implements IInventory {
 
 
 	@Override
-	public void onUpdate() {
-		super.onUpdate();
-	}
-
-
-
-	@Override
 	protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {
 		super.writeEntityToNBT(nbttagcompound);
 

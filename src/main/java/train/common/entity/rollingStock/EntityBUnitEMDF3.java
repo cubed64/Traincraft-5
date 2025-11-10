@@ -5,7 +5,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -15,7 +14,6 @@ import train.common.api.INoFuelTransferEntity;
 import train.common.api.LiquidManager;
 import train.common.api.LiquidTank;
 import train.common.library.EnumHeritageTrainsLegacy;
-import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 
 public class EntityBUnitEMDF3 extends LiquidTank implements IFluidHandler, INoFuelTransferEntity

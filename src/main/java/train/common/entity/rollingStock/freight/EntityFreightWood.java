@@ -27,13 +27,7 @@ public class EntityFreightWood extends Freight implements IInventory {
 		if(trainSpec!=null)freightInventorySize = trainSpec.getCargoCapacity();
 		cargoItems = new ItemStack[freightInventorySize];
 	}
-	
-	@Override
-	public void onUpdate() {
-		super.onUpdate();
-	}
 
-	
 
 	@Override
 	protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {
