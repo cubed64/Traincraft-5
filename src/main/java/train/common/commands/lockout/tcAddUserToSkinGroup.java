@@ -13,6 +13,7 @@ import java.util.UUID;
 
 public class tcAddUserToSkinGroup extends CommandBase
 {
+    @Override
     public int getRequiredPermissionLevel()
     {
         return 0;
