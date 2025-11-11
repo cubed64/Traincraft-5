@@ -42,6 +42,7 @@ import train.common.library.BetterEnumSounds;
 import train.common.library.Info;
 import train.common.library.TraincraftRegistry;
 import train.common.recipes.AssemblyTableRecipes;
+import train.common.utils.devutils.TrainSheetsDataGenerator;
 import train.common.utils.lockout.ILockoutGroup;
 import train.common.utils.lockout.LockoutPermissionsUtil;
 
@@ -284,6 +285,12 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		thing.init();*/
 		MapGenVillage.villageSpawnBiomes = Arrays.asList(BiomeGenBase.plains, BiomeGenBase.desert, BiomeGenBase.savanna, BiomeGenBase.extremeHills);
 		tcLog.info("Finished PostInitialization! We are done for Traincraft!");
+
+		// Uncomment this to regen the texture prefix data file.
+		if (FMLCommonHandler.instance().getEffectiveSide().isClient())
+		{
+			new TrainSheetsDataGenerator();
+		}
 	}
 
 	@EventHandler

@@ -12,6 +12,7 @@ import train.common.api.AbstractTrains;
 import train.common.core.managers.TierRecipeManager;
 import train.common.library.register.ITrainRecord;
 import train.client.render.register.ITrainRenderRecord;
+import train.common.library.register.TrainRecord;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -73,6 +74,28 @@ public class TraincraftRegistry
 
         ITrainRecord record = getCurrentTrain(item);
         return getEntity(record.getEntityClass(), world, x, y, z);
+    }
+
+    public HashMap<Item, ITrainRecord> getAllTrains()
+    {
+        HashMap<Item, ITrainRecord> trainRecords =new HashMap<>();
+
+
+        for (EnumTrains trains : EnumTrains.values()) {
+            trainRecords.put(trains.getItem(), trains);
+        }
+
+        for (Map.Entry<Item, ITrainRecord> trainRecord : trainRecordsByItem.entrySet())
+        {
+            trainRecords.put(trainRecord.getKey(), trainRecord.getValue());
+        }
+
+        for (EnumHeritageTrainsLegacy trains : EnumHeritageTrainsLegacy.values())
+        {
+            trainRecords.put(trains.getItem(), trains);
+        }
+
+        return trainRecords;
     }
 
     public ITrainRecord getCurrentTrain(Item item)
