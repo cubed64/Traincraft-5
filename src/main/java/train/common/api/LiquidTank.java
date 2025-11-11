@@ -20,7 +20,7 @@ public class LiquidTank extends EntityRollingStock implements IFluidHandler, ISi
 	private int capacity;
 	protected ItemStack cargoItems[];
 	private int update = 8;
-	private FluidTank theTank;
+	protected FluidTank theTank;
 	public TileEntity[] blocksToCheck;
 
 	/**
