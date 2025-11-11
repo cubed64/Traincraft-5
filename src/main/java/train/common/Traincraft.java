@@ -15,6 +15,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.VillagerRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.launchwrapper.Launch;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.MapGenVillage;
@@ -285,9 +286,8 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		thing.init();*/
 		MapGenVillage.villageSpawnBiomes = Arrays.asList(BiomeGenBase.plains, BiomeGenBase.desert, BiomeGenBase.savanna, BiomeGenBase.extremeHills);
 		tcLog.info("Finished PostInitialization! We are done for Traincraft!");
-
 		// Uncomment this to regen the texture prefix data file.
-		if (FMLCommonHandler.instance().getEffectiveSide().isClient())
+		if ((Boolean) Launch.blackboard.get("fml.deobfuscatedEnvironment") && FMLCommonHandler.instance().getEffectiveSide().isClient())
 		{
 			new TrainSheetsDataGenerator();
 		}
