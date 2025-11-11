@@ -13,6 +13,11 @@ import java.util.UUID;
 
 public class tcAddUserToSkinGroup extends CommandBase
 {
+    public int getRequiredPermissionLevel()
+    {
+        return 0;
+    }
+
     @Override
     public boolean canCommandSenderUseCommand(ICommandSender p_71519_1_)
     {
