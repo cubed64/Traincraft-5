@@ -3678,7 +3678,7 @@ public class ItemTCRail extends ItemPart {
 				putDownSingleRail(world, x, y + 1, z - 4, l, x + 18.48, y + 1, z + 0.95, 18, typeVariantStraight, false, x + 1, y + 1, z - 3, true, false);
 
 				if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray2, x, false), flipArraySign(zArray2, z, true), l, false, 2, x + 2, z - 20, 18, x - 14.5,
-						y + 1, z - 13.5, EnumTracks.MEDIUM_LEFT_TURN.getLabel(), tempType.getItem().item))
+						y + 1, z - 13.5, EnumTracks.MEDIUM_LEFT_TURN.getLabel(), null))
 					return false;
 				TileTCRail tcRailTurn2 = (TileTCRail) world.getTileEntity(x + 1, y + 1, z - 7);
 				if (tcRailTurn2 != null) {
@@ -3728,7 +3728,7 @@ public class ItemTCRail extends ItemPart {
 				putDownSingleRail(world, x, y + 1, z + 4, l, x - 17.48, y + 1, z + 0.05, 18, typeVariantStraight, false, x - 1, y + 1, z + 3, true, false);
 
 				if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray2, x, true), flipArraySign(zArray2, z, false), l, false, 0, x - 2, z + 17, 18, x + 15.48,
-						y + 1, z + 14.5, EnumTracks.MEDIUM_LEFT_TURN.getLabel(), tempType.getItem().item))
+						y + 1, z + 14.5, EnumTracks.MEDIUM_LEFT_TURN.getLabel(), null))
 					return false;
 				TileTCRail tcRailTurn2 = (TileTCRail) world.getTileEntity(x - 1, y + 1, z + 7);
 				if (tcRailTurn2 != null) {
@@ -3778,7 +3778,7 @@ public class ItemTCRail extends ItemPart {
 				putDownSingleRail(world, x - 4, y + 1, z , l, x + 0.95, y + 1, z - 17.48, 18, typeVariantStraight, false, x - 3, y + 1, z - 1, true, false);
 
 				if (!putDownTurn(player, world, false, x, y, z, flipArraySign(zArray2, x, true), flipArraySign(xArray2, z, true), l, false, 1, x - 17, z - 3, 18, x - 13.5,
-						y + 1, z + 15.5, EnumTracks.MEDIUM_LEFT_TURN.getLabel(), tempType.getItem().item))
+						y + 1, z + 15.5, EnumTracks.MEDIUM_LEFT_TURN.getLabel(), null))
 					return false;
 				TileTCRail tcRailTurn2 = (TileTCRail) world.getTileEntity(x - 7, y + 1, z - 1);
 				if (tcRailTurn2 != null) {
@@ -3828,7 +3828,7 @@ public class ItemTCRail extends ItemPart {
 				putDownSingleRail(world, x + 4, y + 1, z , l, x + 0.05, y + 1, z + 18.48, 18, typeVariantStraight, false, x + 3, y + 1, z + 1, true, false);
 
 				if (!putDownTurn(player, world, false, x, y, z, flipArraySign(zArray2, x, false), flipArraySign(xArray2, z, false), l, false, 3, x + 17, z + 3, 18, x + 14.5,
-						y + 1, z - 14.5, EnumTracks.MEDIUM_LEFT_TURN.getLabel(), tempType.getItem().item))
+						y + 1, z - 14.5, EnumTracks.MEDIUM_LEFT_TURN.getLabel(), null))
 					return false;
 				TileTCRail tcRailTurn2 = (TileTCRail) world.getTileEntity(x + 7, y + 1, z + 1);
 				if (tcRailTurn2 != null) {
@@ -3927,7 +3927,7 @@ public class ItemTCRail extends ItemPart {
 				putDownSingleRail(world, x, y + 1, z - 4, l, x - 17.48, y + 1, z + 0.95, 18, typeVariantStraight, false, x - 1, y + 1, z - 3, true, false);
 
 				if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray2, x, true), flipArraySign(zArray2, z, true), l, false, 2, x - 2, z - 17, 18, x + 15.5,
-						y + 1, z - 13.5, EnumTracks.MEDIUM_RIGHT_TURN.getLabel(), tempType.getItem().item))
+						y + 1, z - 13.5, EnumTracks.MEDIUM_RIGHT_TURN.getLabel(), null))
 					return false;
 				TileTCRail tcRailTurn2 = (TileTCRail) world.getTileEntity(x - 1, y + 1, z - 7);
 				if (tcRailTurn2 != null) {
@@ -3977,7 +3977,7 @@ public class ItemTCRail extends ItemPart {
 				putDownSingleRail(world, x, y + 1, z + 4, l, x + 18.48, y + 1, z + 0.05, 18, typeVariantStraight, false, x + 1, y + 1, z + 3, true, false);
 
 				if (!putDownTurn(player, world, false, x, y, z, flipArraySign(xArray2, x, false), flipArraySign(zArray2, z, false), l, false, 0, x - 2, z + 17, 18, x -14.48,
-						y + 1, z + 14.5, EnumTracks.MEDIUM_RIGHT_TURN.getLabel(), tempType.getItem().item))
+						y + 1, z + 14.5, EnumTracks.MEDIUM_RIGHT_TURN.getLabel(), null))
 					return false;
 				TileTCRail tcRailTurn2 = (TileTCRail) world.getTileEntity(x + 1, y + 1, z + 7);
 				if (tcRailTurn2 != null) {
@@ -4027,7 +4027,7 @@ public class ItemTCRail extends ItemPart {
 				putDownSingleRail(world, x - 4, y + 1, z , l, x + 0.95, y + 1, z + 18.48, 18, typeVariantStraight, false, x - 3, y + 1, z + 1, true, false);
 
 				if (!putDownTurn(player, world, false, x, y, z, flipArraySign(zArray2, x, true), flipArraySign(xArray2, z, false), l, false, 1, x - 17, z + 3, 18, x - 13.5,
-						y + 1, z - 14.5, EnumTracks.MEDIUM_RIGHT_TURN.getLabel(), tempType.getItem().item))
+						y + 1, z - 14.5, EnumTracks.MEDIUM_RIGHT_TURN.getLabel(), null))
 					return false;
 				TileTCRail tcRailTurn2 = (TileTCRail) world.getTileEntity(x - 7, y + 1, z + 1);
 				if (tcRailTurn2 != null) {
@@ -4077,7 +4077,7 @@ public class ItemTCRail extends ItemPart {
 				putDownSingleRail(world, x + 4, y + 1, z , l, x + 0.05, y + 1, z - 17.48, 18, typeVariantStraight, false, x + 3, y + 1, z - 1, true, false);
 
 				if (!putDownTurn(player, world, false, x, y, z, flipArraySign(zArray2, x, false), flipArraySign(xArray2, z, true), l, false, 3, x + 17, z + 3, 18, x + 14.5,
-						y + 1, z + 15.5, EnumTracks.MEDIUM_RIGHT_TURN.getLabel(), tempType.getItem().item))
+						y + 1, z + 15.5, EnumTracks.MEDIUM_RIGHT_TURN.getLabel(), null))
 					return false;
 				TileTCRail tcRailTurn2 = (TileTCRail) world.getTileEntity(x + 7, y + 1, z - 1);
 				if (tcRailTurn2 != null) {
