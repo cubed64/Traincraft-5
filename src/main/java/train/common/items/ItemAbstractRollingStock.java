@@ -242,7 +242,8 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
                     || tile.getType().equals(EnumTracks.EMBEDDED_MEDIUM_DIAGONAL_STRAIGHT.getLabel())
                     || tile.getType().equals(EnumTracks.EMBEDDED_LONG_DIAGONAL_STRAIGHT.getLabel())
                     || tile.getType().equals(EnumTracks.EMBEDDED_VERY_LONG_DIAGONAL_STRAIGHT.getLabel())
-            ) {
+            )
+            {
                 this.placeCart(par2EntityPlayer, par1ItemStack, par3World, par4, par5, par6);
                 return true;
             }

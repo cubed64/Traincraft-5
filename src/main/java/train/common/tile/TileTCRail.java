@@ -16,7 +16,10 @@ import train.common.Traincraft;
 import train.common.items.ItemTCRail;
 import train.common.items.TCRailTypes;
 import train.common.library.BlockIDs;
+import train.common.library.EnumCoreTrack;
 import train.common.library.EnumTracks;
+
+import static train.common.library.EnumCoreTrack.*;
 
 public class TileTCRail extends TileEntity {
 
@@ -92,23 +95,19 @@ public class TileTCRail extends TileEntity {
 	{
 		if (railLength == 0)
 		{
-			switch (EnumTracks.valueOf(getType()))
+			switch (EnumTracks.valueOf(getType()).getCoreTrack())
 			{
-				case VERY_LONG_DIAGONAL_STRAIGHT:
-				case EMBEDDED_VERY_LONG_DIAGONAL_STRAIGHT:
+				case CORE_VERY_LONG_DIAGONAL_STRAIGHT:
 					railLength = 12;
 					break;
-				case LONG_DIAGONAL_STRAIGHT:
-				case EMBEDDED_LONG_DIAGONAL_STRAIGHT:
+				case CORE_LONG_DIAGONAL_STRAIGHT:
 					railLength = 6;
 					break;
 
-				case MEDIUM_DIAGONAL_STRAIGHT:
-				case EMBEDDED_MEDIUM_DIAGONAL_STRAIGHT:
+				case CORE_MEDIUM_DIAGONAL_STRAIGHT:
 					railLength = 3;
 					break;
-				case SMALL_DIAGONAL_STRAIGHT:
-				case EMBEDDED_SMALL_DIAGONAL_STRAIGHT:
+				case CORE_SMALL_DIAGONAL_STRAIGHT:
 					railLength = 1;
 					break;
                 default:
@@ -260,44 +259,36 @@ public class TileTCRail extends TileEntity {
 		 * Hacky TC Code to fix already placed slopes
 		 * ETERNAL NOTE: checking if it's a slope before checking what kind of slope, in theory, should improve performance
 		 */
-		if(type.contains("SLOPE")) {
-			if (type.equals(EnumTracks.SLOPE_1X3_DYNAMIC.getLabel()) || type.equals(EnumTracks.EMBEDDED_SLOPE_1X3_DYNAMIC.getLabel()))
+		if(type.contains("SLOPE"))
+		{
+			EnumTracks track = EnumTracks.GetTrackByLabel(type);
+			switch (track.getCoreTrack())
 			{
-				slopeAngle = 0.26;
-			}
-			else if (type.equals(EnumTracks.SLOPE_1X3_DYNAMIC_DIAGONAL.getLabel()) || type.equals(EnumTracks.EMBEDDED_SLOPE_1X3_DYNAMIC_DIAGONAL.getLabel())) {
-				slopeAngle = 0.23; //5 decimals of precision for track length, 2 dec for angle
-			}
-			else if (type.equals(EnumTracks.SLOPE_1X6_DYNAMIC_DIAGONAL.getLabel()) || type.equals(EnumTracks.EMBEDDED_SLOPE_1X6_DYNAMIC_DIAGONAL.getLabel())) {
-				slopeAngle = 0.12; //5 decimals of precision for track length, 2 dec for angle
-			}
-			else if (type.equals(EnumTracks.SLOPE_1X12_DYNAMIC_DIAGONAL.getLabel()) || type.equals(EnumTracks.EMBEDDED_SLOPE_1X12_DYNAMIC_DIAGONAL.getLabel())) {
-				slopeAngle = 0.06; //5 decimals of precision for track length, 2 dec for angle
-			}
-			else if (type.equals(EnumTracks.SLOPE_1X18_DYNAMIC_DIAGONAL.getLabel()) || type.equals(EnumTracks.EMBEDDED_SLOPE_1X18_DYNAMIC_DIAGONAL.getLabel())) {
-				slopeAngle = 0.04; //5 decimals of precision for track length, 2 dec for angle
-			}
-			else if (type.equals(EnumTracks.SLOPE_WOOD.getLabel())
-					|| type.equals(EnumTracks.SLOPE_GRAVEL.getLabel())
-					|| type.equals(EnumTracks.SLOPE_BALLAST.getLabel())
-					|| type.equals(EnumTracks.SLOPE_SNOW_GRAVEL.getLabel())
-					|| type.equals(EnumTracks.SLOPE_DYNAMIC.getLabel())
-					|| type.equals(EnumTracks.EMBEDDED_SLOPE_DYNAMIC.getLabel())) {
-				slopeAngle = 0.13;
-			} else if (type.equals(EnumTracks.LARGE_SLOPE_WOOD.getLabel())
-					|| type.equals(EnumTracks.LARGE_SLOPE_GRAVEL.getLabel())
-					|| type.equals(EnumTracks.LARGE_SLOPE_BALLAST.getLabel())
-					|| type.equals(EnumTracks.LARGE_SLOPE_SNOW_GRAVEL.getLabel())
-					|| type.equals(EnumTracks.LARGE_SLOPE_DYNAMIC.getLabel())
-					|| type.equals(EnumTracks.EMBEDDED_LARGE_SLOPE_DYNAMIC.getLabel())) {
-				slopeAngle = 0.0666;
-			} else if (type.equals(EnumTracks.VERY_LARGE_SLOPE_WOOD.getLabel())
-					|| type.equals(EnumTracks.VERY_LARGE_SLOPE_GRAVEL.getLabel())
-					|| type.equals(EnumTracks.VERY_LARGE_SLOPE_BALLAST.getLabel())
-					|| type.equals(EnumTracks.VERY_LARGE_SLOPE_SNOW_GRAVEL.getLabel())
-					|| type.equals(EnumTracks.VERY_LARGE_SLOPE_DYNAMIC.getLabel())
-					|| type.equals(EnumTracks.EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC.getLabel())) {
-				slopeAngle = 0.0444;
+				case CORE_3_SLOPE:
+					slopeAngle = 0.26;
+				break;
+				case CORE_6_SLOPE:
+					slopeAngle = 0.13;
+				break;
+				case CORE_12_SLOPE:
+					slopeAngle = 0.0666;
+				break;
+				case CORE_18_SLOPE:
+					slopeAngle = 0.0444;
+				break;
+
+				case CORE_3_DIAGONAL_SLOPE:
+					slopeAngle = 0.23; //5 decimals of precision for track length, 2 dec for angle
+				break;
+				case CORE_6_DIAGONAL_SLOPE:
+					slopeAngle = 0.12; //5 decimals of precision for track length, 2 dec for angle
+				break;
+				case CORE_12_DIAGONAL_SLOPE:
+					slopeAngle = 0.06; //5 decimals of precision for track length, 2 dec for angle
+				break;
+				case CORE_18_DIAGONAL_SLOPE:
+					slopeAngle = 0.04; //5 decimals of precision for track length, 2 dec for angle
+				break;
 			}
 		}
 		isLinkedToRail = nbt.getBoolean("isLinkedToRail");
