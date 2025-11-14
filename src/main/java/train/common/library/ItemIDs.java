@@ -333,6 +333,8 @@ public enum ItemIDs {
 	tcRailMedium45DegreeSwitch("ItemTCRail","track_switch_45degree_3x5", 5),
 	tcRailLarge45DegreeSwitch("ItemTCRail", "track_switch_45degree_4x8", 5),
 
+	tcRailCrossoverSwitch10x2("ItemTCRail", "track_switch_crossover_10x2", 5),
+
 	//diamonds
 	tcRailTwoWaysCrossing("ItemTCRail","track_plus_crossing",5),
 	tcRailDiamondCrossing("ItemTCRail", "track_x_crossing", 5),
@@ -407,6 +409,7 @@ public enum ItemIDs {
 
 	tcRailEmbeddedMedium45DegreeSwitch("ItemtcRailEmbedded","track_switch_45degree_3x5_e", 5),
 	tcRailEmbeddedLarge45DegreeSwitch("ItemtcRailEmbedded", "track_switch_45degree_4x8_e", 5),
+	tcRailEmbeddedCrossoverSwitch10x2("ItemTCRail", "track_switch_crossover_10x2_e", 5),
 
 	//diamonds
 	tcRailEmbeddedTwoWaysCrossing("ItemtcRailEmbedded","track_plus_crossing_e",5),
