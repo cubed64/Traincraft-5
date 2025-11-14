@@ -4,6 +4,12 @@ import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import train.client.render.models.blocks.*;
 import train.client.render.models.blocks.BaseClass.ModelSlopeTCTrack;
+import train.client.render.models.blocks.turn.degree45.ModelLeft45DegreeTurnTCTrack;
+import train.client.render.models.blocks.turn.degree45.ModelRight45DegreeTurnTCTrack;
+import train.client.render.models.blocks.turn.degree90.ModelLeftTurnTCTrack;
+import train.client.render.models.blocks.turn.degree90.ModelRightTurnTCTrack;
+import train.common.items.BallastTypes;
+import train.common.library.EnumTracks;
 import train.common.tile.TileTCRail;
 
 public class RenderTCRail extends TileEntitySpecialRenderer {
@@ -51,532 +57,450 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 			
 			if (railTile.hasModel && railTile.getTrackType() != null)
 			{
-				switch (railTile.getTrackType())
+				EnumTracks track = railTile.getTrackType();
+				switch (track.getCoreTrack())
 				{
-					case TURN_1X1:
-					case RIGHT_TURN_1X1:
-					case EMBEDDED_TURN_1X1:
-					case EMBEDDED_RIGHT_TURN_1X1:
-					{
-						modelRightTurn.render("1x", railTile, x, y, z);
-						break;
-					}
-					case LEFT_TURN_1X1:
-					case EMBEDDED_LEFT_TURN_1X1:
-					{
-						modelLeftTurn.render("1x", railTile, x, y, z);
-						break;
-					}
-					case MEDIUM_TURN:
-					case MEDIUM_RIGHT_TURN:
-					case EMBEDDED_MEDIUM_TURN:
-					case EMBEDDED_MEDIUM_RIGHT_TURN:
-					{
-						modelRightTurn.render("medium", railTile, x, y, z);
-						break;
-					}
-					case MEDIUM_LEFT_TURN:
-					case EMBEDDED_MEDIUM_LEFT_TURN:
-					{
-						modelLeftTurn.render("medium", railTile, x, y, z);
-						break;
-					}
-					case LARGE_TURN:
-					case LARGE_RIGHT_TURN:
-					case EMBEDDED_LARGE_TURN:
-					case EMBEDDED_LARGE_RIGHT_TURN:
-					{
-						modelRightTurn.render("large", railTile, x, y, z);
-						break;
-					}
-					case LARGE_LEFT_TURN:
-					case EMBEDDED_LARGE_LEFT_TURN:
-					{
-						modelLeftTurn.render("large", railTile, x, y, z);
-						break;
-					}
-					case VERY_LARGE_TURN:
-					case VERY_LARGE_RIGHT_TURN:
-					case EMBEDDED_VERY_LARGE_TURN:
-					case EMBEDDED_VERY_LARGE_RIGHT_TURN:
-					{
-						modelRightTurn.render("very_large", railTile, x, y, z);
-						break;
-					}
-					case VERY_LARGE_LEFT_TURN:
-					case EMBEDDED_VERY_LARGE_LEFT_TURN:
-					{
-						modelLeftTurn.render("very_large", railTile, x, y, z);
-						break;
-					}
-					case SUPER_LARGE_RIGHT_TURN:
-					case EMBEDDED_SUPER_LARGE_TURN:
-					case EMBEDDED_SUPER_LARGE_RIGHT_TURN:
-					{
-						modelRightTurn.render("super_large", railTile, x , y, z);
-						break;
-					}
-					case SUPER_LARGE_LEFT_TURN:
-					case EMBEDDED_SUPER_LARGE_LEFT_TURN:{
-						modelLeftTurn.render("super_large", railTile, x , y,z);
-						break;
-					}
-					case TURN_29X29:
-					case RIGHT_TURN_29X29:
-					case EMBEDDED_TURN_29X29:
-					case EMBEDDED_RIGHT_TURN_29X29:
-					{
-						modelRightTurn.render("29x", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_LEFT_TURN_29X29:
-					case LEFT_TURN_29X29:
-					{
-						modelLeftTurn.render("29x", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_TURN_32X32:
-					case EMBEDDED_RIGHT_TURN_32X32:
-					case TURN_32X32:
-					case RIGHT_TURN_32X32:
-					{
-						modelRightTurn.render("32x", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_LEFT_TURN_32X32:
-					case LEFT_TURN_32X32:{
-						modelLeftTurn.render("32x", railTile, x, y, z);
-						break;
-					}
-					case MEDIUM_SWITCH:
-					case MEDIUM_RIGHT_SWITCH: {
-						modelRightSwitchTurn.render("medium", railTile, x, y, z);
-						break;
-					}
-					case MEDIUM_LEFT_SWITCH: {
-						modelLeftSwitchTurn.render("medium", railTile, x, y, z);
-						break;
-					}
-					case LARGE_SWITCH:
-					case LARGE_RIGHT_SWITCH: {
-						modelRightSwitchTurn.render("large_90", railTile, x, y, z);
-						break;
-					}
-					case LARGE_LEFT_SWITCH: {
-						modelLeftSwitchTurn.render("large_90", railTile, x, y, z);
-						break;
-					}
-					case MEDIUM_PARALLEL_SWITCH:
-					case MEDIUM_RIGHT_PARALLEL_SWITCH: {
-						modelRightSwitchTurn.render("medium_parallel", railTile, x, y, z);
-						break;
-					}
-					case MEDIUM_LEFT_PARALLEL_SWITCH: {
-						modelLeftSwitchTurn.render("medium_parallel", railTile, x, y, z);
-						break;
-					}
-					case LARGE_PARALLEL_SWITCH:
-					case LARGE_RIGHT_PARALLEL_SWITCH:
-					case EMBEDDED_LARGE_PARALLEL_SWITCH:
-					case EMBEDDED_LARGE_RIGHT_PARALLEL_SWITCH:
-					{
-						modelRightSwitchTurn.render("large_parallel", railTile, x, y, z);
-						break;
-					}
-					case LARGE_LEFT_PARALLEL_SWITCH:
-					case EMBEDDED_LARGE_LEFT_PARALLEL_SWITCH:
-					{
-						modelLeftSwitchTurn.render("large_parallel", railTile, x, y, z);
-						break;
-					}
-
-					case SMALL_STRAIGHT:{
+					case CORE_SMALL_STRAIGHT:
 						modelSmallStraight.render("straight", railTile, x, y, z);
-						break;
-					}
-					case MEDIUM_STRAIGHT:
-					case LONG_STRAIGHT:
-					case VERY_LONG_STRAIGHT:
-                    case EMBEDDED_MEDIUM_STRAIGHT:
-                    case EMBEDDED_LONG_STRAIGHT:
-                    case EMBEDDED_VERY_LONG_STRAIGHT:
-                    {
-						modelMediumStraight.render(railTile, x, y, z);
-						break;
-					}
+					break;
 
-					case SMALL_DIAGONAL_STRAIGHT: {
+					case CORE_MEDIUM_STRAIGHT:
+					case CORE_LONG_STRAIGHT:
+					case CORE_VERY_LONG_STRAIGHT:
+						modelMediumStraight.render(railTile, x, y, z);
+					break;
+
+					case CORE_SMALL_DIAGONAL_STRAIGHT: {
 						modelSmallDiagonalStraight.render("diagonal", railTile, x, y, z);
 						break;
 					}
-					case MEDIUM_DIAGONAL_STRAIGHT:
-					case LONG_DIAGONAL_STRAIGHT:
-					case VERY_LONG_DIAGONAL_STRAIGHT: {
-						modelMediumDiagonalStraight.render("diagonal", railTile, x, y, z);
-						break;
-					}
 
-					case TWO_WAYS_CROSSING:
-					case EMBEDDED_TWO_WAYS_CROSSING:
-					{
-						modelTwoWaysCrossing.render("twoways_crossing", railTile, x, y, z);
-						break;
-					}
-					case FOUR_WAYS_CROSSING:
-					case EMBEDDED_FOUR_WAYS_CROSSING:
-					{
-						modelTwoWaysCrossing.render("universal_crossing", railTile, x, y, z);
-						break;
-					}
-					case DIAMOND_CROSSING:
-					case RIGHT_DIAMOND_CROSSING:
-					case EMBEDDED_DIAMOND_CROSSING:
-					case EMBEDDED_RIGHT_DIAMOND_CROSSING:
-					{
-						modelRightDiamondCrossing.render(railTile, x, y, z);
-						break;
-					}
-					case LEFT_DIAMOND_CROSSING:
-					case EMBEDDED_LEFT_DIAMOND_CROSSING:
-					{
-						modelLeftDiamondCrossing.render(railTile, x, y, z);
-						break;
-					}
-					case DOUBLE_DIAMOND_CROSSING:
-					case EMBEDDED_DOUBLE_DIAMOND_CROSSING:
-					{
-						modelTwoWaysCrossing.render("diamond", railTile, x, y, z);
-						break;
-					}
-					case DIAGONAL_TWO_WAYS_CROSSING:
-					case EMBEDDED_DIAGONAL_TWO_WAYS_CROSSING:
-					{
-						modelTwoWaysCrossing.render("diagonal_crossing", railTile, x, y, z);
-						break;
-					}
-
-					case SMALL_PARALLEL_CURVE:
-					case SMALL_RIGHT_PARALLEL_CURVE:
-					case EMBEDDED_SMALL_PARALLEL_CURVE:
-					case EMBEDDED_SMALL_RIGHT_PARALLEL_CURVE:
-					{
-						modelRightParallelCurve.render("small", railTile, x, y, z);
-						break;
-					}
-					case SMALL_LEFT_PARALLEL_CURVE:
-					case EMBEDDED_SMALL_LEFT_PARALLEL_CURVE:
-					{
-						modelLeftParallelCurve.render("small", railTile, x, y, z);
-						break;
-					}
-
-					case MEDIUM_PARALLEL_CURVE:
-					case MEDIUM_RIGHT_PARALLEL_CURVE:
-					case EMBEDDED_MEDIUM_PARALLEL_CURVE:
-					case EMBEDDED_MEDIUM_RIGHT_PARALLEL_CURVE:
-					{
-						modelRightParallelCurve.render("medium", railTile, x, y, z);
-						break;
-					}
-					case MEDIUM_LEFT_PARALLEL_CURVE:
-					case EMBEDDED_MEDIUM_LEFT_PARALLEL_CURVE:
-					{
-						modelLeftParallelCurve.render("medium", railTile, x, y, z);
-						break;
-					}
-					case LARGE_PARALLEL_CURVE:
-					case LARGE_RIGHT_PARALLEL_CURVE:
-					case EMBEDDED_LARGE_PARALLEL_CURVE:
-					case EMBEDDED_LARGE_RIGHT_PARALLEL_CURVE:
-					{
-						modelRightParallelCurve.render("large", railTile, x, y, z);
-						break;
-					}
-					case LARGE_LEFT_PARALLEL_CURVE:
-					case EMBEDDED_LARGE_LEFT_PARALLEL_CURVE:
-					{
-						modelLeftParallelCurve.render("large", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_SLOPE_1X3_DYNAMIC:
-					case SLOPE_1X3_DYNAMIC:
-					{
-						model1X3Slope.renderDynamic(railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_SLOPE_1X3_DYNAMIC_DIAGONAL:
-					case SLOPE_1X3_DYNAMIC_DIAGONAL: {
-						model1x3DiagonalSlope.renderDynamic(railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_SLOPE_1X6_DYNAMIC_DIAGONAL:
-					case SLOPE_1X6_DYNAMIC_DIAGONAL: {
-						model1x6DiagonalSlope.renderDynamic(railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_SLOPE_1X12_DYNAMIC_DIAGONAL:
-					case SLOPE_1X12_DYNAMIC_DIAGONAL: {
-						model1x12DiagonalSlope.renderDynamic(railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_SLOPE_1X18_DYNAMIC_DIAGONAL:
-					case SLOPE_1X18_DYNAMIC_DIAGONAL: {
-						model1x18DiagonalSlope.renderDynamic(railTile, x, y, z);
-						break;
-					}
-					case SLOPE_DYNAMIC:
-					case EMBEDDED_SLOPE_DYNAMIC:
-					{
-						modelSlope.renderDynamic(railTile, x, y, z);
-						break;
-					}
-					case SLOPE_WOOD:
-					case SLOPE_GRAVEL:
-					case SLOPE_PEA_GRAVEL:
-					case SLOPE_BALLAST:
-					case SLOPE_SNOW_GRAVEL:
-					{
-						modelSlope.render(railTile, x, y, z);
-						break;
-					}
-					case LARGE_SLOPE_DYNAMIC:
-					case EMBEDDED_LARGE_SLOPE_DYNAMIC:
-						modelLargeSlope.renderDynamic(railTile, x, y, z);
+					case CORE_MEDIUM_DIAGONAL_STRAIGHT:
+					case CORE_LONG_DIAGONAL_STRAIGHT:
+					case CORE_VERY_LONG_DIAGONAL_STRAIGHT:
+						modelMediumDiagonalStraight.render(railTile, x, y, z);
 					break;
 
-					case LARGE_SLOPE_WOOD:
-					case LARGE_SLOPE_GRAVEL:
-					case LARGE_SLOPE_BALLAST:
-					case LARGE_SLOPE_SNOW_GRAVEL:
-					case LARGE_SLOPE_PEA_GRAVEL:
-					{
-						modelLargeSlope.render(railTile, x, y, z);
-						break;
-					}
-					case VERY_LARGE_SLOPE_DYNAMIC:
-					case EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC:
-					{
-						modelVeryLargeSlope.renderDynamic(railTile, x, y, z);
-						break;
-					}
-					case VERY_LARGE_SLOPE_WOOD:
-					case VERY_LARGE_SLOPE_GRAVEL:
-					case VERY_LARGE_SLOPE_BALLAST:
-					case VERY_LARGE_SLOPE_SNOW_GRAVEL:
-					case VERY_LARGE_SLOPE_PEA_GRAVEL:
-					{
-						modelVeryLargeSlope.render(railTile, x, y, z);
-						break;
-					}
-					// Embedded Tracks
-					case EMBEDDED_SMALL_STRAIGHT: {
-						modelSmallStraight.render("embedded", railTile, x, y, z);
-						break;
-					}
-					case SMALL_ROAD_CROSSING:{
-						modelRoadCrossing.render("crossing", railTile, x, y, z);
-						break;
-					}
-					case SMALL_ROAD_CROSSING_1:{
-						modelRoadCrossing.render("crossing1", railTile, x, y, z);
-						break;
-					}
-					case SMALL_ROAD_CROSSING_2:{
-						modelRoadCrossing.render("crossing2", railTile, x, y, z);
-						break;
-					}
-					case SMALL_ROAD_CROSSING_DYNAMIC:{
-						modelRoadCrossing.render("dynamic", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_SMALL_DIAGONAL_STRAIGHT: {
-						modelSmallDiagonalStraight.render("embedded_diagonal", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_MEDIUM_DIAGONAL_STRAIGHT:
-					case EMBEDDED_LONG_DIAGONAL_STRAIGHT:
-					case EMBEDDED_VERY_LONG_DIAGONAL_STRAIGHT: {
-						modelMediumDiagonalStraight.render("embedded_diagonal", railTile, x, y, z);
-						break;
-					}
+					case CORE_1X_TURN_R:
+					case CORE_3X_TURN_R:
+					case CORE_5X_TURN_R:
+					case CORE_10X_TURN_R:
+					case CORE_16X_TURN_R:
+					case CORE_29X_TURN_R:
+					case CORE_32X_TURN_R:
+						modelRightTurn.render("1x", railTile, x, y, z);
+					break;
 
-					case MEDIUM_RIGHT_45DEGREE_TURN:
-					case EMBEDDED_MEDIUM_45DEGREE_TURN:
-					case EMBEDDED_MEDIUM_RIGHT_45DEGREE_TURN:
-					{
-						model45DegreeRightTurn.render("medium",  railTile, x, y, z);
-						break;
-					}
-					case MEDIUM_LEFT_45DEGREE_TURN:
-					case EMBEDDED_MEDIUM_LEFT_45DEGREE_TURN: {
-						model45DegreeLeftTurn.render("medium", railTile, x, y, z);
-						break;
-					}
-					case LARGE_RIGHT_45DEGREE_TURN:
-					case EMBEDDED_LARGE_45DEGREE_TURN:
-					case EMBEDDED_LARGE_RIGHT_45DEGREE_TURN: {
-						model45DegreeRightTurn.render("large",  railTile, x, y, z);
-						break;
-					}
-					case LARGE_LEFT_45DEGREE_TURN:
-					case EMBEDDED_LARGE_LEFT_45DEGREE_TURN: {
-						model45DegreeLeftTurn.render("large", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_VERY_LARGE_45DEGREE_TURN:
-					case EMBEDDED_VERY_LARGE_RIGHT_45DEGREE_TURN:
-					case VERY_LARGE_RIGHT_45DEGREE_TURN:
-					{
-						model45DegreeRightTurn.render("verylarge",  railTile, x, y, z);
-						break;
-					}
-					case VERY_LARGE_LEFT_45DEGREE_TURN:
-					case EMBEDDED_VERY_LARGE_LEFT_45DEGREE_TURN: {
-						model45DegreeLeftTurn.render("verylarge", railTile, x, y, z);
-						break;
-					}
-                    case SUPER_LARGE_RIGHT_45DEGREE_TURN:
-					case EMBEDDED_SUPER_LARGE_45DEGREE_TURN:
-					case EMBEDDED_SUPER_LARGE_RIGHT_45DEGREE_TURN: {
-						model45DegreeRightTurn.render("superlarge",  railTile, x, y, z);
-						break;
-					}
-					case SUPER_LARGE_LEFT_45DEGREE_TURN:
-					case EMBEDDED_SUPER_LARGE_LEFT_45DEGREE_TURN: {
-						model45DegreeLeftTurn.render("superlarge", railTile, x, y, z);
-						break;
-					}
-					case DIAGONAL_TURN_9X20:
-					case DIAGONAL_RIGHT_TURN_9X20:
-					case EMBEDDED_DIAGONAL_TURN_9X20:
-					case EMBEDDED_DIAGONAL_RIGHT_TURN_9X20: {
-						model45DegreeRightTurn.render("9x20",railTile,x,y,z);
-						break;
-					}
-					case DIAGONAL_LEFT_TURN_9X20:
-					case EMBEDDED_DIAGONAL_LEFT_TURN_9X20: {
-						model45DegreeLeftTurn.render("9x20",railTile,x,y,z);
-						break;
-					}
-					case DIAGONAL_TURN_10X22:
-					case DIAGONAL_RIGHT_TURN_10X22:
-					case EMBEDDED_DIAGONAL_TURN_10X22:
-					case EMBEDDED_DIAGONAL_RIGHT_TURN_10X22:
-					{
-						model45DegreeRightTurn.render("10x22",railTile,x,y,z);
-						break;
-					}
-					case DIAGONAL_LEFT_TURN_10X22:
-					case EMBEDDED_DIAGONAL_LEFT_TURN_10X22: {
-						model45DegreeLeftTurn.render("10x22",railTile,x,y,z);
-						break;
-					}
+					case CORE_1X_TURN_L:
+					case CORE_3X_TURN_L:
+					case CORE_5X_TURN_L:
+					case CORE_10X_TURN_L:
+					case CORE_16X_TURN_L:
+					case CORE_29X_TURN_L:
+					case CORE_32X_TURN_L:
+						modelLeftTurn.render("1x", railTile, x, y, z);
+					break;
 
-					case EMBEDDED_S_CURVE_20x2:
-					case EMBEDDED_S_CURVE_20x2_RIGHT:
-					case S_CURVE_20x2:
-					case S_CURVE_20x2_RIGHT:
+					case CORE_3_SLOPE:
+                        if (BallastTypes.DYNAMIC.equals(track.getBallastType())) {
+                            model1X3Slope.renderDynamic(railTile, x, y, z);
+                        }
+                        else
 						{
-						modelRightParallelCurve.render("20x2", railTile, x, y, z);
-						break;
-					}
-
-					case S_CURVE_20x2_LEFT:
-					case EMBEDDED_S_CURVE_20x2_LEFT:
+                            model1X3Slope.render(railTile, x, y, z);
+                        }
+					break;
+					case CORE_3_DIAGONAL_SLOPE:
+						if (BallastTypes.DYNAMIC.equals(track.getBallastType())) {
+							model1x3DiagonalSlope.renderDynamic(railTile, x, y, z);
+						}
+						else
 						{
-						modelLeftParallelCurve.render("20x2", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_MEDIUM_SWITCH:
-					case EMBEDDED_MEDIUM_RIGHT_SWITCH: {
-						modelRightSwitchTurn.render("medium", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_MEDIUM_LEFT_SWITCH: {
-						modelLeftSwitchTurn.render("medium", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_LARGE_SWITCH:
-					case EMBEDDED_LARGE_RIGHT_SWITCH: {
-						modelRightSwitchTurn.render("large_90",railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_LARGE_LEFT_SWITCH: {
-						modelLeftSwitchTurn.render("large_90", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_VERY_LARGE_SWITCH:
-					case EMBEDDED_VERY_LARGE_RIGHT_SWITCH:
-					case VERY_LARGE_SWITCH:
-					case VERY_LARGE_RIGHT_SWITCH:
+							model1x3DiagonalSlope.render(railTile, x, y, z);
+						}
+					break;
+					case CORE_6_SLOPE:
+						if (BallastTypes.DYNAMIC.equals(track.getBallastType())) {
+							modelSlope.renderDynamic(railTile, x, y, z);
+						}
+						else
+						{
+							modelSlope.render(railTile, x, y, z);
+						}
+					break;
+					case CORE_6_DIAGONAL_SLOPE:
+						if (BallastTypes.DYNAMIC.equals(track.getBallastType())) {
+							model1x6DiagonalSlope.renderDynamic(railTile, x, y, z);
+						}
+						else
+						{
+							model1x6DiagonalSlope.render(railTile, x, y, z);
+						}
+					break;
+					case CORE_12_SLOPE:
+						if (BallastTypes.DYNAMIC.equals(track.getBallastType())) {
+							modelLargeSlope.renderDynamic(railTile, x, y, z);
+						}
+						else
+						{
+							modelLargeSlope.render(railTile, x, y, z);
+						}
+					break;
+					case CORE_12_DIAGONAL_SLOPE:
+						if (BallastTypes.DYNAMIC.equals(track.getBallastType())) {
+							model1x12DiagonalSlope.renderDynamic(railTile, x, y, z);
+						}
+						else
+						{
+							model1x12DiagonalSlope.render(railTile, x, y, z);
+						}
+					break;
+					case CORE_18_SLOPE:
+						if (BallastTypes.DYNAMIC.equals(track.getBallastType())) {
+							modelVeryLargeSlope.renderDynamic(railTile, x, y, z);
+						}
+						else
+						{
+							modelVeryLargeSlope.render(railTile, x, y, z);
+						}
+					break;
+					case CORE_18_DIAGONAL_SLOPE:
+						if (BallastTypes.DYNAMIC.equals(track.getBallastType())) {
+							model1x18DiagonalSlope.renderDynamic(railTile, x, y, z);
+						}
+						else
+						{
+							model1x18DiagonalSlope.render(railTile, x, y, z);
+						}
+					break;
+					default:
 					{
-						modelRightSwitchTurn.render("very_large_90", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_VERY_LARGE_LEFT_SWITCH:
-					case VERY_LARGE_LEFT_SWITCH:
-					{
-						modelLeftSwitchTurn.render("very_large_90", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_MEDIUM_PARALLEL_SWITCH:
-					case EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH: {
-						modelRightSwitchTurn.render("medium_parallel", railTile, x, y, z);
-						break;
-					}
-					case EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH: {
-						modelLeftSwitchTurn.render("medium_parallel", railTile, x, y, z);
-						break;
-					}
-					case MEDIUM_RIGHT_45DEGREE_SWITCH:
-					case EMBEDDED_MEDIUM_RIGHT_45DEGREE_SWITCH: {
-						modelRightSwitchTurn.render("medium_45degree",  railTile, x, y, z);
-						break;
-					}
-					case MEDIUM_LEFT_45DEGREE_SWITCH:
-					case EMBEDDED_MEDIUM_LEFT_45DEGREE_SWITCH: {
-						modelLeftSwitchTurn.render("medium_45degree",  railTile, x, y, z);
-						break;
-					}
-					case LARGE_RIGHT_45DEGREE_SWITCH:
-					case EMBEDDED_LARGE_RIGHT_45DEGREE_SWITCH: {
-						modelRightSwitchTurn.render("large_45degree",  railTile, x, y, z);
-						break;
-					}
-					case LARGE_LEFT_45DEGREE_SWITCH:
-					case EMBEDDED_LARGE_LEFT_45DEGREE_SWITCH: {
-						modelLeftSwitchTurn.render("large_45degree",  railTile, x, y, z);
-						break;
-					}
+						switch (track)
+						{
+							case MEDIUM_SWITCH:
+							case MEDIUM_RIGHT_SWITCH: {
+								modelRightSwitchTurn.render("medium", railTile, x, y, z);
+								break;
+							}
+							case MEDIUM_LEFT_SWITCH: {
+								modelLeftSwitchTurn.render("medium", railTile, x, y, z);
+								break;
+							}
+							case LARGE_SWITCH:
+							case LARGE_RIGHT_SWITCH: {
+								modelRightSwitchTurn.render("large_90", railTile, x, y, z);
+								break;
+							}
+							case LARGE_LEFT_SWITCH: {
+								modelLeftSwitchTurn.render("large_90", railTile, x, y, z);
+								break;
+							}
+							case MEDIUM_PARALLEL_SWITCH:
+							case MEDIUM_RIGHT_PARALLEL_SWITCH: {
+								modelRightSwitchTurn.render("medium_parallel", railTile, x, y, z);
+								break;
+							}
+							case MEDIUM_LEFT_PARALLEL_SWITCH: {
+								modelLeftSwitchTurn.render("medium_parallel", railTile, x, y, z);
+								break;
+							}
+							case LARGE_PARALLEL_SWITCH:
+							case LARGE_RIGHT_PARALLEL_SWITCH:
+							case EMBEDDED_LARGE_PARALLEL_SWITCH:
+							case EMBEDDED_LARGE_RIGHT_PARALLEL_SWITCH:
+							{
+								modelRightSwitchTurn.render("large_parallel", railTile, x, y, z);
+								break;
+							}
+							case LARGE_LEFT_PARALLEL_SWITCH:
+							case EMBEDDED_LARGE_LEFT_PARALLEL_SWITCH:
+							{
+								modelLeftSwitchTurn.render("large_parallel", railTile, x, y, z);
+								break;
+							}
 
-					//case EMBEDDED_LARGE_CURVED_SLOPE_DYNAMIC:
-					//case EMBEDDED_LARGE_RIGHT_CURVED_SLOPE_DYNAMIC: {
-					//	modelRightCurvedSlope.render("embedded_large", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_LARGE_LEFT_CURVED_SLOPE_DYNAMIC: {
-					//	modelLeftCurvedSlope.render("embedded_large", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_VERY_LARGE_CURVED_SLOPE_DYNAMIC:
-					//case EMBEDDED_VERY_LARGE_RIGHT_CURVED_SLOPE_DYNAMIC: {
-					//	modelRightCurvedSlope.render("embedded_verylarge", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_VERY_LARGE_LEFT_CURVED_SLOPE_DYNAMIC: {
-					//	modelLeftCurvedSlope.render("embedded_verylarge", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_SUPER_LARGE_CURVED_SLOPE_DYNAMIC:
-					//case EMBEDDED_SUPER_LARGE_RIGHT_CURVED_SLOPE_DYNAMIC: {
-					//	modelRightCurvedSlope.render("embedded_superlarge", railTile, x, y, z);
-					//	break;
-					//}
-					//case EMBEDDED_SUPER_LARGE_LEFT_CURVED_SLOPE_DYNAMIC: {
-					//	modelLeftCurvedSlope.render("embedded_superlarge", railTile, x, y, z);
-					//	break;
-					//}
+							case TWO_WAYS_CROSSING:
+							case EMBEDDED_TWO_WAYS_CROSSING:
+							{
+								modelTwoWaysCrossing.render("twoways_crossing", railTile, x, y, z);
+								break;
+							}
+							case FOUR_WAYS_CROSSING:
+							case EMBEDDED_FOUR_WAYS_CROSSING:
+							{
+								modelTwoWaysCrossing.render("universal_crossing", railTile, x, y, z);
+								break;
+							}
+							case DIAMOND_CROSSING:
+							case RIGHT_DIAMOND_CROSSING:
+							case EMBEDDED_DIAMOND_CROSSING:
+							case EMBEDDED_RIGHT_DIAMOND_CROSSING:
+							{
+								modelRightDiamondCrossing.render(railTile, x, y, z);
+								break;
+							}
+							case LEFT_DIAMOND_CROSSING:
+							case EMBEDDED_LEFT_DIAMOND_CROSSING:
+							{
+								modelLeftDiamondCrossing.render(railTile, x, y, z);
+								break;
+							}
+							case DOUBLE_DIAMOND_CROSSING:
+							case EMBEDDED_DOUBLE_DIAMOND_CROSSING:
+							{
+								modelTwoWaysCrossing.render("diamond", railTile, x, y, z);
+								break;
+							}
+							case DIAGONAL_TWO_WAYS_CROSSING:
+							case EMBEDDED_DIAGONAL_TWO_WAYS_CROSSING:
+							{
+								modelTwoWaysCrossing.render("diagonal_crossing", railTile, x, y, z);
+								break;
+							}
+
+							case SMALL_PARALLEL_CURVE:
+							case SMALL_RIGHT_PARALLEL_CURVE:
+							case EMBEDDED_SMALL_PARALLEL_CURVE:
+							case EMBEDDED_SMALL_RIGHT_PARALLEL_CURVE:
+							{
+								modelRightParallelCurve.render("small", railTile, x, y, z);
+								break;
+							}
+							case SMALL_LEFT_PARALLEL_CURVE:
+							case EMBEDDED_SMALL_LEFT_PARALLEL_CURVE:
+							{
+								modelLeftParallelCurve.render("small", railTile, x, y, z);
+								break;
+							}
+
+							case MEDIUM_PARALLEL_CURVE:
+							case MEDIUM_RIGHT_PARALLEL_CURVE:
+							case EMBEDDED_MEDIUM_PARALLEL_CURVE:
+							case EMBEDDED_MEDIUM_RIGHT_PARALLEL_CURVE:
+							{
+								modelRightParallelCurve.render("medium", railTile, x, y, z);
+								break;
+							}
+							case MEDIUM_LEFT_PARALLEL_CURVE:
+							case EMBEDDED_MEDIUM_LEFT_PARALLEL_CURVE:
+							{
+								modelLeftParallelCurve.render("medium", railTile, x, y, z);
+								break;
+							}
+							case LARGE_PARALLEL_CURVE:
+							case LARGE_RIGHT_PARALLEL_CURVE:
+							case EMBEDDED_LARGE_PARALLEL_CURVE:
+							case EMBEDDED_LARGE_RIGHT_PARALLEL_CURVE:
+							{
+								modelRightParallelCurve.render("large", railTile, x, y, z);
+								break;
+							}
+							case LARGE_LEFT_PARALLEL_CURVE:
+							case EMBEDDED_LARGE_LEFT_PARALLEL_CURVE:
+							{
+								modelLeftParallelCurve.render("large", railTile, x, y, z);
+								break;
+							}
+
+							// Embedded Tracks
+							case SMALL_ROAD_CROSSING:{
+								modelRoadCrossing.render("crossing", railTile, x, y, z);
+								break;
+							}
+							case SMALL_ROAD_CROSSING_1:{
+								modelRoadCrossing.render("crossing1", railTile, x, y, z);
+								break;
+							}
+							case SMALL_ROAD_CROSSING_2:{
+								modelRoadCrossing.render("crossing2", railTile, x, y, z);
+								break;
+							}
+							case SMALL_ROAD_CROSSING_DYNAMIC:{
+								modelRoadCrossing.render("dynamic", railTile, x, y, z);
+								break;
+							}
+
+							case MEDIUM_RIGHT_45DEGREE_TURN:
+							case EMBEDDED_MEDIUM_45DEGREE_TURN:
+							case EMBEDDED_MEDIUM_RIGHT_45DEGREE_TURN:
+							{
+								model45DegreeRightTurn.render("medium",  railTile, x, y, z);
+								break;
+							}
+							case MEDIUM_LEFT_45DEGREE_TURN:
+							case EMBEDDED_MEDIUM_LEFT_45DEGREE_TURN: {
+								model45DegreeLeftTurn.render("medium", railTile, x, y, z);
+								break;
+							}
+							case LARGE_RIGHT_45DEGREE_TURN:
+							case EMBEDDED_LARGE_45DEGREE_TURN:
+							case EMBEDDED_LARGE_RIGHT_45DEGREE_TURN: {
+								model45DegreeRightTurn.render("large",  railTile, x, y, z);
+								break;
+							}
+							case LARGE_LEFT_45DEGREE_TURN:
+							case EMBEDDED_LARGE_LEFT_45DEGREE_TURN: {
+								model45DegreeLeftTurn.render("large", railTile, x, y, z);
+								break;
+							}
+							case EMBEDDED_VERY_LARGE_45DEGREE_TURN:
+							case EMBEDDED_VERY_LARGE_RIGHT_45DEGREE_TURN:
+							case VERY_LARGE_RIGHT_45DEGREE_TURN:
+							{
+								model45DegreeRightTurn.render("verylarge",  railTile, x, y, z);
+								break;
+							}
+							case VERY_LARGE_LEFT_45DEGREE_TURN:
+							case EMBEDDED_VERY_LARGE_LEFT_45DEGREE_TURN: {
+								model45DegreeLeftTurn.render("verylarge", railTile, x, y, z);
+								break;
+							}
+							case SUPER_LARGE_RIGHT_45DEGREE_TURN:
+							case EMBEDDED_SUPER_LARGE_45DEGREE_TURN:
+							case EMBEDDED_SUPER_LARGE_RIGHT_45DEGREE_TURN: {
+								model45DegreeRightTurn.render("superlarge",  railTile, x, y, z);
+								break;
+							}
+							case SUPER_LARGE_LEFT_45DEGREE_TURN:
+							case EMBEDDED_SUPER_LARGE_LEFT_45DEGREE_TURN: {
+								model45DegreeLeftTurn.render("superlarge", railTile, x, y, z);
+								break;
+							}
+							case DIAGONAL_TURN_9X20:
+							case DIAGONAL_RIGHT_TURN_9X20:
+							case EMBEDDED_DIAGONAL_TURN_9X20:
+							case EMBEDDED_DIAGONAL_RIGHT_TURN_9X20: {
+								model45DegreeRightTurn.render("9x20",railTile,x,y,z);
+								break;
+							}
+							case DIAGONAL_LEFT_TURN_9X20:
+							case EMBEDDED_DIAGONAL_LEFT_TURN_9X20: {
+								model45DegreeLeftTurn.render("9x20",railTile,x,y,z);
+								break;
+							}
+							case DIAGONAL_TURN_10X22:
+							case DIAGONAL_RIGHT_TURN_10X22:
+							case EMBEDDED_DIAGONAL_TURN_10X22:
+							case EMBEDDED_DIAGONAL_RIGHT_TURN_10X22:
+							{
+								model45DegreeRightTurn.render("10x22",railTile,x,y,z);
+								break;
+							}
+							case DIAGONAL_LEFT_TURN_10X22:
+							case EMBEDDED_DIAGONAL_LEFT_TURN_10X22: {
+								model45DegreeLeftTurn.render("10x22",railTile,x,y,z);
+								break;
+							}
+
+							case EMBEDDED_S_CURVE_20x2:
+							case EMBEDDED_S_CURVE_20x2_RIGHT:
+							case S_CURVE_20x2:
+							case S_CURVE_20x2_RIGHT:
+							{
+								modelRightParallelCurve.render("20x2", railTile, x, y, z);
+								break;
+							}
+
+							case S_CURVE_20x2_LEFT:
+							case EMBEDDED_S_CURVE_20x2_LEFT:
+							{
+								modelLeftParallelCurve.render("20x2", railTile, x, y, z);
+								break;
+							}
+							case EMBEDDED_MEDIUM_SWITCH:
+							case EMBEDDED_MEDIUM_RIGHT_SWITCH: {
+								modelRightSwitchTurn.render("medium", railTile, x, y, z);
+								break;
+							}
+							case EMBEDDED_MEDIUM_LEFT_SWITCH: {
+								modelLeftSwitchTurn.render("medium", railTile, x, y, z);
+								break;
+							}
+							case EMBEDDED_LARGE_SWITCH:
+							case EMBEDDED_LARGE_RIGHT_SWITCH: {
+								modelRightSwitchTurn.render("large_90",railTile, x, y, z);
+								break;
+							}
+							case EMBEDDED_LARGE_LEFT_SWITCH: {
+								modelLeftSwitchTurn.render("large_90", railTile, x, y, z);
+								break;
+							}
+							case EMBEDDED_VERY_LARGE_SWITCH:
+							case EMBEDDED_VERY_LARGE_RIGHT_SWITCH:
+							case VERY_LARGE_SWITCH:
+							case VERY_LARGE_RIGHT_SWITCH:
+							{
+								modelRightSwitchTurn.render("very_large_90", railTile, x, y, z);
+								break;
+							}
+							case EMBEDDED_VERY_LARGE_LEFT_SWITCH:
+							case VERY_LARGE_LEFT_SWITCH:
+							{
+								modelLeftSwitchTurn.render("very_large_90", railTile, x, y, z);
+								break;
+							}
+							case EMBEDDED_MEDIUM_PARALLEL_SWITCH:
+							case EMBEDDED_MEDIUM_RIGHT_PARALLEL_SWITCH: {
+								modelRightSwitchTurn.render("medium_parallel", railTile, x, y, z);
+								break;
+							}
+							case EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH: {
+								modelLeftSwitchTurn.render("medium_parallel", railTile, x, y, z);
+								break;
+							}
+							case MEDIUM_RIGHT_45DEGREE_SWITCH:
+							case EMBEDDED_MEDIUM_RIGHT_45DEGREE_SWITCH: {
+								modelRightSwitchTurn.render("medium_45degree",  railTile, x, y, z);
+								break;
+							}
+							case MEDIUM_LEFT_45DEGREE_SWITCH:
+							case EMBEDDED_MEDIUM_LEFT_45DEGREE_SWITCH: {
+								modelLeftSwitchTurn.render("medium_45degree",  railTile, x, y, z);
+								break;
+							}
+							case LARGE_RIGHT_45DEGREE_SWITCH:
+							case EMBEDDED_LARGE_RIGHT_45DEGREE_SWITCH: {
+								modelRightSwitchTurn.render("large_45degree",  railTile, x, y, z);
+								break;
+							}
+							case LARGE_LEFT_45DEGREE_SWITCH:
+							case EMBEDDED_LARGE_LEFT_45DEGREE_SWITCH: {
+								modelLeftSwitchTurn.render("large_45degree",  railTile, x, y, z);
+								break;
+							}
+
+							//case EMBEDDED_LARGE_CURVED_SLOPE_DYNAMIC:
+							//case EMBEDDED_LARGE_RIGHT_CURVED_SLOPE_DYNAMIC: {
+							//	modelRightCurvedSlope.render("embedded_large", railTile, x, y, z);
+							//	break;
+							//}
+							//case EMBEDDED_LARGE_LEFT_CURVED_SLOPE_DYNAMIC: {
+							//	modelLeftCurvedSlope.render("embedded_large", railTile, x, y, z);
+							//	break;
+							//}
+							//case EMBEDDED_VERY_LARGE_CURVED_SLOPE_DYNAMIC:
+							//case EMBEDDED_VERY_LARGE_RIGHT_CURVED_SLOPE_DYNAMIC: {
+							//	modelRightCurvedSlope.render("embedded_verylarge", railTile, x, y, z);
+							//	break;
+							//}
+							//case EMBEDDED_VERY_LARGE_LEFT_CURVED_SLOPE_DYNAMIC: {
+							//	modelLeftCurvedSlope.render("embedded_verylarge", railTile, x, y, z);
+							//	break;
+							//}
+							//case EMBEDDED_SUPER_LARGE_CURVED_SLOPE_DYNAMIC:
+							//case EMBEDDED_SUPER_LARGE_RIGHT_CURVED_SLOPE_DYNAMIC: {
+							//	modelRightCurvedSlope.render("embedded_superlarge", railTile, x, y, z);
+							//	break;
+							//}
+							//case EMBEDDED_SUPER_LARGE_LEFT_CURVED_SLOPE_DYNAMIC: {
+							//	modelLeftCurvedSlope.render("embedded_superlarge", railTile, x, y, z);
+							//	break;
+							//}
+						}
+					}
 				}
+
+
 			}
 		}
 	}

@@ -393,7 +393,7 @@ public class ItemTCRail extends ItemPart {
 					{
 						--itemstack.stackSize;
 					}
-					return true;
+				return true;
 
 				case CORE_MEDIUM_DIAGONAL_STRAIGHT:
 				case CORE_LONG_DIAGONAL_STRAIGHT:
@@ -407,7 +407,113 @@ public class ItemTCRail extends ItemPart {
 					{
 						--itemstack.stackSize;
 					}
-					return true;
+				return true;
+
+				case CORE_1X_TURN_L:
+					if (!turn1XLeft(player, world, x, y, z, l, tempType)) {return false;}
+
+					if (player == null || !player.capabilities.isCreativeMode)
+					{
+						--itemstack.stackSize;
+					}
+				return true;
+
+				case CORE_1X_TURN_R:
+					if (!turn1XRight(player, world, x, y, z, l, tempType))
+					{return false;}
+
+					if (player == null || !player.capabilities.isCreativeMode)
+					{
+						--itemstack.stackSize;
+					}
+				return true;
+
+				case CORE_3X_TURN_L:
+				case CORE_3X_TURN_R:
+					curveXArray = new int[]{0, 0, 1, 1, 2};
+					curveZArray = new int[]{0, 1, 1, 2, 2};
+					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 2.5f))
+					{
+						return false;
+					}
+
+					if (player == null || !player.capabilities.isCreativeMode)
+					{
+						--itemstack.stackSize;
+					}
+				return true;
+
+				case CORE_5X_TURN_L:
+				case CORE_5X_TURN_R:
+					curveXArray = new int[]{0, 0, 1, 1, 2, 0, 1, 2, 3, 4, 3, 2};
+					curveZArray = new int[]{0, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4};
+					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 4.5f))
+					{
+						return false;
+					}
+
+					if (player == null || !player.capabilities.isCreativeMode)
+					{
+						--itemstack.stackSize;
+					}
+				return true;
+
+				case CORE_10X_TURN_L:
+				case CORE_10X_TURN_R:
+					curveXArray = new int[]{0, 0, 0, 1, 0, 1, 0, 1, 1, 2, 2, 2, 3, 3, 4, 4, 5, 5, 5, 6, 6, 7, 7, 8, 9};
+					curveZArray = new int[]{0, 1, 2, 2, 3, 3, 4, 4, 5, 4, 5, 6, 6, 7, 7, 8, 7, 8, 9, 8, 9, 8, 9, 9, 9};
+					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 9.5f))
+					{
+						return false;
+					}
+
+					if (player == null || !player.capabilities.isCreativeMode)
+					{
+						--itemstack.stackSize;
+					}
+				return true;
+
+				case CORE_16X_TURN_L:
+				case CORE_16X_TURN_R:
+					curveXArray = new int[]{0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 9, 9, 10, 11, 11, 12, 12, 13, 14, 15};
+					curveZArray = new int[]{0, 1, 2, 3, 4, 3, 4, 5, 6, 6, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 13, 14, 14, 14, 15, 14, 15, 15, 15, 15};
+					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 15.5f))
+					{
+						return false;
+					}
+
+					if (player == null || !player.capabilities.isCreativeMode)
+					{
+						--itemstack.stackSize;
+					}
+				return true;
+
+
+				case CORE_29X_TURN_L:
+				case CORE_29X_TURN_R:
+					curveXArray = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9, 10, 10, 10, 11, 11, 11, 12, 12, 13, 13, 14, 14, 14, 15, 15, 16, 16, 16, 17, 17, 18, 18, 18, 19, 19, 20, 20, 21, 21, 21, 22, 22, 23, 23, 24, 24, 25, 25, 26, 27, 28};
+					curveZArray = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 3, 4, 5, 6, 7, 8, 9, 10, 7, 8, 9, 10, 11, 12, 10, 11, 12, 13, 14, 12, 13, 14, 15, 14, 15, 16, 17, 16, 17, 18, 17, 18, 19, 18, 19, 20, 19, 20, 21, 20, 21, 22, 21, 22, 23, 22, 23, 23, 24, 23, 24, 25, 24, 25, 24, 25, 26, 25, 26, 25, 26, 27, 26, 27, 26, 27, 26, 27, 28, 27, 28, 27, 28, 27, 28, 27, 28, 28, 28, 28};
+
+					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 28.5f)) {return false;}
+
+					if (player == null || !player.capabilities.isCreativeMode)
+					{
+						--itemstack.stackSize;
+					}
+				return true;
+
+				case CORE_32X_TURN_L:
+				case CORE_32X_TURN_R:
+					curveXArray = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9, 10, 10, 10, 11, 11, 11, 12, 12, 12, 13, 13, 13, 14, 14, 15, 15, 15, 16, 16, 16, 17, 17, 17, 18, 18, 19, 19, 20, 20, 21, 21, 21, 22, 22, 23, 23, 24, 24, 24, 25, 25, 26, 26, 27, 27, 28, 28, 29, 29, 30, 31};
+					curveZArray = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 2, 3, 4, 5, 6, 7, 8, 9, 10, 7, 8, 9, 10, 11, 12, 10, 11, 12, 13, 14, 15, 13, 14, 15, 16, 14, 15, 16, 17, 18, 16, 17, 18, 19, 18, 19, 20, 19, 20, 21, 20, 21, 22, 21, 22, 23, 22, 23, 24, 23, 24, 25, 24, 25, 26, 25, 26, 25, 26, 27, 26, 27, 28, 26, 27, 28, 27, 28, 28, 29, 28, 29, 28, 29, 30, 29, 30, 29, 30, 29, 30, 31, 30, 31, 30, 31, 30, 31, 30, 31, 30, 31, 31, 31};
+
+					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 31.5f)) {return false;}
+
+					if (player == null || !player.capabilities.isCreativeMode)
+					{
+						--itemstack.stackSize;
+					}
+				return true;
 			}
 
 			switch (tempType)
@@ -552,128 +658,6 @@ public class ItemTCRail extends ItemPart {
 						curveZArray = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 2, 3, 4, 5, 6, 7, 8, 9, 10, 7, 8, 9, 10, 11, 12, 13, 10, 11, 12, 13, 14, 13, 14, 15, 16, 15, 16, 17, 18, 16, 17, 18, 19, 17, 18, 19, 20, 19, 20, 21, 20, 21, 22, 21};
 					}
 					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 30.22f)) {return false;}
-
-					if (player == null || !player.capabilities.isCreativeMode)
-					{
-						--itemstack.stackSize;
-					}
-					return true;
-
-				case LEFT_TURN_1X1:
-				case EMBEDDED_LEFT_TURN_1X1:
-					if (!turn1XLeft(player, world, x, y, z, l, tempType)) {return false;}
-
-					if (player == null || !player.capabilities.isCreativeMode)
-					{
-						--itemstack.stackSize;
-					}
-					return true;
-
-				case RIGHT_TURN_1X1:
-				case EMBEDDED_RIGHT_TURN_1X1:
-					if (!turn1XRight(player, world, x, y, z, l, tempType))
-					{return false;}
-
-					if (player == null || !player.capabilities.isCreativeMode)
-					{
-						--itemstack.stackSize;
-					}
-					return true;
-
-
-				case MEDIUM_LEFT_TURN:
-				case MEDIUM_RIGHT_TURN:
-				case EMBEDDED_MEDIUM_LEFT_TURN:
-				case EMBEDDED_MEDIUM_RIGHT_TURN:
-					curveXArray = new int[]{0, 0, 1, 1, 2};
-					curveZArray = new int[]{0, 1, 1, 2, 2};
-					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 2.5f))
-					{
-						return false;
-					}
-
-					if (player == null || !player.capabilities.isCreativeMode)
-					{
-						--itemstack.stackSize;
-					}
-					return true;
-
-				case LARGE_LEFT_TURN:
-				case LARGE_RIGHT_TURN:
-				case EMBEDDED_LARGE_LEFT_TURN:
-				case EMBEDDED_LARGE_RIGHT_TURN:
-					curveXArray = new int[]{0, 0, 1, 1, 2, 0, 1, 2, 3, 4, 3, 2};
-					curveZArray = new int[]{0, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4};
-					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 4.5f))
-					{
-						return false;
-					}
-
-					if (player == null || !player.capabilities.isCreativeMode)
-					{
-						--itemstack.stackSize;
-					}
-					return true;
-
-				case VERY_LARGE_LEFT_TURN:
-				case VERY_LARGE_RIGHT_TURN:
-				case EMBEDDED_VERY_LARGE_LEFT_TURN:
-				case EMBEDDED_VERY_LARGE_RIGHT_TURN:
-					curveXArray = new int[]{0, 0, 0, 1, 0, 1, 0, 1, 1, 2, 2, 2, 3, 3, 4, 4, 5, 5, 5, 6, 6, 7, 7, 8, 9};
-					curveZArray = new int[]{0, 1, 2, 2, 3, 3, 4, 4, 5, 4, 5, 6, 6, 7, 7, 8, 7, 8, 9, 8, 9, 8, 9, 9, 9};
-					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 9.5f))
-					{
-						return false;
-					}
-
-					if (player == null || !player.capabilities.isCreativeMode)
-					{
-						--itemstack.stackSize;
-					}
-					return true;
-
-
-				case SUPER_LARGE_LEFT_TURN:
-				case SUPER_LARGE_RIGHT_TURN:
-				case EMBEDDED_SUPER_LARGE_LEFT_TURN:
-				case EMBEDDED_SUPER_LARGE_RIGHT_TURN:
-					curveXArray = new int[]{0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 9, 9, 10, 11, 11, 12, 12, 13, 14, 15};
-					curveZArray = new int[]{0, 1, 2, 3, 4, 3, 4, 5, 6, 6, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 13, 14, 14, 14, 15, 14, 15, 15, 15, 15};
-					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 15.5f))
-					{
-						return false;
-					}
-
-					if (player == null || !player.capabilities.isCreativeMode)
-					{
-						--itemstack.stackSize;
-					}
-					return true;
-
-				case LEFT_TURN_29X29:
-				case RIGHT_TURN_29X29:
-				case EMBEDDED_LEFT_TURN_29X29:
-				case EMBEDDED_RIGHT_TURN_29X29:
-
-					curveXArray = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9, 10, 10, 10, 11, 11, 11, 12, 12, 13, 13, 14, 14, 14, 15, 15, 16, 16, 16, 17, 17, 18, 18, 18, 19, 19, 20, 20, 21, 21, 21, 22, 22, 23, 23, 24, 24, 25, 25, 26, 27, 28};
-					curveZArray = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 3, 4, 5, 6, 7, 8, 9, 10, 7, 8, 9, 10, 11, 12, 10, 11, 12, 13, 14, 12, 13, 14, 15, 14, 15, 16, 17, 16, 17, 18, 17, 18, 19, 18, 19, 20, 19, 20, 21, 20, 21, 22, 21, 22, 23, 22, 23, 23, 24, 23, 24, 25, 24, 25, 24, 25, 26, 25, 26, 25, 26, 27, 26, 27, 26, 27, 26, 27, 28, 27, 28, 27, 28, 27, 28, 27, 28, 28, 28, 28};
-
-					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 28.5f)) {return false;}
-
-					if (player == null || !player.capabilities.isCreativeMode)
-					{
-						--itemstack.stackSize;
-					}
-					return true;
-
-				case LEFT_TURN_32X32:
-				case RIGHT_TURN_32X32:
-				case EMBEDDED_LEFT_TURN_32X32:
-				case EMBEDDED_RIGHT_TURN_32X32:
-					curveXArray = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9, 10, 10, 10, 11, 11, 11, 12, 12, 12, 13, 13, 13, 14, 14, 15, 15, 15, 16, 16, 16, 17, 17, 17, 18, 18, 19, 19, 20, 20, 21, 21, 21, 22, 22, 23, 23, 24, 24, 24, 25, 25, 26, 26, 27, 27, 28, 28, 29, 29, 30, 31};
-					curveZArray = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 2, 3, 4, 5, 6, 7, 8, 9, 10, 7, 8, 9, 10, 11, 12, 10, 11, 12, 13, 14, 15, 13, 14, 15, 16, 14, 15, 16, 17, 18, 16, 17, 18, 19, 18, 19, 20, 19, 20, 21, 20, 21, 22, 21, 22, 23, 22, 23, 24, 23, 24, 25, 24, 25, 26, 25, 26, 25, 26, 27, 26, 27, 28, 26, 27, 28, 27, 28, 28, 29, 28, 29, 28, 29, 30, 29, 30, 29, 30, 29, 30, 31, 30, 31, 30, 31, 30, 31, 30, 31, 30, 31, 31, 31};
-
-					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 31.5f)) {return false;}
 
 					if (player == null || !player.capabilities.isCreativeMode)
 					{

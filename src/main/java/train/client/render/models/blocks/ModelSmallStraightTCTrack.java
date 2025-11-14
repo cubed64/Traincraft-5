@@ -9,12 +9,14 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
+import train.client.render.models.blocks.BaseClass.AbstractTrackModel;
 import train.common.enums.TrackResourceLocations;
+import train.common.library.EnumTracks;
 import train.common.library.Info;
 import train.common.tile.TileTCRail;
 
 @SideOnly(Side.CLIENT)
-public class ModelSmallStraightTCTrack extends ModelBase {
+public class ModelSmallStraightTCTrack extends AbstractTrackModel {
 	
 	private IModelCustom modelSmallStraight;
 	private IModelCustom modelRoadCrossing;
@@ -28,10 +30,6 @@ public class ModelSmallStraightTCTrack extends ModelBase {
 	{
 		switch (type)
 		{
-			case "straight":
-			case "embedded":
-				modelSmallStraight.renderAll();
-			break;
 			case "crossing":
 				modelRoadCrossing.renderAll();
 			break;
@@ -41,17 +39,21 @@ public class ModelSmallStraightTCTrack extends ModelBase {
 			case "crossing2":
 				modelRoadCrossing.renderAll();
 			break;
+			default:
+			{
+				modelSmallStraight.renderAll();
+			}
 		}
 
         //render( type, tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord), x, y, z, 1, 1, 1, 1);
 	}
 
-	public void render(String type, TileTCRail tcRail, double x, double y, double z) {
-		int facing = tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord);
-		render( type, facing, x, y, z, 1, 1, 1, 1 );
+	public void render(String type, TileTCRail tcRail, double x, double y, double z)
+	{
+		render(tcRail.getTrackType(), type, getRailDirection(tcRail), x, y, z, 1, 1, 1, 1 );
 	}
 
-	public void render( String type, int facing, double x, double y, double z, float r, float g, float b, float a )
+	public void render(EnumTracks enumTracks, String type, int facing, double x, double y, double z, float r, float g, float b, float a )
 	{
 		// Push a blank matrix onto the stack
 		GL11.glPushMatrix();
@@ -63,12 +65,6 @@ public class ModelSmallStraightTCTrack extends ModelBase {
 		// Bind the texture, so that OpenGL properly textures our block.
 		switch (type)
 		{
-			case "straight":
-				FMLClientHandler.instance().getClient().renderEngine.bindTexture(TrackResourceLocations.track_normal);
-			break;
-			case "embedded":
-				FMLClientHandler.instance().getClient().renderEngine.bindTexture(TrackResourceLocations.track_embedded);
-			break;
 			case "crossing":
 				FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_roadcrossing.png"));
 			break;
@@ -78,6 +74,10 @@ public class ModelSmallStraightTCTrack extends ModelBase {
 			case "crossing2":
 				FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_roadcrossing_2.png"));
 			break;
+			default:
+			{
+				tmt.Tessellator.bindTexture(train.common.enums.TrackResourceLocations.GetResourceLocation(enumTracks.getVariant()));
+			}
 		}
 
 		switch (facing)

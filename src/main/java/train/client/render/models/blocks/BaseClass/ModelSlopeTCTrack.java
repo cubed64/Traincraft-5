@@ -1,5 +1,7 @@
 package train.client.render.models.blocks.BaseClass;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.IIcon;
@@ -13,7 +15,8 @@ import train.common.library.Info;
 import train.common.tile.TileTCRail;
 
 
-public class ModelSlopeTCTrack extends ModelBase
+@SideOnly(Side.CLIENT)
+public class ModelSlopeTCTrack extends AbstractTrackModel
 {
     protected IModelCustom modelTrack;
     protected IModelCustom modelSlopeWood;
@@ -81,8 +84,6 @@ public class ModelSlopeTCTrack extends ModelBase
 
     public void renderDynamic(TileTCRail tcRail, double x, double y, double z)
     {
-        int facing = tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord);
-
         String iconName;
         Block block = Block.getBlockById(tcRail.getBallastMaterial());
         IIcon icon = block.getIcon(1, tcRail.ballastMetadata);
@@ -94,13 +95,12 @@ public class ModelSlopeTCTrack extends ModelBase
             iconName = "tc:ballast_test";
             colour = 16777215;
         }
-        renderDynamic( tcRail.getTrackType().getVariant(), facing, x, y, z, 1, 1, 1, 1, iconName, colour);
+        renderDynamic( tcRail.getTrackType().getVariant(), getRailDirection(tcRail), x, y, z, 1, 1, 1, 1, iconName, colour);
     }
 
     public void render(TileTCRail tcRail, double x, double y, double z)
     {
-        int facing = tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord);
-        render(tcRail.getTrackType().getVariant(), tcRail.getTrackType().getBallastType(), facing, x, y, z, 1, 1, 1, 1);
+        render(tcRail.getTrackType().getVariant(), tcRail.getTrackType().getBallastType(), getRailDirection(tcRail), x, y, z, 1, 1, 1, 1);
     }
 
     private void setupRender(int facing, double x, double y, double z, float r, float g, float b, float a)

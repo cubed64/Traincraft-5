@@ -7,12 +7,13 @@ import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelBase;
+import train.client.render.models.blocks.BaseClass.AbstractTrackModel;
 import train.common.items.RailVariants;
 import train.common.library.Info;
 import train.common.tile.TileTCRail;
 
 @SideOnly(Side.CLIENT)
-public class ModelSmallDiagonalStraightTCTrack extends ModelBase
+public class ModelSmallDiagonalStraightTCTrack extends AbstractTrackModel
 {
 
     private IModelCustom modelSmallDiagonalStraight;
@@ -27,7 +28,7 @@ public class ModelSmallDiagonalStraightTCTrack extends ModelBase
     }
 
     public void render(String type, TileTCRail tcRail, double x, double y, double z) {
-        render( type, tcRail.getTrackType().getVariant(), tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord), x, y, z, 1, 1, 1, 1 );
+        render( type, tcRail.getTrackType().getVariant(), getRailDirection(tcRail), x, y, z, 1, 1, 1, 1 );
     }
 
     public void render(String type, RailVariants variants, int facing, double x, double y, double z, float r, float g, float b, float a )

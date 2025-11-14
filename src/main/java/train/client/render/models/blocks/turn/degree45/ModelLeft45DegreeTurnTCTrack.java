@@ -1,4 +1,4 @@
-package train.client.render.models.blocks;
+package train.client.render.models.blocks.turn.degree45;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -12,32 +12,31 @@ import train.common.tile.TileTCRail;
 
 @SideOnly(Side.CLIENT)
 
-public class ModelRight45DegreeTurnTCTrack
-{
+public class ModelLeft45DegreeTurnTCTrack {
 
-    private IModelCustom modelMediumRight45DegreeTurn;
-    private IModelCustom modelLargeRight45DegreeTurn;
-    private IModelCustom modelVeryLargeRight45DegreeTurn;
-    private IModelCustom modelSuperLargeRight45DegreeTurn;
-    private IModelCustom model9x20Right45DegreeTurn;
-    private IModelCustom model10x22Right45DegreeTurn;
+    private IModelCustom modelMediumLeft45DegreeTurn;
+    private IModelCustom modelLargeLeft45DegreeTurn;
+    private IModelCustom modelVeryLarge45DegreeTurn;
+    private IModelCustom modelSuperLarge45DegreeTurn;
+    private IModelCustom model9x2045DegreeTurn;
+    private IModelCustom model10x2245DegreeTurn;
 
-    public ModelRight45DegreeTurnTCTrack(){
-        modelMediumRight45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/45-deg/3x4_right.obj"));
-        modelLargeRight45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/45-deg/3x6_right.obj"));
-        modelVeryLargeRight45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/45-deg/4x8_right.obj"));
-        modelSuperLargeRight45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/45-deg/5x11_right.obj"));
-        model9x20Right45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/45-deg/9x20_right.obj"));
-        model10x22Right45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/45-deg/10x22_right.obj"));
-
+    public ModelLeft45DegreeTurnTCTrack(){
+        modelMediumLeft45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/45-deg/3x4_left.obj"));
+        modelLargeLeft45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/45-deg/3x6_left.obj"));
+        modelVeryLarge45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/45-deg/4x8_left.obj"));
+        modelSuperLarge45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/45-deg/5x11_left.obj"));
+        model9x2045DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/45-deg/9x20_left.obj"));
+        model10x2245DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/45-deg/10x22_left.obj"));
     }
 
-    public void renderMedium() {modelMediumRight45DegreeTurn.renderAll();}
-    public void renderLarge() {modelLargeRight45DegreeTurn.renderAll();}
-    public void renderVeryLarge() {modelVeryLargeRight45DegreeTurn.renderAll();}
-    public void renderSuperLarge() {modelSuperLargeRight45DegreeTurn.renderAll();}
-    public void render9x20() {model9x20Right45DegreeTurn.renderAll();}
-    public void render10x22(){model10x22Right45DegreeTurn.renderAll();}
+    public void renderMedium() {modelMediumLeft45DegreeTurn.renderAll();}
+    public void renderLarge() {modelLargeLeft45DegreeTurn.renderAll();}
+    public void renderVeryLarge() {modelVeryLarge45DegreeTurn.renderAll();}
+    public void renderSuperLarge() {modelSuperLarge45DegreeTurn.renderAll();}
+    public void render9x20() {model9x2045DegreeTurn.renderAll();}
+    public void render10x22() {model10x2245DegreeTurn.renderAll();}
+
 
     public void render(String turnSize, TileTCRail tcRail, double x, double y, double z)
     {
@@ -45,6 +44,7 @@ public class ModelRight45DegreeTurnTCTrack
     }
 
     public void render(String turnSize, RailVariants variant, int facing, double x, double y, double z, float r, float g, float b, float a) {
+
         // Bind the texture, so that OpenGL properly textures our block.
         tmt.Tessellator.bindTexture(train.common.enums.TrackResourceLocations.GetResourceLocation(variant));
 
@@ -61,19 +61,18 @@ public class ModelRight45DegreeTurnTCTrack
         {
             case 0:
                 GL11.glRotatef(180, 0, 1, 0);
-                GL11.glTranslatef(-0.5f,0,0.5f);
+                GL11.glTranslatef(0.5f,0,0.5f);
                 break;
             case 1:
                 GL11.glRotatef(90, 0, 1, 0);
-                GL11.glTranslatef(-0.5f,0,0.5f);
+                GL11.glTranslatef(0.5f,0,0.5f);
                 break;
             case 2:
-                GL11.glRotatef(0, 0, 1, 0);
-                GL11.glTranslatef(-0.5f,0,0.5f);
+                GL11.glTranslatef(0.5f,0,0.5f);
                 break;
             case 3:
-                GL11.glRotatef(-90,0,1,0);
-                GL11.glTranslatef(-0.5f,0,0.5f);
+                GL11.glRotatef(-90, 0, 1, 0);
+                GL11.glTranslatef(0.5f,0,0.5f);
                 break;
         }
 
@@ -98,8 +97,6 @@ public class ModelRight45DegreeTurnTCTrack
                 this.render10x22();
                 break;
         }
-
-
 
         // Pop this matrix from the stack.
         GL11.glPopMatrix();

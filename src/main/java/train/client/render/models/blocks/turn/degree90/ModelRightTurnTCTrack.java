@@ -1,4 +1,4 @@
-package train.client.render.models.blocks;
+package train.client.render.models.blocks.turn.degree90;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -8,12 +8,15 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
+import train.client.render.models.blocks.BaseClass.AbstractTrackModel;
 import train.common.items.RailVariants;
+import train.common.library.EnumCoreTrack;
+import train.common.library.EnumTracks;
 import train.common.library.Info;
 import train.common.tile.TileTCRail;
 
 @SideOnly(Side.CLIENT)
-public class ModelRightTurnTCTrack extends ModelBase
+public class ModelRightTurnTCTrack extends AbstractTrackModel
 {
 	private IModelCustom model1XRightTurn;
 	private IModelCustom modelMediumRightTurn;
@@ -72,11 +75,10 @@ public class ModelRightTurnTCTrack extends ModelBase
 	}
 
 	public void render(String type, TileTCRail tcRail, double x, double y, double z) {
-		int facing = tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord);
-		render( type, tcRail.getTrackType().getVariant(), facing, x, y, z, 1, 1, 1, 1);
+		render(tcRail.getTrackType().getCoreTrack(), type, tcRail.getTrackType().getVariant(), getRailDirection(tcRail), x, y, z, 1, 1, 1, 1);
 	}
 
-	public void render(String type, RailVariants variants, int facing, double x, double y, double z, float r, float g, float b, float a) {
+	public void render(EnumCoreTrack coreTrack, String type, RailVariants variants, int facing, double x, double y, double z, float r, float g, float b, float a) {
 		// Push a blank matrix onto the stack
 		GL11.glPushMatrix();
 
@@ -91,37 +93,33 @@ public class ModelRightTurnTCTrack extends ModelBase
 
 		setRotation((byte)facing);
 
-		switch (type)
+		switch (coreTrack)
 		{
-			case "1x":
+			case CORE_1X_TURN_R:
 				GL11.glTranslatef(-0.5f,0,0.5f);
 				render1X();
 				break;
-			case "super_large":
-			case "embedded_super_large":
-				GL11.glTranslatef(14.5f, 0.0f, 15.5f);
-				this.renderSuperLarge();
-				break;
-			case "very_large":
-			case "embedded_very_large":
-				GL11.glTranslatef(8.5f, 0.0f, 9.50f);
-				this.renderVeryLarge();
-				break;
-			case "large":
-			case "embedded_large":
-				GL11.glTranslatef(3.5f, 0.0f, 4.5f);
-				this.renderLarge();
-				break;
-			case "medium":
-			case "embedded_medium":
+			case CORE_3X_TURN_R:
 				GL11.glTranslatef(-1.0f, 0.0f, 3.0f);
 				this.renderMedium();
 				break;
-			case "29x":
+			case CORE_5X_TURN_R:
+				GL11.glTranslatef(3.5f, 0.0f, 4.5f);
+				this.renderLarge();
+				break;
+			case CORE_10X_TURN_R:
+				GL11.glTranslatef(8.5f, 0.0f, 9.50f);
+				this.renderVeryLarge();
+				break;
+			case CORE_16X_TURN_R:
+				GL11.glTranslatef(14.5f, 0.0f, 15.5f);
+				this.renderSuperLarge();
+				break;
+			case CORE_29X_TURN_R:
 				GL11.glTranslatef(27.5f,0,28.5f);
 				render29X();
 				break;
-			case "32x":
+			case CORE_32X_TURN_R:
 				GL11.glTranslatef(30.5f,0,31.5f);
 				render32X();
 				break;

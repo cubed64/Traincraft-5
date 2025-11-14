@@ -8,12 +8,13 @@ import net.minecraft.util.ResourceLocation;
 
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
+import train.client.render.models.blocks.BaseClass.AbstractTrackModel;
 import train.common.items.RailVariants;
 import train.common.library.Info;
 import train.common.tile.TileTCRail;
 
 @SideOnly(Side.CLIENT)
-public class ModelMediumStraightTCTrack extends ModelBase {
+public class ModelMediumStraightTCTrack extends AbstractTrackModel {
 	private IModelCustom modelMediumStraight;
 
 	public ModelMediumStraightTCTrack() {
@@ -37,19 +38,23 @@ public class ModelMediumStraightTCTrack extends ModelBase {
 
 		GL11.glColor4f(1, 1, 1, 1);
 		//GL11.glScalef(0.5f, 0.5f, 0.5f);
-		int facing = tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord);
+		int facing = getRailDirection(tcRail);
 
-		if (facing == 3) {
-			GL11.glRotatef(-90, 0, 1, 0);
-		}
-		if (facing == 1) {
-			GL11.glRotatef(90, 0, 1, 0);
-		}
-		if(facing == 0){
-			GL11.glRotatef(180, 0, 1, 0);
+		switch (facing)
+		{
+			case 3:
+				GL11.glRotatef(-90, 0, 1, 0);
+			break;
+			case 1:
+				GL11.glRotatef(90, 0, 1, 0);
+			break;
+			case 0:
+				GL11.glRotatef(180, 0, 1, 0);
+			break;
 		}
 
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 3; i++)
+		{
 			render();
 			GL11.glTranslatef(0.0f, 0.0f, -1.0f);
 		}
