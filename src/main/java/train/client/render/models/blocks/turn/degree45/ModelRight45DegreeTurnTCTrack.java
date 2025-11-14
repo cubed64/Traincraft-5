@@ -15,9 +15,6 @@ import train.common.tile.TileTCRail;
 
 public class ModelRight45DegreeTurnTCTrack extends AbstractTrackModel
 {
-
-    private IModelCustom modelRight45DegreeTurn;
-
     private IModelCustom modelMediumRight45DegreeTurn;
     private IModelCustom modelLargeRight45DegreeTurn;
     private IModelCustom modelVeryLargeRight45DegreeTurn;
@@ -33,16 +30,6 @@ public class ModelRight45DegreeTurnTCTrack extends AbstractTrackModel
         model9x20Right45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/45-deg/9x20_right.obj"));
         model10x22Right45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/45-deg/10x22_right.obj"));
 
-    }
-
-    public ModelRight45DegreeTurnTCTrack(String modelName)
-    {
-        modelRight45DegreeTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + modelName));
-    }
-
-    public void renderRight45DegreeTurnTCTrack()
-    {
-        modelRight45DegreeTurn.renderAll();
     }
 
     public void renderMedium() {modelMediumRight45DegreeTurn.renderAll();}
