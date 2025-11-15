@@ -49,11 +49,12 @@ public class TileTCRail extends TileEntity {
 	public boolean previousRedstoneState;
 	public boolean canTypeBeModifiedBySwitch = false;
 
-	public Item		idDrop;
+	public Item	idDrop;
 	private static final float f = 0.125F;
 	public boolean hasRotated = false;
 	private int isLeftFlag = -5;
 	public Integer displayList = null;
+	public int exitDirection = -1;
 
 	public TileTCRail() {
 		if(this.worldObj != null)
@@ -298,6 +299,10 @@ public class TileTCRail extends TileEntity {
 		idDrop = Item.getItemById(nbt.getInteger("idDrop"));
 		hasRotated = nbt.getBoolean("hasRotated");
 		previousRedstoneState = nbt.getBoolean("previousRedstoneState");
+		if (!nbt.hasKey("exitDirection")) {
+			exitDirection = -1;
+		}
+		exitDirection = nbt.getInteger("exitDirection");
 		super.readFromNBT(nbt);
 	}
 
@@ -332,6 +337,7 @@ public class TileTCRail extends TileEntity {
 		nbt.setBoolean("hasRotated", hasRotated);
 		nbt.setInteger("idDrop", Item.getIdFromItem(idDrop));
 		nbt.setBoolean("previousRedstoneState", previousRedstoneState);
+		nbt.setInteger("exitDirection", exitDirection);
 		super.writeToNBT(nbt);
 	}
 

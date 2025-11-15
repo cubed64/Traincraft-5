@@ -71,6 +71,10 @@ public enum EnumTracks
     VERY_LARGE_RIGHT_SWITCH("VERY_LARGE_RIGHT_SWITCH", SWITCH, NORMAL, ItemIDs.tcRailVeryLargeSwitch, ""),
     VERY_LARGE_LEFT_SWITCH("VERY_LARGE_LEFT_SWITCH", SWITCH, NORMAL, ItemIDs.tcRailVeryLargeSwitch, ""),
 
+    CROSSOVER_SWITCH_10X2("CROSSOVER_SWITCH_10X2", SWITCH, NORMAL, ItemIDs.tcRailCrossoverSwitch10x2, "10x3"),
+    CROSSOVER_SWITCH_10X2_LEFT("CROSSOVER_SWITCH_10X2_LEFT", SWITCH, NORMAL, ItemIDs.tcRailCrossoverSwitch10x2, ""),
+    CROSSOVER_SWITCH_10X2_RIGHT("CROSSOVER_SWITCH_10X2_RIGHT", SWITCH, NORMAL, ItemIDs.tcRailCrossoverSwitch10x2, ""),
+
     MEDIUM_PARALLEL_SWITCH("MEDIUM_PARALLEL_SWITCH", SWITCH, NORMAL, ItemIDs.tcRailMediumParallelSwitch, "4x11"),
     MEDIUM_RIGHT_PARALLEL_SWITCH("MEDIUM_RIGHT_PARALLEL_SWITCH", SWITCH, NORMAL, ItemIDs.tcRailMediumParallelSwitch, ""),
     MEDIUM_LEFT_PARALLEL_SWITCH("MEDIUM_LEFT_PARALLEL_SWITCH", SWITCH, NORMAL, ItemIDs.tcRailMediumParallelSwitch, ""),
@@ -292,6 +296,9 @@ public enum EnumTracks
     EMBEDDED_SLOPE_DYNAMIC("EMBEDDED_SLOPE_DYNAMIC", SLOPE, EMBEDDED, DYNAMIC, CORE_6_SLOPE, ItemIDs.tcRailEmbeddedSlopeDynamic, "1x6"),
     EMBEDDED_LARGE_SLOPE_DYNAMIC("EMBEDDED_LARGE_SLOPE_DYNAMIC", SLOPE, EMBEDDED, DYNAMIC, CORE_12_SLOPE, ItemIDs.tcRailEmbeddedLargeSlopeDynamic, "1x12"),
     EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC("EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC", SLOPE, EMBEDDED, DYNAMIC, CORE_18_SLOPE, ItemIDs.tcRailEmbeddedVeryLargeSlopeDynamic, "1x18"),
+    EMBEDDED_CROSSOVER_SWITCH_10X2("EMBEDDED_CROSSOVER_SWITCH_10X2", SWITCH, EMBEDDED, ItemIDs.tcRailEmbeddedCrossoverSwitch10x2, "10x3"),
+    EMBEDDED_CROSSOVER_SWITCH_10X2_LEFT("EMBEDDED_CROSSOVER_SWITCH_10X2_LEFT", SWITCH, EMBEDDED, ItemIDs.tcRailEmbeddedCrossoverSwitch10x2, ""),
+    EMBEDDED_CROSSOVER_SWITCH_10X2_RIGHT("EMBEDDED_CROSSOVER_SWITCH_10X2_RIGHT", SWITCH, EMBEDDED, ItemIDs.tcRailEmbeddedCrossoverSwitch10x2, ""),
 
     EMBEDDED_SLOPE_1X3_DYNAMIC_DIAGONAL("EMBEDDED_SLOPE_1X3_DYNAMIC_DIAGONAL", SLOPE, EMBEDDED, DYNAMIC, CORE_3_DIAGONAL_SLOPE, ItemIDs.tcRailEmbedded1x3SlopeDynamic, "1x3"),
     EMBEDDED_SLOPE_1X6_DYNAMIC_DIAGONAL("EMBEDDED_SLOPE_1X6_DYNAMIC_DIAGONAL", SLOPE, EMBEDDED, DYNAMIC, CORE_6_DIAGONAL_SLOPE, ItemIDs.tcRailEmbeddedSlopeDynamic, "1x6"),
@@ -596,6 +603,11 @@ public enum EnumTracks
             case EMBEDDED_VERY_LARGE_SWITCH:
                 return new int[][]{{0,0},{1,0}, {2,0},{3,0},{4,0},{5,0},{6,0}, {2, 1},{3, 1},{4, 1},{5, 1},{6, 1},{6, 2},{6, 2},{7, 2},{7, 3},{8, 3},{8, 4},{9, 4},{8, 5},{9, 5},{10, 5},{9, 6},{10, 6},{9, 7},{10, 7},{10, 8},{10, 9}, {10,10}};
 
+            case CROSSOVER_SWITCH_10X2:
+            case EMBEDDED_CROSSOVER_SWITCH_10X2:
+                return new int[][]{ {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {6,0}, {7,0}, {8,0}, {9,0},
+                        {2,1}, {3,1}, {4,1}, {5,1}, {6,1}, {7,1}, {8,1}, {9,1}, {9,2} };
+
             /** Parallel Curves */
             case SMALL_PARALLEL_CURVE:
             case EMBEDDED_SMALL_PARALLEL_CURVE:
@@ -703,28 +715,26 @@ public enum EnumTracks
         {
             case tcRailMediumSwitch:
             case tcRailEmbeddedMediumSwitch:
-                return 2;
             case tcRailMedium45DegreeSwitch:
             case tcRailEmbeddedMedium45DegreeSwitch:
-                return 2;
 
             case tcRailMediumParallelSwitch:
             case tcRailEmbeddedMediumParallelSwitch:
-                return 3;
-
             case tcRailLargeSwitch:
             case tcRailEmbeddedLargeSwitch:
                 return 3;
 
             case tcRailLarge45DegreeSwitch:
             case tcRailEmbeddedLarge45DegreeSwitch:
-                return 4;
             case tcRailLargeParallelSwitch:
             case tcRailEmbeddedLargeParallelSwitch:
-                return 4;
             case tcRailVeryLargeSwitch:
             case tcRailEmbeddedVeryLargeSwitch:
                 return 4;
+
+            case tcRailCrossoverSwitch10x2:
+            case tcRailEmbeddedCrossoverSwitch10x2:
+                return 7;
         }
         return 0;
     }

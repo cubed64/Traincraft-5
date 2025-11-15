@@ -32,6 +32,9 @@ public class ModelLeftSwitchTCTrack extends AbstractTrackModel {
 	private IModelCustom modelLargeLeft45degreeSwitchActive;
 	private IModelCustom modelLargeLeft45degreeSwitchInActive;
 
+	private IModelCustom modelLeftCrossover10x2SwitchActive;
+	private IModelCustom modelLeftCrossover10x2SwitchInactive;
+
 	public ModelLeftSwitchTCTrack() {
 		modelMediumLeftSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/4x4_left.obj"));
 		modelMediumLeftSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/4x4_left.obj"));
@@ -53,6 +56,9 @@ public class ModelLeftSwitchTCTrack extends AbstractTrackModel {
 
 		modelVeryLargeLeftSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/11x11_left.obj"));
 		modelVeryLargeLeftSwitchInactive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/11x11_left.obj"));
+
+		modelLeftCrossover10x2SwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/crossover_10x2_left.obj"));
+		modelLeftCrossover10x2SwitchInactive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/crossover_10x2_left.obj"));
 	}
 
 	public void renderMediumActive() {
@@ -92,6 +98,9 @@ public class ModelLeftSwitchTCTrack extends AbstractTrackModel {
 
 	public void renderLarge45degreeActive() {modelLargeLeft45degreeSwitchActive.renderAll();}
 	public void renderLarge45degreeInActive() {modelLargeLeft45degreeSwitchInActive.renderAll();}
+
+	public void renderCrossover10x2Active() { modelLeftCrossover10x2SwitchActive.renderAll(); }
+	public void renderCrossover10x2Inactive() { modelLeftCrossover10x2SwitchInactive.renderAll(); }
 
 	public void render(String type, TileTCRail tcRail, double x, double y, double z) {
 		render( type, tcRail.getTrackType().getVariant(), getRailDirection(tcRail), tcRail.getSwitchState(), x, y, z, 1, 1, 1, 1);
@@ -136,6 +145,10 @@ public class ModelLeftSwitchTCTrack extends AbstractTrackModel {
 				GL11.glRotatef(-90, 0, 1, 0);
 				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
 			}
+			if(type.equals("crossover_10x2")){
+				GL11.glRotatef(-90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
 
 		}
 		else if (facing == 1) {
@@ -166,6 +179,10 @@ public class ModelLeftSwitchTCTrack extends AbstractTrackModel {
 				GL11.glRotatef(90, 0, 1, 0);
 				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
 			}
+			if(type.equals("crossover_10x2")){
+				GL11.glRotatef(90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
 		}
 		else if(facing == 2){
 			if(type.equals("medium")){
@@ -191,6 +208,9 @@ public class ModelLeftSwitchTCTrack extends AbstractTrackModel {
 			else if(type.equals("large_45degree")){
 				GL11.glRotatef(0, 0, 1, 0);
 				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
+			}
+			if(type.equals("crossover_10x2")){
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
 			}
 		}
 		else if(facing == 0){
@@ -221,6 +241,10 @@ public class ModelLeftSwitchTCTrack extends AbstractTrackModel {
 				GL11.glRotatef(180, 0, 1, 0);
 				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
 			}
+			if(type.equals("crossover_10x2")){
+				GL11.glRotatef(180, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
 		}
 		if(type.equals("medium")&&!active)this.renderMediumInactive();
 		else if(type.equals("medium")&&active)this.renderMediumActive();
@@ -236,6 +260,8 @@ public class ModelLeftSwitchTCTrack extends AbstractTrackModel {
 		else if(type.equals("medium_45degree")&&active)this.renderMedium45degreeActive();
 		else if(type.equals("large_45degree")&&!active)this.renderLarge45degreeInActive();
 		else if(type.equals("large_45degree")&&active)this.renderLarge45degreeActive();
+		else if(type.equals("crossover_10x2")&&active)this.renderCrossover10x2Active();
+		else if (type.equals("crossover_10x2")&&!active)this.renderCrossover10x2Inactive();
 		
 		//if(type.equals("large"))this.renderLarge();
 

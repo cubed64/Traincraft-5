@@ -2,8 +2,11 @@ package train.client.render.models.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.client.render.models.blocks.BaseClass.AbstractTrackModel;
@@ -32,6 +35,10 @@ public class ModelRightSwitchTCTrack extends AbstractTrackModel {
 	private IModelCustom modelLargeRight45degreeSwitchActive;
 	private IModelCustom modelLargeRight45degreeSwitchInActive;
 
+	private IModelCustom modelRightCrossover10x2SwitchActive;
+	private IModelCustom modelRightCrossover10x2SwitchInactive;
+
+
 	public ModelRightSwitchTCTrack() {
 		modelMediumRightSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/4x4_right.obj"));
 		modelMediumRightSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/4x4_right.obj"));
@@ -53,6 +60,9 @@ public class ModelRightSwitchTCTrack extends AbstractTrackModel {
 
 		modelVeryLargeRightSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/11x11_right.obj"));
 		modelVeryLargeRightSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/11x11_right.obj"));
+
+		modelRightCrossover10x2SwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/crossover_10x2_right.obj"));
+		modelRightCrossover10x2SwitchInactive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/crossover_10x2_right.obj"));
 		
 	}
 
@@ -100,6 +110,9 @@ public class ModelRightSwitchTCTrack extends AbstractTrackModel {
 		modelLargeRight45degreeSwitchInActive.renderAll();
 	}
 
+	public void renderCrossover10x2Active() { modelRightCrossover10x2SwitchActive.renderAll(); }
+	public void renderCrossover10x2Inactive() { modelRightCrossover10x2SwitchInactive.renderAll(); }
+
 	public void render(String type, TileTCRail tcRail, double x, double y, double z)
 	{
 		render( type, tcRail.getTrackType().getVariant(), getRailDirection(tcRail), tcRail.getSwitchState(), x, y, z, 1, 1, 1, 1);
@@ -146,6 +159,10 @@ public class ModelRightSwitchTCTrack extends AbstractTrackModel {
 				GL11.glRotatef(-90, 0, 1, 0);
 				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
 			}
+			if(type.equals("crossover_10x2")){
+				GL11.glRotatef(-90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
 		}
 		if (facing == 1) {
 			if(type.equals("medium")){
@@ -174,6 +191,10 @@ public class ModelRightSwitchTCTrack extends AbstractTrackModel {
 			if(type.equals("large_45degree")){
 				GL11.glRotatef(90, 0, 1, 0);
 				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
+			}
+			if(type.equals("crossover_10x2")){
+				GL11.glRotatef(90, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
 			}
 		}
 		if(facing == 2){
@@ -207,6 +228,9 @@ public class ModelRightSwitchTCTrack extends AbstractTrackModel {
 				GL11.glRotatef(0, 0, 1, 0);
 				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
 			}
+			if(type.equals("crossover_10x2")){
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
 
 		}
 		if(facing == 0){
@@ -237,6 +261,10 @@ public class ModelRightSwitchTCTrack extends AbstractTrackModel {
 				GL11.glRotatef(180, 0, 1, 0);
 				GL11.glTranslatef(-0.5f, 0.0f, 1.5f);
 			}
+			if(type.equals("crossover_10x2")){
+				GL11.glRotatef(180, 0, 1, 0);
+				GL11.glTranslatef(-0.5f, 0.0f, 0.5f);
+			}
 		}
 		if(type.equals("medium")&&!active)this.renderMediumInactive();
 		else if(type.equals("medium")&&active)this.renderMediumActive();
@@ -252,7 +280,8 @@ public class ModelRightSwitchTCTrack extends AbstractTrackModel {
 		else if(type.equals("medium_45degree")&&!active)this.renderMedium45degreeInActive();
 		else if(type.equals("large_45degree")&&active)this.renderLarge45degreeActive();
 		else if(type.equals("large_45degree")&&!active)this.renderLarge45degreeInActive();
-		
+		else if(type.equals("crossover_10x2")&&active)this.renderCrossover10x2Active();
+		else if (type.equals("crossover_10x2")&&!active)this.renderCrossover10x2Inactive();
 		//if(type.equals("large"))this.renderLarge();
 
 		// Pop this matrix from the stack.
