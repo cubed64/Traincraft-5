@@ -301,6 +301,18 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 								modelLeftParallelCurve.render("large", railTile, x, y, z);
 								break;
 							}
+							case EMBEDDED_CROSSOVER_SWITCH_10X2_LEFT:
+							case CROSSOVER_SWITCH_10X2_LEFT: {
+								modelLeftSwitchTurn.render("crossover_10x2", railTile, x, y, z);
+								break;
+							}
+							case EMBEDDED_CROSSOVER_SWITCH_10X2:
+							case EMBEDDED_CROSSOVER_SWITCH_10X2_RIGHT:
+							case CROSSOVER_SWITCH_10X2:
+							case CROSSOVER_SWITCH_10X2_RIGHT: {
+								modelRightSwitchTurn.render("crossover_10x2", railTile, x, y, z);
+								break;
+							}
 
 							// Embedded Tracks
 							case SMALL_ROAD_CROSSING:{

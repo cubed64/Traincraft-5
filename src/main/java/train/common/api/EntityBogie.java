@@ -7,7 +7,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 import mods.railcraft.api.carts.IMinecart;
 import mods.railcraft.api.carts.IRoutableCart;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockAir;
 import net.minecraft.block.BlockRailBase;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityMinecart;
@@ -25,7 +24,6 @@ import train.common.blocks.BlockTCRailGag;
 import train.common.items.ItemTCRail;
 import train.common.items.TCRailTypes;
 import train.common.library.BlockIDs;
-import train.common.library.EnumTracks;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
 
@@ -45,6 +43,7 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 	public double bogieShift;
 	protected Side side;
 
+	public TileTCRail currentParentRail = null;
 
 	private int turnProgress;
     private double minecartX;
@@ -140,108 +139,19 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 		float angle = (float) Math.toDegrees(Math.atan2(dz, dx)) - 90F;
 		angle = MathHelper.wrapAngleTo180_float(angle);
 		float serverRealRotation = angle;
-		//System.out.println("distance "+Math.sqrt(dx*dx+dz*dz)+" "+this.entityMainTrain);
-		//
-		//		double rads = serverRealRotation * Math.PI / 180.0D;
-		//		double pitchRads = entityMainTrain.serverRealPitch * Math.PI / 180.0D;
-		//		double cos = Math.cos(rads);
-		//		double sin = Math.sin(rads);
-		//this.setPosition((entityMainTrain.posX - Math.cos(rads) * this.bogieShift), entityMainTrain.posY + ((Math.tan(pitchRads) * -this.bogieShift)+ entityMainTrain.getMountedYOffset()), (entityMainTrain.posZ - Math.sin(rads) * this.bogieShift));
-		//this.bogieLoco[i] = new EntityBogie(worldObj, (posX - Math.cos(rads) * this.bogieShift), posY + ((Math.tan(pitchRads) * -this.bogieShift) + getMountedYOffset()), (posZ - Math.sin(rads) * this.bogieShift), this, this.ID, i, this.bogieShift[i]);
-		//System.out.println("sin "+ sin);
-		//System.out.println("cos "+ cos);
-		//if (cos==-1)cos=0;
-		//System.out.println("shift "+bogieShift);
-		//System.out.println(this.posZ +" Z "+  (posZ - (sin * this.bogieShift)));
-		//System.out.println(this.posX +" X "+  (posX - (cos * this.bogieShift)));
+
 		float rotationCos1 = (float) Math.cos(Math.toRadians(serverRealRotation + 90));
 		float rotationSin1 = (float) Math.sin(Math.toRadians((serverRealRotation + 90)));
-		//float anglePitchClient = serverRealPitch*60;
+
 		double bogieX1 = (entityMainTrain.posX + (rotationCos1 * Math.abs(this.bogieShift)));
 		double bogieZ1 = (entityMainTrain.posZ + (rotationSin1 * Math.abs(this.bogieShift)));
-		/*System.out.println("rotation "+serverRealRotation);
-		System.out.println(this.posZ +" Z "+  bogieZ1);
-		System.out.println(this.posX +" X "+  bogieX1);
-		/*System.out.println(this.posX +" X "+  bogieX1);*/
+
 		this.motionX = (bogieX1 - this.posX);
 		this.motionZ = (bogieZ1 - this.posZ);
 		//this.setPosition(bogieX1, this.posY, bogieZ1);
+		//pathFindingHelper.checkIfPathIsCorrect(this);
 
-
-		//		double d = entityMainTrain.posX - this.posX;
-		//		double d1 = entityMainTrain.posZ - this.posZ;
-		//		double d2 = MathHelper.sqrt_double((d * d) + (d1 * d1));
-		//
-		//		double vecX = entityMainTrain.posX - this.posX;
-		//		double vecZ = entityMainTrain.posZ - this.posZ;
-		//
-		//		double vecNorm = MathHelper.sqrt_double(vecX * vecX + vecZ * vecZ);
-		//
-		//		double unitX = vecX / vecNorm;
-		//		double unitZ = vecZ / vecNorm;
-		//
-		//		float optDist = (float) -bogieShift;
-		//		double stretch = d2 - optDist;
-		//
-		//		double div = spring();
-		//		if (Math.sqrt(entityMainTrain.motionX * entityMainTrain.motionX + entityMainTrain.motionZ * entityMainTrain.motionZ) < 0.17) {
-		//			div = 0.049;
-		//		}
-		//		double springX = div * stretch * vecX * -1;
-		//		double springZ = div * stretch * vecZ * -1;
-		//
-		//		springX = limitForce(springX);
-		//		springZ = limitForce(springZ);
-		//
-		//		/* if (adj1) { ((this) cart1).motionX += springX; ((this) cart1).motionZ += springZ; }
-		//		if (adj2) {
-		//		System.out.println(entityMainTrain.motionX + " " + entityMainTrain.motionZ);
-		//		System.out.println(Math.sqrt(entityMainTrain.motionX*entityMainTrain.motionX + entityMainTrain.motionZ*entityMainTrain.motionZ));
-		//
-		//		if (Math.abs(entityMainTrain.motionX) > 0.003 || Math.abs(entityMainTrain.motionZ) > 0.003) {
-		//			this.motionX -= springX;
-		//			this.motionZ -= springZ;
-		//		}
-		//		else {
-		//			this.motionX = 0;
-		//			this.motionZ = 0;
-		//			entityMainTrain.motionX = 0;
-		//			entityMainTrain.motionZ = 0;
-		//		}*/
-		//		this.motionX -= springX;
-		//		this.motionZ -= springZ;
-		//		double speedVecX = entityMainTrain.motionX - this.motionX;
-		//		double speedVecZ = entityMainTrain.motionZ - this.motionZ;
-		//
-		//		double dot = speedVecX * unitX + speedVecZ * unitZ;
-		//
-		//		double divider = damp();
-		//		if (Math.sqrt(entityMainTrain.motionX * entityMainTrain.motionX + entityMainTrain.motionZ * entityMainTrain.motionZ) < 0.017) {
-		//			divider = 0.2;
-		//		}
-		//		double dampX = divider * dot * unitX * -1;// 0.4
-		//		double dampZ = divider * dot * unitZ * -1;
-		//
-		//		dampX = limitForce(dampX);
-		//		dampZ = limitForce(dampZ);
-		//		this.motionX -= dampX;
-		//		this.motionZ -= dampZ;
-		/*
-		 * if (adj1) { ((this) cart1).motionX += dampX; ((this) cart1).motionZ += dampZ; }
-		if (adj2) {
-		if (Math.abs(entityMainTrain.motionX) > 0.003 || Math.abs(entityMainTrain.motionZ) > 0.003) {
-			this.motionX -= dampX;
-			this.motionZ -= dampZ;
-		}
-		else {
-			this.motionX = 0;
-			this.motionZ = 0;
-			entityMainTrain.motionX = 0;
-			entityMainTrain.motionZ = 0;
-		}
-		}*/
 		if(!pathFindingHelper.isOnRail(this, worldObj)){
-			//this.setPosition(prevX, this.posY, prevZ);
 			this.isDerail = true;
 		} else if (isDerail) {
 			this.isDerail = false;
@@ -374,7 +284,6 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 	 */
 	@Override
 	public void onUpdate(){
-		//super.onUpdate(); // XXX I'll just assume that this is not supposed to be there. Why would you run Vanilla update code, only to run your own code afterwards to do basically the same..?
 
 		this.setCurrentCartSpeedCapOnRail(1.8F);
 		this.setMaxSpeedAirLateral(1.8F);
@@ -457,33 +366,27 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 					//applyDragAndPushForces();
 					limitSpeedOnTCRail();
 
-					if (ItemTCRail.isTCTurnTrack(tileRail))
+					if (ItemTCRail.isTCTurnTrack(tileRail) || TCRailTypes.isTurnTrack(tileRail))
 					{
 						int meta = tileRail.getBlockMetadata();
 						if (pathFindingHelper.shouldIgnoreSwitch(this,tileRail, i, j, k, meta)) {
 							pathFindingHelper.moveOnTCStraight(this, i, j, k, tileRail.xCoord, tileRail.zCoord, tileRail.getBlockMetadata());
 						} else {
-							if (ItemTCRail.isTCTurnTrack(tileRail)) moveOnTC90TurnRail(j, tileRail.r, tileRail.cx, tileRail.cz);
+							pathFindingHelper.moveOnTCCurve(this, j, tileRail.r, tileRail.cx, tileRail.cz);
 						}
-
-						// shouldIgnoreSwitch(tileRail, i, j, k, meta);
-						// if (ItemTCRail.isTCTurnTrack(tileRail)) moveOnTC90TurnRail(i, j, k,
-						// tileRail.r, tileRail.cx, tileRail.cy, tileRail.cz, tileRail.getType(), meta);
 					}
 					else if (ItemTCRail.isTCStraightTrack(tileRail) || (TCRailTypes.isSwitchTrack(tileRail) && !tileRail.getSwitchState()))
 					{
 						pathFindingHelper.moveOnTCStraight(this, i, j, k, tileRail.xCoord, tileRail.zCoord, tileRail.getBlockMetadata());
 						//moveOnTCStraight(j, tileRail.xCoord, tileRail.zCoord, tileRail.getBlockMetadata());
 					}
-					else if (TCRailTypes.isTurnTrack(tileRail) || (TCRailTypes.isSwitchTrack(tileRail) && tileRail.getSwitchState()))
+					else if ((TCRailTypes.isSwitchTrack(tileRail) && tileRail.getSwitchState()))
 					{
 						if (shouldIgnoreSwitch(tileRail, i, j, k, meta)) {
 							pathFindingHelper.moveOnTCStraight(this, i, j, k, tileRail.xCoord, tileRail.zCoord, tileRail.getBlockMetadata());
 						}
 						else {
-							if (TCRailTypes.isTurnTrack(tileRail) || (TCRailTypes.isSwitchTrack(tileRail) && tileRail.getSwitchState())) {
-								moveOnNewTC90TurnRail(j, tileRail.r, tileRail.cx, tileRail.cz);
-							}
+							pathFindingHelper.moveOnTCCurve(this, j, tileRail.r, tileRail.cx, tileRail.cz);
 						}
 					}
 					else if (TCRailTypes.isCrossingTrack(tileRail))
@@ -700,96 +603,6 @@ public class EntityBogie extends EntityMinecart implements IMinecart, IRoutableC
 		this.motionX = alongZ ? 0.0D : Math.copySign(norm, this.motionX);
 		this.motionY = 0;
 		this.motionZ = alongZ ? Math.copySign(norm, this.motionZ) : 0.0D;
-	}
-
-	private void moveOnNewTC90TurnRail(int j,double r, double cx, double cz){
-
-		posY = j + 0.2;
-		double cpx = posX - cx;
-		double cpz = posZ - cz;
-		double cp_norm = Math.sqrt(cpx * cpx + cpz * cpz);
-
-		double vnorm = Math.sqrt(motionX * motionX + motionZ * motionZ);
-
-		double norm_cpx = cpx / cp_norm; //u
-		double norm_cpz = cpz / cp_norm; //v
-
-		double vx2 = -norm_cpz * vnorm;//-v
-		double vz2 = norm_cpx * vnorm;//u
-
-		double px2 = posX + motionX;
-		double pz2 = posZ + motionZ;
-
-		double px2_cx = px2 - cx;
-		double pz2_cz = pz2 - cz;
-
-		double p2_c_norm = Math.sqrt((px2_cx * px2_cx) + (pz2_cz * pz2_cz));
-
-		double px2_cx_norm = px2_cx / p2_c_norm;
-		double pz2_cz_norm = pz2_cz / p2_c_norm;
-
-		double px3 = cx + (px2_cx_norm * r);
-		double pz3 = cz + (pz2_cz_norm * r);
-
-		double signX = px3 - posX;
-		double signZ = pz3 - posZ;
-
-		vx2 = Math.copySign(vx2, signX);
-		vz2 = Math.copySign(vz2, signZ);
-
-		double p_corr_x = cx + ((cpx / cp_norm) * r);
-		double p_corr_z = cz + ((cpz / cp_norm) * r);
-
-
-		setPosition(p_corr_x, posY + yOffset, p_corr_z);
-		moveEntity(vx2, 0.0D, vz2);
-		motionX = vx2;
-		motionZ = vz2;
-
-	}
-
-	private void moveOnTC90TurnRail(int j,double r, double cx, double cz){
-		posY = j + 0.2;
-		double cpx = posX - cx;
-		double cpz = posZ - cz;
-		double cp_norm = Math.sqrt(cpx * cpx + cpz * cpz);
-
-		double vnorm = Math.sqrt(motionX * motionX + motionZ * motionZ);
-
-		double norm_cpx = cpx / cp_norm;//u
-		double norm_cpz = cpz / cp_norm;//v
-
-		double vx2 = -norm_cpz * vnorm;//-v
-		double vz2 = norm_cpx * vnorm;//u
-
-		double px2 = posX + motionX;
-		double pz2 = posZ + motionZ;
-
-		double px2_cx = px2 - cx;
-		double pz2_cz = pz2 - cz;
-
-		double p2_c_norm = Math.sqrt((px2_cx * px2_cx) + (pz2_cz * pz2_cz));
-
-		double px2_cx_norm = px2_cx / p2_c_norm;
-		double pz2_cz_norm = pz2_cz / p2_c_norm;
-
-		double px3 = cx + (px2_cx_norm * r);
-		double pz3 = cz + (pz2_cz_norm * r);
-
-		double signX = px3 - posX;
-		double signZ = pz3 - posZ;
-
-		vx2 = Math.copySign(vx2, signX);
-		vz2 = Math.copySign(vz2, signZ);
-
-		double p_corr_x = cx + ((cpx / cp_norm) * r);
-		double p_corr_z = cz + ((cpz / cp_norm) * r);
-
-		setPosition(p_corr_x, posY + yOffset, p_corr_z);
-
-		moveEntity(vx2, 0.0D, vz2);
-		motionX = vx2;
-		motionZ = vz2;
 	}
 
 	private void limitSpeedOnTCRail() {

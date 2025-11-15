@@ -329,7 +329,7 @@ public class CustomRenderHandler
             }
         }
 
-        // switchs
+        // switches
         else if (TCRailTypes.RailTypes.SWITCH.equals(item.getTrackType().getRailType()))
         {
             float yaw = MathHelper.wrapAngleTo180_float(player.rotationYaw);
@@ -388,6 +388,11 @@ public class CustomRenderHandler
                 out_1_0 = 0;
                 out_1_1 = 0;
             }
+            else if (item.getTrackType() == EnumTracks.CROSSOVER_SWITCH_10X2 || item.getTrackType() == EnumTracks.EMBEDDED_CROSSOVER_SWITCH_10X2) {
+                handleCrossover(isLeftTurn, "crossover_10x2", item, facing, r, g, b, a);
+                GL11.glPopMatrix();
+                return;
+            }
 
             Vector2f dir_1 = ItemTCRail.getDirectionVector(facing_1);
             String variant = item.getTrackType().getVariant().equals(RailVariants.EMBEDDED) ? "embedded" : "straight";
@@ -424,6 +429,14 @@ public class CustomRenderHandler
 
 
             GL11.glPopMatrix();
+    }
+
+    private void handleCrossover(boolean isLeftTurn, String switchType, ItemTCRail item, int facing, float r, float g, float b, float a) {
+        if (isLeftTurn) {
+            RenderTCRail.modelLeftSwitchTurn.render(switchType, item.getTrackType().getVariant(), facing, false, 0, 0, 0, r, g, b, a);
+        } else {
+            RenderTCRail.modelRightSwitchTurn.render(switchType, item.getTrackType().getVariant(), facing, false, 0, 0, 0, r, g, b, a);}
+
     }
 
     private void blockInfo()

@@ -99,6 +99,8 @@ public class TCItems {
 		ItemIDs.tcRailMediumParallelSwitch.item = new ItemTCRail(EnumTracks.MEDIUM_PARALLEL_SWITCH);
 		ItemIDs.tcRailLargeParallelSwitch.item = new ItemTCRail(EnumTracks.LARGE_PARALLEL_SWITCH);
 
+		ItemIDs.tcRailCrossoverSwitch10x2.item = new ItemTCRail(EnumTracks.CROSSOVER_SWITCH_10X2);
+
 		/* Normal Crossways*/
 		ItemIDs.tcRailTwoWaysCrossing.item = new ItemTCRail(EnumTracks.TWO_WAYS_CROSSING);
 		ItemIDs.tcRailDiamondCrossing.item = new ItemTCRail(EnumTracks.DIAMOND_CROSSING);
@@ -124,6 +126,8 @@ public class TCItems {
 		ItemIDs.tcRailEmbeddedLargeParallelSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_PARALLEL_SWITCH);
 		ItemIDs.tcRailEmbeddedMedium45DegreeSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_MEDIUM_45DEGREE_SWITCH);
 		ItemIDs.tcRailEmbeddedLarge45DegreeSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_45DEGREE_SWITCH);
+
+		ItemIDs.tcRailEmbeddedCrossoverSwitch10x2.item = new ItemTCRail(EnumTracks.EMBEDDED_CROSSOVER_SWITCH_10X2);
 
 		/** Normal Slopes*/
 		ItemIDs.tcRail1X3SlopeDynamic.item = new ItemTCRail(EnumTracks.SLOPE_1X3_DYNAMIC);
