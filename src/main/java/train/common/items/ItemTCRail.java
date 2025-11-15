@@ -25,6 +25,8 @@ import train.common.tile.TileTCRailGag;
 import javax.annotation.Nullable;
 import java.util.List;
 
+import static train.common.library.EnumCoreTrack.CORE_5X11_45DEGREE_TURN_R;
+
 public class ItemTCRail extends ItemPart {
 	private EnumTracks type;
 	EnumTracks tempType;
@@ -514,57 +516,41 @@ public class ItemTCRail extends ItemPart {
 						--itemstack.stackSize;
 					}
 				return true;
-			}
-
-			switch (tempType)
-			{
-				case MEDIUM_RIGHT_45DEGREE_TURN:
-				case EMBEDDED_MEDIUM_RIGHT_45DEGREE_TURN:
+				case CORE_3X4_45DEGREE_TURN_R: //TODO consolidate left/right
 					if (!mediumRight45DegreeTurn(player, world, x, y, z, l, tempType))
 					{
 						return false;
 					}
-					else
+
+					if (player == null || !player.capabilities.isCreativeMode)
 					{
-						if (player == null || !player.capabilities.isCreativeMode)
-						{
-							--itemstack.stackSize;
-						}
-						return true;
+						--itemstack.stackSize;
 					}
 
-				case MEDIUM_LEFT_45DEGREE_TURN:
-				case EMBEDDED_MEDIUM_LEFT_45DEGREE_TURN: //TODO consolidate left/right
+					return true;
+				case CORE_3X4_45DEGREE_TURN_L: //TODO consolidate left/right
 					if (!mediumLeft45DegreeTurn(player, world, x, y, z, l, tempType))
 					{
 						return false;
 					}
-					else
-					{
-						if (player == null || !player.capabilities.isCreativeMode)
-						{
-							--itemstack.stackSize;
-						}
-						return true;
-					}
 
-				case LARGE_RIGHT_45DEGREE_TURN:
-				case EMBEDDED_LARGE_RIGHT_45DEGREE_TURN:
+					if (player == null || !player.capabilities.isCreativeMode)
+					{
+						--itemstack.stackSize;
+					}
+					return true;
+				case CORE_3X6_45DEGREE_TURN_R:
 					if (!largeRight45DegreeTurn(player, world, x, y, z, l, tempType))
 					{
 						return false;
 					}
-					else
-					{
-						if (player == null || !player.capabilities.isCreativeMode)
-						{
-							--itemstack.stackSize;
-						}
-						return true;
-					}
 
-				case LARGE_LEFT_45DEGREE_TURN:
-				case EMBEDDED_LARGE_LEFT_45DEGREE_TURN:
+					if (player == null || !player.capabilities.isCreativeMode)
+					{
+						--itemstack.stackSize;
+					}
+					return true;
+				case CORE_3X6_45DEGREE_TURN_L:
 					if (!largeLeft45DegreeTurn(player, world, x, y, z, l, tempType)) {
 						return false;
 					}
@@ -574,9 +560,7 @@ public class ItemTCRail extends ItemPart {
 						--itemstack.stackSize;
 					}
 					return true;
-
-				case VERY_LARGE_RIGHT_45DEGREE_TURN:
-				case EMBEDDED_VERY_LARGE_RIGHT_45DEGREE_TURN:
+				case CORE_4X8_45DEGREE_TURN_R:
 					if (!veryLargeRight45DegreeTurn(player, world, x, y, z, l, tempType)) {
 						return false;
 					}
@@ -586,9 +570,7 @@ public class ItemTCRail extends ItemPart {
 						--itemstack.stackSize;
 					}
 					return true;
-
-				case VERY_LARGE_LEFT_45DEGREE_TURN:
-				case EMBEDDED_VERY_LARGE_LEFT_45DEGREE_TURN:
+				case CORE_4X8_45DEGREE_TURN_L:
 					if (!veryLargeLeft45DegreeTurn(player, world, x, y, z, l, tempType))
 					{
 						return false;
@@ -599,9 +581,7 @@ public class ItemTCRail extends ItemPart {
 						--itemstack.stackSize;
 					}
 					return true;
-
-				case SUPER_LARGE_RIGHT_45DEGREE_TURN:
-				case EMBEDDED_SUPER_LARGE_RIGHT_45DEGREE_TURN:
+				case CORE_5X11_45DEGREE_TURN_R:
 					if (!superLargeRight45DegreeTurn(player, world, x, y, z, l, tempType))
 					{
 						return false;
@@ -612,9 +592,7 @@ public class ItemTCRail extends ItemPart {
 						--itemstack.stackSize;
 					}
 					return true;
-
-				case SUPER_LARGE_LEFT_45DEGREE_TURN:
-				case EMBEDDED_SUPER_LARGE_LEFT_45DEGREE_TURN:
+				case CORE_5X11_45DEGREE_TURN_L:
 					if (!superLargeLeft45DegreeTurn(player, world, x, y, z, l, tempType))
 					{
 						return false;
@@ -625,15 +603,15 @@ public class ItemTCRail extends ItemPart {
 						--itemstack.stackSize;
 					}
 					return true;
-
-				case DIAGONAL_LEFT_TURN_9X20:
-				case DIAGONAL_RIGHT_TURN_9X20:
-				case EMBEDDED_DIAGONAL_LEFT_TURN_9X20:
-				case EMBEDDED_DIAGONAL_RIGHT_TURN_9X20:
-					if (player.isSneaking()) {
+				case CORE_9X20_45DEGREE_TURN_L:
+				case CORE_9X20_45DEGREE_TURN_R:
+					if (player.isSneaking())
+					{
 						curveXArray = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8};
 						curveZArray = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 7, 8, 9, 10, 11, 12, 10, 11, 12, 13, 14, 12, 13, 14, 15, 14, 15, 16, 17, 15, 16, 17, 18, 16, 17, 18, 19, 18, 19};
-					} else {
+					}
+					else
+					{
 						curveXArray = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 9};
 						curveZArray = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 7, 8, 9, 10, 11, 12, 10, 11, 12, 13, 14, 12, 13, 14, 15, 14, 15, 16, 17, 15, 16, 17, 18, 16, 17, 18, 19, 18, 19, 20, 19};
 
@@ -645,103 +623,99 @@ public class ItemTCRail extends ItemPart {
 						--itemstack.stackSize;
 					}
 					return true;
-
-				case DIAGONAL_LEFT_TURN_10X22:
-				case DIAGONAL_RIGHT_TURN_10X22:
-				case EMBEDDED_DIAGONAL_LEFT_TURN_10X22:
-				case EMBEDDED_DIAGONAL_RIGHT_TURN_10X22:
+				case CORE_10x22_45DEGREE_TURN_L:
+				case CORE_10x22_45DEGREE_TURN_R:
+				{
 					if (player.isSneaking()) {
 						curveXArray = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 9, 9};
 						curveZArray = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 2, 3, 4, 5, 6, 7, 8, 9, 10, 7, 8, 9, 10, 11, 12, 13, 10, 11, 12, 13, 14, 13, 14, 15, 16, 15, 16, 17, 18, 16, 17, 18, 19, 17, 18, 19, 20, 19, 20, 21, 20, 21};
-					} else {
+					}
+					else {
 						curveXArray = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 9, 9, 9, 10};
 						curveZArray = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 2, 3, 4, 5, 6, 7, 8, 9, 10, 7, 8, 9, 10, 11, 12, 13, 10, 11, 12, 13, 14, 13, 14, 15, 16, 15, 16, 17, 18, 16, 17, 18, 19, 17, 18, 19, 20, 19, 20, 21, 20, 21, 22, 21};
 					}
-					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 30.22f)) {return false;}
+					if (!turnTrack(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, 30.22f)) {
+						return false;
+					}
 
-					if (player == null || !player.capabilities.isCreativeMode)
-					{
+					if (player == null || !player.capabilities.isCreativeMode) {
 						--itemstack.stackSize;
 					}
 					return true;
+				}
 
-				case SMALL_RIGHT_PARALLEL_CURVE:
-				case SMALL_LEFT_PARALLEL_CURVE:
-				case EMBEDDED_SMALL_RIGHT_PARALLEL_CURVE:
-				case EMBEDDED_SMALL_LEFT_PARALLEL_CURVE:
-
+				case CORE_S_CURVE_2x8_L:
+				case CORE_S_CURVE_2x8_R:
+				{
 					curveXArray = new int[]{0, 0, 0, 0, 0, 0};
 					curveZArray = new int[]{0, 1, 2, 3, 4, 5};
 					curveXArray2 = new int[]{1, 1, 1, 1, 1, 1};
 					curveZArray2 = new int[]{2, 3, 4, 5, 6, 7};
-					if (!SCurve(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, curveXArray2, curveZArray2, 16.25f, 8, 2))
-					{
+					if (!SCurve(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, curveXArray2, curveZArray2, 16.25f, 8, 2)) {
 						return false;
 					}
 
-					if (player == null || !player.capabilities.isCreativeMode)
-					{
+					if (player == null || !player.capabilities.isCreativeMode) {
 						--itemstack.stackSize;
 					}
 					return true;
+				}
 
-				case MEDIUM_RIGHT_PARALLEL_CURVE:
-				case MEDIUM_LEFT_PARALLEL_CURVE:
-				case EMBEDDED_MEDIUM_RIGHT_PARALLEL_CURVE:
-				case EMBEDDED_MEDIUM_LEFT_PARALLEL_CURVE:
-
+				case CORE_S_CURVE_3x12_L:
+				case CORE_S_CURVE_3x12_R:
+				{
 					curveXArray = new int[]{0, 0, 0, 0, 0, 1, 1, 1};
 					curveZArray = new int[]{0, 1, 2, 3, 4, 3, 4, 5};
 					curveXArray2 = new int[]{1, 1, 1, 2, 2, 2, 2, 2};
 					curveZArray2 = new int[]{6, 7, 8, 7, 8, 9, 10, 11};
-					if (!SCurve(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, curveXArray2, curveZArray2, 18.50f, 12, 3))
-					{
+					if (!SCurve(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, curveXArray2, curveZArray2, 18.50f, 12, 3)) {
 						return false;
 					}
 
-					if (player == null || !player.capabilities.isCreativeMode)
-					{
+					if (player == null || !player.capabilities.isCreativeMode) {
 						--itemstack.stackSize;
 					}
 					return true;
+				}
 
-				case LARGE_RIGHT_PARALLEL_CURVE:
-				case LARGE_LEFT_PARALLEL_CURVE:
-				case EMBEDDED_LARGE_RIGHT_PARALLEL_CURVE:
-				case EMBEDDED_LARGE_LEFT_PARALLEL_CURVE:
-
+				case CORE_S_CURVE_4x16_L:
+				case CORE_S_CURVE_4x16_R:
+				{
 					curveXArray = new int[]{0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1};
 					curveZArray = new int[]{0, 1, 2, 3, 4, 5, 4, 5, 6, 7, 8};
-					curveXArray2 = new int[]{2, 2, 2, 2, 2, 3, 3, 3, 3, 3,3};
-					curveZArray2 = new int[]{7, 8, 9, 10, 11, 10, 11, 12, 13, 14,15};
-					if (!SCurve(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, curveXArray2, curveZArray2, 22f, 16, 4))
-					{
+					curveXArray2 = new int[]{2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3};
+					curveZArray2 = new int[]{7, 8, 9, 10, 11, 10, 11, 12, 13, 14, 15};
+					if (!SCurve(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, curveXArray2, curveZArray2, 22f, 16, 4)) {
 						return false;
 					}
 
-					if (player == null || !player.capabilities.isCreativeMode)
-					{
+					if (player == null || !player.capabilities.isCreativeMode) {
 						--itemstack.stackSize;
 					}
 					return true;
+				}
 
-				case S_CURVE_20x2_LEFT:
-				case S_CURVE_20x2_RIGHT:
-				case EMBEDDED_S_CURVE_20x2_LEFT:
-				case EMBEDDED_S_CURVE_20x2_RIGHT:
-					curveXArray = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1};
-					curveZArray = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 3, 4, 5, 6, 7, 8, 9};
-					curveXArray2 = new int[] {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-					curveZArray2 = new int[] {10, 11, 12, 13, 14, 15, 16, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
+				case CORE_S_CURVE_20x2_L:
+				case CORE_S_CURVE_20x2_R:
+				{
+					curveXArray = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1};
+					curveZArray = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 3, 4, 5, 6, 7, 8, 9};
+					curveXArray2 = new int[]{0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+					curveZArray2 = new int[]{10, 11, 12, 13, 14, 15, 16, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
 
-					if (!SCurve(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, curveXArray2, curveZArray2, 100.25f, 20, 2)) {return false;}
+					if (!SCurve(player, world, x, y, z, l, tempType, par10, curveXArray, curveZArray, curveXArray2, curveZArray2, 100.25f, 20, 2)) {
+						return false;
+					}
 
-					if (player == null || !player.capabilities.isCreativeMode)
-					{
+					if (player == null || !player.capabilities.isCreativeMode) {
 						--itemstack.stackSize;
 					}
 					return true;
+				}
+			}
 
+			switch (tempType)
+			{
 				case MEDIUM_LEFT_PARALLEL_SWITCH:
 				case EMBEDDED_MEDIUM_LEFT_PARALLEL_SWITCH:
 				{
@@ -2419,9 +2393,7 @@ public class ItemTCRail extends ItemPart {
 						}
 						return true;
 					}
-
-					else if (EnumCoreTrack.CORE_SMALL_STRAIGHT.equals(type.getCoreTrack())
-							|| type == EnumTracks.SMALL_ROAD_CROSSING || type == EnumTracks.SMALL_ROAD_CROSSING_1 || type == EnumTracks.SMALL_ROAD_CROSSING_2)
+					else if (EnumCoreTrack.CORE_SMALL_STRAIGHT.equals(type.getCoreTrack()))
 					{
 						if (smallStraight(player,world,x,y,z,l,type) == false)
 						{

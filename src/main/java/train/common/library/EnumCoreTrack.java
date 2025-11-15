@@ -5,7 +5,7 @@ package train.common.library;
  */
 public enum EnumCoreTrack
 {
-    NONE,
+    NONE, // default value
 
     CORE_SMALL_STRAIGHT,
     CORE_MEDIUM_STRAIGHT,
@@ -17,6 +17,7 @@ public enum EnumCoreTrack
     CORE_LONG_DIAGONAL_STRAIGHT,
     CORE_VERY_LONG_DIAGONAL_STRAIGHT,
 
+    // region 90 turns
     CORE_1X_TURN ,
     CORE_3X_TURN ,
     CORE_5X_TURN ,
@@ -40,10 +41,79 @@ public enum EnumCoreTrack
     CORE_16X_TURN_R,
     CORE_29X_TURN_R,
     CORE_32X_TURN_R,
+    // endregion 90 turns
 
-    CORE_DIAGONAL_TURN_9X20,
-    DIAGONAL_TURN_9X20,
+    // region 45 turns
+    CORE_3X4_45DEGREE_TURN,
+    CORE_3X4_45DEGREE_TURN_L,
+    CORE_3X4_45DEGREE_TURN_R,
 
+    CORE_3X5_45DEGREE_TURN,
+    CORE_3X5_45DEGREE_TURN_L,
+    CORE_3X5_45DEGREE_TURN_R,
+
+    CORE_3X6_45DEGREE_TURN,
+    CORE_3X6_45DEGREE_TURN_L,
+    CORE_3X6_45DEGREE_TURN_R,
+
+    CORE_4X8_45DEGREE_TURN,
+    CORE_4X8_45DEGREE_TURN_L,
+    CORE_4X8_45DEGREE_TURN_R,
+
+    CORE_5X11_45DEGREE_TURN,
+    CORE_5X11_45DEGREE_TURN_L,
+    CORE_5X11_45DEGREE_TURN_R,
+
+    CORE_9X20_45DEGREE_TURN,
+    CORE_9X20_45DEGREE_TURN_L,
+    CORE_9X20_45DEGREE_TURN_R,
+
+    CORE_10x22_45DEGREE_TURN,
+    CORE_10x22_45DEGREE_TURN_L,
+    CORE_10x22_45DEGREE_TURN_R,
+
+    // endregion 45 turns
+
+    // region S CURVE
+     CORE_S_CURVE_2x8,
+     CORE_S_CURVE_2x8_L,
+     CORE_S_CURVE_2x8_R,
+
+     CORE_S_CURVE_3x12,
+     CORE_S_CURVE_3x12_L,
+     CORE_S_CURVE_3x12_R,
+
+     CORE_S_CURVE_4x16,
+     CORE_S_CURVE_4x16_L,
+     CORE_S_CURVE_4x16_R,
+
+     CORE_S_CURVE_20x2,
+     CORE_S_CURVE_20x2_L,
+     CORE_S_CURVE_20x2_R,
+    // endregion S CURVE
+
+    // region 90 Switches
+    CORE_4x11_PARALLEL_SWITCH,
+    CORE_4x11_PARALLEL_SWITCH_L,
+    CORE_4x11_PARALLEL_SWITCH_R,
+
+    CORE_4x17_PARALLEL_SWITCH,
+    CORE_4x17_PARALLEL_SWITCH_L,
+    CORE_4x17_PARALLEL_SWITCH_R,
+
+    // endregion 90 Switches
+
+    // region 45 Switches
+    CORE_3x5_45DEGREE_SWITCH,
+    CORE_3x5_45DEGREE_SWITCH_L,
+    CORE_3x5_45DEGREE_SWITCH_R,
+
+    CORE_4x8_45DEGREE_SWITCH,
+    CORE_4x8_45DEGREE_SWITCH_L,
+    CORE_4x8_45DEGREE_SWITCH_R,
+    // endregion 45 Switches
+
+    // region Slopes
     CORE_3_SLOPE,
     CORE_6_SLOPE,
     CORE_12_SLOPE,
@@ -52,4 +122,5 @@ public enum EnumCoreTrack
     CORE_6_DIAGONAL_SLOPE,
     CORE_12_DIAGONAL_SLOPE,
     CORE_18_DIAGONAL_SLOPE;
+    // endregion Slopes
 }
