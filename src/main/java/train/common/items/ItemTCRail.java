@@ -3055,6 +3055,13 @@ public class ItemTCRail extends ItemPart {
 		if (!canPlaceTrack(player, world, x, y + 1, z)) {
 			return false;
 		}
+
+		if (type.getLabel().contains("DYNAMIC") && world.getBlock(x, y, z) == BlockIDs.bridgePillar.block)
+		{
+			return false;
+		}
+
+
 		placeTrack(world,x, y + 1, z, BlockIDs.tcRail.block, l);
 		TileTCRail tcRail = (TileTCRail) world.getTileEntity(x, y + 1, z);
 		tcRail.setFacing(l);
@@ -3063,6 +3070,15 @@ public class ItemTCRail extends ItemPart {
 		tcRail.cz = z;
 		tcRail.setType(type.getLabel());
 		tcRail.idDrop = this.type.getItem().item;
+
+		if (type.getLabel().contains("DYNAMIC"))
+		{
+			Block block = world.getBlock(x, y, z);
+			int blockID = Block.getIdFromBlock(block);
+			tcRail.setBallastMaterial(blockID);
+			tcRail.ballastMetadata = world.getBlockMetadata(x, y, z);
+		}
+
 
 		return true;
 	}

@@ -76,7 +76,7 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 								break;
 							}
 							case SMALL_ROAD_CROSSING_DYNAMIC:{
-								modelRoadCrossing.render("dynamic", railTile, x, y, z);
+								modelRoadCrossing.renderDynamic(railTile, x, y, z);
 								break;
 							}
 							default:
