@@ -189,7 +189,7 @@ public class RecipeHandler {
 
 
 		//straights sleeperless
-		GameRegistry.addRecipe(new ItemStack(ItemIDs.tcRailEmbeddedSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', Items.iron_ingot, 'P', Blocks.planks);
+		GameRegistry.addRecipe(new ItemStack(ItemIDs.tcRailEmbeddedSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', Items.iron_ingot, 'P', Items.clay_ball);
 		GameRegistry.addRecipe(new ItemStack(ItemIDs.tcRailEmbeddedMediumStraight.item, 1),  "G  ", "G  ", "G  ", 'G', ItemIDs.tcRailEmbeddedSmallStraight.item);
 		GameRegistry.addRecipe(new ItemStack(ItemIDs.tcRailEmbeddedLongStraight.item, 1),  "G  ", "G  ", "   ", 'G', ItemIDs.tcRailEmbeddedMediumStraight.item);
 		GameRegistry.addRecipe(new ItemStack(ItemIDs.tcRailEmbeddedVeryLongStraight.item, 1),  "G  ", "G  ", "   ", 'G', ItemIDs.tcRailEmbeddedLongStraight.item);
