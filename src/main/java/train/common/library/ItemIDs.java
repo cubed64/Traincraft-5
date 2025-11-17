@@ -75,6 +75,11 @@ public enum ItemIDs {
 	brakeStick("ItemBrakeStick", "item_brakestick", 2),
 	interchangeTransferReportBoard("ItemInterchangeTransferReportBoard", "item_interchangetransferreportboard", 64),
 
+	fourWheelLightweightTruck("ItemTrain", "fourWheelLightweightTruck", 5),
+	fourWheelHeavyweightTruck("ItemTrain", "fourWheelHeavyweightTruck", 5),
+	sixWheelHeavyweightTruck("ItemTrain", "sixWheelHeavyweightTruck", 5),
+	passengerFluting("ItemTrain", "passengerFluting", 2),
+
 
 	minecartWork("ItemRollingStock", "train_work", HERITAGE, 4),
 	minecartTender("ItemRollingStock", "train_tender", HERITAGE, 4),
