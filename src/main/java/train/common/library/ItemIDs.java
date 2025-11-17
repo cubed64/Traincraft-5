@@ -64,7 +64,7 @@ public enum ItemIDs {
 	copperRail("ItemTrain", "item_rail_copper", 1),//ItemTrain actually lives inside ItemPart
 	steelRail("ItemTrain", "item_rail_steel", 1),
 	recipeBook("ItemRecipeBook", "item_book_blue", 1),
-	creditsBook("ItemRecipeBook", "item_book_brown", 1),
+	//creditsBook("ItemRecipeBook", "item_book_brown", 1),
 	adminBook("ItemAdminBook", "item_book_blue", 0),
 	trackDebugger("ItemTrackDebugger", "item_composite_wrench", 0),
 	wirelessTransmitter("ItemWirelessTransmitter", "wireless_transmitter", 3),

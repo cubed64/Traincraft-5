@@ -45,7 +45,7 @@ public class TCItems {
 		ItemIDs.recipeBook.item = new ItemRecipeBook();
 		ItemIDs.adminBook.item = new ItemAdminBook();
 		ItemIDs.trackDebugger.item = new ItemTrackDebugger();
-		ItemIDs.creditsBook.item = new ItemCreditsBook();
+		//ItemIDs.creditsBook.item = new ItemCreditsBook();
 		ItemIDs.paintbrushThing.item = new ItemPaintbrushThing();
 		ItemIDs.padlock.item = new ItemPadlock();
 
