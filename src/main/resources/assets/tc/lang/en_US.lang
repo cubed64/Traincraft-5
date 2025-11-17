@@ -320,6 +320,11 @@ item.tc:remoteController.name=Remote Controller
 item.tc:remoteControllerModule.name=Remote Controller Module
 item.tc:creditsBook.name=(OBSOLETE) JCIRTC Credits Book
 
+item.tc:fourWheelLightweightTruck.name=4 Wheel Lightweight Truck
+item.tc:fourWheelHeavyweightTruck.name=4 Wheel Heavyweight Truck
+item.tc:sixWheelHeavyweightTruck.name=6 Wheel Heavyweight Truck
+item.tc:passengerFluting.name=Passenger Car Fluting
+
 item.tc:zeppelin.name=Zeppelin
 
 <!-- ## TC Tracks - Normal ## -->

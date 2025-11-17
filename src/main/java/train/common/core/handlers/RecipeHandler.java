@@ -438,7 +438,16 @@ public class RecipeHandler {
 			}
 		}
 
-
+		/* passenger car parts */
+		for (ItemStack steelItem: steel) {
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.fourWheelLightweightTruck.item, 2), "   ", "SFS", "W W", 'S', steelItem, 'F', new ItemStack(ItemIDs.steelframe.item), 'W', new ItemStack(ItemIDs.bogie.item)); // 4 wheel lightweight truck
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.fourWheelLightweightTruck.item, 2), "SFS", "W W", "   ", 'S', steelItem, 'F', new ItemStack(ItemIDs.steelframe.item), 'W', new ItemStack(ItemIDs.bogie.item)); // 4 wheel lightweight truck
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.fourWheelHeavyweightTruck.item, 2), "   ", "SSS", "W W", 'S', steelItem, 'W', new ItemStack(ItemIDs.bogie.item)); // 4 wheel heavyweight truck
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.fourWheelHeavyweightTruck.item, 2), "SSS", "W W", "   ", 'S', steelItem, 'W', new ItemStack(ItemIDs.bogie.item)); // 4 wheel heavyweight truck
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.sixWheelHeavyweightTruck.item, 2), "   ", "SSS", "WWW", 'S', steelItem, 'W', new ItemStack(ItemIDs.bogie.item)); // 6 wheel heavyweight truck
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.sixWheelHeavyweightTruck.item, 2), "SSS", "WWW", "   ", 'S', steelItem, 'W', new ItemStack(ItemIDs.bogie.item)); // 6 wheel heavyweight truck
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.passengerFluting.item, 4), "   ", " S ", "   ", 'S', steelItem); // passenger car fluting
+		}
 /*
 		for (ItemStack s: iron) {
 
