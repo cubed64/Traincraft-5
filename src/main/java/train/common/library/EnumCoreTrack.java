@@ -1,7 +1,7 @@
 package train.common.library;
 
 /**
- * CORE TRACK PIECE WITH DISTINCT PATHING TO USE AND SPECIFIC TRACK PIECE
+ * CORE TRACK PIECE WITH DISTINCT MODEL AND PATHING TO USE AND SPECIFIC TRACK PIECE
  */
 public enum EnumCoreTrack
 {
@@ -93,6 +93,18 @@ public enum EnumCoreTrack
     // endregion S CURVE
 
     // region 90 Switches
+    CORE_4x4_SWITCH,
+    CORE_4x4_SWITCH_L,
+    CORE_4x4_SWITCH_R,
+
+    CORE_6x6_SWITCH,
+    CORE_6x6_SWITCH_L,
+    CORE_6x6_SWITCH_R,
+
+    CORE_11x11_SWITCH,
+    CORE_11x11_SWITCH_L,
+    CORE_11x11_SWITCH_R,
+
     CORE_4x11_PARALLEL_SWITCH,
     CORE_4x11_PARALLEL_SWITCH_L,
     CORE_4x11_PARALLEL_SWITCH_R,
@@ -102,6 +114,10 @@ public enum EnumCoreTrack
     CORE_4x17_PARALLEL_SWITCH_R,
 
     // endregion 90 Switches
+
+    CORE_10x2_CROSSOVER_SWITCH,
+    CORE_10x2_CROSSOVER_SWITCH_L,
+    CORE_10x2_CROSSOVER_SWITCH_R,
 
     // region 45 Switches
     CORE_3x5_45DEGREE_SWITCH,
