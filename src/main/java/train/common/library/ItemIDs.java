@@ -75,10 +75,23 @@ public enum ItemIDs {
 	brakeStick("ItemBrakeStick", "item_brakestick", 2),
 	interchangeTransferReportBoard("ItemInterchangeTransferReportBoard", "item_interchangetransferreportboard", 64),
 
+
+	//new crafting parts
 	fourWheelLightweightTruck("ItemTrain", "fourWheelLightweightTruck", 5),
 	fourWheelHeavyweightTruck("ItemTrain", "fourWheelHeavyweightTruck", 5),
 	sixWheelHeavyweightTruck("ItemTrain", "sixWheelHeavyweightTruck", 5),
 	passengerFluting("ItemTrain", "passengerFluting", 2),
+
+	partBlombergB("ItemTrain", "partblombergb", 3),
+	partTypeB("ItemTrain", "parttypeb", 3),
+
+	partComponentEMD("ItemTrain", "partComponentEMD", 1),
+	partComponentGE("ItemTrain", "partComponentGE", 1),
+	partComponentALCO("ItemTrain", "partComponentALCO", 1),
+	partComponentBLW("ItemTrain", "partComponentBLW", 1),
+	partComponentFM("ItemTrain", "partComponentFM", 1),
+	partComponentCEE("ItemTrain", "partComponentCEE", 1),
+
 
 
 	minecartWork("ItemRollingStock", "train_work", HERITAGE, 4),

@@ -296,6 +296,24 @@ public class RecipeHandler {
 		coal.addAll(OreDictionary.getOres("coal"));
 		ArrayList<ItemStack> redstone = OreDictionary.getOres("dustRedstone");
 		ArrayList<ItemStack> waterbucket = waterContainers();
+
+		ArrayList<ItemStack> dyeRed = OreDictionary.getOres("dyeRed");
+		ArrayList<ItemStack> dyeYellow = OreDictionary.getOres("dyeYellow");
+		ArrayList<ItemStack> dyeOrange = OreDictionary.getOres("dyeOrange");
+		ArrayList<ItemStack> dyeGreen = OreDictionary.getOres("dyeGreen");
+		ArrayList<ItemStack> dyeBlue = OreDictionary.getOres("dyeBlue");
+		ArrayList<ItemStack> dyeBrown = OreDictionary.getOres("dyeBrown");
+		ArrayList<ItemStack> dyeGray = OreDictionary.getOres("dyeGray");
+		ArrayList<ItemStack> dyeLightGray = OreDictionary.getOres("dyeLightGray");
+		ArrayList<ItemStack> dyeBlack = OreDictionary.getOres("dyeBlack");
+		ArrayList<ItemStack> dyeWhite = OreDictionary.getOres("dyeWhite");
+		ArrayList<ItemStack> dyeMagenta = OreDictionary.getOres("dyeMagenta");
+		ArrayList<ItemStack> dyeLime = OreDictionary.getOres("dyeLime");
+		ArrayList<ItemStack> dyeLightBlue = OreDictionary.getOres("dyeLightBlue");
+		ArrayList<ItemStack> dyePurple = OreDictionary.getOres("dyePurple");
+		ArrayList<ItemStack> dyePink = OreDictionary.getOres("dyePink");
+		ArrayList<ItemStack> dyeCyan = OreDictionary.getOres("dyeCyan");
+
 		// Always do this " X " instead of this "X", and do not put "" empty brackets
 
 		/* I placed it here because workbench should be one of the first recipe shown in the recipe book */
@@ -504,13 +522,49 @@ public class RecipeHandler {
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.sixWheelHeavyweightTruck.item, 2), "SSS", "WWW", "   ", 'S', steelItem, 'W', new ItemStack(ItemIDs.bogie.item)); // 6 wheel heavyweight truck
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.passengerFluting.item, 4), "   ", " S ", "   ", 'S', steelItem); // passenger car fluting
 		}
+
+		/* locomotive crafting parts NEW */
+		for (ItemStack steelItem: steel) {
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partBlombergB.item,1), "MCM", "SSS", "W W", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentEMD.item));
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "MCM", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentGE.item));
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "MCM", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentCEE.item));
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "MCM", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentALCO.item));
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "MCM", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentBLW.item));
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "MCM", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentFM.item));
+
+			for (ItemStack ironingot : iron) {
+				for (ItemStack copperingot : copper) {
+					for (ItemStack dye : dyeBlue) {
+						TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partComponentEMD.item, 6), "RDR", " C ", "PIP", 'P', new ItemStack(ItemIDs.rawPlastic.item), 'I', ironingot, 'C', copperingot, 'R', new ItemStack(ItemIDs.reinforcedPlastic.item), 'D', dye);
+					}
+					for (ItemStack dye : dyeLightBlue) {
+						TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partComponentGE.item, 6), "RDR", " C ", "PIP", 'P', new ItemStack(ItemIDs.rawPlastic.item), 'I', ironingot, 'C', copperingot, 'R', new ItemStack(ItemIDs.reinforcedPlastic.item), 'D', dye);
+					}
+					for (ItemStack dye : dyeYellow) {
+						TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partComponentALCO.item, 6), "RDR", " C ", "PIP", 'P', new ItemStack(ItemIDs.rawPlastic.item), 'I', ironingot, 'C', copperingot, 'R', new ItemStack(ItemIDs.reinforcedPlastic.item), 'D', dye);
+					}
+					for (ItemStack dye : dyeGray) {
+						TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partComponentBLW.item, 6), "RDR", " C ", "PIP", 'P', new ItemStack(ItemIDs.rawPlastic.item), 'I', ironingot, 'C', copperingot, 'R', new ItemStack(ItemIDs.reinforcedPlastic.item), 'D', dye);
+					}
+					for (ItemStack dye : dyeBlack) {
+						TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partComponentFM.item, 6), "RDR", " C ", "PIP", 'P', new ItemStack(ItemIDs.rawPlastic.item), 'I', ironingot, 'C', copperingot, 'R', new ItemStack(ItemIDs.reinforcedPlastic.item), 'D', dye);
+					}
+					for (ItemStack dye : dyeBrown) {
+						TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partComponentCEE.item, 6), "RDR", " C ", "PIP", 'P', new ItemStack(ItemIDs.rawPlastic.item), 'I', ironingot, 'C', copperingot, 'R', new ItemStack(ItemIDs.reinforcedPlastic.item), 'D', dye);
+					}
+				}
+			}
+		}
+
+		/* freightcar crafting parts NEW */
+
+
+
+
 /*
 		for (ItemStack s: iron) {
 
 		}*/
-
-
-
 
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.tcRailSmallStraight.item, 1),  "   ", " R ", "   ", Character.valueOf('R'), Item.getItemFromBlock(Blocks.rail));// small straight track
 		/*TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.tcRailSmallRoadCrossing.item, 1),  "   ", "SRS", "   ", Character.valueOf('S'), new ItemStack(Blocks.stained_hardened_clay, 1, 15), Character.valueOf('R'), Item.getItemFromBlock(Blocks.rail) );
@@ -608,6 +662,14 @@ public class RecipeHandler {
 		// Bridge Pillar
 		TrainCraftingManager.instance.addRecipe(new ItemStack(BlockIDs.bridgePillar.block, 2),
 				 "SSS", "S S", "SSS", Character.valueOf('S'), Items.stick );
+
+
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartCF7angle3.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartCF7angle.item));
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartCF7angle.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartCF7angle3.item));
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartCF7round3.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartCF7round.item));
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartCF7round.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartCF7round3.item));
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartCF7hh.item, 1),  "   ", "CRC", "   ", 'R', new ItemStack(ItemIDs.minecartCF7angle.item), 'C', new ItemStack(ItemIDs.partComponentCEE.item));
+
 	}
 	
 	public static void initSmeltingRecipes(){

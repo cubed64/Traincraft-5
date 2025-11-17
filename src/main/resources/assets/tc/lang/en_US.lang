@@ -325,6 +325,16 @@ item.tc:fourWheelHeavyweightTruck.name=4 Wheel Heavyweight Truck
 item.tc:sixWheelHeavyweightTruck.name=6 Wheel Heavyweight Truck
 item.tc:passengerFluting.name=Passenger Car Fluting
 
+item.tc:partBlombergB.name=EMD Blomberg B Truck
+item.tc:partTypeB.name=AAR Type B Truck
+
+item.tc:partComponentEMD.name=EMD Construction Component
+item.tc:partComponentGE.name=GE Construction Component
+item.tc:partComponentALCO.name=ALCO Construction Component
+item.tc:partComponentBLW.name=BLW Construction Component
+item.tc:partComponentFM.name=FM Construction Component
+item.tc:partComponentCEE.name=CEE Construction Component
+
 item.tc:zeppelin.name=Zeppelin
 
 <!-- ## TC Tracks - Normal ## -->
