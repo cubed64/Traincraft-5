@@ -16,13 +16,28 @@ import train.common.tile.TileTCRail;
 @SideOnly(Side.CLIENT)
 public class ModelMediumStraightTCTrack extends AbstractTrackModel {
 	private IModelCustom modelMediumStraight;
+	private static int listMediumStraight = -1;
+	private static boolean baked = false;
 
-	public ModelMediumStraightTCTrack() {
-		modelMediumStraight = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/straight/1x1.obj"));
+	public ModelMediumStraightTCTrack()
+	{
+		if (!baked)
+		{
+			modelMediumStraight = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/straight/1x1.obj"));
+
+			// Bake into OpenGL display list
+			listMediumStraight = GL11.glGenLists(1);
+			GL11.glNewList(listMediumStraight, GL11.GL_COMPILE);
+			modelMediumStraight.renderAll();
+			GL11.glEndList();
+
+			baked = true;
+		}
 	}
 
+
 	public void render() {
-		modelMediumStraight.renderAll();
+		GL11.glCallList(listMediumStraight);
 	}
 
 	public void render(TileTCRail tcRail, double x, double y, double z)
