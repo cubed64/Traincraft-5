@@ -78,7 +78,7 @@ public class TraincraftRegistry
 
     public HashMap<Item, ITrainRecord> getAllTrains()
     {
-        HashMap<Item, ITrainRecord> trainRecords =new HashMap<>();
+        HashMap<Item, ITrainRecord> trainRecords  = new HashMap<>();
 
 
         for (EnumTrains trains : EnumTrains.values()) {

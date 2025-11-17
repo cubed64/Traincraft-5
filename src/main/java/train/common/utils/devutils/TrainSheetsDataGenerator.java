@@ -10,22 +10,41 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.Format;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class TrainSheetsDataGenerator
 {
     public TrainSheetsDataGenerator()
     {
         StringBuilder tsv = new StringBuilder();
-        Map<Item, ITrainRecord> list = Traincraft.traincraftRegistry.getAllTrains();
+        List<Map.Entry<Item, ITrainRecord>> list = new ArrayList<Map.Entry<Item, ITrainRecord>>(Traincraft.traincraftRegistry.getAllTrains().entrySet());
+
+        Collections.sort(list, new Comparator<Map.Entry<Item, ITrainRecord>>()
+        {
+            @Override
+            public int compare(Map.Entry<Item, ITrainRecord> e1,
+                               Map.Entry<Item, ITrainRecord> e2)
+            {
+
+                // Compare by entity class name
+                String c1 = e1.getValue().getEntityClass().getSimpleName();
+                String c2 = e2.getValue().getEntityClass().getSimpleName();
+
+                int cmp = c1.compareTo(c2);
+                if (cmp != 0) return cmp;
+
+                // Tie-breaker by item name (required for stability)
+                return e1.getKey().getUnlocalizedName()
+                        .compareTo(e2.getKey().getUnlocalizedName());
+            }
+        });
 
         // Header row (recommended)
         tsv.append("ItemName\tInternalName\tEntityClass\tTexturePrefix\n");
 
-        for (Map.Entry<Item, ITrainRecord> entry : list.entrySet()) {
+
+
+        for (Map.Entry<Item, ITrainRecord> entry : list) {
 
             Item item = entry.getKey();
             ITrainRecord record = entry.getValue();
