@@ -21,7 +21,7 @@ public void setupTextureDescription()
     InsertTexture(2, "Northern Pacific");
     InsertTexture(3, "DCLX");
     InsertTexture(4, "Steampunk Rail", LockoutGroup.SPR);
-    InsertTexture(5, "Not the SCP Foundation");
+    InsertTexture(5, "Not the SCP Foundation", LockoutGroup.SCP);
 }
     
 
