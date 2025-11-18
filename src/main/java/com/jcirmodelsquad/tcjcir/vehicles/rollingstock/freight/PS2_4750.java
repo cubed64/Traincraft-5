@@ -52,7 +52,7 @@ public class PS2_4750 extends AbstractStandardFreightCar
 		InsertTexture(26, "Washington Grain Train");
 		InsertTexture(27, "Washington Grain Train (Stale)");
 		InsertTexture(28, "HRTX (THE GOCK!!!!1!!!1111111111111111111111111111111111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!?!11111111111111111!!!!!!!!!!!!!!!!/)");
-		InsertTexture(29, "GCM");
+		InsertTexture(29, "GCM", LockoutGroup.GCM); 
 		InsertTexture(30, "Cornhub");
 		InsertTexture(31, "ATSF again");
 		InsertTexture(32, "MNS");

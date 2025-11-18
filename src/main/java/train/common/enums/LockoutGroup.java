@@ -27,6 +27,8 @@ public enum LockoutGroup implements ILockoutGroup
     //messi
     MTS("8eb7bc43-c2c4-4b45-8329-4c5260c0fbf0"), //Morristown Tenneva & Southern
     LW ("8eb7bc43-c2c4-4b45-8329-4c5260c0fbf0"), //Lisha & Watson
+    // wcfb75
+    GCM("56af8eef-e84f-4eab-ad56-ba59f8431176"), //Galesburg Clinton & Midland
 
 
     JCTransit()

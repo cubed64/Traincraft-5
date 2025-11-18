@@ -36,7 +36,7 @@ public class DieselDash840C extends DieselTrain {
         InsertTexture(8, "Blandsville & Blankerston");
         InsertTexture(9, "Morristown Tenneva & Southern");
         InsertTexture(10, "FURRX");
-        InsertTexture(11, "GCM");
+        InsertTexture(11, "GCM", LockoutGroup.GCM); 
     }
 
 

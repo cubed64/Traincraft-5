@@ -326,7 +326,7 @@ public class FNCC60FootBulk extends AbstractStandardFreightCar
         InsertTexture(7, "DN");
         InsertTexture(8, "BN");
         InsertTexture(9, "BN (Stakes)");
-        InsertTexture(10, "GCM");
+        InsertTexture(10, "GCM", LockoutGroup.GCM); 
     }
 
     @Override

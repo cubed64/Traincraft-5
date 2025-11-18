@@ -24,7 +24,7 @@ public class SBMS extends AbstractTankSlug
         InsertTexture(10, "TTLC (Jungle Green)");
         InsertTexture(11, "TTLC (Pine Green)");
         InsertTexture(12, "TTLC (Red Forest Brown)");
-        InsertTexture(13, "Galesburg Clinton & Midland");
+        InsertTexture(13, "Galesburg Clinton & Midland", LockoutGroup.GCM); 
         InsertTexture(14, "UPNS haha lol just kidding its just regular NS");
     }
 

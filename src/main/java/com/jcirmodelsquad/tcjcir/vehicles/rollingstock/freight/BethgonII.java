@@ -50,7 +50,7 @@ public class BethgonII extends AbstractStandardFreightCar
         InsertTexture(6, "NS");
         InsertTexture(7, "C&PV (Rock Service)");
         InsertTexture(8, "C&PV (Rock Service)");
-        InsertTexture(9, "GCM");
+        InsertTexture(9, "GCM", LockoutGroup.GCM); 
     }
 
     @Override

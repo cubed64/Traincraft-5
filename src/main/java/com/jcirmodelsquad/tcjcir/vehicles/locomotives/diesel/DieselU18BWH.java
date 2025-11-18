@@ -28,7 +28,7 @@ public class DieselU18BWH extends DieselTrain {
         InsertTexture(0, "Amtrak (PH1)");
         InsertTexture(1, "Amtrak (Low Clearance NEC Edition)");
         InsertTexture(2, "Blandsville & Blankerston");
-        InsertTexture(3, "Galesburg Clinton & Midland");
+        InsertTexture(3, "Galesburg Clinton & Midland", LockoutGroup.GCM); 
     }
 
 

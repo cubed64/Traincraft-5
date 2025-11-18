@@ -35,7 +35,7 @@ public class DieselU18Balt extends DieselTrain {
         InsertTexture(5, "SV 406", LockoutGroup.BIDA);
         InsertTexture(6, "SV 1801", LockoutGroup.BIDA);
         InsertTexture(7, "Grassland Laboratories");
-        InsertTexture(8, "GCM");
+        InsertTexture(8, "GCM", LockoutGroup.GCM); 
         InsertTexture(9, "CSXT (Stealth)");
         InsertTexture(10, "CSXT (Blue Stripe)");
         InsertTexture(11, "CSXT (Blue Down)");

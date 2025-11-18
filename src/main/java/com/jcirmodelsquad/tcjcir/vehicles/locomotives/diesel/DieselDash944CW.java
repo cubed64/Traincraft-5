@@ -36,12 +36,12 @@ public class DieselDash944CW extends DieselTrain {
         InsertTexture(7, "Chicago Northwestern");
         InsertTexture(8, "Morristown Tenneva & Southern", LockoutGroup.MTS);
         InsertTexture(9, "Avanste Northeastern", LockoutGroup.ANE);
-        InsertTexture(10, "Galesburg Clinton & Midland");
+        InsertTexture(10, "Galesburg Clinton & Midland", LockoutGroup.GCM); 
         InsertTexture(11, "CSLX (EX CSWR)");
         InsertTexture(12, "ATSF");
         InsertTexture(13, "ATSF (BNSF Patch)");
         InsertTexture(14, "Plainsview");
-        InsertTexture(15, "Galesburg Clinton & Midland");
+        InsertTexture(15, "Galesburg Clinton & Midland", LockoutGroup.GCM); 
     }
         
     @Override

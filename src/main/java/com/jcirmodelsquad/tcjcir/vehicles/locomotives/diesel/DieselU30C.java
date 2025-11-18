@@ -35,7 +35,7 @@ public class DieselU30C extends DieselTrain {
         InsertTexture(6, "West Creek Pacific");
         InsertTexture(7, "Boston & Maine 663 (Guilford)");
         InsertTexture(8, "AGW");
-        InsertTexture(9, "GCM");
+        InsertTexture(9, "GCM", LockoutGroup.GCM); 
         InsertTexture(10, "Chicago and North Western");
         InsertTexture(11, "CSXT (Stealth)");
         InsertTexture(12, "CSXT (Bluedown)");

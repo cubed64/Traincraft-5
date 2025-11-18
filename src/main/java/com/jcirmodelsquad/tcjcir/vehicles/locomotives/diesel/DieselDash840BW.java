@@ -30,7 +30,7 @@ public class DieselDash840BW extends DieselTrain {
         InsertTexture(1, "borgborg");
         InsertTexture(2, "Blandsville & Blankerston");
         InsertTexture(3, "Morristown Tenneva & Southern", LockoutGroup.MTS);
-        InsertTexture(4, "Galesburg Clinton & Midland");
+        InsertTexture(4, "Galesburg Clinton & Midland", LockoutGroup.GCM); 
         InsertTexture(5, "");
         InsertTexture(6, "");
         InsertTexture(7, "");

@@ -31,7 +31,7 @@ public class DieselWorkdayHyrail extends DieselTrain {
         InsertTexture(3, "WP/NEP MOW");
         InsertTexture(4, "GLC");
         InsertTexture(5, "CRIP");
-        InsertTexture(6, "GCM");
+        InsertTexture(6, "GCM", LockoutGroup.GCM); 
     }
 
 
