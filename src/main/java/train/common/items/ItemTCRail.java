@@ -393,6 +393,8 @@ public class ItemTCRail extends ItemPart {
 						0.25F,
 						0.8F);
 			}
+
+			return result;
 		}
 
 		return false;
