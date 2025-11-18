@@ -1,106 +1,123 @@
-package train.client.render.models.blocks;
+package train.client.render.models.blocks.track.switchs;
 
-import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.ResourceLocation;
 
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
-import train.client.render.models.blocks.BaseClass.AbstractTrackModel;
+import train.client.render.models.blocks.track.AbstractTrackModel;
 import train.common.items.RailVariants;
 import train.common.library.Info;
 import train.common.tile.TileTCRail;
 
 @SideOnly(Side.CLIENT)
-public class ModelLeftSwitchTCTrack extends AbstractTrackModel {
-	private IModelCustom modelMediumLeftSwitchActive;
-	private IModelCustom modelMediumLeftSwitchInactive;
-	private IModelCustom modelMediumLeftParallelSwitchInactive;
-	private IModelCustom modelMediumLeftParallelSwitchActive;
-	private IModelCustom modelLargeLeftParallelSwitchInactive;
-	private IModelCustom modelLargeLeftParallelSwitchActive;
-	private IModelCustom modelLargeLeftSwitchActive;
-	private IModelCustom modelLargeLeftSwitchInactive;
+public class ModelLeftSwitchTCTrack extends AbstractSwitchTCTrack {
 
-	private IModelCustom modelVeryLargeLeftSwitchActive;
-	private IModelCustom modelVeryLargeLeftSwitchInactive;
-	private IModelCustom modelMediumLeft45degreeSwitchActive;
-	private IModelCustom modelMediumLeft45degreeSwitchInActive;
-	private IModelCustom modelLargeLeft45degreeSwitchActive;
-	private IModelCustom modelLargeLeft45degreeSwitchInActive;
+	public ModelLeftSwitchTCTrack()
+	{
+		if (!baked)
+		{
+			modelMediumSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/4x4_left.obj"));
+			listMediumSwitchActive = GL11.glGenLists(1);
+			GL11.glNewList(listMediumSwitchActive, GL11.GL_COMPILE);
+			modelMediumSwitchActive.renderAll();
+			GL11.glEndList();
 
-	private IModelCustom modelLeftCrossover10x2SwitchActive;
-	private IModelCustom modelLeftCrossover10x2SwitchInactive;
+			modelMediumSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/4x4_left.obj"));
+			listMediumSwitchInactive = GL11.glGenLists(1);
+			GL11.glNewList(listMediumSwitchInactive, GL11.GL_COMPILE);
+			modelMediumSwitchInactive.renderAll();
+			GL11.glEndList();
 
-	public ModelLeftSwitchTCTrack() {
-		modelMediumLeftSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/4x4_left.obj"));
-		modelMediumLeftSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/4x4_left.obj"));
+			modelMediumParallelSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/4x11_left.obj"));
+			listMediumParallelSwitchActive = GL11.glGenLists(1);
+			GL11.glNewList(listMediumParallelSwitchActive, GL11.GL_COMPILE);
+			modelMediumParallelSwitchActive.renderAll();
+			GL11.glEndList();
 
-		modelMediumLeftParallelSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/4x11_left.obj"));
-		modelMediumLeftParallelSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/4x11_left.obj"));
+			modelMediumParallelSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/4x11_left.obj"));
+			listMediumParallelSwitchInactive = GL11.glGenLists(1);
+			GL11.glNewList(listMediumParallelSwitchInactive, GL11.GL_COMPILE);
+			modelMediumParallelSwitchInactive.renderAll();
+			GL11.glEndList();
 
-		modelLargeLeftParallelSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/4x17_left.obj"));
-		modelLargeLeftParallelSwitchInactive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/4x17_left.obj"));
+			modelLargeParallelSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/4x17_left.obj"));
+			listLargeParallelSwitchActive = GL11.glGenLists(1);
+			GL11.glNewList(listLargeParallelSwitchActive, GL11.GL_COMPILE);
+			modelLargeParallelSwitchActive.renderAll();
+			GL11.glEndList();
 
-		modelLargeLeftSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/6x6_left.obj"));
-		modelLargeLeftSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/6x6_left.obj"));
+			modelLargeParallelSwitchInactive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/4x17_left.obj"));
+			listLargeParallelSwitchInactive = GL11.glGenLists(1);
+			GL11.glNewList(listLargeParallelSwitchInactive, GL11.GL_COMPILE);
+			modelLargeParallelSwitchInactive.renderAll();
+			GL11.glEndList();
 
-		modelMediumLeft45degreeSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/3x5_left.obj"));
-		modelMediumLeft45degreeSwitchInActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/3x5_left.obj"));
+			modelLargeSwitchActive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/6x6_left.obj"));
+			listLargeSwitchActive = GL11.glGenLists(1);
+			GL11.glNewList(listLargeSwitchActive, GL11.GL_COMPILE);
+			modelLargeSwitchActive.renderAll();
+			GL11.glEndList();
 
-		modelLargeLeft45degreeSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/4x8_left.obj"));
-		modelLargeLeft45degreeSwitchInActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/4x8_left.obj"));
+			modelLargeSwitchInactive = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/6x6_left.obj"));
+			listLargeSwitchInactive = GL11.glGenLists(1);
+			GL11.glNewList(listLargeSwitchInactive, GL11.GL_COMPILE);
+			modelLargeSwitchInactive.renderAll();
+			GL11.glEndList();
 
-		modelVeryLargeLeftSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/11x11_left.obj"));
-		modelVeryLargeLeftSwitchInactive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/11x11_left.obj"));
+			modelMedium45degreeSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/3x5_left.obj"));
+			listMedium45degreeSwitchActive = GL11.glGenLists(1);
+			GL11.glNewList(listMedium45degreeSwitchActive, GL11.GL_COMPILE);
+			modelMedium45degreeSwitchActive.renderAll();
+			GL11.glEndList();
 
-		modelLeftCrossover10x2SwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/crossover_10x2_left.obj"));
-		modelLeftCrossover10x2SwitchInactive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/crossover_10x2_left.obj"));
+			modelMedium45degreeSwitchInActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/3x5_left.obj"));
+			listMedium45degreeSwitchInActive = GL11.glGenLists(1);
+			GL11.glNewList(listMedium45degreeSwitchInActive, GL11.GL_COMPILE);
+			modelMedium45degreeSwitchInActive.renderAll();
+			GL11.glEndList();
+
+			modelLarge45degreeSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/4x8_left.obj"));
+			listLarge45degreeSwitchActive = GL11.glGenLists(1);
+			GL11.glNewList(listLarge45degreeSwitchActive, GL11.GL_COMPILE);
+			modelLarge45degreeSwitchActive.renderAll();
+			GL11.glEndList();
+
+			modelLarge45degreeSwitchInActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/4x8_left.obj"));
+			listLarge45degreeSwitchInActive = GL11.glGenLists(1);
+			GL11.glNewList(listLarge45degreeSwitchInActive, GL11.GL_COMPILE);
+			modelLarge45degreeSwitchInActive.renderAll();
+			GL11.glEndList();
+
+			modelVeryLargeSwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/11x11_left.obj"));
+			listVeryLargeSwitchActive = GL11.glGenLists(1);
+			GL11.glNewList(listVeryLargeSwitchActive, GL11.GL_COMPILE);
+			modelVeryLargeSwitchActive.renderAll();
+			GL11.glEndList();
+
+			modelVeryLargeSwitchInactive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/11x11_left.obj"));
+			listVeryLargeSwitchInactive = GL11.glGenLists(1);
+			GL11.glNewList(listVeryLargeSwitchInactive, GL11.GL_COMPILE);
+			modelVeryLargeSwitchInactive.renderAll();
+			GL11.glEndList();
+
+			modelCrossover10x2SwitchActive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/active/crossover_10x2_left.obj"));
+			listCrossover10x2SwitchActive = GL11.glGenLists(1);
+			GL11.glNewList(listCrossover10x2SwitchActive, GL11.GL_COMPILE);
+			modelCrossover10x2SwitchActive.renderAll();
+			GL11.glEndList();
+
+			modelCrossover10x2SwitchInactive = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/switch/inactive/crossover_10x2_left.obj"));
+			listCrossover10x2SwitchInactive = GL11.glGenLists(1);
+			GL11.glNewList(listCrossover10x2SwitchInactive, GL11.GL_COMPILE);
+			modelCrossover10x2SwitchInactive.renderAll();
+			GL11.glEndList();
+
+			baked = true;
+		}
 	}
-
-	public void renderMediumActive() {
-		modelMediumLeftSwitchActive.renderAll();
-	}
-	public void renderMediumInactive() {
-		modelMediumLeftSwitchInactive.renderAll();
-	}
-	public void renderMediumParallelInactive() {
-		modelMediumLeftParallelSwitchInactive.renderAll();
-	}
-	public void renderMediumParallelActive() {
-		modelMediumLeftParallelSwitchActive.renderAll();
-	}
-	public void renderLargeParallelInactive() {
-		modelLargeLeftParallelSwitchInactive.renderAll();
-	}
-	public void renderLargeParallelActive() {
-		modelLargeLeftParallelSwitchActive.renderAll();
-	}
-	public void renderLarge90Active() {
-		modelLargeLeftSwitchActive.renderAll();
-	}
-	public void renderLarge90Inactive() {
-		modelLargeLeftSwitchInactive.renderAll();
-	}
-
-	public void renderVeryLarge90Active() {
-		modelVeryLargeLeftSwitchActive.renderAll();
-	}
-	public void renderVeryLarge90Inactive() {
-		modelVeryLargeLeftSwitchInactive.renderAll();
-	}
-
-	public void renderMedium45degreeActive() {modelMediumLeft45degreeSwitchActive.renderAll();}
-	public void renderMedium45degreeInActive() {modelMediumLeft45degreeSwitchInActive.renderAll();}
-
-	public void renderLarge45degreeActive() {modelLargeLeft45degreeSwitchActive.renderAll();}
-	public void renderLarge45degreeInActive() {modelLargeLeft45degreeSwitchInActive.renderAll();}
-
-	public void renderCrossover10x2Active() { modelLeftCrossover10x2SwitchActive.renderAll(); }
-	public void renderCrossover10x2Inactive() { modelLeftCrossover10x2SwitchInactive.renderAll(); }
 
 	public void render(String type, TileTCRail tcRail, double x, double y, double z) {
 		render( type, tcRail.getTrackType().getVariant(), getRailDirection(tcRail), tcRail.getSwitchState(), x, y, z, 1, 1, 1, 1);

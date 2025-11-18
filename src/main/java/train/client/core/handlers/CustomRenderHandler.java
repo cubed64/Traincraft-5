@@ -9,13 +9,13 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.client.event.RenderWorldLastEvent;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Vector2f;
 import train.client.render.RenderTCRail;
 import train.common.enums.TCTrackDirection;
+import train.common.items.BallastTypes;
 import train.common.items.ItemTCRail;
 import train.common.items.RailVariants;
 import train.common.items.TCRailTypes;
@@ -194,37 +194,66 @@ public class CustomRenderHandler
             }
         }
         // Slopes
-        else if (item.getTrackType().getLabel().contains("VERY_LARGE_SLOPE_DYNAMIC"))
+        else if (EnumCoreTrack.CORE_18_SLOPE.equals(item.getTrackType().getCoreTrack()))
         {
-            facing = TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double((player.rotationYaw * 8.0F / 360.0F + 0.5D)) & 7);
-            blockInfo();
-            if (facing == 4 || facing == 5 || facing == 6 || facing == 7) {
-                RenderTCRail.model1x18DiagonalSlope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
+            if (BallastTypes.DYNAMIC.equals(item.getTrackType().getBallastType()))
+            {
+                facing = TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double((player.rotationYaw * 8.0F / 360.0F + 0.5D)) & 7);
+                blockInfo();
+                if (facing == 4 || facing == 5 || facing == 6 || facing == 7) {
+                    RenderTCRail.model1x18DiagonalSlope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
+                }
+                else {
+                    RenderTCRail.model1x18Slope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
+                }
             }
-            else {
-                RenderTCRail.modelVeryLargeSlope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
-            }
-        }
-        else if (item.getTrackType().getLabel().contains("VERY_LARGE_SLOPE"))
-        {
-            RenderTCRail.modelVeryLargeSlope.render(item.getTrackType().getVariant(), item.getTrackType().getBallastType(), facing, 0, 0, 0, r, g, b, 0.5f);
-        }
-        else if (item.getTrackType().getLabel().contains("LARGE_SLOPE_DYNAMIC"))
-        {
-            facing = TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double((player.rotationYaw * 8.0F / 360.0F + 0.5D)) & 7);
-            blockInfo();
-            if (facing == 4 || facing == 5 || facing == 6 || facing == 7) {
-                RenderTCRail.model1x12DiagonalSlope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-            }
-            else {
-                RenderTCRail.modelLargeSlope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
+            else
+            {
+                RenderTCRail.model1x18Slope.render(item.getTrackType().getVariant(), item.getTrackType().getBallastType(), facing, 0, 0, 0, r, g, b, 0.5f);
             }
         }
-        else if (item.getTrackType().getLabel().contains("LARGE_SLOPE"))
+        else if (EnumCoreTrack.CORE_12_SLOPE.equals(item.getTrackType().getCoreTrack()))
         {
-            RenderTCRail.modelLargeSlope.render(item.getTrackType().getVariant(), item.getTrackType().getBallastType(), facing, 0, 0, 0, r, g, b, 0.5f);
+            if (BallastTypes.DYNAMIC.equals(item.getTrackType().getBallastType()))
+            {
+                facing = TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double((player.rotationYaw * 8.0F / 360.0F + 0.5D)) & 7);
+                blockInfo();
+                if (facing == 4 || facing == 5 || facing == 6 || facing == 7) {
+                    RenderTCRail.model1x12DiagonalSlope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
+                }
+                else {
+                    RenderTCRail.model1x12Slope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
+                }
+            }
+            else
+            {
+                RenderTCRail.model1x12Slope.render(item.getTrackType().getVariant(), item.getTrackType().getBallastType(), facing, 0, 0, 0, r, g, b, 0.5f);
+            }
+
+
         }
-        else if  (item.getTrackType().getLabel().contains("SLOPE_1X3_DYNAMIC")) {
+        else if (EnumCoreTrack.CORE_6_SLOPE.equals(item.getTrackType().getCoreTrack()))
+        {
+            if (BallastTypes.DYNAMIC.equals(item.getTrackType().getBallastType()))
+            {
+                facing = TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double((player.rotationYaw * 8.0F / 360.0F + 0.5D)) & 7);
+                blockInfo();
+                if (facing == 4 || facing == 5 || facing == 6 || facing == 7)
+                {
+                    RenderTCRail.model1x6DiagonalSlope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
+                }
+                else
+                {
+                    RenderTCRail.model1x6Slope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
+                }
+            }
+            else
+            {
+                RenderTCRail.model1x6Slope.render(item.getTrackType().getVariant(), item.getTrackType().getBallastType(), facing, 0, 0, 0, r, g, b, 0.5f);
+            }
+        }
+        else if (EnumCoreTrack.CORE_3_SLOPE.equals(item.getTrackType().getCoreTrack()))
+        {
             facing = TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double((player.rotationYaw * 8.0F / 360.0F + 0.5D)) & 7);
             blockInfo();
             if (facing == 4 || facing == 5 || facing == 6 || facing == 7) {
@@ -234,22 +263,7 @@ public class CustomRenderHandler
                 RenderTCRail.model1X3Slope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
             }
         }
-        else if (item.getTrackType().getLabel().contains("SLOPE_DYNAMIC"))
-        {
-            facing = TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double((player.rotationYaw * 8.0F / 360.0F + 0.5D)) & 7);
-            blockInfo();
-            if (facing == 4 || facing == 5 || facing == 6 || facing == 7) {
-                RenderTCRail.model1x6DiagonalSlope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
-            }
-            else {
-                RenderTCRail.modelSlope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a, ballastMaterial, blockColour);
-            }
-        }
-        else if (item.getTrackType().getLabel().contains("SLOPE"))
-        {
-            RenderTCRail.modelSlope.render(item.getTrackType().getVariant(), item.getTrackType().getBallastType(), facing, 0, 0, 0, r, g, b, 0.5f);
-        }
-        else if (item.getTrackType().getRailType() == TCRailTypes.RailTypes.PARALLEL)
+        else if (TCRailTypes.RailTypes.PARALLEL.equals(item.getTrackType().getRailType()))
         {
             float yaw = MathHelper.wrapAngleTo180_float(player.rotationYaw);
             boolean isLeftTurn = item.getTrackOrientation(facing, yaw).equals("left");
@@ -274,40 +288,26 @@ public class CustomRenderHandler
 
             if (isLeftTurn)
             {
-                RenderTCRail.modelLeftParallelCurve.render(parallelCurve, item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a);
+                EnumCoreTrack core = EnumCoreTrack.valueOf(item.getTrackType().getCoreTrack().name() + "_L");
+                RenderTCRail.modelLeftParallelCurve.render(core, parallelCurve, item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a);
             }
             else
             {
-                RenderTCRail.modelRightParallelCurve.render(parallelCurve, item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a);
+                EnumCoreTrack core = EnumCoreTrack.valueOf(item.getTrackType().getCoreTrack().name() + "_R");
+                RenderTCRail.modelRightParallelCurve.render(core, parallelCurve, item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a);
             }
         }
         else if (item.getTrackType().getRailType() == TCRailTypes.RailTypes.DIAGONALTURN) // 45 Degree Turns
         {
-            String turnSize = "medium";
-            if (item.getTrackType() == EnumTracks.LARGE_45DEGREE_TURN || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_45DEGREE_TURN) {
-                turnSize = "large";
+            if (item.getTrackOrientation(facing, MathHelper.wrapAngleTo180_float(player.rotationYaw)).equals("left"))
+            {
+                EnumCoreTrack core = EnumCoreTrack.valueOf(item.getTrackType().getCoreTrack().name() + "_L");
+                RenderTCRail.model45DegreeLeftTurn.render(core, null, item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a);
             }
-
-            if (item.getTrackType() == EnumTracks.VERY_LARGE_45DEGREE_TURN || item.getTrackType() == EnumTracks.EMBEDDED_VERY_LARGE_45DEGREE_TURN) {
-                turnSize = "verylarge";
-            }
-
-            if (item.getTrackType() == EnumTracks.SUPER_LARGE_45DEGREE_TURN || item.getTrackType() == EnumTracks.EMBEDDED_SUPER_LARGE_45DEGREE_TURN) {
-                turnSize = "superlarge";
-            }
-
-            if (item.getTrackType() == EnumTracks.DIAGONAL_TURN_9X20 || item.getTrackType() == EnumTracks.EMBEDDED_DIAGONAL_TURN_9X20) {
-                turnSize = "9x20";
-            }
-
-            if (item.getTrackType() == EnumTracks.DIAGONAL_TURN_10X22 || item.getTrackType() == EnumTracks.EMBEDDED_DIAGONAL_TURN_10X22) {
-                turnSize = "10x22";
-            }
-
-            if (item.getTrackOrientation(facing, MathHelper.wrapAngleTo180_float(player.rotationYaw)).equals("left")) {
-                RenderTCRail.model45DegreeLeftTurn.render(turnSize, item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a);
-            } else {
-                RenderTCRail.model45DegreeRightTurn.render(turnSize, item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a);
+            else
+            {
+                EnumCoreTrack core = EnumCoreTrack.valueOf(item.getTrackType().getCoreTrack().name() + "_R");
+                RenderTCRail.model45DegreeRightTurn.render(core, null, item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, a);
             }
         }
 

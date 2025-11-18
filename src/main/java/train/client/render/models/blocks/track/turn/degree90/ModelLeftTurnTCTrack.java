@@ -1,57 +1,20 @@
-package train.client.render.models.blocks.turn.degree90;
+package train.client.render.models.blocks.track.turn.degree90;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.model.ModelBase;
-import net.minecraft.util.ResourceLocation;
 
-import net.minecraftforge.client.model.AdvancedModelLoader;
-import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
-import train.client.render.models.blocks.BaseClass.AbstractTrackModel;
-import train.client.renderhelper.ModelRenderHelper;
-import train.common.enums.TrackResourceLocations;
 import train.common.items.RailVariants;
 import train.common.library.EnumCoreTrack;
-import train.common.library.EnumTracks;
-import train.common.library.Info;
 import train.common.tile.TileTCRail;
 
 @SideOnly(Side.CLIENT)
-public class ModelLeftTurnTCTrack extends AbstractTrackModel {
-	private IModelCustom model1XLeftTurn;
-	private IModelCustom modelMediumLeftTurn;
-	private IModelCustom modelLargeLeftTurn;
-	private IModelCustom modelVeryLargeLeftTurn;
-	private IModelCustom modelSuperLargeLeftTurn;
-	private IModelCustom model29XLeftTurn;
-	private IModelCustom model32XLeftTurn;
-
+public class ModelLeftTurnTCTrack extends AbstractBase90DegreeTurnTCTrack
+{
 	public ModelLeftTurnTCTrack() {
-		model1XLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/90-deg/1x1.obj"));
-		modelMediumLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/90-deg/3x3.obj"));
-		modelLargeLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/90-deg/5x5.obj"));
-		modelVeryLargeLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/90-deg/10x10.obj"));
-		modelSuperLargeLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/90-deg/16x16.obj"));
-		model29XLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/90-deg/29x29.obj"));
-		model32XLeftTurn = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/90-deg/32x32.obj"));
+		super();
 	}
-
-	public void render1X() {model1XLeftTurn.renderAll();}
-	public void renderMedium() {
-		modelMediumLeftTurn.renderAll();
-	}
-	public void renderLarge() {
-		modelLargeLeftTurn.renderAll();
-	}
-	public void renderVeryLarge() {
-		modelVeryLargeLeftTurn.renderAll();
-	}
-	public void renderSuperLarge() { modelSuperLargeLeftTurn.renderAll();}
-
-	public void render29X() {model29XLeftTurn.renderAll();}
-	public void render32X() {model32XLeftTurn.renderAll();}
 
 	private void setRotation(byte facing)
 	{

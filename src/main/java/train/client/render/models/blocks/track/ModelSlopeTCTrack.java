@@ -1,9 +1,8 @@
-package train.client.render.models.blocks.BaseClass;
+package train.client.render.models.blocks.track;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.IModelCustom;
@@ -19,21 +18,55 @@ import train.common.tile.TileTCRail;
 public class ModelSlopeTCTrack extends AbstractTrackModel
 {
     protected IModelCustom modelTrack;
+    private int listTrack = -1;
     protected IModelCustom modelSlopeWood;
+    private int listSlopeWood = -1;
     protected IModelCustom modelSlopeBallast;
+    private int listSlopeBallast = -1;
     protected String[] ballastTexture = new String[2];
 
     public ModelSlopeTCTrack(String trackOBJ, String slopeBallastOBJ)
     {
-        modelTrack = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + trackOBJ));
-        modelSlopeBallast = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + slopeBallastOBJ));
+        if (!baked) {
+            modelTrack = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + trackOBJ));
+            listTrack = GL11.glGenLists(1);
+            GL11.glNewList(listTrack, GL11.GL_COMPILE);
+            modelTrack.renderAll();
+            GL11.glEndList();
+
+            modelSlopeBallast = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + slopeBallastOBJ));
+            listSlopeBallast = GL11.glGenLists(1);
+            GL11.glNewList(listSlopeBallast, GL11.GL_COMPILE);
+            modelSlopeBallast.renderAll();
+            GL11.glEndList();
+
+            baked = true;
+        }
     }
 
     public ModelSlopeTCTrack(String trackOBJ, String slopeWoodSupportOBJ, String slopeBallastOBJ)
     {
-        modelTrack = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + trackOBJ));
-        modelSlopeWood = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + slopeWoodSupportOBJ));
-        modelSlopeBallast = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + slopeBallastOBJ));
+        if (!baked) {
+            modelTrack = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + trackOBJ));
+            listTrack = GL11.glGenLists(1);
+            GL11.glNewList(listTrack, GL11.GL_COMPILE);
+            modelTrack.renderAll();
+            GL11.glEndList();
+
+            modelSlopeWood = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + slopeWoodSupportOBJ));
+            listSlopeWood = GL11.glGenLists(1);
+            GL11.glNewList(listSlopeWood, GL11.GL_COMPILE);
+            modelSlopeWood.renderAll();
+            GL11.glEndList();
+
+            modelSlopeBallast = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + slopeBallastOBJ));
+            listSlopeBallast = GL11.glGenLists(1);
+            GL11.glNewList(listSlopeBallast, GL11.GL_COMPILE);
+            modelSlopeBallast.renderAll();
+            GL11.glEndList();
+
+            baked = true;
+        }
     }
 
     protected void SetupDynamicBallastColour(int ballastColour)
@@ -59,26 +92,26 @@ public class ModelSlopeTCTrack extends AbstractTrackModel
     public void renderDynamic(RailVariants variants, String ballastTextureInput, int ballastColour)
     {
         tmt.Tessellator.bindTexture(TrackResourceLocations.GetResourceLocation(variants));
-        modelTrack.renderAll();
+        GL11.glCallList(listTrack);
         SetupDynamicBallast(ballastTextureInput);
         tmt.Tessellator.bindTexture(new ResourceLocation(ballastTexture[0],  "textures/blocks/" + ballastTexture[1] +".png"));
         SetupDynamicBallastColour(ballastColour);
-        modelSlopeBallast.renderAll();
+        GL11.glCallList(listSlopeBallast);
     }
 
     public void render(RailVariants variants, BallastTypes ballast)
     {
         tmt.Tessellator.bindTexture(TrackResourceLocations.GetResourceLocation(variants));
-        modelTrack.renderAll();
+        GL11.glCallList(listTrack);
 
         tmt.Tessellator.bindTexture(TrackResourceLocations.GetBallasetResourceLocation(ballast));
         if (BallastTypes.WOODSUPPORT.equals(ballast))
         {
-            modelSlopeWood.renderAll();
+            GL11.glCallList(listSlopeWood);
         }
         else
         {
-            modelSlopeBallast.renderAll();
+            GL11.glCallList(listSlopeBallast);
         }
     }
 

@@ -1,26 +1,32 @@
-package train.client.render.models.blocks;
+package train.client.render.models.blocks.track.crossing;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.Block;
-import net.minecraft.client.model.ModelBase;
-import net.minecraft.util.IIcon;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
+import train.client.render.models.blocks.track.AbstractTrackModel;
 import train.common.items.RailVariants;
 import train.common.library.Info;
 import train.common.tile.TileTCRail;
 
 @SideOnly(Side.CLIENT)
-public class ModelLeftDiamondCrossing extends ModelBase{
-    private IModelCustom modelDiamondCrossing = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/crossing/diamond_left.obj"));
-
-
-    public void render()
+public class ModelLeftDiamondCrossing extends AbstractDiamondCrossing
+{
+    public ModelLeftDiamondCrossing()
     {
-        modelDiamondCrossing.renderAll();
+        if (!baked) {
+            modelDiamondCrossing = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/crossing/diamond_left.obj"));
+
+            listDiamondCrossing = GL11.glGenLists(1);
+            GL11.glNewList(listDiamondCrossing, GL11.GL_COMPILE);
+            modelDiamondCrossing.renderAll();
+            GL11.glEndList();
+
+            baked = true;
+        }
     }
+
 
     public void render(TileTCRail tcRail, double x, double y, double z) {
         render(tcRail.getTrackType().getVariant(), x, y, z, tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord), 1, 1, 1, 1);

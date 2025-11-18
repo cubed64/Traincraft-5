@@ -1,4 +1,4 @@
-package train.client.render.models.blocks;
+package train.client.render.models.blocks.track.s_curve;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
@@ -11,32 +11,48 @@ import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.common.enums.TrackResourceLocations;
 import train.common.items.RailVariants;
+import train.common.library.EnumCoreTrack;
 import train.common.library.Info;
 import train.common.tile.TileTCRail;
 
 @SideOnly(Side.CLIENT)
-public class ModelLeftParallelCurveTCTrack extends ModelBase {
+public class ModelLeftParallelCurveTCTrack extends AbstractSCurve
+{
+    public ModelLeftParallelCurveTCTrack()
+    {
+        if (!baked)
+        {
+            model2x8SCurve = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/s/2x8_left.obj"));
+            list2x8SCurve = GL11.glGenLists(1);
+            GL11.glNewList(list2x8SCurve, GL11.GL_COMPILE);
+            model2x8SCurve.renderAll();
+            GL11.glEndList();
 
-    private IModelCustom modelSmallLeftParallelCurve;
-    private IModelCustom modelMediumLeftParallelCurve;
-    private IModelCustom modelLargeLeftParallelCurve;
-    private IModelCustom model20x2SCurveLeft;
+            model3x12SCurve = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/s/3x12_left.obj"));
+            list3x12SCurve = GL11.glGenLists(1);
+            GL11.glNewList(list3x12SCurve, GL11.GL_COMPILE);
+            model3x12SCurve.renderAll();
+            GL11.glEndList();
 
-    public ModelLeftParallelCurveTCTrack() {
-        modelSmallLeftParallelCurve = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/s/2x8_left.obj"));
-        modelMediumLeftParallelCurve = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/s/3x12_left.obj"));
-        modelLargeLeftParallelCurve = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/s/4x16_left.obj"));
-        model20x2SCurveLeft = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/s/20x2_left.obj"));
+            model4x16SCurve = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/s/4x16_left.obj"));
+            list4x16SCurve = GL11.glGenLists(1);
+            GL11.glNewList(list4x16SCurve, GL11.GL_COMPILE);
+            model4x16SCurve.renderAll();
+            GL11.glEndList();
+
+            model2x20SCurve = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/curve/s/20x2_left.obj"));
+            list2x20SCurve = GL11.glGenLists(1);
+            GL11.glNewList(list2x20SCurve, GL11.GL_COMPILE);
+            model2x20SCurve.renderAll();
+            GL11.glEndList();
+
+            baked = true;
+        }
     }
-
-    public void renderSmall() {modelSmallLeftParallelCurve.renderAll();}
-    public void renderMedium() {modelMediumLeftParallelCurve.renderAll();}
-    public void renderLarge() {modelLargeLeftParallelCurve.renderAll();}
-    public void render20x2() {model20x2SCurveLeft.renderAll();}
 
     public void render(String type, TileTCRail tcRail, double x, double y, double z) {
         int facing = tcRail.getWorldObj().getBlockMetadata(tcRail.xCoord, tcRail.yCoord, tcRail.zCoord);
-        render( type, tcRail.getTrackType().getVariant(), facing, x, y, z, 1, 1, 1, 1 );
+        render(tcRail.getTrackType().getCoreTrack(), type, tcRail.getTrackType().getVariant(), facing, x, y, z, 1, 1, 1, 1 );
     }
 
     private void setRotation(byte facing)
@@ -61,7 +77,7 @@ public class ModelLeftParallelCurveTCTrack extends ModelBase {
         }
     }
 
-    public void render(String type, RailVariants variants, int facing, double x, double y, double z, float r, float g, float b, float a) {
+    public void render(EnumCoreTrack core, String type, RailVariants variants, int facing, double x, double y, double z, float r, float g, float b, float a) {
 
         // Push a blank matrix onto the stack
         GL11.glPushMatrix();
@@ -84,16 +100,16 @@ public class ModelLeftParallelCurveTCTrack extends ModelBase {
         switch (type)
         {
             case "small":
-                this.renderSmall();
+                this.render2x8SCurve();
                 break;
             case "medium":
-                this.renderMedium();
+                this.render3x12SCurve();
                 break;
             case "large":
-                this.renderLarge();
+                this.render4x16SCurve();
                 break;
             case "20x2":
-                this.render20x2();
+                this.render2x20SCurve();
                 break;
         }
 

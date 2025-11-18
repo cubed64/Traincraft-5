@@ -1,15 +1,12 @@
-package train.client.render.models.blocks;
+package train.client.render.models.blocks.track.straight;
 
-import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.ResourceLocation;
 
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
-import train.client.render.models.blocks.BaseClass.AbstractTrackModel;
-import train.common.items.RailVariants;
+import train.client.render.models.blocks.track.AbstractTrackModel;
 import train.common.library.Info;
 import train.common.tile.TileTCRail;
 
@@ -36,7 +33,7 @@ public class ModelMediumStraightTCTrack extends AbstractTrackModel {
 	}
 
 
-	public void render() {
+	private void render() {
 		GL11.glCallList(listMediumStraight);
 	}
 

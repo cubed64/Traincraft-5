@@ -2,12 +2,22 @@ package train.client.render;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
-import train.client.render.models.blocks.*;
-import train.client.render.models.blocks.BaseClass.ModelSlopeTCTrack;
-import train.client.render.models.blocks.turn.degree45.ModelLeft45DegreeTurnTCTrack;
-import train.client.render.models.blocks.turn.degree45.ModelRight45DegreeTurnTCTrack;
-import train.client.render.models.blocks.turn.degree90.ModelLeftTurnTCTrack;
-import train.client.render.models.blocks.turn.degree90.ModelRightTurnTCTrack;
+import train.client.render.models.blocks.track.ModelSlopeTCTrack;
+import train.client.render.models.blocks.track.crossing.ModelLeftDiamondCrossing;
+import train.client.render.models.blocks.track.crossing.ModelRightDiamondCrossing;
+import train.client.render.models.blocks.track.crossing.ModelTwoWaysCrossingTCTrack;
+import train.client.render.models.blocks.track.s_curve.ModelLeftParallelCurveTCTrack;
+import train.client.render.models.blocks.track.s_curve.ModelRightParallelCurveTCTrack;
+import train.client.render.models.blocks.track.straight.ModelMediumDiagonalStraightTCTrack;
+import train.client.render.models.blocks.track.straight.ModelMediumStraightTCTrack;
+import train.client.render.models.blocks.track.straight.ModelSmallDiagonalStraightTCTrack;
+import train.client.render.models.blocks.track.straight.ModelSmallStraightTCTrack;
+import train.client.render.models.blocks.track.switchs.ModelLeftSwitchTCTrack;
+import train.client.render.models.blocks.track.switchs.ModelRightSwitchTCTrack;
+import train.client.render.models.blocks.track.turn.degree45.ModelLeft45DegreeTurnTCTrack;
+import train.client.render.models.blocks.track.turn.degree45.ModelRight45DegreeTurnTCTrack;
+import train.client.render.models.blocks.track.turn.degree90.ModelLeftTurnTCTrack;
+import train.client.render.models.blocks.track.turn.degree90.ModelRightTurnTCTrack;
 import train.common.items.BallastTypes;
 import train.common.library.EnumTracks;
 import train.common.tile.TileTCRail;
@@ -32,9 +42,9 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 	public static final ModelTwoWaysCrossingTCTrack modelTwoWaysCrossing = new ModelTwoWaysCrossingTCTrack();
 
 	public static final ModelSlopeTCTrack model1X3Slope = new ModelSlopeTCTrack("track/slope/straight/1x3_rails.obj", "track/slope/straight/1x3_ballast.obj");
-	public static final ModelSlopeTCTrack modelSlope = new ModelSlopeTCTrack("track/slope/straight/1x6_rails.obj", "track/slope/straight/1x6_supports.obj", "track/slope/straight/1x6_ballast.obj");
-	public static final ModelSlopeTCTrack modelLargeSlope = new ModelSlopeTCTrack("track/slope/straight/1x12_rails.obj", "track/slope/straight/1x12_supports.obj", "track/slope/straight/1x12_ballast.obj");
-	public static final ModelSlopeTCTrack modelVeryLargeSlope = new ModelSlopeTCTrack("track/slope/straight/1x18_rails.obj", "track/slope/straight/1x18_supports.obj", "track/slope/straight/1x18_ballast.obj");
+	public static final ModelSlopeTCTrack model1x6Slope = new ModelSlopeTCTrack("track/slope/straight/1x6_rails.obj", "track/slope/straight/1x6_supports.obj", "track/slope/straight/1x6_ballast.obj");
+	public static final ModelSlopeTCTrack model1x12Slope = new ModelSlopeTCTrack("track/slope/straight/1x12_rails.obj", "track/slope/straight/1x12_supports.obj", "track/slope/straight/1x12_ballast.obj");
+	public static final ModelSlopeTCTrack model1x18Slope = new ModelSlopeTCTrack("track/slope/straight/1x18_rails.obj", "track/slope/straight/1x18_supports.obj", "track/slope/straight/1x18_ballast.obj");
 	public static final ModelSlopeTCTrack model1x3DiagonalSlope = new ModelSlopeTCTrack("track/slope/45-deg/1x3_rails.obj","track/slope/45-deg/1x3_ballast.obj");
 	public static final ModelSlopeTCTrack model1x6DiagonalSlope = new ModelSlopeTCTrack("track/slope/45-deg/1x6_rails.obj","track/slope/45-deg/1x6_ballast.obj");
 	public static final ModelSlopeTCTrack model1x12DiagonalSlope = new ModelSlopeTCTrack("track/slope/45-deg/1x12_rails.obj","track/slope/45-deg/1x12_ballast.obj");
@@ -142,11 +152,11 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 					break;
 					case CORE_6_SLOPE:
 						if (BallastTypes.DYNAMIC.equals(track.getBallastType())) {
-							modelSlope.renderDynamic(railTile, x, y, z);
+							model1x6Slope.renderDynamic(railTile, x, y, z);
 						}
 						else
 						{
-							modelSlope.render(railTile, x, y, z);
+							model1x6Slope.render(railTile, x, y, z);
 						}
 					break;
 					case CORE_6_DIAGONAL_SLOPE:
@@ -160,11 +170,11 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 					break;
 					case CORE_12_SLOPE:
 						if (BallastTypes.DYNAMIC.equals(track.getBallastType())) {
-							modelLargeSlope.renderDynamic(railTile, x, y, z);
+							model1x12Slope.renderDynamic(railTile, x, y, z);
 						}
 						else
 						{
-							modelLargeSlope.render(railTile, x, y, z);
+							model1x12Slope.render(railTile, x, y, z);
 						}
 					break;
 					case CORE_12_DIAGONAL_SLOPE:
@@ -178,11 +188,11 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 					break;
 					case CORE_18_SLOPE:
 						if (BallastTypes.DYNAMIC.equals(track.getBallastType())) {
-							modelVeryLargeSlope.renderDynamic(railTile, x, y, z);
+							model1x18Slope.renderDynamic(railTile, x, y, z);
 						}
 						else
 						{
-							modelVeryLargeSlope.render(railTile, x, y, z);
+							model1x18Slope.render(railTile, x, y, z);
 						}
 					break;
 					case CORE_18_DIAGONAL_SLOPE:
@@ -233,43 +243,45 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 
 					case CORE_S_CURVE_2x8_R:
 						modelRightParallelCurve.render("small", railTile, x, y, z);
-					break;
+						break;
 					case CORE_S_CURVE_2x8_L:
 						modelLeftParallelCurve.render("small", railTile, x, y, z);
-					break;
+						break;
 					case CORE_S_CURVE_3x12_R:
 						modelRightParallelCurve.render("medium", railTile, x, y, z);
-					break;
+						break;
 					case CORE_S_CURVE_3x12_L:
 						modelLeftParallelCurve.render("medium", railTile, x, y, z);
-					break;
+						break;
 					case CORE_S_CURVE_4x16_R:
 						modelRightParallelCurve.render("large", railTile, x, y, z);
-					break;
+						break;
 					case CORE_S_CURVE_4x16_L:
 						modelLeftParallelCurve.render("large", railTile, x, y, z);
-					break;
+						break;
 					case CORE_S_CURVE_20x2_R:
 						modelRightParallelCurve.render("20x2", railTile, x, y, z);
-					break;
+						break;
 					case CORE_S_CURVE_20x2_L:
 						modelLeftParallelCurve.render("20x2", railTile, x, y, z);
-					break;
-
+						break;
 					case CORE_3X4_45DEGREE_TURN_R:
 					{
 						model45DegreeRightTurn.render("medium",  railTile, x, y, z);
 						break;
 					}
-					case CORE_3X4_45DEGREE_TURN_L: {
+					case CORE_3X4_45DEGREE_TURN_L:
+					{
 						model45DegreeLeftTurn.render("medium", railTile, x, y, z);
 						break;
 					}
-					case CORE_3X6_45DEGREE_TURN_R: {
+					case CORE_3X6_45DEGREE_TURN_R:
+					{
 						model45DegreeRightTurn.render("large",  railTile, x, y, z);
 						break;
 					}
-					case CORE_3X6_45DEGREE_TURN_L: {
+					case CORE_3X6_45DEGREE_TURN_L:
+					{
 						model45DegreeLeftTurn.render("large", railTile, x, y, z);
 						break;
 					}
@@ -278,15 +290,18 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 						model45DegreeRightTurn.render("verylarge",  railTile, x, y, z);
 						break;
 					}
-					case CORE_4X8_45DEGREE_TURN_L: {
+					case CORE_4X8_45DEGREE_TURN_L:
+					{
 						model45DegreeLeftTurn.render("verylarge", railTile, x, y, z);
 						break;
 					}
-					case CORE_5X11_45DEGREE_TURN_R: {
+					case CORE_5X11_45DEGREE_TURN_R:
+					{
 						model45DegreeRightTurn.render("superlarge",  railTile, x, y, z);
 						break;
 					}
-					case CORE_5X11_45DEGREE_TURN_L: {
+					case CORE_5X11_45DEGREE_TURN_L:
+					{
 						model45DegreeLeftTurn.render("superlarge", railTile, x, y, z);
 						break;
 					}

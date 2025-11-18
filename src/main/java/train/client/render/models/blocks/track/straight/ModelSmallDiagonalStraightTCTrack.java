@@ -1,4 +1,4 @@
-package train.client.render.models.blocks;
+package train.client.render.models.blocks.track.straight;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -6,8 +6,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
-import tmt.ModelBase;
-import train.client.render.models.blocks.BaseClass.AbstractTrackModel;
+import train.client.render.models.blocks.track.AbstractTrackModel;
 import train.common.items.RailVariants;
 import train.common.library.Info;
 import train.common.tile.TileTCRail;
@@ -17,14 +16,27 @@ public class ModelSmallDiagonalStraightTCTrack extends AbstractTrackModel
 {
 
     private IModelCustom modelSmallDiagonalStraight;
+    private static int listSmallDiagonalStraight = -1;
 
+    public ModelSmallDiagonalStraightTCTrack()
+    {
+        if (!baked)
+        {
+            modelSmallDiagonalStraight = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/straight/1x1_diagonal.obj"));
 
-    public ModelSmallDiagonalStraightTCTrack() {
-        modelSmallDiagonalStraight = AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/straight/1x1_diagonal.obj"));
+            listSmallDiagonalStraight = GL11.glGenLists(1);
+            GL11.glNewList(listSmallDiagonalStraight, GL11.GL_COMPILE);
+            modelSmallDiagonalStraight.renderAll();
+            GL11.glEndList();
+
+            baked = true;
+        }
+
     }
 
-    public void render(String type) {
-        modelSmallDiagonalStraight.renderAll();
+    private void render()
+    {
+        GL11.glCallList(listSmallDiagonalStraight);
     }
 
     public void render(String type, TileTCRail tcRail, double x, double y, double z) {
@@ -56,7 +68,7 @@ public class ModelSmallDiagonalStraightTCTrack extends AbstractTrackModel
                 break;
         }
 
-        render(type);
+        render();
 
         // Pop this matrix from the stack.
         GL11.glPopMatrix();
