@@ -9,6 +9,7 @@ import net.minecraft.world.World;
 import train.common.api.AbstractStandardFreightCar;
 import train.common.entity.CargoManager;
 import train.common.entity.CargoSpecification;
+import train.common.enums.LockoutGroup;
 
 public class FNCC60FootBulk extends AbstractStandardFreightCar
 {
@@ -326,7 +327,7 @@ public class FNCC60FootBulk extends AbstractStandardFreightCar
         InsertTexture(7, "DN");
         InsertTexture(8, "BN");
         InsertTexture(9, "BN (Stakes)");
-        InsertTexture(10, "GCM", LockoutGroup.GCM); 
+        InsertTexture(10, "GCM", train.common.enums.LockoutGroup.GCM);
     }
 
     @Override

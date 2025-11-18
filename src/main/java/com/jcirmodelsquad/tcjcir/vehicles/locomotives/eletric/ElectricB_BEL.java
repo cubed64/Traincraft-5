@@ -28,7 +28,7 @@ public class ElectricB_BEL extends ElectricTrain {
         InsertTexture(2, "Western Pacific");
         InsertTexture(3, "Norfolk Southern");
         InsertTexture(4, "FURRX");
-        InsertTexture(5, "Galesburg Clinton & Midland", LockoutGroup.GCM); 
+        InsertTexture(5, "Galesburg Clinton & Midland", train.common.enums.LockoutGroup.GCM); 
         InsertTexture(6, "JCIR 633");
     }
 

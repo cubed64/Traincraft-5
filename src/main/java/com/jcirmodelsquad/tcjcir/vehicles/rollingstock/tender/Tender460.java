@@ -27,7 +27,7 @@ public class Tender460 extends Tender  {
 		InsertTexture(1, "CDC&S");
 		InsertTexture(2, "RI");
 		InsertTexture(3, "%Lemo");
-		InsertTexture(4, "GCM", LockoutGroup.GCM); 
+		InsertTexture(4, "GCM", train.common.enums.LockoutGroup.GCM); 
 	}
 	
 	@Override

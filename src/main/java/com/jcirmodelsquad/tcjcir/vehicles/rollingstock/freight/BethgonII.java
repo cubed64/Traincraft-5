@@ -6,6 +6,7 @@ import net.minecraft.world.World;
 import train.common.api.AbstractStandardFreightCar;
 import train.common.entity.CargoManager;
 import train.common.entity.CargoSpecification;
+import train.common.enums.LockoutGroup;
 
 public class BethgonII extends AbstractStandardFreightCar
 {
@@ -50,7 +51,7 @@ public class BethgonII extends AbstractStandardFreightCar
         InsertTexture(6, "NS");
         InsertTexture(7, "C&PV (Rock Service)");
         InsertTexture(8, "C&PV (Rock Service)");
-        InsertTexture(9, "GCM", LockoutGroup.GCM); 
+        InsertTexture(9, "GCM", train.common.enums.LockoutGroup.GCM);
     }
 
     @Override

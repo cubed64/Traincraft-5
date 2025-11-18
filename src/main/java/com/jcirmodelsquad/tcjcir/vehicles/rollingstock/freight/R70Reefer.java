@@ -44,7 +44,7 @@ public class R70Reefer extends AbstractStandardFreightCar
         InsertTexture(19, "ATSF Late");
         InsertTexture(20, "WP Ice Service");
         InsertTexture(21, "FGE (Real Cold)");
-        InsertTexture(22, "GCM", LockoutGroup.GCM); 
+        InsertTexture(22, "GCM", train.common.enums.LockoutGroup.GCM); 
     }
 
     @Override

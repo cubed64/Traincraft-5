@@ -25,7 +25,7 @@ public class ElectricClass74 extends ElectricTrain {
         super(world);
         InsertTexture(0, "BR");
         InsertTexture(1, "SPR", LockoutGroup.SPR);
-        InsertTexture(2, "GCM", LockoutGroup.GCM); 
+        InsertTexture(2, "GCM", train.common.enums.LockoutGroup.GCM); 
         InsertTexture(3, "CRL");
         InsertTexture(4, "CRL (Phase 2)");
     }

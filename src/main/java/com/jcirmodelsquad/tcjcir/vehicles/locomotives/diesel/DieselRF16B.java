@@ -34,7 +34,7 @@ public class DieselRF16B extends DieselTrain {
         InsertTexture(4, "New York Central (Late)");
         InsertTexture(5, "Monongahela");
         InsertTexture(6, "Blandsville & Blankerston");
-        InsertTexture(7, "Galesburg Clinton & Midland", LockoutGroup.GCM); 
+        InsertTexture(7, "Galesburg Clinton & Midland", train.common.enums.LockoutGroup.GCM); 
         InsertTexture(8, "Steampunk Rail", LockoutGroup.SPR);
     }
 

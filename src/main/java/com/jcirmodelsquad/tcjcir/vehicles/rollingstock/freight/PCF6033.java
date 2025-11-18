@@ -34,7 +34,7 @@ public class PCF6033 extends AbstractStandardFreightCar
         InsertTexture(9, "WRX (Tree Logo)");
         InsertTexture(10, "WRX (Washaska Text)");
         InsertTexture(11, "BNBX");
-        InsertTexture(12, "GCM", LockoutGroup.GCM); 
+        InsertTexture(12, "GCM", train.common.enums.LockoutGroup.GCM); 
         InsertTexture(13, "SP (Paper Service)");
         InsertTexture(14, "WP");
         InsertTexture(15, "");

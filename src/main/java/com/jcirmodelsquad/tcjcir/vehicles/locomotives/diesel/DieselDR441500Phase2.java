@@ -35,7 +35,7 @@ public class DieselDR441500Phase2 extends DieselTrain {
         InsertTexture(5, "New York Central (Dynamics removed)");
         InsertTexture(6, "New York Central (Cigarband)");
         InsertTexture(7, "Blandsville & Blankerston");
-        InsertTexture(8, "Galesburg Clinton & Midland", LockoutGroup.GCM); 
+        InsertTexture(8, "Galesburg Clinton & Midland", train.common.enums.LockoutGroup.GCM); 
         InsertTexture(9, "Steampunk Rail", LockoutGroup.SPR);
     }
 

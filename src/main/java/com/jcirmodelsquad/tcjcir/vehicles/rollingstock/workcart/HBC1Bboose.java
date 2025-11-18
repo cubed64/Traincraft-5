@@ -11,7 +11,7 @@ public class HBC1Bboose extends AbstractWorkCart
         InsertTexture(0, "Ann Arbor");
         InsertTexture(1, "WV");
         InsertTexture(2, "GCN");
-        InsertTexture(3, "GCM", LockoutGroup.GCM); 
+        InsertTexture(3, "GCM", train.common.enums.LockoutGroup.GCM);
         InsertTexture(4, "TIRY");
         InsertTexture(5, "TIRY");
         InsertTexture(6, "CRL");
