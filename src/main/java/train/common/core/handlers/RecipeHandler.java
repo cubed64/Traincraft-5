@@ -523,7 +523,16 @@ public class RecipeHandler {
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.sixWheelHeavyweightTruck.item, 2), "SSS", "WWW", "   ", 'S', steelItem, 'W', new ItemStack(ItemIDs.bogie.item)); // 6 wheel heavyweight truck
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.passengerFluting.item, 4), "   ", " S ", "   ", 'S', steelItem); // passenger car fluting
 		}
-
+		/* interurban/streetcar parts */
+		for (ItemStack steelItem: steel) {
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.trolleyPole.item, 2), "S  ", " SS", "   ", 'S', steelItem); //trolley pole
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.trolleyPole.item, 2), "   ", "S  ", " SS", 'S', steelItem); //trolley pole
+			for (ItemStack plankItem : planks) {
+				TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.thirdRailShoe.item, 4), "   ", "WWW", " S ", 'S', steelItem, 'W', plankItem); //third rail shoe
+				TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.thirdRailShoe.item, 4), "WWW", " S ", "   ", 'S', steelItem, 'W', plankItem); //third rail shoe
+			}
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.interurbanTruck.item,1), "M M", "SSS", "W W", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item)); //interurban truck
+		}
 		/* locomotive crafting parts NEW */
 		for (ItemStack steelItem: steel) {
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partBlombergB.item,1), "MCM", "SSS", "W W", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentEMD.item));

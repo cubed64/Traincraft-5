@@ -82,6 +82,10 @@ public enum ItemIDs {
 	sixWheelHeavyweightTruck("ItemTrain", "sixWheelHeavyweightTruck", 5),
 	passengerFluting("ItemTrain", "passengerFluting", 2),
 
+	trolleyPole("ItemTrain", "trolleyPole", 2),
+	thirdRailShoe("ItemTrain", "thirdRailShoe", 2),
+	interurbanTruck("ItemTrain", "interurbanTruck", 2),
+
 	partBlombergB("ItemTrain", "partblombergb", 3),
 	partTypeB("ItemTrain", "parttypeb", 3),
 
