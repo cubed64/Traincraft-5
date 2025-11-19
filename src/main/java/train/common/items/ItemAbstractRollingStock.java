@@ -34,8 +34,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public abstract class ItemAbstractRollingStock extends ItemMinecart implements IMinecart, IMinecartItem {
-
+public abstract class ItemAbstractRollingStock extends ItemMinecart implements IMinecart, IMinecartItem
+{
     protected String iconName = "";
     protected String trainName;
     protected String trainCreator;
@@ -92,6 +92,12 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
             }
         }
         ITrainRecord trainRecord = Traincraft.traincraftRegistry.getCurrentTrain(this);
+        RollingStockItemCache itemCacheData = cache.getIfPresent(trainRecord.getInternalName());
+        if (itemCacheData == null)
+        {
+            itemCacheData = new RollingStockItemCache(trainRecord, Traincraft.traincraftRegistry.getEntity(trainRecord.getEntityClass(), null));
+            cache.put(trainRecord.getInternalName(), itemCacheData);
+        }
 
         double mass = trainRecord.getMass();
         int power = trainRecord.getMHP();
@@ -103,7 +109,14 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
             par3List.add("\u00a77" + "Type: " + getTrainType());
         }
 
-        par3List.add(EnumChatFormatting.RED + "Lockout: " + (hasPublicDomainSkins() ? EnumChatFormatting.GREEN + "Public Skins" : EnumChatFormatting.RED + "No Public Skins"));
+        par3List.add("\u00a77" + (itemCacheData.TransportCountry != "" ? "Country" + itemCacheData.TransportCountry + " : "  : "") + (itemCacheData.TransportYear != "" ? "Year" + itemCacheData.TransportYear : ""));
+
+        if (itemCacheData.TransportCountry != "" && itemCacheData.TransportYear != "")
+        {
+            par3List.add("\u00a77" + "Fictional: " + (itemCacheData.IsFictional ? "Y" : "N"));
+        }
+
+        par3List.add(EnumChatFormatting.RED + "Lockout: " + (itemCacheData.HasPublicSkins ? EnumChatFormatting.GREEN + "Public Skins" : EnumChatFormatting.RED + "No Public Skins"));
 
         if (power > 0) {
             par3List.add("\u00a77" + "Power: " + power + " Mhp");
@@ -153,26 +166,6 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
             .maximumSize(500)
             .expireAfterWrite(10, TimeUnit.MINUTES)
             .build();
-
-    public boolean hasPublicDomainSkins()
-    {
-        ITrainRecord trainRecord = Traincraft.traincraftRegistry.getCurrentTrain(this);
-        if (trainRecord.getColors() == null)
-        {
-            return true;
-        }
-
-        RollingStockItemCache itemCacheData = cache.getIfPresent(trainRecord.getInternalName());
-        if (itemCacheData == null)
-        {
-            AbstractTrains train = Traincraft.traincraftRegistry.getEntity(trainRecord.getEntityClass(), null);
-            boolean hasPublicSkin = train.lockoutMap.isEmpty() || train.lockoutMap.size() != trainRecord.getColors().length;
-            itemCacheData = new RollingStockItemCache(hasPublicSkin);
-            cache.put(trainRecord.getInternalName(), itemCacheData);
-        }
-
-        return itemCacheData.HasPublicSkins;
-    }
 
     @Override
     public EnumRarity getRarity(ItemStack par1ItemStack) {

@@ -1,13 +1,22 @@
 package train.common.items;
 
+import train.common.api.AbstractTrains;
+import train.common.library.register.ITrainRecord;
+import train.common.library.register.TrainRecord;
+
 public class RollingStockItemCache
 {
-    public RollingStockItemCache(boolean hasPublicSkins)
+    public RollingStockItemCache(ITrainRecord trainRecord, AbstractTrains train)
     {
-        HasPublicSkins = hasPublicSkins;
+        HasPublicSkins = trainRecord.getColors() == null || train.lockoutMap.isEmpty() || train.lockoutMap.size() != trainRecord.getColors().length;
+        TransportYear = train.transportYear();
+        TransportCountry = train.transportCountry();
+        IsFictional = train.isFictional();
     }
 
     public final boolean HasPublicSkins;
 
-
+    public final String TransportYear;
+    public final String TransportCountry;
+    public final boolean IsFictional;
 }

@@ -1,6 +1,5 @@
 package train.common.api;
 
-import com.google.gson.JsonObject;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.registry.IEntityAdditionalSpawnData;
 import io.netty.buffer.ByteBuf;
@@ -47,7 +46,8 @@ import java.util.*;
 
 import static train.common.core.handlers.ConfigHandler.CREATIVE_DROP_ROLLINGSTOCK;
 
-public abstract class AbstractTrains extends EntityMinecart implements IMinecart, IRoutableCart, IEntityAdditionalSpawnData {
+public abstract class AbstractTrains extends EntityMinecart implements IMinecart, IRoutableCart, IEntityAdditionalSpawnData
+{
 
 	/**
 	 * The color of the current rollingstock -1 if default
@@ -244,6 +244,20 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			GetRenderSpec();
 		}
 	}
+
+	public String transportCountry()
+	{
+		return "";
+	};
+
+	public String transportYear() {
+		return "";
+	}
+
+	public boolean isFictional() {
+		return false;
+	}
+
 
 	/**
 	 * Called to set up initial pos and motion
