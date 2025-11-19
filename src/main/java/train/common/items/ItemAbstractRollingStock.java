@@ -109,7 +109,11 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
             par3List.add("\u00a77" + "Type: " + getTrainType());
         }
 
-        par3List.add("\u00a77" + (itemCacheData.TransportCountry != "" ? "Country" + itemCacheData.TransportCountry + " : "  : "") + (itemCacheData.TransportYear != "" ? "Year" + itemCacheData.TransportYear : ""));
+        if (itemCacheData.TransportCountry != "" || itemCacheData.TransportYear != "")
+        {
+
+            par3List.add("\u00a77" + (itemCacheData.TransportCountry != "" ? "Country" + itemCacheData.TransportCountry + " : "  : "") + (itemCacheData.TransportYear != "" ? "Year" + itemCacheData.TransportYear : ""));
+        }
 
         if (itemCacheData.TransportCountry != "" && itemCacheData.TransportYear != "")
         {
