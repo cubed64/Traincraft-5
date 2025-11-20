@@ -4093,10 +4093,10 @@ public class ItemTCRail extends ItemPart {
 		}
 		world.setBlockMetadataWithNotify(x + originShiftX, y + 1, z + originShiftZ, facing, 3);//to force client update
 		putDownSingleRail(world, x, y + 1, z, facing, x + centerX, y + 1, z + centerZ, radius, tempType.getLabel(), true, x + originShiftX, y + 1, z + originShiftZ, true, false);
-		for (int i = 1; i < EnumTracks.GetSwitchSize(tempType.getItem()); i++) {
+		for (int i = 1; i < EnumTracks.GetSwitchSize(tempType.getCoreTrack()); i++) {
 			putDownSingleRail(world, x + (dx*i), y + 1, z + (dz*i), facing, x + centerX, y + 1, z + centerZ, radius, typeVariantStraight, false, x+originShiftX, y + 1, z + originShiftZ, true, false);
 		}
-		for (int i = EnumTracks.GetSwitchSize(tempType.getItem()); i < 10; i++) {
+		for (int i = EnumTracks.GetSwitchSize(tempType.getCoreTrack()); i < 10; i++) {
 			putDownSingleRail(world, x + (i * dx), y + 1, z + (i * dz), facing, x + 1 , y + 1, z - 7.99, 8.49, typeVariantStraight, false, x + originShiftX, y + 1, z + originShiftZ, false, false);
 		}
 		return true;

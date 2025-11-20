@@ -115,16 +115,16 @@ public enum EnumTracks
     LARGE_RIGHT_45DEGREE_SWITCH("LARGE_RIGHT_45DEGREE_SWITCH", SWITCH, NORMAL, CORE_4x8_45DEGREE_SWITCH_R, TrackItemIDs.tcRailLarge45DegreeSwitch,""),
     LARGE_LEFT_45DEGREE_SWITCH("LARGE_LEFT_45DEGREE_SWITCH", SWITCH, NORMAL, CORE_4x8_45DEGREE_SWITCH_L, TrackItemIDs.tcRailLarge45DegreeSwitch,""),
 
-    TWO_WAYS_CROSSING("TWO_WAYS_CROSSING", CROSSING, NORMAL, TrackItemIDs.tcRailTwoWaysCrossing, "3x3"),
-    DIAGONAL_TWO_WAYS_CROSSING("DIAGONAL_TWO_WAYS_CROSSING", DIAGONAL_CROSSING, NORMAL, TrackItemIDs.tcRailTwoWaysCrossing, "3x3"),
+    TWO_WAYS_CROSSING("TWO_WAYS_CROSSING", CROSSING, NORMAL, CORE_TWO_WAYS_CROSSING, TrackItemIDs.tcRailTwoWaysCrossing, "3x3"),
+    DIAGONAL_TWO_WAYS_CROSSING("DIAGONAL_TWO_WAYS_CROSSING", DIAGONAL_CROSSING, NORMAL, CORE_DIAGONAL_TWO_WAYS_CROSSING, TrackItemIDs.tcRailTwoWaysCrossing, "3x3"),
 
-    DIAMOND_CROSSING("DIAMOND_CROSSING", DIAGONAL_CROSSING, NORMAL, TrackItemIDs.tcRailDiamondCrossing, "3x3"),
-    RIGHT_DIAMOND_CROSSING("RIGHT_DIAMOND_CROSSING", DIAGONAL_CROSSING, NORMAL, TrackItemIDs.tcRailDiamondCrossing,"3x3"),
-    LEFT_DIAMOND_CROSSING("LEFT_DIAMOND_CROSSING", DIAGONAL_CROSSING, NORMAL, TrackItemIDs.tcRailDiamondCrossing, "3x3"),
+    DIAMOND_CROSSING("DIAMOND_CROSSING", DIAGONAL_CROSSING, NORMAL, CORE_DIAMOND_CROSSING, TrackItemIDs.tcRailDiamondCrossing, "3x3"),
+    RIGHT_DIAMOND_CROSSING("RIGHT_DIAMOND_CROSSING", DIAGONAL_CROSSING, NORMAL, CORE_DIAMOND_CROSSING_R, TrackItemIDs.tcRailDiamondCrossing,"3x3"),
+    LEFT_DIAMOND_CROSSING("LEFT_DIAMOND_CROSSING", DIAGONAL_CROSSING, NORMAL, CORE_DIAMOND_CROSSING_L, TrackItemIDs.tcRailDiamondCrossing, "3x3"),
 
-    DOUBLE_DIAMOND_CROSSING("DOUBLE_DIAMOND_CROSSING", DIAGONAL_CROSSING, NORMAL, TrackItemIDs.tcRailDoubleDiamondCrossing, "3x3"),
+    DOUBLE_DIAMOND_CROSSING("DOUBLE_DIAMOND_CROSSING", DIAGONAL_CROSSING, NORMAL, CORE_DOUBLE_DIAMOND_CROSSING, TrackItemIDs.tcRailDoubleDiamondCrossing, "3x3"),
 
-    FOUR_WAYS_CROSSING("FOUR_WAYS_CROSSING", DIAGONAL_CROSSING, NORMAL, TrackItemIDs.tcRailFourWaysCrossing, "3x3"),
+    FOUR_WAYS_CROSSING("FOUR_WAYS_CROSSING", DIAGONAL_CROSSING, NORMAL, CORE_FOUR_WAYS_CROSSING, TrackItemIDs.tcRailFourWaysCrossing, "3x3"),
 
     SLOPE_WOOD("SLOPE_WOOD", SLOPE, NORMAL, WOODSUPPORT, CORE_6_SLOPE, TrackItemIDs.tcRailSlopeWood, "1x6"),
     SLOPE_GRAVEL("SLOPE_GRAVEL", SLOPE, NORMAL, GRAVEL, CORE_6_SLOPE,TrackItemIDs.tcRailSlopeGravel, "1x6"),
@@ -253,15 +253,15 @@ public enum EnumTracks
     EMBEDDED_S_CURVE_20x2_RIGHT("EMBEDDED_20x2_S_CURVE_RIGHT", PARALLEL, EMBEDDED,  CORE_S_CURVE_20x2_R, TrackItemIDs.tcRailEmbedded20x2SCurve,  ""),
     EMBEDDED_S_CURVE_20x2_LEFT("EMBEDDED_20x2_S_CURVE_LEFT", PARALLEL, EMBEDDED, CORE_S_CURVE_20x2_L, TrackItemIDs.tcRailEmbedded20x2SCurve,  ""),
 
-    EMBEDDED_TWO_WAYS_CROSSING("EMBEDDED_TWO_WAYS_CROSSING", CROSSING, EMBEDDED, TrackItemIDs.tcRailEmbeddedTwoWaysCrossing,"3x3"),
-    EMBEDDED_DIAGONAL_TWO_WAYS_CROSSING("EMBEDDED_DIAGONAL_TWO_WAYS_CROSSING", DIAGONAL_CROSSING, EMBEDDED, TrackItemIDs.tcRailEmbeddedTwoWaysCrossing, "3x3"),
+    EMBEDDED_TWO_WAYS_CROSSING("EMBEDDED_TWO_WAYS_CROSSING", CROSSING, EMBEDDED, CORE_TWO_WAYS_CROSSING, TrackItemIDs.tcRailEmbeddedTwoWaysCrossing,"3x3"),
+    EMBEDDED_DIAGONAL_TWO_WAYS_CROSSING("EMBEDDED_DIAGONAL_TWO_WAYS_CROSSING", DIAGONAL_CROSSING, EMBEDDED, CORE_DIAGONAL_TWO_WAYS_CROSSING, TrackItemIDs.tcRailEmbeddedTwoWaysCrossing, "3x3"),
 
-    EMBEDDED_FOUR_WAYS_CROSSING("EMBEDDED_FOUR_WAYS_CROSSING", DIAGONAL_CROSSING, EMBEDDED,TrackItemIDs.tcRailEmbeddedFourWaysCrossing, "3x3"),
+    EMBEDDED_FOUR_WAYS_CROSSING("EMBEDDED_FOUR_WAYS_CROSSING", DIAGONAL_CROSSING, EMBEDDED, CORE_FOUR_WAYS_CROSSING, TrackItemIDs.tcRailEmbeddedFourWaysCrossing, "3x3"),
 
-    EMBEDDED_DIAMOND_CROSSING("EMBEDDED_DIAMOND_CROSSING", DIAGONAL_CROSSING, EMBEDDED, TrackItemIDs.tcRailEmbeddedDiamondCrossing, "3x3"),
-    EMBEDDED_RIGHT_DIAMOND_CROSSING("EMBEDDED_RIGHT_DIAMOND_CROSSING", DIAGONAL_CROSSING, EMBEDDED, TrackItemIDs.tcRailEmbeddedDiamondCrossing, "3x3"),
-    EMBEDDED_LEFT_DIAMOND_CROSSING("EMBEDDED_LEFT_DIAMOND_CROSSING", DIAGONAL_CROSSING, EMBEDDED,TrackItemIDs.tcRailEmbeddedDiamondCrossing, "3x3"),
-    EMBEDDED_DOUBLE_DIAMOND_CROSSING("EMBEDDED_DOUBLE_DIAMOND_CROSSING", DIAGONAL_CROSSING, EMBEDDED, TrackItemIDs.tcRailEmbeddedDoubleDiamondCrossing, "3x3"),
+    EMBEDDED_DIAMOND_CROSSING("EMBEDDED_DIAMOND_CROSSING", DIAGONAL_CROSSING, EMBEDDED, CORE_DIAMOND_CROSSING, TrackItemIDs.tcRailEmbeddedDiamondCrossing, "3x3"),
+    EMBEDDED_RIGHT_DIAMOND_CROSSING("EMBEDDED_RIGHT_DIAMOND_CROSSING", DIAGONAL_CROSSING, EMBEDDED, CORE_DIAMOND_CROSSING_R, TrackItemIDs.tcRailEmbeddedDiamondCrossing, "3x3"),
+    EMBEDDED_LEFT_DIAMOND_CROSSING("EMBEDDED_LEFT_DIAMOND_CROSSING", DIAGONAL_CROSSING, EMBEDDED, CORE_DIAMOND_CROSSING_L, TrackItemIDs.tcRailEmbeddedDiamondCrossing, "3x3"),
+    EMBEDDED_DOUBLE_DIAMOND_CROSSING("EMBEDDED_DOUBLE_DIAMOND_CROSSING", DIAGONAL_CROSSING, EMBEDDED, CORE_DOUBLE_DIAMOND_CROSSING, TrackItemIDs.tcRailEmbeddedDoubleDiamondCrossing, "3x3"),
 
 
     EMBEDDED_MEDIUM_SWITCH("EMBEDDED_MEDIUM_SWITCH", SWITCH, EMBEDDED, CORE_4x4_SWITCH, TrackItemIDs.tcRailEmbeddedMediumSwitch, "4x4"),
@@ -335,18 +335,6 @@ public enum EnumTracks
     private final TrackItemIDs item;
     private final String tooltip;
 
-    EnumTracks(String label, TCRailTypes.RailTypes railType, RailVariants variant, TrackItemIDs item, String tooltip)
-    {
-        this.label = label;
-        this.railType = railType;
-        this.type = railType.toString();
-        this.item = item;
-        this.tooltip = tooltip;
-        this.variant = variant;
-        this.ballastType = null;
-        this.enumCoreTrack = NONE;
-    }
-
     EnumTracks(String label, TCRailTypes.RailTypes railType, RailVariants variant, EnumCoreTrack enumCoreTrack, TrackItemIDs item, String tooltip)
     {
         this.label = label;
@@ -357,18 +345,6 @@ public enum EnumTracks
         this.variant = variant;
         this.ballastType = null;
         this.enumCoreTrack = enumCoreTrack;
-    }
-
-    EnumTracks(String label, TCRailTypes.RailTypes railType, RailVariants variant, BallastTypes ballastType, TrackItemIDs item, String tooltip)
-    {
-        this.label = label;
-        this.railType = railType;
-        this.type = railType.toString();
-        this.item = item;
-        this.tooltip = tooltip;
-        this.variant = variant;
-        this.ballastType = ballastType;
-        this.enumCoreTrack = NONE;
     }
 
     EnumTracks(String label, TCRailTypes.RailTypes railType, RailVariants variant, BallastTypes ballastType, EnumCoreTrack enumCoreTrack, TrackItemIDs item, String tooltip)
@@ -433,146 +409,81 @@ public enum EnumTracks
 
     public int[][] getUsedSpaceFromType(@Nullable EntityPlayer player)
     {
-        switch (this)
+        switch (this.getCoreTrack())
         {
-            case SMALL_STRAIGHT:
-            case SMALL_ROAD_CROSSING:
-            case SMALL_ROAD_CROSSING_1:
-            case SMALL_ROAD_CROSSING_2:
-            case EMBEDDED_SMALL_STRAIGHT:
-            case TURN_1X1:
-            case EMBEDDED_TURN_1X1:
+            case CORE_SMALL_STRAIGHT:
+            case CORE_1X_TURN:
                 return new int[][]{ {0,0} };
 
-            case SMALL_DIAGONAL_STRAIGHT:
-            case EMBEDDED_SMALL_DIAGONAL_STRAIGHT:
+            case CORE_SMALL_DIAGONAL_STRAIGHT:
                 if (player.isSneaking()) {
                     return new int[][]{ {0,0} };
                 }
                 return new int[][]{{0, 0}, {1, 0}, {0, 1}};
-
-            case MEDIUM_DIAGONAL_STRAIGHT:
-            case EMBEDDED_MEDIUM_DIAGONAL_STRAIGHT:
+            case CORE_MEDIUM_DIAGONAL_STRAIGHT:
                 if (player.isSneaking()) {
                     return new int[][]{ {0,0}, {1,0}, {0,1}, {1,1}, {2,1}, {1,2}, {2,2} };
                 }
                 return new int[][]{{0, 0}, {1, 0}, {0, 1}, {1, 1}, {2, 1}, {1, 2}, {2, 2}, {3, 2}, {2, 3}};
-            case LONG_DIAGONAL_STRAIGHT:
-            case EMBEDDED_LONG_DIAGONAL_STRAIGHT:
+            case CORE_LONG_DIAGONAL_STRAIGHT:
                 if (player.isSneaking()) {
                     return new int[][]{{0, 0}, {1, 0}, {0, 1}, {1, 1}, {2, 1}, {1, 2}, {2, 2}, {3, 2}, {2, 3}, {3, 3}, {4, 3}, {3, 4}, {4, 4}, {4, 5}, {5, 4}, {5, 5}};
                 }
                 return new int[][]{{0, 0}, {1, 0}, {0, 1}, {1, 1}, {2, 1}, {1, 2}, {2, 2}, {3, 2}, {2, 3}, {3, 3}, {4, 3}, {3, 4}, {4, 4}, {4, 5}, {5, 4}, {5, 5}, {6, 5}, {5, 6}};
-            case VERY_LONG_DIAGONAL_STRAIGHT:
-            case EMBEDDED_VERY_LONG_DIAGONAL_STRAIGHT:
+            case CORE_VERY_LONG_DIAGONAL_STRAIGHT:
                 if (player.isSneaking()) {
                     return new int[][]{{0, 0}, {1, 0}, {0, 1}, {1, 1}, {2, 1}, {1, 2}, {2, 2}, {3, 2}, {2, 3}, {3, 3}, {4, 3}, {3, 4}, {4, 4}, {4, 5}, {5, 4}, {5, 5}, {6, 5}, {5, 6},
                             {6, 6}, {6, 7}, {7, 6}, {7, 7}, {8, 7}, {7, 8}, {8, 8}, {9, 8}, {8, 9}, {9, 9}, {10, 9}, {9, 10}, {10, 10}, {11, 10}, {10, 11}, {11, 11}};
                 }
                 return new int[][]{{0, 0}, {1, 0}, {0, 1}, {1, 1}, {2, 1}, {1, 2}, {2, 2}, {3, 2}, {2, 3}, {3, 3}, {4, 3}, {3, 4}, {4, 4}, {4, 5}, {5, 4}, {5, 5}, {6, 5}, {5, 6},
                         {6, 6}, {6, 7}, {7, 6}, {7, 7}, {8, 7}, {7, 8}, {8, 8}, {9, 8}, {8, 9}, {9, 9}, {10, 9}, {9, 10}, {10, 10}, {11, 10}, {10, 11}, {11, 11}, {12, 11}, {11, 12}};
-            case MEDIUM_STRAIGHT:
-            case EMBEDDED_MEDIUM_STRAIGHT:
+            case CORE_MEDIUM_STRAIGHT:
                 return new int[][]{ {0,0}, {1,0}, {2,0} };
-
-            case LONG_STRAIGHT:
-            case EMBEDDED_LONG_STRAIGHT:
+            case CORE_LONG_STRAIGHT:
                 return new int[][]{ {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0} };
-
-            case VERY_LONG_STRAIGHT:
-            case EMBEDDED_VERY_LONG_STRAIGHT:
+            case CORE_VERY_LONG_STRAIGHT:
                 return new int[][]{ {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {6,0}, {7,0}, {8,0}, {9,0}, {10,0}, {11,0}};
-
-            case EMBEDDED_SLOPE_1X3_DYNAMIC:
-            case SLOPE_1X3_DYNAMIC:
+            case CORE_3_SLOPE:
                 return new int[][]{ {0,0}, {1,0}, {2,0} };
-            case EMBEDDED_SLOPE_1X3_DYNAMIC_DIAGONAL:
-            case SLOPE_1X3_DYNAMIC_DIAGONAL:
+            case CORE_3_DIAGONAL_SLOPE:
                 //return new int[][]{ {0,0}, {0,1}, {1,0}, {1,1}, {1,2}, {2,1}, {2,2}, {2,3}, {3,2} }; //in case the pure diagonal doesn't work
                 return new int[][] { {0,0}, {1,1}, {2,2} };
-            case EMBEDDED_SLOPE_1X6_DYNAMIC_DIAGONAL:
-            case SLOPE_1X6_DYNAMIC_DIAGONAL:
+            case CORE_6_SLOPE:
+                return new int[][]{ {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0} };
+            case CORE_6_DIAGONAL_SLOPE:
                 //return new int[][]{ {0,0}, {0,1}, {1,0}, {1,1}, {1,2}, {2,1}, {2,2}, {2,3}, {3,2}, {3,3}, {3,4}, {4,3}, {4,4}, {4,5}, {5,4}, {5,5}, {5,6}, {6,5} };
                 return new int[][]{ {0,0}, {1,1}, {2,2}, {3,3}, {4,4}, {5,5} };
-            case EMBEDDED_SLOPE_1X12_DYNAMIC_DIAGONAL:
-            case SLOPE_1X12_DYNAMIC_DIAGONAL:
+            case CORE_12_SLOPE:
+                return new int[][]{ {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {6,0}, {7,0}, {8,0}, {9,0}, {10,0}, {11,0} };
+            case CORE_12_DIAGONAL_SLOPE:
                 //return new int[][]{ {0,0}, {0,1}, {1,0}, {1,1}, {1,2}, {2,1}, {2,2}, {2,3}, {3,2}, {3,3}, {3,4}, {4,3}, {4,4}, {4,5}, {5,4}, {5,5}, {5,6}, {6,5}, {6,6}, {6,7}, {7,6}, {7,7}, {7,8}, {8,7}, {8,8}, {8,9}, {9,8}, {9,9}, {9,10}, {10,9}, {10,10}, {10,11}, {11,10}, {11,11}, {11,12}, {12,11} };
                 return new int[][]{ {0,0}, {1,1}, {2,2}, {3,3}, {4,4}, {5,5}, {6,6}, {7,7}, {8,8}, {9,9}, {10,10}, {11,11} };
-            case EMBEDDED_SLOPE_1X18_DYNAMIC_DIAGONAL:
-            case SLOPE_1X18_DYNAMIC_DIAGONAL:
-                //return new int[][]{ {0,0}, {0,1}, {1,0}, {1,1}, {1,2}, {2,1}, {2,2}, {2,3}, {3,2}, {3,3}, {3,4}, {4,3}, {4,4}, {4,5}, {5,4}, {5,5}, {5,6}, {6,5}, {6,6}, {6,7}, {7,6}, {7,7}, {7,8}, {8,7}, {8,8}, {8,9}, {9,8}, {9,9}, {9,10}, {10,9}, {10,10}, {10,11}, {11,10}, {11,11}, {11,12}, {12,11}, {12,12}, {12,13}, {13,12}, {13,13}, {13,14}, {14,13}, {14,14}, {14,15}, {15,14}, {15,15}, {15,16}, {16,15}, {16,16}, {16,17}, {17,16}, {17,17}, {17,18}, {18,17} };
-                return new int[][]{ {0,0}, {1,1}, {2,2}, {3,3}, {4,4}, {5,5}, {6,6}, {7,7}, {8,8}, {9,9}, {10,10}, {11,11}, {12,12}, {13,13}, {14,14}, {15,15}, {16,16}, {17,17} };
-            case SLOPE_BALLAST:
-            case SLOPE_GRAVEL:
-            case SLOPE_WOOD:
-            case SLOPE_SNOW_GRAVEL:
-            case SLOPE_PEA_GRAVEL:
-            case SLOPE_DYNAMIC:
-            case EMBEDDED_SLOPE_DYNAMIC:
-                return new int[][]{ {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0} };
-
-            case LARGE_SLOPE_BALLAST:
-            case LARGE_SLOPE_GRAVEL:
-            case LARGE_SLOPE_WOOD:
-            case LARGE_SLOPE_SNOW_GRAVEL:
-            case LARGE_SLOPE_PEA_GRAVEL:
-            case LARGE_SLOPE_DYNAMIC:
-            case EMBEDDED_LARGE_SLOPE_DYNAMIC:
-                return new int[][]{ {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {6,0}, {7,0}, {8,0}, {9,0}, {10,0}, {11,0} };
-
-            case VERY_LARGE_SLOPE_BALLAST:
-            case VERY_LARGE_SLOPE_GRAVEL:
-            case VERY_LARGE_SLOPE_WOOD:
-            case VERY_LARGE_SLOPE_SNOW_GRAVEL:
-            case VERY_LARGE_SLOPE_PEA_GRAVEL:
-            case VERY_LARGE_SLOPE_DYNAMIC:
-            case EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC:
+            case CORE_18_SLOPE:
                 return new int[][]{ {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {6,0}, {7,0}, {8,0}, {9,0}, {10,0}, {11,0},
                         {12,0}, {13,0}, {14,0}, {15,0}, {16,0}, {17,0}};
-
-            /** Crossing */
-            case TWO_WAYS_CROSSING:
-            case EMBEDDED_TWO_WAYS_CROSSING:
-                return new int[][] { {0,0}, {1,0}, {2,0}, {1,1}, {1,-1} };
-
-            case DIAGONAL_TWO_WAYS_CROSSING:
-            case EMBEDDED_DIAGONAL_TWO_WAYS_CROSSING:
-                return new int[][]{{0, 0}, {-1, -1}, {1, -1}, {1, 1}, {-1, 1}};
-            case DIAMOND_CROSSING:
-            case EMBEDDED_DIAMOND_CROSSING:
-                return new int[][]{{0, 0}, {1, 0}, {2, 0}, {0, -1}, {2, 1}};
-            case DOUBLE_DIAMOND_CROSSING:
-            case EMBEDDED_DOUBLE_DIAMOND_CROSSING:
-                return new int[][]{{0, 0}, {1, 0}, {2, 0}, {0, -1}, {2, -1}, {0, 1}, {2, 1}};
-            case FOUR_WAYS_CROSSING:
-            case EMBEDDED_FOUR_WAYS_CROSSING:
-                return new int[][]{{0, 0}, {1, 0}, {-1, 0}, {0, -1}, {1, -1}, {-1, -1}, {0, 1}, {1, 1}, {-1, 1}};
+            case CORE_18_DIAGONAL_SLOPE:
+                //return new int[][]{ {0,0}, {0,1}, {1,0}, {1,1}, {1,2}, {2,1}, {2,2}, {2,3}, {3,2}, {3,3}, {3,4}, {4,3}, {4,4}, {4,5}, {5,4}, {5,5}, {5,6}, {6,5}, {6,6}, {6,7}, {7,6}, {7,7}, {7,8}, {8,7}, {8,8}, {8,9}, {9,8}, {9,9}, {9,10}, {10,9}, {10,10}, {10,11}, {11,10}, {11,11}, {11,12}, {12,11}, {12,12}, {12,13}, {13,12}, {13,13}, {13,14}, {14,13}, {14,14}, {14,15}, {15,14}, {15,15}, {15,16}, {16,15}, {16,16}, {16,17}, {17,16}, {17,17}, {17,18}, {18,17} };
+                return new int[][]{ {0,0}, {1,1}, {2,2}, {3,3}, {4,4}, {5,5}, {6,6}, {7,7}, {8,8}, {9,9}, {10,10}, {11,11}, {12,12}, {13,13}, {14,14}, {15,15}, {16,16}, {17,17} };
 
             /** Turns */
-            case MEDIUM_TURN:
-            case EMBEDDED_MEDIUM_TURN:
+            case CORE_3X_TURN:
                 return new int[][] { {0,0}, {1,0}, {1,1}, {2,1}, {2,2} };
 
-            case LARGE_TURN:
-            case EMBEDDED_LARGE_TURN:
+            case CORE_5X_TURN:
                 return new int[][] { {0,0}, {1,0}, {2,0}, {1,1}, {2,1}, {3,1}, {2,2}, {3,2}, {4,2}, {3,3}, {4,3}, {4,4} };
 
-            case VERY_LARGE_TURN:
-            case EMBEDDED_VERY_LARGE_TURN:
+            case CORE_10X_TURN:
                 return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {2,1}, {3,1}, {4,1}, {5,1}, {4,2}, {5,2}, {6,2},
                         {6,3}, {7,3}, {7,4}, {8,4}, {7,5}, {8,5}, {9,5}, {8,6}, {9,6}, {8,7}, {9,7}, {9,8}, {9,9} };
 
-            case SUPER_LARGE_TURN:
-            case EMBEDDED_SUPER_LARGE_TURN:
+            case CORE_16X_TURN:
                 return new int[][]{ {0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {6, 1}, {5, 2}, {6, 2}, {7, 2}, {8, 2},
                         {7, 3}, {8, 3}, {9, 3}, {10, 3}, {9, 4}, {10, 4}, {11, 4}, {10, 5}, {11, 5}, {12, 5}, {11, 6}, {12, 6}, {13, 6}, {12, 7}, {13, 7},
                         {12, 8}, {13, 8}, {14, 8}, {13, 9}, {14, 9}, {13, 10}, {14, 10}, {15, 10}, {14, 11}, {15, 11}, {14, 12}, {15, 12}, {14, 12,}, {15, 13}, {15, 14}, {15, 15}};
-            case TURN_29X29:
-            case EMBEDDED_TURN_29X29:
+            case CORE_29X_TURN:
                 return new int[][]{{0, 0}, {1, 0},{2, 0},{3, 0},{4, 0},{5, 0},{6, 0},{7, 0},{3, 1},{4, 1},{5, 1},{6, 1},{7, 1},{8, 1},{9, 1},{10, 1},{7,2},{8, 2},{9, 2},{10, 2},{11, 2},{12, 2},{10,3},{11, 3},{12, 3},{13, 3},{14, 3},{12,4},{13, 4},{14, 4},{15, 4},{14, 5},{15, 5},{16, 5},{17, 5},{16, 6},{17, 6},{18, 6},{17, 7},{18, 7},{19, 7},{18, 8},{19, 8},{20, 8},{19, 9},{20, 9},{21, 9},{20, 10},{21, 10},{22, 10},{21, 11},{22, 11},{23, 11},{22, 12},{23, 12},{23, 13},{24, 13},{23, 14},{24, 14},{25, 14},{24, 15},{25, 15},{24, 16},{25, 16},{26, 16},{25, 17},{26, 17},{25, 18},{26, 18},{27, 18},{26, 19},{27, 19},{26, 20},{27, 20},{26, 21},{27, 21},{28, 21},{27, 22},{28, 22},{27, 23},{28, 23},{27, 24},{28, 24},{27, 25},{28, 25},{28, 26},{28, 27},{28, 28}};
 
-            case TURN_32X32:
-            case EMBEDDED_TURN_32X32:
+            case CORE_32X_TURN:
                 return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0}, {6, 0}, {7, 0}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {6, 1}, {7, 1}, {8, 1}, {9, 1},
                         {10, 1}, {7,2}, {8, 2}, {9, 2}, {10, 2}, {11, 2}, {12, 2}, {10,3}, {11, 3}, {12, 3}, {13, 3}, {14, 3}, {15, 3}, {13, 4}, {14, 4},
                         {15, 4}, {16, 4}, {14,5}, {15, 5}, {16, 5}, {17, 5}, {18, 5}, {16, 6}, {17, 6}, {18, 6}, {19, 6}, {18, 7}, {19, 7}, {20, 7}, {19, 8}, {20, 8},
@@ -581,53 +492,42 @@ public enum EnumTracks
                         {29, 19}, {28, 20}, {29, 20}, {28, 21}, {29, 21}, {30, 21}, {29, 22}, {30, 22}, {29, 23}, {30, 23}, {29,24}, {30, 24}, {31, 24}, {30, 25}, {31, 25}, {30, 26},
                         {31, 26}, {30, 27}, {31, 27}, {30, 28}, {31, 28}, {30, 29}, {31, 29}, {31, 30}, {31, 31}};
 
+            /** Parallel Curves */
+            case CORE_S_CURVE_2x8:
+                return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {2,1}, {3,1}, {4,1}, {5,1}, {6,1}, {7,1}};
+
+            case CORE_S_CURVE_3x12:
+                return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {3,1}, {4,1}, {5,1}, {6,1}, {7,1}, {8,1}, {7,2}, {8,2}, {9,2}, {10,2}, {11,2}};
+
+            case CORE_S_CURVE_4x16:
+                return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {4,1}, {5,1}, {6,1}, {7,1}, {8,1}, {7,2}, {8,2}, {9,2}, {10,2}, {11,2}, {10,3}, {11,3}, {12,3}, {13,3}, {14,3}, {15,3}};
+
+            case CORE_S_CURVE_20x2:
+                return new int[][]{{0,0},{1,0},{2,0},{3,0},{4,0},{5,0},{6,0},{7,0},{8,0},{9,0},{10,0},{11,0},{12,0},{13,0},{14,0},{15,0},{16,0},{3,1},{4,1},{5,1},{6,1},{7,1},{8,1},{9,1},{10,1},{11,1},{12,1},{13,1},{14,1},{15,1},{16,1},{17,1},{18,1},{19,1}};
+
             /** Switches*/
-            case MEDIUM_PARALLEL_SWITCH:
-            case EMBEDDED_MEDIUM_PARALLEL_SWITCH:
+            case CORE_4x11_PARALLEL_SWITCH:
                 return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {6,0}, {7,0}, {8,0}, {9,0}, {10,0},
                         {2,1}, {3,1}, {4,1}, {5,1},	{4,2}, {5,2}, {6,2}, {7,2}, {8,2}, {6,3}, {7,3}, {8,3}, {9,3}, {10,3}};
 
-            case LARGE_PARALLEL_SWITCH:
-            case EMBEDDED_LARGE_PARALLEL_SWITCH:
+            case CORE_4x17_PARALLEL_SWITCH:
                 return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0}, {6, 0}, {7, 0}, {8, 0}, {9, 0}, {10, 0},{11, 0},{12, 0},{13, 0},{14, 0},{15, 0},{16, 0}, {14, 3},{15, 3},{16, 3},{3, 1}, {4, 1}, {5, 1}, {6, 1}, {6, 2}, {7, 1}, {7, 2}, {8, 2}, {9, 2}, {10, 2}, {11, 2}, {9, 3}, {10, 3}, {11, 3}, {12, 3}, {13, 3}};
 
-            case MEDIUM_SWITCH:
-            case EMBEDDED_MEDIUM_SWITCH:
+            case CORE_4x4_SWITCH:
                 return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {2,1}, {3,1}, {3,2}, {3,3} };
 
-            case LARGE_SWITCH:
-            case EMBEDDED_LARGE_SWITCH:
+            case CORE_6x6_SWITCH:
                 return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0},
                         {2,1}, {3,1}, {4,1}, {3,2}, {4,2}, {5,2}, {4,3}, {5,3},	{5,4}, {5,5}};
-            case VERY_LARGE_SWITCH:
-            case EMBEDDED_VERY_LARGE_SWITCH:
+            case CORE_11x11_SWITCH:
                 return new int[][]{{0,0},{1,0}, {2,0},{3,0},{4,0},{5,0},{6,0}, {2, 1},{3, 1},{4, 1},{5, 1},{6, 1},{6, 2},{6, 2},{7, 2},{7, 3},{8, 3},{8, 4},{9, 4},{8, 5},{9, 5},{10, 5},{9, 6},{10, 6},{9, 7},{10, 7},{10, 8},{10, 9}, {10,10}};
 
-            case CROSSOVER_SWITCH_10X2:
-            case EMBEDDED_CROSSOVER_SWITCH_10X2:
+            case CORE_10x2_CROSSOVER_SWITCH:
                 return new int[][]{ {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {6,0}, {7,0}, {8,0}, {9,0},
                         {2,1}, {3,1}, {4,1}, {5,1}, {6,1}, {7,1}, {8,1}, {9,1}, {9,2} };
 
-            /** Parallel Curves */
-            case SMALL_PARALLEL_CURVE:
-            case EMBEDDED_SMALL_PARALLEL_CURVE:
-                return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {2,1}, {3,1}, {4,1}, {5,1}, {6,1}, {7,1}};
-
-            case MEDIUM_PARALLEL_CURVE:
-            case EMBEDDED_MEDIUM_PARALLEL_CURVE:
-                return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {3,1}, {4,1}, {5,1}, {6,1}, {7,1}, {8,1}, {7,2}, {8,2}, {9,2}, {10,2}, {11,2}};
-
-            case LARGE_PARALLEL_CURVE:
-            case EMBEDDED_LARGE_PARALLEL_CURVE:
-                return new int[][] { {0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {4,1}, {5,1}, {6,1}, {7,1}, {8,1}, {7,2}, {8,2}, {9,2}, {10,2}, {11,2}, {10,3}, {11,3}, {12,3}, {13,3}, {14,3}, {15,3}};
-
-            case S_CURVE_20x2:
-            case EMBEDDED_S_CURVE_20x2:
-                return new int[][]{{0,0},{1,0},{2,0},{3,0},{4,0},{5,0},{6,0},{7,0},{8,0},{9,0},{10,0},{11,0},{12,0},{13,0},{14,0},{15,0},{16,0},{3,1},{4,1},{5,1},{6,1},{7,1},{8,1},{9,1},{10,1},{11,1},{12,1},{13,1},{14,1},{15,1},{16,1},{17,1},{18,1},{19,1}};
-
             /** 45 Degree Turns */
-            case MEDIUM_45DEGREE_TURN:
-            case EMBEDDED_MEDIUM_45DEGREE_TURN:
+            case CORE_3X4_45DEGREE_TURN:
                 if (player.isSneaking())
                 {
                     return new int[][]{{0, 0}, {1, 0}, {2, 0}, {1, 1}, {2, 1}};
@@ -636,8 +536,7 @@ public enum EnumTracks
                 {
                     return new int[][]{{0, 0}, {1, 0}, {2, 0}, {1, 1}, {2, 1}, {3, 1}, {2, 2}};
                 }
-            case LARGE_45DEGREE_TURN:
-            case EMBEDDED_LARGE_45DEGREE_TURN:
+            case CORE_3X6_45DEGREE_TURN:
                 if (player.isSneaking())
                 {
                     return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {4, 2}, {5, 2}};
@@ -646,8 +545,7 @@ public enum EnumTracks
                 {
                     return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {4, 2}, {5, 2}, {6, 2}, {5, 3}};
                 }
-            case VERY_LARGE_45DEGREE_TURN:
-            case EMBEDDED_VERY_LARGE_45DEGREE_TURN:
+            case CORE_4X8_45DEGREE_TURN:
                 if (player.isSneaking())
                 {
                     return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {6, 1}, {4, 2}, {5, 2}, {6, 2}, {7, 2}, {6, 3}, {7, 3}};
@@ -656,8 +554,7 @@ public enum EnumTracks
                 {
                     return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {6, 1}, {4, 2}, {5, 2}, {6, 2}, {7, 2}, {6, 3}, {7, 3}, {8, 3}, {7, 4}};
                 }
-            case SUPER_LARGE_45DEGREE_TURN:
-            case EMBEDDED_SUPER_LARGE_45DEGREE_TURN:
+            case CORE_5X11_45DEGREE_TURN:
                 if (player.isSneaking())
                 {
                     return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {6, 1}, {7, 1}, {5, 2}, {6, 2}, {7, 2}, {8, 2}, {9, 2}, {7, 3}, {8, 3}, {9, 3}, {10, 3}, {9, 4}, {10, 4}};
@@ -666,8 +563,7 @@ public enum EnumTracks
                 {
                     return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {6, 1}, {7, 1}, {5, 2}, {6, 2}, {7, 2}, {8, 2}, {9, 2}, {7, 3}, {8, 3}, {9, 3}, {10, 3}, {9, 4}, {10, 4}, {11, 4}, {10, 5}};
                 }
-            case DIAGONAL_TURN_9X20:
-            case EMBEDDED_DIAGONAL_TURN_9X20:
+            case CORE_9X20_45DEGREE_TURN:
                 if (player.isSneaking())
                 {
                     return new int[][]{{0,0},{1,0},{2,0},{3,0},{4,0},{5,0},{6,0},{7,0},{1,1},{2,1},{3,1},{4,1},{5,1},{6,1},{7,1},{8,1},{9,1},{10,1},{7,2},{8,2},{9,2},{10,2},{11,2},{12,2},{10,3},{11,3},{12,3},{13,3},{14,3},{12,4},{13,4},{14,4},{15,4},{14,5},{15,5},{16,5},{17,5},{15,6},{16,6},{17,6},{18,6},{16,7},{17,7},{18,7},{19,7},{18,8},{19,8}};
@@ -676,16 +572,14 @@ public enum EnumTracks
                 {
                     return new int[][]{{0,0},{1,0},{2,0},{3,0},{4,0},{5,0},{6,0},{7,0},{1,1},{2,1},{3,1},{4,1},{5,1},{6,1},{7,1},{8,1},{9,1},{10,1},{7,2},{8,2},{9,2},{10,2},{11,2},{12,2},{10,3},{11,3},{12,3},{13,3},{14,3},{12,4},{13,4},{14,4},{15,4},{14,5},{15,5},{16,5},{17,5},{15,6},{16,6},{17,6},{18,6},{16,7},{17,7},{18,7},{19,7},{18,8},{19,8},{20,8},{19,9}};
                 }
-            case DIAGONAL_TURN_10X22:
-            case EMBEDDED_DIAGONAL_TURN_10X22:
+            case CORE_10x22_45DEGREE_TURN:
                 if (player.isSneaking()) {
                     return new int[][]{{0,0},{1,0},{2,0},{3,0},{4,0},{5,0},{6,0},{7,0},{2,1},{3,1},{4,1},{5,1},{6,1},{7,1},{8,1},{9,1},{10,1},{7,2},{8,2},{9,2},{10,2},{11,2},{12,2},{13,2},{10,3},{11,3},{12,3},{13,3},{14,3},{13,4},{14,4},{15,4},{16,4},{15,5},{16,5},{17,5},{18,5},{16,6},{17,6},{18,6},{19,6},{17,7},{18,7},{19,7},{20,7},{19,8},{20,8},{21,8},{20,9},{21,9}};
                 } else {
                     return new int[][]{{0,0},{1,0},{2,0},{3,0},{4,0},{5,0},{6,0},{7,0},{2,1},{3,1},{4,1},{5,1},{6,1},{7,1},{8,1},{9,1},{10,1},{7,2},{8,2},{9,2},{10,2},{11,2},{12,2},{13,2},{10,3},{11,3},{12,3},{13,3},{14,3},{13,4},{14,4},{15,4},{16,4},{15,5},{16,5},{17,5},{18,5},{16,6},{17,6},{18,6},{19,6},{17,7},{18,7},{19,7},{20,7},{19,8},{20,8},{21,8},{20,9},{21,9},{22,9},{21,10}};
                 }
                 /** 45 Degree Switches */
-            case MEDIUM_45DEGREE_SWITCH:
-            case EMBEDDED_MEDIUM_45DEGREE_SWITCH:
+            case CORE_3x5_45DEGREE_SWITCH:
                 if (player.isSneaking())
                 {
                     return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {2, 1}, {3, 1}};
@@ -694,8 +588,7 @@ public enum EnumTracks
                 {
                     return new int[][]{{0, 0}, {1, 0}, {2, 0}, {3, 0}, {2, 1}, {3, 1}, {4, 1}, {3, 2}};
                 }
-            case LARGE_45DEGREE_SWITCH:
-            case EMBEDDED_LARGE_45DEGREE_SWITCH:
+            case CORE_4x8_45DEGREE_SWITCH:
                 if (player.isSneaking())
                 {
                     return new int[][]{{0,0},{1,0},{2,0},{3,0},{4,0},{5,0},{6,0}, {3, 1}, {4, 1}, {5, 1}, {6, 1}, {5, 2}, {6, 2}};
@@ -704,37 +597,58 @@ public enum EnumTracks
                 {
                     return new int[][]{{0,0},{1,0},{2,0},{3,0},{4,0},{5,0},{6,0},{3, 1}, {4, 1}, {5, 1}, {6, 1}, {5, 2}, {6, 2}, {7, 2}, {6, 3},};
                 }
+            /** Crossing */
+            case CORE_TWO_WAYS_CROSSING:
+                return new int[][] { {0,0}, {1,0}, {2,0}, {1,1}, {1,-1} };
+            case CORE_DIAGONAL_TWO_WAYS_CROSSING:
+                return new int[][] { {0,0}, {1,0}, {2,0}, {1,1}, {1,-1} };
+            case CORE_DIAMOND_CROSSING:
+                return new int[][]{{0, 0}, {1, 0}, {2, 0}, {0, -1}, {2, 1}};
+            case CORE_DOUBLE_DIAMOND_CROSSING:
+                return new int[][]{{0, 0}, {1, 0}, {2, 0}, {0, -1}, {2, -1}, {0, 1}, {2, 1}};
+            case CORE_FOUR_WAYS_CROSSING:
+                return new int[][]{{0, 0}, {1, 0}, {-1, 0}, {0, -1}, {1, -1}, {-1, -1}, {0, 1}, {1, 1}, {-1, 1}};
             default:
+            {
                 return null;
+            }
         }
     }
 
-    public static int GetSwitchSize(TrackItemIDs itemIDs)
+    public static int GetSwitchSize(EnumCoreTrack enumCoreTrack)
     {
-        switch (itemIDs)
+        switch (enumCoreTrack)
         {
-            case tcRailMediumSwitch:
-            case tcRailEmbeddedMediumSwitch:
-            case tcRailMedium45DegreeSwitch:
-            case tcRailEmbeddedMedium45DegreeSwitch:
+            case CORE_4x4_SWITCH:
+            case CORE_4x4_SWITCH_L:
+            case CORE_4x4_SWITCH_R:
+            case CORE_3x5_45DEGREE_SWITCH:
+            case CORE_3x5_45DEGREE_SWITCH_L:
+            case CORE_3x5_45DEGREE_SWITCH_R:
                 return 2;
 
-            case tcRailMediumParallelSwitch:
-            case tcRailEmbeddedMediumParallelSwitch:
-            case tcRailLargeSwitch:
-            case tcRailEmbeddedLargeSwitch:
+            case CORE_4x11_PARALLEL_SWITCH:
+            case CORE_4x11_PARALLEL_SWITCH_L:
+            case CORE_4x11_PARALLEL_SWITCH_R:
+            case CORE_6x6_SWITCH:
+            case CORE_6x6_SWITCH_L:
+            case CORE_6x6_SWITCH_R:
                 return 3;
 
-            case tcRailLarge45DegreeSwitch:
-            case tcRailEmbeddedLarge45DegreeSwitch:
-            case tcRailLargeParallelSwitch:
-            case tcRailEmbeddedLargeParallelSwitch:
-            case tcRailVeryLargeSwitch:
-            case tcRailEmbeddedVeryLargeSwitch:
+            case CORE_4x8_45DEGREE_SWITCH:
+            case CORE_4x8_45DEGREE_SWITCH_L:
+            case CORE_4x8_45DEGREE_SWITCH_R:
+            case CORE_4x17_PARALLEL_SWITCH:
+            case CORE_4x17_PARALLEL_SWITCH_L:
+            case CORE_4x17_PARALLEL_SWITCH_R:
+            case CORE_11x11_SWITCH:
+            case CORE_11x11_SWITCH_L:
+            case CORE_11x11_SWITCH_R:
                 return 4;
 
-            case tcRailCrossoverSwitch10x2:
-            case tcRailEmbeddedCrossoverSwitch10x2:
+            case CORE_10x2_CROSSOVER_SWITCH:
+            case CORE_10x2_CROSSOVER_SWITCH_L:
+            case CORE_10x2_CROSSOVER_SWITCH_R:
                 return 7;
         }
         return 0;

@@ -198,7 +198,7 @@ public class TileTCRail extends TileEntity {
 
 	public int GetSwitchSize(TileTCRail tileTCRail)
 	{
-		return EnumTracks.GetSwitchSize(tileTCRail.getTrackType().getItem());
+		return EnumTracks.GetSwitchSize(tileTCRail.getTrackType().getCoreTrack());
 	}
 
 	public void setSwitchState(boolean state, boolean manualOverride) {
