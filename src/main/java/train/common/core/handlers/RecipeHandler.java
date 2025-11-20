@@ -691,8 +691,17 @@ public class RecipeHandler {
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartU23BU.item, 1),  "   ", "CRC", "   ", 'R', new ItemStack(ItemIDs.minecartU23B.item), 'C', new ItemStack(ItemIDs.partComponentCEE.item));
         TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartES44h.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartES44.item));
         TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartES44.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartES44h.item));
+        TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartSD70ACe.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartSD70ACe_H.item));
+        TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartSD70ACe_H.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartSD70ACe.item));
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartSD40R.item, 1),  "   ", "CRC", "   ", 'R', new ItemStack(ItemIDs.minecartSD40.item), 'C', new ItemStack(ItemIDs.partComponentEMD.item));
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartSD40dash3.item, 1),  "   ", "ARC", "   ", 'R', new ItemStack(ItemIDs.minecartSD40dash2.item), 'C', new ItemStack(ItemIDs.partComponentEMD.item), 'A', ItemIDs.steelcab.item);
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartSW10.item, 1),  "   ", "CRC", "   ", 'R', new ItemStack(ItemIDs.minecartSW9.item), 'C', new ItemStack(ItemIDs.partComponentEMD.item));
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartSW1600.item, 1),  "   ", "ARC", "   ", 'R', new ItemStack(ItemIDs.minecartSW1500.item), 'A', new ItemStack(ItemIDs.partComponentEMD.item), 'C', new ItemStack(ItemIDs.partComponentCEE.item));
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecart4ED172T_E.item, 1),  "   ", "CRC", "   ", 'R', new ItemStack(ItemIDs.minecart4ED172T.item), 'C', new ItemStack(ItemIDs.partComponentEMD.item));
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecart4ED172T_G.item, 1),  "   ", "CRC", "   ", 'R', new ItemStack(ItemIDs.minecart4ED172T.item), 'C', new ItemStack(ItemIDs.partComponentGE.item));
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecart4ED172T_C.item, 1),  "   ", "CRC", "   ", 'R', new ItemStack(ItemIDs.minecart4ED172T.item), 'C', new ItemStack(ItemIDs.partComponentCEE.item));
 
-    }
+	}
 	
 	public static void initSmeltingRecipes(){
 
