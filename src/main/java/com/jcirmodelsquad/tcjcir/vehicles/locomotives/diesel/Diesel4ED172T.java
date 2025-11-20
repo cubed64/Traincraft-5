@@ -49,4 +49,13 @@ public class Diesel4ED172T extends DieselTrain {
     @Override
     public String getInventoryName() { return "CEE 4ED-172T"; }
 
+    @Override
+    public String transportYear() {
+        return "1950-1953";
+    }
+
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 }

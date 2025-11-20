@@ -78,7 +78,10 @@ public class SteamBuckingBull extends SteamTrain {
     }
 
 
-
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 
 
     @Override

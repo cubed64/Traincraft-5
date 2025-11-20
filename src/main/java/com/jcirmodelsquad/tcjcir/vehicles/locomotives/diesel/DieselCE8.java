@@ -33,34 +33,26 @@ public class DieselCE8 extends DieselTrain {
         InsertTexture(3, "Blandsville & Blankerston (Dynamics)");
         InsertTexture(4, "L&W", LockoutGroup.LW);
     }
-    
-
-
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.6, 0.16, -0.35); }
-    
-
-
-
-
-
-    
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.2F;
     }
-
-
 
     @Override
     public String getInventoryName() {
         return "CEE CE8";
     }
 
-    
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 
-
-    
-
+    @Override
+    public String transportYear() {
+        return "1980";
+    }
 }

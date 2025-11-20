@@ -31,33 +31,21 @@ public class DieselU18BWH extends DieselTrain {
         InsertTexture(3, "Galesburg Clinton & Midland", train.common.enums.LockoutGroup.GCM); 
     }
 
-
-
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.3, 0.25, -0.35); }
-
-
-
-
-    
-
-
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.315F;
     }
 
-
-
     @Override
     public String getInventoryName() {
         return "GE U18B(W)H";
     }
-
-    
-
-    
-    
 
 }

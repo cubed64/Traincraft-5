@@ -43,4 +43,9 @@ public class DieselGP39TDash2 extends DieselTrain {
     public String getInventoryName() {
         return "EMD GP39T-2";
     }
+
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 }

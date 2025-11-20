@@ -27,9 +27,6 @@ public class SteamF01 extends SteamTrain {
 		InsertTexture(0, "CDC&S 4");
 	}
 
-	
-
-	
 	@Override
 	public void updateRiderPosition() {
 		if (riddenByEntity == null) {return;}
@@ -65,17 +62,18 @@ public class SteamF01 extends SteamTrain {
 		}
 	}
 
-@Override
+	@Override
 	public String getInventoryName() {
 		return "F-01 Class 2-4-4 Forney";
 	}
-
-	
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.3F;
 	}
 
-	
+	@Override
+	public boolean isFictional() {
+		return true;
+	}
 }

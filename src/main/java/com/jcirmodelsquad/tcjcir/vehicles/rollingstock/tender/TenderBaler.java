@@ -29,8 +29,11 @@ public class TenderBaler extends Tender  {
         return "WCP Baler Tender";
     }
 
-    
 
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
     
 
     @Override

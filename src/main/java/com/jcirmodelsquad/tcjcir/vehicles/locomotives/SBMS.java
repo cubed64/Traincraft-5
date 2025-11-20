@@ -38,4 +38,8 @@ public class SBMS extends AbstractTankSlug
         return 2.9F;
     }
 
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
 }

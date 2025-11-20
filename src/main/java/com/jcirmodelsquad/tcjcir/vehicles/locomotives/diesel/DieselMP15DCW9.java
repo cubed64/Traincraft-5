@@ -31,9 +31,6 @@ public class DieselMP15DCW9 extends DieselTrain {
         //when the
     }
 
-
-    
-
     @Override
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
@@ -69,27 +66,17 @@ public class DieselMP15DCW9 extends DieselTrain {
         }
     }
 
-
-    
-
-    
-
-
-
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 0.9F;
     }
-
-
 
     @Override
     public String getInventoryName() {
         return "WFLW MP15DCW-9";
     }
 
-    
-
-
-
-
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 }

@@ -59,18 +59,18 @@ public class ElectricJT7 extends ElectricTrain {
         }
     }
 
-    
     @Override
     public String getInventoryName() {
         return "CEE JT-7 'Pignose'";
     }
 
-    
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
         return 1.7F;
     }
 
-
-    
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
 }

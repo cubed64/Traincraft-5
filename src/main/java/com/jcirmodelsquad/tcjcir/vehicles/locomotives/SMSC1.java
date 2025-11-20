@@ -23,4 +23,9 @@ public class SMSC1 extends AbstractTankSlug
     public float getOptimalDistance(EntityMinecart cart) {
         return 3.0F;
     }
+
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
 }

@@ -390,9 +390,9 @@ public class RecipeHandler {
 		/* Trains parts */
 
 		for (ItemStack ironingot : iron) {
-			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.generator.item, 1), " ##", "E$$", " ##", Character.valueOf('#'), ItemIDs.copperWireFine.item, Character.valueOf('E'), ItemIDs.electronicCircuit.item, Character.valueOf('$'), ironingot);// generator
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.generator.item, 2), " ##", "E$$", " ##", Character.valueOf('#'), ItemIDs.copperWireFine.item, Character.valueOf('E'), ItemIDs.electronicCircuit.item, Character.valueOf('$'), ironingot);// generator
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.controls.item, 1), "#X#", "#E#", "$$$", Character.valueOf('#'), Blocks.lever, Character.valueOf('X'), Blocks.stone_button, Character.valueOf('$'), ironingot, Character.valueOf('E'), ItemIDs.electronicCircuit.item);// train controls
-			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.electmotor.item, 1), "I#I", "#E#", "I#I", Character.valueOf('#'), ItemIDs.copperWireFine.item, Character.valueOf('I'), ironingot, Character.valueOf('E'), ItemIDs.electronicCircuit.item);// Electric motor
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.electmotor.item, 2), "I#I", "#E#", "I#I", Character.valueOf('#'), ItemIDs.copperWireFine.item, Character.valueOf('I'), ironingot, Character.valueOf('E'), ItemIDs.electronicCircuit.item);// Electric motor
 			for (ItemStack bucketWater : waterbucket) {
 				TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.ironBoiler.item, 2), "###", "XXX", "###", Character.valueOf('#'), ironingot, Character.valueOf('X'), bucketWater.getItem());// iron Boiler
 			}
@@ -531,16 +531,24 @@ public class RecipeHandler {
 				TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.thirdRailShoe.item, 4), "   ", "WWW", " S ", 'S', steelItem, 'W', plankItem); //third rail shoe
 				TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.thirdRailShoe.item, 4), "WWW", " S ", "   ", 'S', steelItem, 'W', plankItem); //third rail shoe
 			}
-			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.interurbanTruck.item,1), "M M", "SSS", "W W", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item)); //interurban truck
+			for (ItemStack copperItem : copper){
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.interurbanTruck.item,1), "MCM", "SSS", "W W", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', copperItem); //interurban truck
+			}
 		}
 		/* locomotive crafting parts NEW */
 		for (ItemStack steelItem: steel) {
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partBlombergB.item,1), "MCM", "SSS", "W W", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentEMD.item));
-			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "MCM", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentGE.item));
-			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "MCM", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentCEE.item));
-			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "MCM", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentALCO.item));
-			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "MCM", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentBLW.item));
-			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "MCM", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentFM.item));
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "M M", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item));
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partFB2.item,1), "M M", "SCS", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentGE.item));
+
+
+
+			//commented out till someone fixes not being able to use more than one recipe for an item
+			//TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "MCM", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentGE.item));
+			//TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "MCM", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentCEE.item));
+			//TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "MCM", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentALCO.item));
+			//TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "MCM", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentBLW.item));
+			//TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "MCM", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentFM.item));
 
 			for (ItemStack ironingot : iron) {
 				for (ItemStack copperingot : copper) {
@@ -563,8 +571,11 @@ public class RecipeHandler {
 						TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partComponentCEE.item, 6), "RDR", " C ", "PIP", 'P', new ItemStack(ItemIDs.rawPlastic.item), 'I', ironingot, 'C', copperingot, 'R', new ItemStack(ItemIDs.reinforcedPlastic.item), 'D', dye);
 					}
 				}
-			}
+                TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partAlternator.item, 2), "## ", "$$E", "## ", '$', ItemIDs.copperWireFine.item, 'E', ItemIDs.electronicCircuit.item, '#', ironingot);
+                TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTurboExhaust.item, 2), "S S", "S S", "SPS", 'S', steelItem, 'P', ItemIDs.piston.item);
+            }
 		}
+
 
 		/* freightcar crafting parts NEW */
 
@@ -679,8 +690,11 @@ public class RecipeHandler {
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartCF7round3.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartCF7round.item));
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartCF7round.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartCF7round3.item));
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartCF7hh.item, 1),  "   ", "CRC", "   ", 'R', new ItemStack(ItemIDs.minecartCF7angle.item), 'C', new ItemStack(ItemIDs.partComponentCEE.item));
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartU23BU.item, 1),  "   ", "CRC", "   ", 'R', new ItemStack(ItemIDs.minecartU23B.item), 'C', new ItemStack(ItemIDs.partComponentCEE.item));
+        TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartES44h.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartES44.item));
+        TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartES44.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartES44h.item));
 
-	}
+    }
 	
 	public static void initSmeltingRecipes(){
 

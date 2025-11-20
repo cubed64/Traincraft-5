@@ -40,4 +40,8 @@ public class DieselSW1600 extends DieselTrain {
         return "FNCC SW1600";
     }
 
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 }

@@ -67,4 +67,9 @@ public class DieselGP38dash9W extends DieselTrain {
     public String getInventoryName() {
         return "MT&S GP38-9W";
     }
+
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 }

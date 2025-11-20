@@ -48,4 +48,8 @@ public class DieselGP39TDash2B extends DieselTrain {
         return "EMD GP39T-2";
     }
 
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 }

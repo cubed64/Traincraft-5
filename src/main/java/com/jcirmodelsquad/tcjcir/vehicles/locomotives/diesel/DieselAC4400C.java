@@ -42,4 +42,13 @@ public class DieselAC4400C extends DieselTrain {
     @Override
     public String getInventoryName() { return "GE AC4400C"; }
 
+    /*@Override
+    public String transportYear() {
+        return "1981-1989";
+    }*/
+
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
 }

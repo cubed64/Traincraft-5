@@ -33,33 +33,21 @@ public class DieselM640W extends DieselTrain {
 
     }
 
-
-    
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.75, 0.35, -0.4); }
-    
-
-    
-
-    
-
-
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.525F;
     }
 
-    
-
     @Override
     public String getInventoryName() {
         return "MLW M640W";
     }
-
-
-
-    
-
 
 }

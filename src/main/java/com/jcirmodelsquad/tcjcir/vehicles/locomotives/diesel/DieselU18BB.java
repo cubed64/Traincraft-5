@@ -28,9 +28,11 @@ public class DieselU18BB extends DieselTrain {
         InsertTexture(0, "West Creek Pacific");
         InsertTexture(1, "Gaesburg Clinton & Midland");
     }
-    
 
-
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 
     @Override
     public void updateRiderPosition() {
@@ -67,27 +69,13 @@ public class DieselU18BB extends DieselTrain {
         }
     }
 
-
-
-
-
-
-    
-
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.2F;
     }
-
-
 
     @Override
     public String getInventoryName() {
         return "GE U18B B-Unit";
     }
-
-
-
-    
-
 
 }

@@ -43,4 +43,8 @@ public class DieselMP900 extends DieselTrain {
         return "Masaou MP900";
     }
 
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 }

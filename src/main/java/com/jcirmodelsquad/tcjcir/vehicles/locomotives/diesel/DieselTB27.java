@@ -44,4 +44,9 @@ public class DieselTB27 extends DieselTrain {
         return "Masaou TB27";
     }
 
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
+
 }

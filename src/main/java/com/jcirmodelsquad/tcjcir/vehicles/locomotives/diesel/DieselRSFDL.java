@@ -30,33 +30,21 @@ public class DieselRSFDL extends DieselTrain {
 
     }
 
-
-
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.1, 0.3, -0.35); }
-    
-
-    
-
-    
-
-    
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.3F;
     }
 
-    
-
     @Override
     public String getInventoryName() {
         return "ALCo RSFDL";
     }
-
-    
-
-    
-
 
 }

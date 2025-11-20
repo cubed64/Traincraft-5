@@ -31,9 +31,10 @@ public class DieselU18BW extends DieselTrain {
         InsertTexture(4, "West Creek Pacific");
     }
 
-
-
-
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 
     @Override
     public void updateRiderPosition() {
@@ -70,27 +71,13 @@ public class DieselU18BW extends DieselTrain {
         }
     }
 
-
-
-
-
-
-
-
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.2F;
     }
-
-    
 
     @Override
     public String getInventoryName() {
         return "CEE/GE U18B(W)";
     }
-
-    
-
-
-    
 
 }

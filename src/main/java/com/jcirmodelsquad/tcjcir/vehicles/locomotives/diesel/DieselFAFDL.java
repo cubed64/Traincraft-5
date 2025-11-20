@@ -33,33 +33,26 @@ public class DieselFAFDL extends DieselTrain {
         InsertTexture(3, "");
     }
 
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
 
-    
+    @Override
+    public String transportYear() {
+        return "1977-1978";
+    }
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.72, 0.13, -0.35); }
-    
-
-
-
-    
-
-    
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 0.93F;
     }
 
-    
-
     @Override
     public String getInventoryName() {
         return "CEE FA-FDL";
     }
-
-    
-
-    
-    
 
 }

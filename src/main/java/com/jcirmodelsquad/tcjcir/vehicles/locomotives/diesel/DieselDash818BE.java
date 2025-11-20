@@ -39,4 +39,14 @@ public class DieselDash818BE extends DieselTrain {
         return "GE B18-8E";
     }
 
+    @Override
+    public String transportYear() {
+        return "1987";
+    }
+
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
+
 }

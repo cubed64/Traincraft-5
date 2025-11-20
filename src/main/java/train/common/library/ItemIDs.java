@@ -88,6 +88,10 @@ public enum ItemIDs {
 
 	partBlombergB("ItemTrain", "partblombergb", 3),
 	partTypeB("ItemTrain", "parttypeb", 3),
+	partFB2("ItemTrain", "partfb2", 3),
+
+	partTurboExhaust("ItemTrain", "partTurboExhaust", 2),
+	partAlternator("ItemTrain", "item_alternator", 2),
 
 	partComponentEMD("ItemTrain", "partComponentEMD", 1),
 	partComponentGE("ItemTrain", "partComponentGE", 1),

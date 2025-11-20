@@ -39,4 +39,8 @@ public class Diesel4ED172T_C extends DieselTrain {
     @Override
     public String getInventoryName() { return "CEE 4ED-172T (CAT Repower)"; }
 
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 }

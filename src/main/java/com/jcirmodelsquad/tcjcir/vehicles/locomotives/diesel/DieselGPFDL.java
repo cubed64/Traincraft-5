@@ -73,4 +73,8 @@ public class DieselGPFDL extends DieselTrain {
         return "EMD/CEE GPFDL";
     }
 
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 }

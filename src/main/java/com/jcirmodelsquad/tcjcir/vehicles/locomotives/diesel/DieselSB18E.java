@@ -34,9 +34,6 @@ public class DieselSB18E extends DieselTrain {
         InsertTexture(6, "Morristown Tenneva & Southern", LockoutGroup.MTS);
     }
 
-
-
-
     @Override
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
@@ -71,28 +68,24 @@ public class DieselSB18E extends DieselTrain {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
         }
     }
-    
 
+    @Override
+    public String transportYear() {
+        return "1981-1989";
+    }
 
-
-
-
-
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.2F;
     }
 
-    
-
     @Override
     public String getInventoryName() {
         return "CEE SB18E";
     }
-
-    
-
-
-    
 
 }

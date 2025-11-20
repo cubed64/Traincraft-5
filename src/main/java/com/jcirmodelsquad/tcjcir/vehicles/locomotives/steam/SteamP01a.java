@@ -35,17 +35,18 @@ public class SteamP01a extends SteamTrain {
 	@Override
 	public void updateRiderPosition() { TraincraftUtil.updateRider(this, -0.9, 0.1, -0.4); }
 
-@Override
+	@Override
 	public String getInventoryName() {
 		return "P01a 2-6-2 Prairie";
 	}
-
-	
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.05F;
 	}
 
-	
+	@Override
+	public boolean isFictional() {
+		return true;
+	}
 }

@@ -51,4 +51,13 @@ public class DieselSB36X extends DieselTrain {
         return "CEE SB36X Prototype";
     }
 
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
+
+    @Override
+    public String transportYear() {
+        return "1988";
+    }
 }

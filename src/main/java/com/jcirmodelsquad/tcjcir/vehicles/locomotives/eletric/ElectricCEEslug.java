@@ -34,19 +34,20 @@ public class ElectricCEEslug extends ElectricTrain
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.2, 0.25, -0.35); }
-
     
     @Override
     public String getInventoryName() {
         return "CEE rebuilt slug (U23B core)";
     }
 
-    
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
         return 1.3F;
     }
 
-    
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
     
 }

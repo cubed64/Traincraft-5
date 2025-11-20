@@ -34,4 +34,8 @@ public class HotTubTender extends Tender  {
         return 1.8F;
     }
 
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 }

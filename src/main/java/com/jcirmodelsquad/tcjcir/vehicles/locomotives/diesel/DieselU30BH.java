@@ -46,4 +46,8 @@ public class DieselU30BH extends DieselTrain {
         return "CEE U30B(H)";
     }
 
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 }

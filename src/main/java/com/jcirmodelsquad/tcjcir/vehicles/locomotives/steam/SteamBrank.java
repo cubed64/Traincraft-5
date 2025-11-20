@@ -31,17 +31,18 @@ public class SteamBrank extends SteamTrain {
 	@Override
 	public void updateRiderPosition() { TraincraftUtil.updateRider(this, -0.28, -0.23, -0.45); }
 
-@Override
+	@Override
 	public String getInventoryName() {
 		return "2-6-2T Branch Tank \"Brank\"";
 	}
-
-	
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.3F;
 	}
 
-	
+	@Override
+	public boolean isFictional() {
+		return true;
+	}
 }

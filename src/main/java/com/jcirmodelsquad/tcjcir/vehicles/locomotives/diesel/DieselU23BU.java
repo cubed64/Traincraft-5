@@ -52,4 +52,8 @@ public class DieselU23BU extends DieselTrain {
         return "CEE U23B(U)";
     }
 
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 }

@@ -77,7 +77,10 @@ public class SteamMacky extends SteamTrain {
         checkInvent(locoInvent[0], locoInvent[1], this);
     }
 
-    
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 
 
 

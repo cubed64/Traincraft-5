@@ -28,33 +28,21 @@ public class DieselCF7hh extends DieselTrain {
         
         InsertTexture(0, "Grassland Laboratories");
     }
-    
-
-    
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.5, 0.2, -0.35); }
 
-
-
-    
-
-
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.2F;
     }
-
-    
 
     @Override
     public String getInventoryName() {
         return "CEE CF7 (GL)";
     }
 
-
-
-
-
-
-
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 }

@@ -52,4 +52,9 @@ public class DieselCF7round3 extends DieselTrain {
     public String getInventoryName() {
         return "EMD CF7 Roundcab";
     }
+
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 }

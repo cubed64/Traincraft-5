@@ -18,9 +18,6 @@ import train.common.library.GuiIDs;
 
 public class TenderSquanderback extends Tender  {
 
-	
-	
-
 	public TenderSquanderback(World world) {
 		super(world, FluidRegistry.WATER, 0, EnumTrains.SquanderbackTender.getTankCapacity(), LiquidManager.WATER_FILTER);
 		
@@ -34,13 +31,13 @@ public class TenderSquanderback extends Tender  {
 		return "WRX Squanderback Tender";
 	}
 
-	
-
-	
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.45F;
 	}
 
-	
+	@Override
+	public boolean isFictional() {
+		return true;
+	}
 }

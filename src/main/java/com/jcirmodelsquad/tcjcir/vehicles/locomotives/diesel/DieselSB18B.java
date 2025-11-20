@@ -31,9 +31,6 @@ public class DieselSB18B extends DieselTrain {
         InsertTexture(4, "TTLC (Turtle Moss)");
     }
 
-
-    
-
     @Override
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}
@@ -69,27 +66,23 @@ public class DieselSB18B extends DieselTrain {
         }
     }
 
+    @Override
+    public String transportYear() {
+        return "1981-1989";
+    }
 
-    
-
-    
-
-    
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.2F;
     }
 
-
-
     @Override
     public String getInventoryName() {
         return "CEE SB18B";
     }
-
-
-
-
-
 
 }

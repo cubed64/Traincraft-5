@@ -28,32 +28,24 @@ public class DieselFOLM1B extends DieselTrain {
 
     }
 
-
-
-    
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
 
     @Override
     public void updateRiderPosition() {
         TraincraftUtil.updateRider(this, 4.0, 0.35f);
     }
 
-
-
-
-
-
     @Override
     public String getInventoryName() {
         return "FOL-M1B";
     }
-
-    
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
         return (1F);
     }
 
-
-    
 }

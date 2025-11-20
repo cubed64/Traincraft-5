@@ -38,6 +38,16 @@ public class DieselSB23E extends DieselTrain {
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.2, 0.25, 0.35); }
 
     @Override
+    public String transportYear() {
+        return "1981-1989";
+    }
+
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
+
+    @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.315F;
     }
 

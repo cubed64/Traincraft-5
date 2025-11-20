@@ -117,7 +117,7 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
 
         if (itemCacheData.TransportYear != "")
         {
-            par3List.add("\u00a77" + "Fictional: " + (itemCacheData.IsFictional ? "Y" : "N"));
+            par3List.add("\u00a77" + "Fictional: " + (itemCacheData.IsFictional ? "Yes" : "No"));
         }
 
         par3List.add(EnumChatFormatting.RED + "Lockout: " + (itemCacheData.HasPublicSkins ? EnumChatFormatting.GREEN + "Public Skins" : EnumChatFormatting.RED + "No Public Skins"));

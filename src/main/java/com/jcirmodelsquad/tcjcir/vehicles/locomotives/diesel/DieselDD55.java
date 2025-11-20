@@ -33,34 +33,22 @@ public class DieselDD55 extends DieselTrain {
         InsertTexture(4, "CSX (but awesome)");
 
     }
-    
 
-
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.75, 0.125, -0.35); }
-
-
-
-
-
-
-
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 1.2F;
     }
 
-
-
     @Override
     public String getInventoryName() {
         return "LASC DD55";
     }
-
-
-
-
-
 
 }

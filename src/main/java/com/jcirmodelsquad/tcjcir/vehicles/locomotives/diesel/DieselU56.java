@@ -41,4 +41,8 @@ public class DieselU56 extends DieselTrain {
         return "CEE U56";
     }
 
+    @Override
+    public boolean isFictional() {
+        return true;
+    }
 }

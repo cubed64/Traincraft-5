@@ -35,25 +35,24 @@ public class ElectricB_BEL extends ElectricTrain {
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.2, 0.25, -0.35); }
 
-    
+    @Override
+    public String transportYear() {
+        return "1993-1998";
+    }
 
-    
-
-
-
-
+    @Override
+    public boolean isFictional(){
+        return true;
+    }
 
     @Override
     public String getInventoryName() {
         return "CEE B-BEL";
     }
 
-    
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
         return 1.3F;
     }
 
-    
-    
 }
