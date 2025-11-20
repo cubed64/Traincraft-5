@@ -219,31 +219,22 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
             TileTCRailGag tileGag = (TileTCRailGag) tileEntity;
             tile = (TileTCRail) par3World.getTileEntity(tileGag.originX, tileGag.originY, tileGag.originZ);
         }
-        if (tile != null) {
-            if (tile.getType().equals(EnumTracks.MEDIUM_STRAIGHT.getLabel())
-                    || tile.getType().equals(EnumTracks.SMALL_STRAIGHT.getLabel())
-                    || tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING.getLabel())
-                    || tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING_1.getLabel())
-                    || tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING_2.getLabel())
-                    || tile.getType().equals(EnumTracks.LONG_STRAIGHT.getLabel())
-                    || tile.getType().equals(EnumTracks.EMBEDDED_SMALL_STRAIGHT.getLabel())
-                    || tile.getType().equals(EnumTracks.VERY_LONG_STRAIGHT.getLabel())
-                    || tile.getType().equals(EnumTracks.EMBEDDED_MEDIUM_STRAIGHT.getLabel())
-                    || tile.getType().equals(EnumTracks.EMBEDDED_LONG_STRAIGHT.getLabel())
-                    || tile.getType().equals(EnumTracks.EMBEDDED_VERY_LONG_STRAIGHT.getLabel())
+        if (tile != null)
+        {
+            EnumTracks enumTracks = EnumTracks.GetTrackByLabel(tile.getType());
+            if (enumTracks == null)
+            {
+                par2EntityPlayer.addChatMessage(new ChatComponentText("An error occurred please try replacing the track"));
+                return false;
+            }
 
-                    || tile.getType().equals(EnumTracks.SMALL_DIAGONAL_STRAIGHT.getLabel())
-                    || tile.getType().equals(EnumTracks.MEDIUM_DIAGONAL_STRAIGHT.getLabel())
-                    || tile.getType().equals(EnumTracks.LONG_DIAGONAL_STRAIGHT.getLabel())
-                    || tile.getType().equals(EnumTracks.VERY_LONG_DIAGONAL_STRAIGHT.getLabel())
-                    || tile.getType().equals(EnumTracks.EMBEDDED_SMALL_DIAGONAL_STRAIGHT.getLabel())
-                    || tile.getType().equals(EnumTracks.EMBEDDED_MEDIUM_DIAGONAL_STRAIGHT.getLabel())
-                    || tile.getType().equals(EnumTracks.EMBEDDED_LONG_DIAGONAL_STRAIGHT.getLabel())
-                    || tile.getType().equals(EnumTracks.EMBEDDED_VERY_LONG_DIAGONAL_STRAIGHT.getLabel())
-            ) {
+            if (enumTracks.getCoreTrack().isCoreTrackValidForRollingStockPlaceable())
+            {
                 this.placeCart(par2EntityPlayer, par1ItemStack, par3World, par4, par5, par6);
                 return true;
-            } else {
+            }
+            else
+            {
                 par2EntityPlayer.addChatMessage(new ChatComponentText("Place me on a straight piece of track!"));
                 return false;
             }

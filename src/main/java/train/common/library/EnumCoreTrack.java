@@ -139,4 +139,26 @@ public enum EnumCoreTrack
     CORE_12_DIAGONAL_SLOPE,
     CORE_18_DIAGONAL_SLOPE;
     // endregion Slopes
+
+    public boolean isCoreTrackValidForRollingStockPlaceable()
+    {
+        switch (this)
+        {
+            case CORE_SMALL_STRAIGHT :
+            case CORE_MEDIUM_STRAIGHT :
+            case CORE_LONG_STRAIGHT :
+            case CORE_VERY_LONG_STRAIGHT :
+            case CORE_SMALL_DIAGONAL_STRAIGHT :
+            case CORE_MEDIUM_DIAGONAL_STRAIGHT :
+            case CORE_LONG_DIAGONAL_STRAIGHT :
+            case CORE_VERY_LONG_DIAGONAL_STRAIGHT :
+                return true;
+
+            default:
+            {
+                return false;
+            }
+        }
+
+    }
 }
