@@ -4,6 +4,7 @@ import com.jcirmodelsquad.tcjcir.vehicles.locomotives.steam.*;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.*;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.*;
 import com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.controlcar.AmfleetCab;
+import net.minecraft.entity.item.EntityFallingBlock;
 import train.common.entity.rollingStock.diesel.*;
 import train.common.entity.rollingStock.electric.*;
 import train.common.entity.rollingStock.steam.*;
@@ -12,6 +13,8 @@ import train.common.library.sounds.TrainSoundRecord;
 
 public class EnumSounds 
 {
+	public static final SoundRecord fallback = new SoundRecord(EntityFallingBlock.class, "oh_no_shits", 1.0F, "oh_no_shits", 0.65F, 40, "oh_no_shits", 0.65F, 40, false, " ", 0);
+
 
     //TC DIESEL & ELECTRIC//
 	public static final SoundRecord locoDieselKof_DB= new SoundRecord(EntityLocoDieselKof_DB.class, "chme3_horn", 0.8F, "chme3_idle", 0.65F, 40, "chme3_idle", 0.65F, 40, false, " ", 0);

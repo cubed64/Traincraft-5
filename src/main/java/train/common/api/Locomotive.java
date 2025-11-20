@@ -60,6 +60,8 @@ import train.common.mtc.network.*;
 
 import java.util.*;
 
+import static train.common.library.EnumSounds.fallback;
+
 
 public abstract class Locomotive extends EntityRollingStock implements IInventory, IRollingStockLightControls {
     public boolean isLocomotiveLightsEnabled = false;
@@ -778,7 +780,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         }
         else
         {
-            worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "oh_no_shits", trainSoundRecord.getHornVolume(), 1.0F);
+            worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + fallback.getHornString(), fallback.getHornVolume(), 1.0F);
         }
         List entities = worldObj.getEntitiesWithinAABB(EntityAnimal.class, AxisAlignedBB.getBoundingBox(
                 this.posX - 20, this.posY - 5, this.posZ - 20,
@@ -995,11 +997,13 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             }//FIND OUT HOW TO GET BELLPRESSED TO TRUE
         //}
 */
-        if (ConfigHandler.SOUNDS) {
+        if (ConfigHandler.SOUNDS)
+        {
 
             double speed = this.getSpeed();
 
-            if (BetterEnumSounds.trainSounds.containsKey(this.getClass().getName()) && worldObj.isRemote && getFuel() > 0 && this.isLocoTurnedOn()) {
+            if (BetterEnumSounds.trainSounds.containsKey(this.getClass().getName()) && worldObj.isRemote && getFuel() > 0 && this.isLocoTurnedOn())
+            {
                 //Use BetterEnumSounds.
                 BetterEnumSounds sounds = BetterEnumSounds.trainSounds.get(this.getClass().getName());
                 String sound = "";
@@ -1084,6 +1088,10 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             {
                     //Use the old sound system.
                     SoundRecord soundRecord = getSoundRecord();
+                    if (soundRecord == null)
+                    {
+                        soundRecord = fallback;
+                    }
                     if (!soundRecord.getHornString().isEmpty() && whistleDelay == 0) {
                         if (getFuel() > 0 && this.isLocoTurnedOn()) {
                             if (speed > -0.001D && speed < 0.01D && soundPosition == 0) {
