@@ -6,13 +6,14 @@ import train.common.api.LiquidManager;
 import train.common.api.SteamTrain;
 import train.common.core.util.TraincraftUtil;
 import train.common.library.EnumHeritageTrainsLegacy;
+import train.common.library.EnumSounds;
 import train.common.library.sounds.SoundRecord;
 
 public class EntityLocoSteamBerk1225 extends SteamTrain {
 	@Override
 	public SoundRecord getSoundRecord()
 	{
-		return null;
+		return EnumSounds.locoSteamBerk1225;
 	}
 
 	public EntityLocoSteamBerk1225(World world) {
