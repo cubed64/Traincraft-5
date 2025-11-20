@@ -10,8 +10,8 @@ import net.minecraft.item.crafting.ShapedRecipes;
 import net.minecraftforge.oredict.OreDictionary;
 import train.client.gui.GuiTrainCraftingBlock;
 import train.common.inventory.TrainCraftingManager;
-import train.common.recipes.ShapedTrainRecipes;
-import train.common.recipes.ShapelessTrainRecipe;
+import train.common.recipes.ITCRecipe.ShapedTrainRecipes;
+import train.common.recipes.ITCRecipe.ShapelessTrainRecipe;
 
 import java.awt.*;
 import java.util.ArrayList;

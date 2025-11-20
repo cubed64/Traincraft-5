@@ -22,8 +22,8 @@ import train.common.items.ItemRecipeBook;
 import train.common.library.BlockIDs;
 import train.common.library.Info;
 import train.common.library.ItemIDs;
-import train.common.recipes.ShapedTrainRecipes;
-import train.common.recipes.ShapelessTrainRecipe;
+import train.common.recipes.ITCRecipe.ShapedTrainRecipes;
+import train.common.recipes.ITCRecipe.ShapelessTrainRecipe;
 
 import java.util.ArrayList;
 import java.util.List;

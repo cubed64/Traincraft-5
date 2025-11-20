@@ -36,13 +36,15 @@ import train.common.core.CommonProxy;
 import train.common.core.creativetab.*;
 import train.common.core.TrainModCore;
 import train.common.core.handlers.*;
+import train.common.core.managers.TierRecipeManager;
 import train.common.generation.ComponentVillageTrainstation;
 import train.common.generation.WorldGenWorld;
 import train.common.items.TCItems;
 import train.common.library.BetterEnumSounds;
 import train.common.library.Info;
 import train.common.library.TraincraftRegistry;
-import train.common.recipes.AssemblyTableRecipes;
+import train.common.recipes.*;
+import train.common.recipes.rollingstock.*;
 import train.common.utils.devutils.TrainSheetsDataGenerator;
 import train.common.utils.lockout.ILockoutGroup;
 import train.common.utils.lockout.LockoutPermissionsUtil;
@@ -236,7 +238,15 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		RecipeHandler.initBlockRecipes();
 		RecipeHandler.initItemRecipes();
 		RecipeHandler.initSmeltingRecipes();
+
+		new SteamRecipes(TierRecipeManager.getInstance());
+		new DieselRecipes(TierRecipeManager.getInstance());
+		new ElectricRecipes(TierRecipeManager.getInstance());
+		new FreightRecipes(TierRecipeManager.getInstance());
+		new PassengerRecipes(TierRecipeManager.getInstance());
+
 		new AssemblyTableRecipes().recipes();
+
 
 		/* Register the liquids */
 		tcLog.info("Initializing fluids..");

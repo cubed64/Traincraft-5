@@ -7,8 +7,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import train.common.core.interfaces.ITCRecipe;
 import train.common.recipes.OpenHearthFurnaceRecipe;
-import train.common.recipes.ShapedTrainRecipes;
-import train.common.recipes.ShapelessTrainRecipe;
+import train.common.recipes.ITCRecipe.ShapedTrainRecipes;
+import train.common.recipes.ITCRecipe.ShapelessTrainRecipe;
 
 import java.util.ArrayList;
 import java.util.Collections;

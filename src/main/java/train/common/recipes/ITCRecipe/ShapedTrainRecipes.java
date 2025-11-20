@@ -5,7 +5,7 @@
  * @author Mrbrutal
  ******************************************************************************/
 
-package train.common.recipes;
+package train.common.recipes.ITCRecipe;
 
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;

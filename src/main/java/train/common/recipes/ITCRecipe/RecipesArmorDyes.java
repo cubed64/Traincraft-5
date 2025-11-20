@@ -1,4 +1,4 @@
-package train.common.recipes;
+package train.common.recipes.ITCRecipe;
 
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.init.Items;
