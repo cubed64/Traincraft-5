@@ -84,7 +84,10 @@ public enum ItemIDs {
 
 	trolleyPole("ItemTrain", "trolleyPole", 2),
 	thirdRailShoe("ItemTrain", "thirdRailShoe", 2),
-	interurbanTruck("ItemTrain", "interurbanTruck", 2),
+	interurbanTruck("ItemTrain", "interurbanTruck", 5),
+
+	freightCarTruck("ItemTrain", "freightCarTruck", 4),
+	cabooseTruck("ItemTrain", "cabooseTruck", 4),
 
 	partBlombergB("ItemTrain", "partblombergb", 3),
 	partTypeB("ItemTrain", "parttypeb", 3),

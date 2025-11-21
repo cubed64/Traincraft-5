@@ -533,6 +533,14 @@ public class RecipeHandler {
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.interurbanTruck.item,1), "MCM", "SSS", "W W", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', copperItem); //interurban truck
 			}
 		}
+		/* freight car and caboose parts */
+		for (ItemStack steelItem: steel) {
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.freightCarTruck.item, 2), "   ", "FSF", "W W", 'S', steelItem, 'F', new ItemStack(ItemIDs.steelframe.item), 'W', new ItemStack(ItemIDs.bogie.item)); // 4 wheel lightweight truck
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.freightCarTruck.item, 2), "FSF", "W W", "   ", 'S', steelItem, 'F', new ItemStack(ItemIDs.steelframe.item), 'W', new ItemStack(ItemIDs.bogie.item)); // 4 wheel lightweight truck
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.cabooseTruck.item, 2), "   ", "FSF", "WSW", 'S', steelItem, 'F', new ItemStack(ItemIDs.steelframe.item), 'W', new ItemStack(ItemIDs.bogie.item)); // 4 wheel lightweight truck
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.cabooseTruck.item, 2), "FSF", "WSW", "   ", 'S', steelItem, 'F', new ItemStack(ItemIDs.steelframe.item), 'W', new ItemStack(ItemIDs.bogie.item)); // 4 wheel lightweight truck
+
+		}
 		/* locomotive crafting parts NEW */
 		for (ItemStack steelItem: steel) {
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partBlombergB.item,1), "MCM", "SSS", "W W", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentEMD.item));
