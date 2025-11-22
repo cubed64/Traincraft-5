@@ -29,6 +29,7 @@ public class ModelBridgePillar extends ModelBase {
 			GL11.glNewList(list, GL11.GL_COMPILE);
 			bridgePillar.renderAll();
 			GL11.glEndList();
+			baked = true;
 		}
 
 	}
