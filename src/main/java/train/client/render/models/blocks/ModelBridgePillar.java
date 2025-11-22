@@ -50,7 +50,7 @@ public class ModelBridgePillar extends ModelBase {
 		switch (facing)
 		{
 			case 2:
-				GL11.glRotatef(90, 0, 1, 0);
+			case 0:
 				GL11.glRotatef(90, 0, 1, 0);
 				break;
 		}
