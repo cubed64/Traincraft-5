@@ -24,12 +24,14 @@ import static codechicken.lib.gui.GuiDraw.*;
 
 public class NEIAssemblyTableRecipePlugin extends ShapedRecipeHandler {
 	private List<TierRecipe> recipeList = assemblyListCleaner(TierRecipeManager.getInstance().getRecipeList());
+	private static TierRecipe currentRecipe;
 
 	private CachedShapedRecipe getShape(TierRecipe recipe) {
 		CachedShapedRecipe shape = new CachedShapedRecipe(0, 0, null, recipe.getOutput());
 		PositionedStack stack = null;
-		if (recipe.getInput().get(0) != null) {
-			stack = new PositionedStack(recipe.getInput().get(0), 20, 16);
+		if (recipe.getInput().get(0) != null)
+		{
+			stack = new PositionedStack(recipe.getInput().get(0).copy(), 20, 16);
 			stack.setMaxSize(recipe.getInput().get(0).stackSize);
 			shape.ingredients.add(stack);
 			stack = null;
@@ -150,27 +152,61 @@ public class NEIAssemblyTableRecipePlugin extends ShapedRecipeHandler {
 		private int cycleTicks = 0;
 
 		@Override
-		public List<PositionedStack> getCycledIngredients(int cycle, List<PositionedStack> ingredients) {
+		public List<PositionedStack> getCycledIngredients(int cycle, List<PositionedStack> ingredients)
+		{
 			cycleTicks++;
-			for (int itemIndex = 0; itemIndex < ingredients.size(); itemIndex++) {
+			final int CYCLE_DELAY = 15;
 
-				String oreName = OreDictionary.getOreName(OreDictionary.getOreID(ingredients.get(itemIndex).item));
-				if (oreName.equals("ingotSteel") || oreName.equals("ingotIron") || oreName.equals("ingotCopper") || oreName.equals("dustPlastic") || oreName.equals("dustCoal")) {
-					ArrayList list = OreDictionary.getOres(OreDictionary.getOreName(OreDictionary.getOreID(ingredients.get(itemIndex).item)));
-					Random rand = new Random(cycle + System.currentTimeMillis());
-					if (cycleTicks % 15 == 0) {
-						int stackSize = ingredients.get(itemIndex).item.stackSize;
-						ingredients.get(itemIndex).item = (ItemStack) list.get(Math.abs(rand.nextInt()) % list.size());
-						ingredients.get(itemIndex).item.stackSize = stackSize;
+			for (int i = 0; i < ingredients.size(); i++) {
+
+				PositionedStack stack = ingredients.get(i);
+				ItemStack item = stack.item;
+
+				String oreName = OreDictionary.getOreName(OreDictionary.getOreID(item));
+
+				// Check if we need to cycle ore-dictionary variants
+				if (oreName.equals("ingotSteel") ||
+						oreName.equals("ingotIron") ||
+						oreName.equals("ingotCopper") ||
+						oreName.equals("dustPlastic") ||
+						oreName.equals("dustCoal")) {
+
+					List<ItemStack> oreList = OreDictionary.getOres(oreName);
+
+					// Only cycle every 15 ticks
+					if (cycleTicks % CYCLE_DELAY == 0 && !oreList.isEmpty()) {
+
+						// Keep the original stack size
+						int stackSize = item.stackSize;
+
+						// Use a stable Random instance
+						int index = floorMod((cycle + i), oreList.size());
+
+						// Assign a new item but preserve size
+						ItemStack next = oreList.get(index).copy();
+						next.stackSize = stackSize;
+
+						stack.item = next;
 					}
+
 				}
 				else {
-					randomRenderPermutation(ingredients.get(itemIndex), cycle + itemIndex);
+					// Use your default random renderer if not an ore entry
+					randomRenderPermutation(stack, cycle + i);
 				}
 			}
 
 			return ingredients;
 		}
+
+		public int floorMod(int x, int y) {
+			int r = x % y;
+			if (r < 0) {
+				r += (y < 0 ? -y : y);
+			}
+			return r;
+		}
+
 	}
 
 	@Override
@@ -178,6 +214,7 @@ public class NEIAssemblyTableRecipePlugin extends ShapedRecipeHandler {
 		for (TierRecipe recipe : recipeList) {
 			if (NEIClientUtils.areStacksSameTypeCrafting(recipe.getOutput(), result)) {
 				this.arecipes.add(getShape(recipe));
+				currentRecipe = recipe;
 			}
 		}
 	}
@@ -217,7 +254,7 @@ public class NEIAssemblyTableRecipePlugin extends ShapedRecipeHandler {
 		GL11.glColor4f(1, 1, 1, 1);
 		TierRecipe tierRecipe = null;
 		if (recipe < recipeList.size()) {
-			tierRecipe = recipeList.get(recipe);
+			tierRecipe = currentRecipe;
 			if (tierRecipe != null) {
 				changeTexture(getGuiTexture(tierRecipe.getTier()));
 			}
