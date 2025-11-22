@@ -5,8 +5,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.oredict.OreDictionary;
-import train.common.api.crafting.ITierCraftingManager;
-import train.common.core.managers.TierRecipeManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +15,8 @@ import java.util.List;
 public abstract class AbstractRecipeHandler
 {
     public ArrayList<ItemStack> ingotIron	= OreDictionary.getOres("ingotIron");
-    public ArrayList<ItemStack> s1 = OreDictionary.getOres("plankWood");
-    public ArrayList<ItemStack> s2 = OreDictionary.getOres("logWood");
+    public ArrayList<ItemStack> plankWood = OreDictionary.getOres("plankWood");
+    public ArrayList<ItemStack> logWood = OreDictionary.getOres("logWood");
     public ArrayList<ItemStack> ingotSteel = OreDictionary.getOres("ingotSteel");
     public ArrayList<ItemStack> dyeRed = OreDictionary.getOres("dyeRed"); //1
     public ArrayList<ItemStack> dyeYellow = OreDictionary.getOres("dyeYellow"); //11

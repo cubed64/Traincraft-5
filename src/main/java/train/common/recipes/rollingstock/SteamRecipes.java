@@ -30,7 +30,7 @@ public class SteamRecipes extends AbstractRecipeHandler
             {
                 for (ItemStack c : coal) {
                     cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 2), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 2), null, new ItemStack(ItemIDs.minecartClimaxNew.item, 1), 1);
-                    for (ItemStack plank : s1) {
+                    for (ItemStack plank : plankWood) {
                         cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(plank.getItem(), 3), new ItemStack(ItemIDs.ironBoiler.item, 1), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(iron.getItem(), 2), null, new ItemStack(ItemIDs.minecartVBShay2.item, 1), 1);
                     }
                     for (ItemStack dye : dyeGreen) {
@@ -50,7 +50,7 @@ public class SteamRecipes extends AbstractRecipeHandler
                         cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), null, null, null, new ItemStack(iron.getItem(), 3), new ItemStack(c.getItem(), 2), dye, new ItemStack(ItemIDs.minecartSquanderbackTender.item, 1), 1);
                     }
                     for (ItemStack dye : dyeBlack) {
-                        for (ItemStack plank : s1) {
+                        for (ItemStack plank : plankWood) {
                             cm.addRecipe(2, new ItemStack(plank.getItem(), 2), new ItemStack(ItemIDs.bogie.item, 3), new ItemStack(ItemIDs.steelframe.item, 1), new ItemStack(itemSteel, 3, itemDamageSteel), null, null, null, null, new ItemStack(itemSteel, 4, itemDamageSteel), dye, new ItemStack(ItemIDs.minecartBKno2a.item, 1), 1);
                             cm.addRecipe(2, new ItemStack(plank.getItem(), 1), new ItemStack(ItemIDs.bogie.item, 3), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.boiler.item, 4), new ItemStack(ItemIDs.firebox.item, 1), new ItemStack(itemSteel, 4, itemDamageSteel), dye, new ItemStack(ItemIDs.minecartBKno2b.item, 1), 1);
                         }
