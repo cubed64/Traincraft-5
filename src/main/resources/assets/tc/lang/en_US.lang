@@ -334,7 +334,10 @@ item.tc:cabooseTruck.name=Caboose Truck
 
 item.tc:partBlombergB.name=EMD Blomberg B Truck
 item.tc:partTypeB.name=AAR Type B Truck
+item.tc:partTypeA.name=AAR Type A Truck
 item.tc:partFB2.name=GE FB2 Truck
+item.tc:partFB3.name=GE FB3 Truck
+item.tc:partFlexicoil.name=EMD Flexicoil Truck
 
 item.tc:partTurboExhaust.name=Turbocharged Exhaust Stack
 item.tc:partAlternator.name=Alternator
@@ -2008,6 +2011,8 @@ item.tc:minecartFourCorTrailerComposite.name=4-Cor Trailer Composite
 item.tc:minecartFourCorTrailerSecond.name=4-Cor Trailer Second
 item.tc:minecartFourBuf.name=4-Buf
 item.tc:minecartFourCorTail.name=4-Cor Tail
+item.tc:minecartLocoNS3700Class.name=NS 3700 Class
+item.tc:minecartTenderNS3700.name=NS 3700 Tender
 
 entity.tc.TwoBil.name=2-Bil Engine
 entity.tc.TwoBilTail.name=2-Bil Tail
@@ -2016,6 +2021,8 @@ entity.tc.FourCorTrailerComposite.name=4-Cor Trailer Composite
 entity.tc.FourCorTrailerSecond.name=4-Cor Trailer Second
 entity.tc.FourBuf.name=4-Buf
 entity.tc.FourCorTail.name=4-Cor Tail
+entity.tc.Tender NS 3700.name=NS 3700 Tender
+entity.tc.Loco Steam NS 3700 Class.name=NS 3700 Class
 
 
 item.tc:minecartWorkdayHyrail.name=1980 Pine Workday Hi-rail Truck

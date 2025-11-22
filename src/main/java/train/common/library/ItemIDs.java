@@ -91,7 +91,10 @@ public enum ItemIDs {
 
 	partBlombergB("ItemTrain", "partblombergb", 3),
 	partTypeB("ItemTrain", "parttypeb", 3),
+	partTypeA("ItemTrain", "parttypea", 3),
 	partFB2("ItemTrain", "partfb2", 3),
+	partFB3("ItemTrain", "partfb3", 3),
+	partFlexicoil("ItemTrain", "partflexicoil", 3),
 
 	partTurboExhaust("ItemTrain", "partTurboExhaust", 2),
 	partAlternator("ItemTrain", "item_alternator", 2),
@@ -250,6 +253,8 @@ public enum ItemIDs {
 	minecartICE1_1stClass("ItemRollingStock", "train_ice1_passenger", HERITAGE, 10),
 	minecartICE1_2ndClass("ItemRollingStock", "train_ice1_passenger", HERITAGE, 10),
 	minecartICE1_Restaurant("ItemRollingStock", "train_ice1_restaurant", HERITAGE, 10),
+	minecartTenderNS3700("ItemRollingStock", "train_ns_3700_tender", HERITAGE, 2),
+	minecartLocoNS3700Class("ItemRollingStock", "train_ns_3700_class", HERITAGE, 4),
 
 	hat_ticketMan_paintable("ItemTCArmor", "armor_ticket_man_hat", 1),
 	pants_ticketMan_paintable("ItemTCArmor", "armor_ticket_man_pants", 1),

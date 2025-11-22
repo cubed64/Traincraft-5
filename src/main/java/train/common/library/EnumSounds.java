@@ -88,6 +88,7 @@ public class EnumSounds
 	public static final SoundRecord locoSteamMILWClassA= new SoundRecord(EntityLocoSteamMILWClassA.class, "leslie_a125_1", 0.8F, "steam_run", 0.4F, 20, "steam_run", 0.4F, 20, true, "steambell_1", 22);
 	public static final SoundRecord locoSteamFowler= new SoundRecord(EntityLocoSteamFowler.class, "steam_horn", 0.6F, "steam_run", 0.4F, 20, "steam_run", 0.4F, 20, true, " ", 0);
 	public static final SoundRecord locoSteamSnowPlow= new SoundRecord(EntityLocoSteamSnowPlow.class, "shay_horn", 0.8F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, " ", 0);
+	public static final SoundRecord locoSteamNS3700Class= new SoundRecord(EntityLocoSteamNS3700Class.class, "steam_horn", 0.6F, "steam_run", 0.4F, 20, "steam_run", 0.4F, 20, true, "steambell_1", 22);
 
 	//TC OTHER//
 	public static final SoundRecord CF7_H_Angle= new SoundRecord(DieselCF7_H_Angle.class, "gp40_2_horn", 0.8F, "chme3_idle", 0.65F, 40, "chme3_idle", 0.65F, 40, false, "emd_brassbell_1", 15);

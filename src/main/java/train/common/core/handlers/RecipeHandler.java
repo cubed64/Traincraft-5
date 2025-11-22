@@ -544,8 +544,11 @@ public class RecipeHandler {
 		/* locomotive crafting parts NEW */
 		for (ItemStack steelItem: steel) {
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partBlombergB.item,1), "MCM", "SSS", "W W", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentEMD.item));
-			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "M M", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item));
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeB.item,1), "M M", "S S", "WFW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'F', new ItemStack(ItemIDs.steelframe.item));
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partTypeA.item,1), "M M", "S S", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item));
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partFB2.item,1), "M M", "SCS", "WSW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentGE.item));
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partFB3.item,1), "MMM", "SCS", "WWW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentGE.item));
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.partFlexicoil.item,1), "MMM", "SCS", "WWW", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', new ItemStack(ItemIDs.partComponentEMD.item));
 
 
 
@@ -582,16 +585,6 @@ public class RecipeHandler {
             }
 		}
 
-
-		/* freightcar crafting parts NEW */
-
-
-
-
-/*
-		for (ItemStack s: iron) {
-
-		}*/
 
 		TrainCraftingManager.instance.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 1),  "   ", " R ", "   ", Character.valueOf('R'), Item.getItemFromBlock(Blocks.rail));// small straight track
 		/*TrainCraftingManager.instance.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing.item, 1),  "   ", "SRS", "   ", Character.valueOf('S'), new ItemStack(Blocks.stained_hardened_clay, 1, 15), Character.valueOf('R'), Item.getItemFromBlock(Blocks.rail) );

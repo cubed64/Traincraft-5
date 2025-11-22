@@ -1856,7 +1856,7 @@ public enum RenderEnum implements ITrainRenderRecord, ISubTrainRenderRecord
 			add(new double[]{0.575D, 1.5D, 0.0D});
 		}
 	}, "", null, 0, false),
-	DH643( DieselDH643.class,  new ModelDH643_fixed(), "DH643_LRR_1", false,new float[]{-2F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
+	DH643( DieselDH643.class,  new ModelDH643_fixed(), "DH643_", true,new float[]{-2F, 0.15F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
 		{
 			add(new double[]{0.2D, 1.4D, 0.0D});
 			add(new double[]{3.6D, 1.4D, 0.0D});
@@ -2345,7 +2345,16 @@ public enum RenderEnum implements ITrainRenderRecord, ISubTrainRenderRecord
 	FourCorTrailerSecond(PassengerFourCorTrailerSecond.class, new ModelFourCorTrailerSecond(), "4-cor_trailer_", true, new float[]{0.02F, 0.17F, 0F}, new float[]{0F, 0F, 180F}, null, "", 0, null, "", null, 0, false),
 	FourBuf(PassengerFourBuf.class, new ModelFourBuf(), "4-buf_", true, new float[]{0.02F, 0.17F, 0F}, new float[]{0F, 0F, 180F}, null, "", 0, null, "", null, 0, false),
 	FourCorTail(PassengerFourCorTail.class, new ModelFourCorTail(), "4-cor_", true, new float[]{0.02F, 0.17F, 0F}, new float[]{0F, 0F, 180F}, null, "", 0, null, "", null, 0, false),
-
+	tenderNS3700(EntityTenderNS3700.class, new ModelNS3700Tender(), "ns_3700_tender", false, new float[]{ 0.0f, 0.18f, 0.0f}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	locoNS3700Class(EntityLocoSteamNS3700Class.class, new ModelNS3700Class(), "ns_3700_class", false, new float[]{ -1.3f, 0.18f, 0.0f}, new float[] { 0, 180, 180 }, null, "largesmoke", 3, new ArrayList<double[]>() {
+		{
+			add(new double[] { 2.5D, 1.5D, 0D });
+		}
+	}, "explode", new ArrayList<double[]>() {
+		{
+			add(new double[] { 2.65D, -0.05D, 0.65D });
+		}
+	}, 2, true),
 
 	WorkdayHyrail( DieselWorkdayHyrail.class,  new ModelWorkdayHyrail(), "workday_hyrail_", true,new float[] {-1.0F, 0.155F, 0.00F},  new float[] { 0F, 180F, 180F }, null, "smoke", 1,  new ArrayList<double[]>() {
 		{

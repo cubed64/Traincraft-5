@@ -252,7 +252,7 @@ public enum EnumTrains implements ITrainRecord
 	C415L("C415L", DieselC415L.class, ItemIDs.minecartC415L.item, "diesel", 1500, 106, 0, 35, 0, 200, 0.87, 0.93, 17000, TraincraftUtil.getBytesFromColors(new String[] {"Black"}), 16, -2.5),
 	C424("C424",DieselC424.class, ItemIDs.minecartC424.item, "diesel", 2400, 113, 0, 40, 0, 200, 0.7, 0.8, 18000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Red", "Black", "Pink", "Brown", "Magenta", "Skin17", "LightGrey", "Skin16", "Skin18", "Skin19", "Cyan", "Green", "Purple"}), 14, -2.8),
 	C425("C425", DieselC425.class, ItemIDs.minecartC425.item, "diesel", 2500, 113, 0, 40, 0, 200, 0.7, 0.8, 18000, TraincraftUtil.getBytesFromColors(new String[]{"Black", "Yellow", "Skin16", "Green"}), 14, -2.8),
-	DH643("DH643", DieselDH643.class, ItemIDs.minecartDH643.item, "diesel", 4300, 124, 0, 60, 0, 200, 0.7, 0.87, 16000, null, 12, -4.0),
+	DH643("DH643", DieselDH643.class, ItemIDs.minecartDH643.item, "diesel", 4300, 124, 0, 60, 0, 200, 0.7, 0.87, 16000, TraincraftUtil.getBytesFromColors(new String[]{"Brown"}), 12, -4.0),
 	C855a("C855a", DieselC855a.class, ItemIDs.minecartC855a.item, "diesel", 5500, 106, 0, 40, 0, 200, 0.8, 0.85, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Cyan", "Skin16"}), 10, -4.25),
 	C855b("C855b", DieselC855b.class, ItemIDs.minecartC855b.item, "diesel", 5500, 106, 0, 40, 0, 200, 0.8, 0.85, 15000, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Cyan", "Skin16"}), 10, -4.25),
 
@@ -587,6 +587,8 @@ public enum EnumTrains implements ITrainRecord
 	FourCorTrailerSecond("FourCorTrailerSecond", PassengerFourCorTrailerSecond.class, ItemIDs.minecartFourCorTrailerSecond.item, "passenger", 0, 0, 1.6, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Red", "Green", "Purple", "LightGrey", "Grey"}), 11, 0, (new String[] {"Not BAP, but gets to be included"})),
 	FourBuf("FourBuf", PassengerFourBuf.class, ItemIDs.minecartFourBuf.item, "passenger", 0, 0, 1.7, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Red", "Green", "Purple", "LightGrey", "Grey"}), 11, 0, (new String[] {"Not BAP, but gets to be included"})),
 	FourCorTail("FourCorTail", PassengerFourCorTail.class, ItemIDs.minecartFourCorTail.item, "passenger", 0, 0, 1.8, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Red", "Green", "Brown", "Blue", "Purple", "Cyan", "LightGrey", "Grey"}), 11, 0, (new String[] {"Not BAP, but gets to be included"})),
+	tenderNS3700("Tender NS 3700", EntityTenderNS3700.class, ItemIDs.minecartTenderNS3700.item,"tender",0,0,4.3,0,0,0,0,0,16000,null,18,0, (new String[] {"Not BAP, but gets to be included"})),
+	locoSteamNS3700Class("Loco Steam NS 3700 Class", EntityLocoSteamNS3700Class.class, ItemIDs.minecartLocoNS3700Class.item,"steam", 1286, 110, 0, 80, 100, 200, 0.35, 0.975, 4000, null, 10, -2.6, (new String[] {"Not BAP, but gets to be included"})),
 
 	KawasakiLRV("KawasakiLRV", ElectricKawasakiLRV.class,  ItemIDs.minecartKawasakiLRV.item, "electric", 200, 80, 0, 10, 0, 170, 0.7, 0.9, 0, null, 10, -3, (new String[] {"Not BAP, but gets to be included"})),
 	CQ310PO("CQ310PO", ElectricCQ310PO.class,  ItemIDs.minecartCQ310PO.item, "electric", 350, 100, 0, 10, 0, 170, 0.7, 0.9, 0, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Black", "Skin16"}), 10, -3, (new String[] {"Not BAP, but gets to be included"})),
