@@ -539,7 +539,8 @@ public class RecipeHandler {
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.freightCarTruck.item, 2), "FSF", "W W", "   ", 'S', steelItem, 'F', new ItemStack(ItemIDs.steelframe.item), 'W', new ItemStack(ItemIDs.bogie.item)); // 4 wheel lightweight truck
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.cabooseTruck.item, 2), "   ", "FSF", "WSW", 'S', steelItem, 'F', new ItemStack(ItemIDs.steelframe.item), 'W', new ItemStack(ItemIDs.bogie.item)); // 4 wheel lightweight truck
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.cabooseTruck.item, 2), "FSF", "WSW", "   ", 'S', steelItem, 'F', new ItemStack(ItemIDs.steelframe.item), 'W', new ItemStack(ItemIDs.bogie.item)); // 4 wheel lightweight truck
-
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.archbarTruck.item, 2), "   ", " S ", "WSW", 'S', steelItem, 'W', new ItemStack(ItemIDs.bogie.item)); // archbar truck
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.archbarTruck.item, 2), " S ", "WSW", "   ", 'S', steelItem, 'W', new ItemStack(ItemIDs.bogie.item)); // archbar truck
 		}
 		/* locomotive crafting parts NEW */
 		for (ItemStack steelItem: steel) {
