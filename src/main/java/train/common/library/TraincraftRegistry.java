@@ -14,6 +14,7 @@ import train.common.library.register.ITrainRecord;
 import train.client.render.register.ITrainRenderRecord;
 import train.common.library.register.TrainRecord;
 
+import javax.annotation.Nullable;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -150,7 +151,7 @@ public class TraincraftRegistry
         return null;
     }
 
-    public ITrainRenderRecord getTrainRenderRecord(Class<?> entityClass)
+    public ITrainRenderRecord getTrainRenderRecord(Class<?> entityClass, @Nullable AbstractTrains trainInstance)
     {
         for (RenderEnum render : train.client.render.RenderEnum.values())
         {
@@ -163,6 +164,15 @@ public class TraincraftRegistry
         if (trainRenderRecords.containsKey(entityClass))
         {
             return trainRenderRecords.get(entityClass);
+        }
+
+        if (trainInstance != null)
+        {
+            trainInstance.onRenderRecordInsert();
+            if (trainRenderRecords.containsKey(entityClass))
+            {
+                return trainRenderRecords.get(entityClass);
+            }
         }
 
         Traincraft.tcLog.log(Level.ERROR, "ERROR RENDER ENUM IS MISSING FOR " + entityClass.getName());

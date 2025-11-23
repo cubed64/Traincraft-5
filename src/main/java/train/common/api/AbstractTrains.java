@@ -2,6 +2,8 @@ package train.common.api;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.registry.IEntityAdditionalSpawnData;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import io.netty.buffer.ByteBuf;
 import mods.railcraft.api.carts.IMinecart;
 import mods.railcraft.api.carts.IRoutableCart;
@@ -281,7 +283,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	{
 		if (worldObj.isRemote)
 		{
-			renderSpec = Traincraft.traincraftRegistry.getTrainRenderRecord(this.getClass());
+			renderSpec = Traincraft.traincraftRegistry.getTrainRenderRecord(this.getClass(), this);
 			subTrainRenderRecordSpec = renderSpec.getSubTrainRenderRecord(((short) this.getColor()));
 		}
 	}
@@ -1071,5 +1073,14 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 			GetRenderSpec();
 		}
 		return subTrainRenderRecordSpec;
+	}
+
+	/**
+	 * Code to insert the render record
+	 */
+	@SideOnly(Side.CLIENT)
+	public void onRenderRecordInsert()
+	{
+
 	}
 }
