@@ -19,6 +19,7 @@ import train.common.core.managers.TierRecipeManager;
 import train.common.inventory.TrainCraftingManager;
 import train.common.items.ItemAbstractRollingStock;
 import train.common.items.ItemRecipeBook;
+import train.common.items.TCItems;
 import train.common.library.BlockIDs;
 import train.common.library.Info;
 import train.common.library.ItemIDs;
@@ -198,10 +199,14 @@ public class GuiRecipeBook extends GuiScreen {
 				add(new StackToDraw(new ItemStack(Items.ender_pearl), 170, 16));
 			}
 		});
-		addPage("Colors:\n\nSome rolling stock has several textures and can be painted with dyes.\nThe rolling stock that can be painted will show the possible colors in the chat once placed in the world.\nTo paint, simply right click with the correct dye.\n\nLantern color is randomly picked, but you can set the hex color manually with a wrench", "", "right", new ArrayList<StackToDraw>() {
+		addPage("Paint Schemes:\n\nRolling stock has multiple textures and can be painted with the Paintbrush." +
+				"\nSome rolling stock that can be painted will have locked schemes that you need to be in a lockout group for." +
+				"\nTo paint, simply right click with the Train paintbrush." +
+				"\n\nLantern color is randomly picked, but you can set the hex color manually with a wrench", "", "right", new ArrayList<StackToDraw>()
+		{
 			{
-				add(new StackToDraw(new ItemStack(Items.dye, 1, 1), 20, 16));
-				add(new StackToDraw(new ItemStack(Items.dye, 1, 11), 170, 16));
+				add(new StackToDraw(new ItemStack(ItemIDs.paintbrushThing.item, 1, 1), 20, 16));
+				add(new StackToDraw(new ItemStack(ItemIDs.paintbrushThing.item, 1, 11), 170, 16));
 			}
 		});
 		addPage("Stock car:\n\nThe stock car is the only rolling stock that can be ridden by any animals and mobs.\nTo fill the stock car, either collide the animal with the car or use the animal/mob boarding tracks (Railcraft required).\nTo empty the car, use the disembark track (Railcraft required).\n", "", "left", new ArrayList<StackToDraw>() {
