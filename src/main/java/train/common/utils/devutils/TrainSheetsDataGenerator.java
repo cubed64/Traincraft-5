@@ -2,7 +2,9 @@ package train.common.utils.devutils;
 
 import cpw.mods.fml.common.Loader;
 import net.minecraft.item.Item;
+import net.minecraft.world.World;
 import train.common.Traincraft;
+import train.common.api.AbstractTrains;
 import train.common.library.register.ITrainRecord;
 
 import java.io.File;
@@ -44,23 +46,32 @@ public class TrainSheetsDataGenerator
 
 
 
-        for (Map.Entry<Item, ITrainRecord> entry : list) {
+        try
+        {
+            for (Map.Entry<Item, ITrainRecord> entry : list)
+            {
 
-            Item item = entry.getKey();
-            ITrainRecord record = entry.getValue();
+                Item item = entry.getKey();
+                ITrainRecord record = entry.getValue();
+                String name = item.getUnlocalizedName();
+                String internalName = record.getInternalName();
+                String className = record.getEntityClass().getName();
+                World world = null;
+                String texturePrefix = Traincraft.traincraftRegistry
+                        .getTrainRenderRecord(record.getEntityClass(), (AbstractTrains) record.getEntityClass().getConstructor(World.class).newInstance(world))
+                        .getTexturePrefix();
 
-            String name = item.getUnlocalizedName();
-            String internalName = record.getInternalName();
-            String className = record.getEntityClass().getName();
-            String texturePrefix = Traincraft.traincraftRegistry
-                    .getTrainRenderRecord(record.getEntityClass())
-                    .getTexturePrefix();
-
-            tsv.append(name).append("\t")
-                    .append(internalName).append("\t")
-                    .append(className).append("\t")
-                    .append(texturePrefix).append("\n");
+                tsv.append(name).append("\t")
+                        .append(internalName).append("\t")
+                        .append(className).append("\t")
+                        .append(texturePrefix).append("\n");
+            }
         }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
 
         try {
             File configDir = Loader.instance().getConfigDir();
