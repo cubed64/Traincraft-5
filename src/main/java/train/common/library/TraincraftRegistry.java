@@ -1,20 +1,15 @@
 package train.common.library;
 
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.registry.EntityRegistry;
-import cpw.mods.fml.relauncher.Side;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
 import org.apache.logging.log4j.Level;
 import train.client.render.RenderEnum;
 import train.common.Traincraft;
 import train.common.api.AbstractTrains;
-import train.common.core.managers.TierRecipeManager;
 import train.common.library.register.ITrainRecord;
 import train.client.render.register.ITrainRenderRecord;
-import train.common.library.register.TrainRecord;
 
-import javax.annotation.Nullable;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -151,7 +146,7 @@ public class TraincraftRegistry
         return null;
     }
 
-    public ITrainRenderRecord getTrainRenderRecord(Class<?> entityClass, @Nullable AbstractTrains trainInstance)
+    public ITrainRenderRecord getTrainRenderRecord(Class<?> entityClass, AbstractTrains trainInstance)
     {
         for (RenderEnum render : train.client.render.RenderEnum.values())
         {
@@ -168,7 +163,7 @@ public class TraincraftRegistry
 
         if (trainInstance != null)
         {
-            trainInstance.onRenderRecordInsert();
+            trainInstance.onRenderInsertRecord();
             if (trainRenderRecords.containsKey(entityClass))
             {
                 return trainRenderRecords.get(entityClass);

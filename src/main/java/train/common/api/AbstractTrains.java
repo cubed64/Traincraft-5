@@ -1076,10 +1076,10 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	}
 
 	/**
-	 * Code to insert the render record
+	 * Code to insert the render record when its needed
 	 */
 	@SideOnly(Side.CLIENT)
-	public void onRenderRecordInsert()
+	public void onRenderInsertRecord()
 	{
 
 	}
