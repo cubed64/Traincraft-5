@@ -92,7 +92,7 @@ item.tc:minecartCF7hh	CF7hh	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diese
 item.tc:minecartCF7round	CF7round	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselCF7round	CF7_Round_
 item.tc:minecartCF7round3	CF7round3	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselCF7round3	CF7_Round_F_
 item.tc:minecartDD55	DD55	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselDD55	DD55_
-item.tc:minecartDH643	DH643	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselDH643	DH643_LRR_1
+item.tc:minecartDH643	DH643	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselDH643	DH643_
 item.tc:minecartDR441500BPhase2	DR441500BPhase2	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselDR441500BPhase2	DR441500BPhase2_
 item.tc:minecartDR441500BShark	DR441500BShark	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselDR441500BShark	DR441500BShark_
 item.tc:minecartDR441500Phase2	DR441500Phase2	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselDR441500Phase2	DR441500Phase2_
@@ -392,6 +392,7 @@ item.tc:minecartLocoLSSP7	Loco Steam LSSP7	train.common.entity.rollingStock.stea
 item.tc:minecartLocoMILWClassA	Loco Steam MILW Class A	train.common.entity.rollingStock.steam.EntityLocoSteamMILWClassA	locoMILW_ClassA
 item.tc:minecartLocoA4Mallard	Loco Steam A4 Mallard	train.common.entity.rollingStock.steam.EntityLocoSteamMallardA4	locoA4_UK_
 item.tc:minecartLocomogulBlue	Loco Steam Mogul	train.common.entity.rollingStock.steam.EntityLocoSteamMogulBlue	locoMogul
+item.tc:minecartLocoNS3700Class	Loco Steam NS 3700 Class	com.jcirmodelsquad.tcjcir.vehicles.locomotives.steam.EntityLocoSteamNS3700Class	ns_3700_class
 item.tc:minecartLocoSteamPannier	Loco Steam Pannier	train.common.entity.rollingStock.steam.EntityLocoSteamPannier	locoPannier
 item.tc:minecartLocoSteamShay	Loco Steam Shay	train.common.entity.rollingStock.steam.EntityLocoSteamShay	locoShay
 item.tc:minecartLoco3	Loco Steam Small	train.common.entity.rollingStock.steam.EntityLocoSteamSmall	loco3_
@@ -452,6 +453,7 @@ item.tc:minecartFowler4FTender	Fowler 4F Tender	train.common.entity.rollingStock
 item.tc:minecartGS4_Tender	Tender GS4	train.common.entity.rollingStock.tender.EntityTenderGS4	GS4_tender_
 item.tc:minecartTenderHeavy	Tender Heavy	train.common.entity.rollingStock.tender.EntityTenderHeavy	heavytender_
 item.tc:minecartMILWTender	Tender MILW	train.common.entity.rollingStock.tender.EntityTenderMILW	milw_tender
+item.tc:minecartTenderNS3700	Tender NS 3700	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tender.EntityTenderNS3700	ns_3700_tender
 item.tc:minecartTender	Tender Small Black	train.common.entity.rollingStock.tender.EntityTenderSmall	tender2_
 item.tc:minecartTenderC41	Tender C41	train.common.entity.rollingStock.tender.EntityTender_C41	C41Tender_
 item.tc:minecartTenderSouthern1102	Tender Southern1102	train.common.entity.rollingStock.tender.EntityTender_Southern1102	Southern1102Tender

@@ -9,8 +9,10 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import net.minecraft.entity.Entity;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
+import train.client.renderhelper.ModelRenderHelper;
 
 public class ModelNS3700Class extends ModelConverter //Same as Filename
 {
@@ -91,8 +93,8 @@ public class ModelNS3700Class extends ModelConverter //Same as Filename
 		bodyModel[57] = new ModelRendererTurbo(this, 241, 17, textureX, textureY); // Box 73
 		bodyModel[58] = new ModelRendererTurbo(this, 1, 9, textureX, textureY); // Box 74
 		bodyModel[59] = new ModelRendererTurbo(this, 137, 9, textureX, textureY); // Box 75
-		bodyModel[60] = new ModelRendererTurbo(this, 505, 25, textureX, textureY); // Box 76 lamp
-		bodyModel[61] = new ModelRendererTurbo(this, 1, 33, textureX, textureY); // Box 77 lamp
+		bodyModel[60] = new ModelRendererTurbo(this, 505, 25, textureX, textureY, "lamp"); // Box 76 lamp
+		bodyModel[61] = new ModelRendererTurbo(this, 1, 33, textureX, textureY, "lamp"); // Box 77 lamp
 		bodyModel[62] = new ModelRendererTurbo(this, 169, 33, textureX, textureY); // Box 78
 		bodyModel[63] = new ModelRendererTurbo(this, 145, 9, textureX, textureY); // Box 79
 		bodyModel[64] = new ModelRendererTurbo(this, 225, 9, textureX, textureY); // Box 80
@@ -131,7 +133,7 @@ public class ModelNS3700Class extends ModelConverter //Same as Filename
 		bodyModel[97] = new ModelRendererTurbo(this, 129, 57, textureX, textureY); // Box 119
 		bodyModel[98] = new ModelRendererTurbo(this, 217, 57, textureX, textureY); // Box 120
 		bodyModel[99] = new ModelRendererTurbo(this, 505, 33, textureX, textureY); // Box 121
-		bodyModel[100] = new ModelRendererTurbo(this, 49, 41, textureX, textureY); // Box 122 lamp
+		bodyModel[100] = new ModelRendererTurbo(this, 49, 41, textureX, textureY, "lamp"); // Box 122 lamp
 		bodyModel[101] = new ModelRendererTurbo(this, 257, 9, textureX, textureY); // Box 123
 		bodyModel[102] = new ModelRendererTurbo(this, 1, 57, textureX, textureY); // Box 124
 		bodyModel[103] = new ModelRendererTurbo(this, 121, 41, textureX, textureY); // Box 125
@@ -789,4 +791,9 @@ public class ModelNS3700Class extends ModelConverter //Same as Filename
 		bodyModel[183].setRotationPoint(14.5F, -18.5F, -0.5F);
 	}
 	//public float[] getTrans() { return new float[]{ -1.3f, 0.18f, 0.0f}; }
+	@Override
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+
+		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
+	}
 }

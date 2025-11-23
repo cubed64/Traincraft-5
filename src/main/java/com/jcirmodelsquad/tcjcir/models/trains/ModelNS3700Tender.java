@@ -9,6 +9,9 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.Entity;
+import org.lwjgl.opengl.GL11;
 import tmt.ModelConverter;
 import tmt.ModelRendererTurbo;
 
@@ -62,7 +65,7 @@ public class ModelNS3700Tender extends ModelConverter //Same as Filename
 		bodyModel[28] = new ModelRendererTurbo(this, 1, 9, textureX, textureY); // Box 193
 		bodyModel[29] = new ModelRendererTurbo(this, 9, 9, textureX, textureY); // Box 194
 		bodyModel[30] = new ModelRendererTurbo(this, 313, 17, textureX, textureY); // Box 195
-		bodyModel[31] = new ModelRendererTurbo(this, 17, 9, textureX, textureY); // Box 196 lamp
+		bodyModel[31] = new ModelRendererTurbo(this, 17, 9, textureX, textureY, "lamp"); // Box 196 lamp
 		bodyModel[32] = new ModelRendererTurbo(this, 25, 9, textureX, textureY); // Box 197
 		bodyModel[33] = new ModelRendererTurbo(this, 41, 9, textureX, textureY); // Box 198
 		bodyModel[34] = new ModelRendererTurbo(this, 137, 1, textureX, textureY); // Box 199
@@ -314,4 +317,20 @@ public class ModelNS3700Tender extends ModelConverter //Same as Filename
 		bodyModel[68].setRotationPoint(14F, 5F, 9.5F);
 	}
 	//public float[] getTrans() { return new float[]{ 0.0f, 0.18f, 0.0f}; }
+	@Override
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+		for(ModelRendererTurbo m :bodyModel) {
+			if(m.boxName.equals("lamp")){
+				Minecraft.getMinecraft().entityRenderer.disableLightmap(1D);
+				m.render(f5);
+				Minecraft.getMinecraft().entityRenderer.enableLightmap(1D);
+			}else if(m.boxName.equals("cull")){
+				GL11.glDisable(GL11.GL_CULL_FACE);
+				m.render(f5);
+				GL11.glEnable(GL11.GL_CULL_FACE);
+			}else{
+				m.render(f5);
+			}
+		}
+	}
 }
