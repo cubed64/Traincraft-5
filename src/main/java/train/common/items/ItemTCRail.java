@@ -18,6 +18,7 @@ import train.common.enums.TCTrackDirection;
 import train.common.library.*;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
+import static train.common.core.handlers.ConfigHandler.ENGINEERGAMING;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -388,10 +389,12 @@ public class ItemTCRail extends ItemPart {
 					--itemstack.stackSize;
 				}
 
-				world.playSoundEffect(x ,y ,z ,
-						"minecraft:random.anvil_use",
-						0.25F,
-						0.8F);
+				if (ENGINEERGAMING) {
+					world.playSoundEffect(x, y, z,
+							"tc:track",
+							0.25F,//volume
+							1.0F);//pitch & speed
+				}
 			}
 
 			return result;

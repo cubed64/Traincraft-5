@@ -32,6 +32,8 @@
   "mg_run": {"category": "master", "sounds": [{"name": "mg_run","stream": false}]},
   "mg_idle": {"category": "master", "sounds": [{"name": "mg_idle","stream": false}]},
 
+  "track": {"category": "master", "sounds": [{"name": "track","stream": true}]},
+
   "buell_b3_1": {"category": "master", "sounds": [{"name": "buell_b3_1", "stream":  true}]},
   "buell_b5_1": {"category": "master", "sounds": [{"name": "buell_b5_1", "stream":  true}]},
   "buell_b5_2": {"category": "master", "sounds": [{"name": "buell_b5_2", "stream":  true}]},
