@@ -4,6 +4,8 @@ import train.common.Traincraft;
 import train.common.core.util.TraincraftUtil;
 import train.common.entity.rollingStock.electric.*;
 import train.common.entity.rollingStock.passenger.*;
+import train.common.entity.rollingStock.workcart.EntityCaboose;
+import train.common.entity.rollingStock.workcart.EntityCaboose3;
 import train.common.library.register.TrainRecord;
 
 public class RegisterTrains
@@ -236,6 +238,30 @@ public class RegisterTrains
                         (ItemIDs.minecartPassengerMILWTail.item,
                                 new TrainRecord("Passenger MILW Tail", EntityPassengerMILWTail.class, ItemIDs.minecartPassengerMILWTail.item, EnumTrainType.Passenger, 1,
                                         new String[]{"Black"},
+                                        18),
+                                Traincraft.instance // don't touch this line
+                        );
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartPassengerBamboo.item,
+                                new TrainRecord("Bamboo Flatcar Passenger", EntityPassengerBamboo.class, ItemIDs.minecartPassengerBamboo.item, EnumTrainType.Passenger, 0.1,
+                                        new String[] {"Red", "Blue", "Black", "Yellow", "Magenta", "Cyan", "Pink", "LightGrey", "Green", "White", "LightBlue", "Lime", "Brown", "Purple", "Orange", "Grey"},
+                                        18),
+                                Traincraft.instance // don't touch this line
+                        );
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartCaboose.item,
+                                new TrainRecord("Caboose Red", EntityCaboose.class, ItemIDs.minecartCaboose.item, EnumTrainType.Caboose, 0.5,
+                                        new String[] {"Red"},
+                                        18),
+                                Traincraft.instance // don't touch this line
+                        );
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartCaboose3.item,
+                                new TrainRecord("Caboose Black", EntityCaboose3.class, ItemIDs.minecartCaboose3.item, EnumTrainType.Caboose, 0.5,
+                                        new String[] {"Black"},
                                         18),
                                 Traincraft.instance // don't touch this line
                         );
