@@ -530,7 +530,8 @@ public class RecipeHandler {
 				TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.thirdRailShoe.item, 4), "WWW", " S ", "   ", 'S', steelItem, 'W', plankItem); //third rail shoe
 			}
 			for (ItemStack copperItem : copper){
-			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.interurbanTruck.item,1), "MCM", "SSS", "W W", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', copperItem); //interurban truck
+				TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.interurbanTruck.item,1), "MCM", "SSS", "W W", 'W', new ItemStack(ItemIDs.bogie.item), 'S', steelItem, 'M', new ItemStack(ItemIDs.electmotor.item), 'C', copperItem); //interurban truck
+				TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.pantograph.item,2), " C ", "S S", " S ", 'S', steelItem, 'C', copperItem); //pantograph
 			}
 		}
 		/* freight car and caboose parts */
@@ -541,6 +542,14 @@ public class RecipeHandler {
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.cabooseTruck.item, 2), "FSF", "WSW", "   ", 'S', steelItem, 'F', new ItemStack(ItemIDs.steelframe.item), 'W', new ItemStack(ItemIDs.bogie.item)); // 4 wheel lightweight truck
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.archbarTruck.item, 2), "   ", " S ", "WSW", 'S', steelItem, 'W', new ItemStack(ItemIDs.bogie.item)); // archbar truck
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.archbarTruck.item, 2), " S ", "WSW", "   ", 'S', steelItem, 'W', new ItemStack(ItemIDs.bogie.item)); // archbar truck
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.boxcarDoor.item, 2), " SS", " SS", " SS", 'S', steelItem); // boxcar door
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.boxcarDoor.item, 2), "SS ", "SS ", "SS ", 'S', steelItem); // boxcar door
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.hopperBay.item, 2), "   ", "SSS", " S ", 'S', steelItem); // hopper bay
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.hopperBay.item, 2), "SSS", " S ", "   ", 'S', steelItem); // hopper bay
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.tankcarDome.item, 2), " S ", "S S", "   ", 'S', steelItem); // tankcar dome
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.tankcarDome.item, 2), "   ", " S ", "S S", 'S', steelItem); // tankcar dome
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.freightCarRibbing.item, 2), "   ", "S S", "S S", 'S', steelItem); // freight car ribbing
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.freightCarRibbing.item, 2), "S S", "S S", "   ", 'S', steelItem); // freight car ribbing
 		}
 		/* locomotive crafting parts NEW */
 		for (ItemStack steelItem: steel) {
