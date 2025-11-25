@@ -168,14 +168,14 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		TCItems.init();
 		EntityHandler.init();
 
-		if (FMLCommonHandler.instance().getEffectiveSide().isClient())
-		{
-			List<ITrainRenderRecord> renderRecords = new RenderRegisterList().SetupRollingStockModels();
-			for (ITrainRenderRecord r : renderRecords)
-			{
-				traincraftRegistry.RegisterRollingStockModel(r);
-			}
-		}
+		///if (FMLCommonHandler.instance().getEffectiveSide().isClient())
+		///{
+		///	List<ITrainRenderRecord> renderRecords = new RenderRegisterList().SetupRollingStockModels();
+		///	for (ITrainRenderRecord r : renderRecords)
+		///	{
+		///		traincraftRegistry.RegisterRollingStockModel(r);
+		///	}
+		///}
 
 		proxy.registerTileEntities();
 		proxy.registerSounds();

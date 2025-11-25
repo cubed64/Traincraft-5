@@ -42,7 +42,15 @@ public class TraincraftRegistry
     {
         trainRecordsByItem.put(item, trainRecord);
         trainRecords.add(trainRecord);
-        EntityRegistry.registerModEntity(trainRecord.getEntityClass(), trainRecord.getInternalName(), trainID++, mod, 512, 1, true);
+
+        trainID++;
+        // DO NOT REMOVE THIS IF YOU DO IT WILL CONFUSE ENTITY'S
+        if(Traincraft.traincraftRegistry.trainID== 112 || Traincraft.traincraftRegistry.trainID==51 || Traincraft.traincraftRegistry.trainID== 116)
+        {
+            trainID++;
+        }
+
+        EntityRegistry.registerModEntity(trainRecord.getEntityClass(), trainRecord.getInternalName(), trainID, mod, 512, 1, true);
     }
 
     /**

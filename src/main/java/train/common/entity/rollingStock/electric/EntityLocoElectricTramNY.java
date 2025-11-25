@@ -2,8 +2,14 @@ package train.common.entity.rollingStock.electric;
 
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
+import train.client.render.models.ModelPassenger7;
+import train.client.render.models.ModelTramNY;
+import train.client.render.register.TrainRenderRecord;
+import train.common.Traincraft;
 import train.common.api.ElectricTrain;
+import train.common.entity.rollingStock.passenger.EntityPassenger7;
 import train.common.library.EnumSounds;
+import train.common.library.Info;
 import train.common.library.sounds.SoundRecord;
 
 public class EntityLocoElectricTramNY extends ElectricTrain {
@@ -62,6 +68,15 @@ public class EntityLocoElectricTramNY extends ElectricTrain {
 		return 0.7F;
 	}
 
-	
+	@Override
+	public void onRenderInsertRecord()
+	{
+		Traincraft.traincraftRegistry.RegisterRollingStockModel(new TrainRenderRecord(Info.modID,
+				EntityLocoElectricTramNY.class, new ModelTramNY(),
+				"locoTramNY_",
+				new float[] { -1.5F, -0.44F, 0.0F },
+				null,
+				null));
+	}
 	
 }

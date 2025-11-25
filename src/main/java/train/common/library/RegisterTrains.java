@@ -1,6 +1,7 @@
 package train.common.library;
 
 import train.common.Traincraft;
+import train.common.core.util.TraincraftUtil;
 import train.common.entity.rollingStock.electric.*;
 import train.common.entity.rollingStock.passenger.*;
 import train.common.library.register.TrainRecord;
@@ -109,6 +110,135 @@ public class RegisterTrains
                                 Traincraft.instance // don't touch this line
                         );
         //passengerAdler("Passenger Adler", EntityPassengerAdler.class, ItemIDs.minecartPassengerAdler.item, "passenger", 0, 0, 0.5, 0, 0, 0, 0, 0, 0, null, 18, 0),
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartPassengerDBOriental.item,
+                                new TrainRecord("Passenger DB oriental", EntityPassengerDBOriental.class, ItemIDs.minecartPassengerDBOriental.item, EnumTrainType.Passenger, 1,
+                                        new String[] {"Yellow", "Blue", "White"},
+                                        18),
+                                Traincraft.instance // don't touch this line
+                        );
+        //passengerDBOriental("Passenger DB oriental", EntityPassengerDBOriental.class, ItemIDs.minecartPassengerDBOriental.item, "passenger", 0, 0, 1, 0, 0, 0, 0, 0, 0, TraincraftUtil.getBytesFromColors(new String[]{"Yellow", "Blue", "White"}), 18, 0),
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartICE1_1stClass.item,
+                                new TrainRecord("Passenger ICE 1st Class", EntityPassengerICE_1class.class, ItemIDs.minecartICE1_1stClass.item, EnumTrainType.Passenger, 1.5,
+                                        new String[]{"White", "Red"},
+                                        10),
+                                Traincraft.instance // don't touch this line
+                        );
+
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartICE1_2ndClass.item,
+                                new TrainRecord("Passenger ICE 2nd Class", EntityPassengerICE_2class.class, ItemIDs.minecartICE1_2ndClass.item, EnumTrainType.Passenger, 1.5,
+                                        new String[]{"White", "Red"},
+                                        10),
+                                Traincraft.instance // don't touch this line
+                        );
+
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartICE1_Restaurant.item,
+                                new TrainRecord("ICE Restaurant", EntityPassengerICE_Restaurant.class, ItemIDs.minecartICE1_Restaurant.item, EnumTrainType.Passenger, 1.5,
+                                        new String[]{"White", "Red"},
+                                        10),
+                                Traincraft.instance // don't touch this line
+                        );
+
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartGS4_Passenger.item,
+                                new TrainRecord("Passenger GS4", EntityPassengerGS4.class, ItemIDs.minecartGS4_Passenger.item, EnumTrainType.Passenger, 1,
+                                        new String[]{"Orange", "White", "Yellow", "Brown", "Green", "Lime", "Red", "Grey", "Green", "LightGrey", "Blue", "Black", "LightBlue"},
+                                        11),
+                                Traincraft.instance // don't touch this line
+                        );
+
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartGS4_Observatory.item,
+                                new TrainRecord("Passenger GS4 Observatory", EntityPassengerGS4_Observatory.class, ItemIDs.minecartGS4_Observatory.item, EnumTrainType.Passenger, 1,
+                                        new String[]{"Orange", "White", "Yellow", "Brown", "Lime", "Red", "Grey", "Green", "LightGrey", "Black", "LightBlue"},
+                                        11),
+                                Traincraft.instance // don't touch this line
+                        );
+
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartGS4_Tail.item,
+                                new TrainRecord("Passenger GS4 Tail", EntityPassengerGS4_Tail.class, ItemIDs.minecartGS4_Tail.item, EnumTrainType.Passenger, 1,
+                                        new String[]{"Orange", "White", "Yellow", "Brown", "Lime", "Red", "Grey", "Green", "LightGrey", "Black", "LightBlue"},
+                                        11),
+                                Traincraft.instance // don't touch this line
+                        );
+
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartDenverRioGrandePassenger.item,
+                                new TrainRecord("Passenger Denver Rio Grande", EntityPassengerDenverRioGrande.class, ItemIDs.minecartDenverRioGrandePassenger.item, EnumTrainType.Passenger, 1,
+                                        new String[]{"Yellow", "Red", "Green"},
+                                        10),
+                                Traincraft.instance // don't touch this line
+                        );
+
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartDenverRioGrandeCombo.item,
+                                new TrainRecord("Passenger Denver Rio Grande Combo", EntityPassengerDenverRioGrandeCombo.class, ItemIDs.minecartDenverRioGrandeCombo.item, EnumTrainType.Passenger, 1,
+                                        new String[]{"Yellow", "Red", "Green"},
+                                        10),
+                                Traincraft.instance // don't touch this line
+                        );
+
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartPassengerRheingold.item,
+                                new TrainRecord("Passenger Rheingold", EntityPassengerRheingold.class, ItemIDs.minecartPassengerRheingold.item, EnumTrainType.Passenger, 1,
+                                        new String[]{"Blue", "Red", "Green", "LightBlue", "Magenta", "Lime", "Cyan"},
+                                        18),
+                                Traincraft.instance // don't touch this line
+                        );
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartPassengerRheingoldDining1.item,
+                                new TrainRecord("Rheingold Dining", EntityPassengerRheingoldDining1.class, ItemIDs.minecartPassengerRheingoldDining1.item, EnumTrainType.Passenger_Combine, 1.5,
+                                        new String[]{"Blue", "Red", "Green", "LightBlue", "Magenta", "Lime"},
+                                        18),
+                                Traincraft.instance // don't touch this line
+                        );
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartPassengerRheingoldDining2.item,
+                                new TrainRecord("Rheingold Dining Alternate", EntityPassengerRheingoldDining2.class, ItemIDs.minecartPassengerRheingoldDining2.item, EnumTrainType.Passenger_Combine, 1.5,
+                                        new String[]{"Blue", "Red", "Green", "LightBlue", "Magenta", "Lime"},
+                                        18),
+                                Traincraft.instance // don't touch this line
+                        );
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartPassengerRheingoldPanorama.item,
+                                new TrainRecord("Rheingold Panorama", EntityPassengerRheingoldPanorama.class, ItemIDs.minecartPassengerRheingoldPanorama.item, EnumTrainType.Passenger, 1,
+                                        new String[]{"Blue", "Red"},
+                                        18),
+                                Traincraft.instance // don't touch this line
+                        );
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartPassengerMILW.item,
+                                new TrainRecord("Passenger MILW", EntityPassengerMILW.class, ItemIDs.minecartPassengerMILW.item, EnumTrainType.Passenger, 1,
+                                        new String[]{"Black"},
+                                        18),
+                                Traincraft.instance // don't touch this line
+                        );
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartPassengerMILWTail.item,
+                                new TrainRecord("Passenger MILW Tail", EntityPassengerMILWTail.class, ItemIDs.minecartPassengerMILWTail.item, EnumTrainType.Passenger, 1,
+                                        new String[]{"Black"},
+                                        18),
+                                Traincraft.instance // don't touch this line
+                        );
     }
 
     private void RegisterBAPSteam()

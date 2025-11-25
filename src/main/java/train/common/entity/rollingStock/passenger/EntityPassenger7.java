@@ -4,8 +4,13 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import train.client.render.models.ModelPassenger5;
+import train.client.render.models.ModelPassenger7;
+import train.client.render.register.TrainRenderRecord;
+import train.common.Traincraft;
 import train.common.api.EntityRollingStock;
 import train.common.api.IPassenger;
+import train.common.library.Info;
 
 public class EntityPassenger7 extends EntityRollingStock implements IPassenger {
 
@@ -59,5 +64,16 @@ public class EntityPassenger7 extends EntityRollingStock implements IPassenger {
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.4F;
+	}
+
+	@Override
+	public void onRenderInsertRecord()
+	{
+		Traincraft.traincraftRegistry.RegisterRollingStockModel(new TrainRenderRecord(Info.modID,
+				EntityPassenger7.class, new ModelPassenger7(),
+				"passenger7_",
+				new float[] { 0.0F, -0.44F, 0.0F },
+				new float[] { 0F, 90F, 0F },
+				null));
 	}
 }
