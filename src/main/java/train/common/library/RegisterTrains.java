@@ -2,10 +2,14 @@ package train.common.library;
 
 import train.common.Traincraft;
 import train.common.core.util.TraincraftUtil;
+import train.common.entity.rollingStock.*;
 import train.common.entity.rollingStock.electric.*;
+import train.common.entity.rollingStock.freight.EntityFlatCar_DB;
+import train.common.entity.rollingStock.freight.EntityFlatCart;
+import train.common.entity.rollingStock.freight.EntityFlatCartSU;
+import train.common.entity.rollingStock.freight.EntityFlatCartUS;
 import train.common.entity.rollingStock.passenger.*;
-import train.common.entity.rollingStock.workcart.EntityCaboose;
-import train.common.entity.rollingStock.workcart.EntityCaboose3;
+import train.common.entity.rollingStock.workcart.*;
 import train.common.library.register.TrainRecord;
 
 public class RegisterTrains
@@ -249,6 +253,9 @@ public class RegisterTrains
                                         18),
                                 Traincraft.instance // don't touch this line
                         );
+        /**
+         * Caboose
+         */
         Traincraft.traincraftRegistry
                 .RegisterRollingStockEntity
                         (ItemIDs.minecartCaboose.item,
@@ -265,6 +272,144 @@ public class RegisterTrains
                                         18),
                                 Traincraft.instance // don't touch this line
                         );
+
+        /**
+         * Specials
+         **/
+        Traincraft.traincraftRegistry
+                .RegisterRollingStockEntity
+                        (ItemIDs.minecartGWRBrakeVan.item,
+                                new TrainRecord("GWR Toad Brake Van", EntityGWRBrakeVan.class, ItemIDs.minecartGWRBrakeVan.item, "work", 0.7,
+                                        new String[]{"Black"},
+                                        18),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartStockCar.item,
+                                        new TrainRecord("Stock Cart", EntityStockCar.class, ItemIDs.minecartStockCar.item, "stock car", 2,
+                                                new String[]{"Blue", "Red", "Yellow", "White"},
+                                                18),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartDRWGStockCar.item,
+                                        new TrainRecord("DRWG Stock Cart", EntityStockCarDRWG.class, ItemIDs.minecartDRWGStockCar.item, "stock car", 2,
+                                                new String[]{"Black"},
+                                                18),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartWork.item,
+                                        new TrainRecord("Work Cart Yellow", EntityWorkCart.class, ItemIDs.minecartWork.item, "work", 0.7,
+                                                new String[]{"Black"},
+                                                18),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartFlatCart.item,
+                                        new TrainRecord("Flat Cart", EntityFlatCart.class, ItemIDs.minecartFlatCart.item, EnumTrainType.Flatcars, 0.2,
+                                                new String[]{"Black"},
+                                                18),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartCabooseWork.item,
+                                        new TrainRecord("Work Caboose", EntityCabooseWorkCart.class, ItemIDs.minecartCabooseWork.item, "work", 0.6,
+                                                new String[]{"Black"},
+                                                18),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartCabooseLogging.item,
+                                        new TrainRecord("Caboose Logging", EntityCabooseLogging.class, ItemIDs.minecartCabooseLogging.item, "work", 0.2,
+                                                new String[]{"Red", "Cyan", "Grey"},
+                                                18),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartCabooseLoggingPRR.item,
+                                        new TrainRecord("PRR Caboose Logging", EntityCabooseLoggingPRR.class, ItemIDs.minecartCabooseLoggingPRR.item, "work", 0.2,
+                                                new String[]{"Red", "Blue", "Green", "Orange"},
+                                                18),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartMailWagon_DB.item,
+                                        new TrainRecord("Mail Wagon DB", EntityMailWagen_DB.class, ItemIDs.minecartMailWagon_DB.item, "work", 1,
+                                                new String[]{"Black"},
+                                                18),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartJukeBoxCart.item,
+                                        new TrainRecord("JukeBox Cart", EntityJukeBoxCart.class, ItemIDs.minecartJukeBoxCart.item, "special", 0.2,
+                                                new String[]{"Black"},
+                                                18),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartFlatCartSU.item,
+                                        new TrainRecord("Flat Cart SU", EntityFlatCartSU.class, ItemIDs.minecartFlatCartSU.item, EnumTrainType.Flatcars, 0.2,
+                                                new String[]{"Black"},
+                                                18),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartFlatCartUS.item,
+                                        new TrainRecord("Flat Cart US", EntityFlatCartUS.class, ItemIDs.minecartFlatCartUS.item, EnumTrainType.Flatcars, 0.4,
+                                                new String[]{"Black"},
+                                                18),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartBuilder.item,
+                                        new TrainRecord("Tracks Builder", EntityTracksBuilder.class, ItemIDs.minecartBuilder.item, "special", 0,
+                                                new String[]{"Black"},
+                                                14),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartFlatCart_DB.item,
+                                        new TrainRecord("Flat Cart DB", EntityFlatCar_DB.class, ItemIDs.minecartFlatCart_DB.item, "flat", 0.2,
+                                                new String[]{"Red", "Green"},
+                                                18),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartLocoDD35B.item,
+                                        new TrainRecord("DD35 B Unit", EntityBUnitDD35.class, ItemIDs.minecartLocoDD35B.item, "b-unit", 8,
+                                                new String[]{"Orange", "Black"},
+                                                18)
+                                    .setTankCapacity(12000),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartPropagandaUs.item,
+                                        new TrainRecord("Propaganda USA", EntityPropagandaUS.class, ItemIDs.minecartPropagandaUs.item, "decorative", 0.1,
+                                                new String[]{"Blue", "White", "Red", "Green", "Orange", "Lime"},
+                                                14),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartPropagandaUSSR.item,
+                                        new TrainRecord("Propaganda USSR", EntityPropagandaUSSR.class, ItemIDs.minecartPropagandaUSSR.item, "decorative", 0.1,
+                                                new String[]{"Blue", "White", "Red"},
+                                                14),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartPropagandaJapan.item,
+                                        new TrainRecord("Propaganda Japan", EntityPropagandaJapan.class, ItemIDs.minecartPropagandaJapan.item, "decorative", 0.1,
+                                                new String[]{"Red", "White", "Yellow"},
+                                                14),
+                                Traincraft.instance);
+                Traincraft.traincraftRegistry
+                        .RegisterRollingStockEntity
+                                (ItemIDs.minecartPropagandaBritish.item,
+                                        new TrainRecord("Propaganda Britain", EntityPropagandaBritain.class, ItemIDs.minecartPropagandaBritish.item, "decorative", 0.1,
+                                                new String[]{"Blue", "White", "Yellow"},
+                                                14),
+                                Traincraft.instance);
     }
 
     private void RegisterBAPSteam()

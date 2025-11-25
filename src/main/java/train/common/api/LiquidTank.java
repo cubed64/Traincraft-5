@@ -10,7 +10,9 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.*;
+import train.common.Traincraft;
 import train.common.adminbook.ServerLogger;
+import train.common.entity.rollingStock.EntityBUnitDD35;
 import train.common.entity.rollingStock.tanker.EntityTankLava;
 import train.common.library.ItemIDs;
 
@@ -40,10 +42,10 @@ public class LiquidTank extends EntityRollingStock implements IFluidHandler, ISi
 
 	public LiquidTank(@Nullable FluidStack liquid, int capacity, World world) {
 		super(world);
-		this.capacity = capacity;
+		this.capacity = this.trainSpec.getTankCapacity();
 		if (world != null)
 		{
-			this.theTank = new FluidTank(liquid, capacity);
+			this.theTank = new FluidTank(liquid, this.trainSpec.getTankCapacity());
 			dataWatcher.addObject(4, 0);
 			dataWatcher.addObject(22, "");
 		}

@@ -21,10 +21,11 @@ public class EntityBUnitDD35 extends LiquidTank implements IFluidHandler {
 	private int update = 8;
 	private LiquidManager.StandardTank theTank;
 
-	public EntityBUnitDD35(World world) {
-		super(world, EnumHeritageTrainsLegacy.BUnitDD35.getTankCapacity());
+	public EntityBUnitDD35(World world)
+	{
+		super(world, Traincraft.traincraftRegistry.getTrainRecord(EntityBUnitDD35.class).getTankCapacity());
 		initFreightWater();
-		this.theTank = LiquidManager.getInstance().new FilteredTank(EnumHeritageTrainsLegacy.BUnitDD35.getTankCapacity(), LiquidManager.dieselFilter());
+		this.theTank = LiquidManager.getInstance().new FilteredTank(Traincraft.traincraftRegistry.getTrainRecord(EntityBUnitDD35.class).getTankCapacity(), LiquidManager.dieselFilter());
 	}
 
 	
@@ -54,14 +55,14 @@ public class EntityBUnitDD35 extends LiquidTank implements IFluidHandler {
 
 		if (getAmount() > 0) {
 			// setColor(getColorFromString("Full"));
-			setDefaultMass(-EnumHeritageTrainsLegacy.BUnitDD35.getMass());
+			setDefaultMass(-trainSpec.getMass());
 			if ((motionX>0.01 || motionZ>0.01) && ticksExisted % 40 == 0) {
 				drain(ForgeDirection.UNKNOWN, 8,true);
 			}
 			
 		} else if (getAmount() <= 0) {
 			// setColor(getColorFromString("Empty"));
-			setDefaultMass(EnumHeritageTrainsLegacy.BUnitDD35.getMass());
+			setDefaultMass(trainSpec.getMass());
 		}
 	}
 
