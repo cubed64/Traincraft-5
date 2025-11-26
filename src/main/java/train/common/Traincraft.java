@@ -41,6 +41,7 @@ import train.common.generation.ComponentVillageTrainstation;
 import train.common.generation.WorldGenWorld;
 import train.common.items.TCItems;
 import train.common.library.BetterEnumSounds;
+import train.common.library.BlockIDs;
 import train.common.library.Info;
 import train.common.library.TraincraftRegistry;
 import train.common.recipes.*;
@@ -222,6 +223,12 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 	public void load(FMLInitializationEvent event)
 	{
 		tcLog.info("Entering Initialization.");
+
+		if (Loader.isModLoaded("ForgeMultipart"))
+		{
+			tcLog.info("ForgeMultipart detected. Registering Traincraft Blocks");
+			train.common.core.plugins.ForgeMultiPart.registerBlocks(BlockIDs.values());
+		}
 
 		//proxy.getCape();
 

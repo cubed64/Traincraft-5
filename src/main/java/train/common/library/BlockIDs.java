@@ -13,7 +13,7 @@ import net.minecraft.item.ItemBlock;
 import com.jcirmodelsquad.tcjcir.render.ItemRenderMILWSwitchStand;
 import train.common.items.*;
 
-public enum BlockIDs {
+public enum BlockIDs implements IBlockIDs {
 
 	assemblyTableI(false, null),
 	assemblyTableII(false, null),
@@ -33,7 +33,7 @@ public enum BlockIDs {
 
 	openFurnaceIdle(false, null),
 	openFurnaceActive(false, null),
-	oreTC(true, ItemBlockOreTC.class),
+	oreTC(true, ItemBlockOreTC.class, 4),
 	lantern(false, null),
 	switchStand(false, null),
 	waterWheel(true, ItemBlockGeneratorWaterWheel.class),
@@ -98,8 +98,41 @@ public enum BlockIDs {
 	public boolean hasItemBlock;
 	public Class itemBlockClass;
 
+	private final int MaxMetaData;
+
 	BlockIDs(boolean hasItemBlock, Class<? extends ItemBlock> itemBlockClass) {
 		this.hasItemBlock = hasItemBlock;
 		this.itemBlockClass = itemBlockClass;
+		MaxMetaData = -1;
+	}
+
+	BlockIDs(boolean hasItemBlock, Class<? extends ItemBlock> itemBlockClass, int maxMetaData) {
+		this.hasItemBlock = hasItemBlock;
+		this.itemBlockClass = itemBlockClass;
+		MaxMetaData = maxMetaData;
+	}
+
+	@Override
+	public Block getBlock()
+	{
+		return block;
+	}
+
+	@Override
+	public boolean hasItemBlock()
+	{
+		return hasItemBlock;
+	}
+
+	@Override
+	public Class getItemBlockClass()
+	{
+		return itemBlockClass;
+	}
+
+	@Override
+	public int getMaxMetaData()
+	{
+		return MaxMetaData;
 	}
 }
