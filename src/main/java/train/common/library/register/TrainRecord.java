@@ -234,7 +234,14 @@ public class TrainRecord implements ITrainRecord
     public TrainRecord setGuiRenderScale(int scale) { this.guiRenderScale = scale; return this; }
 
     public String[] getAdditionalTooltip() { return this.additionalTooltip; }
+
+    /**
+     * @deprecated use the lowercase version Correct Method -> setAdditionalTooltip
+     */
+    @Deprecated
     public TrainRecord SetAdditionalTooltip(String[] additionalTooltip) { this.additionalTooltip = additionalTooltip; return this; }
+
+    public TrainRecord setAdditionalTooltip(String[] additionalTooltip) { this.additionalTooltip = additionalTooltip; return this; }
 
     public int getCargoCapacity() { return cargoCapacity; }
     public TrainRecord setCargoCapacity(int capacity) { this.cargoCapacity = capacity; return this; }
