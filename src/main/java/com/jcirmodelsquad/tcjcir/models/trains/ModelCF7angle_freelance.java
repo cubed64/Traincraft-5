@@ -2082,7 +2082,7 @@ public class ModelCF7angle_freelance extends ModelConverter //Same as Filename
 				GL11.glPopMatrix();
 			}
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 16) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_Silver.png"));
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/TypeB_2_FNCC.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.28, -0.025, 0);
 			theB.render(entity, f, f1, f2, f3, f4, f5);

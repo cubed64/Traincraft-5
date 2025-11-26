@@ -177,6 +177,9 @@ public class DieselRecipes extends AbstractRecipeHandler
                 cm.addRecipe(2, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.partFlexicoil.item, 2), new ItemStack(ItemIDs.steelframe.item, 3), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.partComponentEMD.item, 3), new ItemStack(ItemIDs.generator.item, 2), new ItemStack(ItemIDs.dieselengine.item, 2), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartSD9.item, 1), 1);
             }
 
+            for (ItemStack dye : dyeGreen) {//VO-1000
+                cm.addRecipe(2, new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.partTypeA.item, 2), new ItemStack(ItemIDs.steelframe.item, 1), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 1), new ItemStack(ItemIDs.partComponentBLW.item, 2), new ItemStack(ItemIDs.generator.item, 1), new ItemStack(ItemIDs.dieselengine.item, 1), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartVO1000.item, 1), 1);
+            }
             for (ItemStack dye : dyeBlue) {//S12
                 cm.addRecipe(2, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.partTypeA.item, 2), new ItemStack(ItemIDs.steelframe.item, 1), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 1), new ItemStack(ItemIDs.partComponentBLW.item, 2), new ItemStack(ItemIDs.generator.item, 2), new ItemStack(ItemIDs.dieselengine.item, 1), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartS12.item, 1), 1);
             }
@@ -188,11 +191,17 @@ public class DieselRecipes extends AbstractRecipeHandler
                 cm.addRecipe(2, new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.partTypeA.item, 2), new ItemStack(ItemIDs.steelframe.item, 1), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.partComponentFM.item, 2), new ItemStack(ItemIDs.generator.item, 2), new ItemStack(ItemIDs.dieselengine.item, 1), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartH1044.item, 1), 1);
             }
             for (ItemStack dye : dyeGray) {//h16-66
-                cm.addRecipe(2, new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.partComponentFM.item, 3), new ItemStack(ItemIDs.generator.item, 2), new ItemStack(ItemIDs.dieselengine.item, 2), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartH16_66.item, 1), 1);
+                cm.addRecipe(2, new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 3), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.partComponentFM.item, 3), new ItemStack(ItemIDs.generator.item, 2), new ItemStack(ItemIDs.dieselengine.item, 2), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartH16_66.item, 1), 1);
+            }
+            for (ItemStack dye : dyeRed) {//h24-66
+                cm.addRecipe(2, new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.partComponentFM.item, 3), new ItemStack(ItemIDs.generator.item, 3), new ItemStack(ItemIDs.dieselengine.item, 3), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartH24_66.item, 1), 1);
             }
 
             for (ItemStack dye : dyeBlack) {//S2
                 cm.addRecipe(2, new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.partTypeA.item, 2), new ItemStack(ItemIDs.steelframe.item, 1), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 1), new ItemStack(ItemIDs.partComponentALCO.item, 2), new ItemStack(ItemIDs.generator.item, 1), new ItemStack(ItemIDs.dieselengine.item, 1), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartS2.item, 1), 1);
+            }
+            for (ItemStack dye : dyeYellow) {//HH660
+                cm.addRecipe(2, new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.partTypeA.item, 2), new ItemStack(ItemIDs.steelframe.item, 1), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 1), new ItemStack(ItemIDs.partComponentALCO.item, 2), new ItemStack(ItemIDs.generator.item, 1), new ItemStack(ItemIDs.dieselengine.item, 1), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartHH660.item, 1), 1);
             }
             for (ItemStack dye : dyeCyan) {//fafdl & fbfdl
                 //todo redo this at somepoint to be a rebuild of regular FA
@@ -228,16 +237,31 @@ public class DieselRecipes extends AbstractRecipeHandler
                 cm.addRecipe(2, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.partTypeB.item, 4), new ItemStack(ItemIDs.steelframe.item, 6), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 2), new ItemStack(ItemIDs.partComponentALCO.item, 6), new ItemStack(ItemIDs.generator.item, 6), new ItemStack(ItemIDs.dieselengine.item, 5), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartC855a.item, 1), 1);
                 cm.addRecipe(2, new ItemStack(ItemIDs.partComponentALCO.item, 1), new ItemStack(ItemIDs.partTypeB.item, 4), new ItemStack(ItemIDs.steelframe.item, 6), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 2), new ItemStack(ItemIDs.partComponentALCO.item, 6), new ItemStack(ItemIDs.generator.item, 6), new ItemStack(ItemIDs.dieselengine.item, 5), null, dye, new ItemStack(ItemIDs.minecartC855b.item, 1), 1);
             }
-
+            for (ItemStack dye : dyeBlack) {//tb27
+                cm.addRecipe(2, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.partTypeB.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.partComponentALCO.item, 3), new ItemStack(ItemIDs.generator.item, 3), new ItemStack(ItemIDs.dieselengine.item, 3), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartTB27.item, 1), 1);
+            }
 
 
             //=================== TIER III =================//
 
 
 
-            for (ItemStack dye : dyeGreen) {//m420
+            for (ItemStack dye : dyeGreen) {//m420 & m630 divot
                 cm.addRecipe(3, new ItemStack(ItemIDs.steelcab.item, 2), new ItemStack(ItemIDs.partTypeB.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 1), new ItemStack(ItemIDs.partComponentALCO.item, 3), new ItemStack(ItemIDs.generator.item, 2), new ItemStack(ItemIDs.dieselengine.item, 2), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartM420.item, 1), 1);
                 cm.addRecipe(3, new ItemStack(ItemIDs.partComponentALCO.item, 2), new ItemStack(ItemIDs.partTypeB.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 1), new ItemStack(ItemIDs.partComponentALCO.item, 3), new ItemStack(ItemIDs.generator.item, 2), new ItemStack(ItemIDs.dieselengine.item, 2), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartM420B.item, 1), 1);
+                cm.addRecipe(3, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 1), new ItemStack(ItemIDs.partComponentALCO.item, 3), new ItemStack(ItemIDs.generator.item, 3), new ItemStack(ItemIDs.dieselengine.item, 3), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartM630.item, 1), 1);
+            }
+            for (ItemStack dye : dyeRed) {//m630 round & w & m640
+                cm.addRecipe(3, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 1), new ItemStack(ItemIDs.partComponentALCO.item, 3), new ItemStack(ItemIDs.generator.item, 3), new ItemStack(ItemIDs.dieselengine.item, 3), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartM630R.item, 1), 1);
+                cm.addRecipe(3, new ItemStack(ItemIDs.steelcab.item, 2), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 1), new ItemStack(ItemIDs.partComponentALCO.item, 3), new ItemStack(ItemIDs.generator.item, 3), new ItemStack(ItemIDs.dieselengine.item, 3), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartM630W.item, 1), 1);
+                cm.addRecipe(3, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 1), new ItemStack(ItemIDs.partComponentALCO.item, 4), new ItemStack(ItemIDs.generator.item, 4), new ItemStack(ItemIDs.dieselengine.item, 4), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartM640.item, 1), 1);
+            }
+            for (ItemStack dye : dyeYellow) {//m636 & m640w
+                cm.addRecipe(3, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 1), new ItemStack(ItemIDs.partComponentALCO.item, 3), new ItemStack(ItemIDs.generator.item, 3), new ItemStack(ItemIDs.dieselengine.item, 4), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartM636.item, 1), 1);
+                cm.addRecipe(3, new ItemStack(ItemIDs.steelcab.item, 2), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 1), new ItemStack(ItemIDs.partComponentALCO.item, 4), new ItemStack(ItemIDs.generator.item, 4), new ItemStack(ItemIDs.dieselengine.item, 4), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartM640W.item, 1), 1);
+            }
+            for (ItemStack dye : dyeBlack) {//m636 round
+                cm.addRecipe(3, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 1), new ItemStack(ItemIDs.partComponentALCO.item, 3), new ItemStack(ItemIDs.generator.item, 3), new ItemStack(ItemIDs.dieselengine.item, 4), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartM636R.item, 1), 1);
             }
             for (ItemStack dye : dyeYellow) {//gp15-1
                 cm.addRecipe(3, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.partBlombergB.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.partComponentEMD.item, 3), new ItemStack(ItemIDs.generator.item, 2), new ItemStack(ItemIDs.dieselengine.item, 2), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartGP15.item, 1), 1);

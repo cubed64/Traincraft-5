@@ -2066,6 +2066,8 @@ public enum RenderEnum implements ITrainRenderRecord, ISubTrainRenderRecord
 	SMSC1(SMSC1.class, new ModelSMSC1(), "SMSC1_", true, new float[]{0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
 	CEEslug(ElectricCEEslug.class,  new ModelCEEslug(), "CEEslug_", true,new float[]{-1.525F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	SBMS(SBMS.class, new ModelSBMS(), "SBMS_", true, new float[]{-0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
+	//F7BSlug(F7BSlug.class, new ModelF7b(), "SBMS_", true, new float[]{-0F, 0.155F, 0F}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
+	//gonna come back and fix this at a later date
 
 	/**ELECTRICC**/
 	EF1(ElectricEF1.class,  new ModelEF1(), "ef1_", true,new float[] {-1.60F, 0.1875F, 0F},  new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

@@ -1459,11 +1459,9 @@ item.tc:minecartEP1A.name=GE-MILW EP-1A
 
 item.tc:minecartGM6C.name=EMD GM6C
 
-item.tc:minecartILMA.name=I.L.M.A.
-item.tc:minecartILMB.name=I.L.M.B.
 item.tc:minecartJT7.name=CEE JT-7 "Pignose"
 
-item.tc:minecartAEM7.name=EMD AEM-7
+item.tc:minecartAEM7.name=EMD "AEM-7"
 
 item.tc:minecartB_BEL.name=CEE B-BEL (2000)
 
@@ -1474,11 +1472,9 @@ entity.tc.EP1A.name=GE-MILW EP-1A
 
 entity.tc.GM6C.name=EMD GM6C
 
-entity.tc.Loco Electric ILMA.name=I.L.M.A
-entity.tc.Loco Electric ILMB.name=I.L.M.B
 entity.tc.JT7.name=CEE JT-7 "Pignose"
 
-entity.tc.AEM7.name=EMD AEM-7
+entity.tc.AEM7.name=EMD "AEM-7"
 
 entity.tc.B-BEL.name=CEE B-BEL (2000)
 --------------------------------------------------------

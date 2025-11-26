@@ -139,12 +139,25 @@ public class AssemblyTableRecipes extends AbstractRecipeHandler
 
 			//=================== TIER II ==================//
 
+			for (ItemStack dye : dyeWhite) {//slugma
+				cm.addRecipe(2, new ItemStack(itemSteel, 3, itemDamageSteel), null, new ItemStack(ItemIDs.steelframe.item, 1), new ItemStack(itemSteel, 3, itemDamageSteel), null, new ItemStack(ItemIDs.partComponentEMD.item, 3), new ItemStack(ItemIDs.minecartGP7.item, 1), null, new ItemStack(ItemIDs.electmotor.item, 1), dye, new ItemStack(ItemIDs.minecartSlugMA.item, 1), 1);
+			}
+			for (ItemStack dye : dyeCyan) {//smsc1 & sbms
+				cm.addRecipe(2, new ItemStack(itemSteel, 3, itemDamageSteel), null, new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), null, new ItemStack(ItemIDs.partComponentCEE.item, 3), new ItemStack(ItemIDs.minecartE8B.item, 1), null, new ItemStack(ItemIDs.electmotor.item, 1), dye, new ItemStack(ItemIDs.minecartSMSC1.item, 1), 1);
+				cm.addRecipe(2, new ItemStack(itemSteel, 3, itemDamageSteel), null, new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), null, new ItemStack(ItemIDs.partComponentCEE.item, 3), new ItemStack(ItemIDs.copperWireFine.item, 4), null, new ItemStack(ItemIDs.electmotor.item, 1), dye, new ItemStack(ItemIDs.minecartSBMS.item, 1), 1);
+			}
+			for (ItemStack dye : dyeBlue) {//u23b cee slug
+				cm.addRecipe(2, new ItemStack(itemSteel, 3, itemDamageSteel), null, new ItemStack(ItemIDs.steelframe.item, 1), new ItemStack(itemSteel, 3, itemDamageSteel), null, new ItemStack(ItemIDs.partComponentCEE.item, 3), new ItemStack(ItemIDs.minecartU23B.item, 1), null, new ItemStack(ItemIDs.electmotor.item, 1), dye, new ItemStack(ItemIDs.minecartCEEslug.item, 1), 1);
+			}
+
+			for (ItemStack dye : dyeWhite) {//pine highrail
+				cm.addRecipe(2, new ItemStack(itemSteel, 1, itemDamageSteel), null, new ItemStack(ItemIDs.ironFrame.item, 1), new ItemStack(ItemIDs.ironChimney.item, 1), null, new ItemStack(ItemIDs.electronicCircuit.item, 1), new ItemStack(ItemIDs.ironBogie.item, 1), null, new ItemStack(ItemIDs.dieselengine.item, 1), dye, new ItemStack(ItemIDs.minecartWorkdayHyrail.item, 1), 1);
+			}
 
 
 			for (ItemStack bucketWater : waterbucket) {
 					cm.addRecipe(2, new ItemStack(itemSteel, 6, itemDamageSteel), new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 2, itemDamageSteel), null, null, null, null, new ItemStack(bucketWater.getItem(), 1), new ItemStack(bucketWater.getItem()), new ItemStack(ItemIDs.minecartTankWagon.item, 1), 1);
-				}
-
+			}
 
 			cm.addRecipe(2, new ItemStack(Blocks.torch,1), new ItemStack(ItemIDs.bogie.item, 3), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.steelcab.item, 2), new ItemStack(ItemIDs.boiler.item, 4), new ItemStack(ItemIDs.firebox.item, 2), new ItemStack(Items.iron_ingot, 2), new ItemStack(Items.iron_ingot,1), new ItemStack(ItemIDs.minecartHeavySteam.item, 1),1);
 			//cm.addRecipe(2, new ItemStack(Blocks.torch,1), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.steelcab.item, 2), new ItemStack(ItemIDs.boiler.item, 4), new ItemStack(ItemIDs.firebox.item, 2), new ItemStack(Items.iron_ingot, 2), new ItemStack(Items.iron_ingot,1), new ItemStack(ItemIDs.minecartSkook.item, 1),1);
@@ -259,7 +272,7 @@ public class AssemblyTableRecipes extends AbstractRecipeHandler
 						new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.boiler.item, 2),
 						new ItemStack(ItemIDs.firebox.item, 2), null, dye,
 						new ItemStack (ItemIDs.minecartLocoHallClass.item, 1), 1);
-				cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 1, itemDamageSteel), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.electmotor.item, 4), new ItemStack(ItemIDs.dieselengine.item, 4), new ItemStack(ItemIDs.controls.item, 2), dye, new ItemStack(ItemIDs.minecartVO1000.item, 1), 1);
+				//cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 1, itemDamageSteel), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.electmotor.item, 4), new ItemStack(ItemIDs.dieselengine.item, 4), new ItemStack(ItemIDs.controls.item, 2), dye, new ItemStack(ItemIDs.minecartVO1000.item, 1), 1);
 				//cm.addRecipe(2, new ItemStack(ItemIDs.controls.item, 2), new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 3), new ItemStack(itemSteel, 4, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.electmotor.item, 4), new ItemStack(ItemIDs.dieselengine.item, 3), new ItemStack(ItemIDs.generator.item, 3), dye, new ItemStack(ItemIDs.minecartRF16.item, 1), 1);
 				//cm.addRecipe(2, new ItemStack(ItemIDs.controls.item, 0), new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 3), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.electmotor.item, 4), new ItemStack(ItemIDs.dieselengine.item, 3), new ItemStack(ItemIDs.generator.item, 3), dye, new ItemStack(ItemIDs.minecartRF16B.item, 1), 1);
 
@@ -283,7 +296,7 @@ public class AssemblyTableRecipes extends AbstractRecipeHandler
 						new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.boiler.item, 3),
 						new ItemStack(ItemIDs.firebox.item, 3), null, dye,
 						new ItemStack(ItemIDs.minecartLocoFowler.item, 1), 1);
-				cm.addRecipe(2, new ItemStack(ItemIDs.controls.item, 2), new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.electmotor.item, 4), new ItemStack(ItemIDs.dieselengine.item, 3), new ItemStack(ItemIDs.generator.item, 2), dye, new ItemStack(ItemIDs.minecartHH660.item, 1), 1);
+				//cm.addRecipe(2, new ItemStack(ItemIDs.controls.item, 2), new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.electmotor.item, 4), new ItemStack(ItemIDs.dieselengine.item, 3), new ItemStack(ItemIDs.generator.item, 2), dye, new ItemStack(ItemIDs.minecartHH660.item, 1), 1);
 				//cm.addRecipe(2, null, new ItemStack(ItemIDs.bogie.item, 2), new ItemStack(ItemIDs.steelframe.item, 3), new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.boiler.item, 1), new ItemStack(ItemIDs.firebox.item, 2), null, dye, new ItemStack(ItemIDs.minecartOnion.item, 1), 1);
 				cm.addRecipe(2, new ItemStack(Blocks.iron_bars, 2), new ItemStack(ItemIDs.freightCarTruck.item, 2), new ItemStack(ItemIDs.steelframe.item, 3), new ItemStack(itemSteel, 2, itemDamageSteel), null, new ItemStack(Blocks.iron_bars, 2), null, null, new ItemStack(itemSteel, 3, itemDamageSteel), dye, new ItemStack(ItemIDs.minecart60centerbeam.item, 1), 1);
 				cm.addRecipe(2, new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.freightCarTruck.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(ItemIDs.hopperBay.item, 4), new ItemStack(ItemIDs.freightCarRibbing.item, 5), null, null, new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(Blocks.chest, 3), dye, new ItemStack(ItemIDs.minecartBethgonII.item, 1), 1);
@@ -625,9 +638,9 @@ public class AssemblyTableRecipes extends AbstractRecipeHandler
 
 
 			for (ItemStack dye : dyeWhite){
-				for (ItemStack rs : redstone) {
+				/*for (ItemStack rs : redstone) {
 					cm.addRecipe(3, new ItemStack(ItemIDs.controls.item, 3), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 3), new ItemStack(itemSteel, 4, itemDamageSteel), null, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.transformer.item, 4), new ItemStack(ItemIDs.electmotor.item, 6), new ItemStack(rs.getItem(), 4), dye, new ItemStack(ItemIDs.minecartGM6C.item, 1), 1);
-				}
+				}*/
 				cm.addRecipe(3, new ItemStack(itemSteel, 2, itemDamageSteel), new ItemStack(ItemIDs.fourWheelLightweightTruck.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), null, new ItemStack(ItemIDs.steelcab.item, 1), null, new ItemStack(ItemIDs.seats.item, 5), null, dye, new ItemStack(ItemIDs.minecartOBBAR52SeatCoach_Dinette.item, 1), 1);
 				cm.addRecipe(3, new ItemStack(itemSteel, 5, itemDamageSteel), new ItemStack(ItemIDs.bogie.item, 4), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(ItemIDs.electmotor.item, 2), new ItemStack(ItemIDs.pantograph.item, 1), new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.seats.item, 5), null, new ItemStack(ItemIDs.controls.item, 2), dye, new ItemStack(ItemIDs.minecartKawasakiLRV.item, 1), 1);
 			}

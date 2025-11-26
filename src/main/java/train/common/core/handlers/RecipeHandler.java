@@ -180,6 +180,7 @@ public class RecipeHandler {
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', new ItemStack(Blocks.stained_hardened_clay, 1, 15));
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing1.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', new ItemStack(Blocks.stained_hardened_clay, 1, 7));
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing2.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', new ItemStack(Blocks.stained_hardened_clay, 1, 8));
+		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossingDynamic.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', Items.clay_ball);
 
 		//buffers
 		GameRegistry.addRecipe(new ItemStack(BlockIDs.stopper.block, 1), "PPP", "I I", " T ", 'P', Blocks.planks, 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRailSmallStraight.item);
@@ -693,6 +694,9 @@ public class RecipeHandler {
 		TrainCraftingManager.instance.addRecipe(new ItemStack(BlockIDs.bridgePillar.block, 2),
 				 "SSS", "S S", "SSS", Character.valueOf('S'), Items.stick );
 
+		for (ItemStack dye : dyeYellow) {
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartFRED.item, 1), " T ", " D ", " S ", 'D', dye, 'T', Blocks.redstone_torch, 'S', new ItemStack(ItemIDs.steel.item));
+		}
 
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartCF7angle3.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartCF7angle.item));
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartCF7angle.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartCF7angle3.item));
@@ -711,6 +715,9 @@ public class RecipeHandler {
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecart4ED172T_E.item, 1),  "   ", "CRC", "   ", 'R', new ItemStack(ItemIDs.minecart4ED172T.item), 'C', new ItemStack(ItemIDs.partComponentEMD.item));
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecart4ED172T_G.item, 1),  "   ", "CRC", "   ", 'R', new ItemStack(ItemIDs.minecart4ED172T.item), 'C', new ItemStack(ItemIDs.partComponentGE.item));
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecart4ED172T_C.item, 1),  "   ", "CRC", "   ", 'R', new ItemStack(ItemIDs.minecart4ED172T.item), 'C', new ItemStack(ItemIDs.partComponentCEE.item));
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartH24_66L.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartH24_66.item));
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartH24_66C.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartH24_66L.item));
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartH24_66.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartH24_66C.item));
 
 	}
 	
