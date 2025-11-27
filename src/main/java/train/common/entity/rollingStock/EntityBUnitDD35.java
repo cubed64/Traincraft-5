@@ -12,7 +12,6 @@ import net.minecraftforge.fluids.*;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.LiquidTank;
-import train.common.library.EnumHeritageTrainsLegacy;
 import train.common.library.GuiIDs;
 
 public class EntityBUnitDD35 extends LiquidTank implements IFluidHandler {
