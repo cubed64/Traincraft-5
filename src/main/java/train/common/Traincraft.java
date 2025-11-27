@@ -169,14 +169,6 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		TCItems.init();
 		EntityHandler.init();
 
-		///if (FMLCommonHandler.instance().getEffectiveSide().isClient())
-		///{
-		///	List<ITrainRenderRecord> renderRecords = new RenderRegisterList().SetupRollingStockModels();
-		///	for (ITrainRenderRecord r : renderRecords)
-		///	{
-		///		traincraftRegistry.RegisterRollingStockModel(r);
-		///	}
-		///}
 
 		proxy.registerTileEntities();
 		proxy.registerSounds();
@@ -240,21 +232,6 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		/* Ore dictionary */
 		OreHandler.registerOres();
 
-		/* Recipes */
-		tcLog.info("Initializing recipes...");
-		RecipeHandler.initBlockRecipes();
-		RecipeHandler.initItemRecipes();
-		RecipeHandler.initSmeltingRecipes();
-
-		new SteamRecipes(TierRecipeManager.getInstance());
-		new DieselRecipes(TierRecipeManager.getInstance());
-		new ElectricRecipes(TierRecipeManager.getInstance());
-		new FreightRecipes(TierRecipeManager.getInstance());
-		new PassengerRecipes(TierRecipeManager.getInstance());
-
-		new AssemblyTableRecipes().recipes();
-
-
 		/* Register the liquids */
 		tcLog.info("Initializing fluids..");
 		LiquidManager.getInstance().registerLiquids();
@@ -286,8 +263,21 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 	}
 
 	@EventHandler
-	public void postInit(FMLPostInitializationEvent evt) {
+	public void postInit(FMLPostInitializationEvent evt)
+	{
 		tcLog.info("Entering PostInitialization.");
+		/* Recipes */
+		tcLog.info("Initializing recipes...");
+		new RecipeHandler();
+
+		new SteamRecipes(TierRecipeManager.getInstance());
+		new DieselRecipes(TierRecipeManager.getInstance());
+		new ElectricRecipes(TierRecipeManager.getInstance());
+		new FreightRecipes(TierRecipeManager.getInstance());
+		new PassengerRecipes(TierRecipeManager.getInstance());
+
+		new AssemblyTableRecipes().recipes();
+
 		tcLog.info("Registering ChunkHandler..");
 
 		tcLog.info("Activating mod compatibility.");

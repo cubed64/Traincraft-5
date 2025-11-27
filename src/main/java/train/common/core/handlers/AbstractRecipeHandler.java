@@ -43,6 +43,8 @@ public abstract class AbstractRecipeHandler
         }
     };
 
+    public ArrayList<ItemStack> ingotRainbontrium = OreDictionary.getOres("ingotRainbontrium");
+
 
     public ArrayList<ItemStack> redstone = OreDictionary.getOres("dustRedstone");
     public ArrayList<ItemStack> waterbucket = waterContainers();

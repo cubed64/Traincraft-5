@@ -15,6 +15,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+import train.common.Traincraft;
 import train.common.inventory.TrainCraftingManager;
 import train.common.library.BlockIDs;
 import train.common.library.ItemIDs;
@@ -26,7 +27,14 @@ import java.util.List;
 
 import static train.common.recipes.AssemblyTableRecipes.waterContainers;
 
-public class RecipeHandler {
+public class RecipeHandler extends AbstractRecipeHandler
+{
+	public RecipeHandler()
+	{
+		initBlockRecipes();
+		initItemRecipes();
+		initSmeltingRecipes();
+	}
 
 	private static ArrayList<ItemStack> multiNameOreDict(String ... names){
 		ArrayList<ItemStack> entries = new ArrayList<ItemStack>();
@@ -36,7 +44,7 @@ public class RecipeHandler {
 		return entries;
 	}
 
-	public static void initBlockRecipes() {//crafting table recipes
+	public void initBlockRecipes() {//crafting table recipes
 		ArrayList<ItemStack> iron = OreDictionary.getOres("ingotIron");
 		ArrayList<ItemStack> gold = OreDictionary.getOres("ingotGold");
 
@@ -171,6 +179,16 @@ public class RecipeHandler {
 
 		//dynamic slopes regulah
 		//todo have clay be the fallback recipe if foxblocks isnt present, switch to rainbonite in foxblocks if present
+
+		for (ItemStack rainbowItem : ingotRainbontrium)
+		{
+			Traincraft.tcLog.info("MMMMM T A S T E THE RAINBOW!");
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail1X3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailSmallStraight.item, 'D', rainbowItem.getItem());
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossingDynamic.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', rainbowItem.getItem());
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', Items.iron_ingot, 'P', rainbowItem.getItem());
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbedded1x3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'D', rainbowItem.getItem());
+		}
+
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail1X3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailSmallStraight.item, 'D', Items.clay_ball);
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSlopeDynamic.item, 1), "   ", "  T", " T ", 'T', TrackItemIDs.tcRail1X3SlopeDynamic.item);
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailLargeSlopeDynamic.item, 1), "   ", "  T", " T ", 'T', TrackItemIDs.tcRailSlopeDynamic.item);
@@ -181,6 +199,8 @@ public class RecipeHandler {
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing1.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', new ItemStack(Blocks.stained_hardened_clay, 1, 7));
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing2.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', new ItemStack(Blocks.stained_hardened_clay, 1, 8));
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossingDynamic.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', Items.clay_ball);
+
+
 
 		//buffers
 		GameRegistry.addRecipe(new ItemStack(BlockIDs.stopper.block, 1), "PPP", "I I", " T ", 'P', Blocks.planks, 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRailSmallStraight.item);
@@ -282,7 +302,7 @@ public class RecipeHandler {
 
 	}
 
-	public static void initItemRecipes() {//train wb recipes
+	public void initItemRecipes() {//train wb recipes
 
 		ArrayList<ItemStack> steel = OreDictionary.getOres("ingotSteel");//doesnt work with mekanism steel
 		ArrayList<ItemStack> iron = OreDictionary.getOres("ingotIron");
@@ -721,7 +741,7 @@ public class RecipeHandler {
 
 	}
 	
-	public static void initSmeltingRecipes(){
+	public void initSmeltingRecipes(){
 
 		/* OpenHearthFurnace recipes */
 		if (!ConfigHandler.MAKE_MODPACKS_GREAT_AGAIN) {
