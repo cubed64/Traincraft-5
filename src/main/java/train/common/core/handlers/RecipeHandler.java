@@ -713,6 +713,26 @@ public class RecipeHandler extends AbstractRecipeHandler
 		// Bridge Pillar
 		TrainCraftingManager.instance.addRecipe(new ItemStack(BlockIDs.bridgePillar.block, 2),
 				 "SSS", "S S", "SSS", Character.valueOf('S'), Items.stick );
+		//Remote Control
+		for (ItemStack plastic : plastics) {
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.remoteController.item, 1),
+					 " L ", "PBP", "   ", 'B', ItemIDs.electronicCircuit.item, 'L', Blocks.lever, 'P', plastic);
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.remoteController.item, 1),
+					 "   ", " L ", "PBP", 'B', ItemIDs.electronicCircuit.item, 'L', Blocks.lever, 'P', plastic);
+		}
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.remoteControllerModule.item, 1),
+				 "   ", " B ", "   ", 'B', ItemIDs.electronicCircuit.item);
+		//Brake Stick
+		for (ItemStack ironingot : iron) {
+			for (ItemStack steelItem: steel) {
+				for (ItemStack plastic : plastics) {
+					TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.brakeStick.item, 1),
+							"IS ", " P ", " S ", 'I', ironingot, 'S', steelItem, 'P', plastic);
+					TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.brakeStick.item, 1),
+							" SI", " P ", " S ", 'I', ironingot, 'S', steelItem, 'P', plastic);
+				}
+			}
+		}
 
 		for (ItemStack dye : dyeYellow) {
 			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartFRED.item, 1), " T ", " D ", " S ", 'D', dye, 'T', Blocks.redstone_torch, 'S', new ItemStack(ItemIDs.steel.item));
@@ -738,7 +758,8 @@ public class RecipeHandler extends AbstractRecipeHandler
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartH24_66L.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartH24_66.item));
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartH24_66C.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartH24_66L.item));
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartH24_66.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartH24_66C.item));
-
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartHHgregg.item, 1),  "   ", " H ", "   ", 'H', new ItemStack(ItemIDs.minecartHH660.item));
+		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartHH660.item, 1),  "   ", " H ", "   ", 'H', new ItemStack(ItemIDs.minecartHHgregg.item));
 	}
 	
 	public void initSmeltingRecipes(){

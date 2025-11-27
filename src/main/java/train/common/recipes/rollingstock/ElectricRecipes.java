@@ -21,13 +21,13 @@ public class ElectricRecipes extends AbstractRecipeHandler
 
             for (ItemStack rs : redstone){
                 for (ItemStack dye : dyeWhite) {//gm6c
-                    cm.addRecipe(3, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.partFlexicoil.item, 2), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(rs.getItem(), 4), new ItemStack(ItemIDs.partComponentEMD.item, 3), new ItemStack(ItemIDs.transformer.item, 4), new ItemStack(ItemIDs.copperWireFine.item, 4), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartGM6C.item, 1), 1);
+                    cm.addRecipe(3, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.partFlexicoil.item, 2), new ItemStack(ItemIDs.steelframe.item, 4), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.pantograph.item, 2), new ItemStack(ItemIDs.partComponentEMD.item, 3), new ItemStack(ItemIDs.transformer.item, 4), new ItemStack(ItemIDs.copperWireFine.item, 4), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartGM6C.item, 1), 1);
                 }
                 for (ItemStack dye : dyeWhite) {//b-bel
                     cm.addRecipe(3, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.partFB2.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(rs.getItem(), 12), new ItemStack(ItemIDs.partComponentCEE.item, 5), new ItemStack(ItemIDs.transformer.item, 1), new ItemStack(ItemIDs.copperWireFine.item, 4), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartB_BEL.item, 1), 1);
                 }
                 for (ItemStack dye : dyeLime) {//jt7
-                    cm.addRecipe(3, new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 6), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(rs.getItem(), 6), new ItemStack(ItemIDs.partComponentCEE.item, 3), new ItemStack(ItemIDs.transformer.item, 8), new ItemStack(ItemIDs.copperWireFine.item, 4), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartJT7.item, 1), 1);
+                    cm.addRecipe(3, new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.bogie.item, 6), new ItemStack(ItemIDs.steelframe.item, 6), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.pantograph.item, 2), new ItemStack(ItemIDs.partComponentCEE.item, 3), new ItemStack(ItemIDs.transformer.item, 8), new ItemStack(ItemIDs.copperWireFine.item, 4), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartJT7.item, 1), 1);
                 }
             }
 
