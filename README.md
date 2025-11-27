@@ -7,6 +7,7 @@
 ### On top of all the new BAP rollingstock, it adds things like:
 
 - Paintbrush Item & unlimited textures
+- Addon Pack Support
 - Functional Headlights, Ditchlights, Beacon lights, ect
 - Handbrake for railcars
 - Notebox on cars and locomotives (useful for having car numbers for OPS)
