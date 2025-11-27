@@ -9,7 +9,6 @@ import net.minecraft.world.World;
 import train.common.api.AbstractStandardFreightCar;
 import train.common.entity.CargoManager;
 import train.common.entity.CargoSpecification;
-import train.common.enums.LockoutGroup;
 
 public class FNCC60FootBulk extends AbstractStandardFreightCar
 {

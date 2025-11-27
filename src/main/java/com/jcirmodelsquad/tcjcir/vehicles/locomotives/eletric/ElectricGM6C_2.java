@@ -5,20 +5,13 @@ import com.jcirmodelsquad.tcjcir.models.pantos.Modelpanto_gm6c_downup;
 import com.jcirmodelsquad.tcjcir.models.pantos.Modelpanto_gm6c_up;
 import com.jcirmodelsquad.tcjcir.models.pantos.Modelpanto_gm6c_updown;
 import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.Constants;
-import train.common.Traincraft;
 import train.common.api.ElectricTrain;
 import train.common.core.util.TraincraftUtil;
 import train.common.entity.CargoManager;
 import train.common.entity.CargoSpecification;
 import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
-import train.common.library.GuiIDs;
 import train.common.library.sounds.SoundRecord;
 
 public class ElectricGM6C_2 extends ElectricTrain {

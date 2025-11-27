@@ -1,26 +1,16 @@
 package com.jcirmodelsquad.tcjcir.vehicles.locomotives;
 
 import com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2Handler;
-import com.jcirmodelsquad.tcjcir.features.autotrain.BogiePathfinding;
-import com.jcirmodelsquad.tcjcir.features.autotrain.TrackSection;
-import com.jcirmodelsquad.tcjcir.features.autotrain.modules.PassengerTrainModule;
-import com.jcirmodelsquad.tcjcir.features.autotrain.modules.PitTrainModule;
-import com.jcirmodelsquad.tcjcir.features.eti.jcirmonitor.Position;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import train.common.Traincraft;
-import train.common.api.EntityBogie;
-import train.common.api.EntityRollingStock;
 import train.common.api.HydrogenTrain;
-import train.common.core.util.TraincraftUtil;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 import train.common.library.sounds.SoundRecord;
-
-import java.util.ArrayList;
 
 public class PCH100H extends HydrogenTrain{
 

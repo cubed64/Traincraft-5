@@ -3,19 +3,10 @@ package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight;
 import com.jcirmodelsquad.tcjcir.models.loads.Model35FootAggregate;
 import com.jcirmodelsquad.tcjcir.models.loads.Model35FootRails;
 import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.Constants;
-import train.common.Traincraft;
 import train.common.api.AbstractStandardFreightCar;
-import train.common.api.Freight;
 import train.common.entity.CargoManager;
 import train.common.entity.CargoSpecification;
-import train.common.library.GuiIDs;
 
 public class MaPa35FootGondola extends AbstractStandardFreightCar {
     public MaPa35FootGondola(World world)

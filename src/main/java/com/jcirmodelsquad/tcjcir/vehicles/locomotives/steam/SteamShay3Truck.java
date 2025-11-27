@@ -1,18 +1,11 @@
 package com.jcirmodelsquad.tcjcir.vehicles.locomotives.steam;
 
 import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.Constants;
-import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.SteamTrain;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
-import train.common.library.GuiIDs;
 import train.common.library.sounds.SoundRecord;
 
 public class SteamShay3Truck extends SteamTrain {

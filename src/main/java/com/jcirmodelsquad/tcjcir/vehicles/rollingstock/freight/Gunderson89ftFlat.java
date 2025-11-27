@@ -4,19 +4,10 @@ import com.jcirmodelsquad.tcjcir.models.loads.Modelroadrailer_trailer_53;
 import com.jcirmodelsquad.tcjcir.models.loads.Modeltoastertiedown;
 import com.jcirmodelsquad.tcjcir.models.trains.ModelAEM7;
 import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.Constants;
-import train.common.Traincraft;
 import train.common.api.AbstractStandardFreightCar;
-import train.common.api.Freight;
 import train.common.entity.CargoManager;
 import train.common.entity.CargoSpecification;
-import train.common.library.GuiIDs;
 
 public class Gunderson89ftFlat extends AbstractStandardFreightCar
 {

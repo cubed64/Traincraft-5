@@ -3,8 +3,6 @@ package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.misc;
 
 
 import cofh.api.energy.IEnergyHandler;
-import com.jcirmodelsquad.tcjcir.extras.packets.ClientGeometryCarUpdate;
-import com.jcirmodelsquad.tcjcir.extras.packets.UpdateGeometryCarFromServer;
 import com.jcirmodelsquad.tcjcir.features.geometry.PotentialIssue;
 import com.jcirmodelsquad.tcjcir.features.geometry.TrackPosition;
 import cpw.mods.fml.common.Loader;

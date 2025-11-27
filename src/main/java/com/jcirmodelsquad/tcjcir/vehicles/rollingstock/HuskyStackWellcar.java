@@ -2,19 +2,10 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock;
 
 import com.jcirmodelsquad.tcjcir.features.containers.BasicallyContainer;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.JsonToNBT;
-import net.minecraft.nbt.NBTException;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.Constants;
 import train.common.api.EntityRollingStock;
 import train.common.api.IPassenger;
-import train.common.library.BlockIDs;
 
 @Deprecated
 /** Do not use unless you plan to refactor the datawatchers**/

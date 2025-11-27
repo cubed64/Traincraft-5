@@ -2,19 +2,11 @@ package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.tanker;
 
 import com.jcirmodelsquad.tcjcir.models.loads.Modelhazmat_plac_17600;
 import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.Constants;
-import train.common.Traincraft;
 import train.common.api.AbstractStandardTankerCar;
-import train.common.api.LiquidTank;
 import train.common.entity.CargoManager;
 import train.common.entity.CargoSpecification;
 import train.common.library.EnumTrains;
-import train.common.library.GuiIDs;
 
 public class DOT11117600 extends AbstractStandardTankerCar {
 

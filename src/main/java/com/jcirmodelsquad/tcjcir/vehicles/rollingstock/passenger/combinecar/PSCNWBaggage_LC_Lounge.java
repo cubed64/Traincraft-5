@@ -1,7 +1,6 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar;
 
 import net.minecraft.world.World;
-import train.common.api.AbstractPassengerCar;
 import train.common.api.AbstractPassengerCombineCar;
 
 public class PSCNWBaggage_LC_Lounge extends AbstractPassengerCombineCar

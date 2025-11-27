@@ -1,7 +1,6 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger;
 
 import net.minecraft.world.World;
-import train.common.api.AbstractPassengerCar;
 import train.common.api.AbstractPassengerCombineCar;
 
 public class PSCEIRPO15_Baggage_38SeatCoach extends AbstractPassengerCombineCar

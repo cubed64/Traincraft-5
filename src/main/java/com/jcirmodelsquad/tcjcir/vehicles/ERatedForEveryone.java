@@ -4,7 +4,6 @@ import com.mojang.authlib.GameProfile;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import train.common.api.AbstractTrains;
 import train.common.api.EntityRollingStock;
 
 import java.util.List;

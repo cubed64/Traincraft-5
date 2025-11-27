@@ -1,10 +1,8 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.misc;
 
-import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import train.common.api.AbstractPassengerCar;
 import train.common.api.AbstractPassengerCar;
 
 public class StampedeRack extends AbstractPassengerCar

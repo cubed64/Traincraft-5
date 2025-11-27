@@ -1,12 +1,8 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.workcart;
 
 import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
-import train.common.Traincraft;
-import train.common.api.AbstractPassengerCar;
 import train.common.api.AbstractWorkCart;
-import train.common.library.GuiIDs;
 
 public class CA11 extends AbstractWorkCart
 {
