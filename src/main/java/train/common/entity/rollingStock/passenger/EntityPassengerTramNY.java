@@ -9,7 +9,6 @@ import train.client.render.register.TrainRenderRecord;
 import train.common.Traincraft;
 import train.common.api.EntityRollingStock;
 import train.common.api.IPassenger;
-import train.common.entity.rollingStock.electric.EntityLocoElectricTramNY;
 import train.common.library.Info;
 
 public class EntityPassengerTramNY extends EntityRollingStock implements IPassenger {

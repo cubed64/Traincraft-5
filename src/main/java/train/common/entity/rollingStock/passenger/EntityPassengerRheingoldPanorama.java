@@ -4,7 +4,6 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import train.client.render.models.ModelPassenger7;
 import train.client.render.models.ModelRheingoldPassenger_Panorama;
 import train.client.render.register.TrainRenderRecord;
 import train.common.Traincraft;

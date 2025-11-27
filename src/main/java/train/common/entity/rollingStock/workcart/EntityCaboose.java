@@ -2,13 +2,10 @@ package train.common.entity.rollingStock.workcart;
 
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
-import train.client.render.models.ModelBambooTrainPassenger;
 import train.client.render.models.ModelCaboose;
-import train.client.render.models.ModelCaboose3;
 import train.client.render.register.TrainRenderRecord;
 import train.common.Traincraft;
 import train.common.api.AbstractWorkCart;
-import train.common.entity.rollingStock.passenger.EntityPassengerBamboo;
 import train.common.library.Info;
 
 public class EntityCaboose extends AbstractWorkCart

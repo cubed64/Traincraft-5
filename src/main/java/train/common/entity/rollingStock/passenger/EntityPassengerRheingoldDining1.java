@@ -2,16 +2,12 @@ package train.common.entity.rollingStock.passenger;
 
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import train.client.render.models.ModelPassenger7;
 import train.client.render.models.ModelRheingoldPassenger_Dining1;
 import train.client.render.register.TrainRenderRecord;
 import train.common.Traincraft;
 import train.common.api.AbstractWorkCart;
 import train.common.core.util.TraincraftUtil;
-import train.common.library.GuiIDs;
 import train.common.library.Info;
 
 public class EntityPassengerRheingoldDining1 extends AbstractWorkCart {

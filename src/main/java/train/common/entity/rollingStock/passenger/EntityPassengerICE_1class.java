@@ -5,7 +5,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import train.client.render.models.ModelICE1Passenger;
-import train.client.render.models.ModelPassenger2;
 import train.client.render.register.TrainRenderRecord;
 import train.common.Traincraft;
 import train.common.api.EntityRollingStock;

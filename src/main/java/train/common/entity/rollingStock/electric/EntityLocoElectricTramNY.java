@@ -2,12 +2,10 @@ package train.common.entity.rollingStock.electric;
 
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
-import train.client.render.models.ModelPassenger7;
 import train.client.render.models.ModelTramNY;
 import train.client.render.register.TrainRenderRecord;
 import train.common.Traincraft;
 import train.common.api.ElectricTrain;
-import train.common.entity.rollingStock.passenger.EntityPassenger7;
 import train.common.library.EnumSounds;
 import train.common.library.Info;
 import train.common.library.sounds.SoundRecord;

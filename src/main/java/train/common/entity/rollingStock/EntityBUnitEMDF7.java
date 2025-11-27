@@ -13,7 +13,6 @@ import train.common.Traincraft;
 import train.common.api.INoFuelTransferEntity;
 import train.common.api.LiquidManager;
 import train.common.api.LiquidTank;
-import train.common.library.EnumHeritageTrainsLegacy;
 import train.common.library.GuiIDs;
 
 @Deprecated

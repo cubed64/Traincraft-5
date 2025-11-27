@@ -11,7 +11,6 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import train.client.render.models.ModelPassenger2;
 import train.client.render.models.ModelPassenger_DB_oriental;
 import train.client.render.register.TrainRenderRecord;
 import train.common.Traincraft;
