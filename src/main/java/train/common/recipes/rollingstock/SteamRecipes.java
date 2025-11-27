@@ -82,8 +82,11 @@ public class SteamRecipes extends AbstractRecipeHandler
                     }
                     for (ItemStack dye : dyeGreen) {
                         cm.addRecipe(1, new ItemStack(Blocks.torch, 1), new ItemStack(ItemIDs.ironBogie.item, 2), new ItemStack(ItemIDs.ironFrame.item, 1), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 1), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 3), dye, new ItemStack(ItemIDs.minecartAlco460.item, 1), 1);
+                        cm.addRecipe(1, new ItemStack(Blocks.torch, 1), new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 1), new ItemStack(iron.getItem(), 3), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 1), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 3), dye, new ItemStack(ItemIDs.minecartLima2_8_0.item, 1), 1);
                         for (ItemStack bucketWater : waterbucket) {
                             cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), null, null, new ItemStack(bucketWater.getItem(), 1), new ItemStack(iron.getItem(), 3), new ItemStack(c.getItem(), 2), dye, new ItemStack(ItemIDs.minecartTender460.item, 1), 1);
+                            cm.addRecipe(1, null, new ItemStack(ItemIDs.ironBogie.item, 4), new ItemStack(ItemIDs.ironFrame.item, 2), new ItemStack(iron.getItem(), 3), null, null, new ItemStack(bucketWater.getItem(), 1), new ItemStack(iron.getItem(), 2), new ItemStack(c.getItem(), 2), dye, new ItemStack(ItemIDs.minecartTenderLima2_8_0.item, 1), 1);
+                            cm.addRecipe(1, new ItemStack(Blocks.torch, 1), new ItemStack(ItemIDs.ironBogie.item, 3), new ItemStack(ItemIDs.ironFrame.item, 1), new ItemStack(iron.getItem(), 4), new ItemStack(ItemIDs.ironChimney.item, 1), new ItemStack(ItemIDs.ironCab.item, 1), new ItemStack(ItemIDs.ironBoiler.item, 1), new ItemStack(ItemIDs.ironFirebox.item, 1), new ItemStack(c.getItem(), 3), dye, new ItemStack(ItemIDs.minecartBrank.item, 1), 1);
                         }
                     }
                     for (ItemStack dye : dyeBrown) {
