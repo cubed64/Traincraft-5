@@ -11,7 +11,8 @@ import train.common.entity.CargoSpecification;
 
 public class EntityBulkheadFlatCart extends AbstractStandardFreightCar
 {
-	public EntityBulkheadFlatCart(World world) {
+	public EntityBulkheadFlatCart(World world)
+	{
 		super(world);
 	}
 

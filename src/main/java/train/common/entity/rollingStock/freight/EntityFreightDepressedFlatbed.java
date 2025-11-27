@@ -3,30 +3,24 @@ package train.common.entity.rollingStock.freight;
 import com.jcirmodelsquad.tcjcir.models.loads.Modelboulder;
 import com.jcirmodelsquad.tcjcir.models.trains.*;
 import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.Constants;
 import train.client.render.models.ModelCharB1;
 import train.client.render.models.ModelFT17;
 import train.client.render.models.ModelPanzerI;
-import train.common.Traincraft;
-import train.common.api.Freight;
+import train.common.api.AbstractStandardFreightCar;
 import train.common.entity.CargoManager;
 import train.common.entity.CargoSpecification;
-import train.common.library.GuiIDs;
 
-public class EntityFreightDepressedFlatbed extends Freight implements IInventory {
-	public int freightInventorySize;
-	public int numFreightSlots;
+public class EntityFreightDepressedFlatbed extends AbstractStandardFreightCar
+{
 	public EntityFreightDepressedFlatbed(World world) {
 		super(world);
-		initFreightCart();
+	}
 
-		setCargoManager(new CargoManager(new CargoSpecification[][] {
+	@Override
+	public CargoManager setupCargoManager()
+	{
+		return new CargoManager(new CargoSpecification[][] {
 				{ new CargoSpecification(ModelCharB1.class,
 						"trains/CharB1", "Char B1", 0.9, 3.075, -0.0425, -0.45, -0.4,-0.4) },
 				{ new CargoSpecification(ModelPanzerI.class,
@@ -45,71 +39,22 @@ public class EntityFreightDepressedFlatbed extends Freight implements IInventory
 				{new CargoSpecification(Modelboulder.class,
 						"loads/boulder2", "Washaskan Boulder", new CargoSpecification.RenderParameters().setOffset(0.3, 2.75, -0.1)),
 				},
-		}));
-	}
-
-	public void initFreightCart() {
-		numFreightSlots = 9;
-		if(trainSpec!=null)freightInventorySize = trainSpec.getCargoCapacity();
-		cargoItems = new ItemStack[freightInventorySize];
+		});
 	}
 
 	@Override
-	protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {
-		super.writeEntityToNBT(nbttagcompound);
+	public void setupTextureDescription()
+	{
 
-		NBTTagList nbttaglist = new NBTTagList();
-		for (int i = 0; i < cargoItems.length; i++) {
-			if (cargoItems[i] != null) {
-				NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-				nbttagcompound1.setByte("Slot", (byte) i);
-				cargoItems[i].writeToNBT(nbttagcompound1);
-				nbttaglist.appendTag(nbttagcompound1);
-			}
-		}
-		nbttagcompound.setTag("Items", nbttaglist);
 	}
 
-	@Override
-	protected void readEntityFromNBT(NBTTagCompound nbttagcompound) {
-		super.readEntityFromNBT(nbttagcompound);
-
-		NBTTagList nbttaglist = nbttagcompound.getTagList("Items", Constants.NBT.TAG_COMPOUND);
-		cargoItems = new ItemStack[getSizeInventory()];
-		for (int i = 0; i < nbttaglist.tagCount(); i++) {
-			NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
-			int j = nbttagcompound1.getByte("Slot") & 0xff;
-			if (j >= 0 && j < cargoItems.length) {
-				cargoItems[j] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
-			}
-		}
-	}
 	@Override
 	public String getInventoryName() {
 		return "Freight cart";
 	}
 
 	@Override
-	public int getSizeInventory() {
-		return freightInventorySize;
-	}
-
-	@Override
-	public boolean interactFirst(EntityPlayer entityplayer) {
-		playerEntity = entityplayer;
-		if ((super.interactFirst(entityplayer))) {
-			return false;
-		}
-		entityplayer.openGui(Traincraft.instance, GuiIDs.FREIGHT, worldObj, this.getEntityId(), -1, (int) this.posZ);
-		return true;
-	}
-	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 3.8F;
-	}
-
-	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		return true;
 	}
 }

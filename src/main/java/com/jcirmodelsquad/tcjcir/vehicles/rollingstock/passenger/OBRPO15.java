@@ -9,16 +9,21 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
+import train.common.api.AbstractStandardFixedFreightCar;
+import train.common.api.AbstractStandardFreightCar;
 import train.common.api.Freight;
+import train.common.entity.CargoManager;
 import train.common.library.GuiIDs;
 
-public class OBRPO15 extends Freight implements IInventory {
-	public int freightInventorySize;
-	public int numFreightSlots;
-
+public class OBRPO15 extends AbstractStandardFixedFreightCar
+{
 	public OBRPO15(World world) {
 		super(world);
-		initFreightCart();
+	}
+
+	@Override
+	public void setupTextureDescription()
+	{
 		InsertTexture(0, "BAR (566-568)");
 		InsertTexture(1, "BAR (569)");
 		InsertTexture(2, "BAR (566-568, Grey and Sapphire)");
@@ -27,76 +32,13 @@ public class OBRPO15 extends Freight implements IInventory {
 		InsertTexture(5, "NEP");
 	}
 
-	public void initFreightCart() {
-		numFreightSlots = 9;
-		if(trainSpec!=null)freightInventorySize = trainSpec.getCargoCapacity();
-		cargoItems = new ItemStack[freightInventorySize];
-	}
-
-	@Override
-	public void setDead() {
-		super.setDead();
-		isDead = true;
-	}
-
-	@Override
-	protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {
-		super.writeEntityToNBT(nbttagcompound);
-
-		NBTTagList nbttaglist = new NBTTagList();
-		for (int i = 0; i < cargoItems.length; i++) {
-			if (cargoItems[i] != null) {
-				NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-				nbttagcompound1.setByte("Slot", (byte) i);
-				cargoItems[i].writeToNBT(nbttagcompound1);
-				nbttaglist.appendTag(nbttagcompound1);
-			}
-		}
-		nbttagcompound.setTag("Items", nbttaglist);
-	}
-
-	@Override
-	protected void readEntityFromNBT(NBTTagCompound nbttagcompound) {
-		super.readEntityFromNBT(nbttagcompound);
-
-		NBTTagList nbttaglist = nbttagcompound.getTagList("Items", Constants.NBT.TAG_COMPOUND);
-		cargoItems = new ItemStack[getSizeInventory()];
-		for (int i = 0; i < nbttaglist.tagCount(); i++) {
-			NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
-			int j = nbttagcompound1.getByte("Slot") & 0xff;
-			if (j >= 0 && j < cargoItems.length) {
-				cargoItems[j] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
-			}
-		}
-	}
-
 	@Override
 	public String getInventoryName() {
 		return "Osgood Bradley RPO(15')";
 	}
 
 	@Override
-	public int getSizeInventory() {
-		return freightInventorySize;
-	}
-
-	@Override
-	public boolean interactFirst(EntityPlayer entityplayer) {
-		playerEntity = entityplayer;
-		if ((super.interactFirst(entityplayer))) {
-			return false;
-		}
-		entityplayer.openGui(Traincraft.instance, GuiIDs.FREIGHT, worldObj, this.getEntityId(), -1, (int) this.posZ);
-		return true;
-	}
-
-	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 3.37F;
-	}
-
-	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		return true;
 	}
 }

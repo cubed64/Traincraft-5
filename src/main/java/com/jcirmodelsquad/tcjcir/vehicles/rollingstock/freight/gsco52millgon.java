@@ -11,13 +11,9 @@ import train.common.entity.CargoSpecification;
 
 public class gsco52millgon extends AbstractStandardFreightCar
 {
-    public int freightInventorySize;
-    public int numFreightSlots;
     public gsco52millgon(World world) {
         super(world);
     }
-
-
 
     @Override
     public CargoManager setupCargoManager()

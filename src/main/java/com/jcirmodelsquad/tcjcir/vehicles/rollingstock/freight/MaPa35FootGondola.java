@@ -11,20 +11,22 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
+import train.common.api.AbstractStandardFreightCar;
 import train.common.api.Freight;
 import train.common.entity.CargoManager;
 import train.common.entity.CargoSpecification;
 import train.common.library.GuiIDs;
 
-public class MaPa35FootGondola extends Freight implements IInventory {
-    public int freightInventorySize;
-    public int numFreightSlots;
-    public MaPa35FootGondola(World world) {
+public class MaPa35FootGondola extends AbstractStandardFreightCar {
+    public MaPa35FootGondola(World world)
+    {
         super(world);
-        initFreightCart();
-        InsertTexture(0, "MA&PA");
-        InsertTexture(1, "MOW");
-        setCargoManager(new CargoManager(new CargoSpecification[][] {
+    }
+
+    @Override
+    public CargoManager setupCargoManager()
+    {
+        return new CargoManager(new CargoSpecification[][] {
                 { new CargoSpecification(Model35FootAggregate.class,
                         "loads/aggregate35Foot_ballast", "Ballast", 0, 3.0, 0) },
                 { new CargoSpecification(Model35FootAggregate.class,
@@ -37,68 +39,19 @@ public class MaPa35FootGondola extends Freight implements IInventory {
                         "loads/aggregate35Foot_gravel", "Gravel", 0, 3.0, 0) },
                 { new CargoSpecification(Model35FootRails.class,
                         "loads/rails35Foot", "Rails", 0, 3.0, 0) },
-        }));
-    }
-
-    public void initFreightCart() {
-        numFreightSlots = 3;
-        freightInventorySize = trainSpec.getCargoCapacity();
-        cargoItems = new ItemStack[freightInventorySize];
-    }
-    @Override
-    public void setDead() {
-        super.setDead();
-        isDead = true;
+        });
     }
 
     @Override
-    protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {
-        super.writeEntityToNBT(nbttagcompound);
-        NBTTagList nbttaglist = new NBTTagList();
-        for (int i = 0; i < cargoItems.length; i++) {
-            if (cargoItems[i] != null) {
-                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-                nbttagcompound1.setByte("Slot", (byte) i);
-                cargoItems[i].writeToNBT(nbttagcompound1);
-                nbttaglist.appendTag(nbttagcompound1);
-            }
-        }
-
-        nbttagcompound.setTag("Items", nbttaglist);
-    }
-
-    @Override
-    protected void readEntityFromNBT(NBTTagCompound nbttagcompound) {
-        super.readEntityFromNBT(nbttagcompound);
-
-        NBTTagList nbttaglist = nbttagcompound.getTagList("Items", Constants.NBT.TAG_COMPOUND);
-        cargoItems = new ItemStack[getSizeInventory()];
-        for (int i = 0; i < nbttaglist.tagCount(); i++) {
-            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
-            int j = nbttagcompound1.getByte("Slot") & 0xff;
-            if (j >= 0 && j < cargoItems.length) {
-                cargoItems[j] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
-            }
-        }
+    public void setupTextureDescription()
+    {
+        InsertTexture(0, "MA&PA");
+        InsertTexture(1, "MOW");
     }
 
     @Override
     public String getInventoryName() {
         return "MA&PA 35' Gondola";
-    }
-
-    @Override
-    public int getSizeInventory() {
-        return freightInventorySize;
-    }
-
-    @Override
-    public boolean interactFirst(EntityPlayer entityplayer) {
-        if ((super.interactFirst(entityplayer))) {
-            return false;
-        }
-        entityplayer.openGui(Traincraft.instance, GuiIDs.FREIGHT, worldObj, this.getEntityId(), -1, (int) this.posZ);
-        return true;
     }
 
     @Override
