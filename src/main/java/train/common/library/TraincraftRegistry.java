@@ -48,6 +48,18 @@ public class TraincraftRegistry
         EntityRegistry.registerModEntity(trainRecord.getEntityClass(), trainRecord.getInternalName(), id, mod, 512, 1, true);
     }
 
+    public void RegisterRollingStockEntities(Map<Item, ITrainRecord> entries, Object mod)
+    {
+        trainRecordsByItem.putAll(entries);
+        trainRecords.addAll(entries.values());
+
+        for (Map.Entry<Item, ITrainRecord> entry : entries.entrySet())
+        {
+            int id = incrementTrainID();
+            EntityRegistry.registerModEntity(entry.getValue().getEntityClass(), entry.getValue().getInternalName(), id, mod, 512, 1, true);
+        }
+    }
+
     public final int incrementTrainID()
     {
         trainID++;
@@ -93,7 +105,6 @@ public class TraincraftRegistry
 
         for (EnumTrains trains : EnumTrains.values()) {
             trainRecords.put(trains.getItem(), trains);
-            trainRecordsByItem.put(trains.getItem(), trains);
         }
 
         for (EnumHeritageTrainsLegacy trains : EnumHeritageTrainsLegacy.values())
