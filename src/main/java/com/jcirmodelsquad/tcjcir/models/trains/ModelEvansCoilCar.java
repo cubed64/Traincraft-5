@@ -9,6 +9,7 @@
 
 package com.jcirmodelsquad.tcjcir.models.trains; //Path where the model is located
 
+import com.jcirmodelsquad.tcjcir.models.loads.ModelEvansCoilCar_Coils;
 import com.jcirmodelsquad.tcjcir.models.loads.ModelEvansCoilCar_Covers;
 import com.jcirmodelsquad.tcjcir.models.trucks.Model70TonTruck2;
 import net.minecraft.entity.Entity;
@@ -642,20 +643,21 @@ public class ModelEvansCoilCar extends ModelConverter //Same as Filename
 	}
 
     Model70TonTruck2 bogie = new Model70TonTruck2();
-	//ModelEvansCoilCar_Covers coils = new ModelEvansCoilCar_Covers();
+	ModelEvansCoilCar_Coils coils = new ModelEvansCoilCar_Coils();
 
     @Override
     public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
     {
 		int cargo = ((Freight) entity).getAmmountOfCargo();
+		int cargoType = ((Freight) entity).getCargoManager().getSelectedCargo();
         ModelRenderHelper.renderModelWithStandardFreightRollingStock(bodyModel, entity, f5);
-		/*if (cargo > 0) {
-			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/coilcar_covers/evanscoilcover_coils.png"));
+		if (cargo > 0 && cargoType == 0) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/coilcar_covers/evanscoilcar_coils.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(0.0,0.0,0.0);
 			coils.render(entity,f,f1,f2,f3,f4,f5);
 			GL11.glPopMatrix();
-		}*/
+		}
         if(entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor()==3249){
             Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/70Ton_Greyish.png"));
         } else {
