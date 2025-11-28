@@ -57,7 +57,13 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Calendar;
 
-public class ClientProxy extends CommonProxy {
+public class ClientProxy extends CommonProxy
+{
+	public static boolean isHolidayHalloween()
+	{
+		Calendar cal = Calendar.getInstance();
+		return(cal.get(Calendar.MONTH) == Calendar.OCTOBER);
+	}
 
 	public static boolean isHoliday()
 	{
@@ -72,10 +78,11 @@ public class ClientProxy extends CommonProxy {
 	}
 
 	@Override
+	public boolean isClient(){
+		return true;
+	}
 
-
-
-
+	@Override
 	public void registerEvents(FMLPreInitializationEvent event) {
 		super.registerEvents(event);
 		ClientTickHandler tickHandler = new ClientTickHandler();

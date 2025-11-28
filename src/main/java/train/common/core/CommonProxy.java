@@ -53,6 +53,10 @@ public class CommonProxy implements IGuiHandler {
 		throw new IllegalStateException("You're trying to use a Traincraft alpha-version past its expiry date. Download a release-build at https://minecraft.curseforge.com/projects/traincraft.");
 	}
 
+	public boolean isClient(){
+		return false;
+	}
+
 	public void setKeyBinding(String name, int value) {}
 
 	public void registerRenderInformation() {}

@@ -105,6 +105,45 @@ lockmenu.Title_Trusted_Players.name=Trusted Players
 lockmenu.Save and Close.name=Save and Close
 lockmenu.Save To All Cars in Consist.name=Save To All Cars in Consist
 
+<!-- ## GUI ## -->
+menu.item.slots=Slots
+menu.item.seats=Max Riders
+menu.item.isizeof=Inventory
+menu.item.freight=Freight
+menu.item.passenger=Passenger
+menu.item.tanker=Tanker
+menu.item.tender=Tender
+menu.item.workcart=Workbench Cart
+menu.item.rollingstock=Rollingstock
+menu.item.locomotive=Locomotive
+menu.item.fueltype=Fuel
+menu.item.steam=Steam
+menu.item.diesel=Diesel
+menu.item.electric=Electric
+menu.item.types=Type
+menu.item.mhp=MHP
+menu.item.speed=Top Speed
+menu.item.weight=Weight
+menu.item.country=Country
+menu.item.year=Year
+menu.item.fictional=Fictional
+
+menu.item.yes=Yes
+menu.item.no=No
+
+menu.item.lockout=Lockout
+menu.item.lockout.public=Public Skins
+menu.item.lockout.notpublic=No Public Skins
+
+<!-- ## GUI ## -->
+menu.item.=N/A
+menu.item.be=Belgium
+menu.item.uk=United Kingdom
+menu.item.us=United States
+menu.item.cz=Czech Republic
+menu.item.de=Germany
+menu.item.es=Spain
+
 <!-- ## Achievements ## -->
 achievement.tc:engineer=Engineers clothes
 achievement.tc:engineer.desc=A true trainman!
