@@ -50,7 +50,6 @@ import static train.common.core.handlers.ConfigHandler.CREATIVE_DROP_ROLLINGSTOC
 
 public abstract class AbstractTrains extends EntityMinecart implements IMinecart, IRoutableCart, IEntityAdditionalSpawnData
 {
-
 	/**
 	 * The color of the current rollingstock -1 if default
 	 */
@@ -169,6 +168,11 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	private List<TrustedPlayer> trustedList = new ArrayList<>();
 	private CargoManager cargoManager = null;
 	private final Map<Integer, String> textureDescriptionMap = new HashMap<>();
+
+	public Map<Integer, String> getTextureDescriptionMap()
+	{
+		return textureDescriptionMap;
+	}
 
 	public boolean isTextureDescriptionMapEmpty()
 	{

@@ -4,6 +4,9 @@ import train.common.api.AbstractTrains;
 import train.common.library.register.ITrainRecord;
 import train.common.library.register.TrainRecord;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class RollingStockItemCache
 {
     public RollingStockItemCache(ITrainRecord trainRecord, AbstractTrains train)
@@ -12,7 +15,10 @@ public class RollingStockItemCache
         TransportYear = train.transportYear();
         TransportCountry = train.transportCountry();
         IsFictional = train.isFictional();
+        textureDescriptionMap = train.getTextureDescriptionMap();
     }
+
+    public final Map<Integer, String> textureDescriptionMap;
 
     public final boolean HasPublicSkins;
 

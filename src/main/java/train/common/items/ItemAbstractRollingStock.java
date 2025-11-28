@@ -71,6 +71,15 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
     {
         par3List.add("\u00a77" + "Pack: " + GetContentPackName());
+
+        ITrainRecord trainRecord = Traincraft.traincraftRegistry.getCurrentTrain(this);
+        RollingStockItemCache itemCacheData = cache.getIfPresent(trainRecord.getInternalName());
+        if (itemCacheData == null)
+        {
+            itemCacheData = new RollingStockItemCache(trainRecord, Traincraft.traincraftRegistry.getEntity(trainRecord.getEntityClass(), null));
+            cache.put(trainRecord.getInternalName(), itemCacheData);
+        }
+
         if (par1ItemStack.hasTagCompound())
         {
             NBTTagCompound var5 = par1ItemStack.getTagCompound();
@@ -82,22 +91,34 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
                 par3List.add("\u00a77" + "Creator: " + trainCreator);
             }
             int color = var5.getInteger("trainColor");
-            if (var5.hasKey("trainColor") /*&& color <= 16*/) {
-                par3List.add("\u00a77" + "Color: " + AbstractTrains.getColorAsString(color));
-            }
+            if (var5.hasKey("trainColor"))
+            {
+                int actualPos = 0;
+                for (int colorPos = 0; colorPos < trainRecord.getColors().length; colorPos++)
+                {
+                    if (trainRecord.getColors()[colorPos] == color)
+                    {
+                        actualPos = colorPos;
+                        break;
+                    }
 
+                }
+
+                if (itemCacheData.textureDescriptionMap.containsKey(actualPos))
+                {
+                    par3List.add("\u00a77" + "Scheme: " + itemCacheData.textureDescriptionMap.get(actualPos));
+                }
+                else
+                {
+                    par3List.add("\u00a77" + "Color: " + AbstractTrains.getColorAsString(color));
+                }
+            }
 
             if (!trainNote.isEmpty()) {
                 par3List.add("\u00a77" + "Notes: " + trainNote);
             }
         }
-        ITrainRecord trainRecord = Traincraft.traincraftRegistry.getCurrentTrain(this);
-        RollingStockItemCache itemCacheData = cache.getIfPresent(trainRecord.getInternalName());
-        if (itemCacheData == null)
-        {
-            itemCacheData = new RollingStockItemCache(trainRecord, Traincraft.traincraftRegistry.getEntity(trainRecord.getEntityClass(), null));
-            cache.put(trainRecord.getInternalName(), itemCacheData);
-        }
+
 
         String[] additionnalInfo = trainRecord.getAdditionalTooltip();
 
