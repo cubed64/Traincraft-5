@@ -460,6 +460,7 @@ item.tc:minecartTenderSouthern1102	Tender Southern1102	train.common.entity.rolli
 item.tc:minecartBuilder	Tracks Builder	train.common.entity.rollingStock.EntityTracksBuilder	builder2
 item.tc:minecartWork	Work Cart Yellow	train.common.entity.rollingStock.workcart.EntityWorkCart	workcart
 item.tc:minecartEvans5100	Evans5100	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.Evans5100	Evans_5100_
+item.tc:minecartEvansCoilCar	EvansCoilCar	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.EvansCoilCar	EvansCoilCar_
 item.tc:minecartGeometryCar	NXTrack Geometry Car	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.misc.ExperimentalGeometryCar	geometrycar_
 item.tc:minecartFNCC2375Hopper	FNCC2375Hopper	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.FNCC2375Hopper	FNCC2375_
 item.tc:minecartFNCC50Foot	FNCC50FootBoxcar	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.FNCC50Foot	FNCC50Foot_

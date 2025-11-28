@@ -527,6 +527,7 @@ public class AssemblyTableRecipes extends AbstractRecipeHandler
 				}
 				for (ItemStack dye : dyeBlue) {
 					cm.addRecipe(2, new ItemStack(ItemIDs.freightCarRibbing.item, 4), new ItemStack(ItemIDs.freightCarTruck.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(i.getItem(), 3, OreDictionary.WILDCARD_VALUE), null, null, null, new ItemStack(itemSteel, 3, itemDamageSteel), dye, new ItemStack(ItemIDs.minecartGSI60FootBulkhead.item, 1), 1);
+					cm.addRecipe(2, null, new ItemStack(ItemIDs.freightCarTruck.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 4, itemDamageSteel), null, null, new ItemStack(itemSteel, 4, itemDamageSteel), new ItemStack(Blocks.chest, 1), new ItemStack(Blocks.chest, 1), dye, new ItemStack(ItemIDs.minecartEvansCoilCar.item, 1), 1);
 				}
 			}
 			for (ItemStack dye : dyeGreen) {
