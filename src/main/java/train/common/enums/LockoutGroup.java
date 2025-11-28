@@ -21,6 +21,7 @@ public enum LockoutGroup implements ILockoutGroup
     SNCT("d46213e9-ea09-40e7-9ec9-595903d98e17"), //seattle & north coast ry (protolance textures only)
     BIDA("d46213e9-ea09-40e7-9ec9-595903d98e17"), //misc mark for various bida railroads i dont think are important enough to have their own groups
     LRR("d46213e9-ea09-40e7-9ec9-595903d98e17"), //latrans range
+    PDEV("d46213e9-ea09-40e7-9ec9-595903d98e17"), //Peninsula Development & Improvement Company Railroad
     SGPR(),//sargosa
     ADT(),//divs ADT
 
