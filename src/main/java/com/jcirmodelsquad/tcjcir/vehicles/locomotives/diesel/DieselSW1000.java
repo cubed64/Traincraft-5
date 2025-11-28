@@ -30,6 +30,7 @@ public class DieselSW1000 extends DieselTrain {
         InsertTexture(7, "Thunder Valley Transportation District (Falcon Area Rapid Transit)");
         InsertTexture(8, "ANW");
         InsertTexture(9, "ANW (Chevrons)");
+        InsertTexture(10, "Peninsula Development & Improvement Company", LockoutGroup.PDEV);
     }
 
     @Override

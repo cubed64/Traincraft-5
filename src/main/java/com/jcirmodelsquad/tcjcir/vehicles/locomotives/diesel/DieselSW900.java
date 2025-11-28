@@ -32,6 +32,7 @@ public class DieselSW900 extends DieselTrain {
         InsertTexture(9, "Falcon Area Rapid Transit MOW");
         InsertTexture(10, "Sacramento Northern (Ex FNCC)");
         InsertTexture(11, "SP Tigerstripe");
+        InsertTexture(12, "Peninsula Development & Improvement Company", LockoutGroup.PDEV);
     }
 
     @Override
