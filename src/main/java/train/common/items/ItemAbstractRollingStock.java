@@ -125,7 +125,7 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
             par3List.add("\u00a77" + "Mass: " + (trainRecord.getMass() * 10));
         }
         if (trainRecord.getMaxSpeed() > 0) {
-            par3List.add("\u00a77" + translate("menu.item.speed") + ": " + trainRecord.getMaxSpeed());
+            par3List.add("\u00a77" + translate("menu.item.speed") + ": " + trainRecord.getMaxSpeed() + " km/h");
         }
         if (getCargoCapacity() > 0) {
             par3List.add("\u00a77" + translate("menu.item.slots") + ": " + getCargoCapacity());
