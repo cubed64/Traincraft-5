@@ -22,7 +22,11 @@ public class DieselSF30C extends DieselTrain {
         InsertTexture(1, "ATSF (Kodachrome)");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

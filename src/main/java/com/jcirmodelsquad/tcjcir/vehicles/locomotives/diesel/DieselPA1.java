@@ -20,8 +20,12 @@ public class DieselPA1 extends DieselTrain {
 
         //when the benis sus
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

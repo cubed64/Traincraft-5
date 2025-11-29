@@ -23,7 +23,11 @@ public class DieselP32 extends DieselTrain {
         InsertTexture(2, "Amtrak (Empire Service)");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

@@ -36,6 +36,12 @@ public class DieselSD70Mac extends DieselTrain {
 
 
     }
+
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
 

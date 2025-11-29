@@ -26,6 +26,12 @@ public class DieselMP900 extends DieselTrain {
     }
 
     @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
+
+    @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 1.1, 0.3, -0.35); }
 
     @Override

@@ -29,8 +29,12 @@ public class DieselRS2 extends DieselTrain {
         InsertTexture(8, "WM (Speed Lettering)");
 
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

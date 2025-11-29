@@ -25,6 +25,12 @@ public class DieselSD40R extends DieselTrain {
         InsertTexture(3, "CSLX");
     }
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
+
 
     
 

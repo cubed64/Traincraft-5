@@ -24,8 +24,12 @@ public class DieselSD45dash2B extends DieselTrain {
         InsertTexture(2, "ATSF (Kodachrome)");
         InsertTexture(3, "ATSF (Bicentennial)");
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

@@ -23,6 +23,12 @@ public class DieselSD40dash2B extends DieselTrain {
         InsertTexture(0, "FURRX (Ex-CSWR)");
     }
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
+
 
     
 

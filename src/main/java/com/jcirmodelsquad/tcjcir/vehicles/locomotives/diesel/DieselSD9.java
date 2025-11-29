@@ -38,6 +38,12 @@ public class DieselSD9 extends DieselTrain {
     }
 
     @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
+
+    @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.9, 0.1, -0.45); }
 
     @Override

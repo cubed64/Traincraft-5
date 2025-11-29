@@ -49,7 +49,11 @@ public class DieselSD45dash2 extends DieselTrain {
 
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

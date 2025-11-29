@@ -20,8 +20,12 @@ public class DieselRSD15 extends DieselTrain {
         InsertTexture(2, "Blandsville & Blankerston");
         InsertTexture(3, "FURRX (EX CSWR)");
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

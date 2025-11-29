@@ -25,7 +25,11 @@ public class DieselNRE3gs21b extends DieselTrain {
         InsertTexture(5, "CSXT (Yn3)");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

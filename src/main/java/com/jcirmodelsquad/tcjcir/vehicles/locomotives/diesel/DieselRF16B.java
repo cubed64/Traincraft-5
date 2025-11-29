@@ -31,7 +31,11 @@ public class DieselRF16B extends DieselTrain {
         InsertTexture(8, "Steampunk Rail", LockoutGroup.SPR);
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

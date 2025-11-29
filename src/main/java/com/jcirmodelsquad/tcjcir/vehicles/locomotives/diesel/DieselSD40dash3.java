@@ -24,6 +24,12 @@ public class DieselSD40dash3 extends DieselTrain {
         InsertTexture(1, "CSXT");
         InsertTexture(2, "Ann Arbor");
     }
+
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     

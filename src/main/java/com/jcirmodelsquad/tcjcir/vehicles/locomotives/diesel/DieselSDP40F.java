@@ -26,7 +26,11 @@ public class DieselSDP40F extends DieselTrain {
         InsertTexture(4, "ATSF (Frieghtbonnet)");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

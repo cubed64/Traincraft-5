@@ -32,8 +32,12 @@ public class DieselRF16 extends DieselTrain {
         InsertTexture(10, "A-Team");
 
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

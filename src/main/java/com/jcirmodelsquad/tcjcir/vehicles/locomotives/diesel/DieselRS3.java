@@ -32,7 +32,11 @@ public class DieselRS3 extends DieselTrain {
         InsertTexture(11, "WM (Speed Lettering Hammerhead)");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

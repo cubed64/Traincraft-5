@@ -24,7 +24,11 @@ public class DieselP42 extends DieselTrain {
         InsertTexture(3, "VIA Rail");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

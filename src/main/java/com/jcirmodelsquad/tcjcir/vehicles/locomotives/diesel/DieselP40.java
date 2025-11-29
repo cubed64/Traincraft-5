@@ -23,7 +23,11 @@ public class DieselP40 extends DieselTrain {
         InsertTexture(1, "Amtrak Phase V");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

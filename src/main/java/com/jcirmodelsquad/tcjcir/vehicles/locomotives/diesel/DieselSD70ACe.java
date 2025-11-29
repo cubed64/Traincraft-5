@@ -38,6 +38,12 @@ public class DieselSD70ACe extends DieselTrain {
         InsertTexture(16, "EMDX Demonstrator Whispercab");
         InsertTexture(17, "CN Demonstrator Whispercab");
     }
+
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
         
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 4.15, 0.4, -0.35); }

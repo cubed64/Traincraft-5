@@ -30,8 +30,12 @@ public class DieselS12 extends DieselTrain {
         InsertTexture(7, "Monongahela");
         InsertTexture(8, "SP Tigerstripe");
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

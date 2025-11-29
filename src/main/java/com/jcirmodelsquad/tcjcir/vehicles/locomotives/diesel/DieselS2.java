@@ -31,7 +31,11 @@ public class DieselS2 extends DieselTrain {
         InsertTexture(12, "AGW");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override
