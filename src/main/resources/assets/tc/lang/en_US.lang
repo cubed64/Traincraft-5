@@ -715,6 +715,8 @@ item.tc:minecartLocoC41_080.name=C41 0-8-0
 item.tc:minecartLocoAlcoSC4.name=Alco SC4
 item.tc:minecartFreightL.name=Freight Car L
 
+entity.tc.Passenger Denver Rio Grande Combo.name=Denver Rio Grande Combo
+
 entity.tc.Entity Front Bogie.name=Bogie
 entity.tc.zeppelin big.name=Zeppelin One Balloon
 entity.tc.zeppelin.name=Zeppelin Two Balloons
