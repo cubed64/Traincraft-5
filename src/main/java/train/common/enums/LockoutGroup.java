@@ -31,6 +31,14 @@ public enum LockoutGroup implements ILockoutGroup
     // wcfb75
     GCM("56af8eef-e84f-4eab-ad56-ba59f8431176"), //Galesburg Clinton & Midland
 
+    //mano
+    CWL("ae85a873-2ce8-4a28-9589-fddae7e0af65"), //clear water lakes
+
+    //maxywolfi
+    ANW("fc29999b-606d-46a2-a2cc-80042df47544"), //akworth northwestern
+
+    //riggs64
+    DRXL("b57bdcf8-561b-426e-9603-5a8ad35f9375"), //drexel co
 
     JCTransit()
     ;

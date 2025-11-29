@@ -32,8 +32,8 @@ public class DieselGP38 extends DieselTrain {
         InsertTexture(10, "SNCT 301 (Protolance)", LockoutGroup.SNCT);
         InsertTexture(11, "SNCT 302 (Protolance)", LockoutGroup.SNCT);
         InsertTexture(12, "GLNT JCIR 6 years");
-        InsertTexture(13, "ANW");
-        InsertTexture(14, "ANW (Chevrons)");
+        InsertTexture(13, "ANW", LockoutGroup.ANW);
+        InsertTexture(14, "ANW (Chevrons)", LockoutGroup.ANW);
         InsertTexture(15, "Georgia Northeastern");
         InsertTexture(16, "Monongahela (Early)");
         InsertTexture(17, "Monongahela (Late)");

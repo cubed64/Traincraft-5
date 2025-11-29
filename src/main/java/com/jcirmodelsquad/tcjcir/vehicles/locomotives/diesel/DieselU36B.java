@@ -4,6 +4,7 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -27,7 +28,7 @@ public class DieselU36B extends DieselTrain {
         InsertTexture(7, "Seaboard");
         InsertTexture(8, "she consolodate on my rail till i coperation");
         InsertTexture(9, "Western Pacific");
-        InsertTexture(10, "Drexel Co");
+        InsertTexture(10, "Drexel Co", LockoutGroup.DRXL);
         InsertTexture(11, "Deadwood & La Mesa");
     }
 

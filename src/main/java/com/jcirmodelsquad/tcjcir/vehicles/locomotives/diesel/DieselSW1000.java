@@ -28,8 +28,8 @@ public class DieselSW1000 extends DieselTrain {
         InsertTexture(5, "Southern Peenor Belt");
         InsertTexture(6, "Southern Port Belt (BN Patch)");
         InsertTexture(7, "Thunder Valley Transportation District (Falcon Area Rapid Transit)");
-        InsertTexture(8, "ANW");
-        InsertTexture(9, "ANW (Chevrons)");
+        InsertTexture(8, "ANW", LockoutGroup.ANW);
+        InsertTexture(9, "ANW (Chevrons)", LockoutGroup.ANW);
         InsertTexture(10, "Peninsula Development & Improvement Company", LockoutGroup.PDEV);
     }
 

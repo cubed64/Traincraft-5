@@ -24,7 +24,7 @@ public class DieselCF7round3 extends DieselTrain {
         InsertTexture(2, "FNCC (KIT-L, Ex ATSF, Dual Canon)", LockoutGroup.FNCC);
         InsertTexture(3, "Avanste Northeastern", LockoutGroup.ANE);
         InsertTexture(4, "Paradox Rail 69");
-        InsertTexture(5, "Drexel Co");
+        InsertTexture(5, "Drexel Co", LockoutGroup.DRXL);
         InsertTexture(6, "FURRX (EX CSWR)");
         InsertTexture(7, "West Creek Pacific");
         InsertTexture(8, "Marshwood Terminal");
