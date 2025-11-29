@@ -32,8 +32,8 @@ public class EntityPassengerBamboo extends AbstractPassengerCar
 		Traincraft.traincraftRegistry.RegisterRollingStockModel(new TrainRenderRecord(Info.modID,
 				EntityPassengerBamboo.class, new ModelBambooTrainPassenger(),
 				"passenger_bamboo_",
-				new float[] { 1.7F, 0.15F, -0.6F },
+				new float[] { 0.1F, 0F, 0F },
 				new float[] { 0F, 180F, 180F },
-				new float[] {0.9f,1f,0.9f}));
+				null));
 	}
 }
