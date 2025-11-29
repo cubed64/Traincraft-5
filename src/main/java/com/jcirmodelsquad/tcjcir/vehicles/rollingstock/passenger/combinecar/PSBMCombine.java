@@ -24,6 +24,12 @@ public class PSBMCombine extends AbstractPassengerCombineCar
 	}
 
 	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
+
+	@Override
 	public String getInventoryName()
 	{
 		return "Pullman Standard B&M Combine Passenger-Baggage";

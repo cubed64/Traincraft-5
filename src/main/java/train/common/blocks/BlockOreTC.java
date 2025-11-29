@@ -50,13 +50,14 @@ public class BlockOreTC extends BlockFalling {
 	}
 
 	@Override
-    public void onBlockAdded(World world, int x, int y, int z) {
-		if (world.getBlockMetadata(x, y, z) == 1) world.scheduleBlockUpdate(x, y, z, this, this.tickRate(world));
+    public void onBlockAdded(World world, int x, int y, int z)
+	{
+		if (world.getBlockMetadata(x, y, z) == 1 || world.getBlockMetadata(x, y, z) == 3 || world.getBlockMetadata(x, y, z) == 4) world.scheduleBlockUpdate(x, y, z, this, this.tickRate(world));
     }
 
 	@Override
     public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
-		if (world.getBlockMetadata(x, y, z) == 1) world.scheduleBlockUpdate(x, y, z, this, this.tickRate(world));
+		if (world.getBlockMetadata(x, y, z) == 1 || world.getBlockMetadata(x, y, z) == 3 || world.getBlockMetadata(x, y, z) == 4) world.scheduleBlockUpdate(x, y, z, this, this.tickRate(world));
     }
 
 	@Override

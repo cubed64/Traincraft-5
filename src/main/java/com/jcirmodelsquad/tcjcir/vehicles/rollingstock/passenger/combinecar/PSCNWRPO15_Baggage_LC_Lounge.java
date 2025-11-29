@@ -11,7 +11,11 @@ public class PSCNWRPO15_Baggage_LC_Lounge extends AbstractPassengerCombineCar
 		super(world);
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 
 	@Override
 	public void setupTextureDescription()

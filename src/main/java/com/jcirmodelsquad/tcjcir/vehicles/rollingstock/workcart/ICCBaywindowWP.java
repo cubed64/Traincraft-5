@@ -24,7 +24,7 @@ public class ICCBaywindowWP extends AbstractWorkCart
     @Override
     public String transportCountry()
     {
-        return "USA";
+        return "US";
     }
 
     @Override

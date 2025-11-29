@@ -1,23 +1,35 @@
 package train.common.entity.rollingStock.passenger;
 
 import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import train.client.render.models.ModelDRGCombo;
 import train.client.render.register.TrainRenderRecord;
 import train.common.Traincraft;
-import train.common.api.EntityRollingStock;
-import train.common.api.IPassenger;
+import train.common.api.AbstractPassengerCombineCar;
 import train.common.library.Info;
 
-public class EntityPassengerDenverRioGrandeCombo extends EntityRollingStock implements IPassenger {
+public class EntityPassengerDenverRioGrandeCombo extends AbstractPassengerCombineCar
+{
 
 	public EntityPassengerDenverRioGrandeCombo(World world) {
 		super(world);
 	}
 
-		@Override
+	@Override
+	public void setupTextureDescription()
+	{
+		InsertTexture(0, "DRGW");
+		InsertTexture(1, "Noctua Poopy Brown");
+		InsertTexture(2, "Green");
+	}
+
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
+
+	@Override
 	public void updateRiderPosition() {
 		//if(this.bogie[0]!=null){
 			/*double dX = this.posX - this.bogie[0].posX;
@@ -33,42 +45,6 @@ public class EntityPassengerDenverRioGrandeCombo extends EntityRollingStock impl
 		riddenByEntity.setPosition(posX - Math.cos(rads)*distance, posY + (Math.tan(pitchRads)*-distance)+( getMountedYOffset() + riddenByEntity.getYOffset() + 0.2F), posZ - Math.sin(rads)*distance);
 		*/
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset() + 0.2, posZ);
-	}
-
-	
-
-	@Override
-	public boolean interactFirst(EntityPlayer entityplayer) {
-		playerEntity = entityplayer;
-		if ((super.interactFirst(entityplayer))) {
-			return false;
-		}
-		if (!worldObj.isRemote) {
-			ItemStack itemstack = entityplayer.inventory.getCurrentItem();
-			if(lockThisCart(itemstack, entityplayer))return true;
-			if (riddenByEntity != null && (riddenByEntity instanceof EntityPlayer) && riddenByEntity != entityplayer) {
-				return true;
-			}
-			if (!worldObj.isRemote) {
-				entityplayer.mountEntity(this);
-			}
-		}
-		return true;
-	}
-
-	@Override
-	public boolean canBeRidden() {
-		return true;
-	}
-
-	@Override
-	public boolean isStorageCart() {
-		return false;
-	}
-
-	@Override
-	public boolean isPoweredCart() {
-		return false;
 	}
 
 	@Override

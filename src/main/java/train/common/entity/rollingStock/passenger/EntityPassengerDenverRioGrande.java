@@ -7,17 +7,24 @@ import net.minecraft.world.World;
 import train.client.render.models.ModelDRGPassenger;
 import train.client.render.register.TrainRenderRecord;
 import train.common.Traincraft;
+import train.common.api.AbstractPassengerCar;
 import train.common.api.EntityRollingStock;
 import train.common.api.IPassenger;
 import train.common.library.Info;
 
-public class EntityPassengerDenverRioGrande extends EntityRollingStock implements IPassenger {
+public class EntityPassengerDenverRioGrande extends AbstractPassengerCar {
 
 	public EntityPassengerDenverRioGrande(World world) {
 		super(world);
 	}
 
-		@Override
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
+
+	@Override
 	public void updateRiderPosition() {
 		//if(this.bogie[0]!=null){
 			/*double dX = this.posX - this.bogie[0].posX;
@@ -33,42 +40,6 @@ public class EntityPassengerDenverRioGrande extends EntityRollingStock implement
 		riddenByEntity.setPosition(posX - Math.cos(rads)*distance, posY + (Math.tan(pitchRads)*-distance)+( getMountedYOffset() + riddenByEntity.getYOffset() + 0.2F), posZ - Math.sin(rads)*distance);
 		*/
 		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset() + 0.2, posZ);
-	}
-
-
-
-	@Override
-	public boolean interactFirst(EntityPlayer entityplayer) {
-		playerEntity = entityplayer;
-		if ((super.interactFirst(entityplayer))) {
-			return false;
-		}
-		if (!worldObj.isRemote) {
-			ItemStack itemstack = entityplayer.inventory.getCurrentItem();
-			if(lockThisCart(itemstack, entityplayer))return true;
-			if (riddenByEntity != null && (riddenByEntity instanceof EntityPlayer) && riddenByEntity != entityplayer) {
-				return true;
-			}
-			if (!worldObj.isRemote) {
-				entityplayer.mountEntity(this);
-			}
-		}
-		return true;
-	}
-
-	@Override
-	public boolean canBeRidden() {
-		return true;
-	}
-
-	@Override
-	public boolean isStorageCart() {
-		return false;
-	}
-
-	@Override
-	public boolean isPoweredCart() {
-		return false;
 	}
 
 	@Override
