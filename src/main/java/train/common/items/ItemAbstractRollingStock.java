@@ -134,10 +134,7 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
             par3List.add("\u00a77" + translate("menu.item.types") + ": " + getTrainType());
         }
 
-        if (itemCacheData.TransportYear != "")
-        {
-            par3List.add("\u00a77" + translate("menu.item.fictional") + ": " + (itemCacheData.IsFictional ? translate("menu.item.yes") : translate("menu.item.no")));
-        }
+        par3List.add("\u00a77" + translate("menu.item.fictional") + ": " + (itemCacheData.IsFictional ? translate("menu.item.yes") : translate("menu.item.no")));
 
         par3List.add(EnumChatFormatting.RED + translate("menu.item.lockout") + ": " + (itemCacheData.HasPublicSkins ? EnumChatFormatting.GREEN + translate("menu.item.lockout.public") : EnumChatFormatting.RED + translate("menu.item.lockout.notpublic")));
 
