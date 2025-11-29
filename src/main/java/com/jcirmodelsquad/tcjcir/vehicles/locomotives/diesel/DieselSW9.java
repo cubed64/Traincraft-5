@@ -27,7 +27,11 @@ public class DieselSW9 extends DieselTrain {
         InsertTexture(5, "Blandsville & Blankerston");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

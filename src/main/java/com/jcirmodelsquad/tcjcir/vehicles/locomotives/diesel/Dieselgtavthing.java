@@ -20,8 +20,12 @@ public class Dieselgtavthing extends DieselTrain {
 
     }
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
-    
 
     @Override
     public void updateRiderPosition() {

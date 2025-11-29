@@ -36,7 +36,13 @@ public class DieselDash944CW extends DieselTrain {
         InsertTexture(14, "Plainview");
         InsertTexture(15, "Galesburg Clinton & Midland", train.common.enums.LockoutGroup.GCM); 
     }
-        
+
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
+
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.9, 0.4, -0.35); }
 

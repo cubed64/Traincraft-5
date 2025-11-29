@@ -26,6 +26,13 @@ public class DieselGP39TDash2 extends DieselTrain {
         InsertTexture(4, "");
 
     }
+
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
+
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.9, 0.15, -0.325); }
 

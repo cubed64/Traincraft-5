@@ -37,7 +37,11 @@ public class DieselFA1 extends DieselTrain {
         InsertTexture(16, "LIRR (MTA Scheme #3)");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

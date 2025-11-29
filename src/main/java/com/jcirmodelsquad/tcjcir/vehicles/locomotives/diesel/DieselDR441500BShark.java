@@ -27,7 +27,11 @@ public class DieselDR441500BShark extends DieselTrain {
 
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

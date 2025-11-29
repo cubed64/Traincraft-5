@@ -21,7 +21,11 @@ public class DieselE7B extends DieselTrain {
         //when the benis sus
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

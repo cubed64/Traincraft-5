@@ -33,6 +33,12 @@ public class DieselGP15 extends DieselTrain {
 		InsertTexture(11, "Conrail (Just Do It Boston Marathon Unit");
 	}
 
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
+
 	public void initLoco() {
 		fuelTrain = 0;
 		locoInvent = new ItemStack[inventorySize];

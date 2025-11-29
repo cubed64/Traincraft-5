@@ -14,7 +14,11 @@ public class WPShops600Series extends AbstractWorkCart
         InsertTexture(3, "SN");
     }
 
-    
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
     @Override
     public double getAdditionalYOffset()

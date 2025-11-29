@@ -21,7 +21,11 @@ public class DieselE8B extends DieselTrain {
     }
 
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
     @Override
     public void updateRiderPosition() {

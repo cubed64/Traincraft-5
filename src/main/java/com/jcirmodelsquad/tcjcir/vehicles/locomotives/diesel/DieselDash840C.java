@@ -32,7 +32,11 @@ public class DieselDash840C extends DieselTrain {
         InsertTexture(11, "GCM", train.common.enums.LockoutGroup.GCM); 
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

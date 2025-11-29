@@ -24,7 +24,11 @@ public class DieselFP45 extends DieselTrain {
         InsertTexture(3, "ATSF (Warbonnet w/ Small letters)");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

@@ -22,7 +22,11 @@ public class DieselKrautt extends DieselTrain {
         //when the
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "DE";
+    }
 
 
     @Override

@@ -25,7 +25,11 @@ public class DieselF40PH extends DieselTrain {
 
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

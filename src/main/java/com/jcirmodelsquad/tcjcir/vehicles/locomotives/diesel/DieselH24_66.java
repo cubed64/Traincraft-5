@@ -26,7 +26,11 @@ public class DieselH24_66 extends DieselTrain {
         InsertTexture(6, "West Creek Pacific");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

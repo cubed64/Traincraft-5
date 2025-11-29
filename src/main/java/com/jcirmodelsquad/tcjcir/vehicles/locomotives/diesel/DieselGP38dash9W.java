@@ -19,6 +19,12 @@ public class DieselGP38dash9W extends DieselTrain {
         
 
     }
+
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     @Override
     public void updateRiderPosition() {
         if (riddenByEntity == null) {return;}

@@ -42,8 +42,12 @@ public class DieselF7B extends DieselTrain {
         InsertTexture(19, "CB&Q (Late)");
         InsertTexture(20, "MILW (Grey scheme)");
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

@@ -19,8 +19,12 @@ public class DieselC415L extends DieselTrain {
         
         InsertTexture(0, "Mongolia Connecting Railroad");
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

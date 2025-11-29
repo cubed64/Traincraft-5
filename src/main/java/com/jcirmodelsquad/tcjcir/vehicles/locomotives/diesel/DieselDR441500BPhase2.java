@@ -31,8 +31,12 @@ public class DieselDR441500BPhase2 extends DieselTrain {
         InsertTexture(8, "Steampunk Rail", LockoutGroup.SPR);
 
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

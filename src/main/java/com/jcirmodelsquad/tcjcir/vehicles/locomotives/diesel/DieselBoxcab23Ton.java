@@ -21,7 +21,11 @@ public class DieselBoxcab23Ton extends DieselTrain {
 
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
     
 

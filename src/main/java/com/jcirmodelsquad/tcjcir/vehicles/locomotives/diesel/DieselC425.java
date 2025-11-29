@@ -24,7 +24,11 @@ public class DieselC425 extends DieselTrain {
         InsertTexture(3, "Burlington Northern");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

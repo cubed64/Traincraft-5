@@ -33,7 +33,12 @@ public class DieselDash839C extends DieselTrain {
         InsertTexture(11, "CEEX 101", LockoutGroup.BIDA);
         InsertTexture(12, "CNRC (Ex EARR)", LockoutGroup.CNRC);
     }
-        
+
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 4.05, 0.3, -0.35); }
 

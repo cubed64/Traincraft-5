@@ -42,6 +42,12 @@ public class DieselGP38dash2 extends DieselTrain {
     }
 
     @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
+
+    @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.9, 0.15, -0.325); }
 
     @Override

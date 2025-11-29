@@ -22,7 +22,11 @@ public class DieselGP38H3 extends DieselTrain {
 
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

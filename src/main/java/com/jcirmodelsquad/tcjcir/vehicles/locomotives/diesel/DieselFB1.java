@@ -27,7 +27,11 @@ public class DieselFB1 extends DieselTrain {
         InsertTexture(6, "Lehigh & New England");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

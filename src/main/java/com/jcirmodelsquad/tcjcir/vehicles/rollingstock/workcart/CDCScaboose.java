@@ -14,7 +14,11 @@ public class CDCScaboose extends AbstractWorkCart
         InsertTexture(3, "MOW");
     }
 
-    
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
     @Override
     public double getAdditionalYOffset()

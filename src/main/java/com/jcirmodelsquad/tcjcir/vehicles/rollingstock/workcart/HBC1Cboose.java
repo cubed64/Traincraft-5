@@ -16,7 +16,11 @@ public class HBC1Cboose extends AbstractWorkCart
         InsertTexture(4, "CRL (MOW)");
     }
 
-    
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
     @Override
     public double getAdditionalYOffset()

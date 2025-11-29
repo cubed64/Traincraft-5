@@ -35,7 +35,11 @@ public class DieselCF7round extends DieselTrain {
         InsertTexture(13, "");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

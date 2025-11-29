@@ -36,6 +36,12 @@ public class DieselU30C extends DieselTrain {
         InsertTexture(14, "Chessie System");
     }
 
+
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.6, 0.3, -0.35); }
 

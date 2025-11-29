@@ -26,7 +26,11 @@ public class DieselM420 extends DieselTrain {
         InsertTexture(4, "SPR (M424)", LockoutGroup.SPR);
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "CA";
+    }
 
 
     @Override

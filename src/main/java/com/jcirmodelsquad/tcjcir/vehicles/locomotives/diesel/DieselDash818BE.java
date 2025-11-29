@@ -21,6 +21,13 @@ public class DieselDash818BE extends DieselTrain {
         
         InsertTexture(0, "FNCC (Kit-L)", LockoutGroup.FNCC);
     }
+
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
+
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.1, 0.25, -0.35); }
 

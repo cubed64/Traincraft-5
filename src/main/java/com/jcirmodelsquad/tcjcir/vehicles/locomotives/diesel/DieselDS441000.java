@@ -24,8 +24,12 @@ public class DieselDS441000 extends DieselTrain {
         InsertTexture(3, "New York Central (Late)");
         InsertTexture(4, "AGW");
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

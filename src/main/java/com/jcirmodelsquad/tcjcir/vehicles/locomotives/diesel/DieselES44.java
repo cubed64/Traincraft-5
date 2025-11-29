@@ -40,8 +40,12 @@ public class DieselES44 extends DieselTrain {
         InsertTexture(17, "GLNT");
         InsertTexture(18, "Ann Arbor");
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

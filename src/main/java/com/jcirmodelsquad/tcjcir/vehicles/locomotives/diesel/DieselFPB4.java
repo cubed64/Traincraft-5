@@ -29,7 +29,11 @@ public class DieselFPB4 extends DieselTrain {
 
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

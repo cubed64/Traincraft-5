@@ -34,7 +34,11 @@ public class DieselH1044 extends DieselTrain {
 
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

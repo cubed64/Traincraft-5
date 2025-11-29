@@ -80,6 +80,12 @@ public class DieselGP7 extends DieselTrain {
     }
 
     @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
+
+    @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.55, 0.15, -0.35); }
 
     @Override

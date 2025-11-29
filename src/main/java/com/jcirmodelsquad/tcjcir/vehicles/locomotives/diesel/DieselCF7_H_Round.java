@@ -21,7 +21,11 @@ public class DieselCF7_H_Round extends DieselTrain {
         
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

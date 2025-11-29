@@ -14,7 +14,11 @@ public class ICC_Bobber extends AbstractWorkCart
         InsertTexture(3, "Magnolia Acres; Coffeeville");
     }
 
-    
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
     @Override
     public double getAdditionalYOffset()

@@ -25,7 +25,11 @@ public class DieselM636R extends DieselTrain {
 
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "CA";
+    }
     
 
     @Override

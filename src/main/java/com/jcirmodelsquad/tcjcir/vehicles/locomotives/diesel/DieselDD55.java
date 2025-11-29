@@ -28,6 +28,12 @@ public class DieselDD55 extends DieselTrain {
     }
 
     @Override
+    public String transportCountry()
+    {
+        return "DEATH";
+    }
+
+    @Override
     public boolean isFictional(){
         return true;
     }

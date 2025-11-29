@@ -27,6 +27,12 @@ public class DieselM640W extends DieselTrain {
     }
 
     @Override
+    public String transportCountry()
+    {
+        return "CA";
+    }
+
+    @Override
     public boolean isFictional(){
         return true;
     }

@@ -28,7 +28,11 @@ public class DieselFB2 extends DieselTrain {
         InsertTexture(7, "Galesburg Clinton & Midland (FPB-2)");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

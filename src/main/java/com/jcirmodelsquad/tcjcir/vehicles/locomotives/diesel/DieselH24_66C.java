@@ -21,7 +21,7 @@ public class DieselH24_66C extends DieselTrain {
         InsertTexture(1, "Canadian Pacific (Demonstrator)");
         InsertTexture(2, "Canadian Pacific (Twin Steam Generators)");
     }
-    
+
 
     
 

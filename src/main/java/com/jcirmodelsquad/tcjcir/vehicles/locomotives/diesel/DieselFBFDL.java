@@ -27,6 +27,12 @@ public class DieselFBFDL extends DieselTrain {
     }
 
     @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
+
+    @Override
     public boolean isFictional(){
         return true;
     }

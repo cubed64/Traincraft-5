@@ -26,7 +26,11 @@ public class DieselSW8 extends DieselTrain {
         InsertTexture(5, "EMDX");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

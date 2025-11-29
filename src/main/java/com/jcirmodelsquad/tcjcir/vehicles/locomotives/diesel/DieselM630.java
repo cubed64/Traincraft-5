@@ -27,8 +27,12 @@ public class DieselM630 extends DieselTrain {
         InsertTexture(4, "Latrans Range Railroad", LockoutGroup.LRR);
 
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "CA";
+    }
     
 
     @Override

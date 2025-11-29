@@ -30,7 +30,11 @@ public class DieselGE25Ton extends DieselTrain {
 		locoInvent = new ItemStack[inventorySize];
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 
 	@Override
 	public void updateRiderPosition() {

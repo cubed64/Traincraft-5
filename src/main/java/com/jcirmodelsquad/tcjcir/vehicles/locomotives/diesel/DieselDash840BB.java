@@ -22,6 +22,11 @@ public class DieselDash840BB extends DieselTrain {
         InsertTexture(1, "North Fox (Early)", LockoutGroup.FNCC);
     }
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
 

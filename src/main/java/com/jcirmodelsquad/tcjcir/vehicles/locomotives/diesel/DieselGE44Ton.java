@@ -35,6 +35,12 @@ public class DieselGE44Ton extends DieselTrain {
 		InsertTexture(13, "WM (Fireball Late)");
 	}
 
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
+
 	public void initLoco() {
 		fuelTrain = 0;
 		locoInvent = new ItemStack[inventorySize];

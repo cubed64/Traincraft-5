@@ -18,8 +18,12 @@ public class DieselBeep extends DieselTrain {
         super(world, EnumTrains.Beep.getTankCapacity(), LiquidManager.dieselFilter());
 
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

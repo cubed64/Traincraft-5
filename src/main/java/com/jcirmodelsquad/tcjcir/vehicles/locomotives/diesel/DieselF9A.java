@@ -27,8 +27,12 @@ public class DieselF9A extends DieselTrain {
         InsertTexture(5, "DRGW (4 stripe, late)");
         InsertTexture(6, "DRGW (1 stripe)");
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

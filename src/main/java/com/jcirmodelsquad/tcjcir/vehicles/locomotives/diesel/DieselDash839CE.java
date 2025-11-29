@@ -27,6 +27,12 @@ public class DieselDash839CE extends DieselTrain {
     }
 
     @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
+
+    @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 4.05, 0.3, -0.35); }
 
     @Override

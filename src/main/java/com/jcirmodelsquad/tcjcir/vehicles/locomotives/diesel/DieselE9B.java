@@ -21,8 +21,12 @@ public class DieselE9B extends DieselTrain {
         InsertTexture(0, "AMTK (Ph 1)");
         InsertTexture(1, "AMTK (Ph 2)");
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

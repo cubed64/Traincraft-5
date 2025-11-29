@@ -21,6 +21,11 @@ public class DieselGP40TC extends DieselTrain {
         InsertTexture(1, "Amtrak");
     }
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
 

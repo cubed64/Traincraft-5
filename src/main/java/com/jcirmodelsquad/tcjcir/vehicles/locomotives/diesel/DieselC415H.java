@@ -26,7 +26,11 @@ public class DieselC415H extends DieselTrain {
         InsertTexture(5, "Morristown, Tenneva & Southern", LockoutGroup.MTS);
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

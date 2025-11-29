@@ -25,7 +25,11 @@ public class DRGWboose extends AbstractWorkCart
         InsertTexture(14, "C&PV");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
     @Override
     public float getOptimalDistance(EntityMinecart cart)

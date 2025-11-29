@@ -17,7 +17,11 @@ public class WVcaboose extends AbstractWorkCart
         InsertTexture(6, "Magnolia");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
     @Override
     public double getAdditionalYOffset()

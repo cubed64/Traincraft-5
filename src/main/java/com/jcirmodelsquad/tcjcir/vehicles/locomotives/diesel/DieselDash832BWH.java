@@ -30,7 +30,11 @@ public class DieselDash832BWH extends DieselTrain {
 
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

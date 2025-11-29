@@ -22,8 +22,12 @@ public class DieselC855b extends DieselTrain {
         InsertTexture(1, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(2, "Great Lakes & Northern Territories"); // "Great Ligma & Northern Tiddies"
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

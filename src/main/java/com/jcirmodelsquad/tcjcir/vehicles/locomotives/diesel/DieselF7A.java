@@ -49,7 +49,11 @@ public class DieselF7A extends DieselTrain {
         InsertTexture(26, "MILW (Grey scheme)");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

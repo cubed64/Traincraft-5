@@ -24,7 +24,11 @@ public class DieselE9A extends DieselTrain {
         InsertTexture(2, "AMTK (Steam Generator Car 675)");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

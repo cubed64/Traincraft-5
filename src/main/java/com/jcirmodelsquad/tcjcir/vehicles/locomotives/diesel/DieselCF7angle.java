@@ -59,8 +59,12 @@ public class DieselCF7angle extends DieselTrain {
         InsertTexture(37, "");
         InsertTexture(38, "");
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

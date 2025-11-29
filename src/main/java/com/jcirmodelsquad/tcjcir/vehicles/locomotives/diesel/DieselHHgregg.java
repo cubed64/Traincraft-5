@@ -19,7 +19,11 @@ public class DieselHHgregg extends DieselTrain {
 
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

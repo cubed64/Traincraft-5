@@ -34,6 +34,11 @@ public class DieselC424 extends DieselTrain {
         InsertTexture(13, "Great Lakes & Northern Territories");
     }
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

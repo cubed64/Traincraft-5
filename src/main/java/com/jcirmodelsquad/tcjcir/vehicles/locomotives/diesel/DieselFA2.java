@@ -32,8 +32,12 @@ public class DieselFA2 extends DieselTrain {
         InsertTexture(11, "WM (Speed Lettering)");
         InsertTexture(12, "WM (Circus)");
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

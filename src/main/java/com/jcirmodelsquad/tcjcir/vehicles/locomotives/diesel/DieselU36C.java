@@ -26,7 +26,11 @@ public class DieselU36C extends DieselTrain {
         InsertTexture(5, "FNCC 19", LockoutGroup.FNCC);// one of a kind Super 7-36CXE
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

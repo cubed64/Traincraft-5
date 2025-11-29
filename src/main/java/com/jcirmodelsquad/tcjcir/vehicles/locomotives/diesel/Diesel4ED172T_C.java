@@ -30,6 +30,12 @@ public class Diesel4ED172T_C extends DieselTrain {
     public float getOptimalDistance(EntityMinecart cart) { return 1.3F; }
 
     @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
+
+    @Override
     public String getInventoryName() { return "CEE 4ED-172T (CAT Repower)"; }
 
     @Override

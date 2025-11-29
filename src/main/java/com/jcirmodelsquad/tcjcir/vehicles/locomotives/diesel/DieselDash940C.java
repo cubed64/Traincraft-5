@@ -24,6 +24,12 @@ public class DieselDash940C extends DieselTrain {
     }
 
     @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
+
+    @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.9, 0.3, -0.35); }
 
     @Override

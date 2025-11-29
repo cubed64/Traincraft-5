@@ -251,6 +251,10 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		}
 	}
 
+	/**
+	 * Please keep this based on the real country code standard ISO 3166 code
+	 * @return
+	 */
 	public String transportCountry()
 	{
 		return "";

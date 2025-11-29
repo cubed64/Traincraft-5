@@ -23,7 +23,11 @@ public class DieselC855a extends DieselTrain {
         InsertTexture(2, "Great Lakes & Northern Territories");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

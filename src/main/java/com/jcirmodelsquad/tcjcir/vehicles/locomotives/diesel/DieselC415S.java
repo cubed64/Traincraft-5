@@ -24,8 +24,12 @@ public class DieselC415S extends DieselTrain {
         InsertTexture(4, "ANW (not to be confused with ANE)");
         InsertTexture(5, "ANW (Chevrons)");
     }
-    
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

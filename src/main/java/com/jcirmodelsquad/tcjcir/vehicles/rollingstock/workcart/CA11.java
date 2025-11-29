@@ -20,7 +20,11 @@ public class CA11 extends AbstractWorkCart
         InsertTexture(9, "");
     }
 
-    
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
     @Override
     public double getAdditionalYOffset()

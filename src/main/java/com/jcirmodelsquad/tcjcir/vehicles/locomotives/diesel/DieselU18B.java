@@ -43,7 +43,11 @@ public class DieselU18B extends DieselTrain {
         InsertTexture(22, "CSXT");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
     
 

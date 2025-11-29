@@ -58,7 +58,11 @@ public class DieselES44h extends DieselTrain {
         InsertTexture(36, "IAIS (516)");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     
 
     @Override

@@ -27,6 +27,12 @@ public class DieselU30BH extends DieselTrain {
         InsertTexture(5, "CRL (2006-onwards)");
     }
 
+
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.2, 0.25, -0.35); }
 

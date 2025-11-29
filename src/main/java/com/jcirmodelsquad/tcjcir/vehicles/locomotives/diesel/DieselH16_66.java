@@ -32,7 +32,11 @@ public class DieselH16_66 extends DieselTrain {
         InsertTexture(12, "DLMR");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

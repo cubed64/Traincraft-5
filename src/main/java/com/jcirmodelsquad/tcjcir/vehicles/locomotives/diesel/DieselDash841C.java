@@ -28,7 +28,13 @@ public class DieselDash841C extends DieselTrain {
         InsertTexture(6, "uhhhhhhhhhh peenor lol");
         InsertTexture(7, "Chicago and North Western");
     }
-        
+
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
+
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 4.05, 0.3, -0.35); }
 

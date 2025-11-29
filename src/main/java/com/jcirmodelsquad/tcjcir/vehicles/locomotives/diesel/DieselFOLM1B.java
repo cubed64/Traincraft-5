@@ -21,6 +21,12 @@ public class DieselFOLM1B extends DieselTrain {
     }
 
     @Override
+    public String transportCountry()
+    {
+        return "CZ";
+    }
+
+    @Override
     public boolean isFictional(){
         return true;
     }

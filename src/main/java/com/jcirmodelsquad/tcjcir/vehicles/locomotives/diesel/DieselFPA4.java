@@ -32,7 +32,11 @@ public class DieselFPA4 extends DieselTrain {
         InsertTexture(11, "VIA Rail");
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

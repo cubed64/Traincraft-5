@@ -28,6 +28,12 @@ public class DieselU23C extends DieselTrain {
         InsertTexture(7, "");
     }
 
+
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.6, 0.3, -0.35); }
 

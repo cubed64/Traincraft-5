@@ -21,7 +21,11 @@ public class ICCBaywindowWP extends AbstractWorkCart
         InsertTexture(10, "AGW");
     }
 
-    
+    @Override
+    public String transportCountry()
+    {
+        return "USA";
+    }
 
     @Override
     public double getAdditionalYOffset()

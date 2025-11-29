@@ -24,7 +24,11 @@ public class DieselCF7_H_Angle extends DieselTrain {
 
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
 
     @Override

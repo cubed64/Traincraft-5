@@ -24,7 +24,11 @@ public class DieselM420B extends DieselTrain {
         InsertTexture(2, "FNCC (KIT-L, Non Canon)", LockoutGroup.FNCC);
     }
 
-
+    @Override
+    public String transportCountry()
+    {
+        return "CA";
+    }
     
 
     @Override
