@@ -80,6 +80,13 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
             cache.put(trainRecord.getInternalName(), itemCacheData);
         }
 
+        if (itemCacheData.TransportYear != "")
+        {
+            par3List.add("\u00a77" + (itemCacheData.TransportYear != "" ? translate("menu.item.year") + ": " + itemCacheData.TransportYear : ""));
+        }
+
+        par3List.add("\u00a77" + translate("menu.item.country") + ": " + translate("menu.item." + itemCacheData.TransportCountry.toLowerCase()));
+
         if (par1ItemStack.hasTagCompound())
         {
             NBTTagCompound var5 = par1ItemStack.getTagCompound();
@@ -125,11 +132,6 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
         if (getTrainType().length() > 0)
         {
             par3List.add("\u00a77" + translate("menu.item.types") + ": " + getTrainType());
-        }
-
-        if (itemCacheData.TransportCountry != "" || itemCacheData.TransportYear != "")
-        {
-            par3List.add("\u00a77" + (itemCacheData.TransportCountry != "" ? translate("menu.item.country") + ": " + itemCacheData.TransportCountry + " : "  : "") + (itemCacheData.TransportYear != "" ? translate("menu.item.year") + ": " + itemCacheData.TransportYear : ""));
         }
 
         if (itemCacheData.TransportYear != "")
