@@ -110,7 +110,7 @@ public class ModelEvansCoilCar extends ModelConverter //Same as Filename
 		bodyModel[65] = new ModelRendererTurbo(this, 39, 85, textureX, textureY); // Box 66
 		bodyModel[66] = new ModelRendererTurbo(this, 39, 81, textureX, textureY); // Box 66 earl
 		bodyModel[67] = new ModelRendererTurbo(this, 47, 81, textureX, textureY); // Box 66
-		bodyModel[68] = new ModelRendererTurbo(this, 16, 72, textureX, textureY,"cull"); // Box 60 Grab Bracket cull
+		bodyModel[68] = new ModelRendererTurbo(this, 16, 71, textureX, textureY,"cull"); // Box 60 Grab Bracket cull
 		bodyModel[69] = new ModelRendererTurbo(this, 16, 80, textureX, textureY,"cull"); // Box 60 Grab Bracket cull
 		bodyModel[70] = new ModelRendererTurbo(this, 25, 78, textureX, textureY); // Box 72
 		bodyModel[71] = new ModelRendererTurbo(this, 16, 77, textureX, textureY,"cull"); // Box 60 Grab Bracket cull

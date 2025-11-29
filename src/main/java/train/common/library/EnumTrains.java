@@ -402,7 +402,7 @@ public enum EnumTrains implements ITrainRecord
 
 	IngotPig("IngotPig", IngotPig.class, ItemIDs.minecartIngotPig.item, "Other", 2, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "Black"}), 18, 9, (new String[] {"Cargo: Ingots."})),
 	SteelSlabFlat("SteelSlabFlat", SteelSlabFlat.class, ItemIDs.minecartSteelSlabFlat.item, "Other", 2.5, TraincraftUtil.getBytesFromColors(new String[] {"Brown", "Black"}), 16, 9, (new String[] {"Cargo: steel and metal ig."})),
-	EvansCoilCar("EvansCoilCar", EvansCoilCar.class, ItemIDs.minecartEvansCoilCar.item, "Other", 3, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Red", "Green", "Brown", "Blue", "Purple", "Cyan", "LightGrey", "Grey", "Pink", "Lime", "Yellow", "LightBlue", "Magenta", "Orange", "White", "Skin16", "Skin17", "Skin18", "Skin19"}), 16, 36, (new String[] {"Cargo: Steel Coils & Likewise"})),
+	EvansCoilCar("EvansCoilCar", EvansCoilCar.class, ItemIDs.minecartEvansCoilCar.item, "Other", 3, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Red", "Green", "Brown", "Blue", "Purple", "Cyan", "LightGrey", "Grey", "Pink", "Lime", "Yellow", "LightBlue", "Magenta", "Orange", "White", "Skin16", "Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23"}), 16, 36, (new String[] {"Cargo: Steel Coils & Likewise"})),
 
 
 	// Passenger //

@@ -26,7 +26,7 @@ public class EvansCoilCar extends AbstractStandardFreightCar
                         new CargoSpecification.RenderParameters().setOffset(0, 3, 0)),
                 },
                 {new CargoSpecification(ModelEvansCoilCar_Covers.class,
-                        "trains/coilcar_covers/evanscoilcover_gtwmegacover_GTW", "Grand Trunk Western (GTW Mega Cover)",
+                        "trains/coilcar_covers/evanscoilcover_megacover_GTW", "Grand Trunk Western (Mega Cover)",
                         new CargoSpecification.RenderParameters().setOffset(0,3,0)),
                 },
                 {new CargoSpecification(ModelEvansCoilCar_Covers.class,
@@ -106,7 +106,35 @@ public class EvansCoilCar extends AbstractStandardFreightCar
                         new CargoSpecification.RenderParameters().setOffset(0,3,0)),
                 },
                 {new CargoSpecification(ModelEvansCoilCar_Covers.class,
-                        "trains/coilcar_covers/evanscoilcover_gtwmegacover_blank", "Blandsville & Blankerston RR (GTW Mega Cover)",
+                        "trains/coilcar_covers/evanscoilcover_megacover_blank", "Blandsville & Blankerston RR (Mega Cover)",
+                        new CargoSpecification.RenderParameters().setOffset(0,3,0)),
+                },
+                {new CargoSpecification(ModelEvansCoilCar_Covers.class,
+                        "trains/coilcar_covers/evanscoilcover_angled_CHSY", "Chessie System (Angled Covers)",
+                        new CargoSpecification.RenderParameters().setOffset(0,3,0)),
+                },
+                {new CargoSpecification(ModelEvansCoilCar_Covers.class,
+                        "trains/coilcar_covers/evanscoilcover_round_CHSY", "Chessie System (Rounded Covers)",
+                        new CargoSpecification.RenderParameters().setOffset(0,3,0)),
+                },
+                {new CargoSpecification(ModelEvansCoilCar_Covers.class,
+                        "trains/coilcar_covers/evanscoilcover_fiberglass_CHSY", "Chessie System (Fiberglass Covers)",
+                        new CargoSpecification.RenderParameters().setOffset(0,3,0)),
+                },
+                {new CargoSpecification(ModelEvansCoilCar_Covers.class,
+                        "trains/coilcar_covers/evanscoilcover_round_CSX", "CSX (Rounded Covers, Yellow Ends)",
+                        new CargoSpecification.RenderParameters().setOffset(0,3,0)),
+                },
+                {new CargoSpecification(ModelEvansCoilCar_Covers.class,
+                        "trains/coilcar_covers/evanscoilcover_round_CSX2", "CSX (Rounded Covers)",
+                        new CargoSpecification.RenderParameters().setOffset(0,3,0)),
+                },
+                {new CargoSpecification(ModelEvansCoilCar_Covers.class,
+                        "trains/coilcar_covers/evanscoilcover_megacover_CSX", "Grand Trunk Western (Mega Cover, Yellow Ends)",
+                        new CargoSpecification.RenderParameters().setOffset(0,3,0)),
+                },
+                {new CargoSpecification(ModelEvansCoilCar_Covers.class,
+                        "trains/coilcar_covers/evanscoilcover_megacover_CSX2", "Grand Trunk Western (Mega Cover)",
                         new CargoSpecification.RenderParameters().setOffset(0,3,0)),
                 },
 
@@ -136,6 +164,10 @@ public class EvansCoilCar extends AbstractStandardFreightCar
         InsertTexture(17, "B&B (Late)");
         InsertTexture(18, "B&B (Early, With Chessie System Bulkhead)");
         InsertTexture(19, "B&B (Late, With CSX Railings)");
+        InsertTexture(20, "Chessie System");
+        InsertTexture(21, "CSX (Early)");
+        InsertTexture(22, "CSX (Early, With Chessie System Bulkhead)");
+        InsertTexture(23, "CSX (Late, With CSX Railings)");
     }
 
     @Override
