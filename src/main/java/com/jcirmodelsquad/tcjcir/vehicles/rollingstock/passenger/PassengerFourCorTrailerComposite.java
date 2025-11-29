@@ -26,6 +26,12 @@ public class PassengerFourCorTrailerComposite extends AbstractPassengerCar {
         }));
     }
 
+    @Override
+    public String transportCountry()
+    {
+        return "UK";
+    }
+
     
 
     @Override

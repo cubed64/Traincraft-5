@@ -26,6 +26,12 @@ public class ElectricTwoBil extends ElectricTrain {
         InsertTexture(7, "CCRL");
     }
 
+    @Override
+    public String transportCountry()
+    {
+        return "UK";
+    }
+
     
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.98, 0.0, 0.41); }

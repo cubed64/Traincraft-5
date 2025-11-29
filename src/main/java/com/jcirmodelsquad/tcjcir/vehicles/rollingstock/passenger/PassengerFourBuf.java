@@ -26,6 +26,12 @@ public class PassengerFourBuf extends AbstractPassengerCar {
         }));
     }
 
+    @Override
+    public String transportCountry()
+    {
+        return "UK";
+    }
+
     
 
     @Override

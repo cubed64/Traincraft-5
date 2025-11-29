@@ -24,6 +24,12 @@ public class ElectricClass74 extends ElectricTrain {
     }
 
     @Override
+    public String transportCountry()
+    {
+        return "UK";
+    }
+
+    @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.65, 0.08, 0.25); }
 
 

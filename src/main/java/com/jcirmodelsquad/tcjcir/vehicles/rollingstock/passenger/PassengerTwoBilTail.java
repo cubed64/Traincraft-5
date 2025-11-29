@@ -19,6 +19,11 @@ public class PassengerTwoBilTail extends AbstractPassengerCar {
         InsertTexture(7, "CCRL");
     }
 
+    @Override
+    public String transportCountry()
+    {
+        return "UK";
+    }
     
 
     @Override
