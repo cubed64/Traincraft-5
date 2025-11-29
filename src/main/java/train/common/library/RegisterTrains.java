@@ -7,6 +7,9 @@ import train.common.entity.rollingStock.*;
 import train.common.entity.rollingStock.electric.*;
 import train.common.entity.rollingStock.freight.*;
 import train.common.entity.rollingStock.passenger.*;
+import train.common.entity.rollingStock.passenger.baggagecar.EntityFreightBaggageMILW;
+import train.common.entity.rollingStock.passenger.baggagecar.EntityFreightGS4_Baggage;
+import train.common.entity.rollingStock.passenger.baggagecar.EntityFreightHeavyweightBaggage;
 import train.common.entity.rollingStock.workcart.*;
 import train.common.library.register.ITrainRecord;
 import train.common.library.register.TrainRecord;
@@ -488,6 +491,74 @@ public class RegisterTrains
                                         new TrainRecord("Freight Ice Wagon", EntityFreightIceWagon.class, ItemIDs.minecartIceWagon.item, "freight", 0.5,
                                                 new String[]{ "Black" },
                                                 18).setCargoCapacity(38).setAdditionalTooltip(new String[]{"Cargo: only ice"}));
+
+                               put(ItemIDs.minecartGS4_Baggage.item,
+                                        new TrainRecord("Freight Cart GS4 Baggage", EntityFreightGS4_Baggage.class, ItemIDs.minecartGS4_Baggage.item, "freight", 1,
+                                                new String[]{"Orange", "White", "Yellow", "Brown", "Lime", "Red", "Grey", "Green", "LightGrey", "Black", "LightBlue"},
+                                                11).setCargoCapacity(45).setAdditionalTooltip(new String[]{"Cargo: any"}));
+
+                               put(ItemIDs.minecartFreightGondola_DB.item,
+                                       new TrainRecord("Freight Gondola DB", EntityFreightGondola_DB.class, ItemIDs.minecartFreightGondola_DB.item, "freight", 3.5,
+                                               new String[]{"Red", "Green", "Black", "Brown", "Grey", "LightGrey", "Lime", "Orange", "Pink", "White", "Yellow"},
+                                               18).setCargoCapacity(45).setAdditionalTooltip(new String[]{"Cargo: blocks, vanilla items"}));
+
+                            put(ItemIDs.minecartFreightCenterBeam_Empty.item,
+                                    new TrainRecord("Freight Center Beam Empty", EntityFreightCenterbeam_Empty.class, ItemIDs.minecartFreightCenterBeam_Empty.item, "freight", 0.5,
+                                            new String[]{"Grey", "LightGrey"},
+                                            18).setCargoCapacity(54).setAdditionalTooltip(new String[]{"Cargo: any"}));
+                            put(ItemIDs.minecartFreightCenterBeam_Wood_1.item,
+                                    new TrainRecord("Freight Center Beam Wood1", EntityFreightCenterbeam_Wood_1.class, ItemIDs.minecartFreightCenterBeam_Wood_1.item, "freight", 3,
+                                            new String[]{"Brown", "Blue", "White"},
+                                            18).setCargoCapacity(54).setAdditionalTooltip(new String[]{"Cargo: wood stuff"}));
+                            put(ItemIDs.minecartFreightCenterBeam_Wood_2.item,
+                                    new TrainRecord("Freight Center Beam Wood2", EntityFreightCenterbeam_Wood_2.class, ItemIDs.minecartFreightCenterBeam_Wood_2.item, "freight", 3,
+                                            new String[]{"Brown", "Blue", "White"},
+                                            18).setCargoCapacity(54).setAdditionalTooltip(new String[]{"Cargo: wood stuff"}));
+
+                            put(ItemIDs.minecartFreightWellcar.item,
+                                    new TrainRecord("Freight Well Car", EntityFreightWellcar.class, ItemIDs.minecartFreightWellcar.item, "freight", 3,
+                                            new String[]{"Blue", "Red", "Green", "Black", "Grey", "Cyan", "Brown", "Lime", "LightBlue", "LightGrey", "Magenta", "Orange", "Pink", "Purple", "White", "Yellow"},
+                                            18).setCargoCapacity(54).setAdditionalTooltip(new String[]{"Cargo: any"}));
+                            put(ItemIDs.minecartFreightTrailer.item,
+                                    new TrainRecord("Freight Trailer", EntityFreightTrailer.class, ItemIDs.minecartFreightTrailer.item, "freight", 3,
+                                            new String[]{"Blue", "Yellow", "LightBlue", "Red", "Grey", "LightGrey", "Magenta", "Orange", "Pink", "Purple", "Lime", "White", "Green"},
+                                            18).setCargoCapacity(54).setAdditionalTooltip(new String[]{"Cargo: any"}));
+
+                            put(ItemIDs.minecartDenverRioGrandeBaggage.item,
+                                    new TrainRecord("Denver Rio Grande Baggage", EntityFreightDenverRioGrande.class, ItemIDs.minecartDenverRioGrandeBaggage.item, "freight", 0.5,
+                                            new String[]{"Yellow", "Red", "Green"},
+                                            18).setCargoCapacity(54).setAdditionalTooltip(new String[]{"Cargo: any"}));
+                            put(ItemIDs.minecartBaggageMILW.item,
+                                    new TrainRecord("MILW Baggage", EntityFreightBaggageMILW.class, ItemIDs.minecartBaggageMILW.item, "freight", 0.5,
+                                            new String[]{"Black"},
+                                            18).setCargoCapacity(54).setAdditionalTooltip(new String[]{"Cargo: Cargo: any"}));
+                            put(ItemIDs.minecartHeavyweightMailcar.item,
+                                    new TrainRecord("Heavyweight Freight Car", EntityFreightHeavyweight.class, ItemIDs.minecartHeavyweightMailcar.item, "freight", 0.5,
+                                            new String[]{"Black"},
+                                            18).setCargoCapacity(27).setAdditionalTooltip(new String[]{"Cargo: any"}));
+
+                            put(ItemIDs.minecartFreightBamboo.item,
+                                    new TrainRecord("Bamboo Flatcar Freight", EntityFreightBamboo.class, ItemIDs.minecartFreightBamboo.item, "freight", 0.1,
+                                            new String[]{"Red", "Blue", "Black", "Yellow", "Magenta", "Cyan", "Pink", "LightGrey", "Green", "White", "LightBlue", "Lime", "Brown", "Purple", "Orange", "Grey"},
+                                            18).setCargoCapacity(36).setAdditionalTooltip(new String[]{"Cargo: any"}));
+                            put(ItemIDs.minecartFreightGermanPost.item,
+                                    new TrainRecord("Freight German Post", EntityFreightGermanPost.class, ItemIDs.minecartFreightGermanPost.item, "freight", 0.1,
+                                            new String[]{"Yellow", "Red", "Blue"},
+                                            18).setCargoCapacity(36).setAdditionalTooltip(new String[]{"Cargo: non-blocks"}));
+
+                            put(ItemIDs.minecartFreightDepressedFlatbed.item,
+                                    new TrainRecord("Freight Depressed Flatcar", EntityFreightDepressedFlatbed.class, ItemIDs.minecartFreightDepressedFlatbed.item, "freight", 0.1,
+                                            new String[]{"LightGrey", "Blue", "Yellow"},
+                                            8).setCargoCapacity(36).setAdditionalTooltip(new String[]{"Cargo: any"}));
+                            put(ItemIDs.minecartFreightL.item,
+                                    new TrainRecord("Freight Car L", EntityFreightCartL.class, ItemIDs.minecartFreightL.item, "freight", 3,
+                                            new String[]{"Red", "Blue"},
+                                            18).setCargoCapacity(27).setAdditionalTooltip(new String[]{"Cargo: any"}));
+                            put(ItemIDs.minecartHeavyweightFreight.item,
+                                    new TrainRecord("Freight Heavyweight Baggage", EntityFreightHeavyweightBaggage.class, ItemIDs.minecartHeavyweightFreight.item, "freight", 3,
+                                            new String[]{"Red", "Grey"},
+                                            18).setCargoCapacity(36).setAdditionalTooltip(new String[]{"Cargo: any"}));
+
                         }}, Traincraft.instance
 
                 );
