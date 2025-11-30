@@ -1,8 +1,6 @@
 package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight;
 
-import com.jcirmodelsquad.tcjcir.models.loads.Modelcoil_load;
-import com.jcirmodelsquad.tcjcir.models.loads.Modelgondola_load_flat_aggregates_medium;
-import com.jcirmodelsquad.tcjcir.models.loads.Modelrebar_bundle;
+import com.jcirmodelsquad.tcjcir.models.loads.*;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.AbstractStandardFreightCar;
@@ -39,6 +37,12 @@ public class MillGondola extends AbstractStandardFreightCar
                         "Rebar Bundle", 0, 2.375, 0)},
                 { new CargoSpecification(Modelcoil_load.class, "loads/coils",
                         "Metal Coils", 0, 2.375, 0)},
+                { new CargoSpecification(Modelmill_gondola_ties.class, "loads/gondola_load_millgondola_ties",
+                        "Ties", 0, 3, 0)},
+                { new CargoSpecification(Modelmill_gondola_CSXT_tie_crib.class, "loads/gondola_load_millgondola_ties_crib_orange",
+                        "CSXT Tie Crib With Ties (Orange)", 0, 2.999, 0)},
+                { new CargoSpecification(Modelmill_gondola_CSXT_tie_crib.class, "loads/gondola_load_millgondola_ties_crib_yellow",
+                        "CSXT Tie Crib With Ties (Yellow)", 0, 2.999, 0)},
         });
     }
 
