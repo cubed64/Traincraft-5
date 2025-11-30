@@ -37,15 +37,6 @@ public class TileTCRailGag extends TileEntity {
 		super.readFromNBT(nbt);
 	}
 
-	public void setCanPlaceRollingStock(boolean canPlace){
-		TileTCRail tile = (TileTCRail) worldObj.getTileEntity(originX, originY, originZ);
-		if (tile != null){
-			if (tile.getRailType() == TCRailTypes.RailTypes.STRAIGHT || tile.getRailType() == TCRailTypes.RailTypes.DIAGONAL){
-				//canPlaceRollingstock = canPlace;
-			}
-		}
-	}
-
 	@Override
 	public void writeToNBT(NBTTagCompound nbt) {
 

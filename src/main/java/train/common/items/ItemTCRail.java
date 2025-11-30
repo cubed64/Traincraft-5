@@ -4745,20 +4745,20 @@ public class ItemTCRail extends ItemPart {
 
 			placeTrack(world, x + (i * dx) + dx, y + 1, z + (i * dz) + dz, BlockIDs.tcRailGag.block, l);
 			tcRailGag[(3* i) - (i / 3)] = (TileTCRailGag) world.getTileEntity(x + (i * dx) + dx, y + 1, z + (i * dz) + dz);
-			tcRailGag[(3* i) - (i / 3)].setCanPlaceRollingStock(true);
+
 			placeTrack(world,x + (i * dx) + (2 * dx), y + 1, z + (i * dz) + (2 * dz), BlockIDs.tcRailGag.block, l);
 			tcRailGag[((3* i) - (i / 3)) + 1] = (TileTCRailGag) world.getTileEntity(x + (i * dx) +  (2 * dx), y + 1, z + (i * dz) + (2 * dz));
-			tcRailGag[((3* i) - (i / 3)) + 1].setCanPlaceRollingStock(true);
+
 			for (int j = 0; j < 3; j++){
 				if (player.isSneaking() && i == trackLength && j == 2) {
 					break;
 				} else {
 					placeTrack(world, x + (i * dx) + (j * dx) + dx, y + 1, z + (i * dz) + (j * dz), BlockIDs.tcRailGag.block, l);
 					tcRailGag[((3 * i) - (i / 3)) + ((2 * j) + 2)] = (TileTCRailGag) world.getTileEntity(x + (i * dx) + (j * dx) + dx, y + 1, z + (i * dz) + (j * dz));
-					tcRailGag[((3 * i) - (i / 3)) + ((2 * j) + 2)].setCanPlaceRollingStock(false);
+
 					placeTrack(world, x + (i * dx) + (j * dx), y + 1, z + (i * dz) + (j * dz) + dz, BlockIDs.tcRailGag.block, l);
 					tcRailGag[((3 * i) - (i / 3)) + ((2 * j) + 3)] = (TileTCRailGag) world.getTileEntity(x + (i * dx) + (j * dx), y + 1, z + (i * dz) + (j * dz) + dz);
-					tcRailGag[((3 * i) - (i / 3)) + ((2 * j) + 3)].setCanPlaceRollingStock(false);
+
 				}
 			}
 
