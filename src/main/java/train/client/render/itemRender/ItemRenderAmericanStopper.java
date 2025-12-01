@@ -60,7 +60,7 @@ public class ItemRenderAmericanStopper implements IItemRenderer {
         GL11.glPushMatrix(); //start
         GL11.glTranslatef(f, g, h); //size
         GL11.glRotatef(rotation, f, g, h);
-        americanStopper.render2(0.0625F);
+        americanStopper.renderInHand(0.0625F);
         GL11.glPopMatrix(); //end
     }
 }
