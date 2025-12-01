@@ -43,6 +43,10 @@ public class MillGondola extends AbstractStandardFreightCar
                         "CSXT Tie Crib With Ties (Orange)", 0, 2.999, 0)},
                 { new CargoSpecification(Modelmill_gondola_CSXT_tie_crib.class, "loads/gondola_load_millgondola_ties_crib_yellow",
                         "CSXT Tie Crib With Ties (Yellow)", 0, 2.999, 0)},
+                { new CargoSpecification(Modelmill_gondola_CSXT_tie_crib.class, "loads/gondola_load_millgondola_ties_crib_orange_empty",
+                        "CSXT Tie Crib (Yellow)", 0, 2.999, 0)},
+                { new CargoSpecification(Modelmill_gondola_CSXT_tie_crib.class, "loads/gondola_load_millgondola_ties_crib_yellow_empty",
+                        "CSXT Tie Crib (Yellow)", 0, 2.999, 0)},
         });
     }
 
