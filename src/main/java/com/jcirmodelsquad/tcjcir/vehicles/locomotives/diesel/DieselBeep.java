@@ -77,6 +77,10 @@ public class DieselBeep extends DieselTrain {
         return "ATSF Beep";
     }
 
+    @Override
+    public String transportYear() {
+        return "1943";
+    }
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) {

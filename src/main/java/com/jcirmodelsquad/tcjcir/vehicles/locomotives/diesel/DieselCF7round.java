@@ -57,7 +57,10 @@ public class DieselCF7round extends DieselTrain {
     public float getOptimalDistance(EntityMinecart cart) { return 1.2F;
     }
 
-    
+    @Override
+    public String transportYear() {
+        return "1969-1978";
+    }
 
     @Override
     public String getInventoryName() {

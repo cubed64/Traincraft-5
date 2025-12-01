@@ -53,9 +53,10 @@ public class DieselF7B extends DieselTrain {
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 2.85, 0, 0.35); }
 
-    
-
-    
+    @Override
+    public String transportYear() {
+        return "1949-1953";
+    }
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) { return 0.87F;

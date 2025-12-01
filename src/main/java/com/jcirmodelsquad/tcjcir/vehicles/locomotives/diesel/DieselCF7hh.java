@@ -41,6 +41,11 @@ public class DieselCF7hh extends DieselTrain {
     }
 
     @Override
+    public String transportYear() {
+        return "1969-1978";
+    }
+
+    @Override
     public boolean isFictional() {
         return true;
     }

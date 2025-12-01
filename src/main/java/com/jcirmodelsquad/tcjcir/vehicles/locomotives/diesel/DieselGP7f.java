@@ -41,6 +41,11 @@ public class DieselGP7f extends DieselTrain {
     }
 
     @Override
+    public String transportYear() {
+        return "1949-1954";
+    }
+
+    @Override
     public String getInventoryName() {
         return "ARR GP7u";
     }

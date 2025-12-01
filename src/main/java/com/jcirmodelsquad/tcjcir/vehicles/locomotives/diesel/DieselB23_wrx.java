@@ -37,4 +37,9 @@ public class DieselB23_wrx extends DieselTrain {
     @Override
     public String getInventoryName() { return "CEE B23-7 (WRX special order)"; }
 
+    @Override
+    public String transportYear() {
+        return "1977-1984";
+    }
+
 }

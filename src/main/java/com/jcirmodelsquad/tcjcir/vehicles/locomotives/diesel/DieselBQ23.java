@@ -41,6 +41,11 @@ public class DieselBQ23 extends DieselTrain {
     }
 
     @Override
+    public String transportYear() {
+        return "1978-1979";
+    }
+
+    @Override
     public String getInventoryName() {
         return "GE BQ23-7";
     }

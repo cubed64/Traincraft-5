@@ -46,6 +46,11 @@ public class DieselSD50 extends DieselTrain {
     public float getOptimalDistance(EntityMinecart cart) { return 1.425F; }
 
     @Override
+    public String transportYear() {
+        return "1980-1985";
+    }
+
+    @Override
     public String getInventoryName() {
         return "EMD SD50";
     }

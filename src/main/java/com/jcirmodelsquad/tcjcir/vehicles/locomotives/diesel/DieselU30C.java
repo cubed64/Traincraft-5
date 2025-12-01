@@ -50,6 +50,11 @@ public class DieselU30C extends DieselTrain {
     }
 
     @Override
+    public String transportYear() {
+        return "1966-1976";
+    }
+
+    @Override
     public String getInventoryName() {
         return "GE U30C";
     }

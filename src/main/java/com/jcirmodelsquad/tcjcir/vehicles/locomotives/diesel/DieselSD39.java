@@ -79,6 +79,11 @@ public class DieselSD39 extends DieselTrain {
     }
 
     @Override
+    public String transportYear() {
+        return "1968-1970";
+    }
+
+    @Override
     public String getInventoryName() {
         return "EMD SD39";
     }

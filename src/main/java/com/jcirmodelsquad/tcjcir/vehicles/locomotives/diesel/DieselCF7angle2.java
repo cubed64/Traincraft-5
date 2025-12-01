@@ -36,6 +36,11 @@ public class DieselCF7angle2 extends DieselTrain {
     }
 
     @Override
+    public String transportYear() {
+        return "1969-1978";
+    }
+
+    @Override
     public String getInventoryName() {
         return "EMD CF7 (CBRR)";
     }

@@ -46,7 +46,11 @@ public class DieselES44 extends DieselTrain {
     {
         return "US";
     }
-    
+
+    @Override
+    public String transportYear() {
+        return "2003-Present";
+    }
 
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.9, 0.4, -0.35); }

@@ -47,6 +47,11 @@ public class DieselGP18 extends DieselTrain {
     }
 
     @Override
+    public String transportYear() {
+        return "1959-1963";
+    }
+
+    @Override
     public String getInventoryName() {
         return "EMD GP18";
     }

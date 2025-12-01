@@ -48,7 +48,10 @@ public class DieselSD40dash3 extends DieselTrain {
     public float getOptimalDistance(EntityMinecart cart) { return 1.4F;
     }
 
-    
+    @Override
+    public String transportYear() {
+        return "2011-Present";
+    }
 
     @Override
     public String getInventoryName() {

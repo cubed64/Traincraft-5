@@ -63,6 +63,11 @@ public class DieselGP38dash9W extends DieselTrain {
     public float getOptimalDistance(EntityMinecart cart) { return 1.25F; }
 
     @Override
+    public String transportYear() {
+        return "1985";
+    }
+
+    @Override
     public String getInventoryName() {
         return "MT&S GP38-9W";
     }

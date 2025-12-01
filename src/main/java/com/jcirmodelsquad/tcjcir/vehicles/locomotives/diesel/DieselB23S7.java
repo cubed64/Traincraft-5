@@ -46,4 +46,9 @@ public class DieselB23S7 extends DieselTrain {
         return "GE B23-S7";
     }
 
+    @Override
+    public String transportYear() {
+        return "1989-1991";
+    }
+
 }

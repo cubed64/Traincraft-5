@@ -54,6 +54,11 @@ public class DieselU18Balt extends DieselTrain {
     public float getOptimalDistance(EntityMinecart cart) { return 1.2F; }
 
     @Override
+    public String transportYear() {
+        return "1973-1976";
+    }
+
+    @Override
     public String getInventoryName() {
         return "GE U18B (New Model)";
     }

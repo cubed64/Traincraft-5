@@ -45,6 +45,11 @@ public class DieselSD70ACe_H extends DieselTrain {
     public float getOptimalDistance(EntityMinecart cart) { return 1.45F; }
 
     @Override
+    public String transportYear() {
+        return "2003-Present";
+    }
+
+    @Override
     public String getInventoryName() {
         return "EMD SD70ACe (Heritage Units)";
     }

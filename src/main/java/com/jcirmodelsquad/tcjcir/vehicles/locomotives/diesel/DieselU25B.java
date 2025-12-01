@@ -79,6 +79,11 @@ public class DieselU25B extends DieselTrain {
     public float getOptimalDistance(EntityMinecart cart) { return 1.1F; }
 
     @Override
+    public String transportYear() {
+        return "1959-1966";
+    }
+
+    @Override
     public String getInventoryName() {
         return "GE U25B Phase 2-4";
     }

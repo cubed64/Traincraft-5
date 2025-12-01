@@ -43,6 +43,11 @@ public class DieselSW10 extends DieselTrain {
     public float getOptimalDistance(EntityMinecart cart) { return 1.1F; }
 
     @Override
+    public String transportYear() {
+        return "1980-1999";
+    }
+
+    @Override
     public String getInventoryName() {
         return "EMD/UP SW10";
     }

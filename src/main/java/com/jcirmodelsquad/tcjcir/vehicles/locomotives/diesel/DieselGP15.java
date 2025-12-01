@@ -84,6 +84,11 @@ public class DieselGP15 extends DieselTrain {
 	}
 
 	@Override
+	public String transportYear() {
+		return "1976-1982";
+	}
+
+	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return (1.0F);
 	}

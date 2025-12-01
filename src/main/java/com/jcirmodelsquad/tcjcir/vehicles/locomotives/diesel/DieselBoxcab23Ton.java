@@ -75,7 +75,10 @@ public class DieselBoxcab23Ton extends DieselTrain {
     public float getOptimalDistance(EntityMinecart cart) { return 0.7F;
     }
 
-    
+    @Override
+    public String transportYear() {
+        return "1939";
+    }
 
     @Override
     public String getInventoryName() {

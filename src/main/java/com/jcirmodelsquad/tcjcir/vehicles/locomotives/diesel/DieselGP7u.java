@@ -44,6 +44,11 @@ public class DieselGP7u extends DieselTrain {
     }
 
     @Override
+    public String transportYear() {
+        return "1972-1981";
+    }
+
+    @Override
     public String getInventoryName() {
         return "EMD GP7u";
     }
