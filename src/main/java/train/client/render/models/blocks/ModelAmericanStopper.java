@@ -19,10 +19,20 @@ import train.common.library.Info;
 public class ModelAmericanStopper
 {
     private IModelCustom track;
+    private static int listAmericanBumperPiece = -1;
 
+    protected boolean baked = false;
     public ModelAmericanStopper(float scale)
     {
-        track =  net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "american_bumper.obj"));
+        if (!baked) {
+
+            listAmericanBumperPiece = GL11.glGenLists(1);
+            track = net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "american_bumper.obj"));
+            GL11.glNewList(listAmericanBumperPiece, GL11.GL_COMPILE);
+            track.renderAll();
+            GL11.glEndList();
+            baked = true;
+        }
     }
 
     public void render(float f5, int facing)
@@ -84,7 +94,7 @@ public class ModelAmericanStopper
         tmt.Tessellator
                 .bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "american_stopper.png"));
         GL11.glColor4f(1, 1, 1, 1);
-        track.renderAll();
+        GL11.glCallList(listAmericanBumperPiece);
         GL11.glPopMatrix();
     }
 
@@ -94,6 +104,6 @@ public class ModelAmericanStopper
         tmt.Tessellator
                 .bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "american_stopper.png"));
         GL11.glColor4f(1, 1, 1, 1);
-        track.renderAll();
+        GL11.glCallList(listAmericanBumperPiece);
     }
 }
