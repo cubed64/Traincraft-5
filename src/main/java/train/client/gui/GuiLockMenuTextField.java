@@ -14,7 +14,7 @@ public class GuiLockMenuTextField extends GuiTextField {
 
     @Override
     public void setFocused(boolean focused) {
-        if (super.isFocused() && !focused) { // If losing focus...
+        if (super.getVisible() && super.isFocused() && !focused) { // If losing focus...
             super.setFocused(false);
             // Update the trustee list whenever the text box is deselected.
             guiClass.updateTrustee(textFieldID + guiClass.getCurrentPage() * guiClass.MAX_TRUSTEES_ON_PAGE);
