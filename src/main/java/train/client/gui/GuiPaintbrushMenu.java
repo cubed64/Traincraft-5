@@ -412,10 +412,11 @@ public class GuiPaintbrushMenu extends GuiScreen {
                     * we need an update immediately for menu feedback. */
                     rollingStock.setColor(newColor);
                     // Check if the new texture can have an overlay. If not, remove it.
-                    OverlayTextureManager.Type validTypesForTexture = rollingStock.getOverlayTextureContainer().textureHasOverlayTypes(rollingStock.acceptedColors.indexOf(rollingStock.getColor()));
-                    if (validTypesForTexture != rollingStock.getOverlayTextureContainer().getType() & validTypesForTexture != OverlayTextureManager.Type.BOTH)
-                        clearOverlay();
-                    updateButtons();
+                    if (rollingStock.getOverlayTextureContainer() != null) {
+                        OverlayTextureManager.Type validTypesForTexture = rollingStock.getOverlayTextureContainer().textureHasOverlayTypes(rollingStock.acceptedColors.indexOf(rollingStock.getColor()));
+                        if (validTypesForTexture != rollingStock.getOverlayTextureContainer().getType() & validTypesForTexture != OverlayTextureManager.Type.BOTH)
+                            clearOverlay();
+                    }
                     break;
                 case 11: // Clear overlay button.
                     clearOverlay();
