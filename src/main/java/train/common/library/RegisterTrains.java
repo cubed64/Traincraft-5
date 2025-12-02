@@ -15,6 +15,7 @@ import train.common.library.register.ITrainRecord;
 import train.common.library.register.TrainRecord;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class RegisterTrains
 {
@@ -32,7 +33,7 @@ public class RegisterTrains
     {
         Traincraft.traincraftRegistry
                 .RegisterRollingStockEntities(
-                        new HashMap<Item, ITrainRecord>()
+                        new LinkedHashMap<Item, ITrainRecord>()
                         {{
                             put(ItemIDs.minecartPassengerBlue.item,
                                 new TrainRecord("Passenger Blue", EntityPassengerBlue.class, ItemIDs.minecartPassengerBlue.item, EnumTrainType.Passenger, 1,
