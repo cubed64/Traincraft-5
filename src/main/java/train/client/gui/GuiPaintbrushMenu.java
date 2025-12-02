@@ -410,7 +410,7 @@ public class GuiPaintbrushMenu extends GuiScreen {
                     /* We must update the color locally in addition to sending the packet —
                     *  even though the packet, once received and redistributed by the server, will force an update,
                     * we need an update immediately for menu feedback. */
-                    rollingStock.setColor(newColor);
+                   // rollingStock.setColor(newColor);
                     // Check if the new texture can have an overlay. If not, remove it.
                     if (rollingStock.getOverlayTextureContainer() != null) {
                         OverlayTextureManager.Type validTypesForTexture = rollingStock.getOverlayTextureContainer().textureHasOverlayTypes(rollingStock.acceptedColors.indexOf(rollingStock.getColor()));
