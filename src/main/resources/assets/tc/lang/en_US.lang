@@ -92,12 +92,20 @@ paintbrushmenu.Next Page.name=Next Page
 paintbrushmenu.Previous Page.name=Previous Page
 paintbrushmenu.Pause.name=Pause Animation
 paintbrushmenu.Play.name=Play Animation
+paintbrushmenu.Fixed Overlay.name=Appliqué Selector
+paintbrushmenu.Dynamic Overlay.name=Custom Text Tool
+paintbrushmenu.None.name=No Custom Text or Appliqué
 paintbrushmenu.Lights On.name=Lights On
 paintbrushmenu.Lights Off.name=Lights Off
 paintbrushmenu.Hide Models.name=Hide Models
 paintbrushmenu.Show Models.name=Show Models
 paintbrushmenu.Load Cargo.name=Load Cargo
 paintbrushmenu.No Cargo.name=No Cargo
+
+dynamicoverlaymenu.Background Color.name=Background Color
+dynamicoverlaymenu.Foreground Color.name=Foreground Color
+dynamicoverlaymenu.Submit.name=Submit
+dynamicoverlaymenu.Back.name=Back
 
 lockmenu.Unlock.name=Unlock
 lockmenu.Lock.name=Lock
