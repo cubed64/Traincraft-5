@@ -10,17 +10,16 @@ package train.client.render.models.blocks;
 import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.util.ResourceLocation;
 
-import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import tmt.ModelBase;
 import train.client.render.CustomModelRenderer;
-import train.common.enums.TrackResourceLocations;
+import train.client.render.RenderTCRail;
+import train.common.library.EnumTracks;
 import train.common.library.Info;
 
-public class ModelStopper extends ModelBase {
-	
-	private IModelCustom track;
-
+public class ModelStopper extends ModelBase
+{
+	public static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation,Info.modelTexPrefix + "buffer.png");
 	public CustomModelRenderer box;
 	public CustomModelRenderer box0;
 	public CustomModelRenderer box1;
@@ -32,10 +31,8 @@ public class ModelStopper extends ModelBase {
 	public CustomModelRenderer box5;
 
 
-	public ModelStopper(float scale) {
-
-		track =  net.minecraftforge.client.model.AdvancedModelLoader.loadModel(new ResourceLocation(Info.modelPrefix + "track/straight/1x1.obj"));
-		
+	public ModelStopper(float scale)
+	{
 		box = new CustomModelRenderer(this, 43, 4, 64, 64);
 		box.addBox(0F, 0F, 0F, 2, 15, 1, scale);
 		box.setPosition(-8F, 0F, 4F);
@@ -77,20 +74,53 @@ public class ModelStopper extends ModelBase {
 		box5.setPosition(2F, 0F, -6F);
 	}
 
-	public void render(float f5, int meta) {
-		if (meta != -1) {
-			switch (meta) {
+	public void render(float f5, int facing, EnumTracks enumTrack)
+	{
+		switch (facing)
+		{
 			case 0:
+				RenderTCRail.modelSmallStraight.render(enumTrack, "", facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+				GL11.glPushMatrix();
 				GL11.glRotatef(90.0F, 0.0F, 1.0F, 0.0F);
+				break;
+			case 7:
+				RenderTCRail.modelSmallDiagonalStraight.render("", enumTrack.getVariant(), facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+				GL11.glPushMatrix();
+				GL11.glRotatef(-225, 0 , 1, 0);
+				break;
 			case 1:
-				GL11.glRotatef(90.0F, 0.0F, 1.0F, 0.0F);
+				RenderTCRail.modelSmallStraight.render(enumTrack, "", facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+				GL11.glPushMatrix();
+				GL11.glRotatef(0.0F, 0.0F, 1.0F, 0.0F);
+				break;
+			case 4:
+				RenderTCRail.modelSmallDiagonalStraight.render("", enumTrack.getVariant(), facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+				GL11.glPushMatrix();
+				GL11.glRotatef(45, 0 , 1, 0);
+				break;
 			case 2:
-				GL11.glRotatef(90.0F, 0.0F, 1.0F, 0.0F);
+				RenderTCRail.modelSmallStraight.render(enumTrack, "", facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+				GL11.glPushMatrix();
+				GL11.glRotatef(-90.0F, 0.0F, 1.0F, 0.0F);
+				break;
 			case 3:
-				GL11.glRotatef(90.0F, 0.0F, 1.0F, 0.0F);
-			}
+				RenderTCRail.modelSmallStraight.render(enumTrack, "", facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+				GL11.glPushMatrix();
+				GL11.glRotatef(180.0F, 0.0F, 1.0F, 0.0F);
+				break;
+			case 6:
+				RenderTCRail.modelSmallDiagonalStraight.render("", enumTrack.getVariant(), facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+				GL11.glPushMatrix();
+				GL11.glRotatef(225, 0 , 1, 0);
+				break;
+			case 5:
+				RenderTCRail.modelSmallDiagonalStraight.render("", enumTrack.getVariant(), facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+				GL11.glPushMatrix();
+				GL11.glRotatef(-45F, 0.0F, 1.0F, 0.0F);
+				break;
 		}
-		
+
+		tmt.Tessellator.bindTexture(texture);
 		box.render(f5);
 		box0.render(f5);
 		box1.render(f5);
@@ -101,17 +131,18 @@ public class ModelStopper extends ModelBase {
 		// box4.render(f5);
 		box5.render(f5);
 		
-		GL11.glPushMatrix();
+
 		GL11.glTranslatef(0, 0, 0);
-		GL11.glRotatef(90, 0, 1, 0);
-		FMLClientHandler.instance().getClient().renderEngine
-				.bindTexture(TrackResourceLocations.track_normal);
 		GL11.glColor4f(1, 1, 1, 1);
-		track.renderAll();
+
 		GL11.glPopMatrix();
 	}
 
-	public void render2(float f5) {
+	public void render2(float f5, int facing, EnumTracks enumTrack)
+	{
+		RenderTCRail.modelSmallStraight.render(enumTrack, "", facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+
+		tmt.Tessellator.bindTexture(texture);
 		box.render(f5);
 		box0.render(f5);
 		box1.render(f5);
@@ -122,9 +153,7 @@ public class ModelStopper extends ModelBase {
 		// box4.render(f5);
 		box5.render(f5);
 		GL11.glRotatef(90, 0, 1, 0);
-		FMLClientHandler.instance().getClient().renderEngine
-				.bindTexture(TrackResourceLocations.track_normal);
 		GL11.glColor4f(1, 1, 1, 1);
-		track.renderAll();
+
 	}
 }

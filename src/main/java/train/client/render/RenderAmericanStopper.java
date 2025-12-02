@@ -11,15 +11,18 @@ import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import org.lwjgl.opengl.GL11;
 import train.client.render.models.blocks.ModelAmericanStopper;
+import train.common.library.EnumTracks;
+import train.common.tile.BaseStopperTileEntity;
 import train.common.tile.TileAmericanStopper;
 
 public class RenderAmericanStopper extends TileEntitySpecialRenderer
 {
     private static final ModelAmericanStopper modelAmericanStopper = new ModelAmericanStopper(1.0F / 16.0F);
+    private EnumTracks EnumTrack;
 
-    public RenderAmericanStopper()
+    public RenderAmericanStopper(EnumTracks enumTrack)
     {
-
+        EnumTrack = enumTrack;
     }
 
     public void render(TileEntity var1, double x, double y, double z) {
@@ -28,7 +31,7 @@ public class RenderAmericanStopper extends TileEntitySpecialRenderer
         GL11.glTranslated(x, y, z);
 
         GL11.glTranslatef(0.5F, 0.0F, 0.5F);
-        modelAmericanStopper.render(0.0625F, ((TileAmericanStopper) var1).getFacing());
+        modelAmericanStopper.render(0.0625F, ((BaseStopperTileEntity) var1).getFacing(), EnumTrack);
 
         GL11.glPopMatrix();
     }

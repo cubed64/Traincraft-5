@@ -1,29 +1,17 @@
-/*******************************************************************************
- * Copyright (c) 2012 Mrbrutal. All rights reserved.
- *
- * @name TrainCraft
- * @author Mrbrutal
- ******************************************************************************/
-
 package train.client.render.itemRender;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
 import org.lwjgl.opengl.GL11;
-import train.client.render.models.blocks.ModelAmericanStopper;
 import train.common.library.EnumTracks;
 import train.common.library.Info;
 
-public class ItemRenderAmericanStopper implements IItemRenderer {
-    public static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "buffer.png");
-    public static final ModelAmericanStopper americanStopper = new ModelAmericanStopper(1F);
-
-    private EnumTracks EnumTrack;
-
-    public ItemRenderAmericanStopper(EnumTracks enumTrack)
+public class ItemRenderEmbeddedStopper extends ItemRenderStopper
+{
+    public ItemRenderEmbeddedStopper(EnumTracks enumTrack)
     {
-        EnumTrack = enumTrack;
+        super(enumTrack);
     }
 
     @Override
@@ -40,19 +28,19 @@ public class ItemRenderAmericanStopper implements IItemRenderer {
     public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
         switch (type) {
             case ENTITY: {
-                renderAmericanStopper(0.0F, 0F, 0.0F, 0.0F);
+                renderEmbeddedStopper(0.0F, 0F, 0.0F, 0.0F);
                 break;
             }
             case EQUIPPED: {
-                renderAmericanStopper(0F, 0.4F, 0F, 180.0F);
+                renderEmbeddedStopper(0F, 0.4F, 0F, 180.0F);
                 break;
             }
             case EQUIPPED_FIRST_PERSON: {
-                renderAmericanStopper(0F, 0.4F, 0F, 180.0F);
+                renderEmbeddedStopper(0F, 0.4F, 0F, 180.0F);
                 return;
             }
             case INVENTORY: {
-                renderAmericanStopper(1F, 0.65F, 1F, 0.0F);
+                renderEmbeddedStopper(1F, 0.65F, 1F, 0.0F);
                 break;
             }
             default:
@@ -60,12 +48,12 @@ public class ItemRenderAmericanStopper implements IItemRenderer {
         }
     }
 
-    private void renderAmericanStopper(float f, float g, float h, float rotation) {
-        tmt.Tessellator.bindTexture(texture);
+    private void renderEmbeddedStopper(float f, float g, float h, float rotation) {
+        tmt.Tessellator.bindTexture(ItemRenderAmericanStopper.texture);
         GL11.glPushMatrix(); //start
         GL11.glTranslatef(f, g, h); //size
         GL11.glRotatef(rotation, f, g, h);
-        americanStopper.renderInHand(0.0625F, EnumTrack);
+        ItemRenderAmericanStopper.americanStopper.renderInHand(0.0625F, EnumTracks.SMALL_STRAIGHT);
         GL11.glPopMatrix(); //end
     }
 }

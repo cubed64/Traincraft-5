@@ -13,13 +13,18 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
 import org.lwjgl.opengl.GL11;
 import train.client.render.models.blocks.ModelStopper;
+import train.common.library.EnumTracks;
 import train.common.library.Info;
 
 public class ItemRenderStopper implements IItemRenderer {
-	private static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation,Info.modelTexPrefix + "buffer.png");
-	private static final ModelStopper stopper = new ModelStopper(1F);
+	public static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation,Info.modelTexPrefix + "buffer.png");
+	public static final ModelStopper stopper = new ModelStopper(1F);
 
-	public ItemRenderStopper() {
+	private EnumTracks EnumTrack;
+
+	public ItemRenderStopper(EnumTracks enumTrack)
+	{
+		EnumTrack = enumTrack;
 	}
 
 	@Override
@@ -57,11 +62,10 @@ public class ItemRenderStopper implements IItemRenderer {
 	}
 
 	private void renderStopper(float f, float g, float h, float rotation) {
-		tmt.Tessellator.bindTexture(texture);
 		GL11.glPushMatrix(); //start
 		GL11.glTranslatef(f, g, h); //size
 		GL11.glRotatef(rotation, f, g, h);
-		stopper.render2(0.0625F);
+		stopper.render2(0.0625F, 0, EnumTrack);
 		GL11.glPopMatrix(); //end
 	}
 }

@@ -16,6 +16,7 @@ tile.tc:openFurnaceIdle.name=Hearth Furnace
 tile.tc:stopper.name=Train Buffer
 tile.tc:embeddedStopper.name=Sleeperless Train Buffer
 tile.tc:americanstopper.name=Hayes Train Buffer
+tile.tc:embeddedamericanstopper.name=Sleeperless Hayes Train Buffer
 tile.tc:trainWorkbench.name=Train Workbench
 tile.tc:distilActive.name=Distill (active)
 tile.tc:distilIdle.name=Distill

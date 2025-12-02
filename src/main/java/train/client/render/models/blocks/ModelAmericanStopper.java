@@ -35,52 +35,53 @@ public class ModelAmericanStopper
         }
     }
 
-    public void render(float f5, int facing)
+    public void render(float f5, int facing, EnumTracks enumTrack)
     {
-        switch (facing) {
+        switch (facing)
+        {
             case 0:
-                RenderTCRail.modelSmallStraight.render(EnumTracks.SMALL_STRAIGHT, "", facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+                RenderTCRail.modelSmallStraight.render(enumTrack, "", facing, -0.5, 0, -0.5, 1, 1, 1, 1);
                 GL11.glPushMatrix();
                 GL11.glRotatef(-180,0,1,0);
                 renderBlock();
                 break;
             case 7:
-                RenderTCRail.modelSmallDiagonalStraight.render("", RailVariants.NORMAL, facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+                RenderTCRail.modelSmallDiagonalStraight.render("", enumTrack.getVariant(), facing, -0.5, 0, -0.5, 1, 1, 1, 1);
                 GL11.glPushMatrix();
                 GL11.glRotatef(-135, 0 , 1, 0);
                 renderBlock();
                 break;
             case 1:
-                RenderTCRail.modelSmallStraight.render(EnumTracks.SMALL_STRAIGHT, "", facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+                RenderTCRail.modelSmallStraight.render(enumTrack, "", facing, -0.5, 0, -0.5, 1, 1, 1, 1);
                 GL11.glPushMatrix();
                 GL11.glRotatef(90, 0 , 1, 0);
                 renderBlock();
                 break;
             case 4:
-                RenderTCRail.modelSmallDiagonalStraight.render("", RailVariants.NORMAL, facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+                RenderTCRail.modelSmallDiagonalStraight.render("", enumTrack.getVariant(), facing, -0.5, 0, -0.5, 1, 1, 1, 1);
                 GL11.glPushMatrix();
                 GL11.glRotatef(135, 0 , 1, 0);
                 renderBlock();
                 break;
             case 2:
-                RenderTCRail.modelSmallStraight.render(EnumTracks.SMALL_STRAIGHT, "", facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+                RenderTCRail.modelSmallStraight.render(enumTrack, "", facing, -0.5, 0, -0.5, 1, 1, 1, 1);
                 GL11.glPushMatrix();
                 renderBlock();
                 break;
             case 3:
-                RenderTCRail.modelSmallStraight.render(EnumTracks.SMALL_STRAIGHT, "", facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+                RenderTCRail.modelSmallStraight.render(enumTrack, "", facing, -0.5, 0, -0.5, 1, 1, 1, 1);
                 GL11.glPushMatrix();
                 GL11.glRotatef(-90, 0 , 1, 0);
                 renderBlock();
                 break;
             case 6:
-                RenderTCRail.modelSmallDiagonalStraight.render("", RailVariants.NORMAL, facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+                RenderTCRail.modelSmallDiagonalStraight.render("", enumTrack.getVariant(), facing, -0.5, 0, -0.5, 1, 1, 1, 1);
                 GL11.glPushMatrix();
                 GL11.glRotatef(-45F, 0 , 1, 0);
                 renderBlock();
                 break;
             case 5:
-                RenderTCRail.modelSmallDiagonalStraight.render("", RailVariants.NORMAL, facing, -0.5, 0, -0.5, 1, 1, 1, 1);
+                RenderTCRail.modelSmallDiagonalStraight.render("", enumTrack.getVariant(), facing, -0.5, 0, -0.5, 1, 1, 1, 1);
                 GL11.glPushMatrix();
                 GL11.glRotatef(45F, 0.0F, 1.0F, 0.0F);
                 renderBlock();
@@ -98,8 +99,8 @@ public class ModelAmericanStopper
         GL11.glPopMatrix();
     }
 
-    public void renderInHand(float f5) {
-        RenderTCRail.modelSmallStraight.render(EnumTracks.SMALL_STRAIGHT, "", 1, -0.5, 0, -0.5, 1, 1, 1, 1);
+    public void renderInHand(float f5, EnumTracks enumTrack) {
+        RenderTCRail.modelSmallStraight.render(enumTrack, "", 1, -0.5, 0, -0.5, 1, 1, 1, 1);
         GL11.glRotatef(90, 0, 1, 0);
         tmt.Tessellator
                 .bindTexture(new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "american_stopper.png"));

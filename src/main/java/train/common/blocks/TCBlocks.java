@@ -14,11 +14,14 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
 import train.common.Traincraft;
 import train.common.blocks.crossers.*;
 import train.common.library.BlockIDs;
 import train.common.library.Info;
 import train.common.mtc.block.*;
+import train.common.tile.TileAmericanStopper;
 
 public class TCBlocks {
 
@@ -49,7 +52,9 @@ public class TCBlocks {
 
 		BlockIDs.trainWorkbench.block = new BlockTrainWorkbench(16).setHardness(1.7F).setStepSound(Block.soundTypeWood);
 		BlockIDs.stopper.block = new BlockStopper().setHardness(1.7F).setStepSound(Block.soundTypeWood);
+		BlockIDs.embeddedStopper.block = new BlockEmbeddedStopper().setHardness(1.7F).setStepSound(Block.soundTypeWood);
 		BlockIDs.americanstopper.block = new BlockAmericanStopper().setHardness(1.7F).setStepSound(Block.soundTypeMetal);
+		BlockIDs.embeddedamericanstopper.block = new BlockAmericanEmbeddedStopper().setHardness(1.7F).setStepSound(Block.soundTypeMetal);
 
 		BlockIDs.openFurnaceIdle.block = new BlockOpenHearthFurnace(false).setHardness(3.5F).setStepSound(Block.soundTypeStone);
 		BlockIDs.openFurnaceActive.block = new BlockOpenHearthFurnace(true).setHardness(3.5F).setStepSound(Block.soundTypeStone);

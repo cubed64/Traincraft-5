@@ -7,31 +7,33 @@
 
 package train.client.render;
 
-import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import train.client.render.models.blocks.ModelStopper;
-import train.common.library.Info;
+import train.common.library.EnumTracks;
+import train.common.tile.BaseStopperTileEntity;
 import train.common.tile.TileStopper;
 
 public class RenderStopper extends TileEntitySpecialRenderer {
 
 	private static final ModelStopper modelStopper = new ModelStopper(1.0F / 16.0F);
-	private static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation,Info.modelTexPrefix + "buffer.png");
 
-	public RenderStopper() {
+	EnumTracks EnumTrack;
+
+	public RenderStopper(EnumTracks enumTrack)
+	{
+		EnumTrack = enumTrack;
 	}
 
 	public void render(TileEntity var1, double x, double y, double z) {
 		GL11.glPushMatrix();
 
 		GL11.glTranslated(x, y, z);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture);
+		//FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture);
 
 		GL11.glTranslatef(0.5F, 0.0F, 0.5F);
-		modelStopper.render(0.0625F, ((TileStopper) var1).getFacing());
+		modelStopper.render(0.0625F, ((BaseStopperTileEntity) var1).getFacing(), EnumTrack);
 
 		GL11.glPopMatrix();
 	}

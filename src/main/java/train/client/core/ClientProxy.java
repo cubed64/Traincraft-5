@@ -46,6 +46,7 @@ import train.common.entity.rollingStock.EntityJukeBoxCart;
 import train.common.entity.zeppelin.EntityZeppelinOneBalloon;
 import train.common.entity.zeppelin.EntityZeppelinTwoBalloons;
 import train.common.library.BlockIDs;
+import train.common.library.EnumTracks;
 import train.common.library.GuiIDs;
 import train.common.library.Info;
 import train.common.mtc.render.RenderMTCBlock;
@@ -139,12 +140,18 @@ public class ClientProxy extends CommonProxy
 		ClientRegistry.bindTileEntitySpecialRenderer(TileAutoSwitchStand.class, new RenderautoSwitchStand());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.autoSwtichStand.block), new ItemRenderautoSwitchStand());
 
-		ClientRegistry.bindTileEntitySpecialRenderer(TileStopper.class, new RenderStopper());
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.stopper.block), new ItemRenderStopper());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileStopper.class, new RenderStopper(EnumTracks.SMALL_STRAIGHT));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.stopper.block), new ItemRenderStopper(EnumTracks.SMALL_STRAIGHT));
 
-		ClientRegistry.bindTileEntitySpecialRenderer(TileAmericanStopper.class, new RenderAmericanStopper());
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.americanstopper.block), new ItemRenderAmericanStopper());
-		
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEmbeddedStopper.class, new RenderEmbeddedStopper(EnumTracks.EMBEDDED_SMALL_STRAIGHT));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.embeddedStopper.block), new ItemRenderStopper(EnumTracks.EMBEDDED_SMALL_STRAIGHT));
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileAmericanStopper.class, new RenderAmericanStopper(EnumTracks.SMALL_STRAIGHT));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.americanstopper.block), new BaseItemRenderAmericanStopper(EnumTracks.SMALL_STRAIGHT));
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEmbeddedAmericanStopper.class, new RenderAmericanStopper(EnumTracks.EMBEDDED_SMALL_STRAIGHT));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.embeddedamericanstopper.block), new BaseItemRenderAmericanStopper(EnumTracks.EMBEDDED_SMALL_STRAIGHT));
+
 		//ClientRegistry.bindTileEntitySpecialRenderer(TileBook.class, new RenderTCBook());
 		//MinecraftForgeClient.registerItemRenderer(BlockIDs.book.blockID, new ItemRenderBook());
 

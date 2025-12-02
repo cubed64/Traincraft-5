@@ -67,7 +67,6 @@ public class BlockAmericanStopper extends BlockContainer {
 
         if (te !=  null)
         {
-            System.out.println("DIIR" + dir);
             te.setFacing(dir);
         }
     }

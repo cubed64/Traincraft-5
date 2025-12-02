@@ -1,10 +1,3 @@
-/*******************************************************************************
- * Copyright (c) 2012 Mrbrutal. All rights reserved.
- *
- * @name TrainCraft
- * @author Mrbrutal
- ******************************************************************************/
-
 package train.client.render.itemRender;
 
 import net.minecraft.item.ItemStack;
@@ -15,24 +8,25 @@ import train.client.render.models.blocks.ModelAmericanStopper;
 import train.common.library.EnumTracks;
 import train.common.library.Info;
 
-public class ItemRenderAmericanStopper implements IItemRenderer {
+public class BaseItemRenderAmericanStopper implements IItemRenderer
+{
     public static final ResourceLocation texture = new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "buffer.png");
     public static final ModelAmericanStopper americanStopper = new ModelAmericanStopper(1F);
-
-    private EnumTracks EnumTrack;
-
-    public ItemRenderAmericanStopper(EnumTracks enumTrack)
+    private EnumTracks baseEnumTrack;
+    public BaseItemRenderAmericanStopper(EnumTracks enumTrack)
     {
-        EnumTrack = enumTrack;
+        baseEnumTrack = enumTrack;
     }
 
     @Override
-    public boolean handleRenderType(ItemStack item, ItemRenderType type) {
+    public boolean handleRenderType(ItemStack item, ItemRenderType type)
+    {
         return true;
     }
 
     @Override
-    public boolean shouldUseRenderHelper(ItemRenderType type, ItemStack item, ItemRendererHelper helper) {
+    public boolean shouldUseRenderHelper(ItemRenderType type, ItemStack item, ItemRendererHelper helper)
+    {
         return true;
     }
 
@@ -65,7 +59,7 @@ public class ItemRenderAmericanStopper implements IItemRenderer {
         GL11.glPushMatrix(); //start
         GL11.glTranslatef(f, g, h); //size
         GL11.glRotatef(rotation, f, g, h);
-        americanStopper.renderInHand(0.0625F, EnumTrack);
+        americanStopper.renderInHand(0.0625F, baseEnumTrack);
         GL11.glPopMatrix(); //end
     }
 }
