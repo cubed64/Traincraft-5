@@ -37,6 +37,9 @@ public class Thanos extends ElectricTrain {
         return 0.53F;
     }
 
-
-    
+    @Override
+    public boolean isFictional()
+    {
+        return true;
+    }
 }

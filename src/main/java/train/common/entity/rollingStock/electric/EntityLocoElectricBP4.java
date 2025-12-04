@@ -37,7 +37,11 @@ public class EntityLocoElectricBP4 extends ElectricTrain {
 		return "BP4";
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {

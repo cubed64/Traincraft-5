@@ -27,7 +27,11 @@ public class BUnitGP7b extends LiquidTank implements IFluidHandler {
 		this.theTank = LiquidManager.getInstance().new FilteredTank(EnumTrains.GP7b.getTankCapacity(), LiquidManager.dieselFilter());
 	}
 
-
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 
 
 

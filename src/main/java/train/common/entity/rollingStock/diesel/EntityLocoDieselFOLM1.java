@@ -26,7 +26,17 @@ public class EntityLocoDieselFOLM1 extends DieselTrain {
 		locoInvent = new ItemStack[inventorySize];
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "CZ";
+	}
+
+	@Override
+	public boolean isFictional()
+	{
+		return true;
+	}
 
 	@Override
 	public void updateRiderPosition() {
