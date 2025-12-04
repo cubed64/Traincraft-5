@@ -611,7 +611,7 @@ public enum ItemIDs {
 	//other MOtOEr Shuite//
 	minecartNRE3gs21b("ItemRollingStock", "3gs21b", DIESEL, 4),
 	minecartgtavthing("ItemRollingStock", "gtavthing", DIESEL, 7),
-	minecartFOLM1B("ItemRollingStock", "folm1b", DIESEL, 9),
+	minecartFOLM1B("ItemRollingStock", "folm1b", HERITAGE, 9),
 	//minecartBUnitFOLM1B("ItemRollingStock", "folm1b", 4),
 	minecartKrautt("ItemRollingStock", "ML4000", DIESEL, 5),
 	//minecartILMC("ItemRollingStock", "ILMC_ICON", 2),
