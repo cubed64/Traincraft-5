@@ -10,6 +10,12 @@ public class TrackResourceLocations
     public static final ResourceLocation track_normal = new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_normal.png");
     public static final ResourceLocation track_embedded = new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_embedded.png");
 
+    public static final ResourceLocation track_concrete_1 = new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_concrete_1.png");
+    public static final ResourceLocation track_concrete_2 = new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_concrete_2.png");
+    public static final ResourceLocation track_concrete_3 = new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_concrete_3.png");
+
+    public static final ResourceLocation track_wood_type1 = new ResourceLocation(Info.resourceLocation, Info.modelTexPrefix + "track_wood_type1.png");
+
     public static ResourceLocation GetResourceLocation(RailVariants variant)
     {
         switch (variant)
@@ -18,6 +24,14 @@ public class TrackResourceLocations
                 return track_normal;
             case EMBEDDED:
                 return track_embedded;
+            case CONCRETE_TYPE1:
+                return track_concrete_1;
+            case CONCRETE_TYPE2:
+                return track_concrete_2;
+            case CONCRETE_TYPE3:
+                return track_concrete_3;
+            case TREATED_WOOD_TYPE1:
+                return track_wood_type1;
 
             default:
                 return track_normal;
