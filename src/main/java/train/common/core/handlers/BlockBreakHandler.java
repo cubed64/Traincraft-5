@@ -36,40 +36,5 @@ public class BlockBreakHandler {
                 }
             }
         }
-        else if (breakEvent.block instanceof BlockTCRail) {
-            if (breakEvent.getPlayer() == null) {
-                return;
-            }
-            if (!breakEvent.getPlayer().capabilities.isCreativeMode) {
-                TileTCRail tileEntity = (TileTCRail) breakEvent.world.getTileEntity(breakEvent.x, breakEvent.y, breakEvent.z);
-                while (tileEntity.isLinkedToRail) {
-                    if (breakEvent.world.getTileEntity(tileEntity.linkedX, tileEntity.linkedY, tileEntity.linkedZ) instanceof TileTCRailGag) {
-                        TileTCRailGag tile = (TileTCRailGag) breakEvent.world.getTileEntity(tileEntity.linkedX, tileEntity.linkedY, tileEntity.linkedZ);
-                        while (breakEvent.world.getTileEntity(tile.originX, tile.originY, tile.originZ) instanceof TileTCRailGag) {
-                            tile = (TileTCRailGag) breakEvent.world.getTileEntity(tile.originX, tile.originY, tile.originZ);
-                        }
-                        tileEntity = (TileTCRail) breakEvent.world.getTileEntity(tile.originX, tile.originY, tile.originZ);
-                    } else {
-                        tileEntity = (TileTCRail) breakEvent.world.getTileEntity(tileEntity.linkedX, tileEntity.linkedY, tileEntity.linkedZ);
-                    }
-                }
-                ItemStack stack =  new ItemStack(tileEntity.idDrop, 1, 0);
-                breakEvent.world.spawnEntityInWorld(new EntityItem(breakEvent.world, breakEvent.x, breakEvent.y, breakEvent.z, stack));
-            }
-        }
-        else if (breakEvent.block instanceof BlockTCRailGag) {
-            if (breakEvent.getPlayer() == null) {
-                return;
-            }
-            if (!breakEvent.getPlayer().capabilities.isCreativeMode) {
-                TileTCRailGag tileEntity = (TileTCRailGag) breakEvent.world.getTileEntity(breakEvent.x, breakEvent.y, breakEvent.z);
-                while (breakEvent.world.getTileEntity(tileEntity.originX, tileEntity.originY, tileEntity.originZ) instanceof TileTCRailGag) {
-                    tileEntity = (TileTCRailGag) breakEvent.world.getTileEntity(tileEntity.originX, tileEntity.originY, tileEntity.originZ);
-                }
-                TileTCRail tile = (TileTCRail) breakEvent.world.getTileEntity(tileEntity.originX, tileEntity.originY, tileEntity.originZ);
-                ItemStack stack =  new ItemStack(tile.idDrop, 1, 0);
-                breakEvent.world.spawnEntityInWorld(new EntityItem(breakEvent.world, breakEvent.x, breakEvent.y, breakEvent.z, stack));
-            }
-        }
     }
 }
