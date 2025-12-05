@@ -1919,8 +1919,25 @@ public class ModelRendererTurbo {
 		return this;
 	}
 
-	public ModelRendererTurbo setName(String string){
-		this.boxName = string;
+    public ModelRendererTurbo setName(BoxName boxName)
+    {
+        this.boxName = boxName.BoxName;
+        return this;
+    }
+
+	public ModelRendererTurbo setName(String string)
+    {
+        switch (string.toLowerCase())
+        {
+            case "ditchlight_right":
+            case "ditchlight_left":
+                this.boxName = BoxName.ditch.BoxName;
+            break;
+            default:
+            {
+                this.boxName = string;
+            }
+        }
 		return this;
 	}
 	
