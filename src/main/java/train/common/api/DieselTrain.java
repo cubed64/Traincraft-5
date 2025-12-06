@@ -26,16 +26,18 @@ public abstract class DieselTrain extends Locomotive implements IFluidHandler {
 	private StandardTank theTank;
 
 	public DieselTrain(World world, int capacity) {
-		this(capacity, world, null, null);
+		this(world, null, null);
 	}
 
-	public DieselTrain(World world, int capacity, FluidStack filter) {
-		this(capacity, world, filter, null);
+	public DieselTrain(World world, FluidStack[] multiFilter)
+	{
+		this(world, 0, multiFilter);
 	}
 
+	@Deprecated // Remove the capacity passed in this is taken from trainspec now
 	public DieselTrain(World world, int capacity, FluidStack[] multiFilter)
 	{
-		this(capacity, world, null, multiFilter);
+		this(world, null, multiFilter);
 		if (world != null)
 		{
 			fuelTrain = 0;
@@ -43,7 +45,7 @@ public abstract class DieselTrain extends Locomotive implements IFluidHandler {
 		}
 	}
 
-	private DieselTrain(int capacity, World world, FluidStack filter, FluidStack[] multiFilter)
+	private DieselTrain(World world, FluidStack filter, FluidStack[] multiFilter)
 	{
 		super(world);
 		this.maxTank = this.trainSpec.getTankCapacity();
@@ -54,13 +56,13 @@ public abstract class DieselTrain extends Locomotive implements IFluidHandler {
 		if (world != null)
 		{
 			if (filter == null && multiFilter == null) {
-				this.theTank = LiquidManager.getInstance().new StandardTank(capacity);
+				this.theTank = LiquidManager.getInstance().new StandardTank(this.trainSpec.getTankCapacity());
 			}
 			if (filter != null) {
-				this.theTank = LiquidManager.getInstance().new FilteredTank(capacity, filter);
+				this.theTank = LiquidManager.getInstance().new FilteredTank(this.trainSpec.getTankCapacity(), filter);
 			}
 			if (multiFilter != null) {
-				this.theTank = LiquidManager.getInstance().new FilteredTank(capacity, multiFilter);
+				this.theTank = LiquidManager.getInstance().new FilteredTank(this.trainSpec.getTankCapacity(), multiFilter);
 			}
 			dataWatcher.addObject(4, 0);
 			this.dataWatcher.addObject(23, "null-_-" + 0);
