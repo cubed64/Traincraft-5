@@ -169,6 +169,8 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	private CargoManager cargoManager = null;
 	private final Map<Integer, String> textureDescriptionMap = new HashMap<>();
 
+	public final Map<Integer, String> textureFullPathOverride = new HashMap<>();
+
 	public Map<Integer, String> getTextureDescriptionMap()
 	{
 		return textureDescriptionMap;
@@ -198,6 +200,21 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	public void InsertTexture(int pos, String desc)
 	{
 		textureDescriptionMap.put(pos, desc);
+	}
+
+	/**
+	 * Function as a compatibility layer to easily convert tim
+	 * @param theClass
+	 * @param modID
+	 * @param fullTexturePath
+	 * @param desc
+	 * @param extraLore
+	 */
+	public void InsertSkinRecord(Class theClass, String modID, String fullTexturePath, String desc, String extraLore)
+	{
+		int pos = textureDescriptionMap.size();
+		textureDescriptionMap.put(pos, desc);
+		textureFullPathOverride.put(pos, fullTexturePath);
 	}
 
 	public final Map<Integer, ILockoutGroup> lockoutMap = new HashMap<>();

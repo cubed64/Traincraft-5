@@ -95,9 +95,7 @@ public class ItemTCRail extends ItemPart {
 				//|| (tile.getType().equals(EnumTracks.LARGE_RIGHT_SWITCH.getLabel()) && !tile.getSwitchState())
 				//|| (tile.getType().equals(EnumTracks.MEDIUM_RIGHT_PARALLEL_SWITCH.getLabel()) && !tile.getSwitchState())
 				//|| (tile.getType().equals(EnumTracks.MEDIUM_LEFT_PARALLEL_SWITCH.getLabel()) && !tile.getSwitchState())
-				tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING.getLabel())
-				|| tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING_1.getLabel())
-				|| tile.getType().equals(EnumTracks.SMALL_ROAD_CROSSING_2.getLabel())
+				EnumCoreTrack.CORE_SMALL_STRAIGHT.equals(EnumTracks.GetTrackByLabel(tile.getType()).getCoreTrack())
 				|| (tile.getType().contains("STRAIGHT") && TCRailTypes.isDiagonalTrack(tile) == false && TCRailTypes.isSwitchTrack(tile) == false)
 				;
 	}
@@ -2421,34 +2419,7 @@ public class ItemTCRail extends ItemPart {
 		{
 			if (facing == 6 || facing == 4 || facing == 7 || facing == 5)
 			{
-				switch (type)
-				{
-					case SMALL_STRAIGHT:
-						tempType = EnumTracks.SMALL_DIAGONAL_STRAIGHT;
-						break;
-					case MEDIUM_STRAIGHT:
-						tempType = EnumTracks.MEDIUM_DIAGONAL_STRAIGHT;
-						break;
-					case LONG_STRAIGHT:
-						tempType = EnumTracks.LONG_DIAGONAL_STRAIGHT;
-						break;
-					case VERY_LONG_STRAIGHT:
-						tempType = EnumTracks.VERY_LONG_DIAGONAL_STRAIGHT;
-						break;
-					case EMBEDDED_SMALL_STRAIGHT:
-						tempType = EnumTracks.EMBEDDED_SMALL_DIAGONAL_STRAIGHT;
-						break;
-					case EMBEDDED_MEDIUM_STRAIGHT:
-						tempType = EnumTracks.EMBEDDED_MEDIUM_DIAGONAL_STRAIGHT;
-						break;
-					case EMBEDDED_LONG_STRAIGHT:
-						tempType = EnumTracks.EMBEDDED_LONG_DIAGONAL_STRAIGHT;
-						break;
-					case EMBEDDED_VERY_LONG_STRAIGHT:
-						tempType = EnumTracks.EMBEDDED_VERY_LONG_DIAGONAL_STRAIGHT;
-						break;
-				}
-				return tempType;
+				return EnumTracks.GetTrackByLabel(type.getLabel().replace("_STRAIGHT", "_DIAGONAL_STRAIGHT"));
 			}
 		}
 		else if (TCRailTypes.RailTypes.CROSSING.equals(type.getRailType()))
