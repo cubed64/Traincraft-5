@@ -180,16 +180,26 @@ public class RecipeHandler extends AbstractRecipeHandler
 		//dynamic slopes regulah
 		//todo have clay be the fallback recipe if foxblocks isnt present, switch to rainbonite in foxblocks if present
 
-		for (ItemStack rainbowItem : ingotRainbontrium)
+		if (ingotRainbontrium.isEmpty())
 		{
-			Traincraft.tcLog.info("MMMMM T A S T E THE RAINBOW!");
-			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail1X3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailSmallStraight.item, 'D', rainbowItem.getItem());
-			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossingDynamic.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', rainbowItem.getItem());
-			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', Items.iron_ingot, 'P', rainbowItem.getItem());
-			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbedded1x3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'D', rainbowItem.getItem());
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail1X3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailSmallStraight.item, 'D', Items.clay_ball);
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossingDynamic.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', Items.clay_ball);
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', Items.iron_ingot, 'P', Items.clay_ball);
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbedded1x3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'D', Items.clay_ball);
+		}
+		else
+		{
+			for (ItemStack rainbowItem : ingotRainbontrium)
+			{
+				Traincraft.tcLog.info("MMMMM T A S T E THE RAINBOW!");
+				GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail1X3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailSmallStraight.item, 'D', rainbowItem.getItem());
+				GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossingDynamic.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', rainbowItem.getItem());
+				GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', Items.iron_ingot, 'P', rainbowItem.getItem());
+				GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbedded1x3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'D', rainbowItem.getItem());
+			}
 		}
 
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail1X3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailSmallStraight.item, 'D', Items.clay_ball);
+
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSlopeDynamic.item, 1), "   ", "  T", " T ", 'T', TrackItemIDs.tcRail1X3SlopeDynamic.item);
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailLargeSlopeDynamic.item, 1), "   ", "  T", " T ", 'T', TrackItemIDs.tcRailSlopeDynamic.item);
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailVeryLargeSlopeDynamic.item, 1), "   ", "  S", " T ", 'T', TrackItemIDs.tcRailLargeSlopeDynamic.item, 'S', TrackItemIDs.tcRailSlopeDynamic.item);
@@ -198,9 +208,6 @@ public class RecipeHandler extends AbstractRecipeHandler
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', new ItemStack(Blocks.stained_hardened_clay, 1, 15));
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing1.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', new ItemStack(Blocks.stained_hardened_clay, 1, 7));
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing2.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', new ItemStack(Blocks.stained_hardened_clay, 1, 8));
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossingDynamic.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', Items.clay_ball);
-
-
 
 		//buffers
 		GameRegistry.addRecipe(new ItemStack(BlockIDs.stopper.block, 1), "PPP", "I I", " T ", 'P', Blocks.planks, 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRailSmallStraight.item);
@@ -209,7 +216,6 @@ public class RecipeHandler extends AbstractRecipeHandler
 
 
 		//straights sleeperless
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', Items.iron_ingot, 'P', Items.clay_ball);
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedMediumStraight.item, 1),  "G  ", "G  ", "G  ", 'G', TrackItemIDs.tcRailEmbeddedSmallStraight.item);
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedLongStraight.item, 1),  "G  ", "G  ", "   ", 'G', TrackItemIDs.tcRailEmbeddedMediumStraight.item);
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedVeryLongStraight.item, 1),  "G  ", "G  ", "   ", 'G', TrackItemIDs.tcRailEmbeddedLongStraight.item);
@@ -263,7 +269,7 @@ public class RecipeHandler extends AbstractRecipeHandler
 
 		//dynamic slopes sleeperless
 		//todo have clay be the fallback recipe if foxblocks isnt present, switch to rainbonite in foxblocks if present
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbedded1x3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'D', Items.clay_ball);
+
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSlopeDynamic.item, 1), "   ", "  T", " T ", 'T', TrackItemIDs.tcRailEmbedded1x3SlopeDynamic.item);
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedLargeSlopeDynamic.item, 1), "   ", "  T", " T ", 'T', TrackItemIDs.tcRailEmbeddedSlopeDynamic.item);
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedVeryLargeSlopeDynamic.item, 1), "   ", "  S", " T ", 'T', TrackItemIDs.tcRailEmbeddedLargeSlopeDynamic.item, 'S', TrackItemIDs.tcRailEmbeddedSlopeDynamic.item);
