@@ -344,21 +344,21 @@ public class CustomRenderHandler
             int out_1_1 = 3;
 
             String switchType = "medium";
-            if (item.getTrackType() == EnumTracks.MEDIUM_PARALLEL_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_PARALLEL_SWITCH) {
+            if (CORE_4x11_PARALLEL_SWITCH.equals(item.getTrackType().getCoreTrack())) {
                 switchType = "medium_parallel";
                 out_0_start = 5;
                 out_0_end = 10;
                 out_1_0 = 10;
                 out_1_1 = 3;
             }
-            else if (item.getTrackType() == EnumTracks.LARGE_PARALLEL_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_PARALLEL_SWITCH)
+            else if (CORE_4x17_PARALLEL_SWITCH.equals(item.getTrackType().getCoreTrack()))
             {
                 switchType = "large_parallel";
                 out_0_start = 0;
                 out_0_end = 0;
                 out_1_0 = 0;
             }
-            else if (item.getTrackType() == EnumTracks.LARGE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_SWITCH)
+            else if (CORE_6x6_SWITCH.equals(item.getTrackType().getCoreTrack()))
             {
                 switchType = "large_90";
                 out_0_start = 5;
@@ -366,7 +366,7 @@ public class CustomRenderHandler
                 out_1_0 = 5;
                 out_1_1 = 5;
             }
-            else if (item.getTrackType() == EnumTracks.VERY_LARGE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_VERY_LARGE_SWITCH)
+            else if (CORE_11x11_SWITCH.equals(item.getTrackType().getCoreTrack()))
             {
                 switchType = "very_large_90";
                 out_0_start = 0;
@@ -374,21 +374,21 @@ public class CustomRenderHandler
                 out_1_0 = 10;
                 out_1_1 = 10;
             }
-            else if (item.getTrackType() == EnumTracks.MEDIUM_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_45DEGREE_SWITCH) {
+            else if (CORE_3x5_45DEGREE_SWITCH.equals(item.getTrackType().getCoreTrack())) {
                 switchType = "medium_45degree";
                 out_0_start = 0;
                 out_0_end = 0;
                 out_1_0 = 0;
                 out_1_1 = 0;
             }
-            else if (item.getTrackType() == EnumTracks.LARGE_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_45DEGREE_SWITCH) {
+            else if (CORE_4x8_45DEGREE_SWITCH.equals(item.getTrackType().getCoreTrack())) {
                 switchType = "large_45degree";
                 out_0_start = 0;
                 out_0_end = 0;
                 out_1_0 = 0;
                 out_1_1 = 0;
             }
-            else if (item.getTrackType() == EnumTracks.CROSSOVER_SWITCH_10X2 || item.getTrackType() == EnumTracks.EMBEDDED_CROSSOVER_SWITCH_10X2) {
+            else if (CORE_10x2_CROSSOVER_SWITCH.equals(item.getTrackType().getCoreTrack())) {
                 handleCrossover(isLeftTurn, "crossover_10x2", item, facing, r, g, b, a);
                 GL11.glPopMatrix();
                 return;
@@ -405,12 +405,15 @@ public class CustomRenderHandler
                 RenderTCRail.modelSmallStraight.render(item.getTrackType(), variant, facing, dx * out_0, 0, dz * out_0, r, g, b, a);
             }
 
-            if (item.getTrackType() == EnumTracks.MEDIUM_PARALLEL_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_PARALLEL_SWITCH)
+            if (CORE_4x11_PARALLEL_SWITCH.equals(item.getTrackType().getCoreTrack()))
             {
                 RenderTCRail.modelSmallStraight.render(item.getTrackType(), variant, facing, 0, 0, 0, r, g, b, a);
                 RenderTCRail.modelSmallStraight.render(item.getTrackType(), variant, facing, dx * out_1_0 + dx_1 * out_1_1, 0, dz * out_1_0 + dz_1 * out_1_1, r, g, b, a);
             }
-            else if (!(item.getTrackType() == EnumTracks.MEDIUM_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_MEDIUM_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.LARGE_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_45DEGREE_SWITCH || item.getTrackType() == EnumTracks.LARGE_PARALLEL_SWITCH || item.getTrackType() == EnumTracks.EMBEDDED_LARGE_PARALLEL_SWITCH))
+            else if (
+                    !(CORE_3x5_45DEGREE_SWITCH.equals(item.getTrackType().getCoreTrack())
+                    || CORE_4x8_45DEGREE_SWITCH.equals(item.getTrackType().getCoreTrack())
+                    || CORE_4x17_PARALLEL_SWITCH.equals(item.getTrackType().getCoreTrack())))
             {
                 RenderTCRail.modelSmallStraight.render(item.getTrackType(), variant, facing, 0, 0, 0, r, g, b, a);
                 RenderTCRail.modelSmallStraight.render(item.getTrackType(), variant, facing_1, dx * out_1_0 + dx_1 * out_1_1, 0, dz * out_1_0 + dz_1 * out_1_1, r, g, b, a);
