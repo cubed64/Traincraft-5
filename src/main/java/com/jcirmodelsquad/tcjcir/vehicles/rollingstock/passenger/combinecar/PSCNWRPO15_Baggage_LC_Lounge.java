@@ -34,4 +34,9 @@ public class PSCNWRPO15_Baggage_LC_Lounge extends AbstractPassengerCombineCar
 	{
 		return 3.85F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1941";
+	}
 }

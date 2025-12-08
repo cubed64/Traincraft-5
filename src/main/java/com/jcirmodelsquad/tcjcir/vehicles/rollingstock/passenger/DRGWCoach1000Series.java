@@ -25,4 +25,9 @@ public class DRGWCoach1000Series extends AbstractPassengerCar {
 
 	@Override
 	public float getOptimalLinkingDistance() { return 3.5F; }
+
+	@Override
+	public String transportYear() {
+		return "(Rebuilt) 1939";
+	}
 }

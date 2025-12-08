@@ -36,5 +36,8 @@ public class PSSOUBaggage extends AbstractStandardFixedFreightCar
 		return 3.97F;
 	}
 
-	
+	@Override
+	public String transportYear() {
+		return "1941";
+	}
 }

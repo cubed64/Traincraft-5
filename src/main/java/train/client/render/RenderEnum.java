@@ -29,7 +29,6 @@ import train.common.entity.rollingStock.*;
 import train.common.entity.rollingStock.diesel.*;
 import train.common.entity.rollingStock.electric.*;
 import train.common.entity.rollingStock.freight.*;
-import train.common.entity.rollingStock.passenger.*;
 import train.common.entity.rollingStock.passenger.baggagecar.*;
 import train.common.entity.rollingStock.steam.*;
 import train.common.entity.rollingStock.tanker.*;
@@ -2202,7 +2201,7 @@ public enum RenderEnum implements ITrainRenderRecord, ISubTrainRenderRecord
 	PSBM56SeatCoach(PSBM56SeatCoach.class, new ModelPSBM56SeatCoach(), "PS_lightweight_BM56SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSBMDiner_Lounge(PSBMDiner_Lounge.class, new ModelPSBMDiner_Lounge(), "PS_lightweight_BMDiner_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
-	ACFGNRPO_30(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.ACFGNRPO_30.class, new ModelACFGNRPO_30(), "AC&F_lightweight_GNRPO30_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACFGNRPO_30(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.rpo.ACFGNRPO_30.class, new ModelACFGNRPO_30(), "AC&F_lightweight_GNRPO30_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ACFGN60SeatCoach(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.ACFGN60SeatCoach.class, new ModelACFGN60SeatCoach(), "AC&F_lightweight_GN60SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ACFGNDinerObservation(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.ACFGNDinerObservation.class, new ModelACFGNDinerObservation(), "AC&F_lightweight_GNDiner_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	ACFGN28SeatCoach_Dinette(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.ACFGN28SeatCoach_Dinette.class, new ModelACFGN28SeatCoach_Dinette(), "AC&F_lightweight_GN28SeatCoach_Dinette_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -2216,7 +2215,7 @@ public enum RenderEnum implements ITrainRenderRecord, ISubTrainRenderRecord
 	OBBaggage_52SeatDividedCoach(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.OBBaggage_52SeatDividedCoach.class, new ModelOBBaggage_52SeatDividedCoach(), "OB_lightweight_Baggage_52SeatDividedCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	OB76SeatDividedCoach(OB76SeatDividedCoach.class, new ModelOB76SeatDividedCoach(), "OB_lightweight_76SeatDividedCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	OBLV82_92SeatCoach(OBLV82_92SeatCoach.class, new ModelOBLV82_92SeatCoach(), "OB_lightweight_LV82_92SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	OBRPO15(OBRPO15.class, new ModelOBRPO15(), "OB_lightweight_RPO15_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	OBRPO15(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.rpo.OBRPO15.class, new ModelOBRPO15(), "OB_lightweight_RPO15_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	OB24SeatCoach_Dinette(OB24SeatCoach_Dinette.class, new ModelOB24SeatCoach_Dinette(), "OB_lightweight_24SeatCoach_Dinette_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	OBBAR52SeatCoach_Dinette(OBBAR52SeatCoach_Dinette.class, new ModelOBBAR52SeatCoach_Dinette(), "OB_lightweight_BAR52SeatCoach_Dinette_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
@@ -2233,7 +2232,7 @@ public enum RenderEnum implements ITrainRenderRecord, ISubTrainRenderRecord
 	PSCNWRPO60(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.rpo.PSCNWRPO60.class, new ModelPSCNWRPO60(), "PS_lightweight_CNWRPO60_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCNWBaggage_LC_Lounge(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSCNWBaggage_LC_Lounge.class, new ModelPSCNWBaggage_LC_Lounge(), "PS_lightweight_CNWBaggage_LC_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCNWRPO15_Baggage_LC_Lounge(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSCNWRPO15_Baggage_LC_Lounge.class, new ModelPSCNWRPO15_Baggage_LC_Lounge(), "PS_lightweight_CNWRPO15_Baggage_LC_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	PSCNWBaggage_LC_Diner(PSCNWBaggage_LC_Diner.class, new ModelPSCNWBaggage_LC_Diner(), "PS_lightweight_CNWBaggage_LC_Diner_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCNWBaggage_LC_Diner(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSCNWBaggage_LC_Diner.class, new ModelPSCNWBaggage_LC_Diner(), "PS_lightweight_CNWBaggage_LC_Diner_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCNW20SeatCoach_Lounge_1959(PSCNW20SeatCoach_Lounge_1959.class, new ModelPSCNW20SeatCoach_Lounge_1959(), "PS_lightweight_CNW20SeatCoach_Lounge_1959_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCNWCommuterLounge(PSCNWCommuterLounge.class, new ModelPSCNW20SeatCoach_Lounge_1959(), "PS_lightweight_CNWCommuterLounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCNW27SeatParlor_Observation(PSCNW27SeatParlor_Observation.class, new ModelPSCNW27SeatParlor_Observation(), "PS_lightweight_CNW27SeatParlor_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -2260,12 +2259,12 @@ public enum RenderEnum implements ITrainRenderRecord, ISubTrainRenderRecord
 
 	ACF_SP_98seatcoach(ACF_SP_98seatcoach.class, new ModelACF_SP_98seatcoach(), "acf_sp_72_c_1_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
-	ACFUPRPO60(ACFUPRPO60.class, new ModelACFUPRPO60(), "AC&F_lightweight_UPRPO60_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	ACFUPRPO60(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.rpo.ACFUPRPO60.class, new ModelACFUPRPO60(), "AC&F_lightweight_UPRPO60_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	BuddDome54SeatCoach(BuddDome54SeatCoach.class, new ModelBuddDome54SeatCoach(), "Budd_lightweight_Dome54SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	PSCEIRPO15_Baggage_LC_Lounge(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSCEIRPO15_Baggage_LC_Lounge.class, new ModelPSCEIRPO15_Baggage_LC_Lounge(), "PS_lightweight_CEIRPO15_Baggage_LC_Lounge_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
-	PSCEIRPO15_Baggage_38SeatCoach(PSCEIRPO15_Baggage_38SeatCoach.class, new ModelPSCEIRPO15_Baggage_38SeatCoach(), "PS_lightweight_CEIRPO15_Baggage_38SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSCEIRPO15_Baggage_38SeatCoach(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSCEIRPO15_Baggage_38SeatCoach.class, new ModelPSCEIRPO15_Baggage_38SeatCoach(), "PS_lightweight_CEIRPO15_Baggage_38SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCEI60SeatCoach(PSCEI60SeatCoach.class, new ModelPSCEI60SeatCoach(), "PS_lightweight_CEI60SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCEIDiner(PSCEIDiner.class, new ModelPSCEIDiner(), "PS_lightweight_CEIDiner_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PSCEI1DR_28SeatParlor_Observation(PSCEI1DR_28SeatParlor_Observation.class, new ModelPSCEI1DR_28SeatParlor_Observation(), "PS_lightweight_CEI1DR_28SeatParlor_Observation_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
@@ -2284,7 +2283,7 @@ public enum RenderEnum implements ITrainRenderRecord, ISubTrainRenderRecord
 
 	PRECOPendulumCoach(PRECOPendulumCoach.class, new ModelPRECOPendulumCoach(), "PRECO_lightweight_PendulumCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
-	PSFNCCBaggage_Dinette(PSFNCCBaggage_Dinette.class, new ModelPSFNCCBaggage_Dinette(), "PS_lightweight_FNCCBaggage_Dinette_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	PSFNCCBaggage_Dinette(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSFNCCBaggage_Dinette.class, new ModelPSFNCCBaggage_Dinette(), "PS_lightweight_FNCCBaggage_Dinette_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	NYCPrewar56SeatCoach(NYCPrewar56SeatCoach.class, new ModelNYCPrewar56SeatCoach(), "NYC_lightweight_Prewar56SeatCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 

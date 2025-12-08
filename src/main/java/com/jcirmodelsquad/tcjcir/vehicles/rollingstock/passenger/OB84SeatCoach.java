@@ -51,4 +51,9 @@ public class OB84SeatCoach extends AbstractPassengerCar
 	{
 		return 3.97F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1935-1938";
+	}
 }

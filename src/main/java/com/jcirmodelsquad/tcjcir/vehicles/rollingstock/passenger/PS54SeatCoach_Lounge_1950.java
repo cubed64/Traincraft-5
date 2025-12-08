@@ -25,4 +25,9 @@ public class PS54SeatCoach_Lounge_1950 extends AbstractPassengerCar {
 	{
 		return 3.97F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1950";
+	}
 }

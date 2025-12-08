@@ -27,4 +27,9 @@ public class BuddRDG56SeatCoach_Lounge extends AbstractPassengerCar
 	{
 		return 3.72F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1937";
+	}
 }

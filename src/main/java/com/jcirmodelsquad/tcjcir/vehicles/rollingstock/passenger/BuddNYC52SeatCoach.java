@@ -23,4 +23,9 @@ public class BuddNYC52SeatCoach extends AbstractPassengerCar
 	{
 		return 3.73F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1938";
+	}
 }

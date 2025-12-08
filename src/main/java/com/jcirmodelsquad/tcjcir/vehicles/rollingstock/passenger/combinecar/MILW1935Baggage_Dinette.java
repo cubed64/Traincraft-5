@@ -37,4 +37,9 @@ public class MILW1935Baggage_Dinette extends AbstractPassengerCombineCar
 	{
 		return 3.38F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1934";
+	}
 }

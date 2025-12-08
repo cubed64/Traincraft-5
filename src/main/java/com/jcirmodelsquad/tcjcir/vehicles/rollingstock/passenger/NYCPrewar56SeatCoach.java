@@ -62,4 +62,9 @@ public class NYCPrewar56SeatCoach extends AbstractPassengerCar {
 	{
 		return 3.97F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1941-1942";
+	}
 }

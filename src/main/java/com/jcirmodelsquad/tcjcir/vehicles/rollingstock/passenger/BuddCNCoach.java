@@ -29,4 +29,9 @@ public class BuddCNCoach extends AbstractPassengerCar
 	{
 		return 3.72F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "(Rebuilt) 1964";
+	}
 }

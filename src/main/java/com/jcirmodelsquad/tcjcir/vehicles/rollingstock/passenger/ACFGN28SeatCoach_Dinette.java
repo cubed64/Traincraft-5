@@ -27,4 +27,9 @@ public class ACFGN28SeatCoach_Dinette extends AbstractPassengerCar
 	{
 		return 3.97F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1950";
+	}
 }

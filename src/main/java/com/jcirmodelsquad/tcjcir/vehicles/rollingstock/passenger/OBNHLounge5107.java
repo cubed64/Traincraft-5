@@ -25,4 +25,9 @@ public class OBNHLounge5107 extends AbstractPassengerCar
 	{
 		return 3.97F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "(Rebuilt) 1950";
+	}
 }

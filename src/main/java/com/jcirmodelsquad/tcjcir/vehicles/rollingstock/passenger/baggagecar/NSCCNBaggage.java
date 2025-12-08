@@ -49,4 +49,9 @@ public class NSCCNBaggage extends AbstractStandardFixedFreightCar
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 3.49F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1950, 1954";
+	}
 }

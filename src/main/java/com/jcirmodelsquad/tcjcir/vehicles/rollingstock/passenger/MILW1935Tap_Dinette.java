@@ -31,4 +31,9 @@ public class MILW1935Tap_Dinette extends AbstractPassengerCar {
 	{
 		return 3.38F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "(Rebuilt) 1935";
+	}
 }

@@ -33,4 +33,9 @@ public class PS73Baggage extends AbstractStandardFixedFreightCar
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 3.23F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1946";
+	}
 }

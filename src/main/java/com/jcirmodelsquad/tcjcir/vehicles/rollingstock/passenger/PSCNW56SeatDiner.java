@@ -23,4 +23,9 @@ public class PSCNW56SeatDiner extends AbstractPassengerCar {
 	{
 		return 3.85F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1939, 1941";
+	}
 }

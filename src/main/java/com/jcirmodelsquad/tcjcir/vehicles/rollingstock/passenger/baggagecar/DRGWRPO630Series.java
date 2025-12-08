@@ -28,4 +28,9 @@ public class DRGWRPO630Series extends AbstractStandardFixedFreightCar
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 3.23F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1930";
+	}
 }

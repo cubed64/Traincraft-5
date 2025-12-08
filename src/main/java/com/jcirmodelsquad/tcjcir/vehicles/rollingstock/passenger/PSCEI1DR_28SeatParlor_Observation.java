@@ -26,4 +26,9 @@ public class PSCEI1DR_28SeatParlor_Observation extends AbstractPassengerCar {
 	{
 		return 3.97F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1946";
+	}
 }

@@ -57,4 +57,9 @@ public class MILWPrewarBaggage extends AbstractStandardFixedFreightCar
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 3.38F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1934, 1936, 1938, (Rebuilt To) 1952";
+	}
 }

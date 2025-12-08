@@ -25,4 +25,9 @@ public class BuddRDGDiner_Lounge extends AbstractPassengerCar
 	{
 		return 3.83F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1937";
+	}
 }

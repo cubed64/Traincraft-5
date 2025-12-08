@@ -25,4 +25,9 @@ public class OBBAR52SeatCoach_Dinette extends AbstractPassengerCar
 	{
 		return 3.97F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "(Rebuilt) Early Postwar";
+	}
 }

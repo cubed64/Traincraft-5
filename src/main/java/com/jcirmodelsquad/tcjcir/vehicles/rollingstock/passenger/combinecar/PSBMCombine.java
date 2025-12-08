@@ -46,4 +46,9 @@ public class PSBMCombine extends AbstractPassengerCombineCar
 	{
 		return 3.97F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1947";
+	}
 }

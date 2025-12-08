@@ -35,4 +35,9 @@ public class DRGWBaggage700Series extends AbstractStandardFixedFreightCar
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) { return 2.81F; }
+
+	@Override
+	public String transportYear() {
+		return "1910";
+	}
 }

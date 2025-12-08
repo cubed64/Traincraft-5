@@ -32,4 +32,9 @@ public class OB92SeatCoach extends AbstractPassengerCar
 	{
 		return 3.97F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1937-1938";
+	}
 }

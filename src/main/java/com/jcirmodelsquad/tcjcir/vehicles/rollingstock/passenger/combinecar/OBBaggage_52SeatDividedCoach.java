@@ -32,4 +32,9 @@ public class OBBaggage_52SeatDividedCoach extends AbstractPassengerCombineCar
 	{
 		return 3.97F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1937";
+	}
 }

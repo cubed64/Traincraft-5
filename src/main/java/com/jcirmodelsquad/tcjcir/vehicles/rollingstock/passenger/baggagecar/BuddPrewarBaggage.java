@@ -33,4 +33,9 @@ public class BuddPrewarBaggage extends AbstractStandardFixedFreightCar
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 3.23F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1940, 1942";
+	}
 }

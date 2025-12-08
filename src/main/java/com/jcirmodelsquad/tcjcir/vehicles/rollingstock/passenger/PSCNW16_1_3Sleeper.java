@@ -23,4 +23,9 @@ public class PSCNW16_1_3Sleeper extends AbstractPassengerCar {
 	{
 		return 3.97F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1948";
+	}
 }

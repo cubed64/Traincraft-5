@@ -24,4 +24,9 @@ public class MILW1935_44SeatCoach_Observation extends AbstractPassengerCar {
 	{
 		return 3.81F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "1935";
+	}
 }

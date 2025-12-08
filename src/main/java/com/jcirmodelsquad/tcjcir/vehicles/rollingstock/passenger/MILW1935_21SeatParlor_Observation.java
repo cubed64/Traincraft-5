@@ -29,4 +29,9 @@ public class MILW1935_21SeatParlor_Observation extends AbstractPassengerCar {
 	{
 		return 3.81F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "(Rebuilt) 1935";
+	}
 }

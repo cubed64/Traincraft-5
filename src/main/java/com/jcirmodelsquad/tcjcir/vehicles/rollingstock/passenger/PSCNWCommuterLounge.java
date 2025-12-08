@@ -24,4 +24,9 @@ public class PSCNWCommuterLounge extends AbstractPassengerCar
 	{
 		return 3.85F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "(Rebuilt) 1961";
+	}
 }

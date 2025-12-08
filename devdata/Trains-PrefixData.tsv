@@ -10,10 +10,10 @@ item.tc:minecartACFGN1DR_17SeatParlor_Observation	AC&F GN 1DR-17 Seat Parlor-Obs
 item.tc:minecartACFGN28SeatCoach_Dinette	AC&F GN 28 Seat Coach-Dinette	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.ACFGN28SeatCoach_Dinette	AC&F_lightweight_GN28SeatCoach_Dinette_
 item.tc:minecartACFGN60SeatCoach	AC&F GN 60 Seat Coach	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.ACFGN60SeatCoach	AC&F_lightweight_GN60SeatCoach_
 item.tc:minecartACFGNDiner_Observation	AC&F GN Diner-Observation	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.ACFGNDinerObservation	AC&F_lightweight_GNDiner_Observation_
-item.tc:minecartACFGNRPO_30	AC&F GN RPO (30' mail)	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.ACFGNRPO_30	AC&F_lightweight_GNRPO30_
+item.tc:minecartACFGNRPO_30	AC&F GN RPO (30' mail)	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.rpo.ACFGNRPO_30	AC&F_lightweight_GNRPO30_
 item.tc:minecartACFRailbox	ACF Railbox	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.ACFRailbox	ACFRailbox_
 item.tc:minecartACFRailboxCushioned	ACF Railbox (Cushioned)	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.ACFRailboxCushioned	ACFRailboxCushioned_
-item.tc:minecartACFUPRPO60	AC&F UP RPO(60')	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.ACFUPRPO60	AC&F_lightweight_UPRPO60_
+item.tc:minecartACFUPRPO60	AC&F UP RPO(60')	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.rpo.ACFUPRPO60	AC&F_lightweight_UPRPO60_
 item.tc:minecartACF_SP_98seatcoach	AC&F SP 98 Seat Coach	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.ACF_SP_98seatcoach	acf_sp_72_c_1_
 item.tc:minecartAipkitExplorer	Aipkit Explorer	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.AipkitExplorer	aipkit_explorer
 item.tc:minecartAipkitExplorer2	Aipkit Explorer-II	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.AipkitExplorer2	aipkit_explorerii_
@@ -517,7 +517,7 @@ item.tc:minecartOBHWNH5570_5589Baggage	OB HW NH 5570-5589 Series Baggage	com.jci
 item.tc:minecartOBLV82_92SeatCoach	OB LV 82/92 Seat Coach	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.OBLV82_92SeatCoach	OB_lightweight_LV82_92SeatCoach_
 item.tc:minecartOBNHGrillCar	OB NH Grill Car	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.OBNHGrillCar	OB_lightweight_NHGrillCar_
 item.tc:minecartOBNHLounge5107	OB NH Commuter Lounge 5107	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.OBNHLounge5107	OB_lightweight_NHLounge5107_
-item.tc:minecartOBRPO15	OB RPO (15' mail)	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.OBRPO15	OB_lightweight_RPO15_
+item.tc:minecartOBRPO15	OB RPO (15' mail)	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.rpo.OBRPO15	OB_lightweight_RPO15_
 item.tc:minecartOWO60Verticube	OWO 60 Verticube	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.OWO60Verticube	verticube60_
 item.tc:minecartOreJenny	Ore Jenny	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.OreJenny	orejenny_
 item.tc:minecartPCF6033	PCF6033	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.PCF6033	pcf_6033_
@@ -554,7 +554,7 @@ item.tc:minecartPSBMDiner_Lounge	PS B&M Diner_Lounge	com.jcirmodelsquad.tcjcir.v
 item.tc:minecartPSCEI1DR28SeatParlorObservation	PS C&EI 1DR-28 Seat Parlor-Observation	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.PSCEI1DR_28SeatParlor_Observation	PS_lightweight_CEI1DR_28SeatParlor_Observation_
 item.tc:minecartPSCEI60SeatCoach	PS C&EI 60 Seat Coach	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.PSCEI60SeatCoach	PS_lightweight_CEI60SeatCoach_
 item.tc:minecartPSCEIDiner	PS C&EI Diner	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.PSCEIDiner	PS_lightweight_CEIDiner_
-item.tc:minecartPSCEIRPO15_Baggage_38SeatCoach	PS C&EI RPO(15')-Baggage-38 Seat Coach	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.PSCEIRPO15_Baggage_38SeatCoach	PS_lightweight_CEIRPO15_Baggage_38SeatCoach_
+item.tc:minecartPSCEIRPO15_Baggage_38SeatCoach	PS C&EI RPO(15')-Baggage-38 Seat Coach	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSCEIRPO15_Baggage_38SeatCoach	PS_lightweight_CEIRPO15_Baggage_38SeatCoach_
 item.tc:minecartPSCEIRPO15_Baggage_LC_Lounge	PS C&EI RPO(15')-Baggage-LC-Lounge	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSCEIRPO15_Baggage_LC_Lounge	PS_lightweight_CEIRPO15_Baggage_LC_Lounge_
 item.tc:minecartPSCNW12SeatParlor_Observation	PS CNW 12 Seat Parlor-Observation	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.PSCNW12SeatParlor_Observation	PS_lightweight_CNW12SeatParlor_Observation_
 item.tc:minecartPSCNW16_1_3Sleeper	PS CNW 16-1-3 Sleeper	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.PSCNW16_1_3Sleeper	PS_lightweight_CNW16_1_3Sleeper_
@@ -567,7 +567,7 @@ item.tc:minecartPSCNW48SeatCoachLounge	PS CNW 48 Seat Coach-Lounge	com.jcirmodel
 item.tc:minecartPSCNW48SeatDiner	PS CNW 48 Seat Diner	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.PSCNW48SeatDiner	PS_lightweight_CNW48SeatCoachDiner_
 item.tc:minecartPSCNW56SeatCoach	PS CNW 56 Seat Coach	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.PSCNW56SeatCoach	PS_lightweight_CNW56SeatCoach_
 item.tc:minecartPSCNW56SeatDiner	PS CNW 56 Seat Diner	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.PSCNW56SeatDiner	PS_lightweight_CNW56SeatCoachDiner_
-item.tc:minecartPSCNWBaggage_LC_Diner	PS CNW Baggage-LC-Diner	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.PSCNWBaggage_LC_Diner	PS_lightweight_CNWBaggage_LC_Diner_
+item.tc:minecartPSCNWBaggage_LC_Diner	PS CNW Baggage-LC-Diner	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSCNWBaggage_LC_Diner	PS_lightweight_CNWBaggage_LC_Diner_
 item.tc:minecartPSCNWBaggage_LC_Lounge	PS CNW Baggage-LC-Lounge	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSCNWBaggage_LC_Lounge	PS_lightweight_CNWBaggage_LC_Lounge_
 item.tc:minecartPSCNWCommuterLounge	PS CNW Commuter Lounge	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.PSCNWCommuterLounge	PS_lightweight_CNWCommuterLounge_
 item.tc:minecartPSCNWRPO15	PS CNW RPO(15')	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.baggagecar.PSCNWRPO15	PS_lightweight_CNWRPO15_
@@ -575,7 +575,7 @@ item.tc:minecartPSCNWRPO15_Baggage_LC_Lounge	PS CNW RPO(15')-Baggage-LC-Lounge	c
 item.tc:minecartPSCNWRPO60	PS CNW RPO(60')	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.rpo.PSCNWRPO60	PS_lightweight_CNWRPO60_
 item.tc:minecartPScombine	PS Combine Coach	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSCombine	PS_lightweight_baggage-coach_
 item.tc:minecartPSDamnitAnotherDiner	PS Center Diner 2	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.PSDamnitAnotherDiner	PS_lightweight_center_diner_2_
-item.tc:minecartPSFNCCBaggage_Dinette	PS FNCC Baggage-Dinette	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.PSFNCCBaggage_Dinette	PS_lightweight_FNCCBaggage_Dinette_
+item.tc:minecartPSFNCCBaggage_Dinette	PS FNCC Baggage-Dinette	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.PSFNCCBaggage_Dinette	PS_lightweight_FNCCBaggage_Dinette_
 item.tc:minecartPSGNRPO_30	PS GN RPO (30' mail)	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.rpo.PSGNRPO_30	PS_lightweight_GNRPO30_
 item.tc:minecartPSLunchCounter_Lounge	PS Lunch Counter-Lounge	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.PSLunchCounter_Lounge	PS_lightweight_LunchCounter_Lounge_
 item.tc:minecartPSRPO	PSRPO	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.rpo.PSRPO	PS_lightweight_RPO_

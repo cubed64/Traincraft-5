@@ -36,5 +36,8 @@ public class OBHWNH5570_5589Baggage extends AbstractStandardFixedFreightCar
 		return 3.37F;
 	}
 
-	
+	@Override
+	public String transportYear() {
+		return "1927";
+	}
 }

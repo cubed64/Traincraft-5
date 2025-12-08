@@ -26,4 +26,9 @@ public class BuddCNDiner_Lounge extends AbstractPassengerCar
 	{
 		return 3.83F;
 	}
+
+	@Override
+	public String transportYear() {
+		return "(Rebuilt) 1964";
+	}
 }
