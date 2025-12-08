@@ -22,6 +22,8 @@ import train.common.items.TCRailTypes;
 import train.common.library.EnumCoreTrack;
 import train.common.library.EnumTracks;
 
+import static train.common.library.EnumCoreTrack.*;
+
 
 public class CustomRenderHandler
 {
@@ -152,16 +154,16 @@ public class CustomRenderHandler
                 }
             }
         }
-        else if (item.getTrackType() == EnumTracks.DOUBLE_DIAMOND_CROSSING || item.getTrackType() == EnumTracks.EMBEDDED_DOUBLE_DIAMOND_CROSSING) {
+        else if (CORE_DOUBLE_DIAMOND_CROSSING.equals(item.getTrackType().getCoreTrack())) {
             float dx = dir.getX();
             float dz = dir.getY();
 
             RenderTCRail.modelTwoWaysCrossing.render("diamond", facing, item.getTrackType().getVariant(), dx, 0, dz,  r, g, b, a);
         }
-        else if (item.getTrackType() == EnumTracks.FOUR_WAYS_CROSSING || item.getTrackType() == EnumTracks.EMBEDDED_FOUR_WAYS_CROSSING) {
+        else if (CORE_FOUR_WAYS_CROSSING.equals(item.getTrackType().getCoreTrack())) {
             RenderTCRail.modelTwoWaysCrossing.render("universal_crossing", facing, item.getTrackType().getVariant(), 0, 0, 0,  r, g, b, a);
         }
-        else if (item.getTrackType() == EnumTracks.DIAMOND_CROSSING || item.getTrackType() == EnumTracks.EMBEDDED_DIAMOND_CROSSING)
+        else if (CORE_DIAMOND_CROSSING.equals(item.getTrackType().getCoreTrack()))
         {
             float dx = dir.getX();
             float dz = dir.getY();
@@ -172,7 +174,7 @@ public class CustomRenderHandler
                 RenderTCRail.modelRightDiamondCrossing.render(item.getTrackType().getVariant(), dx, 0, dz, facing, r, g, b, a);
             }
         }
-        else if (item.getTrackType() == EnumTracks.TWO_WAYS_CROSSING || item.getTrackType() == EnumTracks.EMBEDDED_TWO_WAYS_CROSSING)
+        else if (CORE_TWO_WAYS_CROSSING.equals(item.getTrackType().getCoreTrack()))
         {
             facing = TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double((player.rotationYaw * 8.0F / 360.0F + 0.5D)) & 7);
             if (facing == 6 || facing == 4 || facing == 7 || facing == 5)
@@ -270,20 +272,18 @@ public class CustomRenderHandler
 
             String parallelCurve = "small";
 
-            switch (item.getTrackType())
+            switch (item.getTrackType().getCoreTrack())
             {
-                case MEDIUM_PARALLEL_CURVE:
-                case EMBEDDED_MEDIUM_PARALLEL_CURVE:
+                case CORE_S_CURVE_3x12:
                     parallelCurve = "medium";
                     break;
-                case LARGE_PARALLEL_CURVE:
-                case EMBEDDED_LARGE_PARALLEL_CURVE:
+                case CORE_S_CURVE_4x16:
                     parallelCurve = "large";
                     break;
-                case S_CURVE_20x2:
-                case EMBEDDED_S_CURVE_20x2:
+                case CORE_S_CURVE_20x2:
                     parallelCurve = "20x2";
                     break;
+
             }
 
             if (isLeftTurn)
