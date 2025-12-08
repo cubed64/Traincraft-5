@@ -74,10 +74,8 @@ public class TCItems {
 		ItemIDs.helmet_suit_paintable.item = new ItemTCCompositeSuit(ItemIDs.helmet_suit_paintable.iconName, Traincraft.instance.armorCompositeSuit, Traincraft.trainCompositeSuit, 0,0x1469d9);
 
 		ItemIDs.composite_wrench.item = new ItemWrench();
-
+		// region standard track
 		/**Tracks*/
-
-
 		TrackItemIDs.tcRailSmallStraight.item = new ItemTCRail(EnumTracks.SMALL_STRAIGHT);
 		TrackItemIDs.tcRailMediumStraight.item = new ItemTCRail(EnumTracks.MEDIUM_STRAIGHT);
 		TrackItemIDs.tcRailLongStraight.item = new ItemTCRail(EnumTracks.LONG_STRAIGHT);
@@ -98,27 +96,61 @@ public class TCItems {
 		TrackItemIDs.tcRailSmallRoadCrossing2.item = new ItemTCRail(EnumTracks.SMALL_ROAD_CROSSING_2);
 		TrackItemIDs.tcRailSmallRoadCrossingDynamic.item = new ItemTCRail(EnumTracks.SMALL_ROAD_CROSSING_DYNAMIC);
 
+		TrackItemIDs.tcRailMedium45DegreeSwitch.item = new ItemTCRail(EnumTracks.MEDIUM_45DEGREE_SWITCH);
+		TrackItemIDs.tcRailLarge45DegreeSwitch.item = new ItemTCRail(EnumTracks.LARGE_45DEGREE_SWITCH);
+		TrackItemIDs.tcRailVeryLargeSwitch.item = new ItemTCRail(EnumTracks.VERY_LARGE_SWITCH);
+
 		TrackItemIDs.tcRailMediumParallelSwitch.item = new ItemTCRail(EnumTracks.MEDIUM_PARALLEL_SWITCH);
 		TrackItemIDs.tcRailLargeParallelSwitch.item = new ItemTCRail(EnumTracks.LARGE_PARALLEL_SWITCH);
 
 		TrackItemIDs.tcRailCrossoverSwitch10x2.item = new ItemTCRail(EnumTracks.CROSSOVER_SWITCH_10X2);
 
-		/* Normal Crossways*/
+		TrackItemIDs.tcRailSmallParallelCurve.item = new ItemTCRail(EnumTracks.SMALL_PARALLEL_CURVE);
+		TrackItemIDs.tcRailMediumParallelCurve.item = new ItemTCRail(EnumTracks.MEDIUM_PARALLEL_CURVE);
+		TrackItemIDs.tcRailLargeParallelCurve.item = new ItemTCRail(EnumTracks.LARGE_PARALLEL_CURVE);
+		TrackItemIDs.tcRail20x2SCurve.item = new ItemTCRail(EnumTracks.S_CURVE_20x2);
+
+		/** Normal Slopes*/
+		TrackItemIDs.tcRail1X3SlopeDynamic.item = new ItemTCRail(EnumTracks.SLOPE_1X3_DYNAMIC);
+		TrackItemIDs.tcRailSlopeDynamic.item = new ItemTCRail(EnumTracks.SLOPE_DYNAMIC);
+		TrackItemIDs.tcRailLargeSlopeDynamic.item = new ItemTCRail(EnumTracks.LARGE_SLOPE_DYNAMIC);
+		TrackItemIDs.tcRailVeryLargeSlopeDynamic.item = new ItemTCRail(EnumTracks.VERY_LARGE_SLOPE_DYNAMIC);
+
+
+		// region Deprecated Slopes
+		TrackItemIDs.tcRailSlopeWood.item = new ItemTCRail(EnumTracks.SLOPE_WOOD);
+		TrackItemIDs.tcRailSlopeGravel.item = new ItemTCRail(EnumTracks.SLOPE_GRAVEL);
+		TrackItemIDs.tcRailSlopeBallast.item = new ItemTCRail(EnumTracks.SLOPE_BALLAST);
+
+		TrackItemIDs.tcRailLargeSlopeWood.item = new ItemTCRail(EnumTracks.LARGE_SLOPE_WOOD);
+		TrackItemIDs.tcRailLargeSlopeGravel.item = new ItemTCRail(EnumTracks.LARGE_SLOPE_GRAVEL);
+		TrackItemIDs.tcRailLargeSlopeBallast.item = new ItemTCRail(EnumTracks.LARGE_SLOPE_BALLAST);
+		TrackItemIDs.tcRailVeryLargeSlopeWood.item = new ItemTCRail(EnumTracks.VERY_LARGE_SLOPE_WOOD);
+		TrackItemIDs.tcRailVeryLargeSlopeGravel.item = new ItemTCRail(EnumTracks.VERY_LARGE_SLOPE_GRAVEL);
+		TrackItemIDs.tcRailVeryLargeSlopeBallast.item = new ItemTCRail(EnumTracks.VERY_LARGE_SLOPE_BALLAST);
+
+		TrackItemIDs.tcRailSlopeSnowGravel.item = new ItemTCRail(EnumTracks.SLOPE_SNOW_GRAVEL);
+		TrackItemIDs.tcRailLargeSlopeSnowGravel.item = new ItemTCRail(EnumTracks.LARGE_SLOPE_SNOW_GRAVEL);
+		TrackItemIDs.tcRailVeryLargeSlopeSnowGravel.item = new ItemTCRail(EnumTracks.VERY_LARGE_SLOPE_SNOW_GRAVEL);
+		TrackItemIDs.tcRailSlopePeaGravel.item = new ItemTCRail(EnumTracks.SLOPE_PEA_GRAVEL);
+		TrackItemIDs.tcRailLargeSlopePeaGravel.item = new ItemTCRail(EnumTracks.LARGE_SLOPE_PEA_GRAVEL);
+		TrackItemIDs.tcRailVeryLargeSlopePeaGravel.item = new ItemTCRail(EnumTracks.VERY_LARGE_SLOPE_PEA_GRAVEL);
+		// endregion Deprecated Slopes
+
+
+		/** Normal Crossways*/
 		TrackItemIDs.tcRailTwoWaysCrossing.item = new ItemTCRail(EnumTracks.TWO_WAYS_CROSSING);
 		TrackItemIDs.tcRailDiamondCrossing.item = new ItemTCRail(EnumTracks.DIAMOND_CROSSING);
 		TrackItemIDs.tcRailDoubleDiamondCrossing.item = new ItemTCRail(EnumTracks.DOUBLE_DIAMOND_CROSSING);
 		TrackItemIDs.tcRailFourWaysCrossing.item = new ItemTCRail(EnumTracks.FOUR_WAYS_CROSSING);
+
+		// endregion standard track
 
 		/*Embedded Crossways*/
 		TrackItemIDs.tcRailEmbeddedTwoWaysCrossing.item = new ItemTCRail(EnumTracks.EMBEDDED_TWO_WAYS_CROSSING);
 		TrackItemIDs.tcRailEmbeddedDiamondCrossing.item = new ItemTCRail(EnumTracks.EMBEDDED_DIAMOND_CROSSING);
 		TrackItemIDs.tcRailEmbeddedDoubleDiamondCrossing.item = new ItemTCRail(EnumTracks.EMBEDDED_DOUBLE_DIAMOND_CROSSING);
 		TrackItemIDs.tcRailEmbeddedFourWaysCrossing.item = new ItemTCRail(EnumTracks.EMBEDDED_FOUR_WAYS_CROSSING);
-
-		/* Normal Switches*/
-		TrackItemIDs.tcRailMedium45DegreeSwitch.item = new ItemTCRail(EnumTracks.MEDIUM_45DEGREE_SWITCH);
-		TrackItemIDs.tcRailLarge45DegreeSwitch.item = new ItemTCRail(EnumTracks.LARGE_45DEGREE_SWITCH);
-		TrackItemIDs.tcRailVeryLargeSwitch.item = new ItemTCRail(EnumTracks.VERY_LARGE_SWITCH);
 
 		/* Embedded Switches*/
 		TrackItemIDs.tcRailEmbeddedMediumSwitch.item = new ItemTCRail(EnumTracks.EMBEDDED_MEDIUM_SWITCH);
@@ -131,32 +163,6 @@ public class TCItems {
 
 		TrackItemIDs.tcRailEmbeddedCrossoverSwitch10x2.item = new ItemTCRail(EnumTracks.EMBEDDED_CROSSOVER_SWITCH_10X2);
 
-		/** Normal Slopes*/
-		TrackItemIDs.tcRail1X3SlopeDynamic.item = new ItemTCRail(EnumTracks.SLOPE_1X3_DYNAMIC);
-		TrackItemIDs.tcRailSlopeWood.item = new ItemTCRail(EnumTracks.SLOPE_WOOD);
-		TrackItemIDs.tcRailSlopeGravel.item = new ItemTCRail(EnumTracks.SLOPE_GRAVEL);
-		TrackItemIDs.tcRailSlopeBallast.item = new ItemTCRail(EnumTracks.SLOPE_BALLAST);
-		TrackItemIDs.tcRailSlopeDynamic.item = new ItemTCRail(EnumTracks.SLOPE_DYNAMIC);
-		TrackItemIDs.tcRailLargeSlopeWood.item = new ItemTCRail(EnumTracks.LARGE_SLOPE_WOOD);
-		TrackItemIDs.tcRailLargeSlopeGravel.item = new ItemTCRail(EnumTracks.LARGE_SLOPE_GRAVEL);
-		TrackItemIDs.tcRailLargeSlopeBallast.item = new ItemTCRail(EnumTracks.LARGE_SLOPE_BALLAST);
-		TrackItemIDs.tcRailVeryLargeSlopeWood.item = new ItemTCRail(EnumTracks.VERY_LARGE_SLOPE_WOOD);
-		TrackItemIDs.tcRailVeryLargeSlopeGravel.item = new ItemTCRail(EnumTracks.VERY_LARGE_SLOPE_GRAVEL);
-		TrackItemIDs.tcRailVeryLargeSlopeBallast.item = new ItemTCRail(EnumTracks.VERY_LARGE_SLOPE_BALLAST);
-		TrackItemIDs.tcRailLargeSlopeDynamic.item = new ItemTCRail(EnumTracks.LARGE_SLOPE_DYNAMIC);
-		TrackItemIDs.tcRailSlopeSnowGravel.item = new ItemTCRail(EnumTracks.SLOPE_SNOW_GRAVEL);
-		TrackItemIDs.tcRailLargeSlopeSnowGravel.item = new ItemTCRail(EnumTracks.LARGE_SLOPE_SNOW_GRAVEL);
-		TrackItemIDs.tcRailVeryLargeSlopeSnowGravel.item = new ItemTCRail(EnumTracks.VERY_LARGE_SLOPE_SNOW_GRAVEL);
-		TrackItemIDs.tcRailSlopePeaGravel.item = new ItemTCRail(EnumTracks.SLOPE_PEA_GRAVEL);
-		TrackItemIDs.tcRailLargeSlopePeaGravel.item = new ItemTCRail(EnumTracks.LARGE_SLOPE_PEA_GRAVEL);
-		TrackItemIDs.tcRailVeryLargeSlopePeaGravel.item = new ItemTCRail(EnumTracks.VERY_LARGE_SLOPE_PEA_GRAVEL);
-		TrackItemIDs.tcRailVeryLargeSlopeDynamic.item = new ItemTCRail(EnumTracks.VERY_LARGE_SLOPE_DYNAMIC);
-
-
-		TrackItemIDs.tcRailSmallParallelCurve.item = new ItemTCRail(EnumTracks.SMALL_PARALLEL_CURVE);
-		TrackItemIDs.tcRailMediumParallelCurve.item = new ItemTCRail(EnumTracks.MEDIUM_PARALLEL_CURVE);
-		TrackItemIDs.tcRailLargeParallelCurve.item = new ItemTCRail(EnumTracks.LARGE_PARALLEL_CURVE);
-		TrackItemIDs.tcRail20x2SCurve.item = new ItemTCRail(EnumTracks.S_CURVE_20x2);
 
 		/*Embedded Straights*/
 		TrackItemIDs.tcRailEmbeddedSmallStraight.item = new ItemTCRail(EnumTracks.EMBEDDED_SMALL_STRAIGHT);
@@ -202,7 +208,63 @@ public class TCItems {
 		TrackItemIDs.tcRailEmbeddedLargeSlopeDynamic.item = new ItemTCRail(EnumTracks.EMBEDDED_LARGE_SLOPE_DYNAMIC);
 		TrackItemIDs.tcRailEmbeddedVeryLargeSlopeDynamic.item = new ItemTCRail(EnumTracks.EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC);
 
+		//===================================================Concrete Type 1=============================================================
+		/*CONCRETE_TYPE1 Crossways*/
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_TwoWaysCrossing.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_TWO_WAYS_CROSSING);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_DiamondCrossing.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_DIAMOND_CROSSING);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_DoubleDiamondCrossing.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_DOUBLE_DIAMOND_CROSSING);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_FourWaysCrossing.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_FOUR_WAYS_CROSSING);
 
+		/* Embedded Switches*/
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_MediumSwitch.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_MEDIUM_SWITCH);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_LargeSwitch.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_LARGE_SWITCH);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_VeryLargeSwitch.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_VERY_LARGE_SWITCH);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_MediumParallelSwitch.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_MEDIUM_PARALLEL_SWITCH);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_LargeParallelSwitch.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_LARGE_PARALLEL_SWITCH);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_Medium45DegreeSwitch.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_MEDIUM_45DEGREE_SWITCH);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_Large45DegreeSwitch.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_LARGE_45DEGREE_SWITCH);
+
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_CrossoverSwitch10x2.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_CROSSOVER_SWITCH_10X2);
+
+
+		/*Embedded Straights*/
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_SmallStraight.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_SMALL_STRAIGHT);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_MediumStraight.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_MEDIUM_STRAIGHT);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_LongStraight.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_LONG_STRAIGHT);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_VeryLongStraight.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_VERY_LONG_STRAIGHT);
+
+		/* Embedded Parallel Curves*/
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_SmallParallelCurve.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_SMALL_PARALLEL_CURVE);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_MediumParallelCurve.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_MEDIUM_PARALLEL_CURVE);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_LargeParallelCurve.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_LARGE_PARALLEL_CURVE);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_20x2SCurve.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_S_CURVE_20x2);
+
+		/* Embedded Turns */
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_1X1Turn.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_TURN_1X1);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_MediumTurn.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_MEDIUM_TURN);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_LargeTurn.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_LARGE_TURN);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_VeryLargeTurn.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_VERY_LARGE_TURN);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_SuperLargeTurn.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_SUPER_LARGE_TURN);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_29X29Turn.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_TURN_29X29);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_32X32Turn.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_TURN_32X32);
+
+		/*Embedded 45Degree Turns*/
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_Medium45DegreeTurn.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_MEDIUM_45DEGREE_TURN);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_Large45DegreeTurn.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_LARGE_45DEGREE_TURN);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_VeryLarge45DegreeTurn.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_VERY_LARGE_45DEGREE_TURN);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_SuperLarge45DegreeTurn.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_SUPER_LARGE_45DEGREE_TURN);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_45DegreeTurn9x20.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_DIAGONAL_TURN_9X20);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_45DegreeTurn10x22.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_DIAGONAL_TURN_10X22);
+
+		/* Embedded Slopes*/
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_1x3SlopeDynamic.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_SLOPE_1X3_DYNAMIC);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_SlopeDynamic.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_SLOPE_DYNAMIC);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_LargeSlopeDynamic.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_LARGE_SLOPE_DYNAMIC);
+		TrackItemIDs.tcRail_CONCRETE_TYPE1_VeryLargeSlopeDynamic.item = new ItemTCRail(EnumTracks.CONCRETE_TYPE1_VERY_LARGE_SLOPE_DYNAMIC);
+
+
+
+		//=========================================================END===================================================================
 			ItemIDs.wirelessTransmitter.item = new ItemWirelessTransmitter();
 			ItemIDs.atoCard.item = new ItemATOCard();
 			ItemIDs.pennCentral.item = new ItemPennCentralSimCard();

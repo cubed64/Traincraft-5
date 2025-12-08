@@ -57,26 +57,41 @@ public enum TrackItemIDs
     tcRail1X3SlopeDynamic("ItemTCRail", "item_rail_straight_slope_dynamic", 3),
 
     //1x6 slopes
+    @Deprecated
     tcRailSlopeWood("ItemTCRail", "item_rail_straight_slope_wood", 3),
+    @Deprecated
     tcRailSlopeGravel("ItemTCRail", "item_rail_straight_slope_gravel", 3),
+    @Deprecated
     tcRailSlopeBallast("ItemTCRail", "item_rail_straight_slope_ballast", 3),
+    @Deprecated
     tcRailSlopeSnowGravel("ItemTCRail", "item_rail_straight_slope_snow_gravel", 3),
+    @Deprecated
     tcRailSlopePeaGravel("ItemTCRail", "item_rail_straight_slope_pea_gravel", 3),
     tcRailSlopeDynamic("ItemTCRail", "item_rail_straight_slope_dynamic", 3),
 
     //1x12 slopes
+
     tcRailLargeSlopeWood("ItemTCRail", "item_rail_straight_slope_wood", 3),
+    @Deprecated
     tcRailLargeSlopeGravel("ItemTCRail", "item_rail_straight_slope_gravel", 3),
+    @Deprecated
     tcRailLargeSlopeBallast("ItemTCRail", "item_rail_straight_slope_ballast", 3),
+    @Deprecated
     tcRailLargeSlopeSnowGravel("ItemTCRail", "item_rail_straight_slope_snow_gravel", 3),
+    @Deprecated
     tcRailLargeSlopePeaGravel("ItemTCRail", "item_rail_straight_slope_pea_gravel", 3),
     tcRailLargeSlopeDynamic("ItemTCRail", "item_rail_straight_slope_dynamic", 3),
 
     //1x18 slopes
+    @Deprecated
     tcRailVeryLargeSlopeWood("ItemTCRail", "item_rail_straight_slope_wood", 3),
+    @Deprecated
     tcRailVeryLargeSlopeGravel("ItemTCRail", "item_rail_straight_slope_gravel", 3),
+    @Deprecated
     tcRailVeryLargeSlopeBallast("ItemTCRail", "item_rail_straight_slope_ballast", 3),
+    @Deprecated
     tcRailVeryLargeSlopeSnowGravel("ItemTCRail", "item_rail_straight_slope_snow_gravel", 3),
+    @Deprecated
     tcRailVeryLargeSlopePeaGravel("ItemTCRail", "item_rail_straight_slope_pea_gravel", 3),
     tcRailVeryLargeSlopeDynamic("ItemTCRail", "item_rail_straight_slope_dynamic", 3),
 
@@ -134,6 +149,67 @@ public enum TrackItemIDs
     tcRailEmbeddedSlopeDynamic("ItemTCRail", "item_rail_embedded_slope_dynamic", 5),
     tcRailEmbeddedLargeSlopeDynamic("ItemTCRail", "item_rail_embedded_slope_dynamic", 5),
     tcRailEmbeddedVeryLargeSlopeDynamic("ItemTCRail", "item_rail_embedded_slope_dynamic", 5),
+
+    /**
+     * Concrete Type1
+     */
+    //straights
+    tcRail_CONCRETE_TYPE1_SmallStraight("ItemTCRail", "track_straight_1_e", 5),
+    tcRail_CONCRETE_TYPE1_MediumStraight("ItemTCRail", "track_straight_3_e", 5),
+    tcRail_CONCRETE_TYPE1_LongStraight("ItemTCRail", "track_straight_6_e", 5),
+    tcRail_CONCRETE_TYPE1_VeryLongStraight("ItemTCRail", "track_straight_12_e", 5),
+
+    //turns
+    tcRail_CONCRETE_TYPE1_1X1Turn("ItemTCRail", "track_turn_1_e", 5),
+    tcRail_CONCRETE_TYPE1_MediumTurn("ItemTCRail", "track_turn_3_e", 5),
+    tcRail_CONCRETE_TYPE1_LargeTurn("ItemTCRail", "track_turn_5_e", 5),
+    tcRail_CONCRETE_TYPE1_VeryLargeTurn("ItemTCRail", "track_turn_10_e", 5),
+    tcRail_CONCRETE_TYPE1_SuperLargeTurn("ItemTCRail", "track_turn_16_e", 5),
+    tcRail_CONCRETE_TYPE1_29X29Turn("ItemTCRail", "track_turn_29_e", 5),
+    tcRail_CONCRETE_TYPE1_32X32Turn("ItemTCRail", "track_turn_32_e", 5),
+
+    //45 degree turns
+    tcRail_CONCRETE_TYPE1_Medium45DegreeTurn("ItemTCRail", "track_45degree_turn_3x4_e", 5),
+    tcRail_CONCRETE_TYPE1_Large45DegreeTurn("ItemTCRail", "track_45degree_turn_3x6_e", 5),
+    tcRail_CONCRETE_TYPE1_VeryLarge45DegreeTurn("ItemTCRail", "track_45degree_turn_4x8_e", 5),
+    tcRail_CONCRETE_TYPE1_SuperLarge45DegreeTurn("ItemTCRail", "track_45degree_turn_5x11_e", 5),
+    tcRail_CONCRETE_TYPE1_45DegreeTurn9x20("ItemTCRail", "track_45degree_turn_9x20_e", 5),
+    tcRail_CONCRETE_TYPE1_45DegreeTurn10x22("ItemTCRail", "track_45degree_turn_10x22_e", 5),
+
+    //parallel curves / s curves
+    tcRail_CONCRETE_TYPE1_SmallParallelCurve("ItemTCRail", "track_s-curve_2x8_e", 3),
+    tcRail_CONCRETE_TYPE1_MediumParallelCurve("ItemTCRail", "track_s-curve_3x12_e", 3),
+    tcRail_CONCRETE_TYPE1_LargeParallelCurve("ItemTCRail", "track_s-curve_4x16_e", 3),
+    tcRail_CONCRETE_TYPE1_20x2SCurve("ItemTCRail", "track_s-curve_2x20_e", 3),
+
+    //switches
+    tcRail_CONCRETE_TYPE1_MediumSwitch("ItemtcRail_CONCRETE_TYPE1_", "track_switch_4x4_e", 5),
+    tcRail_CONCRETE_TYPE1_LargeSwitch("ItemtcRail_CONCRETE_TYPE1_", "track_switch_6x6_e", 5),
+    tcRail_CONCRETE_TYPE1_VeryLargeSwitch("ItemtcRail_CONCRETE_TYPE1_", "track_switch_11x11_e", 5),
+
+    tcRail_CONCRETE_TYPE1_MediumParallelSwitch("ItemtcRail_CONCRETE_TYPE1_", "track_switch_p_4x11_e", 5),
+    tcRail_CONCRETE_TYPE1_LargeParallelSwitch("ItemtcRail_CONCRETE_TYPE1_", "track_switch_p_4x17_e", 5),
+
+    tcRail_CONCRETE_TYPE1_Medium45DegreeSwitch("ItemtcRail_CONCRETE_TYPE1_","track_switch_45degree_3x5_e", 5),
+    tcRail_CONCRETE_TYPE1_Large45DegreeSwitch("ItemtcRail_CONCRETE_TYPE1_", "track_switch_45degree_4x8_e", 5),
+    tcRail_CONCRETE_TYPE1_CrossoverSwitch10x2("ItemTCRail", "track_switch_crossover_10x2_e", 5),
+
+    //diamonds
+    tcRail_CONCRETE_TYPE1_TwoWaysCrossing("ItemtcRail_CONCRETE_TYPE1_","track_plus_crossing_e",5),
+    tcRail_CONCRETE_TYPE1_DiamondCrossing("ItemtcRail_CONCRETE_TYPE1_", "track_x_crossing_e",5),
+    tcRail_CONCRETE_TYPE1_DoubleDiamondCrossing("ItemtcRail_CONCRETE_TYPE1_", "track_double_x_crossing_e",5),
+    tcRail_CONCRETE_TYPE1_FourWaysCrossing("ItemtcRail_CONCRETE_TYPE1_", "track_xplus_crossing_e",5),
+
+    //slopes
+    tcRail_CONCRETE_TYPE1_1x3SlopeDynamic("ItemTCRail", "item_rail_CONCRETE_TYPE1_slope_dynamic", 5),
+    tcRail_CONCRETE_TYPE1_SlopeDynamic("ItemTCRail", "item_rail_CONCRETE_TYPE1_slope_dynamic", 5),
+    tcRail_CONCRETE_TYPE1_LargeSlopeDynamic("ItemTCRail", "item_rail_CONCRETE_TYPE1_slope_dynamic", 5),
+    tcRail_CONCRETE_TYPE1_VeryLargeSlopeDynamic("ItemTCRail", "item_rail_CONCRETE_TYPE1_slope_dynamic", 5),
+    
+
+    /**
+     * NON STANDARD
+     */
 
     //road crossings
     tcRailSmallRoadCrossing("ItemTCRail", "item_rail_small_road_crossing", 5),

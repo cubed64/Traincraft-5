@@ -22,6 +22,8 @@ import train.common.items.BallastTypes;
 import train.common.library.EnumTracks;
 import train.common.tile.TileTCRail;
 
+import static train.common.library.EnumCoreTrack.CORE_10x2_CROSSOVER_SWITCH_R;
+
 public class RenderTCRail extends TileEntitySpecialRenderer {
 
 	public static final ModelSmallStraightTCTrack modelSmallStraight = new ModelSmallStraightTCTrack();
@@ -305,111 +307,72 @@ public class RenderTCRail extends TileEntitySpecialRenderer {
 						model45DegreeLeftTurn.render("superlarge", railTile, x, y, z);
 						break;
 					}
-
+					case CORE_TWO_WAYS_CROSSING:
+					{
+						modelTwoWaysCrossing.render("twoways_crossing", railTile, x, y, z);
+						break;
+					}
+					case CORE_FOUR_WAYS_CROSSING:
+					{
+						modelTwoWaysCrossing.render("universal_crossing", railTile, x, y, z);
+						break;
+					}
+					case CORE_DIAMOND_CROSSING_R:
+						modelRightDiamondCrossing.render(railTile, x, y, z);
+						break;
+					case CORE_DIAMOND_CROSSING_L:
+						modelLeftDiamondCrossing.render(railTile, x, y, z);
+						break;
+					case CORE_DOUBLE_DIAMOND_CROSSING:
+						modelTwoWaysCrossing.render("diamond", railTile, x, y, z);
+						break;
+					case CORE_DIAGONAL_TWO_WAYS_CROSSING:
+						modelTwoWaysCrossing.render("diagonal_crossing", railTile, x, y, z);
+						break;
+					case CORE_10x2_CROSSOVER_SWITCH_L: {
+						modelLeftSwitchTurn.render("crossover_10x2", railTile, x, y, z);
+						break;
+					}
+					case CORE_10x2_CROSSOVER_SWITCH_R: {
+						modelRightSwitchTurn.render("crossover_10x2", railTile, x, y, z);
+						break;
+					}
+					case CORE_9X20_45DEGREE_TURN_R:
+						model45DegreeRightTurn.render("9x20",railTile,x,y,z);
+						break;
+					case CORE_9X20_45DEGREE_TURN_L:
+						model45DegreeLeftTurn.render("9x20",railTile,x,y,z);
+						break;
+					case CORE_10x22_45DEGREE_TURN_R:
+					{
+						model45DegreeRightTurn.render("10x22",railTile,x,y,z);
+						break;
+					}
+					case CORE_10x22_45DEGREE_TURN_L:
+					{
+						model45DegreeLeftTurn.render("10x22",railTile,x,y,z);
+						break;
+					}
+					case CORE_3x5_45DEGREE_SWITCH_R:
+					{
+						modelRightSwitchTurn.render("medium_45degree",  railTile, x, y, z);
+						break;
+					}
+					case CORE_3x5_45DEGREE_SWITCH_L:
+					{
+						modelLeftSwitchTurn.render("medium_45degree",  railTile, x, y, z);
+						break;
+					}
+					case CORE_4x8_45DEGREE_SWITCH_R:
+						modelRightSwitchTurn.render("large_45degree",  railTile, x, y, z);
+						break;
+					case CORE_4x8_45DEGREE_SWITCH_L:
+						modelLeftSwitchTurn.render("large_45degree",  railTile, x, y, z);
+						break;
 					default:
 					{
 						switch (track)
 						{
-							case TWO_WAYS_CROSSING:
-							case EMBEDDED_TWO_WAYS_CROSSING:
-							{
-								modelTwoWaysCrossing.render("twoways_crossing", railTile, x, y, z);
-								break;
-							}
-							case FOUR_WAYS_CROSSING:
-							case EMBEDDED_FOUR_WAYS_CROSSING:
-							{
-								modelTwoWaysCrossing.render("universal_crossing", railTile, x, y, z);
-								break;
-							}
-							case DIAMOND_CROSSING:
-							case RIGHT_DIAMOND_CROSSING:
-							case EMBEDDED_DIAMOND_CROSSING:
-							case EMBEDDED_RIGHT_DIAMOND_CROSSING:
-							{
-								modelRightDiamondCrossing.render(railTile, x, y, z);
-								break;
-							}
-							case LEFT_DIAMOND_CROSSING:
-							case EMBEDDED_LEFT_DIAMOND_CROSSING:
-							{
-								modelLeftDiamondCrossing.render(railTile, x, y, z);
-								break;
-							}
-							case DOUBLE_DIAMOND_CROSSING:
-							case EMBEDDED_DOUBLE_DIAMOND_CROSSING:
-							{
-								modelTwoWaysCrossing.render("diamond", railTile, x, y, z);
-								break;
-							}
-							case DIAGONAL_TWO_WAYS_CROSSING:
-							case EMBEDDED_DIAGONAL_TWO_WAYS_CROSSING:
-							{
-								modelTwoWaysCrossing.render("diagonal_crossing", railTile, x, y, z);
-								break;
-							}
-
-							case EMBEDDED_CROSSOVER_SWITCH_10X2_LEFT:
-							case CROSSOVER_SWITCH_10X2_LEFT: {
-								modelLeftSwitchTurn.render("crossover_10x2", railTile, x, y, z);
-								break;
-							}
-							case EMBEDDED_CROSSOVER_SWITCH_10X2:
-							case EMBEDDED_CROSSOVER_SWITCH_10X2_RIGHT:
-							case CROSSOVER_SWITCH_10X2:
-							case CROSSOVER_SWITCH_10X2_RIGHT: {
-								modelRightSwitchTurn.render("crossover_10x2", railTile, x, y, z);
-								break;
-							}
-
-							// Embedded Tracks
-
-							case DIAGONAL_TURN_9X20:
-							case DIAGONAL_RIGHT_TURN_9X20:
-							case EMBEDDED_DIAGONAL_TURN_9X20:
-							case EMBEDDED_DIAGONAL_RIGHT_TURN_9X20: {
-								model45DegreeRightTurn.render("9x20",railTile,x,y,z);
-								break;
-							}
-							case DIAGONAL_LEFT_TURN_9X20:
-							case EMBEDDED_DIAGONAL_LEFT_TURN_9X20: {
-								model45DegreeLeftTurn.render("9x20",railTile,x,y,z);
-								break;
-							}
-							case DIAGONAL_TURN_10X22:
-							case DIAGONAL_RIGHT_TURN_10X22:
-							case EMBEDDED_DIAGONAL_TURN_10X22:
-							case EMBEDDED_DIAGONAL_RIGHT_TURN_10X22:
-							{
-								model45DegreeRightTurn.render("10x22",railTile,x,y,z);
-								break;
-							}
-							case DIAGONAL_LEFT_TURN_10X22:
-							case EMBEDDED_DIAGONAL_LEFT_TURN_10X22: {
-								model45DegreeLeftTurn.render("10x22",railTile,x,y,z);
-								break;
-							}
-							case MEDIUM_RIGHT_45DEGREE_SWITCH:
-							case EMBEDDED_MEDIUM_RIGHT_45DEGREE_SWITCH: {
-								modelRightSwitchTurn.render("medium_45degree",  railTile, x, y, z);
-								break;
-							}
-							case MEDIUM_LEFT_45DEGREE_SWITCH:
-							case EMBEDDED_MEDIUM_LEFT_45DEGREE_SWITCH: {
-								modelLeftSwitchTurn.render("medium_45degree",  railTile, x, y, z);
-								break;
-							}
-							case LARGE_RIGHT_45DEGREE_SWITCH:
-							case EMBEDDED_LARGE_RIGHT_45DEGREE_SWITCH: {
-								modelRightSwitchTurn.render("large_45degree",  railTile, x, y, z);
-								break;
-							}
-							case LARGE_LEFT_45DEGREE_SWITCH:
-							case EMBEDDED_LARGE_LEFT_45DEGREE_SWITCH: {
-								modelLeftSwitchTurn.render("large_45degree",  railTile, x, y, z);
-								break;
-							}
-
 							//case EMBEDDED_LARGE_CURVED_SLOPE_DYNAMIC:
 							//case EMBEDDED_LARGE_RIGHT_CURVED_SLOPE_DYNAMIC: {
 							//	modelRightCurvedSlope.render("embedded_large", railTile, x, y, z);

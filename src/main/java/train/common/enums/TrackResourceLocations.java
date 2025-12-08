@@ -28,8 +28,6 @@ public class TrackResourceLocations
                 return track_concrete_1;
             case CONCRETE_TYPE2:
                 return track_concrete_2;
-            case CONCRETE_TYPE3:
-                return track_concrete_3;
             case TREATED_WOOD_TYPE1:
                 return track_wood_type1;
 
