@@ -65,15 +65,15 @@ public enum ItemIDs {
 	steelRail("ItemTrain", "item_rail_steel", 1),
 	recipeBook("ItemRecipeBook", "item_book_blue", 1),
 	//creditsBook("ItemRecipeBook", "item_book_brown", 1),
-	adminBook("ItemAdminBook", "item_book_blue", 0),
+	adminBook("ItemAdminBook", "item_book_blue"),
 	trackDebugger("ItemTrackDebugger", "item_composite_wrench", 0),
 	wirelessTransmitter("ItemWirelessTransmitter", "wireless_transmitter", 3),
 	padlock("ItemPadlock", "padlock", 1),
 	atoCard("ItemATOCard", "ato_card", 5),
-	pennCentral("ItemPennCentralSimCard", "ato_card", 291),
-	paintbrushThing("ItemPaintbrushThing", "paintbrushthing", 9),
-	brakeStick("ItemBrakeStick", "item_brakestick", 2),
-	interchangeTransferReportBoard("ItemInterchangeTransferReportBoard", "item_interchangetransferreportboard", 64),
+	pennCentral("ItemPennCentralSimCard", "ato_card"),
+	paintbrushThing("ItemPaintbrushThing", "paintbrushthing", 20),
+	brakeStick("ItemBrakeStick", "item_brakestick", 5),
+	interchangeTransferReportBoard("ItemInterchangeTransferReportBoard", "item_interchangetransferreportboard", 0),
 
 
 	//new crafting parts
@@ -125,7 +125,7 @@ public enum ItemIDs {
 	minecartPower("ItemRollingStock", "train_steam_normal", HERITAGE, 10),
 	minecartASTFAutorack("ItemRollingStock", "train_autorack", HERITAGE, 5),
 	minecartLoco3("ItemRollingStock", "train_steam_small", HERITAGE, 7),
-	minecartBuilder("ItemRollingStock", "train_builder", HERITAGE, 20),
+	minecartBuilder("ItemRollingStock", "train_builder", HERITAGE),
 	minecartCaboose("ItemRollingStock", "train_caboose", HERITAGE, 6),
 	minecartGrain("ItemRollingStock", "train_hopper_grain", HERITAGE, 6),
 	minecartWatertransp("ItemRollingStock", "train_tank_lava", HERITAGE, 7),
@@ -877,11 +877,11 @@ public enum ItemIDs {
 	minecartWPShops600Series("ItemRollingStock", "wp648680_series_icon", BOOSE,3),
 	minecartCDCScaboose("ItemRollingStock", "CDCScaboose", BOOSE,3),
 
-	minecartBigMeme("ItemRollingStock", "lol", 69),
+	minecartBigMeme("ItemRollingStock", "lol", 64),
 	minecartBombCart("ItemRollingStock", "payload", 2),
-	minecartThanos("ItemRollingStock", "thanos", 64),
-	minecartTGVMobile("ItemRollingStock", "tgvmobile", 30),
-	minecartHHgregg("ItemRollingStock", "hhgregg", 69),
+	minecartThanos("ItemRollingStock", "thanos"),
+	minecartTGVMobile("ItemRollingStock", "tgvmobile", 64),
+	minecartHHgregg("ItemRollingStock", "hhgregg", 64),
 
 	minecartCQ310PO("ItemRollingStock", "CQ_310_Loco_icon", PASSENGER,3),
 	minecartCQ310PA("ItemRollingStock", "CQ_310_Tail_icon", PASSENGER,3),
@@ -893,12 +893,12 @@ public enum ItemIDs {
 	minecartW_A55_Combine("ItemRollingStock", "W_A55_Combine", PASSENGER,3),
 
 	//peach moments
-	minecartGeometryCar("ItemRollingStock", "geometry_car", 15),
+	minecartGeometryCar("ItemRollingStock", "geometry_car"),
 	minecartExperimentalHydrogenTrain("ItemRollingStock", "pch100h", PASSENGER, 21),
 	minecartPCH100HCoach("ItemRollingStock", "pch100h_coach", PASSENGER, 15),
 	//testControlCar("ItemRollingStock", "test_controlcar", 100000),
-	minecartAipkitExplorer("ItemRollingStock", "explorer", PASSENGER, 14),
-	minecartAipkitExplorer2("ItemRollingStock", "explorer2", PASSENGER, 15),
+	minecartAipkitExplorer("ItemRollingStock", "explorer", PASSENGER),
+	minecartAipkitExplorer2("ItemRollingStock", "explorer2", PASSENGER),
 
 	//ah, but we, are british
 	//minecartLUengine("ItemRollingStock","luengine", 3),
@@ -950,6 +950,12 @@ public enum ItemIDs {
 		this.amountForEmerald = amountForEmerald;
 	}
 
+	ItemIDs(String classMethodName, String iconName) {
+		this.className = classMethodName;
+		this.iconName = iconName;
+		this.amountForEmerald = -1;
+	}
+
 	/**
 	 * @param classMethodName
 	 * @param iconName
@@ -961,6 +967,13 @@ public enum ItemIDs {
 		this.iconName = iconName;
 		TypeOfRollingStock = typeOfRollingStock;
 		this.amountForEmerald = amountForEmerald;
+	}
+
+	ItemIDs(String classMethodName, String iconName, TypeOfRollingStock typeOfRollingStock) {
+		this.className = classMethodName;
+		this.iconName = iconName;
+		TypeOfRollingStock = typeOfRollingStock;
+		this.amountForEmerald = -1;
 	}
 
 }
