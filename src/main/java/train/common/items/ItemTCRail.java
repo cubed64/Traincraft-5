@@ -2439,27 +2439,16 @@ public class ItemTCRail extends ItemPart {
 			{
 				String nameConverted = type.getLabel() + "_DIAGONAL";
 				// Have to add this to convert older track that use older names.
-				switch (type)
+
+				switch (type.getCoreTrack())
 				{
-					case EMBEDDED_SLOPE_DYNAMIC:
-					case SLOPE_DYNAMIC:
-					case SLOPE_GRAVEL:
-					case SLOPE_BALLAST:
-					case SLOPE_SNOW_GRAVEL:
+					case CORE_6_SLOPE:
 						nameConverted = nameConverted.replace("SLOPE", "SLOPE_1X6");
 						break;
-					case LARGE_SLOPE_DYNAMIC:
-					case LARGE_SLOPE_GRAVEL:
-					case LARGE_SLOPE_BALLAST:
-					case LARGE_SLOPE_SNOW_GRAVEL:
-					case EMBEDDED_LARGE_SLOPE_DYNAMIC:
+					case CORE_12_SLOPE:
 						nameConverted = nameConverted.replace("LARGE_SLOPE", "SLOPE_1X12");
 						break;
-					case VERY_LARGE_SLOPE_DYNAMIC:
-					case VERY_LARGE_SLOPE_GRAVEL:
-					case VERY_LARGE_SLOPE_BALLAST:
-					case VERY_LARGE_SLOPE_SNOW_GRAVEL:
-					case EMBEDDED_VERY_LARGE_SLOPE_DYNAMIC:
+					case CORE_18_SLOPE:
 						nameConverted = nameConverted.replace("VERY_LARGE_SLOPE", "SLOPE_1X18");
 						break;
 				}

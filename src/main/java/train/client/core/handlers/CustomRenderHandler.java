@@ -15,10 +15,12 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Vector2f;
 import train.client.render.RenderTCRail;
 import train.common.enums.TCTrackDirection;
+import train.common.enums.TrackResourceLocations;
 import train.common.items.BallastTypes;
 import train.common.items.ItemTCRail;
 import train.common.items.RailVariants;
 import train.common.items.TCRailTypes;
+import train.common.library.BlockIDs;
 import train.common.library.EnumCoreTrack;
 import train.common.library.EnumTracks;
 
@@ -198,10 +200,36 @@ public class CustomRenderHandler
         // Slopes
         else if (EnumCoreTrack.CORE_18_SLOPE.equals(item.getTrackType().getCoreTrack()))
         {
-            if (BallastTypes.DYNAMIC.equals(item.getTrackType().getBallastType()))
+            if (BallastTypes.WOODSUPPORT.equals(item.getTrackType().getBallastType()) == false && BallastTypes.PEAGRAVEL.equals(item.getTrackType().getBallastType()) == false)
             {
                 facing = TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double((player.rotationYaw * 8.0F / 360.0F + 0.5D)) & 7);
                 blockInfo();
+                switch (item.getTrackType().getBallastType())
+                {
+                    case GRAVEL:
+                        blockColour = Blocks.gravel.colorMultiplier(world, x, y, z);
+                        IIcon icon = Blocks.gravel.getIcon(1, 0);
+                        if (icon != null && icon.getIconName() != null) {
+                            ballastMaterial = icon.getIconName();
+                        }
+                        break;
+                    case BALLAST:
+                        blockColour = BlockIDs.oreTC.getBlock().colorMultiplier(world, x, y, z);
+                        IIcon icon1 = BlockIDs.oreTC.getBlock().getIcon(1, 3);
+                        if (icon1 != null && icon1.getIconName() != null) {
+                            ballastMaterial = icon1.getIconName();
+                        }
+                        break;
+                    case SNOWGRAVEL:
+                        blockColour = BlockIDs.oreTC.getBlock().colorMultiplier(world, x, y, z);
+                        IIcon icon2 = BlockIDs.oreTC.getBlock().getIcon(1, 4);
+                        if (icon2 != null && icon2.getIconName() != null) {
+                            ballastMaterial = icon2.getIconName();
+                        }
+                        break;
+                    case DYNAMIC:
+                        break;
+                }
                 if (facing == 4 || facing == 5 || facing == 6 || facing == 7) {
                     RenderTCRail.model1x18DiagonalSlope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
                 }
@@ -216,10 +244,36 @@ public class CustomRenderHandler
         }
         else if (EnumCoreTrack.CORE_12_SLOPE.equals(item.getTrackType().getCoreTrack()))
         {
-            if (BallastTypes.DYNAMIC.equals(item.getTrackType().getBallastType()))
+            if (BallastTypes.WOODSUPPORT.equals(item.getTrackType().getBallastType()) == false && BallastTypes.PEAGRAVEL.equals(item.getTrackType().getBallastType()) == false)
             {
                 facing = TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double((player.rotationYaw * 8.0F / 360.0F + 0.5D)) & 7);
                 blockInfo();
+                switch (item.getTrackType().getBallastType())
+                {
+                    case GRAVEL:
+                        blockColour = Blocks.gravel.colorMultiplier(world, x, y, z);
+                        IIcon icon = Blocks.gravel.getIcon(1, 0);
+                        if (icon != null && icon.getIconName() != null) {
+                            ballastMaterial = icon.getIconName();
+                        }
+                        break;
+                    case BALLAST:
+                        blockColour = BlockIDs.oreTC.getBlock().colorMultiplier(world, x, y, z);
+                        IIcon icon1 = BlockIDs.oreTC.getBlock().getIcon(1, 3);
+                        if (icon1 != null && icon1.getIconName() != null) {
+                            ballastMaterial = icon1.getIconName();
+                        }
+                        break;
+                    case SNOWGRAVEL:
+                        blockColour = BlockIDs.oreTC.getBlock().colorMultiplier(world, x, y, z);
+                        IIcon icon2 = BlockIDs.oreTC.getBlock().getIcon(1, 4);
+                        if (icon2 != null && icon2.getIconName() != null) {
+                            ballastMaterial = icon2.getIconName();
+                        }
+                        break;
+                    case DYNAMIC:
+                        break;
+                }
                 if (facing == 4 || facing == 5 || facing == 6 || facing == 7) {
                     RenderTCRail.model1x12DiagonalSlope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
                 }
@@ -236,10 +290,37 @@ public class CustomRenderHandler
         }
         else if (EnumCoreTrack.CORE_6_SLOPE.equals(item.getTrackType().getCoreTrack()))
         {
-            if (BallastTypes.DYNAMIC.equals(item.getTrackType().getBallastType()))
+            if (BallastTypes.WOODSUPPORT.equals(item.getTrackType().getBallastType()) == false && BallastTypes.PEAGRAVEL.equals(item.getTrackType().getBallastType()) == false)
             {
                 facing = TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double((player.rotationYaw * 8.0F / 360.0F + 0.5D)) & 7);
                 blockInfo();
+                switch (item.getTrackType().getBallastType())
+                {
+                    case GRAVEL:
+                        blockColour = Blocks.gravel.colorMultiplier(world, x, y, z);
+                        IIcon icon = Blocks.gravel.getIcon(1, 0);
+                        if (icon != null && icon.getIconName() != null) {
+                            ballastMaterial = icon.getIconName();
+                        }
+                        break;
+                    case BALLAST:
+                        blockColour = BlockIDs.oreTC.getBlock().colorMultiplier(world, x, y, z);
+                        IIcon icon1 = BlockIDs.oreTC.getBlock().getIcon(1, 3);
+                        if (icon1 != null && icon1.getIconName() != null) {
+                            ballastMaterial = icon1.getIconName();
+                        }
+                        break;
+                    case SNOWGRAVEL:
+                        blockColour = BlockIDs.oreTC.getBlock().colorMultiplier(world, x, y, z);
+                        IIcon icon2 = BlockIDs.oreTC.getBlock().getIcon(1, 4);
+                        if (icon2 != null && icon2.getIconName() != null) {
+                            ballastMaterial = icon2.getIconName();
+                        }
+                        break;
+                    case DYNAMIC:
+                    break;
+                }
+
                 if (facing == 4 || facing == 5 || facing == 6 || facing == 7)
                 {
                     RenderTCRail.model1x6DiagonalSlope.renderDynamic(item.getTrackType().getVariant(), facing, 0, 0, 0, r, g, b, 0.5f, ballastMaterial, blockColour);
