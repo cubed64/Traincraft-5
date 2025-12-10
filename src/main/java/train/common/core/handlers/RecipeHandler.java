@@ -97,6 +97,7 @@ public class RecipeHandler extends AbstractRecipeHandler
 		/* New Track Recipes */
 		//trying to make recipes space economic
 		//(it costs how many tiles of track it is, eg a 10x10 turn costs 10 rails because it takes up ~10 blocks of space if you think about it)
+		GameRegistry.addRecipe(new ItemStack(ItemIDs.partSpike.item, 16), " II", " I ", " I ", 'I', Items.iron_ingot);
 
 		//straights regular
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', Items.iron_ingot, 'P', Blocks.planks);
@@ -179,12 +180,12 @@ public class RecipeHandler extends AbstractRecipeHandler
 
 		//dynamic slopes regulah
 		//todo have clay be the fallback recipe if foxblocks isnt present, switch to rainbonite in foxblocks if present
+		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSmallStraight.item, 16), "I I", "B B", "I I", 'I', Items.iron_ingot, 'B', ItemIDs.partSpike.item);
 
 		if (ingotRainbontrium.isEmpty())
 		{
 			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail1X3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailSmallStraight.item, 'D', Items.clay_ball);
 			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossingDynamic.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', Items.clay_ball);
-			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', Items.iron_ingot, 'P', Items.clay_ball);
 			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbedded1x3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'D', Items.clay_ball);
 		}
 		else
@@ -194,7 +195,6 @@ public class RecipeHandler extends AbstractRecipeHandler
 				Traincraft.tcLog.info("MMMMM T A S T E THE RAINBOW!");
 				GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail1X3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailSmallStraight.item, 'D', rainbowItem.getItem());
 				GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossingDynamic.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', rainbowItem.getItem());
-				GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', Items.iron_ingot, 'P', rainbowItem.getItem());
 				GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbedded1x3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'D', rainbowItem.getItem());
 			}
 		}

@@ -112,6 +112,7 @@ public enum ItemIDs {
 	partComponentFM("ItemTrain", "partComponentFM", 1),
 	partComponentCEE("ItemTrain", "partComponentCEE", 1),
 
+	partSpike("ItemTrain", "item_partSpike", 5),
 
 
 	minecartWork("ItemRollingStock", "train_work", HERITAGE, 4),

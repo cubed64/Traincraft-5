@@ -406,6 +406,8 @@ item.tc:partComponentBLW.name=BLW Construction Component
 item.tc:partComponentFM.name=FM Construction Component
 item.tc:partComponentCEE.name=CEE Construction Component
 
+item.tc:partSpike.name=Rail Spike
+
 item.tc:zeppelin.name=Zeppelin
 
 <!-- ## TC Tracks - Normal ## -->
