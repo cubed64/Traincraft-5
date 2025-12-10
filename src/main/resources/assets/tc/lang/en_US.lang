@@ -562,6 +562,97 @@ item.tc:tcRail_CONCRETE_TYPE1_SlopeDynamic.name=1x6 Grey Concrete Slope Track (D
 item.tc:tcRail_CONCRETE_TYPE1_LargeSlopeDynamic.name=1x12 Grey Concrete Large Slope Track (Dynamic)
 item.tc:tcRail_CONCRETE_TYPE1_VeryLargeSlopeDynamic.name=1x18 Grey Concrete Very Large Slope Track (Dynamic)
 
+<!-- ## TC Tracks - Concrete Type 2 ## -->
+item.tc:tcRail_CONCRETE_TYPE2_SmallStraight.name=1x1 Weathered Concrete Straight
+item.tc:tcRail_CONCRETE_TYPE2_MediumStraight.name=1x3 Weathered Concrete Straight
+item.tc:tcRail_CONCRETE_TYPE2_LongStraight.name=1x6 Weathered Concrete Straight
+item.tc:tcRail_CONCRETE_TYPE2_VeryLongStraight.name=1x12 Weathered Concrete Straight
+
+item.tc:tcRail_CONCRETE_TYPE2_1X1Turn.name=1x1 Weathered Concrete Turn
+item.tc:tcRail_CONCRETE_TYPE2_MediumTurn.name=3x3 Weathered Concrete Turn
+item.tc:tcRail_CONCRETE_TYPE2_LargeTurn.name=5x5 Weathered Concrete Turn
+item.tc:tcRail_CONCRETE_TYPE2_VeryLargeTurn.name=10x10 Weathered Concrete Turn
+item.tc:tcRail_CONCRETE_TYPE2_SuperLargeTurn.name=16x16 Weathered Concrete Turn
+item.tc:tcRail_CONCRETE_TYPE2_29X29Turn.name=29x29 Weathered Concrete Turn
+item.tc:tcRail_CONCRETE_TYPE2_32X32Turn.name=32x32 Weathered Concrete Turn
+
+item.tc:tcRail_CONCRETE_TYPE2_Medium45DegreeTurn.name=3x4 Weathered Concrete 45 Degree Turn
+item.tc:tcRail_CONCRETE_TYPE2_Large45DegreeTurn.name=3x6 Weathered Concrete 45 Degree Turn
+item.tc:tcRail_CONCRETE_TYPE2_VeryLarge45DegreeTurn.name=4x8 Weathered Concrete 45 Degree Turn
+item.tc:tcRail_CONCRETE_TYPE2_SuperLarge45DegreeTurn.name=5x11 Weathered Concrete 45 Degree Turn
+item.tc:tcRail_CONCRETE_TYPE2_45DegreeTurn9x20.name=9x20 Weathered Concrete 45 Degree Turn
+item.tc:tcRail_CONCRETE_TYPE2_45DegreeTurn10x22.name=10x22 Weathered Concrete 45 Degree Turn
+
+item.tc:tcRail_CONCRETE_TYPE2_SmallParallelCurve.name=2x8 Weathered Concrete S-Curve
+item.tc:tcRail_CONCRETE_TYPE2_MediumParallelCurve.name=3x12 Weathered Concrete S-Curve
+item.tc:tcRail_CONCRETE_TYPE2_LargeParallelCurve.name=4x16 Weathered Concrete S-Curve
+item.tc:tcRail_CONCRETE_TYPE2_20x2SCurve.name=2x20 Weathered Concrete S-Curve
+
+item.tc:tcRail_CONCRETE_TYPE2_MediumSwitch.name=4x4 Weathered Concrete 90 Degrees Switch
+item.tc:tcRail_CONCRETE_TYPE2_LargeSwitch.name=6x6 Weathered Concrete 90 Degrees Switch
+item.tc:tcRail_CONCRETE_TYPE2_VeryLargeSwitch.name=11x11 Weathered Concrete 90 Degrees Switch
+item.tc:tcRail_CONCRETE_TYPE2_MediumParallelSwitch.name=4x11 Weathered Concrete Parallel Switch
+item.tc:tcRail_CONCRETE_TYPE2_LargeParallelSwitch.name=4x17 Weathered Concrete Parallel Switch
+item.tc:tcRail_CONCRETE_TYPE2_Medium45DegreeSwitch.name=3x5 Weathered Concrete 45 Degree Switch
+item.tc:tcRail_CONCRETE_TYPE2_Large45DegreeSwitch.name=4x8 Weathered Concrete 45 Degree Switch
+item.tc:tcRail_CONCRETE_TYPE2_CrossoverSwitch10x2.name=10x3 Weathered Concrete Crossover Switch
+
+item.tc:tcRail_CONCRETE_TYPE2_TwoWaysCrossing.name=Weathered Concrete Plus Crossing
+item.tc:tcRail_CONCRETE_TYPE2_DiamondCrossing.name=Weathered Concrete X Crossing
+item.tc:tcRail_CONCRETE_TYPE2_DoubleDiamondCrossing.name=Weathered Concrete Double X Crossing
+item.tc:tcRail_CONCRETE_TYPE2_FourWaysCrossing.name=Weathered Concrete X-Plus Crossing
+
+item.tc:tcRail_CONCRETE_TYPE2_1x3SlopeDynamic.name=1x3 Weathered Concrete Slope Track (Dynamic)
+item.tc:tcRail_CONCRETE_TYPE2_SlopeDynamic.name=1x6 Weathered Concrete Slope Track (Dynamic)
+item.tc:tcRail_CONCRETE_TYPE2_LargeSlopeDynamic.name=1x12 Weathered Concrete Large Slope Track (Dynamic)
+item.tc:tcRail_CONCRETE_TYPE2_VeryLargeSlopeDynamic.name=1x18 Weathered Concrete Very Large Slope Track (Dynamic)
+
+<!-- ## TC Tracks - Wood Type 1 ## -->
+item.tc:tcRail_WOOD_TYPE1_SmallStraight.name=1x1 Treated Wood Straight
+item.tc:tcRail_WOOD_TYPE1_MediumStraight.name=1x3 Treated Wood Straight
+item.tc:tcRail_WOOD_TYPE1_LongStraight.name=1x6 Treated Wood Straight
+item.tc:tcRail_WOOD_TYPE1_VeryLongStraight.name=1x12 Treated Wood Straight
+
+item.tc:tcRail_WOOD_TYPE1_1X1Turn.name=1x1 Treated Wood Turn
+item.tc:tcRail_WOOD_TYPE1_MediumTurn.name=3x3 Treated Wood Turn
+item.tc:tcRail_WOOD_TYPE1_LargeTurn.name=5x5 Treated Wood Turn
+item.tc:tcRail_WOOD_TYPE1_VeryLargeTurn.name=10x10 Treated Wood Turn
+item.tc:tcRail_WOOD_TYPE1_SuperLargeTurn.name=16x16 Treated Wood Turn
+item.tc:tcRail_WOOD_TYPE1_29X29Turn.name=29x29 Treated Wood Turn
+item.tc:tcRail_WOOD_TYPE1_32X32Turn.name=32x32 Treated Wood Turn
+
+item.tc:tcRail_WOOD_TYPE1_Medium45DegreeTurn.name=3x4 Treated Wood 45 Degree Turn
+item.tc:tcRail_WOOD_TYPE1_Large45DegreeTurn.name=3x6 Treated Wood 45 Degree Turn
+item.tc:tcRail_WOOD_TYPE1_VeryLarge45DegreeTurn.name=4x8 Treated Wood 45 Degree Turn
+item.tc:tcRail_WOOD_TYPE1_SuperLarge45DegreeTurn.name=5x11 Treated Wood 45 Degree Turn
+item.tc:tcRail_WOOD_TYPE1_45DegreeTurn9x20.name=9x20 Treated Wood 45 Degree Turn
+item.tc:tcRail_WOOD_TYPE1_45DegreeTurn10x22.name=10x22 Treated Wood 45 Degree Turn
+
+item.tc:tcRail_WOOD_TYPE1_SmallParallelCurve.name=2x8 Treated Wood S-Curve
+item.tc:tcRail_WOOD_TYPE1_MediumParallelCurve.name=3x12 Treated Wood S-Curve
+item.tc:tcRail_WOOD_TYPE1_LargeParallelCurve.name=4x16 Treated Wood S-Curve
+item.tc:tcRail_WOOD_TYPE1_20x2SCurve.name=2x20 Treated Wood S-Curve
+
+item.tc:tcRail_WOOD_TYPE1_MediumSwitch.name=4x4 Treated Wood 90 Degrees Switch
+item.tc:tcRail_WOOD_TYPE1_LargeSwitch.name=6x6 Treated Wood 90 Degrees Switch
+item.tc:tcRail_WOOD_TYPE1_VeryLargeSwitch.name=11x11 Treated Wood 90 Degrees Switch
+item.tc:tcRail_WOOD_TYPE1_MediumParallelSwitch.name=4x11 Treated Wood Parallel Switch
+item.tc:tcRail_WOOD_TYPE1_LargeParallelSwitch.name=4x17 Treated Wood Parallel Switch
+item.tc:tcRail_WOOD_TYPE1_Medium45DegreeSwitch.name=3x5 Treated Wood 45 Degree Switch
+item.tc:tcRail_WOOD_TYPE1_Large45DegreeSwitch.name=4x8 Treated Wood 45 Degree Switch
+item.tc:tcRail_WOOD_TYPE1_CrossoverSwitch10x2.name=10x3 Treated Wood Crossover Switch
+
+item.tc:tcRail_WOOD_TYPE1_TwoWaysCrossing.name=Treated Wood Plus Crossing
+item.tc:tcRail_WOOD_TYPE1_DiamondCrossing.name=Treated Wood X Crossing
+item.tc:tcRail_WOOD_TYPE1_DoubleDiamondCrossing.name=Treated Wood Double X Crossing
+item.tc:tcRail_WOOD_TYPE1_FourWaysCrossing.name=Treated Wood X-Plus Crossing
+
+item.tc:tcRail_WOOD_TYPE1_1x3SlopeDynamic.name=1x3 Treated Wood Slope Track (Dynamic)
+item.tc:tcRail_WOOD_TYPE1_SlopeDynamic.name=1x6 Treated Wood Slope Track (Dynamic)
+item.tc:tcRail_WOOD_TYPE1_LargeSlopeDynamic.name=1x12 Treated Wood Large Slope Track (Dynamic)
+item.tc:tcRail_WOOD_TYPE1_VeryLargeSlopeDynamic.name=1x18 Treated Wood Very Large Slope Track (Dynamic)
+
+
 item.tc:tcRailSmallRoadCrossing.name=RailRoad Crossing (Black Asphalt)
 item.tc:tcRailSmallRoadCrossing1.name=RailRoad Crossing (Clean Asphalt)
 item.tc:tcRailSmallRoadCrossing2.name=RailRoad Crossing (light Gray Asphalt)

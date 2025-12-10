@@ -377,20 +377,15 @@ public class ItemTCRail extends ItemPart {
 				typeVariantDiagonalStraightLabel = EnumTracks.CONCRETE_TYPE1_SMALL_DIAGONAL_STRAIGHT.getLabel();
 				break;
 			case CONCRETE_TYPE2:
-				//typeVariantStraightLabel = EnumTracks.CONCRETE_TYPE1_SMALL_STRAIGHT.getLabel();
-				//typeVariantDiagonalStraightLabel = EnumTracks.CONCRETE_TYPE1_SMALL_DIAGONAL_STRAIGHT.getLabel();
+				typeVariantStraightLabel = EnumTracks.CONCRETE_TYPE2_SMALL_STRAIGHT.getLabel();
+				typeVariantDiagonalStraightLabel = EnumTracks.CONCRETE_TYPE1_SMALL_DIAGONAL_STRAIGHT.getLabel();
 				break;
 			case TREATED_WOOD_TYPE1:
-
+				typeVariantStraightLabel = WOOD_TYPE1_SMALL_STRAIGHT.getLabel();
+				typeVariantDiagonalStraightLabel = EnumTracks.WOOD_TYPE1_SMALL_DIAGONAL_STRAIGHT.getLabel();
 				break;
 		}
 	}
-
-	private EnumTracks getTurnVariant()
-	{
-		return null;
-	}
-
 
 	@Override
 	public boolean onItemUse(ItemStack itemstack, EntityPlayer player, World world, int x, int y, int z, int par7, float par8, float par9, float par10)
