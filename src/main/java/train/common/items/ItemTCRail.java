@@ -5324,6 +5324,9 @@ public class ItemTCRail extends ItemPart {
 				case CONCRETE_TYPE2:
 					par3List.add(EnumChatFormatting.GRAY + "Variant: " + this.getTrackType().getVariant().name());
 					break;
+				case TREATED_WOOD_TYPE1:
+					par3List.add(EnumChatFormatting.GRAY + "Variant: " + this.getTrackType().getVariant().name());
+					break;
 			}
 		}
 		if (this.getTrackType().getBallastType() != null)
