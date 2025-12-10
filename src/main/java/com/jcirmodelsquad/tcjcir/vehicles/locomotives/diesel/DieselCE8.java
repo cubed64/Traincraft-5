@@ -21,10 +21,10 @@ public class DieselCE8 extends DieselTrain {
         super(world, EnumTrains.CE8.getTankCapacity(), LiquidManager.dieselFilter());
 
         InsertTexture(0, "FNCC 99 (KIT-L)", LockoutGroup.FNCC);
-        InsertTexture(1, "Nomansi Sugar Cane Corperation");
-        InsertTexture(2, "Blandsville & Blankerston (No Dynamics)");
-        InsertTexture(3, "Blandsville & Blankerston (Dynamics)");
-        InsertTexture(4, "L&W", LockoutGroup.LW);
+        InsertTexture(1, "Peninsula Development & Improvement Company", LockoutGroup.PDEV);
+        InsertTexture(2, "Blandsville & Blankerston");
+        InsertTexture(3, "");
+        InsertTexture(4, "");
     }
 
     @Override
