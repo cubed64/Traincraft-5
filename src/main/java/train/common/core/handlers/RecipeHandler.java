@@ -13,9 +13,14 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import train.common.Traincraft;
+import train.common.api.LiquidManager;
 import train.common.inventory.TrainCraftingManager;
 import train.common.items.BallastTypes;
 import train.common.items.RailVariants;
@@ -25,6 +30,7 @@ import train.common.recipes.ITCRecipe.RecipesArmorDyes;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 import static train.common.library.EnumCoreTrack.*;
 import static train.common.recipes.AssemblyTableRecipes.waterContainers;
@@ -113,6 +119,30 @@ public class RecipeHandler extends AbstractRecipeHandler
 		}
 
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_CONCRETE_TYPE2_SmallStraight.item, 1), "   ", " B ", " I ", 'I', Items.water_bucket, 'B', TrackItemIDs.tcRail_CONCRETE_TYPE1_SmallStraight.item);
+		Fluid creosote = FluidRegistry.getFluid("creosote");
+
+		List<ItemStack> CREOSOTE_CONTAINERS = new ArrayList<>();
+
+		CREOSOTE_CONTAINERS.clear();
+
+		for (Object obj : Item.itemRegistry) {
+			Item item = (Item) obj;
+			ItemStack stack = new ItemStack(item, 1);
+			FluidStack fluid = FluidContainerRegistry.getFluidForFilledItem(stack);
+			if (fluid != null && fluid.getFluid() == creosote)
+			{
+				if (Item.itemRegistry.getNameForObject(item).toLowerCase().contains("bucket") == false)
+				{
+					CREOSOTE_CONTAINERS.add(stack.copy());
+				}
+			}
+		}
+
+		for (ItemStack creoStack : CREOSOTE_CONTAINERS)
+		{
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_WOOD_TYPE1_SmallStraight.item, 1),  " G ", " P ", "   ", 'G', creoStack, 'P', TrackItemIDs.tcRailSmallStraight.item);
+		}
+
 
 		registerStandardTrackRecipes();
 
