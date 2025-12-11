@@ -138,11 +138,17 @@ public class RecipeHandler extends AbstractRecipeHandler
 			}
 		}
 
-		for (ItemStack creoStack : CREOSOTE_CONTAINERS)
+		if (CREOSOTE_CONTAINERS.isEmpty())
 		{
-			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_WOOD_TYPE1_SmallStraight.item, 1),  " G ", " P ", "   ", 'G', creoStack, 'P', TrackItemIDs.tcRailSmallStraight.item);
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_WOOD_TYPE1_SmallStraight.item, 1),  " G ", " P ", "   ", 'G', ItemIDs.diesel.item, 'P', TrackItemIDs.tcRailSmallStraight.item);
 		}
-
+		else
+		{
+			for (ItemStack creoStack : CREOSOTE_CONTAINERS)
+			{
+				GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_WOOD_TYPE1_SmallStraight.item, 1),  " G ", " P ", "   ", 'G', creoStack, 'P', TrackItemIDs.tcRailSmallStraight.item);
+			}
+		}
 
 		registerStandardTrackRecipes();
 
@@ -175,25 +181,21 @@ public class RecipeHandler extends AbstractRecipeHandler
 		//dynamic slopes regulah
 		//todo have clay be the fallback recipe if foxblocks isnt present, switch to rainbonite in foxblocks if present
 
-
+		//railroad crossings
 		if (ingotRainbontrium.isEmpty())
 		{
-			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail1X3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailSmallStraight.item, 'D', Items.clay_ball);
 			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossingDynamic.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', Items.clay_ball);
-			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbedded1x3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'D', Items.clay_ball);
 		}
 		else
 		{
 			for (ItemStack rainbowItem : ingotRainbontrium)
 			{
 				Traincraft.tcLog.info("MMMMM T A S T E THE RAINBOW!");
-				GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail1X3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailSmallStraight.item, 'D', rainbowItem.getItem());
 				GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossingDynamic.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', rainbowItem.getItem());
-				GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbedded1x3SlopeDynamic.item,1), "  T"," TD","TDD", 'T', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'D', rainbowItem.getItem());
 			}
 		}
 
-		//railroad crossings
+
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', new ItemStack(Blocks.stained_hardened_clay, 1, 15));
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing1.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', new ItemStack(Blocks.stained_hardened_clay, 1, 7));
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing2.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', new ItemStack(Blocks.stained_hardened_clay, 1, 8));
@@ -340,6 +342,19 @@ public class RecipeHandler extends AbstractRecipeHandler
 			TrackItemIDs dynamicSlopes6 = tracks.get(CORE_6_SLOPE).get(BallastTypes.DYNAMIC.name()).getItem();
 			TrackItemIDs dynamicSlopes12 = tracks.get(CORE_12_SLOPE).get(BallastTypes.DYNAMIC.name()).getItem();
 			TrackItemIDs dynamicSlopes18 = tracks.get(CORE_18_SLOPE).get(BallastTypes.DYNAMIC.name()).getItem();
+
+			if (ingotRainbontrium.isEmpty())
+			{
+				GameRegistry.addRecipe(new ItemStack(dynamicSlopes3.item,1), "  T"," TD","TDD", 'T', straight1X.item, 'D', Items.clay_ball);
+			}
+			else
+			{
+				for (ItemStack rainbowItem : ingotRainbontrium)
+				{
+					Traincraft.tcLog.info("MMMMM T A S T E THE RAINBOW!");
+					GameRegistry.addRecipe(new ItemStack(dynamicSlopes3.item,1), "  T"," TD","TDD", 'T', straight1X.item, 'D', rainbowItem.getItem());
+				}
+			}
 
 			GameRegistry.addRecipe(new ItemStack(dynamicSlopes6.item, 1), "   ", "  T", " T ", 'T', dynamicSlopes3.item);
 			GameRegistry.addRecipe(new ItemStack(dynamicSlopes12.item, 1), "   ", "  T", " T ", 'T', dynamicSlopes6.item);
