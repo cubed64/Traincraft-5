@@ -361,7 +361,6 @@ public class RecipeHandler extends AbstractRecipeHandler
 			{
 				for (ItemStack rainbowItem : ingotRainbontrium)
 				{
-					Traincraft.tcLog.info("MMMMM T A S T E THE RAINBOW!");
 					GameRegistry.addRecipe(new ItemStack(dynamicSlopes3.item,1), "  T"," TD","TDD", 'T', straight1X.item, 'D', rainbowItem.getItem());
 				}
 			}
