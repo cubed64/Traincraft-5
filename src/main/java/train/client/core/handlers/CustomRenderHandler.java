@@ -423,23 +423,23 @@ public class CustomRenderHandler
             int facing_1 = isLeftTurn ? (facing + 4 - 1) % 4 : (facing + 1) % 4;
             int out_1_0 = 3;
             int out_1_1 = 3;
-
+            EnumCoreTrack enumCoreTrack = item.getTrackType().getCoreTrack();
             String switchType = "medium";
-            if (CORE_4x11_PARALLEL_SWITCH.equals(item.getTrackType().getCoreTrack())) {
+            if (CORE_4x11_PARALLEL_SWITCH.equals(enumCoreTrack)) {
                 switchType = "medium_parallel";
                 out_0_start = 5;
                 out_0_end = 10;
                 out_1_0 = 10;
                 out_1_1 = 3;
             }
-            else if (CORE_4x17_PARALLEL_SWITCH.equals(item.getTrackType().getCoreTrack()))
+            else if (CORE_4x17_PARALLEL_SWITCH.equals(enumCoreTrack))
             {
                 switchType = "large_parallel";
                 out_0_start = 0;
                 out_0_end = 0;
                 out_1_0 = 0;
             }
-            else if (CORE_6x6_SWITCH.equals(item.getTrackType().getCoreTrack()))
+            else if (CORE_6x6_SWITCH.equals(enumCoreTrack))
             {
                 switchType = "large_90";
                 out_0_start = 5;
@@ -447,7 +447,7 @@ public class CustomRenderHandler
                 out_1_0 = 5;
                 out_1_1 = 5;
             }
-            else if (CORE_11x11_SWITCH.equals(item.getTrackType().getCoreTrack()))
+            else if (CORE_11x11_SWITCH.equals(enumCoreTrack))
             {
                 switchType = "very_large_90";
                 out_0_start = 0;
@@ -455,21 +455,21 @@ public class CustomRenderHandler
                 out_1_0 = 10;
                 out_1_1 = 10;
             }
-            else if (CORE_3x5_45DEGREE_SWITCH.equals(item.getTrackType().getCoreTrack())) {
+            else if (CORE_3x5_45DEGREE_SWITCH.equals(enumCoreTrack)) {
                 switchType = "medium_45degree";
                 out_0_start = 0;
                 out_0_end = 0;
                 out_1_0 = 0;
                 out_1_1 = 0;
             }
-            else if (CORE_4x8_45DEGREE_SWITCH.equals(item.getTrackType().getCoreTrack())) {
+            else if (CORE_4x8_45DEGREE_SWITCH.equals(enumCoreTrack)) {
                 switchType = "large_45degree";
                 out_0_start = 0;
                 out_0_end = 0;
                 out_1_0 = 0;
                 out_1_1 = 0;
             }
-            else if (CORE_10x2_CROSSOVER_SWITCH.equals(item.getTrackType().getCoreTrack())) {
+            else if (CORE_10x2_CROSSOVER_SWITCH.equals(enumCoreTrack)) {
                 handleCrossover(isLeftTurn, "crossover_10x2", item, facing, r, g, b, a);
                 GL11.glPopMatrix();
                 return;
@@ -486,15 +486,15 @@ public class CustomRenderHandler
                 RenderTCRail.modelSmallStraight.render(item.getTrackType(), variant, facing, dx * out_0, 0, dz * out_0, r, g, b, a);
             }
 
-            if (CORE_4x11_PARALLEL_SWITCH.equals(item.getTrackType().getCoreTrack()))
+            if (CORE_4x11_PARALLEL_SWITCH.equals(enumCoreTrack))
             {
                 RenderTCRail.modelSmallStraight.render(item.getTrackType(), variant, facing, 0, 0, 0, r, g, b, a);
                 RenderTCRail.modelSmallStraight.render(item.getTrackType(), variant, facing, dx * out_1_0 + dx_1 * out_1_1, 0, dz * out_1_0 + dz_1 * out_1_1, r, g, b, a);
             }
             else if (
-                    !(CORE_3x5_45DEGREE_SWITCH.equals(item.getTrackType().getCoreTrack())
-                    || CORE_4x8_45DEGREE_SWITCH.equals(item.getTrackType().getCoreTrack())
-                    || CORE_4x17_PARALLEL_SWITCH.equals(item.getTrackType().getCoreTrack())))
+                    !(CORE_3x5_45DEGREE_SWITCH.equals(enumCoreTrack)
+                    || CORE_4x8_45DEGREE_SWITCH.equals(enumCoreTrack)
+                    || CORE_4x17_PARALLEL_SWITCH.equals(enumCoreTrack)))
             {
                 RenderTCRail.modelSmallStraight.render(item.getTrackType(), variant, facing, 0, 0, 0, r, g, b, a);
                 RenderTCRail.modelSmallStraight.render(item.getTrackType(), variant, facing_1, dx * out_1_0 + dx_1 * out_1_1, 0, dz * out_1_0 + dz_1 * out_1_1, r, g, b, a);

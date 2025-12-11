@@ -67,6 +67,6 @@ public class SteamC11 extends SteamTrain {
 	@Override
 	public String transportCountry()
 	{
-		return "Japan";
+		return "JP";
 	}
 }

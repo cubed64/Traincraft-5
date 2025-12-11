@@ -78,6 +78,6 @@ public class SteamOnion extends SteamTrain {
 	@Override
 	public String transportCountry()
 	{
-		return "The Moon";
+		return "Moon";
 	}
 }

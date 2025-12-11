@@ -168,6 +168,8 @@ menu.item.death=HELL
 menu.item.cz=Czech Republic
 menu.item.de=Germany
 menu.item.es=Spain
+menu.item.jp=Japan
+menu.item.moon=The Moon
 
 <!-- ## Achievements ## -->
 achievement.tc:engineer=Engineers clothes

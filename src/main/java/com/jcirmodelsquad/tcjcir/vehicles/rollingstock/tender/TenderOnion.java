@@ -27,6 +27,6 @@ public class TenderOnion extends Tender  {
 	@Override
 	public String transportCountry()
 	{
-		return "The Moon";
+		return "Moon";
 	}
 }
