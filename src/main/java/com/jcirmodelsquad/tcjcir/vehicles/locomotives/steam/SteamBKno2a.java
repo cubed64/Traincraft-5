@@ -19,8 +19,11 @@ public class SteamBKno2a extends SteamTrain {
 		
 	}
 
-	
-
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 	
 	@Override
 	public void updateRiderPosition() {
@@ -57,17 +60,14 @@ public class SteamBKno2a extends SteamTrain {
 		}
 	}
 
-@Override
+	@Override
 	public String getInventoryName() {
 		return "Booth-Kelly Lumber Co. No2";
 	}
-
-	
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 0.6F;
 	}
 
-	
 }

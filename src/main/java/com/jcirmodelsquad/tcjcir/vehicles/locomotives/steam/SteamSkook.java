@@ -5,6 +5,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import train.common.api.LiquidManager;
 import train.common.api.SteamTrain;
+import train.common.core.util.TraincraftUtil;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -25,8 +26,16 @@ public class SteamSkook extends SteamTrain {
         locoInvent = new ItemStack[inventorySize];
     }
 
-    
+    /*@Override//todo THIS METHOD DOES NOT WORK
+    public void updateRiderPosition() {
+        if(riddenByEntity==null){return;}
+        riddenByEntity.setPosition(posX-0.35F, posY + getMountedYOffset() + riddenByEntity.getYOffset()+0.2F, posZ-1.1F);// default
+    }*/
+
     @Override
+    public void updateRiderPosition() { TraincraftUtil.updateRider(this, -1.1, 0.2, -0.35); }
+
+    /*@Override
     public void updateRiderPosition() {
         if (riddenByEntity == null) {
             return;
@@ -60,8 +69,7 @@ public class SteamSkook extends SteamTrain {
         if (pitchRads > -1.01 && pitchRads < 1.01) {
             riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
         }
-    }
-
+    }*/
 
     @Override
     public void onUpdate() {
@@ -72,13 +80,9 @@ public class SteamSkook extends SteamTrain {
         checkInvent(locoInvent[0], locoInvent[1], this);
     }
 
-    
-
-    
-
     @Override
     public String getInventoryName() {
-        return "Skookum";
+        return "Skookum 2-4-4-2";
     }
 
     @Override
@@ -86,7 +90,10 @@ public class SteamSkook extends SteamTrain {
         return 1.4F;
     }
 
-    
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
-    
 }

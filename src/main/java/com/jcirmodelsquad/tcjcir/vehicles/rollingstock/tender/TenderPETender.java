@@ -8,8 +8,6 @@ import train.common.api.Tender;
 import train.common.library.EnumTrains;
 
 public class TenderPETender extends Tender  {
-	
-	
 
 	public TenderPETender(World world) {
 		super(world, FluidRegistry.WATER, 0, EnumTrains.PETender.getTankCapacity(), LiquidManager.WATER_FILTER);
@@ -19,7 +17,9 @@ public class TenderPETender extends Tender  {
 	@Override
 	public String getInventoryName() {
 		return "Polar Express Tender";
-	}@Override
+	}
+
+	@Override
 	public boolean canBeRidden() {
 		return false;
 	}
@@ -29,5 +29,9 @@ public class TenderPETender extends Tender  {
 		return 2.0F;
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 }

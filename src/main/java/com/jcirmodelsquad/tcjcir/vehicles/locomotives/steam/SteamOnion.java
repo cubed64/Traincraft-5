@@ -20,12 +20,9 @@ public class SteamOnion extends SteamTrain {
 	public SteamOnion(World world) {
 		super(world, EnumTrains.Onion.getTankCapacity(), LiquidManager.WATER_FILTER);
 		
-		InsertTexture(4, "MISSINGNO BUTTSECKS RAILROAD NUMBER 1");
+		//InsertTexture(4, "MISSINGNO BUTTSECKS RAILROAD NUMBER 1");
 	}
 
-	
-
-	
 	@Override
 	public void updateRiderPosition() {
 		if (riddenByEntity == null) {return;}
@@ -61,8 +58,6 @@ public class SteamOnion extends SteamTrain {
 		}
 	}
 
-
-
 	@Override
 	public void pressKey(int i) {
 		if (i == 7 &&riddenByEntity instanceof EntityPlayer) {
@@ -70,17 +65,19 @@ public class SteamOnion extends SteamTrain {
 		}
 	}
 
-	
 	@Override
 	public String getInventoryName() {
 		return "Onion";
 	}
 
-	
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 0.3F;
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "The Moon";
+	}
 }

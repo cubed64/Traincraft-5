@@ -38,4 +38,10 @@ public class HotTubTender extends Tender  {
     public boolean isFictional() {
         return true;
     }
+
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 }

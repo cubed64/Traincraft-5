@@ -9,9 +9,6 @@ import train.common.library.EnumTrains;
 
 public class TenderOnion extends Tender  {
 
-	
-	
-
 	public TenderOnion(World world) {
 		super(world, FluidRegistry.WATER, 0, EnumTrains.OnionTender.getTankCapacity(), LiquidManager.WATER_FILTER);
 		
@@ -22,13 +19,14 @@ public class TenderOnion extends Tender  {
 		return "Onion's Tender";
 	}
 
-	
-
-	
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.0F;
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "The Moon";
+	}
 }

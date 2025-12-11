@@ -8,8 +8,6 @@ import train.common.api.Tender;
 import train.common.library.EnumTrains;
 
 public class TenderBaler extends Tender  {
-    
-    
 
     public TenderBaler(World world) {
         super(world, FluidRegistry.WATER, 0, EnumTrains.WCPBaler.getTankCapacity(), LiquidManager.WATER_FILTER);
@@ -21,12 +19,10 @@ public class TenderBaler extends Tender  {
         return "WCP Baler Tender";
     }
 
-
     @Override
     public boolean isFictional() {
         return true;
     }
-    
 
     @Override
     public boolean canBeRidden() {
@@ -38,5 +34,9 @@ public class TenderBaler extends Tender  {
         return 1.7F;
     }
 
-    
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 }

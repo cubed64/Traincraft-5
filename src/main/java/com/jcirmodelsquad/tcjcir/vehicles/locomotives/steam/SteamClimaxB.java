@@ -28,17 +28,20 @@ public class SteamClimaxB extends SteamTrain {
 	@Override
 	public void updateRiderPosition() { TraincraftUtil.updateRider(this, 0.3, 0.0, -0.4); }
 
-@Override
+	@Override
 	public String getInventoryName() {
 		return "50 Ton Class B Climax";
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.0F;
 	}
 
-	
 }

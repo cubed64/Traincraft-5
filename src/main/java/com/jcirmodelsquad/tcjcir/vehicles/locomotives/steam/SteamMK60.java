@@ -34,17 +34,19 @@ public class SteamMK60 extends SteamTrain {
 	@Override
 	public void updateRiderPosition() { TraincraftUtil.updateRider(this, -1.2, 0.25, -0.45); }
 
-@Override
+	@Override
 	public String getInventoryName() {
 		return "WP MK60-71 2-8-2";
 	}
-
-	
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.7F;
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 }

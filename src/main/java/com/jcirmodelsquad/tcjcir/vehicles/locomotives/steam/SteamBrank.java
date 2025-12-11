@@ -38,4 +38,10 @@ public class SteamBrank extends SteamTrain {
 	public boolean isFictional() {
 		return true;
 	}
+
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 }

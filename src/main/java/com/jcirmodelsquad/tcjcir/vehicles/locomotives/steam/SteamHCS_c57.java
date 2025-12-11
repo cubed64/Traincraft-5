@@ -32,17 +32,19 @@ public class SteamHCS_c57 extends SteamTrain {
 	@Override
 	public void updateRiderPosition() { TraincraftUtil.updateRider(this, -0.9, 0.2, -0.45); }
 
-@Override
+	@Override
 	public String getInventoryName() {
 		return "UP-SP C57 2-8-0";
 	}
-
-	
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.15F;
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 }

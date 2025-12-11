@@ -20,9 +20,6 @@ public class SteamPELoco extends SteamTrain {
 		
 	}
 
-	
-
-	
 	@Override
 	public void updateRiderPosition() {
 		if(riddenByEntity==null){return;}
@@ -58,21 +55,19 @@ public class SteamPELoco extends SteamTrain {
 		}
 	}
 
-
-
-	
-
 	@Override
 	public String getInventoryName() {
 		return "Polar Express Locomotive";
 	}
-
-	
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.0F;
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 }

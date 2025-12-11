@@ -23,17 +23,20 @@ public class SteamNP_L9 extends SteamTrain {
 	@Override
 	public void updateRiderPosition() { TraincraftUtil.updateRider(this, -0.6, 0.1, -0.45); }
 
-@Override
+	@Override
 	public String getInventoryName() {
 		return "NP L9 Class 0-6-0";
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.0F;
 	}
 
-	
 }

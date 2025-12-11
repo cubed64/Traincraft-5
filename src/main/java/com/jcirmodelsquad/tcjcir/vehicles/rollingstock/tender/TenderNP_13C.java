@@ -19,13 +19,15 @@ public class TenderNP_13C extends Tender  {
 		return "NP 13C Tender";
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 
-	
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.3F;
 	}
 
-	
 }

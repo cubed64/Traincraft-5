@@ -9,8 +9,6 @@ import train.common.enums.LockoutGroup;
 import train.common.library.EnumTrains;
 
 public class Tender10k extends Tender  {
-    
-    
 
     public Tender10k(World world) {
         super(world, FluidRegistry.WATER, 0, EnumTrains.Tender10k.getTankCapacity(), LiquidManager.WATER_FILTER);
@@ -34,9 +32,11 @@ public class Tender10k extends Tender  {
         return "WP 10,000 Gal Tender";
     }
 
-    
-
-    
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
     @Override
     public boolean canBeRidden() {
@@ -48,5 +48,4 @@ public class Tender10k extends Tender  {
         return 1.8F;
     }
 
-    
 }

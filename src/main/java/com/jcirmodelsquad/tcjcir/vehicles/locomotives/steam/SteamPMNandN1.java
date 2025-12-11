@@ -10,6 +10,7 @@ import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
 
 public class SteamPMNandN1 extends SteamTrain {
+
 	@Override
 	public SoundRecord getSoundRecord()
 	{
@@ -28,17 +29,20 @@ public class SteamPMNandN1 extends SteamTrain {
 	@Override
 	public void updateRiderPosition() { TraincraftUtil.updateRider(this, -0.75, 0.15, -0.5); }
 
-@Override
+	@Override
 	public String getInventoryName() {
 		return "Pere Marquette N and N-1";
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.15F;
 	}
 
-	
 }

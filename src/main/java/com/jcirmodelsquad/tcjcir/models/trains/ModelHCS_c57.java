@@ -54,8 +54,8 @@ public class ModelHCS_c57 extends ModelConverter //Same as Filename
 		bodyModel[14] = new ModelRendererTurbo(this, 304, 226, textureX, textureY); // Box 491
 		bodyModel[15] = new ModelRendererTurbo(this, 270, 35, textureX, textureY); // Box 496
 		bodyModel[16] = new ModelRendererTurbo(this, 280, 39, textureX, textureY); // Box 495
-		bodyModel[17] = new ModelRendererTurbo(this, 45, 84, textureX, textureY); // Box 171 nep upfit twinbeam glow
-		bodyModel[18] = new ModelRendererTurbo(this, 45, 84, textureX, textureY); // Box 171 nep upfit twinbeam glow
+		bodyModel[17] = new ModelRendererTurbo(this, 45, 84, textureX, textureY, "lamp"); // Box 171 nep upfit twinbeam glow
+		bodyModel[18] = new ModelRendererTurbo(this, 45, 84, textureX, textureY, "lamp"); // Box 171 nep upfit twinbeam glow
 		bodyModel[19] = new ModelRendererTurbo(this, 406, 181, textureX, textureY); // Box 490
 		bodyModel[20] = new ModelRendererTurbo(this, 428, 32, textureX, textureY, "cull"); // Box cull c8 extendo
 		bodyModel[21] = new ModelRendererTurbo(this, 417, 32, textureX, textureY, "cull"); // Box cull c8 walkway extendio
@@ -178,8 +178,8 @@ public class ModelHCS_c57 extends ModelConverter //Same as Filename
 		bodyModel[138] = new ModelRendererTurbo(this, 388, 212, textureX, textureY); // Box boiler button
 		bodyModel[139] = new ModelRendererTurbo(this, 18, 38, textureX, textureY, "cull"); // Box fncc frontals
 		bodyModel[140] = new ModelRendererTurbo(this, 24, 40, textureX, textureY); // Box fncc frontals
-		bodyModel[141] = new ModelRendererTurbo(this, 39, 38, textureX, textureY); // Box fncc frontals glow
-		bodyModel[142] = new ModelRendererTurbo(this, 30, 37, textureX, textureY); // Box fncc frontals glow
+		bodyModel[141] = new ModelRendererTurbo(this, 39, 38, textureX, textureY, "lamp"); // Box fncc frontals glow
+		bodyModel[142] = new ModelRendererTurbo(this, 30, 37, textureX, textureY, "lamp"); // Box fncc frontals glow
 		bodyModel[143] = new ModelRendererTurbo(this, 5, 37, textureX, textureY); // Box fncc frontals
 		bodyModel[144] = new ModelRendererTurbo(this, 385, 245, textureX, textureY); // Box 379
 		bodyModel[145] = new ModelRendererTurbo(this, 427, 214, textureX, textureY); // Box 378

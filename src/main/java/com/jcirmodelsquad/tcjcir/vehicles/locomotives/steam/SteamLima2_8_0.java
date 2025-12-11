@@ -29,17 +29,19 @@ public class SteamLima2_8_0 extends SteamTrain {
 	@Override
 	public void updateRiderPosition() { TraincraftUtil.updateRider(this, -0.72, 0.05, -0.45); }
 
-@Override
+	@Override
 	public String getInventoryName() {
 		return "Lima 2-8-0";
 	}
-
-	
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.17F;
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 }

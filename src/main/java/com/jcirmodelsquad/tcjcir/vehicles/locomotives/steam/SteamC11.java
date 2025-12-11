@@ -19,9 +19,6 @@ public class SteamC11 extends SteamTrain {
 		
 	}
 
-	
-
-	
 	@Override
 	public void updateRiderPosition() {
 		if(riddenByEntity==null){return;}
@@ -57,21 +54,19 @@ public class SteamC11 extends SteamTrain {
 		}
 	}
 
-
-
-	
-
 	@Override
 	public String getInventoryName() {
 		return "JNR C411";
 	}
-
-	
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 0.9F;
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "Japan";
+	}
 }

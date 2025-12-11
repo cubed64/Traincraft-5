@@ -25,7 +25,6 @@ public class SteamMacky extends SteamTrain {
         locoInvent = new ItemStack[inventorySize];
     }
 
-    
     @Override
     public void updateRiderPosition() {
         if (riddenByEntity == null) {
@@ -76,8 +75,6 @@ public class SteamMacky extends SteamTrain {
         return true;
     }
 
-
-
     @Override
     public String getInventoryName() {
         return "WCP Macky 0-10-2";
@@ -88,7 +85,10 @@ public class SteamMacky extends SteamTrain {
         return 1.4F;
     }
 
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
-
-    
 }

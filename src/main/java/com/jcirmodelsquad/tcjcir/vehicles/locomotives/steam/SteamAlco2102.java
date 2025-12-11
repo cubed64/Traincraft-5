@@ -30,17 +30,19 @@ public class SteamAlco2102 extends SteamTrain {
 	@Override
 	public void updateRiderPosition() { TraincraftUtil.updateRider(this, -0.5, 0.1, -0.45); }
 
-@Override
+	@Override
 	public String getInventoryName() {
 		return "Alco 2-10-2ST";
 	}
-
-	
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.45F;
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 }

@@ -4,6 +4,7 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.LiquidManager;
 import train.common.api.SteamTrain;
+import train.common.core.util.TraincraftUtil;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -20,22 +21,21 @@ public class SteamClimaxNew extends SteamTrain {
 	}
 
 	@Override
-	public void updateRiderPosition() {
-		if(riddenByEntity==null){return;}
-		riddenByEntity.setPosition(posX, posY + getMountedYOffset() + riddenByEntity.getYOffset()+0.25F, posZ);// default
-	}
+	public void updateRiderPosition() { TraincraftUtil.updateRider(this, 0.0, 0.25, -0.35); }
 
-@Override
+	@Override
 	public String getInventoryName() {
 		return "2 Truck Climax";
 	}
-
-	
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.5F;
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 }

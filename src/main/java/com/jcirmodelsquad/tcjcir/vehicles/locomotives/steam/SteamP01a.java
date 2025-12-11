@@ -14,7 +14,7 @@ public class SteamP01a extends SteamTrain {
 	@Override
 	public SoundRecord getSoundRecord()
 	{
-		return EnumSounds.SteamF01;
+		return EnumSounds.SteamP01a;
 	}
 
 	public SteamP01a(World world) {
@@ -41,5 +41,11 @@ public class SteamP01a extends SteamTrain {
 	@Override
 	public boolean isFictional() {
 		return true;
+	}
+
+	@Override
+	public String transportCountry()
+	{
+		return "US";
 	}
 }

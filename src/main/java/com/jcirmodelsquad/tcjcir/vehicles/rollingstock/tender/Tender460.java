@@ -9,9 +9,6 @@ import train.common.library.EnumTrains;
 
 public class Tender460 extends Tender  {
 
-	
-	
-
 	public Tender460(World world) {
 		super(world, FluidRegistry.WATER, 0, EnumTrains.Tender460.getTankCapacity(), LiquidManager.WATER_FILTER);
 		
@@ -27,13 +24,14 @@ public class Tender460 extends Tender  {
 		return "ALCo 4-6-0 Tender";
 	}
 
-	
-
-	
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.3F;
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 }

@@ -27,19 +27,20 @@ public class SteamAlco0_6_0T extends SteamTrain {
 	@Override
 	public void updateRiderPosition() { TraincraftUtil.updateRider(this, -0.33, -0.23, -0.45); }
 
-	
-
 	@Override
 	public String getInventoryName() {
 		return "Alco 0-6-0T";
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.15F;
 	}
 
-	
 }

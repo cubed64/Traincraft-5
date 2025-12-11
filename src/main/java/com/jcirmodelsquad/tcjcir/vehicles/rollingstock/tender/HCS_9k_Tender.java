@@ -8,8 +8,6 @@ import train.common.api.Tender;
 import train.common.library.EnumTrains;
 
 public class HCS_9k_Tender extends Tender  {
-    
-    
 
     public HCS_9k_Tender(World world) {
         super(world, FluidRegistry.WATER, 0, EnumTrains.HCS_9k_Tender.getTankCapacity(), LiquidManager.WATER_FILTER);
@@ -27,9 +25,11 @@ public class HCS_9k_Tender extends Tender  {
         return "UP - SP 9000 Gallon Tender";
     }
 
-    
-
-    
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
     @Override
     public boolean canBeRidden() {
@@ -41,5 +41,4 @@ public class HCS_9k_Tender extends Tender  {
         return 1.8F;
     }
 
-    
 }

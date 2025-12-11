@@ -8,8 +8,6 @@ import train.common.api.Tender;
 import train.common.library.EnumTrains;
 
 public class TenderSkookTender extends Tender  {
-    
-    
 
     public TenderSkookTender(World world) {
         super(world, FluidRegistry.WATER, 0, EnumTrains.SkookTender.getTankCapacity(), LiquidManager.WATER_FILTER);
@@ -21,9 +19,11 @@ public class TenderSkookTender extends Tender  {
         return "Skookum Tender";
     }
 
-    
-
-    
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
     @Override
     public boolean canBeRidden() {
@@ -35,5 +35,4 @@ public class TenderSkookTender extends Tender  {
         return 1.5F;
     }
 
-    
 }

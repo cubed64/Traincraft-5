@@ -101,7 +101,7 @@ public class EnumSounds
 	//STEAM//
 	public static final SoundRecord SteamClimaxNew= new SoundRecord(SteamClimaxNew.class, "shay_horn", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 21);
 	public static final SoundRecord SteamVBShay2= new SoundRecord(SteamVBShay2.class, "shay_horn", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 21);
-	public static final SoundRecord SteamSkook= new SoundRecord(SteamSkook.class,"skookum_whistle", 1F, "skookum_notch8", 0.9F, 8, "skookum_idle", 0.7F, 50, true, "steambell_4", 19);
+	public static final SoundRecord SteamSkook= new SoundRecord(SteamSkook.class,"skookum_whistle", 1F, "steam_run", 0.2F, 20, "skookum_idle", 0.2F, 20, true, "steambell_4", 19);
 	public static final SoundRecord Steam3Truck= new SoundRecord(SteamShay3Truck.class, "shay_horn", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 21);
 	public static final SoundRecord SteamClimaxB= new SoundRecord(SteamClimaxB.class, " ", 1F, "steam_run", 0.2F, 20, "steam_run", 0.2F, 20, true, "steambell_4", 19, new String[] {"shay_whistle_1", "shay_horn", "lukenhimer_3chime_2", "lukenhimer_3chime_2"});
 	public static final SoundRecord SteamF01= new SoundRecord(SteamF01.class, "shay_horn", 1F, "steam_run", 0.2F, 20, "steam_idle2", 0.2F, 24, true, "steambell_4", 19);

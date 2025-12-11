@@ -25,7 +25,6 @@ public class SteamBuckingBull extends SteamTrain {
         locoInvent = new ItemStack[inventorySize];
     }
 
-    
     @Override
     public void updateRiderPosition() {
         if (riddenByEntity == null) {
@@ -71,12 +70,10 @@ public class SteamBuckingBull extends SteamTrain {
         checkInvent(locoInvent[0], locoInvent[1], this);
     }
 
-
     @Override
     public boolean isFictional() {
         return true;
     }
-
 
     @Override
     public String getInventoryName() {
@@ -88,7 +85,10 @@ public class SteamBuckingBull extends SteamTrain {
         return 1.4F;
     }
 
-    
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 
-    
 }

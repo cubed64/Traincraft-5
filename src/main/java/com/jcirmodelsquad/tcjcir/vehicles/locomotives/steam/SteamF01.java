@@ -4,6 +4,7 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.LiquidManager;
 import train.common.api.SteamTrain;
+import train.common.core.util.TraincraftUtil;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -21,6 +22,9 @@ public class SteamF01 extends SteamTrain {
 	}
 
 	@Override
+	public void updateRiderPosition() { TraincraftUtil.updateRider(this, 0.25, 0.15, -0.35); }
+
+	/*@Override
 	public void updateRiderPosition() {
 		if (riddenByEntity == null) {return;}
 		double pitchRads = this.anglePitchClient * Math.PI / 180.0D;
@@ -53,7 +57,7 @@ public class SteamF01 extends SteamTrain {
 		if (pitchRads > -1.01 && pitchRads < 1.01) {
 			riddenByEntity.setPosition(bogieX1, pitch, bogieZ1);
 		}
-	}
+	}*/
 
 	@Override
 	public String getInventoryName() {
@@ -68,5 +72,11 @@ public class SteamF01 extends SteamTrain {
 	@Override
 	public boolean isFictional() {
 		return true;
+	}
+
+	@Override
+	public String transportCountry()
+	{
+		return "US";
 	}
 }

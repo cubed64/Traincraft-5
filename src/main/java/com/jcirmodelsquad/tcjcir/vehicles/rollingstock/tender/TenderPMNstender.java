@@ -8,8 +8,6 @@ import train.common.api.Tender;
 import train.common.library.EnumTrains;
 
 public class TenderPMNstender extends Tender  {
-    
-    
 
     public TenderPMNstender(World world) {
         super(world, FluidRegistry.WATER, 0, EnumTrains.PMNstender.getTankCapacity(), LiquidManager.WATER_FILTER);
@@ -25,10 +23,6 @@ public class TenderPMNstender extends Tender  {
         return "PM N Series Tender";
     }
 
-    
-
-    
-
     @Override
     public boolean canBeRidden() {
         return false;
@@ -39,5 +33,9 @@ public class TenderPMNstender extends Tender  {
         return 2.165F;
     }
 
-    
+    @Override
+    public String transportCountry()
+    {
+        return "US";
+    }
 }

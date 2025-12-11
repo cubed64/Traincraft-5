@@ -9,9 +9,6 @@ import train.common.library.EnumTrains;
 
 public class TenderShay3Truck extends Tender  {
 
-	
-	
-
 	public TenderShay3Truck(World world) {
 		super(world, FluidRegistry.WATER, 0, EnumTrains.Shay3TruckTender.getTankCapacity(), LiquidManager.WATER_FILTER);
 		
@@ -22,13 +19,14 @@ public class TenderShay3Truck extends Tender  {
 		return "Class 3-PC-13 3-Truck Shay Tender";
 	}
 
-	
-
-	
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 0.7F;
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 }

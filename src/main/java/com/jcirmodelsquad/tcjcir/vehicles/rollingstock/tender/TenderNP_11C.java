@@ -9,9 +9,6 @@ import train.common.library.EnumTrains;
 
 public class TenderNP_11C extends Tender  {
 
-	
-	
-
 	public TenderNP_11C(World world) {
 		super(world, FluidRegistry.WATER, 0, EnumTrains.NP_11C_Tender.getTankCapacity(), LiquidManager.WATER_FILTER);
 		
@@ -22,13 +19,15 @@ public class TenderNP_11C extends Tender  {
 		return "NP 11C/12C Tender(s)";
 	}
 
-	
+	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
 
-	
 	@Override
 	public float getOptimalDistance(EntityMinecart cart) {
 		return 1.3F;
 	}
 
-	
 }
