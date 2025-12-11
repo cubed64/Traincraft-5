@@ -52,6 +52,16 @@ import train.common.library.Info;
 import train.common.mtc.render.RenderMTCBlock;
 import train.common.mtc.tile.TileTransmitterSpeed;
 import train.common.tile.*;
+import train.common.tile.tileStopper.TileAmericanStopper;
+import train.common.tile.tileStopper.sleeperless.TileEmbeddedAmericanStopper;
+import train.common.tile.tileStopper.sleeperless.TileEmbeddedStopper;
+import train.common.tile.tileStopper.TileStopper;
+import train.common.tile.tileStopper.concrete_type1.TileConcreteType1_AmericanStopper;
+import train.common.tile.tileStopper.concrete_type1.TileConcreteType1_Stopper;
+import train.common.tile.tileStopper.concrete_type2.TileConcreteType2_AmericanStopper;
+import train.common.tile.tileStopper.concrete_type2.TileConcreteType2_Stopper;
+import train.common.tile.tileStopper.wood_type1.TileWoodType1_AmericanStopper;
+import train.common.tile.tileStopper.wood_type1.TileWoodType1_Stopper;
 import train.common.tile.tileSwitch.*;
 
 import java.lang.reflect.InvocationTargetException;
@@ -151,6 +161,26 @@ public class ClientProxy extends CommonProxy
 
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEmbeddedAmericanStopper.class, new RenderAmericanStopper(EnumTracks.EMBEDDED_SMALL_STRAIGHT));
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.embeddedamericanstopper.block), new BaseItemRenderAmericanStopper(EnumTracks.EMBEDDED_SMALL_STRAIGHT));
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileConcreteType1_Stopper.class, new RenderStopper(EnumTracks.CONCRETE_TYPE1_SMALL_STRAIGHT));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.concrete_type1_stopper.block), new ItemRenderStopper(EnumTracks.CONCRETE_TYPE1_SMALL_STRAIGHT));
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileConcreteType1_AmericanStopper.class, new RenderAmericanStopper(EnumTracks.CONCRETE_TYPE1_SMALL_STRAIGHT));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.concrete_type1_americanstopper.block), new BaseItemRenderAmericanStopper(EnumTracks.CONCRETE_TYPE1_SMALL_STRAIGHT));
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileConcreteType2_Stopper.class, new RenderStopper(EnumTracks.CONCRETE_TYPE2_SMALL_STRAIGHT));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.concrete_type2_stopper.block), new ItemRenderStopper(EnumTracks.CONCRETE_TYPE2_SMALL_STRAIGHT));
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileConcreteType2_AmericanStopper.class, new RenderAmericanStopper(EnumTracks.CONCRETE_TYPE2_SMALL_STRAIGHT));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.concrete_type2_americanstopper.block), new BaseItemRenderAmericanStopper(EnumTracks.CONCRETE_TYPE2_SMALL_STRAIGHT));
+
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileWoodType1_Stopper.class, new RenderStopper(EnumTracks.WOOD_TYPE1_SMALL_STRAIGHT));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.wood_type1_stopper.block), new ItemRenderStopper(EnumTracks.WOOD_TYPE1_SMALL_STRAIGHT));
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileWoodType1_AmericanStopper.class, new RenderAmericanStopper(EnumTracks.WOOD_TYPE1_SMALL_STRAIGHT));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockIDs.wood_type1_americanstopper.block), new BaseItemRenderAmericanStopper(EnumTracks.WOOD_TYPE1_SMALL_STRAIGHT));
+
 
 		//ClientRegistry.bindTileEntitySpecialRenderer(TileBook.class, new RenderTCBook());
 		//MinecraftForgeClient.registerItemRenderer(BlockIDs.book.blockID, new ItemRenderBook());

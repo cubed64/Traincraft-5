@@ -13,7 +13,6 @@ import org.lwjgl.opengl.GL11;
 import train.client.render.models.blocks.ModelAmericanStopper;
 import train.common.library.EnumTracks;
 import train.common.tile.BaseStopperTileEntity;
-import train.common.tile.TileAmericanStopper;
 
 public class RenderAmericanStopper extends TileEntitySpecialRenderer
 {

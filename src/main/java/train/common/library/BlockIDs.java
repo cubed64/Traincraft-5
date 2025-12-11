@@ -7,10 +7,8 @@
 
 package train.common.library;
 
-import com.jcirmodelsquad.tcjcir.features.containers.ItemFortyFootContainer;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
-import com.jcirmodelsquad.tcjcir.render.ItemRenderMILWSwitchStand;
 import train.common.items.*;
 
 public enum BlockIDs implements IBlockIDs {
@@ -32,6 +30,17 @@ public enum BlockIDs implements IBlockIDs {
 
 	americanstopper(false, null),
 	embeddedamericanstopper(false, null),
+
+	concrete_type1_stopper(false, null),
+	concrete_type1_americanstopper(false, null),
+
+	concrete_type2_stopper(false, null),
+	concrete_type2_americanstopper(false, null),
+	wood_type1_stopper(false, null),
+	wood_type1_americanstopper(false, null),
+
+
+
 
 	openFurnaceIdle(false, null),
 	openFurnaceActive(false, null),

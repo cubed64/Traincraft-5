@@ -8,20 +8,16 @@
 package train.common.blocks;
 
 import com.jcirmodelsquad.tcjcir.blocks.*;
-import com.jcirmodelsquad.tcjcir.features.containers.BlockFortyFootContainer;
-import com.jcirmodelsquad.tcjcir.features.signal.vbc.BlockVBCController;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
 import train.common.Traincraft;
 import train.common.blocks.crossers.*;
+import train.common.blocks.stoppers.*;
 import train.common.library.BlockIDs;
 import train.common.library.Info;
 import train.common.mtc.block.*;
-import train.common.tile.TileAmericanStopper;
 
 public class TCBlocks {
 
@@ -51,10 +47,28 @@ public class TCBlocks {
 		BlockIDs.Racor36H_2.block = new BlockRacor36H_2().setHardness(4F).setStepSound(Block.soundTypeWood);
 
 		BlockIDs.trainWorkbench.block = new BlockTrainWorkbench(16).setHardness(1.7F).setStepSound(Block.soundTypeWood);
+
 		BlockIDs.stopper.block = new BlockStopper().setHardness(1.7F).setStepSound(Block.soundTypeWood);
-		BlockIDs.embeddedStopper.block = new BlockEmbeddedStopper().setHardness(1.7F).setStepSound(Block.soundTypeWood);
 		BlockIDs.americanstopper.block = new BlockAmericanStopper().setHardness(1.7F).setStepSound(Block.soundTypeMetal);
+
+		BlockIDs.embeddedStopper.block = new BlockEmbeddedStopper().setHardness(1.7F).setStepSound(Block.soundTypeWood);
 		BlockIDs.embeddedamericanstopper.block = new BlockAmericanEmbeddedStopper().setHardness(1.7F).setStepSound(Block.soundTypeMetal);
+
+		BlockIDs.concrete_type1_stopper.block = new concrete_type1_stopper().setHardness(1.7F).setStepSound(Block.soundTypeWood);
+
+		BlockIDs.concrete_type1_americanstopper.block = new concrete_type1_americanstopper().setHardness(1.7F).setStepSound(Block.soundTypeMetal);
+
+		BlockIDs.concrete_type2_stopper.block = new concrete_type2_stopper()
+				.setHardness(1.7F).setStepSound(Block.soundTypeWood);
+		BlockIDs.concrete_type2_americanstopper.block = new concrete_type2_americanstopper()
+				.setHardness(1.7F).setStepSound(Block.soundTypeMetal);
+
+		BlockIDs.wood_type1_stopper.block = new treated_wood_type1_stopper()
+				.setHardness(1.7F).setStepSound(Block.soundTypeWood);
+		BlockIDs.wood_type1_americanstopper.block = new treated_wood_type1_americanstopper()
+				.setHardness(1.7F).setStepSound(Block.soundTypeMetal);
+
+
 
 		BlockIDs.openFurnaceIdle.block = new BlockOpenHearthFurnace(false).setHardness(3.5F).setStepSound(Block.soundTypeStone);
 		BlockIDs.openFurnaceActive.block = new BlockOpenHearthFurnace(true).setHardness(3.5F).setStepSound(Block.soundTypeStone);

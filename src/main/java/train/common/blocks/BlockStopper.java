@@ -21,7 +21,7 @@ import net.minecraft.world.World;
 import train.common.Traincraft;
 import train.common.enums.TCTrackDirection;
 import train.common.library.Info;
-import train.common.tile.TileStopper;
+import train.common.tile.tileStopper.TileStopper;
 
 import static net.minecraftforge.common.util.ForgeDirection.UP;
 

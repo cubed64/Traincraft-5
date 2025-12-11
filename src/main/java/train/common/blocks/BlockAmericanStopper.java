@@ -13,7 +13,6 @@ import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
@@ -22,7 +21,7 @@ import net.minecraft.world.World;
 import train.common.Traincraft;
 import train.common.enums.TCTrackDirection;
 import train.common.library.Info;
-import train.common.tile.TileAmericanStopper;
+import train.common.tile.tileStopper.TileAmericanStopper;
 
 import static net.minecraftforge.common.util.ForgeDirection.UP;
 

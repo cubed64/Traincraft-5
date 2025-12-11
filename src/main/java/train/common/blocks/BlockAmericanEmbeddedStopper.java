@@ -2,8 +2,7 @@ package train.common.blocks;
 
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import train.common.tile.TileAmericanStopper;
-import train.common.tile.TileEmbeddedAmericanStopper;
+import train.common.tile.tileStopper.sleeperless.TileEmbeddedAmericanStopper;
 
 public class BlockAmericanEmbeddedStopper extends BlockAmericanStopper
 {
