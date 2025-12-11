@@ -203,8 +203,18 @@ public class RecipeHandler extends AbstractRecipeHandler
 		//buffers
 		GameRegistry.addRecipe(new ItemStack(BlockIDs.stopper.block, 1), "PPP", "I I", " T ", 'P', Blocks.planks, 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRailSmallStraight.item);
 		GameRegistry.addRecipe(new ItemStack(BlockIDs.americanstopper.block, 1), "III", "I I", " T ", 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRailSmallStraight.item);
+
 		GameRegistry.addRecipe(new ItemStack(BlockIDs.embeddedStopper.block, 1), "PPP", "I I", " T ", 'P', Blocks.planks, 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRailEmbeddedSmallStraight.item);
 		GameRegistry.addRecipe(new ItemStack(BlockIDs.embeddedamericanstopper.block, 1), "III", "I I", " T ", 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRailEmbeddedSmallStraight.item);
+
+		GameRegistry.addRecipe(new ItemStack(BlockIDs.concrete_type1_stopper.block, 1), "PPP", "I I", " T ", 'P', Blocks.planks, 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRail_CONCRETE_TYPE1_SmallStraight.item);
+		GameRegistry.addRecipe(new ItemStack(BlockIDs.concrete_type1_americanstopper.block, 1), "III", "I I", " T ", 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRail_CONCRETE_TYPE1_SmallStraight.item);
+
+		GameRegistry.addRecipe(new ItemStack(BlockIDs.concrete_type2_stopper.block, 1), "PPP", "I I", " T ", 'P', Blocks.planks, 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRail_CONCRETE_TYPE2_SmallStraight.item);
+		GameRegistry.addRecipe(new ItemStack(BlockIDs.concrete_type2_americanstopper.block, 1), "III", "I I", " T ", 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRail_CONCRETE_TYPE2_SmallStraight.item);
+
+		GameRegistry.addRecipe(new ItemStack(BlockIDs.wood_type1_stopper.block, 1), "PPP", "I I", " T ", 'P', Blocks.planks, 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRail_WOOD_TYPE1_SmallStraight.item);
+		GameRegistry.addRecipe(new ItemStack(BlockIDs.wood_type1_americanstopper.block, 1), "III", "I I", " T ", 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRail_WOOD_TYPE1_SmallStraight.item);
 
 
 		//paintbrush

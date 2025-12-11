@@ -39,9 +39,6 @@ public enum BlockIDs implements IBlockIDs {
 	wood_type1_stopper(false, null),
 	wood_type1_americanstopper(false, null),
 
-
-
-
 	openFurnaceIdle(false, null),
 	openFurnaceActive(false, null),
 	oreTC(true, ItemBlockOreTC.class, 4),
