@@ -1,12 +1,15 @@
 package train.common.library;
 
 import net.minecraft.entity.player.EntityPlayer;
+import scala.actors.threadpool.Arrays;
 import train.common.items.BallastTypes;
 import train.common.items.RailVariants;
 import train.common.items.TCRailTypes;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import static train.common.items.BallastTypes.*;
 import static train.common.items.RailVariants.*;
@@ -777,6 +780,35 @@ public enum EnumTracks
         }
 
         return tracksHashMap;
+    }
+
+    public static HashMap<EnumCoreTrack,  HashMap<String, EnumTracks>> GetTracksByGroup(RailVariants railVariants)
+    {
+        HashMap<EnumCoreTrack,  HashMap<String, EnumTracks>> tracks = new HashMap<>();
+
+        for (final EnumTracks track : EnumTracks.values())
+        {
+            if (railVariants.equals(track.getVariant()) && track.getLabel().contains("ROAD_CROSSING") == false)
+            {
+                if (tracks.containsKey(track.getCoreTrack()))
+                {
+                    HashMap<String, EnumTracks> trackList = tracks.get(track.getCoreTrack());
+                    trackList.put(track.ballastType.name(), track);
+                }
+                else
+                {
+                    if (track.ballastType == null)
+                    {
+                        tracks.put(track.getCoreTrack(), new HashMap<String, EnumTracks>() {{ put("", track); }});
+                    }
+                    else
+                    {
+                        tracks.put(track.getCoreTrack(), new HashMap<String, EnumTracks>() {{ put(track.ballastType.name(), track); }});
+                    }
+                }
+            }
+        }
+        return tracks;
     }
 
     public String getLabel() {

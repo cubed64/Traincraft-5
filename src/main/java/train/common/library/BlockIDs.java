@@ -27,8 +27,8 @@ public enum BlockIDs implements IBlockIDs {
 
 	trainWorkbench(false, null),
 
-	embeddedStopper(false, null),
 	stopper(false, null),
+	embeddedStopper(false, null),
 
 	americanstopper(false, null),
 	embeddedamericanstopper(false, null),

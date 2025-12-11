@@ -17,14 +17,16 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import train.common.Traincraft;
 import train.common.inventory.TrainCraftingManager;
-import train.common.library.BlockIDs;
-import train.common.library.ItemIDs;
-import train.common.library.TrackItemIDs;
+import train.common.items.BallastTypes;
+import train.common.items.RailVariants;
+import train.common.library.*;
 import train.common.recipes.ITCRecipe.RecipesArmorDyes;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
+import static train.common.library.EnumCoreTrack.*;
 import static train.common.recipes.AssemblyTableRecipes.waterContainers;
 
 public class RecipeHandler extends AbstractRecipeHandler
@@ -101,56 +103,18 @@ public class RecipeHandler extends AbstractRecipeHandler
 
 		//straights regular
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', Items.iron_ingot, 'P', Blocks.planks);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailMediumStraight.item, 1),  "G  ", "G  ", "G  ", 'G', TrackItemIDs.tcRailSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailLongStraight.item, 1),  "G  ", "G  ", "   ", 'G', TrackItemIDs.tcRailMediumStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailVeryLongStraight.item, 1),  "G  ", "G  ", "   ", 'G', TrackItemIDs.tcRailLongStraight.item);
-		GameRegistry.addShapelessRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 1), TrackItemIDs.tcRail1X1Turn.item);//convert 1x1 turn back to straight
+		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSmallStraight.item, 16), "I I", "B B", "I I", 'I', Items.iron_ingot, 'B', ItemIDs.partSpike.item);
 
-		//90 turns regular
-		GameRegistry.addShapelessRecipe(new ItemStack(TrackItemIDs.tcRail1X1Turn.item, 1), TrackItemIDs.tcRailSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailMediumTurn.item, 1),  "GG ", "G  ", "   ", 'G', TrackItemIDs.tcRailSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailLargeTurn.item, 1),  " GG", "GG ", "G  ", 'G', TrackItemIDs.tcRailSmallStraight.item);
-		//GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailVeryLargeTurn.item, 1), "SS ","S  ","   ", 'S', TrackItemIDs.tcRailMediumTurn.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailVeryLargeTurn.item, 1), " S ","S  ","   ", 'S', TrackItemIDs.tcRailLargeTurn.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSuperLargeTurn.item, 1), " TS","T  ","S  ",'T', TrackItemIDs.tcRailLargeTurn.item, 'S', TrackItemIDs.tcRailMediumTurn.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail29X29Turn.item,1 ), "AT ","TB ","   ",'T', TrackItemIDs.tcRailVeryLargeTurn.item, 'A', TrackItemIDs.tcRailLargeTurn.item, 'B', TrackItemIDs.tcRailSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail32X32Turn.item,1), " S ","S  ","   ", 'S', TrackItemIDs.tcRailSuperLargeTurn.item);
+		ArrayList<ItemStack> concretes = OreDictionary.getOres("concrete");
 
-		//45 turns regular
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailMedium45DegreeTurn.item,1), "S  "," S "," S ", 'S', TrackItemIDs.tcRailSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailLarge45DegreeTurn.item,1), "SS "," S "," M ", 'S', TrackItemIDs.tcRailSmallStraight.item, 'M', TrackItemIDs.tcRailMediumStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailVeryLarge45DegreeTurn.item,1), "MS "," S "," M ", 'S', TrackItemIDs.tcRailSmallStraight.item, 'M', TrackItemIDs.tcRailMediumStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSuperLarge45DegreeTurn.item,1), "SS "," M ","  L", 'S', TrackItemIDs.tcRailSmallStraight.item, 'M', TrackItemIDs.tcRailMediumStraight.item, 'L', TrackItemIDs.tcRailLongStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail45DegreeTurn9x20.item,1), "SS "," L ","  V", 'S', TrackItemIDs.tcRailSmallStraight.item, 'V', TrackItemIDs.tcRailVeryLongStraight.item, 'L', TrackItemIDs.tcRailLongStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail45DegreeTurn10x22.item,1), "SM "," L ","  V", 'S', TrackItemIDs.tcRailSmallStraight.item, 'V', TrackItemIDs.tcRailVeryLongStraight.item, 'L', TrackItemIDs.tcRailLongStraight.item, 'M', TrackItemIDs.tcRailMediumStraight.item);
+		for (ItemStack itemStack : concretes)
+		{
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_CONCRETE_TYPE1_SmallStraight.item, 16),  "I I", "BPB", "I I", 'I', Items.iron_ingot, 'B', ItemIDs.partSpike.item, 'P', new ItemStack(itemStack.getItem(), 1, OreDictionary.WILDCARD_VALUE));
+		}
 
-		//s curves (parallel curves) regular
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallParallelCurve.item,1), "MS ", " SM", "   ", 'S', TrackItemIDs.tcRailSmallStraight.item, 'M', TrackItemIDs.tcRailMediumStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailMediumParallelCurve.item,1), "MM ", " MM", "   ", 'M', TrackItemIDs.tcRailMediumStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailLargeParallelCurve.item,1), "LM ", " SL", "   ", 'S', TrackItemIDs.tcRailSmallStraight.item, 'M', TrackItemIDs.tcRailMediumStraight.item, 'L', TrackItemIDs.tcRailLongStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail20x2SCurve.item,1), "LS ", " L ", " SL", 'S', TrackItemIDs.tcRailSmallStraight.item, 'L', TrackItemIDs.tcRailLongStraight.item);
+		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_CONCRETE_TYPE2_SmallStraight.item, 1), "   ", " B ", " I ", 'I', Items.water_bucket, 'B', TrackItemIDs.tcRail_CONCRETE_TYPE1_SmallStraight.item);
 
-		//90 switches regular
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailMediumSwitch.item, 1),  "G  ", "GHG", "G  ", 'G', TrackItemIDs.tcRailSmallStraight.item, 'H', TrackItemIDs.tcRailMediumTurn.item );
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailLargeSwitch.item, 1),  "G  ", "HIG", "G  ", 'G', TrackItemIDs.tcRailSmallStraight.item, 'H', TrackItemIDs.tcRailMediumStraight.item, 'I', TrackItemIDs.tcRailLargeTurn.item );
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailVeryLargeSwitch.item, 1),  "G  ", "HI ", "G  ", 'G', TrackItemIDs.tcRailSmallStraight.item, 'H', TrackItemIDs.tcRailLongStraight.item, 'I', TrackItemIDs.tcRailVeryLargeTurn.item );
-
-		//parallel switches regulah
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailMediumParallelSwitch.item, 1),  "I G", "IHH", "IH ", 'G', TrackItemIDs.tcRailSmallStraight.item, 'H', TrackItemIDs.tcRailMediumTurn.item, 'I', TrackItemIDs.tcRailMediumStraight.item );
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailLargeParallelSwitch.item, 1),  "L M", "MSC", "LC ", 'L', TrackItemIDs.tcRailLongStraight.item, 'C', TrackItemIDs.tcRailMediumTurn.item, 'M', TrackItemIDs.tcRailMediumStraight.item, 'S', TrackItemIDs.tcRailLargeTurn.item);
-
-		//45 switches regular
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailMedium45DegreeSwitch.item,1), "SS ","SS ","S  ", 'S', TrackItemIDs.tcRailSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailLarge45DegreeSwitch.item,1), "MM ","SS ","M  ", 'S', TrackItemIDs.tcRailSmallStraight.item, 'M', TrackItemIDs.tcRailMediumStraight.item);
-
-		//crossover switch regular
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailCrossoverSwitch10x2.item,1), "MM ","MM ","M  ",'M', TrackItemIDs.tcRailMediumStraight.item);
-
-		//diamond crossings
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailTwoWaysCrossing.item,1), " S ","SSS"," S ",'S', TrackItemIDs.tcRailSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailDiamondCrossing.item,1), "SS "," S "," SS",'S', TrackItemIDs.tcRailSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailDoubleDiamondCrossing.item,1), "S S"," M ","S S",'S', TrackItemIDs.tcRailSmallStraight.item, 'M', TrackItemIDs.tcRailMediumStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailFourWaysCrossing.item,1), "   ","SDS","   ",'S', TrackItemIDs.tcRailSmallStraight.item, 'D', TrackItemIDs.tcRailDoubleDiamondCrossing.item);
+		registerStandardTrackRecipes();
 
 		//gravel slopes regular
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSlopeGravel.item, 1), " TG","TGG","GGG", 'T', TrackItemIDs.tcRailMediumStraight.item, 'G', Blocks.gravel);
@@ -180,7 +144,7 @@ public class RecipeHandler extends AbstractRecipeHandler
 
 		//dynamic slopes regulah
 		//todo have clay be the fallback recipe if foxblocks isnt present, switch to rainbonite in foxblocks if present
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSmallStraight.item, 16), "I I", "B B", "I I", 'I', Items.iron_ingot, 'B', ItemIDs.partSpike.item);
+
 
 		if (ingotRainbontrium.isEmpty())
 		{
@@ -199,11 +163,6 @@ public class RecipeHandler extends AbstractRecipeHandler
 			}
 		}
 
-
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSlopeDynamic.item, 1), "   ", "  T", " T ", 'T', TrackItemIDs.tcRail1X3SlopeDynamic.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailLargeSlopeDynamic.item, 1), "   ", "  T", " T ", 'T', TrackItemIDs.tcRailSlopeDynamic.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailVeryLargeSlopeDynamic.item, 1), "   ", "  S", " T ", 'T', TrackItemIDs.tcRailLargeSlopeDynamic.item, 'S', TrackItemIDs.tcRailSlopeDynamic.item);
-
 		//railroad crossings
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', new ItemStack(Blocks.stained_hardened_clay, 1, 15));
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing1.item, 8), "TTT", "TBT", "TTT", 'T', TrackItemIDs.tcRailSmallStraight.item, 'B', new ItemStack(Blocks.stained_hardened_clay, 1, 7));
@@ -212,68 +171,8 @@ public class RecipeHandler extends AbstractRecipeHandler
 		//buffers
 		GameRegistry.addRecipe(new ItemStack(BlockIDs.stopper.block, 1), "PPP", "I I", " T ", 'P', Blocks.planks, 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRailSmallStraight.item);
 		GameRegistry.addRecipe(new ItemStack(BlockIDs.americanstopper.block, 1), "III", "I I", " T ", 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRailSmallStraight.item);
-
-
-
-		//straights sleeperless
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedMediumStraight.item, 1),  "G  ", "G  ", "G  ", 'G', TrackItemIDs.tcRailEmbeddedSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedLongStraight.item, 1),  "G  ", "G  ", "   ", 'G', TrackItemIDs.tcRailEmbeddedMediumStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedVeryLongStraight.item, 1),  "G  ", "G  ", "   ", 'G', TrackItemIDs.tcRailEmbeddedLongStraight.item);
-		GameRegistry.addShapelessRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSmallStraight.item, 1), TrackItemIDs.tcRailEmbedded1X1Turn.item);//convert 1x1 turn back to straight
-
-		//90 turns sleeperless
-		GameRegistry.addShapelessRecipe(new ItemStack(TrackItemIDs.tcRailEmbedded1X1Turn.item, 1), TrackItemIDs.tcRailEmbeddedSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedMediumTurn.item, 1),  "GG ", "G  ", "   ", 'G', TrackItemIDs.tcRailEmbeddedSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedLargeTurn.item, 1),  " GG", "GG ", "G  ", 'G', TrackItemIDs.tcRailEmbeddedSmallStraight.item);
-		//GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedVeryLargeTurn.item, 1), "SS ","S  ","   ", 'S', TrackItemIDs.tcRailEmbeddedMediumTurn.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedVeryLargeTurn.item, 1), " S ","S  ","   ", 'S', TrackItemIDs.tcRailEmbeddedLargeTurn.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSuperLargeTurn.item, 1), " TS","T  ","S  ",'T', TrackItemIDs.tcRailEmbeddedLargeTurn.item, 'S', TrackItemIDs.tcRailEmbeddedMediumTurn.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbedded29X29Turn.item,1 ), "AT ","TB ","   ",'T', TrackItemIDs.tcRailEmbeddedVeryLargeTurn.item, 'A', TrackItemIDs.tcRailEmbeddedLargeTurn.item, 'B', TrackItemIDs.tcRailEmbeddedSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbedded32X32Turn.item,1), " S ","S  ","   ", 'S', TrackItemIDs.tcRailEmbeddedSuperLargeTurn.item);
-
-		//45 turns sleeperless
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedMedium45DegreeTurn.item,1), "S  "," S "," S ", 'S', TrackItemIDs.tcRailEmbeddedSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedLarge45DegreeTurn.item,1), "SS "," S "," M ", 'S', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'M', TrackItemIDs.tcRailEmbeddedMediumStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedVeryLarge45DegreeTurn.item,1), "MS "," S "," M ", 'S', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'M', TrackItemIDs.tcRailEmbeddedMediumStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSuperLarge45DegreeTurn.item,1), "SS "," M ","  L", 'S', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'M', TrackItemIDs.tcRailEmbeddedMediumStraight.item, 'L', TrackItemIDs.tcRailEmbeddedLongStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbedded45DegreeTurn9x20.item,1), "SS "," L ","  V", 'S', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'V', TrackItemIDs.tcRailEmbeddedVeryLongStraight.item, 'L', TrackItemIDs.tcRailEmbeddedLongStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbedded45DegreeTurn10x22.item,1), "SM "," L ","  V", 'S', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'V', TrackItemIDs.tcRailEmbeddedVeryLongStraight.item, 'L', TrackItemIDs.tcRailEmbeddedLongStraight.item, 'M', TrackItemIDs.tcRailEmbeddedMediumStraight.item);
-
-		//s curves (parallel curves) sleeperless
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSmallParallelCurve.item,1), "MS ", " SM", "   ", 'S', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'M', TrackItemIDs.tcRailEmbeddedMediumStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedMediumParallelCurve.item,1), "MM ", " MM", "   ", 'M', TrackItemIDs.tcRailEmbeddedMediumStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedLargeParallelCurve.item,1), "LM ", " SL", "   ", 'S', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'M', TrackItemIDs.tcRailEmbeddedMediumStraight.item, 'L', TrackItemIDs.tcRailEmbeddedLongStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbedded20x2SCurve.item,1), "LS ", " L ", " SL", 'S', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'L', TrackItemIDs.tcRailEmbeddedLongStraight.item);
-
-		//90 switches sleeperless
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedMediumSwitch.item, 1),  "G  ", "GHG", "G  ", 'G', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'H', TrackItemIDs.tcRailEmbeddedMediumTurn.item );
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedLargeSwitch.item, 1),  "G  ", "HIG", "G  ", 'G', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'H', TrackItemIDs.tcRailEmbeddedMediumStraight.item, 'I', TrackItemIDs.tcRailEmbeddedLargeTurn.item );
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedVeryLargeSwitch.item, 1),  "G  ", "HI ", "G  ", 'G', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'H', TrackItemIDs.tcRailEmbeddedLongStraight.item, 'I', TrackItemIDs.tcRailEmbeddedVeryLargeTurn.item );
-
-		//parallel switches regulah
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedMediumParallelSwitch.item, 1),  "I G", "IHH", "IH ", 'G', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'H', TrackItemIDs.tcRailEmbeddedMediumTurn.item, 'I', TrackItemIDs.tcRailEmbeddedMediumStraight.item );
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedLargeParallelSwitch.item, 1),  "L M", "MSC", "LC ", 'L', TrackItemIDs.tcRailEmbeddedLongStraight.item, 'C', TrackItemIDs.tcRailEmbeddedMediumTurn.item, 'M', TrackItemIDs.tcRailEmbeddedMediumStraight.item, 'S', TrackItemIDs.tcRailEmbeddedLargeTurn.item);
-
-		//45 switches sleeperless
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedMedium45DegreeSwitch.item,1), "SS ","SS ","S  ", 'S', TrackItemIDs.tcRailEmbeddedSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedLarge45DegreeSwitch.item,1), "MM ","SS ","M  ", 'S', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'M', TrackItemIDs.tcRailEmbeddedMediumStraight.item);
-
-		//crossover switch sleeperless
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedCrossoverSwitch10x2.item,1), "MM ","MM ","M  ",'M', TrackItemIDs.tcRailEmbeddedMediumStraight.item);
-
-		//diamond crossings sleeperless
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedTwoWaysCrossing.item,1), " S ","SSS"," S ",'S', TrackItemIDs.tcRailEmbeddedSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedDiamondCrossing.item,1), "SS "," S "," SS",'S', TrackItemIDs.tcRailEmbeddedSmallStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedDoubleDiamondCrossing.item,1), "S S"," M ","S S",'S', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'M', TrackItemIDs.tcRailEmbeddedMediumStraight.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedFourWaysCrossing.item,1), "   ","SDS","   ",'S', TrackItemIDs.tcRailEmbeddedSmallStraight.item, 'D', TrackItemIDs.tcRailEmbeddedDoubleDiamondCrossing.item);
-
-		//dynamic slopes sleeperless
-		//todo have clay be the fallback recipe if foxblocks isnt present, switch to rainbonite in foxblocks if present
-
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSlopeDynamic.item, 1), "   ", "  T", " T ", 'T', TrackItemIDs.tcRailEmbedded1x3SlopeDynamic.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedLargeSlopeDynamic.item, 1), "   ", "  T", " T ", 'T', TrackItemIDs.tcRailEmbeddedSlopeDynamic.item);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedVeryLargeSlopeDynamic.item, 1), "   ", "  S", " T ", 'T', TrackItemIDs.tcRailEmbeddedLargeSlopeDynamic.item, 'S', TrackItemIDs.tcRailEmbeddedSlopeDynamic.item);
-
+		GameRegistry.addRecipe(new ItemStack(BlockIDs.embeddedStopper.block, 1), "PPP", "I I", " T ", 'P', Blocks.planks, 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRailEmbeddedSmallStraight.item);
+		GameRegistry.addRecipe(new ItemStack(BlockIDs.embeddedamericanstopper.block, 1), "III", "I I", " T ", 'I', Items.iron_ingot, 'T', TrackItemIDs.tcRailEmbeddedSmallStraight.item);
 
 
 		//paintbrush
@@ -306,6 +205,116 @@ public class RecipeHandler extends AbstractRecipeHandler
 		GameRegistry.addRecipe(new ItemStack(BlockIDs.oreTC.block, 8, 4), "XGG","GGG","GGG", Character.valueOf('G'), Blocks.gravel, Character.valueOf('X'), Blocks.snow);
 		GameRegistry.addRecipe(new ItemStack(BlockIDs.oreTC.block, 8, 3), "XGG","GGG","GGG", Character.valueOf('G'), Blocks.gravel, Character.valueOf('X'), Blocks.clay);
 
+	}
+
+	private void registerStandardTrackRecipes()
+	{
+		for (RailVariants railVariant : RailVariants.values())
+		{
+			HashMap<EnumCoreTrack, HashMap<String, EnumTracks>> tracks = EnumTracks.GetTracksByGroup(railVariant);
+			TrackItemIDs straight1X = tracks.get(EnumCoreTrack.CORE_SMALL_STRAIGHT).get("").getItem();
+			TrackItemIDs straight3X = tracks.get(EnumCoreTrack.CORE_MEDIUM_STRAIGHT).get("").getItem();
+			TrackItemIDs straight6X = tracks.get(EnumCoreTrack.CORE_LONG_STRAIGHT).get("").getItem();
+			TrackItemIDs straight12X = tracks.get(EnumCoreTrack.CORE_VERY_LONG_STRAIGHT).get("").getItem();
+			GameRegistry.addRecipe(new ItemStack(straight3X.item, 1),  "G  ", "G  ", "G  ", 'G', straight1X.item);
+			GameRegistry.addRecipe(new ItemStack(straight6X.item, 1),  "G  ", "G  ", "   ", 'G', straight3X.item);
+			GameRegistry.addRecipe(new ItemStack(straight12X.item, 1),  "G  ", "G  ", "   ", 'G', straight6X.item);
+
+
+
+			//90 turns regular
+			TrackItemIDs turn1X = tracks.get(EnumCoreTrack.CORE_1X_TURN).get("").getItem();
+			TrackItemIDs turn3X = tracks.get(EnumCoreTrack.CORE_3X_TURN).get("").getItem();
+			TrackItemIDs turn5X = tracks.get(EnumCoreTrack.CORE_5X_TURN).get("").getItem();
+			TrackItemIDs turn10X = tracks.get(EnumCoreTrack.CORE_10X_TURN).get("").getItem();
+			TrackItemIDs turn16X = tracks.get(EnumCoreTrack.CORE_16X_TURN).get("").getItem();
+			TrackItemIDs turn29x = tracks.get(EnumCoreTrack.CORE_29X_TURN).get("").getItem();
+			TrackItemIDs turn32x = tracks.get(EnumCoreTrack.CORE_32X_TURN).get("").getItem();
+			
+			GameRegistry.addShapelessRecipe(new ItemStack(turn1X.item, 1), straight1X.item);
+			GameRegistry.addShapelessRecipe(new ItemStack(straight1X.item, 1), turn1X.item);//convert 1x1 turn back to straight
+
+			GameRegistry.addRecipe(new ItemStack(turn3X.item, 1),  "GG ", "G  ", "   ", 'G', straight1X.item);
+			GameRegistry.addRecipe(new ItemStack(turn5X.item, 1),  " GG", "GG ", "G  ", 'G', straight1X.item);
+			GameRegistry.addRecipe(new ItemStack(turn10X.item, 1), " S ","S  ","   ", 'S', turn5X.item);
+			GameRegistry.addRecipe(new ItemStack(turn16X.item, 1), " TS","T  ","S  ",'T', turn5X.item, 'S', turn3X.item);
+			GameRegistry.addRecipe(new ItemStack(turn29x.item,1 ), "AT ","TB ","   ",'T', turn10X.item, 'A', turn5X.item, 'B', straight1X.item);
+			GameRegistry.addRecipe(new ItemStack(turn32x.item,1), " S ","S  ","   ", 'S', turn16X.item);
+
+			//45 turns regular
+			TrackItemIDs CORE_3X4_45DEGREE_TURN = tracks.get(EnumCoreTrack.CORE_3X4_45DEGREE_TURN).get("").getItem();
+			TrackItemIDs CORE_3X6_45DEGREE_TURN = tracks.get(EnumCoreTrack.CORE_3X6_45DEGREE_TURN).get("").getItem();
+			TrackItemIDs CORE_4X8_45DEGREE_TURN = tracks.get(EnumCoreTrack.CORE_4X8_45DEGREE_TURN).get("").getItem();
+			TrackItemIDs CORE_5X11_45DEGREE_TURN = tracks.get(EnumCoreTrack.CORE_5X11_45DEGREE_TURN).get("").getItem();
+			TrackItemIDs CORE_9X20_45DEGREE_TURN = tracks.get(EnumCoreTrack.CORE_9X20_45DEGREE_TURN).get("").getItem();
+			TrackItemIDs CORE_10x22_45DEGREE_TURN = tracks.get(EnumCoreTrack.CORE_10x22_45DEGREE_TURN).get("").getItem();
+			//TrackItemIDs turn32x = tracks.get(EnumCoreTrack.CORE_32X_TURN).getItem();
+			
+			GameRegistry.addRecipe(new ItemStack(CORE_3X4_45DEGREE_TURN.item,1), "S  "," S "," S ", 'S', straight1X.item);
+			GameRegistry.addRecipe(new ItemStack(CORE_3X6_45DEGREE_TURN.item,1), "SS "," S "," M ", 'S', straight1X.item, 'M', straight3X.item);
+			GameRegistry.addRecipe(new ItemStack(CORE_4X8_45DEGREE_TURN.item,1), "MS "," S "," M ", 'S', straight1X.item, 'M', straight3X.item);
+			GameRegistry.addRecipe(new ItemStack(CORE_5X11_45DEGREE_TURN.item,1), "SS "," M ","  L", 'S', straight1X.item, 'M', straight3X.item, 'L', straight6X.item);
+			GameRegistry.addRecipe(new ItemStack(CORE_9X20_45DEGREE_TURN.item,1), "SS "," L ","  V", 'S', straight1X.item, 'V', straight12X.item, 'L', straight6X.item);
+			GameRegistry.addRecipe(new ItemStack(CORE_10x22_45DEGREE_TURN.item,1), "SM "," L ","  V", 'S', straight1X.item, 'V', straight12X.item, 'L', straight6X.item, 'M', straight3X.item);
+
+			//s curves (parallel curves) regular
+			TrackItemIDs CORE_S_CURVE_2x8 = tracks.get(EnumCoreTrack.CORE_S_CURVE_2x8).get("").getItem();
+			TrackItemIDs CORE_S_CURVE_3x12 = tracks.get(EnumCoreTrack.CORE_S_CURVE_3x12).get("").getItem();
+			TrackItemIDs CORE_S_CURVE_4x16 = tracks.get(EnumCoreTrack.CORE_S_CURVE_4x16).get("").getItem();
+			TrackItemIDs CORE_S_CURVE_20x2 = tracks.get(EnumCoreTrack.CORE_S_CURVE_20x2).get("").getItem();
+
+			GameRegistry.addRecipe(new ItemStack(CORE_S_CURVE_2x8.item,1), "MS ", " SM", "   ", 'S', straight1X.item, 'M', straight3X.item);
+			GameRegistry.addRecipe(new ItemStack(CORE_S_CURVE_3x12.item,1), "MM ", " MM", "   ", 'M', straight3X.item);
+			GameRegistry.addRecipe(new ItemStack(CORE_S_CURVE_4x16.item,1), "LM ", " SL", "   ", 'S', straight1X.item, 'M', straight3X.item, 'L', straight6X.item);
+			GameRegistry.addRecipe(new ItemStack(CORE_S_CURVE_20x2.item,1), "LS ", " L ", " SL", 'S', straight1X.item, 'L', straight6X.item);
+
+
+			TrackItemIDs CORE_4x4_SWITCH = tracks.get(EnumCoreTrack.CORE_4x4_SWITCH).get("").getItem();
+			TrackItemIDs CORE_6x6_SWITCH = tracks.get(EnumCoreTrack.CORE_6x6_SWITCH).get("").getItem();
+			TrackItemIDs CORE_11x11_SWITCH = tracks.get(EnumCoreTrack.CORE_11x11_SWITCH).get("").getItem();
+
+			//90 switches regular
+			GameRegistry.addRecipe(new ItemStack(CORE_4x4_SWITCH.item, 1),  "G  ", "GHG", "G  ", 'G', straight1X.item, 'H', turn3X.item );
+			GameRegistry.addRecipe(new ItemStack(CORE_6x6_SWITCH.item, 1),  "G  ", "HIG", "G  ", 'G', straight1X.item, 'H', straight3X.item, 'I', turn5X.item );
+			GameRegistry.addRecipe(new ItemStack(CORE_11x11_SWITCH.item, 1),  "G  ", "HI ", "G  ", 'G', straight1X.item, 'H', straight6X.item, 'I', turn10X.item );
+
+			TrackItemIDs CORE_4x11_PARALLEL_SWITCH = tracks.get(EnumCoreTrack.CORE_4x11_PARALLEL_SWITCH).get("").getItem();
+			TrackItemIDs CORE_4x17_PARALLEL_SWITCH = tracks.get(EnumCoreTrack.CORE_4x17_PARALLEL_SWITCH).get("").getItem();
+			//parallel switches regulah
+			GameRegistry.addRecipe(new ItemStack(CORE_4x11_PARALLEL_SWITCH.item, 1),  "I G", "IHH", "IH ", 'G', straight1X.item, 'H', turn3X.item, 'I', straight3X.item );
+			GameRegistry.addRecipe(new ItemStack(CORE_4x17_PARALLEL_SWITCH.item, 1),  "L M", "MSC", "LC ", 'L', straight6X.item, 'C', turn3X.item, 'M', straight3X.item, 'S', turn5X.item);
+
+			//45 switches regular
+			TrackItemIDs CORE_3x5_45DEGREE_SWITCH = tracks.get(EnumCoreTrack.CORE_3x5_45DEGREE_SWITCH).get("").getItem();
+			TrackItemIDs CORE_4x8_45DEGREE_SWITCH = tracks.get(EnumCoreTrack.CORE_4x8_45DEGREE_SWITCH).get("").getItem();
+			GameRegistry.addRecipe(new ItemStack(CORE_3x5_45DEGREE_SWITCH.item,1), "SS ","SS ","S  ", 'S', straight1X.item);
+			GameRegistry.addRecipe(new ItemStack(CORE_4x8_45DEGREE_SWITCH.item,1), "MM ","SS ","M  ", 'S', straight1X.item, 'M', straight3X.item);
+
+			//crossover switch regular
+			TrackItemIDs CORE_10x2_CROSSOVER_SWITCH = tracks.get(EnumCoreTrack.CORE_10x2_CROSSOVER_SWITCH).get("").getItem();
+			GameRegistry.addRecipe(new ItemStack(CORE_10x2_CROSSOVER_SWITCH.item,1), "MM ","MM ","M  ",'M', straight3X.item);
+
+			//diamond crossings
+			TrackItemIDs CORE_TWO_WAYS_CROSSING = tracks.get(EnumCoreTrack.CORE_TWO_WAYS_CROSSING).get("").getItem();
+			TrackItemIDs CORE_DIAMOND_CROSSING = tracks.get(EnumCoreTrack.CORE_DIAMOND_CROSSING).get("").getItem();
+			TrackItemIDs CORE_DOUBLE_DIAMOND_CROSSING = tracks.get(EnumCoreTrack.CORE_DOUBLE_DIAMOND_CROSSING).get("").getItem();
+			TrackItemIDs CORE_FOUR_WAYS_CROSSING = tracks.get(EnumCoreTrack.CORE_FOUR_WAYS_CROSSING).get("").getItem();
+
+			GameRegistry.addRecipe(new ItemStack(CORE_TWO_WAYS_CROSSING.item,1), " S ","SSS"," S ",'S',  straight1X.item);
+			GameRegistry.addRecipe(new ItemStack(CORE_DIAMOND_CROSSING.item,1), "SS "," S "," SS",'S',  straight1X.item);
+			GameRegistry.addRecipe(new ItemStack(CORE_DOUBLE_DIAMOND_CROSSING.item,1), "S S"," M ","S S",'S',  straight1X.item, 'M', straight3X.item);
+			GameRegistry.addRecipe(new ItemStack(CORE_FOUR_WAYS_CROSSING.item,1), "   ","SDS","   ",'S',  straight1X.item, 'D', CORE_DOUBLE_DIAMOND_CROSSING.item);
+
+			//Dynamic Slopes
+			TrackItemIDs dynamicSlopes3 = tracks.get(CORE_3_SLOPE).get(BallastTypes.DYNAMIC.name()).getItem();
+			TrackItemIDs dynamicSlopes6 = tracks.get(CORE_6_SLOPE).get(BallastTypes.DYNAMIC.name()).getItem();
+			TrackItemIDs dynamicSlopes12 = tracks.get(CORE_12_SLOPE).get(BallastTypes.DYNAMIC.name()).getItem();
+			TrackItemIDs dynamicSlopes18 = tracks.get(CORE_18_SLOPE).get(BallastTypes.DYNAMIC.name()).getItem();
+
+			GameRegistry.addRecipe(new ItemStack(dynamicSlopes6.item, 1), "   ", "  T", " T ", 'T', dynamicSlopes3.item);
+			GameRegistry.addRecipe(new ItemStack(dynamicSlopes12.item, 1), "   ", "  T", " T ", 'T', dynamicSlopes6.item);
+			GameRegistry.addRecipe(new ItemStack(dynamicSlopes18.item, 1), "   ", "  S", " T ", 'T', dynamicSlopes12.item, 'S', dynamicSlopes6.item);
+		}
 	}
 
 	public void initItemRecipes() {//train wb recipes
