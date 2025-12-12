@@ -2244,7 +2244,7 @@ public class ModelF3a_new extends ModelConverter //Same as Filename
 		bodyModel[530].addShapeBox(0F, 0F, 0F, 1, 4, 1, 0F,-0.33F, 0F, -1.99F, 0F, 0.76F, -3F, 0F, 0.76F, 18F, -0.33F, 0F, 19.01F, -0.98F, -2.63F, 0F, 0.98F, -2.69F, 0F, 0.98F, -2.69F, 21F, -0.98F, -2.63F, 21F); // Box 768 stripe part cull
 		bodyModel[530].setRotationPoint(-24.25F, -12.25F, -11F);
 
-		bodyModel[531].addShapeBox(0F, 0F, 0F, 1, 4, 1, 0F,0F, 0.76F, -3F, -1F, 0.76F, -3F, -1F, 0.76F, 18F, 0F, 0.76F, 19F, -0.98F, -2.69F, 0F, 0.95F, -2.75F, 0F, 0.95F, -2.75F, 21F, -0.98F, -2.69F, 21F); // Box 768 stripe part cull
+		bodyModel[531].addShapeBox(0F, 0F, 0F, 1, 4, 1, 0F,0F, 0.76F, -3F, -1F, 0.76F, -3F, -1F, 0.76F, 18F, 0F, 0.76F, 18F, -0.98F, -2.69F, 0F, 0.95F, -2.75F, 0F, 0.95F, -2.75F, 21F, -0.98F, -2.69F, 21F); // Box 768 stripe part cull
 		bodyModel[531].setRotationPoint(-23.25F, -12.25F, -11F);
 	}
 	ModelBlombergBnew theTrucc = new ModelBlombergBnew();
