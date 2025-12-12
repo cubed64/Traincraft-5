@@ -14,6 +14,7 @@ item.tc:minecartACFGNRPO_30	AC&F GN RPO (30' mail)	com.jcirmodelsquad.tcjcir.veh
 item.tc:minecartACFRailbox	ACF Railbox	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.ACFRailbox	ACFRailbox_
 item.tc:minecartACFRailboxCushioned	ACF Railbox (Cushioned)	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.ACFRailboxCushioned	ACFRailboxCushioned_
 item.tc:minecartACFUPRPO60	AC&F UP RPO(60')	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.rpo.ACFUPRPO60	AC&F_lightweight_UPRPO60_
+item.tc:minecartACF_LN_KCS60SeatDividedCoach	AC&F L&N and KCS 60 Seat Divided Coach	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.ACF_LN_KCS60SeatDividedCoach	AC&F_LN_KCS60SeatDividedCoach_
 item.tc:minecartACF_SP_98seatcoach	AC&F SP 98 Seat Coach	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.ACF_SP_98seatcoach	acf_sp_72_c_1_
 item.tc:minecartAipkitExplorer	Aipkit Explorer	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.AipkitExplorer	aipkit_explorer
 item.tc:minecartAipkitExplorer2	Aipkit Explorer-II	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.AipkitExplorer2	aipkit_explorerii_
@@ -491,6 +492,7 @@ item.tc:minecartHuskyStackWellcar	40ftHuskyStackWellcar	com.jcirmodelsquad.tcjci
 item.tc:minecartICCBaywindowWP	ICCBaywindowWP	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.workcart.ICCBaywindowWP	iccbaywindow_
 item.tc:minecartICC_Bobber	ICC_Bobber	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.workcart.ICC_Bobber	icc_bobber_
 item.tc:minecartIngotPig	IngotPig	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.IngotPig	MoltenIngotPig_
+item.tc:minecartLNCoach2551Series	L&N Coach 2551 Series	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.LNCoach2551Series	LNCoach2551Series_
 item.tc:minecartMILW1935Baggage_Dinette	MILW 1935 Baggage-Dinette	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.combinecar.MILW1935Baggage_Dinette	MILW1935Baggage_Dinette_
 item.tc:minecartMILW1935Dorm_56SeatCoach	MILW 1935 Dormitory-56 Seat Coach	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.MILW1935Dorm_56SeatCoach	MILW1935Dorm_56SeatCoach_
 item.tc:minecartMILW1935Tap_Dinette	MILW 1935 Tap-Dinette	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.MILW1935Tap_Dinette	MILW1935Tap_Dinette_
