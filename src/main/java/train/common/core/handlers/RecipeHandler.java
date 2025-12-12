@@ -37,6 +37,9 @@ import static train.common.recipes.AssemblyTableRecipes.waterContainers;
 
 public class RecipeHandler extends AbstractRecipeHandler
 {
+	@GameRegistry.ObjectHolder("foxblocks:bolsterChisel")
+	public static final Item FOXBLOCKS_BolsterChisel = null;
+
 	public RecipeHandler()
 	{
 		initBlockRecipes();
@@ -115,8 +118,8 @@ public class RecipeHandler extends AbstractRecipeHandler
 
 		for (ItemStack itemStack : concretes)
 		{
-			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_CONCRETE_TYPE1_SmallStraight.item, 16),  "IBI", "IPI", "I I", 'I', Items.iron_ingot, 'B', ItemIDs.partSpike.item, 'P', new ItemStack(itemStack.getItem(), 1, OreDictionary.WILDCARD_VALUE));
-			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_CONCRETE_TYPE2_SmallStraight.item, 16),  "IBI", "IPI", "IWI", 'I', Items.iron_ingot, 'B', ItemIDs.partSpike.item, 'P', new ItemStack(itemStack.getItem(), 1, OreDictionary.WILDCARD_VALUE), 'W', Items.water_bucket);
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_CONCRETE_TYPE1_SmallStraight.item, 16),  "IBI", "IPI", "I I", 'I', Items.iron_ingot, 'B', ItemIDs.partSpike.item, 'P', itemStack);
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_CONCRETE_TYPE2_SmallStraight.item, 16),  "IBI", "IPI", "IWI", 'I', Items.iron_ingot, 'B', ItemIDs.partSpike.item, 'P', itemStack, 'W', Items.water_bucket);
 		}
 
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_CONCRETE_TYPE2_SmallStraight.item, 1), "   ", " B ", " I ", 'I', Items.water_bucket, 'B', TrackItemIDs.tcRail_CONCRETE_TYPE1_SmallStraight.item);
@@ -265,7 +268,12 @@ public class RecipeHandler extends AbstractRecipeHandler
 			GameRegistry.addRecipe(new ItemStack(straight6X.item, 1),  "G  ", "G  ", "   ", 'G', straight3X.item);
 			GameRegistry.addRecipe(new ItemStack(straight12X.item, 1),  "G  ", "G  ", "   ", 'G', straight6X.item);
 
-
+			if (FOXBLOCKS_BolsterChisel != null)
+			{
+				GameRegistry.addRecipe(new ItemStack(straight1X.item, 3),  " X ", " G ", "   ", 'G', straight3X.item, 'X', FOXBLOCKS_BolsterChisel);
+				GameRegistry.addRecipe(new ItemStack(straight3X.item, 2),  " X ", " G ", "   ", 'G', straight6X.item, 'X', FOXBLOCKS_BolsterChisel);
+				GameRegistry.addRecipe(new ItemStack(straight6X.item, 2),  " X ", " G ", "   ", 'G', straight12X.item, 'X', FOXBLOCKS_BolsterChisel);
+			}
 
 			//90 turns regular
 			TrackItemIDs turn1X = tracks.get(EnumCoreTrack.CORE_1X_TURN).get("").getItem();
@@ -285,6 +293,14 @@ public class RecipeHandler extends AbstractRecipeHandler
 			GameRegistry.addRecipe(new ItemStack(turn16X.item, 1), " TS","T  ","S  ",'T', turn5X.item, 'S', turn3X.item);
 			GameRegistry.addRecipe(new ItemStack(turn29x.item,1 ), "AT ","TB ","   ",'T', turn10X.item, 'A', turn5X.item, 'B', straight1X.item);
 			GameRegistry.addRecipe(new ItemStack(turn32x.item,1), " S ","S  ","   ", 'S', turn16X.item);
+
+			if (FOXBLOCKS_BolsterChisel != null)
+			{
+				GameRegistry.addRecipe(new ItemStack(straight1X.item, 3),  " X ", " G ", "   ", 'G', turn3X.item, 'X', FOXBLOCKS_BolsterChisel);
+				GameRegistry.addRecipe(new ItemStack(straight1X.item, 5),  " X ", " G ", "   ", 'G', turn5X.item, 'X', FOXBLOCKS_BolsterChisel);
+				GameRegistry.addRecipe(new ItemStack(turn5X.item, 2),  " X ", " G ", "   ", 'G', turn10X.item, 'X', FOXBLOCKS_BolsterChisel);
+				GameRegistry.addRecipe(new ItemStack(turn16X.item, 2),  " X ", " G ", "   ", 'G', turn32x.item, 'X', FOXBLOCKS_BolsterChisel);
+			}
 
 			//45 turns regular
 			TrackItemIDs CORE_3X4_45DEGREE_TURN = tracks.get(EnumCoreTrack.CORE_3X4_45DEGREE_TURN).get("").getItem();
@@ -371,6 +387,14 @@ public class RecipeHandler extends AbstractRecipeHandler
 			GameRegistry.addRecipe(new ItemStack(dynamicSlopes6.item, 1), "   ", "  T", " T ", 'T', dynamicSlopes3.item);
 			GameRegistry.addRecipe(new ItemStack(dynamicSlopes12.item, 1), "   ", "  T", " T ", 'T', dynamicSlopes6.item);
 			GameRegistry.addRecipe(new ItemStack(dynamicSlopes18.item, 1), "   ", "  S", " T ", 'T', dynamicSlopes12.item, 'S', dynamicSlopes6.item);
+			GameRegistry.addRecipe(new ItemStack(dynamicSlopes18.item, 1), "  S", " S ", "S  ", 'S', dynamicSlopes6.item);
+
+			if (FOXBLOCKS_BolsterChisel != null)
+			{
+				GameRegistry.addRecipe(new ItemStack(dynamicSlopes6.item, 3),  " X ", " G ", "   ", 'G', dynamicSlopes18.item, 'X', FOXBLOCKS_BolsterChisel);
+				GameRegistry.addRecipe(new ItemStack(dynamicSlopes6.item, 2),  " X ", " G ", "   ", 'G', dynamicSlopes12.item, 'X', FOXBLOCKS_BolsterChisel);
+				GameRegistry.addRecipe(new ItemStack(dynamicSlopes3.item, 2),  " X ", " G ", "   ", 'G', dynamicSlopes6.item, 'X', FOXBLOCKS_BolsterChisel);
+			}
 		}
 	}
 
