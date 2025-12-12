@@ -398,7 +398,20 @@ public class RecipeHandler extends AbstractRecipeHandler
 		}
 	}
 
+	public void initFoxDrivesRecipe()
+	{
+		Item FOXDRIVES_workday_1980_utility_hirail = GameRegistry.findItem("foxdrives", "workday_1980_utility_hirail");
+		if (FOXDRIVES_workday_1980_utility_hirail != null)
+		{
+			GameRegistry.addRecipe(new ItemStack(ItemIDs.minecartWorkdayHyrail.item, 1),  "   ", " G ", "   ", 'G', FOXDRIVES_workday_1980_utility_hirail);
+			GameRegistry.addRecipe(new ItemStack(FOXDRIVES_workday_1980_utility_hirail, 1),  "   ", " G ", "   ", 'G', ItemIDs.minecartWorkdayHyrail.item);
+		}
+	}
+
+
 	public void initItemRecipes() {//train wb recipes
+
+		initFoxDrivesRecipe();
 
 		ArrayList<ItemStack> steel = OreDictionary.getOres("ingotSteel");//doesnt work with mekanism steel
 		ArrayList<ItemStack> iron = OreDictionary.getOres("ingotIron");
