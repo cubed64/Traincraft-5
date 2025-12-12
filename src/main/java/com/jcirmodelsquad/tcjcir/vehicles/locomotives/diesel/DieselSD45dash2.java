@@ -43,7 +43,7 @@ public class DieselSD45dash2 extends DieselTrain {
         InsertTexture(20, "Blandsville & Blankerston");
         InsertTexture(22, "CSXT (Yn3)");
         InsertTexture(23, "Morristown Tenneva & Southern", LockoutGroup.MTS);
-        InsertTexture(24, "Glitter like the golden beautiful bitch you are");
+        InsertTexture(24, "Glitter like the golden beautiful betch you are");
         InsertTexture(25, "GLC (Cigar Band)");
         InsertTexture(26, "AA (Fog)");
 

@@ -19,7 +19,7 @@ public class DieselRSFDL extends DieselTrain {
         super(world, EnumTrains.RSFDL.getTankCapacity(), LiquidManager.dieselFilter());
 
         InsertTexture(0, "not FNCC");
-        InsertTexture(1, "peenor lol");
+        InsertTexture(1, "peenore lol");
 
     }
 

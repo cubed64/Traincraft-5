@@ -23,8 +23,8 @@ public class SteamAlco2102 extends SteamTrain {
 		InsertTexture(1, "Sugar Pine Lumber");
 		InsertTexture(2, "Consolidated Builders Inc");
 		InsertTexture(3, "Kaiser Steel");
-		InsertTexture(4, "Oil Clusters & Garden");
-		InsertTexture(5, "Washaska Resources", LockoutGroup.BIDA);
+		InsertTexture(4, "Oil Clusters & Garden", LockoutGroup.CUBED);
+		InsertTexture(5, "Washaska Resources \" The HOUND \"", LockoutGroup.BIDA);
 	}
 
 	@Override

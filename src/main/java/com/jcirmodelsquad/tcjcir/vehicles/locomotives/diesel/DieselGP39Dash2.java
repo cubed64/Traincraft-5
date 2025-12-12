@@ -5,6 +5,7 @@ import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
 import train.common.core.util.TraincraftUtil;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -20,8 +21,8 @@ public class DieselGP39Dash2 extends DieselTrain {
         
         InsertTexture(0, "MKT");
         InsertTexture(1, "FURRX (Ex CSWR)");
-        InsertTexture(2, "Nomansi & Eastern Pacific");
-        InsertTexture(3, "NEP (Late)");
+        InsertTexture(2, "Nomansi & Eastern Pacific", LockoutGroup.CUBED);
+        InsertTexture(3, "NEP (Late)", LockoutGroup.CUBED);
         InsertTexture(4, "CSXT (YN3)");
 
     }

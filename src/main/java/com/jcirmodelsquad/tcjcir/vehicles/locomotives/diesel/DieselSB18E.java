@@ -19,7 +19,7 @@ public class DieselSB18E extends DieselTrain {
         super(world, EnumTrains.SB18E.getTankCapacity(), LiquidManager.dieselFilter());
 
         InsertTexture(0, "CEE Factory Blank (Phase 2)");
-        InsertTexture(1, "Nomansi & Eastern Pacific");
+        InsertTexture(1, "Nomansi & Eastern Pacific", LockoutGroup.CUBED);
         InsertTexture(2, "Western Pacific");
         InsertTexture(3, "Western Pacific");
         InsertTexture(4, "Galesburg Clinton & Midland i think");

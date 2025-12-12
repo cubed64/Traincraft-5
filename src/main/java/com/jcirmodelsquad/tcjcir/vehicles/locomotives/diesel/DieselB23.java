@@ -44,7 +44,7 @@ public class DieselB23 extends DieselTrain {
         InsertTexture(23, "ADT", LockoutGroup.ADT);
         InsertTexture(24, "BNSF H1 (Ex ATSF)");
         InsertTexture(25, "Atlas & Red Sands Railroad", LockoutGroup.BIDA);
-        InsertTexture(26, "Magnolia");
+        InsertTexture(26, "Magnolia", LockoutGroup.MAG);
         InsertTexture(27, "CNRC 1901 & 1903", LockoutGroup.CNRC);
         InsertTexture(28, "CNRC 1902", LockoutGroup.CNRC);
         InsertTexture(29, "CSXT (Stealth)");

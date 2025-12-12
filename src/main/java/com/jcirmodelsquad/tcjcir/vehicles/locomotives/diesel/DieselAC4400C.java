@@ -23,7 +23,7 @@ public class DieselAC4400C extends DieselTrain {
         InsertTexture(2, "North Fox (KIT-80)", LockoutGroup.FNCC);
         InsertTexture(3, "CEFX");
         InsertTexture(4, "Blandsville & Blankerston");
-        InsertTexture(5, "NEP");
+        InsertTexture(5, "NEP", LockoutGroup.CUBED);
     }
 
     @Override

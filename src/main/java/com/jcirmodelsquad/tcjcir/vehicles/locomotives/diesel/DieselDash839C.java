@@ -23,11 +23,11 @@ public class DieselDash839C extends DieselTrain {
         InsertTexture(1, "CSXT (YN2)");
         InsertTexture(2, "CSXT (YN3)");
         InsertTexture(3, "Norfolk Southern");
-        InsertTexture(4, "Nomansi and Eastern Pacific");
-        InsertTexture(5, "Nomansi and Eastern Pacific (Late)");
+        InsertTexture(4, "Nomansi and Eastern Pacific", LockoutGroup.CUBED);
+        InsertTexture(5, "Nomansi and Eastern Pacific (Late)", LockoutGroup.CUBED);
         InsertTexture(6, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(7, "Blandsville & Blankerston");
-        InsertTexture(8, "Magnolia Acres");
+        InsertTexture(8, "Magnolia Acres", LockoutGroup.MAG);
         InsertTexture(9, "Nautilus");
         InsertTexture(10, "Ann Arbor (but awesomer)");
         InsertTexture(11, "CEEX 101", LockoutGroup.BIDA);

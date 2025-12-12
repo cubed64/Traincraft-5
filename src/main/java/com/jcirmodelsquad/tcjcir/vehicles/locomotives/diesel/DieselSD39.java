@@ -22,9 +22,9 @@ public class DieselSD39 extends DieselTrain {
         InsertTexture(0, "BNSF");
         InsertTexture(1, "Blandsville & Blankerston");
         InsertTexture(2, "TORE");
-        InsertTexture(3, "NEP");
-        InsertTexture(4, "NEP");
-        InsertTexture(5, "NEP");
+        InsertTexture(3, "NEP", LockoutGroup.CUBED);
+        InsertTexture(4, "NEP", LockoutGroup.CUBED);
+        InsertTexture(5, "NEP", LockoutGroup.CUBED);
         InsertTexture(6, "FURRX");
         InsertTexture(7, "Carbondale & Pine Valley", LockoutGroup.CPV);
 

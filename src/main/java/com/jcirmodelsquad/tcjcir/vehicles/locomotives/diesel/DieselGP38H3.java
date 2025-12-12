@@ -4,6 +4,7 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -18,7 +19,7 @@ public class DieselGP38H3 extends DieselTrain {
         super(world, EnumTrains.GP38H3.getTankCapacity(), LiquidManager.dieselFilter());
         
         InsertTexture(0, "Amtrak");
-        InsertTexture(1, "Unexpected Cubed in the Bagging Area");
+        InsertTexture(1, "Unexpected Cubed in the Bagging Area", LockoutGroup.CUBED);
 
     }
 

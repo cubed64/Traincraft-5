@@ -29,7 +29,7 @@ public class DieselSW1500 extends DieselTrain {
         InsertTexture(7, "FNCC (DRW)", LockoutGroup.FNCC);
         InsertTexture(8, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(9, "Indiana Harbor Belt");
-        InsertTexture(10, "Nomansi and Eastern Pacific? maybe?");
+        InsertTexture(10, "Nomansi and Eastern Pacific? maybe?", LockoutGroup.CUBED);
         InsertTexture(11, "CSXT (Yn3)");
         InsertTexture(12, "Port of Latona Terminal Railroad");
         InsertTexture(13, "Morristown Tenneva & Southern (The 1701 Trekkie Unit)", LockoutGroup.MTS);

@@ -22,7 +22,7 @@ public class DieselSD70ACe extends DieselTrain {
         InsertTexture(0, "Blandsville & Blankerston");
         InsertTexture(1, "FURRX Lease");
         InsertTexture(2, "CSXT Thundercab");
-        InsertTexture(3, "PRLX C&O Heritable");
+        InsertTexture(3, "PRLX \"C&O Heritable\"");
         InsertTexture(4, "CSXT What If Whispercab, Hunter Harrison Killed it");
         InsertTexture(5, "BNSF Whispercab");
         InsertTexture(6, "BNSF Thundercab");

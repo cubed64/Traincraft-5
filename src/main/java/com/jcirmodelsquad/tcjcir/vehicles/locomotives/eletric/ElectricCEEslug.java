@@ -18,7 +18,7 @@ public class ElectricCEEslug extends ElectricTrain
 
     public ElectricCEEslug(World world) {
         super(world);
-        InsertTexture(0, "NEP SUB-4");
+        InsertTexture(0, "NEP SUB-4", LockoutGroup.CUBED);
         InsertTexture(1, "FNCC S111, S112, & S114", LockoutGroup.FNCC);
         InsertTexture(2, "FNCC S113", LockoutGroup.FNCC);
         InsertTexture(3, "Blandsville & Blankerston");

@@ -39,12 +39,12 @@ public class DieselU23B extends DieselTrain {
         InsertTexture(17, "CFW 558", LockoutGroup.BIDA);
         InsertTexture(18, "Morristown Tenneva & Southern", LockoutGroup.MTS);
         InsertTexture(19, "Milwaukee Road");
-        InsertTexture(20, "Nomansi & Eastern Pacific");
+        InsertTexture(20, "Nomansi & Eastern Pacific", LockoutGroup.CUBED);
         InsertTexture(21, "ADT", LockoutGroup.ADT);
         InsertTexture(22, "ADT (Ex UP)", LockoutGroup.ADT);
         InsertTexture(23, "Suffern Hoboken Interstate Transfer 211");
         InsertTexture(24, "Detroit Export System", LockoutGroup.DES);
-        InsertTexture(25, "Magnolia Properties");
+        InsertTexture(25, "Magnolia Properties", LockoutGroup.MAG);
         InsertTexture(26, "AGW");
         InsertTexture(27, "CNRC 5001 & 5002", LockoutGroup.CNRC);
         InsertTexture(28, "CSXT (Bluedown)");

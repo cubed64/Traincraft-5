@@ -7,7 +7,7 @@ public enum LockoutGroup implements ILockoutGroup
 {
     DEFAULT,
 
-    //tbeas rrs
+    //tbea
     SPR("932ac07f-59c3-43ec-b11d-a26ea08c77d9"), //steampunk rail
     SCP("932ac07f-59c3-43ec-b11d-a26ea08c77d9"), //scp
 
@@ -24,6 +24,10 @@ public enum LockoutGroup implements ILockoutGroup
     PDEV("d46213e9-ea09-40e7-9ec9-595903d98e17"), //Peninsula Development & Improvement Company Railroad
     SGPR(),//sargosa
     ADT(),//divs ADT
+
+    //Cubed
+    MAG("47959692-7c74-4734-8a43-7fc59bc9c8e8"), //Magnolia Acres MFG
+    CUBED("47959692-7c74-4734-8a43-7fc59bc9c8e8"), //cubed railroads
 
     //messi
     MTS("8eb7bc43-c2c4-4b45-8329-4c5260c0fbf0"), //Morristown Tenneva & Southern

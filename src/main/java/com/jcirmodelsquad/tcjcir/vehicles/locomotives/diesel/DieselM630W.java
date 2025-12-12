@@ -5,6 +5,7 @@ import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
 import train.common.core.util.TraincraftUtil;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -20,7 +21,7 @@ public class DieselM630W extends DieselTrain {
         super(world, EnumTrains.M630W.getTankCapacity(), LiquidManager.dieselFilter());
         
         InsertTexture(0, "Blandsville & Blankerston");
-        InsertTexture(1, "North Fox & Yukon Route (FNCC, KIT-L, Big Canon)");
+        InsertTexture(1, "North Fox & Yukon Route (FNCC, KIT-L, Big Canon)", LockoutGroup.FNCC);
         InsertTexture(2, "BCRail");
 
     }

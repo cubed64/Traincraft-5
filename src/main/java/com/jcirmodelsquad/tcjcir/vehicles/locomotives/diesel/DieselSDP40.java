@@ -21,8 +21,8 @@ public class DieselSDP40 extends DieselTrain {
 
         //when the
         InsertTexture(0, "Burlington Northern");
-        InsertTexture(1, "NEP");
-        InsertTexture(2, "NEPKIN");
+        InsertTexture(1, "NEP", LockoutGroup.CUBED);
+        InsertTexture(2, "NEPKIN", LockoutGroup.CUBED);
         InsertTexture(3, "that one chopass SDP that cubed is obsessed with");
         InsertTexture(4, "Blandsville & Blankerston");
         InsertTexture(5, "Burlington Northern 6396");

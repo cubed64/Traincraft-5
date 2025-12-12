@@ -4,6 +4,7 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -16,7 +17,7 @@ public class DieselFA2 extends DieselTrain {
         return EnumSounds.DieselFA2;
     }
     public DieselFA2(World world) {
-        super(world, EnumTrains.FA1.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, EnumTrains.FA2.getTankCapacity(), LiquidManager.dieselFilter());
 
         InsertTexture(0, "New York Central (Lightning)");
         InsertTexture(1, "Chicago Northwestern");
@@ -28,7 +29,7 @@ public class DieselFA2 extends DieselTrain {
         InsertTexture(7, "Great Northern (Steam Gen Solid 2)");
         InsertTexture(8, "Canadian National (Old)");
         InsertTexture(9, "Canadian National (Stripes)");
-        InsertTexture(10, "Galesburg Clinton & Midland (FPA-2)");
+        InsertTexture(10, "Galesburg Clinton & Midland (FPA-2)", LockoutGroup.GCM);
         InsertTexture(11, "WM (Speed Lettering)");
         InsertTexture(12, "WM (Circus)");
     }

@@ -16,7 +16,7 @@ public class Tender10k extends Tender  {
         InsertTexture(0, "Blank");
         InsertTexture(1, "Spoof");
         InsertTexture(2, "WP");
-        InsertTexture(3, "NEP-WP 334 aux tender");
+        InsertTexture(3, "NEP-WP 334 aux tender", LockoutGroup.CUBED);
         InsertTexture(4, "WPMW");
         InsertTexture(5, "DLMR Herald Logo");
         InsertTexture(6, "DLMR Text Logo");

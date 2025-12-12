@@ -27,7 +27,7 @@ public class DieselSD9 extends DieselTrain {
         InsertTexture(3, "MILW (Typeface)");
         InsertTexture(4, "FNCC 201 & 202 (Kit-L)", LockoutGroup.FNCC);
         InsertTexture(5, "Blandsville Pacific");
-        InsertTexture(6, "OC&G");
+        InsertTexture(6, "OC&G", LockoutGroup.CUBED);
         InsertTexture(7, "DRGW");
         InsertTexture(8, "DRGW (5305, Low Hood)");
         InsertTexture(9, "ADT", LockoutGroup.ADT);

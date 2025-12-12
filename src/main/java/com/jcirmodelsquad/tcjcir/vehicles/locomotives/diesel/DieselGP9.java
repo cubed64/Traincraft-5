@@ -30,8 +30,8 @@ public class DieselGP9 extends DieselTrain {
         InsertTexture(7, "Lisha & Watson (High Hood)", LockoutGroup.LW);
         InsertTexture(8, "Lisha & Watson (Chop Nose)", LockoutGroup.LW);
         InsertTexture(9, "Blandsville & Blankerston");
-        InsertTexture(10, "Nomansi & Eastern Pacific (Early)");
-        InsertTexture(11, "Nomansi & Eastern Pacific");
+        InsertTexture(10, "Nomansi & Eastern Pacific (Early)", LockoutGroup.CUBED);
+        InsertTexture(11, "Nomansi & Eastern Pacific", LockoutGroup.CUBED);
         InsertTexture(12, "Milwaukee Road");
         InsertTexture(13, "Canadian Pacific (Script)");
         InsertTexture(14, "Denver & Rio Grande Western (Early)");
@@ -40,7 +40,7 @@ public class DieselGP9 extends DieselTrain {
         InsertTexture(17, "Spokane Portland & Seattle (Early)");
         InsertTexture(18, "Spokane Portland & Seattle (Middle Era)");
         InsertTexture(19, "Spokane Portland & Seattle (Late)");
-        InsertTexture(20, "Magnolia Acres");
+        InsertTexture(20, "Magnolia Acres", LockoutGroup.MAG);
         InsertTexture(21, "New York Central (Early)");
         InsertTexture(22, "New York Central (Lightning Bolt)");
         InsertTexture(23, "New York Central (Late)");

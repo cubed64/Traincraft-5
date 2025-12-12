@@ -24,7 +24,7 @@ public class DieselSW1000 extends DieselTrain {
         InsertTexture(1, "Blandsville & Blankerston");
         InsertTexture(2, "Carbondale & Pine Valley", LockoutGroup.CPV);
         InsertTexture(3, "Rio Grande");
-        InsertTexture(4, "Nomansi and Eastern Pacific");
+        InsertTexture(4, "Nomansi and Eastern Pacific", LockoutGroup.CUBED);
         InsertTexture(5, "Southern Peenor Belt");
         InsertTexture(6, "Southern Port Belt (BN Patch)");
         InsertTexture(7, "Thunder Valley Transportation District (Falcon Area Rapid Transit)");

@@ -4,6 +4,7 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -19,8 +20,8 @@ public class DieselSD40A extends DieselTrain {
         super(world, EnumTrains.SD40A.getTankCapacity(), LiquidManager.dieselFilter());
 
         //when the
-        InsertTexture(0, "NEP (Later)");
-        InsertTexture(1, "NEP (Early)");
+        InsertTexture(0, "NEP (Later)", LockoutGroup.CUBED);
+        InsertTexture(1, "NEP (Early)", LockoutGroup.CUBED);
         InsertTexture(2, "Illinois Central 6009 (Death Star)");
         InsertTexture(3, "Illinois Central 6009 (Operation Lifesaver)");
         InsertTexture(4, "Illinois Central (1970's)");

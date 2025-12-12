@@ -27,13 +27,13 @@ public class DieselSW1 extends DieselTrain {
         InsertTexture(4, "ARR (Later)");
         InsertTexture(5, "WP");
         InsertTexture(6, "WP");
-        InsertTexture(7, "Magnolia");
+        InsertTexture(7, "Magnolia", LockoutGroup.MAG);
         InsertTexture(8, "Carbondale & Pine Valley", LockoutGroup.CPV);
         InsertTexture(9, "DLMR");
         InsertTexture(10, "DLMR");
         InsertTexture(11, "POOP TRAIN RAILROAD");
-        InsertTexture(12, "NEP");
-        InsertTexture(13, "NEP MOW");
+        InsertTexture(12, "NEP", LockoutGroup.CUBED);
+        InsertTexture(13, "NEP MOW", LockoutGroup.CUBED);
         InsertTexture(14, "NYC");
         InsertTexture(15, "NYC");
         InsertTexture(16, "ur mom");

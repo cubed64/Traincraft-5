@@ -5,6 +5,7 @@ import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
 import train.common.core.util.TraincraftUtil;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -18,7 +19,7 @@ public class DieselAC4400CW extends DieselTrain {
         super(world, EnumTrains.AC4400CW.getTankCapacity(), LiquidManager.dieselFilter());
         
         InsertTexture(0, "CSXT (YN2)");
-        InsertTexture(1, "Nomansi and Eastern Pacific");
+        InsertTexture(1, "Nomansi and Eastern Pacific", LockoutGroup.CUBED);
         InsertTexture(2, "Blandsville & Blankerston");
     }
 

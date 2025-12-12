@@ -12,7 +12,7 @@ public class SlugMA extends AbstractTankSlug
 		super(world, EnumTrains.SlugMA);
 		InsertTexture(0, "ANE SMA-1", LockoutGroup.ANE);
 		InsertTexture(1, "ANE SMA-2", LockoutGroup.ANE);
-		InsertTexture(2, "Magnolia");
+		InsertTexture(2, "Magnolia", LockoutGroup.MAG);
 		InsertTexture(3, "CSXT");
 		InsertTexture(4, "ATSF");
 	}

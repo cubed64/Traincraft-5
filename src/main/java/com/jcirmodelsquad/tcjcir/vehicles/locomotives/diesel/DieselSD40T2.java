@@ -28,8 +28,8 @@ public class DieselSD40T2 extends DieselTrain {
         InsertTexture(5, "Northern Railroad");
         InsertTexture(6, "EMD Demo/Lease");
         InsertTexture(7, "Blandsville & Blankerston");
-        InsertTexture(8, "NEP");
-        InsertTexture(9, "Magnolia Acres");
+        InsertTexture(8, "NEP", LockoutGroup.CUBED);
+        InsertTexture(9, "Magnolia Acres", LockoutGroup.MAG);
         InsertTexture(10, "Run 8 & Western");
         InsertTexture(11, "Paradox Rail");
         InsertTexture(12, "Avanste Northeastern", LockoutGroup.ANE);

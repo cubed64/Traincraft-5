@@ -26,7 +26,7 @@ public class DieselS12 extends DieselTrain {
         InsertTexture(3, "hamburger helper railroad");
         InsertTexture(4, "DDVR 30 & 31");
         InsertTexture(5, "FMSR", LockoutGroup.FMSR);
-        InsertTexture(6, "OC&G (Ex FMSR 164)");
+        InsertTexture(6, "OC&G (Ex FMSR 164)", LockoutGroup.CUBED);
         InsertTexture(7, "Monongahela");
         InsertTexture(8, "SP Tigerstripe");
     }

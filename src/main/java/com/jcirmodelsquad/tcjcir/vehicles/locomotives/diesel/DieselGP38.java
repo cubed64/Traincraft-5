@@ -22,8 +22,8 @@ public class DieselGP38 extends DieselTrain {
         InsertTexture(0, "Fox Union Rail Resources (FURRX)");
         InsertTexture(1, "FNCC (GP38ac, Kit-L)", LockoutGroup.FNCC);
         InsertTexture(2, "Blandsville & Blankerston");
-        InsertTexture(3, "Nomansi & Eastern Pacific");
-        InsertTexture(4, "Nomansi & Eastern Pacific (GP38R)");
+        InsertTexture(3, "Nomansi & Eastern Pacific", LockoutGroup.CUBED);
+        InsertTexture(4, "Nomansi & Eastern Pacific (GP38R)", LockoutGroup.CUBED);
         InsertTexture(5, "ATSF (Pinstripe)");
         InsertTexture(6, "ATSF (Freightbonnet)");
         InsertTexture(7, "ATSF (Kodachrome)");
