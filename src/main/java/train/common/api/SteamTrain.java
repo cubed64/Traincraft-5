@@ -33,12 +33,25 @@ public abstract class SteamTrain extends Locomotive implements IFluidHandler {
 	 * @param world
 	 * @param capacity
 	 */
+	@Deprecated // Use SteamTrain(World world)
 	public SteamTrain(World world, int capacity)
 	{
 		this(capacity, world, null);
 	}
 
-	public SteamTrain(World world, int capacity, FluidStack filter) {
+	public SteamTrain(World world)
+	{
+		this(0, world, null);
+	}
+
+	public SteamTrain(World world, FluidStack filter)
+	{
+		this(world, 0, filter);
+	}
+
+	@Deprecated // Use SteamTrain(World world, FluidStack filter)
+	public SteamTrain(World world, int capacity, FluidStack filter)
+	{
 		this(capacity, world, filter);
 		fuelTrain = 0;
 		locoInvent = new ItemStack[inventorySize];
@@ -46,11 +59,11 @@ public abstract class SteamTrain extends Locomotive implements IFluidHandler {
 
 	private SteamTrain(int capacity, World world, FluidStack filter) {
 		super(world);
-		this.maxTank = capacity;
+		this.maxTank = this.trainSpec.getTankCapacity();
 		if (filter == null) {
-			this.theTank = LiquidManager.getInstance().new StandardTank(capacity);
+			this.theTank = LiquidManager.getInstance().new StandardTank(this.trainSpec.getTankCapacity());
 		} else {
-			this.theTank = LiquidManager.getInstance().new FilteredTank(capacity, filter);
+			this.theTank = LiquidManager.getInstance().new FilteredTank(this.trainSpec.getTankCapacity(), filter);
 		}
 		tankArray[0] = theTank;
 		dataWatcher.addObject(4, 0);

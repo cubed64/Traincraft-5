@@ -9,13 +9,13 @@ package train.common.tile.tileStopper;
 
 import train.common.tile.BaseStopperTileEntity;
 
-public class TileStopper extends BaseStopperTileEntity {
-	public TileStopper() {
+public class TileGenericStopper extends BaseStopperTileEntity {
+	public TileGenericStopper() {
         super();
         //facingMeta = this.getBlockMetadata(); // Changed from this.blockMetadata to the method call to avoid receiving invalid Metadata.
 	}
 	
-	public TileStopper(int meta){
+	public TileGenericStopper(int meta){
 		
 		super(meta);
 	}

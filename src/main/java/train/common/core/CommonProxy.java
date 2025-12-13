@@ -40,14 +40,14 @@ import train.common.mtc.tile.*;
 import train.common.tile.*;
 import train.common.tile.tileStopper.TileAmericanStopper;
 import train.common.tile.tileStopper.concrete_type1.TileConcreteType1_AmericanStopper;
-import train.common.tile.tileStopper.concrete_type1.TileConcreteType1_Stopper;
+import train.common.tile.tileStopper.concrete_type1.TileConcreteType1_Generic_Stopper;
 import train.common.tile.tileStopper.concrete_type2.TileConcreteType2_AmericanStopper;
-import train.common.tile.tileStopper.concrete_type2.TileConcreteType2_Stopper;
+import train.common.tile.tileStopper.concrete_type2.TileConcreteType2_Generic_Stopper;
 import train.common.tile.tileStopper.sleeperless.TileEmbeddedAmericanStopper;
-import train.common.tile.tileStopper.sleeperless.TileEmbeddedStopper;
-import train.common.tile.tileStopper.TileStopper;
+import train.common.tile.tileStopper.sleeperless.TileEmbeddedGenericStopper;
+import train.common.tile.tileStopper.TileGenericStopper;
 import train.common.tile.tileStopper.wood_type1.TileWoodType1_AmericanStopper;
-import train.common.tile.tileStopper.wood_type1.TileWoodType1_Stopper;
+import train.common.tile.tileStopper.wood_type1.TileWoodType1_Generic_Stopper;
 import train.common.tile.tileSwitch.*;
 
 import java.lang.reflect.InvocationTargetException;
@@ -93,16 +93,16 @@ public class CommonProxy implements IGuiHandler {
 		GameRegistry.registerTileEntity(TileTrainWbench.class, "TileTrainWbench");
 		GameRegistry.registerTileEntity(TileEntityDistil.class, "Tile Distil");
 		GameRegistry.registerTileEntity(TileEntityOpenHearthFurnace.class, "Tile OpenHearthFurnace");
-		GameRegistry.registerTileEntity(TileStopper.class, "TileStopper");
-		GameRegistry.registerTileEntity(TileEmbeddedStopper.class, "TileEmbeddedStopper");
+		GameRegistry.registerTileEntity(TileGenericStopper.class, "TileStopper");
+		GameRegistry.registerTileEntity(TileEmbeddedGenericStopper.class, "TileEmbeddedStopper");
 		GameRegistry.registerTileEntity(TileAmericanStopper.class, "TileAmericanStopper");
 		GameRegistry.registerTileEntity(TileEmbeddedAmericanStopper.class, "TileEmbeddedAmericanStopper");
 
-		GameRegistry.registerTileEntity(TileConcreteType1_Stopper.class, "TileConcreteType1_Stopper");
+		GameRegistry.registerTileEntity(TileConcreteType1_Generic_Stopper.class, "TileConcreteType1_Stopper");
 		GameRegistry.registerTileEntity(TileConcreteType1_AmericanStopper.class, "TileConcreteType1_AmericanStopper");
-		GameRegistry.registerTileEntity(TileConcreteType2_Stopper.class, "TileConcreteType2_Stopper");
+		GameRegistry.registerTileEntity(TileConcreteType2_Generic_Stopper.class, "TileConcreteType2_Stopper");
 		GameRegistry.registerTileEntity(TileConcreteType2_AmericanStopper.class, "TileConcreteType2_AmericanStopper");
-		GameRegistry.registerTileEntity(TileWoodType1_Stopper.class, "TileWoodType1_Stopper");
+		GameRegistry.registerTileEntity(TileWoodType1_Generic_Stopper.class, "TileWoodType1_Stopper");
 		GameRegistry.registerTileEntity(TileWoodType1_AmericanStopper.class, "TileWoodType1_AmericanStopper");
 
 

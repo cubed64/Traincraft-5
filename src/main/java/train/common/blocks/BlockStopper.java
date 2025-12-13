@@ -21,7 +21,7 @@ import net.minecraft.world.World;
 import train.common.Traincraft;
 import train.common.enums.TCTrackDirection;
 import train.common.library.Info;
-import train.common.tile.tileStopper.TileStopper;
+import train.common.tile.tileStopper.TileGenericStopper;
 
 import static net.minecraftforge.common.util.ForgeDirection.UP;
 
@@ -61,7 +61,7 @@ public class BlockStopper extends BlockContainer {
 
 	@Override
 	public void onBlockPlacedBy(World world, int par2, int par3, int par4, EntityLivingBase living, ItemStack stack) {
-		TileStopper te = (TileStopper) world.getTileEntity(par2, par3, par4);
+		TileGenericStopper te = (TileGenericStopper) world.getTileEntity(par2, par3, par4);
 		byte dir = TCTrackDirection.ConvertDiagonalDirectionInput(MathHelper.floor_double(((living.rotationYaw) * 8.0F / 360.0F + 0.5D)) & 7);
 
 		if (te !=  null)
@@ -84,7 +84,7 @@ public class BlockStopper extends BlockContainer {
 
 	@Override
 	public TileEntity createNewTileEntity(World world, int meta) {
-		return new TileStopper(meta);
+		return new TileGenericStopper(meta);
 	}
 
 	@Override
