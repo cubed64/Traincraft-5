@@ -114,7 +114,15 @@ public class RecipeHandler extends AbstractRecipeHandler
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', Items.iron_ingot, 'P', Blocks.planks);
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSmallStraight.item, 16), "I I", "IBI", "I I", 'I', Items.iron_ingot, 'B', ItemIDs.partSpike.item);
 
-		ArrayList<ItemStack> concretes = OreDictionary.getOres("concrete");
+		ArrayList<ItemStack> concretes = new ArrayList<ItemStack>();
+		if (Loader.isModLoaded("Railcraft"))
+		{
+			Item railcraftItem = GameRegistry.findItem("Railcraft", "cube");
+			concretes.add(new ItemStack(railcraftItem, 1, 1));
+		}
+
+
+		concretes.addAll(OreDictionary.getOres("concrete"));
 
 		for (ItemStack itemStack : concretes)
 		{
