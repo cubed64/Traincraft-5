@@ -57,6 +57,7 @@ public class DieselGP35 extends DieselTrain {
         InsertTexture(35, "Chessie System");
         InsertTexture(36, "WM (Speed Lettering)");
         InsertTexture(37, "WM (Circus)");
+        InsertTexture(38, "PDEV", LockoutGroup.PDEV);
     }
 
     @Override
