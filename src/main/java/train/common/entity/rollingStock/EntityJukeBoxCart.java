@@ -14,6 +14,7 @@ import train.common.Traincraft;
 import train.common.adminbook.ServerLogger;
 import train.common.api.EntityRollingStock;
 import train.common.core.util.MP3Player;
+import train.common.enums.LockoutGroup;
 import train.common.library.GuiIDs;
 
 public class EntityJukeBoxCart extends EntityRollingStock {
@@ -25,11 +26,13 @@ public class EntityJukeBoxCart extends EntityRollingStock {
 	public float volume = 1.0f;
 	public MP3Player player;
 
-	public EntityJukeBoxCart(World world) {
+	public EntityJukeBoxCart(World world)
+	{
 		super(world);
 		dataWatcher.addObject(22, streamURL);
 		dataWatcher.addObject(23, 0);
 		side = FMLCommonHandler.instance().getEffectiveSide();
+		InsertTexture(0, "Jukebox Cart", LockoutGroup.ADMIN);
 	}
 
 

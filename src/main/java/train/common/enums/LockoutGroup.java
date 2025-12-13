@@ -6,6 +6,7 @@ import train.common.utils.lockout.ILockoutGroup;
 public enum LockoutGroup implements ILockoutGroup
 {
     DEFAULT,
+    ADMIN,
 
     //tbea
     SPR("932ac07f-59c3-43ec-b11d-a26ea08c77d9"), //steampunk rail
