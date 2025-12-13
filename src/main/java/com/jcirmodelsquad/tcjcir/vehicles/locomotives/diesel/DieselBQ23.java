@@ -5,6 +5,7 @@ import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
 import train.common.core.util.TraincraftUtil;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -25,7 +26,7 @@ public class DieselBQ23 extends DieselTrain {
         InsertTexture(4, "CSXT YN2 (Post 90s)");
         InsertTexture(5, "CSXT Ghrey Ghonst");
         InsertTexture(6, "breaking bad if it was good");
-        InsertTexture(7, "Nautilussy so sussy");
+        InsertTexture(7, "Nautilussy so sussy", LockoutGroup.CUBED);
     }
 
     @Override

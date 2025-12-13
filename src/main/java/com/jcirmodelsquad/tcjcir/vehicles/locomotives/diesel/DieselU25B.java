@@ -27,7 +27,7 @@ public class DieselU25B extends DieselTrain {
         InsertTexture(6, "Burlington Northern");
         InsertTexture(7, "Deadwood & La Mesa (hamburger helper rayroad)");
         InsertTexture(8, "Burlington");
-        InsertTexture(9, "Nautilus");
+        InsertTexture(9, "Nautilus", LockoutGroup.CUBED);
         InsertTexture(10, "New York Central (Early 60s)");
         InsertTexture(11, "New York Central (Very Late 60s)");
         InsertTexture(12, "Galesburg Clinton & Midland", train.common.enums.LockoutGroup.GCM); 

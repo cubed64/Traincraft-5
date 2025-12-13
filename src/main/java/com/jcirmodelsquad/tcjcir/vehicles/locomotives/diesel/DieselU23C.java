@@ -5,6 +5,7 @@ import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
 import train.common.core.util.TraincraftUtil;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -19,7 +20,7 @@ public class DieselU23C extends DieselTrain {
         super(world, EnumTrains.U23C.getTankCapacity(), LiquidManager.dieselFilter());//its like magic guys trust me
 
         InsertTexture(0, "Consolidate DeeZ NUTS");
-        InsertTexture(1, "Nautilus");
+        InsertTexture(1, "Nautilus", LockoutGroup.CUBED);
         InsertTexture(2, "Blandsville & Blankerston");
         InsertTexture(3, "ATSF Pinstripe");
         InsertTexture(4, "ATSF Freightbonnet");

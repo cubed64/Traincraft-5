@@ -28,7 +28,7 @@ public class DieselDash839C extends DieselTrain {
         InsertTexture(6, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(7, "Blandsville & Blankerston");
         InsertTexture(8, "Magnolia Acres", LockoutGroup.MAG);
-        InsertTexture(9, "Nautilus");
+        InsertTexture(9, "Nautilus", LockoutGroup.CUBED);
         InsertTexture(10, "Ann Arbor (but awesomer)");
         InsertTexture(11, "CEEX 101", LockoutGroup.BIDA);
         InsertTexture(12, "CNRC (Ex EARR)", LockoutGroup.CNRC);

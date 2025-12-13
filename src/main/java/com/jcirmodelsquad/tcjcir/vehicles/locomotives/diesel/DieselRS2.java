@@ -5,6 +5,7 @@ import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
 import train.common.core.util.TraincraftUtil;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -23,7 +24,7 @@ public class DieselRS2 extends DieselTrain {
         InsertTexture(2, "sans fey undertail rayroad");
         InsertTexture(3, "Lehigh & New England");
         InsertTexture(4, "Lehigh & New England (late)");
-        InsertTexture(5, "Nautilus");
+        InsertTexture(5, "Nautilus", LockoutGroup.CUBED);
         InsertTexture(6, "AGW");
         InsertTexture(7, "WM (Fireball)");
         InsertTexture(8, "WM (Speed Lettering)");
