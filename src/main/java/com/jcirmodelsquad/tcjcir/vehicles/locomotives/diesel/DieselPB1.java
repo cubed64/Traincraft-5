@@ -18,7 +18,14 @@ public class DieselPB1 extends DieselTrain {
     public DieselPB1(World world) {
         super(world, EnumTrains.AlcoPB1.getTankCapacity(), LiquidManager.dieselFilter());
 
-        //when the benis sus
+        InsertTexture(0, "Santa Fe");
+        InsertTexture(1, "Demonstrator");
+        InsertTexture(2, "Denver & Rio Grande Western");
+        InsertTexture(3, "Denver & Rio Grande Western (4 Stripe)");
+        InsertTexture(4, "Southern Pacific");
+        InsertTexture(5, "Union Pacific");
+        InsertTexture(6, "New York Central");
+        InsertTexture(7, "Generic");
     }
 
     @Override

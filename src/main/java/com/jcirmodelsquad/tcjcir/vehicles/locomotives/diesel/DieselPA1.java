@@ -18,7 +18,31 @@ public class DieselPA1 extends DieselTrain {
     public DieselPA1(World world) {
         super(world, EnumTrains.AlcoPA1.getTankCapacity(), LiquidManager.dieselFilter());
 
-        //when the benis sus
+        InsertTexture(0, "Santa Fe");
+        InsertTexture(1, "Santa Fe (Late)");
+        InsertTexture(2, "Demonstrator");
+        InsertTexture(3, "Nickel Plate Road (Early)");
+        InsertTexture(4, "Nickel Plate Road");
+        InsertTexture(5, "Wabash");
+        InsertTexture(6, "Denver & Rio Grande Western");
+        InsertTexture(7, "Denver & Rio Grande Western (4 Stripe)");
+        InsertTexture(8, "Southern Pacific");
+        InsertTexture(9, "Cotton Belt");
+        InsertTexture(10, "New Haven");
+        InsertTexture(11, "New Haven (Reverse McGinnis)");
+        InsertTexture(12, "Pennsylvania Railroad");
+        InsertTexture(13, "Union Pacific");
+        InsertTexture(14, "Demonstrator (Canadian)");
+        InsertTexture(15, "CN (Semi-fictional)");
+        InsertTexture(16, "Missouri Pacific");
+        InsertTexture(17, "Missouri Pacific (Jenks Blue)");
+        InsertTexture(18, "Missouri-Kansas-Texas (Shadowlined)");
+        InsertTexture(19, "Missouri-Kansas-Texas");
+        InsertTexture(20, "New York Central");
+        InsertTexture(21, "Pittsburgh & Lake Erie");
+        InsertTexture(22, "Lehigh Valley");
+        InsertTexture(23, "American Freedom Train");
+        InsertTexture(24, "Generic");
     }
 
     @Override
