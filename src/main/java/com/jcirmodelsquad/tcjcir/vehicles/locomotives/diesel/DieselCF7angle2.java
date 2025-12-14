@@ -19,7 +19,13 @@ public class DieselCF7angle2 extends DieselTrain {
     public DieselCF7angle2(World world) {
         super(world, EnumTrains.CF7angle2.getTankCapacity(), LiquidManager.dieselFilter());
         
-        InsertTexture(6, "CFW 1504", LockoutGroup.BIDA);
+        InsertTexture(0, "CFW 517", LockoutGroup.BIDA);
+        InsertTexture(1, "CFW 2209", LockoutGroup.BIDA);
+        InsertTexture(2, "CBRR 715", LockoutGroup.BIDA);
+        InsertTexture(3, "CBRR 77", LockoutGroup.BIDA);
+        InsertTexture(4, "CBRR 4677", LockoutGroup.BIDA);
+        InsertTexture(5, "ex FNCC", LockoutGroup.BIDA);
+        InsertTexture(6, "");
     }
 
     @Override
