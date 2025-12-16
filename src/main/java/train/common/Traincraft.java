@@ -2,12 +2,9 @@ package train.common;
 
 import com.google.gson.JsonParser;
 import com.jcirmodelsquad.tcjcir.features.signal.dynamic.TrainTalk;
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.Loader;
-import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.*;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
@@ -248,7 +245,8 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		proxy.registerVillagerSkin(ConfigHandler.TRAINCRAFT_VILLAGER_ID, "station_chief.png");
 		VillagerRegistry.instance().registerVillageTradeHandler(ConfigHandler.TRAINCRAFT_VILLAGER_ID, villageHandler);
 
-
+		//register player scaler
+		proxy.registerPlayerScaler();
 		proxy.registerBookHandler();
 
 		/*FMLCommonHandler.instance().bus().register(VBCTracking.getInstance());
@@ -256,6 +254,8 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 
 		TrainTalk.getInstance().init();
 		//DSSConfig.load();
+
+
 
 
 		tcLog.info("Finished Initialization!");
@@ -321,6 +321,7 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		event.registerServerCommand(new tcAddUserToSkinGroup());
 		event.registerServerCommand(new tcSetSkinGroupOwner());
 		event.registerServerCommand(new tcRemoveUserFromSkinGroup());
+
 	}
 
 

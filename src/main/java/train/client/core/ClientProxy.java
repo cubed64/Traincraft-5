@@ -26,6 +26,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
 import org.apache.logging.log4j.Level;
+import org.lwjgl.opengl.GL11;
 import train.client.core.handlers.ClientTickHandler;
 import train.client.core.handlers.CustomRenderHandler;
 import train.client.core.handlers.RecipeBookHandler;
@@ -34,8 +35,10 @@ import train.client.core.helpers.JLayerHook;
 import train.client.gui.*;
 import train.client.render.*;
 import train.client.render.itemRender.*;
+import train.common.PlayerScaleHandler;
 import train.common.Traincraft;
 import train.common.adminbook.GUIAdminBook;
+import train.common.api.AbstractTrains;
 import train.common.api.EntityBogie;
 import train.common.api.EntityRollingStock;
 import train.common.core.CommonProxy;
@@ -437,5 +440,10 @@ public class ClientProxy extends CommonProxy
 	@Override
 	public void setHook() {
 		JavaLayerUtils.setHook(new JLayerHook(Minecraft.getMinecraft()));
+	}
+
+	@Override
+	public void registerPlayerScaler(){
+		MinecraftForge.EVENT_BUS.register(new PlayerScaleHandler());
 	}
 }
