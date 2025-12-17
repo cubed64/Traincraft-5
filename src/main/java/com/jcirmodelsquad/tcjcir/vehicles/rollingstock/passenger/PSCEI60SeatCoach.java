@@ -2,6 +2,7 @@ package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger;
 
 import net.minecraft.world.World;
 import train.common.api.AbstractPassengerCar;
+import train.common.enums.LockoutGroup;
 
 public class PSCEI60SeatCoach extends AbstractPassengerCar {
 
@@ -21,6 +22,7 @@ public class PSCEI60SeatCoach extends AbstractPassengerCar {
 		InsertTexture(11, "C&EI 464 (L&N paint)");
 		InsertTexture(12, "IC (Interior Scheme 1)");
 		InsertTexture(13, "IC (Interior Scheme 2)");
+		InsertTexture(14, "GCM", LockoutGroup.GCM);
 	}
 
 	

@@ -6,6 +6,7 @@ import net.minecraft.world.World;
 import train.common.api.AbstractStandardFreightCar;
 import train.common.entity.CargoManager;
 import train.common.entity.CargoSpecification;
+import train.common.enums.LockoutGroup;
 
 public class AAR70TonHopper extends AbstractStandardFreightCar
 {
@@ -28,7 +29,7 @@ public class AAR70TonHopper extends AbstractStandardFreightCar
     public void setupTextureDescription()
     {
         InsertTexture(0, "NKP");
-        InsertTexture(1, "GC&M");
+        InsertTexture(1, "GCM", LockoutGroup.GCM);
         InsertTexture(2, "AGW");
         InsertTexture(3, "TNO As-Delivered");
         InsertTexture(4, "TNO Later");

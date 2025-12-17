@@ -5,6 +5,7 @@ import net.minecraft.world.World;
 import train.common.api.LiquidManager;
 import train.common.api.SteamTrain;
 import train.common.core.util.TraincraftUtil;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -23,8 +24,8 @@ public class SteamAlco460 extends SteamTrain {
 		InsertTexture(1, "CDC&S");
 		InsertTexture(2, "RI");
 		InsertTexture(3, "%Lemo");
-		InsertTexture(4, "GCM 67");
-		InsertTexture(5, "GCM 60");
+		InsertTexture(4, "GCM 67", LockoutGroup.GCM);
+		InsertTexture(5, "GCM 60", LockoutGroup.GCM);
 	}
 
 	@Override

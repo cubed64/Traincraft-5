@@ -18,7 +18,7 @@ public class PSCEIRPO15_Baggage_LC_Lounge extends AbstractPassengerCombineCar
 		InsertTexture(0, "C&EI (As Delivered)");
 		InsertTexture(1, "C&EI");
 		InsertTexture(2, "FMSR", LockoutGroup.FMSR);
-		InsertTexture(3, "GC&M");
+		InsertTexture(3, "GCM", LockoutGroup.GCM);
 	}
 
 	@Override

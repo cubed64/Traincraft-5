@@ -5,6 +5,7 @@ import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
 import train.common.core.util.TraincraftUtil;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -24,7 +25,7 @@ public class DieselDash840B extends DieselTrain {
         InsertTexture(3, "BNSF");
         InsertTexture(4, "CR");
         InsertTexture(5, "PDR");
-        InsertTexture(6, "GC&M");
+        InsertTexture(6, "GCM", LockoutGroup.GCM);
         InsertTexture(7, "NS");
         InsertTexture(8, "");
         InsertTexture(9, "");

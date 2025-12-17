@@ -22,7 +22,7 @@ public class DieselSB18E extends DieselTrain {
         InsertTexture(1, "Nomansi & Eastern Pacific", LockoutGroup.CUBED);
         InsertTexture(2, "Western Pacific");
         InsertTexture(3, "Western Pacific");
-        InsertTexture(4, "Galesburg Clinton & Midland i think");
+        InsertTexture(4, "Galesburg Clinton & Midland i think", LockoutGroup.GCM);
         InsertTexture(5, "CSXT (Yn2, Protolance)");
         InsertTexture(6, "Morristown Tenneva & Southern", LockoutGroup.MTS);
     }
