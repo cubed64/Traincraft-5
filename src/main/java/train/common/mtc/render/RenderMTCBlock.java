@@ -1,13 +1,10 @@
 package train.common.mtc.render;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
-import net.minecraft.entity.Entity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import tmt.Tessellator;
-import train.client.render.models.blocks.ModelBridgePillar;
-import train.common.tile.TileBridgePillar;
 
 public class RenderMTCBlock  extends TileEntitySpecialRenderer {
     private static final ModelMTCBalise model = new ModelMTCBalise();

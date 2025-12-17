@@ -9,7 +9,6 @@
 
 package train.client.render.models;
 
-import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergB;
 import com.jcirmodelsquad.tcjcir.models.trucks.ModelBlombergBnew;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;

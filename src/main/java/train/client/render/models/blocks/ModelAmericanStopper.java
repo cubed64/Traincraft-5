@@ -12,7 +12,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 import train.client.render.RenderTCRail;
-import train.common.items.RailVariants;
 import train.common.library.EnumTracks;
 import train.common.library.Info;
 

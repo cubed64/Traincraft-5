@@ -1,15 +1,12 @@
 package train.common.library;
 
 import net.minecraft.entity.player.EntityPlayer;
-import scala.actors.threadpool.Arrays;
 import train.common.items.BallastTypes;
 import train.common.items.RailVariants;
 import train.common.items.TCRailTypes;
 
 import javax.annotation.Nullable;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 import static train.common.items.BallastTypes.*;
 import static train.common.items.RailVariants.*;

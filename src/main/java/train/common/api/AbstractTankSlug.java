@@ -1,7 +1,6 @@
 package train.common.api;
 
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -11,7 +10,6 @@ import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.*;
 import train.common.Traincraft;
-import train.common.library.EnumTrains;
 import train.common.library.GuiIDs;
 import train.common.library.register.ITrainRecord;
 

@@ -2,14 +2,12 @@ package train.common.api;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.*;
-import train.common.library.EnumTrains;
 
 public abstract class HydrogenTrain extends Locomotive implements IFluidHandler {
     public int fuelSlot = 1;

@@ -17,7 +17,6 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 import train.common.Traincraft;
 import train.common.api.Locomotive;
-import train.common.mtc.network.PacketMTC;
 import train.common.mtc.network.PacketMTCStatus;
 
 import java.util.List;

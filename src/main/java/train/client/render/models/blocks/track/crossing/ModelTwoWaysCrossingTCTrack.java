@@ -13,8 +13,6 @@ import train.common.items.RailVariants;
 import train.common.library.Info;
 import train.common.tile.TileTCRail;
 
-import static train.common.items.RailVariants.EMBEDDED;
-
 @SideOnly(Side.CLIENT)
 public class ModelTwoWaysCrossingTCTrack extends ModelBase {
 	private IModelCustom modelTwoWaysCrossing;

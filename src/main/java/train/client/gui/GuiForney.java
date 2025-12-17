@@ -1,7 +1,6 @@
 package train.client.gui;
 
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.Entity;

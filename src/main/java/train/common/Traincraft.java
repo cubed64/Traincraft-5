@@ -21,8 +21,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import train.client.render.register.ITrainRenderRecord;
-import train.client.render.register.RenderRegisterList;
 import train.common.api.LiquidManager;
 import train.common.blocks.TCBlocks;
 import train.common.commands.lockout.tcAddUserToSkinGroup;
@@ -50,7 +48,6 @@ import train.common.utils.lockout.LockoutPermissionsUtil;
 import java.io.File;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
 @Mod(modid = Info.modID, name = Info.modName, version = Info.modVersion)
 public class Traincraft {

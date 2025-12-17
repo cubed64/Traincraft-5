@@ -4,8 +4,6 @@ import net.minecraft.util.ResourceLocation;
 import tmt.ModelBase;
 import train.common.api.AbstractTrains;
 
-import java.util.ArrayList;
-
 public interface ITrainRenderRecord
 {
     String GetModID();

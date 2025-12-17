@@ -8,21 +8,13 @@
 package train.common.core.handlers;
 
 import cpw.mods.fml.common.registry.EntityRegistry;
-import net.minecraft.entity.Entity;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldServer;
-import train.client.render.models.ModelPassenger6;
-import train.client.render.register.TrainRenderRecord;
 import train.common.Traincraft;
 import train.common.api.EntityBogie;
 import train.common.core.EntityIds;
 import train.common.entity.digger.EntityRotativeDigger;
-import train.common.entity.rollingStock.passenger.EntityPassengerBlue;
 import train.common.entity.zeppelin.EntityZeppelinOneBalloon;
 import train.common.entity.zeppelin.EntityZeppelinTwoBalloons;
-import train.common.items.TCItems;
 import train.common.library.*;
-import train.common.library.register.TrainRecord;
 
 public class EntityHandler
 {

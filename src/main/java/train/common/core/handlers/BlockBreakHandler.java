@@ -1,19 +1,12 @@
 package train.common.core.handlers;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.event.world.BlockEvent;
 import train.common.blocks.BlockSwitchStand;
-import train.common.blocks.BlockTCRail;
-import train.common.blocks.BlockTCRailGag;
 import train.common.entity.TrustedPlayer;
 import train.common.items.ItemPadlock;
 import train.common.tile.TileSwitchStand;
-import train.common.tile.TileTCRail;
-import train.common.tile.TileTCRailGag;
 
 public class BlockBreakHandler {
     @SubscribeEvent

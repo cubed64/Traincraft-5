@@ -7,7 +7,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 import mods.railcraft.api.carts.IMinecart;
 import mods.railcraft.api.carts.IRoutableCart;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockAir;
 import net.minecraft.block.BlockRailBase;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityMinecart;
@@ -25,7 +24,6 @@ import train.common.blocks.BlockTCRailGag;
 import train.common.items.ItemTCRail;
 import train.common.items.TCRailTypes;
 import train.common.library.BlockIDs;
-import train.common.library.EnumTracks;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
 

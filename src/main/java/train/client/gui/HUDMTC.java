@@ -3,9 +3,7 @@ package train.client.gui;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import ebf.XmlBuilder;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiScreen;
@@ -13,15 +11,11 @@ import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Vec3;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import org.lwjgl.opengl.GL11;
 import train.common.Traincraft;
 import train.common.api.Locomotive;
-import train.common.api.SteamTrain;
 import train.common.library.Info;
-
-import static train.common.adminbook.GUIAdminBook.drawTexturedRect;
 
 public class HUDMTC extends GuiScreen {
 

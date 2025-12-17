@@ -2,12 +2,10 @@ package train.common.mtc.tile;
 
 import cpw.mods.fml.common.Optional;
 import cpw.mods.fml.common.network.NetworkRegistry;
-import li.cil.oc.api.Network;
 import li.cil.oc.api.machine.Arguments;
 import li.cil.oc.api.machine.Callback;
 import li.cil.oc.api.machine.Context;
 import li.cil.oc.api.network.*;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
@@ -17,7 +15,6 @@ import train.common.api.Locomotive;
 import train.common.mtc.network.PacketMTC;
 import train.common.mtc.network.PacketSpeedLimit;
 import train.common.mtc.network.PacketStopPoint;
-import train.common.mtc.packets.*;
 
 import java.util.List;
 

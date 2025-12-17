@@ -3,10 +3,8 @@ package train.common.api;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
 import train.common.entity.CargoManager;
-import train.common.items.ItemPadlock;
 import train.common.library.ItemIDs;
 
 public abstract class AbstractPassengerCombineCar extends AbstractStandardFreightCar implements IPassenger

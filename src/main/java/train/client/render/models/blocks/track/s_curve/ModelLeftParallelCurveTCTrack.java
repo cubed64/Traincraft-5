@@ -3,13 +3,9 @@ package train.client.render.models.blocks.track.s_curve;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.ResourceLocation;
 
-import net.minecraftforge.client.model.AdvancedModelLoader;
-import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
-import train.common.enums.TrackResourceLocations;
 import train.common.items.RailVariants;
 import train.common.library.EnumCoreTrack;
 import train.common.library.Info;

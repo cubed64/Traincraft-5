@@ -2,9 +2,7 @@ package train.common.items;
 
 import train.common.api.AbstractTrains;
 import train.common.library.register.ITrainRecord;
-import train.common.library.register.TrainRecord;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class RollingStockItemCache

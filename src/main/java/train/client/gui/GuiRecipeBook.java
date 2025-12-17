@@ -19,7 +19,6 @@ import train.common.core.managers.TierRecipeManager;
 import train.common.inventory.TrainCraftingManager;
 import train.common.items.ItemAbstractRollingStock;
 import train.common.items.ItemRecipeBook;
-import train.common.items.TCItems;
 import train.common.library.BlockIDs;
 import train.common.library.Info;
 import train.common.library.ItemIDs;

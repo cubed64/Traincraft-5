@@ -2,16 +2,11 @@ package train.common.library;
 
 import net.minecraft.item.Item;
 import train.common.core.util.TraincraftUtil;
-import train.common.entity.rollingStock.*;
 import train.common.entity.rollingStock.diesel.*;
 import train.common.entity.rollingStock.electric.*;
-import train.common.entity.rollingStock.freight.*;
-import train.common.entity.rollingStock.passenger.*;
-import train.common.entity.rollingStock.passenger.baggagecar.*;
 import train.common.entity.rollingStock.steam.*;
 import train.common.entity.rollingStock.tanker.*;
 import train.common.entity.rollingStock.tender.*;
-import train.common.entity.rollingStock.workcart.*;
 import train.common.library.register.ITrainRecord;
 
 public enum EnumHeritageTrainsLegacy implements ITrainRecord

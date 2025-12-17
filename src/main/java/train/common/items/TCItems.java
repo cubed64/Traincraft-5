@@ -8,7 +8,6 @@
 package train.common.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.item.Item;
 import train.common.Traincraft;
 import train.common.adminbook.ItemAdminBook;
 import train.common.library.EnumTracks;

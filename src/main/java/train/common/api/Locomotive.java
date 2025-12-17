@@ -1,7 +1,6 @@
 package train.common.api;
 
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 import com.jcirmodelsquad.tcjcir.extras.PeachyUtil;
 import com.jcirmodelsquad.tcjcir.extras.packets.RemoteControlKeyPacket;
 import com.jcirmodelsquad.tcjcir.features.autotrain.AutoTrain2;
@@ -13,10 +12,8 @@ import com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.PCH120Commute;
 import com.jcirmodelsquad.tcjcir.vehicles.locomotives.eletric.PCH130Commute2;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
-import cpw.mods.fml.common.registry.GameRegistry;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -52,10 +49,8 @@ import train.common.items.ItemRemoteController;
 import train.common.items.ItemRemoteControllerModule;
 import train.common.items.ItemWirelessTransmitter;
 import train.common.library.BetterEnumSounds;
-import train.common.library.EnumSounds;
 import train.common.library.Info;
 import train.common.library.sounds.SoundRecord;
-import train.common.library.sounds.TrainSoundRecord;
 import train.common.mtc.network.*;
 
 import java.util.*;

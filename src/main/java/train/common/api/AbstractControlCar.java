@@ -1,7 +1,6 @@
 package train.common.api;
 
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.passive.EntityAnimal;
@@ -18,7 +17,6 @@ import org.lwjgl.input.Keyboard;
 import train.common.Traincraft;
 import train.common.core.handlers.ConfigHandler;
 import train.common.core.network.PacketKeyPress;
-import train.common.library.EnumSounds;
 import train.common.library.GuiIDs;
 import train.common.library.Info;
 import train.common.library.sounds.SoundRecord;

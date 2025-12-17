@@ -2,7 +2,6 @@ package train.common.library;
 
 import net.minecraft.item.Item;
 import train.common.Traincraft;
-import train.common.core.util.TraincraftUtil;
 import train.common.entity.rollingStock.*;
 import train.common.entity.rollingStock.electric.*;
 import train.common.entity.rollingStock.freight.*;
@@ -14,7 +13,6 @@ import train.common.entity.rollingStock.workcart.*;
 import train.common.library.register.ITrainRecord;
 import train.common.library.register.TrainRecord;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 public class RegisterTrains

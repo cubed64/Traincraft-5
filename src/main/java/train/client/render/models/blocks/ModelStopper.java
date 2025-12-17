@@ -7,7 +7,6 @@
 
 package train.client.render.models.blocks;
 
-import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;

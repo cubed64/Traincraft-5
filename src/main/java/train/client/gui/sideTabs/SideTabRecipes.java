@@ -18,7 +18,6 @@ import org.lwjgl.opengl.GL11;
 import train.client.gui.GuiCrafterTier;
 import train.common.library.Info;
 
-import static net.minecraft.client.gui.Gui.drawRect;
 import static train.client.gui.GuiCrafterTier.*;
 
 @SideOnly(Side.CLIENT)

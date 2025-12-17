@@ -5,10 +5,7 @@ import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.Entity;
-import net.minecraft.server.MinecraftServer;
 import train.common.api.AbstractTrains;
-import train.common.api.EntityRollingStock;
-import train.common.api.Locomotive;
 
 import java.nio.charset.StandardCharsets;
 

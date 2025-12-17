@@ -1,8 +1,6 @@
 package train.client.render.register;
 
-import com.google.common.primitives.Doubles;
 import net.minecraft.util.ResourceLocation;
-import org.apache.commons.lang3.ArrayUtils;
 import tmt.ModelBase;
 import train.common.Traincraft;
 import train.common.api.AbstractTrains;

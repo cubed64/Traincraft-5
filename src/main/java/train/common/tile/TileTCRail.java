@@ -16,7 +16,6 @@ import train.common.Traincraft;
 import train.common.items.ItemTCRail;
 import train.common.items.TCRailTypes;
 import train.common.library.BlockIDs;
-import train.common.library.EnumCoreTrack;
 import train.common.library.EnumTracks;
 
 import static train.common.library.EnumCoreTrack.*;

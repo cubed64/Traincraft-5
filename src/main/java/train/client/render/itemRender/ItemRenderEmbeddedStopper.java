@@ -1,11 +1,8 @@
 package train.client.render.itemRender;
 
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.IItemRenderer;
 import org.lwjgl.opengl.GL11;
 import train.common.library.EnumTracks;
-import train.common.library.Info;
 
 public class ItemRenderEmbeddedStopper extends ItemRenderStopper
 {
