@@ -56,7 +56,7 @@ public class DistilRecipes {
 	}
 
 	public float getExperience(int i) {
-		return this.experienceList.containsKey(i) ? this.experienceList.get(i) : 0.0F;
+		return this.experienceList.getOrDefault(i, 0.0F);
 	}
 
 	public int getPlasticChance(Item item) {

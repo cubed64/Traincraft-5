@@ -23,22 +23,27 @@ public class TCItems {
 		registerItems();
 	}
 
-	private static void loadItems() {
-		for (ItemIDs items : ItemIDs.values()) {
-			if (items.className != null) {
-				if (items.className.equals("ItemTrain")) {
-					items.item = new ItemPart(items.iconName);
-				}
-				else if (items.className.equals("ItemRollingStock"))
+	private static void loadItems()
+	{
+		for (ItemIDs items : ItemIDs.values())
+		{
+			if (items.className != null)
+			{
+                switch (items.className)
 				{
-					items.item = new ItemTCRollingStock(items.iconName, items.TypeOfRollingStock);
-				}
-				else if (items.className.equals("ItemRotativeDigger")) {
-					items.item = new ItemRotativeDigger();
-				}
-				else if (items.className.equals("ItemContainer")) {
-					items.item = new ItemContainer(items.iconName);
-				}
+                    case "ItemTrain":
+                        items.item = new ItemPart(items.iconName);
+                        break;
+                    case "ItemRollingStock":
+                        items.item = new ItemTCRollingStock(items.iconName, items.TypeOfRollingStock);
+                        break;
+                    case "ItemRotativeDigger":
+                        items.item = new ItemRotativeDigger();
+                        break;
+                    case "ItemContainer":
+                        items.item = new ItemContainer(items.iconName);
+                        break;
+                }
 			}
 		}
 		//ItemIDs.signal.item = new ItemSignal(ItemIDs.signal.itemID, BlockIDs.activeSignal.block).setIconIndex(ItemIDs.signal.iconIndex);

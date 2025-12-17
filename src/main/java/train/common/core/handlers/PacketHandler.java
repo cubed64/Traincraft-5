@@ -118,35 +118,17 @@ public class PacketHandler {
 	}
 
 	private static final IMessageHandler[] HANDLERS = new IMessageHandler[]{
-			new IMessageHandler<IMessage, IMessage>() {
-				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
-			},
-			new IMessageHandler<IMessage, IMessage>() {
-				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
-			},
-			new IMessageHandler<IMessage, IMessage>() {
-				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
-			},
-			new IMessageHandler<IMessage, IMessage>() {
-				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
-			},
-			new IMessageHandler<IMessage, IMessage>() {
-				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
-			},
-			new IMessageHandler<IMessage, IMessage>() {
-				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
-			},
+            (IMessageHandler<IMessage, IMessage>) (IMessage message, MessageContext ctx) -> null,
+            (IMessageHandler<IMessage, IMessage>) (IMessage message, MessageContext ctx) -> null,
+            (IMessageHandler<IMessage, IMessage>) (IMessage message, MessageContext ctx) -> null,
+            (IMessageHandler<IMessage, IMessage>) (IMessage message, MessageContext ctx) -> null,
+            (IMessageHandler<IMessage, IMessage>) (IMessage message, MessageContext ctx) -> null,
+            (IMessageHandler<IMessage, IMessage>) (IMessage message, MessageContext ctx) -> null,
 
-			new IMessageHandler<IMessage, IMessage>() {
-				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
-			},
+            (IMessageHandler<IMessage, IMessage>) (IMessage message, MessageContext ctx) -> null,
 
-			new IMessageHandler<IMessage, IMessage>() {
-				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
-			},
-			new IMessageHandler<IMessage, IMessage>() {
-				@Override public IMessage onMessage(IMessage message, MessageContext ctx) {return null;}
-			}
-	};
+            (IMessageHandler<IMessage, IMessage>) (IMessage message, MessageContext ctx) -> null,
+            (IMessageHandler<IMessage, IMessage>) (IMessage message, MessageContext ctx) -> null
+    };
 }
 
