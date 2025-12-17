@@ -27,34 +27,34 @@ public abstract class Tender extends Freight implements IFluidHandler, IInventor
 	private StandardTank theTank;
 	private IFluidTank[] tankArray = new IFluidTank[1];
 	public TileEntity[] blocksToCheck;
+
 	/**
-	 * 
+	 * USE Tender(World world, FluidStack filter)
 	 * @param world
 	 * @param fluid
 	 * @param quantity
 	 * @param capacity
+	 * @param filter
 	 */
-	public Tender(World world, Fluid fluid, int quantity, int capacity) {
-		this(new FluidStack(fluid, quantity), capacity, world, null);
-	}
-
+	@Deprecated
 	public Tender(World world, Fluid fluid, int quantity, int capacity, FluidStack filter)
 	{
-		this(new FluidStack(fluid, quantity), capacity, world, filter);
-		freightInventorySize = 16;
-		tenderItems = new ItemStack[freightInventorySize];
+		this(world, filter);
 	}
 
-	private Tender(FluidStack fluid, int capacity, World world, FluidStack filter) {
+	public Tender(World world, FluidStack filter)
+	{
 		super(world);
-		this.maxTank = capacity;
+		this.maxTank = trainSpec.getTankCapacity();
 		if (filter == null)
-			this.theTank = LiquidManager.getInstance().new StandardTank(capacity);
+			this.theTank = LiquidManager.getInstance().new StandardTank(trainSpec.getTankCapacity());
 		if (filter != null)
-			this.theTank = LiquidManager.getInstance().new FilteredTank(capacity, filter);
+			this.theTank = LiquidManager.getInstance().new FilteredTank(trainSpec.getTankCapacity(), filter);
 		tankArray[0] = theTank;
 		dataWatcher.addObject(4, 0);
 		this.dataWatcher.addObject(23, 0);
+		freightInventorySize = 16;
+		tenderItems = new ItemStack[freightInventorySize];
 	}
 
 	@Override
