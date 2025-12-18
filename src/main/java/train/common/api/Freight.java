@@ -54,21 +54,21 @@ public abstract class Freight extends EntityRollingStock implements IInventory
 		}
 		if(canBeDestroyedByPlayer(damagesource))return true;
 		super.attackEntityFrom(damagesource, i);
-		setRollingDirection(-getRollingDirection());
-		setRollingAmplitude(10);
-		setBeenAttacked();
-		setDamage(getDamage() + i * 10);
-		if (getDamage() > 40) {
-			if (riddenByEntity != null) {
-				riddenByEntity.mountEntity(this);
-			}
-			this.setDead();
-			ServerLogger.deleteWagon(this);
-			if(damagesource.getEntity() instanceof EntityPlayer) {
-				dropCartAsItem(((EntityPlayer)damagesource.getEntity()).capabilities.isCreativeMode);
-			}
-		}
+
 		return true;
+	}
+
+	@Override
+	public void onEntityDestruction(DamageSource damagesource)
+	{
+		if(damagesource.getEntity() instanceof EntityPlayer)
+		{
+			dropCartAsItem(((EntityPlayer)damagesource.getEntity()).capabilities.isCreativeMode);
+		}
+		else
+		{
+			dropCartAsItem(false);
+		}
 	}
 
 	/* IInventory implements */

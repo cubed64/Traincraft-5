@@ -386,7 +386,8 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	}
 
 	@Override
-	public boolean attackEntityFrom(DamageSource damagesource, float i) {
+	public boolean attackEntityFrom(DamageSource damagesource, float i)
+	{
 		if (worldObj.isRemote || isDead) { return true; }
 		if (damagesource.getEntity() instanceof EntityPlayer && !damagesource.isProjectile()) {
 			if(this instanceof IPassenger){
@@ -395,23 +396,29 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 			setRollingDirection(-getRollingDirection());
 			setRollingAmplitude(10);
 			setBeenAttacked();
-			if (((EntityPlayer) damagesource.getEntity()).capabilities.isCreativeMode) {
+			if (((EntityPlayer) damagesource.getEntity()).capabilities.isCreativeMode)
+			{
 				this.setDamage(1000);
-				if (ConfigHandler.ENABLE_WAGON_REMOVAL_NOTICES && ((EntityPlayer) damagesource.getEntity()).canCommandSenderUseCommand(2,"")) {
+				if (ConfigHandler.ENABLE_WAGON_REMOVAL_NOTICES && ((EntityPlayer) damagesource.getEntity()).canCommandSenderUseCommand(2,""))
+				{
 					((EntityPlayer) damagesource.getEntity()).addChatComponentMessage(new ChatComponentText("Operator removed " + getTrainName() + " owned by " + getTrainOwner() + "."));
 				}
 			}
 			setDamage(getDamage() + i * 10);
-			if (getDamage() > 40) {
-				if (riddenByEntity != null) {
+			if (getDamage() > 40)
+			{
+				if (riddenByEntity != null)
+				{
 					riddenByEntity.mountEntity(this);
 				}
+				onEntityDestruction(damagesource);
 				ServerLogger.deleteWagon(this);
 				/**
 				 * Destroy IPassenger since they don't extend Freight or
 				 * Locomotive and don't have a proper attackEntityFrom() method
 				 */
-				if (this instanceof IPassenger) {
+				if (this instanceof IPassenger)
+				{
 					this.setDead();
 					dropCartAsItem(((EntityPlayer)damagesource.getEntity()).capabilities.isCreativeMode);
 				}
@@ -419,6 +426,12 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		}
 		return true;
 	}
+
+	public void onEntityDestruction(DamageSource damagesource)
+	{
+		// Mostly used for child classes
+	}
+
 
 	@Override
 	@SideOnly(Side.CLIENT)
