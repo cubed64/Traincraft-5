@@ -540,11 +540,11 @@ public class RecipeHandler extends AbstractRecipeHandler
 		
 		if (!ConfigHandler.MAKE_MODPACKS_GREAT_AGAIN) {
 			for (ItemStack c : coal) {
-				TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.coaldust.item, 4),
+				TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.coaldust.item, 3),
 						"###", "   ", "   ", Character.valueOf('#'), c.getItem());
-				TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.coaldust.item, 4),
+				TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.coaldust.item, 3),
 						"   ", "###", "   ", Character.valueOf('#'), c.getItem());
-				TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.coaldust.item, 4),
+				TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.coaldust.item, 3),
 						"   ", "   ", "###", Character.valueOf('#'), c.getItem());
 			}
 		}
