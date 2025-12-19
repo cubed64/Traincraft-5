@@ -46,25 +46,14 @@ public class ElectricGM6C_2 extends ElectricTrain {
     @Override
     public void updateRiderPosition() { TraincraftUtil.updateRider(this, 3.8, -0.10, -0.35); }
 
-
-
-    
-
-
-
-
-
     @Override
     public String getInventoryName() {
         return "EMD GM6C";
     }
-
 
     @Override
     public float getOptimalDistance(EntityMinecart cart) {
         return 1.45F;
     }
 
-
-    
 }

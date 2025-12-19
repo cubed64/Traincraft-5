@@ -625,6 +625,8 @@ public enum ItemIDs {
 	minecartCEEslug("ItemRollingStock", "ceeslug", DIESEL, 4),
 	minecartSBMS("ItemRollingStock", "sbms", DIESEL, 4),
 
+	minecartRotaryPlow("ItemRollingStock", "rotary", 10),
+
 	//E-lect-trock//
 	minecartEF1("ItemRollingStock", "ef1", ELECTRIC, 6),
 	minecartEF1B("ItemRollingStock", "ef1b", ELECTRIC, 5),

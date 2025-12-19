@@ -1640,6 +1640,8 @@ item.tc:minecartSMSC1.name=CEE Slug Motor System, C-C, Type 1
 item.tc:minecartCEEslug.name=CEE rebuilt slug (U23B core)
 item.tc:minecartSBMS.name=CEE SB Motor System
 
+item.tc:minecartRotaryPlow.name=Rotary Snowplow
+
 
 entity.tc.NRE3gs21b.name=NRE 3GS21B Genset
 entity.tc.gtavthing.name=GTAV Locomotive
@@ -1657,6 +1659,8 @@ entity.tc.S1BL.name=FNCC S1BL Slug
 entity.tc.SMSC1.name=CEE Slug Motor System, C-C, Type 1
 entity.tc.CEEslug.name=CEE rebuilt slug (U23B core)
 entity.tc.SBMS.name=CEE SB Motor System
+
+entity.tc.RotaryPlow.name=Rotary Snowplow
 
 --------------------------------------------------------
 

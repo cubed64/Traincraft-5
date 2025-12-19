@@ -305,6 +305,8 @@ public enum EnumTrains implements ITrainRecord
 	CEEslug("CEEslug", ElectricCEEslug.class, ItemIDs.minecartCEEslug.item, "'slug'", 3000, 113, 0, 15, 0, 200, 0.89, 0.91, 0, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Cyan", "Skin16", "LightGrey"}), 14, -3.1),
 	SBMS("SBMS", SBMS.class, ItemIDs.minecartSBMS.item, "slug", 0, 0, 7, 0, 0, 0, 0, 0, 20000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "Green", "LightGrey", "Skin17", "Skin18", "Skin19", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24", "Skin25", "Skin26", "Pink", "Black"}), 12, 0),
 
+	RotaryPlow("RotaryPlow", RotaryPlow1.class, ItemIDs.minecartRotaryPlow.item, "snowplow", 1750, 60, 0, 30, 0, 200, 0.70, 0.75, 0, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16"}), 14, -1.95),
+
 	//based electrics//
 	EF1("EF1",ElectricEF1.class, ItemIDs.minecartEF1.item, "electric", 1720, 64, 0, 55, 0, 200, 0.65, 0.75, 12500, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Yellow", "Red", "Green", "Black", "Grey"}), 10, -3.4375),
 	EF1B("EF1B",ElectricEF1B.class, ItemIDs.minecartEF1B.item, "electric", 1720, 64, 0, 55, 0, 200, 0.65, 0.75, 12500, TraincraftUtil.getBytesFromColors(new String[] {"Orange", "Red", "Black", "Pink"}), 10, -2.3125),

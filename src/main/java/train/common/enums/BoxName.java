@@ -15,6 +15,8 @@ public enum BoxName
     prime3("prime3"),
     prime4("prime4"),
     commander("commander"),
+
+    rotary("rotary"), //rotary plow blade rotation
     wheel("wheel"); // not used for anything special right now but god to document
 
     public final String BoxName;

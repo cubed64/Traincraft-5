@@ -597,6 +597,7 @@ item.tc:minecartR70Reefer	R70Reefer	com.jcirmodelsquad.tcjcir.vehicles.rollingst
 item.tc:minecartR70Reefer2	R70Reefer2	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.R70Reefer2	R-70-15_
 item.tc:minecartReefer64	Reefer64	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.Reefer64Foot	reefer_64_
 item.tc:minecartRibbedHopper	Freight Ribbed Covered Hopper	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.RibbedHopper	ribbed_hopper_
+item.tc:minecartRotaryPlow	RotaryPlow	com.jcirmodelsquad.tcjcir.vehicles.locomotives.RotaryPlow1	RotaryPlow_
 item.tc:minecartRoundHopper	Freight Round Covered Hopper	com.jcirmodelsquad.tcjcir.vehicles.rollingstock.freight.RoundHopper	roundedhopper_
 item.tc:minecartSBMS	SBMS	com.jcirmodelsquad.tcjcir.vehicles.locomotives.SBMS	SBMS_
 item.tc:minecartSMSC1	SMSC1	com.jcirmodelsquad.tcjcir.vehicles.locomotives.SMSC1	SMSC1_

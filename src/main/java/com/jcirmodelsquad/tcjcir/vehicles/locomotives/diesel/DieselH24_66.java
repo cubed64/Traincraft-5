@@ -12,7 +12,7 @@ public class DieselH24_66 extends DieselTrain {
     @Override
     public SoundRecord getSoundRecord()
     {
-        return EnumSounds.DieselH16_66;
+        return EnumSounds.DieselH24_66;
     }
     public DieselH24_66(World world) {
         super(world, EnumTrains.H24_66.getTankCapacity(), LiquidManager.dieselFilter());
