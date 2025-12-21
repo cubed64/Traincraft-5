@@ -565,7 +565,7 @@ public class ModelZeppelinOneBalloon extends ModelBase {
 		if (((EntityZeppelinOneBalloon) entity).getFuel() > 0) {
 			long now = System.nanoTime();
 			int elapsed = (int) ((now - lastframe) / (1000 * 1000));
-			propel -= (float) elapsed / 300.0f;
+			propel -= (float) elapsed / 50.0f;
 			lastframe = now;
 			//Propeller.rotateAngleZ = 0;
 			Propeller.rotateAngleX = propel + propel1;

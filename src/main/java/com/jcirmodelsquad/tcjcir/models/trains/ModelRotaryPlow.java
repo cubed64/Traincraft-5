@@ -1341,8 +1341,29 @@ public class ModelRotaryPlow extends ModelConverter //Same as Filename
 
 		bodyModel[305].addBox(0F, 0F, 0F, 4, 9, 1, 0F); // Box 305 cull sp roof ladder
 		bodyModel[305].setRotationPoint(28.49F, -18F, -11.75F);
+
+		lastframe = System.nanoTime();
 	}
 	Modelrotary_foxtruck truc = new Modelrotary_foxtruck();
+
+	public float blade1 = 0.0F;
+	public float blade2 = 1.5707963268F;
+	public float blade3 = 3.1415926536F;
+	public float blade4 = 4.7123889804F;
+	public float blade5 = 0.5235987756F;
+	public float blade6 = 2.0943951024F;
+	public float blade7 = 3.6651914292F;
+	public float blade8 = 5.235987756F;
+	public float blade9 = 1.0471975512F;
+	public float blade10 = 2.617993878F;
+	public float blade11 = 4.1887902048F;
+	public float blade12 = 5.75958653F;
+
+	public float blade00 = 0.4188790204786391F; //24 degrees
+	//public float propel2 = 5.759586531581287F;//330 degrees
+	private long lastframe;
+	private float blade;
+
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
@@ -1373,16 +1394,25 @@ public class ModelRotaryPlow extends ModelConverter //Same as Filename
 		((AbstractTrains) entity).getCargoManager().renderCargo((AbstractTrains) entity, f, f1, f2, f3, f4, f5);
 
 		//for(ModelRendererTurbo m :bodyModel) {
-			if (((RotaryPlow1) entity).isLocoTurnedOn() /*&& m.boxName.equals("rotary")*/) {//36-49, 222-223
-				//if (m.boxName.equals("rotary")) {
-					if (((RotaryPlow1) entity).getCustomSpeed() <= 0) {
 
+		/*System.out.println( lastframe + "   LAST FRAME");
+		System.out.println( blade + "   BLADE");
+		System.out.println( blade1 + "   BLADE1");
+		System.out.println( blade2 + "   BLADE2!!!!!!");*/
+		//System.out.println( blade8 + blade + "   BLADE8");
+
+			//if (((RotaryPlow1) entity).isLocoTurnedOn() && ((RotaryPlow1) entity).getCustomSpeed() <= 0 /*&& m.boxName.equals("rotary")*/) {//36-49, 222-223
+				//if (m.boxName.equals("rotary")) {
+					//if (((RotaryPlow1) entity).getCustomSpeed() <= 0) {
+
+
+						//lastframe = System.nanoTime();
 						blade = 0.0F;
 
 						long now2 = System.nanoTime();
 						int elapsed2 = (int) ((now2 - lastframe) / (1000 * 1000));
-						blade -= (float) elapsed2 / 300.0f;
-						lastframe = now2;
+						blade -= (float) elapsed2 / 500.0f;//300 default, the higher the number the slower it rotates. 150 for normal run speed and 500 for idle?
+						//lastframe = now2;
 
 						bodyModel[36].rotateAngleX = blade1 + blade;//main shaft
 						bodyModel[37].rotateAngleX = blade1 + blade;//box 205 0
@@ -1401,9 +1431,9 @@ public class ModelRotaryPlow extends ModelConverter //Same as Filename
 						bodyModel[222].rotateAngleX = blade1 + blade;//interior shaft
 						bodyModel[223].rotateAngleX = blade1 + blade;//interior shaft
 
-					} /*else if (((RotaryPlow1) entity).getCustomSpeed() > 0) {
+					//} /*else if (((RotaryPlow1) entity).getCustomSpeed() > 0) {
 
-						long now23 = System.nanoTime();
+						/*long now23 = System.nanoTime();
 						int elapsed23 = (int) ((now23 - lastframe) / (1000 * 1000));
 						blade -= (float) elapsed23 / 500.0f;
 						lastframe = now23;
@@ -1423,11 +1453,11 @@ public class ModelRotaryPlow extends ModelConverter //Same as Filename
 						bodyModel[48].rotateAngleX = blade + blade1;
 						bodyModel[49].rotateAngleX = blade + blade1;
 						bodyModel[222].rotateAngleX = blade + blade1;
-						bodyModel[223].rotateAngleX = blade + blade1;
+						bodyModel[223].rotateAngleX = blade + blade1;*/
 
-					}*/
+					//}*/
 				//}
-			} /*else {
+			/*} else {
 				bodyModel[37].rotateAngleX = 0F;
 				bodyModel[38].rotateAngleX = 1.57079633F;
 				bodyModel[39].rotateAngleX = 3.14159265F;
@@ -1439,28 +1469,12 @@ public class ModelRotaryPlow extends ModelConverter //Same as Filename
 				bodyModel[45].rotateAngleX = 1.04719755F;
 				bodyModel[46].rotateAngleX = 2.61799388F;
 				bodyModel[47].rotateAngleX = 4.1887902F;
-				bodyModel[48].rotateAngleX = 5.75958653F;
-			}*/
+				bodyModel[48].rotateAngleX = 5.75958653F;*/
+			//}
 		//}
 
 	}
 		//getCustomSpeed  if(m.boxName.equals("rotary")){
 
-	private float blade1 = 0.0F;
-	private float blade2 = 1.5707963268F;
-	private float blade3 = 3.1415926536F;
-	private float blade4 = 4.7123889804F;
-	private float blade5 = 0.5235987756F;
-	private float blade6 = 2.0943951024F;
-	private float blade7 = 3.6651914292F;
-	private float blade8 = 5.235987756F;
-	private float blade9 = 1.0471975512F;
-	private float blade10 = 2.617993878F;
-	private float blade11 = 4.1887902048F;
-	private float blade12 = 5.235987756F;
 
-	public float blade00 = 0.4188790204786391F; //24 degrees
-	//public float propel2 = 5.759586531581287F;//330 degrees
-	private long lastframe;
-	private float blade;
 }

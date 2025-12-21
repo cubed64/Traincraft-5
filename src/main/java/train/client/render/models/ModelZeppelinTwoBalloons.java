@@ -115,7 +115,7 @@ public class ModelZeppelinTwoBalloons extends ModelBase {
 		if (((EntityZeppelinTwoBalloons) entity).getFuel() > 0) {
 			long now = System.nanoTime();
 			int elapsed = (int) ((now - lastframe) / (1000 * 1000));
-			helice -= (float) elapsed / 300.0f;
+			helice -= (float) elapsed / 100.0f;
 			lastframe = now;
 
 			zepSides[6].rotateAngleZ = helice + helice1;
