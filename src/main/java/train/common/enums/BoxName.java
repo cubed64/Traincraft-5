@@ -5,18 +5,18 @@ package train.common.enums;
  */
 public enum BoxName
 {
-    cull("cull"),
-    lamp("lamp"),
-    ditch("ditch"),
+    cull("cull"),//disable part face culling on advanced models
+    lamp("lamp"),//for headlights, numberboards, markerlights, pretty much anything that needs to be glowey
+    ditch("ditch"),//ditchlights toggle on/off, no blink
     ditch_left("ditch"), // not used for anything special right now but god to document
     ditch_right("ditch"), // not used for anything special right now but god to document
-    prime1("prime1"),
+    prime1("prime1"),//the 4 prime tags are for beacons with 4 parts that cycle (BN used a lot of prime beacons)
     prime2("prime2"),
     prime3("prime3"),
     prime4("prime4"),
-    commander("commander"),
+    commander("commander"),//quick flash beacon
 
-    rotary("rotary"), //rotary plow blade rotation
+    rotary("rotary"), //rotary plow blade rotation WIP
     wheel("wheel"); // not used for anything special right now but god to document
 
     public final String BoxName;
