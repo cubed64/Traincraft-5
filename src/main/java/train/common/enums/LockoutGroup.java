@@ -46,8 +46,8 @@ public enum LockoutGroup implements ILockoutGroup
     DRXL("b57bdcf8-561b-426e-9603-5a8ad35f9375"), //drexel co
 
     //bigfishie
-    DLMR(),//deadwood & la mesa
-    AGW(),// adelante great western or whatsitsface spelled lol
+    DLMR("8ce3fa8e-9f27-48c5-b97e-de12ad735296"),//deadwood & la mesa
+    AGW("8ce3fa8e-9f27-48c5-b97e-de12ad735296"),// adelante great western or whatsitsface spelled lol
 
     JCTransit()
     ;
