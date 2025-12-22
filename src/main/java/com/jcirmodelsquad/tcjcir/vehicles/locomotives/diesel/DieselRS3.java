@@ -5,6 +5,7 @@ import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
 import train.common.core.util.TraincraftUtil;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -22,7 +23,7 @@ public class DieselRS3 extends DieselTrain {
         InsertTexture(1, "Blandsville & Blankerston");
         InsertTexture(2, "Denver & Rio Grande Western (Early)");
         InsertTexture(3, "Denver & Rio Grande Western");
-        InsertTexture(4, "AGW");
+        InsertTexture(4, "AGW", LockoutGroup.AGW);
         InsertTexture(5, "CCRL");
         InsertTexture(6, "SER");
         InsertTexture(7, "NSE");

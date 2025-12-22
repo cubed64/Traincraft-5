@@ -32,9 +32,9 @@ public class DieselGP7 extends DieselTrain {
         InsertTexture(10, "Carbondale & Pine Valley (CSWR Buyout)", LockoutGroup.CPV);
         InsertTexture(11, "Carbondale & Pine Valley 11", LockoutGroup.CPV);
         InsertTexture(12, "waltuh white gp7");
-        InsertTexture(13, "Deadwood & La Mesa (Early)");
-        InsertTexture(14, "Deadwood & La Mesa (Late)");
-        InsertTexture(15, "Deadwood & La Mesa (Passenger)");
+        InsertTexture(13, "Deadwood & La Mesa (Early)", LockoutGroup.DLMR);
+        InsertTexture(14, "Deadwood & La Mesa (Late)", LockoutGroup.DLMR);
+        InsertTexture(15, "Deadwood & La Mesa (Passenger)", LockoutGroup.DLMR);
         InsertTexture(16, "Blandsville & Blankerston");
         InsertTexture(17, "Amtrak MOW");
         InsertTexture(18, "Seaboard Coast Line");
@@ -63,7 +63,7 @@ public class DieselGP7 extends DieselTrain {
         InsertTexture(41, "Cotton Belt/ Southern Pacific");
         InsertTexture(42, "Southern Pacific");
         InsertTexture(43, "Western Pacific");
-        InsertTexture(44, "Deadwood & Northern");
+        InsertTexture(44, "Deadwood & Northern", LockoutGroup.DLMR);
         InsertTexture(45, "CNW 1518");
         InsertTexture(46, "Great Lakes & Northern Territories (Ex FNCC)");
         InsertTexture(47, "Monongahela");

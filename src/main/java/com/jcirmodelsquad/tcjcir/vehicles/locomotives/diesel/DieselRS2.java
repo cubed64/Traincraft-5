@@ -25,7 +25,7 @@ public class DieselRS2 extends DieselTrain {
         InsertTexture(3, "Lehigh & New England");
         InsertTexture(4, "Lehigh & New England (late)");
         InsertTexture(5, "Nautilus", LockoutGroup.CUBED);
-        InsertTexture(6, "AGW");
+        InsertTexture(6, "AGW", LockoutGroup.AGW);
         InsertTexture(7, "WM (Fireball)");
         InsertTexture(8, "WM (Speed Lettering)");
 

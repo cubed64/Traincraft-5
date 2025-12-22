@@ -5,6 +5,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -28,9 +29,9 @@ public class DieselGE44Ton extends DieselTrain {
 		InsertTexture(6, "TIR");
 		InsertTexture(7, "Generic Industrial");
 		InsertTexture(8, "Generic Industrial");
-		InsertTexture(9, "DLMR");
+		InsertTexture(9, "DLMR", LockoutGroup.DLMR);
 		InsertTexture(10, "TNRJ (Temporarily Named Spawn Railroad Company of JCIR)");
-		InsertTexture(11, "D(eez)N(uts)");
+		InsertTexture(11, "D(eez)N(uts)", LockoutGroup.DLMR);
 		InsertTexture(12, "WM (Fireball Early)");
 		InsertTexture(13, "WM (Fireball Late)");
 	}

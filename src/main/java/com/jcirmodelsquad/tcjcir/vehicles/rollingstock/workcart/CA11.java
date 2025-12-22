@@ -3,6 +3,7 @@ package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.workcart;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.AbstractWorkCart;
+import train.common.enums.LockoutGroup;
 
 public class CA11 extends AbstractWorkCart
 {
@@ -10,11 +11,11 @@ public class CA11 extends AbstractWorkCart
         super(world);
         InsertTexture(0, "UP");
         InsertTexture(1, "WP");
-        InsertTexture(2, "FNCC (Regal)");
+        InsertTexture(2, "FNCC (Regal)", LockoutGroup.FNCC);
         InsertTexture(3, "Generic");
         InsertTexture(4, "GLC");
         InsertTexture(5, "GLNT");
-        InsertTexture(6, "CNCR C1-C5");
+        InsertTexture(6, "CNCR C1-C5", LockoutGroup.CNRC);
         InsertTexture(7, "");
         InsertTexture(8, "");
         InsertTexture(9, "");

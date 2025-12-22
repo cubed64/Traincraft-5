@@ -4,6 +4,7 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -29,7 +30,7 @@ public class DieselH16_66 extends DieselTrain {
         InsertTexture(9, "Squaw Creek Coal (Yellow Steps)");
         InsertTexture(10, "Squaw Creek Coal");
         InsertTexture(11, "Canadian Pacific");
-        InsertTexture(12, "DLMR");
+        InsertTexture(12, "DLMR", LockoutGroup.DLMR);
     }
 
     @Override

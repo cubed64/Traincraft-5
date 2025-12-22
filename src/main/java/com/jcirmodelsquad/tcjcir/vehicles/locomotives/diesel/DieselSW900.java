@@ -24,7 +24,7 @@ public class DieselSW900 extends DieselTrain {
         InsertTexture(1, "Conrail Shared Assets");
         InsertTexture(2, "Avanste Northeastern", LockoutGroup.ANE);
         InsertTexture(3, "Blandsville & Blankerston");
-        InsertTexture(4, "Deadwood & La Mesa");
+        InsertTexture(4, "Deadwood & La Mesa", LockoutGroup.DLMR);
         InsertTexture(5, "New York Central");
         InsertTexture(6, "New York Central");
         InsertTexture(7, "Great Lakes & Northern Territories");

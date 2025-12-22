@@ -33,7 +33,7 @@ public class DieselU23B extends DieselTrain {
         InsertTexture(11, "MoPac");
         InsertTexture(12, "Western Pacific");
         InsertTexture(13, "Western Pacific");
-        InsertTexture(14, "Deadwood & La Mesa");
+        InsertTexture(14, "Deadwood & La Mesa", LockoutGroup.DLMR);
         InsertTexture(15, "Penn Central");
         InsertTexture(16, "Seaboard System");
         InsertTexture(17, "CFW 558", LockoutGroup.BIDA);
@@ -45,7 +45,7 @@ public class DieselU23B extends DieselTrain {
         InsertTexture(23, "Suffern Hoboken Interstate Transfer 211");
         InsertTexture(24, "Detroit Export System", LockoutGroup.DES);
         InsertTexture(25, "Magnolia Properties", LockoutGroup.MAG);
-        InsertTexture(26, "AGW");
+        InsertTexture(26, "AGW", LockoutGroup.AGW);
         InsertTexture(27, "CNRC 5001 & 5002", LockoutGroup.CNRC);
         InsertTexture(28, "CSXT (Bluedown)");
         InsertTexture(29, "CSXT (Stealth)");

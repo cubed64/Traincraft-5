@@ -62,9 +62,9 @@ public class DieselGP9 extends DieselTrain {
         InsertTexture(39, "NP (Phase II no DB)");
         InsertTexture(40, "NP (Phase III)");
         InsertTexture(41, "NP (Phase III no DB)");
-        InsertTexture(42, "DLMR (Early)");
-        InsertTexture(43, "DLMR (Late)");
-        InsertTexture(44, "DLMR (MOW)");
+        InsertTexture(42, "DLMR (Early)", LockoutGroup.DLMR);
+        InsertTexture(43, "DLMR (Late)", LockoutGroup.DLMR);
+        InsertTexture(44, "DLMR (MOW)", LockoutGroup.DLMR);
         InsertTexture(45, "MMID (High Nose)");
         InsertTexture(46, "MMID (Chop Nose)");
         InsertTexture(47, "SGPR 25 (Patch)", LockoutGroup.SGPR);

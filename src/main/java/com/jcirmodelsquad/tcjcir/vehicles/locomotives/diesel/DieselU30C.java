@@ -24,10 +24,10 @@ public class DieselU30C extends DieselTrain {
         InsertTexture(2, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(3, "Southern Pacific");
         InsertTexture(4, "Rock Island");
-        InsertTexture(5, "Deadwood & La Mesa");
+        InsertTexture(5, "Deadwood & La Mesa", LockoutGroup.DLMR);
         InsertTexture(6, "West Creek Pacific");
         InsertTexture(7, "Boston & Maine 663 (Guilford)");
-        InsertTexture(8, "AGW");
+        InsertTexture(8, "AGW", LockoutGroup.AGW);
         InsertTexture(9, "GCM", train.common.enums.LockoutGroup.GCM); 
         InsertTexture(10, "Chicago and North Western");
         InsertTexture(11, "CSXT (Stealth)");

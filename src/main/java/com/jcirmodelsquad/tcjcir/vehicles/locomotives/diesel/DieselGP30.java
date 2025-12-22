@@ -34,7 +34,7 @@ public class DieselGP30 extends DieselTrain {
         InsertTexture(12, "OC&G 35", LockoutGroup.CUBED);
         InsertTexture(13, "MAG 84", LockoutGroup.MAG);
         InsertTexture(14, "KCS i mean CGW");
-        InsertTexture(15, "DLMR");
+        InsertTexture(15, "DLMR", LockoutGroup.DLMR);
         InsertTexture(16, "B&B");
         InsertTexture(17, "WV");
         InsertTexture(18, "GLNT");

@@ -26,7 +26,7 @@ public class SteamMK60 extends SteamTrain {
 		InsertTexture(4, "WP 327-329");
 		InsertTexture(5, "WP 334 NEP-WP Condition", LockoutGroup.CUBED);
 		InsertTexture(6, "WP 334-335");
-		InsertTexture(7, "DLMR 199");
+		InsertTexture(7, "DLMR 199", LockoutGroup.DLMR);
 		InsertTexture(8, "FMSR 560-574", LockoutGroup.FMSR);
 		InsertTexture(9, "FMSR 575-579", LockoutGroup.FMSR);
 	}

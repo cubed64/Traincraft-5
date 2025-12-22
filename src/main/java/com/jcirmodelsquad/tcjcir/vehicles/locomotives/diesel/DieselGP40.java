@@ -29,7 +29,7 @@ public class DieselGP40 extends DieselTrain {
         InsertTexture(7, "Burlington Northern");
         InsertTexture(8, "Chicago, Burlington & Quincy");
         InsertTexture(9, "Suffern Hoboken Interstate Transfer");
-        InsertTexture(10, "Deadwood & La Mesa");
+        InsertTexture(10, "Deadwood & La Mesa", LockoutGroup.DLMR);
         InsertTexture(11, "New York Central");
         InsertTexture(12, "New York Central");
         InsertTexture(13, "Great Lakes & Northern Territories");

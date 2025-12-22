@@ -3,6 +3,7 @@ package com.jcirmodelsquad.tcjcir.vehicles.rollingstock.workcart;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.AbstractWorkCart;
+import train.common.enums.LockoutGroup;
 
 public class DRGWboose extends AbstractWorkCart
 {
@@ -21,8 +22,8 @@ public class DRGWboose extends AbstractWorkCart
         InsertTexture(10, "DRGW (01400-01406, Switch Caboose)");
         InsertTexture(11, "DRGW (The Action Road)");
         InsertTexture(12, "DRGW (The Action Road, Removed Windows)");
-        InsertTexture(13, "DLMR");
-        InsertTexture(14, "C&PV");
+        InsertTexture(13, "DLMR", LockoutGroup.DLMR);
+        InsertTexture(14, "C&PV", LockoutGroup.CPV);
     }
 
     @Override

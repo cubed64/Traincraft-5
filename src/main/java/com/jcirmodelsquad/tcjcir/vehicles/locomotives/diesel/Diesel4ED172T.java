@@ -20,7 +20,7 @@ public class Diesel4ED172T extends DieselTrain {
 
         InsertTexture(0, "CEE 1950s Demo units");
         InsertTexture(1, "FMSR Late (FNCC Early)", LockoutGroup.FMSR);
-        InsertTexture(2, "DLMR");
+        InsertTexture(2, "DLMR", LockoutGroup.DLMR);
         InsertTexture(3, "PAMC (Early)");
         InsertTexture(4, "Blandsville & Blankerston");
         InsertTexture(5, "Blandsville & Blankerston (Chop)");

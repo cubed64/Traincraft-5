@@ -23,12 +23,12 @@ public class DieselRS1 extends DieselTrain {
         InsertTexture(1, "she wabash on my lake till i ann arbor");
         InsertTexture(2, "Tidewater Southern");
         InsertTexture(3, "Blandsville & Blankerston");
-        InsertTexture(4, "DLMR (Early)");
-        InsertTexture(5, "DLMR (Late)");
+        InsertTexture(4, "DLMR (Early)", LockoutGroup.DLMR);
+        InsertTexture(5, "DLMR (Late)", LockoutGroup.DLMR);
         InsertTexture(6, "FMSR", LockoutGroup.FMSR);
         InsertTexture(7, "ATSF");
         InsertTexture(8, "Glontch");
-        InsertTexture(9, "AGW");
+        InsertTexture(9, "AGW", LockoutGroup.AGW);
         InsertTexture(10, "CYDZ");
 
     }

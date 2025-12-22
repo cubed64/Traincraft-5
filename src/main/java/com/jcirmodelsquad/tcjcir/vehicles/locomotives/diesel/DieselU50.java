@@ -5,6 +5,7 @@ import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
 import train.common.core.util.TraincraftUtil;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -24,7 +25,7 @@ public class DieselU50 extends DieselTrain {
         InsertTexture(3, "Southfield");
         InsertTexture(4, "Southfield De Mexico");
         InsertTexture(5, "Penn Central the objectively best railroad to own the U50 guys i swear PC owned like 30 of them trust me bro my source is that i MADE IT THE FUCK UP");
-        InsertTexture(6, "hamburge helper rayroade");
+        InsertTexture(6, "hamburge helper rayroade", LockoutGroup.DLMR);
     }
 
     @Override

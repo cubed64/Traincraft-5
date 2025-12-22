@@ -4,6 +4,7 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -22,7 +23,7 @@ public class DieselDS441000 extends DieselTrain {
         InsertTexture(1, "Chicago & Northwestern (Late)");
         InsertTexture(2, "New York Central (Early)");
         InsertTexture(3, "New York Central (Late)");
-        InsertTexture(4, "AGW");
+        InsertTexture(4, "AGW", LockoutGroup.AGW);
     }
 
     @Override

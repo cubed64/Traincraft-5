@@ -29,7 +29,7 @@ public class DieselU36B extends DieselTrain {
         InsertTexture(8, "she consolodate on my rail till i coperation");
         InsertTexture(9, "Western Pacific");
         InsertTexture(10, "Drexel Co", LockoutGroup.DRXL);
-        InsertTexture(11, "Deadwood & La Mesa");
+        InsertTexture(11, "Deadwood & La Mesa", LockoutGroup.DLMR);
     }
 
     @Override

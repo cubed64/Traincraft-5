@@ -4,6 +4,7 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
+import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
 import train.common.library.sounds.SoundRecord;
@@ -26,8 +27,8 @@ public class DieselFA1 extends DieselTrain {
         InsertTexture(5, "Great Northern (Solid)");
         InsertTexture(6, "Lehigh & New England");
         InsertTexture(7, "Lehigh & New England (late)");
-        InsertTexture(8, "Deadwood & La Mesa");
-        InsertTexture(9, "Deadwood & La Mesa");
+        InsertTexture(8, "Deadwood & La Mesa", LockoutGroup.DLMR);
+        InsertTexture(9, "Deadwood & La Mesa", LockoutGroup.DLMR);
         InsertTexture(10, "LIRR (Experimental)");
         InsertTexture(11, "LIRR (MTA Scheme #1 Grills)");
         InsertTexture(12, "LIRR (MTA Scheme #1 No Grills)");
