@@ -801,12 +801,15 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 		return -1;
 	}
 
-	public void dropCartAsItem(boolean isCreative) {
+	public void dropCartAsItem(boolean isCreative)
+	{
 		if (itemdropped == false && (CREATIVE_DROP_ROLLINGSTOCK || isCreative == false))
 		{
 			itemdropped=true;
-			for (ItemStack item : getItemsDropped()) {
-				if (item.getItem() instanceof ItemAbstractRollingStock){
+			for (ItemStack item : getItemsDropped())
+			{
+				if (item.getItem() instanceof ItemAbstractRollingStock)
+				{
 					ItemStack stack = ItemAbstractRollingStock.setPersistentData(item,this,this.getUniqueTrainID(), trainOwner, trainCreator, getColor(), trainNote);
 					exportTrustedListToNBT(stack != null ? stack.getTagCompound() : null);
 					if (cargoManager!= null && cargoManager.getSelectedCargo() != 0 && stack != null)
@@ -814,7 +817,8 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 						stack.getTagCompound().setInteger("cargoSelection", cargoManager.getSelectedCargo());
 					}
 					entityDropItem(stack!=null?stack:item,0);
-				} else
+				}
+				else
 				{
 					setUniqueIDToItem(item);
 					entityDropItem(item, 0);
@@ -900,26 +904,43 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	}
 
 	protected boolean canBeDestroyedByPlayer(DamageSource damagesource) {
-		if (this.getTrainLockedFromPacket()) {
-			if (damagesource.getEntity() instanceof EntityPlayer) {
+		if (this.getTrainLockedFromPacket())
+		{
+			if (damagesource.getEntity() instanceof EntityPlayer)
+			{
 				if ((damagesource.getEntity() instanceof EntityPlayerMP) &&
 						((EntityPlayerMP)damagesource.getEntity()).canCommandSenderUseCommand(2, "") &&
 						((EntityPlayer) damagesource.getEntity()).inventory.getCurrentItem() != null &&
-						((EntityPlayer) damagesource.getEntity()).inventory.getCurrentItem().getItem() instanceof ItemWrench) {
+						((EntityPlayer) damagesource.getEntity()).inventory.getCurrentItem().getItem() instanceof ItemWrench)
+				{
 
 					((EntityPlayer) damagesource.getEntity()).addChatMessage(new ChatComponentText("Removing the train using OP permission"));
 					return false;
 				}
-				else if (!((EntityPlayer) damagesource.getEntity()).getDisplayName().equalsIgnoreCase(this.trainOwner) && !(this.isPlayerTrustedToBreak(((EntityPlayerMP) damagesource.getEntity()).getDisplayName()))) {
+				else if (!((EntityPlayer) damagesource.getEntity()).getDisplayName().equalsIgnoreCase(this.trainOwner) && !(this.isPlayerTrustedToBreak(((EntityPlayerMP) damagesource.getEntity()).getDisplayName())))
+				{
 					((EntityPlayer) damagesource.getEntity()).addChatMessage(new ChatComponentText("You are not the owner!"));
 					return true;
 				}
 			}
-			else if (!damagesource.isProjectile()) {
+			else if (!damagesource.isProjectile())
+			{
 				return true;
 			}
 		}
 		return false;
+	}
+
+	public final static void dropStockInventoryContents(AbstractTrains stock, ItemStack cargoItems[])
+	{
+		if (cargoItems != null)
+		{
+			for (ItemStack stack : cargoItems) {
+				if (stack != null) {
+					stock.entityDropItem(stack, 0);
+				}
+			}
+		}
 	}
 
 	/** Railcraft routing integration */

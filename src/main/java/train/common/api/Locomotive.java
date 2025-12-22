@@ -1646,15 +1646,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         }
         if (canBeDestroyedByPlayer(damagesource)) return true;
         super.attackEntityFrom(damagesource, i);
-        setRollingDirection(-getRollingDirection());
-        setRollingAmplitude(10);
-        setBeenAttacked();
-        setDamage(getDamage() + i * 10);
         if (getDamage() > 40) {
-            if (riddenByEntity != null) {
-                riddenByEntity.mountEntity(this);
-            }
-            this.setDead();
             disconnectFromServer();
 
             if (ttTransceiver != null) ttTransceiver.disconnect();
@@ -1674,11 +1666,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
     public void dropCartAsItem(boolean isCreative) {
         if (!itemdropped) {
             super.dropCartAsItem(isCreative);
-            for (ItemStack stack : locoInvent) {
-                if (stack != null) {
-                    entityDropItem(stack, 0);
-                }
-            }
+            dropStockInventoryContents(this, locoInvent);
         }
     }
 

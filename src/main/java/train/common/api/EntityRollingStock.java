@@ -389,10 +389,14 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	public boolean attackEntityFrom(DamageSource damagesource, float i)
 	{
 		if (worldObj.isRemote || isDead) { return true; }
-		if (damagesource.getEntity() instanceof EntityPlayer && !damagesource.isProjectile()) {
-			if(this instanceof IPassenger){
-				if (canBeDestroyedByPlayer(damagesource)) return false;
+		if (damagesource.getEntity() instanceof EntityPlayer && !damagesource.isProjectile())
+		{
+			if (canBeDestroyedByPlayer(damagesource))
+			{
+				((EntityPlayer) damagesource.getEntity()).addChatComponentMessage(new ChatComponentText("Cannot remove " + getTrainName() + " owned by " + getTrainOwner() + "."));
+				return false;
 			}
+
 			setRollingDirection(-getRollingDirection());
 			setRollingAmplitude(10);
 			setBeenAttacked();
@@ -413,15 +417,9 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				}
 				onEntityDestruction(damagesource);
 				ServerLogger.deleteWagon(this);
-				/**
-				 * Destroy IPassenger since they don't extend Freight or
-				 * Locomotive and don't have a proper attackEntityFrom() method
-				 */
-				if (this instanceof IPassenger)
-				{
-					this.setDead();
-					dropCartAsItem(((EntityPlayer)damagesource.getEntity()).capabilities.isCreativeMode);
-				}
+
+				this.setDead();
+				dropCartAsItem(((EntityPlayer)damagesource.getEntity()).capabilities.isCreativeMode);
 			}
 		}
 		return true;
