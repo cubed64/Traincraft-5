@@ -9,7 +9,8 @@ import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.library.GuiIDs;
 
-public abstract class AbstractStandardTankerCar extends LiquidTank{
+public abstract class AbstractStandardTankerCar extends LiquidTank
+{
 
     public int freightInventorySize;
 
@@ -90,5 +91,15 @@ public abstract class AbstractStandardTankerCar extends LiquidTank{
     @Override
     public boolean isStorageCart() {
         return true;
+    }
+
+    @Override
+    public void dropCartAsItem(boolean isCreative)
+    {
+        if(!itemdropped)
+        {
+            super.dropCartAsItem(isCreative);
+            dropStockInventoryContents(this, cargoItems);
+        }
     }
 }
