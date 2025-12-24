@@ -106,6 +106,9 @@ public class RecipeHandler extends AbstractRecipeHandler
 		//trying to make recipes space economic
 		//(it costs how many tiles of track it is, eg a 10x10 turn costs 10 rails because it takes up ~10 blocks of space if you think about it)
 		GameRegistry.addRecipe(new ItemStack(ItemIDs.partSpike.item, 16), " II", " I ", " I ", 'I', Items.iron_ingot);
+		GameRegistry.addRecipe(new ItemStack(ItemIDs.partSpike.item, 16), "II ", " I ", " I ", 'I', Items.iron_ingot);
+		addDictRecipe(new ItemStack(ItemIDs.partSpike.item, 24), "II ", " I ", " I ", 'I', "ingotSteel");
+		addDictRecipe(new ItemStack(ItemIDs.partSpike.item, 24), " II", " I ", " I ", 'I', "ingotSteel");
 
 		//straights regular
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', Items.iron_ingot, 'P', Blocks.planks);

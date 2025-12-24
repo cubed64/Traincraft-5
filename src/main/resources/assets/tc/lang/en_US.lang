@@ -1994,7 +1994,7 @@ item.tc:minecartPSSOURPO_30.name=Pullman Standard SOU RPO (30' mail section)
 
 item.tc:minecartPRECOPendulumCoach.name=Pacific Railway Equipment Company Pendulum Coach
 
-item.tc:minecartPSFNCCBaggage_Dinette.name=Pullman Standard FNCC Baggage-Dinette
+item.tc:minecartPSFNCCBaggage_Dinette.name=Pullman Standard FMSR Baggage-Dinette
 
 item.tc:minecartNYCPrewar56SeatCoach.name=NYC Prewar 56 Seat Coach
 
@@ -2119,7 +2119,7 @@ entity.tc.PS SOU RPO (30' mail).name=Pullman Standard SOU RPO (30' mail section)
 
 entity.tc.PRECO Pendulum Coach.name=Pacific Railway Equipment Company Pendulum Coach
 
-entity.tc.PS FNCC Baggage-Dinette.name=Pullman Standard FNCC Baggage-Dinette
+entity.tc.PS FNCC Baggage-Dinette.name=Pullman Standard FMSR Baggage-Dinette
 
 entity.tc.NYC Prewar 56 Seat Coach.name=NYC Prewar 56 Seat Coach
 
