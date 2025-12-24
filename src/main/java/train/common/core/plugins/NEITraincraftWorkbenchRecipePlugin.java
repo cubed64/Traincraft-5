@@ -72,7 +72,7 @@ public class NEITraincraftWorkbenchRecipePlugin extends ShapedRecipeHandler {
 
 		@Override
 		public List<PositionedStack> getIngredients() {
-			return getCycledIngredients(cycleticks / 20, ingredients);
+			return getCycledIngredients(cycleticks % 20, ingredients);
 		}
 
 		public PositionedStack getResult() {
@@ -96,19 +96,25 @@ public class NEITraincraftWorkbenchRecipePlugin extends ShapedRecipeHandler {
 		@Override
 		public List<PositionedStack> getCycledIngredients(int cycle, List<PositionedStack> ingredients) {
 			cycleTicks++;
-			for (int itemIndex = 0; itemIndex < ingredients.size(); itemIndex++) {
-
+			final int CYCLE_DELAY = 15;
+			for (int itemIndex = 0; itemIndex < ingredients.size(); itemIndex++)
+			{
 				String oreName = OreDictionary.getOreName(OreDictionary.getOreID(ingredients.get(itemIndex).item));
-				if (oreName.equals("ingotSteel") || oreName.equals("ingotIron") || oreName.equals("ingotCopper") || oreName.equals("dustPlastic") || oreName.equals("dustCoal")) {
+				if (oreName.isEmpty() == false)
+				{
 					ArrayList list = OreDictionary.getOres(OreDictionary.getOreName(OreDictionary.getOreID(ingredients.get(itemIndex).item)));
-					Random rand = new Random(cycle + System.currentTimeMillis());
-					if (cycleTicks % 15 == 0) {
-						int stackSize = ingredients.get(itemIndex).item.stackSize;
-						ingredients.get(itemIndex).item = (ItemStack) list.get(Math.abs(rand.nextInt()) % list.size());
-						ingredients.get(itemIndex).item.stackSize = stackSize;
+					if (list.size() > 1)
+					{
+						Random rand = new Random(cycle + System.currentTimeMillis());
+						if (cycleTicks % CYCLE_DELAY == 0) {
+							int stackSize = ingredients.get(itemIndex).item.stackSize;
+							ingredients.get(itemIndex).item = (ItemStack) list.get(Math.abs(rand.nextInt()) % list.size());
+							ingredients.get(itemIndex).item.stackSize = stackSize;
+						}
 					}
 				}
-				else {
+				else
+				{
 					randomRenderPermutation(ingredients.get(itemIndex), cycle + itemIndex);
 				}
 			}

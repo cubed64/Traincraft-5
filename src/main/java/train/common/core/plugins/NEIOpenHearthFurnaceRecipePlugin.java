@@ -78,7 +78,7 @@ public class NEIOpenHearthFurnaceRecipePlugin extends ShapedRecipeHandler {
         @Override
         public List<PositionedStack> getIngredients()
         {
-            return getCycledIngredients(cycleticks / 20, ingredients);
+            return getCycledIngredients(cycleticks % 20, ingredients);
         }
         
         public PositionedStack getResult()

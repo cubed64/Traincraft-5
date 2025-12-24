@@ -5,6 +5,7 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import net.minecraftforge.oredict.OreDictionary;
 import train.common.core.interfaces.ITCRecipe;
 import train.common.recipes.OpenHearthFurnaceRecipe;
 import train.common.recipes.ITCRecipe.ShapedTrainRecipes;
@@ -21,7 +22,17 @@ public class TrainCraftingManager {
 
 	/** A list of all the recipes added */
 	private List recipes = new ArrayList();
-	
+
+	public void AddShapedRecipe(ShapedTrainRecipes shapedTrainRecipe)
+	{
+		this.shapedRecipes.add(shapedTrainRecipe);
+	}
+
+	public void AddRecipe(ShapedTrainRecipes shapedTrainRecipe)
+	{
+		this.recipes.add(shapedTrainRecipe);
+	}
+
 	private final ArrayList<ShapedTrainRecipes> shapedRecipes = new ArrayList<ShapedTrainRecipes>();
 
 	/** Recipes for openHearthFurnace */
@@ -34,6 +45,10 @@ public class TrainCraftingManager {
 	}
 
 	private TrainCraftingManager() {}
+
+
+
+
 
 	public void addRecipe(ItemStack par1ItemStack, Object... obj) {
 		String var3 = "";
