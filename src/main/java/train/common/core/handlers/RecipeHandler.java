@@ -105,14 +105,28 @@ public class RecipeHandler extends AbstractRecipeHandler
 		/* New Track Recipes */
 		//trying to make recipes space economic
 		//(it costs how many tiles of track it is, eg a 10x10 turn costs 10 rails because it takes up ~10 blocks of space if you think about it)
-		GameRegistry.addRecipe(new ItemStack(ItemIDs.partSpike.item, 16), " II", " I ", " I ", 'I', Items.iron_ingot);
-		GameRegistry.addRecipe(new ItemStack(ItemIDs.partSpike.item, 16), "II ", " I ", " I ", 'I', Items.iron_ingot);
+
+
+		Item railResource = ConfigHandler.MAKE_MODPACKS_GREAT_AGAIN ? ItemIDs.steel.item : Items.iron_ingot;
+
+		if (ConfigHandler.MAKE_MODPACKS_GREAT_AGAIN == false)
+		{
+			GameRegistry.addRecipe(new ItemStack(ItemIDs.partSpike.item, 16), " II", " I ", " I ", 'I', Items.iron_ingot);
+			GameRegistry.addRecipe(new ItemStack(ItemIDs.partSpike.item, 16), "II ", " I ", " I ", 'I', Items.iron_ingot);
+		}
+
 		addDictRecipe(new ItemStack(ItemIDs.partSpike.item, 24), "II ", " I ", " I ", 'I', "ingotSteel");
 		addDictRecipe(new ItemStack(ItemIDs.partSpike.item, 24), " II", " I ", " I ", 'I', "ingotSteel");
 
 		//straights regular
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', Items.iron_ingot, 'P', Blocks.planks);
-		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSmallStraight.item, 16), "I I", "IBI", "I I", 'I', Items.iron_ingot, 'B', ItemIDs.partSpike.item);
+		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', railResource, 'P', new ItemStack(Blocks.planks, 1, 0)); // oak
+		//GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', railResource, 'P', new ItemStack(Blocks.planks, 0, 3)); // Spuce
+		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', railResource, 'P', new ItemStack(Blocks.planks, 1, 2)); // birch
+		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', railResource, 'P', new ItemStack(Blocks.planks, 1, 3)); // jungle
+		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', railResource, 'P', new ItemStack(Blocks.planks, 1, 4)); // acacia
+		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', railResource, 'P', new ItemStack(Blocks.planks, 1, 5)); // dark oak
+
+		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailEmbeddedSmallStraight.item, 16), "I I", "IBI", "I I", 'I', railResource, 'B', ItemIDs.partSpike.item);
 
 		ArrayList<ItemStack> concretes = new ArrayList<ItemStack>();
 		if (Loader.isModLoaded("Railcraft"))
@@ -126,8 +140,8 @@ public class RecipeHandler extends AbstractRecipeHandler
 
 		for (ItemStack itemStack : concretes)
 		{
-			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_CONCRETE_TYPE1_SmallStraight.item, 16),  "IBI", "IPI", "I I", 'I', Items.iron_ingot, 'B', ItemIDs.partSpike.item, 'P', itemStack);
-			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_CONCRETE_TYPE2_SmallStraight.item, 16),  "IBI", "IPI", "IWI", 'I', Items.iron_ingot, 'B', ItemIDs.partSpike.item, 'P', itemStack, 'W', Items.water_bucket);
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_CONCRETE_TYPE1_SmallStraight.item, 16),  "IBI", "IPI", "I I", 'I', railResource, 'B', ItemIDs.partSpike.item, 'P', itemStack);
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_CONCRETE_TYPE2_SmallStraight.item, 16),  "IBI", "IPI", "IWI", 'I', railResource, 'B', ItemIDs.partSpike.item, 'P', itemStack, 'W', Items.water_bucket);
 		}
 
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_CONCRETE_TYPE2_SmallStraight.item, 1), "   ", " B ", " I ", 'I', Items.water_bucket, 'B', TrackItemIDs.tcRail_CONCRETE_TYPE1_SmallStraight.item);
@@ -152,14 +166,14 @@ public class RecipeHandler extends AbstractRecipeHandler
 
 		if (CREOSOTE_CONTAINERS.isEmpty())
 		{
-			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_WOOD_TYPE1_SmallStraight.item, 16),  "GCG", "GPG", "G G", 'G', Items.iron_ingot, 'P', Blocks.planks, 'C', ItemIDs.diesel.item);
+			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_WOOD_TYPE1_SmallStraight.item, 16),  "GCG", "GPG", "G G", 'G', railResource, 'P', Blocks.planks, 'C', ItemIDs.diesel.item);
 			GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_WOOD_TYPE1_SmallStraight.item, 1),  " G ", " P ", "   ", 'G', ItemIDs.diesel.item, 'P', TrackItemIDs.tcRailSmallStraight.item);
 		}
 		else
 		{
 			for (ItemStack creoStack : CREOSOTE_CONTAINERS)
 			{
-				GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_WOOD_TYPE1_SmallStraight.item, 16),  "GCG", "GPG", "G G", 'G', Items.iron_ingot, 'P', Blocks.planks, 'C', creoStack);
+				GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_WOOD_TYPE1_SmallStraight.item, 16),  "GCG", "GPG", "G G", 'G', railResource, 'P', Blocks.planks, 'C', creoStack);
 				GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_WOOD_TYPE1_SmallStraight.item, 1),  " G ", " P ", "   ", 'G', creoStack, 'P', TrackItemIDs.tcRailSmallStraight.item);
 			}
 		}
