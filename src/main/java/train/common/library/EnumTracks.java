@@ -868,7 +868,7 @@ public enum EnumTracks
     private final TCRailTypes.RailTypes railType;
     private final BallastTypes ballastType;
 
-    private EnumCoreTrack enumCoreTrack;
+    private final EnumCoreTrack enumCoreTrack;
 
     private final RailVariants variant;
     private final TrackItemIDs item;
