@@ -120,7 +120,7 @@ public class RecipeHandler extends AbstractRecipeHandler
 
 		//straights regular
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', railResource, 'P', new ItemStack(Blocks.planks, 1, 0)); // oak
-		//GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', railResource, 'P', new ItemStack(Blocks.planks, 0, 3)); // Spuce
+		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRail_WOOD_TYPE2_SmallStraight.item, 16),  "G G", "GPG", "G G", 'G', railResource, 'P', new ItemStack(Blocks.planks, 1, 1)); // Spuce
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', railResource, 'P', new ItemStack(Blocks.planks, 1, 2)); // birch
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', railResource, 'P', new ItemStack(Blocks.planks, 1, 3)); // jungle
 		GameRegistry.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16),  "G G", "GPG", "G G", 'G', railResource, 'P', new ItemStack(Blocks.planks, 1, 4)); // acacia
@@ -636,7 +636,7 @@ public class RecipeHandler extends AbstractRecipeHandler
 				}
 			}
 			for (ItemStack ironItem : iron) {
-				TrainCraftingManager.instance.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16), "I I", "IPI", "I I", Character.valueOf('P'), plankItem, Character.valueOf('I'), ironItem);// small straight track
+				//TrainCraftingManager.instance.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallStraight.item, 16), "I I", "IPI", "I I", Character.valueOf('P'), plankItem, Character.valueOf('I'), ironItem);// small straight track
 
 				TrainCraftingManager.instance.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing.item, 16), "I I", "IPI", "I I", Character.valueOf('P'), new ItemStack(Blocks.stained_hardened_clay, 1, 15), Character.valueOf('I'), ironItem);
 				TrainCraftingManager.instance.addRecipe(new ItemStack(TrackItemIDs.tcRailSmallRoadCrossing1.item, 16), "I I", "IPI", "I I", Character.valueOf('P'), new ItemStack(Blocks.stained_hardened_clay, 1, 7), Character.valueOf('I'), ironItem);

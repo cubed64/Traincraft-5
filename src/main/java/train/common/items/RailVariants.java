@@ -7,4 +7,6 @@ public enum RailVariants
     CONCRETE_TYPE1,
     CONCRETE_TYPE2,
     TREATED_WOOD_TYPE1,
+
+    WOOD_TYPE2,
 }

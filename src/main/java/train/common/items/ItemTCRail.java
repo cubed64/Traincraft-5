@@ -378,11 +378,15 @@ public class ItemTCRail extends ItemPart {
 				break;
 			case CONCRETE_TYPE2:
 				typeVariantStraightLabel = EnumTracks.CONCRETE_TYPE2_SMALL_STRAIGHT.getLabel();
-				typeVariantDiagonalStraightLabel = EnumTracks.CONCRETE_TYPE1_SMALL_DIAGONAL_STRAIGHT.getLabel();
+				typeVariantDiagonalStraightLabel = EnumTracks.CONCRETE_TYPE2_SMALL_DIAGONAL_STRAIGHT.getLabel();
 				break;
 			case TREATED_WOOD_TYPE1:
 				typeVariantStraightLabel = WOOD_TYPE1_SMALL_STRAIGHT.getLabel();
 				typeVariantDiagonalStraightLabel = EnumTracks.WOOD_TYPE1_SMALL_DIAGONAL_STRAIGHT.getLabel();
+				break;
+			case WOOD_TYPE2:
+				typeVariantStraightLabel = WOOD_TYPE2_SMALL_STRAIGHT.getLabel();
+				typeVariantDiagonalStraightLabel = EnumTracks.WOOD_TYPE2_SMALL_DIAGONAL_STRAIGHT.getLabel();
 				break;
 		}
 	}
@@ -5325,6 +5329,9 @@ public class ItemTCRail extends ItemPart {
 					par3List.add(EnumChatFormatting.GRAY + "Variant: " + this.getTrackType().getVariant().name());
 					break;
 				case TREATED_WOOD_TYPE1:
+					par3List.add(EnumChatFormatting.GRAY + "Variant: " + this.getTrackType().getVariant().name());
+					break;
+				case WOOD_TYPE2:
 					par3List.add(EnumChatFormatting.GRAY + "Variant: " + this.getTrackType().getVariant().name());
 					break;
 			}
