@@ -375,13 +375,13 @@ public class TCItems {
 		TrackItemIDs.tcRail_WOOD_TYPE1_VeryLargeSlopeDynamic.item = new ItemTCRail(EnumTracks.WOOD_TYPE1_VERY_LARGE_SLOPE_DYNAMIC);
 
 		//===================================================WOOD_TYPE2=============================================================
-		/*TREATED_WOOD_TYPE1 Crossways*/
+		/*WOOD_TYPE2 Crossways*/
 		TrackItemIDs.tcRail_WOOD_TYPE2_TwoWaysCrossing.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_TWO_WAYS_CROSSING);
 		TrackItemIDs.tcRail_WOOD_TYPE2_DiamondCrossing.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_DIAMOND_CROSSING);
 		TrackItemIDs.tcRail_WOOD_TYPE2_DoubleDiamondCrossing.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_DOUBLE_DIAMOND_CROSSING);
 		TrackItemIDs.tcRail_WOOD_TYPE2_FourWaysCrossing.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_FOUR_WAYS_CROSSING);
 
-		/* TREATED_WOOD_TYPE2 Switches*/
+		/* WOOD_TYPE2 Switches*/
 		TrackItemIDs.tcRail_WOOD_TYPE2_MediumSwitch.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_MEDIUM_SWITCH);
 		TrackItemIDs.tcRail_WOOD_TYPE2_LargeSwitch.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_LARGE_SWITCH);
 		TrackItemIDs.tcRail_WOOD_TYPE2_VeryLargeSwitch.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_VERY_LARGE_SWITCH);
@@ -393,19 +393,19 @@ public class TCItems {
 		TrackItemIDs.tcRail_WOOD_TYPE2_CrossoverSwitch10x2.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_CROSSOVER_SWITCH_10X2);
 
 
-		/*TREATED_WOOD_TYPE2 Straights*/
+		/*WOOD_TYPE2 Straights*/
 		TrackItemIDs.tcRail_WOOD_TYPE2_SmallStraight.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_SMALL_STRAIGHT);
 		TrackItemIDs.tcRail_WOOD_TYPE2_MediumStraight.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_MEDIUM_STRAIGHT);
 		TrackItemIDs.tcRail_WOOD_TYPE2_LongStraight.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_LONG_STRAIGHT);
 		TrackItemIDs.tcRail_WOOD_TYPE2_VeryLongStraight.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_VERY_LONG_STRAIGHT);
 
-		/* TREATED_WOOD_TYPE2 Parallel Curves*/
+		/* WOOD_TYPE2 Parallel Curves*/
 		TrackItemIDs.tcRail_WOOD_TYPE2_SmallParallelCurve.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_SMALL_PARALLEL_CURVE);
 		TrackItemIDs.tcRail_WOOD_TYPE2_MediumParallelCurve.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_MEDIUM_PARALLEL_CURVE);
 		TrackItemIDs.tcRail_WOOD_TYPE2_LargeParallelCurve.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_LARGE_PARALLEL_CURVE);
 		TrackItemIDs.tcRail_WOOD_TYPE2_20x2SCurve.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_S_CURVE_20x2);
 
-		/* TREATED_WOOD_TYPE2 Turns */
+		/* WOOD_TYPE2 Turns */
 		TrackItemIDs.tcRail_WOOD_TYPE2_1X1Turn.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_TURN_1X1);
 		TrackItemIDs.tcRail_WOOD_TYPE2_MediumTurn.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_MEDIUM_TURN);
 		TrackItemIDs.tcRail_WOOD_TYPE2_LargeTurn.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_LARGE_TURN);
@@ -414,7 +414,7 @@ public class TCItems {
 		TrackItemIDs.tcRail_WOOD_TYPE2_29X29Turn.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_TURN_29X29);
 		TrackItemIDs.tcRail_WOOD_TYPE2_32X32Turn.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_TURN_32X32);
 
-		/*TREATED_WOOD_TYPE2 45Degree Turns*/
+		/*WOOD_TYPE2 45Degree Turns*/
 		TrackItemIDs.tcRail_WOOD_TYPE2_Medium45DegreeTurn.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_MEDIUM_45DEGREE_TURN);
 		TrackItemIDs.tcRail_WOOD_TYPE2_Large45DegreeTurn.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_LARGE_45DEGREE_TURN);
 		TrackItemIDs.tcRail_WOOD_TYPE2_VeryLarge45DegreeTurn.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_VERY_LARGE_45DEGREE_TURN);
@@ -422,7 +422,7 @@ public class TCItems {
 		TrackItemIDs.tcRail_WOOD_TYPE2_45DegreeTurn9x20.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_DIAGONAL_TURN_9X20);
 		TrackItemIDs.tcRail_WOOD_TYPE2_45DegreeTurn10x22.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_DIAGONAL_TURN_10X22);
 
-		/* TREATED_WOOD_TYPE2 Slopes*/
+		/* WOOD_TYPE2 Slopes*/
 		TrackItemIDs.tcRail_WOOD_TYPE2_1x3SlopeDynamic.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_SLOPE_1X3_DYNAMIC);
 		TrackItemIDs.tcRail_WOOD_TYPE2_SlopeDynamic.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_SLOPE_DYNAMIC);
 		TrackItemIDs.tcRail_WOOD_TYPE2_LargeSlopeDynamic.item = new ItemTCRail(EnumTracks.WOOD_TYPE2_LARGE_SLOPE_DYNAMIC);

@@ -357,23 +357,9 @@ public class LiquidTank extends EntityRollingStock implements IFluidHandler, ISi
 		if (worldObj.isRemote) {
 			return true;
 		}
-		if (canBeDestroyedByPlayer(damagesource))
-			return true;
+		if(canBeDestroyedByPlayer(damagesource))return true;
 		super.attackEntityFrom(damagesource, i);
-		setRollingDirection(-getRollingDirection());
-		setRollingAmplitude(10);
-		setBeenAttacked();
-		setDamage(getDamage() + i * 10);
-		if (getDamage() > 40) {
-			if (riddenByEntity != null) {
-				riddenByEntity.mountEntity(this);
-			}
-			this.setDead();
-			ServerLogger.deleteWagon(this);
-			if (damagesource.getEntity() instanceof EntityPlayer) {
-				dropCartAsItem(((EntityPlayer)damagesource.getEntity()).capabilities.isCreativeMode);
-			}
-		}
+
 		return true;
 	}
 
