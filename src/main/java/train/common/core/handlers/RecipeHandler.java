@@ -866,9 +866,7 @@ public class RecipeHandler extends AbstractRecipeHandler
 			}
 		}
 
-		for (ItemStack dye : dyeYellow) {
-			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartFRED.item, 1), " T ", " D ", " S ", 'D', dye, 'T', Blocks.redstone_torch, 'S', new ItemStack(ItemIDs.steel.item));
-		}
+		addRecipeWithOreDic(new ItemStack(ItemIDs.minecartFRED.item, 1), " T ", " D ", " S ", 'D', dyeYellow.get(0), 'T', Blocks.redstone_torch, 'S', new ItemStack(ItemIDs.steel.item));
 
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartCF7angle3.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartCF7angle.item));
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.minecartCF7angle.item, 1),  "   ", " R ", "   ", 'R', new ItemStack(ItemIDs.minecartCF7angle3.item));
