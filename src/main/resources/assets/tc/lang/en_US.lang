@@ -7,6 +7,14 @@ tile.tc:oreTC.copperOre.name=Copper Ore
 tile.tc:oreTC.oilSands.name=Oil Sands
 tile.tc:oreTC.petroleum.name=Petroleum
 tile.tc:oreTC.ballast.name=Ballast
+
+tile.tc:dirtyBallast.name=Dirty Ballast
+tile.tc:dirtierBallast.name=Dirtier Ballast
+
+tile.tc:asphalt.name=Asphalt Block
+tile.tc:asphaltSlab.name=Asphalt Slab
+tile.tc:asphaltStairs.name=Asphalt Stairs
+
 tile.tc:generatorDiesel.name=Diesel Generator
 tile.tc:windMill.name=Windmill
 tile.tc:waterWheel.name=Water Wheel

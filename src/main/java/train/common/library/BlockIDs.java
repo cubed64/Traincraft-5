@@ -78,7 +78,18 @@ public enum BlockIDs implements IBlockIDs {
 	Racor36H(false,null),
 	Racor36H_2(false,null),
 
+	poweredGravel(false,null),
+
 	snowGravel(false,null),
+	dirtyBallast(false,null),
+	dirtierBallast(false,null),
+	asphalt(false, null),
+	asphaltSlab(true, ItemAsphaltSlab.class),
+	asphaltDoubleSlab(true, ItemAsphaltSlab.class),
+
+	//Stairs
+	asphaltStairs(false, null),
+
     mtcVBCController(false,null ),
 
 	//crossing stuff
