@@ -4,11 +4,13 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.AbstractStandardFreightCar;
 import train.common.entity.CargoManager;
+import train.common.enums.CargoItemFilter;
 
 public class IngotPig extends AbstractStandardFreightCar
 {
     public IngotPig(World world) {
         super(world);
+        cargoFilterCategory = CargoItemFilter.INGOT;
     }
 
     

@@ -10,11 +10,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.api.AbstractStandardFreightCar;
 import train.common.entity.CargoManager;
+import train.common.enums.CargoItemFilter;
 
 public class SkeletonLogCar extends AbstractStandardFreightCar
 {
 	public SkeletonLogCar(World world) {
 		super(world);
+		cargoFilterCategory = CargoItemFilter.LOG_WOOD;
 	}
 
 	

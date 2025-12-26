@@ -10,6 +10,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import train.common.Traincraft;
 import train.common.entity.CargoManager;
+import train.common.enums.CargoItemFilter;
 import train.common.library.GuiIDs;
 
 /**
@@ -18,6 +19,13 @@ import train.common.library.GuiIDs;
 public abstract class AbstractStandardFreightCar extends Freight
 {
     private int freightInventorySize;
+
+    protected CargoItemFilter cargoFilterCategory = CargoItemFilter.DEFAULT;
+
+    public CargoItemFilter GetCargoFilterCategory()
+    {
+        return cargoFilterCategory;
+    }
 
     public AbstractStandardFreightCar(World world)
     {

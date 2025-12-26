@@ -8,12 +8,14 @@ import net.minecraft.world.World;
 import train.common.api.AbstractStandardFreightCar;
 import train.common.entity.CargoManager;
 import train.common.entity.CargoSpecification;
+import train.common.enums.CargoItemFilter;
 
 public class EntityBulkheadFlatCart extends AbstractStandardFreightCar
 {
 	public EntityBulkheadFlatCart(World world)
 	{
 		super(world);
+		cargoFilterCategory = CargoItemFilter.WOOD_PRODUCTS;
 	}
 
 	@Override

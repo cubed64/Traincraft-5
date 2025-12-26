@@ -4,11 +4,13 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.AbstractStandardFreightCar;
 import train.common.entity.CargoManager;
+import train.common.enums.CargoItemFilter;
 
 public class WoodchipHopper extends AbstractStandardFreightCar
 {
     public WoodchipHopper(World world) {
         super(world);
+        cargoFilterCategory = CargoItemFilter.WOOD_CHIPS;
     }
 
     

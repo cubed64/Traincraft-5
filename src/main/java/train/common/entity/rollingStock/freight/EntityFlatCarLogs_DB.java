@@ -4,6 +4,7 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import train.common.api.AbstractStandardFixedFreightCar;
+import train.common.enums.CargoItemFilter;
 import train.common.library.ItemIDs;
 
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ public class EntityFlatCarLogs_DB extends AbstractStandardFixedFreightCar
 {
 	public EntityFlatCarLogs_DB(World world) {
 		super(world);
+		cargoFilterCategory = CargoItemFilter.WOOD_PRODUCTS;
 	}
 
 	@Override

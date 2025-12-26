@@ -4,14 +4,14 @@ import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
 import train.common.api.AbstractStandardFreightCar;
 import train.common.entity.CargoManager;
+import train.common.enums.CargoItemFilter;
 
 public class VersaLongi extends AbstractStandardFreightCar
 {
     public VersaLongi(World world) {
         super(world);
+        cargoFilterCategory = CargoItemFilter.AGGREGATE;
     }
-
-
 
     @Override
     public CargoManager setupCargoManager()

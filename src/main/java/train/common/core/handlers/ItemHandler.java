@@ -20,6 +20,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import train.common.api.*;
 import train.common.entity.rollingStock.freight.*;
+import train.common.enums.CargoItemFilter;
 import train.common.items.ItemBlockOreTC;
 import train.common.items.ItemTCRail;
 
@@ -46,7 +47,8 @@ public class ItemHandler {
 		return false;
 	}
 
-	public static boolean handleFreight(Entity entity, ItemStack itemstack) {
+	public static boolean handleFreight(Entity entity, ItemStack itemstack)
+	{
 		int logWood = OreDictionary.getOreID("logWood");
 		int plankWood = OreDictionary.getOreID("plankWood");
 		int slabWood =  OreDictionary.getOreID("slabWood");
@@ -64,55 +66,61 @@ public class ItemHandler {
 		if (block == null) {
 			return false;
 		}
-		if (entity instanceof EntityFreightCenterbeam_Wood_1 || entity instanceof EntityFreightCenterbeam_Wood_2 || entity instanceof Freight66centerbeam || entity instanceof Freight60centerbeam ||
-				entity instanceof EntityFlatCartWoodUS || entity instanceof EntityBulkheadFlatCart || entity instanceof EntityFlatCarLogs_DB ||
-				entity instanceof EntityFreightWood || entity instanceof EntityFreightWood2 || entity instanceof Freight73centerbeam || entity instanceof Thrall63centerbeam) {
-            int isid = OreDictionary.getOreID(itemstack);
-			return isid == plankWood || isid == logWood || isid == slabWood || isid == stairWood || isid == dw1|| isid == dw2||
-					itemstack.getItem() == Item.getItemFromBlock(Blocks.ladder) || itemstack.getItem() == Item.getItemFromBlock(Blocks.fence) || itemstack.getItem() == Item.getItemFromBlock(Blocks.fence_gate) || isid == rubberWood;
-		}
-		else if (entity instanceof SkeletonLogCar) {
-			int isid = OreDictionary.getOreID(itemstack);
-			return isid == logWood;
-		}
-		else if (entity instanceof EntityFlatCarRails_DB) {
-			return block instanceof BlockRailBase || itemstack.getItem() instanceof ItemTCRail;
-		}
 
-		else if (entity instanceof EntityFreightGrain) {
-			Item item = itemstack.getItem();
-			if (item == Items.wheat || item == Items.wheat_seeds || item == Items.melon_seeds
-					|| item == Items.pumpkin_seeds || item instanceof ItemSeeds) {
-				return true;
+		if (entity instanceof AbstractStandardFreightCar)
+		{
+			AbstractStandardFreightCar car = (AbstractStandardFreightCar) entity;
+			if (CargoItemFilter.DEFAULT.equals(car.GetCargoFilterCategory()) == false)
+			{
+				int oreDicID;
+				switch (car.GetCargoFilterCategory())
+				{
+					case WOOD_PRODUCTS:
+						oreDicID = OreDictionary.getOreID(itemstack);
+						return oreDicID == plankWood
+								|| oreDicID == logWood
+								|| oreDicID == slabWood
+								|| oreDicID == stairWood
+								|| oreDicID == dw1
+								|| oreDicID == dw2
+								|| itemstack.getItem() == Item.getItemFromBlock(Blocks.ladder)
+								|| itemstack.getItem() == Item.getItemFromBlock(Blocks.fence)
+								|| itemstack.getItem() == Item.getItemFromBlock(Blocks.fence_gate)
+								|| oreDicID == rubberWood;
+					case LOG_WOOD:
+						oreDicID = OreDictionary.getOreID(itemstack);
+						return oreDicID == logWood;
+					case ASSEMBLED_TRAIN_TRACK:
+						return block instanceof BlockRailBase || itemstack.getItem() instanceof ItemTCRail;
+					case GRAIN:
+						Item item = itemstack.getItem();
+						if (item == Items.wheat
+								|| item == Items.wheat_seeds
+								|| item == Items.melon_seeds
+								|| item == Items.pumpkin_seeds
+								|| item instanceof ItemSeeds)
+						{
+							return true;
+						}
+						return cropStuff(itemstack);
+					case OPAQUE_BLOCKS:
+						return block.isOpaqueCube();
+					case WOOD_CHIPS:
+						return powderWood(itemstack);
+					case ROCK_MATERIAL:
+						return block.getMaterial() == Material.rock;
+					case ICE_MATERIAL:
+						return block.getMaterial() == Material.ice || block.getMaterial() == Material.packedIce;
+					case ORE:
+						return oreBlocks(itemstack);
+					case INGOT:
+						return ingotItems(itemstack);
+					default:
+						return true;
+				}
 			}
-			return cropStuff(itemstack);
 		}
-		else if (entity instanceof EntityFreightMinetrain) {
-				return block.isOpaqueCube();
-		}
-
-		else if (entity instanceof WoodchipHopper) {
-			return powderWood(itemstack);
-		}
-
-		else if (entity instanceof EntityFreightSlateWagon){
-			return block.getMaterial() == Material.rock;
-		}
-		else if (entity instanceof EntityFreightIceWagon){
-			return block.getMaterial() == Material.ice || block.getMaterial() == Material.packedIce;
-		}
-		else if (entity instanceof VersaLongi || entity instanceof VersaTrans){
-			return block.getMaterial() == Material.sand || block.getMaterial() == Material.clay || block.getMaterial() == Material.ground || itemstack.getItem() instanceof ItemBlockOreTC;
-		}
-		else if (entity instanceof OreJenny) {
-			return oreBlocks(itemstack);
-		}
-		else if (entity instanceof IngotPig) {
-			return ingotItems(itemstack);
-		}
-		else {
-			return true;
-		}
+		return true;
 	}
 
 	private static boolean oreCoal(ItemStack itemstack){
