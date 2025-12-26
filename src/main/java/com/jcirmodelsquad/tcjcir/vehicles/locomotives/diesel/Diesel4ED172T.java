@@ -1,14 +1,21 @@
 package com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel;
 
+import com.jcirmodelsquad.tcjcir.models.trains.Model4ED172T;
 import net.minecraft.entity.item.EntityMinecart;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import train.client.render.register.TrainRenderRecord;
+import train.common.Traincraft;
 import train.common.api.DieselTrain;
 import train.common.api.LiquidManager;
 import train.common.core.util.TraincraftUtil;
 import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.EnumTrains;
+import train.common.library.Info;
 import train.common.library.sounds.SoundRecord;
+
+import java.util.ArrayList;
 
 public class Diesel4ED172T extends DieselTrain {
 
@@ -50,5 +57,26 @@ public class Diesel4ED172T extends DieselTrain {
     @Override
     public boolean isFictional() {
         return true;
+    }
+
+    @Override
+    public void onRenderInsertRecord()
+    {
+        Traincraft.traincraftRegistry.RegisterRollingStockModel(new TrainRenderRecord(Info.modID,
+                Diesel4ED172T.class,
+                new Model4ED172T(),
+                "4ED-172T_",
+                new float[]{-1.45F, 0.155F, 0F},
+                new float[] { 0F, 180F, 180F },
+                null,
+                "smoke",
+                new ArrayList<double[]>()
+                {
+                    {
+                        add(new double[]{0.45D, 1.5D, 0.0D});
+                    }
+                },
+                "", null, 4, 0)
+        );
     }
 }

@@ -1735,11 +1735,11 @@ public enum RenderEnum implements ITrainRenderRecord, ISubTrainRenderRecord
 		}
 	}, "", null, 0, false),
 
-	CEE4ED172T( Diesel4ED172T.class,  new Model4ED172T(), "4ED-172T_", true,new float[]{-1.45F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
-		{
-			add(new double[]{0.45D, 1.5D, 0.0D});
-		}
-	}, "", null, 0, true),
+	//CEE4ED172T( Diesel4ED172T.class,  new Model4ED172T(), "4ED-172T_", true,new float[]{-1.45F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
+	//	{
+	//		add(new double[]{0.45D, 1.5D, 0.0D});
+	//	}
+	//}, "", null, 0, true),
 	CEE4ED172T_E( Diesel4ED172T_E.class,  new Model4ED172T(), "4ED-172T_E_", true,new float[]{-1.45F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{
 			add(new double[]{1.55D, 1.4D, 0.0D});//front
