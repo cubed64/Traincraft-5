@@ -7,7 +7,7 @@ import train.common.api.AbstractStandardTankerCar;
 public class EntityTankWagon_DB extends AbstractStandardTankerCar {
 
 	public EntityTankWagon_DB(World world) {
-		super(world, 0);
+		super(world);
 	}
 
 	@Override

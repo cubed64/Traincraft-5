@@ -14,6 +14,18 @@ public abstract class AbstractStandardTankerCar extends LiquidTank
 
     public int freightInventorySize;
 
+    protected boolean isHighTemperature = false;
+
+    public boolean isHighTemperature()
+    {
+        return isHighTemperature;
+    }
+
+    public AbstractStandardTankerCar(World world)
+    {
+        this(world, 0);
+    }
+
     public AbstractStandardTankerCar(World world, int capacity)
     {
         super(null, capacity,world);

@@ -7,11 +7,12 @@ import net.minecraft.world.World;
 import train.client.render.models.ModelPassenger2;
 import train.client.render.register.TrainRenderRecord;
 import train.common.Traincraft;
+import train.common.api.AbstractPassengerCar;
 import train.common.api.EntityRollingStock;
 import train.common.api.IPassenger;
 import train.common.library.Info;
 
-public class EntityPassenger2 extends EntityRollingStock implements IPassenger {
+public class EntityPassenger2 extends AbstractPassengerCar {
 
 	public EntityPassenger2(World world) {
 		super(world);
