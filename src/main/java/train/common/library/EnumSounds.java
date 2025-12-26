@@ -331,7 +331,7 @@ public class EnumSounds
 	public static final SoundRecord DieselTB27= new SoundRecord(DieselTB27.class, " ", 1F, "EMD_8_645E_Notch8", 0.45F, 48, "EMD_8_645E_Idle", 0.45F, 54, false, "emd_steelbell_8", 13, new String[] {"nathan_n3_1", "generic_horn_1", "nathan_m3h_4", "nathan_p5_old_4"});
 	public static final SoundRecord ElectricCEESlug= new SoundRecord(ElectricCEEslug.class, " ", 1F, "MILW_Idle", 0.45F, 40, "MILW_Idle", 0.45F, 50, false, "ge_steelbell_2", 15, new String[] {"nathan_j3_3","nathan_m3r_1", "gp40_2_horn", "generic_horn_2"});
 
-	public static final SoundRecord ROTARYPLOW= new SoundRecord(RotaryPlow1.class, " ", 0.8F, "vl10_idle", 0.45F, 40, "vl10_idle", 0.45F, 40, false, "emd_steelbell_4", 10, new String[] {"nathan_j3_1"});
+	public static final SoundRecord ROTARYPLOW= new SoundRecord(RotaryPlow1.class, " ", 0.8F, "vl10_idle", 0.45F, 40, "vl10_idle", 0.45F, 40, false, "emd_steelbell_4", 10, new String[] {"nathan_j3_1", " "});
 
 	//ELECTRIC//
 	public static final SoundRecord ElectricEF1= new SoundRecord(ElectricEF1.class, "wabco_e2_1", 1F, "MILW_Notch8", 0.45F, 40, "MILW_Idle", 0.45F, 50, false, "alco_bronzebell_3", 18);

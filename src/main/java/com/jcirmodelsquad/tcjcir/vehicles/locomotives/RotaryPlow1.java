@@ -33,6 +33,7 @@ public class RotaryPlow1 extends ElectricTrain {
     public RotaryPlow1(World world) {
         super(world);
         InsertTexture(0, "Generic Black (With Wings)");
+        InsertTexture(1, "SPR", LockoutGroup.SPR);
 
 
         //cargomanger for detachable front coupler
