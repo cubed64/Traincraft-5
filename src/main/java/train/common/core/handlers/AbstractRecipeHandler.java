@@ -10,10 +10,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import train.common.inventory.TrainCraftingManager;
 import train.common.recipes.ITCRecipe.ShapedTrainRecipes;
 
-import java.util.ArrayList;
-import java.util.Dictionary;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * Used as a base Table Recipe Handler that grabs all the items needed
@@ -192,7 +189,49 @@ public abstract class AbstractRecipeHandler
 
             List<ItemStack[]> next = new ArrayList<ItemStack[]>();
 
+            // Determine if this symbol maps to a single ore material (like steel)
+            Integer lockedOreId = null;
+            boolean lockByOre = false;
+
+            if (options != null && options.size() > 1) {
+                // Find common OreDictionary IDs shared by all options
+                Set<Integer> commonIds = new HashSet<Integer>();
+                for (int id : OreDictionary.getOreIDs(options.get(0))) {
+                    commonIds.add(id);
+                }
+
+                for (int k = 1; k < options.size(); k++) {
+                    int[] ids = OreDictionary.getOreIDs(options.get(k));
+                    Set<Integer> current = new HashSet<Integer>();
+                    for (int id : ids) {
+                        current.add(id);
+                    }
+                    commonIds.retainAll(current);
+
+                    if (commonIds.isEmpty()) {
+                        break;
+                    }
+                }
+
+                if (!commonIds.isEmpty()) {
+                    lockedOreId = commonIds.iterator().next();
+                    lockByOre = true;
+                }
+            }
+
             for (ItemStack[] base : results) {
+
+                // Find previously used stack for this symbol
+                ItemStack lockedStack = null;
+                if (lockByOre) {
+                    for (int j = 0; j < i; j++) {
+                        if (pattern.charAt(j) == symbol && base[j] != null) {
+                            lockedStack = base[j];
+                            break;
+                        }
+                    }
+                }
+
                 if (options == null) {
                     ItemStack[] copy = base.clone();
                     copy[i] = null;
@@ -200,6 +239,14 @@ public abstract class AbstractRecipeHandler
                 }
                 else {
                     for (ItemStack stack : options) {
+
+                        // Only restrict when it's the same ore material (steel case)
+                        if (lockByOre && lockedStack != null) {
+                            if (!OreDictionary.itemMatches(lockedStack, stack, false)) {
+                                continue;
+                            }
+                        }
+
                         ItemStack[] copy = base.clone();
                         copy[i] = stack.copy();
                         next.add(copy);
