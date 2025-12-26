@@ -677,7 +677,52 @@ item.tc:tcRail_WOOD_TYPE1_SlopeDynamic.name=1x6 Treated Wood Slope Track (Dynami
 item.tc:tcRail_WOOD_TYPE1_LargeSlopeDynamic.name=1x12 Treated Wood Large Slope Track (Dynamic)
 item.tc:tcRail_WOOD_TYPE1_VeryLargeSlopeDynamic.name=1x18 Treated Wood Very Large Slope Track (Dynamic)
 
+<!-- ## TC Tracks - Wood Type 2 (Spruce) ## -->
+item.tc:tcRail_WOOD_TYPE2_SmallStraight.name=1x1 Spruce Wood Straight
+item.tc:tcRail_WOOD_TYPE2_MediumStraight.name=1x3 Spruce Wood Straight
+item.tc:tcRail_WOOD_TYPE2_LongStraight.name=1x6 Spruce Wood Straight
+item.tc:tcRail_WOOD_TYPE2_VeryLongStraight.name=1x12 Spruce Wood Straight
 
+item.tc:tcRail_WOOD_TYPE2_1X1Turn.name=1x1 Spruce Wood Turn
+item.tc:tcRail_WOOD_TYPE2_MediumTurn.name=3x3 Spruce Wood Turn
+item.tc:tcRail_WOOD_TYPE2_LargeTurn.name=5x5 Spruce Wood Turn
+item.tc:tcRail_WOOD_TYPE2_VeryLargeTurn.name=10x10 Spruce Wood Turn
+item.tc:tcRail_WOOD_TYPE2_SuperLargeTurn.name=16x16 Spruce Wood Turn
+item.tc:tcRail_WOOD_TYPE2_29X29Turn.name=29x29 Spruce Wood Turn
+item.tc:tcRail_WOOD_TYPE2_32X32Turn.name=32x32 Spruce Wood Turn
+
+item.tc:tcRail_WOOD_TYPE2_Medium45DegreeTurn.name=3x4 Spruce Wood 45 Degree Turn
+item.tc:tcRail_WOOD_TYPE2_Large45DegreeTurn.name=3x6 Spruce Wood 45 Degree Turn
+item.tc:tcRail_WOOD_TYPE2_VeryLarge45DegreeTurn.name=4x8 Spruce Wood 45 Degree Turn
+item.tc:tcRail_WOOD_TYPE2_SuperLarge45DegreeTurn.name=5x11 Spruce Wood 45 Degree Turn
+item.tc:tcRail_WOOD_TYPE2_45DegreeTurn9x20.name=9x20 Spruce Wood 45 Degree Turn
+item.tc:tcRail_WOOD_TYPE2_45DegreeTurn10x22.name=10x22 Spruce Wood 45 Degree Turn
+
+item.tc:tcRail_WOOD_TYPE2_SmallParallelCurve.name=2x8 Spruce Wood S-Curve
+item.tc:tcRail_WOOD_TYPE2_MediumParallelCurve.name=3x12 Spruce Wood S-Curve
+item.tc:tcRail_WOOD_TYPE2_LargeParallelCurve.name=4x16 Spruce Wood S-Curve
+item.tc:tcRail_WOOD_TYPE2_20x2SCurve.name=2x20 Spruce Wood S-Curve
+
+item.tc:tcRail_WOOD_TYPE2_MediumSwitch.name=4x4 Spruce Wood 90 Degrees Switch
+item.tc:tcRail_WOOD_TYPE2_LargeSwitch.name=6x6 Spruce Wood 90 Degrees Switch
+item.tc:tcRail_WOOD_TYPE2_VeryLargeSwitch.name=11x11 Spruce Wood 90 Degrees Switch
+item.tc:tcRail_WOOD_TYPE2_MediumParallelSwitch.name=4x11 Spruce Wood Parallel Switch
+item.tc:tcRail_WOOD_TYPE2_LargeParallelSwitch.name=4x17 Spruce Wood Parallel Switch
+item.tc:tcRail_WOOD_TYPE2_Medium45DegreeSwitch.name=3x5 Spruce Wood 45 Degree Switch
+item.tc:tcRail_WOOD_TYPE2_Large45DegreeSwitch.name=4x8 Spruce Wood 45 Degree Switch
+item.tc:tcRail_WOOD_TYPE2_CrossoverSwitch10x2.name=10x3 Spruce Wood Crossover Switch
+
+item.tc:tcRail_WOOD_TYPE2_TwoWaysCrossing.name=Spruce Wood Plus Crossing
+item.tc:tcRail_WOOD_TYPE2_DiamondCrossing.name=Spruce Wood X Crossing
+item.tc:tcRail_WOOD_TYPE2_DoubleDiamondCrossing.name=Spruce Wood Double X Crossing
+item.tc:tcRail_WOOD_TYPE2_FourWaysCrossing.name=Spruce Wood X-Plus Crossing
+
+item.tc:tcRail_WOOD_TYPE2_1x3SlopeDynamic.name=1x3 Spruce Wood Slope Track (Dynamic)
+item.tc:tcRail_WOOD_TYPE2_SlopeDynamic.name=1x6 Spruce Wood Slope Track (Dynamic)
+item.tc:tcRail_WOOD_TYPE2_LargeSlopeDynamic.name=1x12 Spruce Wood Large Slope Track (Dynamic)
+item.tc:tcRail_WOOD_TYPE2_VeryLargeSlopeDynamic.name=1x18 Spruce Wood Very Large Slope Track (Dynamic)
+
+<!-- ## TC Tracks - RR Crossings ## -->
 item.tc:tcRailSmallRoadCrossing.name=RailRoad Crossing (Black Asphalt)
 item.tc:tcRailSmallRoadCrossing1.name=RailRoad Crossing (Clean Asphalt)
 item.tc:tcRailSmallRoadCrossing2.name=RailRoad Crossing (light Gray Asphalt)
