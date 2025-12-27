@@ -1,6 +1,7 @@
 package train.common.entity;
 
 import tmt.ModelConverter;
+import train.common.library.Info;
 
 import java.util.LinkedList;
 
@@ -11,6 +12,7 @@ import java.util.LinkedList;
  */
 public class CargoSpecification {
     public final Class<? extends ModelConverter> cargoModelClass;
+    public final String resourceDomain;
     public final String textureFile;
     public final String textureName;
     public final RenderParameters renderParameters;
@@ -150,6 +152,7 @@ public class CargoSpecification {
         this.textureName = textureName;
         this.renderParameters = new RenderParameters();
         this.renderParameters.setOffset(offsetX, offsetY, offsetZ);
+        resourceDomain = Info.resourceLocation;
     }
 
     @Deprecated
@@ -160,10 +163,29 @@ public class CargoSpecification {
         this.renderParameters = new RenderParameters();
         this.renderParameters.setOffset(offsetX, offsetY, offsetZ);
         this.renderParameters.setScale(scaleX, scaleY, scaleZ);
+        resourceDomain = Info.resourceLocation;
     }
+
 
     public CargoSpecification(Class<? extends ModelConverter> cargoModelClass, String textureFile, String textureName, RenderParameters renderParameters) {
         this.cargoModelClass = cargoModelClass;
+        this.textureFile = textureFile;
+        this.textureName = textureName;
+        this.renderParameters = renderParameters;
+        resourceDomain = Info.resourceLocation;
+    }
+
+    /**
+     * Designed For Addon Pack Compatability
+     * @param cargoModelClass
+     * @param resourceDomain Domain IE tc
+     * @param textureFile
+     * @param textureName
+     * @param renderParameters
+     */
+    public CargoSpecification(Class<? extends ModelConverter> cargoModelClass, String resourceDomain, String textureFile, String textureName, RenderParameters renderParameters) {
+        this.cargoModelClass = cargoModelClass;
+        this.resourceDomain = resourceDomain;
         this.textureFile = textureFile;
         this.textureName = textureName;
         this.renderParameters = renderParameters;

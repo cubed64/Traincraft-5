@@ -57,7 +57,7 @@ public class CargoManager {
             if (cargoNumber - 1 < cargoSpecificationList.length) {
                 for (int i = 0; i < getCargoSpecificationList()[cargoNumber - 1].length; i++) {
                     if (!getCargoSpecificationList()[cargoNumber - 1][i].textureFile.isEmpty())
-                        Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/" + getCargoSpecificationList()[cargoNumber - 1][i].textureFile + ".png"));
+                        Tessellator.bindTexture(new ResourceLocation(getCargoSpecificationList()[cargoNumber - 1][i].resourceDomain, "textures/" + getCargoSpecificationList()[cargoNumber - 1][i].textureFile + ".png"));
                     GL11.glPushMatrix();
                     CargoSpecification.RenderParameters renderParameters = getCargoSpecificationList()[cargoNumber - 1][i].renderParameters;
                     GL11.glTranslated(renderParameters.getOffsetX(), renderParameters.getOffsetY() - 3, renderParameters.getOffsetZ());
