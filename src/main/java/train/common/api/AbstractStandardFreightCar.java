@@ -92,13 +92,13 @@ public abstract class AbstractStandardFreightCar extends Freight
         }
 
         boolean isTrustedPlayer = isPlayerTrusted(playerEntity.getDisplayName());
-        if (this.getTrainLockedFromPacket() && !playerEntity.getDisplayName().equalsIgnoreCase(this.getTrainOwner()) && !isTrustedPlayer)
+        if (this.getTrainLockedFromPacket() && !playerEntity.getDisplayName().equalsIgnoreCase(this.getTransportOwner()) && !isTrustedPlayer)
         {
             if (!worldObj.isRemote)
             {
                 if (entityplayer.isSneaking() || this instanceof AbstractPassengerCombineCar == false)
                 {
-                    entityplayer.addChatMessage(new ChatComponentText("Train is locked by " + this.getTrainOwner() + "."));
+                    entityplayer.addChatMessage(new ChatComponentText("Train is locked by " + this.getTransportOwner() + "."));
                 }
             }
             return true;

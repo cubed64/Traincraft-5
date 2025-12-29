@@ -83,7 +83,7 @@ public class GuiForney extends GuiContainer {
 			this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 124, var2 - 10, 51, 10, "Unlocked"));
 		}
 		else {
-			if (loco.getTrainOwner().equalsIgnoreCase(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
+			if (loco.getTransportOwner().equalsIgnoreCase(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
 				this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 130, var2 - 10, 43, 10, "Locked"));
 			else if (loco.isPlayerTrusted(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
 				if (loco.isPlayerTrustedToBreak(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
@@ -110,7 +110,7 @@ public class GuiForney extends GuiContainer {
 			}
 		}
 		if (guibutton.id == 3) {
-			if (loco.riddenByEntity != null && loco.riddenByEntity instanceof EntityPlayer && ((EntityPlayer) loco.riddenByEntity).getDisplayName().equals(loco.getTrainOwner())) {
+			if (loco.riddenByEntity != null && loco.riddenByEntity instanceof EntityPlayer && ((EntityPlayer) loco.riddenByEntity).getDisplayName().equals(loco.getTransportOwner())) {
 				if (!isShiftKeyDown()) {
 					if ((!loco.getTrainLockedFromPacket())) {
 						loco.locked = true;
@@ -136,7 +136,7 @@ public class GuiForney extends GuiContainer {
 		//int liqui = (dieselInventory.getLiquidAmount() * 50) / dieselInventory.getTankCapacity();
 		String state = "";
 		if (loco.getTrainLockedFromPacket()) {
-			if (loco.getTrainOwner().equalsIgnoreCase(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
+			if (loco.getTransportOwner().equalsIgnoreCase(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
 				state = "Locked";
 			else if (loco.isPlayerTrusted(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
 				if (loco.isPlayerTrustedToBreak(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
@@ -161,7 +161,7 @@ public class GuiForney extends GuiContainer {
 		fontRendererObj.drawStringWithShadow("only its owner can open", startX, startY + 10, -1);
 		fontRendererObj.drawStringWithShadow("the GUI, change speed, destroy it.", startX, startY + 20, -1);
 		fontRendererObj.drawStringWithShadow("Current state: " + state, startX, startY + 30, -1);
-		fontRendererObj.drawStringWithShadow("Owner: " + loco.getTrainOwner().trim(), startX, startY + 40, -1);
+		fontRendererObj.drawStringWithShadow("Owner: " + loco.getTransportOwner().trim(), startX, startY + 40, -1);
 	}
 
 	public boolean intersectsWith(int mouseX, int mouseY) {

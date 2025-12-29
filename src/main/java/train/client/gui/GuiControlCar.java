@@ -93,7 +93,7 @@ public class GuiControlCar extends GuiContainer
             this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 108, var2 - 10, 67, 10, "Unlocked"));
         }
         else {
-            if (controlCar.getTrainOwner().equalsIgnoreCase(((EntityPlayer) controlCar.riddenByEntity).getDisplayName()))
+            if (controlCar.getTransportOwner().equalsIgnoreCase(((EntityPlayer) controlCar.riddenByEntity).getDisplayName()))
                 this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 108, var2 - 10, 67, 10, "Locked"));
             else if (controlCar.isPlayerTrusted(((EntityPlayer) controlCar.riddenByEntity).getDisplayName()))
                 if (controlCar.isPlayerTrustedToBreak(((EntityPlayer) controlCar.riddenByEntity).getDisplayName()))
@@ -165,7 +165,7 @@ public class GuiControlCar extends GuiContainer
             break;
 
             case 3: // Lock Control Car
-                if (controlCar.riddenByEntity instanceof EntityPlayer && ((EntityPlayer) controlCar.riddenByEntity).getDisplayName().equals(controlCar.getTrainOwner())) {
+                if (controlCar.riddenByEntity instanceof EntityPlayer && ((EntityPlayer) controlCar.riddenByEntity).getDisplayName().equals(controlCar.getTransportOwner())) {
                     if ((!controlCar.getTrainLockedFromPacket())) {
                         if (!isShiftKeyDown()) {
                             Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(true, controlCar.getTrustedList(), controlCar.getEntityId(), false));
@@ -237,7 +237,7 @@ public class GuiControlCar extends GuiContainer
 
         String state = "";
         if (controlCar.getTrainLockedFromPacket()) {
-            if (controlCar.getTrainOwner().equalsIgnoreCase(((EntityPlayer) controlCar.riddenByEntity).getDisplayName()))
+            if (controlCar.getTransportOwner().equalsIgnoreCase(((EntityPlayer) controlCar.riddenByEntity).getDisplayName()))
                 state = "Locked";
             else if (controlCar.isPlayerTrusted(((EntityPlayer) controlCar.riddenByEntity).getDisplayName()))
                 if (controlCar.isPlayerTrustedToBreak(((EntityPlayer) controlCar.riddenByEntity).getDisplayName()))
@@ -263,7 +263,7 @@ public class GuiControlCar extends GuiContainer
         fontRendererObj.drawStringWithShadow("only its owner can open", startX, startY + 10, -1);
         fontRendererObj.drawStringWithShadow("the GUI, change speed, destroy it.", startX, startY + 20, -1);
         fontRendererObj.drawStringWithShadow("Current state: " + state, startX, startY + 30, -1);
-        fontRendererObj.drawStringWithShadow("Owner: " + controlCar.getTrainOwner().trim(), startX,
+        fontRendererObj.drawStringWithShadow("Owner: " + controlCar.getTransportOwner().trim(), startX,
                 startY + 40, -1);
     }
 

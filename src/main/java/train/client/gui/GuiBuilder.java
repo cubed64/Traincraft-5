@@ -94,7 +94,7 @@ public class GuiBuilder extends GuiContainer {
 		}
 
 		if (guibutton.id == 4) {
-			if (player != null && player.getCommandSenderName().toLowerCase().equals((builder).getTrainOwner().toLowerCase())) {
+			if (player != null && player.getCommandSenderName().toLowerCase().equals((builder).getTransportOwner().toLowerCase())) {
 				if ((!(builder).getTrainLockedFromPacket())) {
 					AxisAlignedBB box = (builder).boundingBox.expand(5, 5, 5);
 					List<?> lis3 = (builder).worldObj.getEntitiesWithinAABBExcludingEntity(builder, box);
@@ -154,7 +154,7 @@ public class GuiBuilder extends GuiContainer {
 		fontRendererObj.drawStringWithShadow("only its owner can open", startX, startY + 10, -1);
 		fontRendererObj.drawStringWithShadow("the GUI and destroy it.", startX, startY + 20, -1);
 		fontRendererObj.drawStringWithShadow("Current state: " + state, startX, startY + 30, -1);
-		fontRendererObj.drawStringWithShadow("Owner: " + (builder).getTrainOwner().trim(), startX, startY + 40, -1);
+		fontRendererObj.drawStringWithShadow("Owner: " + (builder).getTransportOwner().trim(), startX, startY + 40, -1);
 	}
 
 	public boolean intersectsWith(int mouseX, int mouseY) {

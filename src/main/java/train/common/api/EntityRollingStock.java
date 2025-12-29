@@ -278,7 +278,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 	}
 
 	@Override
-	public String getTrainOwner() {
+	public String getTransportOwner() {
 		return dataWatcher.getWatchableObjectString(7);
 	}
 
@@ -393,7 +393,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 		{
 			if (canBeDestroyedByPlayer(damagesource))
 			{
-				((EntityPlayer) damagesource.getEntity()).addChatComponentMessage(new ChatComponentText("Cannot remove " + getTrainName() + " owned by " + getTrainOwner() + "."));
+				((EntityPlayer) damagesource.getEntity()).addChatComponentMessage(new ChatComponentText("Cannot remove " + getTrainName() + " owned by " + getTransportOwner() + "."));
 				return false;
 			}
 
@@ -405,7 +405,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				this.setDamage(1000);
 				if (ConfigHandler.ENABLE_WAGON_REMOVAL_NOTICES && ((EntityPlayer) damagesource.getEntity()).canCommandSenderUseCommand(2,""))
 				{
-					((EntityPlayer) damagesource.getEntity()).addChatComponentMessage(new ChatComponentText("Operator removed " + getTrainName() + " owned by " + getTrainOwner() + "."));
+					((EntityPlayer) damagesource.getEntity()).addChatComponentMessage(new ChatComponentText("Operator removed " + getTrainName() + " owned by " + getTransportOwner() + "."));
 				}
 			}
 			setDamage(getDamage() + i * 10);
@@ -1650,14 +1650,14 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 
 		if (this.getTrainLockedFromPacket()) {
 			boolean isTrustedPlayer = isPlayerTrusted(playerEntity.getDisplayName());
-			if (!playerEntity.getDisplayName().equalsIgnoreCase(this.getTrainOwner()) && !canBeRiddenWhileLocked(this) && !isTrustedPlayer)
+			if (!playerEntity.getDisplayName().equalsIgnoreCase(this.getTransportOwner()) && !canBeRiddenWhileLocked(this) && !isTrustedPlayer)
 			{
-				if (!worldObj.isRemote) entityplayer.addChatMessage(new ChatComponentText("Train is locked by " + this.getTrainOwner() + "."));
+				if (!worldObj.isRemote) entityplayer.addChatMessage(new ChatComponentText("Train is locked by " + this.getTransportOwner() + "."));
 				return true;
 			}
-			else if (!playerEntity.getDisplayName().equalsIgnoreCase(this.getTrainOwner()) && entityplayer.inventory.getCurrentItem() != null && entityplayer.inventory.getCurrentItem().getItem() instanceof ItemDye && (this instanceof Locomotive) && !isTrustedPlayer)
+			else if (!playerEntity.getDisplayName().equalsIgnoreCase(this.getTransportOwner()) && entityplayer.inventory.getCurrentItem() != null && entityplayer.inventory.getCurrentItem().getItem() instanceof ItemDye && (this instanceof Locomotive) && !isTrustedPlayer)
 			{
-				if (!worldObj.isRemote) entityplayer.addChatMessage(new ChatComponentText("Train is locked by " + this.getTrainOwner() + "."));
+				if (!worldObj.isRemote) entityplayer.addChatMessage(new ChatComponentText("Train is locked by " + this.getTransportOwner() + "."));
 				return true;
 			}
 		}
@@ -1693,7 +1693,7 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 				return true;
 			}
 
-			if (entityplayer.isSneaking() && itemstack != null && itemstack.getItem() instanceof ItemPadlock && getTrainOwner().equalsIgnoreCase(entityplayer.getDisplayName()))
+			if (entityplayer.isSneaking() && itemstack != null && itemstack.getItem() instanceof ItemPadlock && getTransportOwner().equalsIgnoreCase(entityplayer.getDisplayName()))
 			{
 				entityplayer.openGui(Traincraft.instance, GuiIDs.LOCK_MENU, entityplayer.getEntityWorld(), this.getEntityId(), -1, (int) this.posZ);
 				return true;
@@ -1776,11 +1776,11 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 					ItemRemoteController theItem2 = ((ItemRemoteController) itemstack.getItem());
 
 					if (theItem2.attachedLocomotive == null) {
-						if (this.locked && this.getTrainOwner().equals(entityplayer.getDisplayName())) {
+						if (this.locked && this.getTransportOwner().equals(entityplayer.getDisplayName())) {
 							theItem2.attachedLocomotive = thisAsLocomotive;
 							entityplayer.addChatMessage(new ChatComponentText(EnumChatFormatting.GREEN +  "Successfully paired with train! Right click again to unpair."));
 
-						} else if (!this.locked || Objects.equals(entityplayer.getDisplayName(), this.getTrainOwner())) {
+						} else if (!this.locked || Objects.equals(entityplayer.getDisplayName(), this.getTransportOwner())) {
 							theItem2.attachedLocomotive = thisAsLocomotive;
 							entityplayer.addChatMessage(new ChatComponentText(EnumChatFormatting.GREEN +"Successfully paired with train! Right click again to unpair."));
 						} else {

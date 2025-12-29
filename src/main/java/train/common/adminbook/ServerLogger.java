@@ -40,8 +40,8 @@ public class ServerLogger {
             }
             if(wagon.getOwner() != null && wagon.getOwner().getName()!=null && !wagon.getOwner().getName().equals("")){
                 sb.append(wagon.getOwner().getName().toLowerCase());
-            } else if (wagon.getTrainOwner() !=null && !wagon.getTrainOwner().equals("")){
-                sb.append(wagon.getTrainOwner().toLowerCase());
+            } else if (wagon.getTransportOwner() !=null && !wagon.getTransportOwner().equals("")){
+                sb.append(wagon.getTransportOwner().toLowerCase());
             } else {
                 sb.append("unknown_player");
             }
@@ -99,8 +99,8 @@ public class ServerLogger {
         sb.append("/traincraft/");
         if(wagon.getOwner() != null && wagon.getOwner().getName()!=null && !wagon.getOwner().getName().equals("")){
             sb.append(wagon.getOwner().getName().toLowerCase());
-        } else if (wagon.getTrainOwner() !=null && !wagon.getTrainOwner().equals("")){
-            sb.append(wagon.getTrainOwner().toLowerCase());
+        } else if (wagon.getTransportOwner() !=null && !wagon.getTransportOwner().equals("")){
+            sb.append(wagon.getTransportOwner().toLowerCase());
         } else {
          sb.append("unknown_player");
         }

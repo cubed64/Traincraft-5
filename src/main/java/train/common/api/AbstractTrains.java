@@ -109,7 +109,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 	 */
 	public String trainOwner = "";
 
-	public String getTrainOwner() {
+	public String getTransportOwner() {
 		return trainOwner;
 	}
 
@@ -1062,7 +1062,7 @@ public abstract class AbstractTrains extends EntityMinecart implements IMinecart
 				trustedList.appendTag(trustedPlayerTag);
 			}
 			nbttagcompound.setTag("trustedList", trustedList);
-			nbttagcompound.setString("trustedListPreviousOwner", getTrainOwner());
+			nbttagcompound.setString("trustedListPreviousOwner", getTransportOwner());
 		}
 	}
 

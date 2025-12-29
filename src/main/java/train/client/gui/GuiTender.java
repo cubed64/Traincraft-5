@@ -42,7 +42,7 @@ public class GuiTender extends GuiContainer {
 		if (!tender.getTrainLockedFromPacket()) {
 			this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 124, var2 - 10, 51, 10, "Unlocked"));
 		} else {
-			if (tender.getTrainOwner().equalsIgnoreCase(player.getDisplayName()))
+			if (tender.getTransportOwner().equalsIgnoreCase(player.getDisplayName()))
 				this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 130, var2 - 10, 43, 10, "Locked"));
 			else if (tender.isPlayerTrusted(player.getDisplayName()))
 				if (tender.isPlayerTrustedToBreak(player.getDisplayName()))
@@ -58,7 +58,7 @@ public class GuiTender extends GuiContainer {
 	@Override
 	protected void actionPerformed(GuiButton guibutton) {
 		if (guibutton.id == 3) {
-			if(player!=null && player.getCommandSenderName().equalsIgnoreCase(tender.getTrainOwner())){
+			if(player!=null && player.getCommandSenderName().equalsIgnoreCase(tender.getTransportOwner())){
 				if ((!tender.getTrainLockedFromPacket()) && !isShiftKeyDown()) {
 					tender.locked = true;
 					guibutton.displayString = "Locked";
@@ -115,7 +115,7 @@ public class GuiTender extends GuiContainer {
 		//int liqui = (dieselInventory.getLiquidAmount() * 50) / dieselInventory.getTankCapacity();
 		String state = "";
 		if (tender.getTrainLockedFromPacket()) {
-			if (tender.getTrainOwner().equalsIgnoreCase(player.getDisplayName()))
+			if (tender.getTransportOwner().equalsIgnoreCase(player.getDisplayName()))
 				state = "Locked";
 			else if (tender.isPlayerTrusted(player.getDisplayName()))
 				if (tender.isPlayerTrustedToBreak(player.getDisplayName()))
@@ -140,7 +140,7 @@ public class GuiTender extends GuiContainer {
 		fontRendererObj.drawStringWithShadow("only its owner can open", startX, startY + 10, -1);
 		fontRendererObj.drawStringWithShadow("the GUI and destroy it.", startX, startY + 20, -1);
 		fontRendererObj.drawStringWithShadow("Current state: "+state, startX, startY+30, -1);
-		fontRendererObj.drawStringWithShadow("Owner: "+tender.getTrainOwner().trim(), startX, startY+40, -1);
+		fontRendererObj.drawStringWithShadow("Owner: "+tender.getTransportOwner().trim(), startX, startY+40, -1);
 	}
 	public boolean intersectsWith(int mouseX, int mouseY) {
 		//System.out.println(mouseX+" "+mouseY);

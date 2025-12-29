@@ -153,13 +153,13 @@ public class PacketSetTrainLockedToClient implements IMessage {
                     } else
                         break;
                 }
-                if (loopRollingStock != rollingStock && loopRollingStock.getTrainOwner().equalsIgnoreCase(rollingStock.getTrainOwner())) {
+                if (loopRollingStock != rollingStock && loopRollingStock.getTransportOwner().equalsIgnoreCase(rollingStock.getTransportOwner())) {
                     loopRollingStock.setTrainLockedFromPacket(locked);
                     loopRollingStock.setTrustedList(trustedPlayerList);
                     Traincraft.lockChannel.sendToAllAround(new PacketSetTrainLockedToClient(locked, trustedPlayerList, loopRollingStock.getEntityId(), false),
                             new NetworkRegistry.TargetPoint(loopRollingStock.dimension, loopRollingStock.posX, loopRollingStock.posY, loopRollingStock.posZ, 256D));
                     completedList.add(loopRollingStock.getEntityId());
-                } else if (!loopRollingStock.getTrainOwner().equalsIgnoreCase(rollingStock.getTrainOwner())) {
+                } else if (!loopRollingStock.getTransportOwner().equalsIgnoreCase(rollingStock.getTransportOwner())) {
                     completedList.add(loopRollingStock.getEntityId());
 
                 }

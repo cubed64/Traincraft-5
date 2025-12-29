@@ -16,7 +16,7 @@ public class TrainsOnClick
 {
 	public boolean onClickWithStake(AbstractTrains train, ItemStack itemstack, EntityPlayer playerEntity, World world) {
 		if (itemstack != null && itemstack.getItem() == ItemIDs.stake.item && !world.isRemote &&
-				(FMLCommonHandler.instance().getMinecraftServerInstance().isSinglePlayer() || !train.isLinked() || train.getTrainOwner().equals(playerEntity.getDisplayName()) || train.getTrainOwner().equals("") || train.getTrainOwner()==null)) {
+				(FMLCommonHandler.instance().getMinecraftServerInstance().isSinglePlayer() || !train.isLinked() || train.getTransportOwner().equals(playerEntity.getDisplayName()) || train.getTransportOwner().equals("") || train.getTransportOwner()==null)) {
 
 			if (playerEntity.isSneaking() && train instanceof Locomotive) {
 				if (!train.canBeAdjusted(train)) {
@@ -99,9 +99,9 @@ public class TrainsOnClick
 				&& (entityRollingStock instanceof Locomotive == false && entityRollingStock instanceof AbstractControlCar == false)
 				&& (FMLCommonHandler.instance().getMinecraftServerInstance().isSinglePlayer()
 					|| entityRollingStock.getTrainLockedFromPacket() == false
-					|| entityRollingStock.getTrainOwner() == null
-					|| entityRollingStock.getTrainOwner().equals("")
-					|| entityRollingStock.getTrainOwner().equalsIgnoreCase(playerEntity.getDisplayName())
+					|| entityRollingStock.getTransportOwner() == null
+					|| entityRollingStock.getTransportOwner().equals("")
+					|| entityRollingStock.getTransportOwner().equalsIgnoreCase(playerEntity.getDisplayName())
 					|| entityRollingStock.isPlayerTrusted(playerEntity.getDisplayName())
 					|| entityRollingStock.isPlayerTrustedToBreak(playerEntity.getDisplayName()))
 		)

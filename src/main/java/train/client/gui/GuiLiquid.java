@@ -69,7 +69,7 @@ public class GuiLiquid extends GuiContainer {
 		if (!liquid.getTrainLockedFromPacket()) {
 			this.buttonList.add(new GuiButton(3, var1 + 124, var2 - 10, 51, 10, "Unlocked"));
 		}else{
-			if (liquid.getTrainOwner().equalsIgnoreCase(player.getDisplayName()))
+			if (liquid.getTransportOwner().equalsIgnoreCase(player.getDisplayName()))
 				this.buttonList.add(new GuiButton(3, var1 + 130, var2 - 10, 43, 10, "Locked"));
 			else if (liquid.isPlayerTrusted(player.getDisplayName()))
 				if (liquid.isPlayerTrustedToBreak(player.getDisplayName()))
@@ -85,7 +85,7 @@ public class GuiLiquid extends GuiContainer {
 	@Override
 	protected void actionPerformed(GuiButton guibutton) {
 		if (guibutton.id == 3) {
-			if (player != null && player.getCommandSenderName().equalsIgnoreCase(((AbstractTrains) liquid).getTrainOwner()) && !isShiftKeyDown()){
+			if (player != null && player.getCommandSenderName().equalsIgnoreCase(((AbstractTrains) liquid).getTransportOwner()) && !isShiftKeyDown()){
 				if ((!liquid.getTrainLockedFromPacket())){
 					liquid.locked = true;
 					guibutton.displayString = "Locked";
@@ -160,7 +160,7 @@ public class GuiLiquid extends GuiContainer {
 		//int liqui = (dieselInventory.getLiquidAmount() * 50) / dieselInventory.getTankCapacity();
 		String state = "";
 		if(liquid.getTrainLockedFromPacket()){
-			if (liquid.getTrainOwner().equalsIgnoreCase(player.getDisplayName()))
+			if (liquid.getTransportOwner().equalsIgnoreCase(player.getDisplayName()))
 				state = "Locked";
 			else if (liquid.isPlayerTrusted(player.getDisplayName()))
 				if (liquid.isPlayerTrustedToBreak(player.getDisplayName()))
@@ -186,7 +186,7 @@ public class GuiLiquid extends GuiContainer {
 		fontRendererObj.drawStringWithShadow("only its owner can open", startX, startY + 10, -1);
 		fontRendererObj.drawStringWithShadow("the GUI and destroy it.", startX, startY + 20, -1);
 		fontRendererObj.drawStringWithShadow("Current state: "+state, startX, startY+30, -1);
-		fontRendererObj.drawStringWithShadow("Owner: "+(liquid).getTrainOwner().trim(), startX, startY+40, -1);
+		fontRendererObj.drawStringWithShadow("Owner: "+(liquid).getTransportOwner().trim(), startX, startY+40, -1);
 	}
 	public boolean intersectsWithLockButton(int mouseX, int mouseY) {
 		//System.out.println(mouseX+" "+mouseY);

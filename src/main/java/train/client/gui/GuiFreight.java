@@ -61,7 +61,7 @@ public class GuiFreight extends GuiContainer {
 			this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 124, var2 - 10, 51, 10, "Unlocked"));
 		}
 		else {
-			if (freight.getTrainOwner().equalsIgnoreCase(player.getDisplayName()))
+			if (freight.getTransportOwner().equalsIgnoreCase(player.getDisplayName()))
 				this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 130, var2 - 10, 43, 10, "Locked"));
 			else if (freight.isPlayerTrusted(player.getDisplayName()))
 				if (freight.isPlayerTrustedToBreak(player.getDisplayName()))
@@ -81,7 +81,7 @@ public class GuiFreight extends GuiContainer {
 		switch (guibutton.id)
 		{
 			case 3:
-				if (player != null && player.getCommandSenderName().equalsIgnoreCase(freight.getTrainOwner())) {
+				if (player != null && player.getCommandSenderName().equalsIgnoreCase(freight.getTransportOwner())) {
 					if (!freight.getTrainLockedFromPacket() && !isShiftKeyDown()) {
 						freight.locked = true;
 						guibutton.displayString = "Locked";
@@ -115,7 +115,7 @@ public class GuiFreight extends GuiContainer {
 
 		String state = "";
 		if (freight.getTrainLockedFromPacket()) {
-			if (freight.getTrainOwner().equalsIgnoreCase(player.getDisplayName()))
+			if (freight.getTransportOwner().equalsIgnoreCase(player.getDisplayName()))
 				state = "Locked";
 			else if (freight.isPlayerTrusted(player.getDisplayName()))
 				if (freight.isPlayerTrustedToBreak(player.getDisplayName()))
@@ -140,7 +140,7 @@ public class GuiFreight extends GuiContainer {
 		fontRendererObj.drawStringWithShadow("only its owner can open", startX, startY + 10, -1);
 		fontRendererObj.drawStringWithShadow("the GUI and destroy it.", startX, startY + 20, -1);
 		fontRendererObj.drawStringWithShadow("Current state: " + state, startX, startY + 30, -1);
-		fontRendererObj.drawStringWithShadow("Owner: " + freight.getTrainOwner().trim(), startX, startY + 40, -1);
+		fontRendererObj.drawStringWithShadow("Owner: " + freight.getTransportOwner().trim(), startX, startY + 40, -1);
 	}
 
 	public boolean intersectsWith(int mouseX, int mouseY) {

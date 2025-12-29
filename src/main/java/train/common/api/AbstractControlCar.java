@@ -279,7 +279,7 @@ public abstract class AbstractControlCar extends EntityRollingStock implements I
 
                     if (connectedLocomotive.getFuel() > 0 && connectedLocomotive.isLocoTurnedOn() && rand.nextInt(4) == 0 && !worldObj.isRemote) {
                         if (this.getTrainLockedFromPacket() && !((EntityPlayer) this.riddenByEntity).getDisplayName()
-                                .toLowerCase().equals(this.getTrainOwner().toLowerCase())) {
+                                .toLowerCase().equals(this.getTransportOwner().toLowerCase())) {
                             return;
                         }
                         if (riddenByEntity != null && riddenByEntity instanceof EntityPlayer) {
@@ -335,7 +335,7 @@ public abstract class AbstractControlCar extends EntityRollingStock implements I
         if (this.getTrainLockedFromPacket()) {
             if (this.riddenByEntity != null && this.riddenByEntity instanceof EntityPlayer
                     && !((EntityPlayer) this.riddenByEntity).getDisplayName().toLowerCase()
-                    .equals(this.getTrainOwner().toLowerCase())) {
+                    .equals(this.getTransportOwner().toLowerCase())) {
                 return;
             }
         }

@@ -253,7 +253,7 @@ public class GuiJukebox extends GuiScreen {
 		}
 
 		if (button.id == 3) {
-			if (player != null && player instanceof EntityPlayer && player.getDisplayName().equals(((AbstractTrains) jukebox).getTrainOwner())) {
+			if (player != null && player instanceof EntityPlayer && player.getDisplayName().equals(((AbstractTrains) jukebox).getTransportOwner())) {
 				if ((!((AbstractTrains) jukebox).locked)) {
 					AxisAlignedBB box = jukebox.boundingBox.expand(5, 5, 5);
 					List lis3 = jukebox.worldObj.getEntitiesWithinAABBExcludingEntity(jukebox, box);
@@ -322,7 +322,7 @@ public class GuiJukebox extends GuiScreen {
 		fontRendererObj.drawStringWithShadow("only its owner can open", t + 15, g + 10 - 40, -1);
 		fontRendererObj.drawStringWithShadow("the GUI and destroy it.", t + 15, g + 20 - 40, -1);
 		fontRendererObj.drawStringWithShadow("Current state: " + state, t + 15, g + 30 - 40, -1);
-		fontRendererObj.drawStringWithShadow("Owner: " + jukebox.getTrainOwner(), t + 15, g + 40 - 40, -1);
+		fontRendererObj.drawStringWithShadow("Owner: " + jukebox.getTransportOwner(), t + 15, g + 40 - 40, -1);
 	}
 
 	public boolean intersectsWith(int mouseX, int mouseY) {

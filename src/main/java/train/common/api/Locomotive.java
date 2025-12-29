@@ -630,7 +630,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             // Allow a player to operate locomotive if they are the owner if they are trusted.
             if (this.riddenByEntity instanceof EntityPlayer
                     && !((EntityPlayer) this.riddenByEntity).getDisplayName()
-                    .equalsIgnoreCase(this.getTrainOwner()) && !this.isPlayerTrusted(((EntityPlayer) riddenByEntity).getDisplayName())) {
+                    .equalsIgnoreCase(this.getTransportOwner()) && !this.isPlayerTrusted(((EntityPlayer) riddenByEntity).getDisplayName())) {
                 return;
             }
         }
@@ -894,7 +894,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                 //EntityLivingBase entity = (EntityLivingBase) this.riddenByEntity;
                 if (forwardPressed || backwardPressed) {
                     if (getFuel() > 0 && this.isLocoTurnedOn() && rand.nextInt(4) == 0 && !worldObj.isRemote) {
-                        if (this.getTrainLockedFromPacket() && !((EntityPlayer) this.riddenByEntity).getDisplayName().equalsIgnoreCase(this.getTrainOwner())
+                        if (this.getTrainLockedFromPacket() && !((EntityPlayer) this.riddenByEntity).getDisplayName().equalsIgnoreCase(this.getTransportOwner())
                                 && !isPlayerTrusted(((EntityPlayer) this.riddenByEntity).getDisplayName())) {
                             return;
                         }
@@ -1198,8 +1198,8 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                     this.setDead();
                 }
                 if (!worldObj.isRemote && FMLCommonHandler.instance().getMinecraftServerInstance() != null && this.lastEntityRider instanceof EntityPlayer) {
-                    FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().sendChatMsg(new ChatComponentText(((EntityPlayer) this.lastEntityRider).getDisplayName() + " blew " + this.getTrainOwner() + "'s locomotive"));
-                    FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().sendChatMsg(new ChatComponentText(((EntityPlayer) this.lastEntityRider).getDisplayName() + " blew " + this.getTrainOwner() + "'s locomotive"));
+                    FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().sendChatMsg(new ChatComponentText(((EntityPlayer) this.lastEntityRider).getDisplayName() + " blew " + this.getTransportOwner() + "'s locomotive"));
+                    FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().sendChatMsg(new ChatComponentText(((EntityPlayer) this.lastEntityRider).getDisplayName() + " blew " + this.getTransportOwner() + "'s locomotive"));
                 }
             }
         }
@@ -1227,8 +1227,8 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
             {
                 if (!hasDrowned && !worldObj.isRemote && FMLCommonHandler.instance().getMinecraftServerInstance() != null && this.lastEntityRider instanceof EntityPlayer)
                 {
-                    FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().sendChatMsg(new ChatComponentText(((EntityPlayer) this.lastEntityRider).getDisplayName() + " drowned " + this.getTrainOwner() + "'s locomotive"));
-                    FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().sendChatMsg(new ChatComponentText(((EntityPlayer) this.lastEntityRider).getDisplayName() + " drowned " + this.getTrainOwner() + "'s locomotive"));
+                    FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().sendChatMsg(new ChatComponentText(((EntityPlayer) this.lastEntityRider).getDisplayName() + " drowned " + this.getTransportOwner() + "'s locomotive"));
+                    FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().sendChatMsg(new ChatComponentText(((EntityPlayer) this.lastEntityRider).getDisplayName() + " drowned " + this.getTransportOwner() + "'s locomotive"));
                 }
                 //this.attackEntityFrom(DamageSource.generic, 100);
                 this.setCustomSpeed(0);// set speed to normal

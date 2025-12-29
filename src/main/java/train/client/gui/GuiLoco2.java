@@ -89,7 +89,7 @@ public class GuiLoco2 extends GuiContainer {
 			this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 108, var2 - 10, 67, 10, "Unlocked"));
 		}
 		else {
-			if (loco.getTrainOwner().equalsIgnoreCase(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
+			if (loco.getTransportOwner().equalsIgnoreCase(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
 				this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 108, var2 - 10, 67, 10, "Locked"));
 			else if (loco.isPlayerTrusted(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
 				if (loco.isPlayerTrustedToBreak(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
@@ -181,7 +181,7 @@ public class GuiLoco2 extends GuiContainer {
 				}
 			break;
 			case 3:
-				if (loco.riddenByEntity instanceof EntityPlayer && ((EntityPlayer) loco.riddenByEntity).getDisplayName().equals(loco.getTrainOwner())) {
+				if (loco.riddenByEntity instanceof EntityPlayer && ((EntityPlayer) loco.riddenByEntity).getDisplayName().equals(loco.getTransportOwner())) {
 					if ((!loco.getTrainLockedFromPacket())) {
 						if (!isShiftKeyDown()) {
 							Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(true, loco.getTrustedList(), loco.getEntityId(), false));
@@ -304,7 +304,7 @@ public class GuiLoco2 extends GuiContainer {
 		//int liqui = (dieselInventory.getLiquidAmount() * 50) / dieselInventory.getTankCapacity();
 		String state = "";
 		if (loco.getTrainLockedFromPacket()) {
-			if (loco.getTrainOwner().equalsIgnoreCase(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
+			if (loco.getTransportOwner().equalsIgnoreCase(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
 				state = "Locked";
 			else if (loco.isPlayerTrusted(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
 				if (loco.isPlayerTrustedToBreak(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
@@ -330,7 +330,7 @@ public class GuiLoco2 extends GuiContainer {
 		fontRendererObj.drawStringWithShadow("only its owner can open", startX, startY + 10, -1);
 		fontRendererObj.drawStringWithShadow("the GUI, change speed, destroy it.", startX, startY + 20, -1);
 		fontRendererObj.drawStringWithShadow("Current state: " + state, startX, startY + 30, -1);
-		fontRendererObj.drawStringWithShadow("Owner: " + loco.getTrainOwner().trim(), startX,
+		fontRendererObj.drawStringWithShadow("Owner: " + loco.getTransportOwner().trim(), startX,
 				startY + 40, -1);
 	}
 
