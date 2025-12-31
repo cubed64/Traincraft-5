@@ -5348,7 +5348,8 @@ public class ItemTCRail extends ItemPart {
 
 
 		par3List.add("\u00a77" + type.getTooltip());
-		if (TCRailTypes.RailTypes.SLOPE.equals(this.getTrackType().getRailType()) || (TCRailTypes.RailTypes.STRAIGHT.equals(this.getTrackType().getRailType()) && this.getTrackType().getLabel().contains("ROAD_CROSSING") == false))
+		if ((TCRailTypes.RailTypes.SLOPE.equals(this.getTrackType().getRailType()) && this.getTrackType().getBallastType() == BallastTypes.DYNAMIC)
+				|| (TCRailTypes.RailTypes.STRAIGHT.equals(this.getTrackType().getRailType()) && this.getTrackType().getLabel().contains("ROAD_CROSSING") == false))
 		{
 			par3List.add("\u00a77" + "Shift+Scroll to");
 			par3List.add("\u00a77" + "Cycle Between Straight And Slope");
