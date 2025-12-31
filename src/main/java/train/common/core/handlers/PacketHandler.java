@@ -11,20 +11,36 @@ import com.jcirmodelsquad.tcjcir.extras.packets.MissionStatusPacket;
 import com.jcirmodelsquad.tcjcir.extras.packets.RemoteControlKeyPacket;
 import com.jcirmodelsquad.tcjcir.extras.packets.UpdateGeometryCar;
 import com.jcirmodelsquad.tcjcir.features.aipkitinterface.PacketInterfaceAction;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.network.FMLNetworkEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.network.internal.FMLProxyPacket;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import cpw.mods.fml.relauncher.Side;
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.ByteBufInputStream;
+import io.netty.buffer.Unpooled;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.network.NetHandlerPlayServer;
+import net.minecraft.network.play.client.C17PacketCustomPayload;
+import org.apache.logging.log4j.Level;
 import train.common.Traincraft;
 import train.common.core.network.*;
 import train.common.core.network.AdminBook.PacketAdminBook;
 import train.common.core.network.AdminBook.PacketAdminBookClient;
 import train.common.core.network.AdminBook.PacketAdminBookToggleChunkLoading;
+import train.common.core.network.ITCPacket.ITCPacket;
+import train.common.core.network.ITCPacket.PacketScrollingItemBlockSelect;
 import train.common.core.network.lockout.PacketLockoutAddUserToSkinGroup;
 import train.common.core.network.lockout.PacketPaintBrushClientSideUpdate;
 import train.common.library.Info;
 import train.common.mtc.network.*;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PacketHandler {
 
@@ -50,6 +66,8 @@ public class PacketHandler {
 		Traincraft.interchangeChannel = NetworkRegistry.INSTANCE.newSimpleChannel("reportChannel");
 		Traincraft.toggleChunkLoadingChannel = NetworkRegistry.INSTANCE.newSimpleChannel("ToggleChunkLoading");
 		Traincraft.lockoutCommChannel = NetworkRegistry.INSTANCE.newSimpleChannel("lockoutCommChannel");
+
+		Traincraft.channel = NetworkRegistry.INSTANCE.newEventDrivenChannel(Info.modID);
 
 
 		Traincraft.keyChannel.registerMessage(PacketAdminBook.Handler.class, PacketAdminBook.class, 4, Side.CLIENT);
@@ -130,5 +148,42 @@ public class PacketHandler {
             (IMessageHandler<IMessage, IMessage>) (IMessage message, MessageContext ctx) -> null,
             (IMessageHandler<IMessage, IMessage>) (IMessage message, MessageContext ctx) -> null
     };
+
+	private final static List<Class> packetCarrier;
+	static {
+		packetCarrier = new ArrayList<Class>();
+		packetCarrier.add(PacketScrollingItemBlockSelect.class);
+	}
+
+	@SubscribeEvent
+	public void onServerPacket(FMLNetworkEvent.ServerCustomPacketEvent event) throws IOException {
+		ByteBufInputStream bbis = new ByteBufInputStream(event.packet.payload());
+		EntityPlayer entityPlayer = ((NetHandlerPlayServer) event.handler).playerEntity;
+		int packetId = bbis.readInt();
+		if (packetId < packetCarrier.size()) {
+			try {
+				ITCPacket packetClass = (ITCPacket) packetCarrier.get(packetId).newInstance();
+				packetClass.processData(entityPlayer, bbis);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else {
+			Traincraft.tcLog.log(Level.WARN, "Encountered out of range packet Id: " + packetId);
+		}
+		bbis.close();
+	}
+
+	public static void sendPacketToServer(ITCPacket packet) {
+		ByteBuf buffer = Unpooled.buffer();
+		buffer.writeInt(packetCarrier.indexOf(packet.getClass()));
+
+		try {
+			packet.appendData(buffer);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		Traincraft.channel.sendToServer(new FMLProxyPacket(new C17PacketCustomPayload(Info.modID, buffer)));
+	}
 }
 

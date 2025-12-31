@@ -170,6 +170,5 @@ public enum EnumCoreTrack
                 return false;
             }
         }
-
     }
 }

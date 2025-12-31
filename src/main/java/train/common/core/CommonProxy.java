@@ -24,6 +24,8 @@ import train.common.Traincraft;
 import train.common.api.*;
 import train.common.containers.*;
 import train.common.core.handlers.ChunkEvents;
+import train.common.core.handlers.MouseEventListener;
+import train.common.core.handlers.PacketHandler;
 import train.common.core.handlers.WorldEvents;
 import train.common.core.util.MP3Player;
 import train.common.entity.digger.EntityRotativeDigger;
@@ -316,5 +318,10 @@ public class CommonProxy implements IGuiHandler {
 	public void setHook() {}
 
 	public void registerPlayerScaler(){}
+
+	public void registerMouseEventHandler() {
+		MinecraftForge.EVENT_BUS.register(new MouseEventListener());
+		Traincraft.channel.register(new PacketHandler());
+	}
 	
 }

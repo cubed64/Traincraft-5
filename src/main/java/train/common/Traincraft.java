@@ -6,6 +6,7 @@ import cpw.mods.fml.common.*;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.*;
+import cpw.mods.fml.common.network.FMLEventChannel;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -99,6 +100,8 @@ public class Traincraft {
 	public static SimpleNetworkWrapper updateEtiChannel = NetworkRegistry.INSTANCE.newSimpleChannel("UpdateETI");
 
 	public static SimpleNetworkWrapper lockoutCommChannel;
+
+	public static FMLEventChannel channel;
 
 	/*public static  SimpleNetworkWrapper itsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("TransmitterSpeed");
 //public static  SimpleNetworkWrapper mtcsChannel = NetworkRegistry.INSTANCE.newSimpleChannel("MTCSysSetSpeed");
@@ -245,6 +248,7 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		//register player scaler
 		proxy.registerPlayerScaler();
 		proxy.registerBookHandler();
+		proxy.registerMouseEventHandler();
 
 		/*FMLCommonHandler.instance().bus().register(VBCTracking.getInstance());
 		MinecraftForge.EVENT_BUS.register(VBCTracking.getInstance());*/

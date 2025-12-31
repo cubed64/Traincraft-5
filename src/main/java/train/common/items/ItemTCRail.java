@@ -35,6 +35,11 @@ public class ItemTCRail extends ItemPart {
 	private String typeVariantDiagonalStraightLabel = EnumTracks.SMALL_DIAGONAL_STRAIGHT.getLabel();
 	private String typeVariant90Turn;
 
+	public void setEnumTrack(EnumTracks enumTrack)
+	{
+		type = enumTrack;
+	}
+
 	public static boolean isTCTurnTrack(TileTCRail tile) {
 		if(tile==null || tile.getType()==null){return false;}
 		return (tile.getType().equals(EnumTracks.MEDIUM_LEFT_SWITCH.getLabel()) && tile.getSwitchState())
@@ -5343,6 +5348,11 @@ public class ItemTCRail extends ItemPart {
 
 
 		par3List.add("\u00a77" + type.getTooltip());
+		if (TCRailTypes.RailTypes.SLOPE.equals(this.getTrackType().getRailType()) || (TCRailTypes.RailTypes.STRAIGHT.equals(this.getTrackType().getRailType()) && this.getTrackType().getLabel().contains("ROAD_CROSSING") == false))
+		{
+			par3List.add("\u00a77" + "Shift+Scroll to");
+			par3List.add("\u00a77" + "Cycle Between Straight And Slope");
+		}
 	}
 
 	public EnumTracks getTrackType() {

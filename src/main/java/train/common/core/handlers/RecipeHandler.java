@@ -407,20 +407,6 @@ public class RecipeHandler extends AbstractRecipeHandler
 			TrackItemIDs dynamicSlopes12 = tracks.get(CORE_12_SLOPE).get(BallastTypes.DYNAMIC.name()).getItem();
 			TrackItemIDs dynamicSlopes18 = tracks.get(CORE_18_SLOPE).get(BallastTypes.DYNAMIC.name()).getItem();
 
-			if (ingotRainbontrium.isEmpty())
-			{
-				GameRegistry.addRecipe(new ItemStack(dynamicSlopes3.item,1), "  T"," TD","TDD", 'T', straight1X.item, 'D', Items.clay_ball);
-			}
-			else
-			{
-				for (ItemStack rainbowItem : ingotRainbontrium)
-				{
-					GameRegistry.addRecipe(new ItemStack(dynamicSlopes3.item,1), "  T"," TD","TDD", 'T', straight1X.item, 'D', rainbowItem.getItem());
-				}
-			}
-
-			GameRegistry.addRecipe(new ItemStack(dynamicSlopes6.item, 1), "   ", "  T", " T ", 'T', dynamicSlopes3.item);
-			GameRegistry.addRecipe(new ItemStack(dynamicSlopes12.item, 1), "   ", "  T", " T ", 'T', dynamicSlopes6.item);
 			GameRegistry.addRecipe(new ItemStack(dynamicSlopes18.item, 1), "   ", "  S", " T ", 'T', dynamicSlopes12.item, 'S', dynamicSlopes6.item);
 			GameRegistry.addRecipe(new ItemStack(dynamicSlopes18.item, 1), "  S", " S ", "S  ", 'S', dynamicSlopes6.item);
 
