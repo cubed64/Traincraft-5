@@ -96,7 +96,7 @@ public class PacketScrollingItemBlockSelect implements ITCPacket
         {
             ItemTCRail itemTCRail = (ItemTCRail)itemStack.getItem();
 
-            if (itemTCRail.getTrackType().getBallastType() != null && itemTCRail.getTrackType().getBallastType() != BallastTypes.DYNAMIC)
+            if (itemTCRail.getTrackType().getBallastType() != null && itemTCRail.getTrackType().getBallastType() != BallastTypes.DYNAMIC || itemTCRail.getTrackType().getLabel().contains("ROAD_CROSSING"))
             {
                 return;
             }
