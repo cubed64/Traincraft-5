@@ -36,12 +36,10 @@ import train.common.core.managers.TierRecipeManager;
 import train.common.generation.ComponentVillageTrainstation;
 import train.common.generation.WorldGenWorld;
 import train.common.items.TCItems;
-import train.common.library.BetterEnumSounds;
-import train.common.library.BlockIDs;
-import train.common.library.Info;
-import train.common.library.TraincraftRegistry;
+import train.common.library.*;
 import train.common.recipes.*;
 import train.common.recipes.rollingstock.*;
+import train.common.utils.devutils.DebugUtil;
 import train.common.utils.devutils.TrainSheetsDataGenerator;
 import train.common.utils.lockout.ILockoutGroup;
 import train.common.utils.lockout.LockoutPermissionsUtil;
@@ -132,8 +130,13 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 	public static final JsonParser jsonParser = new JsonParser();
 
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event) {
+	public void preInit(FMLPreInitializationEvent event)
+	{
 		tcLog.info("Starting Fox-Traincraft " + Info.modVersion + "!");
+		if (DebugUtil.dev)
+		{
+			tcLog.info("DEV ENVIRONMENT DETECTED");
+		}
 		/* Config handler */
 		configDirectory= event.getModConfigurationDirectory();
 		ConfigHandler.init(new File(event.getModConfigurationDirectory(), Info.modName + ".cfg"));
@@ -296,7 +299,7 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		MapGenVillage.villageSpawnBiomes = Arrays.asList(BiomeGenBase.plains, BiomeGenBase.desert, BiomeGenBase.savanna, BiomeGenBase.extremeHills);
 		tcLog.info("Finished PostInitialization! We are done for Traincraft!");
 		// Uncomment this to regen the texture prefix data file.
-		if ((Boolean) Launch.blackboard.get("fml.deobfuscatedEnvironment") && FMLCommonHandler.instance().getEffectiveSide().isClient())
+		if (DebugUtil.dev && FMLCommonHandler.instance().getEffectiveSide().isClient())
 		{
 			new TrainSheetsDataGenerator();
 		}
