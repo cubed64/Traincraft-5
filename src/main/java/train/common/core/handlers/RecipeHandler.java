@@ -536,6 +536,13 @@ public class RecipeHandler extends AbstractRecipeHandler
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.jacket_suit_paintable.item, 1),  "X X", "XDX", "XAX", Character.valueOf('A'), Items.golden_apple, Character.valueOf('X'), ItemIDs.reinforcedPlates.item,Character.valueOf('D'), Blocks.diamond_block);
 		TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.helmet_suit_paintable.item, 1), "#D#", "# #", Character.valueOf('D'), Blocks.diamond_block, Character.valueOf('#'), ItemIDs.reinforcedPlates.item );
 
+		/* All Steels From Other Mods to be converted */
+		for (ItemStack steelInstance : ingotSteel)
+		{
+			TrainCraftingManager.instance.addRecipe(new ItemStack(ItemIDs.steel.item, 1), "   ", " # ", "   ", Character.valueOf('#'), steelInstance);
+		}
+
+
 		/* Trains parts */
 
 		addRecipeWithOreDic(new ItemStack(ItemIDs.generator.item, 2), " ##", "E$$", " ##", Character.valueOf('#'), ItemIDs.copperWireFine.item, Character.valueOf('E'), ItemIDs.electronicCircuit.item, Character.valueOf('$'), Items.iron_ingot);// generator
