@@ -23,11 +23,11 @@ public class StandardRollingStockSlot extends Slot
         }
 
         Block block = Block.getBlockFromItem(itemStack.getItem());
-        if (block == null)
+        if (block == null || ItemHandler.isBanned(itemStack))
         {
             return false;
         }
 
-        return ItemHandler.isBanned(itemStack);
+        return true;
     }
 }
