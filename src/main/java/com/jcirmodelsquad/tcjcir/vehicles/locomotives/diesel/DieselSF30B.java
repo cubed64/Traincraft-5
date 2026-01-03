@@ -17,7 +17,7 @@ public class DieselSF30B extends DieselTrain {
         return EnumSounds.DieselSF30B;
     }
     public DieselSF30B(World world) {
-        super(world, EnumTrains.SF30B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Blandsville & Blankerston");
         InsertTexture(1, "MKM Leasing");

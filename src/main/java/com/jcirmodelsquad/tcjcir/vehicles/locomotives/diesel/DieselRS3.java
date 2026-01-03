@@ -17,7 +17,7 @@ public class DieselRS3 extends DieselTrain {
         return EnumSounds.DieselRS3;
     }
     public DieselRS3(World world) {
-        super(world, EnumTrains.RS3.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Boston & Maine (Simp)");
         InsertTexture(1, "Blandsville & Blankerston");

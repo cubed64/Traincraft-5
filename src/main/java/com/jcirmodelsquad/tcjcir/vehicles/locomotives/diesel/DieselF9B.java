@@ -17,7 +17,7 @@ public class DieselF9B extends DieselTrain {
         return EnumSounds.DieselF9B;
     }
     public DieselF9B(World world) {
-        super(world, EnumTrains.F9B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Blandsville & Blankerstoner");
         InsertTexture(1, "FMSR", LockoutGroup.FMSR);

@@ -17,7 +17,7 @@ public class DieselBQ23 extends DieselTrain {
         return EnumSounds.DieselBQ23;
     }
     public DieselBQ23(World world) {
-        super(world, EnumTrains.BQ23.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Family Lines (As Delivered)");
         InsertTexture(1, "Providence & Worcester");

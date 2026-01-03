@@ -16,7 +16,7 @@ public class DieselSB18E extends DieselTrain {
         return EnumSounds.DieselSB18E;
     }
     public DieselSB18E(World world) {
-        super(world, EnumTrains.SB18E.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "CEE Factory Blank (Phase 2)");
         InsertTexture(1, "Nomansi & Eastern Pacific", LockoutGroup.CUBED);

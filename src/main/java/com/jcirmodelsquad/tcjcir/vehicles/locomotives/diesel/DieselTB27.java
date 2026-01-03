@@ -17,7 +17,7 @@ public class DieselTB27 extends DieselTrain {
         return EnumSounds.DieselTB27;
     }
     public DieselTB27(World world) {
-        super(world, EnumTrains.TB27.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Demonstrator");
         InsertTexture(1, "Blandsville & Blankerston");

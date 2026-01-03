@@ -17,7 +17,7 @@ public class DieselES44 extends DieselTrain {
         return EnumSounds.DieselES44;
     }
     public DieselES44(World world) {
-        super(world, EnumTrains.ES44.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         //i think i need a scooby doo tie-fighter now
         InsertTexture(0, "Evolution Series Demonstrator");

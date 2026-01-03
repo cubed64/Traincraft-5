@@ -17,7 +17,7 @@ public class DieselSB23R extends DieselTrain {
         return EnumSounds.DieselSB23R;
     }
     public DieselSB23R(World world) {
-        super(world, EnumTrains.SB23R.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "BMC (Plant Switcher)");
         //InsertTexture(1, "Western Pacific (Early)");

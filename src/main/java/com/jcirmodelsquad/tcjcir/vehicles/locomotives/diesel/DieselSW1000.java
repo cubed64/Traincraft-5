@@ -18,7 +18,7 @@ public class DieselSW1000 extends DieselTrain {
         return EnumSounds.DieselSW1000;
     }
     public DieselSW1000(World world) {
-        super(world, EnumTrains.SW1000.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Burlington Northern");
         InsertTexture(1, "Blandsville & Blankerston");

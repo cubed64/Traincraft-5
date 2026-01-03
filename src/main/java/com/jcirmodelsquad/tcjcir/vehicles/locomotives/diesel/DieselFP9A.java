@@ -17,7 +17,7 @@ public class DieselFP9A extends DieselTrain {
         return EnumSounds.DieselFP9A;
     }
     public DieselFP9A(World world) {
-        super(world, EnumTrains.FP9A.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         //when the benis sus
     }

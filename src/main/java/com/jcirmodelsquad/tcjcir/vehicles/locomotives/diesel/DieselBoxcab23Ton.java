@@ -15,7 +15,7 @@ public class DieselBoxcab23Ton extends DieselTrain {
         return EnumSounds.DieselBoxcab23Ton;
     }
     public DieselBoxcab23Ton(World world) {
-        super(world, EnumTrains.Boxcab23Ton.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         //i think i need a scooby doo tie-fighter now
 

@@ -17,7 +17,7 @@ public class DieselFP7A extends DieselTrain {
         return EnumSounds.DieselFP7A;
     }
     public DieselFP7A(World world) {
-        super(world, EnumTrains.FP7A.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         //when the benis sus
         InsertTexture(0, "Readding a fucking book");

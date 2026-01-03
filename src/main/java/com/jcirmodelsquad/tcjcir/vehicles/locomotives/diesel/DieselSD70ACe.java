@@ -17,7 +17,7 @@ public class DieselSD70ACe extends DieselTrain {
         return EnumSounds.DieselSD70ACe;
     }
     public DieselSD70ACe(World world) {
-        super(world, EnumTrains.SD70ACe.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Blandsville & Blankerston");
         InsertTexture(1, "FURRX Lease");

@@ -17,7 +17,7 @@ public class DieselFA1 extends DieselTrain {
         return EnumSounds.DieselFA1;
     }
     public DieselFA1(World world) {
-        super(world, EnumTrains.FA1.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "New Haven");
         InsertTexture(1, "New Haven 2");

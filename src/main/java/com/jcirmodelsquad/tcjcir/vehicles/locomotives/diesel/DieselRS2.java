@@ -17,7 +17,7 @@ public class DieselRS2 extends DieselTrain {
         return EnumSounds.DieselRS2;
     }
     public DieselRS2(World world) {
-        super(world, EnumTrains.RS2.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Deleware & Hudson");
         InsertTexture(1, "Blandsville & Blankerston");

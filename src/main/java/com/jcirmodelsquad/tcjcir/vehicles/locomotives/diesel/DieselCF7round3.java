@@ -17,7 +17,7 @@ public class DieselCF7round3 extends DieselTrain {
         return EnumSounds.DieselCF7round3;
     }
     public DieselCF7round3(World world) {
-        super(world, EnumTrains.CF7round3.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Carbondale & Pine Valley", LockoutGroup.CPV);
         InsertTexture(1, "FNCC (KIT-L, Ex ATSF, Dual Canon)", LockoutGroup.FNCC);

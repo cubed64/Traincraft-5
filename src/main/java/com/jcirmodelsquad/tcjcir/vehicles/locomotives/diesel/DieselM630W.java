@@ -18,7 +18,7 @@ public class DieselM630W extends DieselTrain {
         return EnumSounds.DieselM630W;
     }
     public DieselM630W(World world) {
-        super(world, EnumTrains.M630W.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Blandsville & Blankerston");
         InsertTexture(1, "North Fox & Yukon Route (FNCC, KIT-L, Big Canon)", LockoutGroup.FNCC);

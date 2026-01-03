@@ -17,7 +17,7 @@ public class DieselCF7hh extends DieselTrain {
         return EnumSounds.DieselCF7HH;
     }
     public DieselCF7hh(World world) {
-        super(world, EnumTrains.CF7hh.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Grassland Laboratories");
     }

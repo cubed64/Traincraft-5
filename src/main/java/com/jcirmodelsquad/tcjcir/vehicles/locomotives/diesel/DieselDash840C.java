@@ -16,7 +16,7 @@ public class DieselDash840C extends DieselTrain {
         return EnumSounds.DieselDash840C;
     }
     public DieselDash840C(World world) {
-        super(world, EnumTrains.Dash840C.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Union Pacific (ITS A SPECTRUM ITS OKAY)");
         InsertTexture(1, "CSXT (Grey Ghost)");

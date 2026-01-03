@@ -17,7 +17,7 @@ public class DieselM640W extends DieselTrain {
         return EnumSounds.DieselM640W;
     }
     public DieselM640W(World world) {
-        super(world, EnumTrains.M640W.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "COW");
         InsertTexture(1, "COW (Special)");

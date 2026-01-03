@@ -17,7 +17,7 @@ public class DieselGP7 extends DieselTrain {
         return EnumSounds.DieselGP7;
     }
     public DieselGP7(World world) {
-        super(world, EnumTrains.GP7.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Avanste Northeastern (Late)", LockoutGroup.ANE);
         InsertTexture(1, "Burlington Northern (Ex CBQ)");

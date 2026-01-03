@@ -17,7 +17,7 @@ public class DieselCF7angle2 extends DieselTrain {
         return EnumSounds.DieselCF7angle2;
     }
     public DieselCF7angle2(World world) {
-        super(world, EnumTrains.CF7angle2.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "CFW 517", LockoutGroup.BIDA);
         InsertTexture(1, "CFW 2209", LockoutGroup.BIDA);

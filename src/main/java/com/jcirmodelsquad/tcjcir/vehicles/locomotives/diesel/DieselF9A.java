@@ -17,7 +17,7 @@ public class DieselF9A extends DieselTrain {
         return EnumSounds.DieselF9A;
     }
     public DieselF9A(World world) {
-        super(world, EnumTrains.F9A.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "BN 814");
         InsertTexture(1, "FMSR", LockoutGroup.FMSR);

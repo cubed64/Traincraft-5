@@ -17,7 +17,7 @@ public class DieselSD70ACe_H extends DieselTrain {
         return EnumSounds.DieselSD70ACe_H;
     }
     public DieselSD70ACe_H(World world) {
-        super(world, EnumTrains.SD70ACe_H.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "hey louis");
         InsertTexture(1, "NS 1065 (Savannah & Atlanta)");

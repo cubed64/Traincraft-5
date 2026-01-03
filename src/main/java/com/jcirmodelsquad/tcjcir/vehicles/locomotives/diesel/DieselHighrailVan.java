@@ -15,7 +15,7 @@ public class DieselHighrailVan extends DieselTrain {
         return EnumSounds.DieselHighrailVan;
     }
     public DieselHighrailVan(World world) {
-        super(world, EnumTrains.HighrailVan.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
     }
 

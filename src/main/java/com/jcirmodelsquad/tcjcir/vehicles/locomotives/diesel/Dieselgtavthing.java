@@ -15,7 +15,7 @@ public class Dieselgtavthing extends DieselTrain {
         return EnumSounds.Dieselgtavthing;
     }
     public Dieselgtavthing(World world) {
-        super(world, EnumTrains.gtavthing.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
 
     }

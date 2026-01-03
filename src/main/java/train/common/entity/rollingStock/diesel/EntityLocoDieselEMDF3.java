@@ -18,7 +18,7 @@ public class EntityLocoDieselEMDF3 extends DieselTrain {
 	}
 
 	public EntityLocoDieselEMDF3(World world) {
-		super(world, EnumTrains.F3A.getTankCapacity(), LiquidManager.dieselFilter());
+		super(world, LiquidManager.dieselFilter());
 		initLoco();
 	}
 

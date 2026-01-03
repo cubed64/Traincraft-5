@@ -16,7 +16,7 @@ public class DieselSD60 extends DieselTrain {
         return EnumSounds.DieselSD60;
     }
     public DieselSD60(World world) {
-        super(world, EnumTrains.SD60.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Oakway Lease");
         InsertTexture(1, "Oakway Lease");

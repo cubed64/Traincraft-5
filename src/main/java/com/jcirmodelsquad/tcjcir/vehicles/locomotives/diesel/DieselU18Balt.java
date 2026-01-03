@@ -17,7 +17,7 @@ public class DieselU18Balt extends DieselTrain {
         return EnumSounds.DieselU18Balt;
     }
     public DieselU18Balt(World world) {
-        super(world, EnumTrains.U18Balt.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
 
         InsertTexture(0, "PW (Late Orange & Brown)");

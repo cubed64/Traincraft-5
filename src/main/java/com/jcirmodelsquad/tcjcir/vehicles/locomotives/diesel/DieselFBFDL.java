@@ -18,7 +18,7 @@ public class DieselFBFDL extends DieselTrain {
         return EnumSounds.DieselFBFDL;
     }
     public DieselFBFDL(World world) {
-        super(world, EnumTrains.FBFDL.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "FMSR", LockoutGroup.FMSR);
         InsertTexture(1, "Blandsville & Blankerston (Early FBFDL)");

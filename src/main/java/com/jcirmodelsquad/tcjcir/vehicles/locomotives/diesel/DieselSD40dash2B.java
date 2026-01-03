@@ -16,7 +16,7 @@ public class DieselSD40dash2B extends DieselTrain {
         return EnumSounds.DieselSD40dash2B;
     }
     public DieselSD40dash2B(World world) {
-        super(world, EnumTrains.SD40dash2B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         //when the
         InsertTexture(1, "");

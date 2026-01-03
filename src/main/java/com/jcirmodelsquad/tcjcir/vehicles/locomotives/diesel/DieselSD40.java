@@ -16,7 +16,7 @@ public class DieselSD40 extends DieselTrain {
         return EnumSounds.DieselSD40;
     }
     public DieselSD40(World world) {
-        super(world, EnumTrains.SD40.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         //when the
         InsertTexture(0, "ATSF (Pinstripe)");

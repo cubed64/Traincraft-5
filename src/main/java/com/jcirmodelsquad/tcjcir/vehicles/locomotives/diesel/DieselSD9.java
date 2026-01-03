@@ -18,7 +18,7 @@ public class DieselSD9 extends DieselTrain {
         return EnumSounds.DieselSD9;
     }
     public DieselSD9(World world) {
-        super(world, EnumTrains.SD9.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         //when the
         InsertTexture(0, "SP (1980s)");

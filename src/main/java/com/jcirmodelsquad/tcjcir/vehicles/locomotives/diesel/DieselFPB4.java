@@ -16,7 +16,7 @@ public class DieselFPB4 extends DieselTrain {
         return EnumSounds.DieselFPB4;
     }
     public DieselFPB4(World world) {
-        super(world, EnumTrains.FPB4.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "VIA Rail");
         InsertTexture(1, "Canadian National (Old)");

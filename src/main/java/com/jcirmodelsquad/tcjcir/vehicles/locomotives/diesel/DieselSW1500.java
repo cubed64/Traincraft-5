@@ -17,7 +17,7 @@ public class DieselSW1500 extends DieselTrain {
         return EnumSounds.DieselSW1500;
     }
     public DieselSW1500(World world) {
-        super(world, EnumTrains.SW1500.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Denver Rock Island Railroad 1083");//Denver SUCK MY FUCKIN BALLS cock sucker island (stupid) mofo Volkswagon 1083 deez nuts express
         InsertTexture(1, "Blandsville & Blankerston");

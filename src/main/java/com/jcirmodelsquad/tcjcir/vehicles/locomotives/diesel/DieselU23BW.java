@@ -16,7 +16,7 @@ public class DieselU23BW extends DieselTrain {
         return EnumSounds.DieselU23BW;
     }
     public DieselU23BW(World world) {
-        super(world, EnumTrains.U23BW.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Blandsville & Blankerston");
         InsertTexture(1, "CSXT (Yn2, Protolance)");

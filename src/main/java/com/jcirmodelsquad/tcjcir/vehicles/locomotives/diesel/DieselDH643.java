@@ -17,7 +17,7 @@ public class DieselDH643 extends DieselTrain {
         return EnumSounds.DieselDH643;
     }
     public DieselDH643(World world) {
-        super(world, EnumTrains.DH643.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Latrans Range Railroad", LockoutGroup.LRR);
     }

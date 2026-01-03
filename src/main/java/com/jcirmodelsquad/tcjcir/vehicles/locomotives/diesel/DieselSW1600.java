@@ -17,7 +17,7 @@ public class DieselSW1600 extends DieselTrain {
         return EnumSounds.DieselSW1600;
     }
     public DieselSW1600(World world) {
-        super(world, EnumTrains.SW1600.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "FNCC (KIT-L)", LockoutGroup.FNCC);
     }

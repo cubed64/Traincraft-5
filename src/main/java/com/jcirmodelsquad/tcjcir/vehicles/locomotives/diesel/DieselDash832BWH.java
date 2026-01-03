@@ -16,7 +16,7 @@ public class DieselDash832BWH extends DieselTrain {
         return EnumSounds.DieselDash832BWH;
     }
     public DieselDash832BWH(World world) {
-        super(world, EnumTrains.Dash832BWH.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Amtrak (PH 3)");
         InsertTexture(1, "Amtrak (PH 4)");

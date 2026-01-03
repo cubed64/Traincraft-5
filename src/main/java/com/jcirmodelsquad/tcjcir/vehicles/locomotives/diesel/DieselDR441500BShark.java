@@ -17,7 +17,7 @@ public class DieselDR441500BShark extends DieselTrain {
         return EnumSounds.DieselDR441500BShark;
     }
     public DieselDR441500BShark(World world) {
-        super(world, EnumTrains.DR441500BShark.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Demonstrator");
         InsertTexture(1, "Elgin, Joliet & Eastern");

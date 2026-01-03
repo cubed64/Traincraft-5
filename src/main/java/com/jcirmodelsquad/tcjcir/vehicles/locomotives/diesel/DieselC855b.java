@@ -16,7 +16,7 @@ public class DieselC855b extends DieselTrain {
         return EnumSounds.DieselC855b;
     }
     public DieselC855b(World world) {
-        super(world, EnumTrains.C855b.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Union Pacific");
         InsertTexture(1, "FNCC (KIT-L)", LockoutGroup.FNCC);

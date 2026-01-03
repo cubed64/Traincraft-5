@@ -15,7 +15,7 @@ public class DieselU18BB extends DieselTrain {
         return EnumSounds.DieselU18BB;
     }
     public DieselU18BB(World world) {
-        super(world, EnumTrains.U18BB.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(10, "");
         InsertTexture(0, "West Creek Pacific");

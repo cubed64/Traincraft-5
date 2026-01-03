@@ -15,7 +15,7 @@ public class DieselH24_66 extends DieselTrain {
         return EnumSounds.DieselH24_66;
     }
     public DieselH24_66(World world) {
-        super(world, EnumTrains.H24_66.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "FM Demo");
         InsertTexture(1, "Virginian");

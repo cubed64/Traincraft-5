@@ -16,7 +16,7 @@ public class DieselGP13 extends DieselTrain {
         return EnumSounds.DieselGP13;
     }
     public DieselGP13(World world) {
-        super(world, EnumTrains.GP13.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         InsertTexture(9, "Avanste Northeastern (Late)", LockoutGroup.ANE);
     }
 

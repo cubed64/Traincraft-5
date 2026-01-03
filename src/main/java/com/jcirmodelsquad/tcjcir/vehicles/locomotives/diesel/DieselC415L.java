@@ -15,7 +15,7 @@ public class DieselC415L extends DieselTrain {
         return EnumSounds.DieselC415L;
     }
     public DieselC415L(World world) {
-        super(world, EnumTrains.C415L.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Mongolia Connecting Railroad");
     }

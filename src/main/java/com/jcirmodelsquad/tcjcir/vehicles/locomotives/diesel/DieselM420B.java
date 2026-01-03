@@ -17,7 +17,7 @@ public class DieselM420B extends DieselTrain {
         return EnumSounds.DieselM420B;
     }
     public DieselM420B(World world) {
-        super(world, EnumTrains.M420B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "BCRail (Zig Zag)");
         InsertTexture(1, "COW (Calf)");

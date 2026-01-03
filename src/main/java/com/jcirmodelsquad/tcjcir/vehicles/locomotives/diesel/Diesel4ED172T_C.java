@@ -16,7 +16,7 @@ public class Diesel4ED172T_C extends DieselTrain {
     public SoundRecord getSoundRecord() { return EnumSounds.Diesel4ED172_C; }
 
     public Diesel4ED172T_C(World world) {
-        super(world, EnumTrains.CEE4ED172T_C.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "PAMC (Late)");
         InsertTexture(1, "Blandsville & Blankerston");

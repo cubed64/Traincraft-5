@@ -16,7 +16,7 @@ public class DieselPA1 extends DieselTrain {
         return EnumSounds.DieselPA1;
     }
     public DieselPA1(World world) {
-        super(world, EnumTrains.AlcoPA1.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Santa Fe");
         InsertTexture(1, "Santa Fe (Late)");

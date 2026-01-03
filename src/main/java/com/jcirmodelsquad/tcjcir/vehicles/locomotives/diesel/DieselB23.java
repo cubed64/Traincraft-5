@@ -16,7 +16,7 @@ public class DieselB23 extends DieselTrain {
     public SoundRecord getSoundRecord() { return EnumSounds.DieselB23; }
 
     public DieselB23(World world) {
-        super(world, EnumTrains.B23.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Franklin Industrial Minerals (FIMX Early)");
         InsertTexture(1, "Southern Pacific (Early)");

@@ -15,7 +15,7 @@ public class DieselE8B extends DieselTrain {
         return EnumSounds.DieselE8B;
     }
     public DieselE8B(World world) {
-        super(world, EnumTrains.E8B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         //when the benis sus
     }

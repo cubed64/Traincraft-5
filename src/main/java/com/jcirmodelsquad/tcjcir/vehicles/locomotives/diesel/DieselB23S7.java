@@ -17,7 +17,7 @@ public class DieselB23S7 extends DieselTrain {
         return EnumSounds.DieselB23S7;
     }
     public DieselB23S7(World world) {
-        super(world, EnumTrains.B23S7.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "GECX 2000");
         InsertTexture(1, "GECX 2002");

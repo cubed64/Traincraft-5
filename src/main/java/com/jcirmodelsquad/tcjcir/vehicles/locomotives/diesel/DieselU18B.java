@@ -16,7 +16,7 @@ public class DieselU18B extends DieselTrain {
         return EnumSounds.DieselU18B;
     }
     public DieselU18B(World world) {
-        super(world, EnumTrains.U18B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "MEC 405");
         InsertTexture(1, "MEC 402");

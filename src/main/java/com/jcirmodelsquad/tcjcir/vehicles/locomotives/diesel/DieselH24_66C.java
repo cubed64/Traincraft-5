@@ -15,7 +15,7 @@ public class DieselH24_66C extends DieselTrain {
         return EnumSounds.DieselH24_66C;
     }
     public DieselH24_66C(World world) {
-        super(world, EnumTrains.H24_66C.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Canadian Pacific");
         InsertTexture(1, "Canadian Pacific (Demonstrator)");

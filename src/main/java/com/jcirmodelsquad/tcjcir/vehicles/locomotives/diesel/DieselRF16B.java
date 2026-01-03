@@ -18,7 +18,7 @@ public class DieselRF16B extends DieselTrain {
         return EnumSounds.DieselRF16B;
     }
     public DieselRF16B(World world) {
-        super(world, EnumTrains.RF16B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Pennsylvania (1 Stipe)");
         InsertTexture(1, "Baltimore & Ohio");

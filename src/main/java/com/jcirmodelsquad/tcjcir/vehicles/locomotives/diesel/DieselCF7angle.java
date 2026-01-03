@@ -17,7 +17,7 @@ public class DieselCF7angle extends DieselTrain {
         return EnumSounds.DieselCF7angle;
     }
     public DieselCF7angle(World world) {
-        super(world, EnumTrains.CF7angle.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "ATSF 2444");
         InsertTexture(1, "ATSF 2546");

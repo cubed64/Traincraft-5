@@ -18,7 +18,7 @@ public class DieselCE8 extends DieselTrain {
         return EnumSounds.DieselCE8;
     }
     public DieselCE8(World world) {
-        super(world, EnumTrains.CE8.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "FNCC 99 (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(1, "Peninsula Development & Improvement Company", LockoutGroup.PDEV);

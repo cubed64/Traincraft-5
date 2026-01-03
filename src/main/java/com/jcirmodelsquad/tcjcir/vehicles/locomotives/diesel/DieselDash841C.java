@@ -17,7 +17,7 @@ public class DieselDash841C extends DieselTrain {
         return EnumSounds.DieselDash841C;
     }
     public DieselDash841C(World world) {
-        super(world, EnumTrains.Dash841C.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Canadian National");
         InsertTexture(1, "Blandsville & Blankerston");

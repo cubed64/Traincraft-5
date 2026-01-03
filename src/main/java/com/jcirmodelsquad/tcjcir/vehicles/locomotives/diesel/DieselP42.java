@@ -16,7 +16,7 @@ public class DieselP42 extends DieselTrain {
         return EnumSounds.DieselP42;
     }
     public DieselP42(World world) {
-        super(world, EnumTrains.P42.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "New Jersey Transit");
         InsertTexture(1, "VIA Rail");

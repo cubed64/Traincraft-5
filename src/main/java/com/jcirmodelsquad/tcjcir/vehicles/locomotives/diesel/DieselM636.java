@@ -17,7 +17,7 @@ public class DieselM636 extends DieselTrain {
         return EnumSounds.DieselM636D;
     }
     public DieselM636(World world) {
-        super(world, EnumTrains.M636.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "FCP (Small Words)");
         InsertTexture(1, "FCP (Big Letters)");

@@ -18,7 +18,7 @@ public class DieselDR441500BPhase2 extends DieselTrain {
         return EnumSounds.DieselDR441500BPhase2;
     }
     public DieselDR441500BPhase2(World world) {
-        super(world, EnumTrains.DR441500BPhase2.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Missouri Pacific (As delivered)");
         InsertTexture(1, "Missouri Pacific");

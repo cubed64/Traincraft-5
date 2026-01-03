@@ -17,7 +17,7 @@ public class DieselDS441000 extends DieselTrain {
         return EnumSounds.DieselDS441000;
     }
     public DieselDS441000(World world) {
-        super(world, EnumTrains.DS441000.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Chicago & Northwestern (Early)");
         InsertTexture(1, "Chicago & Northwestern (Late)");

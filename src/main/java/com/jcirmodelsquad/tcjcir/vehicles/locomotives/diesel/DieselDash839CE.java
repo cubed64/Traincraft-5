@@ -17,7 +17,7 @@ public class DieselDash839CE extends DieselTrain {
         return EnumSounds.DieselDash839CE;
     }
     public DieselDash839CE(World world) {
-        super(world, EnumTrains.Dash839CE.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "North Fox (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(1, "North Fox (KIT-80)", LockoutGroup.FNCC);

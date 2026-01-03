@@ -17,7 +17,7 @@ public class DieselGP39TDash2 extends DieselTrain {
         return EnumSounds.DieselGP39TDash2;
     }
     public DieselGP39TDash2(World world) {
-        super(world, EnumTrains.GP39TDash2.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "DIP", LockoutGroup.BIDA);
         InsertTexture(1, "");

@@ -17,7 +17,7 @@ public class DieselGP39TDash2B extends DieselTrain {
     }
 
     public DieselGP39TDash2B(World world) {
-        super(world, EnumTrains.GP39TDash2B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "DIP", LockoutGroup.BIDA);
         InsertTexture(1, "");

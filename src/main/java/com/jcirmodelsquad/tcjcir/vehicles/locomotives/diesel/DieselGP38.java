@@ -17,7 +17,7 @@ public class DieselGP38 extends DieselTrain {
         return EnumSounds.DieselGP38;
     }
     public DieselGP38(World world) {
-        super(world, EnumTrains.GP38.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Fox Union Rail Resources (FURRX)");
         InsertTexture(1, "FNCC (GP38ac, Kit-L)", LockoutGroup.FNCC);

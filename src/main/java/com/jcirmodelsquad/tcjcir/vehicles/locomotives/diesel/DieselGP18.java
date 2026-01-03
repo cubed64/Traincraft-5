@@ -16,7 +16,7 @@ public class DieselGP18 extends DieselTrain {
         return EnumSounds.DieselGP18;
     }
     public DieselGP18(World world) {
-        super(world, EnumTrains.GP18.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "NP");
         InsertTexture(1, "BN 1996");

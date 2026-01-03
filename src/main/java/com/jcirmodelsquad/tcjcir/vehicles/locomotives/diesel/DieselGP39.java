@@ -16,7 +16,7 @@ public class DieselGP39 extends DieselTrain {
         return EnumSounds.DieselGP39;
     }
     public DieselGP39(World world) {
-        super(world, EnumTrains.GP39.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Atlanta & St Andrews Bay");
         InsertTexture(1, "Blandsville & Blankerston");

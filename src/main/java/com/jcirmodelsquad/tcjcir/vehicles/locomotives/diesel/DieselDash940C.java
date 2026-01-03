@@ -18,7 +18,7 @@ public class DieselDash940C extends DieselTrain {
         return EnumSounds.DieselDash940C;
     }
     public DieselDash940C(World world) {
-        super(world, EnumTrains.Dash940C.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Avanste Northeastern", LockoutGroup.ANE);
     }

@@ -17,7 +17,7 @@ public class DieselDash944CW extends DieselTrain {
         return EnumSounds.DieselDash9C44W;
     }
     public DieselDash944CW(World world) {
-        super(world, EnumTrains.Dash944CW.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Norfolk Southern");
         InsertTexture(1, "Norfolk Southern (9634)");

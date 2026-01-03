@@ -16,7 +16,7 @@ public class DieselGPFDL extends DieselTrain {
         return EnumSounds.DieselGPFDL;
     }
     public DieselGPFDL(World world) {
-        super(world, EnumTrains.GPFDL.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "North Fox (KIT-L, Non Canon)", LockoutGroup.FNCC);
         InsertTexture(1, "Blandsville & Blankerston");

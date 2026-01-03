@@ -15,7 +15,7 @@ public class DieselS2 extends DieselTrain {
         return EnumSounds.DieselS2;
     }
     public DieselS2(World world) {
-        super(world, EnumTrains.S2.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Penn Central");
         InsertTexture(2, "Great Northern");

@@ -15,7 +15,7 @@ public class DieselGP38dash9W extends DieselTrain {
         return EnumSounds.DieselGP389W;
     }
     public DieselGP38dash9W(World world) {
-        super(world, EnumTrains.GP38dash9W.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
 
     }

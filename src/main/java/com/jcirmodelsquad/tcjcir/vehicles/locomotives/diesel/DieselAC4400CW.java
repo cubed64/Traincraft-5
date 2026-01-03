@@ -16,7 +16,7 @@ public class DieselAC4400CW extends DieselTrain {
     public SoundRecord getSoundRecord() { return EnumSounds.DieselAC4400CW; }
 
     public DieselAC4400CW(World world) {
-        super(world, EnumTrains.AC4400CW.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "CSXT (YN2)");
         InsertTexture(1, "Nomansi and Eastern Pacific", LockoutGroup.CUBED);

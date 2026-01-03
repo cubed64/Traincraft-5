@@ -17,7 +17,7 @@ public class DieselDash839B extends DieselTrain {
         return EnumSounds.DieselDash839B;
     }
     public DieselDash839B(World world) {
-        super(world, EnumTrains.Dash839B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Southern Pacific");
         InsertTexture(1, "LMX (1990s)");

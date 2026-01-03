@@ -18,7 +18,7 @@ public class DieselGE44Ton extends DieselTrain {
 		return EnumSounds.Diesel44Ton;
 	}
 	public DieselGE44Ton(World world) {
-		super(world, EnumTrains.GE44Ton.getTankCapacity(), LiquidManager.dieselFilter());
+		super(world, LiquidManager.dieselFilter());
 		
 		InsertTexture(0, "VGN");
 		InsertTexture(1, "VGN");

@@ -15,7 +15,7 @@ public class DieselSB18B extends DieselTrain {
         return EnumSounds.DieselSB18B;
     }
     public DieselSB18B(World world) {
-        super(world, EnumTrains.SB18B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "CEE Factory Blank (Phase 1)");
         InsertTexture(1, "TTLC (Alaskan Moss)");

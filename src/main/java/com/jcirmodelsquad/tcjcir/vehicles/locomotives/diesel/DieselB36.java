@@ -16,7 +16,7 @@ public class DieselB36 extends DieselTrain {
     public SoundRecord getSoundRecord() { return EnumSounds.DieselB36; }
 
     public DieselB36(World world) {
-        super(world, EnumTrains.B36.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "CNRC 7772 & 7773", LockoutGroup.CNRC);
         InsertTexture(1, "CNRC 7771", LockoutGroup.CNRC);

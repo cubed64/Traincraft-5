@@ -15,7 +15,7 @@ public class DieselU18BW extends DieselTrain {
         return EnumSounds.DieselU18BW;
     }
     public DieselU18BW(World world) {
-        super(world, EnumTrains.U18BW.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "CEE Demonstrator");
         InsertTexture(1, "CEE Leaser");

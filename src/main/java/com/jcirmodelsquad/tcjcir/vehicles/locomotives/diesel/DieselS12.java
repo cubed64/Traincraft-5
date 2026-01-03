@@ -18,7 +18,7 @@ public class DieselS12 extends DieselTrain {
         return EnumSounds.DieselS12;
     }
     public DieselS12(World world) {
-        super(world, EnumTrains.S12.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Amador Central Railroad");
         InsertTexture(1, "Blandsville & Blankerston");

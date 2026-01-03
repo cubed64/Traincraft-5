@@ -16,7 +16,7 @@ public class DieselDash840BB extends DieselTrain {
         return EnumSounds.DieselDash840BB;
     }
     public DieselDash840BB(World world) {
-        super(world, EnumTrains.Dash840BB.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "ATSF");
         InsertTexture(1, "North Fox (Early)", LockoutGroup.FNCC);

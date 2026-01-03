@@ -16,7 +16,7 @@ public class DieselB23_wrx extends DieselTrain {
     public SoundRecord getSoundRecord() { return EnumSounds.DieselB23_wrx; }
 
     public DieselB23_wrx(World world) {
-        super(world, EnumTrains.B23_wrx.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "WRXR Washaskan Woods RR", LockoutGroup.BIDA);
         InsertTexture(1, "WRXR Washaskan Woods RR (Extended DB)", LockoutGroup.BIDA);

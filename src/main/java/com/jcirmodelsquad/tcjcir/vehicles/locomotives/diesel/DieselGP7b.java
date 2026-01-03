@@ -16,7 +16,7 @@ public class DieselGP7b extends DieselTrain {
         return EnumSounds.DieselGP7b;
     }
     public DieselGP7b(World world) {
-        super(world, EnumTrains.GP7b.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "ATSF");
         InsertTexture(1, "Blandsville & Blankerston");

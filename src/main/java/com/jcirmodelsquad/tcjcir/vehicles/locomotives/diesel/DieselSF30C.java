@@ -16,7 +16,7 @@ public class DieselSF30C extends DieselTrain {
         return EnumSounds.DieselSF30C;
     }
     public DieselSF30C(World world) {
-        super(world, EnumTrains.SF30C.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "ATSF (Freightbonnet)");
         InsertTexture(1, "ATSF (Kodachrome)");

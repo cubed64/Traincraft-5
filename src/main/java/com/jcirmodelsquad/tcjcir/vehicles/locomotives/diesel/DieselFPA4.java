@@ -16,7 +16,7 @@ public class DieselFPA4 extends DieselTrain {
         return EnumSounds.DieselFPA4;
     }
     public DieselFPA4(World world) {
-        super(world, EnumTrains.FPA4.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "VIA Rail");
         InsertTexture(1, "VIA Rail");

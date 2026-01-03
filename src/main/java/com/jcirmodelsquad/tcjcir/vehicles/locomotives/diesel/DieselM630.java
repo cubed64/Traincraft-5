@@ -18,7 +18,7 @@ public class DieselM630 extends DieselTrain {
         return EnumSounds.DieselM630D;
     }
     public DieselM630(World world) {
-        super(world, EnumTrains.M630.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Pacific Great Eastern");
         InsertTexture(1, "Blandsville & Blankerston");

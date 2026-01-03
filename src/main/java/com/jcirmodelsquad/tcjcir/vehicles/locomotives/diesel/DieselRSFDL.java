@@ -16,7 +16,7 @@ public class DieselRSFDL extends DieselTrain {
         return EnumSounds.DieselRSFDL;
     }
     public DieselRSFDL(World world) {
-        super(world, EnumTrains.RSFDL.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "not FNCC");
         InsertTexture(1, "peenore lol");

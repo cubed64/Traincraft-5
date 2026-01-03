@@ -17,7 +17,7 @@ public class DieselDD55 extends DieselTrain {
         return EnumSounds.DieselDD55;
     }
     public DieselDD55(World world) {
-        super(world, EnumTrains.DD55.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "West Creek Pacific");
         InsertTexture(1, "Steampunk Rail", LockoutGroup.SPR);

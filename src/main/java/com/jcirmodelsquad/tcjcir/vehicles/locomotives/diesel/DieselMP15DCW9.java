@@ -16,7 +16,7 @@ public class DieselMP15DCW9 extends DieselTrain {
         return EnumSounds.DieselMP15DCW9;
     }
     public DieselMP15DCW9(World world) {
-        super(world, EnumTrains.MP15DCW9.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, ""); // buttsecks poopyhead dead rayroad boner ;)
         InsertTexture(1, "WFR but AWESOME");

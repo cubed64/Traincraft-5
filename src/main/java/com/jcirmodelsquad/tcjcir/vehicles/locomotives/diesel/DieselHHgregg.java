@@ -15,7 +15,7 @@ public class DieselHHgregg extends DieselTrain {
         return EnumSounds.DieselHHGregg;
     }
     public DieselHHgregg(World world) {
-        super(world, EnumTrains.HHgregg.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
     }
 

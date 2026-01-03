@@ -15,7 +15,7 @@ public class Diesel4ED172T_E extends DieselTrain {
     public SoundRecord getSoundRecord() { return EnumSounds.Diesel4ED172_E; }
 
     public Diesel4ED172T_E(World world) {
-        super(world, EnumTrains.CEE4ED172T_E.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "GLNT");
         InsertTexture(1, "Blandsville & Blankerston");

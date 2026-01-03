@@ -17,7 +17,7 @@ public class DieselTR4 extends DieselTrain {
         return EnumSounds.DieselTR4;
     }
     public DieselTR4(World world) {
-        super(world, EnumTrains.TR4.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Belt Railroad of Chicago");
         InsertTexture(1, "Milwaukee Road");

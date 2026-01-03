@@ -16,7 +16,7 @@ public class DieselSDL39 extends DieselTrain {
         return EnumSounds.DieselSDL39;
     }
     public DieselSDL39(World world) {
-        super(world, EnumTrains.SDL39.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         //when the
         InsertTexture(0, "MILW");

@@ -16,7 +16,7 @@ public class DieselSW8 extends DieselTrain {
         return EnumSounds.DieselSW8;
     }
     public DieselSW8(World world) {
-        super(world, EnumTrains.SW8.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "DRIR 553");
         InsertTexture(1, "Blandsville & Blankerston");

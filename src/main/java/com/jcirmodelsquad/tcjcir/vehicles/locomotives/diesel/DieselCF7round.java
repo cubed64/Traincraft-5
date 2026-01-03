@@ -17,7 +17,7 @@ public class DieselCF7round extends DieselTrain {
         return EnumSounds.DieselCF7round;
     }
     public DieselCF7round(World world) {
-        super(world, EnumTrains.CF7round.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "ATSF (Pinstripe)");
         InsertTexture(1, "ATSF (2568)");

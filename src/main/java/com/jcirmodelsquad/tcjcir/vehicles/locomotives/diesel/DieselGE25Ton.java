@@ -16,7 +16,7 @@ public class DieselGE25Ton extends DieselTrain {
 		return EnumSounds.Diesel25Ton;
 	}
 	public DieselGE25Ton(World world) {
-		super(world, EnumTrains.GE25Ton.getTankCapacity(), LiquidManager.dieselFilter());
+		super(world, LiquidManager.dieselFilter());
 
 		InsertTexture(0, "NPS (Golden Spike National Park)");
 		InsertTexture(1, "PW (Shop Switcher)");

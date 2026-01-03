@@ -17,7 +17,7 @@ public class DieselDash818BE extends DieselTrain {
         return EnumSounds.DieselDash818BE;
     }
     public DieselDash818BE(World world) {
-        super(world, EnumTrains.Dash818BE.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "FNCC (Kit-L)", LockoutGroup.FNCC);
     }

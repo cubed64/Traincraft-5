@@ -16,7 +16,7 @@ public class DieselC424 extends DieselTrain {
     public SoundRecord getSoundRecord() { return EnumSounds.DieselC424; }
 
     public DieselC424(World world) {
-        super(world, EnumTrains.C424.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Spokane, Portland & Seattle");
         InsertTexture(1, "Morristown & Erie");

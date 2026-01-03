@@ -16,7 +16,7 @@ public class DieselB30 extends DieselTrain {
     public SoundRecord getSoundRecord() { return EnumSounds.DieselB30; }
 
     public DieselB30(World world) {
-        super(world, EnumTrains.B30.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "CNCR 5550", LockoutGroup.CNRC);
         InsertTexture(1, "CNCR 5552", LockoutGroup.CNRC);

@@ -15,7 +15,7 @@ public class Diesel4ED172T_G extends DieselTrain {
     public SoundRecord getSoundRecord() { return EnumSounds.Diesel4ED172_G; }
 
     public Diesel4ED172T_G(World world) {
-        super(world, EnumTrains.CEE4ED172T_G.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Grassland Laboratories");
         InsertTexture(1, "Blandsville & Blankerston");

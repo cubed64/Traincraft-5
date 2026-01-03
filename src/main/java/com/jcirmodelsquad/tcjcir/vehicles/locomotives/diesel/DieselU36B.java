@@ -16,7 +16,7 @@ public class DieselU36B extends DieselTrain {
         return EnumSounds.DieselU36B;
     }
     public DieselU36B(World world) {
-        super(world, EnumTrains.U36B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "auto-train Corp");
         InsertTexture(1, "Transkentucky Transportation Ind");

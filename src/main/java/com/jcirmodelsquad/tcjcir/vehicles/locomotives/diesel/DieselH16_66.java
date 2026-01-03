@@ -16,7 +16,7 @@ public class DieselH16_66 extends DieselTrain {
         return EnumSounds.DieselH16_66;
     }
     public DieselH16_66(World world) {
-        super(world, EnumTrains.H24_66.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "TVA");
         InsertTexture(1, "Chicago Northwestern (Stripes)");

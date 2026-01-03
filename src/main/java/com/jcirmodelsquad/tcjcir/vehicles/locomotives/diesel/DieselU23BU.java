@@ -17,7 +17,7 @@ public class DieselU23BU extends DieselTrain {
         return EnumSounds.DieselU23BU;
     }
     public DieselU23BU(World world) {
-        super(world, EnumTrains.U23BU.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "FNCC (1st Order)", LockoutGroup.FNCC);//type b
         InsertTexture(1, "FNCC (2nd Order)", LockoutGroup.FNCC);//fb2

@@ -17,7 +17,7 @@ public class DieselSD45dash2 extends DieselTrain {
         return EnumSounds.DieselSD45dash2;
     }
     public DieselSD45dash2(World world) {
-        super(world, EnumTrains.SD45.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         //when the
         InsertTexture(0, "Great Northern (Big Sky)");

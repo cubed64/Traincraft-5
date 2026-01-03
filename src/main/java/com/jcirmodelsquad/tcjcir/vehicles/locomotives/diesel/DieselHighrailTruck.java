@@ -15,7 +15,7 @@ public class DieselHighrailTruck extends DieselTrain {
         return EnumSounds.DieselHighrailTruck;
     }
     public DieselHighrailTruck(World world) {
-        super(world, EnumTrains.HighrailTruck.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         //apparently, the reason "world" was red was cus it needed the tank capacity thingg from something else, so iDk reER
     }

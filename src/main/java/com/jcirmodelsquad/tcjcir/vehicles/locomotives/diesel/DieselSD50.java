@@ -17,7 +17,7 @@ public class DieselSD50 extends DieselTrain {
         return EnumSounds.DieselSD50;
     }
     public DieselSD50(World world) {
-        super(world, EnumTrains.SD50.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "CSX (YN1)");
         InsertTexture(1, "CSX (YN2)");

@@ -23,7 +23,7 @@ public class Diesel4ED172T extends DieselTrain {
     public SoundRecord getSoundRecord() { return EnumSounds.Diesel4ED172T; }
 
     public Diesel4ED172T(World world) {
-        super(world, EnumTrains.CEE4ED172T.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "CEE 1950s Demo units");
         InsertTexture(1, "FMSR Late (FNCC Early)", LockoutGroup.FMSR);

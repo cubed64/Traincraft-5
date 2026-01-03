@@ -17,7 +17,7 @@ public class DieselRS1 extends DieselTrain {
         return EnumSounds.DieselRS1;
     }
     public DieselRS1(World world) {
-        super(world, EnumTrains.RS1.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "she ann on my arbor till i bankruptcy");
         InsertTexture(1, "she wabash on my lake till i ann arbor");

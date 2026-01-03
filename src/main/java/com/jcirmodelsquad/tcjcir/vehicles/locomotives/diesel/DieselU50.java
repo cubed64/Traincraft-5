@@ -17,7 +17,7 @@ public class DieselU50 extends DieselTrain {
         return EnumSounds.DieselU50;
     }
     public DieselU50(World world) {
-        super(world, EnumTrains.U50.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Union Pacific");
         InsertTexture(1, "Southern Pacific");

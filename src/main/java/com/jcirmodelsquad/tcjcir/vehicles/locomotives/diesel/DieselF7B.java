@@ -17,7 +17,7 @@ public class DieselF7B extends DieselTrain {
         return EnumSounds.DieselF7B;
     }
     public DieselF7B(World world) {
-        super(world, EnumTrains.F7B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         //when the benis sus
         InsertTexture(0, "PC (Ex NYC)");

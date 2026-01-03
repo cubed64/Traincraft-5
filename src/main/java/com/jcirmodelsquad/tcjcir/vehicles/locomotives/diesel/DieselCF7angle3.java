@@ -17,7 +17,7 @@ public class DieselCF7angle3 extends DieselTrain {
         return EnumSounds.DieselCF7angle3;
     }
     public DieselCF7angle3(World world) {
-        super(world, EnumTrains.CF7angle3.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "ANE", LockoutGroup.ANE);
         InsertTexture(1, "FNCC (CEE Rebuilt)", LockoutGroup.FNCC);

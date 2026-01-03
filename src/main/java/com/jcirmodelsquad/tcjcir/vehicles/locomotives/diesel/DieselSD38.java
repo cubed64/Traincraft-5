@@ -16,7 +16,7 @@ public class DieselSD38 extends DieselTrain {
         return EnumSounds.DieselSD38;
     }
     public DieselSD38(World world) {
-        super(world, EnumTrains.SD38.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         //when the
         InsertTexture(0, "Yankee(with no brim)town Dock Corporation");

@@ -17,7 +17,7 @@ public class DieselGP30 extends DieselTrain {
         return EnumSounds.DieselGP30;
     }
     public DieselGP30(World world) {
-        super(world, EnumTrains.GP30.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "ICG");
         InsertTexture(1, "ACL");

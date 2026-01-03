@@ -15,7 +15,7 @@ public class DieselVO1000 extends DieselTrain {
         return EnumSounds.DieselVO1000;
     }
     public DieselVO1000(World world) {
-        super(world, EnumTrains.VO1000.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Spokane Portland & Seattle");
         InsertTexture(1, "LC&BC 9");

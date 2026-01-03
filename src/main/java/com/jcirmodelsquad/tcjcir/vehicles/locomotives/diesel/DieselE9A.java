@@ -16,7 +16,7 @@ public class DieselE9A extends DieselTrain {
         return EnumSounds.DieselE9A;
     }
     public DieselE9A(World world) {
-        super(world, EnumTrains.E9A.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         //when the benis sus
         InsertTexture(0, "AMTK (Ph 1)");

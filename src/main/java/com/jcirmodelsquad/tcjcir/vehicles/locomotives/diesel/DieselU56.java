@@ -17,7 +17,7 @@ public class DieselU56 extends DieselTrain {
         return EnumSounds.DieselU56;
     }
     public DieselU56(World world) {
-        super(world, EnumTrains.U56.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "FNCC (KIT-L)", LockoutGroup.FNCC);
         InsertTexture(1, "FMSR", LockoutGroup.FMSR);

@@ -17,7 +17,7 @@ public class DieselU23C extends DieselTrain {
         return EnumSounds.DieselU23C;
     }
     public DieselU23C(World world) {
-        super(world, EnumTrains.U23C.getTankCapacity(), LiquidManager.dieselFilter());//its like magic guys trust me
+        super(world, LiquidManager.dieselFilter());//its like magic guys trust me
 
         InsertTexture(0, "Consolidate DeeZ NUTS");
         InsertTexture(1, "Nautilus", LockoutGroup.CUBED);

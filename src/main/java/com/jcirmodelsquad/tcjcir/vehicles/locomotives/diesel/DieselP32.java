@@ -16,7 +16,7 @@ public class DieselP32 extends DieselTrain {
         return EnumSounds.DieselP32;
     }
     public DieselP32(World world) {
-        super(world, EnumTrains.P32.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Metro North");
         InsertTexture(1, "Metro North (New Haven)");

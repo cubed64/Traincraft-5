@@ -15,7 +15,7 @@ public class DieselNRE3gs21b extends DieselTrain {
         return EnumSounds.DieselNRE3gs21b;
     }
     public DieselNRE3gs21b(World world) {
-        super(world, EnumTrains.NRE3gs21b.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Union Pacific");
         InsertTexture(1, "BNSF");

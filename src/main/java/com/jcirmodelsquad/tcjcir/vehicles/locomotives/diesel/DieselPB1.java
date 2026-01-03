@@ -16,7 +16,7 @@ public class DieselPB1 extends DieselTrain {
         return EnumSounds.DieselPB1;
     }
     public DieselPB1(World world) {
-        super(world, EnumTrains.AlcoPB1.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Santa Fe");
         InsertTexture(1, "Demonstrator");

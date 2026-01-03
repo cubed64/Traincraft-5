@@ -15,7 +15,7 @@ public class DieselC415S extends DieselTrain {
         return EnumSounds.DieselC415S;
     }
     public DieselC415S(World world) {
-        super(world, EnumTrains.C415S.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Burlington Northern");
         InsertTexture(1, "Spokane, Portland & Seattle");

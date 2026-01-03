@@ -17,7 +17,7 @@ public class DieselH1044 extends DieselTrain {
         return EnumSounds.DieselH1044;
     }
     public DieselH1044(World world) {
-        super(world, EnumTrains.H1044.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Hallet Dock Company");
         InsertTexture(1, "Union Pacific");

@@ -16,7 +16,7 @@ public class DieselSD45dash2B extends DieselTrain {
         return EnumSounds.DieselSD45dash2B;
     }
     public DieselSD45dash2B(World world) {
-        super(world, EnumTrains.SD45dash2B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         //when the
         InsertTexture(0, "ATSF (Pinstripe)");

@@ -16,7 +16,7 @@ public class DieselFB1 extends DieselTrain {
         return EnumSounds.DieselFB1;
     }
     public DieselFB1(World world) {
-        super(world, EnumTrains.FB1.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "New Haven");
         InsertTexture(1, "New Haven 2");

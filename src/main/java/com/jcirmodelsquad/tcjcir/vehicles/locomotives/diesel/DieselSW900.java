@@ -18,7 +18,7 @@ public class DieselSW900 extends DieselTrain {
         return EnumSounds.DieselSW900;
     }
     public DieselSW900(World world) {
-        super(world, EnumTrains.SW900.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Electric Fuels Corporation");
         InsertTexture(1, "Conrail Shared Assets");

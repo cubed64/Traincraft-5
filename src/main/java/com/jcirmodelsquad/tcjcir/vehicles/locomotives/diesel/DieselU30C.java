@@ -17,7 +17,7 @@ public class DieselU30C extends DieselTrain {
         return EnumSounds.DieselU30C;
     }
     public DieselU30C(World world) {
-        super(world, EnumTrains.U30C.getTankCapacity(), LiquidManager.dieselFilter());//its like magic guys trust me
+        super(world, LiquidManager.dieselFilter());//its like magic guys trust me
 
         InsertTexture(0, "Burlington Northern 5344");
         InsertTexture(1, "Blandsville & Blankerston");

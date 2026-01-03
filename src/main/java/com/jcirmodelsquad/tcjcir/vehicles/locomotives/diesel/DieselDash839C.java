@@ -17,7 +17,7 @@ public class DieselDash839C extends DieselTrain {
         return EnumSounds.DieselDash839C;
     }
     public DieselDash839C(World world) {
-        super(world, EnumTrains.Dash839C.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Conrail");
         InsertTexture(1, "CSXT (YN2)");

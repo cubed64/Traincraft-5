@@ -17,7 +17,7 @@ public class DieselHH660 extends DieselTrain {
         return EnumSounds.DieselHH600;
     }
     public DieselHH660(World world) {
-        super(world, EnumTrains.HH660.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "RE 601");
         InsertTexture(1, "RE 606");

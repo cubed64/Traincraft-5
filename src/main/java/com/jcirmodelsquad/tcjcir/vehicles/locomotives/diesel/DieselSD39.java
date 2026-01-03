@@ -16,7 +16,7 @@ public class DieselSD39 extends DieselTrain {
     }
 
     public DieselSD39(World world) {
-        super(world, EnumTrains.SD39.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         //when the
         InsertTexture(0, "BNSF");

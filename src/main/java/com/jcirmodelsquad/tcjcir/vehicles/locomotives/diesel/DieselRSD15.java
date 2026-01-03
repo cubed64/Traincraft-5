@@ -15,7 +15,7 @@ public class DieselRSD15 extends DieselTrain {
         return EnumSounds.DieselRSD15;
     }
     public DieselRSD15(World world) {
-        super(world, EnumTrains.RSD15.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(2, "Blandsville & Blankerston");
         InsertTexture(3, "FURRX (EX CSWR)");

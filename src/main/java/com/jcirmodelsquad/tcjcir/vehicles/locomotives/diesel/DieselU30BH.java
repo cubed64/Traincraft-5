@@ -17,7 +17,7 @@ public class DieselU30BH extends DieselTrain {
         return EnumSounds.DieselU30BH;
     }
     public DieselU30BH(World world) {
-        super(world, EnumTrains.U30BH.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Northern Cascades Transit Authority (NOCTA)", LockoutGroup.BIDA);
         InsertTexture(1, "Blandsville Area Rapid Transporation (BlART)");

@@ -18,7 +18,7 @@ public class DieselSD40T2 extends DieselTrain {
         return EnumSounds.DieselSD40T2;
     }
     public DieselSD40T2(World world) {
-        super(world, EnumTrains.SD40T2.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Denver and Rio Grande Western");
         InsertTexture(1, "Southern Pacific 8491 (Early)");

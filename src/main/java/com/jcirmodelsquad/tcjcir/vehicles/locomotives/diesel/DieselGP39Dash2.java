@@ -17,7 +17,7 @@ public class DieselGP39Dash2 extends DieselTrain {
         return EnumSounds.DieselGP39Dash2;
     }
     public DieselGP39Dash2(World world) {
-        super(world, EnumTrains.GP39Dash2.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "MKT");
         InsertTexture(1, "FURRX (Ex CSWR)");

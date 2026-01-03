@@ -16,7 +16,7 @@ public class DieselU36C extends DieselTrain {
         return EnumSounds.DieselU36C;
     }
     public DieselU36C(World world) {
-        super(world, EnumTrains.U36C.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Erie Lackawana");
         InsertTexture(1, "ATSF (Pinstripe)");

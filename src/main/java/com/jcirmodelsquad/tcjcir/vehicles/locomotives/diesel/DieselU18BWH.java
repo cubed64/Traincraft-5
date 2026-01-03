@@ -16,7 +16,7 @@ public class DieselU18BWH extends DieselTrain {
         return EnumSounds.DieselU18BWH;
     }
     public DieselU18BWH(World world) {
-        super(world, EnumTrains.U18BWH.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Amtrak (PH1)");
         InsertTexture(1, "Amtrak (Low Clearance NEC Edition)");

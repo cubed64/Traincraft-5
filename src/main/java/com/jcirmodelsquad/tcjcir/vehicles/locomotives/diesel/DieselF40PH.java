@@ -15,7 +15,7 @@ public class DieselF40PH extends DieselTrain {
         return EnumSounds.DieselF40PH;
     }
     public DieselF40PH(World world) {
-        super(world, EnumTrains.F40PH.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Amtrak (Phase III)");
         InsertTexture(1, "Amtrak (Phase IV)");

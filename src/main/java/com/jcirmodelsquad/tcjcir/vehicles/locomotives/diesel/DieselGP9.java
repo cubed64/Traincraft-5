@@ -18,7 +18,7 @@ public class DieselGP9 extends DieselTrain {
         return EnumSounds.DieselGP9;
     }
     public DieselGP9(World world) {
-        super(world, EnumTrains.GP9.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "BN 1783");
         InsertTexture(1, "Southern Pacific (Black Widow Passenger)");

@@ -17,7 +17,7 @@ public class DieselGP40 extends DieselTrain {
         return EnumSounds.DieselGP40;
     }
     public DieselGP40(World world) {
-        super(world, EnumTrains.GP40.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Wisconsin Central (FrankenForty)");
         InsertTexture(1, "Wisconsin Central");

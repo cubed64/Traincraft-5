@@ -17,7 +17,7 @@ public class DieselWorkdayHyrail extends DieselTrain {
         return EnumSounds.DieselWorkdayHyrail;
     }
     public DieselWorkdayHyrail(World world) {
-        super(world, EnumTrains.WorkdayHyrail.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         InsertTexture(0, "Generic");
         InsertTexture(1, "CSXT");
         InsertTexture(2, "FNCC MOW", LockoutGroup.FNCC);

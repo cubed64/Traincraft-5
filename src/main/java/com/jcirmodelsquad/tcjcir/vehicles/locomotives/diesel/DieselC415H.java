@@ -16,7 +16,7 @@ public class DieselC415H extends DieselTrain {
         return EnumSounds.DieselC415H;
     }
     public DieselC415H(World world) {
-        super(world, EnumTrains.C415H.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Port of Tillamook Bay 701 (BRJ 701 Early)");
         InsertTexture(1, "Port of Tillamook Bay 702 (BRJ 702 Early)");

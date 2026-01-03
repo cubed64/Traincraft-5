@@ -16,7 +16,7 @@ public class DieselSD70Mac extends DieselTrain {
         return EnumSounds.DieselSD70Mac;
     }
     public DieselSD70Mac(World world) {
-        super(world, EnumTrains.SD70Mac.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "EMD Demo");
         InsertTexture(1, "Alaska Railroad");

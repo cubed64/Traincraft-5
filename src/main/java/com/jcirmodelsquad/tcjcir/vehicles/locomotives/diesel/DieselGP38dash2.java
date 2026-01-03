@@ -16,7 +16,7 @@ public class DieselGP38dash2 extends DieselTrain {
         return EnumSounds.DieselGP38dash2;
     }
     public DieselGP38dash2(World world) {
-        super(world, EnumTrains.GP38Dash2.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Butte, Anaconda & Pacific");
         InsertTexture(1, "MKT (Stripes)");

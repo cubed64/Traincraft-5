@@ -15,7 +15,7 @@ public class DieselF45 extends DieselTrain {
         return EnumSounds.DieselF45;
     }
     public DieselF45(World world) {
-        super(world, EnumTrains.F45.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         //when the
         InsertTexture(0, "Great Northern");

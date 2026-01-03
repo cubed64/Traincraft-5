@@ -16,7 +16,7 @@ public class DieselAC4400C extends DieselTrain {
     public SoundRecord getSoundRecord() { return EnumSounds.DieselAC4400C; }
 
     public DieselAC4400C(World world) {
-        super(world, EnumTrains.AC4400C.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Western Pacific");
         InsertTexture(1, "North Fox (KIT-L)", LockoutGroup.FNCC);

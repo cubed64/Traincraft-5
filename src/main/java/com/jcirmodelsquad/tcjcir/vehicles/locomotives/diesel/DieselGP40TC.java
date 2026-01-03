@@ -15,7 +15,7 @@ public class DieselGP40TC extends DieselTrain {
         return EnumSounds.DieselGP40TC;
     }
     public DieselGP40TC(World world) {
-        super(world, EnumTrains.GP40TC.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "GO Transit");
         InsertTexture(1, "Amtrak");

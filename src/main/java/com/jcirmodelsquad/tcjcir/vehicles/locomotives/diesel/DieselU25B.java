@@ -16,7 +16,7 @@ public class DieselU25B extends DieselTrain {
         return EnumSounds.DieselU25B;
     }
     public DieselU25B(World world) {
-        super(world, EnumTrains.U25B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "New Haven");
         InsertTexture(1, "Blandsville & Blankerston");

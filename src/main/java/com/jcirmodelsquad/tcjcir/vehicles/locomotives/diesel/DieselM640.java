@@ -17,7 +17,7 @@ public class DieselM640 extends DieselTrain {
         return EnumSounds.DieselM640;
     }
     public DieselM640(World world) {
-        super(world, EnumTrains.M640.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "CPRail 4744");
         InsertTexture(1, "CPRail 4744 (AC Convertible)");

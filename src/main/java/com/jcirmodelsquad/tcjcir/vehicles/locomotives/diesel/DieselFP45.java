@@ -15,7 +15,7 @@ public class DieselFP45 extends DieselTrain {
         return EnumSounds.DieselFP45;
     }
     public DieselFP45(World world) {
-        super(world, EnumTrains.FP45.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         //when the
         InsertTexture(0, "THE MILWAUKEE ROAD");

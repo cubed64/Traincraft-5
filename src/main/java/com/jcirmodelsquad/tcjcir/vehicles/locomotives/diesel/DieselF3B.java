@@ -17,7 +17,7 @@ public class DieselF3B extends DieselTrain {
         return EnumSounds.DieselF3B;
     }
     public DieselF3B(World world) {
-        super(world, EnumTrains.F3B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Phase 2 Early");
         InsertTexture(1, "FMSR", LockoutGroup.FMSR);

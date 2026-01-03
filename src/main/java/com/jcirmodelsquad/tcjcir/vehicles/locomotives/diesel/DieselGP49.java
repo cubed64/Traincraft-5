@@ -25,10 +25,10 @@ public class DieselGP49 extends DieselTrain {
         return EnumSounds.DieselGP49;
     }
     public DieselGP49(World world) {
-        super(world, EnumTrains.GP49.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         InsertTexture(0, "Alaska Railroad");
         InsertTexture(1, "Fox Union Rail Resources (FURRX)");
-        InsertTexture(2, "Great Lakes & Northern Testicles");
+        InsertTexture(2, "Great Lakes & Northern Territories"); // Great Lakes & Northern Testicles
     }
 
     @Override

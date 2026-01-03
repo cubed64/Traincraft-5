@@ -15,7 +15,7 @@ public class DieselGP7old extends DieselTrain {
     }
 
     public DieselGP7old(World world) {
-        super(world, EnumTrains.GP7.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
 
     }

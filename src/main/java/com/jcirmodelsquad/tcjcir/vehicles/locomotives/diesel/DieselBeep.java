@@ -15,7 +15,7 @@ public class DieselBeep extends DieselTrain {
         return EnumSounds.DieselBeep;
     }
     public DieselBeep(World world) {
-        super(world, EnumTrains.Beep.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
     }
 

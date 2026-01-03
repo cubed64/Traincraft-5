@@ -17,7 +17,7 @@ public class DieselMP900 extends DieselTrain {
         return EnumSounds.DieselMP900;
     }
     public DieselMP900(World world) {
-        super(world, EnumTrains.MP900.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Masaou Demo");
         InsertTexture(1, "Blandsville & Blankerston");

@@ -17,7 +17,7 @@ public class DieselES44h extends DieselTrain {
         return EnumSounds.DieselES44h;
     }
     public DieselES44h(World world) {
-        super(world, EnumTrains.ES44h.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "NS 8025 (Monongahela)");
         InsertTexture(1, "NS 8098 (Conrail)");

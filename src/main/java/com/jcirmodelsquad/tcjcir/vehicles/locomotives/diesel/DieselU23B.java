@@ -17,7 +17,7 @@ public class DieselU23B extends DieselTrain {
         return EnumSounds.DieselU23B;
     }
     public DieselU23B(World world) {
-        super(world, EnumTrains.U23B.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         InsertTexture(0, "Union Pacific");
         InsertTexture(1, "Fox Union Rail Resources (FURRX)");

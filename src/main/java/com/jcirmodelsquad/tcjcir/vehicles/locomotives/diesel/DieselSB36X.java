@@ -17,7 +17,7 @@ public class DieselSB36X extends DieselTrain {
         return EnumSounds.DieselSB36X;
     }
     public DieselSB36X(World world) {
-        super(world, EnumTrains.SB36X.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "TTLC (Black Forest Blue)");
         InsertTexture(1, "TTLC (Forest Blue)");

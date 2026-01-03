@@ -16,7 +16,7 @@ public class DieselGP38H3 extends DieselTrain {
         return EnumSounds.DieselGP38H3;
     }
     public DieselGP38H3(World world) {
-        super(world, EnumTrains.GP38H3.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Amtrak");
         InsertTexture(1, "Unexpected Cubed in the Bagging Area", LockoutGroup.CUBED);

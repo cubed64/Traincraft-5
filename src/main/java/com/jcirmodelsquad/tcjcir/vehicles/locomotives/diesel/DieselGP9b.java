@@ -15,7 +15,7 @@ public class DieselGP9b extends DieselTrain {
         return EnumSounds.DieselGP9b;
     }
     public DieselGP9b(World world) {
-        super(world, EnumTrains.GP9b.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Union Pacific");
         InsertTexture(1, "Penn Central");

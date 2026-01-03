@@ -16,7 +16,7 @@ public class DieselP40 extends DieselTrain {
         return EnumSounds.DieselP40;
     }
     public DieselP40(World world) {
-        super(world, EnumTrains.geGenesis.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         //when the
         InsertTexture(0, "Amtrak Phase III");

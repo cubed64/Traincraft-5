@@ -17,7 +17,7 @@ public class DieselSD40dash3 extends DieselTrain {
         return EnumSounds.DieselSD40dash3;
     }
     public DieselSD40dash3(World world) {
-        super(world, EnumTrains.SD40dash3.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         //when the
         InsertTexture(0, "CSXT (RCO Equipped)");

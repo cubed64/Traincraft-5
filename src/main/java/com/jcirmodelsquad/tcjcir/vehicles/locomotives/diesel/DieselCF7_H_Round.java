@@ -17,7 +17,7 @@ public class DieselCF7_H_Round extends DieselTrain {
         return EnumSounds.CF7_H_Round;
     }
     public DieselCF7_H_Round(World world) {
-        super(world, EnumTrains.CF7round.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
     }
 

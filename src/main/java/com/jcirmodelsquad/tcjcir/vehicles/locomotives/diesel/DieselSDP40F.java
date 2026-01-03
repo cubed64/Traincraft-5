@@ -16,7 +16,7 @@ public class DieselSDP40F extends DieselTrain {
         return EnumSounds.DieselSDP40F;
     }
     public DieselSDP40F(World world) {
-        super(world, EnumTrains.SDP40F.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         //when the
         InsertTexture(0, "EMD");

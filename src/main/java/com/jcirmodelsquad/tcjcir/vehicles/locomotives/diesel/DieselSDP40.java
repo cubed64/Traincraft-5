@@ -17,7 +17,7 @@ public class DieselSDP40 extends DieselTrain {
         return EnumSounds.DieselSDP40;
     }
     public DieselSDP40(World world) {
-        super(world, EnumTrains.SDP40.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         //when the
         InsertTexture(0, "Burlington Northern");

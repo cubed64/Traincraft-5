@@ -16,7 +16,7 @@ public class DieselSD40R extends DieselTrain {
         return EnumSounds.DieselSD40R;
     }
     public DieselSD40R(World world) {
-        super(world, EnumTrains.SD40R.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         //when the
         InsertTexture(0, "Southern Pacific (Early)");

@@ -17,7 +17,7 @@ public class DieselGP35 extends DieselTrain {
         return EnumSounds.DieselGP35;
     }
     public DieselGP35(World world) {
-        super(world, EnumTrains.GP35.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Ann Arbor");
         InsertTexture(1, "Ann Arbor (Ferry in the Fog)");

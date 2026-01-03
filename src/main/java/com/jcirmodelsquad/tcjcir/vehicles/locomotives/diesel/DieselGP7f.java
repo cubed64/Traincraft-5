@@ -17,7 +17,7 @@ public class DieselGP7f extends DieselTrain {
         return EnumSounds.DieselGP7f;
     }
     public DieselGP7f(World world) {
-        super(world, EnumTrains.GP7f.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "ARR 1803");
         InsertTexture(1, "ARR 1807");

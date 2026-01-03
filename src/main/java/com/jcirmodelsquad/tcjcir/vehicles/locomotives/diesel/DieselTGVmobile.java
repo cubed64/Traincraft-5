@@ -15,7 +15,7 @@ public class DieselTGVmobile extends DieselTrain {
         return EnumSounds.DieselTGVMobile;
     }
     public DieselTGVmobile(World world) {
-        super(world, EnumTrains.TGVmobile.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
     }
 

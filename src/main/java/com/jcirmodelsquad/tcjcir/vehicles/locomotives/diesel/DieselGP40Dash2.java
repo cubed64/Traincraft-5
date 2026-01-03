@@ -17,7 +17,7 @@ public class DieselGP40Dash2 extends DieselTrain {
         return EnumSounds.DieselGP40Dash2;
     }
     public DieselGP40Dash2(World world) {
-        super(world, EnumTrains.GP40Dash2.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "Florida East Coast");
         InsertTexture(1, "Paradox Rail");

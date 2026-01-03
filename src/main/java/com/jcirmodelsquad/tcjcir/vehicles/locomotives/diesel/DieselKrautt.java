@@ -17,7 +17,7 @@ public class DieselKrautt extends DieselTrain {
         return EnumSounds.DieselKrautt;
     }
     public DieselKrautt(World world) {
-        super(world, EnumTrains.Krautt.getTankCapacity(), LiquidManager.dieselFilter());
+        super(world, LiquidManager.dieselFilter());
 
         //when the
     }
