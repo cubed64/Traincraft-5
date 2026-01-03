@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.tileentity.TileEntityFurnace;
 import train.common.api.AbstractWorkCart;
+import train.common.slots.StandardRollingStockSlot;
 
 public class InventoryWorkCart extends Container {
 	private AbstractWorkCart furnace;
@@ -19,8 +20,8 @@ public class InventoryWorkCart extends Container {
 
 	public InventoryWorkCart(InventoryPlayer par1InventoryPlayer, Entity entity) {
 		this.furnace = (AbstractWorkCart) entity;
-		this.addSlotToContainer(new Slot((IInventory) entity, 0, 56, 17));
-		this.addSlotToContainer(new Slot((IInventory) entity, 1, 56, 53));
+		this.addSlotToContainer(new StandardRollingStockSlot((IInventory) entity, 0, 56, 17));
+		this.addSlotToContainer(new StandardRollingStockSlot((IInventory) entity, 1, 56, 53));
 		this.addSlotToContainer(new SlotFurnace(par1InventoryPlayer.player, (IInventory) entity, 2, 116, 35));
 		int var3;
 

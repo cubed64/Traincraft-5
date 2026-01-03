@@ -6,6 +6,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import train.common.entity.zeppelin.AbstractZeppelin;
+import train.common.slots.StandardRollingStockSlot;
 
 public class InventoryZepp extends Container {
 	private AbstractZeppelin zepp;
@@ -14,20 +15,20 @@ public class InventoryZepp extends Container {
 	public InventoryZepp(InventoryPlayer iinventory, AbstractZeppelin entityzepp) {
 		inventorySize = 10;
 		zepp = entityzepp;
-		addSlotToContainer(new Slot(entityzepp, 0, 8, 53));
+		addSlotToContainer(new StandardRollingStockSlot(entityzepp, 0, 8, 53));
 		int i = 1;
 		for (int j = 0; j < zepp.numCargoSlots; j++) {
-			addSlotToContainer(new Slot(entityzepp, i, 80 + j * 18, 18));
+			addSlotToContainer(new StandardRollingStockSlot(entityzepp, i, 80 + j * 18, 18));
 			i++;
 		}
 
 		for (int k = 0; k < zepp.numCargoSlots1; k++) {
-			addSlotToContainer(new Slot(entityzepp, i, 80 + k * 18, 36));
+			addSlotToContainer(new StandardRollingStockSlot(entityzepp, i, 80 + k * 18, 36));
 			i++;
 		}
 
 		for (int l = 0; l < zepp.numCargoSlots2; l++) {
-			addSlotToContainer(new Slot(entityzepp, i, 80 + l * 18, 54));
+			addSlotToContainer(new StandardRollingStockSlot(entityzepp, i, 80 + l * 18, 54));
 			i++;
 		}
 

@@ -6,12 +6,16 @@ import cpw.mods.fml.common.*;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.*;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.PlayerEvent;
 import cpw.mods.fml.common.network.FMLEventChannel;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.VillagerRegistry;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.launchwrapper.Launch;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -33,6 +37,7 @@ import train.common.core.creativetab.*;
 import train.common.core.TrainModCore;
 import train.common.core.handlers.*;
 import train.common.core.managers.TierRecipeManager;
+import train.common.core.network.PacketSyncBannedItems;
 import train.common.generation.ComponentVillageTrainstation;
 import train.common.generation.WorldGenWorld;
 import train.common.items.TCItems;
@@ -98,6 +103,8 @@ public class Traincraft {
 	public static SimpleNetworkWrapper updateEtiChannel = NetworkRegistry.INSTANCE.newSimpleChannel("UpdateETI");
 
 	public static SimpleNetworkWrapper lockoutCommChannel;
+
+	public static final SimpleNetworkWrapper BannedItems_CHANNEL = NetworkRegistry.INSTANCE.newSimpleChannel("banneditems_sync");
 
 	public static FMLEventChannel channel;
 
@@ -303,6 +310,8 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 		{
 			new TrainSheetsDataGenerator();
 		}
+
+		ItemHandler.parseBannedItems(ConfigHandler.ROLLINGSTOCK_INVENTORY_BLACKLIST_RAW);
 	}
 
 	@EventHandler

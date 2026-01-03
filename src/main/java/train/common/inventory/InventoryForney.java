@@ -12,6 +12,7 @@ import train.common.api.LiquidManager;
 import train.common.api.Locomotive;
 import train.common.api.SteamTrain;
 import train.common.core.handlers.FuelHandler;
+import train.common.slots.StandardRollingStockSlot;
 
 public class InventoryForney extends Container {
 
@@ -25,20 +26,20 @@ public class InventoryForney extends Container {
 		inventorySize = loco.inventorySize;
 		int i = 2;
 		int numCargoSlots = 5;
-		addSlotToContainer(new Slot((IInventory) entityminecart, 0, 8, 34));
+		addSlotToContainer(new StandardRollingStockSlot((IInventory) entityminecart, 0, 8, 34));
 
-		addSlotToContainer(new Slot((IInventory) entityminecart, 1, 8, 53));
+		addSlotToContainer(new StandardRollingStockSlot((IInventory) entityminecart, 1, 8, 53));
 
 		for (int j = 0; j < numCargoSlots; j++) {
-			addSlotToContainer(new Slot((IInventory) entityminecart, i, 44 + j * 18, 18));
+			addSlotToContainer(new StandardRollingStockSlot((IInventory) entityminecart, i, 44 + j * 18, 18));
 			i++;
 		}
 		for (int k = 0; k < numCargoSlots; k++) {
-			addSlotToContainer(new Slot((IInventory) entityminecart, i, 44 + k * 18, 36));
+			addSlotToContainer(new StandardRollingStockSlot((IInventory) entityminecart, i, 44 + k * 18, 36));
 			i++;
 		}
 		for (int l = 0; l < numCargoSlots; l++) {
-			addSlotToContainer(new Slot((IInventory) entityminecart, i, 44 + l * 18, 54));
+			addSlotToContainer(new StandardRollingStockSlot((IInventory) entityminecart, i, 44 + l * 18, 54));
 			i++;
 		}
 		for (int i1 = 0; i1 < 3; i1++) {

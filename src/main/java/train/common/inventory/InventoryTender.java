@@ -9,6 +9,7 @@ import net.minecraft.item.ItemStack;
 import train.common.api.EntityRollingStock;
 import train.common.api.Tender;
 import train.common.slots.SlotTender;
+import train.common.slots.StandardRollingStockSlot;
 
 public class InventoryTender extends Container {
 
@@ -22,7 +23,7 @@ public class InventoryTender extends Container {
 		inventorySize = loco.tenderItems.length;
 		int i = 1;
 		int numCargoSlots = 5;
-		addSlotToContainer(new Slot((IInventory) entityminecart, 0, 8, 53));
+		addSlotToContainer(new StandardRollingStockSlot((IInventory) entityminecart, 0, 8, 53));
 
 		for (int j = 0; j < numCargoSlots; j++) {
 			addSlotToContainer(new SlotTender((IInventory) entityminecart, i, 44 + j * 18, 18));
@@ -38,11 +39,11 @@ public class InventoryTender extends Container {
 		}
 		for (int i1 = 0; i1 < 3; i1++) {
 			for (int k1 = 0; k1 < 9; k1++) {
-				addSlotToContainer(new Slot(iinventory, k1 + i1 * 9 + 9, 8 + k1 * 18, 84 + i1 * 18));
+				addSlotToContainer(new StandardRollingStockSlot(iinventory, k1 + i1 * 9 + 9, 8 + k1 * 18, 84 + i1 * 18));
 			}
 		}
 		for (int j1 = 0; j1 < 9; j1++) {
-			addSlotToContainer(new Slot(iinventory, j1, 8 + j1 * 18, 142));
+			addSlotToContainer(new StandardRollingStockSlot(iinventory, j1, 8 + j1 * 18, 142));
 		}
 	}
 

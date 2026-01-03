@@ -8,6 +8,7 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import train.common.api.AbstractControlCar;
 import train.common.api.EntityRollingStock;
+import train.common.slots.StandardRollingStockSlot;
 
 
 public class InventoryControlCar extends Container
@@ -25,18 +26,18 @@ public class InventoryControlCar extends Container
 
 		// region Adds the slots for the Control Car
 		// This Slot is typically the slot for fuel in a locomotive
-		addSlotToContainer(new Slot((IInventory) entityminecart, 0, 8, 53));
+		addSlotToContainer(new StandardRollingStockSlot((IInventory) entityminecart, 0, 8, 53));
 
 		for (int j = 0; j < controlCar.numCargoSlots; j++) {
-			addSlotToContainer(new Slot((IInventory) entityminecart, i, 80 + j * 18, 18));
+			addSlotToContainer(new StandardRollingStockSlot((IInventory) entityminecart, i, 80 + j * 18, 18));
 			i++;
 		}
 		for (int k = 0; k < controlCar.numCargoSlots1; k++) {
-			addSlotToContainer(new Slot((IInventory) entityminecart, i, 80 + k * 18, 36));
+			addSlotToContainer(new StandardRollingStockSlot((IInventory) entityminecart, i, 80 + k * 18, 36));
 			i++;
 		}
 		for (int l = 0; l < controlCar.numCargoSlots2; l++) {
-			addSlotToContainer(new Slot((IInventory) entityminecart, i, 80 + l * 18, 54));
+			addSlotToContainer(new StandardRollingStockSlot((IInventory) entityminecart, i, 80 + l * 18, 54));
 			i++;
 		}
 		// endregion Adds the slots for the Control Car

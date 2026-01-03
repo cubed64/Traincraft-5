@@ -42,8 +42,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PacketHandler {
-
+public class PacketHandler
+{
 	public static void init(){
 		Traincraft.tcLog.info("Initializing Packets");
 		Traincraft.modChannel = NetworkRegistry.INSTANCE.newSimpleChannel(Info.channel);
@@ -133,6 +133,8 @@ public class PacketHandler {
 		Traincraft.interchangeChannel.registerMessage(PacketClientSideEvent.Handler.class, PacketClientSideEvent.class, 25, Side.CLIENT);
 
 		Traincraft.lockoutCommChannel.registerMessage(PacketLockoutAddUserToSkinGroup.Handler.class, PacketLockoutAddUserToSkinGroup.class, 26, Side.SERVER);
+
+		Traincraft.BannedItems_CHANNEL.registerMessage(PacketSyncBannedItems.Handler.class, PacketSyncBannedItems.class, 29, Side.CLIENT);
 	}
 
 	private static final IMessageHandler[] HANDLERS = new IMessageHandler[]{

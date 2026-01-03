@@ -13,6 +13,7 @@ import train.common.api.Locomotive;
 import train.common.api.SteamTrain;
 import train.common.core.handlers.FuelHandler;
 import train.common.slots.SpecialSlots;
+import train.common.slots.StandardRollingStockSlot;
 
 public class InventoryLoco extends Container {
 	private Locomotive loco;
@@ -33,15 +34,15 @@ public class InventoryLoco extends Container {
 			i = 2;
 		}
 		for (int j = 0; j < loco.numCargoSlots; j++) {
-			addSlotToContainer(new Slot((IInventory) entityminecart, i, 80 + j * 18, 18));
+			addSlotToContainer(new StandardRollingStockSlot((IInventory) entityminecart, i, 80 + j * 18, 18));
 			i++;
 		}
 		for (int k = 0; k < loco.numCargoSlots1; k++) {
-			addSlotToContainer(new Slot((IInventory) entityminecart, i, 80 + k * 18, 36));
+			addSlotToContainer(new StandardRollingStockSlot((IInventory) entityminecart, i, 80 + k * 18, 36));
 			i++;
 		}
 		for (int l = 0; l < loco.numCargoSlots2; l++) {
-			addSlotToContainer(new Slot((IInventory) entityminecart, i, 80 + l * 18, 54));
+			addSlotToContainer(new StandardRollingStockSlot((IInventory) entityminecart, i, 80 + l * 18, 54));
 			i++;
 		}
 		for (int i1 = 0; i1 < 3; i1++) {

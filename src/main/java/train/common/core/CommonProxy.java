@@ -23,10 +23,7 @@ import train.client.gui.GuiSpeedTransmitter;
 import train.common.Traincraft;
 import train.common.api.*;
 import train.common.containers.*;
-import train.common.core.handlers.ChunkEvents;
-import train.common.core.handlers.MouseEventListener;
-import train.common.core.handlers.PacketHandler;
-import train.common.core.handlers.WorldEvents;
+import train.common.core.handlers.*;
 import train.common.core.util.MP3Player;
 import train.common.entity.digger.EntityRotativeDigger;
 import train.common.entity.rollingStock.EntityJukeBoxCart;
@@ -76,9 +73,12 @@ public class CommonProxy implements IGuiHandler {
 	public void registerEvents(FMLPreInitializationEvent event){
 		WorldEvents worldEvents = new WorldEvents();
 		ChunkEvents chunkEvents = new ChunkEvents();
+		PlayerSyncHandler playerSyncHandler = new PlayerSyncHandler();
 
 		registerEvent(worldEvents);
 		registerEvent(chunkEvents);
+		registerEvent(playerSyncHandler);
+
 		ForgeChunkManager.setForcedChunkLoadingCallback(Traincraft.instance, chunkEvents);
 
 	}

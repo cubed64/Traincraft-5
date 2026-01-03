@@ -13,7 +13,8 @@ public class SlotTender extends Slot {
 	}
 	
 	@Override
-	public boolean isItemValid(ItemStack itemstack) {
+	public boolean isItemValid(ItemStack itemstack)
+	{
 		if (LiquidManager.getInstance().isContainer(itemstack))
 			return true;
 		if (FuelHandler.steamFuelLast(itemstack) > 0) {

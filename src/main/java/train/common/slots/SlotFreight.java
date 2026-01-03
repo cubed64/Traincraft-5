@@ -7,6 +7,7 @@
 
 package train.common.slots;
 
+import cpw.mods.fml.relauncher.Side;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
@@ -25,7 +26,8 @@ public class SlotFreight extends Slot {
 	}
 	
 	@Override
-	public boolean isItemValid(ItemStack stack) {
+	public boolean isItemValid(ItemStack stack)
+	{
 		return stack != null && ItemHandler.handleFreight(freight, stack);
 	}
 }

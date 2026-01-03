@@ -51,18 +51,21 @@ public class ConfigHandler {
 	public static boolean ENABLE_DSS_WEBUI;
 	public static boolean ENGINEERGAMING;
     public static int MAX_TRUSTEES_ON_PADLOCK;
+	public static String[] ROLLINGSTOCK_INVENTORY_BLACKLIST_RAW;
 
 	public static void changeFirstLoad(){
-		Configuration cf = new Configuration(new File(Traincraft.configDirectory, Info.modName + ".cfg"));
+		Configuration cf = new Configuration(new File(Traincraft.configDirectory, Info.modName + ".cfg"), "1.0");
 		cf.load();
 		cf.get(CATEGORY_GENERAL, "FIRST_RUN", true).set(false);
 		cf.save();
 	}
 
 	public static void init(File configFile) {
-		Configuration cf = new Configuration(configFile);
+		Configuration cf = new Configuration(configFile, "1.0");
 
-		try {
+		try
+		{
+			final String CATEGORY_INVENTORY = "CATEGORY_INVENTORY";
 			cf.load();
 			/* General */
 			SOUNDS = cf.get(CATEGORY_GENERAL, "ENABLE_SOUNDS", true).getBoolean(true);
@@ -102,6 +105,15 @@ public class ConfigHandler {
 			CREATIVE_DROP_ROLLINGSTOCK = cf.get(CATEGORY_GENERAL, "CREATIVE_DROP_ROLLINGSTOCK", true).getBoolean(true);
 			ENGINEERGAMING = cf.get(CATEGORY_GENERAL, "ENGINEERGAMING", false).getBoolean(false);
             MAX_TRUSTEES_ON_PADLOCK = cf.get(CATEGORY_GENERAL, "MAX_TRUSTEES_ON_PADLOCK", false, "Defaults to hiding models in the paintbrush menu. Potentially useful on lower-spec machines.").getInt(30);
+			ROLLINGSTOCK_INVENTORY_BLACKLIST_RAW = cf.get(CATEGORY_INVENTORY, "ROLLINGSTOCK_INVENTORY_BLACKLIST_RAW",
+					new String[]
+					{
+							"ThermalFoundation:Storage:0-15",
+							"ThermalExpansion:Cache",
+							"ThermalExpansion:Strongbox",
+							"etfuturum:shulker_box"
+					},
+					"List of banned INVENTORY items").getStringList();
 		} catch (Exception e) {
 			Traincraft.tcLog.fatal("Traincraft had a problem loading its configuration\n" + e);
 		} finally {
