@@ -1,20 +1,9 @@
 package com.jcirmodelsquad.tcjcir.vehicles.locomotives;
 
 import com.jcirmodelsquad.tcjcir.models.detailkits.ModelRotaryPlowCoupler;
-import com.jcirmodelsquad.tcjcir.models.pantos.Modelpanto_gm6c_down;
-import com.jcirmodelsquad.tcjcir.models.pantos.Modelpanto_gm6c_downup;
-import com.jcirmodelsquad.tcjcir.models.pantos.Modelpanto_gm6c_up;
-import com.jcirmodelsquad.tcjcir.models.pantos.Modelpanto_gm6c_updown;
-import net.minecraft.block.Block;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-import train.common.api.ElectricTrain;
-import train.common.core.FakePlayer;
+import train.common.api.AbstractRotarySnowPlow;
 import train.common.core.util.TraincraftUtil;
 import train.common.entity.CargoManager;
 import train.common.entity.CargoSpecification;
@@ -22,9 +11,8 @@ import train.common.enums.LockoutGroup;
 import train.common.library.EnumSounds;
 import train.common.library.sounds.SoundRecord;
 
-import java.util.Random;
 
-public class RotaryPlow1 extends ElectricTrain {
+public class RotaryPlow1 extends AbstractRotarySnowPlow {
     @Override
     public SoundRecord getSoundRecord()
     {
@@ -34,7 +22,6 @@ public class RotaryPlow1 extends ElectricTrain {
         super(world);
         InsertTexture(0, "Generic Black (With Wings)");
         InsertTexture(1, "SPR", LockoutGroup.SPR);
-
 
         //cargomanger for detachable front coupler
         setCargoManager(new CargoManager(new CargoSpecification[][] {
@@ -65,106 +52,4 @@ public class RotaryPlow1 extends ElectricTrain {
     public float getOptimalDistance(EntityMinecart cart) {
         return 1.3F;
     }
-
-
-    //snowplowing shit below
-
-    private static final double[][]	blockpos	= { { 3, 0, 1 }, { 3, 0, -1 }, { 3, 0, 0 }};//which blocks in front of it get snow removed, f/b, u/d, l/r
-    private double[] point1;
-    private FakePlayer fakePlayer = null;
-    private int rotation =0;
-    private static final float radianF = (float) Math.PI / 180.0f;
-
-    @Override
-    public void onUpdate() {
-        super.onUpdate();
-        if (worldObj.isRemote || bogieLoco==null) {
-            return;
-        }
-
-        if (fakePlayer == null){
-            fakePlayer = new FakePlayer(worldObj);
-        }
-        rotation = MathHelper.floor_double(Math.toDegrees(Math.atan2(
-                bogieLoco.posZ - posZ,
-                bogieLoco.posX - posX)));
-
-        point1 = rotateVec3(blockpos[0], getPitch(), rotation);
-        point1[0] += posX;point1[1] += posY;point1[2] += posZ;
-        mineSnow(worldObj, point1, locoInvent, fakePlayer);
-        point1[1]++;
-        mineSnow(worldObj, point1, locoInvent, fakePlayer);
-        point1[1]++;
-        mineSnow(worldObj, point1, locoInvent, fakePlayer);
-
-
-        point1 = rotateVec3(blockpos[1], getPitch(), rotation);
-        point1[0] += posX;point1[1] += posY;point1[2] += posZ;
-        mineSnow(worldObj, point1, locoInvent, fakePlayer);
-        point1[1]++;
-        mineSnow(worldObj, point1, locoInvent, fakePlayer);
-        point1[1]++;
-        mineSnow(worldObj, point1, locoInvent, fakePlayer);
-
-
-        point1 = rotateVec3(blockpos[2], getPitch(), rotation);
-        point1[0] += posX;point1[1] += posY+1;point1[2] += posZ;
-        mineSnow(worldObj, point1, locoInvent, fakePlayer);
-        point1[1]++;
-        mineSnow(worldObj, point1, locoInvent, fakePlayer);
-
-    }
-
-    private static void mineSnow(World worldObj, double[] point, ItemStack[] locoInvent, FakePlayer fakePlayer){
-        Block b = worldObj.getBlock(MathHelper.floor_double(point[0]),MathHelper.floor_double(point[1]),MathHelper.floor_double(point[2]));
-        int blockMeta = worldObj.getBlockMetadata(MathHelper.floor_double(point[0]), MathHelper.floor_double(point[1]),
-                MathHelper.floor_double(point[2]));
-
-        if((b == Blocks.snow || b == Blocks.snow_layer) && b.canHarvestBlock(fakePlayer, blockMeta)){
-            worldObj.setBlockToAir(MathHelper.floor_double(point[0]),MathHelper.floor_double(point[1]),MathHelper.floor_double(point[2]));
-            int snowballs = new Random().nextInt(9);
-            for(int i=2; i<locoInvent.length && snowballs>0; i++){
-                if (locoInvent[i] == null){
-                    locoInvent[i] = new ItemStack(Items.snowball, snowballs);
-                    snowballs--;
-                } else if (locoInvent[i].getItem() == Items.snowball && locoInvent[i].stackSize < Items.snowball.getItemStackLimit()){
-                    while (locoInvent[i].stackSize < locoInvent[i].getMaxStackSize() && snowballs >0){
-                        locoInvent[i].stackSize++;
-                        snowballs--;
-                    }
-                }
-                if (snowballs ==0){
-                    break;
-                }
-            }
-            if (snowballs >0){
-                EntityItem entityitem = new EntityItem(worldObj, point[0], point[1] + 1, point[2], new ItemStack(Items.snowball, snowballs));
-                entityitem.delayBeforeCanPickup = 10;
-                worldObj.spawnEntityInWorld(entityitem);
-
-            }
-        }
-    }
-
-    private static double[] rotateVec3(double[] offset, float pitch, float yaw) {
-        double[] xyz = new double[]{offset[0],offset[1],offset[2]};
-        //rotate pitch
-        if (pitch != 0.0F) {
-            pitch *= radianF;
-
-            xyz[0] = (offset[0] * Math.cos(pitch));
-            xyz[1] = (offset[0] * Math.sin(pitch));
-        }
-        //rotate yaw
-        if (yaw != 0.0F) {
-            yaw *= radianF;
-            double cos = MathHelper.cos(yaw);
-            double sin = MathHelper.sin(yaw);
-
-            xyz[0] = (offset[0] * cos) - (offset[2] * sin);
-            xyz[2] = (offset[0] * sin) + (offset[2] * cos);
-        }
-        return xyz;
-    }
-
 }

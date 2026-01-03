@@ -2,9 +2,12 @@ package train.client.render;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
+import com.jcirmodelsquad.tcjcir.models.trains.ModelRotaryPlow;
+import com.jcirmodelsquad.tcjcir.vehicles.locomotives.RotaryPlow1;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockRailBase;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.entity.Entity;
@@ -12,13 +15,19 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Vec3;
 import org.lwjgl.opengl.GL11;
+import tmt.ModelBase;
+import tmt.ModelConverter;
+import tmt.ModelRendererTurbo;
 import tmt.Tessellator;
 import train.client.render.register.SubTrainRenderRecord;
+import train.client.renderhelper.ModelRenderHelper;
+import train.common.api.AbstractRotarySnowPlow;
 import train.common.api.EntityRollingStock;
 import train.common.api.Locomotive;
 import train.common.entity.rollingStock.EntityTracksBuilder;
 import train.client.render.register.ITrainRenderRecord;
 import train.common.overlaytexture.OverlayTextureManager;
+import train.common.utils.devutils.DebugUtil;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -36,9 +45,8 @@ public class RenderRollingStock extends Render {
 	 * Renders the Minecart.
 	 */
 
-
-
-	public static void renderTheMinecart(EntityRollingStock cart, double x, double y, double z, float yaw, float time, boolean renderModeGUI) {
+	public final void renderTheMinecart(EntityRollingStock cart, double x, double y, double z, float yaw, float time, boolean renderModeGUI)
+	{
 		GL11.glPushMatrix();
 		long var10 = cart.getEntityId() * 493286711L;
 		var10 = var10 * var10 * 4392167121L + var10 * 98761L;
@@ -277,7 +285,97 @@ public class RenderRollingStock extends Render {
 					240f);
 		}
 
-		renders.getModel().render(cart, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+		if (cart.modelInstance == null)
+		{
+			cart.modelInstance = cart.getRenderSpec().getModel();
+			switch (cart.specialRenderMode)
+			{
+				case 100:
+
+                    for (ModelRendererTurbo box : ((ModelConverter)cart.modelInstance).bodyModel)
+					{
+						if (box.boxName != null && box.boxName.equals("rotary"))
+						{
+							cart.modelInstance.rotaryBlades.add(box);
+
+						}
+						else
+						{
+							cart.modelInstance.boxList.add(box);
+						}
+
+
+					}
+
+				break;
+			}
+		}
+
+		switch (cart.specialRenderMode)
+		{
+			case 0:
+				cart.modelInstance.render(cart, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+			break;
+			case 100:
+				//cart.modelInstance.render(cart, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+				if (((AbstractRotarySnowPlow)cart).isRotaryOn())
+				{
+					for (ModelRendererTurbo turbo : cart.modelInstance.rotaryBlades)
+					{
+						GL11.glPushMatrix();
+
+						GL11.glTranslatef(
+								turbo.rotationPointX * 0.0625F,
+								turbo.rotationPointY * 0.0625F,
+								turbo.rotationPointZ * 0.0625F
+						);
+
+						GL11.glRotatef(((AbstractRotarySnowPlow)cart).bladeAngle * 57.29578F, 1F, 0F, 0F);
+
+						GL11.glTranslatef(
+								-turbo.rotationPointX * 0.0625F,
+								-turbo.rotationPointY * 0.0625F,
+								-turbo.rotationPointZ * 0.0625F
+						);
+
+						turbo.render();
+						GL11.glPopMatrix();
+					}
+
+					GL11.glPushMatrix();
+					cart.modelInstance.render(cart, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+					GL11.glPopMatrix();
+
+				}
+				else
+				{
+					for (ModelRendererTurbo turbo : cart.modelInstance.rotaryBlades)
+					{
+						GL11.glPushMatrix();
+
+						GL11.glTranslatef(
+								turbo.rotationPointX * 0.0625F,
+								turbo.rotationPointY * 0.0625F,
+								turbo.rotationPointZ * 0.0625F
+						);
+
+						GL11.glTranslatef(
+								-turbo.rotationPointX * 0.0625F,
+								-turbo.rotationPointY * 0.0625F,
+								-turbo.rotationPointZ * 0.0625F
+						);
+
+						turbo.render();
+						GL11.glPopMatrix();
+					}
+
+					GL11.glPushMatrix();
+					cart.modelInstance.render(cart, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+					GL11.glPopMatrix();
+				}
+			break;
+		}
+
 		if (renders.hasSmoke())
 		{
 			SubTrainRenderRecord subTrainRender = cart.getSubTrainRenderRecordSpec();
@@ -394,7 +492,8 @@ public class RenderRollingStock extends Render {
 	}
 
 	@Override
-	public void doRender(Entity par1Entity, double x, double y, double d2, float yaw, float time) {
+	public void doRender(Entity par1Entity, double x, double y, double d2, float yaw, float time)
+	{
 		renderTheMinecart((EntityRollingStock) par1Entity, x, y, d2, yaw, time, renderModeGUI);
 	}
 

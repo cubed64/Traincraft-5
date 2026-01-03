@@ -39,6 +39,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.minecart.MinecartCollisionEvent;
 import net.minecraftforge.event.entity.minecart.MinecartInteractEvent;
 import net.minecraftforge.event.entity.minecart.MinecartUpdateEvent;
+import tmt.ModelBase;
 import train.client.core.handlers.SoundUpdaterRollingStock;
 import train.common.Traincraft;
 import train.common.adminbook.ServerLogger;
@@ -63,7 +64,9 @@ import java.util.Objects;
 import static train.common.core.util.TraincraftUtil.degrees;
 import static train.common.core.util.TraincraftUtil.isRailBlockAt;
 
-public class EntityRollingStock extends AbstractTrains implements ILinkableCart {
+public class EntityRollingStock extends AbstractTrains implements ILinkableCart
+{
+	public byte specialRenderMode = 0;
 	public int fuelTrain;
 	protected static final int matrix[][][] = { { { 0, 0, -1 }, { 0, 0, 1 } }, { { -1, 0, 0 }, { 1, 0, 0 } }, { { -1, -1, 0 }, { 1, 0, 0 } }, { { -1, 0, 0 }, { 1, -1, 0 } }, { { 0, 0, -1 }, { 0, -1, 1 } }, { { 0, -1, -1 }, { 0, 0, 1 } }, { { 0, 0, 1 }, { 1, 0, 0 } }, { { 0, 0, 1 }, { -1, 0, 0 } }, { { 0, 0, -1 }, { -1, 0, 0 } }, { { 0, 0, -1 }, { 1, 0, 0 } } };
 
@@ -71,6 +74,9 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart 
 
 	/** Axis aligned bounding box. */
 	private AxisAlignedBB boundingBoxSmall;
+
+	@SideOnly(Side.CLIENT)
+	public ModelBase modelInstance;
 
 	public float maxSpeed;
 	public float railMaxSpeed;

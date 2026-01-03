@@ -1343,6 +1343,29 @@ public class ModelRotaryPlow extends ModelConverter //Same as Filename
 		bodyModel[305].setRotationPoint(28.49F, -18F, -11.75F);
 
 		lastframe = System.nanoTime();
+
+		blade = 0.0F;
+
+		long now2 = System.nanoTime();
+		int elapsed2 = (int) ((now2 - lastframe) / (1000 * 1000));
+		blade -= (float) elapsed2 / 500.0f;//300 default, the higher the number the slower it rotates. 150 for normal run speed and 500 for idle?
+
+		bodyModel[36].rotateAngleX = blade1 + blade;//main shaft
+		bodyModel[37].rotateAngleX = blade1 + blade;//box 205 0
+		bodyModel[38].rotateAngleX = blade2 + blade;//box 207 90
+		bodyModel[39].rotateAngleX = blade3 + blade;//box 208 180
+		bodyModel[40].rotateAngleX = blade4 + blade;//box 209 270
+		bodyModel[41].rotateAngleX = blade5 + blade;//box 210 30
+		bodyModel[42].rotateAngleX = blade6 + blade;//box 211 120
+		bodyModel[43].rotateAngleX = blade7 + blade;//box 212 210
+		bodyModel[44].rotateAngleX = blade8 + blade;//box 213 300
+		bodyModel[45].rotateAngleX = blade9 + blade;//box 214 60
+		bodyModel[46].rotateAngleX = blade10 + blade;//box 215 150
+		bodyModel[47].rotateAngleX = blade11 + blade;//box 216 240
+		bodyModel[48].rotateAngleX = blade12 + blade;//box 217 300
+		bodyModel[49].rotateAngleX = blade1 + blade;//rotor shaft cap
+		bodyModel[222].rotateAngleX = blade1 + blade;//interior shaft
+		bodyModel[223].rotateAngleX = blade1 + blade;//interior shaft
 	}
 	Modelrotary_foxtruck truc = new Modelrotary_foxtruck();
 
@@ -1369,7 +1392,6 @@ public class ModelRotaryPlow extends ModelConverter //Same as Filename
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
 		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
-
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6546) {
 			//silver truck
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/newBogies/flexicoil_C_dash2_longjohns.png"));
@@ -1407,29 +1429,29 @@ public class ModelRotaryPlow extends ModelConverter //Same as Filename
 
 
 						//lastframe = System.nanoTime();
-						blade = 0.0F;
+		//				blade = 0.0F;
+//
+		//				long now2 = System.nanoTime();
+		//				int elapsed2 = (int) ((now2 - lastframe) / (1000 * 1000));
+		//				blade -= (float) elapsed2 / 500.0f;//300 default, the higher the number the slower it rotates. 150 for normal run speed and 500 for idle?
+		//				//lastframe = now2;
+		//bodyModel[36].rotateAngleX = blade1 + blade;//main shaft
+		//bodyModel[37].rotateAngleX = blade1 + blade;//box 205 0
+		//bodyModel[38].rotateAngleX = blade2 + blade;//box 207 90
+		//bodyModel[39].rotateAngleX = blade3 + blade;//box 208 180
+		//bodyModel[40].rotateAngleX = blade4 + blade;//box 209 270
+		//bodyModel[41].rotateAngleX = blade5 + blade;//box 210 30
+		//bodyModel[42].rotateAngleX = blade6 + blade;//box 211 120
+		//bodyModel[43].rotateAngleX = blade7 + blade;//box 212 210
+		//bodyModel[44].rotateAngleX = blade8 + blade;//box 213 300
+		//bodyModel[45].rotateAngleX = blade9 + blade;//box 214 60
+		//bodyModel[46].rotateAngleX = blade10 + blade;//box 215 150
+		//bodyModel[47].rotateAngleX = blade11 + blade;//box 216 240
+		//bodyModel[48].rotateAngleX = blade12 + blade;//box 217 300
+		//bodyModel[49].rotateAngleX = blade1 + blade;//rotor shaft cap
+		//bodyModel[222].rotateAngleX = blade1 + blade;//interior shaft
+		//bodyModel[223].rotateAngleX = blade1 + blade;//interior shaft
 
-						long now2 = System.nanoTime();
-						int elapsed2 = (int) ((now2 - lastframe) / (1000 * 1000));
-						blade -= (float) elapsed2 / 500.0f;//300 default, the higher the number the slower it rotates. 150 for normal run speed and 500 for idle?
-						//lastframe = now2;
-
-						bodyModel[36].rotateAngleX = blade1 + blade;//main shaft
-						bodyModel[37].rotateAngleX = blade1 + blade;//box 205 0
-						bodyModel[38].rotateAngleX = blade2 + blade;//box 207 90
-						bodyModel[39].rotateAngleX = blade3 + blade;//box 208 180
-						bodyModel[40].rotateAngleX = blade4 + blade;//box 209 270
-						bodyModel[41].rotateAngleX = blade5 + blade;//box 210 30
-						bodyModel[42].rotateAngleX = blade6 + blade;//box 211 120
-						bodyModel[43].rotateAngleX = blade7 + blade;//box 212 210
-						bodyModel[44].rotateAngleX = blade8 + blade;//box 213 300
-						bodyModel[45].rotateAngleX = blade9 + blade;//box 214 60
-						bodyModel[46].rotateAngleX = blade10 + blade;//box 215 150
-						bodyModel[47].rotateAngleX = blade11 + blade;//box 216 240
-						bodyModel[48].rotateAngleX = blade12 + blade;//box 217 300
-						bodyModel[49].rotateAngleX = blade1 + blade;//rotor shaft cap
-						bodyModel[222].rotateAngleX = blade1 + blade;//interior shaft
-						bodyModel[223].rotateAngleX = blade1 + blade;//interior shaft
 
 					//} /*else if (((RotaryPlow1) entity).getCustomSpeed() > 0) {
 

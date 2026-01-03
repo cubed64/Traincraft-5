@@ -89,6 +89,8 @@ public class ModelRenderHelper
                         bm.render(f5);
                     }
                 break;
+                case "rotary":
+                    break;
                 default:
                     bm.render(f5);
                 break;

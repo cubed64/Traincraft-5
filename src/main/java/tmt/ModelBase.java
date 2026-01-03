@@ -2,6 +2,9 @@ package tmt;
 
 import net.minecraft.entity.Entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
 * Similar to 'FlansMod'-type Models, for a fast convert.
 * @Author Ferdinand Calo' (FEX___96)
@@ -21,6 +24,9 @@ public class ModelBase extends Model<Object> {
 	public ModelRendererTurbo r8[] = new ModelRendererTurbo[0];
 	public ModelRendererTurbo r9[] = new ModelRendererTurbo[0];
 	public ModelRendererTurbo r0[] = new ModelRendererTurbo[0];
+
+	public List<ModelRendererTurbo> boxList = new ArrayList<>();
+	public List<ModelRendererTurbo> rotaryBlades = new ArrayList<>();
 	   
 	public void render(){
 		render(base);
@@ -76,5 +82,4 @@ public class ModelBase extends Model<Object> {
 		rotate(r8, x, y, z);
 		rotate(r9, x, y, z);
 	}
-	
 }
