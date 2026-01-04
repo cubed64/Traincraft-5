@@ -20,6 +20,7 @@ import train.common.api.LiquidTank;
 import train.common.core.network.PacketAddNote;
 import train.common.core.network.PacketSetTrainLockedToClient;
 import train.common.inventory.InventoryLiquid;
+import train.common.library.GuiIDs;
 import train.common.library.Info;
 
 import java.util.List;
@@ -84,29 +85,48 @@ public class GuiLiquid extends GuiContainer {
 	}
 	@Override
 	protected void actionPerformed(GuiButton guibutton) {
-		if (guibutton.id == 3) {
-			if (player != null && player.getCommandSenderName().equalsIgnoreCase(((AbstractTrains) liquid).getTransportOwner()) && !isShiftKeyDown()){
-				if ((!liquid.getTrainLockedFromPacket())){
+		if (guibutton.id == 3)
+		{
+			if (player != null && player.getCommandSenderName().equalsIgnoreCase(((AbstractTrains) liquid).getTransportOwner()))
+			{
+				if ((!liquid.getTrainLockedFromPacket()) && !isShiftKeyDown())
+				{
 					liquid.locked = true;
 					guibutton.displayString = "Locked";
 					this.initGui();
-				} else if (!isShiftKeyDown()) {
+				}
+				else if (!isShiftKeyDown())
+				{
 					liquid.locked = false;
 					guibutton.displayString = "UnLocked";
 					this.initGui();
 				}
+
 				AxisAlignedBB box = liquid.boundingBox.expand(5, 5, 5);
 				List lis3 = liquid.worldObj.getEntitiesWithinAABBExcludingEntity(liquid, box);
-				if (lis3 != null && lis3.size() > 0) {
-					for (Object entity : lis3) {
-						if (entity instanceof EntityPlayer) {
-							if (!isShiftKeyDown()) {
+				if (lis3 != null && lis3.size() > 0)
+				{
+					for (Object entity : lis3)
+					{
+						if (entity instanceof EntityPlayer)
+						{
+							if (!isShiftKeyDown())
+							{
 								Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(liquid.locked, liquid.getTrustedList(), liquid.getEntityId(), false));
 							}
+							else
+							{
+								this.mc.thePlayer.closeScreen();
+								player.openGui(Traincraft.instance, GuiIDs.LOCK_MENU, player.getEntityWorld(), liquid.getEntityId(), -1, (int) liquid.posZ);
+								return;
+							}
+
+
 						}
 					}
 				}
-			}else if (player != null) {
+			}
+			else if (player != null) {
 				player.addChatMessage(new ChatComponentText("You are not the owner!"));
 			}
 		}

@@ -306,7 +306,7 @@ public class ClientProxy extends CommonProxy
 		case (GuiIDs.CONTROL_CAR):
 			return riddenByEntity != null ? new GuiControlCar(riddenByEntity.inventory, entity) : null;
 		case (GuiIDs.FORNEY):
-			return riddenByEntity != null ? new GuiForney(riddenByEntity.inventory, entity) : null;
+			return riddenByEntity != null ? new GuiTankEngine(riddenByEntity.inventory, entity) : null;
 		case (GuiIDs.CRAFTING_CART):
 			return riddenByEntity != null ? new GuiCraftingCart(riddenByEntity.inventory, world) : null;
 		case (GuiIDs.FURNACE_CART):

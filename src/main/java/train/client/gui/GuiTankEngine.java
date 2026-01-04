@@ -16,9 +16,10 @@ import train.common.api.SteamTrain;
 import train.common.core.network.PacketParkingBrake;
 import train.common.core.network.PacketSetTrainLockedToClient;
 import train.common.inventory.InventoryForney;
+import train.common.library.GuiIDs;
 import train.common.library.Info;
 
-public class GuiForney extends GuiContainer {
+public class GuiTankEngine extends GuiContainer {
 
 
 	private String texture = Info.guiPrefix + "customButton.png";
@@ -34,7 +35,7 @@ public class GuiForney extends GuiContainer {
 
 	private Locomotive loco;
 
-	public GuiForney(InventoryPlayer inventoryplayer, Entity entityminecart) {
+	public GuiTankEngine(InventoryPlayer inventoryplayer, Entity entityminecart) {
 		super(new InventoryForney(inventoryplayer, (Locomotive) entityminecart));
 		loco = (Locomotive) entityminecart;
 	}
@@ -123,6 +124,11 @@ public class GuiForney extends GuiContainer {
 					}
 					Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(true, loco.getTrustedList(), loco.getEntityId(), false));
 				}
+				else {
+					this.mc.thePlayer.closeScreen();
+					((EntityPlayer) loco.riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCK_MENU, ((EntityPlayer) loco.riddenByEntity).getEntityWorld(), (int) loco.posX, (int) loco.posY, (int) loco.posZ);
+				}
+
 			}
 			else if (loco.riddenByEntity != null && loco.riddenByEntity instanceof EntityPlayer) {
 				((EntityPlayer) loco.riddenByEntity).addChatMessage(new ChatComponentText("You are not the owner"));

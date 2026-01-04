@@ -16,6 +16,7 @@ import train.common.api.Tender;
 import train.common.core.network.PacketAddNote;
 import train.common.core.network.PacketSetTrainLockedToClient;
 import train.common.inventory.InventoryTender;
+import train.common.library.GuiIDs;
 import train.common.library.Info;
 
 import java.util.Collections;
@@ -75,6 +76,12 @@ public class GuiTender extends GuiContainer {
 						if (entity instanceof EntityPlayer) {
 							if (!isShiftKeyDown()) {
 								Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(tender.locked, tender.getTrustedList(), tender.getEntityId(), false));
+							}
+							else
+							{
+								this.mc.thePlayer.closeScreen();
+								player.openGui(Traincraft.instance, GuiIDs.LOCK_MENU, player.getEntityWorld(), tender.getEntityId(), -1, (int) tender.posZ);
+								return;
 							}
 						}
 					}

@@ -16,6 +16,7 @@ import train.common.Traincraft;
 import train.common.api.*;
 import train.common.core.network.*;
 import train.common.inventory.InventoryLoco;
+import train.common.library.GuiIDs;
 import train.common.library.Info;
 
 import java.util.Collections;
@@ -182,19 +183,32 @@ public class GuiLoco2 extends GuiContainer {
 			break;
 			case 3:
 				if (loco.riddenByEntity instanceof EntityPlayer && ((EntityPlayer) loco.riddenByEntity).getDisplayName().equals(loco.getTransportOwner())) {
-					if ((!loco.getTrainLockedFromPacket())) {
-						if (!isShiftKeyDown()) {
+					if ((!loco.getTrainLockedFromPacket()))
+					{
+						if (!isShiftKeyDown())
+						{
 							Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(true, loco.getTrustedList(), loco.getEntityId(), false));
 							loco.locked = true;
 							guibutton.displayString = "Locked";
 							this.initGui();
 						}
-					} else {
-						if (!isShiftKeyDown()) {
+						else
+						{
+							((EntityPlayer) loco.riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCK_MENU, ((EntityPlayer) loco.riddenByEntity).getEntityWorld(), loco.getEntityId(), -1, (int) loco.riddenByEntity.posZ);
+						}
+					}
+					else
+					{
+						if (!isShiftKeyDown())
+						{
 							Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(false, loco.getTrustedList(), loco.getEntityId(), false));
 							loco.locked = false;
 							guibutton.displayString = "UnLocked";
 							this.initGui();
+						}
+						else
+						{
+							((EntityPlayer) loco.riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCK_MENU, ((EntityPlayer) loco.riddenByEntity).getEntityWorld(), loco.getEntityId(), -1, (int) loco.riddenByEntity.posZ);
 						}
 					}
 				}
@@ -494,5 +508,11 @@ public class GuiLoco2 extends GuiContainer {
 		fontRendererObj.drawStringWithShadow("Heat level: " + loco.getOverheatLevel(), 1, 100, 0xFFFFFF);
 		fontRendererObj.drawStringWithShadow("Maximum Speed: " + (loco.getCustomSpeedGUI()) + " km/h", 1, 110, 0xFFFFFF);
 		fontRendererObj.drawStringWithShadow("Destination: " + (loco.getDestinationGUI()), 1, 120, 0xFFFFFF);
+	}
+
+	@Override
+	public boolean doesGuiPauseGame()
+	{
+		return false;
 	}
 }

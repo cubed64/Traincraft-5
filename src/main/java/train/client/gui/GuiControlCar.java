@@ -15,6 +15,7 @@ import train.common.Traincraft;
 import train.common.api.*;
 import train.common.core.network.*;
 import train.common.inventory.InventoryControlCar;
+import train.common.library.GuiIDs;
 import train.common.library.Info;
 
 public class GuiControlCar extends GuiContainer
@@ -173,12 +174,20 @@ public class GuiControlCar extends GuiContainer
                             guibutton.displayString = "Locked";
                             this.initGui();
                         }
+                        else
+                        {
+                            ((EntityPlayer) controlCar.riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCK_MENU, ((EntityPlayer) controlCar.riddenByEntity).getEntityWorld(), controlCar.getEntityId(), -1, (int) controlCar.riddenByEntity.posZ);
+                        }
                     } else {
                         if (!isShiftKeyDown()) {
                             Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(false, controlCar.getTrustedList(), controlCar.getEntityId(), false));
                             controlCar.locked = false;
                             guibutton.displayString = "UnLocked";
                             this.initGui();
+                        }
+                        else
+                        {
+                            ((EntityPlayer) controlCar.riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCK_MENU, ((EntityPlayer) controlCar.riddenByEntity).getEntityWorld(), controlCar.getEntityId(), -1, (int) controlCar.riddenByEntity.posZ);
                         }
                     }
                 }

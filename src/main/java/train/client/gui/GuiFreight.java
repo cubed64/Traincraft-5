@@ -17,6 +17,7 @@ import train.common.api.Freight;
 import train.common.core.network.PacketAddNote;
 import train.common.core.network.PacketSetTrainLockedToClient;
 import train.common.inventory.InventoryFreight;
+import train.common.library.GuiIDs;
 import train.common.library.Info;
 
 import java.util.List;
@@ -99,6 +100,13 @@ public class GuiFreight extends GuiContainer {
 								if (!isShiftKeyDown()) {
 									Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(freight.locked, freight.getTrustedList(), freight.getEntityId(), false));
 								}
+								else
+								{
+									this.mc.thePlayer.closeScreen();
+									player.openGui(Traincraft.instance, GuiIDs.LOCK_MENU, player.getEntityWorld(), freight.getEntityId(), -1, (int) freight.posZ);
+									return;
+								}
+
 							}
 						}
 					}
