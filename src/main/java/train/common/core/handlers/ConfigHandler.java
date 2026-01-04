@@ -111,7 +111,8 @@ public class ConfigHandler {
 							"ThermalFoundation:Storage:0-15",
 							"ThermalExpansion:Cache",
 							"ThermalExpansion:Strongbox",
-							"etfuturum:shulker_box"
+							"etfuturum:shulker_box",
+							"ImmersiveEngineering:woodenDevice"
 					},
 					"List of banned INVENTORY items").getStringList();
 		} catch (Exception e) {
