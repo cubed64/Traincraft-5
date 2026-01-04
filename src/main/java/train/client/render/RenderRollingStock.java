@@ -294,17 +294,15 @@ public class RenderRollingStock extends Render {
 
                     for (ModelRendererTurbo box : ((ModelConverter)cart.modelInstance).bodyModel)
 					{
-						if (box.boxName != null && box.boxName.equals("rotary"))
+						switch (box.boxName)
 						{
-							cart.modelInstance.rotaryBlades.add(box);
-
+							case "rotary":
+								cart.modelInstance.rotaryBlades.add(box);
+								break;
+							default:
+								cart.modelInstance.boxList.add(box);
+								break;
 						}
-						else
-						{
-							cart.modelInstance.boxList.add(box);
-						}
-
-
 					}
 
 				break;
@@ -318,61 +316,36 @@ public class RenderRollingStock extends Render {
 			break;
 			case 100:
 				//cart.modelInstance.render(cart, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
-				if (((AbstractRotarySnowPlow)cart).isRotaryOn())
+
+				for (ModelRendererTurbo turbo : cart.modelInstance.rotaryBlades)
 				{
-					for (ModelRendererTurbo turbo : cart.modelInstance.rotaryBlades)
+					GL11.glPushMatrix();
+
+					GL11.glTranslatef(
+							turbo.rotationPointX * 0.0625F,
+							turbo.rotationPointY * 0.0625F,
+							turbo.rotationPointZ * 0.0625F
+					);
+
+					if (((AbstractRotarySnowPlow)cart).isRotaryOn())
 					{
-						GL11.glPushMatrix();
-
-						GL11.glTranslatef(
-								turbo.rotationPointX * 0.0625F,
-								turbo.rotationPointY * 0.0625F,
-								turbo.rotationPointZ * 0.0625F
-						);
-
 						GL11.glRotatef(((AbstractRotarySnowPlow)cart).bladeAngle * 57.29578F, 1F, 0F, 0F);
-
-						GL11.glTranslatef(
-								-turbo.rotationPointX * 0.0625F,
-								-turbo.rotationPointY * 0.0625F,
-								-turbo.rotationPointZ * 0.0625F
-						);
-
-						turbo.render();
-						GL11.glPopMatrix();
 					}
 
-					GL11.glPushMatrix();
-					cart.modelInstance.render(cart, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
-					GL11.glPopMatrix();
+					GL11.glTranslatef(
+							-turbo.rotationPointX * 0.0625F,
+							-turbo.rotationPointY * 0.0625F,
+							-turbo.rotationPointZ * 0.0625F
+					);
 
-				}
-				else
-				{
-					for (ModelRendererTurbo turbo : cart.modelInstance.rotaryBlades)
-					{
-						GL11.glPushMatrix();
-
-						GL11.glTranslatef(
-								turbo.rotationPointX * 0.0625F,
-								turbo.rotationPointY * 0.0625F,
-								turbo.rotationPointZ * 0.0625F
-						);
-
-						GL11.glTranslatef(
-								-turbo.rotationPointX * 0.0625F,
-								-turbo.rotationPointY * 0.0625F,
-								-turbo.rotationPointZ * 0.0625F
-						);
-
-						turbo.render();
-						GL11.glPopMatrix();
-					}
-
-					GL11.glPushMatrix();
-					cart.modelInstance.render(cart, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+					turbo.render();
 					GL11.glPopMatrix();
 				}
+
+				GL11.glPushMatrix();
+				cart.modelInstance.render(cart, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+				GL11.glPopMatrix();
+
 			break;
 		}
 
