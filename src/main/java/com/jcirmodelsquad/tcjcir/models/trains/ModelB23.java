@@ -1919,7 +1919,7 @@ public class ModelB23 extends ModelConverter //Same as Filename
 		ModelRenderHelper.renderModelWithRollingStockLightControls(bodyModel, entity, f5);
 
 		if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 1||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 0
-				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 29
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 3||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 2945
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 30||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 31
 				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 34) {
 			//fb2 black late
