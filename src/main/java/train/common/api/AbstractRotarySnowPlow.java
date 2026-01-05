@@ -1,5 +1,7 @@
 package train.common.api;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Blocks;
@@ -21,10 +23,12 @@ public abstract class AbstractRotarySnowPlow extends ElectricTrain
 
     // radians
     public float bladeAngle;
-    public float bladeAnglePrev;
 
-    // radians per tick
-    public float bladeSpeed;
+    @SideOnly(Side.CLIENT)
+    public float bladeRenderAngle = 0.0F;
+
+    @SideOnly(Side.CLIENT)
+    public long bladeRenderLastTime = 0L;
 
     public boolean isRotaryOn()
     {
@@ -34,25 +38,6 @@ public abstract class AbstractRotarySnowPlow extends ElectricTrain
     @Override
     public void onUpdate() {
         super.onUpdate();
-
-        // store previous for interpolation
-        bladeAnglePrev = bladeAngle;
-
-        if (this.isLocoTurnedOn)
-        {
-            // adjust this value for speed
-            bladeSpeed = 0.05f;
-        }
-        else
-        {
-            bladeSpeed = 0f;
-        }
-
-        bladeAngle += bladeSpeed;
-
-        // keep bounded
-        if (bladeAngle > Math.PI * 2)
-            bladeAngle -= Math.PI * 2;
 
         if (worldObj.isRemote || bogieLoco==null) {
             return;

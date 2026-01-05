@@ -314,8 +314,44 @@ public class RenderRollingStock extends Render {
 			case 0:
 				cart.modelInstance.render(cart, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
 			break;
-			case 100:
-				//cart.modelInstance.render(cart, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+			case 100: // Only used for AbstractRotarySnowPlow
+				AbstractRotarySnowPlow plow = (AbstractRotarySnowPlow) cart;
+				long now = System.nanoTime();
+
+				if (plow.bladeRenderLastTime == 0L)
+				{
+					plow.bladeRenderLastTime = now;
+				}
+
+				float elapsedMs = (now - plow.bladeRenderLastTime) / 1_000_000F;
+				plow.bladeRenderLastTime = now;
+				float idleDivisor = 500.0F; // slowest spin at idle
+				float maxDivisor  = 150.0F; // fastest spin at full speed
+
+				double trainSpeed = Math.abs(plow.getSpeed());
+
+				// map speed to divisor range
+				// at speed = 0 → divisor = idleDivisor
+				// at speed >= maxSpeed → divisor = maxDivisor
+				float maxSpeed = 60.0F; // km/h
+
+				// linear interpolation
+				double divisor = idleDivisor - (idleDivisor - maxDivisor) * Math.min(trainSpeed / maxSpeed, 1.0F);
+
+				if (plow.isRotaryOn())
+				{
+					plow.bladeRenderAngle -= elapsedMs / divisor;
+				}
+
+				// keep bounded
+				if (plow.bladeRenderAngle > Math.PI * 2F)
+				{
+					plow.bladeRenderAngle -= Math.PI * 2F;
+				}
+				if (plow.bladeRenderAngle < -Math.PI * 2F)
+				{
+					plow.bladeRenderAngle += Math.PI * 2F;
+				}
 
 				for (ModelRendererTurbo turbo : cart.modelInstance.rotaryBlades)
 				{
@@ -329,7 +365,7 @@ public class RenderRollingStock extends Render {
 
 					if (((AbstractRotarySnowPlow)cart).isRotaryOn())
 					{
-						GL11.glRotatef(((AbstractRotarySnowPlow)cart).bladeAngle * 57.29578F, 1F, 0F, 0F);
+						GL11.glRotatef(((AbstractRotarySnowPlow)cart).bladeRenderAngle * 57.29578F, 1F, 0F, 0F);
 					}
 
 					GL11.glTranslatef(
