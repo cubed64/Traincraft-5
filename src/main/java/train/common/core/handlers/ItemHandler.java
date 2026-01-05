@@ -131,9 +131,6 @@ public class ItemHandler
 
 	public static boolean isBanned(ItemStack stack)
 	{
-		Traincraft.tcLog.info(BANNED_ITEMS);
-		Traincraft.tcLog.info(stack);
-		Traincraft.tcLog.info(stack.getItem().getUnlocalizedName());
 		for (train.common.slots.util.ItemKey key : BANNED_ITEMS)
 		{
 			if (key.matches(stack)) {
