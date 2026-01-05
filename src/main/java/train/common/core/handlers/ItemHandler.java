@@ -19,6 +19,8 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.fluids.ItemFluidContainer;
 import net.minecraftforge.oredict.OreDictionary;
 import train.common.Traincraft;
 import train.common.api.*;
@@ -162,55 +164,58 @@ public class ItemHandler
 		if (entity instanceof AbstractStandardFreightCar)
 		{
 			AbstractStandardFreightCar car = (AbstractStandardFreightCar) entity;
-			if (CargoItemFilter.DEFAULT.equals(car.GetCargoFilterCategory()) == false)
+			int oreDicID;
+			switch (car.GetCargoFilterCategory())
 			{
-				int oreDicID;
-				switch (car.GetCargoFilterCategory())
-				{
-					case WOOD_PRODUCTS:
-						oreDicID = OreDictionary.getOreID(itemstack);
-						return oreDicID == OreDictionary.getOreID("plankWood")
-								|| oreDicID == OreDictionary.getOreID("logWood")
-								|| oreDicID == OreDictionary.getOreID("slabWood")
-								|| oreDicID == OreDictionary.getOreID("stairWood")
-								|| oreDicID == OreDictionary.getOreID("woodRubber")
-								|| oreDicID == OreDictionary.getOreID("drywallFinished")
-								|| itemstack.getItem() == Item.getItemFromBlock(Blocks.ladder)
-								|| itemstack.getItem() == Item.getItemFromBlock(Blocks.fence)
-								|| itemstack.getItem() == Item.getItemFromBlock(Blocks.fence_gate)
-								|| oreDicID == OreDictionary.getOreID("woodRubber");
-					case LOG_WOOD:
-						oreDicID = OreDictionary.getOreID(itemstack);
-						return oreDicID == OreDictionary.getOreID("logWood");
-					case ASSEMBLED_TRAIN_TRACK:
-						return block instanceof BlockRailBase || itemstack.getItem() instanceof ItemTCRail;
-					case GRAIN:
-						Item item = itemstack.getItem();
-						if (item == Items.wheat
-								|| item == Items.wheat_seeds
-								|| item == Items.melon_seeds
-								|| item == Items.pumpkin_seeds
-								|| item instanceof ItemSeeds)
-						{
-							return true;
-						}
-						return cropStuff(itemstack);
-					case OPAQUE_BLOCKS:
-						return block.isOpaqueCube();
-					case WOOD_CHIPS:
-						return powderWood(itemstack);
-					case ROCK_MATERIAL:
-						return block.getMaterial() == Material.rock;
-					case ICE_MATERIAL:
-						return block.getMaterial() == Material.ice || block.getMaterial() == Material.packedIce;
-					case ORE:
-						return oreBlocks(itemstack);
-					case INGOT:
-						return ingotItems(itemstack);
-					default:
+				case WOOD_PRODUCTS:
+					oreDicID = OreDictionary.getOreID(itemstack);
+					return oreDicID == OreDictionary.getOreID("plankWood")
+							|| oreDicID == OreDictionary.getOreID("logWood")
+							|| oreDicID == OreDictionary.getOreID("slabWood")
+							|| oreDicID == OreDictionary.getOreID("stairWood")
+							|| oreDicID == OreDictionary.getOreID("woodRubber")
+							|| oreDicID == OreDictionary.getOreID("drywallFinished")
+							|| itemstack.getItem() == Item.getItemFromBlock(Blocks.ladder)
+							|| itemstack.getItem() == Item.getItemFromBlock(Blocks.fence)
+							|| itemstack.getItem() == Item.getItemFromBlock(Blocks.fence_gate)
+							|| oreDicID == OreDictionary.getOreID("woodRubber");
+				case LOG_WOOD:
+					oreDicID = OreDictionary.getOreID(itemstack);
+					return oreDicID == OreDictionary.getOreID("logWood");
+				case ASSEMBLED_TRAIN_TRACK:
+					return block instanceof BlockRailBase || itemstack.getItem() instanceof ItemTCRail;
+				case GRAIN:
+					Item item = itemstack.getItem();
+					if (item == Items.wheat
+							|| item == Items.wheat_seeds
+							|| item == Items.melon_seeds
+							|| item == Items.pumpkin_seeds
+							|| item instanceof ItemSeeds)
+					{
 						return true;
-				}
+					}
+					return cropStuff(itemstack);
+				case OPAQUE_BLOCKS:
+					return block.isOpaqueCube();
+				case WOOD_CHIPS:
+					return powderWood(itemstack);
+				case ROCK_MATERIAL:
+					return block.getMaterial() == Material.rock;
+				case ICE_MATERIAL:
+					return block.getMaterial() == Material.ice || block.getMaterial() == Material.packedIce;
+				case ORE:
+					return oreBlocks(itemstack);
+				case INGOT:
+					return ingotItems(itemstack);
+				default:
+					if ((itemstack.getItem() == Items.lava_bucket) == false
+							&& FluidContainerRegistry.isFilledContainer(itemstack))
+					{
+						return false;
+					}
+					return true;
 			}
+
 		}
 		return true;
 	}

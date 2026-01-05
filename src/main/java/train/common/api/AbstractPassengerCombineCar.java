@@ -5,6 +5,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import train.common.entity.CargoManager;
+import train.common.enums.CargoItemFilter;
 import train.common.library.ItemIDs;
 
 public abstract class AbstractPassengerCombineCar extends AbstractStandardFreightCar implements IPassenger
@@ -12,6 +13,7 @@ public abstract class AbstractPassengerCombineCar extends AbstractStandardFreigh
     public AbstractPassengerCombineCar(World world)
     {
         super(world);
+        cargoFilterCategory = CargoItemFilter.DEFAULT;
     }
 
     @Override
