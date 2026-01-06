@@ -2,9 +2,13 @@ package train.common.overlaytexture;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.nbt.NBTTagCompound;
 
 import java.awt.*;
+import java.awt.font.TextAttribute;
 import java.awt.image.BufferedImage;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author 02skaplan
@@ -13,14 +17,15 @@ import java.awt.image.BufferedImage;
 public class OTSpecificationDynamic extends OTSpecification
 {
     final float fontSize;
+    final float fontSpacing;
     final int maxWidth;
     final int maxHeight;
-    final private EnumOverlayFonts font;
+    final private OverlayFontRegistry.OverlayFont font;
     final private AlignmentMode alignmentMode;
-    private String displayText;
+    private String displayText = "";
     private Color foregroundColor = new Color(25, 25, 25, 255);
     private Color backgroundColor = new Color(0, 0, 0, 0);
-    private final String overlayName;
+
     private final Integer characterLimit;
 
     public enum AlignmentMode {
@@ -37,26 +42,51 @@ public class OTSpecificationDynamic extends OTSpecification
      * @param characterLimit Optional character limit. For default, set to null.
      * @param font Font registered in EnumOverlayFonts.
      * @param fontSize Font size.
+     * @param fontSpacing Font spacing. Default is 0.0f.
      * @param alignmentMode Alignment mode dictating how the text will be drawn in the given overlay.
      * @param drawingPointsList List of points on the texture map for a given model on which to draw the overlay.
      */
-    public OTSpecificationDynamic(String overlayName, int maxWidth, int maxHeight, Integer characterLimit, EnumOverlayFonts font, float fontSize, AlignmentMode alignmentMode, Point[] drawingPointsList) {
-        super(drawingPointsList);
-        this.overlayName = overlayName;
+    public OTSpecificationDynamic(String overlayName, int maxWidth, int maxHeight, Integer characterLimit, IOverlayFont font, float fontSize, float fontSpacing, AlignmentMode alignmentMode, Point[] drawingPointsList) {
+        super(drawingPointsList, overlayName);
         this.maxWidth = maxWidth;
         this.maxHeight = maxHeight;
         this.characterLimit = characterLimit;
         this.fontSize = fontSize;
+        this.fontSpacing = fontSpacing;
         this.alignmentMode = alignmentMode;
-        setDisplayText("");
-        this.font = font;
+        this.font = OverlayFontRegistry.getFont(font);
+    }
+
+    /**
+     * @author 02skaplan
+     * @param overlayName Readable name for overlay. Ex: "Road Name", "Engine Number".
+     * @param maxWidth Maximum width of overlay.
+     * @param maxHeight Maximum height of overlay.
+     * @param characterLimit Optional character limit. For default, set to null.
+     * @param font Font registered in EnumOverlayFonts.
+     * @param fontSize Font size.
+     * @param alignmentMode Alignment mode dictating how the text will be drawn in the given overlay.
+     * @param drawingPointsList List of points on the texture map for a given model on which to draw the overlay.
+     */
+    public OTSpecificationDynamic(String overlayName, int maxWidth, int maxHeight, Integer characterLimit, IOverlayFont font, float fontSize, AlignmentMode alignmentMode, Point[] drawingPointsList) {
+        super(drawingPointsList, overlayName);
+        this.maxWidth = maxWidth;
+        this.maxHeight = maxHeight;
+        this.characterLimit = characterLimit;
+        this.fontSize = fontSize;
+        this.fontSpacing = 0.0f;
+        this.alignmentMode = alignmentMode;
+        this.font = OverlayFontRegistry.getFont(font);
     }
 
 
     @Override
     @SideOnly(Side.CLIENT)
     public void renderOverlay() {
-        Font renderFont = font.getFont().deriveFont(fontSize);
+        Map<TextAttribute, Object> fontAttributes = new HashMap<>(2);
+        fontAttributes.put(TextAttribute.SIZE, fontSize);
+        fontAttributes.put(TextAttribute.TRACKING, fontSpacing);
+        Font renderFont = font.getFont().deriveFont(fontAttributes);
         overlayImage = new BufferedImage(maxWidth, maxHeight, BufferedImage.TYPE_INT_ARGB);
         Graphics graphics = overlayImage.getGraphics();
         graphics.setColor(backgroundColor);
@@ -82,10 +112,37 @@ public class OTSpecificationDynamic extends OTSpecification
         graphics.dispose();
     }
 
+    @Override
+    public void getOverlayConfigTag(NBTTagCompound nbtTag) {
+        nbtTag.setString("dynamicDisplayText", getDisplayText());
+        nbtTag.setInteger("backgroundColorRGBA", getBackgroundColor().getRGB());
+        nbtTag.setInteger("foregroundColorRGBA", getForegroundColor().getRGB());
+    }
+
+    @Override
+    public void importFromConfigTag(NBTTagCompound nbtTag) {
+        setDisplayText(nbtTag.getString("dynamicDisplayText"));
+        setBackgroundColor(new Color(nbtTag.getInteger("backgroundColorRGBA"), true));
+        setForegroundColor(new Color(nbtTag.getInteger("foregroundColorRGBA"), true));
+    }
+
+    @Override
+    public OverlayTextureManager.Type getType() {
+        return OverlayTextureManager.Type.DYNAMIC;
+    }
+
     public void setDisplayText(String displayText) {
+        setActive(!displayText.isEmpty());
         this.displayText = displayText;
     }
     public String getDisplayText() { return displayText; }
+
+    @Override
+    public void setActive(boolean active) {
+        if (!active && !displayText.isEmpty()) // Clear the display text if we are setting the overlay to inactive.
+            this.displayText = "";
+        super.setActive(active);
+    }
 
     public void setForegroundColor(Color foregroundColor) {
         this.foregroundColor = foregroundColor;
@@ -95,8 +152,5 @@ public class OTSpecificationDynamic extends OTSpecification
         this.backgroundColor = backgroundColor;
     }
     public Color getBackgroundColor() { return backgroundColor; }
-    public String getOverlayName() {
-        return overlayName;
-    }
     public Integer getCharacterLimit() { return characterLimit; }
 }
