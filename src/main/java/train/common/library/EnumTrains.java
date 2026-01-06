@@ -54,7 +54,7 @@ public enum EnumTrains implements ITrainRecord
 	HotTubTender("HotTubTender", HotTubTender.class, ItemIDs.minecartHotTubTender.item,"tender",0,0,3,0,0,0,0,0,41000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "Skin16", "Skin17"}),18,0),
 
 	C11("Loco Steam C11", SteamC11.class, ItemIDs.minecartLocoC11.item,"steam", 1030, 97, 0, 80, 100, 200, 0.35, 0.975, 16000, null, 10, -3.0),
-	Onion("Onion", SteamOnion.class, ItemIDs.minecartOnion.item, "steam", 350,1555,0,50,140,100,0.7,0.99,8000, TraincraftUtil.getBytesFromColors(new String[]{"Black", "Orange", "Blue", "Grey", "Red", "Yellow", "White", "Brown", "LightGrey", "Pink"}),17,-1.3),
+	Onion("Onion", SteamOnion.class, ItemIDs.minecartOnion.item, "steam", 350,190,0,50,140,100,0.7,0.99,8000, TraincraftUtil.getBytesFromColors(new String[]{"Black", "Orange", "Blue", "Grey", "Red", "Yellow", "White", "Brown", "LightGrey", "Pink"}),17,-1.3),
 	OnionTender("Onion Tender", TenderOnion.class, ItemIDs.minecartOnionTender.item, "tender", 0, 0, 0.1, 0, 0, 0, 0, 0, 12000, TraincraftUtil.getBytesFromColors(new String[]{"Black", "Orange", "Blue", "Grey", "Red", "Yellow", "White", "Brown", "LightGrey", "Pink"}), 17, 0),
 	NP_L9("NP_L9", SteamNP_L9.class, ItemIDs.minecartNP_L9.item, "steam", 1200,65,0,80,180,140,0.7,0.725,3000, TraincraftUtil.getBytesFromColors(new String[] {"Grey"}),16,-1.7),
 	NP_11C_Tender("NP_11C_Tender", TenderNP_11C.class, ItemIDs.minecartNP_11C_tender.item,"tender",0,0,3.5,0,0,0,0,0,26000, TraincraftUtil.getBytesFromColors(new String[] {"Grey", "Black"}),18,0),
