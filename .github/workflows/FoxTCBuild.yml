@@ -23,6 +23,8 @@ jobs:
       # Setup Gradle
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+        with:
+          validate-wrappers: false
 
       # Cache Gradle stuff
       - name: Cache Gradle stuff
