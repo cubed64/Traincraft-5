@@ -107,6 +107,8 @@ builder.reqElev.name=Requested elevation
 train.owner.name=You are not the owner!
 train.locked.name=Locked
 train.unlocked.name=Unlocked
+train.trustedplus.name=Trusted+
+train.trusted.name=Trusted
 
 paintbrushmenu.Close Menu.name=Close
 paintbrushmenu.Next Page.name=Next Page

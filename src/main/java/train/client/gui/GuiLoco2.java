@@ -12,6 +12,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
+import train.client.gui.specialbuttons.TrainLockGuiHandler;
 import train.common.Traincraft;
 import train.common.api.*;
 import train.common.core.network.*;
@@ -86,18 +87,21 @@ public class GuiLoco2 extends GuiContainer {
 		//region TrainLocked
 		int var1 = (this.width - xSize) / 2;
 		int var2 = (this.height - ySize) / 2;
-		if (!loco.getTrainLockedFromPacket()) {
-			this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 108, var2 - 10, 67, 10, "Unlocked"));
+		GuiButton lockButton = TrainLockGuiHandler.createLockButton(
+				loco,
+				(EntityPlayer)loco.riddenByEntity,
+				var1,
+				var2,
+				108,
+				-10,
+				67
+		);
+
+		if (lockButton != null) {
+			this.buttonList.add(lockButton);
+			this.buttonLock = lockButton;
 		}
-		else {
-			if (loco.getTransportOwner().equalsIgnoreCase(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
-				this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 108, var2 - 10, 67, 10, "Locked"));
-			else if (loco.isPlayerTrusted(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
-				if (loco.isPlayerTrustedToBreak(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
-					this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 104, var2 - 10, 71, 10, "Trusted+"));
-				else
-					this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 106, var2 - 10, 69, 10, "Trusted"));
-		}
+
 		//endregion TrainLocked
 
 		//region Start/Stop Engine
@@ -182,39 +186,7 @@ public class GuiLoco2 extends GuiContainer {
 				}
 			break;
 			case 3:
-				if (loco.riddenByEntity instanceof EntityPlayer && ((EntityPlayer) loco.riddenByEntity).getDisplayName().equals(loco.getTransportOwner())) {
-					if ((!loco.getTrainLockedFromPacket()))
-					{
-						if (!isShiftKeyDown())
-						{
-							Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(true, loco.getTrustedList(), loco.getEntityId(), false));
-							loco.locked = true;
-							guibutton.displayString = "Locked";
-							this.initGui();
-						}
-						else
-						{
-							((EntityPlayer) loco.riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCK_MENU, ((EntityPlayer) loco.riddenByEntity).getEntityWorld(), loco.getEntityId(), -1, (int) loco.riddenByEntity.posZ);
-						}
-					}
-					else
-					{
-						if (!isShiftKeyDown())
-						{
-							Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(false, loco.getTrustedList(), loco.getEntityId(), false));
-							loco.locked = false;
-							guibutton.displayString = "UnLocked";
-							this.initGui();
-						}
-						else
-						{
-							((EntityPlayer) loco.riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCK_MENU, ((EntityPlayer) loco.riddenByEntity).getEntityWorld(), loco.getEntityId(), -1, (int) loco.riddenByEntity.posZ);
-						}
-					}
-				}
-				else if (loco.riddenByEntity instanceof EntityPlayer) {
-					((EntityPlayer) loco.riddenByEntity).addChatMessage(new ChatComponentText("You are not the owner!"));
-				}
+				TrainLockGuiHandler.handleLockButton(this, guibutton, (EntityPlayer)loco.riddenByEntity, loco, isShiftKeyDown());
 			break;
 			case 4:
 				if (loco.isLocoTurnedOn())
@@ -304,11 +276,11 @@ public class GuiLoco2 extends GuiContainer {
 					loco.ditchLightMode = 1;
 					guibutton.displayString = "Ditch Lights: On";
 				}
-   break;
+   			break;
 			case 9: //drop fire
 				Traincraft.ignitionChannel.sendToServer(new PacketDropFire(loco.getEntityId()));
 				loco.fuelTrain=0;
-   break;
+   			break;
 		}
 	}
 

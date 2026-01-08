@@ -9,6 +9,7 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
+import train.client.gui.specialbuttons.TrainLockGuiHandler;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.Locomotive;
@@ -80,59 +81,44 @@ public class GuiTankEngine extends GuiContainer {
 		}
 		int var1 = (this.width - xSize) / 2;
 		int var2 = (this.height - ySize) / 2;
-		if (!loco.getTrainLockedFromPacket()) {
-			this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 124, var2 - 10, 51, 10, "Unlocked"));
-		}
-		else {
-			if (loco.getTransportOwner().equalsIgnoreCase(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
-				this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 130, var2 - 10, 43, 10, "Locked"));
-			else if (loco.isPlayerTrusted(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
-				if (loco.isPlayerTrustedToBreak(((EntityPlayer) loco.riddenByEntity).getDisplayName()))
-					this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 125, var2 - 10, 48, 10, "Trusted+"));
-				else
-					this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 128, var2 - 10, 45, 10, "Trusted"));
+		GuiButton lockButton = TrainLockGuiHandler.createLockButton(
+				loco,
+				(EntityPlayer)loco.riddenByEntity,
+				var1,
+				var2,
+				124,
+				-10,
+				51
+		);
+
+		if (lockButton != null) {
+			this.buttonList.add(lockButton);
+			this.buttonLock = lockButton;
 		}
 	}
 
 	@Override
-	protected void actionPerformed(GuiButton guibutton) {
-		if (guibutton.id == 2) {
-			if ((!loco.getParkingBrakeDW()) && loco.getSpeed() < 10) {
-				Traincraft.brakeChannel.sendToServer(new PacketParkingBrake(true, loco.getEntityId()));
-				loco.parkingBrake = true;
-				guibutton.displayString = "Brake: On";
-				this.initGui();
-			}
-			else if (loco.getSpeed() < 10) {
-				Traincraft.brakeChannel.sendToServer(new PacketParkingBrake(false, loco.getEntityId()));
-				loco.parkingBrake = false;
-				guibutton.displayString = "Brake: Off";
-				this.initGui();
-			}
-		}
-		if (guibutton.id == 3) {
-			if (loco.riddenByEntity != null && loco.riddenByEntity instanceof EntityPlayer && ((EntityPlayer) loco.riddenByEntity).getDisplayName().equals(loco.getTransportOwner())) {
-				if (!isShiftKeyDown()) {
-					if ((!loco.getTrainLockedFromPacket())) {
-						loco.locked = true;
-						guibutton.displayString = "Locked";
-						this.initGui();
-					} else {
-						loco.locked = false;
-						guibutton.displayString = "UnLocked";
-						this.initGui();
-					}
-					Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(true, loco.getTrustedList(), loco.getEntityId(), false));
+	protected void actionPerformed(GuiButton guibutton)
+	{
+		switch (guibutton.id)
+		{
+			case 2:
+				if ((!loco.getParkingBrakeDW()) && loco.getSpeed() < 10) {
+					Traincraft.brakeChannel.sendToServer(new PacketParkingBrake(true, loco.getEntityId()));
+					loco.parkingBrake = true;
+					guibutton.displayString = "Brake: On";
+					this.initGui();
 				}
-				else {
-					this.mc.thePlayer.closeScreen();
-					((EntityPlayer) loco.riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCK_MENU, ((EntityPlayer) loco.riddenByEntity).getEntityWorld(), (int) loco.posX, (int) loco.posY, (int) loco.posZ);
+				else if (loco.getSpeed() < 10) {
+					Traincraft.brakeChannel.sendToServer(new PacketParkingBrake(false, loco.getEntityId()));
+					loco.parkingBrake = false;
+					guibutton.displayString = "Brake: Off";
+					this.initGui();
 				}
-
-			}
-			else if (loco.riddenByEntity != null && loco.riddenByEntity instanceof EntityPlayer) {
-				((EntityPlayer) loco.riddenByEntity).addChatMessage(new ChatComponentText("You are not the owner"));
-			}
+			break;
+			case 3:
+				TrainLockGuiHandler.handleLockButton(this, guibutton, (EntityPlayer) loco.riddenByEntity, loco, isShiftKeyDown());
+			break;
 		}
 	}
 

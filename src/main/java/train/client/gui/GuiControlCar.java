@@ -11,6 +11,7 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
+import train.client.gui.specialbuttons.TrainLockGuiHandler;
 import train.common.Traincraft;
 import train.common.api.*;
 import train.common.core.network.*;
@@ -90,18 +91,21 @@ public class GuiControlCar extends GuiContainer
         //region TrainLocked
         int var1 = (this.width - xSize) / 2;
         int var2 = (this.height - ySize) / 2;
-        if (!controlCar.getTrainLockedFromPacket()) {
-            this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 108, var2 - 10, 67, 10, "Unlocked"));
+        GuiButton lockButton = TrainLockGuiHandler.createLockButton(
+                controlCar,
+                (EntityPlayer)controlCar.riddenByEntity,
+                var1,
+                var2,
+                108,
+                -10,
+                67
+        );
+
+        if (lockButton != null) {
+            this.buttonList.add(lockButton);
+            this.buttonLock = lockButton;
         }
-        else {
-            if (controlCar.getTransportOwner().equalsIgnoreCase(((EntityPlayer) controlCar.riddenByEntity).getDisplayName()))
-                this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 108, var2 - 10, 67, 10, "Locked"));
-            else if (controlCar.isPlayerTrusted(((EntityPlayer) controlCar.riddenByEntity).getDisplayName()))
-                if (controlCar.isPlayerTrustedToBreak(((EntityPlayer) controlCar.riddenByEntity).getDisplayName()))
-                    this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 104, var2 - 10, 71, 10, "Trusted+"));
-                else
-                    this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 106, var2 - 10, 69, 10, "Trusted"));
-        }
+
         //endregion TrainLocked
 
         //region guiTCTextFieldTrainNote
@@ -166,34 +170,7 @@ public class GuiControlCar extends GuiContainer
             break;
 
             case 3: // Lock Control Car
-                if (controlCar.riddenByEntity instanceof EntityPlayer && ((EntityPlayer) controlCar.riddenByEntity).getDisplayName().equals(controlCar.getTransportOwner())) {
-                    if ((!controlCar.getTrainLockedFromPacket())) {
-                        if (!isShiftKeyDown()) {
-                            Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(true, controlCar.getTrustedList(), controlCar.getEntityId(), false));
-                            controlCar.locked = true;
-                            guibutton.displayString = "Locked";
-                            this.initGui();
-                        }
-                        else
-                        {
-                            ((EntityPlayer) controlCar.riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCK_MENU, ((EntityPlayer) controlCar.riddenByEntity).getEntityWorld(), controlCar.getEntityId(), -1, (int) controlCar.riddenByEntity.posZ);
-                        }
-                    } else {
-                        if (!isShiftKeyDown()) {
-                            Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(false, controlCar.getTrustedList(), controlCar.getEntityId(), false));
-                            controlCar.locked = false;
-                            guibutton.displayString = "UnLocked";
-                            this.initGui();
-                        }
-                        else
-                        {
-                            ((EntityPlayer) controlCar.riddenByEntity).openGui(Traincraft.instance, GuiIDs.LOCK_MENU, ((EntityPlayer) controlCar.riddenByEntity).getEntityWorld(), controlCar.getEntityId(), -1, (int) controlCar.riddenByEntity.posZ);
-                        }
-                    }
-                }
-                else if (controlCar.riddenByEntity instanceof EntityPlayer) {
-                    ((EntityPlayer) controlCar.riddenByEntity).addChatMessage(new ChatComponentText("You are not the owner!"));
-                }
+                TrainLockGuiHandler.handleLockButton(this, guibutton, (EntityPlayer)controlCar.riddenByEntity, controlCar, isShiftKeyDown());
             break;
 
             case 6: // Lights

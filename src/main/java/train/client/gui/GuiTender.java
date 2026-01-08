@@ -10,6 +10,7 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
+import train.client.gui.specialbuttons.TrainLockGuiHandler;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.Tender;
@@ -40,16 +41,20 @@ public class GuiTender extends GuiContainer {
 		buttonList.clear();
 		int var1 = (this.width-xSize) / 2;
 		int var2 = (this.height-ySize) / 2;
-		if (!tender.getTrainLockedFromPacket()) {
-			this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 124, var2 - 10, 51, 10, "Unlocked"));
-		} else {
-			if (tender.getTransportOwner().equalsIgnoreCase(player.getDisplayName()))
-				this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 130, var2 - 10, 43, 10, "Locked"));
-			else if (tender.isPlayerTrusted(player.getDisplayName()))
-				if (tender.isPlayerTrustedToBreak(player.getDisplayName()))
-					this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 125, var2 - 10, 48, 10, "Trusted+"));
-				else
-					this.buttonList.add(this.buttonLock = new GuiButton(3, var1 + 128, var2 - 10, 45, 10, "Trusted"));
+
+		GuiButton lockButton = TrainLockGuiHandler.createLockButton(
+				tender,
+				player,
+				var1,
+				var2,
+				124,
+				-10,
+				51
+		);
+
+		if (lockButton != null) {
+			this.buttonList.add(lockButton);
+			this.buttonLock = lockButton;
 		}
 
 		tender.guiTCTextFieldTrainNote = new GuiTCTextField(fontRendererObj, width/2 - 85, var2 - 26, 170,15);
@@ -57,38 +62,13 @@ public class GuiTender extends GuiContainer {
 	}
 
 	@Override
-	protected void actionPerformed(GuiButton guibutton) {
-		if (guibutton.id == 3) {
-			if(player!=null && player.getCommandSenderName().equalsIgnoreCase(tender.getTransportOwner())){
-				if ((!tender.getTrainLockedFromPacket()) && !isShiftKeyDown()) {
-					tender.locked = true;
-					guibutton.displayString = "Locked";
-					this.initGui();
-				} else if (!isShiftKeyDown()) {
-					tender.locked = false;
-					guibutton.displayString = "UnLocked";
-					this.initGui();
-				}
-				AxisAlignedBB box = tender.boundingBox.expand(5, 5, 5);
-				List lis3 = tender.worldObj.getEntitiesWithinAABBExcludingEntity(tender, box);
-				if (lis3 != null && lis3.size() > 0) {
-					for (Object entity : lis3) {
-						if (entity instanceof EntityPlayer) {
-							if (!isShiftKeyDown()) {
-								Traincraft.lockChannel.sendToServer(new PacketSetTrainLockedToClient(tender.locked, tender.getTrustedList(), tender.getEntityId(), false));
-							}
-							else
-							{
-								this.mc.thePlayer.closeScreen();
-								player.openGui(Traincraft.instance, GuiIDs.LOCK_MENU, player.getEntityWorld(), tender.getEntityId(), -1, (int) tender.posZ);
-								return;
-							}
-						}
-					}
-				}
-			}else if(player!=null && player instanceof EntityPlayer){
-				player.addChatMessage(new ChatComponentText("You are not the owner!"));
-			}
+	protected void actionPerformed(GuiButton guibutton)
+	{
+		switch (guibutton.id)
+		{
+			case 3:
+				TrainLockGuiHandler.handleLockButton(this, guibutton, player, tender, isShiftKeyDown());
+			break;
 		}
 	}
 
