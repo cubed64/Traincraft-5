@@ -2039,7 +2039,7 @@ public enum RenderEnum implements ITrainRenderRecord, ISubTrainRenderRecord
 			add(new double[]{1.6D, 1.45D, 0.0D});
 		}
 	}, "", null, 0, false),
-	BUnitFOLM1B(BUnitFOLM1B.class, new ModelFOLM1B(), "FOL_M1b_", true, new float[]{-0.25F, 0.05F, 0F}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
+	//BUnitFOLM1B(BUnitFOLM1B.class, new ModelFOLM1B(), "FOL_M1b_", true, new float[]{-0.25F, 0.05F, 0F}, new float[] { 0F, 180F, 180F }, new float[]{1f,1f,1f}, "", 0, null, "", null, 0, false),
 
 	Krautt(DieselKrautt.class,  new ModelKrautt(), "KM_ML4000_", true,new float[]{-1.6F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 6,  new ArrayList<double[]>() {
 		{
