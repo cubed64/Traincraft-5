@@ -678,6 +678,8 @@ public class RecipeHandler extends AbstractRecipeHandler
 		addRecipeWithOreDic(new ItemStack(ItemIDs.fourWheelLightweightTruck.item, 2), "SFS", "W W", "   ", 'S', ItemIDs.steel.item, 'F', new ItemStack(ItemIDs.steelframe.item), 'W', new ItemStack(ItemIDs.bogie.item)); // 4 wheel lightweight truck
 		addRecipeWithOreDic(new ItemStack(ItemIDs.fourWheelHeavyweightTruck.item, 2), "   ", "SSS", "W W", 'S', ItemIDs.steel.item, 'W', new ItemStack(ItemIDs.bogie.item)); // 4 wheel heavyweight truck
 		addRecipeWithOreDic(new ItemStack(ItemIDs.fourWheelHeavyweightTruck.item, 2), "SSS", "W W", "   ", 'S', ItemIDs.steel.item, 'W', new ItemStack(ItemIDs.bogie.item)); // 4 wheel heavyweight truck
+		addRecipeWithOreDic(new ItemStack(ItemIDs.sixWheelLightweightTruck.item, 2), "   ", "FSF", "WWW", 'S', ItemIDs.steel.item, 'F', new ItemStack(ItemIDs.steelframe.item), 'W', new ItemStack(ItemIDs.bogie.item)); // 6 wheel lightweight truck
+		addRecipeWithOreDic(new ItemStack(ItemIDs.sixWheelLightweightTruck.item, 2), "FSF", "WWW", "   ", 'S', ItemIDs.steel.item, 'F', new ItemStack(ItemIDs.steelframe.item), 'W', new ItemStack(ItemIDs.bogie.item)); // 6 wheel lightweight truck
 		addRecipeWithOreDic(new ItemStack(ItemIDs.sixWheelHeavyweightTruck.item, 2), "   ", "SSS", "WWW", 'S', ItemIDs.steel.item, 'W', new ItemStack(ItemIDs.bogie.item)); // 6 wheel heavyweight truck
 		addRecipeWithOreDic(new ItemStack(ItemIDs.sixWheelHeavyweightTruck.item, 2), "SSS", "WWW", "   ", 'S', ItemIDs.steel.item, 'W', new ItemStack(ItemIDs.bogie.item)); // 6 wheel heavyweight truck
 		addRecipeWithOreDic(new ItemStack(ItemIDs.passengerFluting.item, 4), "   ", " S ", "   ", 'S', ItemIDs.steel.item); // passenger car fluting

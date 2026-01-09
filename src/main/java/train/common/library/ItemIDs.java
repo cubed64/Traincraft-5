@@ -79,6 +79,7 @@ public enum ItemIDs {
 	//new crafting parts
 	fourWheelLightweightTruck("ItemTrain", "fourWheelLightweightTruck", 5),
 	fourWheelHeavyweightTruck("ItemTrain", "fourWheelHeavyweightTruck", 5),
+	sixWheelLightweightTruck("ItemTrain", "sixWheelLightweightTruck", 5),
 	sixWheelHeavyweightTruck("ItemTrain", "sixWheelHeavyweightTruck", 5),
 	passengerFluting("ItemTrain", "passengerFluting", 2),
 
@@ -862,6 +863,8 @@ public enum ItemIDs {
 
 	minecartACF_LN_KCS60SeatDividedCoach("ItemRollingStock", "ACF_LN_KCS60SeatDividedCoach", PASSENGER, 3),
 	minecartLNCoach2551Series("ItemRollingStock", "LNCoach2551Series", PASSENGER, 3),
+
+	minecartMON_lightweightCoach("ItemRollingStock", "MON_lightweightCoach", PASSENGER, 3),
 
 	minecartAmfleet("ItemRollingStock", "Amfleet", PASSENGER, 3),
 	minecartAmfleet2("ItemRollingStock", "Amfleet2", PASSENGER, 3),

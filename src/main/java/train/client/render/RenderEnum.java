@@ -2301,6 +2301,8 @@ public enum RenderEnum implements ITrainRenderRecord, ISubTrainRenderRecord
 	ACF_LN_KCS60SeatDividedCoach(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.ACF_LN_KCS60SeatDividedCoach.class, new ModelACF_LN_KCS60SeatDividedCoach(), "AC&F_LN_KCS60SeatDividedCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
 	LNCoach2551Series(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.LNCoach2551Series.class, new ModelLNCoach2551Series(), "LNCoach2551Series_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
+	MON_LightweightCoach(com.jcirmodelsquad.tcjcir.vehicles.rollingstock.passenger.MON_LightweightCoach.class, new ModelMON_LightweightCoach(), "MON_LightweightCoach_", true, new float[] { 0F, 0.15F, 0.0F }, new float[] { 0F, 0F, 180F }, null, "", 0, null, "", null, 0, false),
+
 	amfleet(Amfleet.class, new ModelAmfleet(),"amfleet_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	amfleet2(Amfleet2.class, new ModelAmfleet2(),"amfleet2_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	amfleetCab(AmfleetCab.class, new ModelAmfleetCab(),"amfleet_Cabber_", true, new float[]{0F, -0.45F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),

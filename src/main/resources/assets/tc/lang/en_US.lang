@@ -402,6 +402,7 @@ item.tc:creditsBook.name=(OBSOLETE) JCIRTC Credits Book
 
 item.tc:fourWheelLightweightTruck.name=4 Wheel Lightweight Truck
 item.tc:fourWheelHeavyweightTruck.name=4 Wheel Heavyweight Truck
+item.tc:sixWheelLightweightTruck.name=6 Wheel Lightweight Truck
 item.tc:sixWheelHeavyweightTruck.name=6 Wheel Heavyweight Truck
 item.tc:passengerFluting.name=Passenger Car Fluting
 
@@ -2069,6 +2070,8 @@ item.tc:minecartMILW1935Dorm_56SeatCoach.name=Milwaukee Road 1935 Dormitory-56 S
 item.tc:minecartACF_LN_KCS60SeatDividedCoach.name=American Car & Foundry L&N and KCS 60 Seat Divided Coach
 item.tc:minecartLNCoach2551Series.name=L&N 2551 Series Coach
 
+item.tc:minecartMON_lightweightCoach.name=Monon 21 Series Lightweight Coach
+
 entity.tc.Freight PS 85 Baggage.name=Pullman Standard 85' Baggage
 entity.tc.PS 5-6-5 Sleeper.name=Pullman Standard 10-6 Sleeper (Center Bedroom)
 entity.tc.PS 5-6-5 Sleeper DRGW Edition.name=Pullman Standard DRGW 6-5-5 Sleeper
@@ -2193,6 +2196,8 @@ entity.tc.MILW 1935 Dormitory-56 Seat Coach.name=Milwaukee Road 1935 Dormitory-5
 
 entity.tc.AC&F L&N and KCS 60 Seat Divided Coach.name=American Car & Foundry L&N and KCS 60 Seat Divided Coach
 entity.tc.L&N Coach 2551 Series.name=L&N 2551 Series Coach
+
+entity.tc.Monon 21 Series Lightweight Coach.name=Monon 21 Series Lightweight Coach
 
 item.tc:minecartAmfleet.name=Amfleet 1 Coach
 item.tc:minecartAmfleet2.name=Amfleet 2 Coach
