@@ -2,22 +2,17 @@ package train.client.gui.specialbuttons;
 
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentText;
 import train.common.Traincraft;
 import train.common.api.EntityRollingStock;
-import train.common.api.Locomotive;
 import train.common.core.network.PacketSetTrainLockedToClient;
 import train.common.library.GuiIDs;
 import train.common.utils.TranslationUtil;
 
-import java.util.List;
+public final class TransportLockGuiHandler {
 
-public final class TrainLockGuiHandler {
-
-    private TrainLockGuiHandler()
+    private TransportLockGuiHandler()
     {
     }
 

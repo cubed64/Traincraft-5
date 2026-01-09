@@ -12,12 +12,11 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
-import train.client.gui.specialbuttons.TrainLockGuiHandler;
+import train.client.gui.specialbuttons.TransportLockGuiHandler;
 import train.common.Traincraft;
 import train.common.api.*;
 import train.common.core.network.*;
 import train.common.inventory.InventoryLoco;
-import train.common.library.GuiIDs;
 import train.common.library.Info;
 
 import java.util.Collections;
@@ -87,7 +86,7 @@ public class GuiLoco2 extends GuiContainer {
 		//region TrainLocked
 		int var1 = (this.width - xSize) / 2;
 		int var2 = (this.height - ySize) / 2;
-		GuiButton lockButton = TrainLockGuiHandler.createLockButton(
+		GuiButton lockButton = TransportLockGuiHandler.createLockButton(
 				loco,
 				(EntityPlayer)loco.riddenByEntity,
 				var1,
@@ -186,7 +185,7 @@ public class GuiLoco2 extends GuiContainer {
 				}
 			break;
 			case 3:
-				TrainLockGuiHandler.handleLockButton(this, guibutton, (EntityPlayer)loco.riddenByEntity, loco, isShiftKeyDown());
+				TransportLockGuiHandler.handleLockButton(this, guibutton, (EntityPlayer)loco.riddenByEntity, loco, isShiftKeyDown());
 			break;
 			case 4:
 				if (loco.isLocoTurnedOn())

@@ -7,16 +7,14 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
-import train.client.gui.specialbuttons.TrainLockGuiHandler;
+import train.client.gui.specialbuttons.TransportLockGuiHandler;
 import train.common.Traincraft;
 import train.common.api.*;
 import train.common.core.network.*;
 import train.common.inventory.InventoryControlCar;
-import train.common.library.GuiIDs;
 import train.common.library.Info;
 
 public class GuiControlCar extends GuiContainer
@@ -91,7 +89,7 @@ public class GuiControlCar extends GuiContainer
         //region TrainLocked
         int var1 = (this.width - xSize) / 2;
         int var2 = (this.height - ySize) / 2;
-        GuiButton lockButton = TrainLockGuiHandler.createLockButton(
+        GuiButton lockButton = TransportLockGuiHandler.createLockButton(
                 controlCar,
                 (EntityPlayer)controlCar.riddenByEntity,
                 var1,
@@ -170,7 +168,7 @@ public class GuiControlCar extends GuiContainer
             break;
 
             case 3: // Lock Control Car
-                TrainLockGuiHandler.handleLockButton(this, guibutton, (EntityPlayer)controlCar.riddenByEntity, controlCar, isShiftKeyDown());
+                TransportLockGuiHandler.handleLockButton(this, guibutton, (EntityPlayer)controlCar.riddenByEntity, controlCar, isShiftKeyDown());
             break;
 
             case 6: // Lights

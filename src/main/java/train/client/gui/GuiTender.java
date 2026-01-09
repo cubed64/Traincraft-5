@@ -5,23 +5,18 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
-import train.client.gui.specialbuttons.TrainLockGuiHandler;
+import train.client.gui.specialbuttons.TransportLockGuiHandler;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.Tender;
 import train.common.core.network.PacketAddNote;
-import train.common.core.network.PacketSetTrainLockedToClient;
 import train.common.inventory.InventoryTender;
-import train.common.library.GuiIDs;
 import train.common.library.Info;
 
 import java.util.Collections;
-import java.util.List;
 
 public class GuiTender extends GuiContainer {
 
@@ -42,7 +37,7 @@ public class GuiTender extends GuiContainer {
 		int var1 = (this.width-xSize) / 2;
 		int var2 = (this.height-ySize) / 2;
 
-		GuiButton lockButton = TrainLockGuiHandler.createLockButton(
+		GuiButton lockButton = TransportLockGuiHandler.createLockButton(
 				tender,
 				player,
 				var1,
@@ -67,7 +62,7 @@ public class GuiTender extends GuiContainer {
 		switch (guibutton.id)
 		{
 			case 3:
-				TrainLockGuiHandler.handleLockButton(this, guibutton, player, tender, isShiftKeyDown());
+				TransportLockGuiHandler.handleLockButton(this, guibutton, player, tender, isShiftKeyDown());
 			break;
 		}
 	}

@@ -6,18 +6,15 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
-import train.client.gui.specialbuttons.TrainLockGuiHandler;
+import train.client.gui.specialbuttons.TransportLockGuiHandler;
 import train.common.Traincraft;
 import train.common.api.LiquidManager;
 import train.common.api.Locomotive;
 import train.common.api.SteamTrain;
 import train.common.core.network.PacketParkingBrake;
-import train.common.core.network.PacketSetTrainLockedToClient;
 import train.common.inventory.InventoryForney;
-import train.common.library.GuiIDs;
 import train.common.library.Info;
 
 public class GuiTankEngine extends GuiContainer {
@@ -81,7 +78,7 @@ public class GuiTankEngine extends GuiContainer {
 		}
 		int var1 = (this.width - xSize) / 2;
 		int var2 = (this.height - ySize) / 2;
-		GuiButton lockButton = TrainLockGuiHandler.createLockButton(
+		GuiButton lockButton = TransportLockGuiHandler.createLockButton(
 				loco,
 				(EntityPlayer)loco.riddenByEntity,
 				var1,
@@ -117,7 +114,7 @@ public class GuiTankEngine extends GuiContainer {
 				}
 			break;
 			case 3:
-				TrainLockGuiHandler.handleLockButton(this, guibutton, (EntityPlayer) loco.riddenByEntity, loco, isShiftKeyDown());
+				TransportLockGuiHandler.handleLockButton(this, guibutton, (EntityPlayer) loco.riddenByEntity, loco, isShiftKeyDown());
 			break;
 		}
 	}
