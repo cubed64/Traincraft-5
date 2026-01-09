@@ -32,6 +32,12 @@ public class MON_LightweightCoach extends AbstractPassengerCar
 	}
 
 	@Override
+	public String transportCountry()
+	{
+		return "US";
+	}
+
+	@Override
 	public String transportYear() {
 		return "(Rebuilt) 1947";
 	}

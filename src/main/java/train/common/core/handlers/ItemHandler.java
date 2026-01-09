@@ -205,11 +205,11 @@ public class ItemHandler
 				case INGOT:
 					return ingotItems(itemstack);
 				default:
-					if ((itemstack.getItem() == Items.lava_bucket) == false
-							&& FluidContainerRegistry.isFilledContainer(itemstack))
-					{
-						return false;
-					}
+					//if ((itemstack.getItem() == Items.lava_bucket) == false
+					//		&& FluidContainerRegistry.isFilledContainer(itemstack))
+					//{
+					//	return false;
+					//}
 					return true;
 			}
 
