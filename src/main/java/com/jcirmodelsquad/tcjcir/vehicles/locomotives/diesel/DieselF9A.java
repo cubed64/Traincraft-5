@@ -26,6 +26,9 @@ public class DieselF9A extends DieselTrain {
         InsertTexture(4, "DRGW (4 stripe)");
         InsertTexture(5, "DRGW (4 stripe, late)");
         InsertTexture(6, "DRGW (1 stripe)");
+        InsertTexture(7, "SP Scarlet (Bloodynose)");
+        InsertTexture(8, "TNO/SP Blackwidow");
+        InsertTexture(9, "TNO Halloween Scheme");
     }
 
     @Override

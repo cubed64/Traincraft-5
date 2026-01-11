@@ -47,6 +47,9 @@ public class DieselF7A extends DieselTrain {
         InsertTexture(24, "CB&Q (Late, with coupler cover)");
         InsertTexture(25, "CB&Q (Late)");
         InsertTexture(26, "MILW (Grey scheme)");
+        InsertTexture(27, "Conrail Blue");
+        InsertTexture(28, "SP Black Widow");
+        InsertTexture(29, "SP Scarlet (Bloodynose)");
     }
 
     @Override

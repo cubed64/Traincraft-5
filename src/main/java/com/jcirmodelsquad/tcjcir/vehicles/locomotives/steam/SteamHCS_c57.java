@@ -27,6 +27,11 @@ public class SteamHCS_c57 extends SteamTrain {
 		InsertTexture(5, "SP C9 2564/2567");
 		InsertTexture(6, "C57 C9 Blank");
 		InsertTexture(7, "WPSR CO-04B \"Pine Class\" (Post FMSR Merger)", LockoutGroup.FMSR);
+		InsertTexture(8, "UP C57 Blank");
+		InsertTexture(9, "UP C57 (General 1920s Condition)");
+		InsertTexture(10, "UP C57 374/376 (w/ Snowplow)");
+		InsertTexture(11, "UP C57 6046/6053 (1950s re-number)");
+		InsertTexture(12, "Herber Valley 618");
 	}
 
 	@Override

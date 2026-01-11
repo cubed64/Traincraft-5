@@ -49,6 +49,7 @@ public class DieselF3A extends DieselTrain {
         InsertTexture(27, "WM (Speed Lettering)");
         InsertTexture(28, "WM (Circus)");
         InsertTexture(29, "WM (Fireball)");
+        InsertTexture(30, "SP Black Widow");
     }
 
     @Override
