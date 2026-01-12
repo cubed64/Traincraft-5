@@ -52,6 +52,7 @@ import train.common.library.BetterEnumSounds;
 import train.common.library.Info;
 import train.common.library.sounds.SoundRecord;
 import train.common.mtc.network.*;
+import train.common.utils.devutils.DebugUtil;
 
 import java.util.*;
 
@@ -757,6 +758,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
                     if (trainSoundRecord.getHorns().length <= this.acceptedColors.indexOf(this.getColor()))
                     {
                         worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + "oh_no_shits", trainSoundRecord.getHornVolume(), 1.0F);
+                        DebugUtil.log("FoxTC: ERROR AMOUNT OF HORNS MISMATCH");
                     }
                     else
                     {
@@ -776,6 +778,7 @@ public abstract class Locomotive extends EntityRollingStock implements IInventor
         else
         {
             worldObj.playSoundAtEntity(this, Info.resourceLocation + ":" + fallback.getHornString(), fallback.getHornVolume(), 1.0F);
+            DebugUtil.log("FoxTC: ERROR trainSoundRecord NULL OR ");
         }
         List entities = worldObj.getEntitiesWithinAABB(EntityAnimal.class, AxisAlignedBB.getBoundingBox(
                 this.posX - 20, this.posY - 5, this.posZ - 20,

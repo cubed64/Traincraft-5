@@ -27,6 +27,7 @@ import train.common.library.*;
 import train.common.library.register.ITrainRecord;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
+import train.common.utils.devutils.DebugUtil;
 import train.common.utils.lockout.ILockoutGroup;
 
 import javax.annotation.Nullable;
@@ -71,8 +72,12 @@ public abstract class ItemAbstractRollingStock extends ItemMinecart implements I
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
     {
         par3List.add("\u00a77" + "Pack: " + GetContentPackName());
-
         ITrainRecord trainRecord = Traincraft.traincraftRegistry.getCurrentTrain(this);
+        if (trainRecord == null)
+        {
+            DebugUtil.log("CRITICAL ERROR: TRAIN RECORD IS COULD NOT BE FOUND FOR " + this.trainName + " REPORT TO MOD AUTHORS ASAP");
+        }
+
         RollingStockItemCache itemCacheData = cache.getIfPresent(trainRecord.getInternalName());
         if (itemCacheData == null)
         {
