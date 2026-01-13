@@ -40,6 +40,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.minecart.MinecartCollisionEvent;
 import net.minecraftforge.event.entity.minecart.MinecartInteractEvent;
 import net.minecraftforge.event.entity.minecart.MinecartUpdateEvent;
+import org.apache.logging.log4j.Level;
 import tmt.ModelBase;
 import train.client.core.handlers.SoundUpdaterRollingStock;
 import train.common.Traincraft;
@@ -58,6 +59,7 @@ import train.common.library.*;
 import train.common.library.register.ITrainRecord;
 import train.common.tile.TileTCRail;
 import train.common.tile.TileTCRailGag;
+import train.common.utils.devutils.DebugUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -432,6 +434,10 @@ public class EntityRollingStock extends AbstractTrains implements ILinkableCart
 				}
 				onEntityDestruction(damagesource);
 				ServerLogger.deleteWagon(this);
+				if (((EntityPlayer) damagesource.getEntity()).getDisplayName().equals(getTransportOwner()) == false)
+				{
+					DebugUtil.log(Level.INFO, "RollingStockRemovedEvent: " + ((EntityPlayer) damagesource.getEntity()).getDisplayName() + "| Destroyed " + getTrainName() + "| ReportMark:" + getTrainNote() + "| Owned By: " + getTransportOwner());
+				}
 
 				this.setDead();
 				dropCartAsItem(((EntityPlayer)damagesource.getEntity()).capabilities.isCreativeMode);
