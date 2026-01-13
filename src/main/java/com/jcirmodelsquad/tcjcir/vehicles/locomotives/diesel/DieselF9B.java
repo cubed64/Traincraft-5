@@ -24,6 +24,7 @@ public class DieselF9B extends DieselTrain {
         InsertTexture(2, "DRGW (4 stripe)");
         InsertTexture(3, "DRGW (4 stripe, late)");
         InsertTexture(4, "DRGW (1 stripe)");
+        InsertTexture(5, "SP Scarlet");
     }
 
     @Override

@@ -2266,7 +2266,7 @@ public class ModelF9a_new extends ModelConverter //Same as Filename
 			GL11.glTranslated(1.25, -0.025, 0);
 			theTrucc.render(entity, f, f1, f2, f3, f4, f5);//rear
 			GL11.glPopMatrix();
-		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 832) {
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 17) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_Espee.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.05, -0.025, 0);
