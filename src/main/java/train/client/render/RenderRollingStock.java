@@ -332,7 +332,7 @@ public class RenderRollingStock extends Render {
 				// map speed to divisor range
 				// at speed = 0 → divisor = idleDivisor
 				// at speed >= maxSpeed → divisor = maxDivisor
-				float maxSpeed = 60.0F; // km/h
+				float maxSpeed = 1.0F; // km/h
 
 				// linear interpolation
 				double divisor = idleDivisor - (idleDivisor - maxDivisor) * Math.min(trainSpeed / maxSpeed, 1.0F);
