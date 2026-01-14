@@ -278,8 +278,6 @@ public static final SimpleNetworkWrapper gsfsrChannel = NetworkRegistry.INSTANCE
 
 
 		tcLog.info("Finished Initialization!");
-
-
 	}
 
 	@EventHandler
