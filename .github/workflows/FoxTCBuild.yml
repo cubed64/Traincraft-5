@@ -80,11 +80,12 @@ jobs:
           prerelease: true
           body: |
             Automated release for **Fox Traincraft**
+
             Branch: `foxtc-020-tracktastic`
             Version: `${{ steps.version.outputs.version }}`
             Commit: `${{ github.sha }}`
-          
-            ${{ '⚠ **Note:** This is a pre-release. It is intended for testing and does not guarantee stability or completeness.' if 'true' == 'true' else '' }}
+            
+            ⚠ **Note:** If this is a pre-release. It is intended for testing and **does not guarantee stability or completeness**.
           files: |
             build/libs/Fox-Traincraft-${{ steps.version.outputs.version }}*.jar
         env:
