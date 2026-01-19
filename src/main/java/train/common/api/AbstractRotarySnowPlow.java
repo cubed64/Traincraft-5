@@ -22,12 +22,8 @@ public abstract class AbstractRotarySnowPlow extends ElectricTrain
     }
 
     // radians
-    public float bladeAngle;
-
-    @SideOnly(Side.CLIENT)
     public float bladeRenderAngle = 0.0F;
 
-    @SideOnly(Side.CLIENT)
     public long bladeRenderLastTime = 0L;
 
     public boolean isRotaryOn()
