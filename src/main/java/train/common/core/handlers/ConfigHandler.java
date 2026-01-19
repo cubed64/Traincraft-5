@@ -53,6 +53,8 @@ public class ConfigHandler {
     public static int MAX_TRUSTEES_ON_PADLOCK;
 	public static String[] ROLLINGSTOCK_INVENTORY_BLACKLIST_RAW;
 
+	public static boolean ROLLINGSTOCK_INVENTORY_BAN_OPEN_FLUID_CONTAINERS;
+
 	public static void changeFirstLoad(){
 		Configuration cf = new Configuration(new File(Traincraft.configDirectory, Info.modName + ".cfg"), "1.0");
 		cf.load();
@@ -115,6 +117,8 @@ public class ConfigHandler {
 							"ImmersiveEngineering:woodenDevice"
 					},
 					"List of banned INVENTORY items").getStringList();
+			ROLLINGSTOCK_INVENTORY_BAN_OPEN_FLUID_CONTAINERS = cf.get(CATEGORY_INVENTORY, "ROLLINGSTOCK_INVENTORY_BAN_OPEN_FLUID_CONTAINERS",
+					false, "Blocks open fluid containers from being stored in Freight Cars").getBoolean(false);
 		} catch (Exception e) {
 			Traincraft.tcLog.fatal("Traincraft had a problem loading its configuration\n" + e);
 		} finally {

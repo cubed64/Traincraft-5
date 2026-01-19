@@ -205,6 +205,11 @@ public class ItemHandler
 				case INGOT:
 					return ingotItems(itemstack);
 				default:
+					if (ConfigHandler.ROLLINGSTOCK_INVENTORY_BAN_OPEN_FLUID_CONTAINERS == false)
+					{
+						return true;
+					}
+					// Allowing Lava Buckets since not alot of cars for this
 					if ((itemstack.getItem() == Items.lava_bucket) == false
 							&& FluidContainerRegistry.isFilledContainer(itemstack))
 					{
