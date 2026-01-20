@@ -55,6 +55,8 @@ public class ConfigHandler {
 
 	public static boolean ROLLINGSTOCK_INVENTORY_BAN_OPEN_FLUID_CONTAINERS;
 
+	public static boolean ROLLINGSTOCK_PLAYER_SCALING;
+
 	public static void changeFirstLoad(){
 		Configuration cf = new Configuration(new File(Traincraft.configDirectory, Info.modName + ".cfg"), "1.0");
 		cf.load();
@@ -119,6 +121,8 @@ public class ConfigHandler {
 					"List of banned INVENTORY items").getStringList();
 			ROLLINGSTOCK_INVENTORY_BAN_OPEN_FLUID_CONTAINERS = cf.get(CATEGORY_INVENTORY, "ROLLINGSTOCK_INVENTORY_BAN_OPEN_FLUID_CONTAINERS",
 					false, "Blocks open fluid containers from being stored in Freight Cars").getBoolean(false);
+			ROLLINGSTOCK_PLAYER_SCALING = cf.get(CATEGORY_GENERAL, "ROLLINGSTOCK_PLAYER_SCALING",
+					true, "Toggles player scaling").getBoolean(true);
 		} catch (Exception e) {
 			Traincraft.tcLog.fatal("Traincraft had a problem loading its configuration\n" + e);
 		} finally {

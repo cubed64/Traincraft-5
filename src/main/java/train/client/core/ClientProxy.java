@@ -15,7 +15,11 @@ import cpw.mods.fml.common.registry.VillagerRegistry;
 import javazoom.jl.decoder.JavaLayerUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.SoundCategory;
+import net.minecraft.client.entity.AbstractClientPlayer;
+import net.minecraft.client.entity.EntityClientPlayerMP;
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.entity.RenderPlayer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -34,7 +38,8 @@ import train.client.core.helpers.JLayerHook;
 import train.client.gui.*;
 import train.client.render.*;
 import train.client.render.itemRender.*;
-import train.common.PlayerScaleHandler;
+import train.common.core.handlers.ConfigHandler;
+import train.common.core.handlers.RenderScaledPlayer;
 import train.common.Traincraft;
 import train.common.adminbook.GUIAdminBook;
 import train.common.api.EntityBogie;
@@ -54,7 +59,6 @@ import train.common.mtc.render.RenderMTCBlock;
 import train.common.mtc.tile.TileTransmitterSpeed;
 import train.common.overlaytexture.OTSpecificationDynamic;
 import train.common.overlaytexture.OTSpecificationFixed;
-import train.common.overlaytexture.OverlayTextureManager;
 import train.common.tile.*;
 import train.common.tile.tileStopper.TileAmericanStopper;
 import train.common.tile.tileStopper.TileGenericStopper;
@@ -446,7 +450,19 @@ public class ClientProxy extends CommonProxy
 	}
 
 	@Override
-	public void registerPlayerScaler(){
-		MinecraftForge.EVENT_BUS.register(new PlayerScaleHandler());
+	public void registerPlayerScaler()
+	{
+		if (ConfigHandler.ROLLINGSTOCK_PLAYER_SCALING)
+		{
+			RenderPlayer customRenderer = new RenderScaledPlayer();
+			RenderManager rm = RenderManager.instance;
+
+			// Local player
+			rm.entityRenderMap.put(EntityPlayer.class, customRenderer);
+			rm.entityRenderMap.put(AbstractClientPlayer.class, customRenderer);
+			rm.entityRenderMap.put(EntityClientPlayerMP.class, customRenderer);
+		}
 	}
+
+
 }
