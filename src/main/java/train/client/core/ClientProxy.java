@@ -12,6 +12,7 @@ import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Optional;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.VillagerRegistry;
+import foxmods.playerscale.DelegatingRenderPlayer;
 import javazoom.jl.decoder.JavaLayerUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.SoundCategory;
@@ -30,6 +31,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
 import org.apache.logging.log4j.Level;
+import org.lwjgl.opengl.GL11;
 import train.client.core.handlers.ClientTickHandler;
 import train.client.core.handlers.CustomRenderHandler;
 import train.client.core.handlers.RecipeBookHandler;
@@ -38,6 +40,7 @@ import train.client.core.helpers.JLayerHook;
 import train.client.gui.*;
 import train.client.render.*;
 import train.client.render.itemRender.*;
+import train.common.api.AbstractTrains;
 import train.common.core.handlers.ConfigHandler;
 import train.common.core.handlers.RenderScaledPlayer;
 import train.common.Traincraft;
@@ -454,15 +457,40 @@ public class ClientProxy extends CommonProxy
 	{
 		if (ConfigHandler.ROLLINGSTOCK_PLAYER_SCALING)
 		{
-			RenderPlayer customRenderer = new RenderScaledPlayer();
-			RenderManager rm = RenderManager.instance;
+			DelegatingRenderPlayer.registerRenderer();
+			DelegatingRenderPlayer.registerDelegate(new DelegatingRenderPlayer.Delegate()
+			{
+				AbstractTrains trains;
 
-			// Local player
-			rm.entityRenderMap.put(EntityPlayer.class, customRenderer);
-			rm.entityRenderMap.put(AbstractClientPlayer.class, customRenderer);
-			rm.entityRenderMap.put(EntityClientPlayerMP.class, customRenderer);
+				@Override
+				public boolean doRender(net.minecraft.client.entity.AbstractClientPlayer player, double x, double y, double z, float f0, float f1)
+				{
+					if (player.ridingEntity instanceof AbstractTrains)
+					{
+						trains = (AbstractTrains) player.ridingEntity;
+						if(trains != null)
+						{
+							GL11.glPushMatrix();
+							float scale = 0.65f;
+							scale = player.height * scale / player.height;
+							GL11.glTranslated(x, (y + .35), z);
+							GL11.glScalef(scale, scale, scale);
+							GL11.glTranslated(-x, -(y + .35), -z);
+							if (player != Minecraft.getMinecraft().thePlayer)
+							{
+								GL11.glTranslated(0, 0.87f, 0); //rough approx. but gets the job done for everything in range 0.5-1
+							}
+							else
+							{
+								GL11.glTranslated(0, 0, 0); //rough approx. but gets the job done for everything in range 0.5-1
+							}
+
+							return true;
+						}
+					}
+					return false;
+				}
+			});
 		}
 	}
-
-
 }
