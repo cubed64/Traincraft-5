@@ -21,17 +21,18 @@ public class DieselGP20 extends DieselTrain {
         InsertTexture(1, "Western Pacific");
         InsertTexture(2, "Union Pacific \"Omaha GP20\" ");
         InsertTexture(3, "Southern Pacific");
-        InsertTexture(4, "New York Central");
-        InsertTexture(5, "AT&SF");
-        InsertTexture(6, "BN 2028 (ex CB&Q)");
-        InsertTexture(7, "BN 2012 (ex GN)");
-        InsertTexture(8, "GN Empire Builder");
-        InsertTexture(9, "GN \"Big Sky Blue\"");
-        InsertTexture(10, "CB&Q");
-        InsertTexture(11, "D&LMR");
-        InsertTexture(12, "Oil Clusters and Garden");
-        InsertTexture(13, "Lowhood Blank");
-        InsertTexture(14, "Highhood Blank");
+        InsertTexture(4, "Southern Pacific (GP20R)");
+        InsertTexture(5, "New York Central");
+        InsertTexture(6, "AT&SF");
+        InsertTexture(7, "BN 2028 (ex CB&Q)");
+        InsertTexture(8, "BN 2012 (ex GN)");
+        InsertTexture(9, "GN Empire Builder");
+        InsertTexture(10, "GN \"Big Sky Blue\"");
+        InsertTexture(11, "CB&Q");
+        InsertTexture(12, "D&LMR");
+        InsertTexture(13, "Oil Clusters and Garden");
+        InsertTexture(14, "Lowhood Blank");
+        InsertTexture(15, "Highhood Blank");
     }
 
     @Override
