@@ -429,6 +429,7 @@ public enum ItemIDs {
 	minecartGP13("ItemRollingStock", "gp13", DIESEL, 3),
 	minecartGP15("ItemRollingStock", "gp15", DIESEL, 3),
 	minecartGP18("ItemRollingStock", "gp18", DIESEL, 3),
+	minecartGP20("ItemRollingStock", "gp20", DIESEL, 64),
 	minecartGP30("ItemRollingStock", "gp30", DIESEL, 4),
 	minecartGP35("ItemRollingStock", "gp35", DIESEL, 4),
 	minecartGP38dash9W("ItemRollingStock", "gp38dash9w", DIESEL, 3),
@@ -693,6 +694,7 @@ public enum ItemIDs {
 	minecart1912WoodBoxcar("ItemRollingStock", "1912WoodBoxcar", FREIGHT, 3),
 	minecartPS_40t_ss_box("ItemRollingStock", "PS_40t_ss_box_icon", FREIGHT, 3),
 	minecartSP_B50("ItemRollingStock", "SP_B50_icon", FREIGHT, 3),
+	minecartSP_B50_AAR("ItemRollingStock", "SP_B50_AAR_icon", FREIGHT, 4),
 	minecartPFEr_40_23Reefer("ItemRollingStock", "PFEr_40_23Reefer_icon", FREIGHT, 4),
 
 	minecartVersaLongi("ItemRollingStock", "versalongi", FREIGHT, 4),

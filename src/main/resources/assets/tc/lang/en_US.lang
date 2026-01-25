@@ -1276,6 +1276,7 @@ item.tc:minecartGP7old.name=EMD GP7 (Old Model)
 item.tc:minecartGP13.name=EMD GP13
 item.tc:minecartGP15.name=EMD GP15-1
 item.tc:minecartGP18.name=EMD GP18
+item.tc:minecartGP20.name=EMD GP20
 item.tc:minecartGP30.name=EMD GP30
 item.tc:minecartGP35.name=EMD GP35 (Phase 1)
 item.tc:minecartGP38dash9W.name=MT&S GP38W-2
@@ -1373,6 +1374,7 @@ entity.tc.GP7old.name=EMD GP7 (Old Model)
 entity.tc.GP13.name=EMD GP13
 entity.tc.GP15.name=EMD GP15-1
 entity.tc.GP18.name=EMD GP18
+entity.tc.GP20.name=EMD GP20
 entity.tc.GP30.name=EMD GP30
 entity.tc.GP35.name=EMD GP35 (Phase 1)
 entity.tc.GP38dash9W.name=MT&S GP38W-2
@@ -1824,6 +1826,7 @@ item.tc:minecartEvans5100.name=Evans-USRE 5100 Cu Ft Boxcar
 item.tc:minecart1912WoodBoxcar.name=1912 Wood Sheathed Boxcar
 item.tc:minecartPS_40t_ss_box.name=1916 Pullman MFG 40-Ton Boxcar
 item.tc:minecartSP_B50.name=SP B-50-15 and B-50-16 Boxcar
+item.tc:minecartSP_B50_AAR.name=SP B-50-28 /-29 /-31 Boxcar
 item.tc:minecartPFEr_40_23Reefer.name=PFE R-40-23 Ice Reefer
 
 
@@ -1850,6 +1853,7 @@ entity.tc.Evans5100.name=Evans-USRE 5100 Cu Ft Boxcar
 entity.tc.1912WoodBoxcar.name=1912 Wood Sheathed Boxcar
 entity.tc.PS_40t_ss_box.name=1916 Pullman MFG 40-Ton Boxcar
 entity.tc.SP_B50.name=SP B-50-15 and B-50-16
+entity.tc.SP_B50_AAR.name=SP B-50-28 /-29 /-31 Boxcar
 entity.tc.PFEr_40_23Reefer.name=PFE R-40-23 Ice Reefer
 
 item.tc:minecartVersaLongi.name=Versaflood Longitudinal Hopper

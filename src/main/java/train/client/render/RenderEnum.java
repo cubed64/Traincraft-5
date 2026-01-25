@@ -1180,6 +1180,11 @@ public enum RenderEnum implements ITrainRenderRecord, ISubTrainRenderRecord
 			add(new double[]{0.475D, 1.3D, 0.0D});//rear
 		}
 	}, "", null, 0, false),
+	GP20( DieselGP20.class,  new ModelGP20(), "gp20_", true,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.45D, 1.275D, 0.0D});//front
+		}
+	}, "", null, 0, false),
 	GP30( DieselGP30.class,  new ModelGP30new(), "gp30_", true,new float[]{-1.45F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 4,  new ArrayList<double[]>() {
 		{
 			add(new double[]{1.65D, 1.3D, 0.0D});//front
@@ -2132,6 +2137,7 @@ public enum RenderEnum implements ITrainRenderRecord, ISubTrainRenderRecord
 	Wood1912Boxcar(Wood1912Boxcar.class, new Model1912WoodBoxcar(),"1912_wood_boxcar_", true, new float[]{-0F, 0.1F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PS_40t_ss_box(PS_40t_ss_box.class, new ModelPS_40t_ss_box(),"ps_40t_ss_box_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	SP_B50(SP_B50.class, new ModelSP_B50(),"sp_b_50_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
+	SP_B50_AAR(SP_B50_AAR.class, new ModelSP_B50_AAR(),"sp_b_50_28_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 	PFEr_40_23Reefer(PFEr_40_23Reefer.class, new ModelPFEr_40_23Reefer(),"PFEr_40_23Reefer_", true, new float[]{-0F, 0.15F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
 
 	VersaLongi(VersaLongi.class, new ModelVersaLongi(),"versa_longi_", true,  new float[]{-0F, 0.10F, 0F}, new float[] { 0F, 180F, 180F }, null, "", 0, null, "", null, 0, false),
