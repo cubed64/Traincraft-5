@@ -1826,6 +1826,7 @@ item.tc:minecartEvans5100.name=Evans-USRE 5100 Cu Ft Boxcar
 item.tc:minecart1912WoodBoxcar.name=1912 Wood Sheathed Boxcar
 item.tc:minecartPS_40t_ss_box.name=1916 Pullman MFG 40-Ton Boxcar
 item.tc:minecartSP_B50.name=SP B-50-15 and B-50-16 Boxcar
+item.tc:minecartSP_B50_AAR.name=SP B-50-28 /-29 /-31 Boxcar
 item.tc:minecartPFEr_40_23Reefer.name=PFE R-40-23 Ice Reefer
 
 
@@ -1852,6 +1853,7 @@ entity.tc.Evans5100.name=Evans-USRE 5100 Cu Ft Boxcar
 entity.tc.1912WoodBoxcar.name=1912 Wood Sheathed Boxcar
 entity.tc.PS_40t_ss_box.name=1916 Pullman MFG 40-Ton Boxcar
 entity.tc.SP_B50.name=SP B-50-15 and B-50-16
+entity.tc.SP_B50_AAR.name=SP B-50-28 /-29 /-31 Boxcar
 entity.tc.PFEr_40_23Reefer.name=PFE R-40-23 Ice Reefer
 
 item.tc:minecartVersaLongi.name=Versaflood Longitudinal Hopper
