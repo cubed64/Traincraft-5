@@ -33,7 +33,7 @@ public class ModelGP15 extends ModelConverter //Same as Filename
 
 	public ModelGP15() //Same as Filename
 	{
-		bodyModel = new ModelRendererTurbo[388];
+		bodyModel = new ModelRendererTurbo[393];
 
 		initbodyModel_1();
 
@@ -364,7 +364,7 @@ public class ModelGP15 extends ModelConverter //Same as Filename
 		bodyModel[316] = new ModelRendererTurbo(this, 45, 198, textureX, textureY); // Box 361
 		bodyModel[317] = new ModelRendererTurbo(this, 67, 209, textureX, textureY); // Box 362
 		bodyModel[318] = new ModelRendererTurbo(this, 45, 209, textureX, textureY); // Box 363
-		bodyModel[319] = new ModelRendererTurbo(this, 181, 13, textureX, textureY, "lamp"); // Box 364 commander beacon
+		bodyModel[319] = new ModelRendererTurbo(this, 181, 13, textureX, textureY, "commander"); // Box 364 commander beacon
 		bodyModel[320] = new ModelRendererTurbo(this, 180, 17, textureX, textureY); // Box 365
 		bodyModel[321] = new ModelRendererTurbo(this, 220, 214, textureX, textureY); // Box 366 smol radiator
 		bodyModel[322] = new ModelRendererTurbo(this, 185, 214, textureX, textureY); // Box 367 smol radiator
@@ -433,6 +433,12 @@ public class ModelGP15 extends ModelConverter //Same as Filename
 		bodyModel[385] = new ModelRendererTurbo(this, 102, 124, textureX, textureY); // Box 385
 		bodyModel[386] = new ModelRendererTurbo(this, 105, 124, textureX, textureY); // Box 386
 		bodyModel[387] = new ModelRendererTurbo(this, 105, 124, textureX, textureY); // Box 387
+		bodyModel[388] = new ModelRendererTurbo(this, 2, 39, textureX, textureY); // Box 388 stupid messicrewgo eat hunter harrisons mega bonar
+		bodyModel[389] = new ModelRendererTurbo(this, 216, 93, textureX, textureY, "lamp"); // Box 71 markerlight nose
+		bodyModel[390] = new ModelRendererTurbo(this, 216, 93, textureX, textureY, "lamp"); // Box 1208 makrerlight nose
+		bodyModel[391] = new ModelRendererTurbo(this, 223, 97, textureX, textureY, "lamp"); // Box 391 markerligth rear
+		bodyModel[392] = new ModelRendererTurbo(this, 223, 97, textureX, textureY, "lamp"); // Box 392 markerligth rear
+
 
 		bodyModel[0].addBox(0F, 0F, 0F, 58, 1, 4, 0F); // Box 1
 		bodyModel[0].setRotationPoint(-30F, 0F, -11F);
@@ -1617,6 +1623,21 @@ public class ModelGP15 extends ModelConverter //Same as Filename
 
 		bodyModel[387].addShapeBox(0F, 0F, 0F, 1, 1, 0, 0F,0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F); // Box 387
 		bodyModel[387].setRotationPoint(10F, 1F, 11F);
+
+		bodyModel[388].addBox(0F, 0F, 0F, 2, 1, 4, 0F); // Box 388 stupid messicrewgo eat hunter harrisons mega bonar
+		bodyModel[388].setRotationPoint(-4F, -22.25F, -2F);
+
+		bodyModel[389].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-0.2F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -1F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -1F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F); // Box 71 markerlight nose
+		bodyModel[389].setRotationPoint(-31.65F, -12F, -6.5F);
+
+		bodyModel[390].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0.4F, -0.25F, -0.25F, -1F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -1F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F); // Box 1208 makrerlight nose
+		bodyModel[390].setRotationPoint(-31.65F, -12F, 4.5F);
+
+		bodyModel[391].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,0F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -1F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -1F, -0.25F, -0.25F); // Box 391 markerligth rear
+		bodyModel[391].setRotationPoint(28.65F, -13.5F, -6.5F);
+
+		bodyModel[392].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-1F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -1F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 392 markerligth rear
+		bodyModel[392].setRotationPoint(28.65F, -13.5F, 4.5F);
 	}
 	ModelBlombergB theTrucc = new ModelBlombergB();
 	ModelTypeB theTrucks1 = new ModelTypeB();
@@ -1659,6 +1680,18 @@ public class ModelGP15 extends ModelConverter //Same as Filename
 
 		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 6546) {
 			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/blombergB_2_DarkerGrey.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslated(-1.2, -0.01, 0);
+			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
+
+			GL11.glRotatef(180, 0, 1, 0);
+			GL11.glTranslated(2.27, 0, 0);
+			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
+			GL11.glPopMatrix();
+
+		} else if (entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 27 ||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 28
+				||entity instanceof AbstractTrains && ((AbstractTrains) entity).getColor() == 30) {
+			Tessellator.bindTexture(new ResourceLocation(Info.resourceLocation, "textures/trains/BlombergB_csxbleu.png"));
 			GL11.glPushMatrix();
 			GL11.glTranslated(-1.2, -0.01, 0);
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);

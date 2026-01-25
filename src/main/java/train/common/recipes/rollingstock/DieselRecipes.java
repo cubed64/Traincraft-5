@@ -277,6 +277,9 @@ public class DieselRecipes extends AbstractRecipeHandler
             for (ItemStack dye : dyeYellow) {//gp15-1
                 cm.addRecipe(3, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.partBlombergB.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.partComponentEMD.item, 3), new ItemStack(ItemIDs.generator.item, 2), new ItemStack(ItemIDs.dieselengine.item, 2), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartGP15.item, 1), 1);
             }
+            for (ItemStack dye : dyeBlue) {//gp15t
+                cm.addRecipe(3, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.partBlombergB.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.partTurboExhaust.item, 1), new ItemStack(ItemIDs.partComponentEMD.item, 3), new ItemStack(ItemIDs.generator.item, 2), new ItemStack(ItemIDs.dieselengine.item, 2), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartGP15T.item, 1), 1);
+            }
             for (ItemStack dye : dyeGray) {//gp38
                 cm.addRecipe(3, new ItemStack(ItemIDs.steelcab.item, 1), new ItemStack(ItemIDs.partBlombergB.item, 2), new ItemStack(ItemIDs.steelframe.item, 2), new ItemStack(itemSteel, 3, itemDamageSteel), new ItemStack(ItemIDs.steelchimney.item, 2), new ItemStack(ItemIDs.partComponentEMD.item, 3), new ItemStack(ItemIDs.generator.item, 4), new ItemStack(ItemIDs.dieselengine.item, 3), new ItemStack(ItemIDs.controls.item, 1), dye, new ItemStack(ItemIDs.minecartGP38.item, 1), 1);
             }

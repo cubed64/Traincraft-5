@@ -143,6 +143,7 @@ item.tc:minecart25Ton	GE 25-ton	com.jcirmodelsquad.tcjcir.vehicles.locomotives.d
 item.tc:minecart44Ton	GE 44-ton	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselGE44Ton	44_ton_
 item.tc:minecartGP13	GP13	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselGP13	gp13_
 item.tc:minecartGP15	GP15	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselGP15	gp15_
+item.tc:minecartGP15T	GP15T	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselGP15T	gp15t_
 item.tc:minecartGP18	GP18	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselGP18	gp18_
 item.tc:minecartGP20	GP20	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselGP20	gp20_
 item.tc:minecartGP30	GP30	com.jcirmodelsquad.tcjcir.vehicles.locomotives.diesel.DieselGP30	gp30_

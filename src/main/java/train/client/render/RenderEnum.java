@@ -1174,6 +1174,11 @@ public enum RenderEnum implements ITrainRenderRecord, ISubTrainRenderRecord
 			add(new double[]{0.75D, 1.45D, 0.0D});
 		}
 	}, "", null, 0, false),
+	GP15T( DieselGP15T.class,  new ModelGP15(), "gp15t_", true,new float[] {-1.3F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
+		{
+			add(new double[]{1.5D, 1.3D, 0.0D});
+		}
+	}, "", null, 0, false),
 	GP18( DieselGP18.class,  new ModelGP18(), "gp18_", true,new float[] {-1.5F, 0.155F, 0F},  new float[] { 0F, 180F, 180F }, null, "smoke", 5,  new ArrayList<double[]>() {
 		{
 			add(new double[]{1.225D, 1.3D, 0.0D});//front
