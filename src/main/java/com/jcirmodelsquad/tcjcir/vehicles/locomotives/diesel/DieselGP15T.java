@@ -32,11 +32,6 @@ public class DieselGP15T extends DieselTrain {
 		return "US";
 	}
 
-	public void initLoco() {
-		fuelTrain = 0;
-		locoInvent = new ItemStack[inventorySize];
-	}
-
 	@Override
 	public void updateRiderPosition() {
 		if(riddenByEntity==null){return;}
