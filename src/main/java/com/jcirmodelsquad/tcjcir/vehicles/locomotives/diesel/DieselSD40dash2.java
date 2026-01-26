@@ -61,6 +61,9 @@ public class DieselSD40dash2 extends DieselTrain {
         InsertTexture(35, "Seaboard System");
         InsertTexture(36, "Southern");
         InsertTexture(37, "Chessie System");
+        InsertTexture(38, "CWL", LockoutGroup.CWL);
+        InsertTexture(39, "CWL (High short hood)", LockoutGroup.CWL);
+
         initOverlayTextures();
         getOverlayTextureContainer().initOverlaySpecification(new OTSpecificationDynamic(
                 "Engine Number",

@@ -1639,7 +1639,6 @@ public class ModelGP15 extends ModelConverter //Same as Filename
 		bodyModel[392].addShapeBox(0F, 0F, 0F, 1, 2, 2, 0F,-1F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -1F, -0.25F, -0.25F, 0.4F, -0.25F, -0.25F, -0.2F, -0.25F, -0.25F, 0F, -0.25F, -0.25F); // Box 392 markerligth rear
 		bodyModel[392].setRotationPoint(28.65F, -13.5F, 4.5F);
 	}
-	ModelBlombergB theTrucc = new ModelBlombergB();
 	ModelTypeB theTrucks1 = new ModelTypeB();
 	ModelBlombergBnew theTrucks3 = new ModelBlombergBnew();
 
@@ -1696,7 +1695,6 @@ public class ModelGP15 extends ModelConverter //Same as Filename
 			GL11.glTranslated(-1.2, -0.01, 0);
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
 
-			GL11.glRotatef(180, 0, 1, 0);
 			GL11.glTranslated(2.27, 0, 0);
 			theTrucks3.render(entity, f, f1, f2, f3, f4, f5);
 			GL11.glPopMatrix();
@@ -1712,7 +1710,5 @@ public class ModelGP15 extends ModelConverter //Same as Filename
 			GL11.glPopMatrix();
 		}
 	}
-
-	public ModelRendererTurbo ModelGP15[];
 }
 //blombergB_Stale_Egg

@@ -43,6 +43,7 @@ public class DieselGP38 extends DieselTrain {
         InsertTexture(21, "CSXT (Bluedown)");
         InsertTexture(22, "Seaboard System");
         InsertTexture(23, "Chessie System");
+        InsertTexture(24, "CWL", LockoutGroup.CWL);
     }
 
     @Override
