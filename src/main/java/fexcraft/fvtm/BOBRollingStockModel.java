@@ -54,7 +54,7 @@ public class BOBRollingStockModel extends FVTMFormatBase {
     public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
         model.render(entity, f, f1, f2, f3, f4, f5);
         AbstractTrains train = (AbstractTrains) entity;
-        ModelDetailInformation info = details.get(train.getColor() < details.size() ? train.getColor() : null);
+        ModelDetailInformation info = details.get(train.getColor());
         if (info == null) {
             info = details.get(0);
         }
