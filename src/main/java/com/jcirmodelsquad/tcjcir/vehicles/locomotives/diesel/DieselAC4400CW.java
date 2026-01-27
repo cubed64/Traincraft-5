@@ -19,8 +19,9 @@ public class DieselAC4400CW extends DieselTrain {
         super(world, LiquidManager.dieselFilter());
         
         InsertTexture(0, "CSXT (YN2)");
-        InsertTexture(1, "Nomansi and Eastern Pacific", LockoutGroup.CUBED);
-        InsertTexture(2, "Blandsville & Blankerston");
+        InsertTexture(1, "CSXT (YN3)");
+        InsertTexture(2, "Nomansi and Eastern Pacific", LockoutGroup.CUBED);
+        InsertTexture(3, "Blandsville & Blankerston");
     }
 
     @Override

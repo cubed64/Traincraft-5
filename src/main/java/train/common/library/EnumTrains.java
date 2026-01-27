@@ -217,7 +217,7 @@ public enum EnumTrains implements ITrainRecord
 
 	Dash940C("Dash940C", DieselDash940C.class, ItemIDs.minecartDash940C.item, "diesel", 4000, 119, 0, 45, 0, 180, 0.8, 0.87, 21000, TraincraftUtil.getBytesFromColors(new String[] {"White"}), 12, -4.0),
 	Dash944CW("Dash944CW", DieselDash944CW.class, ItemIDs.minecartDash944CW.item, "diesel", 4400, 119, 0, 45, 0, 180, 0.8, 0.87, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Black", "Skin16", "LightGrey", "Grey", "Orange", "Magenta", "Skin17", "Pink", "Green", "White", "Skin27", "Skin18", "Red", "Skin19", "LightBlue", "Skin28"}), 12, -4.0),
-	AC4400CW("AC4400CW", DieselAC4400CW.class, ItemIDs.minecartAC4400CW.item, "diesel", 4400, 119, 0, 45, 0, 180, 0.8, 0.87, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Skin16", "LightGrey"}), 12, -4.0),
+	AC4400CW("AC4400CW", DieselAC4400CW.class, ItemIDs.minecartAC4400CW.item, "diesel", 4400, 119, 0, 45, 0, 180, 0.8, 0.87, 21000, TraincraftUtil.getBytesFromColors(new String[] {"LightBlue", "Blue", "Skin16", "LightGrey"}), 12, -4.0),
 	AC4400C("AC4400C", DieselAC4400C.class, ItemIDs.minecartAC4400C.item, "diesel", 4400, 119, 0, 45, 0, 180, 0.8, 0.87, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Green", "Cyan", "Skin16", "LightBlue", "Grey", "Blue"}), 12, -4.0),
 
 	ES44("ES44", DieselES44.class, ItemIDs.minecartES44.item, "diesel", 4400, 120, 0, 10, 0, 200, 0.7, 0.8, 21000, TraincraftUtil.getBytesFromColors(new String[] {"Cyan", "Orange", "Skin17", "Red", "Yellow", "Blue", "LightGrey", "Grey", "Black", "Skin18", "Skin19", "Pink", "Purple", "Lime", "Skin20", "Skin21", "Skin22", "Skin23", "Skin24"}), 12, -4.0),
