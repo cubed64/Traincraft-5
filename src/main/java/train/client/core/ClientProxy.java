@@ -16,11 +16,7 @@ import foxmods.playerscale.DelegatingRenderPlayer;
 import javazoom.jl.decoder.JavaLayerUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.SoundCategory;
-import net.minecraft.client.entity.AbstractClientPlayer;
-import net.minecraft.client.entity.EntityClientPlayerMP;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.renderer.entity.RenderPlayer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -42,7 +38,6 @@ import train.client.render.*;
 import train.client.render.itemRender.*;
 import train.common.api.AbstractTrains;
 import train.common.core.handlers.ConfigHandler;
-import train.common.core.handlers.RenderScaledPlayer;
 import train.common.Traincraft;
 import train.common.adminbook.GUIAdminBook;
 import train.common.api.EntityBogie;
@@ -315,7 +310,7 @@ public class ClientProxy extends CommonProxy
 			return riddenByEntity != null ? new GuiLoco2(riddenByEntity.inventory, entity) : null;
 		case (GuiIDs.CONTROL_CAR):
 			return riddenByEntity != null ? new GuiControlCar(riddenByEntity.inventory, entity) : null;
-		case (GuiIDs.FORNEY):
+		case (GuiIDs.LOCO_TANKENGINE):
 			return riddenByEntity != null ? new GuiTankEngine(riddenByEntity.inventory, entity) : null;
 		case (GuiIDs.CRAFTING_CART):
 			return riddenByEntity != null ? new GuiCraftingCart(riddenByEntity.inventory, world) : null;

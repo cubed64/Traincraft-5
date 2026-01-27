@@ -14,13 +14,13 @@ import train.common.api.SteamTrain;
 import train.common.core.handlers.FuelHandler;
 import train.common.slots.StandardRollingStockSlot;
 
-public class InventoryForney extends Container {
+public class InventoryTankEngine extends Container {
 
 	private Locomotive loco;
 	private InventoryPlayer player;
 	private int inventorySize;
 
-	public InventoryForney(InventoryPlayer iinventory, EntityRollingStock entityminecart) {
+	public InventoryTankEngine(InventoryPlayer iinventory, EntityRollingStock entityminecart) {
 		player = iinventory;
 		loco = (Locomotive) entityminecart;
 		inventorySize = loco.inventorySize;

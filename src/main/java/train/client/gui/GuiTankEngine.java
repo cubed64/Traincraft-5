@@ -14,7 +14,7 @@ import train.common.api.LiquidManager;
 import train.common.api.Locomotive;
 import train.common.api.SteamTrain;
 import train.common.core.network.PacketParkingBrake;
-import train.common.inventory.InventoryForney;
+import train.common.inventory.InventoryTankEngine;
 import train.common.library.Info;
 
 public class GuiTankEngine extends GuiContainer {
@@ -34,7 +34,7 @@ public class GuiTankEngine extends GuiContainer {
 	private Locomotive loco;
 
 	public GuiTankEngine(InventoryPlayer inventoryplayer, Entity entityminecart) {
-		super(new InventoryForney(inventoryplayer, (Locomotive) entityminecart));
+		super(new InventoryTankEngine(inventoryplayer, (Locomotive) entityminecart));
 		loco = (Locomotive) entityminecart;
 	}
 
