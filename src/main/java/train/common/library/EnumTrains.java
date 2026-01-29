@@ -276,7 +276,7 @@ public enum EnumTrains implements ITrainRecord
 
 	//BRuhMOMent//
 	VO1000("VO1000", DieselVO1000.class, ItemIDs.minecartVO1000.item, "diesel", 1000, 67, 0, 20, 0, 200, 0.8, 0.9, 6000, TraincraftUtil.getBytesFromColors(new String[]{"Green", "Pink", "Blue", "LightBlue", "Skin16"}), 16, -2.2),
-	DS441000("DS441000", DieselDS441000.class, ItemIDs.minecartDS441000.item, "diesel", 1000, 97, 0, 35, 0, 180, 0.75, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Green", "Grey", "Black", "Orange"}), 16, -2.2),
+	DS441000("DS441000", DieselDS441000.class, ItemIDs.minecartDS441000.item, "diesel", 1000, 97, 0, 35, 0, 180, 0.75, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Yellow", "Green", "Grey", "Black", "Orange","Skin17"}), 16, -2.2),
 	S12("S12", DieselS12.class, ItemIDs.minecartS12.item, "diesel", 1200, 97, 0, 35, 0, 180, 0.75, 0.7, 8000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "LightGrey", "Brown", "Skin16", "White", "Cyan", "Skin18", "Black", "Orange"}), 16, -2.2),
 
 	DR441500Phase2("DR441500Phase2", DieselDR441500Phase2.class, ItemIDs.minecartDR441500Phase2.item, "diesel", 1500, 105, 0, 25, 0, 200, 0.7, 0.79, 15000, TraincraftUtil.getBytesFromColors(new String[] {"Blue", "Cyan", "Black", "LightGrey", "Yellow", "Red", "White", "Grey", "Magenta", "Purple"}), 15, -2.845),
